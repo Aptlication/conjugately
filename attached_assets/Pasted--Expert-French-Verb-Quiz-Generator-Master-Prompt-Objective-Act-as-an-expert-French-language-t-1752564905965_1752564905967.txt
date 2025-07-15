@@ -1,0 +1,50 @@
+*****Expert French Verb Quiz Generator: Master Prompt
+Objective: Act as an expert French language tutor. Your task is to generate a complete, 20-question, multiple-choice quiz based on the parameters provided below. The output must strictly adhere to the specified learning immersive format, producing a single, valid JSON object.
+1. Quiz Parameters (To be filled in by user)
+Verb: "[Verb in French]" (e.g., "faire")
+Tense: "[Tense Name]" (e.g., "Conditionnel Passé")
+Number of Questions: 20
+2. Tense Interpretation Guide (CRITICAL)
+You must interpret the Tense parameter according to the following rules:
+Présent (Present): e.g., "I do" -> Je fais.
+Passé Composé (Past Perfect): e.g., "I did" / "I have done" -> J'ai fait.
+Imparfait (Imperfect): e.g., "I was doing" / "I used to do" -> Je faisais.
+Futur Simple (Simple Future): e.g., "I will do" -> Je ferai.
+Présent Progressif (Present Continuous): e.g., "I am doing" -> Je suis en train de faire.
+Présent + depuis (Present Perfect Continuous): e.g., "I have been doing" -> Je fais... depuis... OR Ça fait... que je fais....
+Conditionnel Présent (Present Conditional): e.g., "I would do" -> Je ferais.
+Conditionnel Passé (Conditional Perfect): e.g., "I would have done" -> J'aurais fait.
+3. Content & Structure Requirements
+Question Format: Each question must be an English sentence to be translated.
+Answer Format: Provide four complete French sentences as answerOptions.
+Subject Pronouns: Distribute questions across all subject pronouns (je, tu, il, elle, nous, vous, ils, elles).
+Negation: Include approximately 4-5 negative sentences, correctly wrapping the negation (ne...pas, ne...rien, etc.) around the conjugated auxiliary verb in compound tenses.
+Plausible Distractors: Incorrect options must target common errors, such as using the wrong tense, incorrect auxiliary verb, wrong subject-verb agreement, or incorrect negation placement.
+Hints: Provide a concise hint that guides the user's thinking without revealing the answer.
+Rationales: For every answer option, provide a clear, one-sentence rationale.
+For the correct answer: Explain why it is correct by referencing the grammatical rule (e.g., "This correctly uses the conditional of 'avoir' with the past participle.").
+For incorrect answers: Explain the specific error (e.g., "This is the Pluperfect tense, not the Conditional Perfect.", "This uses the wrong auxiliary verb.").
+Crucially: Do not state "This is correct" or "This is incorrect."
+4. Technical Format (MANDATORY)
+The entire response must be a single <immersive> block of type learning. The content inside the ```quiz` block must be a single, valid JSON object following these rules:
+Keys & Strings: All property names (keys) and string values must be enclosed in double quotes (").
+Structure: Use {} for objects and [] for arrays. No trailing commas.
+JSON Schema:
+{
+  "questions": [
+    {
+      "question": "...",
+      "hint": "...",
+      "answerOptions": [
+        {
+          "text": "...",
+          "rationale": "...",
+          "isCorrect": true
+        }
+      ]
+    }
+  ]
+}
+
+
+LaTeX Escaping: If using LaTeX, every backslash (\) must be escaped with another backslash (\\). Example: \frac becomes \\frac.
