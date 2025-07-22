@@ -124,6 +124,28 @@ export default function Home() {
     setQuizResult(null);
   };
 
+  const chooseRandomVerb = () => {
+    const randomVerb = TOP_10_FRENCH_VERBS[Math.floor(Math.random() * TOP_10_FRENCH_VERBS.length)];
+    form.setValue("verb", randomVerb.value);
+  };
+
+  const chooseRandomTimeFrame = () => {
+    const timeFrames = Object.keys(TENSE_TYPES) as Array<keyof typeof TENSE_TYPES>;
+    const randomTimeFrame = timeFrames[Math.floor(Math.random() * timeFrames.length)];
+    form.setValue("timeFrame", randomTimeFrame);
+  };
+
+  const chooseRandomTenseType = () => {
+    const currentTimeFrame = form.getValues("timeFrame");
+    if (currentTimeFrame) {
+      const availableTenses = TENSE_TYPES[currentTimeFrame as keyof typeof TENSE_TYPES] || [];
+      if (availableTenses.length > 0) {
+        const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
+        form.setValue("tenseType", randomTense.value);
+      }
+    }
+  };
+
   const availableTenseTypes = watchTimeFrame ? TENSE_TYPES[watchTimeFrame as keyof typeof TENSE_TYPES] || [] : [];
 
   // Show quiz interface when quiz is loaded
@@ -158,9 +180,20 @@ export default function Home() {
                   name="verb"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-medium text-white mb-3 block">
-                        1. Choose a Verb
-                      </FormLabel>
+                      <div className="flex items-center justify-between mb-3">
+                        <FormLabel className="text-lg font-medium text-white">
+                          1. Choose a Verb
+                        </FormLabel>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={chooseRandomVerb}
+                          className="border-border text-muted-foreground hover:text-white hover:bg-input"
+                        >
+                          Choose for me
+                        </Button>
+                      </div>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-12 bg-input border-border text-white">
@@ -186,9 +219,20 @@ export default function Home() {
                   name="timeFrame"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-medium text-white mb-3 block">
-                        2. Choose a Time Frame
-                      </FormLabel>
+                      <div className="flex items-center justify-between mb-3">
+                        <FormLabel className="text-lg font-medium text-white">
+                          2. Choose a Time Frame
+                        </FormLabel>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={chooseRandomTimeFrame}
+                          className="border-border text-muted-foreground hover:text-white hover:bg-input"
+                        >
+                          Choose for me
+                        </Button>
+                      </div>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-12 bg-input border-border text-white">
@@ -214,9 +258,21 @@ export default function Home() {
                   name="tenseType"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-medium text-white mb-3 block">
-                        3. Choose a Tense to Test
-                      </FormLabel>
+                      <div className="flex items-center justify-between mb-3">
+                        <FormLabel className="text-lg font-medium text-white">
+                          3. Choose a Tense to Test
+                        </FormLabel>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={chooseRandomTenseType}
+                          disabled={!watchTimeFrame}
+                          className="border-border text-muted-foreground hover:text-white hover:bg-input disabled:opacity-50"
+                        >
+                          Choose for me
+                        </Button>
+                      </div>
                       <Select 
                         onValueChange={field.onChange} 
                         value={field.value}
