@@ -65,7 +65,7 @@ const TENSE_TYPES = {
     { value: "perfect", label: "Perfect (Futur Antérieur)" },
     { value: "continuous", label: "Continuous (Futur Proche)" }
   ]
-} as const;
+};
 
 export default function Home() {
   const [selectedVerb, setSelectedVerb] = useState("");
@@ -154,7 +154,7 @@ export default function Home() {
 
   const chooseRandomTenseType = () => {
     if (selectedTimeFrame) {
-      const availableTenses = TENSE_TYPES[selectedTimeFrame as keyof typeof TENSE_TYPES] || [];
+      const availableTenses = (TENSE_TYPES as any)[selectedTimeFrame] || [];
       if (availableTenses.length > 0) {
         const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
         setSelectedTenseType(randomTense.value);
@@ -189,7 +189,7 @@ export default function Home() {
     setShowHint(false);
   };
 
-  const availableTenseTypes = selectedTimeFrame ? TENSE_TYPES[selectedTimeFrame as keyof typeof TENSE_TYPES] || [] : [];
+  const availableTenseTypes = selectedTimeFrame ? (TENSE_TYPES as any)[selectedTimeFrame] || [] : [];
 
   // Main render logic
   const renderContent = () => {
