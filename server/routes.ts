@@ -6,29 +6,30 @@ import { generateFrenchVerbQuiz } from "./services/gemini";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Generate French verb quiz
-  app.post("/api/generate-quiz", async (req, res, next) => {
+  // Get French verb quiz from database
+  app.post("/api/get-quiz", async (req, res, next) => {
     try {
       const { verb, timeFrame, tenseType } = quizRequestSchema.parse(req.body);
       
-      const quiz = await generateFrenchVerbQuiz(verb, timeFrame, tenseType);
+      // Look for existing quiz in database
+      const existingQuiz = await storage.getQuizByParams(verb, timeFrame, tenseType);
       
-      // Store the quiz in database
-      const storedQuiz = await storage.createQuiz({
-        verb,
-        tense: `${timeFrame}-${tenseType}`,
-        questions: quiz.questions
-      });
-      
-      res.json({
-        success: true,
-        quiz: {
-          id: storedQuiz.id,
-          verb: storedQuiz.verb,
-          tense: storedQuiz.tense,
-          questions: storedQuiz.questions
-        }
-      });
+      if (existingQuiz) {
+        res.json({
+          success: true,
+          quiz: {
+            id: existingQuiz.id,
+            verb: existingQuiz.verb,
+            tense: `${existingQuiz.timeFrame}-${existingQuiz.tenseType}`,
+            questions: existingQuiz.questions
+          }
+        });
+      } else {
+        res.status(404).json({
+          success: false,
+          error: "Quiz not found for this combination. Please check back later as we're expanding our quiz library.",
+        });
+      }
     } catch (error) {
       if (error instanceof ZodError) {
         return res.status(400).json({
@@ -38,10 +39,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      console.error("Quiz generation error:", error);
+      console.error("Quiz retrieval error:", error);
       res.status(500).json({
         success: false,
-        error: (error as Error).message || "Failed to generate quiz"
+        error: (error as Error).message || "Failed to retrieve quiz"
       });
     }
   });

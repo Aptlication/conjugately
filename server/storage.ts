@@ -1,12 +1,13 @@
 import { users, quizzes, type User, type InsertUser, type Quiz, type InsertQuiz } from "@shared/schema";
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
   getQuiz(id: number): Promise<Quiz | undefined>;
+  getQuizByParams(verb: string, timeFrame: string, tenseType: string): Promise<Quiz | undefined>;
   createQuiz(quiz: InsertQuiz): Promise<Quiz>;
 }
 
@@ -31,6 +32,13 @@ export class DatabaseStorage implements IStorage {
 
   async getQuiz(id: number): Promise<Quiz | undefined> {
     const [quiz] = await db.select().from(quizzes).where(eq(quizzes.id, id));
+    return quiz || undefined;
+  }
+
+  async getQuizByParams(verb: string, timeFrame: string, tenseType: string): Promise<Quiz | undefined> {
+    const [quiz] = await db.select().from(quizzes).where(
+      and(eq(quizzes.verb, verb), eq(quizzes.timeFrame, timeFrame), eq(quizzes.tenseType, tenseType))
+    );
     return quiz || undefined;
   }
 

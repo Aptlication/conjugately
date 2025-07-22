@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loader2, Download, Copy, CheckCircle } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import QuizInterface from "@/components/QuizInterface";
 
 interface QuizResponse {
   success: boolean;
@@ -64,7 +65,7 @@ const TENSE_TYPES = {
 
 export default function Home() {
   const [quizResult, setQuizResult] = useState<QuizResponse | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [showQuizInterface, setShowQuizInterface] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<QuizRequest>({
@@ -85,20 +86,17 @@ export default function Home() {
 
   const generateQuizMutation = useMutation({
     mutationFn: async (data: QuizRequest) => {
-      const response = await apiRequest("POST", "/api/generate-quiz", data);
+      const response = await apiRequest("POST", "/api/get-quiz", data);
       return response.json() as Promise<QuizResponse>;
     },
     onSuccess: (data) => {
       if (data.success) {
         setQuizResult(data);
-        toast({
-          title: "Quiz Generated Successfully",
-          description: `Created a 20-question quiz for "${data.quiz?.verb}".`,
-        });
+        setShowQuizInterface(true);
       } else {
         toast({
-          title: "Error",
-          description: data.error || "Failed to generate quiz",
+          title: "Quiz Not Available",
+          description: data.error || "This quiz combination is not yet available. Please try another combination.",
           variant: "destructive",
         });
       }
@@ -121,41 +119,22 @@ export default function Home() {
     generateQuizMutation.mutate(data);
   };
 
-  const downloadQuiz = () => {
-    if (!quizResult?.quiz) return;
-    
-    const dataStr = JSON.stringify(quizResult.quiz.questions, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const exportFileDefaultName = `french-verb-quiz-${quizResult.quiz.verb}-${quizResult.quiz.tense}.json`;
-    
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', exportFileDefaultName);
-    linkElement.click();
-  };
-
-  const copyToClipboard = async () => {
-    if (!quizResult?.quiz) return;
-    
-    try {
-      await navigator.clipboard.writeText(JSON.stringify(quizResult.quiz.questions, null, 2));
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-      toast({
-        title: "Copied!",
-        description: "Quiz JSON copied to clipboard",
-      });
-    } catch (err) {
-      toast({
-        title: "Error",
-        description: "Failed to copy to clipboard",
-        variant: "destructive",
-      });
-    }
+  const handleQuizComplete = () => {
+    setShowQuizInterface(false);
+    setQuizResult(null);
   };
 
   const availableTenseTypes = watchTimeFrame ? TENSE_TYPES[watchTimeFrame as keyof typeof TENSE_TYPES] || [] : [];
+
+  // Show quiz interface when quiz is loaded
+  if (showQuizInterface && quizResult?.quiz) {
+    return (
+      <QuizInterface 
+        quiz={quizResult.quiz}
+        onComplete={handleQuizComplete}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -272,10 +251,10 @@ export default function Home() {
                     {generateQuizMutation.isPending ? (
                       <>
                         <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                        Generating Quiz...
+                        Loading Quiz...
                       </>
                     ) : (
-                      "Generate Quiz!"
+                      "Start Quiz!"
                     )}
                   </Button>
                 </div>
@@ -290,76 +269,14 @@ export default function Home() {
             <CardContent className="pt-6">
               <div className="flex flex-col items-center space-y-4 py-8">
                 <Loader2 className="h-12 w-12 animate-spin text-primary" />
-                <p className="text-muted-foreground">Generating your personalized French quiz...</p>
-                <p className="text-sm text-muted-foreground">This may take a few moments. If the AI service is busy, we'll automatically retry.</p>
+                <p className="text-muted-foreground">Loading your French quiz...</p>
+                <p className="text-sm text-muted-foreground">Fetching quiz from our database...</p>
               </div>
             </CardContent>
           </Card>
         )}
 
-        {/* Results Section */}
-        {quizResult?.success && quizResult.quiz && (
-          <div>
-            {/* Quiz Info */}
-            <Card className="bg-card border-border mb-6">
-              <CardContent className="pt-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-semibold text-white flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Quiz Generated Successfully
-                  </h2>
-                  <div className="flex items-center space-x-4">
-                    <Button
-                      onClick={downloadQuiz}
-                      className="bg-orange-600 hover:bg-orange-700 text-white"
-                    >
-                      <Download className="h-4 w-4 mr-2" />
-                      Download JSON
-                    </Button>
-                    <Button
-                      onClick={copyToClipboard}
-                      variant="secondary"
-                      className="bg-gray-600 hover:bg-gray-700 text-white"
-                    >
-                      {copied ? (
-                        <>
-                          <CheckCircle className="h-4 w-4 mr-2" />
-                          Copied!
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="h-4 w-4 mr-2" />
-                          Copy JSON
-                        </>
-                      )}
-                    </Button>
-                  </div>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  <span>Verb: <strong className="text-white">{quizResult.quiz.verb}</strong></span>
-                  <span className="mx-4">•</span>
-                  <span>Tense: <strong className="text-white">{quizResult.quiz.tense}</strong></span>
-                  <span className="mx-4">•</span>
-                  <span>Questions: <strong className="text-white">20</strong></span>
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* JSON Preview */}
-            <Card className="bg-card border-border">
-              <CardContent className="p-0">
-                <div className="bg-gray-900 rounded-lg">
-                  <div className="p-4 border-b border-gray-700">
-                    <h3 className="font-medium text-white">Generated Quiz JSON</h3>
-                  </div>
-                  <pre className="p-4 text-sm text-gray-300 overflow-auto max-h-96">
-                    {JSON.stringify(quizResult.quiz.questions, null, 2)}
-                  </pre>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        )}
 
         {/* Footer */}
         <div className="text-center mt-12">

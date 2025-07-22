@@ -11,7 +11,8 @@ export const users = pgTable("users", {
 export const quizzes = pgTable("quizzes", {
   id: serial("id").primaryKey(),
   verb: text("verb").notNull(),
-  tense: text("tense").notNull(),
+  timeFrame: text("time_frame").notNull(),
+  tenseType: text("tense_type").notNull(),
   questions: json("questions").notNull(),
 });
 
@@ -22,7 +23,8 @@ export const insertUserSchema = createInsertSchema(users).pick({
 
 export const insertQuizSchema = createInsertSchema(quizzes).pick({
   verb: true,
-  tense: true,
+  timeFrame: true,
+  tenseType: true,
   questions: true,
 });
 
