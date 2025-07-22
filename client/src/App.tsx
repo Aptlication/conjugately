@@ -338,8 +338,8 @@ function App() {
                 French Verb Master
               </h1>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Master French verb conjugations with pre-populated quizzes. 
-                Select your verb, time frame, and tense type to start learning.
+                Master French verb conjugations with AI-powered quizzes. 
+                Select your verb, time frame, and tense type to generate a personalized 20-question quiz.
               </p>
             </div>
 
@@ -471,7 +471,7 @@ function App() {
                 <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-6 text-center">
                   <h3 className="text-xl font-semibold text-white mb-2">Quiz Preview</h3>
                   <p className="text-green-300">
-                    Ready to load questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong>
+                    Ready to generate 20 AI-powered questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong>
                   </p>
                 </div>
               </div>

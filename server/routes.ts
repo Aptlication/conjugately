@@ -1,8 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
 import { quizRequestSchema } from "@shared/schema";
-import { generateFrenchVerbQuiz } from "./services/gemini";
+import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -16,30 +15,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.redirect(302, '/?v=' + Date.now());
   });
 
-  // Get French verb quiz from database
+  // Generate French verb quiz using Gemini AI
   app.post("/api/get-quiz", async (req, res, next) => {
     try {
       const { verb, timeFrame, tenseType } = quizRequestSchema.parse(req.body);
       
-      // Look for existing quiz in database
-      const existingQuiz = await storage.getQuizByParams(verb, timeFrame, tenseType);
+      console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}`);
       
-      if (existingQuiz) {
-        res.json({
-          success: true,
-          quiz: {
-            id: existingQuiz.id,
-            verb: existingQuiz.verb,
-            tense: `${existingQuiz.timeFrame}-${existingQuiz.tenseType}`,
-            questions: existingQuiz.questions
-          }
-        });
-      } else {
-        res.status(404).json({
-          success: false,
-          error: "Quiz not found for this combination. Please check back later as we're expanding our quiz library.",
-        });
-      }
+      // Generate quiz using Gemini AI with the exact format provided by user
+      const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
+      
+      res.json({
+        success: true,
+        quiz: {
+          id: Date.now(), // Generate unique ID
+          verb: verb,
+          tense: `${timeFrame}-${tenseType}`,
+          questions: generatedQuiz.questions
+        }
+      });
     } catch (error) {
       if (error instanceof ZodError) {
         return res.status(400).json({
@@ -49,38 +43,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      console.error("Quiz retrieval error:", error);
+      console.error("Quiz generation error:", error);
       res.status(500).json({
         success: false,
-        error: (error as Error).message || "Failed to retrieve quiz"
+        error: (error as Error).message || "Failed to generate quiz"
       });
     }
   });
 
-  // Get quiz by ID
-  app.get("/api/quiz/:id", async (req, res, next) => {
-    try {
-      const id = parseInt(req.params.id);
-      const quiz = await storage.getQuiz(id);
-      
-      if (!quiz) {
-        return res.status(404).json({
-          success: false,
-          error: "Quiz not found"
-        });
-      }
-      
-      res.json({
-        success: true,
-        quiz
-      });
-    } catch (error) {
-      console.error("Get quiz error:", error);
-      res.status(500).json({
-        success: false,
-        error: "Failed to retrieve quiz"
-      });
-    }
+  // Simple health check
+  app.get("/api/health", (req, res) => {
+    res.json({
+      success: true,
+      message: "French Verb Master API is running",
+      timestamp: new Date().toISOString()
+    });
   });
 
   const httpServer = createServer(app);
