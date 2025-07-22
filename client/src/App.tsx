@@ -1,17 +1,7 @@
-import { Switch, Route } from "wouter";
 import HomeNew from "@/pages/home-new";
 
-function Router() {
-  return (
-    <Switch>
-      <Route path="/" component={HomeNew} />
-      <Route path="*" component={() => <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><h1 className="text-2xl">Page Not Found</h1></div>} />
-    </Switch>
-  );
-}
-
 function App() {
-  return <Router />;
+  return <HomeNew />;
 }
 
 export default App;
