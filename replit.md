@@ -22,7 +22,7 @@ Preferred communication style: Simple, everyday language.
 ### Backend Architecture
 - **Framework**: Express.js with TypeScript
 - **Runtime**: Node.js with ES modules
-- **Database**: PostgreSQL with Drizzle ORM (currently using in-memory storage)
+- **Database**: PostgreSQL with Drizzle ORM and Neon serverless database
 - **AI Integration**: Google Gemini 2.5 Pro for quiz generation
 - **Session Management**: Express sessions with PostgreSQL store
 - **Validation**: Zod schemas for request/response validation
@@ -56,7 +56,7 @@ Preferred communication style: Simple, everyday language.
 3. POST request sent to `/api/generate-quiz` endpoint
 4. Backend validates request and calls Gemini API with structured prompt
 5. Gemini generates 20-question quiz following specific format requirements
-6. Quiz is stored in memory storage and returned to frontend
+6. Quiz is stored in PostgreSQL database and returned to frontend
 7. Frontend displays success notification and quiz result
 
 ## External Dependencies
@@ -95,7 +95,7 @@ Preferred communication style: Simple, everyday language.
 
 **Monorepo Structure**: Single repository with `client/`, `server/`, and `shared/` directories for better code organization and type sharing.
 
-**In-Memory Storage**: Currently using memory storage for rapid development, with full PostgreSQL setup ready for production deployment.
+**Database Integration**: Using PostgreSQL with Neon serverless database for persistent storage, with Drizzle ORM providing type-safe database operations.
 
 **AI-Powered Content**: Leveraging Google's Gemini 2.5 Pro for educational content generation with structured prompts to ensure consistent quiz quality.
 
