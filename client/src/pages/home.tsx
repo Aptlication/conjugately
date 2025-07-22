@@ -16,21 +16,21 @@ const TIME_FRAMES = {
 // Difficulty configurations
 const DIFFICULTY_CONFIGS = {
   "Easy": {
-    verbs: ["être", "avoir", "faire"],
-    timeFrames: ["Present"],
-    tenses: ["Présent"]
+    verbs: ["être", "avoir", "faire"] as string[],
+    timeFrames: ["Present"] as string[],
+    tenses: ["Présent"] as string[]
   },
   "Moderate": {
-    verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
-    timeFrames: ["Present", "Past"],
-    tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"]
+    verbs: ["être", "avoir", "faire", "dire", "aller", "voir"] as string[],
+    timeFrames: ["Present", "Past"] as string[],
+    tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] as string[]
   },
   "Difficult": {
-    verbs: FRENCH_VERBS,
-    timeFrames: Object.keys(TIME_FRAMES) as Array<keyof typeof TIME_FRAMES>,
-    tenses: Object.values(TIME_FRAMES).flat()
+    verbs: [...FRENCH_VERBS] as string[],
+    timeFrames: Object.keys(TIME_FRAMES) as string[],
+    tenses: Object.values(TIME_FRAMES).flat() as string[]
   }
-} as const;
+};
 
 export default function Home() {
   const [selectedVerb, setSelectedVerb] = useState<string>("");
@@ -70,16 +70,17 @@ export default function Home() {
     setSelectedVerb(randomVerb);
     
     // Select random time frame from difficulty config
-    const randomTimeFrame = config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)];
+    const randomTimeFrame = config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)] as keyof typeof TIME_FRAMES;
     setSelectedTimeFrame(randomTimeFrame);
     
     // Select appropriate tense based on time frame and difficulty
     let availableTenses: string[] = [];
     if (difficulty === "Easy") {
-      availableTenses = config.tenses;
+      availableTenses = [...config.tenses];
     } else {
       // Filter tenses that belong to the selected time frame
-      availableTenses = TIME_FRAMES[randomTimeFrame].filter(tense => 
+      const timeFrameTenses = TIME_FRAMES[randomTimeFrame] || [];
+      availableTenses = timeFrameTenses.filter(tense => 
         config.tenses.includes(tense)
       );
     }
