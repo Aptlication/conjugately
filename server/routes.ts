@@ -7,10 +7,13 @@ import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Serve the app on a new slug to bypass cache
-  app.get("/french-verb-master-v2", (req, res, next) => {
-    // Redirect to the root but this creates a different URL entry point
-    req.url = "/";
-    next();
+  app.get("/frenchverb", (req, res) => {
+    res.set({
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache', 
+      'Expires': '0'
+    });
+    res.redirect(302, '/?v=' + Date.now());
   });
 
   // Get French verb quiz from database
