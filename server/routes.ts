@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { quizRequestSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
+import { generateInternalQuiz } from "./quiz-generator";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -22,10 +23,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}`);
       
-      // Generate quiz using Gemini AI with fallback to templates
+      // Generate quiz using our internal system (fast and reliable)
       try {
-        console.log('🤖 Attempting AI-powered quiz generation...');
-        const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
+        console.log('⚡ Generating quiz with internal system...');
+        const generatedQuiz = generateInternalQuiz(verb, tenseType);
         
         res.json({
           success: true,
@@ -35,20 +36,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
             tense: `${timeFrame}-${tenseType}`,
             questions: generatedQuiz.questions
           },
-          source: 'ai'
+          source: 'internal'
         });
-        console.log(`✅ AI generated ${generatedQuiz.questions.length} questions`);
-      } catch (aiError) {
-        console.error('❌ AI generation failed:', aiError);
+        console.log(`✅ Generated ${generatedQuiz.questions.length} questions instantly`);
+      } catch (internalError) {
+        console.error('❌ Internal generation failed, trying AI fallback:', internalError);
         
-        // Try fallback to template system
-        const { getQuizTemplate, expandQuizTo20Questions } = await import('./quiz-templates');
-        console.log('⚡ Attempting fallback to quiz template...');
-        
-        let templateQuiz = getQuizTemplate(verb, tenseType);
-        
-        if (templateQuiz) {
-          templateQuiz = expandQuizTo20Questions(templateQuiz);
+        // Fallback to AI if our internal system doesn't have the data
+        try {
+          console.log('🤖 Falling back to AI generation...');
+          const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
           
           res.json({
             success: true,
@@ -56,13 +53,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
               id: Date.now(),
               verb: verb,
               tense: `${timeFrame}-${tenseType}`,
-              questions: templateQuiz.questions
+              questions: generatedQuiz.questions
             },
-            source: 'template'
+            source: 'ai'
           });
-          console.log(`✅ Using template with ${templateQuiz.questions.length} questions`);
-        } else {
-          throw new Error(`No template available for ${verb} - ${tenseType}. Please try a different combination.`);
+          console.log(`✅ AI generated ${generatedQuiz.questions.length} questions`);
+        } catch (aiError) {
+          // Final fallback to templates
+          const { getQuizTemplate, expandQuizTo20Questions } = await import('./quiz-templates');
+          console.log('📚 Final fallback to templates...');
+          
+          let templateQuiz = getQuizTemplate(verb, tenseType);
+          if (templateQuiz) {
+            templateQuiz = expandQuizTo20Questions(templateQuiz);
+            
+            res.json({
+              success: true,
+              quiz: {
+                id: Date.now(),
+                verb: verb,
+                tense: `${timeFrame}-${tenseType}`,
+                questions: templateQuiz.questions
+              },
+              source: 'template'
+            });
+            console.log(`✅ Using template with ${templateQuiz.questions.length} questions`);
+          } else {
+            throw new Error(`No quiz available for ${verb} - ${tenseType}`);
+          }
         }
       }
     } catch (error) {
