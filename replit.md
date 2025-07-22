@@ -43,9 +43,11 @@ Preferred communication style: Simple, everyday language.
 - **Verb Selection**: Top 10 most used French verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir, vouloir, venir)
 - **Time Frame Selection**: Past, Present, Future categories
 - **Tense Type Selection**: Dynamic options based on time frame (Simple, Perfect, Continuous, Conditional)
+- **Choose All for Me**: Master button that opens difficulty level modal (Easy/Moderate/Difficult) for automatic selection
+- **Difficulty Levels**: Easy (3 basic verbs, present only), Moderate (6 verbs, basic tenses), Difficult (all verbs and tenses)
 - **UI Components**: Dark-themed shadcn/ui components with custom purple gradient styling
 - **Form Validation**: Real-time validation with error handling and dependent field logic
-- **Toast Notifications**: User feedback for actions and errors
+- **Modal Interface**: Overlay difficulty selection with backdrop blur effects
 
 ### Storage Layer
 - **Memory Storage**: Current implementation using in-memory storage

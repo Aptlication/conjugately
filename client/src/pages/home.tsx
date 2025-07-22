@@ -13,10 +13,30 @@ const TIME_FRAMES = {
   "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
 } as const;
 
+// Difficulty configurations
+const DIFFICULTY_CONFIGS = {
+  "Easy": {
+    verbs: ["être", "avoir", "faire"],
+    timeFrames: ["Present"],
+    tenses: ["Présent"]
+  },
+  "Moderate": {
+    verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
+    timeFrames: ["Present", "Past"],
+    tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"]
+  },
+  "Difficult": {
+    verbs: FRENCH_VERBS,
+    timeFrames: Object.keys(TIME_FRAMES) as Array<keyof typeof TIME_FRAMES>,
+    tenses: Object.values(TIME_FRAMES).flat()
+  }
+} as const;
+
 export default function Home() {
   const [selectedVerb, setSelectedVerb] = useState<string>("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState<keyof typeof TIME_FRAMES | "">("");
   const [selectedTenseType, setSelectedTenseType] = useState<string>("");
+  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
 
   const handleChooseVerb = () => {
     const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
@@ -38,6 +58,38 @@ export default function Home() {
     }
   };
 
+  const handleChooseAll = () => {
+    setShowDifficultyModal(true);
+  };
+
+  const handleDifficultySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+    const config = DIFFICULTY_CONFIGS[difficulty];
+    
+    // Select random verb from difficulty config
+    const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
+    setSelectedVerb(randomVerb);
+    
+    // Select random time frame from difficulty config
+    const randomTimeFrame = config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)];
+    setSelectedTimeFrame(randomTimeFrame);
+    
+    // Select appropriate tense based on time frame and difficulty
+    let availableTenses: string[] = [];
+    if (difficulty === "Easy") {
+      availableTenses = config.tenses;
+    } else {
+      // Filter tenses that belong to the selected time frame
+      availableTenses = TIME_FRAMES[randomTimeFrame].filter(tense => 
+        config.tenses.includes(tense)
+      );
+    }
+    
+    const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
+    setSelectedTenseType(randomTense);
+    
+    setShowDifficultyModal(false);
+  };
+
   const handleStartQuiz = () => {
     if (selectedVerb && selectedTimeFrame && selectedTenseType) {
       alert(`Starting quiz for ${selectedVerb} - ${selectedTimeFrame} - ${selectedTenseType}`);
@@ -56,6 +108,18 @@ export default function Home() {
             Master French verb conjugations with customizable AI-powered quizzes. 
             Select your verb, time frame, and tense type to generate a 20-question quiz.
           </p>
+        </div>
+
+        {/* Choose All Button */}
+        <div className="max-w-4xl mx-auto mb-6">
+          <div className="text-center">
+            <button
+              onClick={handleChooseAll}
+              className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg transform hover:scale-105"
+            >
+              🎲 Choose All for Me
+            </button>
+          </div>
         </div>
 
         {/* Selection Form */}
@@ -176,6 +240,61 @@ export default function Home() {
               <p className="text-green-300">
                 Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong>
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Difficulty Selection Modal */}
+        {showDifficultyModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
+              <h3 className="text-2xl font-bold text-white text-center mb-6">
+                Choose Difficulty Level
+              </h3>
+              <div className="space-y-4">
+                <button
+                  onClick={() => handleDifficultySelect("Easy")}
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl hover:bg-green-500/30 transition-all duration-200 group"
+                >
+                  <div className="text-green-300 font-semibold text-lg group-hover:text-green-200">
+                    🟢 Easy
+                  </div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Basic verbs (être, avoir, faire) • Present tense only
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Moderate")}
+                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl hover:bg-yellow-500/30 transition-all duration-200 group"
+                >
+                  <div className="text-yellow-300 font-semibold text-lg group-hover:text-yellow-200">
+                    🟡 Moderate
+                  </div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    6 common verbs • Present, past, and future tenses
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Difficult")}
+                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl hover:bg-red-500/30 transition-all duration-200 group"
+                >
+                  <div className="text-red-300 font-semibold text-lg group-hover:text-red-200">
+                    🔴 Difficult
+                  </div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    All 10 verbs • All tenses and time frames
+                  </div>
+                </button>
+              </div>
+              
+              <button
+                onClick={() => setShowDifficultyModal(false)}
+                className="w-full mt-6 p-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         )}
