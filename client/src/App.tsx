@@ -91,9 +91,39 @@ function App() {
     setShowDifficultyModal(false);
   };
 
-  const handleStartQuiz = () => {
-    if (selectedVerb && selectedTimeFrame && selectedTenseType) {
-      alert(`Starting quiz for ${selectedVerb} - ${selectedTimeFrame} - ${selectedTenseType}`);
+  const handleStartQuiz = async () => {
+    if (!selectedVerb || !selectedTimeFrame || !selectedTenseType) return;
+
+    try {
+      // Convert frontend time frame to lowercase for backend compatibility
+      const timeFrameMapping = {
+        "Past": "past",
+        "Present": "present", 
+        "Future": "future"
+      };
+
+      const response = await fetch('/api/get-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          verb: selectedVerb,
+          timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
+          tenseType: selectedTenseType,
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        console.log('Quiz generated successfully:', data.quiz);
+        alert(`Quiz found! ${data.quiz.questions.length} questions ready for ${selectedVerb} - ${selectedTenseType}`);
+      } else {
+        console.error('Quiz generation failed:', data.error);
+        alert(`Quiz not available: ${data.error}`);
+      }
+    } catch (error) {
+      console.error('Quiz generation error:', error);
+      alert('Failed to load quiz. Please try again.');
     }
   };
 
