@@ -6,6 +6,13 @@ import { generateFrenchVerbQuiz } from "./services/gemini";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve the app on a new slug to bypass cache
+  app.get("/french-verb-master-v2", (req, res, next) => {
+    // Redirect to the root but this creates a different URL entry point
+    req.url = "/";
+    next();
+  });
+
   // Get French verb quiz from database
   app.post("/api/get-quiz", async (req, res, next) => {
     try {
