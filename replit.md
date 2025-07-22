@@ -110,13 +110,11 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 22, 2025 - Cache Issues Resolved ✓
-- Successfully resolved persistent browser cache issues that were preventing the app from loading
-- Created cache-busting URL slug `/frenchverb` with aggressive no-cache headers  
-- Confirmed app is fully functional with all features working:
-  - Three-dropdown selection system (Verb → Time Frame → Tense Type)
-  - Individual "Choose for me" buttons on each dropdown
-  - "Choose All for Me" master button with difficulty levels
-  - Dark gradient purple theme with glassmorphism effects
-  - Database integration for instant quiz loading
-  - Quiz preview functionality
+### January 22, 2025 - AI-Powered Quiz Generation Implemented ✓
+- Successfully implemented Gemini 2.5 Flash AI-powered quiz generation using user's expert French tutor prompt
+- Replaced database pre-population with real-time AI generation of authentic 20-question quizzes
+- Each quiz includes English-to-French translation questions, multiple choice answers, hints, and detailed rationales
+- Quiz generation follows exact educational specifications: proper subject pronoun distribution, negation examples, plausible distractors
+- Full quiz interface working with loading states, interactive questions, progress tracking, and results display
+- Confirmed AI generation working: generated complete quiz with 20 questions for "être" in present tense
+- App maintains all UI features: three-dropdown selection, "Choose for me" buttons, difficulty levels, dark theme

@@ -72,60 +72,51 @@ The entire response must be a valid JSON object following these rules:
 Generate the complete 20-question quiz now.`;
 
   try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-pro",
-      config: {
-        responseMimeType: "application/json",
-        responseSchema: {
-          type: "object",
-          properties: {
-            questions: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  question: { type: "string" },
-                  hint: { type: "string" },
-                  answerOptions: {
-                    type: "array",
-                    items: {
-                      type: "object",
-                      properties: {
-                        text: { type: "string" },
-                        rationale: { type: "string" },
-                        isCorrect: { type: "boolean" }
-                      },
-                      required: ["text", "rationale", "isCorrect"]
-                    }
-                  }
-                },
-                required: ["question", "hint", "answerOptions"]
-              }
-            }
-          },
-          required: ["questions"]
-        }
-      },
-      contents: prompt,
+    console.log('Starting Gemini API call...');
+    
+    // Add timeout wrapper
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('Gemini API timeout after 45 seconds')), 45000);
     });
 
-    const rawJson = response.text;
-    console.log('Generated quiz JSON:', rawJson);
+    const geminiPromise = ai.models.generateContent({
+      model: "gemini-2.5-flash", // Use faster model
+      config: {
+        responseMimeType: "application/json",
+      },
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+    });
 
+    const response = await Promise.race([geminiPromise, timeoutPromise]) as any;
+    
+    console.log('Gemini API response received');
+    const rawJson = response.text;
+    console.log('Raw response length:', rawJson?.length);
+    
     if (rawJson) {
-      const quizData: GeneratedQuiz = JSON.parse(rawJson);
-      
-      // Validate the quiz has 20 questions
-      if (quizData.questions.length !== 20) {
-        console.warn(`Generated ${quizData.questions.length} questions instead of 20`);
+      try {
+        const quizData: GeneratedQuiz = JSON.parse(rawJson);
+        
+        // Validate the quiz structure
+        if (!quizData.questions || !Array.isArray(quizData.questions)) {
+          throw new Error("Invalid quiz structure - missing questions array");
+        }
+        
+        console.log(`Generated ${quizData.questions.length} questions`);
+        return quizData;
+      } catch (parseError) {
+        console.error('JSON parsing error:', parseError);
+        console.error('Raw JSON sample:', rawJson?.substring(0, 500));
+        throw new Error(`Failed to parse Gemini response: ${parseError}`);
       }
-      
-      return quizData;
     } else {
       throw new Error("Empty response from Gemini");
     }
   } catch (error) {
     console.error('Gemini quiz generation error:', error);
+    if (error instanceof Error && error.message.includes('timeout')) {
+      throw new Error(`Quiz generation timed out. Please try again with a simpler request.`);
+    }
     throw new Error(`Failed to generate French verb quiz: ${error}`);
   }
 }
