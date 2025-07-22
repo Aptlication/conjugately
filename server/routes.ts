@@ -22,18 +22,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}`);
       
-      // Generate quiz using Gemini AI with the exact format provided by user
-      const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
-      
-      res.json({
-        success: true,
-        quiz: {
-          id: Date.now(), // Generate unique ID
-          verb: verb,
-          tense: `${timeFrame}-${tenseType}`,
-          questions: generatedQuiz.questions
+      // Generate quiz using Gemini AI with fallback to templates
+      try {
+        console.log('🤖 Attempting AI-powered quiz generation...');
+        const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
+        
+        res.json({
+          success: true,
+          quiz: {
+            id: Date.now(),
+            verb: verb,
+            tense: `${timeFrame}-${tenseType}`,
+            questions: generatedQuiz.questions
+          },
+          source: 'ai'
+        });
+        console.log(`✅ AI generated ${generatedQuiz.questions.length} questions`);
+      } catch (aiError) {
+        console.error('❌ AI generation failed:', aiError);
+        
+        // Try fallback to template system
+        const { getQuizTemplate, expandQuizTo20Questions } = await import('./quiz-templates');
+        console.log('⚡ Attempting fallback to quiz template...');
+        
+        let templateQuiz = getQuizTemplate(verb, tenseType);
+        
+        if (templateQuiz) {
+          templateQuiz = expandQuizTo20Questions(templateQuiz);
+          
+          res.json({
+            success: true,
+            quiz: {
+              id: Date.now(),
+              verb: verb,
+              tense: `${timeFrame}-${tenseType}`,
+              questions: templateQuiz.questions
+            },
+            source: 'template'
+          });
+          console.log(`✅ Using template with ${templateQuiz.questions.length} questions`);
+        } else {
+          throw new Error(`No template available for ${verb} - ${tenseType}. Please try a different combination.`);
         }
-      });
+      }
     } catch (error) {
       if (error instanceof ZodError) {
         return res.status(400).json({

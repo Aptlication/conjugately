@@ -133,7 +133,13 @@ function App() {
         "Future": "future"
       };
 
-      const response = await fetch('/api/get-quiz', {
+      // Create timeout promise (2 minutes)
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Quiz generation timed out')), 120000);
+      });
+
+      // Create fetch promise
+      const fetchPromise = fetch('/api/get-quiz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -143,6 +149,8 @@ function App() {
         }),
       });
 
+      // Race between fetch and timeout
+      const response = await Promise.race([fetchPromise, timeoutPromise]) as Response;
       const data = await response.json();
       
       if (data.success) {
@@ -158,7 +166,11 @@ function App() {
       }
     } catch (error) {
       console.error('Quiz loading error:', error);
-      alert('Failed to load quiz. Please try again.');
+      if (error instanceof Error && error.message.includes('timed out')) {
+        alert('Quiz generation is taking longer than expected. Please try again with a different verb or tense.');
+      } else {
+        alert('Failed to load quiz. Please try again.');
+      }
       setQuizState('config');
     }
   };
@@ -207,9 +219,19 @@ function App() {
       case 'loading':
         return (
           <div className="flex items-center justify-center min-h-[400px]">
-            <div className="text-center">
+            <div className="text-center max-w-md mx-auto">
               <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-xl text-white">Loading your quiz...</p>
+              <p className="text-xl text-white mb-2">Generating your quiz...</p>
+              <p className="text-purple-300 text-sm mb-4">
+                Our AI is creating 20 personalized questions for <strong>{selectedVerb}</strong> in <strong>{selectedTenseType}</strong>
+              </p>
+              <p className="text-slate-400 text-xs">This may take up to 2 minutes</p>
+              <button
+                onClick={() => setQuizState('config')}
+                className="mt-6 px-4 py-2 text-slate-300 hover:text-white border border-slate-600 rounded-lg hover:border-slate-400 transition-colors"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         );
