@@ -9,14 +9,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Generate French verb quiz
   app.post("/api/generate-quiz", async (req, res, next) => {
     try {
-      const { verb, tense } = quizRequestSchema.parse(req.body);
+      const { verb, timeFrame, tenseType } = quizRequestSchema.parse(req.body);
       
-      const quiz = await generateFrenchVerbQuiz(verb, tense);
+      const quiz = await generateFrenchVerbQuiz(verb, timeFrame, tenseType);
       
-      // Store the quiz in memory
+      // Store the quiz in database
       const storedQuiz = await storage.createQuiz({
         verb,
-        tense,
+        tense: `${timeFrame}-${tenseType}`,
         questions: quiz.questions
       });
       

@@ -8,19 +8,34 @@ import { GoogleGenAI } from "@google/genai";
 // This API key is from Gemini Developer API Key, not vertex AI API Key
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
-export async function generateFrenchVerbQuiz(verb: string, tense: string): Promise<any> {
-  const tenseMapping: { [key: string]: string } = {
-    'present': 'Présent',
-    'passe_compose': 'Passé Composé',
-    'imparfait': 'Imparfait',
-    'futur_simple': 'Futur Simple',
-    'present_progressif': 'Présent Progressif',
-    'present_depuis': 'Présent + depuis',
-    'conditionnel_present': 'Conditionnel Présent',
-    'conditionnel_passe': 'Conditionnel Passé'
+export async function generateFrenchVerbQuiz(verb: string, timeFrame: string, tenseType: string): Promise<any> {
+  // Map the timeFrame and tenseType to actual French tense names
+  const getTenseName = (timeFrame: string, tenseType: string): string => {
+    const tenseMap: { [key: string]: { [key: string]: string } } = {
+      past: {
+        simple: 'Passé Composé',
+        perfect: 'Plus-que-parfait',
+        continuous: 'Imparfait',
+        conditional: 'Conditionnel Passé'
+      },
+      present: {
+        simple: 'Présent',
+        perfect: 'Passé Composé',
+        continuous: 'Présent Progressif',
+        conditional: 'Conditionnel Présent'
+      },
+      future: {
+        simple: 'Futur Simple',
+        perfect: 'Futur Antérieur',
+        continuous: 'Futur Proche',
+        conditional: 'Conditionnel Présent'
+      }
+    };
+
+    return tenseMap[timeFrame]?.[tenseType] || `${timeFrame} ${tenseType}`;
   };
 
-  const tenseName = tenseMapping[tense] || tense;
+  const tenseName = getTenseName(timeFrame, tenseType);
 
   const prompt = `*****Expert French Verb Quiz Generator: Master Prompt
 Objective: Act as an expert French language tutor. Your task is to generate a complete, 20-question, multiple-choice quiz based on the parameters provided below. The output must strictly adhere to the specified learning immersive format, producing a single, valid JSON object.

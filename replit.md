@@ -1,8 +1,8 @@
-# French Verb Quiz Generator
+# French Verb Master
 
 ## Overview
 
-This is a full-stack French verb quiz generator application that uses AI to create educational quizzes. The application allows users to input a French verb and verb tense, then generates a 20-question multiple-choice quiz using OpenAI's GPT-4 model. The frontend is built with React and modern UI components, while the backend uses Express.js with TypeScript.
+French Verb Master is a full-stack application that uses AI to create educational French verb conjugation quizzes. The application features a sleek dark-themed interface where users select from the top 10 most used French verbs, choose a time frame (Past/Present/Future), and select specific tense types to generate customized 20-question multiple-choice quizzes using Google Gemini 2.5 Pro. The frontend uses a modern dark UI design with React, while the backend uses Express.js with TypeScript and PostgreSQL database.
 
 ## User Preferences
 
@@ -35,13 +35,16 @@ Preferred communication style: Simple, everyday language.
 - **Shared Schema**: Type-safe schemas using Drizzle ORM and Zod validation
 
 ### API Endpoints
-- `POST /api/generate-quiz`: Generates a new French verb quiz using OpenAI
+- `POST /api/generate-quiz`: Generates a new French verb quiz using Gemini (accepts verb, timeFrame, tenseType)
 - `GET /api/quiz/:id`: Retrieves a specific quiz by ID
 
 ### Frontend Components
-- **Home Page**: Main quiz generation interface with form inputs
-- **UI Components**: Comprehensive set of accessible components (buttons, forms, cards, etc.)
-- **Form Validation**: Real-time validation with error handling
+- **Home Page**: Dark-themed interface with three-step dropdown selection (Verb, Time Frame, Tense Type)
+- **Verb Selection**: Top 10 most used French verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir, vouloir, venir)
+- **Time Frame Selection**: Past, Present, Future categories
+- **Tense Type Selection**: Dynamic options based on time frame (Simple, Perfect, Continuous, Conditional)
+- **UI Components**: Dark-themed shadcn/ui components with custom purple gradient styling
+- **Form Validation**: Real-time validation with error handling and dependent field logic
 - **Toast Notifications**: User feedback for actions and errors
 
 ### Storage Layer

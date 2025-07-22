@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { quizRequestSchema, type QuizRequest, type GeneratedQuiz } from "@shared/schema";
+import { quizRequestSchema, type QuizRequest } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loader2, Download, Copy, CheckCircle, AlertCircle, GraduationCap, Languages, Settings, Code, Info, MessageCircleQuestion, Users, X, Lightbulb, Clock } from "lucide-react";
+import { Loader2, Download, Copy, CheckCircle } from "lucide-react";
 
 interface QuizResponse {
   success: boolean;
@@ -23,6 +22,46 @@ interface QuizResponse {
   error?: string;
 }
 
+const TOP_10_FRENCH_VERBS = [
+  { value: "être", label: "être (to be)" },
+  { value: "avoir", label: "avoir (to have)" },
+  { value: "faire", label: "faire (to do/make)" },
+  { value: "dire", label: "dire (to say/tell)" },
+  { value: "aller", label: "aller (to go)" },
+  { value: "voir", label: "voir (to see)" },
+  { value: "savoir", label: "savoir (to know)" },
+  { value: "pouvoir", label: "pouvoir (to be able to)" },
+  { value: "vouloir", label: "vouloir (to want)" },
+  { value: "venir", label: "venir (to come)" }
+];
+
+const TIME_FRAMES = [
+  { value: "past", label: "Past" },
+  { value: "present", label: "Present" },
+  { value: "future", label: "Future" }
+];
+
+const TENSE_TYPES = {
+  past: [
+    { value: "simple", label: "Simple (Passé Composé)" },
+    { value: "perfect", label: "Perfect (Plus-que-parfait)" },
+    { value: "continuous", label: "Continuous (Imparfait)" },
+    { value: "conditional", label: "Conditional (Conditionnel Passé)" }
+  ],
+  present: [
+    { value: "simple", label: "Simple (Présent)" },
+    { value: "perfect", label: "Perfect (Passé Composé)" },
+    { value: "continuous", label: "Continuous (Présent Progressif)" },
+    { value: "conditional", label: "Conditional (Conditionnel Présent)" }
+  ],
+  future: [
+    { value: "simple", label: "Simple (Futur Simple)" },
+    { value: "perfect", label: "Perfect (Futur Antérieur)" },
+    { value: "continuous", label: "Continuous (Futur Proche)" },
+    { value: "conditional", label: "Conditional (Conditionnel Présent)" }
+  ]
+};
+
 export default function Home() {
   const [quizResult, setQuizResult] = useState<QuizResponse | null>(null);
   const [copied, setCopied] = useState(false);
@@ -32,9 +71,17 @@ export default function Home() {
     resolver: zodResolver(quizRequestSchema),
     defaultValues: {
       verb: "",
-      tense: "",
+      timeFrame: undefined,
+      tenseType: "",
     },
   });
+
+  // Watch for timeFrame changes to reset tenseType
+  const watchTimeFrame = form.watch("timeFrame");
+  
+  useEffect(() => {
+    form.setValue("tenseType", "");
+  }, [watchTimeFrame, form]);
 
   const generateQuizMutation = useMutation({
     mutationFn: async (data: QuizRequest) => {
@@ -46,7 +93,7 @@ export default function Home() {
         setQuizResult(data);
         toast({
           title: "Quiz Generated Successfully",
-          description: `Created a 20-question quiz for "${data.quiz?.verb}" in ${data.quiz?.tense} tense.`,
+          description: `Created a 20-question quiz for "${data.quiz?.verb}".`,
         });
       } else {
         toast({
@@ -103,171 +150,127 @@ export default function Home() {
     }
   };
 
-  const tenseOptions = [
-    { value: "present", label: "Présent (Present)" },
-    { value: "passe_compose", label: "Passé Composé (Past Perfect)" },
-    { value: "imparfait", label: "Imparfait (Imperfect)" },
-    { value: "futur_simple", label: "Futur Simple (Simple Future)" },
-    { value: "present_progressif", label: "Présent Progressif (Present Continuous)" },
-    { value: "present_depuis", label: "Présent + depuis (Present Perfect Continuous)" },
-    { value: "conditionnel_present", label: "Conditionnel Présent (Present Conditional)" },
-    { value: "conditionnel_passe", label: "Conditionnel Passé (Conditional Perfect)" },
-  ];
+  const availableTenseTypes = watchTimeFrame ? TENSE_TYPES[watchTimeFrame as keyof typeof TENSE_TYPES] || [] : [];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-3">
-              <GraduationCap className="h-8 w-8 text-french-blue" />
-              <h1 className="text-xl font-semibold text-gray-900">French Verb Quiz Generator</h1>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Languages className="h-4 w-4" />
-              <span>Master French Verbs</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-background text-foreground">
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Instructions Section */}
-        <Card className="mb-8 bg-french-light border-french-blue/20">
-          <CardHeader>
-            <CardTitle className="text-lg text-french-blue flex items-center">
-              <Info className="h-5 w-5 mr-2" />
-              How to Use This Quiz Generator
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-medium text-gray-900 mb-2">Step 1: Enter a French Verb</h3>
-                <p className="text-sm text-gray-700 mb-4">Type any French verb in its infinitive form (e.g., "faire", "avoir", "être")</p>
-                
-                <h3 className="font-medium text-gray-900 mb-2">Step 2: Select a Tense</h3>
-                <p className="text-sm text-gray-700">Choose from 8 supported French tenses to practice</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-gray-900 mb-2">What You'll Get</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li className="flex items-center"><MessageCircleQuestion className="h-4 w-4 mr-2 text-french-blue" /> 20 multiple-choice questions</li>
-                  <li className="flex items-center"><Users className="h-4 w-4 mr-2 text-french-blue" /> All subject pronouns covered</li>
-                  <li className="flex items-center"><X className="h-4 w-4 mr-2 text-french-blue" /> Negative sentences included</li>
-                  <li className="flex items-center"><Lightbulb className="h-4 w-4 mr-2 text-french-blue" /> Hints and detailed rationales</li>
-                  <li className="flex items-center"><Code className="h-4 w-4 mr-2 text-french-blue" /> JSON format for easy integration</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      <div className="container mx-auto px-4 py-16 max-w-2xl">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">French Verb Master</h1>
+          <p className="text-muted-foreground text-lg">Select a verb and tense to start your quiz.</p>
+        </div>
 
-        {/* Quiz Generator Form */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-lg text-gray-900 flex items-center">
-              <Settings className="h-5 w-5 mr-2 text-french-blue" />
-              Quiz Configuration
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+        {/* Quiz Generator Card */}
+        <Card className="bg-card border-border mb-8">
+          <CardContent className="p-8">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                
+                {/* Step 1: Choose a Verb */}
                 <FormField
                   control={form.control}
                   name="verb"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">
-                        French Verb <span className="text-french-error">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                          <Input
-                            placeholder="e.g., faire, avoir, être"
-                            {...field}
-                            className="pr-10"
-                          />
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-                            <Languages className="h-4 w-4 text-gray-400" />
-                          </div>
-                        </div>
-                      </FormControl>
-                      <p className="text-xs text-gray-500">Enter the verb in its infinitive form</p>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="tense"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-700">
-                        French Tense <span className="text-french-error">*</span>
+                      <FormLabel className="text-lg font-medium text-white mb-3 block">
+                        1. Choose a Verb
                       </FormLabel>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a tense..." />
+                          <SelectTrigger className="h-12 bg-input border-border text-white">
+                            <SelectValue placeholder="dire (to say/tell)" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {tenseOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
+                          {TOP_10_FRENCH_VERBS.map((verb) => (
+                            <SelectItem key={verb.value} value={verb.value}>
+                              {verb.label}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
-                      <p className="text-xs text-gray-500">Choose the tense you want to practice</p>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
 
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="font-medium text-gray-900 mb-3">Quiz Settings</h3>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <MessageCircleQuestion className="h-4 w-4 text-french-blue" />
-                      <span className="text-gray-700">Questions: <strong>20</strong></span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-french-blue" />
-                      <span className="text-gray-700">All pronouns covered</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <X className="h-4 w-4 text-french-blue" />
-                      <span className="text-gray-700">4-5 negative sentences</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Lightbulb className="h-4 w-4 text-french-blue" />
-                      <span className="text-gray-700">Hints included</span>
-                    </div>
-                  </div>
-                </div>
+                {/* Step 2: Choose Time Frame */}
+                <FormField
+                  control={form.control}
+                  name="timeFrame"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-lg font-medium text-white mb-3 block">
+                        2. Choose a Time Frame
+                      </FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-12 bg-input border-border text-white">
+                            <SelectValue placeholder="Select time frame..." />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {TIME_FRAMES.map((timeFrame) => (
+                            <SelectItem key={timeFrame.value} value={timeFrame.value}>
+                              {timeFrame.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                <div className="flex justify-center">
+                {/* Step 3: Choose Tense Type */}
+                <FormField
+                  control={form.control}
+                  name="tenseType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-lg font-medium text-white mb-3 block">
+                        3. Choose a Tense to Test
+                      </FormLabel>
+                      <Select 
+                        onValueChange={field.onChange} 
+                        value={field.value}
+                        disabled={!watchTimeFrame}
+                      >
+                        <FormControl>
+                          <SelectTrigger className="h-12 bg-input border-border text-white">
+                            <SelectValue placeholder={watchTimeFrame ? "Past Perfect (Plus-que-parfait)" : "Select time frame first..."} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {availableTenseTypes.map((tenseType) => (
+                            <SelectItem key={tenseType.value} value={tenseType.value}>
+                              {tenseType.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Generate Button */}
+                <div className="pt-4">
                   <Button
                     type="submit"
                     disabled={generateQuizMutation.isPending}
-                    className="bg-french-blue hover:bg-blue-700 text-white font-medium py-3 px-8"
+                    className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground text-lg font-medium"
+                    style={{ background: "var(--purple-gradient)" }}
                   >
                     {generateQuizMutation.isPending ? (
                       <>
-                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        <Loader2 className="h-5 w-5 mr-2 animate-spin" />
                         Generating Quiz...
                       </>
                     ) : (
-                      <>
-                        <Settings className="h-4 w-4 mr-2" />
-                        Generate Quiz
-                      </>
+                      "Generate Quiz!"
                     )}
                   </Button>
                 </div>
@@ -278,29 +281,12 @@ export default function Home() {
 
         {/* Loading State */}
         {generateQuizMutation.isPending && (
-          <Card className="mb-8">
+          <Card className="bg-card border-border mb-8">
             <CardContent className="pt-6">
-              <div className="flex flex-col items-center space-y-4">
-                <Loader2 className="h-12 w-12 animate-spin text-french-blue" />
-                <p className="text-gray-600">Generating your personalized French quiz...</p>
-                <p className="text-sm text-gray-500">This may take a few moments</p>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Error State */}
-        {generateQuizMutation.isError && (
-          <Card className="mb-8 bg-red-50 border-red-200">
-            <CardContent className="pt-6">
-              <div className="flex items-start space-x-3">
-                <AlertCircle className="h-5 w-5 text-red-500 mt-0.5" />
-                <div>
-                  <h3 className="font-medium text-red-800">Error Generating Quiz</h3>
-                  <p className="text-sm text-red-700 mt-1">
-                    {generateQuizMutation.error?.message || "Please check your input and try again."}
-                  </p>
-                </div>
+              <div className="flex flex-col items-center space-y-4 py-8">
+                <Loader2 className="h-12 w-12 animate-spin text-primary" />
+                <p className="text-muted-foreground">Generating your personalized French quiz...</p>
+                <p className="text-sm text-muted-foreground">This may take a few moments</p>
               </div>
             </CardContent>
           </Card>
@@ -310,17 +296,17 @@ export default function Home() {
         {quizResult?.success && quizResult.quiz && (
           <div>
             {/* Quiz Info */}
-            <Card className="mb-6">
+            <Card className="bg-card border-border mb-6">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-semibold text-gray-900 flex items-center">
-                    <CheckCircle className="h-5 w-5 text-french-success mr-2" />
+                  <h2 className="text-lg font-semibold text-white flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                     Quiz Generated Successfully
                   </h2>
                   <div className="flex items-center space-x-4">
                     <Button
                       onClick={downloadQuiz}
-                      className="bg-french-accent hover:bg-orange-600 text-white"
+                      className="bg-orange-600 hover:bg-orange-700 text-white"
                     >
                       <Download className="h-4 w-4 mr-2" />
                       Download JSON
@@ -344,37 +330,25 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
-                <div className="grid md:grid-cols-3 gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <Languages className="h-4 w-4 text-french-blue" />
-                    <span>Verb: <strong>{quizResult.quiz.verb}</strong></span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Clock className="h-4 w-4 text-french-blue" />
-                    <span>Tense: <strong>{quizResult.quiz.tense}</strong></span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MessageCircleQuestion className="h-4 w-4 text-french-blue" />
-                    <span>Questions: <strong>20</strong></span>
-                  </div>
+                <div className="text-sm text-muted-foreground">
+                  <span>Verb: <strong className="text-white">{quizResult.quiz.verb}</strong></span>
+                  <span className="mx-4">•</span>
+                  <span>Tense: <strong className="text-white">{quizResult.quiz.tense}</strong></span>
+                  <span className="mx-4">•</span>
+                  <span>Questions: <strong className="text-white">20</strong></span>
                 </div>
               </CardContent>
             </Card>
 
-            {/* JSON Output */}
-            <Card>
-              <CardHeader className="border-b border-gray-200">
-                <CardTitle className="font-medium text-gray-900 flex items-center">
-                  <Code className="h-5 w-5 text-french-blue mr-2" />
-                  Generated Quiz JSON
-                </CardTitle>
-              </CardHeader>
+            {/* JSON Preview */}
+            <Card className="bg-card border-border">
               <CardContent className="p-0">
-                <div className="bg-gray-900 rounded-b-lg p-4 overflow-x-auto">
-                  <pre className="text-sm text-gray-300 font-mono">
-                    <code>
-                      {JSON.stringify(quizResult.quiz.questions, null, 2)}
-                    </code>
+                <div className="bg-gray-900 rounded-lg">
+                  <div className="p-4 border-b border-gray-700">
+                    <h3 className="font-medium text-white">Generated Quiz JSON</h3>
+                  </div>
+                  <pre className="p-4 text-sm text-gray-300 overflow-auto max-h-96">
+                    {JSON.stringify(quizResult.quiz.questions, null, 2)}
                   </pre>
                 </div>
               </CardContent>
@@ -382,60 +356,11 @@ export default function Home() {
           </div>
         )}
 
-        {/* Usage Examples */}
-        <Card className="mt-12 bg-gray-50">
-          <CardHeader>
-            <CardTitle className="text-lg text-gray-900">Usage Examples</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-medium text-gray-900 mb-2">Common Verbs to Try</h3>
-                <div className="space-y-2">
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>être</strong> - to be
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>avoir</strong> - to have
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>faire</strong> - to do/make
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>aller</strong> - to go
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="font-medium text-gray-900 mb-2">Tense Examples</h3>
-                <div className="space-y-2">
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>Présent:</strong> Je fais (I do)
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>Passé Composé:</strong> J'ai fait (I did)
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>Futur Simple:</strong> Je ferai (I will do)
-                  </div>
-                  <div className="bg-white rounded px-3 py-2 text-sm">
-                    <strong>Conditionnel:</strong> Je ferais (I would do)
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-sm text-gray-600">
-            <p>© 2024 French Verb Quiz Generator. Perfect for language learning and education.</p>
-          </div>
+        {/* Footer */}
+        <div className="text-center mt-12">
+          <p className="text-muted-foreground">A focused quiz tool to master French verb tenses.</p>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
