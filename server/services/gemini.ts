@@ -103,55 +103,86 @@ The response must be a valid JSON object with the following structure:
 
 Generate exactly 20 questions following these specifications. Respond only with the JSON object, no additional text.`;
 
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-pro",
-      config: {
-        systemInstruction: "You are an expert French language tutor. Generate a complete French verb quiz in valid JSON format according to the specifications provided.",
-        responseMimeType: "application/json",
-        responseSchema: {
-          type: "object",
-          properties: {
-            questions: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  question: { type: "string" },
-                  hint: { type: "string" },
-                  answerOptions: {
-                    type: "array",
-                    items: {
-                      type: "object",
-                      properties: {
-                        text: { type: "string" },
-                        rationale: { type: "string" },
-                        isCorrect: { type: "boolean" }
-                      },
-                      required: ["text", "rationale", "isCorrect"]
-                    }
-                  }
-                },
-                required: ["question", "hint", "answerOptions"]
-              }
-            }
-          },
-          required: ["questions"]
-        }
-      },
-      contents: prompt,
-    });
+  // Retry logic for handling API overload
+  const maxRetries = 3;
+  const baseDelay = 2000; // 2 seconds
 
-    const rawJson = response.text;
-    
-    if (rawJson) {
-      const result = JSON.parse(rawJson);
-      return result;
-    } else {
-      throw new Error("Empty response from Gemini model");
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      console.log(`Quiz generation attempt ${attempt}/${maxRetries} for ${verb} (${timeFrame}/${tenseType})`);
+      
+      const response = await ai.models.generateContent({
+        model: "gemini-2.5-pro",
+        config: {
+          systemInstruction: "You are an expert French language tutor. Generate a complete French verb quiz in valid JSON format according to the specifications provided.",
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: "object",
+            properties: {
+              questions: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    question: { type: "string" },
+                    hint: { type: "string" },
+                    answerOptions: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          text: { type: "string" },
+                          rationale: { type: "string" },
+                          isCorrect: { type: "boolean" }
+                        },
+                        required: ["text", "rationale", "isCorrect"]
+                      }
+                    }
+                  },
+                  required: ["question", "hint", "answerOptions"]
+                }
+              }
+            },
+            required: ["questions"]
+          }
+        },
+        contents: prompt,
+      });
+
+      const rawJson = response.text;
+      
+      if (rawJson) {
+        const result = JSON.parse(rawJson);
+        console.log(`Quiz generated successfully on attempt ${attempt}`);
+        return result;
+      } else {
+        throw new Error("Empty response from Gemini model");
+      }
+    } catch (error: any) {
+      console.error(`Gemini API error (attempt ${attempt}):`, error);
+      
+      // Check if it's an overload error (503) or rate limit error
+      const isRetryableError = error?.status === 503 || 
+                              error?.status === 429 || 
+                              error?.message?.includes('overloaded') ||
+                              error?.message?.includes('UNAVAILABLE');
+      
+      if (isRetryableError && attempt < maxRetries) {
+        const delay = baseDelay * Math.pow(2, attempt - 1); // Exponential backoff
+        console.log(`Retrying in ${delay}ms... (${maxRetries - attempt} attempts remaining)`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+        continue;
+      }
+      
+      // If it's the last attempt or not a retryable error, throw
+      const errorMessage = error?.message || 'Unknown error occurred';
+      console.error(`Quiz generation failed after ${attempt} attempts:`, errorMessage);
+      
+      if (isRetryableError) {
+        throw new Error("The AI service is currently experiencing high demand. Please try again in a few moments.");
+      } else {
+        throw new Error("Failed to generate quiz: " + errorMessage);
+      }
     }
-  } catch (error) {
-    console.error("Gemini API error:", error);
-    throw new Error("Failed to generate quiz: " + (error as Error).message);
   }
 }

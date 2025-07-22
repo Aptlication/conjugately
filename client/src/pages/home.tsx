@@ -104,9 +104,14 @@ export default function Home() {
       }
     },
     onError: (error) => {
+      const errorMessage = error.message || "Failed to generate quiz";
+      const isOverloadError = errorMessage.includes("high demand") || errorMessage.includes("overloaded");
+      
       toast({
-        title: "Error",
-        description: error.message || "Failed to generate quiz",
+        title: isOverloadError ? "Service Busy" : "Error",
+        description: isOverloadError 
+          ? "The AI service is experiencing high demand. Please try again in a moment." 
+          : errorMessage,
         variant: "destructive",
       });
     },
@@ -286,7 +291,7 @@ export default function Home() {
               <div className="flex flex-col items-center space-y-4 py-8">
                 <Loader2 className="h-12 w-12 animate-spin text-primary" />
                 <p className="text-muted-foreground">Generating your personalized French quiz...</p>
-                <p className="text-sm text-muted-foreground">This may take a few moments</p>
+                <p className="text-sm text-muted-foreground">This may take a few moments. If the AI service is busy, we'll automatically retry.</p>
               </div>
             </CardContent>
           </Card>
