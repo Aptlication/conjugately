@@ -1,11 +1,17 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import path from "path";
 import { quizRequestSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { generateInternalQuiz } from "./quiz-generator";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  
+  // Serve the fresh French Verb Master app
+  app.get("/master", (req, res) => {
+    res.sendFile(path.join(import.meta.dirname, "french-master.html"));
+  });
   
   // Serve FrenchQuiz component at /frenchverb route (fresh slug to bypass cache)
   app.get("/frenchverb", (req, res) => {
