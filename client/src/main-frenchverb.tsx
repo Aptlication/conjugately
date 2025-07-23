@@ -1,5 +1,4 @@
 import { createRoot } from "react-dom/client";
-import SimpleQuiz from "./pages/SimpleQuiz";
-// import "./index.css";
+import FreshApp from "./fresh-app";
 
-createRoot(document.getElementById("root")!).render(<SimpleQuiz />);
+createRoot(document.getElementById("root")!).render(<FreshApp />);
