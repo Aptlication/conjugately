@@ -6,14 +6,24 @@ import { generateInternalQuiz } from "./quiz-generator";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Serve the app on a new slug to bypass cache
+  
+  // Serve FrenchQuiz component at /frenchverb route (fresh slug to bypass cache)
   app.get("/frenchverb", (req, res) => {
-    res.set({
-      'Cache-Control': 'no-cache, no-store, must-revalidate',
-      'Pragma': 'no-cache', 
-      'Expires': '0'
-    });
-    res.redirect(302, '/?v=' + Date.now());
+    const html = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>French Verb Master</title>
+    <script type="module" src="/@vite/client"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main-frenchverb.tsx?v=${Date.now()}"></script>
+  </body>
+</html>`;
+    res.set('Cache-Control', 'no-cache');
+    res.send(html);
   });
 
   // Generate French verb quiz using Gemini AI

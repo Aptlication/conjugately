@@ -120,3 +120,5 @@ Preferred communication style: Simple, everyday language.
 - Confirmed working end-to-end: users can select verb/tense and receive complete 20-question quizzes in 15-20 seconds
 - App maintains all UI features: three-dropdown selection, "Choose for me" buttons, difficulty levels, dark theme
 - System now reliably produces quizzes for users without timeouts or failures
+- Created new dedicated route at /frenchverb to bypass frontend caching issues
+- Complete French Verb Master interface now accessible via fresh URL slug
