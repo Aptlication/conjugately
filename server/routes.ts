@@ -9,7 +9,7 @@ import { ZodError } from "zod";
 export async function registerRoutes(app: Express): Promise<Server> {
   
   // Serve the fresh French Verb Master app
-  app.get("/master", (req, res) => {
+  app.get("/verbmaster", (req, res) => {
     res.sendFile(path.join(import.meta.dirname, "french-master.html"));
   });
   
