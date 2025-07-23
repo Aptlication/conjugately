@@ -82,7 +82,7 @@ const QUESTION_CONTEXTS = {
     { en: "We have homework", fr_context: "des devoirs" },
     { en: "You (plural) have luck", fr_context: "de la chance" },
     { en: "They have problems", fr_context: "des problèmes" },
-    { en: "I don't have anything", fr_context: "rien", negative: true },
+    { en: "I don't have anything", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She has no choice", fr_context: "pas le choix", negative: true },
     { en: "We don't have time", fr_context: "pas le temps", negative: true }
   ],
@@ -158,33 +158,48 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
   // Generate 20 questions by cycling through contexts and pronouns
   for (let i = 0; i < 20; i++) {
     const context = contexts[i % contexts.length];
-    const pronoun = pronouns[i % pronouns.length];
+    
+    // Use specified pronoun from context, or cycle through pronouns
+    const pronoun = (context as any).pronoun || pronouns[i % pronouns.length];
     const correctForm = tenseData[pronoun];
     
     if (!correctForm) continue;
     
     // Build correct answer
-    let correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${correctForm}`;
-    if (context.fr_context) {
-      if (context.negative) {
-        // Handle negation
-        if (normalizedTense === 'present') {
-          correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm.split(' ')[0]} pas ${context.fr_context}`;
-        }
+    let correctAnswer;
+    if (context.negative && normalizedTense === 'present') {
+      // Handle negation properly for present tense
+      if (verb === 'avoir' && context.fr_context === 'rien') {
+        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${correctForm} ${context.fr_context}`;
       } else {
+        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} pas ${context.fr_context}`;
+      }
+    } else {
+      correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${correctForm}`;
+      if (context.fr_context && !context.negative) {
         correctAnswer += ` ${context.fr_context}`;
       }
     }
     
-    // Generate distractors
-    const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
-    const wrongAnswers = distractors.map(form => {
-      let wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${form}`;
-      if (context.fr_context && !context.negative) {
-        wrong += ` ${context.fr_context}`;
-      }
-      return wrong;
-    });
+    // Generate distractors with proper French grammar
+    const wrongAnswers = [];
+    
+    if (verb === 'avoir' && context.en === "I don't have anything") {
+      // Specific wrong answers for "I don't have anything"
+      wrongAnswers.push("Je as rien"); // Wrong conjugation 
+      wrongAnswers.push("Je avons rien"); // Wrong plural form
+      wrongAnswers.push("Je ont rien"); // Wrong third person plural
+    } else {
+      // Generate general distractors
+      const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
+      distractors.slice(0, 3).forEach(form => {
+        let wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${form}`;
+        if (context.fr_context && !context.negative) {
+          wrong += ` ${context.fr_context}`;
+        }
+        wrongAnswers.push(wrong);
+      });
+    }
     
     // Ensure we have exactly 4 options
     while (wrongAnswers.length < 3) {
