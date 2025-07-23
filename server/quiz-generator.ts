@@ -63,40 +63,40 @@ const VERB_CONJUGATIONS = {
 // Question templates with contexts
 const QUESTION_CONTEXTS = {
   être: [
-    { en: "I am happy", fr_context: "heureux/heureuse" },
-    { en: "You are tired", fr_context: "fatigué(e)" },
-    { en: "He is a student", fr_context: "étudiant" },
-    { en: "She is a teacher", fr_context: "professeure" },
-    { en: "We are friends", fr_context: "amis" },
-    { en: "You (plural) are ready", fr_context: "prêts" },
-    { en: "They are busy", fr_context: "occupés" },
-    { en: "I am not here", fr_context: "ici", negative: true },
-    { en: "She is not sick", fr_context: "malade", negative: true },
-    { en: "We are not late", fr_context: "en retard", negative: true }
+    { en: "I am happy", fr_context: "heureux/heureuse", pronoun: "je" },
+    { en: "You are tired", fr_context: "fatigué(e)", pronoun: "tu" },
+    { en: "He is a student", fr_context: "étudiant", pronoun: "il" },
+    { en: "She is a teacher", fr_context: "professeure", pronoun: "elle" },
+    { en: "We are friends", fr_context: "amis", pronoun: "nous" },
+    { en: "You (plural) are ready", fr_context: "prêts", pronoun: "vous" },
+    { en: "They are busy", fr_context: "occupés", pronoun: "ils" },
+    { en: "I am not here", fr_context: "ici", negative: true, pronoun: "je" },
+    { en: "She is not sick", fr_context: "malade", negative: true, pronoun: "elle" },
+    { en: "We are not late", fr_context: "en retard", negative: true, pronoun: "nous" }
   ],
   avoir: [
-    { en: "I have a car", fr_context: "une voiture" },
-    { en: "You have time", fr_context: "du temps" },
-    { en: "He has money", fr_context: "de l'argent" },
-    { en: "She has a dog", fr_context: "un chien" },
-    { en: "We have homework", fr_context: "des devoirs" },
-    { en: "You (plural) have luck", fr_context: "de la chance" },
-    { en: "They have problems", fr_context: "des problèmes" },
+    { en: "I have a car", fr_context: "une voiture", pronoun: "je" },
+    { en: "You have time", fr_context: "du temps", pronoun: "tu" },
+    { en: "He has money", fr_context: "de l'argent", pronoun: "il" },
+    { en: "She has a dog", fr_context: "un chien", pronoun: "elle" },
+    { en: "We have homework", fr_context: "des devoirs", pronoun: "nous" },
+    { en: "You (plural) have luck", fr_context: "de la chance", pronoun: "vous" },
+    { en: "They have problems", fr_context: "des problèmes", pronoun: "ils" },
     { en: "I don't have anything", fr_context: "rien", negative: true, pronoun: "je" },
-    { en: "She has no choice", fr_context: "pas le choix", negative: true },
-    { en: "We don't have time", fr_context: "pas le temps", negative: true }
+    { en: "She has no choice", fr_context: "pas le choix", negative: true, pronoun: "elle" },
+    { en: "We don't have time", fr_context: "pas le temps", negative: true, pronoun: "nous" }
   ],
   faire: [
-    { en: "I do homework", fr_context: "mes devoirs" },
-    { en: "You make dinner", fr_context: "le dîner" },
-    { en: "He does exercise", fr_context: "du sport" },
-    { en: "She makes a cake", fr_context: "un gâteau" },
-    { en: "We do shopping", fr_context: "les courses" },
-    { en: "You (plural) make music", fr_context: "de la musique" },
-    { en: "They do work", fr_context: "du travail" },
-    { en: "I don't do anything", fr_context: "rien", negative: true },
-    { en: "She doesn't make mistakes", fr_context: "pas d'erreurs", negative: true },
-    { en: "We don't do that", fr_context: "pas ça", negative: true }
+    { en: "I do homework", fr_context: "mes devoirs", pronoun: "je" },
+    { en: "You make dinner", fr_context: "le dîner", pronoun: "tu" },
+    { en: "He does exercise", fr_context: "du sport", pronoun: "il" },
+    { en: "She makes a cake", fr_context: "un gâteau", pronoun: "elle" },
+    { en: "We do shopping", fr_context: "les courses", pronoun: "nous" },
+    { en: "You (plural) make music", fr_context: "de la musique", pronoun: "vous" },
+    { en: "They do work", fr_context: "du travail", pronoun: "ils" },
+    { en: "I don't do anything", fr_context: "rien", negative: true, pronoun: "je" },
+    { en: "She doesn't make mistakes", fr_context: "pas d'erreurs", negative: true, pronoun: "elle" },
+    { en: "We don't do that", fr_context: "pas ça", negative: true, pronoun: "nous" }
   ]
 };
 
@@ -184,22 +184,21 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     // Generate distractors with proper French grammar
     const wrongAnswers = [];
     
-    if (verb === 'avoir' && context.en === "I don't have anything") {
-      // Specific wrong answers for "I don't have anything"
-      wrongAnswers.push("Je as rien"); // Wrong conjugation 
-      wrongAnswers.push("Je avons rien"); // Wrong plural form
-      wrongAnswers.push("Je ont rien"); // Wrong third person plural
-    } else {
-      // Generate general distractors
-      const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
-      distractors.slice(0, 3).forEach(form => {
-        let wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${form}`;
-        if (context.fr_context && !context.negative) {
-          wrong += ` ${context.fr_context}`;
+    // Generate distractors using correct pronoun but wrong conjugations
+    const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
+    distractors.slice(0, 3).forEach(form => {
+      let wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${form}`;
+      if (context.fr_context && !context.negative) {
+        wrong += ` ${context.fr_context}`;
+      } else if (context.negative && normalizedTense === 'present') {
+        if (verb === 'avoir' && context.fr_context === 'rien') {
+          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${form} ${context.fr_context}`;
+        } else {
+          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} pas ${context.fr_context}`;
         }
-        wrongAnswers.push(wrong);
-      });
-    }
+      }
+      wrongAnswers.push(wrong);
+    });
     
     // Ensure we have exactly 4 options
     while (wrongAnswers.length < 3) {
