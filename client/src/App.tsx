@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-// FRESH UPDATE - Force cache bust
+console.log("App.tsx is loading - cache bust successful!");
+
 // Types
 interface QuizQuestion {
   question: string;
@@ -54,6 +55,7 @@ const DIFFICULTY_CONFIGS = {
 };
 
 function App() {
+  console.log("App component rendering - this should work now!");
   // Configuration state
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
@@ -358,7 +360,7 @@ function App() {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold text-white mb-4">
-                French Verb Master
+                French Verb Master - FIXED!
               </h1>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Master French verb conjugations with AI-powered quizzes. 
