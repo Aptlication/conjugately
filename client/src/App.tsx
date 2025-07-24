@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [selectedVerb, setSelectedVerb] = useState("");
@@ -11,6 +11,7 @@ function App() {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
+  const [showClickReminder, setShowClickReminder] = useState(true);
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
   
@@ -56,6 +57,18 @@ function App() {
       alert('Failed to load quiz. Please try again.');
       setQuizState('config');
     }
+  };
+
+  // Load user preference for click reminder from localStorage
+  useEffect(() => {
+    const hideReminder = localStorage.getItem('hideClickReminder') === 'true';
+    setShowClickReminder(!hideReminder);
+  }, []);
+
+  // Handle hiding the click reminder
+  const handleHideClickReminder = () => {
+    localStorage.setItem('hideClickReminder', 'true');
+    setShowClickReminder(false);
   };
 
   const handleChooseVerb = () => {
@@ -207,11 +220,19 @@ function App() {
             ))}
           </div>
 
-          {selectedAnswerIndex !== null && isAnswerConfirmed && (
+          {selectedAnswerIndex !== null && isAnswerConfirmed && showClickReminder && (
             <div className="mb-4 p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
-              <p className="text-blue-200 text-center text-sm">
-                💡 Click your selected answer again to continue to the next question
-              </p>
+              <div className="flex items-center justify-between">
+                <p className="text-blue-200 text-sm flex-1">
+                  💡 Click your selected answer again to continue to the next question
+                </p>
+                <button
+                  onClick={handleHideClickReminder}
+                  className="text-blue-300 hover:text-blue-100 text-xs underline ml-4 whitespace-nowrap"
+                >
+                  Don't remind me again
+                </button>
+              </div>
             </div>
           )}
 
