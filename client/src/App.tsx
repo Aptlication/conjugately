@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 function App() {
+  // French Verb Master - No reminder version
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
