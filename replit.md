@@ -111,11 +111,12 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 ### January 24, 2025 - Enhanced User Experience & French Grammar ✓
-- Fixed "pas pas" duplication issue in negative French sentences
+- Fixed "pas pas" duplication issue in negative French sentences by updating logic to properly handle contexts containing "pas"
 - Enhanced French contraction handling for negative forms (ne + vowel = n')
 - Improved click reminder system to show only once per quiz on first question
 - Added localStorage functionality to remember user preferences
-- Updated quiz generator to properly handle contexts that already contain "pas"
+- Updated quiz generator to properly handle contexts that already contain "pas" or start with "pas " 
+- Enhanced Gemini AI prompt with explicit instructions to avoid "pas pas" duplication
 - Refined user interaction flow with automatic reminder dismissal after first use
 - Tested and confirmed all negative forms and contractions display correctly
 
