@@ -339,6 +339,18 @@ function applyContractions(pronoun: string, conjugation: string): string {
   return `${pronounCap} ${conjugation}`;
 }
 
+// Helper function to apply contractions for negative forms
+function applyNegativeContractions(pronoun: string, conjugation: string): string {
+  const pronounCap = pronoun.charAt(0).toUpperCase() + pronoun.slice(1);
+  
+  // Handle contractions for ne + vowel sounds (ne + est = n'est)
+  if (/^[aeiouâêîôû]/.test(conjugation)) {
+    return `${pronounCap} n'${conjugation}`;
+  }
+  
+  return `${pronounCap} ne ${conjugation}`;
+}
+
 export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
   
@@ -390,9 +402,9 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${correctForm} ${context.fr_context}`;
       } else if (context.fr_context && context.fr_context.startsWith('pas ')) {
         // If context already starts with "pas", don't add another "pas"
-        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} ${context.fr_context}`;
+        correctAnswer = `${applyNegativeContractions(pronoun, correctForm)} ${context.fr_context}`;
       } else {
-        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} pas ${context.fr_context}`;
+        correctAnswer = `${applyNegativeContractions(pronoun, correctForm)} pas ${context.fr_context}`;
       }
     } else {
       correctAnswer = applyContractions(pronoun, correctForm);
@@ -414,9 +426,9 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
           wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${form} ${context.fr_context}`;
         } else if (context.fr_context && context.fr_context.startsWith('pas ')) {
           // If context already starts with "pas", don't add another "pas"
-          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} ${context.fr_context}`;
+          wrong = `${applyNegativeContractions(pronoun, form)} ${context.fr_context}`;
         } else {
-          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} pas ${context.fr_context}`;
+          wrong = `${applyNegativeContractions(pronoun, form)} pas ${context.fr_context}`;
         }
       } else {
         // Apply contractions to wrong answers too for consistency
