@@ -232,7 +232,7 @@ const QUESTION_CONTEXTS = {
     { en: "They see the ocean", fr_context: "l'océan", pronoun: "ils" },
     { en: "I don't see anything", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't see well", fr_context: "bien", negative: true, pronoun: "elle" },
-    { en: "We don't see him", fr_context: "pas", negative: true, pronoun: "nous" }
+    { en: "We don't see him", fr_context: "le", negative: true, pronoun: "nous" }
   ],
   dire: [
     { en: "I say hello", fr_context: "bonjour", pronoun: "je" },
@@ -255,7 +255,7 @@ const QUESTION_CONTEXTS = {
     { en: "You (plural) know music", fr_context: "la musique", pronoun: "vous" },
     { en: "They know everything", fr_context: "tout", pronoun: "ils" },
     { en: "I don't know anything", fr_context: "rien", negative: true, pronoun: "je" },
-    { en: "She doesn't know him", fr_context: "pas", negative: true, pronoun: "elle" },
+    { en: "She doesn't know him", fr_context: "le", negative: true, pronoun: "elle" },
     { en: "We don't know where", fr_context: "pas où", negative: true, pronoun: "nous" }
   ],
   pouvoir: [
