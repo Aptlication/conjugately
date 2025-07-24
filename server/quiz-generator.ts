@@ -296,24 +296,14 @@ const QUESTION_CONTEXTS = {
   ]
 };
 
-// Generate wrong answers by using different conjugations
+// Generate wrong answers maintaining proper pronoun-verb agreement
 function generateDistractors(correctForm: string, verb: string, tense: string, pronoun: string): string[] {
   const distractors: string[] = [];
   const verbData = VERB_CONJUGATIONS[verb as keyof typeof VERB_CONJUGATIONS];
   
   if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
   
-  // Wrong pronouns for same tense
-  const currentTense = verbData[tense as keyof typeof verbData] as any;
-  if (currentTense) {
-    Object.entries(currentTense).forEach(([p, form]) => {
-      if (p !== pronoun && form !== correctForm) {
-        distractors.push(form as string);
-      }
-    });
-  }
-  
-  // Wrong tenses for same pronoun
+  // Wrong tenses for same pronoun (maintains proper pronoun agreement)
   Object.entries(verbData).forEach(([t, conjugations]) => {
     if (t !== tense) {
       const wrongForm = (conjugations as any)[pronoun];
@@ -322,6 +312,35 @@ function generateDistractors(correctForm: string, verb: string, tense: string, p
       }
     }
   });
+  
+  // If we need more distractors, add slightly modified forms of the correct form
+  if (distractors.length < 3) {
+    // Add common conjugation mistakes for the same pronoun
+    const currentTense = verbData[tense as keyof typeof verbData] as any;
+    if (currentTense) {
+      // For 'je', add common mistakes like using 'tu' form but keeping 'je'
+      if (pronoun === 'je') {
+        const tuForm = currentTense['tu'];
+        if (tuForm && tuForm !== correctForm) {
+          distractors.push(tuForm);
+        }
+      }
+      // For other pronouns, add slight variations
+      Object.entries(currentTense).forEach(([p, form]) => {
+        if (p !== pronoun && form !== correctForm && distractors.length < 3) {
+          // Only add if it creates a plausible mistake
+          if (!distractors.includes(form as string)) {
+            distractors.push(form as string);
+          }
+        }
+      });
+    }
+  }
+  
+  // Ensure we have exactly 3 distractors
+  while (distractors.length < 3) {
+    distractors.push(`${correctForm.replace(/[aeiou]$/, 'x')}`); // Simple modification
+  }
   
   // Shuffle and take first 3
   return distractors.sort(() => Math.random() - 0.5).slice(0, 3);
