@@ -12,6 +12,7 @@ function App() {
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showClickReminder, setShowClickReminder] = useState(true);
+  const [hasSeenReminderThisQuiz, setHasSeenReminderThisQuiz] = useState(false);
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
   
@@ -48,6 +49,7 @@ function App() {
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
+        setHasSeenReminderThisQuiz(false); // Reset for new quiz
         setQuizState('active');
       } else {
         alert(`Quiz not available: ${data.error}`);
@@ -69,6 +71,11 @@ function App() {
   const handleHideClickReminder = () => {
     localStorage.setItem('hideClickReminder', 'true');
     setShowClickReminder(false);
+  };
+
+  // Hide reminder after first question interaction
+  const handleFirstQuestionInteraction = () => {
+    setHasSeenReminderThisQuiz(true);
   };
 
   const handleChooseVerb = () => {
@@ -116,6 +123,10 @@ function App() {
       // Second click - advance to next question
       handleNextQuestion();
       setIsAnswerConfirmed(false);
+      // Mark reminder as seen after first question interaction
+      if (currentQuestionIndex === 0) {
+        handleFirstQuestionInteraction();
+      }
     } else {
       // First click - select and highlight answer
       setSelectedAnswerIndex(answerIndex);
@@ -220,7 +231,7 @@ function App() {
             ))}
           </div>
 
-          {selectedAnswerIndex !== null && isAnswerConfirmed && showClickReminder && (
+          {selectedAnswerIndex !== null && isAnswerConfirmed && showClickReminder && !hasSeenReminderThisQuiz && currentQuestionIndex === 0 && (
             <div className="mb-4 p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
               <div className="flex items-center justify-between">
                 <p className="text-blue-200 text-sm flex-1">
