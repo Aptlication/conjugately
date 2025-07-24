@@ -121,12 +121,12 @@ function App() {
   const handleAnswerSelect = (answerIndex: number) => {
     if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
       // Second click - advance to next question
-      handleNextQuestion();
-      setIsAnswerConfirmed(false);
       // Mark reminder as seen after first question interaction
       if (currentQuestionIndex === 0) {
         handleFirstQuestionInteraction();
       }
+      handleNextQuestion();
+      setIsAnswerConfirmed(false);
     } else {
       // First click - select and highlight answer
       setSelectedAnswerIndex(answerIndex);
@@ -153,6 +153,7 @@ function App() {
     setShowHint(false);
     setSelectedAnswerIndex(null);
     setIsAnswerConfirmed(false);
+    setHasSeenReminderThisQuiz(false); // Reset reminder state
   };
 
   const calculateResults = () => {
@@ -238,7 +239,10 @@ function App() {
                   💡 Click your selected answer again to continue to the next question
                 </p>
                 <button
-                  onClick={handleHideClickReminder}
+                  onClick={() => {
+                    handleHideClickReminder();
+                    handleFirstQuestionInteraction();
+                  }}
                   className="text-blue-300 hover:text-blue-100 text-xs underline ml-4 whitespace-nowrap"
                 >
                   Don't remind me again
