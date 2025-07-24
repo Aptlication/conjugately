@@ -158,18 +158,29 @@ export default function FrenchQuiz() {
     }
   };
 
+  const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
+
   const handleAnswerSelect = (answerIndex: number) => {
-    setSelectedAnswerIndex(answerIndex);
-    setUserAnswers(prev => ({
-      ...prev,
-      [currentQuestionIndex]: answerIndex
-    }));
+    if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
+      // Second click - advance to next question
+      handleNextQuestion();
+      setIsAnswerConfirmed(false);
+    } else {
+      // First click - select and highlight answer
+      setSelectedAnswerIndex(answerIndex);
+      setIsAnswerConfirmed(true);
+      setUserAnswers(prev => ({
+        ...prev,
+        [currentQuestionIndex]: answerIndex
+      }));
+    }
   };
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
       setShowHint(false);
     } else {
       setQuizState('results');
@@ -182,6 +193,7 @@ export default function FrenchQuiz() {
     setUserAnswers({});
     setShowHint(false);
     setSelectedAnswerIndex(null);
+    setIsAnswerConfirmed(false);
   };
 
   // Calculate quiz results
@@ -254,7 +266,9 @@ export default function FrenchQuiz() {
                     key={index}
                     onClick={() => handleAnswerSelect(index)}
                     className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-200 ${
-                      selectedAnswerIndex === index
+                      selectedAnswerIndex === index && isAnswerConfirmed
+                        ? 'border-green-500 bg-green-500/20 text-white shadow-lg shadow-green-500/20'
+                        : selectedAnswerIndex === index
                         ? 'border-purple-500 bg-purple-500/20 text-white'
                         : 'border-white/20 bg-white/10 text-white hover:border-purple-400 hover:bg-purple-400/10'
                     }`}
@@ -269,8 +283,16 @@ export default function FrenchQuiz() {
                 ))}
               </div>
 
-              {/* Show rationale if answer selected */}
-              {selectedAnswerIndex !== null && (
+              {/* Show rationale and click instruction if answer selected */}
+              {selectedAnswerIndex !== null && isAnswerConfirmed && (
+                <div className="mb-4 p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
+                  <p className="text-blue-200 text-center text-sm">
+                    💡 Click your selected answer again to continue to the next question
+                  </p>
+                </div>
+              )}
+              
+              {selectedAnswerIndex !== null && isAnswerConfirmed && (
                 <div className={`mb-6 p-4 rounded-xl border ${
                   currentQuestion.answerOptions[selectedAnswerIndex].isCorrect
                     ? 'bg-green-500/20 border-green-500/30 text-green-200'
@@ -280,20 +302,13 @@ export default function FrenchQuiz() {
                 </div>
               )}
 
-              {/* Next Button */}
-              <div className="flex justify-between">
+              {/* Start Over Button - Next button removed for double-click functionality */}
+              <div className="flex justify-center">
                 <button
                   onClick={handleStartOver}
                   className="px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
                 >
                   Start Over
-                </button>
-                <button
-                  onClick={handleNextQuestion}
-                  disabled={selectedAnswerIndex === null}
-                  className="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
-                >
-                  {currentQuestionIndex === quizData.length - 1 ? 'Finish Quiz' : 'Next Question'}
                 </button>
               </div>
             </div>
