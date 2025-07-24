@@ -96,15 +96,26 @@ function App() {
     setShowDifficultyModal(false);
   };
 
+  const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
+
   const handleAnswerSelect = (answerIndex: number) => {
-    setSelectedAnswerIndex(answerIndex);
-    setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerIndex }));
+    if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
+      // Second click - advance to next question
+      handleNextQuestion();
+      setIsAnswerConfirmed(false);
+    } else {
+      // First click - select and highlight answer
+      setSelectedAnswerIndex(answerIndex);
+      setIsAnswerConfirmed(true);
+      setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerIndex }));
+    }
   };
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
       setShowHint(false);
     } else {
       setQuizState('results');
@@ -117,6 +128,7 @@ function App() {
     setUserAnswers({});
     setShowHint(false);
     setSelectedAnswerIndex(null);
+    setIsAnswerConfirmed(false);
   };
 
   const calculateResults = () => {
@@ -180,7 +192,9 @@ function App() {
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
                 className={`w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center ${
-                  selectedAnswerIndex === index
+                  selectedAnswerIndex === index && isAnswerConfirmed
+                    ? 'border-2 border-green-500 bg-green-500/20 shadow-lg shadow-green-500/20'
+                    : selectedAnswerIndex === index
                     ? 'border-2 border-purple-600 bg-purple-600/20'
                     : 'border-2 border-white/20 bg-white/10 hover:bg-white/20'
                 }`}
@@ -193,7 +207,15 @@ function App() {
             ))}
           </div>
 
-          {selectedAnswerIndex !== null && (
+          {selectedAnswerIndex !== null && isAnswerConfirmed && (
+            <div className="mb-4 p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
+              <p className="text-blue-200 text-center text-sm">
+                💡 Click your selected answer again to continue to the next question
+              </p>
+            </div>
+          )}
+
+          {selectedAnswerIndex !== null && isAnswerConfirmed && (
             <div className={`mb-6 p-4 rounded-xl border ${
               currentQuestion.answerOptions[selectedAnswerIndex].isCorrect
                 ? 'border-green-500/30 bg-green-500/20 text-green-200'
@@ -203,23 +225,12 @@ function App() {
             </div>
           )}
 
-          <div className="flex justify-between">
+          <div className="flex justify-center">
             <button
               onClick={handleStartOver}
               className="px-6 py-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
             >
               Start Over
-            </button>
-            <button
-              onClick={handleNextQuestion}
-              disabled={selectedAnswerIndex === null}
-              className={`px-8 py-3 rounded-xl font-semibold ${
-                selectedAnswerIndex !== null
-                  ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
-                  : 'bg-slate-600 text-slate-400 cursor-not-allowed'
-              }`}
-            >
-              {currentQuestionIndex === quizData.length - 1 ? 'Finish Quiz' : 'Next Question'}
             </button>
           </div>
         </div>
