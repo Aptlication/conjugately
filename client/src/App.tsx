@@ -240,22 +240,93 @@ function App() {
   if (quizState === 'results') {
     const { correctAnswers, totalQuestions } = calculateResults();
     const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+    
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
-        <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Quiz Complete!</h2>
-          <div className="mb-8">
-            <div className="text-6xl font-bold mb-2">{percentage}%</div>
-            <p className="text-xl text-slate-300">
-              You got {correctAnswers} out of {totalQuestions} questions correct
-            </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Summary Section */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
+            <h2 className="text-4xl font-bold mb-6">Quiz Complete!</h2>
+            <div className="mb-8">
+              <div className="text-6xl font-bold mb-2">{percentage}%</div>
+              <p className="text-xl text-slate-300">
+                You got {correctAnswers} out of {totalQuestions} questions correct
+              </p>
+              <div className="flex justify-center items-center gap-4 mt-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                  <span className="text-green-300">{correctAnswers} Correct</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+                  <span className="text-red-300">{totalQuestions - correctAnswers} Incorrect</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            onClick={handleStartOver}
-            className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700"
-          >
-            Try Another Quiz
-          </button>
+
+          {/* Detailed Review Section */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">Detailed Review</h3>
+            <div className="space-y-4 max-h-96 overflow-y-auto">
+              {quizData.map((question, index) => {
+                const userAnswerIndex = userAnswers[index];
+                const userAnswer = userAnswerIndex !== undefined ? question.answerOptions[userAnswerIndex] : null;
+                const correctAnswer = question.answerOptions.find((option: any) => option.isCorrect);
+                const isCorrect = userAnswer?.isCorrect || false;
+
+                return (
+                  <div key={index} className={`p-4 rounded-xl border ${
+                    isCorrect 
+                      ? 'border-green-500/30 bg-green-500/10' 
+                      : 'border-red-500/30 bg-red-500/10'
+                  }`}>
+                    <div className="flex items-start gap-3">
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                        isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                      }`}>
+                        {index + 1}
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-medium mb-2">{question.question}</p>
+                        <div className="text-sm space-y-1">
+                          <div className="flex items-center gap-2">
+                            <span className={isCorrect ? 'text-green-300' : 'text-red-300'}>
+                              Your answer:
+                            </span>
+                            <span className={isCorrect ? 'text-green-200' : 'text-red-200'}>
+                              {userAnswer ? userAnswer.text : 'No answer selected'}
+                            </span>
+                          </div>
+                          {!isCorrect && correctAnswer && (
+                            <div className="flex items-center gap-2">
+                              <span className="text-green-300">Correct answer:</span>
+                              <span className="text-green-200">{correctAnswer.text}</span>
+                            </div>
+                          )}
+                          <div className="text-slate-300 text-xs mt-2">
+                            {userAnswer?.rationale || correctAnswer?.rationale}
+                          </div>
+                        </div>
+                      </div>
+                      <div className={`text-2xl ${isCorrect ? 'text-green-400' : 'text-red-400'}`}>
+                        {isCorrect ? '✓' : '✗'}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button
+              onClick={handleStartOver}
+              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700"
+            >
+              Try Another Quiz
+            </button>
+          </div>
         </div>
       </div>
     );

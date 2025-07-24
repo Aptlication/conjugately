@@ -110,7 +110,10 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 24, 2025 - Enhanced User Experience & French Grammar ✓
+### January 24, 2025 - Enhanced Results Screen & French Grammar ✓
+- Added comprehensive quiz results review showing all 20 questions with correct/incorrect answers
+- Enhanced results screen with percentage score, visual indicators, and detailed question-by-question breakdown
+- Included rationales for each answer to help users understand their mistakes
 - Fixed "pas pas" duplication issue in negative French sentences by updating logic to properly handle contexts containing "pas"
 - Enhanced French contraction handling for negative forms (ne + vowel = n')
 - Improved click reminder system to show only once per quiz on first question

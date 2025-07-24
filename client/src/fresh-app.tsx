@@ -241,22 +241,104 @@ export default function FreshApp() {
   if (quizState === 'results') {
     const { correctAnswers, totalQuestions } = calculateResults();
     const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+    
     return (
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #1e293b 0%, #7c3aed 50%, #1e293b 100%)', padding: '48px 16px', color: 'white' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.2)', padding: '32px', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '24px' }}>Quiz Complete!</h2>
-          <div style={{ marginBottom: '32px' }}>
-            <div style={{ fontSize: '64px', fontWeight: 'bold', marginBottom: '8px' }}>{percentage}%</div>
-            <p style={{ fontSize: '20px', color: '#cbd5e1' }}>
-              You got {correctAnswers} out of {totalQuestions} questions correct
-            </p>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          {/* Summary Section */}
+          <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.2)', padding: '32px', textAlign: 'center', marginBottom: '32px' }}>
+            <h2 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '24px' }}>Quiz Complete!</h2>
+            <div style={{ marginBottom: '32px' }}>
+              <div style={{ fontSize: '64px', fontWeight: 'bold', marginBottom: '8px' }}>{percentage}%</div>
+              <p style={{ fontSize: '20px', color: '#cbd5e1' }}>
+                You got {correctAnswers} out of {totalQuestions} questions correct
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', marginTop: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '16px', height: '16px', background: '#10b981', borderRadius: '50%' }}></div>
+                  <span style={{ color: '#6ee7b7' }}>{correctAnswers} Correct</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '16px', height: '16px', background: '#ef4444', borderRadius: '50%' }}></div>
+                  <span style={{ color: '#fca5a5' }}>{totalQuestions - correctAnswers} Incorrect</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            onClick={handleStartOver}
-            style={{ padding: '12px 32px', background: 'linear-gradient(to right, #7c3aed, #ec4899)', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: '600', fontSize: '16px' }}
-          >
-            Try Another Quiz
-          </button>
+
+          {/* Detailed Review Section */}
+          <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.2)', padding: '32px', marginBottom: '32px' }}>
+            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>Detailed Review</h3>
+            <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
+              {quizData.map((question, index) => {
+                const userAnswerIndex = userAnswers[index];
+                const userAnswer = userAnswerIndex !== undefined ? question.answerOptions[userAnswerIndex] : null;
+                const correctAnswer = question.answerOptions.find((option: any) => option.isCorrect);
+                const isCorrect = userAnswer?.isCorrect || false;
+
+                return (
+                  <div key={index} style={{ 
+                    padding: '16px', 
+                    marginBottom: '16px',
+                    borderRadius: '12px', 
+                    border: `1px solid ${isCorrect ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
+                    background: isCorrect ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                      <div style={{ 
+                        width: '32px', 
+                        height: '32px', 
+                        borderRadius: '50%', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        fontSize: '14px', 
+                        fontWeight: 'bold',
+                        background: isCorrect ? '#10b981' : '#ef4444',
+                        color: 'white'
+                      }}>
+                        {index + 1}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <p style={{ fontWeight: '500', marginBottom: '8px' }}>{question.question}</p>
+                        <div style={{ fontSize: '14px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                            <span style={{ color: isCorrect ? '#6ee7b7' : '#fca5a5' }}>
+                              Your answer:
+                            </span>
+                            <span style={{ color: isCorrect ? '#a7f3d0' : '#fecaca' }}>
+                              {userAnswer ? userAnswer.text : 'No answer selected'}
+                            </span>
+                          </div>
+                          {!isCorrect && correctAnswer && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                              <span style={{ color: '#6ee7b7' }}>Correct answer:</span>
+                              <span style={{ color: '#a7f3d0' }}>{correctAnswer.text}</span>
+                            </div>
+                          )}
+                          <div style={{ color: '#cbd5e1', fontSize: '12px', marginTop: '8px' }}>
+                            {userAnswer?.rationale || correctAnswer?.rationale}
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ fontSize: '24px', color: isCorrect ? '#10b981' : '#ef4444' }}>
+                        {isCorrect ? '✓' : '✗'}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <button
+              onClick={handleStartOver}
+              style={{ padding: '12px 32px', background: 'linear-gradient(to right, #7c3aed, #ec4899)', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: '600', fontSize: '16px' }}
+            >
+              Try Another Quiz
+            </button>
+          </div>
         </div>
       </div>
     );
