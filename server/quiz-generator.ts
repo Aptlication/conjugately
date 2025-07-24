@@ -388,6 +388,9 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
       // Handle negation properly for present tense
       if (verb === 'avoir' && context.fr_context === 'rien') {
         correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${correctForm} ${context.fr_context}`;
+      } else if (context.fr_context && context.fr_context.startsWith('pas ')) {
+        // If context already starts with "pas", don't add another "pas"
+        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} ${context.fr_context}`;
       } else {
         correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} pas ${context.fr_context}`;
       }
@@ -409,6 +412,9 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
       if (context.negative && normalizedTense === 'present') {
         if (verb === 'avoir' && context.fr_context === 'rien') {
           wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${form} ${context.fr_context}`;
+        } else if (context.fr_context && context.fr_context.startsWith('pas ')) {
+          // If context already starts with "pas", don't add another "pas"
+          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} ${context.fr_context}`;
         } else {
           wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} pas ${context.fr_context}`;
         }
