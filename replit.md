@@ -110,12 +110,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 24, 2025 - French Negation Grammar Fixed ✓
+### January 24, 2025 - Enhanced User Experience & French Grammar ✓
 - Fixed "pas pas" duplication issue in negative French sentences
+- Enhanced French contraction handling for negative forms (ne + vowel = n')
+- Improved click reminder system to show only once per quiz on first question
+- Added localStorage functionality to remember user preferences
 - Updated quiz generator to properly handle contexts that already contain "pas"
-- Improved negative sentence formation logic for phrases like "pas d'erreurs", "pas le choix", "pas ça"
-- Enhanced French grammar accuracy for negation patterns (ne...pas structure)
-- Tested and confirmed all negative forms now display correctly without duplication
+- Refined user interaction flow with automatic reminder dismissal after first use
+- Tested and confirmed all negative forms and contractions display correctly
 
 ### January 24, 2025 - Complete Application Successfully Deployed ✓
 - Successfully fixed all remaining quiz generation issues across all 10 French verbs
