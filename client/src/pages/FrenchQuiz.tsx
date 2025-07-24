@@ -61,19 +61,7 @@ export default function FrenchQuiz() {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
-  const [showClickReminder, setShowClickReminder] = useState(true);
 
-  // Load user preference for click reminder from localStorage
-  useEffect(() => {
-    const hideReminder = localStorage.getItem('hideClickReminder') === 'true';
-    setShowClickReminder(!hideReminder);
-  }, []);
-
-  // Handle hiding the click reminder
-  const handleHideClickReminder = () => {
-    localStorage.setItem('hideClickReminder', 'true');
-    setShowClickReminder(false);
-  };
 
   const handleChooseVerb = () => {
     const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
@@ -296,22 +284,7 @@ export default function FrenchQuiz() {
                 ))}
               </div>
 
-              {/* Show rationale and click instruction if answer selected */}
-              {selectedAnswerIndex !== null && isAnswerConfirmed && showClickReminder && (
-                <div className="mb-4 p-3 rounded-xl bg-blue-500/20 border border-blue-500/30">
-                  <div className="flex items-center justify-between">
-                    <p className="text-blue-200 text-sm flex-1">
-                      💡 Click your selected answer again to continue to the next question
-                    </p>
-                    <button
-                      onClick={handleHideClickReminder}
-                      className="text-blue-300 hover:text-blue-100 text-xs underline ml-4 whitespace-nowrap"
-                    >
-                      Don't remind me again
-                    </button>
-                  </div>
-                </div>
-              )}
+
               
               {selectedAnswerIndex !== null && isAnswerConfirmed && (
                 <div className={`mb-6 p-4 rounded-xl border ${
