@@ -327,6 +327,18 @@ function generateDistractors(correctForm: string, verb: string, tense: string, p
   return distractors.sort(() => Math.random() - 0.5).slice(0, 3);
 }
 
+// Helper function to apply French contractions
+function applyContractions(pronoun: string, conjugation: string): string {
+  const pronounCap = pronoun.charAt(0).toUpperCase() + pronoun.slice(1);
+  
+  // Handle contractions for je + vowel sounds
+  if (pronoun === 'je' && /^[aeiouâêîôû]/.test(conjugation)) {
+    return `J'${conjugation}`;
+  }
+  
+  return `${pronounCap} ${conjugation}`;
+}
+
 export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
   
@@ -369,8 +381,9 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     
     if (!correctForm) continue;
     
-    // Build correct answer
+    // Build correct answer with proper French contractions
     let correctAnswer;
+    
     if (context.negative && normalizedTense === 'present') {
       // Handle negation properly for present tense
       if (verb === 'avoir' && context.fr_context === 'rien') {
@@ -379,7 +392,7 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${correctForm} pas ${context.fr_context}`;
       }
     } else {
-      correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${correctForm}`;
+      correctAnswer = applyContractions(pronoun, correctForm);
       if (context.fr_context && !context.negative) {
         correctAnswer += ` ${context.fr_context}`;
       }
@@ -391,14 +404,19 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     // Generate distractors using correct pronoun but wrong conjugations
     const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
     distractors.slice(0, 3).forEach(form => {
-      let wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${form}`;
-      if (context.fr_context && !context.negative) {
-        wrong += ` ${context.fr_context}`;
-      } else if (context.negative && normalizedTense === 'present') {
+      let wrong;
+      
+      if (context.negative && normalizedTense === 'present') {
         if (verb === 'avoir' && context.fr_context === 'rien') {
           wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${form} ${context.fr_context}`;
         } else {
           wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ne ${form} pas ${context.fr_context}`;
+        }
+      } else {
+        // Apply contractions to wrong answers too for consistency
+        wrong = applyContractions(pronoun, form);
+        if (context.fr_context && !context.negative) {
+          wrong += ` ${context.fr_context}`;
         }
       }
       wrongAnswers.push(wrong);
