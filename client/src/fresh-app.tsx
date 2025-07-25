@@ -17,8 +17,8 @@ export default function FreshApp() {
   
   const TIME_FRAMES = {
     "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
-    "Present": ["Présent", "Présent Progressif"], 
-    "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
+    "Present": ["Présent"], 
+    "Future": ["Futur Simple", "Conditionnel"],
   };
 
   const DIFFICULTY_CONFIGS = {

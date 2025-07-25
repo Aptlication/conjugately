@@ -11,6 +11,10 @@ const VERB_CONJUGATIONS = {
       je: "ai été", tu: "as été", il: "a été", elle: "a été",
       nous: "avons été", vous: "avez été", ils: "ont été", elles: "ont été"
     },
+    passé_simple: {
+      je: "fus", tu: "fus", il: "fut", elle: "fut",
+      nous: "fûmes", vous: "fûtes", ils: "furent", elles: "furent"
+    },
     imparfait: {
       je: "étais", tu: "étais", il: "était", elle: "était",
       nous: "étions", vous: "étiez", ils: "étaient", elles: "étaient"
@@ -18,6 +22,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais été", tu: "avais été", il: "avait été", elle: "avait été",
       nous: "avions été", vous: "aviez été", ils: "avaient été", elles: "avaient été"
+    },
+    conditionnel: {
+      je: "serais", tu: "serais", il: "serait", elle: "serait",
+      nous: "serions", vous: "seriez", ils: "seraient", elles: "seraient"
+    },
+    futur_simple: {
+      je: "serai", tu: "seras", il: "sera", elle: "sera",
+      nous: "serons", vous: "serez", ils: "seront", elles: "seront"
     }
   },
   avoir: {
@@ -29,6 +41,10 @@ const VERB_CONJUGATIONS = {
       je: "ai eu", tu: "as eu", il: "a eu", elle: "a eu",
       nous: "avons eu", vous: "avez eu", ils: "ont eu", elles: "ont eu"
     },
+    passé_simple: {
+      je: "eus", tu: "eus", il: "eut", elle: "eut",
+      nous: "eûmes", vous: "eûtes", ils: "eurent", elles: "eurent"
+    },
     imparfait: {
       je: "avais", tu: "avais", il: "avait", elle: "avait",
       nous: "avions", vous: "aviez", ils: "avaient", elles: "avaient"
@@ -36,6 +52,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais eu", tu: "avais eu", il: "avait eu", elle: "avait eu",
       nous: "avions eu", vous: "aviez eu", ils: "avaient eu", elles: "avaient eu"
+    },
+    conditionnel: {
+      je: "aurais", tu: "aurais", il: "aurait", elle: "aurait",
+      nous: "aurions", vous: "auriez", ils: "auraient", elles: "auraient"
+    },
+    futur_simple: {
+      je: "aurai", tu: "auras", il: "aura", elle: "aura",
+      nous: "aurons", vous: "aurez", ils: "auront", elles: "auront"
     }
   },
   faire: {
@@ -47,6 +71,10 @@ const VERB_CONJUGATIONS = {
       je: "ai fait", tu: "as fait", il: "a fait", elle: "a fait",
       nous: "avons fait", vous: "avez fait", ils: "ont fait", elles: "ont fait"
     },
+    passé_simple: {
+      je: "fis", tu: "fis", il: "fit", elle: "fit",
+      nous: "fîmes", vous: "fîtes", ils: "firent", elles: "firent"
+    },
     imparfait: {
       je: "faisais", tu: "faisais", il: "faisait", elle: "faisait",
       nous: "faisions", vous: "faisiez", ils: "faisaient", elles: "faisaient"
@@ -54,6 +82,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais fait", tu: "avais fait", il: "avait fait", elle: "avait fait",
       nous: "avions fait", vous: "aviez fait", ils: "avaient fait", elles: "avaient fait"
+    },
+    conditionnel: {
+      je: "ferais", tu: "ferais", il: "ferait", elle: "ferait",
+      nous: "ferions", vous: "feriez", ils: "feraient", elles: "feraient"
+    },
+    futur_simple: {
+      je: "ferai", tu: "feras", il: "fera", elle: "fera",
+      nous: "ferons", vous: "ferez", ils: "feront", elles: "feront"
     }
   },
   aller: {
@@ -65,6 +101,10 @@ const VERB_CONJUGATIONS = {
       je: "suis allé(e)", tu: "es allé(e)", il: "est allé", elle: "est allée",
       nous: "sommes allé(e)s", vous: "êtes allé(e)s", ils: "sont allés", elles: "sont allées"
     },
+    passé_simple: {
+      je: "allai", tu: "allas", il: "alla", elle: "alla",
+      nous: "allâmes", vous: "allâtes", ils: "allèrent", elles: "allèrent"
+    },
     imparfait: {
       je: "allais", tu: "allais", il: "allait", elle: "allait",
       nous: "allions", vous: "alliez", ils: "allaient", elles: "allaient"
@@ -72,6 +112,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "étais allé(e)", tu: "étais allé(e)", il: "était allé", elle: "était allée",
       nous: "étions allé(e)s", vous: "étiez allé(e)s", ils: "étaient allés", elles: "étaient allées"
+    },
+    conditionnel: {
+      je: "irais", tu: "irais", il: "irait", elle: "irait",
+      nous: "irions", vous: "iriez", ils: "iraient", elles: "iraient"
+    },
+    futur_simple: {
+      je: "irai", tu: "iras", il: "ira", elle: "ira",
+      nous: "irons", vous: "irez", ils: "iront", elles: "iront"
     }
   },
   voir: {
@@ -83,6 +131,10 @@ const VERB_CONJUGATIONS = {
       je: "ai vu", tu: "as vu", il: "a vu", elle: "a vu",
       nous: "avons vu", vous: "avez vu", ils: "ont vu", elles: "ont vu"
     },
+    passé_simple: {
+      je: "vis", tu: "vis", il: "vit", elle: "vit",
+      nous: "vîmes", vous: "vîtes", ils: "virent", elles: "virent"
+    },
     imparfait: {
       je: "voyais", tu: "voyais", il: "voyait", elle: "voyait",
       nous: "voyions", vous: "voyiez", ils: "voyaient", elles: "voyaient"
@@ -90,6 +142,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais vu", tu: "avais vu", il: "avait vu", elle: "avait vu",
       nous: "avions vu", vous: "aviez vu", ils: "avaient vu", elles: "avaient vu"
+    },
+    conditionnel: {
+      je: "verrais", tu: "verrais", il: "verrait", elle: "verrait",
+      nous: "verrions", vous: "verriez", ils: "verraient", elles: "verraient"
+    },
+    futur_simple: {
+      je: "verrai", tu: "verras", il: "verra", elle: "verra",
+      nous: "verrons", vous: "verrez", ils: "verront", elles: "verront"
     }
   },
   dire: {
@@ -101,6 +161,10 @@ const VERB_CONJUGATIONS = {
       je: "ai dit", tu: "as dit", il: "a dit", elle: "a dit",
       nous: "avons dit", vous: "avez dit", ils: "ont dit", elles: "ont dit"
     },
+    passé_simple: {
+      je: "dis", tu: "dis", il: "dit", elle: "dit",
+      nous: "dîmes", vous: "dîtes", ils: "dirent", elles: "dirent"
+    },
     imparfait: {
       je: "disais", tu: "disais", il: "disait", elle: "disait",
       nous: "disions", vous: "disiez", ils: "disaient", elles: "disaient"
@@ -108,6 +172,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais dit", tu: "avais dit", il: "avait dit", elle: "avait dit",
       nous: "avions dit", vous: "aviez dit", ils: "avaient dit", elles: "avaient dit"
+    },
+    conditionnel: {
+      je: "dirais", tu: "dirais", il: "dirait", elle: "dirait",
+      nous: "dirions", vous: "diriez", ils: "diraient", elles: "diraient"
+    },
+    futur_simple: {
+      je: "dirai", tu: "diras", il: "dira", elle: "dira",
+      nous: "dirons", vous: "direz", ils: "diront", elles: "diront"
     }
   },
   savoir: {
@@ -119,6 +191,10 @@ const VERB_CONJUGATIONS = {
       je: "ai su", tu: "as su", il: "a su", elle: "a su",
       nous: "avons su", vous: "avez su", ils: "ont su", elles: "ont su"
     },
+    passé_simple: {
+      je: "sus", tu: "sus", il: "sut", elle: "sut",
+      nous: "sûmes", vous: "sûtes", ils: "surent", elles: "surent"
+    },
     imparfait: {
       je: "savais", tu: "savais", il: "savait", elle: "savait",
       nous: "savions", vous: "saviez", ils: "savaient", elles: "savaient"
@@ -126,6 +202,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais su", tu: "avais su", il: "avait su", elle: "avait su",
       nous: "avions su", vous: "aviez su", ils: "avaient su", elles: "avaient su"
+    },
+    conditionnel: {
+      je: "saurais", tu: "saurais", il: "saurait", elle: "saurait",
+      nous: "saurions", vous: "sauriez", ils: "sauraient", elles: "sauraient"
+    },
+    futur_simple: {
+      je: "saurai", tu: "sauras", il: "saura", elle: "saura",
+      nous: "saurons", vous: "saurez", ils: "sauront", elles: "sauront"
     }
   },
   pouvoir: {
@@ -137,6 +221,10 @@ const VERB_CONJUGATIONS = {
       je: "ai pu", tu: "as pu", il: "a pu", elle: "a pu",
       nous: "avons pu", vous: "avez pu", ils: "ont pu", elles: "ont pu"
     },
+    passé_simple: {
+      je: "pus", tu: "pus", il: "put", elle: "put",
+      nous: "pûmes", vous: "pûtes", ils: "purent", elles: "purent"
+    },
     imparfait: {
       je: "pouvais", tu: "pouvais", il: "pouvait", elle: "pouvait",
       nous: "pouvions", vous: "pouviez", ils: "pouvaient", elles: "pouvaient"
@@ -144,6 +232,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais pu", tu: "avais pu", il: "avait pu", elle: "avait pu",
       nous: "avions pu", vous: "aviez pu", ils: "avaient pu", elles: "avaient pu"
+    },
+    conditionnel: {
+      je: "pourrais", tu: "pourrais", il: "pourrait", elle: "pourrait",
+      nous: "pourrions", vous: "pourriez", ils: "pourraient", elles: "pourraient"
+    },
+    futur_simple: {
+      je: "pourrai", tu: "pourras", il: "pourra", elle: "pourra",
+      nous: "pourrons", vous: "pourrez", ils: "pourront", elles: "pourront"
     }
   },
   vouloir: {
@@ -155,6 +251,10 @@ const VERB_CONJUGATIONS = {
       je: "ai voulu", tu: "as voulu", il: "a voulu", elle: "a voulu",
       nous: "avons voulu", vous: "avez voulu", ils: "ont voulu", elles: "ont voulu"
     },
+    passé_simple: {
+      je: "voulus", tu: "voulus", il: "voulut", elle: "voulut",
+      nous: "voulûmes", vous: "voulûtes", ils: "voulurent", elles: "voulurent"
+    },
     imparfait: {
       je: "voulais", tu: "voulais", il: "voulait", elle: "voulait",
       nous: "voulions", vous: "vouliez", ils: "voulaient", elles: "voulaient"
@@ -162,6 +262,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "avais voulu", tu: "avais voulu", il: "avait voulu", elle: "avait voulu",
       nous: "avions voulu", vous: "aviez voulu", ils: "avaient voulu", elles: "avaient voulu"
+    },
+    conditionnel: {
+      je: "voudrais", tu: "voudrais", il: "voudrait", elle: "voudrait",
+      nous: "voudrions", vous: "voudriez", ils: "voudraient", elles: "voudraient"
+    },
+    futur_simple: {
+      je: "voudrai", tu: "voudras", il: "voudra", elle: "voudra",
+      nous: "voudrons", vous: "voudrez", ils: "voudront", elles: "voudront"
     }
   },
   venir: {
@@ -173,6 +281,10 @@ const VERB_CONJUGATIONS = {
       je: "suis venu(e)", tu: "es venu(e)", il: "est venu", elle: "est venue",
       nous: "sommes venu(e)s", vous: "êtes venu(e)s", ils: "sont venus", elles: "sont venues"
     },
+    passé_simple: {
+      je: "vins", tu: "vins", il: "vint", elle: "vint",
+      nous: "vînmes", vous: "vîntes", ils: "vinrent", elles: "vinrent"
+    },
     imparfait: {
       je: "venais", tu: "venais", il: "venait", elle: "venait",
       nous: "venions", vous: "veniez", ils: "venaient", elles: "venaient"
@@ -180,6 +292,14 @@ const VERB_CONJUGATIONS = {
     plus_que_parfait: {
       je: "étais venu(e)", tu: "étais venu(e)", il: "était venu", elle: "était venue",
       nous: "étions venu(e)s", vous: "étiez venu(e)s", ils: "étaient venus", elles: "étaient venues"
+    },
+    conditionnel: {
+      je: "viendrais", tu: "viendrais", il: "viendrait", elle: "viendrait",
+      nous: "viendrions", vous: "viendriez", ils: "viendraient", elles: "viendraient"
+    },
+    futur_simple: {
+      je: "viendrai", tu: "viendras", il: "viendra", elle: "viendra",
+      nous: "viendrons", vous: "viendrez", ils: "viendront", elles: "viendront"
     }
   }
 };
@@ -373,12 +493,15 @@ function applyNegativeContractions(pronoun: string, conjugation: string): string
 export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
   
-  // Normalize tense names
+  // Normalize tense names - map frontend tense names to backend tense keys
   const normalizedTense = tense.toLowerCase()
     .replace('présent', 'present')
     .replace('passé composé', 'passé_composé')
+    .replace('passé simple', 'passé_simple')
     .replace('plus-que-parfait', 'plus_que_parfait')
     .replace('imparfait', 'imparfait')
+    .replace('conditionnel', 'conditionnel')
+    .replace('futur simple', 'futur_simple')
     .replace(/\s+/g, '_');
   
   console.log(`🔧 Tense normalization: "${tense}" → "${normalizedTense}"`);
@@ -765,6 +888,294 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         .replace(/You \(plural\) don't/g, 'You (plural) hadn\'t')
         .replace(/They don't/g, 'They hadn\'t')
         .replace(/can't/g, 'couldn\'t have');
+    } else if (normalizedTense === 'passé_simple') {
+      // Passé simple = literary/formal past tense ("He spoke", "She went") - same as passé composé in English
+      englishQuestion = englishQuestion
+        .replace(/I have/g, 'I had')
+        .replace(/You have/g, 'You had')
+        .replace(/He has/g, 'He had')
+        .replace(/She has/g, 'She had')
+        .replace(/We have/g, 'We had')
+        .replace(/You \(plural\) have/g, 'You (plural) had')
+        .replace(/They have/g, 'They had')
+        .replace(/I am/g, 'I was')
+        .replace(/You are/g, 'You were')
+        .replace(/He is/g, 'He was')
+        .replace(/She is/g, 'She was')
+        .replace(/We are/g, 'We were')
+        .replace(/You \(plural\) are/g, 'You (plural) were')
+        .replace(/They are/g, 'They were')
+        .replace(/I do/g, 'I did')
+        .replace(/You do/g, 'You did')
+        .replace(/He does/g, 'He did')
+        .replace(/She does/g, 'She did')
+        .replace(/We do/g, 'We did')
+        .replace(/You \(plural\) do/g, 'You (plural) did')
+        .replace(/They do/g, 'They did')
+        .replace(/I make/g, 'I made')
+        .replace(/You make/g, 'You made')
+        .replace(/He makes/g, 'He made')
+        .replace(/She makes/g, 'She made')
+        .replace(/We make/g, 'We made')
+        .replace(/You \(plural\) make/g, 'You (plural) made')
+        .replace(/They make/g, 'They made')
+        .replace(/I go/g, 'I went')
+        .replace(/You go/g, 'You went')
+        .replace(/He goes/g, 'He went')
+        .replace(/She goes/g, 'She went')
+        .replace(/We go/g, 'We went')
+        .replace(/You \(plural\) go/g, 'You (plural) went')
+        .replace(/They go/g, 'They went')
+        .replace(/I see/g, 'I saw')
+        .replace(/You see/g, 'You saw')
+        .replace(/He sees/g, 'He saw')
+        .replace(/She sees/g, 'She saw')
+        .replace(/We see/g, 'We saw')
+        .replace(/You \(plural\) see/g, 'You (plural) saw')
+        .replace(/They see/g, 'They saw')
+        .replace(/I say/g, 'I said')
+        .replace(/You say/g, 'You said')
+        .replace(/He says/g, 'He said')
+        .replace(/She says/g, 'She said')
+        .replace(/We say/g, 'We said')
+        .replace(/You \(plural\) say/g, 'You (plural) said')
+        .replace(/They say/g, 'They said')
+        .replace(/I know/g, 'I knew')
+        .replace(/You know/g, 'You knew')
+        .replace(/He knows/g, 'He knew')
+        .replace(/She knows/g, 'She knew')
+        .replace(/We know/g, 'We knew')
+        .replace(/You \(plural\) know/g, 'You (plural) knew')
+        .replace(/They know/g, 'They knew')
+        .replace(/I can/g, 'I could')
+        .replace(/You can/g, 'You could')
+        .replace(/He can/g, 'He could')
+        .replace(/She can/g, 'She could')
+        .replace(/We can/g, 'We could')
+        .replace(/You \(plural\) can/g, 'You (plural) could')
+        .replace(/They can/g, 'They could')
+        .replace(/I want/g, 'I wanted')
+        .replace(/You want/g, 'You wanted')
+        .replace(/He wants/g, 'He wanted')
+        .replace(/She wants/g, 'She wanted')
+        .replace(/We want/g, 'We wanted')
+        .replace(/You \(plural\) want/g, 'You (plural) wanted')
+        .replace(/They want/g, 'They wanted')
+        .replace(/I come/g, 'I came')
+        .replace(/You come/g, 'You came')
+        .replace(/He comes/g, 'He came')
+        .replace(/She comes/g, 'She came')
+        .replace(/We come/g, 'We came')
+        .replace(/You \(plural\) come/g, 'You (plural) came')
+        .replace(/They come/g, 'They came')
+        // Handle negative forms for passé simple
+        .replace(/I don't have/g, 'I didn\'t have')
+        .replace(/You don't have/g, 'You didn\'t have')
+        .replace(/He doesn't have/g, 'He didn\'t have')
+        .replace(/She doesn't have/g, 'She didn\'t have')
+        .replace(/We don't have/g, 'We didn\'t have')
+        .replace(/You \(plural\) don't have/g, 'You (plural) didn\'t have')
+        .replace(/They don't have/g, 'They didn\'t have')
+        .replace(/I don't/g, 'I didn\'t')
+        .replace(/You don't/g, 'You didn\'t')
+        .replace(/He doesn't/g, 'He didn\'t')
+        .replace(/She doesn't/g, 'She didn\'t')
+        .replace(/We don't/g, 'We didn\'t')
+        .replace(/You \(plural\) don't/g, 'You (plural) didn\'t')
+        .replace(/They don't/g, 'They didn\'t')
+        .replace(/can't/g, 'couldn\'t');
+    } else if (normalizedTense === 'conditionnel') {
+      // Conditional = "would" expressions ("I would be", "He would have", etc.)
+      englishQuestion = englishQuestion
+        .replace(/I have/g, 'I would have')
+        .replace(/You have/g, 'You would have')
+        .replace(/He has/g, 'He would have')
+        .replace(/She has/g, 'She would have')
+        .replace(/We have/g, 'We would have')
+        .replace(/You \(plural\) have/g, 'You (plural) would have')
+        .replace(/They have/g, 'They would have')
+        .replace(/I am/g, 'I would be')
+        .replace(/You are/g, 'You would be')
+        .replace(/He is/g, 'He would be')
+        .replace(/She is/g, 'She would be')
+        .replace(/We are/g, 'We would be')
+        .replace(/You \(plural\) are/g, 'You (plural) would be')
+        .replace(/They are/g, 'They would be')
+        .replace(/I do/g, 'I would do')
+        .replace(/You do/g, 'You would do')
+        .replace(/He does/g, 'He would do')
+        .replace(/She does/g, 'She would do')
+        .replace(/We do/g, 'We would do')
+        .replace(/You \(plural\) do/g, 'You (plural) would do')
+        .replace(/They do/g, 'They would do')
+        .replace(/I make/g, 'I would make')
+        .replace(/You make/g, 'You would make')
+        .replace(/He makes/g, 'He would make')
+        .replace(/She makes/g, 'She would make')
+        .replace(/We make/g, 'We would make')
+        .replace(/You \(plural\) make/g, 'You (plural) would make')
+        .replace(/They make/g, 'They would make')
+        .replace(/I go/g, 'I would go')
+        .replace(/You go/g, 'You would go')
+        .replace(/He goes/g, 'He would go')
+        .replace(/She goes/g, 'She would go')
+        .replace(/We go/g, 'We would go')
+        .replace(/You \(plural\) go/g, 'You (plural) would go')
+        .replace(/They go/g, 'They would go')
+        .replace(/I see/g, 'I would see')
+        .replace(/You see/g, 'You would see')
+        .replace(/He sees/g, 'He would see')
+        .replace(/She sees/g, 'She would see')
+        .replace(/We see/g, 'We would see')
+        .replace(/You \(plural\) see/g, 'You (plural) would see')
+        .replace(/They see/g, 'They would see')
+        .replace(/I say/g, 'I would say')
+        .replace(/You say/g, 'You would say')
+        .replace(/He says/g, 'He would say')
+        .replace(/She says/g, 'She would say')
+        .replace(/We say/g, 'We would say')
+        .replace(/You \(plural\) say/g, 'You (plural) would say')
+        .replace(/They say/g, 'They would say')
+        .replace(/I know/g, 'I would know')
+        .replace(/You know/g, 'You would know')
+        .replace(/He knows/g, 'He would know')
+        .replace(/She knows/g, 'She would know')
+        .replace(/We know/g, 'We would know')
+        .replace(/You \(plural\) know/g, 'You (plural) would know')
+        .replace(/They know/g, 'They would know')
+        .replace(/I can/g, 'I could')
+        .replace(/You can/g, 'You could')
+        .replace(/He can/g, 'He could')
+        .replace(/She can/g, 'She could')
+        .replace(/We can/g, 'We could')
+        .replace(/You \(plural\) can/g, 'You (plural) could')
+        .replace(/They can/g, 'They could')
+        .replace(/I want/g, 'I would want')
+        .replace(/You want/g, 'You would want')
+        .replace(/He wants/g, 'He would want')
+        .replace(/She wants/g, 'She would want')
+        .replace(/We want/g, 'We would want')
+        .replace(/You \(plural\) want/g, 'You (plural) would want')
+        .replace(/They want/g, 'They would want')
+        .replace(/I come/g, 'I would come')
+        .replace(/You come/g, 'You would come')
+        .replace(/He comes/g, 'He would come')
+        .replace(/She comes/g, 'She would come')
+        .replace(/We come/g, 'We would come')
+        .replace(/You \(plural\) come/g, 'You (plural) would come')
+        .replace(/They come/g, 'They would come')
+        // Handle negative forms for conditional
+        .replace(/I don't have/g, 'I wouldn\'t have')
+        .replace(/You don't have/g, 'You wouldn\'t have')
+        .replace(/He doesn't have/g, 'He wouldn\'t have')
+        .replace(/She doesn't have/g, 'She wouldn\'t have')
+        .replace(/We don't have/g, 'We wouldn\'t have')
+        .replace(/You \(plural\) don't have/g, 'You (plural) wouldn\'t have')
+        .replace(/They don't have/g, 'They wouldn\'t have')
+        .replace(/I don't/g, 'I wouldn\'t')
+        .replace(/You don't/g, 'You wouldn\'t')
+        .replace(/He doesn't/g, 'He wouldn\'t')
+        .replace(/She doesn't/g, 'She wouldn\'t')
+        .replace(/We don't/g, 'We wouldn\'t')
+        .replace(/You \(plural\) don't/g, 'You (plural) wouldn\'t')
+        .replace(/They don't/g, 'They wouldn\'t')
+        .replace(/can't/g, 'couldn\'t');
+    } else if (normalizedTense === 'futur_simple') {
+      // Futur simple = "will" expressions ("I will be", "He will have", etc.)
+      englishQuestion = englishQuestion
+        .replace(/I have/g, 'I will have')
+        .replace(/You have/g, 'You will have')
+        .replace(/He has/g, 'He will have')
+        .replace(/She has/g, 'She will have')
+        .replace(/We have/g, 'We will have')
+        .replace(/You \(plural\) have/g, 'You (plural) will have')
+        .replace(/They have/g, 'They will have')
+        .replace(/I am/g, 'I will be')
+        .replace(/You are/g, 'You will be')
+        .replace(/He is/g, 'He will be')
+        .replace(/She is/g, 'She will be')
+        .replace(/We are/g, 'We will be')
+        .replace(/You \(plural\) are/g, 'You (plural) will be')
+        .replace(/They are/g, 'They will be')
+        .replace(/I do/g, 'I will do')
+        .replace(/You do/g, 'You will do')
+        .replace(/He does/g, 'He will do')
+        .replace(/She does/g, 'She will do')
+        .replace(/We do/g, 'We will do')
+        .replace(/You \(plural\) do/g, 'You (plural) will do')
+        .replace(/They do/g, 'They will do')
+        .replace(/I make/g, 'I will make')
+        .replace(/You make/g, 'You will make')
+        .replace(/He makes/g, 'He will make')
+        .replace(/She makes/g, 'She will make')
+        .replace(/We make/g, 'We will make')
+        .replace(/You \(plural\) make/g, 'You (plural) will make')
+        .replace(/They make/g, 'They will make')
+        .replace(/I go/g, 'I will go')
+        .replace(/You go/g, 'You will go')
+        .replace(/He goes/g, 'He will go')
+        .replace(/She goes/g, 'She will go')
+        .replace(/We go/g, 'We will go')
+        .replace(/You \(plural\) go/g, 'You (plural) will go')
+        .replace(/They go/g, 'They will go')
+        .replace(/I see/g, 'I will see')
+        .replace(/You see/g, 'You will see')
+        .replace(/He sees/g, 'He will see')
+        .replace(/She sees/g, 'She will see')
+        .replace(/We see/g, 'We will see')
+        .replace(/You \(plural\) see/g, 'You (plural) will see')
+        .replace(/They see/g, 'They will see')
+        .replace(/I say/g, 'I will say')
+        .replace(/You say/g, 'You will say')
+        .replace(/He says/g, 'He will say')
+        .replace(/She says/g, 'She will say')
+        .replace(/We say/g, 'We will say')
+        .replace(/You \(plural\) say/g, 'You (plural) will say')
+        .replace(/They say/g, 'They will say')
+        .replace(/I know/g, 'I will know')
+        .replace(/You know/g, 'You will know')
+        .replace(/He knows/g, 'He will know')
+        .replace(/She knows/g, 'She will know')
+        .replace(/We know/g, 'We will know')
+        .replace(/You \(plural\) know/g, 'You (plural) will know')
+        .replace(/They know/g, 'They will know')
+        .replace(/I can/g, 'I will be able to')
+        .replace(/You can/g, 'You will be able to')
+        .replace(/He can/g, 'He will be able to')
+        .replace(/She can/g, 'She will be able to')
+        .replace(/We can/g, 'We will be able to')
+        .replace(/You \(plural\) can/g, 'You (plural) will be able to')
+        .replace(/They can/g, 'They will be able to')
+        .replace(/I want/g, 'I will want')
+        .replace(/You want/g, 'You will want')
+        .replace(/He wants/g, 'He will want')
+        .replace(/She wants/g, 'She will want')
+        .replace(/We want/g, 'We will want')
+        .replace(/You \(plural\) want/g, 'You (plural) will want')
+        .replace(/They want/g, 'They will want')
+        .replace(/I come/g, 'I will come')
+        .replace(/You come/g, 'You will come')
+        .replace(/He comes/g, 'He will come')
+        .replace(/She comes/g, 'She will come')
+        .replace(/We come/g, 'We will come')
+        .replace(/You \(plural\) come/g, 'You (plural) will come')
+        .replace(/They come/g, 'They will come')
+        // Handle negative forms for future
+        .replace(/I don't have/g, 'I won\'t have')
+        .replace(/You don't have/g, 'You won\'t have')
+        .replace(/He doesn't have/g, 'He won\'t have')
+        .replace(/She doesn't have/g, 'She won\'t have')
+        .replace(/We don't have/g, 'We won\'t have')
+        .replace(/You \(plural\) don't have/g, 'You (plural) won\'t have')
+        .replace(/They don't have/g, 'They won\'t have')
+        .replace(/I don't/g, 'I won\'t')
+        .replace(/You don't/g, 'You won\'t')
+        .replace(/He doesn't/g, 'He won\'t')
+        .replace(/She doesn't/g, 'She won\'t')
+        .replace(/We don't/g, 'We won\'t')
+        .replace(/You \(plural\) don't/g, 'You (plural) won\'t')
+        .replace(/They don't/g, 'They won\'t')
+        .replace(/can't/g, 'won\'t be able to');
     }
 
     questions.push({

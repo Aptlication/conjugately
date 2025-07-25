@@ -1,0 +1,42 @@
+The French **conditional** (le conditionnel) is used to express what **would** happen under certain conditions, similar to the English use of “would” plus a verb[2][3][5]. It is commonly used for polite requests, hypothetical situations, wishes, and reported speech.
+
+**Key uses:**
+- To state hypothetical or possible actions:  
+  *Je voyagerais si j'avais de l'argent.*  
+  (*I would travel if I had money.*)[1][2][6]
+- To make polite requests or suggestions:  
+  *Pourriez-vous m'aider ?*  
+  (*Could you help me?*)[1][2][5]
+- To express wishes or desires:  
+  *Je voudrais un café.*  
+  (*I would like a coffee.*)[2][6]
+- In reported speech for future-in-the-past:  
+  *Il a dit qu’il viendrait.*  
+  (*He said he would come.*)[2][5]
+
+**How to form it:**
+- Use the **future tense stem** (usually the infinitive for regular verbs)
+- Add the **imparfait endings**: **-ais, -ais, -ait, -ions, -iez, -aient**[3][5]
+
+| Pronoun  | Example verb: jouer ("to play") | Conditional Form | English          |
+|----------|---------------------------------|------------------|------------------|
+| je       | jouer                           | je jouerais      | I would play     |
+| tu       | jouer                           | tu jouerais      | you would play   |
+| il/elle  | jouer                           | il jouerait      | he/she would play|
+| nous     | jouer                           | nous jouerions   | we would play    |
+| vous     | jouer                           | vous joueriez    | you would play   |
+| ils/elles| jouer                           | ils joueraient   | they would play  |
+
+**In summary:**  
+The French conditional is used much like the English “would,” and forms the backbone of discussing hypotheticals, politeness, and indirect speech in French[1][2][6].
+
+[1] https://lingvist.com/course/learn-french-online/resources/french-conditional-tense/
+[2] https://www.lawlessfrench.com/grammar/conditional-mood/
+[3] https://www.bbc.co.uk/bitesize/guides/z4b8t39/revision/2
+[4] https://www.bbc.co.uk/bitesize/guides/zqd2k2p/revision/1
+[5] https://www.frenchtoday.com/blog/french-verb-conjugation/conditional-in-french/
+[6] https://www.busuu.com/en/french/conditional
+[7] https://global-exam.com/blog/en/french-grammar-conditional-tense/
+[8] https://www.youtube.com/watch?v=Ickl4xScv10
+[9] https://www.laits.utexas.edu/tex/gr/tac1.html
+[10] https://francais.lingolia.com/en/grammar/verbs/conditionnel
