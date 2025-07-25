@@ -30,6 +30,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "serai", tu: "seras", il: "sera", elle: "sera",
       nous: "serons", vous: "serez", ils: "seront", elles: "seront"
+    },
+    futur_proche: {
+      je: "vais être", tu: "vas être", il: "va être", elle: "va être",
+      nous: "allons être", vous: "allez être", ils: "vont être", elles: "vont être"
     }
   },
   avoir: {
@@ -60,6 +64,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "aurai", tu: "auras", il: "aura", elle: "aura",
       nous: "aurons", vous: "aurez", ils: "auront", elles: "auront"
+    },
+    futur_proche: {
+      je: "vais avoir", tu: "vas avoir", il: "va avoir", elle: "va avoir",
+      nous: "allons avoir", vous: "allez avoir", ils: "vont avoir", elles: "vont avoir"
     }
   },
   faire: {
@@ -90,6 +98,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "ferai", tu: "feras", il: "fera", elle: "fera",
       nous: "ferons", vous: "ferez", ils: "feront", elles: "feront"
+    },
+    futur_proche: {
+      je: "vais faire", tu: "vas faire", il: "va faire", elle: "va faire",
+      nous: "allons faire", vous: "allez faire", ils: "vont faire", elles: "vont faire"
     }
   },
   aller: {
@@ -120,6 +132,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "irai", tu: "iras", il: "ira", elle: "ira",
       nous: "irons", vous: "irez", ils: "iront", elles: "iront"
+    },
+    futur_proche: {
+      je: "vais aller", tu: "vas aller", il: "va aller", elle: "va aller",
+      nous: "allons aller", vous: "allez aller", ils: "vont aller", elles: "vont aller"
     }
   },
   voir: {
@@ -150,6 +166,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "verrai", tu: "verras", il: "verra", elle: "verra",
       nous: "verrons", vous: "verrez", ils: "verront", elles: "verront"
+    },
+    futur_proche: {
+      je: "vais voir", tu: "vas voir", il: "va voir", elle: "va voir",
+      nous: "allons voir", vous: "allez voir", ils: "vont voir", elles: "vont voir"
     }
   },
   dire: {
@@ -180,6 +200,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "dirai", tu: "diras", il: "dira", elle: "dira",
       nous: "dirons", vous: "direz", ils: "diront", elles: "diront"
+    },
+    futur_proche: {
+      je: "vais dire", tu: "vas dire", il: "va dire", elle: "va dire",
+      nous: "allons dire", vous: "allez dire", ils: "vont dire", elles: "vont dire"
     }
   },
   savoir: {
@@ -210,6 +234,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "saurai", tu: "sauras", il: "saura", elle: "saura",
       nous: "saurons", vous: "saurez", ils: "sauront", elles: "sauront"
+    },
+    futur_proche: {
+      je: "vais savoir", tu: "vas savoir", il: "va savoir", elle: "va savoir",
+      nous: "allons savoir", vous: "allez savoir", ils: "vont savoir", elles: "vont savoir"
     }
   },
   pouvoir: {
@@ -240,6 +268,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "pourrai", tu: "pourras", il: "pourra", elle: "pourra",
       nous: "pourrons", vous: "pourrez", ils: "pourront", elles: "pourront"
+    },
+    futur_proche: {
+      je: "vais pouvoir", tu: "vas pouvoir", il: "va pouvoir", elle: "va pouvoir",
+      nous: "allons pouvoir", vous: "allez pouvoir", ils: "vont pouvoir", elles: "vont pouvoir"
     }
   },
   vouloir: {
@@ -270,6 +302,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "voudrai", tu: "voudras", il: "voudra", elle: "voudra",
       nous: "voudrons", vous: "voudrez", ils: "voudront", elles: "voudront"
+    },
+    futur_proche: {
+      je: "vais vouloir", tu: "vas vouloir", il: "va vouloir", elle: "va vouloir",
+      nous: "allons vouloir", vous: "allez vouloir", ils: "vont vouloir", elles: "vont vouloir"
     }
   },
   venir: {
@@ -300,6 +336,10 @@ const VERB_CONJUGATIONS = {
     futur_simple: {
       je: "viendrai", tu: "viendras", il: "viendra", elle: "viendra",
       nous: "viendrons", vous: "viendrez", ils: "viendront", elles: "viendront"
+    },
+    futur_proche: {
+      je: "vais venir", tu: "vas venir", il: "va venir", elle: "va venir",
+      nous: "allons venir", vous: "allez venir", ils: "vont venir", elles: "vont venir"
     }
   }
 };
@@ -523,6 +563,35 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
     }
   }
   
+  // Handle futur_proche where negation surrounds aller (Je ne vais pas dire)
+  if (tense === 'futur_proche') {
+    const parts = conjugation.split(' ');
+    if (parts.length >= 2) {
+      const allerForm = parts[0]; // vais/vas/va/etc.
+      const infinitive = parts.slice(1).join(' '); // infinitive verb
+      
+      // Apply contraction to aller form
+      let negatedAller;
+      if (/^[aeiouâêîôû]/.test(allerForm)) {
+        negatedAller = `n'${allerForm} pas`;
+      } else {
+        negatedAller = `ne ${allerForm} pas`;
+      }
+      
+      if (context === 'rien') {
+        // Special case: "rien" replaces "pas"
+        negatedAller = negatedAller.replace(' pas', '');
+        return `${pronounCap} ${negatedAller} ${infinitive} ${context}`;
+      } else if (context && (context === 'pas' || context.startsWith('pas '))) {
+        // If context already contains "pas", don't duplicate
+        negatedAller = negatedAller.replace(' pas', '');
+        return `${pronounCap} ${negatedAller} ${infinitive} ${context}`;
+      } else {
+        return `${pronounCap} ${negatedAller} ${infinitive}${context ? ` ${context}` : ''}`;
+      }
+    }
+  }
+  
   // Handle simple tenses (présent, imparfait, futur_simple, conditionnel, passé_simple)
   if (context === 'rien') {
     // Special case: "rien" replaces "pas"
@@ -560,6 +629,7 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     .replace('imparfait', 'imparfait')
     .replace('conditionnel', 'conditionnel')
     .replace('futur simple', 'futur_simple')
+    .replace('futur proche', 'futur_proche')
     .replace(/\s+/g, '_');
   
   console.log(`🔧 Tense normalization: "${tense}" → "${normalizedTense}"`);
@@ -1221,6 +1291,102 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         .replace(/You \(plural\) don't/g, 'You (plural) won\'t')
         .replace(/They don't/g, 'They won\'t')
         .replace(/can't/g, 'won\'t be able to');
+    } else if (normalizedTense === 'futur_proche') {
+      // Futur proche = "going to" expressions ("I am going to be", "He is going to have", etc.)
+      englishQuestion = englishQuestion
+        .replace(/I have/g, 'I am going to have')
+        .replace(/You have/g, 'You are going to have')
+        .replace(/He has/g, 'He is going to have')
+        .replace(/She has/g, 'She is going to have')
+        .replace(/We have/g, 'We are going to have')
+        .replace(/You \(plural\) have/g, 'You (plural) are going to have')
+        .replace(/They have/g, 'They are going to have')
+        .replace(/I am/g, 'I am going to be')
+        .replace(/You are/g, 'You are going to be')
+        .replace(/He is/g, 'He is going to be')
+        .replace(/She is/g, 'She is going to be')
+        .replace(/We are/g, 'We are going to be')
+        .replace(/You \(plural\) are/g, 'You (plural) are going to be')
+        .replace(/They are/g, 'They are going to be')
+        .replace(/I do/g, 'I am going to do')
+        .replace(/You do/g, 'You are going to do')
+        .replace(/He does/g, 'He is going to do')
+        .replace(/She does/g, 'She is going to do')
+        .replace(/We do/g, 'We are going to do')
+        .replace(/You \(plural\) do/g, 'You (plural) are going to do')
+        .replace(/They do/g, 'They are going to do')
+        .replace(/I make/g, 'I am going to make')
+        .replace(/You make/g, 'You are going to make')
+        .replace(/He makes/g, 'He is going to make')
+        .replace(/She makes/g, 'She is going to make')
+        .replace(/We make/g, 'We are going to make')
+        .replace(/You \(plural\) make/g, 'You (plural) are going to make')
+        .replace(/They make/g, 'They are going to make')
+        .replace(/I go/g, 'I am going to go')
+        .replace(/You go/g, 'You are going to go')
+        .replace(/He goes/g, 'He is going to go')
+        .replace(/She goes/g, 'She is going to go')
+        .replace(/We go/g, 'We are going to go')
+        .replace(/You \(plural\) go/g, 'You (plural) are going to go')
+        .replace(/They go/g, 'They are going to go')
+        .replace(/I see/g, 'I am going to see')
+        .replace(/You see/g, 'You are going to see')
+        .replace(/He sees/g, 'He is going to see')
+        .replace(/She sees/g, 'She is going to see')
+        .replace(/We see/g, 'We are going to see')
+        .replace(/You \(plural\) see/g, 'You (plural) are going to see')
+        .replace(/They see/g, 'They are going to see')
+        .replace(/I say/g, 'I am going to say')
+        .replace(/You say/g, 'You are going to say')
+        .replace(/He says/g, 'He is going to say')
+        .replace(/She says/g, 'She is going to say')
+        .replace(/We say/g, 'We are going to say')
+        .replace(/You \(plural\) say/g, 'You (plural) are going to say')
+        .replace(/They say/g, 'They are going to say')
+        .replace(/I know/g, 'I am going to know')
+        .replace(/You know/g, 'You are going to know')
+        .replace(/He knows/g, 'He is going to know')
+        .replace(/She knows/g, 'She is going to know')
+        .replace(/We know/g, 'We are going to know')
+        .replace(/You \(plural\) know/g, 'You (plural) are going to know')
+        .replace(/They know/g, 'They are going to know')
+        .replace(/I can/g, 'I am going to be able to')
+        .replace(/You can/g, 'You are going to be able to')
+        .replace(/He can/g, 'He is going to be able to')
+        .replace(/She can/g, 'She is going to be able to')
+        .replace(/We can/g, 'We are going to be able to')
+        .replace(/You \(plural\) can/g, 'You (plural) are going to be able to')
+        .replace(/They can/g, 'They are going to be able to')
+        .replace(/I want/g, 'I am going to want')
+        .replace(/You want/g, 'You are going to want')
+        .replace(/He wants/g, 'He is going to want')
+        .replace(/She wants/g, 'She is going to want')
+        .replace(/We want/g, 'We are going to want')
+        .replace(/You \(plural\) want/g, 'You (plural) are going to want')
+        .replace(/They want/g, 'They are going to want')
+        .replace(/I come/g, 'I am going to come')
+        .replace(/You come/g, 'You are going to come')
+        .replace(/He comes/g, 'He is going to come')
+        .replace(/She comes/g, 'She is going to come')
+        .replace(/We come/g, 'We are going to come')
+        .replace(/You \(plural\) come/g, 'You (plural) are going to come')
+        .replace(/They come/g, 'They are going to come')
+        // Handle negative forms for futur proche
+        .replace(/I don't have/g, 'I am not going to have')
+        .replace(/You don't have/g, 'You are not going to have')
+        .replace(/He doesn't have/g, 'He is not going to have')
+        .replace(/She doesn't have/g, 'She is not going to have')
+        .replace(/We don't have/g, 'We are not going to have')
+        .replace(/You \(plural\) don't have/g, 'You (plural) are not going to have')
+        .replace(/They don't have/g, 'They are not going to have')
+        .replace(/I don't/g, 'I am not going to')
+        .replace(/You don't/g, 'You are not going to')
+        .replace(/He doesn't/g, 'He is not going to')
+        .replace(/She doesn't/g, 'She is not going to')
+        .replace(/We don't/g, 'We are not going to')
+        .replace(/You \(plural\) don't/g, 'You (plural) are not going to')
+        .replace(/They don't/g, 'They are not going to')
+        .replace(/can't/g, 'are not going to be able to');
     }
 
     // Ensure proper punctuation for English sentences
