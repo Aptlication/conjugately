@@ -115,6 +115,11 @@ Preferred communication style: Simple, everyday language.
 - Fixed "pas pas" duplication bug in French negation sentences by correcting context data
 - Updated "We don't see him" to generate "Nous ne le voyons pas" instead of "Nous ne voyons pas pas"
 - Fixed "She doesn't know him" to generate "Elle ne le sait pas" instead of "Elle ne sait pas pas"
+- Completely restructured English-to-French tense matching system for authentic grammar
+- Passé composé now generates "I ate/I did" (completed actions) matching French "J'ai mangé"
+- Imparfait now generates "I used to eat/I was eating" (habitual/ongoing) matching French "Je mangeais"
+- Plus-que-parfait now generates "I had eaten" (past perfect) matching French "J'avais mangé"
+- Fixed all permutations of tense representations according to proper French grammar rules
 - Improved overall quiz presentation with professional English sentence formatting
 
 ### January 24, 2025 - Enhanced Results Screen & French Grammar ✓
