@@ -490,6 +490,64 @@ function applyNegativeContractions(pronoun: string, conjugation: string): string
   return `${pronounCap} ne ${conjugation}`;
 }
 
+// Comprehensive function to build negative French sentences for all tenses
+function buildNegativeFrench(pronoun: string, conjugation: string, context: string, tense: string, verb: string): string {
+  const pronounCap = pronoun.charAt(0).toUpperCase() + pronoun.slice(1);
+  
+  // Handle compound tenses (passé_composé, plus_que_parfait) where negation surrounds auxiliary
+  if (tense === 'passé_composé' || tense === 'plus_que_parfait') {
+    const parts = conjugation.split(' ');
+    if (parts.length >= 2) {
+      const auxiliary = parts[0]; // être/avoir
+      const participle = parts.slice(1).join(' '); // past participle
+      
+      // Apply contraction to auxiliary
+      let negatedAux;
+      if (/^[aeiouâêîôû]/.test(auxiliary)) {
+        negatedAux = `n'${auxiliary} pas`;
+      } else {
+        negatedAux = `ne ${auxiliary} pas`;
+      }
+      
+      if (context === 'rien') {
+        // Special case: "rien" replaces "pas" in compound tenses
+        negatedAux = negatedAux.replace(' pas', '');
+        return `${pronounCap} ${negatedAux} ${context} ${participle}`;
+      } else if (context && (context === 'pas' || context.startsWith('pas '))) {
+        // If context already contains "pas", don't duplicate
+        negatedAux = negatedAux.replace(' pas', '');
+        return `${pronounCap} ${negatedAux} ${context} ${participle}`;
+      } else {
+        return `${pronounCap} ${negatedAux} ${participle}${context ? ` ${context}` : ''}`;
+      }
+    }
+  }
+  
+  // Handle simple tenses (présent, imparfait, futur_simple, conditionnel, passé_simple)
+  if (context === 'rien') {
+    // Special case: "rien" replaces "pas"
+    if (/^[aeiouâêîôû]/.test(conjugation)) {
+      return `${pronounCap} n'${conjugation} ${context}`;
+    } else {
+      return `${pronounCap} ne ${conjugation} ${context}`;
+    }
+  } else if (context && (context === 'pas' || context.startsWith('pas '))) {
+    // If context already contains "pas", don't add another "pas"
+    if (/^[aeiouâêîôû]/.test(conjugation)) {
+      return `${pronounCap} n'${conjugation} ${context}`;
+    } else {
+      return `${pronounCap} ne ${conjugation} ${context}`;
+    }
+  } else {
+    // Standard negation: ne + verb + pas + context
+    if (/^[aeiouâêîôû]/.test(conjugation)) {
+      return `${pronounCap} n'${conjugation} pas${context ? ` ${context}` : ''}`;
+    } else {
+      return `${pronounCap} ne ${conjugation} pas${context ? ` ${context}` : ''}`;
+    }
+  }
+}
+
 export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
   
@@ -538,19 +596,12 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     // Build correct answer with proper French contractions
     let correctAnswer;
     
-    if (context.negative && normalizedTense === 'present') {
-      // Handle negation properly for present tense
-      if (verb === 'avoir' && context.fr_context === 'rien') {
-        correctAnswer = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${correctForm} ${context.fr_context}`;
-      } else if (context.fr_context && (context.fr_context === 'pas' || context.fr_context.startsWith('pas '))) {
-        // If context is "pas" or starts with "pas ", don't add another "pas"
-        correctAnswer = `${applyNegativeContractions(pronoun, correctForm)} ${context.fr_context}`;
-      } else {
-        correctAnswer = `${applyNegativeContractions(pronoun, correctForm)} pas ${context.fr_context}`;
-      }
+    if (context.negative) {
+      // Handle negation properly for ALL tenses
+      correctAnswer = buildNegativeFrench(pronoun, correctForm, context.fr_context, normalizedTense, verb);
     } else {
       correctAnswer = applyContractions(pronoun, correctForm);
-      if (context.fr_context && !context.negative) {
+      if (context.fr_context) {
         correctAnswer += ` ${context.fr_context}`;
       }
     }
@@ -563,19 +614,13 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
     distractors.slice(0, 3).forEach(form => {
       let wrong;
       
-      if (context.negative && normalizedTense === 'present') {
-        if (verb === 'avoir' && context.fr_context === 'rien') {
-          wrong = `${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} n'${form} ${context.fr_context}`;
-        } else if (context.fr_context && (context.fr_context === 'pas' || context.fr_context.startsWith('pas '))) {
-          // If context is "pas" or starts with "pas ", don't add another "pas"
-          wrong = `${applyNegativeContractions(pronoun, form)} ${context.fr_context}`;
-        } else {
-          wrong = `${applyNegativeContractions(pronoun, form)} pas ${context.fr_context}`;
-        }
+      if (context.negative) {
+        // Use the same comprehensive negation logic for distractors
+        wrong = buildNegativeFrench(pronoun, form, context.fr_context, normalizedTense, verb);
       } else {
         // Apply contractions to wrong answers too for consistency
         wrong = applyContractions(pronoun, form);
-        if (context.fr_context && !context.negative) {
+        if (context.fr_context) {
           wrong += ` ${context.fr_context}`;
         }
       }
@@ -1176,6 +1221,11 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         .replace(/You \(plural\) don't/g, 'You (plural) won\'t')
         .replace(/They don't/g, 'They won\'t')
         .replace(/can't/g, 'won\'t be able to');
+    }
+
+    // Ensure proper punctuation for English sentences
+    if (!englishQuestion.endsWith('.') && !englishQuestion.endsWith('!') && !englishQuestion.endsWith('?')) {
+      englishQuestion += '.';
     }
 
     questions.push({
