@@ -110,6 +110,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 25, 2025 - Enhanced Quiz Grammar & Punctuation ✓
+- Added full stops to all English sentences in quiz questions for proper punctuation
+- Fixed "pas pas" duplication bug in French negation sentences by correcting context data
+- Updated "We don't see him" to generate "Nous ne le voyons pas" instead of "Nous ne voyons pas pas"
+- Fixed "She doesn't know him" to generate "Elle ne le sait pas" instead of "Elle ne sait pas pas"
+- Improved overall quiz presentation with professional English sentence formatting
+
 ### January 24, 2025 - Enhanced Results Screen & French Grammar ✓
 - Added comprehensive quiz results review showing all 20 questions with correct/incorrect answers
 - Enhanced results screen with percentage score, visual indicators, and detailed question-by-question breakdown
