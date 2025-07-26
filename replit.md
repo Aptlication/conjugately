@@ -111,6 +111,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Added Single Quotation Marks Around French Verbs ✓
+- **Visual Enhancement**: All French verbs now display with single quotation marks for better clarity
+- **Comprehensive Coverage**: Updated unit titles, completion messages, progress indicators, and continue buttons
+- **Examples**: "Unit 2: 'avoir' Complete!" and "Continue to Unit 3: 'faire'" now show proper formatting
+- **Consistent Presentation**: French verbs clearly distinguished from English text throughout the UI
+- **Educational Clarity**: Students can easily identify French vocabulary elements in all course interfaces
+
 ### January 26, 2025 - Applied French Contractions in Quiz Generation ✓
 - **Contractions Fixed**: "Je ai" now correctly displays as "J'ai" in Beginner mode quizzes
 - **Applied applyContractions Function**: Updated Beginner quiz generation to use existing contraction logic
