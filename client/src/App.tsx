@@ -824,7 +824,7 @@ function App() {
         <div className="max-w-5xl mx-auto">
           {/* Summary Section */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
-            <h2 className="text-4xl font-bold mb-6">Quiz Complete!</h2>
+            <h2 className="text-4xl font-bold mb-6">{totalQuestions === 40 ? 'Exam Complete!' : 'Quiz Complete!'}</h2>
             <div className="mb-8">
               <div className="text-6xl font-bold mb-2">{percentage}%</div>
               <p className="text-xl text-slate-300">
