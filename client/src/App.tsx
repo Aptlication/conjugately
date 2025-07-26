@@ -36,7 +36,18 @@ function App() {
   };
 
   const handleStartQuiz = async () => {
-    if (!selectedVerb || !selectedTimeFrame || !selectedTenseType) return;
+    // For beginner, automatically set tense if not already set
+    let finalTenseType = selectedTenseType;
+    if (selectedDifficulty === "Beginner" && !selectedTenseType && selectedTimeFrame) {
+      const beginnerTenseMap = {
+        "Past": "Passé Simple",
+        "Present": "Présent", 
+        "Future": "Futur Simple"
+      };
+      finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+    }
+    
+    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty !== "Beginner")) return;
     setQuizState('loading');
 
     try {
@@ -47,7 +58,7 @@ function App() {
         body: JSON.stringify({
           verb: selectedVerb,
           timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
-          tenseType: selectedTenseType,
+          tenseType: finalTenseType,
           ...(selectedDifficulty && { difficulty: selectedDifficulty }),
         }),
       });
@@ -413,7 +424,13 @@ function App() {
             </div>
             <select
               value={selectedDifficulty || ""}
-              onChange={(e) => setSelectedDifficulty(e.target.value)}
+              onChange={(e) => {
+                setSelectedDifficulty(e.target.value);
+                // Reset dependent selections when difficulty changes
+                setSelectedVerb("");
+                setSelectedTimeFrame("");
+                setSelectedTenseType("");
+              }}
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
@@ -463,7 +480,20 @@ function App() {
             </div>
             <select
               value={selectedTimeFrame}
-              onChange={(e) => { setSelectedTimeFrame(e.target.value); setSelectedTenseType(""); }}
+              onChange={(e) => { 
+                setSelectedTimeFrame(e.target.value); 
+                // For beginner difficulty, automatically set tense based on time frame
+                if (selectedDifficulty === "Beginner") {
+                  const beginnerTenseMap = {
+                    "Past": "Passé Simple",
+                    "Present": "Présent", 
+                    "Future": "Futur Simple"
+                  };
+                  setSelectedTenseType(beginnerTenseMap[e.target.value as keyof typeof beginnerTenseMap] || "");
+                } else {
+                  setSelectedTenseType("");
+                }
+              }}
               disabled={!selectedVerb}
               className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
                 selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
@@ -476,57 +506,59 @@ function App() {
             </select>
           </div>
 
-          <div className="mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">4. Choose Specific Tense</label>
-              <button
-                onClick={handleChooseTenseType}
+          {selectedDifficulty !== "Beginner" && (
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-4">
+                <label className="text-lg font-semibold">4. Choose Specific Tense</label>
+                <button
+                  onClick={handleChooseTenseType}
+                  disabled={!selectedTimeFrame}
+                  className={`px-4 py-2 rounded-lg font-medium ${
+                    selectedTimeFrame
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
+                      : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                  }`}
+                >
+                  Choose for me
+                </button>
+              </div>
+              <select
+                value={selectedTenseType}
+                onChange={(e) => setSelectedTenseType(e.target.value)}
                 disabled={!selectedTimeFrame}
-                className={`px-4 py-2 rounded-lg font-medium ${
-                  selectedTimeFrame
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                    : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
+                  selectedTimeFrame ? 'bg-white/10' : 'bg-white/5 opacity-50'
                 }`}
               >
-                Choose for me
-              </button>
+                <option value="" className="bg-gray-800 text-white">Select tense type...</option>
+                {selectedTimeFrame && TIME_FRAMES[selectedTimeFrame as keyof typeof TIME_FRAMES].map((tense) => (
+                  <option key={tense} value={tense} className="bg-gray-800 text-white">{tense}</option>
+                ))}
+              </select>
             </div>
-            <select
-              value={selectedTenseType}
-              onChange={(e) => setSelectedTenseType(e.target.value)}
-              disabled={!selectedTimeFrame}
-              className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedTimeFrame ? 'bg-white/10' : 'bg-white/5 opacity-50'
-              }`}
-            >
-              <option value="" className="bg-gray-800 text-white">Select tense type...</option>
-              {selectedTimeFrame && TIME_FRAMES[selectedTimeFrame as keyof typeof TIME_FRAMES].map((tense) => (
-                <option key={tense} value={tense} className="bg-gray-800 text-white">{tense}</option>
-              ))}
-            </select>
-          </div>
+          )}
 
           <button
             onClick={handleStartQuiz}
-            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || !selectedTenseType}
+            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty !== "Beginner")}
             className={`w-full p-4 text-lg font-bold rounded-xl transition-all ${
-              (selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType)
+              (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner"))
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
                 : 'bg-slate-600 text-slate-400 cursor-not-allowed'
             }`}
           >
-            {selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType 
-              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedTenseType})`
+            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner")
+              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType})`
               : "Complete all selections to start quiz"
             }
           </button>
         </div>
 
-        {selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType && (
+        {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner") && (
           <div className="max-w-2xl mx-auto mt-8 bg-green-500/20 border border-green-500/30 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold mb-2">Quiz Preview</h3>
             <p className="text-green-200">
-              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong> ({selectedDifficulty} difficulty)
+              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType}</strong> ({selectedDifficulty} difficulty)
             </p>
           </div>
         )}

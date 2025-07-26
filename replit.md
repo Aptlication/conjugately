@@ -112,12 +112,14 @@ Preferred communication style: Simple, everyday language.
 
 ### January 25, 2025 - Complete Difficulty System Implementation ✓
 - Added "Choose Difficulty" as the first step in the quiz configuration flow
-- Reorganized interface to: 1. Choose Difficulty, 2. Choose Verb, 3. Choose Time Frame, 4. Choose Specific Tense
+- Reorganized interface to: 1. Choose Difficulty, 2. Choose Verb, 3. Choose Time Frame
+- For Beginner difficulty: automatically maps time frames to specific tenses (Past→Passé Simple, Present→Présent, Future→Futur Simple)
+- For other difficulties: shows step 4 "Choose Specific Tense" with comprehensive tense options
 - Created new "Beginner" difficulty with simple subject + verb questions (Je suis, Tu es)
 - Beginner mode removes full stops and generates clean conjugation questions
 - Updated quiz generator to support difficulty-specific question formats
-- Enhanced start quiz button to require all four selections including difficulty
-- Updated quiz preview to display selected difficulty level
+- Enhanced start quiz button logic to handle both 3-step (Beginner) and 4-step (other) flows
+- Updated quiz preview to display selected difficulty level and appropriate tense information
 
 ### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
 - Added collapsible instruction popup that appears when quiz starts
