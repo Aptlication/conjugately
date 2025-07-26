@@ -273,7 +273,7 @@ function App() {
         });
         
         setShowBeginnerCourseModal(false);
-        handleStartVerbSection(existingProgress.currentVerbIndex, timeFrame, tense);
+        setQuizState('config'); // Show proper course flow
         return;
       } else {
         // Start fresh - delete existing progress
@@ -898,6 +898,186 @@ function App() {
             >
               Try Another Quiz
             </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show course overview at the beginning
+  if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
+            <div className="text-center mb-6">
+              <h2 className="text-4xl font-bold mb-2">📚 {courseInfo.timeFrame} Tense Course Overview</h2>
+              <p className="text-lg text-purple-300 font-semibold italic">French Verb Master - For serious students.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/5 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-200">🎯 Course Structure</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                    <span>Unit 1: être (20 questions)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                    <span>Unit 2: avoir (20 questions)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                    <span>Unit 3: faire (20 questions)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                    <span>Unit 4: aller (20 questions)</span>
+                  </div>
+                  <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
+                    <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
+                    <span className="font-semibold">Final Exam (20 mixed questions)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/5 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-green-200">✨ What You'll Learn</h3>
+                <ul className="space-y-2 text-slate-300">
+                  <li>• Master the 4 most essential French verbs</li>
+                  <li>• Practice {courseInfo.tense} conjugations</li>
+                  <li>• Learn proper French grammar patterns</li>
+                  <li>• Build confidence with structured progression</li>
+                  <li>• Achieve 90% mastery on final exam</li>
+                </ul>
+                
+                <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                  <p className="text-yellow-200 font-semibold">We have high standards!</p>
+                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% (18/20) to pass and unlock the next course.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <button
+                onClick={() => {
+                  setCourseInfo({...courseInfo, currentVerbIndex: 1});
+                }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700"
+              >
+                Start Unit 1: être →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show individual verb unit introduction
+  if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= 4 && quizData.length === 0) {
+    const verbs = ["être", "avoir", "faire", "aller"];
+    const currentVerb = verbs[courseInfo.currentVerbIndex - 1];
+    const verbInfo = {
+      "être": {
+        meaning: "to be",
+        description: "The most fundamental French verb, used to describe states of being, identity, and characteristics.",
+        examples: ["Je suis étudiant (I am a student)", "Tu es français (You are French)", "Il est grand (He is tall)"],
+        color: "blue"
+      },
+      "avoir": {
+        meaning: "to have", 
+        description: "Essential for expressing possession, age, and many idiomatic expressions in French.",
+        examples: ["J'ai un livre (I have a book)", "Tu as faim (You are hungry)", "Elle a vingt ans (She is twenty years old)"],
+        color: "green"
+      },
+      "faire": {
+        meaning: "to do/make",
+        description: "One of the most versatile French verbs, used for actions, weather, and countless expressions.",
+        examples: ["Je fais mes devoirs (I do my homework)", "Tu fais du sport (You play sports)", "Il fait beau (It's beautiful weather)"],
+        color: "purple"
+      },
+      "aller": {
+        meaning: "to go",
+        description: "Essential for movement and future tense formation, this verb opens up conversations about destinations and plans.",
+        examples: ["Je vais au cinéma (I go to the cinema)", "Tu vas bien (You are doing well)", "Elle va partir (She is going to leave)"],
+        color: "orange"
+      }
+    };
+
+    const info = verbInfo[currentVerb as keyof typeof verbInfo];
+    
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
+            <div className="text-center mb-8">
+              <div className={`w-16 h-16 bg-${info.color}-500/20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4`}>
+                {courseInfo.currentVerbIndex}
+              </div>
+              <h2 className="text-4xl font-bold mb-2">Unit {courseInfo.currentVerbIndex}: {currentVerb}</h2>
+              <p className="text-xl text-slate-300">({info.meaning})</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/5 rounded-xl p-6">
+                <h3 className="text-xl font-semibold mb-4 text-slate-200">About This Verb</h3>
+                <p className="text-slate-300 leading-relaxed">{info.description}</p>
+              </div>
+
+              <div className="bg-white/5 rounded-xl p-6">
+                <h3 className="text-xl font-semibold mb-4 text-slate-200">Example Sentences</h3>
+                <ul className="space-y-2">
+                  {info.examples.map((example, index) => (
+                    <li key={index} className="text-slate-300 leading-relaxed">
+                      • {example}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center space-y-4">
+              <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                <p className="text-blue-200 font-semibold">Ready to practice {currentVerb} in {courseInfo.tense}?</p>
+                <p className="text-sm text-slate-300 mt-1">20 questions focusing on this essential French verb</p>
+              </div>
+              
+              <button
+                onClick={async () => {
+                  // Generate quiz for current verb
+                  setQuizState('loading');
+                  try {
+                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                    const response = await fetch('/api/get-quiz', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                        verb: currentVerb,
+                        timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
+                        tenseType: courseInfo.tense,
+                        difficulty: "Beginner",
+                      })
+                    });
+                    
+                    const data = await response.json();
+                    if (data.success) {
+                      setQuizData(data.quiz.questions);
+                      setCurrentQuestionIndex(0);
+                      setUserAnswers({});
+                      setQuizState('active');
+                    }
+                  } catch (error) {
+                    console.error('Error generating quiz:', error);
+                    setQuizState('config');
+                  }
+                }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700"
+              >
+                Start Unit {courseInfo.currentVerbIndex}: {currentVerb} Practice →
+              </button>
+            </div>
           </div>
         </div>
       </div>
