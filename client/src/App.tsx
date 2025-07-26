@@ -604,7 +604,7 @@ function App() {
                   }`}
                 >
                   🏆 Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
-                  <div className="text-xs opacity-75">(40 q's)</div>
+                  <div className="text-xs opacity-75">(40 questions)</div>
                 </button>
               </div>
 
@@ -943,7 +943,7 @@ function App() {
                   </div>
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam (40 q's)</span>
+                    <span className="font-semibold">Final Exam (40 questions)</span>
                   </div>
                 </div>
               </div>
@@ -980,7 +980,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Exam (40 q's)
+                🏆 Take Final Exam (40 questions)
               </button>
             </div>
           </div>
