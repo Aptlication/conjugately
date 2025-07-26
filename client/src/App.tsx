@@ -403,7 +403,30 @@ function App() {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">1. Choose a French Verb</label>
+              <label className="text-lg font-semibold">1. Choose Difficulty</label>
+              <button
+                onClick={() => setShowDifficultyModal(true)}
+                className="px-4 py-2 rounded-lg font-medium bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
+              >
+                Choose for me
+              </button>
+            </div>
+            <select
+              value={selectedDifficulty || ""}
+              onChange={(e) => setSelectedDifficulty(e.target.value)}
+              className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
+            >
+              <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
+              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Simple subject + verb (Je suis, Tu es)</option>
+              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Basic verbs, present tense only</option>
+              <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 6 verbs, multiple tenses</option>
+              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - All verbs and tenses</option>
+            </select>
+          </div>
+
+          <div className="mb-8">
+            <div className="flex justify-between items-center mb-4">
+              <label className="text-lg font-semibold">2. Choose a French Verb</label>
               <button
                 onClick={handleChooseVerb}
                 className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700"
@@ -425,7 +448,7 @@ function App() {
 
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">2. Choose Time Frame</label>
+              <label className="text-lg font-semibold">3. Choose Time Frame</label>
               <button
                 onClick={handleChooseTimeFrame}
                 disabled={!selectedVerb}
@@ -455,7 +478,7 @@ function App() {
 
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">3. Choose Specific Tense</label>
+              <label className="text-lg font-semibold">4. Choose Specific Tense</label>
               <button
                 onClick={handleChooseTenseType}
                 disabled={!selectedTimeFrame}
@@ -485,25 +508,25 @@ function App() {
 
           <button
             onClick={handleStartQuiz}
-            disabled={!selectedVerb || !selectedTimeFrame || !selectedTenseType}
+            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || !selectedTenseType}
             className={`w-full p-4 text-lg font-bold rounded-xl transition-all ${
-              (selectedVerb && selectedTimeFrame && selectedTenseType)
+              (selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType)
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
                 : 'bg-slate-600 text-slate-400 cursor-not-allowed'
             }`}
           >
-            {selectedVerb && selectedTimeFrame && selectedTenseType 
-              ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
+            {selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType 
+              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedTenseType})`
               : "Complete all selections to start quiz"
             }
           </button>
         </div>
 
-        {selectedVerb && selectedTimeFrame && selectedTenseType && (
+        {selectedDifficulty && selectedVerb && selectedTimeFrame && selectedTenseType && (
           <div className="max-w-2xl mx-auto mt-8 bg-green-500/20 border border-green-500/30 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold mb-2">Quiz Preview</h3>
             <p className="text-green-200">
-              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong>
+              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedTenseType}</strong> ({selectedDifficulty} difficulty)
             </p>
           </div>
         )}
