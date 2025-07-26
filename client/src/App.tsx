@@ -1228,33 +1228,77 @@ function App() {
               <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
               <p className="text-slate-300 text-center mb-6">Choose a time frame for structured learning with 4 individual verb sections plus optional exam</p>
               <div className="space-y-3 mb-6">
-                <button
-                  onClick={() => handleBeginnerCourseTimeFrame("Past")}
-                  className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
-                >
-                  <div className="text-purple-200 font-semibold text-lg">⏮️ Past Tense Course</div>
-                  <div className="text-slate-300 text-sm mt-1">
-                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
-                  </div>
-                </button>
-                <button
-                  onClick={() => handleBeginnerCourseTimeFrame("Present")}
-                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
-                >
-                  <div className="text-green-200 font-semibold text-lg">▶️ Present Tense Course</div>
-                  <div className="text-slate-300 text-sm mt-1">
-                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
-                  </div>
-                </button>
-                <button
-                  onClick={() => handleBeginnerCourseTimeFrame("Future")}
-                  className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
-                >
-                  <div className="text-blue-200 font-semibold text-lg">⏭️ Future Tense Course</div>
-                  <div className="text-slate-300 text-sm mt-1">
-                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
-                  </div>
-                </button>
+                {["Past", "Present", "Future"].map((timeFrame) => {
+                  const beginnerTenseMap = {
+                    "Past": "Passé Simple",
+                    "Present": "Présent", 
+                    "Future": "Futur Simple"
+                  };
+                  const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
+                  
+                  // Check completion status
+                  const isCompleted = completedCourses.some(course => 
+                    course.courseType === "beginner" && 
+                    course.timeFrame === timeFrame && 
+                    course.examPassed
+                  );
+                  
+                  // Check for in-progress
+                  const inProgress = courseProgressData.find(progress => 
+                    progress.courseType === "beginner" && 
+                    progress.timeFrame === timeFrame &&
+                    !progress.isCompleted
+                  );
+                  
+                  const iconMap = {
+                    "Past": "⏮️",
+                    "Present": "▶️",
+                    "Future": "⏭️"
+                  };
+                  
+                  return (
+                    <button
+                      key={timeFrame}
+                      onClick={() => handleBeginnerCourseTimeFrame(timeFrame)}
+                      className={`w-full p-4 text-left ${
+                        isCompleted 
+                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                          : inProgress
+                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                          : timeFrame === "Past"
+                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                          : timeFrame === "Present"
+                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                      } rounded-xl text-white`}
+                    >
+                      <div className={`font-semibold text-lg flex items-center gap-2 ${
+                        isCompleted ? 'text-green-200' : 
+                        inProgress ? 'text-orange-200' :
+                        timeFrame === "Past" ? 'text-purple-200' : 
+                        timeFrame === "Present" ? 'text-green-200' : 
+                        'text-blue-200'
+                      }`}>
+                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                        {isCompleted && <span className="text-sm">✓ Completed</span>}
+                        {inProgress && <span className="text-sm">⏳ In Progress</span>}
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        4 sections: 20 questions each (80 total) + optional exam (90% to pass)
+                      </div>
+                      {inProgress && (
+                        <div className="text-orange-200 text-xs mt-1">
+                          Progress: {inProgress.currentVerbIndex}/4 verbs completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
+                        </div>
+                      )}
+                      {isCompleted && (
+                        <div className="text-green-200 text-xs mt-1">
+                          Completed with {Math.round((completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.totalScore || 0) / (completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.totalQuestions || 1) * 100)}% • Exam: {completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.examScore}/20
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
               <button
                 onClick={() => {
