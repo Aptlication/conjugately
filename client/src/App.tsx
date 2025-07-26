@@ -165,6 +165,54 @@ function App() {
     setSelectedDifficulty(difficulty);
   };
 
+  const handleStartFinalExam = async (timeFrame: string, tense: string) => {
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    
+    setQuizState('loading');
+    
+    try {
+      // Generate 20 questions total: 5 questions from each of the 4 verbs for final exam
+      const allQuestions: any[] = [];
+      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+      
+      for (const currentVerb of beginnerVerbs) {
+        const response = await fetch('/api/get-quiz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verb: currentVerb,
+            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+            tenseType: tense,
+            difficulty: "Beginner",
+          })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          // Take exactly 5 questions from each verb for final exam
+          allQuestions.push(...data.quiz.questions.slice(0, 5));
+        }
+      }
+      
+      // Shuffle all 20 final exam questions (5 from each of the 4 verbs)
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions); // 20 final exam questions
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setQuizState('active');
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error('Error generating final exam:', error);
+      setQuizState('config');
+    }
+  };
+
   const handleMiniCourseSelect = (difficulty: string) => {
     if (difficulty === "Beginner") {
       setShowMiniCoursesModal(false);
@@ -524,7 +572,7 @@ function App() {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">Section {courseInfo.currentVerbIndex + 1} Complete</h2>
+              <h2 className="text-4xl font-bold mb-4">Section 1 Complete</h2>
               <p className="text-xl text-slate-300 mb-4">80 mixed questions from all 4 verbs ({courseInfo.tense})</p>
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-2">{percentage}%</div>
@@ -537,58 +585,60 @@ function App() {
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Course Progress ({courseInfo.timeFrame} Tense)</h3>
                 <div className="flex justify-center gap-2 mb-4">
-                  {beginnerVerbs.map((verb, index) => (
-                    <div key={verb} className={`px-3 py-2 rounded-lg text-sm font-medium ${
-                      index < courseInfo.currentVerbIndex ? 'bg-green-500/20 text-green-300' :
-                      index === courseInfo.currentVerbIndex ? 'bg-blue-500/20 text-blue-300' :
-                      'bg-gray-500/20 text-gray-400'
-                    }`}>
-                      Section {index + 1} {index < courseInfo.currentVerbIndex ? '✓' : index === courseInfo.currentVerbIndex ? '...' : ''}
-                      <div className="text-xs opacity-75">(80 questions)</div>
-                    </div>
-                  ))}
+                  <div className={`px-3 py-2 rounded-lg text-sm font-medium ${
+                    courseInfo.currentVerbIndex >= 1 ? 'bg-green-500/20 text-green-300' :
+                    courseInfo.currentVerbIndex === 0 ? 'bg-blue-500/20 text-blue-300' :
+                    'bg-gray-500/20 text-gray-400'
+                  }`}>
+                    Section 1 {courseInfo.currentVerbIndex >= 1 ? '✓' : courseInfo.currentVerbIndex === 0 ? '...' : ''}
+                    <div className="text-xs opacity-75">(80 questions)</div>
+                  </div>
+                  <div className={`px-3 py-2 rounded-lg text-sm font-medium ${
+                    courseInfo.currentVerbIndex >= 1 ? 'bg-blue-500/20 text-blue-300' : 'bg-gray-500/20 text-gray-400'
+                  }`}>
+                    Final Exam {courseInfo.currentVerbIndex >= 1 ? '...' : ''}
+                    <div className="text-xs opacity-75">(20 questions)</div>
+                  </div>
                 </div>
               </div>
 
               <div className="flex gap-4 justify-center">
-                {courseInfo.currentVerbIndex < 3 ? (
+                {courseInfo.currentVerbIndex < 1 ? (
                   <button
                     onClick={async () => {
-                      // Update course progress
+                      // Update course progress to indicate Section 1 complete
                       const updatedCourse = {
                         ...courseInfo,
-                        currentVerbIndex: courseInfo.currentVerbIndex + 1,
-                        completedVerbs: [...courseInfo.completedVerbs, {verb: currentVerb, score: percentage}],
-                        totalScore: courseInfo.totalScore + correctAnswers,
-                        totalQuestions: courseInfo.totalQuestions + totalQuestions
+                        currentVerbIndex: 1,
+                        completedVerbs: [{verb: "Section 1", score: percentage}],
+                        totalScore: correctAnswers,
+                        totalQuestions: totalQuestions
                       };
                       setCourseInfo(updatedCourse);
                       
                       // Save progress to database
                       await saveCourseProgress(updatedCourse);
                       
-                      // Start next verb section
-                      handleStartVerbSection(updatedCourse.currentVerbIndex, courseInfo.timeFrame, courseInfo.tense);
+                      // Start final exam
+                      handleStartFinalExam(courseInfo.timeFrame, courseInfo.tense);
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700"
                   >
-                    Continue to Section {courseInfo.currentVerbIndex + 2}
+                    Take Final Exam
                   </button>
                 ) : (
                   <button
                     onClick={async () => {
-                      // Update course progress and show exam option
+                      // Course is complete, show exam option
                       const updatedCourse = {
                         ...courseInfo,
-                        currentVerbIndex: 4,
-                        completedVerbs: [...courseInfo.completedVerbs, {verb: currentVerb, score: percentage}],
-                        totalScore: courseInfo.totalScore + correctAnswers,
-                        totalQuestions: courseInfo.totalQuestions + totalQuestions
+                        currentVerbIndex: 1,
+                        isCompleted: true
                       };
                       setCourseInfo(updatedCourse);
                       
                       // Save final progress before exam
-                      await saveCourseProgress({...updatedCourse, isCompleted: true});
+                      await saveCourseProgress(updatedCourse);
                       setShowExamOption(true);
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:from-green-700 hover:to-blue-700"
@@ -1101,7 +1151,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Beginner Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    4 sections with 80 mixed questions each (320 total)
+                    Section 1: 80 mixed questions + Final Exam
                   </div>
                 </button>
                 <button
@@ -1297,11 +1347,11 @@ function App() {
                         {inProgress && <span className="text-sm">⏳ In Progress</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        4 sections: 80 questions each (320 total) + optional exam (90% to pass)
+                        Section 1: 80 questions + Final Exam (90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/4 sections completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
+                          Progress: {inProgress.currentVerbIndex}/1 section completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
                         </div>
                       )}
                       {isCompleted && (
