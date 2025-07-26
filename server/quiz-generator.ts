@@ -732,6 +732,22 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
     }
   }
   
+  // Special handling for present tense third-person singular (adds 's')
+  if (tense === 'present') {
+    const baseVerb = verbData[tense as keyof typeof verbData] || verbData.present;
+    if (pronoun === 'il' || pronoun === 'elle') {
+      // Add 's' for third person singular in present tense
+      if (verb === 'dire') return `${englishPronoun} says`;
+      if (verb === 'faire') return `${englishPronoun} does/makes`;
+      if (verb === 'aller') return `${englishPronoun} goes`;
+      if (verb === 'voir') return `${englishPronoun} sees`;
+      if (verb === 'savoir') return `${englishPronoun} knows`;
+      if (verb === 'pouvoir') return `${englishPronoun} can`;
+      if (verb === 'vouloir') return `${englishPronoun} wants`;
+      if (verb === 'venir') return `${englishPronoun} comes`;
+    }
+  }
+  
   const englishVerb = verbData[tense as keyof typeof verbData] || verbData.present;
   return `${englishPronoun} ${englishVerb}`;
 }
