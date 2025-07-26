@@ -111,6 +111,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Enhanced Final Exam: 40 Questions + Unlocked Access ✓
+- **Final Exam Expansion**: Increased from 20 to 40 questions (10 from each of the 4 verbs: être, avoir, faire, aller)
+- **Unlocked Access**: Final exam now accessible without completing mini-course units
+- **Updated Passing Requirements**: Exam now requires 36/40 (90%) to pass instead of 18/20
+- **Course Overview Integration**: Added direct final exam access button from course overview screen
+- **Comprehensive Testing**: All retry logic and exam generation updated to handle 40-question format
+- **Mixed Question Pool**: Questions randomly shuffled from all 4 verbs for comprehensive assessment
+
 ### January 26, 2025 - Added Single Quotation Marks Around French Verbs ✓
 - **Visual Enhancement**: All French verbs now display with single quotation marks for better clarity
 - **Comprehensive Coverage**: Updated unit titles, completion messages, progress indicators, and continue buttons

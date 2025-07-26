@@ -171,7 +171,7 @@ function App() {
     setQuizState('loading');
     
     try {
-      // Generate 20 questions total: 5 questions from each of the 4 verbs for final exam
+      // Generate 40 questions total: 10 questions from each of the 4 verbs for final exam
       const allQuestions: any[] = [];
       const beginnerVerbs = ["être", "avoir", "faire", "aller"];
       
@@ -189,15 +189,15 @@ function App() {
 
         const data = await response.json();
         if (data.success) {
-          // Take exactly 5 questions from each verb for final exam
-          allQuestions.push(...data.quiz.questions.slice(0, 5));
+          // Take exactly 10 questions from each verb for final exam
+          allQuestions.push(...data.quiz.questions.slice(0, 10));
         }
       }
       
-      // Shuffle all 20 final exam questions (5 from each of the 4 verbs)
+      // Shuffle all 40 final exam questions (10 from each of the 4 verbs)
       const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
       
-      setQuizData(shuffledQuestions); // 20 final exam questions
+      setQuizData(shuffledQuestions); // 40 final exam questions
       setCurrentQuestionIndex(0);
       setUserAnswers({});
       setQuizState('active');
@@ -599,7 +599,7 @@ function App() {
                   courseInfo.currentVerbIndex > 4 ? 'bg-yellow-500/20 text-yellow-300' : 'bg-gray-500/20 text-gray-400'
                 }`}>
                   Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
-                  <div className="text-xs opacity-75">(20 mixed questions)</div>
+                  <div className="text-xs opacity-75">(40 mixed questions)</div>
                 </div>
               </div>
 
@@ -681,12 +681,12 @@ function App() {
 
     // Handle exam results (when currentVerbIndex is 5)
     if (courseInfo && courseInfo.currentVerbIndex === 5) {
-      // For exam, we need exactly 18/20 or higher (90%)
-      const examPassed = correctAnswers >= 18;
+      // For exam, we need exactly 36/40 or higher (90%)
+      const examPassed = correctAnswers >= 36;
       
       // Debug logging
       console.log(`Exam Results: ${correctAnswers}/${totalQuestions} = ${percentage}%`);
-      console.log(`Exam passed: ${examPassed} (need 18/20 or higher)`);
+      console.log(`Exam passed: ${examPassed} (need 36/40 or higher)`);
       
       // Save completed course if passed - do this once when exam is complete
       if (examPassed && !completedCourses.some(course => 
@@ -734,7 +734,7 @@ function App() {
                 <p className="text-lg text-slate-400 mt-2">
                   {examPassed ? 
                     'Congratulations! You passed the final exam!' :
-                    `We have high standards! You need 90% (18/20) to pass. You got ${correctAnswers}/20. Try again!`
+                    `We have high standards! You need 90% (36/40) to pass. You got ${correctAnswers}/40. Try again!`
                   }
                 </p>
               </div>
@@ -781,7 +781,8 @@ function App() {
                           
                           const data = await response.json();
                           if (data.success) {
-                            allQuestions.push(...data.quiz.questions.slice(0, 5));
+                            // Take 10 questions from each verb for 40 total
+                            allQuestions.push(...data.quiz.questions.slice(0, 10));
                           }
                         }
                         
@@ -937,7 +938,7 @@ function App() {
                   </div>
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam (20 mixed questions)</span>
+                    <span className="font-semibold">Final Exam (40 mixed questions)</span>
                   </div>
                 </div>
               </div>
@@ -954,19 +955,27 @@ function App() {
                 
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                   <p className="text-yellow-200 font-semibold">We have high standards!</p>
-                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% (18/20) to pass and unlock the next course.</p>
+                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% (36/40) to pass and unlock the next course.</p>
                 </div>
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center space-y-4">
               <button
                 onClick={() => {
                   setCourseInfo({...courseInfo, currentVerbIndex: 1});
                 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700"
+                className="block w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700"
               >
-                Start Unit 1: être →
+                Start Unit 1: 'être' →
+              </button>
+              <button
+                onClick={async () => {
+                  await handleStartFinalExam(courseInfo.timeFrame, courseInfo.tense);
+                }}
+                className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
+              >
+                🏆 Take Final Exam (40 mixed questions)
               </button>
             </div>
           </div>
@@ -1447,8 +1456,8 @@ function App() {
                         
                         const data = await response.json();
                         if (data.success) {
-                          // Take 5 questions from each verb for 20 total
-                          allQuestions.push(...data.quiz.questions.slice(0, 5));
+                          // Take 10 questions from each verb for 40 total
+                          allQuestions.push(...data.quiz.questions.slice(0, 10));
                         }
                       }
                       
@@ -1469,7 +1478,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🏆 Take Final Exam</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    20 mixed questions - Need 90% to pass (18/20)
+                    40 mixed questions - Need 90% to pass (36/40)
                   </div>
                 </button>
                 <button
