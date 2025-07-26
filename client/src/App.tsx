@@ -1289,7 +1289,7 @@ function App() {
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
-              <p className="text-slate-300 text-center mb-6">Choose a time frame for structured learning with 4 individual verb sections plus optional exam</p>
+              <p className="text-slate-300 text-center mb-6">Choose a time frame to practice all 4 basic verbs (être, avoir, faire, aller)</p>
               <div className="space-y-3 mb-6">
                 {["Past", "Present", "Future"].map((timeFrame) => {
                   const beginnerTenseMap = {
