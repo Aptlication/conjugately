@@ -828,11 +828,10 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .slice(0, 3)
         .map(wrongPronoun => {
           const wrongConjugation = tenseData[wrongPronoun];
-          const wrongPronounCap = wrongPronoun.charAt(0).toUpperCase() + wrongPronoun.slice(1);
-          return `${wrongPronounCap} ${wrongConjugation}`;
+          return applyContractions(wrongPronoun, wrongConjugation);
         });
       
-      const correctAnswer = `${pronounCap} ${conjugation}`;
+      const correctAnswer = applyContractions(pronoun, conjugation);
       
       // Shuffle answers
       const allAnswers = [correctAnswer, ...wrongAnswers];
