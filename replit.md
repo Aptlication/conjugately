@@ -111,6 +111,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Applied French Contractions in Quiz Generation ✓
+- **Contractions Fixed**: "Je ai" now correctly displays as "J'ai" in Beginner mode quizzes
+- **Applied applyContractions Function**: Updated Beginner quiz generation to use existing contraction logic
+- **Comprehensive Coverage**: Both correct answers and wrong answer options now apply proper French contractions
+- **Grammar Consistency**: "Je" + vowel sounds properly contract to "J'" throughout quiz system
+- **Educational Quality**: Students now see grammatically correct French contractions in all quiz modes
+
 ### January 26, 2025 - Fixed All English Grammar Errors in Quiz Generation ✓
 - **Critical Grammar Fix**: Corrected "We is" → "We are", "They is" → "They are" in Beginner mode quizzes
 - **Verb Conjugation Logic**: Fixed English conjugation function to properly handle all pronouns for "être" verb
