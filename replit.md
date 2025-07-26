@@ -111,6 +111,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Complete 4-Unit Course System with Overview & Introductions ✓
+- **Course Overview Screen**: Added comprehensive overview showing all 4 units + final exam structure
+- **Individual Unit Introductions**: Each verb (être, avoir, faire, aller) now has dedicated introduction with meaning, description, and example sentences
+- **Structured Learning Flow**: Course Overview → Unit 1 Intro → Unit 1 Quiz → Unit 2 Intro → Unit 2 Quiz → etc.
+- **Educational Content**: Each unit explains verb usage with authentic French examples and English translations
+- **Visual Progress Tracking**: Unit completion status with numbered progression indicators
+- **Enhanced User Experience**: Students understand course structure and verb context before practicing
+- **Professional Branding**: Maintains "For serious students" messaging throughout course screens
+
 ### January 26, 2025 - Enhanced Branding and Messaging ✓
 - Added official slogan "For serious students" to French Verb Master branding
 - Updated main header with prominent purple slogan display beneath title
