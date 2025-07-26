@@ -34,6 +34,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais être", tu: "vas être", il: "va être", elle: "va être",
       nous: "allons être", vous: "allez être", ils: "vont être", elles: "vont être"
+    },
+    présent_progressif: {
+      je: "suis en train d'être", tu: "es en train d'être", il: "est en train d'être", elle: "est en train d'être",
+      nous: "sommes en train d'être", vous: "êtes en train d'être", ils: "sont en train d'être", elles: "sont en train d'être"
     }
   },
   avoir: {
@@ -68,6 +72,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais avoir", tu: "vas avoir", il: "va avoir", elle: "va avoir",
       nous: "allons avoir", vous: "allez avoir", ils: "vont avoir", elles: "vont avoir"
+    },
+    présent_progressif: {
+      je: "suis en train d'avoir", tu: "es en train d'avoir", il: "est en train d'avoir", elle: "est en train d'avoir",
+      nous: "sommes en train d'avoir", vous: "êtes en train d'avoir", ils: "sont en train d'avoir", elles: "sont en train d'avoir"
     }
   },
   faire: {
@@ -102,6 +110,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais faire", tu: "vas faire", il: "va faire", elle: "va faire",
       nous: "allons faire", vous: "allez faire", ils: "vont faire", elles: "vont faire"
+    },
+    présent_progressif: {
+      je: "suis en train de faire", tu: "es en train de faire", il: "est en train de faire", elle: "est en train de faire",
+      nous: "sommes en train de faire", vous: "êtes en train de faire", ils: "sont en train de faire", elles: "sont en train de faire"
     }
   },
   aller: {
@@ -136,6 +148,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais aller", tu: "vas aller", il: "va aller", elle: "va aller",
       nous: "allons aller", vous: "allez aller", ils: "vont aller", elles: "vont aller"
+    },
+    présent_progressif: {
+      je: "suis en train d'aller", tu: "es en train d'aller", il: "est en train d'aller", elle: "est en train d'aller",
+      nous: "sommes en train d'aller", vous: "êtes en train d'aller", ils: "sont en train d'aller", elles: "sont en train d'aller"
     }
   },
   voir: {
@@ -170,6 +186,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais voir", tu: "vas voir", il: "va voir", elle: "va voir",
       nous: "allons voir", vous: "allez voir", ils: "vont voir", elles: "vont voir"
+    },
+    présent_progressif: {
+      je: "suis en train de voir", tu: "es en train de voir", il: "est en train de voir", elle: "est en train de voir",
+      nous: "sommes en train de voir", vous: "êtes en train de voir", ils: "sont en train de voir", elles: "sont en train de voir"
     }
   },
   dire: {
@@ -204,6 +224,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais dire", tu: "vas dire", il: "va dire", elle: "va dire",
       nous: "allons dire", vous: "allez dire", ils: "vont dire", elles: "vont dire"
+    },
+    présent_progressif: {
+      je: "suis en train de dire", tu: "es en train de dire", il: "est en train de dire", elle: "est en train de dire",
+      nous: "sommes en train de dire", vous: "êtes en train de dire", ils: "sont en train de dire", elles: "sont en train de dire"
     }
   },
   savoir: {
@@ -238,6 +262,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais savoir", tu: "vas savoir", il: "va savoir", elle: "va savoir",
       nous: "allons savoir", vous: "allez savoir", ils: "vont savoir", elles: "vont savoir"
+    },
+    présent_progressif: {
+      je: "suis en train de savoir", tu: "es en train de savoir", il: "est en train de savoir", elle: "est en train de savoir",
+      nous: "sommes en train de savoir", vous: "êtes en train de savoir", ils: "sont en train de savoir", elles: "sont en train de savoir"
     }
   },
   pouvoir: {
@@ -272,6 +300,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais pouvoir", tu: "vas pouvoir", il: "va pouvoir", elle: "va pouvoir",
       nous: "allons pouvoir", vous: "allez pouvoir", ils: "vont pouvoir", elles: "vont pouvoir"
+    },
+    présent_progressif: {
+      je: "suis en train de pouvoir", tu: "es en train de pouvoir", il: "est en train de pouvoir", elle: "est en train de pouvoir",
+      nous: "sommes en train de pouvoir", vous: "êtes en train de pouvoir", ils: "sont en train de pouvoir", elles: "sont en train de pouvoir"
     }
   },
   vouloir: {
@@ -306,6 +338,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais vouloir", tu: "vas vouloir", il: "va vouloir", elle: "va vouloir",
       nous: "allons vouloir", vous: "allez vouloir", ils: "vont vouloir", elles: "vont vouloir"
+    },
+    présent_progressif: {
+      je: "suis en train de vouloir", tu: "es en train de vouloir", il: "est en train de vouloir", elle: "est en train de vouloir",
+      nous: "sommes en train de vouloir", vous: "êtes en train de vouloir", ils: "sont en train de vouloir", elles: "sont en train de vouloir"
     }
   },
   venir: {
@@ -340,6 +376,10 @@ const VERB_CONJUGATIONS = {
     futur_proche: {
       je: "vais venir", tu: "vas venir", il: "va venir", elle: "va venir",
       nous: "allons venir", vous: "allez venir", ils: "vont venir", elles: "vont venir"
+    },
+    présent_progressif: {
+      je: "suis en train de venir", tu: "es en train de venir", il: "est en train de venir", elle: "est en train de venir",
+      nous: "sommes en train de venir", vous: "êtes en train de venir", ils: "sont en train de venir", elles: "sont en train de venir"
     }
   }
 };
@@ -592,6 +632,35 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
     }
   }
   
+  // Handle présent_progressif where negation surrounds être (Je ne suis pas en train de dire)
+  if (tense === 'présent_progressif') {
+    const parts = conjugation.split(' ');
+    if (parts.length >= 4) { // "suis en train de faire"
+      const etreForm = parts[0]; // suis/es/est/etc.
+      const enTrainDePart = parts.slice(1).join(' '); // "en train de + infinitive"
+      
+      // Apply contraction to être form
+      let negatedEtre;
+      if (/^[aeiouâêîôû]/.test(etreForm)) {
+        negatedEtre = `n'${etreForm} pas`;
+      } else {
+        negatedEtre = `ne ${etreForm} pas`;
+      }
+      
+      if (context === 'rien') {
+        // Special case: "rien" replaces "pas"
+        negatedEtre = negatedEtre.replace(' pas', '');
+        return `${pronounCap} ${negatedEtre} ${enTrainDePart} ${context}`;
+      } else if (context && (context === 'pas' || context.startsWith('pas '))) {
+        // If context already contains "pas", don't duplicate
+        negatedEtre = negatedEtre.replace(' pas', '');
+        return `${pronounCap} ${negatedEtre} ${enTrainDePart} ${context}`;
+      } else {
+        return `${pronounCap} ${negatedEtre} ${enTrainDePart}${context ? ` ${context}` : ''}`;
+      }
+    }
+  }
+  
   // Handle simple tenses (présent, imparfait, futur_simple, conditionnel, passé_simple)
   if (context === 'rien') {
     // Special case: "rien" replaces "pas"
@@ -622,6 +691,7 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
   
   // Normalize tense names - map frontend tense names to backend tense keys
   const normalizedTense = tense.toLowerCase()
+    .replace('présent progressif', 'présent_progressif')
     .replace('présent', 'present')
     .replace('passé composé', 'passé_composé')
     .replace('passé simple', 'passé_simple')
@@ -1387,6 +1457,102 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
         .replace(/You \(plural\) don't/g, 'You (plural) are not going to')
         .replace(/They don't/g, 'They are not going to')
         .replace(/can't/g, 'are not going to be able to');
+    } else if (normalizedTense === 'présent_progressif') {
+      // Présent progressif = "am/is/are + -ing" expressions
+      englishQuestion = englishQuestion
+        .replace(/I have/g, 'I am having')
+        .replace(/You have/g, 'You are having')
+        .replace(/He has/g, 'He is having')
+        .replace(/She has/g, 'She is having')
+        .replace(/We have/g, 'We are having')
+        .replace(/You \(plural\) have/g, 'You (plural) are having')
+        .replace(/They have/g, 'They are having')
+        .replace(/I am/g, 'I am being')
+        .replace(/You are/g, 'You are being')
+        .replace(/He is/g, 'He is being')
+        .replace(/She is/g, 'She is being')
+        .replace(/We are/g, 'We are being')
+        .replace(/You \(plural\) are/g, 'You (plural) are being')
+        .replace(/They are/g, 'They are being')
+        .replace(/I do/g, 'I am doing')
+        .replace(/You do/g, 'You are doing')
+        .replace(/He does/g, 'He is doing')
+        .replace(/She does/g, 'She is doing')
+        .replace(/We do/g, 'We are doing')
+        .replace(/You \(plural\) do/g, 'You (plural) are doing')
+        .replace(/They do/g, 'They are doing')
+        .replace(/I make/g, 'I am making')
+        .replace(/You make/g, 'You are making')
+        .replace(/He makes/g, 'He is making')
+        .replace(/She makes/g, 'She is making')
+        .replace(/We make/g, 'We are making')
+        .replace(/You \(plural\) make/g, 'You (plural) are making')
+        .replace(/They make/g, 'They are making')
+        .replace(/I go/g, 'I am going')
+        .replace(/You go/g, 'You are going')
+        .replace(/He goes/g, 'He is going')
+        .replace(/She goes/g, 'She is going')
+        .replace(/We go/g, 'We are going')
+        .replace(/You \(plural\) go/g, 'You (plural) are going')
+        .replace(/They go/g, 'They are going')
+        .replace(/I see/g, 'I am seeing')
+        .replace(/You see/g, 'You are seeing')
+        .replace(/He sees/g, 'He is seeing')
+        .replace(/She sees/g, 'She is seeing')
+        .replace(/We see/g, 'We are seeing')
+        .replace(/You \(plural\) see/g, 'You (plural) are seeing')
+        .replace(/They see/g, 'They are seeing')
+        .replace(/I say/g, 'I am saying')
+        .replace(/You say/g, 'You are saying')
+        .replace(/He says/g, 'He is saying')
+        .replace(/She says/g, 'She is saying')
+        .replace(/We say/g, 'We are saying')
+        .replace(/You \(plural\) say/g, 'You (plural) are saying')
+        .replace(/They say/g, 'They are saying')
+        .replace(/I know/g, 'I am knowing')
+        .replace(/You know/g, 'You are knowing')
+        .replace(/He knows/g, 'He is knowing')
+        .replace(/She knows/g, 'She is knowing')
+        .replace(/We know/g, 'We are knowing')
+        .replace(/You \(plural\) know/g, 'You (plural) are knowing')
+        .replace(/They know/g, 'They are knowing')
+        .replace(/I can/g, 'I am being able to')
+        .replace(/You can/g, 'You are being able to')
+        .replace(/He can/g, 'He is being able to')
+        .replace(/She can/g, 'She is being able to')
+        .replace(/We can/g, 'We are being able to')
+        .replace(/You \(plural\) can/g, 'You (plural) are being able to')
+        .replace(/They can/g, 'They are being able to')
+        .replace(/I want/g, 'I am wanting')
+        .replace(/You want/g, 'You are wanting')
+        .replace(/He wants/g, 'He is wanting')
+        .replace(/She wants/g, 'She is wanting')
+        .replace(/We want/g, 'We are wanting')
+        .replace(/You \(plural\) want/g, 'You (plural) are wanting')
+        .replace(/They want/g, 'They are wanting')
+        .replace(/I come/g, 'I am coming')
+        .replace(/You come/g, 'You are coming')
+        .replace(/He comes/g, 'He is coming')
+        .replace(/She comes/g, 'She is coming')
+        .replace(/We come/g, 'We are coming')
+        .replace(/You \(plural\) come/g, 'You (plural) are coming')
+        .replace(/They come/g, 'They are coming')
+        // Handle negative forms for présent progressif
+        .replace(/I don't have/g, 'I am not having')
+        .replace(/You don't have/g, 'You are not having')
+        .replace(/He doesn't have/g, 'He is not having')
+        .replace(/She doesn't have/g, 'She is not having')
+        .replace(/We don't have/g, 'We are not having')
+        .replace(/You \(plural\) don't have/g, 'You (plural) are not having')
+        .replace(/They don't have/g, 'They are not having')
+        .replace(/I don't/g, 'I am not')
+        .replace(/You don't/g, 'You are not')
+        .replace(/He doesn't/g, 'He is not')
+        .replace(/She doesn't/g, 'She is not')
+        .replace(/We don't/g, 'We are not')
+        .replace(/You \(plural\) don't/g, 'You (plural) are not')
+        .replace(/They don't/g, 'They are not')
+        .replace(/can't/g, 'are not being able to');
     }
 
     // Ensure proper punctuation for English sentences

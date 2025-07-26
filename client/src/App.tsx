@@ -12,6 +12,7 @@ function App() {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
+  const [showInstructionPopup, setShowInstructionPopup] = useState(false);
 
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
@@ -50,6 +51,7 @@ function App() {
         setCurrentQuestionIndex(0);
         setUserAnswers({});
         setQuizState('active');
+        setShowInstructionPopup(true); // Show the instruction popup when quiz starts
       } else {
         alert(`Quiz not available: ${data.error}`);
         setQuizState('config');
@@ -181,6 +183,28 @@ function App() {
               ></div>
             </div>
           </div>
+
+          {/* Instruction Popup */}
+          {showInstructionPopup && (
+            <div className="mb-6 bg-blue-500/20 border border-blue-500/30 rounded-xl p-4 relative animate-pulse">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl">💡</div>
+                  <div>
+                    <p className="text-blue-200 font-medium">Quick Tip</p>
+                    <p className="text-blue-100 text-sm">Click answer twice to move to the next question.</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowInstructionPopup(false)}
+                  className="text-blue-300 hover:text-blue-100 text-xl px-2 py-1 rounded hover:bg-blue-500/20 transition-colors"
+                  title="Dismiss"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )}
 
           <div className="mb-6">
             <h2 className="text-2xl font-bold mb-4">{currentQuestion.question}</h2>
