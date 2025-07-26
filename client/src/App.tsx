@@ -714,7 +714,7 @@ function App() {
                 <p className="text-lg text-slate-400 mt-2">
                   {examPassed ? 
                     'Congratulations! You passed the final exam!' :
-                    `You need 90% (18/20) to pass. You got ${correctAnswers}/20. Try again!`
+                    `We have high standards! You need 90% (18/20) to pass. You got ${correctAnswers}/20. Try again!`
                   }
                 </p>
               </div>

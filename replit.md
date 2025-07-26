@@ -110,6 +110,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Fixed Exam Passing Logic & Sequential Progression ✓
+- Fixed critical bug where users could pass exams with less than 90% (18/20 questions)
+- Changed exam logic from percentage-based to absolute score requirement (>= 18 correct answers)
+- Added jocular "We have high standards!" message for exam failures to maintain engagement
+- Added debug logging to track exam scoring and prevent future issues
+- Cleaned up database to remove incorrectly passed courses
+- Enhanced exam failure feedback to show exact score achieved vs required
+
 ### January 26, 2025 - Sequential Course Progression System ✓
 - Implemented structured course progression: users must complete courses in order (Present → Past → Future)
 - Added numbered step indicators (1, 2, 3) for each course with visual progression tracking
