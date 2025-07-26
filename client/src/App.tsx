@@ -13,6 +13,7 @@ function App() {
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
 
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
@@ -47,6 +48,7 @@ function App() {
           verb: selectedVerb,
           timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
           tenseType: selectedTenseType,
+          ...(selectedDifficulty && { difficulty: selectedDifficulty }),
         }),
       });
 
@@ -109,42 +111,7 @@ function App() {
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
     setShowDifficultyModal(false);
-    
-    // Auto-start quiz with difficulty parameter
-    setQuizState('loading');
-    
-    try {
-      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
-      const response = await fetch('/api/get-quiz', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          verb: randomVerb,
-          timeFrame: timeFrameMapping[randomTimeFrame as keyof typeof timeFrameMapping],
-          tenseType: randomTense,
-          difficulty: difficulty,
-        }),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setQuizData(data.quiz.questions);
-        setCurrentQuestionIndex(0);
-        setUserAnswers({});
-        setQuizState('active');
-        // Only show popup if user hasn't disabled it
-        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
-        if (!dontRemindAgain) {
-          setShowInstructionPopup(true);
-        }
-      } else {
-        alert(`Quiz not available: ${data.error}`);
-        setQuizState('config');
-      }
-    } catch (error) {
-      alert('Failed to load quiz. Please try again.');
-      setQuizState('config');
-    }
+    setSelectedDifficulty(difficulty);
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
@@ -179,6 +146,7 @@ function App() {
     setUserAnswers({});
     setShowHint(false);
     setSelectedAnswerIndex(null);
+    setSelectedDifficulty(null);
     setIsAnswerConfirmed(false);
 
   };

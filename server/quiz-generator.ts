@@ -706,7 +706,7 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
     'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' }
   };
   
-  const englishPronoun = englishPronouns[pronoun] || pronoun;
+  const englishPronoun = englishPronouns[pronoun as keyof typeof englishPronouns] || pronoun;
   const verbData = englishVerbs[verb as keyof typeof englishVerbs];
   
   if (!verbData) return `${englishPronoun} ${verb}`;
@@ -804,14 +804,14 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
       
       questions.push({
-        question: `${englishConjugation}.`,
-        hint: `Think about the correct conjugation of "${verb}" for "${pronoun}".`,
+        question: englishConjugation, // No full stop for Beginner mode
+        hint: `Think about the correct conjugation of "${verb}" for "${pronoun}"`,
         answerOptions: shuffledAnswers.map(answer => ({
           text: answer,
           isCorrect: answer === correctAnswer,
           rationale: answer === correctAnswer 
-            ? `Correct! "${pronoun}" takes the conjugation "${conjugation}".`
-            : `Incorrect. The correct answer is "${correctAnswer}".`
+            ? `Correct! "${pronoun}" takes the conjugation "${conjugation}"`
+            : `Incorrect. The correct answer is "${correctAnswer}"`
         }))
       });
     }
