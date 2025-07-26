@@ -292,29 +292,40 @@ function App() {
     setQuizState('loading');
     
     try {
-      const response = await fetch('/api/get-quiz', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          verb: verb,
-          timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
-          tenseType: tense,
-          difficulty: "Beginner",
-        })
-      });
+      // Generate 80 questions total: 20 questions from each of the 4 verbs for this tense
+      const allQuestions: any[] = [];
+      
+      for (const currentVerb of beginnerVerbs) {
+        const response = await fetch('/api/get-quiz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verb: currentVerb,
+            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+            tenseType: tense,
+            difficulty: "Beginner",
+          })
+        });
 
-      const data = await response.json();
-      if (data.success) {
-        setQuizData(data.quiz.questions); // All 20 questions for this verb
-        setCurrentQuestionIndex(0);
-        setUserAnswers({});
-        setQuizState('active');
-        
-        // Show instruction popup if not disabled
-        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
-        if (!dontRemindAgain) {
-          setShowInstructionPopup(true);
+        const data = await response.json();
+        if (data.success) {
+          // Take exactly 20 questions from each verb
+          allQuestions.push(...data.quiz.questions.slice(0, 20));
         }
+      }
+      
+      // Shuffle all 80 questions (20 from each of the 4 verbs)
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions); // All 80 questions mixed from 4 verbs
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setQuizState('active');
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
       }
     } catch (error) {
       console.error('Error generating verb section:', error);
@@ -513,7 +524,8 @@ function App() {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">Section Complete: {currentVerb}</h2>
+              <h2 className="text-4xl font-bold mb-4">Section {courseInfo.currentVerbIndex + 1} Complete</h2>
+              <p className="text-xl text-slate-300 mb-4">80 mixed questions from all 4 verbs ({courseInfo.tense})</p>
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-2">{percentage}%</div>
                 <p className="text-xl text-slate-300">
@@ -531,7 +543,8 @@ function App() {
                       index === courseInfo.currentVerbIndex ? 'bg-blue-500/20 text-blue-300' :
                       'bg-gray-500/20 text-gray-400'
                     }`}>
-                      {verb} {index < courseInfo.currentVerbIndex ? '✓' : index === courseInfo.currentVerbIndex ? '...' : ''}
+                      Section {index + 1} {index < courseInfo.currentVerbIndex ? '✓' : index === courseInfo.currentVerbIndex ? '...' : ''}
+                      <div className="text-xs opacity-75">(80 questions)</div>
                     </div>
                   ))}
                 </div>
@@ -559,7 +572,7 @@ function App() {
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700"
                   >
-                    Continue to {beginnerVerbs[courseInfo.currentVerbIndex + 1]}
+                    Continue to Section {courseInfo.currentVerbIndex + 2}
                   </button>
                 ) : (
                   <button
@@ -1088,7 +1101,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Beginner Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Learn all 4 basic verbs in your chosen time frame
+                    4 sections with 80 mixed questions each (320 total)
                   </div>
                 </button>
                 <button
@@ -1284,11 +1297,11 @@ function App() {
                         {inProgress && <span className="text-sm">⏳ In Progress</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        4 sections: 20 questions each (80 total) + optional exam (90% to pass)
+                        4 sections: 80 questions each (320 total) + optional exam (90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/4 verbs completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
+                          Progress: {inProgress.currentVerbIndex}/4 sections completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
                         </div>
                       )}
                       {isCompleted && (

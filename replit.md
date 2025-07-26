@@ -127,17 +127,15 @@ Preferred communication style: Simple, everyday language.
 - Added Future timeframe to Moderate difficulty level to enable access to Futur Simple tense
 - Fixed missing question contexts for "aller" verb to resolve quiz generation errors
 
-### January 25, 2025 - Enhanced Mini-Courses with Individual Verb Sections ✓
-- Added "Mini-Courses" button next to "Choose all for me" on landing page
-- Created structured learning paths with difficulty selection modal
-- Implemented Beginner Mini-Course with time frame selection (Past/Present/Future)
-- Redesigned course structure: 4 individual verb sections (être → avoir → faire → aller)
-- Each verb section contains 20 questions (80 questions total per tense course)
-- Added course progression tracking with visual indicators
-- Implemented optional final exam requiring 90% pass rate (18/20 questions)
-- Final exam uses 20 mixed questions (5 from each verb) with retry functionality
-- Added comprehensive course completion screens with detailed scoring
-- Other difficulty courses marked as "coming soon" for future expansion
+### January 25, 2025 - Complete Course Restructure: 320 Questions per Course ✓
+- **MAJOR STRUCTURAL CHANGE**: Each course section now contains 80 questions instead of 20
+- Each of the 4 sections generates 20 questions from each of the 4 verbs (être, avoir, faire, aller) = 80 mixed questions per section
+- Complete course now totals 320 questions (4 sections × 80 questions each) + optional 20-question exam
+- Updated all UI descriptions and progress tracking to reflect new structure
+- Enhanced section completion displays to show "80 mixed questions from all 4 verbs"
+- Modified course progress indicators to show "Section 1, 2, 3, 4" instead of individual verb names
+- Updated database persistence to handle larger question volumes and scoring
+- Maintained course resume functionality with accurate progress tracking for 320-question courses
 
 ### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
 - Added collapsible instruction popup that appears when quiz starts
