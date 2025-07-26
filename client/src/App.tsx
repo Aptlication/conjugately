@@ -661,7 +661,12 @@ function App() {
 
     // Handle exam results (when currentVerbIndex is 5)
     if (courseInfo && courseInfo.currentVerbIndex === 5) {
-      const examPassed = percentage >= 90;
+      // For exam, we need exactly 18/20 or higher (90%)
+      const examPassed = correctAnswers >= 18;
+      
+      // Debug logging
+      console.log(`Exam Results: ${correctAnswers}/${totalQuestions} = ${percentage}%`);
+      console.log(`Exam passed: ${examPassed} (need 18/20 or higher)`);
       
       // Save completed course if passed - do this once when exam is complete
       if (examPassed && !completedCourses.some(course => 
@@ -681,7 +686,7 @@ function App() {
                 totalScore: courseInfo.totalScore + correctAnswers,
                 totalQuestions: courseInfo.totalQuestions + totalQuestions,
                 examScore: correctAnswers,
-                examPassed: true
+                examPassed: examPassed
               })
             });
             await loadUserData(); // Refresh completed courses
@@ -709,7 +714,7 @@ function App() {
                 <p className="text-lg text-slate-400 mt-2">
                   {examPassed ? 
                     'Congratulations! You passed the final exam!' :
-                    'You need 90% (18/20) to pass. Try again!'
+                    `You need 90% (18/20) to pass. You got ${correctAnswers}/20. Try again!`
                   }
                 </p>
               </div>
