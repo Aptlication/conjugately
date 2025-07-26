@@ -902,7 +902,7 @@ function App() {
               onClick={handleStartOver}
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700"
             >
-              Try Another Quiz
+              Try another Mini-Course
             </button>
           </div>
         </div>
