@@ -689,8 +689,8 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 // Helper function to get English conjugation for Beginner mode
 function getEnglishConjugation(pronoun: string, verb: string, tense: string): string {
   const englishPronouns = {
-    'je': 'I', 'tu': 'You', 'il': 'He', 'elle': 'She',
-    'nous': 'We', 'vous': 'You', 'ils': 'They (masculine)', 'elles': 'They (feminine)'
+    'je': 'I', 'tu': 'You (informal)', 'il': 'He', 'elle': 'She',
+    'nous': 'We', 'vous': 'You (formal/plural)', 'ils': 'They (masculine)', 'elles': 'They (feminine)'
   };
   
   const englishVerbs = {
