@@ -52,6 +52,7 @@ function App() {
         setUserAnswers({});
         setQuizState('active');
         setShowInstructionPopup(true); // Show the instruction popup when quiz starts
+        console.log('Quiz started, showInstructionPopup set to true');
       } else {
         alert(`Quiz not available: ${data.error}`);
         setQuizState('config');
@@ -185,19 +186,20 @@ function App() {
           </div>
 
           {/* Instruction Popup */}
+          {console.log('Rendering quiz, showInstructionPopup:', showInstructionPopup)}
           {showInstructionPopup && (
-            <div className="mb-6 bg-blue-500/20 border border-blue-500/30 rounded-xl p-4 relative animate-pulse">
+            <div className="mb-6 bg-blue-500/30 border-2 border-blue-400 rounded-xl p-5 relative shadow-lg shadow-blue-500/20">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="text-2xl">💡</div>
+                <div className="flex items-center gap-4">
+                  <div className="text-3xl animate-bounce">💡</div>
                   <div>
-                    <p className="text-blue-200 font-medium">Quick Tip</p>
-                    <p className="text-blue-100 text-sm">Click answer twice to move to the next question.</p>
+                    <p className="text-blue-100 font-bold text-lg">Quick Tip</p>
+                    <p className="text-blue-50 text-base font-medium">Click answer twice to move to the next question.</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowInstructionPopup(false)}
-                  className="text-blue-300 hover:text-blue-100 text-xl px-2 py-1 rounded hover:bg-blue-500/20 transition-colors"
+                  className="text-blue-200 hover:text-white text-2xl px-3 py-2 rounded-lg hover:bg-blue-500/30 transition-colors font-bold"
                   title="Dismiss"
                 >
                   ×
