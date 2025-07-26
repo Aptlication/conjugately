@@ -6,6 +6,8 @@ function App() {
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showDifficultyModal, setShowDifficultyModal] = useState(false);
+  const [showMiniCoursesModal, setShowMiniCoursesModal] = useState(false);
+  const [showBeginnerCourseModal, setShowBeginnerCourseModal] = useState(false);
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -123,6 +125,76 @@ function App() {
     setSelectedTenseType(randomTense);
     setShowDifficultyModal(false);
     setSelectedDifficulty(difficulty);
+  };
+
+  const handleMiniCourseSelect = (difficulty: string) => {
+    if (difficulty === "Beginner") {
+      setShowMiniCoursesModal(false);
+      setShowBeginnerCourseModal(true);
+    } else {
+      // For now, just select the difficulty and close modal
+      setSelectedDifficulty(difficulty);
+      setSelectedVerb("");
+      setSelectedTimeFrame("");
+      setSelectedTenseType("");
+      setShowMiniCoursesModal(false);
+    }
+  };
+
+  const handleBeginnerCourseTimeFrame = async (timeFrame: string) => {
+    setQuizState('loading');
+    setShowBeginnerCourseModal(false);
+    
+    // Get tense for the time frame
+    const beginnerTenseMap = {
+      "Past": "Passé Simple",
+      "Present": "Présent", 
+      "Future": "Futur Simple"
+    };
+    const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    
+    try {
+      // Generate quizzes for all 4 beginner verbs
+      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+      const allQuestions: any[] = [];
+      
+      for (const verb of beginnerVerbs) {
+        const response = await fetch('/api/get-quiz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verb: verb,
+            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+            tenseType: tense,
+            difficulty: "Beginner",
+          }),
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          // Add 5 questions from each verb (20 total)
+          allQuestions.push(...data.quiz.questions.slice(0, 5));
+        }
+      }
+      
+      // Shuffle all questions for variety
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setQuizState('active');
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error('Error generating beginner course:', error);
+      setQuizState('config');
+    }
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
@@ -403,12 +475,20 @@ function App() {
         </div>
 
         <div className="text-center mb-6">
-          <button
-            onClick={() => setShowDifficultyModal(true)}
-            className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl hover:scale-105 transition-transform"
-          >
-            🎲 Choose All for Me
-          </button>
+          <div className="flex gap-4 justify-center">
+            <button
+              onClick={() => setShowDifficultyModal(true)}
+              className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl hover:scale-105 transition-transform"
+            >
+              🎲 Choose All for Me
+            </button>
+            <button
+              onClick={() => setShowMiniCoursesModal(true)}
+              className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-2xl hover:scale-105 transition-transform"
+            >
+              📚 Mini-Courses
+            </button>
+          </div>
         </div>
 
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
@@ -631,6 +711,108 @@ function App() {
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
               >
                 Cancel
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Mini-Courses Modal */}
+        {showMiniCoursesModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">📚 Mini-Courses</h3>
+              <p className="text-slate-300 text-center mb-6">Choose a difficulty level for structured learning</p>
+              <div className="space-y-3 mb-6">
+                <button
+                  onClick={() => handleMiniCourseSelect("Beginner")}
+                  className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
+                >
+                  <div className="text-blue-200 font-semibold text-lg">🔵 Beginner Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Learn all 4 basic verbs in your chosen time frame
+                  </div>
+                </button>
+                <button
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
+                  disabled
+                >
+                  <div className="text-green-200 font-semibold text-lg">🟢 Easy Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Coming soon...
+                  </div>
+                </button>
+                <button
+                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
+                  disabled
+                >
+                  <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Coming soon...
+                  </div>
+                </button>
+                <button
+                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
+                  disabled
+                >
+                  <div className="text-red-200 font-semibold text-lg">🔴 Difficult Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Coming soon...
+                  </div>
+                </button>
+              </div>
+              <button
+                onClick={() => setShowMiniCoursesModal(false)}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Beginner Course Time Frame Modal */}
+        {showBeginnerCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
+              <p className="text-slate-300 text-center mb-6">Choose a time frame to practice all 4 basic verbs (être, avoir, faire, aller)</p>
+              <div className="space-y-3 mb-6">
+                <button
+                  onClick={() => handleBeginnerCourseTimeFrame("Past")}
+                  className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
+                >
+                  <div className="text-purple-200 font-semibold text-lg">⏮️ Past Tense</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Practice Passé Simple with all 4 verbs (5 questions each)
+                  </div>
+                </button>
+                <button
+                  onClick={() => handleBeginnerCourseTimeFrame("Present")}
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
+                >
+                  <div className="text-green-200 font-semibold text-lg">▶️ Present Tense</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Practice Présent with all 4 verbs (5 questions each)
+                  </div>
+                </button>
+                <button
+                  onClick={() => handleBeginnerCourseTimeFrame("Future")}
+                  className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
+                >
+                  <div className="text-blue-200 font-semibold text-lg">⏭️ Future Tense</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Practice Futur Simple with all 4 verbs (5 questions each)
+                  </div>
+                </button>
+              </div>
+              <button
+                onClick={() => {
+                  setShowBeginnerCourseModal(false);
+                  setShowMiniCoursesModal(true);
+                }}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Back to Mini-Courses
               </button>
             </div>
           </div>
