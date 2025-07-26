@@ -595,12 +595,17 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <div className={`px-3 py-2 rounded-lg text-sm font-medium mx-auto max-w-xs ${
-                  courseInfo.currentVerbIndex > 4 ? 'bg-yellow-500/20 text-yellow-300' : 'bg-gray-500/20 text-gray-400'
-                }`}>
-                  Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
-                  <div className="text-xs opacity-75">(40 mixed questions)</div>
-                </div>
+                <button 
+                  onClick={async () => {
+                    await handleStartFinalExam(courseInfo.timeFrame, courseInfo.tense);
+                  }}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium mx-auto max-w-xs hover:scale-105 transition-transform cursor-pointer ${
+                    courseInfo.currentVerbIndex > 4 ? 'bg-yellow-500/20 text-yellow-300 hover:bg-yellow-500/30' : 'bg-yellow-500/10 text-yellow-200 hover:bg-yellow-500/20'
+                  }`}
+                >
+                  🏆 Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
+                  <div className="text-xs opacity-75">(40 q's)</div>
+                </button>
               </div>
 
               <div className="flex gap-4 justify-center">
@@ -938,7 +943,7 @@ function App() {
                   </div>
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam (40 mixed questions)</span>
+                    <span className="font-semibold">Final Exam (40 q's)</span>
                   </div>
                 </div>
               </div>
@@ -975,7 +980,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Exam (40 mixed questions)
+                🏆 Take Final Exam (40 q's)
               </button>
             </div>
           </div>
