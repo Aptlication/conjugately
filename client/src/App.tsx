@@ -16,6 +16,16 @@ function App() {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+  const [courseInfo, setCourseInfo] = useState<{
+    timeFrame: string;
+    tense: string;
+    currentVerbIndex: number;
+    completedVerbs: Array<{verb: string, score: number}>;
+    totalScore: number;
+    totalQuestions: number;
+  } | null>(null);
+  const [showCourseProgress, setShowCourseProgress] = useState(false);
+  const [showExamOption, setShowExamOption] = useState(false);
 
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
@@ -141,58 +151,61 @@ function App() {
     }
   };
 
-  const handleBeginnerCourseTimeFrame = async (timeFrame: string) => {
-    setQuizState('loading');
-    setShowBeginnerCourseModal(false);
-    
-    // Get tense for the time frame
+  const handleBeginnerCourseTimeFrame = (timeFrame: string) => {
+    // Store course info and start with first verb
     const beginnerTenseMap = {
       "Past": "Passé Simple",
       "Present": "Présent", 
       "Future": "Futur Simple"
     };
-    const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
+    
+    setCourseInfo({
+      timeFrame,
+      tense: beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap],
+      currentVerbIndex: 0,
+      completedVerbs: [],
+      totalScore: 0,
+      totalQuestions: 0
+    });
+    
+    setShowBeginnerCourseModal(false);
+    handleStartVerbSection(0, timeFrame, beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap]);
+  };
+
+  const handleStartVerbSection = async (verbIndex: number, timeFrame: string, tense: string) => {
+    const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+    const verb = beginnerVerbs[verbIndex];
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
     
+    setQuizState('loading');
+    
     try {
-      // Generate quizzes for all 4 beginner verbs
-      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
-      const allQuestions: any[] = [];
-      
-      for (const verb of beginnerVerbs) {
-        const response = await fetch('/api/get-quiz', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            verb: verb,
-            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
-            tenseType: tense,
-            difficulty: "Beginner",
-          }),
-        });
+      const response = await fetch('/api/get-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          verb: verb,
+          timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+          tenseType: tense,
+          difficulty: "Beginner",
+        })
+      });
 
-        const data = await response.json();
-        if (data.success) {
-          // Add 5 questions from each verb (20 total)
-          allQuestions.push(...data.quiz.questions.slice(0, 5));
+      const data = await response.json();
+      if (data.success) {
+        setQuizData(data.quiz.questions); // All 20 questions for this verb
+        setCurrentQuestionIndex(0);
+        setUserAnswers({});
+        setQuizState('active');
+        
+        // Show instruction popup if not disabled
+        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+        if (!dontRemindAgain) {
+          setShowInstructionPopup(true);
         }
       }
-      
-      // Shuffle all questions for variety
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
-      
-      setQuizData(shuffledQuestions);
-      setCurrentQuestionIndex(0);
-      setUserAnswers({});
-      setQuizState('active');
-      
-      // Show instruction popup if not disabled
-      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
-      if (!dontRemindAgain) {
-        setShowInstructionPopup(true);
-      }
     } catch (error) {
-      console.error('Error generating beginner course:', error);
+      console.error('Error generating verb section:', error);
       setQuizState('config');
     }
   };
@@ -224,14 +237,21 @@ function App() {
   };
 
   const handleStartOver = () => {
+    setSelectedVerb("");
+    setSelectedTimeFrame("");
+    setSelectedTenseType("");
+    setSelectedDifficulty(null);
     setQuizState('config');
+    setQuizData([]);
     setCurrentQuestionIndex(0);
     setUserAnswers({});
     setShowHint(false);
     setSelectedAnswerIndex(null);
-    setSelectedDifficulty(null);
+    setShowInstructionPopup(false);
+    setCourseInfo(null);
+    setShowCourseProgress(false);
+    setShowExamOption(false);
     setIsAnswerConfirmed(false);
-
   };
 
   const calculateResults = () => {
@@ -371,6 +391,192 @@ function App() {
   if (quizState === 'results') {
     const { correctAnswers, totalQuestions } = calculateResults();
     const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+    
+    // Handle course progression for Mini-Courses
+    if (courseInfo && courseInfo.currentVerbIndex < 4) {
+      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+      const currentVerb = beginnerVerbs[courseInfo.currentVerbIndex];
+      
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
+              <h2 className="text-4xl font-bold mb-4">Section Complete: {currentVerb}</h2>
+              <div className="mb-6">
+                <div className="text-5xl font-bold mb-2">{percentage}%</div>
+                <p className="text-xl text-slate-300">
+                  You got {correctAnswers} out of {totalQuestions} questions correct
+                </p>
+              </div>
+              
+              {/* Course Progress */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold mb-4">Course Progress ({courseInfo.timeFrame} Tense)</h3>
+                <div className="flex justify-center gap-2 mb-4">
+                  {beginnerVerbs.map((verb, index) => (
+                    <div key={verb} className={`px-3 py-2 rounded-lg text-sm font-medium ${
+                      index < courseInfo.currentVerbIndex ? 'bg-green-500/20 text-green-300' :
+                      index === courseInfo.currentVerbIndex ? 'bg-blue-500/20 text-blue-300' :
+                      'bg-gray-500/20 text-gray-400'
+                    }`}>
+                      {verb} {index < courseInfo.currentVerbIndex ? '✓' : index === courseInfo.currentVerbIndex ? '...' : ''}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex gap-4 justify-center">
+                {courseInfo.currentVerbIndex < 3 ? (
+                  <button
+                    onClick={() => {
+                      // Update course progress
+                      const updatedCourse = {
+                        ...courseInfo,
+                        currentVerbIndex: courseInfo.currentVerbIndex + 1,
+                        completedVerbs: [...courseInfo.completedVerbs, {verb: currentVerb, score: percentage}],
+                        totalScore: courseInfo.totalScore + correctAnswers,
+                        totalQuestions: courseInfo.totalQuestions + totalQuestions
+                      };
+                      setCourseInfo(updatedCourse);
+                      
+                      // Start next verb section
+                      handleStartVerbSection(updatedCourse.currentVerbIndex, courseInfo.timeFrame, courseInfo.tense);
+                    }}
+                    className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700"
+                  >
+                    Continue to {beginnerVerbs[courseInfo.currentVerbIndex + 1]}
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      // Update course progress and show exam option
+                      const updatedCourse = {
+                        ...courseInfo,
+                        currentVerbIndex: 4,
+                        completedVerbs: [...courseInfo.completedVerbs, {verb: currentVerb, score: percentage}],
+                        totalScore: courseInfo.totalScore + correctAnswers,
+                        totalQuestions: courseInfo.totalQuestions + totalQuestions
+                      };
+                      setCourseInfo(updatedCourse);
+                      setShowExamOption(true);
+                    }}
+                    className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:from-green-700 hover:to-blue-700"
+                  >
+                    Course Complete - View Options
+                  </button>
+                )}
+                <button
+                  onClick={handleStartOver}
+                  className="px-8 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl font-semibold hover:from-gray-700 hover:to-gray-800"
+                >
+                  Exit Course
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Handle exam results (when currentVerbIndex is 5)
+    if (courseInfo && courseInfo.currentVerbIndex === 5) {
+      const examPassed = percentage >= 90;
+      
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
+              <h2 className="text-4xl font-bold mb-4">
+                {examPassed ? '🏆 Exam Passed!' : '❌ Exam Failed'}
+              </h2>
+              <div className="mb-6">
+                <div className={`text-6xl font-bold mb-2 ${examPassed ? 'text-green-400' : 'text-red-400'}`}>
+                  {percentage}%
+                </div>
+                <p className="text-xl text-slate-300">
+                  You got {correctAnswers} out of {totalQuestions} questions correct
+                </p>
+                <p className="text-lg text-slate-400 mt-2">
+                  {examPassed ? 
+                    'Congratulations! You passed the final exam!' :
+                    'You need 90% (18/20) to pass. Try again!'
+                  }
+                </p>
+              </div>
+              
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold mb-4">Course Summary ({courseInfo.timeFrame} Tense)</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-slate-300">Total Questions</div>
+                    <div className="text-2xl font-bold">{courseInfo.totalQuestions + totalQuestions}</div>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-4">
+                    <div className="text-slate-300">Overall Score</div>
+                    <div className="text-2xl font-bold">
+                      {Math.round(((courseInfo.totalScore + correctAnswers) / (courseInfo.totalQuestions + totalQuestions)) * 100)}%
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4 justify-center">
+                {!examPassed && (
+                  <button
+                    onClick={async () => {
+                      // Retry exam - generate new mixed questions
+                      setQuizState('loading');
+                      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                      
+                      try {
+                        const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+                        const allQuestions: any[] = [];
+                        
+                        for (const verb of beginnerVerbs) {
+                          const response = await fetch('/api/get-quiz', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                              verb: verb,
+                              timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
+                              tenseType: courseInfo.tense,
+                              difficulty: "Beginner",
+                            })
+                          });
+                          
+                          const data = await response.json();
+                          if (data.success) {
+                            allQuestions.push(...data.quiz.questions.slice(0, 5));
+                          }
+                        }
+                        
+                        const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+                        setQuizData(shuffledQuestions);
+                        setCurrentQuestionIndex(0);
+                        setUserAnswers({});
+                        setQuizState('active');
+                      } catch (error) {
+                        console.error('Error generating retry exam:', error);
+                        setQuizState('config');
+                      }
+                    }}
+                    className="px-8 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold hover:from-yellow-700 hover:to-orange-700"
+                  >
+                    Retry Exam
+                  </button>
+                )}
+                <button
+                  onClick={handleStartOver}
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700"
+                >
+                  Return to Main Menu
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
@@ -776,38 +982,130 @@ function App() {
           </div>
         )}
 
+        {/* Exam Option Modal */}
+        {showExamOption && courseInfo && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">🎓 Course Complete!</h3>
+              <div className="text-center mb-6">
+                <div className="text-4xl font-bold mb-2">
+                  {Math.round((courseInfo.totalScore / courseInfo.totalQuestions) * 100)}%
+                </div>
+                <p className="text-slate-300">
+                  Overall Score: {courseInfo.totalScore}/{courseInfo.totalQuestions}
+                </p>
+                <div className="mt-4 space-y-2">
+                  {courseInfo.completedVerbs.map((verb, index) => (
+                    <div key={index} className="flex justify-between text-sm">
+                      <span>{verb.verb}:</span>
+                      <span className={verb.score >= 70 ? 'text-green-300' : 'text-red-300'}>
+                        {verb.score}%
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <button
+                  onClick={async () => {
+                    setShowExamOption(false);
+                    // Generate mixed exam with all 4 verbs
+                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                    setQuizState('loading');
+                    
+                    try {
+                      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+                      const allQuestions: any[] = [];
+                      
+                      for (const verb of beginnerVerbs) {
+                        const response = await fetch('/api/get-quiz', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            verb: verb,
+                            timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
+                            tenseType: courseInfo.tense,
+                            difficulty: "Beginner",
+                          })
+                        });
+                        
+                        const data = await response.json();
+                        if (data.success) {
+                          // Take 5 questions from each verb for 20 total
+                          allQuestions.push(...data.quiz.questions.slice(0, 5));
+                        }
+                      }
+                      
+                      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+                      setQuizData(shuffledQuestions);
+                      setCurrentQuestionIndex(0);
+                      setUserAnswers({});
+                      
+                      // Mark as exam mode
+                      setCourseInfo({...courseInfo, currentVerbIndex: 5}); // 5 indicates exam mode
+                      setQuizState('active');
+                    } catch (error) {
+                      console.error('Error generating exam:', error);
+                      setQuizState('config');
+                    }
+                  }}
+                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
+                >
+                  <div className="text-yellow-200 font-semibold text-lg">🏆 Take Final Exam</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    20 mixed questions - Need 90% to pass (18/20)
+                  </div>
+                </button>
+                <button
+                  onClick={() => {
+                    setShowExamOption(false);
+                    handleStartOver();
+                  }}
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
+                >
+                  <div className="text-green-200 font-semibold text-lg">✅ Finish Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Complete the course and return to main menu
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Beginner Course Time Frame Modal */}
         {showBeginnerCourseModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
-              <p className="text-slate-300 text-center mb-6">Choose a time frame to practice all 4 basic verbs (être, avoir, faire, aller)</p>
+              <p className="text-slate-300 text-center mb-6">Choose a time frame for structured learning with 4 individual verb sections plus optional exam</p>
               <div className="space-y-3 mb-6">
                 <button
                   onClick={() => handleBeginnerCourseTimeFrame("Past")}
                   className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
                 >
-                  <div className="text-purple-200 font-semibold text-lg">⏮️ Past Tense</div>
+                  <div className="text-purple-200 font-semibold text-lg">⏮️ Past Tense Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Practice Passé Simple with all 4 verbs (5 questions each)
+                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
                   </div>
                 </button>
                 <button
                   onClick={() => handleBeginnerCourseTimeFrame("Present")}
                   className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
                 >
-                  <div className="text-green-200 font-semibold text-lg">▶️ Present Tense</div>
+                  <div className="text-green-200 font-semibold text-lg">▶️ Present Tense Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Practice Présent with all 4 verbs (5 questions each)
+                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
                   </div>
                 </button>
                 <button
                   onClick={() => handleBeginnerCourseTimeFrame("Future")}
                   className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
                 >
-                  <div className="text-blue-200 font-semibold text-lg">⏭️ Future Tense</div>
+                  <div className="text-blue-200 font-semibold text-lg">⏭️ Future Tense Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Practice Futur Simple with all 4 verbs (5 questions each)
+                    4 sections: 20 questions each (80 total) + optional exam (90% to pass)
                   </div>
                 </button>
               </div>

@@ -127,13 +127,16 @@ Preferred communication style: Simple, everyday language.
 - Added Future timeframe to Moderate difficulty level to enable access to Futur Simple tense
 - Fixed missing question contexts for "aller" verb to resolve quiz generation errors
 
-### January 25, 2025 - Added Mini-Courses Feature ✓
+### January 25, 2025 - Enhanced Mini-Courses with Individual Verb Sections ✓
 - Added "Mini-Courses" button next to "Choose all for me" on landing page
 - Created structured learning paths with difficulty selection modal
 - Implemented Beginner Mini-Course with time frame selection (Past/Present/Future)
-- Beginner course generates mixed quizzes from all 4 basic verbs (être, avoir, faire, aller)
-- Each course creates 20 questions: 5 from each verb, shuffled for variety
-- Added navigation between modals with proper back button functionality
+- Redesigned course structure: 4 individual verb sections (être → avoir → faire → aller)
+- Each verb section contains 20 questions (80 questions total per tense course)
+- Added course progression tracking with visual indicators
+- Implemented optional final exam requiring 90% pass rate (18/20 questions)
+- Final exam uses 20 mixed questions (5 from each verb) with retry functionality
+- Added comprehensive course completion screens with detailed scoring
 - Other difficulty courses marked as "coming soon" for future expansion
 
 ### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
