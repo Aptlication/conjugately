@@ -493,6 +493,18 @@ const QUESTION_CONTEXTS = {
     { en: "I don't come often.", fr_context: "pas souvent", negative: true, pronoun: "je" },
     { en: "She doesn't come today.", fr_context: "pas aujourd'hui", negative: true, pronoun: "elle" },
     { en: "We don't come here.", fr_context: "pas ici", negative: true, pronoun: "nous" }
+  ],
+  aller: [
+    { en: "I go to school.", fr_context: "à l'école", pronoun: "je" },
+    { en: "You go home.", fr_context: "à la maison", pronoun: "tu" },
+    { en: "He goes to work.", fr_context: "au travail", pronoun: "il" },
+    { en: "She goes to the store.", fr_context: "au magasin", pronoun: "elle" },
+    { en: "We go to the park.", fr_context: "au parc", pronoun: "nous" },
+    { en: "You (plural) go to the cinema.", fr_context: "au cinéma", pronoun: "vous" },
+    { en: "They go to the beach.", fr_context: "à la plage", pronoun: "ils" },
+    { en: "I don't go there.", fr_context: "là-bas", negative: true, pronoun: "je" },
+    { en: "She doesn't go out.", fr_context: "sortir", negative: true, pronoun: "elle" },
+    { en: "We don't go often.", fr_context: "souvent", negative: true, pronoun: "nous" }
   ]
 };
 

@@ -125,6 +125,7 @@ Preferred communication style: Simple, everyday language.
 - Limited Beginner difficulty to top 4 most used French verbs: être, avoir, faire, aller
 - Added formality specification for French "tu/vous": now displays "You (informal)" and "You (formal/plural)" in quiz questions
 - Added Future timeframe to Moderate difficulty level to enable access to Futur Simple tense
+- Fixed missing question contexts for "aller" verb to resolve quiz generation errors
 
 ### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
 - Added collapsible instruction popup that appears when quiz starts
