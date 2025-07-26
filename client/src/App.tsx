@@ -488,12 +488,6 @@ function App() {
             >
               📚 Mini-Courses
             </button>
-            <button
-              onClick={() => setShowMiniCoursesModal(true)}
-              className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
-            >
-              📚 Mini-Courses
-            </button>
           </div>
         </div>
 
