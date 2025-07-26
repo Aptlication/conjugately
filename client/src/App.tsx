@@ -31,7 +31,7 @@ function App() {
       tenses: ["Présent", "Passé Simple", "Futur Simple"] 
     },
     "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
-    "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
+    "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past", "Future"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
     "Difficult": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
   };
 
@@ -597,7 +597,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    6 common verbs • Present, past, and future tenses
+                    6 common verbs • Present, past, and future tenses (including Futur Simple)
                   </div>
                 </button>
                 
