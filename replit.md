@@ -110,6 +110,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
+- Added collapsible instruction popup that appears when quiz starts
+- Popup displays "Click answer twice to move to the next question" with blue-themed design
+- Implemented "Don't remind me again" toggle with localStorage persistence
+- Users can permanently disable the popup reminder across browser sessions
+- Enhanced user onboarding with dismissible help system
+
 ### January 25, 2025 - Complete French Negation System & Full Tense Support ✓
 - Fixed comprehensive French negation for ALL tenses (not just present tense)
 - Added proper negation handling for compound tenses (passé composé, plus-que-parfait)

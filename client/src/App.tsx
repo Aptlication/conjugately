@@ -51,8 +51,11 @@ function App() {
         setCurrentQuestionIndex(0);
         setUserAnswers({});
         setQuizState('active');
-        setShowInstructionPopup(true); // Show the instruction popup when quiz starts
-        console.log('Quiz started, showInstructionPopup set to true');
+        // Only show popup if user hasn't disabled it
+        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+        if (!dontRemindAgain) {
+          setShowInstructionPopup(true);
+        }
       } else {
         alert(`Quiz not available: ${data.error}`);
         setQuizState('config');
@@ -186,10 +189,9 @@ function App() {
           </div>
 
           {/* Instruction Popup */}
-          {console.log('Rendering quiz, showInstructionPopup:', showInstructionPopup)}
           {showInstructionPopup && (
             <div className="mb-6 bg-blue-500/30 border-2 border-blue-400 rounded-xl p-5 relative shadow-lg shadow-blue-500/20">
-              <div className="flex items-center justify-between">
+              <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
                   <div className="text-3xl animate-bounce">💡</div>
                   <div>
@@ -203,6 +205,17 @@ function App() {
                   title="Dismiss"
                 >
                   ×
+                </button>
+              </div>
+              <div className="mt-4 pt-3 border-t border-blue-400/30">
+                <button
+                  onClick={() => {
+                    localStorage.setItem('dontShowInstructionPopup', 'true');
+                    setShowInstructionPopup(false);
+                  }}
+                  className="text-blue-200 hover:text-blue-100 text-sm underline hover:no-underline transition-colors"
+                >
+                  Don't remind me again
                 </button>
               </div>
             </div>
