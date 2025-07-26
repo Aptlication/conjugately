@@ -475,15 +475,21 @@ function App() {
         </div>
 
         <div className="text-center mb-6">
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 justify-center items-center flex-wrap">
             <button
-              onClick={() => setShowDifficultyModal(true)}
+              onClick={() => {
+                console.log('Choose All for Me clicked');
+                setShowDifficultyModal(true);
+              }}
               className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
             >
               🎲 Choose All for Me
             </button>
             <button
-              onClick={() => setShowMiniCoursesModal(true)}
+              onClick={() => {
+                console.log('Mini-Courses clicked');
+                setShowMiniCoursesModal(true);
+              }}
               className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
             >
               📚 Mini-Courses
