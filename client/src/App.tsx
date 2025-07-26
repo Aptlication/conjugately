@@ -1289,9 +1289,9 @@ function App() {
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
-              <p className="text-slate-300 text-center mb-6">Choose a time frame to practice all 4 basic verbs (être, avoir, faire, aller)</p>
+              <p className="text-slate-300 text-center mb-6">Complete courses in order: Present → Past → Future</p>
               <div className="space-y-3 mb-6">
-                {["Past", "Present", "Future"].map((timeFrame) => {
+                {["Present", "Past", "Future"].map((timeFrame, index) => {
                   const beginnerTenseMap = {
                     "Past": "Passé Simple",
                     "Present": "Présent", 
@@ -1313,18 +1313,39 @@ function App() {
                     !progress.isCompleted
                   );
                   
+                  // Check if previous courses are completed (sequential requirement)
+                  const orderedTimeFrames = ["Present", "Past", "Future"];
+                  const currentIndex = orderedTimeFrames.indexOf(timeFrame);
+                  const isPreviousCompleted = currentIndex === 0 || 
+                    completedCourses.some(course => 
+                      course.courseType === "beginner" && 
+                      course.timeFrame === orderedTimeFrames[currentIndex - 1] && 
+                      course.examPassed
+                    );
+                  
+                  const isLocked = !isPreviousCompleted && !isCompleted && !inProgress;
+                  
                   const iconMap = {
                     "Past": "⏮️",
                     "Present": "▶️",
                     "Future": "⏭️"
                   };
                   
+                  const stepNumbers = {
+                    "Present": "1",
+                    "Past": "2", 
+                    "Future": "3"
+                  };
+                  
                   return (
                     <button
                       key={timeFrame}
-                      onClick={() => handleBeginnerCourseTimeFrame(timeFrame)}
+                      onClick={() => !isLocked && handleBeginnerCourseTimeFrame(timeFrame)}
+                      disabled={isLocked}
                       className={`w-full p-4 text-left ${
-                        isCompleted 
+                        isLocked
+                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                          : isCompleted 
                           ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
                           : inProgress
                           ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
@@ -1336,18 +1357,26 @@ function App() {
                       } rounded-xl text-white`}
                     >
                       <div className={`font-semibold text-lg flex items-center gap-2 ${
+                        isLocked ? 'text-gray-400' :
                         isCompleted ? 'text-green-200' : 
                         inProgress ? 'text-orange-200' :
                         timeFrame === "Past" ? 'text-purple-200' : 
                         timeFrame === "Present" ? 'text-green-200' : 
                         'text-blue-200'
                       }`}>
+                        <span className="w-6 h-6 rounded-full bg-current bg-opacity-20 flex items-center justify-center text-sm font-bold">
+                          {stepNumbers[timeFrame as keyof typeof stepNumbers]}
+                        </span>
                         {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
                         {isCompleted && <span className="text-sm">✓ Completed</span>}
                         {inProgress && <span className="text-sm">⏳ In Progress</span>}
+                        {isLocked && <span className="text-sm">🔒 Locked</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        Section 1: 80 questions + Final Exam (90% to pass)
+                        {isLocked 
+                          ? `Complete ${orderedTimeFrames[currentIndex - 1]} Tense Course first`
+                          : "Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)"
+                        }
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">

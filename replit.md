@@ -110,6 +110,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Sequential Course Progression System ✓
+- Implemented structured course progression: users must complete courses in order (Present → Past → Future)
+- Added numbered step indicators (1, 2, 3) for each course with visual progression tracking
+- Past and Future courses are locked until previous courses are completed with 90% exam pass
+- Enhanced UI with lock indicators showing which previous course must be completed
+- Updated course descriptions to show correct structure: "80 mixed questions (20 from each verb) + Final Exam"
+- Fixed remaining "5 questions each" text to accurately reflect the simplified course structure
+- Courses now display completion status with sequential unlocking requirements
+- Added visual step numbers and progress indicators for better user experience
+
 ### January 25, 2025 - Complete Difficulty System Implementation & English Grammar Fix ✓
 - Added "Choose Difficulty" as the first step in the quiz configuration flow
 - Reorganized interface to: 1. Choose Difficulty, 2. Choose Verb, 3. Choose Time Frame
