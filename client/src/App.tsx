@@ -908,7 +908,8 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">French Verb Master</h1>
+          <h1 className="text-5xl font-bold mb-2">French Verb Master</h1>
+          <p className="text-2xl text-purple-300 font-semibold mb-4 italic">For serious students.</p>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Master French verb conjugations with personalized quizzes. 
             Select your verb, time frame, and tense type to generate a 20-question quiz.

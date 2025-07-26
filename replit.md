@@ -1,4 +1,5 @@
 # French Verb Master
+*For serious students.*
 
 ## Overview
 
@@ -109,6 +110,13 @@ Preferred communication style: Simple, everyday language.
 **Component-Based UI**: Modern React patterns with reusable components and consistent design system using Radix UI and Tailwind CSS.
 
 ## Recent Changes
+
+### January 26, 2025 - Added "For serious students" Slogan ✓
+- Added official slogan "For serious students" to French Verb Master branding
+- Updated main header with prominent purple slogan display beneath title
+- Modified HTML page title to include slogan for better SEO
+- Updated project documentation to reflect new branding
+- Maintained consistent professional appearance with elegant italic styling
 
 ### January 26, 2025 - Fixed Exam Passing Logic & Sequential Progression ✓
 - Fixed critical bug where users could pass exams with less than 90% (18/20 questions)
