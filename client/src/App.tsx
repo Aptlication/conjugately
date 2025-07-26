@@ -296,7 +296,7 @@ function App() {
     
     // Save initial progress to database
     await saveCourseProgress(newCourseInfo);
-    handleStartVerbSection(0, timeFrame, tense);
+    setQuizState('config'); // Show course overview
   };
 
   const resetCourse = async (courseType: string, timeFrame: string) => {
@@ -563,17 +563,16 @@ function App() {
     const { correctAnswers, totalQuestions } = calculateResults();
     const percentage = Math.round((correctAnswers / totalQuestions) * 100);
     
-    // Handle course progression for Mini-Courses
-    if (courseInfo && courseInfo.currentVerbIndex < 4) {
+    // Handle individual unit completion for beginner courses
+    if (courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= 4) {
       const beginnerVerbs = ["être", "avoir", "faire", "aller"];
-      const currentVerb = beginnerVerbs[courseInfo.currentVerbIndex];
+      const currentVerb = beginnerVerbs[courseInfo.currentVerbIndex - 1];
       
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">Section 1 Complete</h2>
-              <p className="text-xl text-slate-300 mb-4">80 mixed questions from all 4 verbs ({courseInfo.tense})</p>
+              <h2 className="text-4xl font-bold mb-4">✅ Unit {courseInfo.currentVerbIndex}: {currentVerb} Complete!</h2>
               <div className="mb-6">
                 <div className="text-5xl font-bold mb-2">{percentage}%</div>
                 <p className="text-xl text-slate-300">
@@ -581,69 +580,90 @@ function App() {
                 </p>
               </div>
               
-              {/* Course Progress */}
+              {/* Unit Progress */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold mb-4">Course Progress ({courseInfo.timeFrame} Tense)</h3>
-                <div className="flex justify-center gap-2 mb-4">
-                  <div className={`px-3 py-2 rounded-lg text-sm font-medium ${
-                    courseInfo.currentVerbIndex >= 1 ? 'bg-green-500/20 text-green-300' :
-                    courseInfo.currentVerbIndex === 0 ? 'bg-blue-500/20 text-blue-300' :
-                    'bg-gray-500/20 text-gray-400'
-                  }`}>
-                    Section 1 {courseInfo.currentVerbIndex >= 1 ? '✓' : courseInfo.currentVerbIndex === 0 ? '...' : ''}
-                    <div className="text-xs opacity-75">(80 questions)</div>
-                  </div>
-                  <div className={`px-3 py-2 rounded-lg text-sm font-medium ${
-                    courseInfo.currentVerbIndex >= 1 ? 'bg-blue-500/20 text-blue-300' : 'bg-gray-500/20 text-gray-400'
-                  }`}>
-                    Final Exam {courseInfo.currentVerbIndex >= 1 ? '...' : ''}
-                    <div className="text-xs opacity-75">(20 questions)</div>
-                  </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+                  {beginnerVerbs.map((verb, index) => (
+                    <div key={verb} className={`px-3 py-2 rounded-lg text-sm font-medium ${
+                      courseInfo.currentVerbIndex > index + 1 ? 'bg-green-500/20 text-green-300' :
+                      courseInfo.currentVerbIndex === index + 1 ? 'bg-blue-500/20 text-blue-300' :
+                      'bg-gray-500/20 text-gray-400'
+                    }`}>
+                      Unit {index + 1}: {verb} {courseInfo.currentVerbIndex > index + 1 ? '✓' : courseInfo.currentVerbIndex === index + 1 ? '✓' : ''}
+                      <div className="text-xs opacity-75">(20 questions)</div>
+                    </div>
+                  ))}
+                </div>
+                <div className={`px-3 py-2 rounded-lg text-sm font-medium mx-auto max-w-xs ${
+                  courseInfo.currentVerbIndex > 4 ? 'bg-yellow-500/20 text-yellow-300' : 'bg-gray-500/20 text-gray-400'
+                }`}>
+                  Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
+                  <div className="text-xs opacity-75">(20 mixed questions)</div>
                 </div>
               </div>
 
               <div className="flex gap-4 justify-center">
-                {courseInfo.currentVerbIndex < 1 ? (
+                {courseInfo.currentVerbIndex < 4 ? (
                   <button
                     onClick={async () => {
-                      // Update course progress to indicate Section 1 complete
+                      // Update course info to track completed verb and move to next unit
+                      const updatedCompletedVerbs = courseInfo.completedVerbs || [];
+                      updatedCompletedVerbs.push({
+                        verb: currentVerb,
+                        score: percentage
+                      });
+                      
                       const updatedCourse = {
                         ...courseInfo,
-                        currentVerbIndex: 1,
-                        completedVerbs: [{verb: "Section 1", score: percentage}],
-                        totalScore: correctAnswers,
-                        totalQuestions: totalQuestions
+                        currentVerbIndex: courseInfo.currentVerbIndex + 1,
+                        completedVerbs: updatedCompletedVerbs,
+                        totalScore: (courseInfo.totalScore || 0) + correctAnswers,
+                        totalQuestions: (courseInfo.totalQuestions || 0) + totalQuestions
                       };
                       setCourseInfo(updatedCourse);
                       
                       // Save progress to database
                       await saveCourseProgress(updatedCourse);
                       
-                      // Start final exam
-                      handleStartFinalExam(courseInfo.timeFrame, courseInfo.tense);
+                      // Clear quiz data to show next unit intro
+                      setQuizData([]);
+                      setQuizState('config');
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700"
                   >
-                    Take Final Exam
+                    Continue to Unit {courseInfo.currentVerbIndex + 1}: {beginnerVerbs[courseInfo.currentVerbIndex]} →
                   </button>
                 ) : (
                   <button
                     onClick={async () => {
-                      // Course is complete, show exam option
+                      // All units complete, update course info and show completion
+                      const updatedCompletedVerbs = courseInfo.completedVerbs || [];
+                      updatedCompletedVerbs.push({
+                        verb: currentVerb,
+                        score: percentage
+                      });
+                      
                       const updatedCourse = {
                         ...courseInfo,
-                        currentVerbIndex: 1,
+                        currentVerbIndex: 5, // Mark as ready for exam
+                        completedVerbs: updatedCompletedVerbs,
+                        totalScore: (courseInfo.totalScore || 0) + correctAnswers,
+                        totalQuestions: (courseInfo.totalQuestions || 0) + totalQuestions,
                         isCompleted: true
                       };
                       setCourseInfo(updatedCourse);
                       
-                      // Save final progress before exam
+                      // Save progress to database
                       await saveCourseProgress(updatedCourse);
-                      setShowExamOption(true);
+                      
+                      // Clear quiz data to show completion screen
+                      setQuizData([]);
+                      setQuizState('config');
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:from-green-700 hover:to-blue-700"
                   >
-                    Course Complete - View Options
+                    Complete All Units - View Options
                   </button>
                 )}
                 <button
