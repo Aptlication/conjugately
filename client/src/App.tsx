@@ -16,6 +16,32 @@ function App() {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+
+  // Load completed courses and progress on app start
+  useEffect(() => {
+    loadUserData();
+  }, []);
+
+  const loadUserData = async () => {
+    try {
+      const [completedResponse, progressResponse] = await Promise.all([
+        fetch('/api/completed-courses/1'),
+        fetch('/api/course-progress/1')
+      ]);
+      
+      if (completedResponse.ok) {
+        const completedData = await completedResponse.json();
+        setCompletedCourses(completedData.completedCourses || []);
+      }
+      
+      if (progressResponse.ok) {
+        const progressData = await progressResponse.json();
+        setCourseProgressData(progressData.progress || []);
+      }
+    } catch (error) {
+      console.error('Error loading user data:', error);
+    }
+  };
   const [courseInfo, setCourseInfo] = useState<{
     timeFrame: string;
     tense: string;
@@ -26,6 +52,8 @@ function App() {
   } | null>(null);
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [showExamOption, setShowExamOption] = useState(false);
+  const [completedCourses, setCompletedCourses] = useState<any[]>([]);
+  const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
 
 
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
@@ -151,25 +179,109 @@ function App() {
     }
   };
 
-  const handleBeginnerCourseTimeFrame = (timeFrame: string) => {
-    // Store course info and start with first verb
+  const handleBeginnerCourseTimeFrame = async (timeFrame: string) => {
     const beginnerTenseMap = {
       "Past": "Passé Simple",
       "Present": "Présent", 
       "Future": "Futur Simple"
     };
     
-    setCourseInfo({
+    const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
+    
+    // Check if course is already completed
+    const isCompleted = completedCourses.some(course => 
+      course.courseType === "beginner" && 
+      course.timeFrame === timeFrame && 
+      course.examPassed
+    );
+    
+    if (isCompleted) {
+      if (confirm(`You've already completed the ${timeFrame} course with a passing grade. Would you like to reset and retake it?`)) {
+        await resetCourse("beginner", timeFrame);
+        await loadUserData(); // Refresh data
+      } else {
+        setShowBeginnerCourseModal(false);
+        return;
+      }
+    }
+    
+    // Check for existing progress
+    const existingProgress = courseProgressData.find(progress => 
+      progress.courseType === "beginner" && 
+      progress.timeFrame === timeFrame &&
+      !progress.isCompleted
+    );
+    
+    if (existingProgress) {
+      if (confirm(`You have progress saved for the ${timeFrame} course. Would you like to continue where you left off?`)) {
+        // Resume from saved progress
+        setCourseInfo({
+          timeFrame,
+          tense,
+          currentVerbIndex: existingProgress.currentVerbIndex,
+          completedVerbs: existingProgress.completedVerbs || [],
+          totalScore: existingProgress.totalScore,
+          totalQuestions: existingProgress.totalQuestions
+        });
+        
+        setShowBeginnerCourseModal(false);
+        handleStartVerbSection(existingProgress.currentVerbIndex, timeFrame, tense);
+        return;
+      } else {
+        // Start fresh - delete existing progress
+        await resetCourse("beginner", timeFrame);
+      }
+    }
+    
+    // Start new course
+    const newCourseInfo = {
       timeFrame,
-      tense: beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap],
+      tense,
       currentVerbIndex: 0,
       completedVerbs: [],
       totalScore: 0,
       totalQuestions: 0
-    });
+    };
     
+    setCourseInfo(newCourseInfo);
     setShowBeginnerCourseModal(false);
-    handleStartVerbSection(0, timeFrame, beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap]);
+    
+    // Save initial progress to database
+    await saveCourseProgress(newCourseInfo);
+    handleStartVerbSection(0, timeFrame, tense);
+  };
+
+  const resetCourse = async (courseType: string, timeFrame: string) => {
+    try {
+      await fetch(`/api/completed-courses/1/${courseType}/${timeFrame}`, {
+        method: 'DELETE'
+      });
+      await loadUserData(); // Refresh data
+    } catch (error) {
+      console.error('Error resetting course:', error);
+    }
+  };
+
+  const saveCourseProgress = async (courseInfo: any) => {
+    try {
+      await fetch('/api/course-progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: 1,
+          courseType: "beginner",
+          timeFrame: courseInfo.timeFrame,
+          tense: courseInfo.tense,
+          currentVerbIndex: courseInfo.currentVerbIndex,
+          completedVerbs: courseInfo.completedVerbs,
+          totalScore: courseInfo.totalScore,
+          totalQuestions: courseInfo.totalQuestions,
+          isCompleted: false
+        })
+      });
+    } catch (error) {
+      console.error('Error saving course progress:', error);
+    }
   };
 
   const handleStartVerbSection = async (verbIndex: number, timeFrame: string, tense: string) => {
@@ -428,7 +540,7 @@ function App() {
               <div className="flex gap-4 justify-center">
                 {courseInfo.currentVerbIndex < 3 ? (
                   <button
-                    onClick={() => {
+                    onClick={async () => {
                       // Update course progress
                       const updatedCourse = {
                         ...courseInfo,
@@ -439,6 +551,9 @@ function App() {
                       };
                       setCourseInfo(updatedCourse);
                       
+                      // Save progress to database
+                      await saveCourseProgress(updatedCourse);
+                      
                       // Start next verb section
                       handleStartVerbSection(updatedCourse.currentVerbIndex, courseInfo.timeFrame, courseInfo.tense);
                     }}
@@ -448,7 +563,7 @@ function App() {
                   </button>
                 ) : (
                   <button
-                    onClick={() => {
+                    onClick={async () => {
                       // Update course progress and show exam option
                       const updatedCourse = {
                         ...courseInfo,
@@ -458,6 +573,9 @@ function App() {
                         totalQuestions: courseInfo.totalQuestions + totalQuestions
                       };
                       setCourseInfo(updatedCourse);
+                      
+                      // Save final progress before exam
+                      await saveCourseProgress({...updatedCourse, isCompleted: true});
                       setShowExamOption(true);
                     }}
                     className="px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:from-green-700 hover:to-blue-700"
@@ -481,6 +599,35 @@ function App() {
     // Handle exam results (when currentVerbIndex is 5)
     if (courseInfo && courseInfo.currentVerbIndex === 5) {
       const examPassed = percentage >= 90;
+      
+      // Save completed course if passed - do this once when exam is complete
+      if (examPassed && !completedCourses.some(course => 
+        course.courseType === "beginner" && 
+        course.timeFrame === courseInfo.timeFrame
+      )) {
+        const saveCompletedCourse = async () => {
+          try {
+            await fetch('/api/completed-courses', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                userId: 1,
+                courseType: "beginner",
+                timeFrame: courseInfo.timeFrame,
+                tense: courseInfo.tense,
+                totalScore: courseInfo.totalScore + correctAnswers,
+                totalQuestions: courseInfo.totalQuestions + totalQuestions,
+                examScore: correctAnswers,
+                examPassed: true
+              })
+            });
+            await loadUserData(); // Refresh completed courses
+          } catch (error) {
+            console.error('Error saving completed course:', error);
+          }
+        };
+        saveCompletedCourse();
+      }
       
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">

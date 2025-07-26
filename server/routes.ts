@@ -1,10 +1,13 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import path from "path";
-import { quizRequestSchema } from "@shared/schema";
+import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { generateInternalQuiz } from "./quiz-generator";
 import { ZodError } from "zod";
+import { db } from "./db";
+import { courseProgress, completedCourses } from "@shared/schema";
+import { eq, and } from "drizzle-orm";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -113,6 +116,107 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: false,
         error: (error as Error).message || "Failed to generate quiz"
       });
+    }
+  });
+
+  // Get course progress for a user
+  app.get("/api/course-progress/:userId", async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId) || 1;
+      const progress = await db.select().from(courseProgress).where(eq(courseProgress.userId, userId));
+      res.json({ success: true, progress });
+    } catch (error) {
+      console.error("Error fetching course progress:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch course progress" });
+    }
+  });
+
+  // Save or update course progress
+  app.post("/api/course-progress", async (req, res) => {
+    try {
+      const progressData = insertCourseProgressSchema.parse(req.body);
+      
+      // Check if progress already exists for this course
+      const existing = await db.select().from(courseProgress).where(
+        and(
+          eq(courseProgress.userId, progressData.userId),
+          eq(courseProgress.courseType, progressData.courseType),
+          eq(courseProgress.timeFrame, progressData.timeFrame)
+        )
+      );
+
+      let result;
+      if (existing.length > 0) {
+        // Update existing progress
+        result = await db
+          .update(courseProgress)
+          .set(progressData)
+          .where(eq(courseProgress.id, existing[0].id))
+          .returning();
+      } else {
+        // Create new progress
+        result = await db.insert(courseProgress).values(progressData).returning();
+      }
+      
+      res.json({ success: true, progress: result[0] });
+    } catch (error) {
+      console.error("Error saving course progress:", error);
+      res.status(500).json({ success: false, error: "Failed to save course progress" });
+    }
+  });
+
+  // Get completed courses for a user
+  app.get("/api/completed-courses/:userId", async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId) || 1;
+      const completed = await db.select().from(completedCourses).where(eq(completedCourses.userId, userId));
+      res.json({ success: true, completedCourses: completed });
+    } catch (error) {
+      console.error("Error fetching completed courses:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch completed courses" });
+    }
+  });
+
+  // Save completed course
+  app.post("/api/completed-courses", async (req, res) => {
+    try {
+      const courseData = insertCompletedCourseSchema.parse(req.body);
+      const result = await db.insert(completedCourses).values(courseData).returning();
+      res.json({ success: true, completedCourse: result[0] });
+    } catch (error) {
+      console.error("Error saving completed course:", error);
+      res.status(500).json({ success: false, error: "Failed to save completed course" });
+    }
+  });
+
+  // Reset/delete completed course (to retake)
+  app.delete("/api/completed-courses/:userId/:courseType/:timeFrame", async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId) || 1;
+      const { courseType, timeFrame } = req.params;
+      
+      // Delete completed course record
+      await db.delete(completedCourses).where(
+        and(
+          eq(completedCourses.userId, userId),
+          eq(completedCourses.courseType, courseType),
+          eq(completedCourses.timeFrame, timeFrame)
+        )
+      );
+      
+      // Also delete any progress for this course
+      await db.delete(courseProgress).where(
+        and(
+          eq(courseProgress.userId, userId),
+          eq(courseProgress.courseType, courseType),
+          eq(courseProgress.timeFrame, timeFrame)
+        )
+      );
+      
+      res.json({ success: true, message: "Course reset successfully" });
+    } catch (error) {
+      console.error("Error resetting course:", error);
+      res.status(500).json({ success: false, error: "Failed to reset course" });
     }
   });
 

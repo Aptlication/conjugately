@@ -16,6 +16,32 @@ export const quizzes = pgTable("quizzes", {
   questions: json("questions").notNull(),
 });
 
+export const courseProgress = pgTable("course_progress", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull().default(1), // Default user for now
+  courseType: text("course_type").notNull(), // "beginner", "moderate", etc.
+  timeFrame: text("time_frame").notNull(), // "Past", "Present", "Future"
+  tense: text("tense").notNull(), // "Passé Simple", "Présent", etc.
+  currentVerbIndex: integer("current_verb_index").notNull().default(0),
+  completedVerbs: json("completed_verbs").notNull().default([]),
+  totalScore: integer("total_score").notNull().default(0),
+  totalQuestions: integer("total_questions").notNull().default(0),
+  isCompleted: boolean("is_completed").notNull().default(false),
+  examPassed: boolean("exam_passed").default(false),
+});
+
+export const completedCourses = pgTable("completed_courses", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull().default(1),
+  courseType: text("course_type").notNull(),
+  timeFrame: text("time_frame").notNull(),
+  tense: text("tense").notNull(),
+  totalScore: integer("total_score").notNull(),
+  totalQuestions: integer("total_questions").notNull(),
+  examScore: integer("exam_score"),
+  examPassed: boolean("exam_passed").notNull(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -26,6 +52,14 @@ export const insertQuizSchema = createInsertSchema(quizzes).pick({
   timeFrame: true,
   tenseType: true,
   questions: true,
+});
+
+export const insertCourseProgressSchema = createInsertSchema(courseProgress).omit({
+  id: true,
+});
+
+export const insertCompletedCourseSchema = createInsertSchema(completedCourses).omit({
+  id: true,
 });
 
 export const quizRequestSchema = z.object({
@@ -40,6 +74,10 @@ export type User = typeof users.$inferSelect;
 export type InsertQuiz = z.infer<typeof insertQuizSchema>;
 export type Quiz = typeof quizzes.$inferSelect;
 export type QuizRequest = z.infer<typeof quizRequestSchema>;
+export type CourseProgress = typeof courseProgress.$inferSelect;
+export type InsertCourseProgress = z.infer<typeof insertCourseProgressSchema>;
+export type CompletedCourse = typeof completedCourses.$inferSelect;
+export type InsertCompletedCourse = z.infer<typeof insertCompletedCourseSchema>;
 
 export interface QuizQuestion {
   question: string;
