@@ -425,11 +425,20 @@ function App() {
             <select
               value={selectedDifficulty || ""}
               onChange={(e) => {
-                setSelectedDifficulty(e.target.value);
+                const newDifficulty = e.target.value;
+                setSelectedDifficulty(newDifficulty);
                 // Reset dependent selections when difficulty changes
                 setSelectedVerb("");
                 setSelectedTimeFrame("");
                 setSelectedTenseType("");
+                
+                // If switching to beginner and current verb isn't in top 4, reset
+                if (newDifficulty === "Beginner") {
+                  const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+                  if (selectedVerb && !beginnerVerbs.includes(selectedVerb)) {
+                    setSelectedVerb("");
+                  }
+                }
               }}
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
@@ -454,12 +463,17 @@ function App() {
             <select
               value={selectedVerb}
               onChange={(e) => setSelectedVerb(e.target.value)}
-              className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white text-lg"
+              disabled={!selectedDifficulty}
+              className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
+                selectedDifficulty ? 'bg-white/10' : 'bg-white/5 opacity-50'
+              }`}
             >
-              <option value="" className="bg-gray-800 text-white">Select a verb...</option>
-              {(selectedDifficulty && DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]
-                ? DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS].verbs
-                : FRENCH_VERBS
+              <option value="" className="bg-gray-800 text-white">
+                {selectedDifficulty ? "Select a verb..." : "Choose difficulty first..."}
+              </option>
+              {selectedDifficulty && (selectedDifficulty === "Beginner" 
+                ? ["être", "avoir", "faire", "aller"]
+                : DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
               ).map((verb) => (
                 <option key={verb} value={verb} className="bg-gray-800 text-white">{verb}</option>
               ))}
@@ -471,7 +485,7 @@ function App() {
               <label className="text-lg font-semibold">3. Choose Time Frame</label>
               <button
                 onClick={handleChooseTimeFrame}
-                disabled={!selectedVerb}
+                disabled={!selectedDifficulty || !selectedVerb}
                 className={`px-4 py-2 rounded-lg font-medium ${
                   selectedVerb
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -499,7 +513,7 @@ function App() {
               }}
               disabled={!selectedVerb}
               className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
+                selectedDifficulty && selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select time frame...</option>
