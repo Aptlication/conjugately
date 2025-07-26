@@ -686,7 +686,57 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
   }
 }
 
-export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz {
+// Helper function to get English conjugation for Beginner mode
+function getEnglishConjugation(pronoun: string, verb: string, tense: string): string {
+  const englishPronouns = {
+    'je': 'I', 'tu': 'You', 'il': 'He', 'elle': 'She',
+    'nous': 'We', 'vous': 'You', 'ils': 'They', 'elles': 'They'
+  };
+  
+  const englishVerbs = {
+    'être': { present: 'am', passé_simple: 'was', futur_simple: 'will be' },
+    'avoir': { present: 'have', passé_simple: 'had', futur_simple: 'will have' },
+    'faire': { present: 'do/make', passé_simple: 'did/made', futur_simple: 'will do/make' },
+    'dire': { present: 'say', passé_simple: 'said', futur_simple: 'will say' },
+    'aller': { present: 'go', passé_simple: 'went', futur_simple: 'will go' },
+    'voir': { present: 'see', passé_simple: 'saw', futur_simple: 'will see' },
+    'savoir': { present: 'know', passé_simple: 'knew', futur_simple: 'will know' },
+    'pouvoir': { present: 'can', passé_simple: 'could', futur_simple: 'will be able to' },
+    'vouloir': { present: 'want', passé_simple: 'wanted', futur_simple: 'will want' },
+    'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' }
+  };
+  
+  const englishPronoun = englishPronouns[pronoun] || pronoun;
+  const verbData = englishVerbs[verb as keyof typeof englishVerbs];
+  
+  if (!verbData) return `${englishPronoun} ${verb}`;
+  
+  // Special handling for "être" with different pronouns
+  if (verb === 'être') {
+    if (tense === 'present') {
+      if (pronoun === 'je') return 'I am';
+      if (pronoun === 'tu' || pronoun === 'vous') return `${englishPronoun} are`;
+      return `${englishPronoun} is`;
+    }
+    if (tense === 'passé_simple') {
+      if (pronoun === 'je' || pronoun === 'il' || pronoun === 'elle') return `${englishPronoun} was`;
+      return `${englishPronoun} were`;
+    }
+  }
+  
+  // Special handling for "avoir" with different pronouns  
+  if (verb === 'avoir') {
+    if (tense === 'present') {
+      if (pronoun === 'il' || pronoun === 'elle') return `${englishPronoun} has`;
+      return `${englishPronoun} have`;
+    }
+  }
+  
+  const englishVerb = verbData[tense as keyof typeof verbData] || verbData.present;
+  return `${englishPronoun} ${englishVerb}`;
+}
+
+export function generateInternalQuiz(verb: string, tense: string, difficulty?: string): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
   
   // Normalize tense names - map frontend tense names to backend tense keys
@@ -722,6 +772,52 @@ export function generateInternalQuiz(verb: string, tense: string): GeneratedQuiz
   
   const questions = [];
   const pronouns = ['je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles'];
+  
+  // Handle Beginner mode - simple subject + verb only
+  if (difficulty === 'Beginner') {
+    console.log('🔧 Generating Beginner mode quiz (simple subject + verb)');
+    
+    for (let i = 0; i < 20; i++) {
+      const pronoun = pronouns[i % pronouns.length];
+      const pronounCap = pronoun.charAt(0).toUpperCase() + pronoun.slice(1);
+      const conjugation = tenseData[pronoun];
+      
+      if (!conjugation) continue;
+      
+      // Simple question: just "I am" -> "Je suis"
+      const englishConjugation = getEnglishConjugation(pronoun, verb, normalizedTense);
+      
+      // Create wrong answer options with other pronouns
+      const wrongAnswers = pronouns
+        .filter(p => p !== pronoun)
+        .slice(0, 3)
+        .map(wrongPronoun => {
+          const wrongConjugation = tenseData[wrongPronoun];
+          const wrongPronounCap = wrongPronoun.charAt(0).toUpperCase() + wrongPronoun.slice(1);
+          return `${wrongPronounCap} ${wrongConjugation}`;
+        });
+      
+      const correctAnswer = `${pronounCap} ${conjugation}`;
+      
+      // Shuffle answers
+      const allAnswers = [correctAnswer, ...wrongAnswers];
+      const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+      
+      questions.push({
+        question: `${englishConjugation}.`,
+        hint: `Think about the correct conjugation of "${verb}" for "${pronoun}".`,
+        answerOptions: shuffledAnswers.map(answer => ({
+          text: answer,
+          isCorrect: answer === correctAnswer,
+          rationale: answer === correctAnswer 
+            ? `Correct! "${pronoun}" takes the conjugation "${conjugation}".`
+            : `Incorrect. The correct answer is "${correctAnswer}".`
+        }))
+      });
+    }
+    
+    return { questions };
+  }
   
   // Generate 20 questions by cycling through contexts and pronouns
   for (let i = 0; i < 20; i++) {

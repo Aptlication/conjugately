@@ -32,6 +32,7 @@ export const quizRequestSchema = z.object({
   verb: z.string().min(1, "French verb is required"),
   timeFrame: z.enum(["past", "present", "future"], { required_error: "Time frame is required" }),
   tenseType: z.string().min(1, "Tense type is required"),
+  difficulty: z.string().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

@@ -16,7 +16,7 @@ export interface GeneratedQuiz {
   questions: QuizQuestion[];
 }
 
-export async function generateFrenchVerbQuiz(verb: string, tense: string): Promise<GeneratedQuiz> {
+export async function generateFrenchVerbQuiz(verb: string, tense: string, difficulty?: string): Promise<GeneratedQuiz> {
   const prompt = `*****Expert French Verb Quiz Generator: Master Prompt
 Objective: Act as an expert French language tutor. Your task is to generate a complete, 20-question, multiple-choice quiz based on the parameters provided below. The output must strictly adhere to the specified learning immersive format, producing a single, valid JSON object.
 

@@ -24,6 +24,11 @@ function App() {
   };
 
   const DIFFICULTY_CONFIGS = {
+    "Beginner": { 
+      verbs: [...FRENCH_VERBS], 
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Simple", "Futur Simple"] 
+    },
     "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
     "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
     "Difficult": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
@@ -88,7 +93,7 @@ function App() {
     }
   };
 
-  const handleDifficultySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+  const handleDifficultySelect = async (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     const config = DIFFICULTY_CONFIGS[difficulty];
     const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
     setSelectedVerb(randomVerb);
@@ -104,6 +109,42 @@ function App() {
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
     setShowDifficultyModal(false);
+    
+    // Auto-start quiz with difficulty parameter
+    setQuizState('loading');
+    
+    try {
+      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+      const response = await fetch('/api/get-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          verb: randomVerb,
+          timeFrame: timeFrameMapping[randomTimeFrame as keyof typeof timeFrameMapping],
+          tenseType: randomTense,
+          difficulty: difficulty,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setQuizData(data.quiz.questions);
+        setCurrentQuestionIndex(0);
+        setUserAnswers({});
+        setQuizState('active');
+        // Only show popup if user hasn't disabled it
+        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+        if (!dontRemindAgain) {
+          setShowInstructionPopup(true);
+        }
+      } else {
+        alert(`Quiz not available: ${data.error}`);
+        setQuizState('config');
+      }
+    } catch (error) {
+      alert('Failed to load quiz. Please try again.');
+      setQuizState('config');
+    }
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
@@ -504,6 +545,16 @@ function App() {
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-6">Choose Difficulty Level</h3>
               <div className="space-y-3 mb-6">
+                <button
+                  onClick={() => handleDifficultySelect("Beginner")}
+                  className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
+                >
+                  <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    All verbs • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
+                  </div>
+                </button>
+                
                 <button
                   onClick={() => handleDifficultySelect("Easy")}
                   className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"

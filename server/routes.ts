@@ -35,14 +35,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Generate French verb quiz using Gemini AI
   app.post("/api/get-quiz", async (req, res, next) => {
     try {
-      const { verb, timeFrame, tenseType } = quizRequestSchema.parse(req.body);
+      const { verb, timeFrame, tenseType, difficulty } = quizRequestSchema.parse(req.body);
       
-      console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}`);
+      console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}${difficulty ? ` (${difficulty})` : ''}`);
       
       // Generate quiz using our internal system (fast and reliable)
       try {
         console.log('⚡ Generating quiz with internal system...');
-        const generatedQuiz = generateInternalQuiz(verb, tenseType);
+        const generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty);
         
         res.json({
           success: true,
@@ -61,7 +61,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Fallback to AI if our internal system doesn't have the data
         try {
           console.log('🤖 Falling back to AI generation...');
-          const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType);
+          const generatedQuiz = await generateFrenchVerbQuiz(verb, tenseType, difficulty);
           
           res.json({
             success: true,
