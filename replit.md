@@ -122,6 +122,7 @@ Preferred communication style: Simple, everyday language.
 - Updated quiz preview to display selected difficulty level and appropriate tense information
 - Fixed English grammar: "He say" → "He says" and added proper third-person singular conjugations for all verbs
 - Added gender specification for French "ils/elles": now displays "They (masculine)" and "They (feminine)" in quiz questions
+- Limited Beginner difficulty to top 4 most used French verbs: être, avoir, faire, aller
 
 ### January 25, 2025 - Enhanced Quiz Interface with Instruction Popup ✓
 - Added collapsible instruction popup that appears when quiz starts

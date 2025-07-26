@@ -26,7 +26,7 @@ function App() {
 
   const DIFFICULTY_CONFIGS = {
     "Beginner": { 
-      verbs: [...FRENCH_VERBS], 
+      verbs: ["être", "avoir", "faire", "aller"], 
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"] 
     },
@@ -434,7 +434,7 @@ function App() {
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
-              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Simple subject + verb (Je suis, Tu es)</option>
+              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
               <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Basic verbs, present tense only</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 6 verbs, multiple tenses</option>
               <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - All verbs and tenses</option>
@@ -457,7 +457,10 @@ function App() {
               className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select a verb...</option>
-              {FRENCH_VERBS.map((verb) => (
+              {(selectedDifficulty && DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]
+                ? DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS].verbs
+                : FRENCH_VERBS
+              ).map((verb) => (
                 <option key={verb} value={verb} className="bg-gray-800 text-white">{verb}</option>
               ))}
             </select>
@@ -574,7 +577,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    All verbs • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
+                    Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
                   </div>
                 </button>
                 
