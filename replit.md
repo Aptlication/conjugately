@@ -111,6 +111,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Fixed All English Grammar Errors in Quiz Generation ✓
+- **Critical Grammar Fix**: Corrected "We is" → "We are", "They is" → "They are" in Beginner mode quizzes
+- **Verb Conjugation Logic**: Fixed English conjugation function to properly handle all pronouns for "être" verb
+- **Third-Person Singular**: Maintained correct "He says", "She says", "He has", "She has" forms
+- **Comprehensive Testing**: Verified grammar accuracy across all French verbs (être, avoir, dire, faire, aller)
+- **Root Cause**: Fixed fallback logic that was incorrectly applying base verb forms to all pronouns
+- **Educational Quality**: Ensures students learn from grammatically perfect English-to-French examples
+
 ### January 26, 2025 - Complete 4-Unit Course System with Overview & Introductions ✓
 - **Course Overview Screen**: Added comprehensive overview showing all 4 units + final exam structure
 - **Individual Unit Introductions**: Each verb (être, avoir, faire, aller) now has dedicated introduction with meaning, description, and example sentences

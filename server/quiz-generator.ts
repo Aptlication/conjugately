@@ -706,7 +706,7 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   };
   
   const englishVerbs = {
-    'être': { present: 'am', passé_simple: 'was', futur_simple: 'will be' },
+    'être': { present: 'be', passé_simple: 'was', futur_simple: 'will be' },
     'avoir': { present: 'have', passé_simple: 'had', futur_simple: 'will have' },
     'faire': { present: 'do/make', passé_simple: 'did/made', futur_simple: 'will do/make' },
     'dire': { present: 'say', passé_simple: 'said', futur_simple: 'will say' },
@@ -727,11 +727,12 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   if (verb === 'être') {
     if (tense === 'present') {
       if (pronoun === 'je') return 'I am';
-      if (pronoun === 'tu' || pronoun === 'vous') return `${englishPronoun} are`;
+      if (pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} are`;
       return `${englishPronoun} is`;
     }
     if (tense === 'passé_simple') {
       if (pronoun === 'je' || pronoun === 'il' || pronoun === 'elle') return `${englishPronoun} was`;
+      if (pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} were`;
       return `${englishPronoun} were`;
     }
   }
@@ -740,15 +741,17 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   if (verb === 'avoir') {
     if (tense === 'present') {
       if (pronoun === 'il' || pronoun === 'elle') return `${englishPronoun} has`;
+      if (pronoun === 'je' || pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} have`;
       return `${englishPronoun} have`;
     }
   }
   
-  // Special handling for present tense third-person singular (adds 's')
+  // General conjugation logic for present tense
   if (tense === 'present') {
     const baseVerb = verbData[tense as keyof typeof verbData] || verbData.present;
+    
+    // Third person singular (he/she) - add 's' where appropriate
     if (pronoun === 'il' || pronoun === 'elle') {
-      // Add 's' for third person singular in present tense
       if (verb === 'dire') return `${englishPronoun} says`;
       if (verb === 'faire') return `${englishPronoun} does/makes`;
       if (verb === 'aller') return `${englishPronoun} goes`;
@@ -758,8 +761,12 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (verb === 'vouloir') return `${englishPronoun} wants`;
       if (verb === 'venir') return `${englishPronoun} comes`;
     }
+    
+    // All other persons use base verb form
+    return `${englishPronoun} ${baseVerb}`;
   }
   
+  // For other tenses, use the base verb form
   const englishVerb = verbData[tense as keyof typeof verbData] || verbData.present;
   return `${englishPronoun} ${englishVerb}`;
 }
