@@ -1091,7 +1091,7 @@ function App() {
           <h1 className="text-5xl font-bold mb-2">French Verb Master</h1>
           <p className="text-2xl text-purple-300 font-semibold mb-4 italic">For serious students.</p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Master French verb conjugations, and thereby the keys to fluency, with your own personalized quizzes and optional mini-courses.
+            Master French verb conjugations—the keys to fluency—with your own personalized quizzes and optional mini-courses.
           </p>
         </div>
 

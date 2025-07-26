@@ -3,7 +3,7 @@
 
 ## Overview
 
-French Verb Master is a full-stack application that uses AI to help students master French verb conjugations, and thereby the keys to fluency, with personalized quizzes and optional mini-courses. The application features a sleek dark-themed interface where users select from the top 10 most used French verbs, choose a time frame (Past/Present/Future), and select specific tense types to generate customized 20-question multiple-choice quizzes using Google Gemini 2.5 Pro. The frontend uses a modern dark UI design with React, while the backend uses Express.js with TypeScript and PostgreSQL database.
+French Verb Master is a full-stack application that uses AI to help students master French verb conjugations—the keys to fluency—with personalized quizzes and optional mini-courses. The application features a sleek dark-themed interface where users select from the top 10 most used French verbs, choose a time frame (Past/Present/Future), and select specific tense types to generate customized 20-question multiple-choice quizzes using Google Gemini 2.5 Pro. The frontend uses a modern dark UI design with React, while the backend uses Express.js with TypeScript and PostgreSQL database.
 
 ## User Preferences
 
