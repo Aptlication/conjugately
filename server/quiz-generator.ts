@@ -659,7 +659,7 @@ const QUESTION_CONTEXTS = {
     { en: "You (plural) see the light.", fr_context: "la lumière", pronoun: "vous" },
     { en: "They see the ocean.", fr_context: "l'océan", pronoun: "ils" },
     { en: "I don't see anything.", fr_context: "rien", negative: true, pronoun: "je" },
-    { en: "She doesn't see well.", fr_context: "bien", negative: true, pronoun: "elle" },
+    { en: "She sees well.", fr_context: "bien", pronoun: "elle" },
     { en: "We don't see him.", fr_context: "le", negative: true, pronoun: "nous" }
   ],
   dire: [
@@ -1065,6 +1065,39 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 
 // Helper function to get English conjugation for Beginner mode
 // Convert positive English sentences to negative
+// CRITICAL: Fix English grammar by applying proper third-person singular conjugation
+function fixEnglishGrammar(sentence: string): string {
+  // Handle "see" verb conjugation errors
+  sentence = sentence.replace(/\bHe see\b/g, "He sees");
+  sentence = sentence.replace(/\bShe see\b/g, "She sees");
+  
+  // Handle "do" verb conjugation errors  
+  sentence = sentence.replace(/\bHe do\b/g, "He does");
+  sentence = sentence.replace(/\bShe do\b/g, "She does");
+  
+  // Handle "go" verb conjugation errors
+  sentence = sentence.replace(/\bHe go\b/g, "He goes");
+  sentence = sentence.replace(/\bShe go\b/g, "She goes");
+  
+  // Handle "say" verb conjugation errors
+  sentence = sentence.replace(/\bHe say\b/g, "He says");
+  sentence = sentence.replace(/\bShe say\b/g, "She says");
+  
+  // Handle "know" verb conjugation errors
+  sentence = sentence.replace(/\bHe know\b/g, "He knows");
+  sentence = sentence.replace(/\bShe know\b/g, "She knows");
+  
+  // Handle "want" verb conjugation errors
+  sentence = sentence.replace(/\bHe want\b/g, "He wants");
+  sentence = sentence.replace(/\bShe want\b/g, "She wants");
+  
+  // Handle "come" verb conjugation errors
+  sentence = sentence.replace(/\bHe come\b/g, "He comes");
+  sentence = sentence.replace(/\bShe come\b/g, "She comes");
+  
+  return sentence;
+}
+
 function convertToNegativeEnglish(englishSentence: string, pronoun: string): string {
   // Handle different verb forms for negation
   let sentence = englishSentence.trim();
@@ -1597,7 +1630,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
     
     // Convert English to proper tense based on French tense
-    let englishQuestion = context.en;
+    let englishQuestion = fixEnglishGrammar(context.en);
     
     // Handle negation properly - respect predefined negatives or apply new negation
     if (shouldBeNegative) {
@@ -1605,7 +1638,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if ((context as any).negative) {
         englishQuestion = context.en; // Keep predefined negative as-is
       } else {
-        let converted = convertToNegativeEnglish(context.en, pronoun); // Convert positive to negative
+        let converted = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun); // Convert positive to negative
         // Apply comprehensive grammar fixes after conversion
         converted = converted.replace(/will don't/g, "won't");
         converted = converted.replace(/will doesn't/g, "won't"); 
