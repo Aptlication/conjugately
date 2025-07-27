@@ -111,6 +111,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - Complete 4-6-8-13 Verb Difficulty System with Reflexive Verbs ✓
+- **Enhanced Difficulty Progression**: Restructured from single 4-verb system to comprehensive 4-6-8-13 verb progression
+- **Beginner Level**: 4 most used verbs (être, avoir, faire, aller) with simple subject + verb questions
+- **Easy Level**: 6 most used verbs (être, avoir, faire, dire, aller, voir) with present tense only
+- **Moderate Level**: 8 verbs including 3 reflexive verbs (être, avoir, faire, dire, aller, se lever, s'appeler, se sentir)
+- **Difficult Level**: 13 verbs including 6 reflexive verbs (10 regular + se laver, se réveiller, s'habiller)
+- **Complete Reflexive Verb Support**: Added full conjugation tables for all 6 reflexive verbs across all tenses
+- **Contextual Question Templates**: Added authentic French question contexts and English translations for reflexive verbs
+- **Enhanced Quiz Generation**: Updated server-side generator to handle reflexive verb conjugations and negations
+- **Progressive Learning Structure**: Students can now advance through increasingly complex verb sets with proper reflexive verb introduction
+
 ### January 27, 2025 - Fixed Exam Passing Logic & Database Synchronization ✓
 - **Critical Fix**: Fixed exam passing threshold to use dynamic 90% calculation instead of hardcoded 36/40
 - **Database Sync**: Fixed issue where passed exams weren't updating course progress table correctly

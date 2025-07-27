@@ -495,6 +495,120 @@ const VERB_CONJUGATIONS = {
       je: "suis en train de me sentir", tu: "es en train de te sentir", il: "est en train de se sentir", elle: "est en train de se sentir",
       nous: "sommes en train de nous sentir", vous: "êtes en train de vous sentir", ils: "sont en train de se sentir", elles: "sont en train de se sentir"
     }
+  },
+  "se laver": {
+    present: {
+      je: "me lave", tu: "te laves", il: "se lave", elle: "se lave",
+      nous: "nous lavons", vous: "vous lavez", ils: "se lavent", elles: "se lavent"
+    },
+    passé_composé: {
+      je: "me suis lavé(e)", tu: "t'es lavé(e)", il: "s'est lavé", elle: "s'est lavée",
+      nous: "nous sommes lavé(e)s", vous: "vous êtes lavé(e)s", ils: "se sont lavés", elles: "se sont lavées"
+    },
+    passé_simple: {
+      je: "me lavai", tu: "te lavas", il: "se lava", elle: "se lava",
+      nous: "nous lavâmes", vous: "vous lavâtes", ils: "se lavèrent", elles: "se lavèrent"
+    },
+    imparfait: {
+      je: "me lavais", tu: "te lavais", il: "se lavait", elle: "se lavait",
+      nous: "nous lavions", vous: "vous laviez", ils: "se lavaient", elles: "se lavaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais lavé(e)", tu: "t'étais lavé(e)", il: "s'était lavé", elle: "s'était lavée",
+      nous: "nous étions lavé(e)s", vous: "vous étiez lavé(e)s", ils: "s'étaient lavés", elles: "s'étaient lavées"
+    },
+    conditionnel: {
+      je: "me laverais", tu: "te laverais", il: "se laverait", elle: "se laverait",
+      nous: "nous laverions", vous: "vous laveriez", ils: "se laveraient", elles: "se laveraient"
+    },
+    futur_simple: {
+      je: "me laverai", tu: "te laveras", il: "se lavera", elle: "se lavera",
+      nous: "nous laverons", vous: "vous laverez", ils: "se laveront", elles: "se laveront"
+    },
+    futur_proche: {
+      je: "vais me laver", tu: "vas te laver", il: "va se laver", elle: "va se laver",
+      nous: "allons nous laver", vous: "allez vous laver", ils: "vont se laver", elles: "vont se laver"
+    },
+    présent_progressif: {
+      je: "suis en train de me laver", tu: "es en train de te laver", il: "est en train de se laver", elle: "est en train de se laver",
+      nous: "sommes en train de nous laver", vous: "êtes en train de vous laver", ils: "sont en train de se laver", elles: "sont en train de se laver"
+    }
+  },
+  "se réveiller": {
+    present: {
+      je: "me réveille", tu: "te réveilles", il: "se réveille", elle: "se réveille",
+      nous: "nous réveillons", vous: "vous réveillez", ils: "se réveillent", elles: "se réveillent"
+    },
+    passé_composé: {
+      je: "me suis réveillé(e)", tu: "t'es réveillé(e)", il: "s'est réveillé", elle: "s'est réveillée",
+      nous: "nous sommes réveillé(e)s", vous: "vous êtes réveillé(e)s", ils: "se sont réveillés", elles: "se sont réveillées"
+    },
+    passé_simple: {
+      je: "me réveillai", tu: "te réveillas", il: "se réveilla", elle: "se réveilla",
+      nous: "nous réveillâmes", vous: "vous réveillâtes", ils: "se réveillèrent", elles: "se réveillèrent"
+    },
+    imparfait: {
+      je: "me réveillais", tu: "te réveillais", il: "se réveillait", elle: "se réveillait",
+      nous: "nous réveillions", vous: "vous réveilliez", ils: "se réveillaient", elles: "se réveillaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais réveillé(e)", tu: "t'étais réveillé(e)", il: "s'était réveillé", elle: "s'était réveillée",
+      nous: "nous étions réveillé(e)s", vous: "vous étiez réveillé(e)s", ils: "s'étaient réveillés", elles: "s'étaient réveillées"
+    },
+    conditionnel: {
+      je: "me réveillerais", tu: "te réveillerais", il: "se réveillerait", elle: "se réveillerait",
+      nous: "nous réveillerions", vous: "vous réveilleriez", ils: "se réveilleraient", elles: "se réveilleraient"
+    },
+    futur_simple: {
+      je: "me réveillerai", tu: "te réveilleras", il: "se réveillera", elle: "se réveillera",
+      nous: "nous réveillerons", vous: "vous réveillerez", ils: "se réveilleront", elles: "se réveilleront"
+    },
+    futur_proche: {
+      je: "vais me réveiller", tu: "vas te réveiller", il: "va se réveiller", elle: "va se réveiller",
+      nous: "allons nous réveiller", vous: "allez vous réveiller", ils: "vont se réveiller", elles: "vont se réveiller"
+    },
+    présent_progressif: {
+      je: "suis en train de me réveiller", tu: "es en train de te réveiller", il: "est en train de se réveiller", elle: "est en train de se réveiller",
+      nous: "sommes en train de nous réveiller", vous: "êtes en train de vous réveiller", ils: "sont en train de se réveiller", elles: "sont en train de se réveiller"
+    }
+  },
+  "s'habiller": {
+    present: {
+      je: "m'habille", tu: "t'habilles", il: "s'habille", elle: "s'habille",
+      nous: "nous habillons", vous: "vous habillez", ils: "s'habillent", elles: "s'habillent"
+    },
+    passé_composé: {
+      je: "me suis habillé(e)", tu: "t'es habillé(e)", il: "s'est habillé", elle: "s'est habillée",
+      nous: "nous sommes habillé(e)s", vous: "vous êtes habillé(e)s", ils: "se sont habillés", elles: "se sont habillées"
+    },
+    passé_simple: {
+      je: "m'habillai", tu: "t'habillas", il: "s'habilla", elle: "s'habilla",
+      nous: "nous habillâmes", vous: "vous habillâtes", ils: "s'habillèrent", elles: "s'habillèrent"
+    },
+    imparfait: {
+      je: "m'habillais", tu: "t'habillais", il: "s'habillait", elle: "s'habillait",
+      nous: "nous habillions", vous: "vous habilliez", ils: "s'habillaient", elles: "s'habillaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais habillé(e)", tu: "t'étais habillé(e)", il: "s'était habillé", elle: "s'était habillée",
+      nous: "nous étions habillé(e)s", vous: "vous étiez habillé(e)s", ils: "s'étaient habillés", elles: "s'étaient habillées"
+    },
+    conditionnel: {
+      je: "m'habillerais", tu: "t'habillerais", il: "s'habillerait", elle: "s'habillerait",
+      nous: "nous habillerions", vous: "vous habilleriez", ils: "s'habilleraient", elles: "s'habilleraient"
+    },
+    futur_simple: {
+      je: "m'habillerai", tu: "t'habilleras", il: "s'habillera", elle: "s'habillera",
+      nous: "nous habillerons", vous: "vous habillerez", ils: "s'habilleront", elles: "s'habilleront"
+    },
+    futur_proche: {
+      je: "vais m'habiller", tu: "vas t'habiller", il: "va s'habiller", elle: "va s'habiller",
+      nous: "allons nous habiller", vous: "allez vous habiller", ils: "vont s'habiller", elles: "vont s'habiller"
+    },
+    présent_progressif: {
+      je: "suis en train de m'habiller", tu: "es en train de t'habiller", il: "est en train de s'habiller", elle: "est en train de s'habiller",
+      nous: "sommes en train de nous habiller", vous: "êtes en train de vous habiller", ils: "sont en train de s'habiller", elles: "sont en train de s'habiller"
+    }
   }
 };
 
@@ -655,6 +769,42 @@ const QUESTION_CONTEXTS = {
     { en: "I don't feel well.", fr_context: "pas bien", negative: true, pronoun: "je" },
     { en: "She doesn't feel safe.", fr_context: "pas en sécurité", negative: true, pronoun: "elle" },
     { en: "We don't feel comfortable.", fr_context: "pas à l'aise", negative: true, pronoun: "nous" }
+  ],
+  "se laver": [
+    { en: "I wash myself.", fr_context: "", pronoun: "je" },
+    { en: "You wash your hands.", fr_context: "les mains", pronoun: "tu" },
+    { en: "He washes his face.", fr_context: "le visage", pronoun: "il" },
+    { en: "She washes her hair.", fr_context: "les cheveux", pronoun: "elle" },
+    { en: "We wash ourselves daily.", fr_context: "tous les jours", pronoun: "nous" },
+    { en: "You (plural) wash quickly.", fr_context: "rapidement", pronoun: "vous" },
+    { en: "They wash carefully.", fr_context: "soigneusement", pronoun: "ils" },
+    { en: "I don't wash often.", fr_context: "pas souvent", negative: true, pronoun: "je" },
+    { en: "She doesn't wash well.", fr_context: "pas bien", negative: true, pronoun: "elle" },
+    { en: "We don't wash there.", fr_context: "pas là", negative: true, pronoun: "nous" }
+  ],
+  "se réveiller": [
+    { en: "I wake up early.", fr_context: "tôt", pronoun: "je" },
+    { en: "You wake up late.", fr_context: "tard", pronoun: "tu" },
+    { en: "He wakes up at dawn.", fr_context: "à l'aube", pronoun: "il" },
+    { en: "She wakes up naturally.", fr_context: "naturellement", pronoun: "elle" },
+    { en: "We wake up together.", fr_context: "ensemble", pronoun: "nous" },
+    { en: "You (plural) wake up slowly.", fr_context: "lentement", pronoun: "vous" },
+    { en: "They wake up refreshed.", fr_context: "reposés", pronoun: "ils" },
+    { en: "I don't wake up easily.", fr_context: "pas facilement", negative: true, pronoun: "je" },
+    { en: "She doesn't wake up early.", fr_context: "pas tôt", negative: true, pronoun: "elle" },
+    { en: "We don't wake up late.", fr_context: "pas tard", negative: true, pronoun: "nous" }
+  ],
+  "s'habiller": [
+    { en: "I get dressed quickly.", fr_context: "rapidement", pronoun: "je" },
+    { en: "You dress elegantly.", fr_context: "élégamment", pronoun: "tu" },
+    { en: "He dresses for work.", fr_context: "pour le travail", pronoun: "il" },
+    { en: "She dresses warmly.", fr_context: "chaudement", pronoun: "elle" },
+    { en: "We dress similarly.", fr_context: "de la même façon", pronoun: "nous" },
+    { en: "You (plural) dress formally.", fr_context: "formellement", pronoun: "vous" },
+    { en: "They dress casually.", fr_context: "décontracté", pronoun: "ils" },
+    { en: "I don't dress up.", fr_context: "pas chic", negative: true, pronoun: "je" },
+    { en: "She doesn't dress warmly.", fr_context: "pas chaudement", negative: true, pronoun: "elle" },
+    { en: "We don't dress alike.", fr_context: "pas pareil", negative: true, pronoun: "nous" }
   ]
 };
 
@@ -868,7 +1018,10 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
     'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' },
     'se lever': { present: 'get up', passé_simple: 'got up', futur_simple: 'will get up' },
     's\'appeler': { present: 'be called', passé_simple: 'was called', futur_simple: 'will be called' },
-    'se sentir': { present: 'feel', passé_simple: 'felt', futur_simple: 'will feel' }
+    'se sentir': { present: 'feel', passé_simple: 'felt', futur_simple: 'will feel' },
+    'se laver': { present: 'wash', passé_simple: 'washed', futur_simple: 'will wash' },
+    'se réveiller': { present: 'wake up', passé_simple: 'woke up', futur_simple: 'will wake up' },
+    's\'habiller': { present: 'get dressed', passé_simple: 'got dressed', futur_simple: 'will get dressed' }
   };
   
   const englishPronoun = englishPronouns[pronoun as keyof typeof englishPronouns] || pronoun;
@@ -916,6 +1069,9 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (verb === 'se lever') return `${englishPronoun} gets up`;
       if (verb === 's\'appeler') return `${englishPronoun} is called`;
       if (verb === 'se sentir') return `${englishPronoun} feels`;
+      if (verb === 'se laver') return `${englishPronoun} washes`;
+      if (verb === 'se réveiller') return `${englishPronoun} wakes up`;
+      if (verb === 's\'habiller') return `${englishPronoun} gets dressed`;
     }
     
     // All other persons use base verb form

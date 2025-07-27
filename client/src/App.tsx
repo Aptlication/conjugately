@@ -82,7 +82,7 @@ function App() {
       tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] 
     },
     "Difficult": { 
-      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"], // 10 most used verbs
+      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se laver", "se réveiller", "s'habiller"], // 10 regular + 3 reflexive verbs
       timeFrames: Object.keys(TIME_FRAMES), 
       tenses: Object.values(TIME_FRAMES).flat() 
     }
@@ -1231,7 +1231,7 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
               <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, present tense only</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (5 regular + 3 reflexive), multiple tenses</option>
-              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - Top 10 verbs, all tenses and complexities</option>
+              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
 
