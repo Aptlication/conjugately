@@ -1555,6 +1555,8 @@ function App() {
                       className={`w-full p-4 text-left ${
                         isLocked
                           ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                          : isCompleted && completed?.examPassed
+                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
                           : isCompleted 
                           ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
                           : inProgress
@@ -1568,6 +1570,7 @@ function App() {
                     >
                       <div className={`font-semibold text-lg flex items-center gap-2 ${
                         isLocked ? 'text-gray-400' :
+                        isCompleted && completed?.examPassed ? 'text-green-100' :
                         isCompleted ? 'text-green-200' : 
                         inProgress ? 'text-orange-200' :
                         timeFrame === "Past" ? 'text-purple-200' : 
@@ -1578,7 +1581,8 @@ function App() {
                           {stepNumbers[timeFrame as keyof typeof stepNumbers]}
                         </span>
                         {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
-                        {isCompleted && <span className="text-sm">✓ Completed</span>}
+                        {isCompleted && completed?.examPassed && <span className="text-sm text-green-300">✓ Passed</span>}
+                        {isCompleted && !completed?.examPassed && <span className="text-sm">✓ Completed</span>}
                         {inProgress && <span className="text-sm">⏳ In Progress</span>}
                         {isLocked && <span className="text-sm">🔒 Locked</span>}
                       </div>

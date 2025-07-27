@@ -111,6 +111,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Passed Exam Visual Indicators ✓
+- **Green "Passed" Status**: Courses with passed exams (90%+) now display "✓ Passed" in bright green
+- **Enhanced Visual Design**: Passed courses have brighter green backgrounds and text for clear recognition
+- **Status Differentiation**: "✓ Passed" for exam success vs "✓ Completed" for course completion without exam pass
+- **Clear Achievement Recognition**: Students can easily identify their successful exam completions
+
 ### January 26, 2025 - Open Course Access ✓
 - **All Courses Unlocked**: Present, Past, and Future tense courses are accessible without prerequisites
 - **Student Choice**: Users can start with any tense course that interests them most
