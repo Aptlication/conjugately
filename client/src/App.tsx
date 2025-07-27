@@ -703,6 +703,82 @@ function App() {
     setShowCourseOverviewModal(true);
   };
 
+  // Generic final exam handler for all course levels
+  const handleStartCourseOverviewFinalExam = async (courseLevel: string, timeFrame: string) => {
+    const config = DIFFICULTY_CONFIGS[courseLevel as keyof typeof DIFFICULTY_CONFIGS];
+    if (!config) return;
+    
+    // Get the tense for this timeframe based on course level
+    const tenseMapping = {
+      "Present": "Présent",
+      "Past": courseLevel === "Easy" ? "Passé Composé" : "Passé Simple", 
+      "Future": "Futur Simple"
+    };
+    const tense = tenseMapping[timeFrame as keyof typeof tenseMapping];
+    
+    setQuizState('loading');
+    setShowCourseOverviewModal(false);
+    
+    try {
+      const finalExam = config.courseStructure.finalExam;
+      const verbs = config.verbs;
+      const questionsPerVerb = finalExam.questionsPerVerb;
+      
+      const allQuestions: any[] = [];
+      
+      // Generate questions from each verb for the final exam
+      for (const verb of verbs) {
+        const response = await fetch('/api/get-quiz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verb: verb,
+            timeFrame: timeFrame.toLowerCase(),
+            tenseType: tense,
+            difficulty: courseLevel,
+          })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          // Take exact number of questions per verb for final exam
+          allQuestions.push(...data.quiz.questions.slice(0, questionsPerVerb));
+        }
+      }
+      
+      // Shuffle all final exam questions
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
+      setQuizState('active');
+      
+      // Set course info for final exam tracking
+      setCourseInfo({
+        timeFrame,
+        tense,
+        currentVerbIndex: verbs.length, // Indicates final exam
+        completedVerbs: verbs,
+        totalScore: 0,
+        totalQuestions: finalExam.questions,
+        isFinalExam: true,
+        courseLevel: courseLevel
+      });
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error('Error generating final exam:', error);
+      setQuizState('config');
+    }
+  };
+
   // Moderate Course Functions  
   const handleModerateCourseTimeFrame = async (timeFrame: string) => {
     // Show section overview modal first
@@ -2293,15 +2369,12 @@ function App() {
         {/* Course Overview Modal - Unit Structure */}
         {showCourseOverviewModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-2xl w-full mx-4">
-              <div className="text-center mb-6">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-4xl w-full mx-4">
+              <div className="text-center mb-8">
                 <div className="text-4xl mb-2">📚</div>
                 <h3 className="text-3xl font-bold mb-2">
-                  {selectedCourseLevel} Course Overview
+                  {selectedCourseTimeFrame} Tense Course Overview
                 </h3>
-                <p className="text-lg text-purple-200">
-                  {selectedCourseTimeFrame} Tense Course
-                </p>
                 <p className="text-sm text-slate-300 italic">
                   French Verb Master - For serious students.
                 </p>
@@ -2313,31 +2386,27 @@ function App() {
                 const finalExam = config?.courseStructure?.finalExam;
                 
                 return (
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     {/* Course Structure Section */}
                     <div className="bg-white/5 rounded-xl p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="text-2xl">🎯</div>
                         <h4 className="text-xl font-semibold text-white">Course Structure</h4>
                       </div>
-                      <div className="space-y-2 mb-4">
+                      <div className="space-y-3 mb-4">
                         {units.map((unit: any, index: number) => (
-                          <div key={index} className="flex items-center justify-between p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg">
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                                {index + 1}
-                              </div>
-                              <span className="font-medium">{unit.name} ({unit.questions} questions)</span>
+                          <div key={index} className="flex items-center gap-3 p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg">
+                            <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                              {index + 1}
                             </div>
+                            <span className="font-medium text-white">{unit.name} ({unit.questions} questions)</span>
                           </div>
                         ))}
-                        <div className="flex items-center justify-between p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                              🏆
-                            </div>
-                            <span className="font-medium">Final Exam ({finalExam?.questions} questions)</span>
+                        <div className="flex items-center gap-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                          <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                            🏆
                           </div>
+                          <span className="font-medium text-white">Final Exam ({finalExam?.questions} questions)</span>
                         </div>
                       </div>
                     </div>
@@ -2348,36 +2417,30 @@ function App() {
                         <div className="text-2xl">✨</div>
                         <h4 className="text-xl font-semibold text-white">What You'll Learn</h4>
                       </div>
-                      <ul className="space-y-2 text-slate-300">
+                      <ul className="space-y-2 text-slate-300 mb-4">
                         <li>• Master the {config.verbs.length} most essential French verbs</li>
-                        <li>• Practice {selectedCourseTimeFrame.toLowerCase()} tense conjugations</li>
+                        <li>• Practice {selectedCourseTimeFrame === "Present" ? "Présent" : selectedCourseTimeFrame === "Past" ? "Passé Composé" : "Futur Simple"} conjugations</li>
                         <li>• Learn proper French grammar patterns</li>
                         <li>• Build confidence with structured progression</li>
                         <li>• Achieve 90% mastery on final exam</li>
                       </ul>
-                    </div>
-
-                    {finalExam && (
-                      <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-xl p-4">
-                        <div className="text-center">
-                          <div className="text-lg font-semibold text-yellow-200 mb-1">We have high standards!</div>
-                          <p className="text-sm text-slate-300">
-                            Final exam requires 90% ({finalExam.passThreshold}/{finalExam.questions}) to pass and unlock the next course.
-                          </p>
+                      
+                      {finalExam && (
+                        <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-xl p-4">
+                          <div className="text-center">
+                            <div className="text-lg font-semibold text-yellow-200 mb-1">We have high standards!</div>
+                            <p className="text-sm text-slate-300">
+                              Final exam requires 90% ({finalExam.passThreshold}/{finalExam.questions}) to pass and unlock the next course.
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 );
               })()}
               
-              <div className="flex gap-3 mt-8">
-                <button
-                  onClick={() => setShowCourseOverviewModal(false)}
-                  className="flex-1 px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
-                >
-                  Back
-                </button>
+              <div className="space-y-3">
                 <button
                   onClick={() => {
                     setShowCourseOverviewModal(false);
@@ -2387,9 +2450,25 @@ function App() {
                     setSelectedUnit(firstUnit);
                     setShowUnitIntroModal(true);
                   }}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl text-white font-medium shadow-lg"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl text-white font-medium shadow-lg text-lg"
                 >
                   Start Unit 1: '{DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.units?.[0]?.verb}' →
+                </button>
+                
+                <button
+                  onClick={() => {
+                    handleStartCourseOverviewFinalExam(selectedCourseLevel, selectedCourseTimeFrame);
+                  }}
+                  className="w-full px-6 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-xl text-white font-medium shadow-lg text-lg"
+                >
+                  🏆 Take Final Exam ({DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.finalExam?.questions} questions)
+                </button>
+                
+                <button
+                  onClick={() => setShowCourseOverviewModal(false)}
+                  className="w-full px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
+                >
+                  Back
                 </button>
               </div>
             </div>
