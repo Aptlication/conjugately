@@ -1062,6 +1062,134 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 }
 
 // Helper function to get English conjugation for Beginner mode
+// Convert positive English sentences to negative
+function convertToNegativeEnglish(englishSentence: string, pronoun: string): string {
+  // Handle different verb forms for negation
+  const sentence = englishSentence.trim();
+  
+  // For simple "to be" forms without trailing space (e.g., "I am", "He is")
+  if (sentence.endsWith(" am")) {
+    return sentence.replace(" am", " am not");
+  }
+  if (sentence.endsWith(" is")) {
+    return sentence.replace(" is", " is not");
+  }
+  if (sentence.endsWith(" are")) {
+    return sentence.replace(" are", " are not");
+  }
+  
+  // For "to be" verbs with trailing content
+  if (sentence.includes(" am ") || sentence.includes(" is ") || sentence.includes(" are ")) {
+    return sentence
+      .replace(" am ", " am not ")
+      .replace(" is ", " is not ")
+      .replace(" are ", " are not ");
+  }
+  
+  // For compound tenses with "have/has" auxiliary verbs (perfect tenses)
+  if (sentence.includes(" have ") || sentence.includes(" has ")) {
+    return sentence
+      .replace(" have ", " haven't ")
+      .replace(" has ", " hasn't ");
+  }
+  
+  // For auxiliary verbs in compound tenses (e.g., "He had" -> "He hadn't" for pluperfect)
+  if (sentence.includes(" had ") && !sentence.includes("didn't")) {
+    return sentence.replace(" had ", " hadn't ");
+  }
+  
+  // For simple "to have" forms without trailing space
+  if (sentence.endsWith(" have")) {
+    return sentence.replace(" have", " don't have");
+  }
+  if (sentence.endsWith(" has")) {
+    return sentence.replace(" has", " doesn't have");
+  }
+  
+  // For past tense verbs (ended in -ed or irregular)
+  if (sentence.includes(" went") || sentence.includes(" did") || sentence.includes(" made") || 
+      sentence.includes(" had") || sentence.includes(" saw") || sentence.includes(" said") ||
+      sentence.includes(" ate") || sentence.includes(" drank") || sentence.includes(" walked") ||
+      sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived")) {
+    const words = sentence.split(" ");
+    if (words.length >= 2) {
+      const subject = words[0];
+      const verb = words[1];
+      return sentence.replace(` ${verb}`, ` didn't ${getBaseVerb(verb)}`);
+    }
+  }
+  
+  // For sentences ending with a period (past tense statements)
+  if (sentence.endsWith(".")) {
+    const words = sentence.slice(0, -1).split(" "); // Remove period and split
+    if (words.length >= 2) {
+      const subject = words[0];
+      const verb = words[1];
+      
+      // Check if it's a past tense verb by looking for common patterns
+      if (verb.endsWith("ed") || ["had", "went", "did", "made", "saw", "said", "ate", "drank", "came", "took", "got", "knew", "thought", "felt"].includes(verb)) {
+        const baseVerb = getBaseVerb(verb);
+        return sentence.replace(` ${verb}`, ` didn't ${baseVerb}`);
+      }
+    }
+  }
+  
+  // For future tense with "will"
+  if (sentence.includes(" will ")) {
+    return sentence.replace(" will ", " won't ");
+  }
+  
+  // For other verbs - add "don't" or "doesn't"
+  const words = sentence.split(" ");
+  if (words.length >= 2) {
+    const subject = words[0];
+    const verb = words[1];
+    
+    if (subject === "He" || subject === "She") {
+      return sentence.replace(` ${verb}`, ` doesn't ${verb.toLowerCase()}`);
+    } else {
+      return sentence.replace(` ${verb}`, ` don't ${verb.toLowerCase()}`);
+    }
+  }
+  
+  return sentence; // fallback
+}
+
+// Helper function to get base verb form from past tense
+function getBaseVerb(pastVerb: string): string {
+  const irregularVerbs: { [key: string]: string } = {
+    'went': 'go',
+    'did': 'do',
+    'made': 'make',
+    'had': 'have',
+    'saw': 'see',
+    'said': 'say',
+    'came': 'come',
+    'took': 'take',
+    'got': 'get',
+    'knew': 'know',
+    'thought': 'think',
+    'felt': 'feel',
+    'ate': 'eat',
+    'drank': 'drink',
+    'was': 'be',
+    'were': 'be'
+  };
+  
+  if (irregularVerbs[pastVerb]) {
+    return irregularVerbs[pastVerb];
+  }
+  
+  // For regular verbs, remove -ed ending
+  if (pastVerb.endsWith('ed')) {
+    let base = pastVerb.slice(0, -2);
+    // Handle doubled consonants (e.g., "walked" -> "walk", "stopped" -> "stop")
+    return base;
+  }
+  
+  return pastVerb; // fallback
+}
+
 function getEnglishConjugation(pronoun: string, verb: string, tense: string): string {
   const englishPronouns = {
     'je': 'I', 'tu': 'You (informal)', 'il': 'He', 'elle': 'She',
@@ -1187,6 +1315,16 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   if (difficulty === 'Beginner') {
     console.log('🔧 Generating Beginner mode quiz (simple subject + verb)');
     
+    // Ensure exactly 30% of questions are negative (6 out of 20)
+    const totalQuestions = 20;
+    const negativeQuestionCount = Math.floor(totalQuestions * 0.3); // 6 questions
+    const negativeIndices = new Set<number>();
+    
+    // Randomly select which questions will be negative
+    while (negativeIndices.size < negativeQuestionCount) {
+      negativeIndices.add(Math.floor(Math.random() * totalQuestions));
+    }
+    
     for (let i = 0; i < 20; i++) {
       const pronoun = pronouns[i % pronouns.length];
       const pronounCap = pronoun.charAt(0).toUpperCase() + pronoun.slice(1);
@@ -1194,8 +1332,20 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       
       if (!conjugation) continue;
       
-      // Simple question: just "I am" -> "Je suis"
-      const englishConjugation = getEnglishConjugation(pronoun, verb, normalizedTense);
+      // Determine if this question should be negative (30% chance)
+      const shouldBeNegative = negativeIndices.has(i);
+      
+      // Simple question: just "I am" -> "Je suis" or "I am not" -> "Je ne suis pas"
+      let englishConjugation = getEnglishConjugation(pronoun, verb, normalizedTense);
+      let correctAnswer;
+      
+      if (shouldBeNegative) {
+        // Convert to negative
+        englishConjugation = convertToNegativeEnglish(englishConjugation, pronoun);
+        correctAnswer = buildNegativeFrench(pronoun, conjugation, "", normalizedTense, verb);
+      } else {
+        correctAnswer = applyContractions(pronoun, conjugation);
+      }
       
       // Create wrong answer options with other pronouns
       const wrongAnswers = pronouns
@@ -1203,10 +1353,12 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .slice(0, 3)
         .map(wrongPronoun => {
           const wrongConjugation = tenseData[wrongPronoun];
-          return applyContractions(wrongPronoun, wrongConjugation);
+          if (shouldBeNegative) {
+            return buildNegativeFrench(wrongPronoun, wrongConjugation, "", normalizedTense, verb);
+          } else {
+            return applyContractions(wrongPronoun, wrongConjugation);
+          }
         });
-      
-      const correctAnswer = applyContractions(pronoun, conjugation);
       
       // Shuffle answers
       const allAnswers = [correctAnswer, ...wrongAnswers];
@@ -1229,6 +1381,16 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   }
   
   // Generate 20 questions by cycling through contexts and pronouns
+  // Ensure exactly 30% of questions are negative (6 out of 20)
+  const totalQuestions = 20;
+  const negativeQuestionCount = Math.floor(totalQuestions * 0.3); // 6 questions
+  const negativeIndices = new Set<number>();
+  
+  // Randomly select which questions will be negative
+  while (negativeIndices.size < negativeQuestionCount) {
+    negativeIndices.add(Math.floor(Math.random() * totalQuestions));
+  }
+  
   for (let i = 0; i < 20; i++) {
     const context = contexts[i % contexts.length];
     
@@ -1238,13 +1400,17 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     
     if (!correctForm) continue;
     
+    // Determine if this question should be negative (30% chance)
+    const shouldBeNegative = negativeIndices.has(i);
+    
     // Build correct answer with proper French contractions
     let correctAnswer;
     
-    if (context.negative) {
-      // Handle negation properly for ALL tenses
+    if (shouldBeNegative) {
+      // Handle negation properly for ALL tenses (ignore original context negative flag)
       correctAnswer = buildNegativeFrench(pronoun, correctForm, context.fr_context, normalizedTense, verb);
     } else {
+      // Positive answer - ignore original context negative flag
       correctAnswer = applyContractions(pronoun, correctForm);
       if (context.fr_context) {
         correctAnswer += ` ${context.fr_context}`;
@@ -1262,11 +1428,11 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     distractors.slice(0, 3).forEach(form => {
       let wrong;
       
-      if (context.negative) {
-        // Use the same comprehensive negation logic for distractors
+      if (shouldBeNegative) {
+        // Use the same comprehensive negation logic for distractors (ignore original context)
         wrong = buildNegativeFrench(pronoun, form, context.fr_context, normalizedTense, verb);
       } else {
-        // Apply contractions to wrong answers too for consistency
+        // Apply contractions to wrong answers too for consistency (ignore original context)
         wrong = applyContractions(pronoun, form);
         if (context.fr_context) {
           wrong += ` ${context.fr_context}`;
@@ -1292,6 +1458,26 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     
     // Convert English to proper tense based on French tense
     let englishQuestion = context.en;
+    
+    // Convert to negative if this question should be negative (override any predefined negatives)
+    if (shouldBeNegative) {
+      // Always convert to negative, regardless of original context
+      if (!context.en.includes("don't") && !context.en.includes("not")) {
+        englishQuestion = convertToNegativeEnglish(context.en, pronoun);
+      }
+    } else {
+      // For positive questions, ensure we remove any predefined negatives
+      englishQuestion = englishQuestion
+        .replace("don't ", "")
+        .replace("doesn't ", "")
+        .replace(" not", "")
+        .replace("I am not", "I am")
+        .replace("He is not", "He is")
+        .replace("She is not", "She is")
+        .replace("We are not", "We are")
+        .replace("You are not", "You are")
+        .replace("They are not", "They are");
+    }
     
     if (normalizedTense === 'passé_composé') {
       // Passé composé = completed action ("I ate" / "I have eaten")

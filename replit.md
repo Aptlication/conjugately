@@ -111,6 +111,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - 30% Negation System Implementation ✓
+- **Universal Negation Coverage**: Implemented 30% negation requirement across ALL quizzes and exams for all difficulty levels
+- **Systematic Random Selection**: Added automatic selection of exactly 6 out of 20 questions (30%) to be negative in every quiz
+- **Override Legacy Context**: Updated system to ignore predefined negative contexts and apply uniform 30% negation rule
+- **Enhanced English Conversion**: Added `convertToNegativeEnglish()` function to properly convert positive English sentences to negative
+- **Beginner Mode Integration**: Updated Beginner difficulty to include 30% negative conjugations with proper French negation
+- **Cross-Difficulty Consistency**: Verified 30% negation works for Beginner, Easy, Moderate, and Difficult levels
+- **Final Exam Compatibility**: Ensured enhanced exam distractors work seamlessly with 30% negation system
+- **Educational Balance**: Maintains learning progression while ensuring consistent negation practice across all course materials
+
 ### January 27, 2025 - Complete Easy Course Overview Implementation ✓
 - **Fixed Easy Course Overview**: Resolved state management issue where Easy courses showed only 4 units instead of 6
 - **State Management Fix**: Added state clearing mechanism to prevent course level conflicts between Beginner and Easy
