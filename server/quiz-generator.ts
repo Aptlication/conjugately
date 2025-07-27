@@ -1339,6 +1339,42 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   return `${englishPronoun} ${englishVerb}`;
 }
 
+// Helper function to convert generic "They" to gender-specific pronouns for advanced courses
+function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: string): string {
+  // Only apply gender specification for Moderate and Difficult courses
+  if (difficulty !== 'Moderate' && difficulty !== 'Difficult') {
+    return englishQuestion;
+  }
+  
+  // Apply gender-specific replacements for "They" patterns
+  return englishQuestion
+    .replace(/They have/g, 'They (masculine) have')
+    .replace(/They are/g, 'They (masculine) are')
+    .replace(/They do/g, 'They (masculine) do')
+    .replace(/They make/g, 'They (masculine) make')
+    .replace(/They go/g, 'They (masculine) go')
+    .replace(/They see/g, 'They (masculine) see')
+    .replace(/They say/g, 'They (masculine) say')
+    .replace(/They know/g, 'They (masculine) know')
+    .replace(/They can/g, 'They (masculine) can')
+    .replace(/They want/g, 'They (masculine) want')
+    .replace(/They come/g, 'They (masculine) come')
+    .replace(/They don't/g, 'They (masculine) don\'t')
+    .replace(/They used to/g, 'They (masculine) used to')
+    .replace(/They were/g, 'They (masculine) were')
+    .replace(/They did/g, 'They (masculine) did')
+    .replace(/They went/g, 'They (masculine) went')
+    .replace(/They made/g, 'They (masculine) made')
+    .replace(/They saw/g, 'They (masculine) saw')
+    .replace(/They said/g, 'They (masculine) said')
+    .replace(/They knew/g, 'They (masculine) knew')
+    .replace(/They could/g, 'They (masculine) could')
+    .replace(/They wanted/g, 'They (masculine) wanted')
+    .replace(/They came/g, 'They (masculine) came')
+    .replace(/They will/g, 'They (masculine) will')
+    .replace(/They would/g, 'They (masculine) would');
+}
+
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
   
@@ -1576,6 +1612,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/We are/g, 'We were')
         .replace(/You \(plural\) are/g, 'You (plural) were')
         .replace(/They are/g, 'They were')
+      
+      englishQuestion = englishQuestion
         .replace(/I do/g, 'I did')
         .replace(/You do/g, 'You did')
         .replace(/He does/g, 'He did')
@@ -1655,6 +1693,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) didn\'t')
         .replace(/They don't/g, 'They didn\'t')
         .replace(/can't/g, 'couldn\'t');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'imparfait') {
       // Imparfait = ongoing/habitual past action ("I used to eat" / "I was eating")
       englishQuestion = englishQuestion
@@ -1751,6 +1792,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) didn\'t use to')
         .replace(/They don't/g, 'They didn\'t use to')
         .replace(/can't/g, 'couldn\'t');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'plus_que_parfait') {
       // Plus-que-parfait = past perfect ("I had eaten")
       englishQuestion = englishQuestion
@@ -1847,6 +1891,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) hadn\'t')
         .replace(/They don't/g, 'They hadn\'t')
         .replace(/can't/g, 'couldn\'t have');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'passé_simple') {
       // Passé simple = literary/formal past tense ("He spoke", "She went") - same as passé composé in English
       englishQuestion = englishQuestion
@@ -1943,6 +1990,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) didn\'t')
         .replace(/They don't/g, 'They didn\'t')
         .replace(/can't/g, 'couldn\'t');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'conditionnel') {
       // Conditional = "would" expressions ("I would be", "He would have", etc.)
       englishQuestion = englishQuestion
@@ -2039,6 +2089,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) wouldn\'t')
         .replace(/They don't/g, 'They wouldn\'t')
         .replace(/can't/g, 'couldn\'t');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'futur_simple') {
       // Futur simple = "will" expressions ("I will be", "He will have", etc.)
       englishQuestion = englishQuestion
@@ -2135,6 +2188,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) won\'t')
         .replace(/They don't/g, 'They won\'t')
         .replace(/can't/g, 'won\'t be able to');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'futur_proche') {
       // Futur proche = "going to" expressions ("I am going to be", "He is going to have", etc.)
       englishQuestion = englishQuestion
@@ -2231,6 +2287,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) are not going to')
         .replace(/They don't/g, 'They are not going to')
         .replace(/can't/g, 'are not going to be able to');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'présent_progressif') {
       // Présent progressif = "am/is/are + -ing" expressions
       englishQuestion = englishQuestion
@@ -2327,6 +2386,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) are not')
         .replace(/They don't/g, 'They are not')
         .replace(/can't/g, 'are not being able to');
+      
+      // Apply gender-specific pronouns for Moderate and Difficult courses
+      englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     }
 
     // Ensure proper punctuation for English sentences
