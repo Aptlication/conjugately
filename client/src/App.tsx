@@ -8,6 +8,9 @@ function App() {
   const [showDifficultyModal, setShowDifficultyModal] = useState(false);
   const [showMiniCoursesModal, setShowMiniCoursesModal] = useState(false);
   const [showBeginnerCourseModal, setShowBeginnerCourseModal] = useState(false);
+  const [showEasyCourseModal, setShowEasyCourseModal] = useState(false);
+  const [showModerateCourseModal, setShowModerateCourseModal] = useState(false);
+  const [showDifficultCourseModal, setShowDifficultCourseModal] = useState(false);
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -69,22 +72,42 @@ function App() {
     "Beginner": { 
       verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Simple", "Futur Simple"] 
+      tenses: ["Présent", "Passé Simple", "Futur Simple"],
+      courseStructure: {
+        section1: { questions: 80, questionsPerVerb: 20 },
+        finalExam: { questions: 40, questionsPerVerb: 10, passThreshold: 36 }
+      }
     },
     "Easy": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], // 6 most used verbs
-      timeFrames: ["Present"], 
-      tenses: ["Présent"] 
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Composé", "Futur Simple"],
+      courseStructure: {
+        section1: { questions: 120, questionsPerVerb: 20 },
+        finalExam: { questions: 60, questionsPerVerb: 10, passThreshold: 54 }
+      }
     },
     "Moderate": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "se lever", "s'appeler", "se sentir"], // 8 verbs (5 regular + 3 reflexive)
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] 
+      tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
+      courseStructure: {
+        section1: { questions: 160, questionsPerVerb: 20 },
+        finalExamPartA: { questions: 40, questionsPerVerb: 5, passThreshold: 36 },
+        finalExamPartB: { questions: 40, questionsPerVerb: 5, passThreshold: 36 },
+        totalPassThreshold: 72
+      }
     },
     "Difficult": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se laver", "se réveiller", "s'habiller"], // 10 regular + 3 reflexive verbs
       timeFrames: Object.keys(TIME_FRAMES), 
-      tenses: Object.values(TIME_FRAMES).flat() 
+      tenses: Object.values(TIME_FRAMES).flat(),
+      courseStructure: {
+        section1: { questions: 260, questionsPerVerb: 20 },
+        finalExamPartA: { questions: 50, questionsPerVerb: 4, passThreshold: 45 },
+        finalExamPartB: { questions: 50, questionsPerVerb: 4, passThreshold: 45 },
+        totalPassThreshold: 90
+      }
     }
   };
 
@@ -234,13 +257,15 @@ function App() {
     if (difficulty === "Beginner") {
       setShowMiniCoursesModal(false);
       setShowBeginnerCourseModal(true);
-    } else {
-      // For now, just select the difficulty and close modal
-      setSelectedDifficulty(difficulty);
-      setSelectedVerb("");
-      setSelectedTimeFrame("");
-      setSelectedTenseType("");
+    } else if (difficulty === "Easy") {
       setShowMiniCoursesModal(false);
+      setShowEasyCourseModal(true);
+    } else if (difficulty === "Moderate") {
+      setShowMiniCoursesModal(false);
+      setShowModerateCourseModal(true);
+    } else if (difficulty === "Difficult") {
+      setShowMiniCoursesModal(false);
+      setShowDifficultCourseModal(true);
     }
   };
 
@@ -401,6 +426,123 @@ function App() {
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
+  const [currentCourseConfig, setCurrentCourseConfig] = useState<any>(null);
+
+  // Easy Course Functions
+  const handleEasyCourseTimeFrame = async (timeFrame: string) => {
+    const config = DIFFICULTY_CONFIGS.Easy;
+    const courseTenses = config.tenses;
+    
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    setQuizState('loading');
+    
+    try {
+      // Generate 120 questions total: 20 questions from each of the 6 verbs
+      const allQuestions: any[] = [];
+      
+      for (const currentVerb of config.verbs) {
+        for (const currentTense of courseTenses) {
+          const response = await fetch('/api/get-quiz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              verb: currentVerb,
+              timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+              tenseType: currentTense,
+              difficulty: "Easy",
+            })
+          });
+
+          const data = await response.json();
+          if (data.success) {
+            // Take proportional questions from each tense
+            const questionsPerTensePerVerb = Math.floor(20 / courseTenses.length);
+            allQuestions.push(...data.quiz.questions.slice(0, questionsPerTensePerVerb));
+          }
+        }
+      }
+      
+      // Shuffle all 120 questions
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
+      setQuizState('active');
+      setShowEasyCourseModal(false);
+      
+      // Set course info for progress tracking
+      setCourseInfo({
+        timeFrame,
+        tense: "Mixed Tenses",
+        currentVerbIndex: 0,
+        completedVerbs: [],
+        totalScore: 0,
+        totalQuestions: 120
+      });
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error('Error generating Easy course:', error);
+      setQuizState('config');
+    }
+  };
+
+  const handleStartEasyFinalExam = async (timeFrame: string) => {
+    const config = DIFFICULTY_CONFIGS.Easy;
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    
+    setQuizState('loading');
+    
+    try {
+      // Generate 60 questions total: 10 questions from each of the 6 verbs for final exam
+      const allQuestions: any[] = [];
+      
+      for (const currentVerb of config.verbs) {
+        const response = await fetch('/api/get-quiz', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            verb: currentVerb,
+            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+            tenseType: "Présent", // Use present tense for final exam
+            difficulty: "Easy",
+          })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          // Take exactly 10 questions from each verb for final exam
+          allQuestions.push(...data.quiz.questions.slice(0, 10));
+        }
+      }
+      
+      // Shuffle all 60 final exam questions
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      
+      setQuizData(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
+      setQuizState('active');
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error('Error generating Easy final exam:', error);
+      setQuizState('config');
+    }
+  };
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
@@ -1229,7 +1371,7 @@ function App() {
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
               <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
-              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, present tense only</option>
+              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, multiple tenses</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (5 regular + 3 reflexive), multiple tenses</option>
               <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
@@ -1386,7 +1528,7 @@ function App() {
                 >
                   <div className="text-green-200 font-semibold text-lg">🟢 Easy</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present tense only
+                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Multiple tenses (Present, Past, Future)
                   </div>
                 </button>
                 
@@ -1438,30 +1580,30 @@ function App() {
                   </div>
                 </button>
                 <button
-                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
-                  disabled
+                  onClick={() => handleMiniCourseSelect("Easy")}
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
                 >
                   <div className="text-green-200 font-semibold text-lg">🟢 Easy Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Coming soon...
+                    Section 1: 120 mixed questions + Final Exam (60 questions)
                   </div>
                 </button>
                 <button
-                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
-                  disabled
+                  onClick={() => handleMiniCourseSelect("Moderate")}
+                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Coming soon...
+                    Section 1: 160 mixed questions + Final Exam Parts A & B (80 questions)
                   </div>
                 </button>
                 <button
-                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white opacity-60 cursor-not-allowed"
-                  disabled
+                  onClick={() => handleMiniCourseSelect("Difficult")}
+                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
                 >
                   <div className="text-red-200 font-semibold text-lg">🔴 Difficult Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Coming soon...
+                    Section 1: 260 mixed questions + Final Exam Parts A & B (100 questions)
                   </div>
                 </button>
               </div>
@@ -1672,6 +1814,79 @@ function App() {
               <button
                 onClick={() => {
                   setShowBeginnerCourseModal(false);
+                  setShowMiniCoursesModal(true);
+                }}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Back to Mini-Courses
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Easy Course Time Frame Modal */}
+        {showEasyCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">🟢 Easy Course</h3>
+              <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
+              <div className="space-y-3 mb-6">
+                {["Present", "Past", "Future"].map((timeFrame, index) => (
+                  <button
+                    key={timeFrame}
+                    onClick={() => handleEasyCourseTimeFrame(timeFrame)}
+                    className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
+                  >
+                    <div className="text-green-200 font-semibold text-lg">
+                      {timeFrame === "Past" ? "⏮️" : timeFrame === "Present" ? "▶️" : "⏭️"} {timeFrame} Tense Course
+                    </div>
+                    <div className="text-slate-300 text-sm mt-1">
+                      Section 1: 120 mixed questions (20 from each of 6 verbs) + Final Exam (90% to pass)
+                    </div>
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  setShowEasyCourseModal(false);
+                  setShowMiniCoursesModal(true);
+                }}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Back to Mini-Courses
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Moderate Course Time Frame Modal */}
+        {showModerateCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">🟡 Moderate Course</h3>
+              <p className="text-slate-300 text-center mb-6">Coming soon...</p>
+              <button
+                onClick={() => {
+                  setShowModerateCourseModal(false);
+                  setShowMiniCoursesModal(true);
+                }}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Back to Mini-Courses
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Difficult Course Time Frame Modal */}
+        {showDifficultCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">🔴 Difficult Course</h3>
+              <p className="text-slate-300 text-center mb-6">Coming soon...</p>
+              <button
+                onClick={() => {
+                  setShowDifficultCourseModal(false);
                   setShowMiniCoursesModal(true);
                 }}
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
