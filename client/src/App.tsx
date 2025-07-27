@@ -89,6 +89,26 @@ function App() {
   // Most used French verbs in order of frequency
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
   
+  // Verb meanings mapping for dropdown display
+  const VERB_MEANINGS = {
+    "être": "to be",
+    "avoir": "to have", 
+    "faire": "to do/make",
+    "dire": "to say/tell",
+    "aller": "to go",
+    "voir": "to see",
+    "savoir": "to know",
+    "pouvoir": "to be able to/can",
+    "vouloir": "to want",
+    "venir": "to come",
+    "se lever": "to get up",
+    "s'appeler": "to be called",
+    "se sentir": "to feel",
+    "se laver": "to wash oneself",
+    "se réveiller": "to wake up",
+    "s'habiller": "to get dressed"
+  };
+  
   const TIME_FRAMES = {
     "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
     "Present": ["Présent", "Présent Progressif"], 
@@ -1781,7 +1801,9 @@ function App() {
                 ? ["être", "avoir", "faire", "aller"]
                 : DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
               ).map((verb) => (
-                <option key={verb} value={verb} className="bg-gray-800 text-white">{verb}</option>
+                <option key={verb} value={verb} className="bg-gray-800 text-white">
+                  {verb} ({VERB_MEANINGS[verb as keyof typeof VERB_MEANINGS]})
+                </option>
               ))}
             </select>
           </div>
