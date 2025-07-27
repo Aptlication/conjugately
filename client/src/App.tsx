@@ -84,12 +84,11 @@ function App() {
       tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
         section1: { 
-          totalQuestions: 120, 
-          questionsPerVerb: 20,
+          totalQuestions: 108, // 6 verbs × 18 questions each (6 per tense)
+          questionsPerVerb: 18,
           parts: [
-            { name: "A", questions: 40, verbs: ["être", "avoir"] },
-            { name: "B", questions: 40, verbs: ["faire", "dire"] },
-            { name: "C", questions: 40, verbs: ["aller", "voir"] }
+            { name: "A", questions: 54, verbs: ["être", "avoir", "faire"] }, // 3 verbs × 18 = 54
+            { name: "B", questions: 54, verbs: ["dire", "aller", "voir"] }   // 3 verbs × 18 = 54
           ]
         },
         finalExam: { 
@@ -109,13 +108,12 @@ function App() {
       tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
       courseStructure: {
         section1: { 
-          totalQuestions: 160, 
-          questionsPerVerb: 20,
+          totalQuestions: 128, // 8 verbs × 16 questions each (4 per tense)
+          questionsPerVerb: 16,
           parts: [
-            { name: "A", questions: 40, verbs: ["être", "avoir"] },
-            { name: "B", questions: 40, verbs: ["faire", "dire"] },
-            { name: "C", questions: 40, verbs: ["aller", "se lever"] },
-            { name: "D", questions: 40, verbs: ["s'appeler", "se sentir"] }
+            { name: "A", questions: 48, verbs: ["être", "avoir", "faire"] },      // 3 verbs × 16 = 48
+            { name: "B", questions: 48, verbs: ["dire", "aller", "se lever"] },   // 3 verbs × 16 = 48  
+            { name: "C", questions: 32, verbs: ["s'appeler", "se sentir"] }       // 2 verbs × 16 = 32
           ]
         },
         finalExam: { 
@@ -135,25 +133,23 @@ function App() {
       tenses: Object.values(TIME_FRAMES).flat(),
       courseStructure: {
         section1: { 
-          totalQuestions: 260, 
-          questionsPerVerb: 20,
+          totalQuestions: 182, // 13 verbs × 14 questions each (2 per tense)
+          questionsPerVerb: 14,
           parts: [
-            { name: "A", questions: 44, verbs: ["être", "avoir"] },
-            { name: "B", questions: 44, verbs: ["faire", "dire"] },
-            { name: "C", questions: 44, verbs: ["aller", "voir"] },
-            { name: "D", questions: 44, verbs: ["savoir", "pouvoir"] },
-            { name: "E", questions: 42, verbs: ["vouloir", "venir"] },
-            { name: "F", questions: 42, verbs: ["se laver", "se réveiller", "s'habiller"] }
+            { name: "A", questions: 42, verbs: ["être", "avoir", "faire"] },           // 3 verbs × 14 = 42
+            { name: "B", questions: 42, verbs: ["dire", "aller", "voir"] },            // 3 verbs × 14 = 42
+            { name: "C", questions: 42, verbs: ["savoir", "pouvoir", "vouloir"] },     // 3 verbs × 14 = 42
+            { name: "D", questions: 56, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] } // 4 verbs × 14 = 56
           ]
         },
         finalExam: { 
-          totalQuestions: 100, 
+          totalQuestions: 104, // 13 verbs × 8 questions each
           questionsPerVerb: 8, 
-          passThreshold: 90,
+          passThreshold: 94,
           parts: [
-            { name: "A", questions: 34, verbs: ["être", "avoir", "faire", "dire", "aller"] },
-            { name: "B", questions: 33, verbs: ["voir", "savoir", "pouvoir", "vouloir"] },
-            { name: "C", questions: 33, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] }
+            { name: "A", questions: 40, verbs: ["être", "avoir", "faire", "dire", "aller"] },        // 5 verbs × 8 = 40
+            { name: "B", questions: 32, verbs: ["voir", "savoir", "pouvoir", "vouloir"] },           // 4 verbs × 8 = 32
+            { name: "C", questions: 32, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] } // 4 verbs × 8 = 32
           ]
         }
       }
@@ -477,6 +473,7 @@ function App() {
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
   const [currentCourseConfig, setCurrentCourseConfig] = useState<any>(null);
   const [showPartSelectionModal, setShowPartSelectionModal] = useState(false);
+  const [showSectionOverviewModal, setShowSectionOverviewModal] = useState(false);
   const [selectedCourseLevel, setSelectedCourseLevel] = useState<string>("");
   const [selectedCourseTimeFrame, setSelectedCourseTimeFrame] = useState<string>("");
   const [selectedSection, setSelectedSection] = useState<string>(""); // "section1" or "finalExam"
@@ -557,12 +554,12 @@ function App() {
 
   // Easy Course Functions  
   const handleEasyCourseTimeFrame = async (timeFrame: string) => {
-    // Show part selection modal instead of generating full course
+    // Show section overview modal first
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("section1");
     setShowEasyCourseModal(false);
-    setShowPartSelectionModal(true);
+    setShowSectionOverviewModal(true);
   };
 
   const handleEasyCourseLegacy = async (timeFrame: string) => {
@@ -631,11 +628,11 @@ function App() {
   };
 
   const handleStartEasyFinalExam = async (timeFrame: string) => {
-    // Show part selection modal for final exam
+    // Show section overview modal for final exam
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("finalExam");
-    setShowPartSelectionModal(true);
+    setShowSectionOverviewModal(true);
   };
 
   const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
@@ -729,6 +726,7 @@ function App() {
     setShowExamOption(false);
     setIsAnswerConfirmed(false);
     setShowPartSelectionModal(false);
+    setShowSectionOverviewModal(false);
     setSelectedCourseLevel("");
     setSelectedCourseTimeFrame("");
     setSelectedSection("");
@@ -1733,7 +1731,7 @@ function App() {
                 >
                   <div className="text-emerald-200 font-semibold text-lg">🟢 Easy Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 3 parts (40 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
+                    Section 1: 2 parts (54 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -1742,7 +1740,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 160 mixed questions + Final Exam Parts A & B (80 questions)
+                    Section 1: 3 parts (48, 48, 32 questions) + Final Exam: 2 parts (40 each, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -1751,7 +1749,7 @@ function App() {
                 >
                   <div className="text-red-200 font-semibold text-lg">🔴 Difficult Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 260 mixed questions + Final Exam Parts A & B (100 questions)
+                    Section 1: 4 parts (42, 42, 42, 56 questions) + Final Exam: 3 parts (40, 32, 32, 90% to pass)
                   </div>
                 </button>
               </div>
@@ -2077,6 +2075,84 @@ function App() {
               >
                 Back to Mini-Courses
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Section Overview Modal */}
+        {showSectionOverviewModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-2xl w-full mx-4">
+              <h3 className="text-3xl font-bold text-center mb-4">
+                {selectedCourseLevel} Course - {selectedCourseTimeFrame} Tense
+              </h3>
+              <h4 className="text-xl font-semibold text-center mb-6 text-purple-200">
+                {selectedSection === "section1" ? "📚 Section 1 Overview" : "🎓 Final Exam Overview"}
+              </h4>
+              
+              {(() => {
+                const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
+                const sectionConfig = config?.courseStructure?.[selectedSection as keyof any] as any;
+                const parts = sectionConfig?.parts || [];
+                
+                return (
+                  <div className="space-y-4 mb-8">
+                    <div className="bg-white/5 rounded-xl p-6 text-center">
+                      <h5 className="text-lg font-semibold mb-2">
+                        {selectedSection === "section1" ? "Practice Section" : "Final Examination"}
+                      </h5>
+                      <p className="text-slate-300 mb-4">
+                        {selectedSection === "section1" 
+                          ? `Complete all ${parts.length} parts to master the ${selectedCourseTimeFrame.toLowerCase()} tense. Each part focuses on specific verbs with ${config.tenses.length} different tenses.`
+                          : `Pass the ${parts.length}-part final exam with 90% overall score to complete the course.`
+                        }
+                      </p>
+                      <div className="text-sm text-slate-400">
+                        Total Questions: {sectionConfig?.totalQuestions || 0} • 
+                        Questions per Verb: {sectionConfig?.questionsPerVerb || 0}
+                      </div>
+                    </div>
+                    
+                    <div className="grid gap-3">
+                      {parts.map((part: any, index: number) => (
+                        <div key={part.name} className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <h6 className="font-semibold text-purple-200">
+                                Part {part.name}: {part.questions} Questions
+                              </h6>
+                              <p className="text-sm text-slate-300 mt-1">
+                                Verbs: {part.verbs.map((verb: string) => `'${verb}'`).join(", ")}
+                              </p>
+                            </div>
+                            <div className="text-2xl">
+                              {selectedSection === "section1" ? "📖" : "📝"}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
+              
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowSectionOverviewModal(false)}
+                  className="flex-1 px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
+                >
+                  Back
+                </button>
+                <button
+                  onClick={() => {
+                    setShowSectionOverviewModal(false);
+                    setShowPartSelectionModal(true);
+                  }}
+                  className="flex-1 px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-xl text-white font-medium"
+                >
+                  Choose Part to Start
+                </button>
+              </div>
             </div>
           </div>
         )}
