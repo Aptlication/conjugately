@@ -56,6 +56,7 @@ function App() {
   const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
 
 
+  // Most used French verbs in order of frequency
   const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
   
   const TIME_FRAMES = {
@@ -66,13 +67,25 @@ function App() {
 
   const DIFFICULTY_CONFIGS = {
     "Beginner": { 
-      verbs: ["être", "avoir", "faire", "aller"], 
+      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"] 
     },
-    "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
-    "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past", "Future"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
-    "Difficult": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
+    "Easy": { 
+      verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], // 6 most used verbs
+      timeFrames: ["Present"], 
+      tenses: ["Présent"] 
+    },
+    "Moderate": { 
+      verbs: ["être", "avoir", "faire", "dire", "aller", "se lever", "s'appeler", "se sentir"], // 8 verbs (5 regular + 3 reflexive)
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] 
+    },
+    "Difficult": { 
+      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"], // 10 most used verbs
+      timeFrames: Object.keys(TIME_FRAMES), 
+      tenses: Object.values(TIME_FRAMES).flat() 
+    }
   };
 
   const handleStartQuiz = async () => {
@@ -1216,9 +1229,9 @@ function App() {
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
               <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
-              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Basic verbs, present tense only</option>
-              <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 6 verbs, multiple tenses</option>
-              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - All verbs and tenses</option>
+              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, present tense only</option>
+              <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (5 regular + 3 reflexive), multiple tenses</option>
+              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - Top 10 verbs, all tenses and complexities</option>
             </select>
           </div>
 

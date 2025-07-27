@@ -381,6 +381,120 @@ const VERB_CONJUGATIONS = {
       je: "suis en train de venir", tu: "es en train de venir", il: "est en train de venir", elle: "est en train de venir",
       nous: "sommes en train de venir", vous: "êtes en train de venir", ils: "sont en train de venir", elles: "sont en train de venir"
     }
+  },
+  "se lever": {
+    present: {
+      je: "me lève", tu: "te lèves", il: "se lève", elle: "se lève",
+      nous: "nous levons", vous: "vous levez", ils: "se lèvent", elles: "se lèvent"
+    },
+    passé_composé: {
+      je: "me suis levé(e)", tu: "t'es levé(e)", il: "s'est levé", elle: "s'est levée",
+      nous: "nous sommes levé(e)s", vous: "vous êtes levé(e)s", ils: "se sont levés", elles: "se sont levées"
+    },
+    passé_simple: {
+      je: "me levai", tu: "te levas", il: "se leva", elle: "se leva",
+      nous: "nous levâmes", vous: "vous levâtes", ils: "se levèrent", elles: "se levèrent"
+    },
+    imparfait: {
+      je: "me levais", tu: "te levais", il: "se levait", elle: "se levait",
+      nous: "nous levions", vous: "vous leviez", ils: "se levaient", elles: "se levaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais levé(e)", tu: "t'étais levé(e)", il: "s'était levé", elle: "s'était levée",
+      nous: "nous étions levé(e)s", vous: "vous étiez levé(e)s", ils: "s'étaient levés", elles: "s'étaient levées"
+    },
+    conditionnel: {
+      je: "me lèverais", tu: "te lèverais", il: "se lèverait", elle: "se lèverait",
+      nous: "nous lèverions", vous: "vous lèveriez", ils: "se lèveraient", elles: "se lèveraient"
+    },
+    futur_simple: {
+      je: "me lèverai", tu: "te lèveras", il: "se lèvera", elle: "se lèvera",
+      nous: "nous lèverons", vous: "vous lèverez", ils: "se lèveront", elles: "se lèveront"
+    },
+    futur_proche: {
+      je: "vais me lever", tu: "vas te lever", il: "va se lever", elle: "va se lever",
+      nous: "allons nous lever", vous: "allez vous lever", ils: "vont se lever", elles: "vont se lever"
+    },
+    présent_progressif: {
+      je: "suis en train de me lever", tu: "es en train de te lever", il: "est en train de se lever", elle: "est en train de se lever",
+      nous: "sommes en train de nous lever", vous: "êtes en train de vous lever", ils: "sont en train de se lever", elles: "sont en train de se lever"
+    }
+  },
+  "s'appeler": {
+    present: {
+      je: "m'appelle", tu: "t'appelles", il: "s'appelle", elle: "s'appelle",
+      nous: "nous appelons", vous: "vous appelez", ils: "s'appellent", elles: "s'appellent"
+    },
+    passé_composé: {
+      je: "me suis appelé(e)", tu: "t'es appelé(e)", il: "s'est appelé", elle: "s'est appelée",
+      nous: "nous sommes appelé(e)s", vous: "vous êtes appelé(e)s", ils: "se sont appelés", elles: "se sont appelées"
+    },
+    passé_simple: {
+      je: "m'appelai", tu: "t'appelas", il: "s'appela", elle: "s'appela",
+      nous: "nous appelâmes", vous: "vous appelâtes", ils: "s'appelèrent", elles: "s'appelèrent"
+    },
+    imparfait: {
+      je: "m'appelais", tu: "t'appelais", il: "s'appelait", elle: "s'appelait",
+      nous: "nous appelions", vous: "vous appeliez", ils: "s'appelaient", elles: "s'appelaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais appelé(e)", tu: "t'étais appelé(e)", il: "s'était appelé", elle: "s'était appelée",
+      nous: "nous étions appelé(e)s", vous: "vous étiez appelé(e)s", ils: "s'étaient appelés", elles: "s'étaient appelées"
+    },
+    conditionnel: {
+      je: "m'appellerais", tu: "t'appellerais", il: "s'appellerait", elle: "s'appellerait",
+      nous: "nous appellerions", vous: "vous appelleriez", ils: "s'appelleraient", elles: "s'appelleraient"
+    },
+    futur_simple: {
+      je: "m'appellerai", tu: "t'appelleras", il: "s'appellera", elle: "s'appellera",
+      nous: "nous appellerons", vous: "vous appellerez", ils: "s'appelleront", elles: "s'appelleront"
+    },
+    futur_proche: {
+      je: "vais m'appeler", tu: "vas t'appeler", il: "va s'appeler", elle: "va s'appeler",
+      nous: "allons nous appeler", vous: "allez vous appeler", ils: "vont s'appeler", elles: "vont s'appeler"
+    },
+    présent_progressif: {
+      je: "suis en train de m'appeler", tu: "es en train de t'appeler", il: "est en train de s'appeler", elle: "est en train de s'appeler",
+      nous: "sommes en train de nous appeler", vous: "êtes en train de vous appeler", ils: "sont en train de s'appeler", elles: "sont en train de s'appeler"
+    }
+  },
+  "se sentir": {
+    present: {
+      je: "me sens", tu: "te sens", il: "se sent", elle: "se sent",
+      nous: "nous sentons", vous: "vous sentez", ils: "se sentent", elles: "se sentent"
+    },
+    passé_composé: {
+      je: "me suis senti(e)", tu: "t'es senti(e)", il: "s'est senti", elle: "s'est sentie",
+      nous: "nous sommes senti(e)s", vous: "vous êtes senti(e)s", ils: "se sont sentis", elles: "se sont senties"
+    },
+    passé_simple: {
+      je: "me sentis", tu: "te sentis", il: "se sentit", elle: "se sentit",
+      nous: "nous sentîmes", vous: "vous sentîtes", ils: "se sentirent", elles: "se sentirent"
+    },
+    imparfait: {
+      je: "me sentais", tu: "te sentais", il: "se sentait", elle: "se sentait",
+      nous: "nous sentions", vous: "vous sentiez", ils: "se sentaient", elles: "se sentaient"
+    },
+    plus_que_parfait: {
+      je: "m'étais senti(e)", tu: "t'étais senti(e)", il: "s'était senti", elle: "s'était sentie",
+      nous: "nous étions senti(e)s", vous: "vous étiez senti(e)s", ils: "s'étaient sentis", elles: "s'étaient senties"
+    },
+    conditionnel: {
+      je: "me sentirais", tu: "te sentirais", il: "se sentirait", elle: "se sentirait",
+      nous: "nous sentirions", vous: "vous sentiriez", ils: "se sentiraient", elles: "se sentiraient"
+    },
+    futur_simple: {
+      je: "me sentirai", tu: "te sentiras", il: "se sentira", elle: "se sentira",
+      nous: "nous sentirons", vous: "vous sentirez", ils: "se sentiront", elles: "se sentiront"
+    },
+    futur_proche: {
+      je: "vais me sentir", tu: "vas te sentir", il: "va se sentir", elle: "va se sentir",
+      nous: "allons nous sentir", vous: "allez vous sentir", ils: "vont se sentir", elles: "vont se sentir"
+    },
+    présent_progressif: {
+      je: "suis en train de me sentir", tu: "es en train de te sentir", il: "est en train de se sentir", elle: "est en train de se sentir",
+      nous: "sommes en train de nous sentir", vous: "êtes en train de vous sentir", ils: "sont en train de se sentir", elles: "sont en train de se sentir"
+    }
   }
 };
 
@@ -505,6 +619,42 @@ const QUESTION_CONTEXTS = {
     { en: "I don't go there.", fr_context: "là-bas", negative: true, pronoun: "je" },
     { en: "She doesn't go out.", fr_context: "sortir", negative: true, pronoun: "elle" },
     { en: "We don't go often.", fr_context: "souvent", negative: true, pronoun: "nous" }
+  ],
+  "se lever": [
+    { en: "I get up early.", fr_context: "tôt", pronoun: "je" },
+    { en: "You wake up late.", fr_context: "tard", pronoun: "tu" },
+    { en: "He gets up at 7.", fr_context: "à 7 heures", pronoun: "il" },
+    { en: "She gets up quickly.", fr_context: "rapidement", pronoun: "elle" },
+    { en: "We get up together.", fr_context: "ensemble", pronoun: "nous" },
+    { en: "You (plural) get up slowly.", fr_context: "lentement", pronoun: "vous" },
+    { en: "They get up first.", fr_context: "en premier", pronoun: "ils" },
+    { en: "I don't get up early.", fr_context: "pas tôt", negative: true, pronoun: "je" },
+    { en: "She doesn't get up easily.", fr_context: "pas facilement", negative: true, pronoun: "elle" },
+    { en: "We don't get up late.", fr_context: "pas tard", negative: true, pronoun: "nous" }
+  ],
+  "s'appeler": [
+    { en: "I am called Marie.", fr_context: "Marie", pronoun: "je" },
+    { en: "You are called Paul.", fr_context: "Paul", pronoun: "tu" },
+    { en: "He is called Jean.", fr_context: "Jean", pronoun: "il" },
+    { en: "She is called Sophie.", fr_context: "Sophie", pronoun: "elle" },
+    { en: "We are called students.", fr_context: "étudiants", pronoun: "nous" },
+    { en: "You (plural) are called friends.", fr_context: "amis", pronoun: "vous" },
+    { en: "They are called teachers.", fr_context: "professeurs", pronoun: "ils" },
+    { en: "I am not called that.", fr_context: "pas comme ça", negative: true, pronoun: "je" },
+    { en: "She is not called Marie.", fr_context: "pas Marie", negative: true, pronoun: "elle" },
+    { en: "We are not called beginners.", fr_context: "pas débutants", negative: true, pronoun: "nous" }
+  ],
+  "se sentir": [
+    { en: "I feel good.", fr_context: "bien", pronoun: "je" },
+    { en: "You feel tired.", fr_context: "fatigué(e)", pronoun: "tu" },
+    { en: "He feels happy.", fr_context: "heureux", pronoun: "il" },
+    { en: "She feels sad.", fr_context: "triste", pronoun: "elle" },
+    { en: "We feel confident.", fr_context: "confiants", pronoun: "nous" },
+    { en: "You (plural) feel ready.", fr_context: "prêts", pronoun: "vous" },
+    { en: "They feel nervous.", fr_context: "nerveux", pronoun: "ils" },
+    { en: "I don't feel well.", fr_context: "pas bien", negative: true, pronoun: "je" },
+    { en: "She doesn't feel safe.", fr_context: "pas en sécurité", negative: true, pronoun: "elle" },
+    { en: "We don't feel comfortable.", fr_context: "pas à l'aise", negative: true, pronoun: "nous" }
   ]
 };
 
@@ -715,7 +865,10 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
     'savoir': { present: 'know', passé_simple: 'knew', futur_simple: 'will know' },
     'pouvoir': { present: 'can', passé_simple: 'could', futur_simple: 'will be able to' },
     'vouloir': { present: 'want', passé_simple: 'wanted', futur_simple: 'will want' },
-    'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' }
+    'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' },
+    'se lever': { present: 'get up', passé_simple: 'got up', futur_simple: 'will get up' },
+    's\'appeler': { present: 'be called', passé_simple: 'was called', futur_simple: 'will be called' },
+    'se sentir': { present: 'feel', passé_simple: 'felt', futur_simple: 'will feel' }
   };
   
   const englishPronoun = englishPronouns[pronoun as keyof typeof englishPronouns] || pronoun;
@@ -760,6 +913,9 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (verb === 'pouvoir') return `${englishPronoun} can`;
       if (verb === 'vouloir') return `${englishPronoun} wants`;
       if (verb === 'venir') return `${englishPronoun} comes`;
+      if (verb === 'se lever') return `${englishPronoun} gets up`;
+      if (verb === 's\'appeler') return `${englishPronoun} is called`;
+      if (verb === 'se sentir') return `${englishPronoun} feels`;
     }
     
     // All other persons use base verb form
