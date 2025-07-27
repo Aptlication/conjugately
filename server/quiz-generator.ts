@@ -973,7 +973,7 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
       } else if (context && (context === 'pas' || context.startsWith('pas '))) {
         // If context already contains "pas", don't duplicate
         negatedAux = negatedAux.replace(' pas', '');
-        return `${pronounCap} ${negatedAux} ${context} ${participle}`;
+        return `${pronounCap} ${negatedAux} ${participle} ${context}`;
       } else {
         return `${pronounCap} ${negatedAux} ${participle}${context ? ` ${context}` : ''}`;
       }
@@ -1067,7 +1067,18 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 // Convert positive English sentences to negative
 function convertToNegativeEnglish(englishSentence: string, pronoun: string): string {
   // Handle different verb forms for negation
-  const sentence = englishSentence.trim();
+  let sentence = englishSentence.trim();
+  
+  // CRITICAL: Fix any existing "will don't" double negations FIRST
+  if (sentence.includes("will don't")) {
+    return sentence.replace("will don't", "won't");
+  }
+  
+  // Handle predefined negative contexts - don't apply double negation
+  if (sentence.includes(" no ") || sentence.includes("nothing") || sentence.includes("never") || 
+      sentence.includes("nowhere") || sentence.includes("nobody") || sentence.includes("n't")) {
+    return sentence; // Already negative, don't modify
+  }
   
   // CRITICAL: Handle ALL future tense cases FIRST to prevent "will don't" constructions
   if (sentence.includes(" will ")) {
@@ -1195,7 +1206,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   }
   
   // For other verbs - add "don't" or "doesn't" ONLY if not already handled by will/future cases
-  if (!sentence.includes("will")) {
+  if (!sentence.includes("will") && !sentence.includes("won't")) {
     const words = sentence.split(" ");
     if (words.length >= 2) {
       const subject = words[0];
@@ -1594,7 +1605,11 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if ((context as any).negative) {
         englishQuestion = context.en; // Keep predefined negative as-is
       } else {
-        englishQuestion = convertToNegativeEnglish(context.en, pronoun); // Convert positive to negative
+        let converted = convertToNegativeEnglish(context.en, pronoun); // Convert positive to negative
+        // Apply comprehensive grammar fixes after conversion
+        converted = converted.replace(/will don't/g, "won't");
+        converted = converted.replace(/will doesn't/g, "won't"); 
+        englishQuestion = converted;
       }
     } else {
       // For positive questions, only process if context is NOT already negative

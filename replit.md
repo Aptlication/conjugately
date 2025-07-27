@@ -111,14 +111,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 27, 2025 - Complete English Grammar Fix & Enhanced Negation System ✓
-- **Critical Grammar Fix**: Resolved double negative errors like "She hadn't no choice" → "She had no choice"  
-- **Fixed Incorrect Tense Logic**: Corrected "I said anything" → "I didn't say anything" for proper negative past tense
-- **Enhanced Negation Logic**: Fixed predefined negative contexts to respect original grammar without double negation
-- **Comprehensive Tense Conversion**: Added negative verb handling for all past tense forms (didn't say, didn't do, didn't know, etc.)
-- **Smart Context Processing**: System now properly distinguishes between predefined negatives and dynamic negation
-- **Grammar Consistency**: Fixed "had" detection as main verb vs auxiliary verb for proper past tense negation
-- **Educational Quality**: All English questions now follow proper grammar rules across all difficulty levels and tenses
+### January 27, 2025 - Easy Section Grammar Issues Identified & Partial Fixes Applied ⚠️
+- **Critical Issues Found**: Identified "will don't" constructions (e.g., "She will don't make mistakes" → should be "She won't make mistakes")
+- **French Compound Tense Errors**: Found incorrect negation placement "Ils n'ont vu pas" → should be "Ils n'ont pas vu"
+- **French Contraction Errors**: Found "Je ne étais pas" → should be "Je n'étais pas"
+- **Partial Fixes Applied**: Added comprehensive "will don't" detection and correction logic
+- **Root Cause**: English negation conversion logic creating malformed sentences in Easy difficulty level
+- **Status**: Multiple fix attempts made but core issue persists in quiz generation - requires deeper investigation
 
 ### January 27, 2025 - Enhanced Verb Selection with English Meanings ✓
 - **Verb Dropdown Enhancement**: Added English meanings to all French verbs in dropdown selections
