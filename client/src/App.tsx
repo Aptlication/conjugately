@@ -1386,7 +1386,7 @@ function App() {
                 >
                   <div className="text-green-200 font-semibold text-lg">🟢 Easy</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Basic verbs (être, avoir, faire) • Present tense only
+                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present tense only
                   </div>
                 </button>
                 
@@ -1396,7 +1396,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    6 common verbs • Present, past, and future tenses (including Futur Simple)
+                    8 verbs (5 regular + 3 reflexive) • Present, past, and future tenses
                   </div>
                 </button>
                 
@@ -1406,7 +1406,7 @@ function App() {
                 >
                   <div className="text-red-200 font-semibold text-lg">🔴 Difficult</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    All 10 verbs • All tenses and time frames
+                    13 verbs (10 regular + 3 reflexive) • All tenses and time frames
                   </div>
                 </button>
               </div>
