@@ -74,8 +74,18 @@ function App() {
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"],
       courseStructure: {
-        section1: { questions: 80, questionsPerVerb: 20 },
-        finalExam: { questions: 40, questionsPerVerb: 10, passThreshold: 36 }
+        units: [
+          { name: "Unit 1: être", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire", verb: "faire", questions: 20 },
+          { name: "Unit 4: aller", verb: "aller", questions: 20 }
+        ],
+        finalExam: { 
+          questions: 40, 
+          questionsPerVerb: 10, 
+          passThreshold: 36,
+          description: "10 questions from each of the 4 verbs"
+        }
       }
     },
     "Easy": { 
@@ -83,22 +93,19 @@ function App() {
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
-        section1: { 
-          totalQuestions: 108, // 6 verbs × 18 questions each (6 per tense)
-          questionsPerVerb: 18,
-          parts: [
-            { name: "A", questions: 54, verbs: ["être", "avoir", "faire"] }, // 3 verbs × 18 = 54
-            { name: "B", questions: 54, verbs: ["dire", "aller", "voir"] }   // 3 verbs × 18 = 54
-          ]
-        },
+        units: [
+          { name: "Unit 1: être", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller", verb: "aller", questions: 20 },
+          { name: "Unit 6: voir", verb: "voir", questions: 20 }
+        ],
         finalExam: { 
-          totalQuestions: 60, 
+          questions: 60, 
           questionsPerVerb: 10, 
           passThreshold: 54,
-          parts: [
-            { name: "A", questions: 30, verbs: ["être", "avoir", "faire"] },
-            { name: "B", questions: 30, verbs: ["dire", "aller", "voir"] }
-          ]
+          description: "10 questions from each of the 6 verbs"
         }
       }
     },
@@ -107,23 +114,21 @@ function App() {
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
       courseStructure: {
-        section1: { 
-          totalQuestions: 128, // 8 verbs × 16 questions each (4 per tense)
-          questionsPerVerb: 16,
-          parts: [
-            { name: "A", questions: 48, verbs: ["être", "avoir", "faire"] },      // 3 verbs × 16 = 48
-            { name: "B", questions: 48, verbs: ["dire", "aller", "se lever"] },   // 3 verbs × 16 = 48  
-            { name: "C", questions: 32, verbs: ["s'appeler", "se sentir"] }       // 2 verbs × 16 = 32
-          ]
-        },
+        units: [
+          { name: "Unit 1: être", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller", verb: "aller", questions: 20 },
+          { name: "Unit 6: se lever", verb: "se lever", questions: 20 },
+          { name: "Unit 7: s'appeler", verb: "s'appeler", questions: 20 },
+          { name: "Unit 8: se sentir", verb: "se sentir", questions: 20 }
+        ],
         finalExam: { 
-          totalQuestions: 80, 
+          questions: 80, 
           questionsPerVerb: 10, 
           passThreshold: 72,
-          parts: [
-            { name: "A", questions: 40, verbs: ["être", "avoir", "faire", "dire"] },
-            { name: "B", questions: 40, verbs: ["aller", "se lever", "s'appeler", "se sentir"] }
-          ]
+          description: "10 questions from each of the 8 verbs"
         }
       }
     },
@@ -132,25 +137,26 @@ function App() {
       timeFrames: Object.keys(TIME_FRAMES), 
       tenses: Object.values(TIME_FRAMES).flat(),
       courseStructure: {
-        section1: { 
-          totalQuestions: 182, // 13 verbs × 14 questions each (2 per tense)
-          questionsPerVerb: 14,
-          parts: [
-            { name: "A", questions: 42, verbs: ["être", "avoir", "faire"] },           // 3 verbs × 14 = 42
-            { name: "B", questions: 42, verbs: ["dire", "aller", "voir"] },            // 3 verbs × 14 = 42
-            { name: "C", questions: 42, verbs: ["savoir", "pouvoir", "vouloir"] },     // 3 verbs × 14 = 42
-            { name: "D", questions: 56, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] } // 4 verbs × 14 = 56
-          ]
-        },
+        units: [
+          { name: "Unit 1: être", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller", verb: "aller", questions: 20 },
+          { name: "Unit 6: voir", verb: "voir", questions: 20 },
+          { name: "Unit 7: savoir", verb: "savoir", questions: 20 },
+          { name: "Unit 8: pouvoir", verb: "pouvoir", questions: 20 },
+          { name: "Unit 9: vouloir", verb: "vouloir", questions: 20 },
+          { name: "Unit 10: venir", verb: "venir", questions: 20 },
+          { name: "Unit 11: se laver", verb: "se laver", questions: 20 },
+          { name: "Unit 12: se réveiller", verb: "se réveiller", questions: 20 },
+          { name: "Unit 13: s'habiller", verb: "s'habiller", questions: 20 }
+        ],
         finalExam: { 
-          totalQuestions: 104, // 13 verbs × 8 questions each
-          questionsPerVerb: 8, 
-          passThreshold: 94,
-          parts: [
-            { name: "A", questions: 40, verbs: ["être", "avoir", "faire", "dire", "aller"] },        // 5 verbs × 8 = 40
-            { name: "B", questions: 32, verbs: ["voir", "savoir", "pouvoir", "vouloir"] },           // 4 verbs × 8 = 32
-            { name: "C", questions: 32, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] } // 4 verbs × 8 = 32
-          ]
+          questions: 130, 
+          questionsPerVerb: 10, 
+          passThreshold: 117,
+          description: "10 questions from each of the 13 verbs"
         }
       }
     }
@@ -473,12 +479,60 @@ function App() {
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
   const [currentCourseConfig, setCurrentCourseConfig] = useState<any>(null);
   const [showPartSelectionModal, setShowPartSelectionModal] = useState(false);
-  const [showSectionOverviewModal, setShowSectionOverviewModal] = useState(false);
+  const [showCourseOverviewModal, setShowCourseOverviewModal] = useState(false);
+  const [showUnitIntroModal, setShowUnitIntroModal] = useState(false);
   const [selectedCourseLevel, setSelectedCourseLevel] = useState<string>("");
   const [selectedCourseTimeFrame, setSelectedCourseTimeFrame] = useState<string>("");
-  const [selectedSection, setSelectedSection] = useState<string>(""); // "section1" or "finalExam"
+  const [selectedUnit, setSelectedUnit] = useState<any>(null);
+  const [currentTense, setCurrentTense] = useState("");
 
-  // Part-Based Generation Functions
+  // Unit-Based Generation Functions
+  const handleStartUnitQuiz = async (difficulty: string, timeFrame: string, unit: any) => {
+    const config = DIFFICULTY_CONFIGS[difficulty as keyof typeof DIFFICULTY_CONFIGS];
+    const tenseMapping = {
+      "Present": "Présent",
+      "Past": "Passé Composé", 
+      "Future": "Futur Simple"
+    };
+    
+    const tense = tenseMapping[timeFrame as keyof typeof tenseMapping];
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    setQuizState('loading');
+    
+    try {
+      const response = await fetch('/api/get-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          verb: unit.verb,
+          timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+          tenseType: tense,
+          difficulty: difficulty,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setQuizData(data.quiz.questions || []);
+        setCurrentQuestionIndex(0);
+        setUserAnswers({});
+        setSelectedAnswerIndex(null);
+        setIsAnswerConfirmed(false);
+        setQuizState('active');
+        
+        // Show instruction popup if not disabled
+        const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+        if (!dontRemindAgain) {
+          setShowInstructionPopup(true);
+        }
+      }
+    } catch (error) {
+      console.error('Error generating unit quiz:', error);
+      setQuizState('config');
+    }
+  };
+
+  // Part-Based Generation Functions (Legacy)
   const handleCoursePart = async (difficulty: string, timeFrame: string, section: string, partName: string) => {
     const config = DIFFICULTY_CONFIGS[difficulty as keyof typeof DIFFICULTY_CONFIGS];
     const sectionConfig = config.courseStructure[section as keyof typeof config.courseStructure] as any;
@@ -559,7 +613,7 @@ function App() {
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("section1");
     setShowEasyCourseModal(false);
-    setShowSectionOverviewModal(true);
+    setShowCourseOverviewModal(true);
   };
 
   const handleEasyCourseLegacy = async (timeFrame: string) => {
@@ -632,7 +686,7 @@ function App() {
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("finalExam");
-    setShowSectionOverviewModal(true);
+    setShowCourseOverviewModal(true);
   };
 
   // Moderate Course Functions  
@@ -642,7 +696,7 @@ function App() {
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("section1");
     setShowModerateCourseModal(false);
-    setShowSectionOverviewModal(true);
+    setShowCourseOverviewModal(true);
   };
 
   const handleStartModerateFinalExam = async (timeFrame: string) => {
@@ -650,7 +704,7 @@ function App() {
     setSelectedCourseLevel("Moderate");
     setSelectedCourseTimeFrame(timeFrame);
     setSelectedSection("finalExam");
-    setShowSectionOverviewModal(true);
+    setShowCourseOverviewModal(true);
   };
 
   const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
@@ -747,10 +801,10 @@ function App() {
     setShowExamOption(false);
     setIsAnswerConfirmed(false);
     setShowPartSelectionModal(false);
-    setShowSectionOverviewModal(false);
+    setShowCourseOverviewModal(false);
     setSelectedCourseLevel("");
     setSelectedCourseTimeFrame("");
-    setSelectedSection("");
+    setSelectedUnit(null);
   };
 
   const calculateResults = () => {
@@ -2071,7 +2125,7 @@ function App() {
                         {isLocked && <span className="text-sm">🔒 Complete Beginner first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        Section 1: 3 parts (40 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
+                        6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
@@ -2174,7 +2228,7 @@ function App() {
                         {isLocked && <span className="text-sm">🔒 Complete Easy first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        Section 1: 3 parts (48, 48, 32 questions) + Final Exam: 2 parts (40 each, 90% to pass)
+                        8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
@@ -2225,78 +2279,204 @@ function App() {
           </div>
         )}
 
-        {/* Section Overview Modal */}
-        {showSectionOverviewModal && (
+        {/* Course Overview Modal - Unit Structure */}
+        {showCourseOverviewModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-2xl w-full mx-4">
-              <h3 className="text-3xl font-bold text-center mb-4">
-                {selectedCourseLevel} Course - {selectedCourseTimeFrame} Tense
-              </h3>
-              <h4 className="text-xl font-semibold text-center mb-6 text-purple-200">
-                {selectedSection === "section1" ? "📚 Section 1 Overview" : "🎓 Final Exam Overview"}
-              </h4>
+              <div className="text-center mb-6">
+                <div className="text-4xl mb-2">📚</div>
+                <h3 className="text-3xl font-bold mb-2">
+                  {selectedCourseLevel} Course Overview
+                </h3>
+                <p className="text-lg text-purple-200">
+                  {selectedCourseTimeFrame} Tense Course
+                </p>
+                <p className="text-sm text-slate-300 italic">
+                  French Verb Master - For serious students.
+                </p>
+              </div>
               
               {(() => {
                 const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
-                const sectionConfig = config?.courseStructure?.[selectedSection as keyof any] as any;
-                const parts = sectionConfig?.parts || [];
+                const units = config?.courseStructure?.units || [];
+                const finalExam = config?.courseStructure?.finalExam;
                 
                 return (
-                  <div className="space-y-4 mb-8">
-                    <div className="bg-white/5 rounded-xl p-6 text-center">
-                      <h5 className="text-lg font-semibold mb-2">
-                        {selectedSection === "section1" ? "Practice Section" : "Final Examination"}
-                      </h5>
-                      <p className="text-slate-300 mb-4">
-                        {selectedSection === "section1" 
-                          ? `Complete all ${parts.length} parts to master the ${selectedCourseTimeFrame.toLowerCase()} tense. Each part focuses on specific verbs with ${config.tenses.length} different tenses.`
-                          : `Pass the ${parts.length}-part final exam with 90% overall score to complete the course.`
-                        }
-                      </p>
-                      <div className="text-sm text-slate-400">
-                        Total Questions: {sectionConfig?.totalQuestions || 0} • 
-                        Questions per Verb: {sectionConfig?.questionsPerVerb || 0}
+                  <div className="space-y-6">
+                    {/* Course Structure Section */}
+                    <div className="bg-white/5 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="text-2xl">🎯</div>
+                        <h4 className="text-xl font-semibold text-white">Course Structure</h4>
                       </div>
-                    </div>
-                    
-                    <div className="grid gap-3">
-                      {parts.map((part: any, index: number) => (
-                        <div key={part.name} className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
-                          <div className="flex justify-between items-center">
-                            <div>
-                              <h6 className="font-semibold text-purple-200">
-                                Part {part.name}: {part.questions} Questions
-                              </h6>
-                              <p className="text-sm text-slate-300 mt-1">
-                                Verbs: {part.verbs.map((verb: string) => `'${verb}'`).join(", ")}
-                              </p>
-                            </div>
-                            <div className="text-2xl">
-                              {selectedSection === "section1" ? "📖" : "📝"}
+                      <div className="space-y-2 mb-4">
+                        {units.map((unit: any, index: number) => (
+                          <div key={index} className="flex items-center justify-between p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg">
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                                {index + 1}
+                              </div>
+                              <span className="font-medium">{unit.name} ({unit.questions} questions)</span>
                             </div>
                           </div>
+                        ))}
+                        <div className="flex items-center justify-between p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                              🏆
+                            </div>
+                            <span className="font-medium">Final Exam ({finalExam?.questions} questions)</span>
+                          </div>
                         </div>
-                      ))}
+                      </div>
                     </div>
+
+                    {/* What You'll Learn Section */}
+                    <div className="bg-white/5 rounded-xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="text-2xl">✨</div>
+                        <h4 className="text-xl font-semibold text-white">What You'll Learn</h4>
+                      </div>
+                      <ul className="space-y-2 text-slate-300">
+                        <li>• Master the {config.verbs.length} most essential French verbs</li>
+                        <li>• Practice {selectedCourseTimeFrame.toLowerCase()} tense conjugations</li>
+                        <li>• Learn proper French grammar patterns</li>
+                        <li>• Build confidence with structured progression</li>
+                        <li>• Achieve 90% mastery on final exam</li>
+                      </ul>
+                    </div>
+
+                    {finalExam && (
+                      <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-xl p-4">
+                        <div className="text-center">
+                          <div className="text-lg font-semibold text-yellow-200 mb-1">We have high standards!</div>
+                          <p className="text-sm text-slate-300">
+                            Final exam requires 90% ({finalExam.passThreshold}/{finalExam.questions}) to pass and unlock the next course.
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })()}
               
-              <div className="flex gap-3">
+              <div className="flex gap-3 mt-8">
                 <button
-                  onClick={() => setShowSectionOverviewModal(false)}
+                  onClick={() => setShowCourseOverviewModal(false)}
                   className="flex-1 px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
                 >
                   Back
                 </button>
                 <button
                   onClick={() => {
-                    setShowSectionOverviewModal(false);
-                    setShowPartSelectionModal(true);
+                    setShowCourseOverviewModal(false);
+                    // Start with Unit 1
+                    const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
+                    const firstUnit = config.courseStructure.units[0];
+                    setSelectedUnit(firstUnit);
+                    setShowUnitIntroModal(true);
                   }}
-                  className="flex-1 px-6 py-3 bg-purple-600 hover:bg-purple-500 rounded-xl text-white font-medium"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl text-white font-medium shadow-lg"
                 >
-                  Choose Part to Start
+                  Start Unit 1: '{DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.units?.[0]?.verb}' →
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Unit Introduction Modal */}
+        {showUnitIntroModal && selectedUnit && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-lg w-full mx-4">
+              <div className="text-center mb-6">
+                <div className="text-4xl mb-2">📖</div>
+                <h3 className="text-2xl font-bold mb-2">{selectedUnit.name}</h3>
+                <p className="text-lg text-purple-200">
+                  Learn the French verb '{selectedUnit.verb}'
+                </p>
+              </div>
+              
+              <div className="bg-white/5 rounded-xl p-6 mb-6">
+                <h4 className="font-semibold text-lg mb-3 text-center">About '{selectedUnit.verb}'</h4>
+                <div className="space-y-3 text-slate-300">
+                  {(() => {
+                    const verbDescriptions: Record<string, { meaning: string; description: string; example: string }> = {
+                      "être": {
+                        meaning: "to be",
+                        description: "The most fundamental French verb, used to describe states of being, identity, and location.",
+                        example: "Je suis étudiant. (I am a student.)"
+                      },
+                      "avoir": {
+                        meaning: "to have",
+                        description: "Essential for expressing possession and forming compound tenses in French.",
+                        example: "J'ai un livre. (I have a book.)"
+                      },
+                      "faire": {
+                        meaning: "to do/make",
+                        description: "One of the most versatile verbs, used in countless French expressions and activities.",
+                        example: "Je fais mes devoirs. (I do my homework.)"
+                      },
+                      "dire": {
+                        meaning: "to say/tell",
+                        description: "Essential for communication and expressing thoughts in French.",
+                        example: "Je dis la vérité. (I tell the truth.)"
+                      },
+                      "aller": {
+                        meaning: "to go",
+                        description: "Crucial for expressing movement and forming the near future tense.",
+                        example: "Je vais à l'école. (I go to school.)"
+                      },
+                      "voir": {
+                        meaning: "to see",
+                        description: "Important for expressing perception and understanding.",
+                        example: "Je vois la tour Eiffel. (I see the Eiffel Tower.)"
+                      }
+                    };
+                    
+                    const info = verbDescriptions[selectedUnit.verb] || {
+                      meaning: "French verb",
+                      description: "An important French verb used in everyday conversation.",
+                      example: `Example with '${selectedUnit.verb}'`
+                    };
+                    
+                    return (
+                      <div>
+                        <p><strong>Meaning:</strong> {info.meaning}</p>
+                        <p><strong>Usage:</strong> {info.description}</p>
+                        <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-3 mt-3">
+                          <p className="text-sm"><strong>Example:</strong> {info.example}</p>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+              </div>
+              
+              <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-6 text-center">
+                <p className="text-blue-200 text-sm">
+                  This unit contains <strong>{selectedUnit.questions} questions</strong> focusing on '{selectedUnit.verb}' in the {selectedCourseTimeFrame.toLowerCase()} tense.
+                </p>
+              </div>
+              
+              <div className="flex gap-3">
+                <button
+                  onClick={() => {
+                    setShowUnitIntroModal(false);
+                    setShowCourseOverviewModal(true);
+                  }}
+                  className="flex-1 px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
+                >
+                  Back to Overview
+                </button>
+                <button
+                  onClick={() => {
+                    setShowUnitIntroModal(false);
+                    handleStartUnitQuiz(selectedCourseLevel, selectedCourseTimeFrame, selectedUnit);
+                  }}
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 rounded-xl text-white font-medium shadow-lg"
+                >
+                  Start Unit Quiz →
                 </button>
               </div>
             </div>
@@ -2311,17 +2491,17 @@ function App() {
                 {selectedCourseLevel} Course - {selectedCourseTimeFrame} Tense
               </h3>
               <p className="text-slate-300 text-center mb-6">
-                {selectedSection === "section1" ? 
+                {selectedUnit === "section1" ? 
                   "Choose a section to practice. Complete all parts to unlock the final exam." :
                   "Choose an exam part. You must pass both parts with 90% combined score."
                 }
               </p>
               
               <div className="space-y-3 mb-6">
-                {(DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedSection as keyof any] as any)?.parts?.map((part: any, index: number) => (
+                {(DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedUnit as keyof any] as any)?.parts?.map((part: any, index: number) => (
                   <button
                     key={part.name}
-                    onClick={() => handleCoursePart(selectedCourseLevel, selectedCourseTimeFrame, selectedSection, part.name)}
+                    onClick={() => handleCoursePart(selectedCourseLevel, selectedCourseTimeFrame, selectedUnit, part.name)}
                     className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
                   >
                     <div className="text-purple-200 font-semibold text-lg">
@@ -2341,7 +2521,7 @@ function App() {
                 >
                   Back
                 </button>
-                {selectedSection === "section1" && (
+                {selectedUnit === "section1" && (
                   <button
                     onClick={() => {
                       setSelectedSection("finalExam");

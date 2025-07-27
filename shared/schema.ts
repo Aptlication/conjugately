@@ -28,8 +28,13 @@ export const courseProgress = pgTable("course_progress", {
   totalQuestions: integer("total_questions").notNull().default(0),
   isCompleted: boolean("is_completed").notNull().default(false),
   examPassed: boolean("exam_passed").default(false),
-  // New fields for part-based progress tracking
-  currentSection: text("current_section").default("section1"), // "section1" or "finalExam"
+  // New fields for unit-based progress tracking
+  currentSection: text("current_section").default("units"), // "units" or "finalExam"
+  currentUnit: integer("current_unit").default(1), // 1, 2, 3, etc. for unit numbers
+  unitVerb: text("unit_verb"), // 'être', 'avoir', etc. the specific verb for current unit
+  completedUnits: json("completed_units").default([]), // [{"unit": 1, "verb": "être", "score": 18, "total": 20}, ...]
+  unitScores: text("unit_scores").default("{}"), // JSON string: {"unit-1": {"score": 18, "total": 20}, "unit-2": {...}, ...}
+  // Legacy part fields for backward compatibility
   currentPart: text("current_part").default("A"), // "A", "B", "C", etc.
   completedParts: json("completed_parts").default([]), // ["section1-A", "section1-B", "finalExam-A"]
   partScores: text("part_scores").default("{}"), // JSON string: {"section1-A": {"score": 35, "total": 40}, ...}
