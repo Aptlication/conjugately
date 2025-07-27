@@ -781,12 +781,26 @@ function App() {
 
   // Moderate Course Functions  
   const handleModerateCourseTimeFrame = async (timeFrame: string) => {
-    // Show section overview modal first
-    setSelectedCourseLevel("Moderate");
-    setSelectedCourseTimeFrame(timeFrame);
-    // Unit-based course - no section needed;
-    setShowModerateCourseModal(false);
-    setShowCourseOverviewModal(true);
+    // Clear any previous state first
+    setSelectedCourseLevel("");
+    setSelectedCourseTimeFrame("");
+    
+    // Use setTimeout to ensure state is cleared before setting new values
+    setTimeout(() => {
+      setSelectedCourseLevel("Moderate");
+      setSelectedCourseTimeFrame(timeFrame);
+      
+      // Get the tense for this timeframe
+      const tenseMapping = {
+        "Present": "Présent",
+        "Past": "Passé Composé", 
+        "Future": "Futur Simple"
+      };
+      setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+      
+      setShowModerateCourseModal(false);
+      setShowCourseOverviewModal(true);
+    }, 10);
   };
 
   const handleStartModerateFinalExam = async (timeFrame: string) => {
@@ -799,19 +813,26 @@ function App() {
 
   // Difficult Course Functions  
   const handleDifficultCourseTimeFrame = (timeFrame: string) => {
-    setSelectedCourseLevel("Difficult");
-    setSelectedCourseTimeFrame(timeFrame);
+    // Clear any previous state first
+    setSelectedCourseLevel("");
+    setSelectedCourseTimeFrame("");
     
-    // Get the tense for this timeframe
-    const tenseMapping = {
-      "Present": "Présent",
-      "Past": "Passé Composé", 
-      "Future": "Futur Simple"
-    };
-    setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
-    
-    setShowDifficultCourseModal(false);
-    setShowCourseOverviewModal(true);
+    // Use setTimeout to ensure state is cleared before setting new values
+    setTimeout(() => {
+      setSelectedCourseLevel("Difficult");
+      setSelectedCourseTimeFrame(timeFrame);
+      
+      // Get the tense for this timeframe
+      const tenseMapping = {
+        "Present": "Présent",
+        "Past": "Passé Composé", 
+        "Future": "Futur Simple"
+      };
+      setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+      
+      setShowDifficultCourseModal(false);
+      setShowCourseOverviewModal(true);
+    }, 10);
   };
 
   const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
