@@ -111,6 +111,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - Fixed Exam Passing Logic & Database Synchronization ✓
+- **Critical Fix**: Fixed exam passing threshold to use dynamic 90% calculation instead of hardcoded 36/40
+- **Database Sync**: Fixed issue where passed exams weren't updating course progress table correctly
+- **Visual Status**: Courses now properly display "✓ Passed" in green when exam is passed with 90%+
+- **Score Calculation**: Now correctly handles both 20-question and 40-question exams (18/20 vs 36/40 for 90%)
+- **Progress Update**: Both completed_courses and course_progress tables update when exam is passed
+- **User Experience**: Students now see immediate visual feedback when achieving 90%+ exam scores
+
 ### January 26, 2025 - Passed Exam Visual Indicators ✓
 - **Green "Passed" Status**: Courses with passed exams (90%+) now display "✓ Passed" in bright green
 - **Enhanced Visual Design**: Passed courses have brighter green backgrounds and text for clear recognition

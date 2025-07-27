@@ -694,13 +694,14 @@ function App() {
       console.log(`Exam Results: ${correctAnswers}/${totalQuestions} = ${percentage}%`);
       console.log(`Exam passed: ${examPassed} (need ${requiredScore}/${totalQuestions} or higher)`);
       
-      // Save completed course if passed - do this once when exam is complete
+      // Save completed course and update progress if passed - do this once when exam is complete
       if (examPassed && !completedCourses.some(course => 
         course.courseType === "beginner" && 
         course.timeFrame === courseInfo.timeFrame
       )) {
         const saveCompletedCourse = async () => {
           try {
+            // Save to completed courses
             await fetch('/api/completed-courses', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -715,7 +716,26 @@ function App() {
                 examPassed: examPassed
               })
             });
-            await loadUserData(); // Refresh completed courses
+            
+            // Also update course progress to mark exam as passed
+            await fetch('/api/course-progress', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                userId: 1,
+                courseType: "beginner",
+                timeFrame: courseInfo.timeFrame,
+                tense: courseInfo.tense,
+                currentVerbIndex: 5,
+                completedVerbs: courseInfo.completedVerbs,
+                totalScore: courseInfo.totalScore + correctAnswers,
+                totalQuestions: courseInfo.totalQuestions + totalQuestions,
+                isCompleted: true,
+                examPassed: true
+              })
+            });
+            
+            await loadUserData(); // Refresh completed courses and progress
           } catch (error) {
             console.error('Error saving completed course:', error);
           }
