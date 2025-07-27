@@ -761,7 +761,7 @@ function App() {
         timeFrame,
         tense,
         currentVerbIndex: verbs.length, // Indicates final exam
-        completedVerbs: verbs,
+        completedVerbs: verbs.map(verb => ({ verb, score: 0 })),
         totalScore: 0,
         totalQuestions: finalExam.questions,
         isFinalExam: true,
@@ -1194,8 +1194,8 @@ function App() {
       );
     }
 
-    // Handle exam results (when currentVerbIndex is 5)
-    if (courseInfo && courseInfo.currentVerbIndex === 5) {
+    // Handle exam results (when it's a final exam or currentVerbIndex is 5 for legacy)
+    if (courseInfo && (courseInfo.isFinalExam || courseInfo.currentVerbIndex === 5)) {
       // For exam, we need exactly 90% or higher (18/20 for 20-question exam, 36/40 for 40-question exam)
       const requiredScore = Math.ceil(totalQuestions * 0.9);
       const examPassed = correctAnswers >= requiredScore;
@@ -1206,7 +1206,7 @@ function App() {
       
       // Save completed course and update progress if passed - do this once when exam is complete
       if (examPassed && !completedCourses.some(course => 
-        course.courseType === "beginner" && 
+        course.courseType === (courseInfo.courseLevel?.toLowerCase() || "beginner") && 
         course.timeFrame === courseInfo.timeFrame
       )) {
         const saveCompletedCourse = async () => {
@@ -1219,7 +1219,7 @@ function App() {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 userId: 1,
-                courseType: "beginner",
+                courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,
                 totalScore: courseInfo.totalScore + correctAnswers,
@@ -1243,10 +1243,10 @@ function App() {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 userId: 1,
-                courseType: "beginner",
+                courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,
-                currentVerbIndex: 5,
+                currentVerbIndex: courseInfo.currentVerbIndex || 5,
                 completedVerbs: courseInfo.completedVerbs,
                 totalScore: courseInfo.totalScore + correctAnswers,
                 totalQuestions: courseInfo.totalQuestions + totalQuestions,
@@ -2609,20 +2609,7 @@ function App() {
               </p>
               
               <div className="space-y-3 mb-6">
-                {(DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedUnit as keyof any] as any)?.parts?.map((part: any, index: number) => (
-                  <button
-                    key={part.name}
-                    onClick={() => handleCoursePart(selectedCourseLevel, selectedCourseTimeFrame, selectedUnit, part.name)}
-                    className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
-                  >
-                    <div className="text-purple-200 font-semibold text-lg">
-                      Part {part.name}: {part.questions} Questions
-                    </div>
-                    <div className="text-slate-300 text-sm mt-1">
-                      Verbs: {part.verbs.map((verb: string) => `'${verb}'`).join(", ")}
-                    </div>
-                  </button>
-                ))}
+                <p className="text-slate-300 text-center">Course configuration in progress...</p>
               </div>
               
               <div className="flex gap-3">
