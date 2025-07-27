@@ -825,10 +825,11 @@ function generateExamDistractors(correctForm: string, verb: string, tense: strin
     }
   });
   
-  // Strategy 2: Different verbs, same tense and pronoun (2 distractors)
-  const allVerbs = Object.keys(VERB_CONJUGATIONS);
-  const otherVerbs = allVerbs.filter(v => v !== verb);
+  // Strategy 2: Different verbs, same tense and pronoun (prioritize mixed verbs for exam difficulty)
+  const priorityVerbs = ['être', 'avoir', 'faire', 'dire', 'aller', 'voir']; // Core verbs for variety
+  const otherVerbs = priorityVerbs.filter(v => v !== verb);
   
+  // Add distractors from different verbs first (most important for exam difficulty)
   otherVerbs.forEach(otherVerb => {
     if (distractors.length >= 3) return;
     
@@ -839,6 +840,7 @@ function generateExamDistractors(correctForm: string, verb: string, tense: strin
       const otherVerbForm = otherVerbTense[pronoun];
       if (otherVerbForm && otherVerbForm !== correctForm && !distractors.includes(otherVerbForm)) {
         distractors.push(otherVerbForm);
+
       }
     }
   });
@@ -1139,6 +1141,23 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
     return sentence.replace(" will ", " won't ");
   }
   
+  // For simple future forms without trailing space (e.g., "I will have")
+  if (sentence.includes(" will have")) {
+    return sentence.replace(" will have", " won't have");
+  }
+  if (sentence.includes(" will be")) {
+    return sentence.replace(" will be", " won't be");
+  }
+  if (sentence.includes(" will do")) {
+    return sentence.replace(" will do", " won't do");
+  }
+  if (sentence.includes(" will make")) {
+    return sentence.replace(" will make", " won't make");
+  }
+  if (sentence.includes(" will go")) {
+    return sentence.replace(" will go", " won't go");
+  }
+  
   // For other verbs - add "don't" or "doesn't"
   const words = sentence.split(" ");
   if (words.length >= 2) {
@@ -1347,18 +1366,33 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         correctAnswer = applyContractions(pronoun, conjugation);
       }
       
-      // Create wrong answer options with other pronouns
-      const wrongAnswers = pronouns
-        .filter(p => p !== pronoun)
-        .slice(0, 3)
-        .map(wrongPronoun => {
-          const wrongConjugation = tenseData[wrongPronoun];
+      // Create wrong answer options - use enhanced distractors for exams, pronouns for regular quizzes
+      let wrongAnswers: string[];
+      
+      if (isExam) {
+        // Use enhanced exam distractors (mixed verbs from different difficulty levels)
+        const distractors = generateExamDistractors(conjugation, verb, normalizedTense, pronoun);
+        wrongAnswers = distractors.slice(0, 3).map(form => {
           if (shouldBeNegative) {
-            return buildNegativeFrench(wrongPronoun, wrongConjugation, "", normalizedTense, verb);
+            return buildNegativeFrench(pronoun, form, "", normalizedTense, verb);
           } else {
-            return applyContractions(wrongPronoun, wrongConjugation);
+            return applyContractions(pronoun, form);
           }
         });
+      } else {
+        // Regular unit quiz - use same verb with different pronouns
+        wrongAnswers = pronouns
+          .filter(p => p !== pronoun)
+          .slice(0, 3)
+          .map(wrongPronoun => {
+            const wrongConjugation = tenseData[wrongPronoun];
+            if (shouldBeNegative) {
+              return buildNegativeFrench(wrongPronoun, wrongConjugation, "", normalizedTense, verb);
+            } else {
+              return applyContractions(wrongPronoun, wrongConjugation);
+            }
+          });
+      }
       
       // Shuffle answers
       const allAnswers = [correctAnswer, ...wrongAnswers];
