@@ -608,19 +608,28 @@ function App() {
 
   // Easy Course Functions  
   const handleEasyCourseTimeFrame = (timeFrame: string) => {
-    setSelectedCourseLevel("Easy");
-    setSelectedCourseTimeFrame(timeFrame);
+    console.log("Setting Easy course level and timeframe:", timeFrame);
     
-    // Get the tense for this timeframe
-    const tenseMapping = {
-      "Present": "Présent",
-      "Past": "Passé Composé", 
-      "Future": "Futur Simple"
-    };
-    setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+    // Clear any previous state first
+    setSelectedCourseLevel("");
+    setSelectedCourseTimeFrame("");
     
-    setShowEasyCourseModal(false);
-    setShowCourseOverviewModal(true);
+    // Use setTimeout to ensure state is cleared before setting new values
+    setTimeout(() => {
+      setSelectedCourseLevel("Easy");
+      setSelectedCourseTimeFrame(timeFrame);
+      
+      // Get the tense for this timeframe
+      const tenseMapping = {
+        "Present": "Présent",
+        "Past": "Passé Composé", 
+        "Future": "Futur Simple"
+      };
+      setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+      
+      setShowEasyCourseModal(false);
+      setShowCourseOverviewModal(true);
+    }, 10);
   };
 
   const handleEasyCourseLegacy = async (timeFrame: string) => {
@@ -2301,9 +2310,12 @@ function App() {
               </div>
               
               {(() => {
+                console.log("Course Overview - selectedCourseLevel:", selectedCourseLevel);
                 const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
+                console.log("Course Overview - config:", config);
                 const units = config?.courseStructure?.units || [];
                 const finalExam = config?.courseStructure?.finalExam;
+                console.log("Course Overview - units count:", units.length);
                 
                 return (
                   <div className="space-y-6">
