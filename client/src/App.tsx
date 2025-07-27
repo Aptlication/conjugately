@@ -108,6 +108,8 @@ function App() {
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
+        setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+        setIsAnswerConfirmed(false); // Reset confirmation state
         setQuizState('active');
         // Only show popup if user hasn't disabled it
         const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
@@ -200,6 +202,8 @@ function App() {
       setQuizData(shuffledQuestions); // 40 final exam questions
       setCurrentQuestionIndex(0);
       setUserAnswers({});
+      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+      setIsAnswerConfirmed(false); // Reset confirmation state
       setQuizState('active');
       
       // Show instruction popup if not disabled
@@ -368,6 +372,8 @@ function App() {
       setQuizData(shuffledQuestions); // All 80 questions mixed from 4 verbs
       setCurrentQuestionIndex(0);
       setUserAnswers({});
+      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+      setIsAnswerConfirmed(false); // Reset confirmation state
       setQuizState('active');
       
       // Show instruction popup if not disabled
@@ -816,6 +822,8 @@ function App() {
                         setQuizData(shuffledQuestions);
                         setCurrentQuestionIndex(0);
                         setUserAnswers({});
+                        setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+                        setIsAnswerConfirmed(false); // Reset confirmation state
                         setQuizState('active');
                       } catch (error) {
                         console.error('Error generating retry exam:', error);
@@ -1101,6 +1109,8 @@ function App() {
                       setQuizData(data.quiz.questions);
                       setCurrentQuestionIndex(0);
                       setUserAnswers({});
+                      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+                      setIsAnswerConfirmed(false); // Reset confirmation state
                       setQuizState('active');
                     }
                   } catch (error) {
@@ -1491,6 +1501,8 @@ function App() {
                       setQuizData(shuffledQuestions);
                       setCurrentQuestionIndex(0);
                       setUserAnswers({});
+                      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
+                      setIsAnswerConfirmed(false); // Reset confirmation state
                       
                       // Mark as exam mode
                       setCourseInfo({...courseInfo, currentVerbIndex: 5}); // 5 indicates exam mode
