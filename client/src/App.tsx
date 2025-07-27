@@ -2094,8 +2094,26 @@ function App() {
                     !progress.isCompleted
                   );
                   
-                  // All courses are unlocked for access
-                  const isLocked = false;
+                  // Sequential progression: Present -> Past -> Future
+                  let isLocked = false;
+                  
+                  if (timeFrame === "Past") {
+                    // Past is locked until Present exam is passed
+                    const presentCompleted = completedCourses.find(course => 
+                      course.courseType === "beginner" && 
+                      course.timeFrame === "Present" && 
+                      course.examPassed
+                    );
+                    isLocked = !presentCompleted;
+                  } else if (timeFrame === "Future") {
+                    // Future is locked until Past exam is passed
+                    const pastCompleted = completedCourses.find(course => 
+                      course.courseType === "beginner" && 
+                      course.timeFrame === "Past" && 
+                      course.examPassed
+                    );
+                    isLocked = !pastCompleted;
+                  }
                   
                   const iconMap = {
                     "Past": "⏮️",
@@ -2146,7 +2164,8 @@ function App() {
                         {isCompleted && completed?.examPassed && <span className="text-sm text-green-300">✓ Passed</span>}
                         {isCompleted && !completed?.examPassed && <span className="text-sm">✓ Completed</span>}
                         {inProgress && <span className="text-sm">⏳ In Progress</span>}
-                        {isLocked && <span className="text-sm">🔒 Locked</span>}
+                        {isLocked && timeFrame === "Past" && <span className="text-sm">🔒 Complete Present exam first</span>}
+                        {isLocked && timeFrame === "Future" && <span className="text-sm">🔒 Complete Past exam first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)
