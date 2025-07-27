@@ -122,10 +122,10 @@ function App() {
       tenses: ["Présent", "Passé Simple", "Futur Simple"],
       courseStructure: {
         units: [
-          { name: "Unit 1: être", verb: "être", questions: 20 },
-          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire", verb: "faire", questions: 20 },
-          { name: "Unit 4: aller", verb: "aller", questions: 20 }
+          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
         ],
         finalExam: { 
           questions: 40, 
@@ -141,12 +141,12 @@ function App() {
       tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
         units: [
-          { name: "Unit 1: être", verb: "être", questions: 20 },
-          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller", verb: "aller", questions: 20 },
-          { name: "Unit 6: voir", verb: "voir", questions: 20 }
+          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 }
         ],
         finalExam: { 
           questions: 60, 
@@ -162,14 +162,14 @@ function App() {
       tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
       courseStructure: {
         units: [
-          { name: "Unit 1: être", verb: "être", questions: 20 },
-          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller", verb: "aller", questions: 20 },
-          { name: "Unit 6: se lever", verb: "se lever", questions: 20 },
-          { name: "Unit 7: s'appeler", verb: "s'appeler", questions: 20 },
-          { name: "Unit 8: se sentir", verb: "se sentir", questions: 20 }
+          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+          { name: "Unit 6: se lever (to get up)", verb: "se lever", questions: 20 },
+          { name: "Unit 7: s'appeler (to be called)", verb: "s'appeler", questions: 20 },
+          { name: "Unit 8: se sentir (to feel)", verb: "se sentir", questions: 20 }
         ],
         finalExam: { 
           questions: 80, 
@@ -185,19 +185,19 @@ function App() {
       tenses: Object.values(TIME_FRAMES).flat(),
       courseStructure: {
         units: [
-          { name: "Unit 1: être", verb: "être", questions: 20 },
-          { name: "Unit 2: avoir", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller", verb: "aller", questions: 20 },
-          { name: "Unit 6: voir", verb: "voir", questions: 20 },
-          { name: "Unit 7: savoir", verb: "savoir", questions: 20 },
-          { name: "Unit 8: pouvoir", verb: "pouvoir", questions: 20 },
-          { name: "Unit 9: vouloir", verb: "vouloir", questions: 20 },
-          { name: "Unit 10: venir", verb: "venir", questions: 20 },
-          { name: "Unit 11: se laver", verb: "se laver", questions: 20 },
-          { name: "Unit 12: se réveiller", verb: "se réveiller", questions: 20 },
-          { name: "Unit 13: s'habiller", verb: "s'habiller", questions: 20 }
+          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 },
+          { name: "Unit 7: savoir (to know)", verb: "savoir", questions: 20 },
+          { name: "Unit 8: pouvoir (to be able to)", verb: "pouvoir", questions: 20 },
+          { name: "Unit 9: vouloir (to want)", verb: "vouloir", questions: 20 },
+          { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
+          { name: "Unit 11: se laver (to wash oneself)", verb: "se laver", questions: 20 },
+          { name: "Unit 12: se réveiller (to wake up)", verb: "se réveiller", questions: 20 },
+          { name: "Unit 13: s'habiller (to get dressed)", verb: "s'habiller", questions: 20 }
         ],
         finalExam: { 
           questions: 130, 
