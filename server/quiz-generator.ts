@@ -808,7 +808,70 @@ const QUESTION_CONTEXTS = {
   ]
 };
 
-// Generate wrong answers maintaining proper pronoun-verb agreement
+// Generate wrong answers with mixed verb sources for educational variety (used for final exams)
+function generateExamDistractors(correctForm: string, verb: string, tense: string, pronoun: string): string[] {
+  const distractors: string[] = [];
+  const verbData = VERB_CONJUGATIONS[verb as keyof typeof VERB_CONJUGATIONS];
+  
+  if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
+  
+  // Strategy 1: Same verb, different tenses (1 distractor max)
+  Object.entries(verbData).forEach(([t, conjugations]) => {
+    if (t !== tense && distractors.length < 1) {
+      const wrongForm = (conjugations as any)[pronoun];
+      if (wrongForm && wrongForm !== correctForm && !distractors.includes(wrongForm)) {
+        distractors.push(wrongForm);
+      }
+    }
+  });
+  
+  // Strategy 2: Different verbs, same tense and pronoun (2 distractors)
+  const allVerbs = Object.keys(VERB_CONJUGATIONS);
+  const otherVerbs = allVerbs.filter(v => v !== verb);
+  
+  otherVerbs.forEach(otherVerb => {
+    if (distractors.length >= 3) return;
+    
+    const otherVerbData = VERB_CONJUGATIONS[otherVerb as keyof typeof VERB_CONJUGATIONS];
+    const otherVerbTense = otherVerbData[tense as keyof typeof otherVerbData] as any;
+    
+    if (otherVerbTense) {
+      const otherVerbForm = otherVerbTense[pronoun];
+      if (otherVerbForm && otherVerbForm !== correctForm && !distractors.includes(otherVerbForm)) {
+        distractors.push(otherVerbForm);
+      }
+    }
+  });
+  
+  // Strategy 3: Same verb, wrong pronoun (if still need more)
+  if (distractors.length < 3) {
+    const currentTense = verbData[tense as keyof typeof verbData] as any;
+    if (currentTense) {
+      Object.entries(currentTense).forEach(([p, form]) => {
+        if (p !== pronoun && form !== correctForm && distractors.length < 3) {
+          if (!distractors.includes(form as string)) {
+            distractors.push(form as string);
+          }
+        }
+      });
+    }
+  }
+  
+  // Fallback: Ensure we have exactly 3 distractors
+  while (distractors.length < 3) {
+    const fallbackForm = `${correctForm}x`; // Simple modification as last resort
+    if (!distractors.includes(fallbackForm)) {
+      distractors.push(fallbackForm);
+    } else {
+      distractors.push(`${correctForm}${distractors.length}`);
+    }
+  }
+  
+  // Shuffle and take first 3
+  return distractors.sort(() => Math.random() - 0.5).slice(0, 3);
+}
+
+// Original distractor function for regular unit quizzes (same verb only)
 function generateDistractors(correctForm: string, verb: string, tense: string, pronoun: string): string[] {
   const distractors: string[] = [];
   const verbData = VERB_CONJUGATIONS[verb as keyof typeof VERB_CONJUGATIONS];
@@ -1083,8 +1146,8 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   return `${englishPronoun} ${englishVerb}`;
 }
 
-export function generateInternalQuiz(verb: string, tense: string, difficulty?: string): GeneratedQuiz {
-  console.log(`🔧 Generating internal quiz for ${verb} - ${tense}`);
+export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
+  console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
   
   // Normalize tense names - map frontend tense names to backend tense keys
   const normalizedTense = tense.toLowerCase()
@@ -1192,7 +1255,10 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     const wrongAnswers = [];
     
     // Generate distractors using correct pronoun but wrong conjugations
-    const distractors = generateDistractors(correctForm, verb, normalizedTense, pronoun);
+    // Use enhanced exam distractors for final exams, regular distractors for unit quizzes
+    const distractors = isExam 
+      ? generateExamDistractors(correctForm, verb, normalizedTense, pronoun)
+      : generateDistractors(correctForm, verb, normalizedTense, pronoun);
     distractors.slice(0, 3).forEach(form => {
       let wrong;
       

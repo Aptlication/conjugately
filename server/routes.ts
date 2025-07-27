@@ -38,14 +38,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Generate French verb quiz using Gemini AI
   app.post("/api/get-quiz", async (req, res, next) => {
     try {
-      const { verb, timeFrame, tenseType, difficulty } = quizRequestSchema.parse(req.body);
+      const { verb, timeFrame, tenseType, difficulty, isExam } = quizRequestSchema.parse(req.body);
       
       console.log(`Generating quiz for: ${verb} - ${timeFrame} - ${tenseType}${difficulty ? ` (${difficulty})` : ''}`);
       
       // Generate quiz using our internal system (fast and reliable)
       try {
         console.log('⚡ Generating quiz with internal system...');
-        const generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty);
+        const generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty, isExam);
         
         res.json({
           success: true,

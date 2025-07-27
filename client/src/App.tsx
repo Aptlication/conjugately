@@ -275,6 +275,7 @@ function App() {
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
             tenseType: tense,
             difficulty: "Beginner",
+            isExam: true,
           })
         });
 
@@ -738,6 +739,7 @@ function App() {
             timeFrame: timeFrame.toLowerCase(),
             tenseType: tense,
             difficulty: courseLevel,
+            isExam: true,
           })
         });
 
@@ -856,6 +858,7 @@ function App() {
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
             tenseType: "Présent", // Use present tense for final exam
             difficulty: "Easy",
+            isExam: true,
           })
         });
 
