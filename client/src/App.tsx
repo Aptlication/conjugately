@@ -52,6 +52,8 @@ function App() {
     completedVerbs: Array<{verb: string, score: number}>;
     totalScore: number;
     totalQuestions: number;
+    isFinalExam?: boolean;
+    courseLevel?: string;
   } | null>(null);
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [showExamOption, setShowExamOption] = useState(false);
@@ -2250,7 +2252,7 @@ function App() {
                         {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
                         {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
                         {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Beginner first</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Beginner exam first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
@@ -2353,7 +2355,7 @@ function App() {
                         {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
                         {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
                         {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Easy first</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Easy exam first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
@@ -2707,7 +2709,7 @@ function App() {
                         {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
                         {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
                         {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Moderate first</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Moderate exam first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
