@@ -611,7 +611,7 @@ function App() {
     // Show section overview modal first
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
-    setSelectedSection("section1");
+    // Unit-based course - no section needed;
     setShowEasyCourseModal(false);
     setShowCourseOverviewModal(true);
   };
@@ -685,7 +685,7 @@ function App() {
     // Show section overview modal for final exam
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
-    setSelectedSection("finalExam");
+    // Final exam - handled separately;
     setShowCourseOverviewModal(true);
   };
 
@@ -694,7 +694,7 @@ function App() {
     // Show section overview modal first
     setSelectedCourseLevel("Moderate");
     setSelectedCourseTimeFrame(timeFrame);
-    setSelectedSection("section1");
+    // Unit-based course - no section needed;
     setShowModerateCourseModal(false);
     setShowCourseOverviewModal(true);
   };
@@ -703,7 +703,7 @@ function App() {
     // Show section overview modal for final exam
     setSelectedCourseLevel("Moderate");
     setSelectedCourseTimeFrame(timeFrame);
-    setSelectedSection("finalExam");
+    // Final exam - handled separately;
     setShowCourseOverviewModal(true);
   };
 
@@ -2524,7 +2524,7 @@ function App() {
                 {selectedUnit === "section1" && (
                   <button
                     onClick={() => {
-                      setSelectedSection("finalExam");
+                      // Final exam - handled separately;
                     }}
                     className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium"
                   >
