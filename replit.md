@@ -111,6 +111,13 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 26, 2025 - Unlocked All Course Access ✓
+- **Removed Sequential Progression**: All tense courses (Present, Past, Future) are now unlocked and accessible
+- **User Choice**: Students can start with any tense course without completing previous ones
+- **Updated Messaging**: Changed "Complete courses in order" to "Choose any tense to start your learning journey"
+- **Improved Accessibility**: Eliminated barriers to course entry while maintaining educational rigor
+- **Consistent Terminology**: Updated results screens to show "Exam Complete!" for 40-question finals vs "Quiz Complete!" for 20-question units
+
 ### January 26, 2025 - Enhanced Final Exam: 40 Questions + Unlocked Access ✓
 - **Final Exam Expansion**: Increased from 20 to 40 questions (10 from each of the 4 verbs: être, avoir, faire, aller)
 - **Unlocked Access**: Final exam now accessible without completing mini-course units

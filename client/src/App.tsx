@@ -1508,7 +1508,7 @@ function App() {
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
-              <p className="text-slate-300 text-center mb-6">Complete courses in order: Present → Past → Future</p>
+              <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
               <div className="space-y-3 mb-6">
                 {["Present", "Past", "Future"].map((timeFrame, index) => {
                   const beginnerTenseMap = {
@@ -1532,17 +1532,8 @@ function App() {
                     !progress.isCompleted
                   );
                   
-                  // Check if previous courses are completed (sequential requirement)
-                  const orderedTimeFrames = ["Present", "Past", "Future"];
-                  const currentIndex = orderedTimeFrames.indexOf(timeFrame);
-                  const isPreviousCompleted = currentIndex === 0 || 
-                    completedCourses.some(course => 
-                      course.courseType === "beginner" && 
-                      course.timeFrame === orderedTimeFrames[currentIndex - 1] && 
-                      course.examPassed
-                    );
-                  
-                  const isLocked = !isPreviousCompleted && !isCompleted && !inProgress;
+                  // All courses are now unlocked for access
+                  const isLocked = false;
                   
                   const iconMap = {
                     "Past": "⏮️",
@@ -1592,10 +1583,7 @@ function App() {
                         {isLocked && <span className="text-sm">🔒 Locked</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        {isLocked 
-                          ? `Complete ${orderedTimeFrames[currentIndex - 1]} Tense Course first`
-                          : "Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)"
-                        }
+                        Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
