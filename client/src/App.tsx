@@ -45,6 +45,31 @@ function App() {
       console.error('Error loading user data:', error);
     }
   };
+
+  const handleResetCourse = async (courseType: string, timeFrame: string, event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent triggering the course button click
+    
+    if (!confirm(`Are you sure you want to reset the ${courseType} ${timeFrame} course? This will mark it as not passed and allow you to retake it.`)) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/completed-courses/1/${courseType}/${timeFrame}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        await loadUserData(); // Refresh the data
+        alert('Course reset successfully! You can now retake it.');
+      } else {
+        const errorData = await response.json();
+        alert(`Failed to reset course: ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Error resetting course:', error);
+      alert('Failed to reset course. Please try again.');
+    }
+  };
   const [courseInfo, setCourseInfo] = useState<{
     timeFrame: string;
     tense: string;
@@ -2128,59 +2153,71 @@ function App() {
                   };
                   
                   return (
-                    <button
-                      key={timeFrame}
-                      onClick={() => !isLocked && handleBeginnerCourseTimeFrame(timeFrame)}
-                      disabled={isLocked}
-                      className={`w-full p-4 text-left ${
-                        isLocked
-                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
-                          : isCompleted && completed?.examPassed
-                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
-                          : isCompleted 
-                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
-                          : inProgress
-                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
-                          : timeFrame === "Past"
-                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
-                          : timeFrame === "Present"
-                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
-                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
-                      } rounded-xl text-white`}
-                    >
-                      <div className={`font-semibold text-lg flex items-center gap-2 ${
-                        isLocked ? 'text-gray-400' :
-                        isCompleted && completed?.examPassed ? 'text-green-100' :
-                        isCompleted ? 'text-green-200' : 
-                        inProgress ? 'text-orange-200' :
-                        timeFrame === "Past" ? 'text-purple-200' : 
-                        timeFrame === "Present" ? 'text-green-200' : 
-                        'text-blue-200'
-                      }`}>
-                        <span className="w-6 h-6 rounded-full bg-current bg-opacity-20 flex items-center justify-center text-sm font-bold">
-                          {stepNumbers[timeFrame as keyof typeof stepNumbers]}
-                        </span>
-                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
-                        {isCompleted && completed?.examPassed && <span className="text-sm text-green-300">✓ Passed</span>}
-                        {isCompleted && !completed?.examPassed && <span className="text-sm">✓ Completed</span>}
-                        {inProgress && <span className="text-sm">⏳ In Progress</span>}
-                        {isLocked && timeFrame === "Past" && <span className="text-sm">🔒 Complete Present exam first</span>}
-                        {isLocked && timeFrame === "Future" && <span className="text-sm">🔒 Complete Past exam first</span>}
-                      </div>
-                      <div className="text-slate-300 text-sm mt-1">
-                        Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)
-                      </div>
-                      {inProgress && (
-                        <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/5 units & exam completed
+                    <div key={timeFrame} className="relative">
+                      <button
+                        onClick={() => !isLocked && handleBeginnerCourseTimeFrame(timeFrame)}
+                        disabled={isLocked}
+                        className={`w-full p-4 text-left ${
+                          isLocked
+                            ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                            : isCompleted && completed?.examPassed
+                            ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                            : isCompleted 
+                            ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                            : inProgress
+                            ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                            : timeFrame === "Past"
+                            ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                            : timeFrame === "Present"
+                            ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                            : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                        } rounded-xl text-white`}
+                      >
+                        <div className={`font-semibold text-lg flex items-center gap-2 ${
+                          isLocked ? 'text-gray-400' :
+                          isCompleted && completed?.examPassed ? 'text-green-100' :
+                          isCompleted ? 'text-green-200' : 
+                          inProgress ? 'text-orange-200' :
+                          timeFrame === "Past" ? 'text-purple-200' : 
+                          timeFrame === "Present" ? 'text-green-200' : 
+                          'text-blue-200'
+                        }`}>
+                          <span className="w-6 h-6 rounded-full bg-current bg-opacity-20 flex items-center justify-center text-sm font-bold">
+                            {stepNumbers[timeFrame as keyof typeof stepNumbers]}
+                          </span>
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                          {isCompleted && completed?.examPassed && <span className="text-sm text-green-300">✓ Passed</span>}
+                          {isCompleted && !completed?.examPassed && <span className="text-sm">✓ Completed</span>}
+                          {inProgress && <span className="text-sm">⏳ In Progress</span>}
+                          {isLocked && timeFrame === "Past" && <span className="text-sm">🔒 Complete Present exam first</span>}
+                          {isLocked && timeFrame === "Future" && <span className="text-sm">🔒 Complete Past exam first</span>}
                         </div>
-                      )}
+                        <div className="text-slate-300 text-sm mt-1">
+                          Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)
+                        </div>
+                        {inProgress && (
+                          <div className="text-orange-200 text-xs mt-1">
+                            Progress: {inProgress.currentVerbIndex}/5 units & exam completed
+                          </div>
+                        )}
+                        {isCompleted && (
+                          <div className="text-green-200 text-xs mt-1">
+                            Progress: 5/5 units & exam completed
+                          </div>
+                        )}
+                      </button>
+                      
+                      {/* Reset button for completed courses */}
                       {isCompleted && (
-                        <div className="text-green-200 text-xs mt-1">
-                          Progress: 5/5 units & exam completed
-                        </div>
+                        <button
+                          onClick={(e) => handleResetCourse("beginner", timeFrame, e)}
+                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          title="Reset course (mark as not passed)"
+                        >
+                          ↻
+                        </button>
                       )}
-                    </button>
+                    </div>
                   );
                 })}
               </div>
@@ -2238,58 +2275,70 @@ function App() {
                   };
                   
                   return (
-                    <button
-                      key={timeFrame}
-                      onClick={() => !isLocked && handleEasyCourseTimeFrame(timeFrame)}
-                      disabled={isLocked}
-                      className={`w-full p-4 text-left ${
-                        isLocked
-                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
-                          : isCompleted && completed?.examPassed
-                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
-                          : isCompleted 
-                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
-                          : inProgress
-                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
-                          : timeFrame === "Past"
-                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
-                          : timeFrame === "Present"
-                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
-                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
-                      } rounded-xl text-white`}
-                    >
-                      <div className={`font-semibold text-lg ${
-                        isCompleted && completed?.examPassed
-                          ? 'text-green-300'
-                          : isCompleted
-                          ? 'text-green-200'
-                          : inProgress
-                          ? 'text-orange-200'
-                          : timeFrame === "Past"
-                          ? 'text-purple-200'
-                          : timeFrame === "Present"
-                          ? 'text-green-200'
-                          : 'text-blue-200'
-                      }`}>
-                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
-                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
-                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Beginner exam first</span>}
-                      </div>
-                      <div className="text-slate-300 text-sm mt-1">
-                        6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
-                      </div>
-                      {inProgress && (
-                        <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/7 units & exam completed
+                    <div key={timeFrame} className="relative">
+                      <button
+                        onClick={() => !isLocked && handleEasyCourseTimeFrame(timeFrame)}
+                        disabled={isLocked}
+                        className={`w-full p-4 text-left ${
+                          isLocked
+                            ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                            : isCompleted && completed?.examPassed
+                            ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                            : isCompleted 
+                            ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                            : inProgress
+                            ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                            : timeFrame === "Past"
+                            ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                            : timeFrame === "Present"
+                            ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                            : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                        } rounded-xl text-white`}
+                      >
+                        <div className={`font-semibold text-lg ${
+                          isCompleted && completed?.examPassed
+                            ? 'text-green-300'
+                            : isCompleted
+                            ? 'text-green-200'
+                            : inProgress
+                            ? 'text-orange-200'
+                            : timeFrame === "Past"
+                            ? 'text-purple-200'
+                            : timeFrame === "Present"
+                            ? 'text-green-200'
+                            : 'text-blue-200'
+                        }`}>
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                          {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                          {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                          {isLocked && <span className="text-sm">🔒 Complete Beginner exam first</span>}
                         </div>
-                      )}
+                        <div className="text-slate-300 text-sm mt-1">
+                          6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
+                        </div>
+                        {inProgress && (
+                          <div className="text-orange-200 text-xs mt-1">
+                            Progress: {inProgress.currentVerbIndex}/7 units & exam completed
+                          </div>
+                        )}
+                        {isCompleted && (
+                          <div className="text-green-200 text-xs mt-1">
+                            Progress: 7/7 units & exam completed
+                          </div>
+                        )}
+                      </button>
+                      
+                      {/* Reset button for completed courses */}
                       {isCompleted && (
-                        <div className="text-green-200 text-xs mt-1">
-                          Progress: 7/7 units & exam completed
-                        </div>
+                        <button
+                          onClick={(e) => handleResetCourse("easy", timeFrame, e)}
+                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          title="Reset course (mark as not passed)"
+                        >
+                          ↻
+                        </button>
                       )}
-                    </button>
+                    </div>
                   );
                 })}
               </div>
@@ -2341,58 +2390,70 @@ function App() {
                   };
                   
                   return (
-                    <button
-                      key={timeFrame}
-                      onClick={() => !isLocked && handleModerateCourseTimeFrame(timeFrame)}
-                      disabled={isLocked}
-                      className={`w-full p-4 text-left ${
-                        isLocked
-                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
-                          : isCompleted && completed?.examPassed
-                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
-                          : isCompleted 
-                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
-                          : inProgress
-                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
-                          : timeFrame === "Past"
-                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
-                          : timeFrame === "Present"
-                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
-                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
-                      } rounded-xl text-white`}
-                    >
-                      <div className={`font-semibold text-lg ${
-                        isCompleted && completed?.examPassed
-                          ? 'text-green-300'
-                          : isCompleted
-                          ? 'text-green-200'
-                          : inProgress
-                          ? 'text-orange-200'
-                          : timeFrame === "Past"
-                          ? 'text-purple-200'
-                          : timeFrame === "Present"
-                          ? 'text-green-200'
-                          : 'text-blue-200'
-                      }`}>
-                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
-                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
-                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Easy exam first</span>}
-                      </div>
-                      <div className="text-slate-300 text-sm mt-1">
-                        8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
-                      </div>
-                      {inProgress && (
-                        <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/8 units & exam completed
+                    <div key={timeFrame} className="relative">
+                      <button
+                        onClick={() => !isLocked && handleModerateCourseTimeFrame(timeFrame)}
+                        disabled={isLocked}
+                        className={`w-full p-4 text-left ${
+                          isLocked
+                            ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                            : isCompleted && completed?.examPassed
+                            ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                            : isCompleted 
+                            ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                            : inProgress
+                            ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                            : timeFrame === "Past"
+                            ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                            : timeFrame === "Present"
+                            ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                            : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                        } rounded-xl text-white`}
+                      >
+                        <div className={`font-semibold text-lg ${
+                          isCompleted && completed?.examPassed
+                            ? 'text-green-300'
+                            : isCompleted
+                            ? 'text-green-200'
+                            : inProgress
+                            ? 'text-orange-200'
+                            : timeFrame === "Past"
+                            ? 'text-purple-200'
+                            : timeFrame === "Present"
+                            ? 'text-green-200'
+                            : 'text-blue-200'
+                        }`}>
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                          {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                          {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                          {isLocked && <span className="text-sm">🔒 Complete Easy exam first</span>}
                         </div>
-                      )}
+                        <div className="text-slate-300 text-sm mt-1">
+                          8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
+                        </div>
+                        {inProgress && (
+                          <div className="text-orange-200 text-xs mt-1">
+                            Progress: {inProgress.currentVerbIndex}/8 units & exam completed
+                          </div>
+                        )}
+                        {isCompleted && (
+                          <div className="text-green-200 text-xs mt-1">
+                            Progress: 8/8 units & exam completed
+                          </div>
+                        )}
+                      </button>
+                      
+                      {/* Reset button for completed courses */}
                       {isCompleted && (
-                        <div className="text-green-200 text-xs mt-1">
-                          Progress: 8/8 units & exam completed
-                        </div>
+                        <button
+                          onClick={(e) => handleResetCourse("moderate", timeFrame, e)}
+                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          title="Reset course (mark as not passed)"
+                        >
+                          ↻
+                        </button>
                       )}
-                    </button>
+                    </div>
                   );
                 })}
               </div>
@@ -2695,58 +2756,70 @@ function App() {
                   };
                   
                   return (
-                    <button
-                      key={timeFrame}
-                      onClick={() => !isLocked && handleDifficultCourseTimeFrame(timeFrame)}
-                      disabled={isLocked}
-                      className={`w-full p-4 text-left ${
-                        isLocked
-                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
-                          : isCompleted && completed?.examPassed
-                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
-                          : isCompleted 
-                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
-                          : inProgress
-                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
-                          : timeFrame === "Past"
-                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
-                          : timeFrame === "Present"
-                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
-                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
-                      } rounded-xl text-white`}
-                    >
-                      <div className={`font-semibold text-lg ${
-                        isCompleted && completed?.examPassed
-                          ? 'text-green-300'
-                          : isCompleted
-                          ? 'text-green-200'
-                          : inProgress
-                          ? 'text-orange-200'
-                          : timeFrame === "Past"
-                          ? 'text-purple-200'
-                          : timeFrame === "Present"
-                          ? 'text-green-200'
-                          : 'text-blue-200'
-                      }`}>
-                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
-                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
-                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                        {isLocked && <span className="text-sm">🔒 Complete Moderate exam first</span>}
-                      </div>
-                      <div className="text-slate-300 text-sm mt-1">
-                        13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
-                      </div>
-                      {inProgress && (
-                        <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/13 units & exam completed
+                    <div key={timeFrame} className="relative">
+                      <button
+                        onClick={() => !isLocked && handleDifficultCourseTimeFrame(timeFrame)}
+                        disabled={isLocked}
+                        className={`w-full p-4 text-left ${
+                          isLocked
+                            ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                            : isCompleted && completed?.examPassed
+                            ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                            : isCompleted 
+                            ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                            : inProgress
+                            ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                            : timeFrame === "Past"
+                            ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                            : timeFrame === "Present"
+                            ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                            : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                        } rounded-xl text-white`}
+                      >
+                        <div className={`font-semibold text-lg ${
+                          isCompleted && completed?.examPassed
+                            ? 'text-green-300'
+                            : isCompleted
+                            ? 'text-green-200'
+                            : inProgress
+                            ? 'text-orange-200'
+                            : timeFrame === "Past"
+                            ? 'text-purple-200'
+                            : timeFrame === "Present"
+                            ? 'text-green-200'
+                            : 'text-blue-200'
+                        }`}>
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                          {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                          {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                          {isLocked && <span className="text-sm">🔒 Complete Moderate exam first</span>}
                         </div>
-                      )}
+                        <div className="text-slate-300 text-sm mt-1">
+                          13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
+                        </div>
+                        {inProgress && (
+                          <div className="text-orange-200 text-xs mt-1">
+                            Progress: {inProgress.currentVerbIndex}/13 units & exam completed
+                          </div>
+                        )}
+                        {isCompleted && (
+                          <div className="text-green-200 text-xs mt-1">
+                            Progress: 13/13 units & exam completed
+                          </div>
+                        )}
+                      </button>
+                      
+                      {/* Reset button for completed courses */}
                       {isCompleted && (
-                        <div className="text-green-200 text-xs mt-1">
-                          Progress: 13/13 units & exam completed
-                        </div>
+                        <button
+                          onClick={(e) => handleResetCourse("difficult", timeFrame, e)}
+                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          title="Reset course (mark as not passed)"
+                        >
+                          ↻
+                        </button>
                       )}
-                    </button>
+                    </div>
                   );
                 })}
               </div>
