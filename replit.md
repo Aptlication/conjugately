@@ -111,11 +111,11 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 26, 2025 - Unlocked All Course Access ✓
-- **Removed Sequential Progression**: All tense courses (Present, Past, Future) are now unlocked and accessible
-- **User Choice**: Students can start with any tense course without completing previous ones
-- **Updated Messaging**: Changed "Complete courses in order" to "Choose any tense to start your learning journey"
-- **Improved Accessibility**: Eliminated barriers to course entry while maintaining educational rigor
+### January 26, 2025 - Exam-Based Course Progression ✓
+- **Sequential Unlocking**: Courses unlock after passing the previous course's final exam (90% required)
+- **Progression Order**: Present → Past → Future courses based on exam completion
+- **Clear Requirements**: Updated messaging to "Pass each final exam (90%) to unlock the next course"
+- **Educational Structure**: Maintains rigorous progression while allowing access to final exams within each course
 - **Consistent Terminology**: Updated results screens to show "Exam Complete!" for 40-question finals vs "Quiz Complete!" for 20-question units
 
 ### January 26, 2025 - Enhanced Final Exam: 40 Questions + Unlocked Access ✓
