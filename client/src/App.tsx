@@ -1831,20 +1831,94 @@ function App() {
               <h3 className="text-2xl font-bold text-center mb-4">🟢 Easy Course</h3>
               <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
               <div className="space-y-3 mb-6">
-                {["Present", "Past", "Future"].map((timeFrame, index) => (
-                  <button
-                    key={timeFrame}
-                    onClick={() => handleEasyCourseTimeFrame(timeFrame)}
-                    className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
-                  >
-                    <div className="text-green-200 font-semibold text-lg">
-                      {timeFrame === "Past" ? "⏮️" : timeFrame === "Present" ? "▶️" : "⏭️"} {timeFrame} Tense Course
-                    </div>
-                    <div className="text-slate-300 text-sm mt-1">
-                      Section 1: 120 mixed questions (20 from each of 6 verbs) + Final Exam (90% to pass)
-                    </div>
-                  </button>
-                ))}
+                {["Present", "Past", "Future"].map((timeFrame, index) => {
+                  // Check completion status for Easy course
+                  const completed = completedCourses.find(course => 
+                    course.courseType === "easy" && 
+                    course.timeFrame === timeFrame
+                  );
+                  const isCompleted = completed && completed.examPassed;
+                  
+                  // Check for in-progress
+                  const inProgress = courseProgressData.find(progress => 
+                    progress.courseType === "easy" && 
+                    progress.timeFrame === timeFrame &&
+                    !progress.isCompleted
+                  );
+                  
+                  // For Easy level, require Beginner completion first
+                  const beginnerCompleted = completedCourses.some(course => 
+                    course.courseType === "beginner" && course.examPassed
+                  );
+                  const isLocked = !beginnerCompleted;
+                  
+                  const iconMap = {
+                    "Past": "⏮️",
+                    "Present": "▶️",
+                    "Future": "⏭️"
+                  };
+                  
+                  const stepNumbers = {
+                    "Present": "1",
+                    "Past": "2", 
+                    "Future": "3"
+                  };
+                  
+                  return (
+                    <button
+                      key={timeFrame}
+                      onClick={() => !isLocked && handleEasyCourseTimeFrame(timeFrame)}
+                      disabled={isLocked}
+                      className={`w-full p-4 text-left ${
+                        isLocked
+                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                          : isCompleted && completed?.examPassed
+                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                          : isCompleted 
+                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                          : inProgress
+                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                          : timeFrame === "Past"
+                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                          : timeFrame === "Present"
+                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                      } rounded-xl text-white`}
+                    >
+                      <div className={`font-semibold text-lg ${
+                        isCompleted && completed?.examPassed
+                          ? 'text-green-300'
+                          : isCompleted
+                          ? 'text-green-200'
+                          : inProgress
+                          ? 'text-orange-200'
+                          : timeFrame === "Past"
+                          ? 'text-purple-200'
+                          : timeFrame === "Present"
+                          ? 'text-green-200'
+                          : 'text-blue-200'
+                      }`}>
+                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Beginner first</span>}
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        Section 1: 120 mixed questions (20 from each of 6 verbs) + Final Exam (90% to pass)
+                      </div>
+                      {inProgress && (
+                        <div className="text-orange-200 text-xs mt-1">
+                          Progress: {inProgress.currentVerbIndex}/7 units & exam completed
+                        </div>
+                      )}
+                      {isCompleted && (
+                        <div className="text-green-200 text-xs mt-1">
+                          Progress: 7/7 units & exam completed
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
               <button
                 onClick={() => {
