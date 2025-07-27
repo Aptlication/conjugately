@@ -607,11 +607,18 @@ function App() {
   };
 
   // Easy Course Functions  
-  const handleEasyCourseTimeFrame = async (timeFrame: string) => {
-    // Show section overview modal first
+  const handleEasyCourseTimeFrame = (timeFrame: string) => {
     setSelectedCourseLevel("Easy");
     setSelectedCourseTimeFrame(timeFrame);
-    // Unit-based course - no section needed;
+    
+    // Get the tense for this timeframe
+    const tenseMapping = {
+      "Present": "Présent",
+      "Past": "Passé Composé", 
+      "Future": "Futur Simple"
+    };
+    setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+    
     setShowEasyCourseModal(false);
     setShowCourseOverviewModal(true);
   };
