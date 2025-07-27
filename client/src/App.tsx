@@ -635,6 +635,24 @@ function App() {
     setShowSectionOverviewModal(true);
   };
 
+  // Moderate Course Functions  
+  const handleModerateCourseTimeFrame = async (timeFrame: string) => {
+    // Show section overview modal first
+    setSelectedCourseLevel("Moderate");
+    setSelectedCourseTimeFrame(timeFrame);
+    setSelectedSection("section1");
+    setShowModerateCourseModal(false);
+    setShowSectionOverviewModal(true);
+  };
+
+  const handleStartModerateFinalExam = async (timeFrame: string) => {
+    // Show section overview modal for final exam
+    setSelectedCourseLevel("Moderate");
+    setSelectedCourseTimeFrame(timeFrame);
+    setSelectedSection("finalExam");
+    setShowSectionOverviewModal(true);
+  };
+
   const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
     const config = DIFFICULTY_CONFIGS.Easy;
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
@@ -721,6 +739,9 @@ function App() {
     setShowHint(false);
     setSelectedAnswerIndex(null);
     setShowInstructionPopup(false);
+    setShowEasyCourseModal(false);
+    setShowModerateCourseModal(false);
+    setShowBeginnerCourseModal(false);
     setCourseInfo(null);
     setShowCourseProgress(false);
     setShowExamOption(false);
@@ -2069,6 +2090,131 @@ function App() {
               <button
                 onClick={() => {
                   setShowEasyCourseModal(false);
+                  setShowMiniCoursesModal(true);
+                }}
+                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
+              >
+                Back to Mini-Courses
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Moderate Course Modal */}
+        {showModerateCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">🟡 Moderate Course</h3>
+              <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
+              <div className="space-y-3 mb-6">
+                {["Present", "Past", "Future"].map((timeFrame, index) => {
+                  // Check completion status for Moderate course
+                  const completed = completedCourses.find(course => 
+                    course.courseType === "moderate" && 
+                    course.timeFrame === timeFrame
+                  );
+                  const isCompleted = completed && completed.examPassed;
+                  
+                  // Check for in-progress
+                  const inProgress = courseProgressData.find(progress => 
+                    progress.courseType === "moderate" && 
+                    progress.timeFrame === timeFrame &&
+                    !progress.isCompleted
+                  );
+                  
+                  // For Moderate level, require Easy completion first
+                  const easyCompleted = completedCourses.some(course => 
+                    course.courseType === "easy" && course.examPassed
+                  );
+                  const isLocked = !easyCompleted;
+                  
+                  const iconMap = {
+                    "Past": "⏮️",
+                    "Present": "▶️",
+                    "Future": "⏭️"
+                  };
+                  
+                  return (
+                    <button
+                      key={timeFrame}
+                      onClick={() => !isLocked && handleModerateCourseTimeFrame(timeFrame)}
+                      disabled={isLocked}
+                      className={`w-full p-4 text-left ${
+                        isLocked
+                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                          : isCompleted && completed?.examPassed
+                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                          : isCompleted 
+                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                          : inProgress
+                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                          : timeFrame === "Past"
+                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                          : timeFrame === "Present"
+                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                      } rounded-xl text-white`}
+                    >
+                      <div className={`font-semibold text-lg ${
+                        isCompleted && completed?.examPassed
+                          ? 'text-green-300'
+                          : isCompleted
+                          ? 'text-green-200'
+                          : inProgress
+                          ? 'text-orange-200'
+                          : timeFrame === "Past"
+                          ? 'text-purple-200'
+                          : timeFrame === "Present"
+                          ? 'text-green-200'
+                          : 'text-blue-200'
+                      }`}>
+                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Easy first</span>}
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        Section 1: 3 parts (48, 48, 32 questions) + Final Exam: 2 parts (40 each, 90% to pass)
+                      </div>
+                      {inProgress && (
+                        <div className="text-orange-200 text-xs mt-1">
+                          Progress: {inProgress.currentVerbIndex}/8 units & exam completed
+                        </div>
+                      )}
+                      {isCompleted && (
+                        <div className="text-green-200 text-xs mt-1">
+                          Progress: 8/8 units & exam completed
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              
+              <div className="mb-4">
+                <button
+                  onClick={() => handleStartModerateFinalExam("Present")}
+                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium mb-2"
+                >
+                  🎓 Take Final Exam (Present)
+                </button>
+                <button
+                  onClick={() => handleStartModerateFinalExam("Past")}
+                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium mb-2"
+                >
+                  🎓 Take Final Exam (Past)
+                </button>
+                <button
+                  onClick={() => handleStartModerateFinalExam("Future")}
+                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium"
+                >
+                  🎓 Take Final Exam (Future)
+                </button>
+              </div>
+              
+              <button
+                onClick={() => {
+                  setShowModerateCourseModal(false);
                   setShowMiniCoursesModal(true);
                 }}
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
