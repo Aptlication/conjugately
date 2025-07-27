@@ -1069,6 +1069,11 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // Handle different verb forms for negation
   const sentence = englishSentence.trim();
   
+  // CRITICAL: Handle ALL future tense cases FIRST to prevent "will don't" constructions
+  if (sentence.includes(" will ")) {
+    return sentence.replace(" will ", " won't ");
+  }
+  
   // For simple "to be" forms without trailing space (e.g., "I am", "He is")
   if (sentence.endsWith(" am")) {
     return sentence.replace(" am", " am not");
@@ -1108,11 +1113,14 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
     return sentence.replace(" has", " doesn't have");
   }
   
-  // For past tense verbs (ended in -ed or irregular)
+  // For past tense verbs (ended in -ed or irregular) OR present forms in past contexts
   if (sentence.includes(" went") || sentence.includes(" did") || sentence.includes(" made") || 
       sentence.includes(" had") || sentence.includes(" saw") || sentence.includes(" said") ||
       sentence.includes(" ate") || sentence.includes(" drank") || sentence.includes(" walked") ||
-      sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived")) {
+      sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived") ||
+      sentence.includes(" goes") || sentence.includes(" says") || sentence.includes(" does") ||
+      sentence.includes(" makes") || sentence.includes(" sees") || sentence.includes(" knows") ||
+      sentence.includes(" wants") || sentence.includes(" comes") || sentence.includes(" feels")) {
     const words = sentence.split(" ");
     if (words.length >= 2) {
       const subject = words[0];
@@ -1136,12 +1144,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
     }
   }
   
-  // For future tense with "will"
-  if (sentence.includes(" will ")) {
-    return sentence.replace(" will ", " won't ");
-  }
-  
-  // For simple future forms without trailing space (e.g., "I will have")
+  // For future tense with "will" - handle all cases first to prevent "will don't" constructions
   if (sentence.includes(" will have")) {
     return sentence.replace(" will have", " won't have");
   }
@@ -1157,17 +1160,50 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   if (sentence.includes(" will go")) {
     return sentence.replace(" will go", " won't go");
   }
+  if (sentence.includes(" will see")) {
+    return sentence.replace(" will see", " won't see");
+  }
+  if (sentence.includes(" will say")) {
+    return sentence.replace(" will say", " won't say");
+  }
+  if (sentence.includes(" will know")) {
+    return sentence.replace(" will know", " won't know");
+  }
+  if (sentence.includes(" will want")) {
+    return sentence.replace(" will want", " won't want");
+  }
+  if (sentence.includes(" will come")) {
+    return sentence.replace(" will come", " won't come");
+  }
+  if (sentence.includes(" will get")) {
+    return sentence.replace(" will get", " won't get");
+  }
+  if (sentence.includes(" will feel")) {
+    return sentence.replace(" will feel", " won't feel");
+  }
+  if (sentence.includes(" will wash")) {
+    return sentence.replace(" will wash", " won't wash");
+  }
+  if (sentence.includes(" will wake")) {
+    return sentence.replace(" will wake", " won't wake");
+  }
+  // General "will" replacement for any remaining cases
+  if (sentence.includes(" will ")) {
+    return sentence.replace(" will ", " won't ");
+  }
   
-  // For other verbs - add "don't" or "doesn't"
-  const words = sentence.split(" ");
-  if (words.length >= 2) {
-    const subject = words[0];
-    const verb = words[1];
-    
-    if (subject === "He" || subject === "She") {
-      return sentence.replace(` ${verb}`, ` doesn't ${verb.toLowerCase()}`);
-    } else {
-      return sentence.replace(` ${verb}`, ` don't ${verb.toLowerCase()}`);
+  // For other verbs - add "don't" or "doesn't" ONLY if not already handled by will/future cases
+  if (!sentence.includes("will")) {
+    const words = sentence.split(" ");
+    if (words.length >= 2) {
+      const subject = words[0];
+      const verb = words[1];
+      
+      if (subject === "He" || subject === "She") {
+        return sentence.replace(` ${verb}`, ` doesn't ${verb.toLowerCase()}`);
+      } else {
+        return sentence.replace(` ${verb}`, ` don't ${verb.toLowerCase()}`);
+      }
     }
   }
   
@@ -1192,7 +1228,17 @@ function getBaseVerb(pastVerb: string): string {
     'ate': 'eat',
     'drank': 'drink',
     'was': 'be',
-    'were': 'be'
+    'were': 'be',
+    // Present forms that need base conversion for past negation
+    'goes': 'go',
+    'says': 'say',
+    'does': 'do',
+    'makes': 'make',
+    'sees': 'see',
+    'knows': 'know',
+    'wants': 'want',
+    'comes': 'come',
+    'feels': 'feel'
   };
   
   if (irregularVerbs[pastVerb]) {
@@ -1216,22 +1262,22 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   };
   
   const englishVerbs = {
-    'être': { present: 'be', passé_simple: 'was', futur_simple: 'will be' },
-    'avoir': { present: 'have', passé_simple: 'had', futur_simple: 'will have' },
-    'faire': { present: 'do/make', passé_simple: 'did/made', futur_simple: 'will do/make' },
-    'dire': { present: 'say', passé_simple: 'said', futur_simple: 'will say' },
-    'aller': { present: 'go', passé_simple: 'went', futur_simple: 'will go' },
-    'voir': { present: 'see', passé_simple: 'saw', futur_simple: 'will see' },
-    'savoir': { present: 'know', passé_simple: 'knew', futur_simple: 'will know' },
-    'pouvoir': { present: 'can', passé_simple: 'could', futur_simple: 'will be able to' },
-    'vouloir': { present: 'want', passé_simple: 'wanted', futur_simple: 'will want' },
-    'venir': { present: 'come', passé_simple: 'came', futur_simple: 'will come' },
-    'se lever': { present: 'get up', passé_simple: 'got up', futur_simple: 'will get up' },
-    's\'appeler': { present: 'be called', passé_simple: 'was called', futur_simple: 'will be called' },
-    'se sentir': { present: 'feel', passé_simple: 'felt', futur_simple: 'will feel' },
-    'se laver': { present: 'wash', passé_simple: 'washed', futur_simple: 'will wash' },
-    'se réveiller': { present: 'wake up', passé_simple: 'woke up', futur_simple: 'will wake up' },
-    's\'habiller': { present: 'get dressed', passé_simple: 'got dressed', futur_simple: 'will get dressed' }
+    'être': { present: 'be', passé_simple: 'was', passé_composé: 'was', futur_simple: 'will be' },
+    'avoir': { present: 'have', passé_simple: 'had', passé_composé: 'had', futur_simple: 'will have' },
+    'faire': { present: 'do/make', passé_simple: 'did/made', passé_composé: 'did/made', futur_simple: 'will do/make' },
+    'dire': { present: 'say', passé_simple: 'said', passé_composé: 'said', futur_simple: 'will say' },
+    'aller': { present: 'go', passé_simple: 'went', passé_composé: 'went', futur_simple: 'will go' },
+    'voir': { present: 'see', passé_simple: 'saw', passé_composé: 'saw', futur_simple: 'will see' },
+    'savoir': { present: 'know', passé_simple: 'knew', passé_composé: 'knew', futur_simple: 'will know' },
+    'pouvoir': { present: 'can', passé_simple: 'could', passé_composé: 'could', futur_simple: 'will be able to' },
+    'vouloir': { present: 'want', passé_simple: 'wanted', passé_composé: 'wanted', futur_simple: 'will want' },
+    'venir': { present: 'come', passé_simple: 'came', passé_composé: 'came', futur_simple: 'will come' },
+    'se lever': { present: 'get up', passé_simple: 'got up', passé_composé: 'got up', futur_simple: 'will get up' },
+    's\'appeler': { present: 'be called', passé_simple: 'was called', passé_composé: 'was called', futur_simple: 'will be called' },
+    'se sentir': { present: 'feel', passé_simple: 'felt', passé_composé: 'felt', futur_simple: 'will feel' },
+    'se laver': { present: 'wash', passé_simple: 'washed', passé_composé: 'washed', futur_simple: 'will wash' },
+    'se réveiller': { present: 'wake up', passé_simple: 'woke up', passé_composé: 'woke up', futur_simple: 'will wake up' },
+    's\'habiller': { present: 'get dressed', passé_simple: 'got dressed', passé_composé: 'got dressed', futur_simple: 'will get dressed' }
   };
   
   const englishPronoun = englishPronouns[pronoun as keyof typeof englishPronouns] || pronoun;

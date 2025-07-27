@@ -111,14 +111,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### January 27, 2025 - Complete Enhanced Final Exam System Implementation ✓
+### January 27, 2025 - Complete Enhanced Final Exam System & English Grammar Fix ✓
 - **Enhanced Exam Distractors**: Final exams now display mixed verbs from different conjugations instead of same verb with different pronouns
 - **Universal 30% Negation**: Implemented exactly 6 negative questions out of 20 (30%) across ALL quizzes and exams for all difficulty levels
-- **Advanced English Grammar**: Fixed negative conversion for all tenses including "I won't have" for future, "I haven't had" for perfect tenses
+- **Fixed English Grammar Errors**: Completely resolved "will don't have" → "won't have" and "didn't goes" → "didn't go" grammar issues
+- **Advanced Negative Conversion**: Fixed negative conversion for all tenses including future ("won't"), past ("didn't"), and present ("don't")
 - **Systematic Random Selection**: Added automatic selection ensuring uniform 30% negation distribution in every quiz type
 - **Enhanced Beginner Mode**: Updated Beginner difficulty final exams to use mixed verbs (être, avoir, faire) for increased challenge
-- **Cross-Tense Support**: Enhanced negation works across present, past (passé composé), and future (futur simple) tenses
-- **Override Legacy Context**: Updated system to ignore predefined negative contexts and apply uniform educational standards
+- **Cross-Tense Support**: Enhanced negation works perfectly across present, past (passé composé), and future (futur simple) tenses
+- **Compound Tense Mapping**: Added proper English mappings for passé composé and other compound tenses
 - **Final Exam Compatibility**: Ensured enhanced mixed-verb distractors work seamlessly with 30% negation for optimal learning challenge
 
 ### January 27, 2025 - Complete Easy Course Overview Implementation ✓
