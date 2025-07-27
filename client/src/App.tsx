@@ -484,7 +484,7 @@ function App() {
   // Part-Based Generation Functions
   const handleCoursePart = async (difficulty: string, timeFrame: string, section: string, partName: string) => {
     const config = DIFFICULTY_CONFIGS[difficulty as keyof typeof DIFFICULTY_CONFIGS];
-    const sectionConfig = config.courseStructure[section as keyof typeof config.courseStructure];
+    const sectionConfig = config.courseStructure[section as keyof typeof config.courseStructure] as any;
     const partConfig = sectionConfig.parts?.find((p: any) => p.name === partName);
     
     if (!partConfig) {
@@ -541,10 +541,7 @@ function App() {
         currentVerbIndex: 0,
         completedVerbs: [],
         totalScore: 0,
-        totalQuestions: partConfig.questions,
-        difficulty,
-        section,
-        partName
+        totalQuestions: partConfig.questions
       });
       
       // Show instruction popup if not disabled
@@ -1732,11 +1729,11 @@ function App() {
                 </button>
                 <button
                   onClick={() => handleMiniCourseSelect("Easy")}
-                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
+                  className="w-full p-4 text-left bg-emerald-500/20 border border-emerald-500/30 rounded-xl text-white hover:bg-emerald-500/30"
                 >
-                  <div className="text-green-200 font-semibold text-lg">🟢 Easy Course</div>
+                  <div className="text-emerald-200 font-semibold text-lg">🟢 Easy Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 120 mixed questions + Final Exam (60 questions)
+                    Section 1: 3 parts (40 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2099,7 +2096,7 @@ function App() {
               </p>
               
               <div className="space-y-3 mb-6">
-                {DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedSection as keyof any]?.parts?.map((part: any, index: number) => (
+                {(DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedSection as keyof any] as any)?.parts?.map((part: any, index: number) => (
                   <button
                     key={part.name}
                     onClick={() => handleCoursePart(selectedCourseLevel, selectedCourseTimeFrame, selectedSection, part.name)}
