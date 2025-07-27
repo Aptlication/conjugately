@@ -1100,11 +1100,6 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
       .replace(" has ", " hasn't ");
   }
   
-  // For auxiliary verbs in compound tenses (e.g., "He had" -> "He hadn't" for pluperfect)
-  if (sentence.includes(" had ") && !sentence.includes("didn't")) {
-    return sentence.replace(" had ", " hadn't ");
-  }
-  
   // For simple "to have" forms without trailing space
   if (sentence.endsWith(" have")) {
     return sentence.replace(" have", " don't have");
@@ -1114,6 +1109,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   }
   
   // For past tense verbs (ended in -ed or irregular) OR present forms in past contexts
+  // IMPORTANT: Handle "had" as main verb (not auxiliary) by checking for main verb usage
   if (sentence.includes(" went") || sentence.includes(" did") || sentence.includes(" made") || 
       sentence.includes(" had") || sentence.includes(" saw") || sentence.includes(" said") ||
       sentence.includes(" ate") || sentence.includes(" drank") || sentence.includes(" walked") ||
@@ -1127,6 +1123,12 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
       const verb = words[1];
       return sentence.replace(` ${verb}`, ` didn't ${getBaseVerb(verb)}`);
     }
+  }
+  
+  // For auxiliary verbs in compound tenses (e.g., "He had eaten" -> "He hadn't eaten" for pluperfect)
+  // Only apply this AFTER checking for main verb usage above
+  if (sentence.includes(" had ") && !sentence.includes("didn't")) {
+    return sentence.replace(" had ", " hadn't ");
   }
   
   // For sentences ending with a period (past tense statements)
@@ -1575,9 +1577,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     // Convert to negative if this question should be negative (override any predefined negatives)
     if (shouldBeNegative) {
       // Always convert to negative, regardless of original context
-      if (!context.en.includes("don't") && !context.en.includes("not")) {
-        englishQuestion = convertToNegativeEnglish(context.en, pronoun);
-      }
+      englishQuestion = convertToNegativeEnglish(context.en, pronoun);
     } else {
       // For positive questions, ensure we remove any predefined negatives
       englishQuestion = englishQuestion
