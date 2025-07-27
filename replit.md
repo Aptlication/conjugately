@@ -111,6 +111,21 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - Enhanced Verb Selection with English Meanings ✓
+- **Verb Dropdown Enhancement**: Added English meanings to all French verbs in dropdown selections
+- **Format Implementation**: Verbs now display as "être (to be)", "avoir (to have)", etc.
+- **Comprehensive Mapping**: Created VERB_MEANINGS object with translations for all 16 verbs including reflexive verbs
+- **Universal Application**: Enhanced display works across all difficulty levels (Beginner, Easy, Moderate, Difficult)
+- **User Experience**: Students can now immediately understand verb meanings when making selections
+- **Reflexive Verb Support**: Includes proper English translations for reflexive verbs like "se lever (to get up)"
+
+### January 27, 2025 - Complete Gender-Specific Pronoun System ✓
+- **Enhanced Pronoun Display**: Implemented gender-specific pronouns for Moderate and Difficult courses
+- **French Grammar Accuracy**: "ils" displays as "They (masculine)" and "elles" as "They (feminine)"
+- **Selective Application**: Gender distinction only applies to Moderate and Difficult levels, maintaining simplicity in Beginner/Easy
+- **Comprehensive Tense Support**: All 8 tense conversion sections updated with gender-specific logic
+- **Educational Quality**: Improved French language learning accuracy with proper pronoun gender recognition
+
 ### January 27, 2025 - Complete Course Reset System Implementation ✓
 - **Reset Functionality Added**: Implemented comprehensive reset system for all course difficulty levels
 - **Reset Button UI**: Added blue circular reset buttons (↻) on completed courses in all course selection modals
