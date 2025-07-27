@@ -1597,17 +1597,23 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         englishQuestion = convertToNegativeEnglish(context.en, pronoun); // Convert positive to negative
       }
     } else {
-      // For positive questions, ensure we remove any predefined negatives
-      englishQuestion = englishQuestion
-        .replace("don't ", "")
-        .replace("doesn't ", "")
-        .replace(" not", "")
-        .replace("I am not", "I am")
-        .replace("He is not", "He is")
-        .replace("She is not", "She is")
-        .replace("We are not", "We are")
-        .replace("You are not", "You are")
-        .replace("They are not", "They are");
+      // For positive questions, only process if context is NOT already negative
+      if (!(context as any).negative) {
+        englishQuestion = context.en; // Use as-is for positive contexts
+      } else {
+        // Convert predefined negative to positive by removing negation words
+        englishQuestion = englishQuestion
+          .replace("don't ", "")
+          .replace("doesn't ", "")
+          .replace("can't ", "can ")
+          .replace(" not", "")
+          .replace("I am not", "I am")
+          .replace("He is not", "He is") 
+          .replace("She is not", "She is")
+          .replace("We are not", "We are")
+          .replace("You are not", "You are")
+          .replace("They are not", "They are");
+      }
     }
     
     if (normalizedTense === 'passé_composé') {
@@ -1627,6 +1633,37 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/We are/g, 'We were')
         .replace(/You \(plural\) are/g, 'You (plural) were')
         .replace(/They are/g, 'They were')
+      
+      // Handle negative forms FIRST before positive forms to prevent conflicts
+      englishQuestion = englishQuestion
+        .replace(/I don't say/g, 'I didn\'t say')
+        .replace(/You don't say/g, 'You didn\'t say')
+        .replace(/He doesn't say/g, 'He didn\'t say')
+        .replace(/She doesn't say/g, 'She didn\'t say')
+        .replace(/We don't say/g, 'We didn\'t say')
+        .replace(/You \(plural\) don't say/g, 'You (plural) didn\'t say')
+        .replace(/They don't say/g, 'They didn\'t say')
+        .replace(/I don't do/g, 'I didn\'t do')
+        .replace(/You don't do/g, 'You didn\'t do')
+        .replace(/He doesn't do/g, 'He didn\'t do')
+        .replace(/She doesn't do/g, 'She didn\'t do')
+        .replace(/We don't do/g, 'We didn\'t do')
+        .replace(/You \(plural\) don't do/g, 'You (plural) didn\'t do')
+        .replace(/They don't do/g, 'They didn\'t do')
+        .replace(/I don't know/g, 'I didn\'t know')
+        .replace(/You don't know/g, 'You didn\'t know')
+        .replace(/He doesn't know/g, 'He didn\'t know')
+        .replace(/She doesn't know/g, 'She didn\'t know')
+        .replace(/We don't know/g, 'We didn\'t know')
+        .replace(/You \(plural\) don't know/g, 'You (plural) didn\'t know')
+        .replace(/They don't know/g, 'They didn\'t know')
+        .replace(/I don't see/g, 'I didn\'t see')
+        .replace(/You don't see/g, 'You didn\'t see')
+        .replace(/He doesn't see/g, 'He didn\'t see')
+        .replace(/She doesn't see/g, 'She didn\'t see')
+        .replace(/We don't see/g, 'We didn\'t see')
+        .replace(/You \(plural\) don't see/g, 'You (plural) didn\'t see')
+        .replace(/They don't see/g, 'They didn\'t see')
       
       englishQuestion = englishQuestion
         .replace(/I do/g, 'I did')

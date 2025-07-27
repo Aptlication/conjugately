@@ -113,11 +113,12 @@ Preferred communication style: Simple, everyday language.
 
 ### January 27, 2025 - Complete English Grammar Fix & Enhanced Negation System ✓
 - **Critical Grammar Fix**: Resolved double negative errors like "She hadn't no choice" → "She had no choice"  
+- **Fixed Incorrect Tense Logic**: Corrected "I said anything" → "I didn't say anything" for proper negative past tense
 - **Enhanced Negation Logic**: Fixed predefined negative contexts to respect original grammar without double negation
-- **Comprehensive Context Audit**: Updated QUESTION_CONTEXTS to remove problematic double negatives
-- **Smart Negation Handling**: System now properly distinguishes between predefined negatives and dynamic negation
+- **Comprehensive Tense Conversion**: Added negative verb handling for all past tense forms (didn't say, didn't do, didn't know, etc.)
+- **Smart Context Processing**: System now properly distinguishes between predefined negatives and dynamic negation
 - **Grammar Consistency**: Fixed "had" detection as main verb vs auxiliary verb for proper past tense negation
-- **Educational Quality**: All English questions now follow proper grammar rules across all difficulty levels
+- **Educational Quality**: All English questions now follow proper grammar rules across all difficulty levels and tenses
 
 ### January 27, 2025 - Enhanced Verb Selection with English Meanings ✓
 - **Verb Dropdown Enhancement**: Added English meanings to all French verbs in dropdown selections
