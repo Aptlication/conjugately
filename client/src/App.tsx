@@ -2211,7 +2211,7 @@ function App() {
                       {isCompleted && (
                         <button
                           onClick={(e) => handleResetCourse("beginner", timeFrame, e)}
-                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          className="absolute top-2 right-2 w-6 h-6 bg-blue-500/70 hover:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
                           title="Reset course (mark as not passed)"
                         >
                           ↻
@@ -2332,7 +2332,7 @@ function App() {
                       {isCompleted && (
                         <button
                           onClick={(e) => handleResetCourse("easy", timeFrame, e)}
-                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          className="absolute top-2 right-2 w-6 h-6 bg-blue-500/70 hover:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
                           title="Reset course (mark as not passed)"
                         >
                           ↻
@@ -2447,7 +2447,7 @@ function App() {
                       {isCompleted && (
                         <button
                           onClick={(e) => handleResetCourse("moderate", timeFrame, e)}
-                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          className="absolute top-2 right-2 w-6 h-6 bg-blue-500/70 hover:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
                           title="Reset course (mark as not passed)"
                         >
                           ↻
@@ -2813,7 +2813,7 @@ function App() {
                       {isCompleted && (
                         <button
                           onClick={(e) => handleResetCourse("difficult", timeFrame, e)}
-                          className="absolute top-2 right-2 w-6 h-6 bg-red-500/70 hover:bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
+                          className="absolute top-2 right-2 w-6 h-6 bg-blue-500/70 hover:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
                           title="Reset course (mark as not passed)"
                         >
                           ↻

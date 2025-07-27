@@ -111,6 +111,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - Complete Course Reset System Implementation ✓
+- **Reset Functionality Added**: Implemented comprehensive reset system for all course difficulty levels
+- **Reset Button UI**: Added blue circular reset buttons (↻) on completed courses in all course selection modals
+- **Confirmation Dialog**: Added user confirmation before resetting courses to prevent accidental resets
+- **Database Integration**: Created DELETE endpoint to remove both completed course records and progress data
+- **User Experience**: Reset allows users to mark courses as "not passed" and retake them from the beginning
+- **Sequential Progression**: Reset system works seamlessly with sequential course progression requirements
+- **All Levels Supported**: Reset functionality available for Beginner, Easy, Moderate, and Difficult courses
+
 ### January 27, 2025 - Complete Enhanced Final Exam System & English Grammar Fix ✓
 - **Enhanced Exam Distractors**: Final exams now display mixed verbs from different conjugations instead of same verb with different pronouns
 - **Universal 30% Negation**: Implemented exactly 6 negative questions out of 20 (30%) across ALL quizzes and exams for all difficulty levels
