@@ -28,6 +28,11 @@ export const courseProgress = pgTable("course_progress", {
   totalQuestions: integer("total_questions").notNull().default(0),
   isCompleted: boolean("is_completed").notNull().default(false),
   examPassed: boolean("exam_passed").default(false),
+  // New fields for part-based progress tracking
+  currentSection: text("current_section").default("section1"), // "section1" or "finalExam"
+  currentPart: text("current_part").default("A"), // "A", "B", "C", etc.
+  completedParts: json("completed_parts").default([]), // ["section1-A", "section1-B", "finalExam-A"]
+  partScores: text("part_scores").default("{}"), // JSON string: {"section1-A": {"score": 35, "total": 40}, ...}
 });
 
 export const completedCourses = pgTable("completed_courses", {

@@ -83,8 +83,24 @@ function App() {
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
-        section1: { questions: 120, questionsPerVerb: 20 },
-        finalExam: { questions: 60, questionsPerVerb: 10, passThreshold: 54 }
+        section1: { 
+          totalQuestions: 120, 
+          questionsPerVerb: 20,
+          parts: [
+            { name: "A", questions: 40, verbs: ["être", "avoir"] },
+            { name: "B", questions: 40, verbs: ["faire", "dire"] },
+            { name: "C", questions: 40, verbs: ["aller", "voir"] }
+          ]
+        },
+        finalExam: { 
+          totalQuestions: 60, 
+          questionsPerVerb: 10, 
+          passThreshold: 54,
+          parts: [
+            { name: "A", questions: 30, verbs: ["être", "avoir", "faire"] },
+            { name: "B", questions: 30, verbs: ["dire", "aller", "voir"] }
+          ]
+        }
       }
     },
     "Moderate": { 
@@ -92,10 +108,25 @@ function App() {
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
       courseStructure: {
-        section1: { questions: 160, questionsPerVerb: 20 },
-        finalExamPartA: { questions: 40, questionsPerVerb: 5, passThreshold: 36 },
-        finalExamPartB: { questions: 40, questionsPerVerb: 5, passThreshold: 36 },
-        totalPassThreshold: 72
+        section1: { 
+          totalQuestions: 160, 
+          questionsPerVerb: 20,
+          parts: [
+            { name: "A", questions: 40, verbs: ["être", "avoir"] },
+            { name: "B", questions: 40, verbs: ["faire", "dire"] },
+            { name: "C", questions: 40, verbs: ["aller", "se lever"] },
+            { name: "D", questions: 40, verbs: ["s'appeler", "se sentir"] }
+          ]
+        },
+        finalExam: { 
+          totalQuestions: 80, 
+          questionsPerVerb: 10, 
+          passThreshold: 72,
+          parts: [
+            { name: "A", questions: 40, verbs: ["être", "avoir", "faire", "dire"] },
+            { name: "B", questions: 40, verbs: ["aller", "se lever", "s'appeler", "se sentir"] }
+          ]
+        }
       }
     },
     "Difficult": { 
@@ -103,10 +134,28 @@ function App() {
       timeFrames: Object.keys(TIME_FRAMES), 
       tenses: Object.values(TIME_FRAMES).flat(),
       courseStructure: {
-        section1: { questions: 260, questionsPerVerb: 20 },
-        finalExamPartA: { questions: 50, questionsPerVerb: 4, passThreshold: 45 },
-        finalExamPartB: { questions: 50, questionsPerVerb: 4, passThreshold: 45 },
-        totalPassThreshold: 90
+        section1: { 
+          totalQuestions: 260, 
+          questionsPerVerb: 20,
+          parts: [
+            { name: "A", questions: 44, verbs: ["être", "avoir"] },
+            { name: "B", questions: 44, verbs: ["faire", "dire"] },
+            { name: "C", questions: 44, verbs: ["aller", "voir"] },
+            { name: "D", questions: 44, verbs: ["savoir", "pouvoir"] },
+            { name: "E", questions: 42, verbs: ["vouloir", "venir"] },
+            { name: "F", questions: 42, verbs: ["se laver", "se réveiller", "s'habiller"] }
+          ]
+        },
+        finalExam: { 
+          totalQuestions: 100, 
+          questionsPerVerb: 8, 
+          passThreshold: 90,
+          parts: [
+            { name: "A", questions: 34, verbs: ["être", "avoir", "faire", "dire", "aller"] },
+            { name: "B", questions: 33, verbs: ["voir", "savoir", "pouvoir", "vouloir"] },
+            { name: "C", questions: 33, verbs: ["venir", "se laver", "se réveiller", "s'habiller"] }
+          ]
+        }
       }
     }
   };
@@ -427,9 +476,99 @@ function App() {
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
   const [currentCourseConfig, setCurrentCourseConfig] = useState<any>(null);
+  const [showPartSelectionModal, setShowPartSelectionModal] = useState(false);
+  const [selectedCourseLevel, setSelectedCourseLevel] = useState<string>("");
+  const [selectedCourseTimeFrame, setSelectedCourseTimeFrame] = useState<string>("");
+  const [selectedSection, setSelectedSection] = useState<string>(""); // "section1" or "finalExam"
 
-  // Easy Course Functions
+  // Part-Based Generation Functions
+  const handleCoursePart = async (difficulty: string, timeFrame: string, section: string, partName: string) => {
+    const config = DIFFICULTY_CONFIGS[difficulty as keyof typeof DIFFICULTY_CONFIGS];
+    const sectionConfig = config.courseStructure[section as keyof typeof config.courseStructure];
+    const partConfig = sectionConfig.parts?.find((p: any) => p.name === partName);
+    
+    if (!partConfig) {
+      console.error('Part configuration not found');
+      return;
+    }
+    
+    const courseTenses = config.tenses;
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    setQuizState('loading');
+    
+    try {
+      const allQuestions: any[] = [];
+      
+      // Generate questions for each verb in this part
+      for (const currentVerb of partConfig.verbs) {
+        const questionsPerVerb = Math.floor(partConfig.questions / partConfig.verbs.length);
+        const questionsPerTense = Math.floor(questionsPerVerb / courseTenses.length);
+        
+        for (const currentTense of courseTenses) {
+          const response = await fetch('/api/get-quiz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              verb: currentVerb,
+              timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
+              tenseType: currentTense,
+              difficulty: difficulty,
+            })
+          });
+
+          const data = await response.json();
+          if (data.success) {
+            allQuestions.push(...data.quiz.questions.slice(0, questionsPerTense));
+          }
+        }
+      }
+      
+      // Ensure we have exactly the right number of questions for this part
+      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5).slice(0, partConfig.questions);
+      
+      setQuizData(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setUserAnswers({});
+      setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
+      setQuizState('active');
+      setShowPartSelectionModal(false);
+      
+      // Set course info for progress tracking
+      setCourseInfo({
+        timeFrame,
+        tense: `${section} Part ${partName}`,
+        currentVerbIndex: 0,
+        completedVerbs: [],
+        totalScore: 0,
+        totalQuestions: partConfig.questions,
+        difficulty,
+        section,
+        partName
+      });
+      
+      // Show instruction popup if not disabled
+      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
+      if (!dontRemindAgain) {
+        setShowInstructionPopup(true);
+      }
+    } catch (error) {
+      console.error(`Error generating ${difficulty} course part ${partName}:`, error);
+      setQuizState('config');
+    }
+  };
+
+  // Easy Course Functions  
   const handleEasyCourseTimeFrame = async (timeFrame: string) => {
+    // Show part selection modal instead of generating full course
+    setSelectedCourseLevel("Easy");
+    setSelectedCourseTimeFrame(timeFrame);
+    setSelectedSection("section1");
+    setShowEasyCourseModal(false);
+    setShowPartSelectionModal(true);
+  };
+
+  const handleEasyCourseLegacy = async (timeFrame: string) => {
     const config = DIFFICULTY_CONFIGS.Easy;
     const courseTenses = config.tenses;
     
@@ -495,6 +634,14 @@ function App() {
   };
 
   const handleStartEasyFinalExam = async (timeFrame: string) => {
+    // Show part selection modal for final exam
+    setSelectedCourseLevel("Easy");
+    setSelectedCourseTimeFrame(timeFrame);
+    setSelectedSection("finalExam");
+    setShowPartSelectionModal(true);
+  };
+
+  const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
     const config = DIFFICULTY_CONFIGS.Easy;
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
     
@@ -584,6 +731,10 @@ function App() {
     setShowCourseProgress(false);
     setShowExamOption(false);
     setIsAnswerConfirmed(false);
+    setShowPartSelectionModal(false);
+    setSelectedCourseLevel("");
+    setSelectedCourseTimeFrame("");
+    setSelectedSection("");
   };
 
   const calculateResults = () => {
@@ -1904,7 +2055,7 @@ function App() {
                         {isLocked && <span className="text-sm">🔒 Complete Beginner first</span>}
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        Section 1: 120 mixed questions (20 from each of 6 verbs) + Final Exam (90% to pass)
+                        Section 1: 3 parts (40 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
@@ -1929,6 +2080,59 @@ function App() {
               >
                 Back to Mini-Courses
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Part Selection Modal */}
+        {showPartSelectionModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-lg w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">
+                {selectedCourseLevel} Course - {selectedCourseTimeFrame} Tense
+              </h3>
+              <p className="text-slate-300 text-center mb-6">
+                {selectedSection === "section1" ? 
+                  "Choose a section to practice. Complete all parts to unlock the final exam." :
+                  "Choose an exam part. You must pass both parts with 90% combined score."
+                }
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                {DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.[selectedSection as keyof any]?.parts?.map((part: any, index: number) => (
+                  <button
+                    key={part.name}
+                    onClick={() => handleCoursePart(selectedCourseLevel, selectedCourseTimeFrame, selectedSection, part.name)}
+                    className="w-full p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30"
+                  >
+                    <div className="text-purple-200 font-semibold text-lg">
+                      Part {part.name}: {part.questions} Questions
+                    </div>
+                    <div className="text-slate-300 text-sm mt-1">
+                      Verbs: {part.verbs.map((verb: string) => `'${verb}'`).join(", ")}
+                    </div>
+                  </button>
+                ))}
+              </div>
+              
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowPartSelectionModal(false)}
+                  className="flex-1 px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium"
+                >
+                  Back
+                </button>
+                {selectedSection === "section1" && (
+                  <button
+                    onClick={() => {
+                      setSelectedSection("finalExam");
+                    }}
+                    className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium"
+                  >
+                    Go to Final Exam
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         )}
