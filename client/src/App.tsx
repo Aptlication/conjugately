@@ -686,12 +686,13 @@ function App() {
 
     // Handle exam results (when currentVerbIndex is 5)
     if (courseInfo && courseInfo.currentVerbIndex === 5) {
-      // For exam, we need exactly 36/40 or higher (90%)
-      const examPassed = correctAnswers >= 36;
+      // For exam, we need exactly 90% or higher (18/20 for 20-question exam, 36/40 for 40-question exam)
+      const requiredScore = Math.ceil(totalQuestions * 0.9);
+      const examPassed = correctAnswers >= requiredScore;
       
       // Debug logging
       console.log(`Exam Results: ${correctAnswers}/${totalQuestions} = ${percentage}%`);
-      console.log(`Exam passed: ${examPassed} (need 36/40 or higher)`);
+      console.log(`Exam passed: ${examPassed} (need ${requiredScore}/${totalQuestions} or higher)`);
       
       // Save completed course if passed - do this once when exam is complete
       if (examPassed && !completedCourses.some(course => 
@@ -739,7 +740,7 @@ function App() {
                 <p className="text-lg text-slate-400 mt-2">
                   {examPassed ? 
                     'Congratulations! You passed the final exam!' :
-                    `We have high standards! You need 90% (36/40) to pass. You got ${correctAnswers}/40. Try again!`
+                    `We have high standards! You need 90% (${requiredScore}/${totalQuestions}) to pass. You got ${correctAnswers}/${totalQuestions}. Try again!`
                   }
                 </p>
               </div>
