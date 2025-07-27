@@ -111,6 +111,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 27, 2025 - Complete English Grammar Fix & Enhanced Negation System ✓
+- **Critical Grammar Fix**: Resolved double negative errors like "She hadn't no choice" → "She had no choice"  
+- **Enhanced Negation Logic**: Fixed predefined negative contexts to respect original grammar without double negation
+- **Comprehensive Context Audit**: Updated QUESTION_CONTEXTS to remove problematic double negatives
+- **Smart Negation Handling**: System now properly distinguishes between predefined negatives and dynamic negation
+- **Grammar Consistency**: Fixed "had" detection as main verb vs auxiliary verb for proper past tense negation
+- **Educational Quality**: All English questions now follow proper grammar rules across all difficulty levels
+
 ### January 27, 2025 - Enhanced Verb Selection with English Meanings ✓
 - **Verb Dropdown Enhancement**: Added English meanings to all French verbs in dropdown selections
 - **Format Implementation**: Verbs now display as "être (to be)", "avoir (to have)", etc.

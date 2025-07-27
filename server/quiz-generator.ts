@@ -635,8 +635,8 @@ const QUESTION_CONTEXTS = {
     { en: "You (plural) have luck.", fr_context: "de la chance", pronoun: "vous" },
     { en: "They have problems.", fr_context: "des problèmes", pronoun: "ils" },
     { en: "I don't have anything.", fr_context: "rien", negative: true, pronoun: "je" },
-    { en: "She has no choice.", fr_context: "pas le choix", negative: true, pronoun: "elle" },
-    { en: "We don't have time.", fr_context: "pas le temps", negative: true, pronoun: "nous" }
+    { en: "She has a choice.", fr_context: "le choix", negative: false, pronoun: "elle" },
+    { en: "We have time.", fr_context: "le temps", negative: false, pronoun: "nous" }
   ],
   faire: [
     { en: "I do homework.", fr_context: "mes devoirs", pronoun: "je" },
@@ -669,7 +669,7 @@ const QUESTION_CONTEXTS = {
     { en: "She says no.", fr_context: "non", pronoun: "elle" },
     { en: "We say goodbye.", fr_context: "au revoir", pronoun: "nous" },
     { en: "You (plural) say thanks.", fr_context: "merci", pronoun: "vous" },
-    { en: "They say nothing.", fr_context: "rien", pronoun: "ils" },
+    { en: "They say something.", fr_context: "quelque chose", pronoun: "ils" },
     { en: "I don't say anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't say that.", fr_context: "pas ça", negative: true, pronoun: "elle" },
     { en: "We don't say bad words.", fr_context: "pas de gros mots", negative: true, pronoun: "nous" }
@@ -681,7 +681,7 @@ const QUESTION_CONTEXTS = {
     { en: "She knows the secret.", fr_context: "le secret", pronoun: "elle" },
     { en: "We know the truth.", fr_context: "la vérité", pronoun: "nous" },
     { en: "You (plural) know music.", fr_context: "la musique", pronoun: "vous" },
-    { en: "They know everything.", fr_context: "tout", pronoun: "ils" },
+    { en: "They know something.", fr_context: "quelque chose", pronoun: "ils" },
     { en: "I don't know anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't know him.", fr_context: "le", negative: true, pronoun: "elle" },
     { en: "We don't know where.", fr_context: "pas où", negative: true, pronoun: "nous" }
@@ -1522,13 +1522,27 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     let correctAnswer;
     
     if (shouldBeNegative) {
-      // Handle negation properly for ALL tenses (ignore original context negative flag)
-      correctAnswer = buildNegativeFrench(pronoun, correctForm, context.fr_context, normalizedTense, verb);
+      // If context is already marked as negative, use its French negation logic
+      if ((context as any).negative) {
+        // Use predefined negative French context
+        correctAnswer = buildNegativeFrench(pronoun, correctForm, context.fr_context, normalizedTense, verb);
+      } else {
+        // Convert positive context to negative French
+        correctAnswer = buildNegativeFrench(pronoun, correctForm, context.fr_context, normalizedTense, verb);
+      }
     } else {
-      // Positive answer - ignore original context negative flag
-      correctAnswer = applyContractions(pronoun, correctForm);
-      if (context.fr_context) {
-        correctAnswer += ` ${context.fr_context}`;
+      // For positive questions, only use positive contexts (ignore predefined negatives)
+      if (!(context as any).negative) {
+        correctAnswer = applyContractions(pronoun, correctForm);
+        if (context.fr_context) {
+          correctAnswer += ` ${context.fr_context}`;
+        }
+      } else {
+        // Convert predefined negative to positive
+        correctAnswer = applyContractions(pronoun, correctForm);
+        if (context.fr_context && !context.fr_context.startsWith('pas')) {
+          correctAnswer += ` ${context.fr_context}`;
+        }
       }
     }
     
@@ -1544,12 +1558,12 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       let wrong;
       
       if (shouldBeNegative) {
-        // Use the same comprehensive negation logic for distractors (ignore original context)
+        // Use the same comprehensive negation logic for distractors
         wrong = buildNegativeFrench(pronoun, form, context.fr_context, normalizedTense, verb);
       } else {
-        // Apply contractions to wrong answers too for consistency (ignore original context)
+        // Apply contractions to wrong answers too for consistency
         wrong = applyContractions(pronoun, form);
-        if (context.fr_context) {
+        if (context.fr_context && !(context as any).negative) {
           wrong += ` ${context.fr_context}`;
         }
       }
@@ -1574,10 +1588,14 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     // Convert English to proper tense based on French tense
     let englishQuestion = context.en;
     
-    // Convert to negative if this question should be negative (override any predefined negatives)
+    // Handle negation properly - respect predefined negatives or apply new negation
     if (shouldBeNegative) {
-      // Always convert to negative, regardless of original context
-      englishQuestion = convertToNegativeEnglish(context.en, pronoun);
+      // If context is already negative, use it as-is; otherwise convert to negative
+      if ((context as any).negative) {
+        englishQuestion = context.en; // Keep predefined negative as-is
+      } else {
+        englishQuestion = convertToNegativeEnglish(context.en, pronoun); // Convert positive to negative
+      }
     } else {
       // For positive questions, ensure we remove any predefined negatives
       englishQuestion = englishQuestion
