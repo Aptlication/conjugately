@@ -707,8 +707,10 @@ function App() {
       )) {
         const saveCompletedCourse = async () => {
           try {
+            console.log('Saving completed course data...');
+            
             // Save to completed courses
-            await fetch('/api/completed-courses', {
+            const completedResponse = await fetch('/api/completed-courses', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -723,8 +725,16 @@ function App() {
               })
             });
             
+            if (!completedResponse.ok) {
+              const errorData = await completedResponse.json();
+              console.error('Failed to save completed course:', errorData);
+              throw new Error(`API Error: ${errorData.error || 'Unknown error'}`);
+            }
+            
+            console.log('Completed course saved successfully');
+            
             // Also update course progress to mark exam as passed
-            await fetch('/api/course-progress', {
+            const progressResponse = await fetch('/api/course-progress', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -741,9 +751,19 @@ function App() {
               })
             });
             
+            if (!progressResponse.ok) {
+              const errorData = await progressResponse.json();
+              console.error('Failed to update course progress:', errorData);
+              throw new Error(`API Error: ${errorData.error || 'Unknown error'}`);
+            }
+            
+            console.log('Course progress updated successfully');
+            
             await loadUserData(); // Refresh completed courses and progress
+            console.log('User data refreshed after exam completion');
           } catch (error) {
             console.error('Error saving completed course:', error);
+            alert('Failed to save exam results. Please contact support if this issue persists.');
           }
         };
         saveCompletedCourse();
