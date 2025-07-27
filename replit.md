@@ -120,11 +120,11 @@ Preferred communication style: Simple, everyday language.
 - **Reflexive Verb Support**: Includes proper English translations for reflexive verbs like "se lever (to get up)"
 
 ### January 27, 2025 - Complete Gender-Specific Pronoun System ✓
-- **Enhanced Pronoun Display**: Implemented gender-specific pronouns for Moderate and Difficult courses
+- **Enhanced Pronoun Display**: Implemented gender-specific pronouns for ALL difficulty levels
 - **French Grammar Accuracy**: "ils" displays as "They (masculine)" and "elles" as "They (feminine)"
-- **Selective Application**: Gender distinction only applies to Moderate and Difficult levels, maintaining simplicity in Beginner/Easy
+- **Universal Application**: Gender distinction now applies to Beginner, Easy, Moderate, and Difficult levels
 - **Comprehensive Tense Support**: All 8 tense conversion sections updated with gender-specific logic
-- **Educational Quality**: Improved French language learning accuracy with proper pronoun gender recognition
+- **Educational Quality**: Improved French language learning accuracy with proper pronoun gender recognition across all courses
 
 ### January 27, 2025 - Complete Course Reset System Implementation ✓
 - **Reset Functionality Added**: Implemented comprehensive reset system for all course difficulty levels
