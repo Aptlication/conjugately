@@ -1519,11 +1519,11 @@ function App() {
                   const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
                   
                   // Check completion status
-                  const isCompleted = completedCourses.some(course => 
+                  const completed = completedCourses.find(course => 
                     course.courseType === "beginner" && 
-                    course.timeFrame === timeFrame && 
-                    course.examPassed
+                    course.timeFrame === timeFrame
                   );
+                  const isCompleted = completed && completed.examPassed;
                   
                   // Check for in-progress
                   const inProgress = courseProgressData.find(progress => 
@@ -1591,12 +1591,12 @@ function App() {
                       </div>
                       {inProgress && (
                         <div className="text-orange-200 text-xs mt-1">
-                          Progress: {inProgress.currentVerbIndex}/1 section completed • {inProgress.totalScore}/{inProgress.totalQuestions} questions
+                          Progress: {inProgress.currentVerbIndex}/5 units & exam completed
                         </div>
                       )}
                       {isCompleted && (
                         <div className="text-green-200 text-xs mt-1">
-                          Completed with {Math.round((completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.totalScore || 0) / (completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.totalQuestions || 1) * 100)}% • Exam: {completedCourses.find(c => c.courseType === "beginner" && c.timeFrame === timeFrame)?.examScore}/20
+                          Progress: 5/5 units & exam completed
                         </div>
                       )}
                     </button>
