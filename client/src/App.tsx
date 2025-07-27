@@ -707,6 +707,23 @@ function App() {
     setShowCourseOverviewModal(true);
   };
 
+  // Difficult Course Functions  
+  const handleDifficultCourseTimeFrame = (timeFrame: string) => {
+    setSelectedCourseLevel("Difficult");
+    setSelectedCourseTimeFrame(timeFrame);
+    
+    // Get the tense for this timeframe
+    const tenseMapping = {
+      "Present": "Présent",
+      "Past": "Passé Composé", 
+      "Future": "Futur Simple"
+    };
+    setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
+    
+    setShowDifficultCourseModal(false);
+    setShowCourseOverviewModal(true);
+  };
+
   const handleStartEasyFinalExamLegacy = async (timeFrame: string) => {
     const config = DIFFICULTY_CONFIGS.Easy;
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
@@ -1797,7 +1814,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Beginner Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 80 mixed questions + Final Exam
+                    4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -1806,7 +1823,7 @@ function App() {
                 >
                   <div className="text-emerald-200 font-semibold text-lg">🟢 Easy Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 2 parts (54 questions each) + Final Exam: 2 parts (30 each, 90% to pass)
+                    6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -1815,7 +1832,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 3 parts (48, 48, 32 questions) + Final Exam: 2 parts (40 each, 90% to pass)
+                    8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -1824,7 +1841,7 @@ function App() {
                 >
                   <div className="text-red-200 font-semibold text-lg">🔴 Difficult Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Section 1: 4 parts (42, 42, 42, 56 questions) + Final Exam: 3 parts (40, 32, 32, 90% to pass)
+                    13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
                   </div>
                 </button>
               </div>
@@ -2244,27 +2261,7 @@ function App() {
                   );
                 })}
               </div>
-              
-              <div className="mb-4">
-                <button
-                  onClick={() => handleStartModerateFinalExam("Present")}
-                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium mb-2"
-                >
-                  🎓 Take Final Exam (Present)
-                </button>
-                <button
-                  onClick={() => handleStartModerateFinalExam("Past")}
-                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium mb-2"
-                >
-                  🎓 Take Final Exam (Past)
-                </button>
-                <button
-                  onClick={() => handleStartModerateFinalExam("Future")}
-                  className="w-full p-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium"
-                >
-                  🎓 Take Final Exam (Future)
-                </button>
-              </div>
+
               
               <button
                 onClick={() => {
@@ -2536,31 +2533,98 @@ function App() {
           </div>
         )}
 
-        {/* Moderate Course Time Frame Modal */}
-        {showModerateCourseModal && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
-              <h3 className="text-2xl font-bold text-center mb-4">🟡 Moderate Course</h3>
-              <p className="text-slate-300 text-center mb-6">Coming soon...</p>
-              <button
-                onClick={() => {
-                  setShowModerateCourseModal(false);
-                  setShowMiniCoursesModal(true);
-                }}
-                className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
-              >
-                Back to Mini-Courses
-              </button>
-            </div>
-          </div>
-        )}
 
-        {/* Difficult Course Time Frame Modal */}
+
+        {/* Difficult Course Modal */}
         {showDifficultCourseModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-4">🔴 Difficult Course</h3>
-              <p className="text-slate-300 text-center mb-6">Coming soon...</p>
+              <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
+              <div className="space-y-3 mb-6">
+                {["Present", "Past", "Future"].map((timeFrame, index) => {
+                  // Check completion status for Difficult course
+                  const completed = completedCourses.find(course => 
+                    course.courseType === "difficult" && 
+                    course.timeFrame === timeFrame
+                  );
+                  const isCompleted = completed && completed.examPassed;
+                  
+                  // Check for in-progress
+                  const inProgress = courseProgressData.find(progress => 
+                    progress.courseType === "difficult" && 
+                    progress.timeFrame === timeFrame &&
+                    !progress.isCompleted
+                  );
+                  
+                  // For Difficult level, require Moderate completion first
+                  const moderateCompleted = completedCourses.some(course => 
+                    course.courseType === "moderate" && course.examPassed
+                  );
+                  const isLocked = !moderateCompleted;
+                  
+                  const iconMap = {
+                    "Past": "⏮️",
+                    "Present": "▶️",
+                    "Future": "⏭️"
+                  };
+                  
+                  return (
+                    <button
+                      key={timeFrame}
+                      onClick={() => !isLocked && handleDifficultCourseTimeFrame(timeFrame)}
+                      disabled={isLocked}
+                      className={`w-full p-4 text-left ${
+                        isLocked
+                          ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                          : isCompleted && completed?.examPassed
+                          ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                          : isCompleted 
+                          ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                          : inProgress
+                          ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                          : timeFrame === "Past"
+                          ? 'bg-purple-500/20 border border-purple-500/30 hover:bg-purple-500/30'
+                          : timeFrame === "Present"
+                          ? 'bg-green-500/20 border border-green-500/30 hover:bg-green-500/30'
+                          : 'bg-blue-500/20 border border-blue-500/30 hover:bg-blue-500/30'
+                      } rounded-xl text-white`}
+                    >
+                      <div className={`font-semibold text-lg ${
+                        isCompleted && completed?.examPassed
+                          ? 'text-green-300'
+                          : isCompleted
+                          ? 'text-green-200'
+                          : inProgress
+                          ? 'text-orange-200'
+                          : timeFrame === "Past"
+                          ? 'text-purple-200'
+                          : timeFrame === "Present"
+                          ? 'text-green-200'
+                          : 'text-blue-200'
+                      }`}>
+                        {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
+                        {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
+                        {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
+                        {isLocked && <span className="text-sm">🔒 Complete Moderate first</span>}
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
+                      </div>
+                      {inProgress && (
+                        <div className="text-orange-200 text-xs mt-1">
+                          Progress: {inProgress.currentVerbIndex}/13 units & exam completed
+                        </div>
+                      )}
+                      {isCompleted && (
+                        <div className="text-green-200 text-xs mt-1">
+                          Progress: 13/13 units & exam completed
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
               <button
                 onClick={() => {
                   setShowDifficultCourseModal(false);
