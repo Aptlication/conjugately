@@ -1068,12 +1068,19 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 // Helper function to convert tense before applying negation (prevents "will don't")
 function convertTenseBeforeNegation(sentence: string, tense: string, pronoun: string): string {
   if (tense === 'futur_simple') {
-    // Convert present to future before negation: "He makes" → "He will make"
+    // Convert present to future before negation with proper "to be" handling
     const words = sentence.split(' ');
     if (words.length >= 2) {
       const subject = words[0];
       const verb = words[1];
       const rest = words.slice(2).join(' ');
+      
+      // CRITICAL: Handle "to be" verbs specially for future tense
+      if (verb === 'am' || verb === 'is' || verb === 'are') {
+        return `${subject} will be${rest ? ' ' + rest : ''}`;
+      }
+      
+      // For other verbs, convert to base form
       const baseVerb = getBaseVerb(verb);
       return `${subject} will ${baseVerb}${rest ? ' ' + rest : ''}`;
     }
@@ -1658,7 +1665,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     
     // CRITICAL: Apply tense conversion FIRST, then handle negation
     if (normalizedTense === 'futur_simple') {
-      // For future tense: convert present to future first
+      // For future tense: convert present to future first, BEFORE any negation logic
       englishQuestion = convertTenseBeforeNegation(englishQuestion, 'futur_simple', pronoun);
     }
     
@@ -1676,9 +1683,15 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           englishQuestion = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun);
         }
         
-        // CRITICAL: Final cleanup of any "will don't" constructions that slipped through
+        // CRITICAL: Final cleanup of any grammar issues that slipped through
         englishQuestion = englishQuestion.replace(/will don't/g, "won't");
         englishQuestion = englishQuestion.replace(/will doesn't/g, "won't");
+        englishQuestion = englishQuestion.replace(/will am/g, "will be");
+        englishQuestion = englishQuestion.replace(/will is/g, "will be");
+        englishQuestion = englishQuestion.replace(/will are/g, "will be");
+        englishQuestion = englishQuestion.replace(/won't am/g, "won't be");
+        englishQuestion = englishQuestion.replace(/won't is/g, "won't be");
+        englishQuestion = englishQuestion.replace(/won't are/g, "won't be");
       }
     } else {
       // For positive questions, only process if context is NOT already negative
@@ -1697,6 +1710,13 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           .replace("We are not", "We are")
           .replace("You are not", "You are")
           .replace("They are not", "They are");
+      }
+      
+      // CRITICAL: Apply same cleanup for positive future tense questions
+      if (normalizedTense === 'futur_simple') {
+        englishQuestion = englishQuestion.replace(/will am/g, "will be");
+        englishQuestion = englishQuestion.replace(/will is/g, "will be");
+        englishQuestion = englishQuestion.replace(/will are/g, "will be");
       }
     }
     
