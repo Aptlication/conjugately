@@ -1065,6 +1065,30 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
 
 // Helper function to get English conjugation for Beginner mode
 // Convert positive English sentences to negative
+// Helper function to convert tense before applying negation (prevents "will don't")
+function convertTenseBeforeNegation(sentence: string, tense: string, pronoun: string): string {
+  if (tense === 'futur_simple') {
+    // Convert present to future before negation: "He makes" → "He will make"
+    const words = sentence.split(' ');
+    if (words.length >= 2) {
+      const subject = words[0];
+      const verb = words[1];
+      const rest = words.slice(2).join(' ');
+      const baseVerb = getBaseVerb(verb);
+      return `${subject} will ${baseVerb}${rest ? ' ' + rest : ''}`;
+    }
+  }
+  return sentence;
+}
+
+// Helper function to apply simple negation without double negatives
+function applySimpleNegation(sentence: string): string {
+  if (sentence.includes(' will ')) {
+    return sentence.replace(' will ', ' won\'t ');
+  }
+  return sentence;
+}
+
 // CRITICAL: Fix English grammar by applying proper third-person singular conjugation
 function fixEnglishGrammar(sentence: string): string {
   // Handle "see" verb conjugation errors
@@ -1632,17 +1656,29 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     // Convert English to proper tense based on French tense
     let englishQuestion = fixEnglishGrammar(context.en);
     
+    // CRITICAL: Apply tense conversion FIRST, then handle negation
+    if (normalizedTense === 'futur_simple') {
+      // For future tense: convert present to future first
+      englishQuestion = convertTenseBeforeNegation(englishQuestion, 'futur_simple', pronoun);
+    }
+    
     // Handle negation properly - respect predefined negatives or apply new negation
     if (shouldBeNegative) {
       // If context is already negative, use it as-is; otherwise convert to negative
       if ((context as any).negative) {
-        englishQuestion = context.en; // Keep predefined negative as-is
+        englishQuestion = fixEnglishGrammar(context.en); // Keep predefined negatives
       } else {
-        let converted = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun); // Convert positive to negative
-        // Apply comprehensive grammar fixes after conversion
-        converted = converted.replace(/will don't/g, "won't");
-        converted = converted.replace(/will doesn't/g, "won't"); 
-        englishQuestion = converted;
+        // For future tense, simply replace "will" with "won't" - NO other negation logic
+        if (normalizedTense === 'futur_simple') {
+          englishQuestion = englishQuestion.replace(/ will /g, " won't ");
+        } else {
+          // For other tenses, apply negation to original context (before tense conversion)
+          englishQuestion = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun);
+        }
+        
+        // CRITICAL: Final cleanup of any "will don't" constructions that slipped through
+        englishQuestion = englishQuestion.replace(/will don't/g, "won't");
+        englishQuestion = englishQuestion.replace(/will doesn't/g, "won't");
       }
     } else {
       // For positive questions, only process if context is NOT already negative

@@ -1,0 +1,6 @@
+[
+  "Je vois le problème",
+  "Je vais voir le problème",
+  "Je verrais le problème",
+  "J'avais vu le problème"
+]

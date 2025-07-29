@@ -1,0 +1,160 @@
+I am happy.
+You are tired.
+He is a student.
+She is a teacher.
+We are friends.
+You (plural) are ready.
+They are busy.
+I am not here.
+She is not sick.
+We are not late.
+I have a car.
+You have time.
+He has money.
+She has a dog.
+We have homework.
+You (plural) have luck.
+They have problems.
+I don't have anything.
+She has a choice.
+We have time.
+I do homework.
+You make dinner.
+He does exercise.
+She makes a cake.
+We do shopping.
+You (plural) make music.
+They do work.
+I don't do anything.
+She doesn't make mistakes.
+We don't do that.
+I see the problem.
+You see the movie.
+He sees his friend.
+She sees the cat.
+We see the truth.
+You (plural) see the light.
+They see the ocean.
+I don't see anything.
+She sees well.
+We don't see him.
+I say hello.
+You say the truth.
+He says yes.
+She says no.
+We say goodbye.
+You (plural) say thanks.
+They say something.
+I don't say anything.
+She doesn't say that.
+We don't say bad words.
+I know the answer.
+You know French.
+He knows the way.
+She knows the secret.
+We know the truth.
+You (plural) know music.
+They know something.
+I don't know anything.
+She doesn't know him.
+We don't know where.
+I can swim.
+You can dance.
+He can run.
+She can sing.
+We can help.
+You (plural) can come.
+They can work.
+I can't sleep.
+She can't come.
+We can't wait.
+I want coffee.
+You want to go.
+He wants money.
+She wants to learn.
+We want peace.
+You (plural) want to eat.
+They want freedom.
+I don't want anything.
+She doesn't want to go.
+We don't want problems.
+I come home.
+You come early.
+He comes here.
+She comes tomorrow.
+We come together.
+You (plural) come often.
+They come late.
+I don't come often.
+She doesn't come today.
+We don't come here.
+I go to school.
+You go home.
+He goes to work.
+She goes to the store.
+We go to the park.
+You (plural) go to the cinema.
+They go to the beach.
+I don't go there.
+She doesn't go out.
+We don't go often.
+I get up early.
+You wake up late.
+He gets up at 7.
+She gets up quickly.
+We get up together.
+You (plural) get up slowly.
+They get up first.
+I don't get up early.
+She doesn't get up easily.
+We don't get up late.
+I am called Marie.
+You are called Paul.
+He is called Jean.
+She is called Sophie.
+We are called students.
+You (plural) are called friends.
+They are called teachers.
+I am not called that.
+She is not called Marie.
+We are not called beginners.
+I feel good.
+You feel tired.
+He feels happy.
+She feels sad.
+We feel confident.
+You (plural) feel ready.
+They feel nervous.
+I don't feel well.
+She doesn't feel safe.
+We don't feel comfortable.
+I wash myself.
+You wash your hands.
+He washes his face.
+She washes her hair.
+We wash ourselves daily.
+You (plural) wash quickly.
+They wash carefully.
+I don't wash often.
+She doesn't wash well.
+We don't wash there.
+I wake up early.
+You wake up late.
+He wakes up at dawn.
+She wakes up naturally.
+We wake up together.
+You (plural) wake up slowly.
+They wake up refreshed.
+I don't wake up easily.
+She doesn't wake up early.
+We don't wake up late.
+I get dressed quickly.
+You dress elegantly.
+He dresses for work.
+She dresses warmly.
+We dress similarly.
+You (plural) dress formally.
+They dress casually.
+I don't dress up.
+She doesn't dress warmly.
+We don't dress alike.

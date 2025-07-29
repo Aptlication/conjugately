@@ -1,0 +1,886 @@
+client/src/hooks/use-mobile.tsx:13:    mql.addEventListener("change", onChange)
+client/src/hooks/use-mobile.tsx:15:    return () => mql.removeEventListener("change", onChange)
+client/src/hooks/use-toast.ts:6:} from "@/components/ui/toast"
+client/src/hooks/use-toast.ts:19:  ADD_TOAST: "ADD_TOAST",
+client/src/hooks/use-toast.ts:20:  UPDATE_TOAST: "UPDATE_TOAST",
+client/src/hooks/use-toast.ts:21:  DISMISS_TOAST: "DISMISS_TOAST",
+client/src/hooks/use-toast.ts:22:  REMOVE_TOAST: "REMOVE_TOAST",
+client/src/hooks/use-toast.ts:36:      type: ActionType["ADD_TOAST"]
+client/src/hooks/use-toast.ts:40:      type: ActionType["UPDATE_TOAST"]
+client/src/hooks/use-toast.ts:44:      type: ActionType["DISMISS_TOAST"]
+client/src/hooks/use-toast.ts:45:      toastId?: ToasterToast["id"]
+client/src/hooks/use-toast.ts:48:      type: ActionType["REMOVE_TOAST"]
+client/src/hooks/use-toast.ts:49:      toastId?: ToasterToast["id"]
+client/src/hooks/use-toast.ts:66:      type: "REMOVE_TOAST",
+client/src/hooks/use-toast.ts:76:    case "ADD_TOAST":
+client/src/hooks/use-toast.ts:82:    case "UPDATE_TOAST":
+client/src/hooks/use-toast.ts:90:    case "DISMISS_TOAST": {
+client/src/hooks/use-toast.ts:115:    case "REMOVE_TOAST":
+client/src/hooks/use-toast.ts:140:type Toast = Omit<ToasterToast, "id">
+client/src/hooks/use-toast.ts:147:      type: "UPDATE_TOAST",
+client/src/hooks/use-toast.ts:150:  const dismiss = () => dispatch({ type: "DISMISS_TOAST", toastId: id })
+client/src/hooks/use-toast.ts:153:    type: "ADD_TOAST",
+client/src/hooks/use-toast.ts:187:    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+client/src/components/ui/dialog.tsx:1:"use client"
+client/src/components/ui/dialog.tsx:24:      "fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+client/src/components/ui/dialog.tsx:41:        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+client/src/components/ui/dialog.tsx:62:      "flex flex-col space-y-1.5 text-center sm:text-left",
+client/src/components/ui/dialog.tsx:68:DialogHeader.displayName = "DialogHeader"
+client/src/components/ui/dialog.tsx:76:      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+client/src/components/ui/dialog.tsx:82:DialogFooter.displayName = "DialogFooter"
+client/src/components/ui/dialog.tsx:91:      "text-lg font-semibold leading-none tracking-tight",
+client/src/components/ui/resizable.tsx:1:"use client"
+client/src/components/ui/resizable.tsx:14:      "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+client/src/components/ui/resizable.tsx:32:      "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
+client/src/components/ui/breadcrumb.tsx:9:  React.ComponentPropsWithoutRef<"nav"> & {
+client/src/components/ui/breadcrumb.tsx:12:>(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />)
+client/src/components/ui/breadcrumb.tsx:13:Breadcrumb.displayName = "Breadcrumb"
+client/src/components/ui/breadcrumb.tsx:17:  React.ComponentPropsWithoutRef<"ol">
+client/src/components/ui/breadcrumb.tsx:22:      "flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5",
+client/src/components/ui/breadcrumb.tsx:28:BreadcrumbList.displayName = "BreadcrumbList"
+client/src/components/ui/breadcrumb.tsx:32:  React.ComponentPropsWithoutRef<"li">
+client/src/components/ui/breadcrumb.tsx:40:BreadcrumbItem.displayName = "BreadcrumbItem"
+client/src/components/ui/breadcrumb.tsx:44:  React.ComponentPropsWithoutRef<"a"> & {
+client/src/components/ui/breadcrumb.tsx:48:  const Comp = asChild ? Slot : "a"
+client/src/components/ui/breadcrumb.tsx:58:BreadcrumbLink.displayName = "BreadcrumbLink"
+client/src/components/ui/breadcrumb.tsx:62:  React.ComponentPropsWithoutRef<"span">
+client/src/components/ui/breadcrumb.tsx:66:    role="link"
+client/src/components/ui/breadcrumb.tsx:67:    aria-disabled="true"
+client/src/components/ui/breadcrumb.tsx:68:    aria-current="page"
+client/src/components/ui/breadcrumb.tsx:73:BreadcrumbPage.displayName = "BreadcrumbPage"
+client/src/components/ui/breadcrumb.tsx:79:}: React.ComponentProps<"li">) => (
+client/src/components/ui/breadcrumb.tsx:81:    role="presentation"
+client/src/components/ui/breadcrumb.tsx:82:    aria-hidden="true"
+client/src/components/ui/breadcrumb.tsx:89:BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+client/src/components/ui/breadcrumb.tsx:94:}: React.ComponentProps<"span">) => (
+client/src/components/ui/breadcrumb.tsx:96:    role="presentation"
+client/src/components/ui/breadcrumb.tsx:97:    aria-hidden="true"
+client/src/components/ui/breadcrumb.tsx:105:BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+client/src/components/ui/separator.tsx:19:        "shrink-0 bg-border",
+client/src/components/ui/separator.tsx:20:        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+client/src/components/ui/popover.tsx:20:        "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-popover-content-transform-origin]",
+client/src/components/ui/toast.tsx:17:      "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
+client/src/components/ui/toast.tsx:26:  "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
+client/src/components/ui/toast.tsx:30:        default: "border bg-background text-foreground",
+client/src/components/ui/toast.tsx:32:          "destructive group border-destructive bg-destructive text-destructive-foreground",
+client/src/components/ui/toast.tsx:36:      variant: "default",
+client/src/components/ui/toast.tsx:63:      "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
+client/src/components/ui/toast.tsx:78:      "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
+client/src/components/ui/textarea.tsx:7:  React.ComponentProps<"textarea">
+client/src/components/ui/textarea.tsx:12:        "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+client/src/components/ui/textarea.tsx:20:Textarea.displayName = "Textarea"
+client/src/components/ui/calendar.tsx:21:        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
+client/src/components/ui/calendar.tsx:22:        month: "space-y-4",
+client/src/components/ui/calendar.tsx:23:        caption: "flex justify-center pt-1 relative items-center",
+client/src/components/ui/calendar.tsx:24:        caption_label: "text-sm font-medium",
+client/src/components/ui/calendar.tsx:25:        nav: "space-x-1 flex items-center",
+client/src/components/ui/calendar.tsx:27:          buttonVariants({ variant: "outline" }),
+client/src/components/ui/calendar.tsx:28:          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+client/src/components/ui/calendar.tsx:30:        nav_button_previous: "absolute left-1",
+client/src/components/ui/calendar.tsx:31:        nav_button_next: "absolute right-1",
+client/src/components/ui/calendar.tsx:32:        table: "w-full border-collapse space-y-1",
+client/src/components/ui/calendar.tsx:33:        head_row: "flex",
+client/src/components/ui/calendar.tsx:35:          "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
+client/src/components/ui/calendar.tsx:36:        row: "flex w-full mt-2",
+client/src/components/ui/calendar.tsx:37:        cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+client/src/components/ui/calendar.tsx:39:          buttonVariants({ variant: "ghost" }),
+client/src/components/ui/calendar.tsx:40:          "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
+client/src/components/ui/calendar.tsx:42:        day_range_end: "day-range-end",
+client/src/components/ui/calendar.tsx:44:          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+client/src/components/ui/calendar.tsx:45:        day_today: "bg-accent text-accent-foreground",
+client/src/components/ui/calendar.tsx:47:          "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
+client/src/components/ui/calendar.tsx:48:        day_disabled: "text-muted-foreground opacity-50",
+client/src/components/ui/calendar.tsx:50:          "aria-selected:bg-accent aria-selected:text-accent-foreground",
+client/src/components/ui/calendar.tsx:51:        day_hidden: "invisible",
+client/src/components/ui/calendar.tsx:66:Calendar.displayName = "Calendar"
+client/src/components/ui/button.tsx:8:  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+client/src/components/ui/button.tsx:12:        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+client/src/components/ui/button.tsx:14:          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+client/src/components/ui/button.tsx:16:          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+client/src/components/ui/button.tsx:18:          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+client/src/components/ui/button.tsx:19:        ghost: "hover:bg-accent hover:text-accent-foreground",
+client/src/components/ui/button.tsx:20:        link: "text-primary underline-offset-4 hover:underline",
+client/src/components/ui/button.tsx:23:        default: "h-10 px-4 py-2",
+client/src/components/ui/button.tsx:24:        sm: "h-9 rounded-md px-3",
+client/src/components/ui/button.tsx:25:        lg: "h-11 rounded-md px-8",
+client/src/components/ui/button.tsx:26:        icon: "h-10 w-10",
+client/src/components/ui/button.tsx:30:      variant: "default",
+client/src/components/ui/button.tsx:31:      size: "default",
+client/src/components/ui/button.tsx:44:    const Comp = asChild ? Slot : "button"
+client/src/components/ui/button.tsx:54:Button.displayName = "Button"
+client/src/components/ui/avatar.tsx:1:"use client"
+client/src/components/ui/avatar.tsx:15:      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+client/src/components/ui/avatar.tsx:42:      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+client/src/components/ui/drawer.tsx:1:"use client"
+client/src/components/ui/drawer.tsx:17:Drawer.displayName = "Drawer"
+client/src/components/ui/drawer.tsx:46:        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
+client/src/components/ui/drawer.tsx:56:DrawerContent.displayName = "DrawerContent"
+client/src/components/ui/drawer.tsx:67:DrawerHeader.displayName = "DrawerHeader"
+client/src/components/ui/drawer.tsx:78:DrawerFooter.displayName = "DrawerFooter"
+client/src/components/ui/drawer.tsx:87:      "text-lg font-semibold leading-none tracking-tight",
+client/src/components/ui/slider.tsx:13:      "relative flex w-full touch-none select-none items-center",
+client/src/components/ui/form.tsx:1:"use client"
+client/src/components/ui/form.tsx:13:} from "react-hook-form"
+client/src/components/ui/form.tsx:52:    throw new Error("useFormField should be used within <FormField>")
+client/src/components/ui/form.tsx:87:FormItem.displayName = "FormItem"
+client/src/components/ui/form.tsx:104:FormLabel.displayName = "FormLabel"
+client/src/components/ui/form.tsx:126:FormControl.displayName = "FormControl"
+client/src/components/ui/form.tsx:143:FormDescription.displayName = "FormDescription"
+client/src/components/ui/form.tsx:167:FormMessage.displayName = "FormMessage"
+client/src/components/ui/radio-group.tsx:29:        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+client/src/components/ui/toggle.tsx:8:  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
+client/src/components/ui/toggle.tsx:12:        default: "bg-transparent",
+client/src/components/ui/toggle.tsx:14:          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+client/src/components/ui/toggle.tsx:17:        default: "h-10 px-3 min-w-10",
+client/src/components/ui/toggle.tsx:18:        sm: "h-9 px-2.5 min-w-9",
+client/src/components/ui/toggle.tsx:19:        lg: "h-11 px-5 min-w-11",
+client/src/components/ui/toggle.tsx:23:      variant: "default",
+client/src/components/ui/toggle.tsx:24:      size: "default",
+client/src/components/ui/input.tsx:5:const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+client/src/components/ui/input.tsx:11:          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+client/src/components/ui/input.tsx:20:Input.displayName = "Input"
+client/src/components/ui/sidebar.tsx:17:} from "@/components/ui/sheet"
+client/src/components/ui/sidebar.tsx:24:} from "@/components/ui/tooltip"
+client/src/components/ui/sidebar.tsx:26:const SIDEBAR_COOKIE_NAME = "sidebar_state"
+client/src/components/ui/sidebar.tsx:28:const SIDEBAR_WIDTH = "16rem"
+client/src/components/ui/sidebar.tsx:29:const SIDEBAR_WIDTH_MOBILE = "18rem"
+client/src/components/ui/sidebar.tsx:30:const SIDEBAR_WIDTH_ICON = "3rem"
+client/src/components/ui/sidebar.tsx:31:const SIDEBAR_KEYBOARD_SHORTCUT = "b"
+client/src/components/ui/sidebar.tsx:34:  state: "expanded" | "collapsed"
+client/src/components/ui/sidebar.tsx:48:    throw new Error("useSidebar must be used within a SidebarProvider.")
+client/src/components/ui/sidebar.tsx:56:  React.ComponentProps<"div"> & {
+client/src/components/ui/sidebar.tsx:83:        const openState = typeof value === "function" ? value(open) : value
+client/src/components/ui/sidebar.tsx:115:      window.addEventListener("keydown", handleKeyDown)
+client/src/components/ui/sidebar.tsx:116:      return () => window.removeEventListener("keydown", handleKeyDown)
+client/src/components/ui/sidebar.tsx:119:    // We add a state so that we can do data-state="expanded" or "collapsed".
+client/src/components/ui/sidebar.tsx:121:    const state = open ? "expanded" : "collapsed"
+client/src/components/ui/sidebar.tsx:142:                "--sidebar-width": SIDEBAR_WIDTH,
+client/src/components/ui/sidebar.tsx:143:                "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
+client/src/components/ui/sidebar.tsx:148:              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+client/src/components/ui/sidebar.tsx:161:SidebarProvider.displayName = "SidebarProvider"
+client/src/components/ui/sidebar.tsx:165:  React.ComponentProps<"div"> & {
+client/src/components/ui/sidebar.tsx:166:    side?: "left" | "right"
+client/src/components/ui/sidebar.tsx:167:    variant?: "sidebar" | "floating" | "inset"
+client/src/components/ui/sidebar.tsx:168:    collapsible?: "offcanvas" | "icon" | "none"
+client/src/components/ui/sidebar.tsx:173:      side = "left",
+client/src/components/ui/sidebar.tsx:174:      variant = "sidebar",
+client/src/components/ui/sidebar.tsx:175:      collapsible = "offcanvas",
+client/src/components/ui/sidebar.tsx:184:    if (collapsible === "none") {
+client/src/components/ui/sidebar.tsx:188:            "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+client/src/components/ui/sidebar.tsx:203:            data-sidebar="sidebar"
+client/src/components/ui/sidebar.tsx:204:            data-mobile="true"
+client/src/components/ui/sidebar.tsx:208:                "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
+client/src/components/ui/sidebar.tsx:228:        data-collapsible={state === "collapsed" ? collapsible : ""}
+client/src/components/ui/sidebar.tsx:235:            "relative w-[--sidebar-width] bg-transparent transition-[width] duration-200 ease-linear",
+client/src/components/ui/sidebar.tsx:236:            "group-data-[collapsible=offcanvas]:w-0",
+client/src/components/ui/sidebar.tsx:237:            "group-data-[side=right]:rotate-180",
+client/src/components/ui/sidebar.tsx:238:            variant === "floating" || variant === "inset"
+client/src/components/ui/sidebar.tsx:239:              ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
+client/src/components/ui/sidebar.tsx:240:              : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+client/src/components/ui/sidebar.tsx:245:            "fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] duration-200 ease-linear md:flex",
+client/src/components/ui/sidebar.tsx:246:            side === "left"
+client/src/components/ui/sidebar.tsx:247:              ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
+client/src/components/ui/sidebar.tsx:248:              : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
+client/src/components/ui/sidebar.tsx:250:            variant === "floating" || variant === "inset"
+client/src/components/ui/sidebar.tsx:251:              ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
+client/src/components/ui/sidebar.tsx:252:              : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
+client/src/components/ui/sidebar.tsx:258:            data-sidebar="sidebar"
+client/src/components/ui/sidebar.tsx:268:Sidebar.displayName = "Sidebar"
+client/src/components/ui/sidebar.tsx:279:      data-sidebar="trigger"
+client/src/components/ui/sidebar.tsx:280:      variant="ghost"
+client/src/components/ui/sidebar.tsx:281:      size="icon"
+client/src/components/ui/sidebar.tsx:294:SidebarTrigger.displayName = "SidebarTrigger"
+client/src/components/ui/sidebar.tsx:298:  React.ComponentProps<"button">
+client/src/components/ui/sidebar.tsx:305:      data-sidebar="rail"
+client/src/components/ui/sidebar.tsx:306:      aria-label="Toggle Sidebar"
+client/src/components/ui/sidebar.tsx:309:      title="Toggle Sidebar"
+client/src/components/ui/sidebar.tsx:311:        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
+client/src/components/ui/sidebar.tsx:312:        "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
+client/src/components/ui/sidebar.tsx:313:        "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
+client/src/components/ui/sidebar.tsx:314:        "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
+client/src/components/ui/sidebar.tsx:315:        "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
+client/src/components/ui/sidebar.tsx:316:        "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
+client/src/components/ui/sidebar.tsx:323:SidebarRail.displayName = "SidebarRail"
+client/src/components/ui/sidebar.tsx:327:  React.ComponentProps<"main">
+client/src/components/ui/sidebar.tsx:333:        "relative flex w-full flex-1 flex-col bg-background",
+client/src/components/ui/sidebar.tsx:334:        "md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+client/src/components/ui/sidebar.tsx:341:SidebarInset.displayName = "SidebarInset"
+client/src/components/ui/sidebar.tsx:350:      data-sidebar="input"
+client/src/components/ui/sidebar.tsx:352:        "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+client/src/components/ui/sidebar.tsx:359:SidebarInput.displayName = "SidebarInput"
+client/src/components/ui/sidebar.tsx:363:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:368:      data-sidebar="header"
+client/src/components/ui/sidebar.tsx:374:SidebarHeader.displayName = "SidebarHeader"
+client/src/components/ui/sidebar.tsx:378:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:383:      data-sidebar="footer"
+client/src/components/ui/sidebar.tsx:389:SidebarFooter.displayName = "SidebarFooter"
+client/src/components/ui/sidebar.tsx:398:      data-sidebar="separator"
+client/src/components/ui/sidebar.tsx:404:SidebarSeparator.displayName = "SidebarSeparator"
+client/src/components/ui/sidebar.tsx:408:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:413:      data-sidebar="content"
+client/src/components/ui/sidebar.tsx:415:        "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+client/src/components/ui/sidebar.tsx:422:SidebarContent.displayName = "SidebarContent"
+client/src/components/ui/sidebar.tsx:426:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:431:      data-sidebar="group"
+client/src/components/ui/sidebar.tsx:437:SidebarGroup.displayName = "SidebarGroup"
+client/src/components/ui/sidebar.tsx:441:  React.ComponentProps<"div"> & { asChild?: boolean }
+client/src/components/ui/sidebar.tsx:443:  const Comp = asChild ? Slot : "div"
+client/src/components/ui/sidebar.tsx:448:      data-sidebar="group-label"
+client/src/components/ui/sidebar.tsx:450:        "flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium text-sidebar-foreground/70 outline-none ring-sidebar-ring transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+client/src/components/ui/sidebar.tsx:451:        "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
+client/src/components/ui/sidebar.tsx:458:SidebarGroupLabel.displayName = "SidebarGroupLabel"
+client/src/components/ui/sidebar.tsx:462:  React.ComponentProps<"button"> & { asChild?: boolean }
+client/src/components/ui/sidebar.tsx:464:  const Comp = asChild ? Slot : "button"
+client/src/components/ui/sidebar.tsx:469:      data-sidebar="group-action"
+client/src/components/ui/sidebar.tsx:471:        "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+client/src/components/ui/sidebar.tsx:473:        "after:absolute after:-inset-2 after:md:hidden",
+client/src/components/ui/sidebar.tsx:474:        "group-data-[collapsible=icon]:hidden",
+client/src/components/ui/sidebar.tsx:481:SidebarGroupAction.displayName = "SidebarGroupAction"
+client/src/components/ui/sidebar.tsx:485:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:489:    data-sidebar="group-content"
+client/src/components/ui/sidebar.tsx:494:SidebarGroupContent.displayName = "SidebarGroupContent"
+client/src/components/ui/sidebar.tsx:498:  React.ComponentProps<"ul">
+client/src/components/ui/sidebar.tsx:502:    data-sidebar="menu"
+client/src/components/ui/sidebar.tsx:507:SidebarMenu.displayName = "SidebarMenu"
+client/src/components/ui/sidebar.tsx:511:  React.ComponentProps<"li">
+client/src/components/ui/sidebar.tsx:515:    data-sidebar="menu-item"
+client/src/components/ui/sidebar.tsx:520:SidebarMenuItem.displayName = "SidebarMenuItem"
+client/src/components/ui/sidebar.tsx:523:  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-none ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+client/src/components/ui/sidebar.tsx:527:        default: "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+client/src/components/ui/sidebar.tsx:529:          "bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
+client/src/components/ui/sidebar.tsx:532:        default: "h-8 text-sm",
+client/src/components/ui/sidebar.tsx:533:        sm: "h-7 text-xs",
+client/src/components/ui/sidebar.tsx:534:        lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0",
+client/src/components/ui/sidebar.tsx:538:      variant: "default",
+client/src/components/ui/sidebar.tsx:539:      size: "default",
+client/src/components/ui/sidebar.tsx:546:  React.ComponentProps<"button"> & {
+client/src/components/ui/sidebar.tsx:556:      variant = "default",
+client/src/components/ui/sidebar.tsx:557:      size = "default",
+client/src/components/ui/sidebar.tsx:564:    const Comp = asChild ? Slot : "button"
+client/src/components/ui/sidebar.tsx:570:        data-sidebar="menu-button"
+client/src/components/ui/sidebar.tsx:582:    if (typeof tooltip === "string") {
+client/src/components/ui/sidebar.tsx:592:          side="right"
+client/src/components/ui/sidebar.tsx:593:          align="center"
+client/src/components/ui/sidebar.tsx:594:          hidden={state !== "collapsed" || isMobile}
+client/src/components/ui/sidebar.tsx:601:SidebarMenuButton.displayName = "SidebarMenuButton"
+client/src/components/ui/sidebar.tsx:605:  React.ComponentProps<"button"> & {
+client/src/components/ui/sidebar.tsx:610:  const Comp = asChild ? Slot : "button"
+client/src/components/ui/sidebar.tsx:615:      data-sidebar="menu-action"
+client/src/components/ui/sidebar.tsx:617:        "absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0",
+client/src/components/ui/sidebar.tsx:619:        "after:absolute after:-inset-2 after:md:hidden",
+client/src/components/ui/sidebar.tsx:620:        "peer-data-[size=sm]/menu-button:top-1",
+client/src/components/ui/sidebar.tsx:621:        "peer-data-[size=default]/menu-button:top-1.5",
+client/src/components/ui/sidebar.tsx:622:        "peer-data-[size=lg]/menu-button:top-2.5",
+client/src/components/ui/sidebar.tsx:623:        "group-data-[collapsible=icon]:hidden",
+client/src/components/ui/sidebar.tsx:625:          "group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:opacity-0",
+client/src/components/ui/sidebar.tsx:632:SidebarMenuAction.displayName = "SidebarMenuAction"
+client/src/components/ui/sidebar.tsx:636:  React.ComponentProps<"div">
+client/src/components/ui/sidebar.tsx:640:    data-sidebar="menu-badge"
+client/src/components/ui/sidebar.tsx:642:      "pointer-events-none absolute right-1 flex h-5 min-w-5 select-none items-center justify-center rounded-md px-1 text-xs font-medium tabular-nums text-sidebar-foreground",
+client/src/components/ui/sidebar.tsx:643:      "peer-hover/menu-button:text-sidebar-accent-foreground peer-data-[active=true]/menu-button:text-sidebar-accent-foreground",
+client/src/components/ui/sidebar.tsx:644:      "peer-data-[size=sm]/menu-button:top-1",
+client/src/components/ui/sidebar.tsx:645:      "peer-data-[size=default]/menu-button:top-1.5",
+client/src/components/ui/sidebar.tsx:646:      "peer-data-[size=lg]/menu-button:top-2.5",
+client/src/components/ui/sidebar.tsx:647:      "group-data-[collapsible=icon]:hidden",
+client/src/components/ui/sidebar.tsx:653:SidebarMenuBadge.displayName = "SidebarMenuBadge"
+client/src/components/ui/sidebar.tsx:657:  React.ComponentProps<"div"> & {
+client/src/components/ui/sidebar.tsx:669:      data-sidebar="menu-skeleton"
+client/src/components/ui/sidebar.tsx:676:          data-sidebar="menu-skeleton-icon"
+client/src/components/ui/sidebar.tsx:681:        data-sidebar="menu-skeleton-text"
+client/src/components/ui/sidebar.tsx:684:            "--skeleton-width": width,
+client/src/components/ui/sidebar.tsx:691:SidebarMenuSkeleton.displayName = "SidebarMenuSkeleton"
+client/src/components/ui/sidebar.tsx:695:  React.ComponentProps<"ul">
+client/src/components/ui/sidebar.tsx:699:    data-sidebar="menu-sub"
+client/src/components/ui/sidebar.tsx:701:      "mx-3.5 flex min-w-0 translate-x-px flex-col gap-1 border-l border-sidebar-border px-2.5 py-0.5",
+client/src/components/ui/sidebar.tsx:702:      "group-data-[collapsible=icon]:hidden",
+client/src/components/ui/sidebar.tsx:708:SidebarMenuSub.displayName = "SidebarMenuSub"
+client/src/components/ui/sidebar.tsx:712:  React.ComponentProps<"li">
+client/src/components/ui/sidebar.tsx:714:SidebarMenuSubItem.displayName = "SidebarMenuSubItem"
+client/src/components/ui/sidebar.tsx:718:  React.ComponentProps<"a"> & {
+client/src/components/ui/sidebar.tsx:720:    size?: "sm" | "md"
+client/src/components/ui/sidebar.tsx:724:  const Comp = asChild ? Slot : "a"
+client/src/components/ui/sidebar.tsx:729:      data-sidebar="menu-sub-button"
+client/src/components/ui/sidebar.tsx:733:        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
+client/src/components/ui/sidebar.tsx:734:        "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
+client/src/components/ui/sidebar.tsx:735:        size === "sm" && "text-xs",
+client/src/components/ui/sidebar.tsx:736:        size === "md" && "text-sm",
+client/src/components/ui/sidebar.tsx:737:        "group-data-[collapsible=icon]:hidden",
+client/src/components/ui/sidebar.tsx:744:SidebarMenuSubButton.displayName = "SidebarMenuSubButton"
+client/src/components/ui/checkbox.tsx:14:      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+client/src/components/ui/carousel.tsx:4:} from "embla-carousel-react"
+client/src/components/ui/carousel.tsx:18:  orientation?: "horizontal" | "vertical"
+client/src/components/ui/carousel.tsx:37:    throw new Error("useCarousel must be used within a <Carousel />")
+client/src/components/ui/carousel.tsx:49:      orientation = "horizontal",
+client/src/components/ui/carousel.tsx:62:        axis: orientation === "horizontal" ? "x" : "y",
+client/src/components/ui/carousel.tsx:88:        if (event.key === "ArrowLeft") {
+client/src/components/ui/carousel.tsx:91:        } else if (event.key === "ArrowRight") {
+client/src/components/ui/carousel.tsx:113:      api.on("reInit", onSelect)
+client/src/components/ui/carousel.tsx:114:      api.on("select", onSelect)
+client/src/components/ui/carousel.tsx:117:        api?.off("select", onSelect)
+client/src/components/ui/carousel.tsx:128:            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+client/src/components/ui/carousel.tsx:139:          role="region"
+client/src/components/ui/carousel.tsx:140:          aria-roledescription="carousel"
+client/src/components/ui/carousel.tsx:149:Carousel.displayName = "Carousel"
+client/src/components/ui/carousel.tsx:162:          "flex",
+client/src/components/ui/carousel.tsx:163:          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+client/src/components/ui/carousel.tsx:171:CarouselContent.displayName = "CarouselContent"
+client/src/components/ui/carousel.tsx:182:      role="group"
+client/src/components/ui/carousel.tsx:183:      aria-roledescription="slide"
+client/src/components/ui/carousel.tsx:185:        "min-w-0 shrink-0 grow-0 basis-full",
+client/src/components/ui/carousel.tsx:186:        orientation === "horizontal" ? "pl-4" : "pt-4",
+client/src/components/ui/carousel.tsx:193:CarouselItem.displayName = "CarouselItem"
+client/src/components/ui/carousel.tsx:207:        "absolute  h-8 w-8 rounded-full",
+client/src/components/ui/carousel.tsx:208:        orientation === "horizontal"
+client/src/components/ui/carousel.tsx:209:          ? "-left-12 top-1/2 -translate-y-1/2"
+client/src/components/ui/carousel.tsx:210:          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+client/src/components/ui/carousel.tsx:222:CarouselPrevious.displayName = "CarouselPrevious"
+client/src/components/ui/carousel.tsx:236:        "absolute h-8 w-8 rounded-full",
+client/src/components/ui/carousel.tsx:237:        orientation === "horizontal"
+client/src/components/ui/carousel.tsx:238:          ? "-right-12 top-1/2 -translate-y-1/2"
+client/src/components/ui/carousel.tsx:239:          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+client/src/components/ui/carousel.tsx:251:CarouselNext.displayName = "CarouselNext"
+client/src/components/ui/card.tsx:12:      "rounded-lg border bg-card text-card-foreground shadow-sm",
+client/src/components/ui/card.tsx:18:Card.displayName = "Card"
+client/src/components/ui/card.tsx:30:CardHeader.displayName = "CardHeader"
+client/src/components/ui/card.tsx:39:      "text-2xl font-semibold leading-none tracking-tight",
+client/src/components/ui/card.tsx:45:CardTitle.displayName = "CardTitle"
+client/src/components/ui/card.tsx:57:CardDescription.displayName = "CardDescription"
+client/src/components/ui/card.tsx:65:CardContent.displayName = "CardContent"
+client/src/components/ui/card.tsx:77:CardFooter.displayName = "CardFooter"
+client/src/components/ui/chart.tsx:1:"use client"
+client/src/components/ui/chart.tsx:9:const THEMES = { light: "", dark: ".dark" } as const
+client/src/components/ui/chart.tsx:31:    throw new Error("useChart must be used within a <ChartContainer />")
+client/src/components/ui/chart.tsx:39:  React.ComponentProps<"div"> & {
+client/src/components/ui/chart.tsx:43:    >["children"]
+client/src/components/ui/chart.tsx:55:          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",
+client/src/components/ui/chart.tsx:68:ChartContainer.displayName = "Chart"
+client/src/components/ui/chart.tsx:93:  .join("\n")}
+client/src/components/ui/chart.tsx:97:          .join("\n"),
+client/src/components/ui/chart.tsx:108:    React.ComponentProps<"div"> & {
+client/src/components/ui/chart.tsx:111:      indicator?: "line" | "dot" | "dashed"
+client/src/components/ui/chart.tsx:121:      indicator = "dot",
+client/src/components/ui/chart.tsx:142:      const key = `${labelKey || item?.dataKey || item?.name || "value"}`
+client/src/components/ui/chart.tsx:145:        !labelKey && typeof label === "string"
+client/src/components/ui/chart.tsx:176:    const nestLabel = payload.length === 1 && indicator !== "dot"
+client/src/components/ui/chart.tsx:182:          "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl",
+client/src/components/ui/chart.tsx:189:            const key = `${nameKey || item.name || item.dataKey || "value"}`
+client/src/components/ui/chart.tsx:197:                  "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-muted-foreground",
+client/src/components/ui/chart.tsx:198:                  indicator === "dot" && "items-center"
+client/src/components/ui/chart.tsx:211:                            "shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]",
+client/src/components/ui/chart.tsx:213:                              "h-2.5 w-2.5": indicator === "dot",
+client/src/components/ui/chart.tsx:214:                              "w-1": indicator === "line",
+client/src/components/ui/chart.tsx:215:                              "w-0 border-[1.5px] border-dashed bg-transparent":
+client/src/components/ui/chart.tsx:216:                                indicator === "dashed",
+client/src/components/ui/chart.tsx:217:                              "my-0.5": nestLabel && indicator === "dashed",
+client/src/components/ui/chart.tsx:222:                              "--color-bg": indicatorColor,
+client/src/components/ui/chart.tsx:223:                              "--color-border": indicatorColor,
+client/src/components/ui/chart.tsx:231:                        "flex flex-1 justify-between leading-none",
+client/src/components/ui/chart.tsx:232:                        nestLabel ? "items-end" : "items-center"
+client/src/components/ui/chart.tsx:257:ChartTooltipContent.displayName = "ChartTooltip"
+client/src/components/ui/chart.tsx:263:  React.ComponentProps<"div"> &
+client/src/components/ui/chart.tsx:264:    Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
+client/src/components/ui/chart.tsx:283:          "flex items-center justify-center gap-4",
+client/src/components/ui/chart.tsx:284:          verticalAlign === "top" ? "pb-3" : "pt-3",
+client/src/components/ui/chart.tsx:289:          const key = `${nameKey || item.dataKey || "value"}`
+client/src/components/ui/chart.tsx:296:                "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
+client/src/components/ui/chart.tsx:317:ChartLegendContent.displayName = "ChartLegend"
+client/src/components/ui/chart.tsx:325:  if (typeof payload !== "object" || payload === null) {
+client/src/components/ui/chart.tsx:330:    "payload" in payload &&
+client/src/components/ui/chart.tsx:331:    typeof payload.payload === "object" &&
+client/src/components/ui/chart.tsx:340:    typeof payload[key as keyof typeof payload] === "string"
+client/src/components/ui/chart.tsx:346:    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
+client/src/components/ui/menubar.tsx:1:"use client"
+client/src/components/ui/menubar.tsx:36:  return <MenubarPrimitive.Sub data-slot="menubar-sub" {...props} />
+client/src/components/ui/menubar.tsx:46:      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+client/src/components/ui/menubar.tsx:61:      "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+client/src/components/ui/menubar.tsx:78:      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+client/src/components/ui/menubar.tsx:79:      inset && "pl-8",
+client/src/components/ui/menubar.tsx:97:      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-menubar-content-transform-origin]",
+client/src/components/ui/menubar.tsx:120:          "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-menubar-content-transform-origin]",
+client/src/components/ui/menubar.tsx:139:      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/menubar.tsx:140:      inset && "pl-8",
+client/src/components/ui/menubar.tsx:155:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/menubar.tsx:178:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/menubar.tsx:202:      "px-2 py-1.5 text-sm font-semibold",
+client/src/components/ui/menubar.tsx:203:      inset && "pl-8",
+client/src/components/ui/menubar.tsx:230:        "ml-auto text-xs tracking-widest text-muted-foreground",
+client/src/components/ui/menubar.tsx:237:MenubarShortcut.displayname = "MenubarShortcut"
+client/src/components/ui/tabs.tsx:15:      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+client/src/components/ui/tabs.tsx:30:      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+client/src/components/ui/tabs.tsx:45:      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+client/src/components/ui/switch.tsx:12:      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+client/src/components/ui/switch.tsx:20:        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+client/src/components/ui/dropdown-menu.tsx:28:      "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+client/src/components/ui/dropdown-menu.tsx:29:      inset && "pl-8",
+client/src/components/ui/dropdown-menu.tsx:48:      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-dropdown-menu-content-transform-origin]",
+client/src/components/ui/dropdown-menu.tsx:66:        "z-50 max-h-[var(--radix-dropdown-menu-content-available-height)] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-dropdown-menu-content-transform-origin]",
+client/src/components/ui/dropdown-menu.tsx:84:      "relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+client/src/components/ui/dropdown-menu.tsx:85:      inset && "pl-8",
+client/src/components/ui/dropdown-menu.tsx:100:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/dropdown-menu.tsx:124:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/dropdown-menu.tsx:148:      "px-2 py-1.5 text-sm font-semibold",
+client/src/components/ui/dropdown-menu.tsx:149:      inset && "pl-8",
+client/src/components/ui/dropdown-menu.tsx:180:DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
+client/src/components/ui/context-menu.tsx:28:      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+client/src/components/ui/context-menu.tsx:29:      inset && "pl-8",
+client/src/components/ui/context-menu.tsx:47:      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-context-menu-content-transform-origin]",
+client/src/components/ui/context-menu.tsx:63:        "z-50 max-h-[--radix-context-menu-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-context-menu-content-transform-origin]",
+client/src/components/ui/context-menu.tsx:81:      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/context-menu.tsx:82:      inset && "pl-8",
+client/src/components/ui/context-menu.tsx:97:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/context-menu.tsx:121:      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/context-menu.tsx:145:      "px-2 py-1.5 text-sm font-semibold text-foreground",
+client/src/components/ui/context-menu.tsx:146:      inset && "pl-8",
+client/src/components/ui/context-menu.tsx:173:        "ml-auto text-xs tracking-widest text-muted-foreground",
+client/src/components/ui/context-menu.tsx:180:ContextMenuShortcut.displayName = "ContextMenuShortcut"
+client/src/components/ui/command.tsx:16:      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
+client/src/components/ui/command.tsx:45:        "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
+client/src/components/ui/command.tsx:88:      "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground",
+client/src/components/ui/command.tsx:116:      "relative flex cursor-default gap-2 select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+client/src/components/ui/command.tsx:132:        "ml-auto text-xs tracking-widest text-muted-foreground",
+client/src/components/ui/command.tsx:139:CommandShortcut.displayName = "CommandShortcut"
+client/src/components/ui/input-otp.tsx:14:      "flex items-center gap-2 has-[:disabled]:opacity-50",
+client/src/components/ui/input-otp.tsx:21:InputOTP.displayName = "InputOTP"
+client/src/components/ui/input-otp.tsx:24:  React.ElementRef<"div">,
+client/src/components/ui/input-otp.tsx:25:  React.ComponentPropsWithoutRef<"div">
+client/src/components/ui/input-otp.tsx:29:InputOTPGroup.displayName = "InputOTPGroup"
+client/src/components/ui/input-otp.tsx:32:  React.ElementRef<"div">,
+client/src/components/ui/input-otp.tsx:33:  React.ComponentPropsWithoutRef<"div"> & { index: number }
+client/src/components/ui/input-otp.tsx:42:        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
+client/src/components/ui/input-otp.tsx:43:        isActive && "z-10 ring-2 ring-ring ring-offset-background",
+client/src/components/ui/input-otp.tsx:57:InputOTPSlot.displayName = "InputOTPSlot"
+client/src/components/ui/input-otp.tsx:60:  React.ElementRef<"div">,
+client/src/components/ui/input-otp.tsx:61:  React.ComponentPropsWithoutRef<"div">
+client/src/components/ui/input-otp.tsx:63:  <div ref={ref} role="separator" {...props}>
+client/src/components/ui/input-otp.tsx:67:InputOTPSeparator.displayName = "InputOTPSeparator"
+client/src/components/ui/accordion.tsx:19:AccordionItem.displayName = "AccordionItem"
+client/src/components/ui/accordion.tsx:29:        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+client/src/components/ui/sheet.tsx:1:"use client"
+client/src/components/ui/sheet.tsx:24:      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+client/src/components/ui/sheet.tsx:34:  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+client/src/components/ui/sheet.tsx:38:        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
+client/src/components/ui/sheet.tsx:40:          "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
+client/src/components/ui/sheet.tsx:41:        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+client/src/components/ui/sheet.tsx:43:          "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
+client/src/components/ui/sheet.tsx:47:      side: "right",
+client/src/components/ui/sheet.tsx:83:      "flex flex-col space-y-2 text-center sm:text-left",
+client/src/components/ui/sheet.tsx:89:SheetHeader.displayName = "SheetHeader"
+client/src/components/ui/sheet.tsx:97:      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+client/src/components/ui/sheet.tsx:103:SheetFooter.displayName = "SheetFooter"
+client/src/components/ui/hover-card.tsx:1:"use client"
+client/src/components/ui/hover-card.tsx:21:      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-hover-card-content-transform-origin]",
+client/src/components/ui/collapsible.tsx:1:"use client"
+client/src/components/ui/table.tsx:17:Table.displayName = "Table"
+client/src/components/ui/table.tsx:25:TableHeader.displayName = "TableHeader"
+client/src/components/ui/table.tsx:37:TableBody.displayName = "TableBody"
+client/src/components/ui/table.tsx:46:      "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
+client/src/components/ui/table.tsx:52:TableFooter.displayName = "TableFooter"
+client/src/components/ui/table.tsx:61:      "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+client/src/components/ui/table.tsx:67:TableRow.displayName = "TableRow"
+client/src/components/ui/table.tsx:76:      "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+client/src/components/ui/table.tsx:82:TableHead.displayName = "TableHead"
+client/src/components/ui/table.tsx:94:TableCell.displayName = "TableCell"
+client/src/components/ui/table.tsx:106:TableCaption.displayName = "TableCaption"
+client/src/components/ui/scroll-area.tsx:32:      "flex touch-none select-none transition-colors",
+client/src/components/ui/scroll-area.tsx:33:      orientation === "vertical" &&
+client/src/components/ui/scroll-area.tsx:34:        "h-full w-2.5 border-l border-l-transparent p-[1px]",
+client/src/components/ui/scroll-area.tsx:35:      orientation === "horizontal" &&
+client/src/components/ui/scroll-area.tsx:36:        "h-2.5 flex-col border-t border-t-transparent p-[1px]",
+client/src/components/ui/toaster.tsx:9:} from "@/components/ui/toast"
+client/src/components/ui/alert.tsx:7:  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+client/src/components/ui/alert.tsx:11:        default: "bg-background text-foreground",
+client/src/components/ui/alert.tsx:13:          "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
+client/src/components/ui/alert.tsx:17:      variant: "default",
+client/src/components/ui/alert.tsx:28:    role="alert"
+client/src/components/ui/alert.tsx:33:Alert.displayName = "Alert"
+client/src/components/ui/alert.tsx:45:AlertTitle.displayName = "AlertTitle"
+client/src/components/ui/alert.tsx:57:AlertDescription.displayName = "AlertDescription"
+client/src/components/ui/select.tsx:1:"use client"
+client/src/components/ui/select.tsx:22:      "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+client/src/components/ui/select.tsx:42:      "flex cursor-default items-center justify-center py-1",
+client/src/components/ui/select.tsx:59:      "flex cursor-default items-center justify-center py-1",
+client/src/components/ui/select.tsx:78:        "relative z-50 max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]",
+client/src/components/ui/select.tsx:79:        position === "popper" &&
+client/src/components/ui/select.tsx:80:          "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+client/src/components/ui/select.tsx:89:          "p-1",
+client/src/components/ui/select.tsx:90:          position === "popper" &&
+client/src/components/ui/select.tsx:91:            "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+client/src/components/ui/select.tsx:121:      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+client/src/components/ui/toggle-group.tsx:1:"use client"
+client/src/components/ui/toggle-group.tsx:13:  size: "default",
+client/src/components/ui/toggle-group.tsx:14:  variant: "default",
+client/src/components/ui/label.tsx:8:  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+client/src/components/ui/alert-dialog.tsx:19:      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+client/src/components/ui/alert-dialog.tsx:37:        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+client/src/components/ui/alert-dialog.tsx:52:      "flex flex-col space-y-2 text-center sm:text-left",
+client/src/components/ui/alert-dialog.tsx:58:AlertDialogHeader.displayName = "AlertDialogHeader"
+client/src/components/ui/alert-dialog.tsx:66:      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+client/src/components/ui/alert-dialog.tsx:72:AlertDialogFooter.displayName = "AlertDialogFooter"
+client/src/components/ui/alert-dialog.tsx:118:      buttonVariants({ variant: "outline" }),
+client/src/components/ui/alert-dialog.tsx:119:      "mt-2 sm:mt-0",
+client/src/components/ui/progress.tsx:1:"use client"
+client/src/components/ui/progress.tsx:15:      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+client/src/components/ui/tooltip.tsx:1:"use client"
+client/src/components/ui/tooltip.tsx:22:      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-tooltip-content-transform-origin]",
+client/src/components/ui/pagination.tsx:9:    role="navigation"
+client/src/components/ui/pagination.tsx:10:    aria-label="pagination"
+client/src/components/ui/pagination.tsx:15:Pagination.displayName = "Pagination"
+client/src/components/ui/pagination.tsx:19:  React.ComponentProps<"ul">
+client/src/components/ui/pagination.tsx:27:PaginationContent.displayName = "PaginationContent"
+client/src/components/ui/pagination.tsx:31:  React.ComponentProps<"li">
+client/src/components/ui/pagination.tsx:35:PaginationItem.displayName = "PaginationItem"
+client/src/components/ui/pagination.tsx:39:} & Pick<ButtonProps, "size"> &
+client/src/components/ui/pagination.tsx:40:  React.ComponentProps<"a">
+client/src/components/ui/pagination.tsx:45:  size = "icon",
+client/src/components/ui/pagination.tsx:49:    aria-current={isActive ? "page" : undefined}
+client/src/components/ui/pagination.tsx:52:        variant: isActive ? "outline" : "ghost",
+client/src/components/ui/pagination.tsx:60:PaginationLink.displayName = "PaginationLink"
+client/src/components/ui/pagination.tsx:67:    aria-label="Go to previous page"
+client/src/components/ui/pagination.tsx:68:    size="default"
+client/src/components/ui/pagination.tsx:76:PaginationPrevious.displayName = "PaginationPrevious"
+client/src/components/ui/pagination.tsx:83:    aria-label="Go to next page"
+client/src/components/ui/pagination.tsx:84:    size="default"
+client/src/components/ui/pagination.tsx:92:PaginationNext.displayName = "PaginationNext"
+client/src/components/ui/pagination.tsx:97:}: React.ComponentProps<"span">) => (
+client/src/components/ui/pagination.tsx:107:PaginationEllipsis.displayName = "PaginationEllipsis"
+client/src/components/ui/navigation-menu.tsx:15:      "relative z-10 flex max-w-max flex-1 items-center justify-center",
+client/src/components/ui/navigation-menu.tsx:33:      "group flex flex-1 list-none items-center justify-center space-x-1",
+client/src/components/ui/navigation-menu.tsx:44:  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-accent-foreground data-[state=open]:bg-accent/50 data-[state=open]:hover:bg-accent data-[state=open]:focus:bg-accent"
+client/src/components/ui/navigation-menu.tsx:59:      aria-hidden="true"
+client/src/components/ui/navigation-menu.tsx:72:      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+client/src/components/ui/navigation-menu.tsx:89:        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+client/src/components/ui/navigation-menu.tsx:107:      "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
+client/src/components/ui/badge.tsx:7:  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+client/src/components/ui/badge.tsx:12:          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+client/src/components/ui/badge.tsx:14:          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+client/src/components/ui/badge.tsx:16:          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+client/src/components/ui/badge.tsx:17:        outline: "text-foreground",
+client/src/components/ui/badge.tsx:21:      variant: "default",
+client/src/components/QuizInterface.tsx:126:                      ? "border-primary bg-primary/10"
+client/src/components/QuizInterface.tsx:127:                      : "border-border bg-input hover:bg-input/80"
+client/src/components/QuizInterface.tsx:143:                variant="ghost"
+client/src/components/QuizInterface.tsx:147:                {showHint ? "Hide Hint" : "Show Hint"}
+client/src/components/QuizInterface.tsx:154:                style={{ background: selectedAnswer !== null ? "var(--purple-gradient)" : undefined }}
+client/src/components/QuizInterface.tsx:156:                {isLastQuestion ? "Finish" : "Next"}
+client/src/lib/queryClient.ts:17:    headers: data ? { "Content-Type": "application/json" } : {},
+client/src/lib/queryClient.ts:19:    credentials: "include",
+client/src/lib/queryClient.ts:26:type UnauthorizedBehavior = "returnNull" | "throw";
+client/src/lib/queryClient.ts:33:      credentials: "include",
+client/src/lib/queryClient.ts:36:    if (unauthorizedBehavior === "returnNull" && res.status === 401) {
+client/src/lib/queryClient.ts:47:      queryFn: getQueryFn({ on401: "throw" }),
+client/src/pages/SimpleQuiz.tsx:2:  console.log("SimpleQuiz component rendering...");
+client/src/pages/FrenchQuiz.tsx:18:  "être", "avoir", "faire", "dire", "aller", 
+client/src/pages/FrenchQuiz.tsx:19:  "voir", "savoir", "pouvoir", "vouloir", "venir"
+client/src/pages/FrenchQuiz.tsx:24:  "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
+client/src/pages/FrenchQuiz.tsx:25:  "Present": ["Présent", "Présent Progressif"],
+client/src/pages/FrenchQuiz.tsx:26:  "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
+client/src/pages/FrenchQuiz.tsx:31:  "Easy": {
+client/src/pages/FrenchQuiz.tsx:32:    verbs: ["être", "avoir", "faire"],
+client/src/pages/FrenchQuiz.tsx:33:    timeFrames: ["Present"],
+client/src/pages/FrenchQuiz.tsx:34:    tenses: ["Présent"]
+client/src/pages/FrenchQuiz.tsx:36:  "Moderate": {
+client/src/pages/FrenchQuiz.tsx:37:    verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
+client/src/pages/FrenchQuiz.tsx:38:    timeFrames: ["Present", "Past"],
+client/src/pages/FrenchQuiz.tsx:39:    tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"]
+client/src/pages/FrenchQuiz.tsx:41:  "Difficult": {
+client/src/pages/FrenchQuiz.tsx:50:  console.log("FrenchQuiz component is rendering!");
+client/src/pages/FrenchQuiz.tsx:103:    if (difficulty === "Easy") {
+client/src/pages/FrenchQuiz.tsx:127:        "Past": "past",
+client/src/pages/FrenchQuiz.tsx:128:        "Present": "present", 
+client/src/pages/FrenchQuiz.tsx:129:        "Future": "future"
+client/src/pages/FrenchQuiz.tsx:467:                        : "Complete all selections to start quiz"
+client/src/pages/FrenchQuiz.tsx:496:                      onClick={() => handleDifficultySelect("Easy")}
+client/src/pages/FrenchQuiz.tsx:508:                      onClick={() => handleDifficultySelect("Moderate")}
+client/src/pages/FrenchQuiz.tsx:520:                      onClick={() => handleDifficultySelect("Difficult")}
+client/src/main-frenchverb.tsx:4:createRoot(document.getElementById("root")!).render(<FreshApp />);
+client/src/fresh-app.tsx:16:  const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
+client/src/fresh-app.tsx:19:    "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
+client/src/fresh-app.tsx:20:    "Present": ["Présent"], 
+client/src/fresh-app.tsx:21:    "Future": ["Futur Simple", "Conditionnel"],
+client/src/fresh-app.tsx:25:    "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
+client/src/fresh-app.tsx:26:    "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
+client/src/fresh-app.tsx:27:    "Difficult": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
+client/src/fresh-app.tsx:35:      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/fresh-app.tsx:89:    if (difficulty === "Easy") {
+client/src/fresh-app.tsx:493:              : "Complete all selections to start quiz"
+client/src/fresh-app.tsx:515:                  onClick={() => handleDifficultySelect("Easy")}
+client/src/fresh-app.tsx:525:                  onClick={() => handleDifficultySelect("Moderate")}
+client/src/fresh-app.tsx:535:                  onClick={() => handleDifficultySelect("Difficult")}
+client/src/main.tsx:6:createRoot(document.getElementById("root")!).render(<App />);
+client/src/App.tsx:90:  const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
+client/src/App.tsx:94:    "être": "to be",
+client/src/App.tsx:95:    "avoir": "to have", 
+client/src/App.tsx:96:    "faire": "to do/make",
+client/src/App.tsx:97:    "dire": "to say/tell",
+client/src/App.tsx:98:    "aller": "to go",
+client/src/App.tsx:99:    "voir": "to see",
+client/src/App.tsx:100:    "savoir": "to know",
+client/src/App.tsx:101:    "pouvoir": "to be able to/can",
+client/src/App.tsx:102:    "vouloir": "to want",
+client/src/App.tsx:103:    "venir": "to come",
+client/src/App.tsx:104:    "se lever": "to get up",
+client/src/App.tsx:105:    "s'appeler": "to be called",
+client/src/App.tsx:106:    "se sentir": "to feel",
+client/src/App.tsx:107:    "se laver": "to wash oneself",
+client/src/App.tsx:108:    "se réveiller": "to wake up",
+client/src/App.tsx:109:    "s'habiller": "to get dressed"
+client/src/App.tsx:113:    "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
+client/src/App.tsx:114:    "Present": ["Présent", "Présent Progressif"], 
+client/src/App.tsx:115:    "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
+client/src/App.tsx:119:    "Beginner": { 
+client/src/App.tsx:120:      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs
+client/src/App.tsx:121:      timeFrames: ["Present", "Past", "Future"], 
+client/src/App.tsx:122:      tenses: ["Présent", "Passé Simple", "Futur Simple"],
+client/src/App.tsx:125:          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+client/src/App.tsx:126:          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+client/src/App.tsx:127:          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+client/src/App.tsx:128:          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
+client/src/App.tsx:134:          description: "10 questions from each of the 4 verbs"
+client/src/App.tsx:138:    "Easy": { 
+client/src/App.tsx:139:      verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], // 6 most used verbs
+client/src/App.tsx:140:      timeFrames: ["Present", "Past", "Future"], 
+client/src/App.tsx:141:      tenses: ["Présent", "Passé Composé", "Futur Simple"],
+client/src/App.tsx:144:          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+client/src/App.tsx:145:          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+client/src/App.tsx:146:          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+client/src/App.tsx:147:          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+client/src/App.tsx:148:          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+client/src/App.tsx:149:          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 }
+client/src/App.tsx:155:          description: "10 questions from each of the 6 verbs"
+client/src/App.tsx:159:    "Moderate": { 
+client/src/App.tsx:160:      verbs: ["être", "avoir", "faire", "dire", "aller", "se lever", "s'appeler", "se sentir"], // 8 verbs (5 regular + 3 reflexive)
+client/src/App.tsx:161:      timeFrames: ["Present", "Past", "Future"], 
+client/src/App.tsx:162:      tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
+client/src/App.tsx:165:          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+client/src/App.tsx:166:          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+client/src/App.tsx:167:          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+client/src/App.tsx:168:          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+client/src/App.tsx:169:          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+client/src/App.tsx:170:          { name: "Unit 6: se lever (to get up)", verb: "se lever", questions: 20 },
+client/src/App.tsx:171:          { name: "Unit 7: s'appeler (to be called)", verb: "s'appeler", questions: 20 },
+client/src/App.tsx:172:          { name: "Unit 8: se sentir (to feel)", verb: "se sentir", questions: 20 }
+client/src/App.tsx:178:          description: "10 questions from each of the 8 verbs"
+client/src/App.tsx:182:    "Difficult": { 
+client/src/App.tsx:183:      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se laver", "se réveiller", "s'habiller"], // 10 regular + 3 reflexive verbs
+client/src/App.tsx:188:          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
+client/src/App.tsx:189:          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
+client/src/App.tsx:190:          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+client/src/App.tsx:191:          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+client/src/App.tsx:192:          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+client/src/App.tsx:193:          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 },
+client/src/App.tsx:194:          { name: "Unit 7: savoir (to know)", verb: "savoir", questions: 20 },
+client/src/App.tsx:195:          { name: "Unit 8: pouvoir (to be able to)", verb: "pouvoir", questions: 20 },
+client/src/App.tsx:196:          { name: "Unit 9: vouloir (to want)", verb: "vouloir", questions: 20 },
+client/src/App.tsx:197:          { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
+client/src/App.tsx:198:          { name: "Unit 11: se laver (to wash oneself)", verb: "se laver", questions: 20 },
+client/src/App.tsx:199:          { name: "Unit 12: se réveiller (to wake up)", verb: "se réveiller", questions: 20 },
+client/src/App.tsx:200:          { name: "Unit 13: s'habiller (to get dressed)", verb: "s'habiller", questions: 20 }
+client/src/App.tsx:206:          description: "10 questions from each of the 13 verbs"
+client/src/App.tsx:215:    if (selectedDifficulty === "Beginner" && !selectedTenseType && selectedTimeFrame) {
+client/src/App.tsx:217:        "Past": "Passé Simple",
+client/src/App.tsx:218:        "Present": "Présent", 
+client/src/App.tsx:219:        "Future": "Futur Simple"
+client/src/App.tsx:224:    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty !== "Beginner")) return;
+client/src/App.tsx:228:      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:292:    if (difficulty === "Easy") {
+client/src/App.tsx:305:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:312:      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:322:            difficulty: "Beginner",
+client/src/App.tsx:356:    if (difficulty === "Beginner") {
+client/src/App.tsx:359:    } else if (difficulty === "Easy") {
+client/src/App.tsx:362:    } else if (difficulty === "Moderate") {
+client/src/App.tsx:365:    } else if (difficulty === "Difficult") {
+client/src/App.tsx:373:      "Past": "Passé Simple",
+client/src/App.tsx:374:      "Present": "Présent", 
+client/src/App.tsx:375:      "Future": "Futur Simple"
+client/src/App.tsx:382:      course.courseType === "beginner" && 
+client/src/App.tsx:389:        await resetCourse("beginner", timeFrame);
+client/src/App.tsx:399:      progress.courseType === "beginner" && 
+client/src/App.tsx:421:        await resetCourse("beginner", timeFrame);
+client/src/App.tsx:461:          courseType: "beginner",
+client/src/App.tsx:477:    const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:479:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:495:            difficulty: "Beginner",
+client/src/App.tsx:541:      "Present": "Présent",
+client/src/App.tsx:542:      "Past": "Passé Composé", 
+client/src/App.tsx:543:      "Future": "Futur Simple"
+client/src/App.tsx:547:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:595:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:665:      setSelectedCourseLevel("Easy");
+client/src/App.tsx:670:        "Present": "Présent",
+client/src/App.tsx:671:        "Past": "Passé Composé", 
+client/src/App.tsx:672:        "Future": "Futur Simple"
+client/src/App.tsx:685:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:701:              difficulty: "Easy",
+client/src/App.tsx:728:        tense: "Mixed Tenses",
+client/src/App.tsx:748:    setSelectedCourseLevel("Easy");
+client/src/App.tsx:761:      "Present": "Présent",
+client/src/App.tsx:762:      "Past": courseLevel === "Easy" ? "Passé Composé" : "Passé Simple", 
+client/src/App.tsx:763:      "Future": "Futur Simple"
+client/src/App.tsx:839:      setSelectedCourseLevel("Moderate");
+client/src/App.tsx:844:        "Present": "Présent",
+client/src/App.tsx:845:        "Past": "Passé Composé", 
+client/src/App.tsx:846:        "Future": "Futur Simple"
+client/src/App.tsx:857:    setSelectedCourseLevel("Moderate");
+client/src/App.tsx:871:      setSelectedCourseLevel("Difficult");
+client/src/App.tsx:876:        "Present": "Présent",
+client/src/App.tsx:877:        "Past": "Passé Composé", 
+client/src/App.tsx:878:        "Future": "Futur Simple"
+client/src/App.tsx:889:    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:904:            tenseType: "Présent", // Use present tense for final exam
+client/src/App.tsx:905:            difficulty: "Easy",
+client/src/App.tsx:1048:                  title="Dismiss"
+client/src/App.tsx:1128:      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:1259:        course.courseType === (courseInfo.courseLevel?.toLowerCase() || "beginner") && 
+client/src/App.tsx:1272:                courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
+client/src/App.tsx:1296:                courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
+client/src/App.tsx:1370:                      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:1373:                        const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:1384:                              difficulty: "Beginner",
+client/src/App.tsx:1597:    const verbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:1600:      "être": {
+client/src/App.tsx:1601:        meaning: "to be",
+client/src/App.tsx:1602:        description: "The most fundamental French verb, used to describe states of being, identity, and characteristics.",
+client/src/App.tsx:1603:        examples: ["Je suis étudiant (I am a student)", "Tu es français (You are French)", "Il est grand (He is tall)"],
+client/src/App.tsx:1604:        color: "blue"
+client/src/App.tsx:1606:      "avoir": {
+client/src/App.tsx:1607:        meaning: "to have", 
+client/src/App.tsx:1608:        description: "Essential for expressing possession, age, and many idiomatic expressions in French.",
+client/src/App.tsx:1609:        examples: ["J'ai un livre (I have a book)", "Tu as faim (You are hungry)", "Elle a vingt ans (She is twenty years old)"],
+client/src/App.tsx:1610:        color: "green"
+client/src/App.tsx:1612:      "faire": {
+client/src/App.tsx:1613:        meaning: "to do/make",
+client/src/App.tsx:1614:        description: "One of the most versatile French verbs, used for actions, weather, and countless expressions.",
+client/src/App.tsx:1615:        examples: ["Je fais mes devoirs (I do my homework)", "Tu fais du sport (You play sports)", "Il fait beau (It's beautiful weather)"],
+client/src/App.tsx:1616:        color: "purple"
+client/src/App.tsx:1618:      "aller": {
+client/src/App.tsx:1619:        meaning: "to go",
+client/src/App.tsx:1620:        description: "Essential for movement and future tense formation, this verb opens up conversations about destinations and plans.",
+client/src/App.tsx:1621:        examples: ["Je vais au cinéma (I go to the cinema)", "Tu vas bien (You are doing well)", "Elle va partir (She is going to leave)"],
+client/src/App.tsx:1622:        color: "orange"
+client/src/App.tsx:1669:                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:1677:                        difficulty: "Beginner",
+client/src/App.tsx:1762:                if (newDifficulty === "Beginner") {
+client/src/App.tsx:1763:                  const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:1798:                {selectedDifficulty ? "Select a verb..." : "Choose difficulty first..."}
+client/src/App.tsx:1800:              {selectedDifficulty && (selectedDifficulty === "Beginner" 
+client/src/App.tsx:1801:                ? ["être", "avoir", "faire", "aller"]
+client/src/App.tsx:1831:                if (selectedDifficulty === "Beginner") {
+client/src/App.tsx:1833:                    "Past": "Passé Simple",
+client/src/App.tsx:1834:                    "Present": "Présent", 
+client/src/App.tsx:1835:                    "Future": "Futur Simple"
+client/src/App.tsx:1854:          {selectedDifficulty !== "Beginner" && (
+client/src/App.tsx:1888:            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty !== "Beginner")}
+client/src/App.tsx:1890:              (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner"))
+client/src/App.tsx:1895:            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner")
+client/src/App.tsx:1896:              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType})`
+client/src/App.tsx:1897:              : "Complete all selections to start quiz"
+client/src/App.tsx:1902:        {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner") && (
+client/src/App.tsx:1906:              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType}</strong> ({selectedDifficulty} difficulty)
+client/src/App.tsx:1917:                  onClick={() => handleDifficultySelect("Beginner")}
+client/src/App.tsx:1927:                  onClick={() => handleDifficultySelect("Easy")}
+client/src/App.tsx:1937:                  onClick={() => handleDifficultySelect("Moderate")}
+client/src/App.tsx:1947:                  onClick={() => handleDifficultySelect("Difficult")}
+client/src/App.tsx:1975:                  onClick={() => handleMiniCourseSelect("Beginner")}
+client/src/App.tsx:1984:                  onClick={() => handleMiniCourseSelect("Easy")}
+client/src/App.tsx:1993:                  onClick={() => handleMiniCourseSelect("Moderate")}
+client/src/App.tsx:2002:                  onClick={() => handleMiniCourseSelect("Difficult")}
+client/src/App.tsx:2050:                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+client/src/App.tsx:2054:                      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+client/src/App.tsx:2065:                            difficulty: "Beginner",
+client/src/App.tsx:2122:                {["Present", "Past", "Future"].map((timeFrame, index) => {
+client/src/App.tsx:2124:                    "Past": "Passé Simple",
+client/src/App.tsx:2125:                    "Present": "Présent", 
+client/src/App.tsx:2126:                    "Future": "Futur Simple"
+client/src/App.tsx:2132:                    course.courseType === "beginner" && 
+client/src/App.tsx:2139:                    progress.courseType === "beginner" && 
+client/src/App.tsx:2147:                  if (timeFrame === "Past") {
+client/src/App.tsx:2150:                      course.courseType === "beginner" && 
+client/src/App.tsx:2151:                      course.timeFrame === "Present" && 
+client/src/App.tsx:2155:                  } else if (timeFrame === "Future") {
+client/src/App.tsx:2158:                      course.courseType === "beginner" && 
+client/src/App.tsx:2159:                      course.timeFrame === "Past" && 
+client/src/App.tsx:2166:                    "Past": "⏮️",
+client/src/App.tsx:2167:                    "Present": "▶️",
+client/src/App.tsx:2168:                    "Future": "⏭️"
+client/src/App.tsx:2172:                    "Present": "1",
+client/src/App.tsx:2173:                    "Past": "2", 
+client/src/App.tsx:2174:                    "Future": "3"
+client/src/App.tsx:2191:                            : timeFrame === "Past"
+client/src/App.tsx:2193:                            : timeFrame === "Present"
+client/src/App.tsx:2203:                          timeFrame === "Past" ? 'text-purple-200' : 
+client/src/App.tsx:2204:                          timeFrame === "Present" ? 'text-green-200' : 
+client/src/App.tsx:2235:                          onClick={(e) => handleResetCourse("beginner", timeFrame, e)}
+client/src/App.tsx:2237:                          title="Reset course (mark as not passed)"
+client/src/App.tsx:2266:                {["Present", "Past", "Future"].map((timeFrame, index) => {
+client/src/App.tsx:2269:                    course.courseType === "easy" && 
+client/src/App.tsx:2276:                    progress.courseType === "easy" && 
+client/src/App.tsx:2283:                    course.courseType === "beginner" && course.examPassed
+client/src/App.tsx:2288:                    "Past": "⏮️",
+client/src/App.tsx:2289:                    "Present": "▶️",
+client/src/App.tsx:2290:                    "Future": "⏭️"
+client/src/App.tsx:2294:                    "Present": "1",
+client/src/App.tsx:2295:                    "Past": "2", 
+client/src/App.tsx:2296:                    "Future": "3"
+client/src/App.tsx:2313:                            : timeFrame === "Past"
+client/src/App.tsx:2315:                            : timeFrame === "Present"
+client/src/App.tsx:2327:                            : timeFrame === "Past"
+client/src/App.tsx:2329:                            : timeFrame === "Present"
+client/src/App.tsx:2356:                          onClick={(e) => handleResetCourse("easy", timeFrame, e)}
+client/src/App.tsx:2358:                          title="Reset course (mark as not passed)"
+client/src/App.tsx:2387:                {["Present", "Past", "Future"].map((timeFrame, index) => {
+client/src/App.tsx:2390:                    course.courseType === "moderate" && 
+client/src/App.tsx:2397:                    progress.courseType === "moderate" && 
+client/src/App.tsx:2404:                    course.courseType === "easy" && course.examPassed
+client/src/App.tsx:2409:                    "Past": "⏮️",
+client/src/App.tsx:2410:                    "Present": "▶️",
+client/src/App.tsx:2411:                    "Future": "⏭️"
+client/src/App.tsx:2428:                            : timeFrame === "Past"
+client/src/App.tsx:2430:                            : timeFrame === "Present"
+client/src/App.tsx:2442:                            : timeFrame === "Past"
+client/src/App.tsx:2444:                            : timeFrame === "Present"
+client/src/App.tsx:2471:                          onClick={(e) => handleResetCourse("moderate", timeFrame, e)}
+client/src/App.tsx:2473:                          title="Reset course (mark as not passed)"
+client/src/App.tsx:2550:                        <li>• Practice {selectedCourseTimeFrame === "Present" ? "Présent" : selectedCourseTimeFrame === "Past" ? "Passé Composé" : "Futur Simple"} conjugations</li>
+client/src/App.tsx:2623:                      "être": {
+client/src/App.tsx:2624:                        meaning: "to be",
+client/src/App.tsx:2625:                        description: "The most fundamental French verb, used to describe states of being, identity, and location.",
+client/src/App.tsx:2626:                        example: "Je suis étudiant. (I am a student.)"
+client/src/App.tsx:2628:                      "avoir": {
+client/src/App.tsx:2629:                        meaning: "to have",
+client/src/App.tsx:2630:                        description: "Essential for expressing possession and forming compound tenses in French.",
+client/src/App.tsx:2631:                        example: "J'ai un livre. (I have a book.)"
+client/src/App.tsx:2633:                      "faire": {
+client/src/App.tsx:2634:                        meaning: "to do/make",
+client/src/App.tsx:2635:                        description: "One of the most versatile verbs, used in countless French expressions and activities.",
+client/src/App.tsx:2636:                        example: "Je fais mes devoirs. (I do my homework.)"
+client/src/App.tsx:2638:                      "dire": {
+client/src/App.tsx:2639:                        meaning: "to say/tell",
+client/src/App.tsx:2640:                        description: "Essential for communication and expressing thoughts in French.",
+client/src/App.tsx:2641:                        example: "Je dis la vérité. (I tell the truth.)"
+client/src/App.tsx:2643:                      "aller": {
+client/src/App.tsx:2644:                        meaning: "to go",
+client/src/App.tsx:2645:                        description: "Crucial for expressing movement and forming the near future tense.",
+client/src/App.tsx:2646:                        example: "Je vais à l'école. (I go to school.)"
+client/src/App.tsx:2648:                      "voir": {
+client/src/App.tsx:2649:                        meaning: "to see",
+client/src/App.tsx:2650:                        description: "Important for expressing perception and understanding.",
+client/src/App.tsx:2651:                        example: "Je vois la tour Eiffel. (I see the Eiffel Tower.)"
+client/src/App.tsx:2656:                      meaning: "French verb",
+client/src/App.tsx:2712:                {selectedUnit === "section1" ? 
+client/src/App.tsx:2713:                  "Choose a section to practice. Complete all parts to unlock the final exam." :
+client/src/App.tsx:2714:                  "Choose an exam part. You must pass both parts with 90% combined score."
+client/src/App.tsx:2729:                {selectedUnit === "section1" && (
+client/src/App.tsx:2753:                {["Present", "Past", "Future"].map((timeFrame, index) => {
+client/src/App.tsx:2756:                    course.courseType === "difficult" && 
+client/src/App.tsx:2763:                    progress.courseType === "difficult" && 
+client/src/App.tsx:2770:                    course.courseType === "moderate" && course.examPassed
+client/src/App.tsx:2775:                    "Past": "⏮️",
+client/src/App.tsx:2776:                    "Present": "▶️",
+client/src/App.tsx:2777:                    "Future": "⏭️"
+client/src/App.tsx:2794:                            : timeFrame === "Past"
+client/src/App.tsx:2796:                            : timeFrame === "Present"
+client/src/App.tsx:2808:                            : timeFrame === "Past"
+client/src/App.tsx:2810:                            : timeFrame === "Present"
+client/src/App.tsx:2837:                          onClick={(e) => handleResetCourse("difficult", timeFrame, e)}
+client/src/App.tsx:2839:                          title="Reset course (mark as not passed)"

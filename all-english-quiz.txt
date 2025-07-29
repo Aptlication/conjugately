@@ -1,0 +1,422 @@
+1:import { GeneratedQuiz } from "./gemini-quiz";
+7:      je: "suis", tu: "es", il: "est", elle: "est", 
+8:      nous: "sommes", vous: "êtes", ils: "sont", elles: "sont"
+11:      je: "ai été", tu: "as été", il: "a été", elle: "a été",
+12:      nous: "avons été", vous: "avez été", ils: "ont été", elles: "ont été"
+15:      je: "fus", tu: "fus", il: "fut", elle: "fut",
+16:      nous: "fûmes", vous: "fûtes", ils: "furent", elles: "furent"
+19:      je: "étais", tu: "étais", il: "était", elle: "était",
+20:      nous: "étions", vous: "étiez", ils: "étaient", elles: "étaient"
+23:      je: "avais été", tu: "avais été", il: "avait été", elle: "avait été",
+24:      nous: "avions été", vous: "aviez été", ils: "avaient été", elles: "avaient été"
+27:      je: "serais", tu: "serais", il: "serait", elle: "serait",
+28:      nous: "serions", vous: "seriez", ils: "seraient", elles: "seraient"
+31:      je: "serai", tu: "seras", il: "sera", elle: "sera",
+32:      nous: "serons", vous: "serez", ils: "seront", elles: "seront"
+35:      je: "vais être", tu: "vas être", il: "va être", elle: "va être",
+36:      nous: "allons être", vous: "allez être", ils: "vont être", elles: "vont être"
+39:      je: "suis en train d'être", tu: "es en train d'être", il: "est en train d'être", elle: "est en train d'être",
+40:      nous: "sommes en train d'être", vous: "êtes en train d'être", ils: "sont en train d'être", elles: "sont en train d'être"
+45:      je: "ai", tu: "as", il: "a", elle: "a",
+46:      nous: "avons", vous: "avez", ils: "ont", elles: "ont"
+49:      je: "ai eu", tu: "as eu", il: "a eu", elle: "a eu",
+50:      nous: "avons eu", vous: "avez eu", ils: "ont eu", elles: "ont eu"
+53:      je: "eus", tu: "eus", il: "eut", elle: "eut",
+54:      nous: "eûmes", vous: "eûtes", ils: "eurent", elles: "eurent"
+57:      je: "avais", tu: "avais", il: "avait", elle: "avait",
+58:      nous: "avions", vous: "aviez", ils: "avaient", elles: "avaient"
+61:      je: "avais eu", tu: "avais eu", il: "avait eu", elle: "avait eu",
+62:      nous: "avions eu", vous: "aviez eu", ils: "avaient eu", elles: "avaient eu"
+65:      je: "aurais", tu: "aurais", il: "aurait", elle: "aurait",
+66:      nous: "aurions", vous: "auriez", ils: "auraient", elles: "auraient"
+69:      je: "aurai", tu: "auras", il: "aura", elle: "aura",
+70:      nous: "aurons", vous: "aurez", ils: "auront", elles: "auront"
+73:      je: "vais avoir", tu: "vas avoir", il: "va avoir", elle: "va avoir",
+74:      nous: "allons avoir", vous: "allez avoir", ils: "vont avoir", elles: "vont avoir"
+77:      je: "suis en train d'avoir", tu: "es en train d'avoir", il: "est en train d'avoir", elle: "est en train d'avoir",
+78:      nous: "sommes en train d'avoir", vous: "êtes en train d'avoir", ils: "sont en train d'avoir", elles: "sont en train d'avoir"
+83:      je: "fais", tu: "fais", il: "fait", elle: "fait",
+84:      nous: "faisons", vous: "faites", ils: "font", elles: "font"
+87:      je: "ai fait", tu: "as fait", il: "a fait", elle: "a fait",
+88:      nous: "avons fait", vous: "avez fait", ils: "ont fait", elles: "ont fait"
+91:      je: "fis", tu: "fis", il: "fit", elle: "fit",
+92:      nous: "fîmes", vous: "fîtes", ils: "firent", elles: "firent"
+95:      je: "faisais", tu: "faisais", il: "faisait", elle: "faisait",
+96:      nous: "faisions", vous: "faisiez", ils: "faisaient", elles: "faisaient"
+99:      je: "avais fait", tu: "avais fait", il: "avait fait", elle: "avait fait",
+100:      nous: "avions fait", vous: "aviez fait", ils: "avaient fait", elles: "avaient fait"
+103:      je: "ferais", tu: "ferais", il: "ferait", elle: "ferait",
+104:      nous: "ferions", vous: "feriez", ils: "feraient", elles: "feraient"
+107:      je: "ferai", tu: "feras", il: "fera", elle: "fera",
+108:      nous: "ferons", vous: "ferez", ils: "feront", elles: "feront"
+111:      je: "vais faire", tu: "vas faire", il: "va faire", elle: "va faire",
+112:      nous: "allons faire", vous: "allez faire", ils: "vont faire", elles: "vont faire"
+115:      je: "suis en train de faire", tu: "es en train de faire", il: "est en train de faire", elle: "est en train de faire",
+116:      nous: "sommes en train de faire", vous: "êtes en train de faire", ils: "sont en train de faire", elles: "sont en train de faire"
+121:      je: "vais", tu: "vas", il: "va", elle: "va",
+122:      nous: "allons", vous: "allez", ils: "vont", elles: "vont"
+125:      je: "suis allé(e)", tu: "es allé(e)", il: "est allé", elle: "est allée",
+126:      nous: "sommes allé(e)s", vous: "êtes allé(e)s", ils: "sont allés", elles: "sont allées"
+129:      je: "allai", tu: "allas", il: "alla", elle: "alla",
+130:      nous: "allâmes", vous: "allâtes", ils: "allèrent", elles: "allèrent"
+133:      je: "allais", tu: "allais", il: "allait", elle: "allait",
+134:      nous: "allions", vous: "alliez", ils: "allaient", elles: "allaient"
+137:      je: "étais allé(e)", tu: "étais allé(e)", il: "était allé", elle: "était allée",
+138:      nous: "étions allé(e)s", vous: "étiez allé(e)s", ils: "étaient allés", elles: "étaient allées"
+141:      je: "irais", tu: "irais", il: "irait", elle: "irait",
+142:      nous: "irions", vous: "iriez", ils: "iraient", elles: "iraient"
+145:      je: "irai", tu: "iras", il: "ira", elle: "ira",
+146:      nous: "irons", vous: "irez", ils: "iront", elles: "iront"
+149:      je: "vais aller", tu: "vas aller", il: "va aller", elle: "va aller",
+150:      nous: "allons aller", vous: "allez aller", ils: "vont aller", elles: "vont aller"
+153:      je: "suis en train d'aller", tu: "es en train d'aller", il: "est en train d'aller", elle: "est en train d'aller",
+154:      nous: "sommes en train d'aller", vous: "êtes en train d'aller", ils: "sont en train d'aller", elles: "sont en train d'aller"
+159:      je: "vois", tu: "vois", il: "voit", elle: "voit",
+160:      nous: "voyons", vous: "voyez", ils: "voient", elles: "voient"
+163:      je: "ai vu", tu: "as vu", il: "a vu", elle: "a vu",
+164:      nous: "avons vu", vous: "avez vu", ils: "ont vu", elles: "ont vu"
+167:      je: "vis", tu: "vis", il: "vit", elle: "vit",
+168:      nous: "vîmes", vous: "vîtes", ils: "virent", elles: "virent"
+171:      je: "voyais", tu: "voyais", il: "voyait", elle: "voyait",
+172:      nous: "voyions", vous: "voyiez", ils: "voyaient", elles: "voyaient"
+175:      je: "avais vu", tu: "avais vu", il: "avait vu", elle: "avait vu",
+176:      nous: "avions vu", vous: "aviez vu", ils: "avaient vu", elles: "avaient vu"
+179:      je: "verrais", tu: "verrais", il: "verrait", elle: "verrait",
+180:      nous: "verrions", vous: "verriez", ils: "verraient", elles: "verraient"
+183:      je: "verrai", tu: "verras", il: "verra", elle: "verra",
+184:      nous: "verrons", vous: "verrez", ils: "verront", elles: "verront"
+187:      je: "vais voir", tu: "vas voir", il: "va voir", elle: "va voir",
+188:      nous: "allons voir", vous: "allez voir", ils: "vont voir", elles: "vont voir"
+191:      je: "suis en train de voir", tu: "es en train de voir", il: "est en train de voir", elle: "est en train de voir",
+192:      nous: "sommes en train de voir", vous: "êtes en train de voir", ils: "sont en train de voir", elles: "sont en train de voir"
+197:      je: "dis", tu: "dis", il: "dit", elle: "dit",
+198:      nous: "disons", vous: "dites", ils: "disent", elles: "disent"
+201:      je: "ai dit", tu: "as dit", il: "a dit", elle: "a dit",
+202:      nous: "avons dit", vous: "avez dit", ils: "ont dit", elles: "ont dit"
+205:      je: "dis", tu: "dis", il: "dit", elle: "dit",
+206:      nous: "dîmes", vous: "dîtes", ils: "dirent", elles: "dirent"
+209:      je: "disais", tu: "disais", il: "disait", elle: "disait",
+210:      nous: "disions", vous: "disiez", ils: "disaient", elles: "disaient"
+213:      je: "avais dit", tu: "avais dit", il: "avait dit", elle: "avait dit",
+214:      nous: "avions dit", vous: "aviez dit", ils: "avaient dit", elles: "avaient dit"
+217:      je: "dirais", tu: "dirais", il: "dirait", elle: "dirait",
+218:      nous: "dirions", vous: "diriez", ils: "diraient", elles: "diraient"
+221:      je: "dirai", tu: "diras", il: "dira", elle: "dira",
+222:      nous: "dirons", vous: "direz", ils: "diront", elles: "diront"
+225:      je: "vais dire", tu: "vas dire", il: "va dire", elle: "va dire",
+226:      nous: "allons dire", vous: "allez dire", ils: "vont dire", elles: "vont dire"
+229:      je: "suis en train de dire", tu: "es en train de dire", il: "est en train de dire", elle: "est en train de dire",
+230:      nous: "sommes en train de dire", vous: "êtes en train de dire", ils: "sont en train de dire", elles: "sont en train de dire"
+235:      je: "sais", tu: "sais", il: "sait", elle: "sait",
+236:      nous: "savons", vous: "savez", ils: "savent", elles: "savent"
+239:      je: "ai su", tu: "as su", il: "a su", elle: "a su",
+240:      nous: "avons su", vous: "avez su", ils: "ont su", elles: "ont su"
+243:      je: "sus", tu: "sus", il: "sut", elle: "sut",
+244:      nous: "sûmes", vous: "sûtes", ils: "surent", elles: "surent"
+247:      je: "savais", tu: "savais", il: "savait", elle: "savait",
+248:      nous: "savions", vous: "saviez", ils: "savaient", elles: "savaient"
+251:      je: "avais su", tu: "avais su", il: "avait su", elle: "avait su",
+252:      nous: "avions su", vous: "aviez su", ils: "avaient su", elles: "avaient su"
+255:      je: "saurais", tu: "saurais", il: "saurait", elle: "saurait",
+256:      nous: "saurions", vous: "sauriez", ils: "sauraient", elles: "sauraient"
+259:      je: "saurai", tu: "sauras", il: "saura", elle: "saura",
+260:      nous: "saurons", vous: "saurez", ils: "sauront", elles: "sauront"
+263:      je: "vais savoir", tu: "vas savoir", il: "va savoir", elle: "va savoir",
+264:      nous: "allons savoir", vous: "allez savoir", ils: "vont savoir", elles: "vont savoir"
+267:      je: "suis en train de savoir", tu: "es en train de savoir", il: "est en train de savoir", elle: "est en train de savoir",
+268:      nous: "sommes en train de savoir", vous: "êtes en train de savoir", ils: "sont en train de savoir", elles: "sont en train de savoir"
+273:      je: "peux", tu: "peux", il: "peut", elle: "peut",
+274:      nous: "pouvons", vous: "pouvez", ils: "peuvent", elles: "peuvent"
+277:      je: "ai pu", tu: "as pu", il: "a pu", elle: "a pu",
+278:      nous: "avons pu", vous: "avez pu", ils: "ont pu", elles: "ont pu"
+281:      je: "pus", tu: "pus", il: "put", elle: "put",
+282:      nous: "pûmes", vous: "pûtes", ils: "purent", elles: "purent"
+285:      je: "pouvais", tu: "pouvais", il: "pouvait", elle: "pouvait",
+286:      nous: "pouvions", vous: "pouviez", ils: "pouvaient", elles: "pouvaient"
+289:      je: "avais pu", tu: "avais pu", il: "avait pu", elle: "avait pu",
+290:      nous: "avions pu", vous: "aviez pu", ils: "avaient pu", elles: "avaient pu"
+293:      je: "pourrais", tu: "pourrais", il: "pourrait", elle: "pourrait",
+294:      nous: "pourrions", vous: "pourriez", ils: "pourraient", elles: "pourraient"
+297:      je: "pourrai", tu: "pourras", il: "pourra", elle: "pourra",
+298:      nous: "pourrons", vous: "pourrez", ils: "pourront", elles: "pourront"
+301:      je: "vais pouvoir", tu: "vas pouvoir", il: "va pouvoir", elle: "va pouvoir",
+302:      nous: "allons pouvoir", vous: "allez pouvoir", ils: "vont pouvoir", elles: "vont pouvoir"
+305:      je: "suis en train de pouvoir", tu: "es en train de pouvoir", il: "est en train de pouvoir", elle: "est en train de pouvoir",
+306:      nous: "sommes en train de pouvoir", vous: "êtes en train de pouvoir", ils: "sont en train de pouvoir", elles: "sont en train de pouvoir"
+311:      je: "veux", tu: "veux", il: "veut", elle: "veut",
+312:      nous: "voulons", vous: "voulez", ils: "veulent", elles: "veulent"
+315:      je: "ai voulu", tu: "as voulu", il: "a voulu", elle: "a voulu",
+316:      nous: "avons voulu", vous: "avez voulu", ils: "ont voulu", elles: "ont voulu"
+319:      je: "voulus", tu: "voulus", il: "voulut", elle: "voulut",
+320:      nous: "voulûmes", vous: "voulûtes", ils: "voulurent", elles: "voulurent"
+323:      je: "voulais", tu: "voulais", il: "voulait", elle: "voulait",
+324:      nous: "voulions", vous: "vouliez", ils: "voulaient", elles: "voulaient"
+327:      je: "avais voulu", tu: "avais voulu", il: "avait voulu", elle: "avait voulu",
+328:      nous: "avions voulu", vous: "aviez voulu", ils: "avaient voulu", elles: "avaient voulu"
+331:      je: "voudrais", tu: "voudrais", il: "voudrait", elle: "voudrait",
+332:      nous: "voudrions", vous: "voudriez", ils: "voudraient", elles: "voudraient"
+335:      je: "voudrai", tu: "voudras", il: "voudra", elle: "voudra",
+336:      nous: "voudrons", vous: "voudrez", ils: "voudront", elles: "voudront"
+339:      je: "vais vouloir", tu: "vas vouloir", il: "va vouloir", elle: "va vouloir",
+340:      nous: "allons vouloir", vous: "allez vouloir", ils: "vont vouloir", elles: "vont vouloir"
+343:      je: "suis en train de vouloir", tu: "es en train de vouloir", il: "est en train de vouloir", elle: "est en train de vouloir",
+344:      nous: "sommes en train de vouloir", vous: "êtes en train de vouloir", ils: "sont en train de vouloir", elles: "sont en train de vouloir"
+349:      je: "viens", tu: "viens", il: "vient", elle: "vient",
+350:      nous: "venons", vous: "venez", ils: "viennent", elles: "viennent"
+353:      je: "suis venu(e)", tu: "es venu(e)", il: "est venu", elle: "est venue",
+354:      nous: "sommes venu(e)s", vous: "êtes venu(e)s", ils: "sont venus", elles: "sont venues"
+357:      je: "vins", tu: "vins", il: "vint", elle: "vint",
+358:      nous: "vînmes", vous: "vîntes", ils: "vinrent", elles: "vinrent"
+361:      je: "venais", tu: "venais", il: "venait", elle: "venait",
+362:      nous: "venions", vous: "veniez", ils: "venaient", elles: "venaient"
+365:      je: "étais venu(e)", tu: "étais venu(e)", il: "était venu", elle: "était venue",
+366:      nous: "étions venu(e)s", vous: "étiez venu(e)s", ils: "étaient venus", elles: "étaient venues"
+369:      je: "viendrais", tu: "viendrais", il: "viendrait", elle: "viendrait",
+370:      nous: "viendrions", vous: "viendriez", ils: "viendraient", elles: "viendraient"
+373:      je: "viendrai", tu: "viendras", il: "viendra", elle: "viendra",
+374:      nous: "viendrons", vous: "viendrez", ils: "viendront", elles: "viendront"
+377:      je: "vais venir", tu: "vas venir", il: "va venir", elle: "va venir",
+378:      nous: "allons venir", vous: "allez venir", ils: "vont venir", elles: "vont venir"
+381:      je: "suis en train de venir", tu: "es en train de venir", il: "est en train de venir", elle: "est en train de venir",
+382:      nous: "sommes en train de venir", vous: "êtes en train de venir", ils: "sont en train de venir", elles: "sont en train de venir"
+385:  "se lever": {
+387:      je: "me lève", tu: "te lèves", il: "se lève", elle: "se lève",
+388:      nous: "nous levons", vous: "vous levez", ils: "se lèvent", elles: "se lèvent"
+391:      je: "me suis levé(e)", tu: "t'es levé(e)", il: "s'est levé", elle: "s'est levée",
+392:      nous: "nous sommes levé(e)s", vous: "vous êtes levé(e)s", ils: "se sont levés", elles: "se sont levées"
+395:      je: "me levai", tu: "te levas", il: "se leva", elle: "se leva",
+396:      nous: "nous levâmes", vous: "vous levâtes", ils: "se levèrent", elles: "se levèrent"
+399:      je: "me levais", tu: "te levais", il: "se levait", elle: "se levait",
+400:      nous: "nous levions", vous: "vous leviez", ils: "se levaient", elles: "se levaient"
+403:      je: "m'étais levé(e)", tu: "t'étais levé(e)", il: "s'était levé", elle: "s'était levée",
+404:      nous: "nous étions levé(e)s", vous: "vous étiez levé(e)s", ils: "s'étaient levés", elles: "s'étaient levées"
+407:      je: "me lèverais", tu: "te lèverais", il: "se lèverait", elle: "se lèverait",
+408:      nous: "nous lèverions", vous: "vous lèveriez", ils: "se lèveraient", elles: "se lèveraient"
+411:      je: "me lèverai", tu: "te lèveras", il: "se lèvera", elle: "se lèvera",
+412:      nous: "nous lèverons", vous: "vous lèverez", ils: "se lèveront", elles: "se lèveront"
+415:      je: "vais me lever", tu: "vas te lever", il: "va se lever", elle: "va se lever",
+416:      nous: "allons nous lever", vous: "allez vous lever", ils: "vont se lever", elles: "vont se lever"
+419:      je: "suis en train de me lever", tu: "es en train de te lever", il: "est en train de se lever", elle: "est en train de se lever",
+420:      nous: "sommes en train de nous lever", vous: "êtes en train de vous lever", ils: "sont en train de se lever", elles: "sont en train de se lever"
+423:  "s'appeler": {
+425:      je: "m'appelle", tu: "t'appelles", il: "s'appelle", elle: "s'appelle",
+426:      nous: "nous appelons", vous: "vous appelez", ils: "s'appellent", elles: "s'appellent"
+429:      je: "me suis appelé(e)", tu: "t'es appelé(e)", il: "s'est appelé", elle: "s'est appelée",
+430:      nous: "nous sommes appelé(e)s", vous: "vous êtes appelé(e)s", ils: "se sont appelés", elles: "se sont appelées"
+433:      je: "m'appelai", tu: "t'appelas", il: "s'appela", elle: "s'appela",
+434:      nous: "nous appelâmes", vous: "vous appelâtes", ils: "s'appelèrent", elles: "s'appelèrent"
+437:      je: "m'appelais", tu: "t'appelais", il: "s'appelait", elle: "s'appelait",
+438:      nous: "nous appelions", vous: "vous appeliez", ils: "s'appelaient", elles: "s'appelaient"
+441:      je: "m'étais appelé(e)", tu: "t'étais appelé(e)", il: "s'était appelé", elle: "s'était appelée",
+442:      nous: "nous étions appelé(e)s", vous: "vous étiez appelé(e)s", ils: "s'étaient appelés", elles: "s'étaient appelées"
+445:      je: "m'appellerais", tu: "t'appellerais", il: "s'appellerait", elle: "s'appellerait",
+446:      nous: "nous appellerions", vous: "vous appelleriez", ils: "s'appelleraient", elles: "s'appelleraient"
+449:      je: "m'appellerai", tu: "t'appelleras", il: "s'appellera", elle: "s'appellera",
+450:      nous: "nous appellerons", vous: "vous appellerez", ils: "s'appelleront", elles: "s'appelleront"
+453:      je: "vais m'appeler", tu: "vas t'appeler", il: "va s'appeler", elle: "va s'appeler",
+454:      nous: "allons nous appeler", vous: "allez vous appeler", ils: "vont s'appeler", elles: "vont s'appeler"
+457:      je: "suis en train de m'appeler", tu: "es en train de t'appeler", il: "est en train de s'appeler", elle: "est en train de s'appeler",
+458:      nous: "sommes en train de nous appeler", vous: "êtes en train de vous appeler", ils: "sont en train de s'appeler", elles: "sont en train de s'appeler"
+461:  "se sentir": {
+463:      je: "me sens", tu: "te sens", il: "se sent", elle: "se sent",
+464:      nous: "nous sentons", vous: "vous sentez", ils: "se sentent", elles: "se sentent"
+467:      je: "me suis senti(e)", tu: "t'es senti(e)", il: "s'est senti", elle: "s'est sentie",
+468:      nous: "nous sommes senti(e)s", vous: "vous êtes senti(e)s", ils: "se sont sentis", elles: "se sont senties"
+471:      je: "me sentis", tu: "te sentis", il: "se sentit", elle: "se sentit",
+472:      nous: "nous sentîmes", vous: "vous sentîtes", ils: "se sentirent", elles: "se sentirent"
+475:      je: "me sentais", tu: "te sentais", il: "se sentait", elle: "se sentait",
+476:      nous: "nous sentions", vous: "vous sentiez", ils: "se sentaient", elles: "se sentaient"
+479:      je: "m'étais senti(e)", tu: "t'étais senti(e)", il: "s'était senti", elle: "s'était sentie",
+480:      nous: "nous étions senti(e)s", vous: "vous étiez senti(e)s", ils: "s'étaient sentis", elles: "s'étaient senties"
+483:      je: "me sentirais", tu: "te sentirais", il: "se sentirait", elle: "se sentirait",
+484:      nous: "nous sentirions", vous: "vous sentiriez", ils: "se sentiraient", elles: "se sentiraient"
+487:      je: "me sentirai", tu: "te sentiras", il: "se sentira", elle: "se sentira",
+488:      nous: "nous sentirons", vous: "vous sentirez", ils: "se sentiront", elles: "se sentiront"
+491:      je: "vais me sentir", tu: "vas te sentir", il: "va se sentir", elle: "va se sentir",
+492:      nous: "allons nous sentir", vous: "allez vous sentir", ils: "vont se sentir", elles: "vont se sentir"
+495:      je: "suis en train de me sentir", tu: "es en train de te sentir", il: "est en train de se sentir", elle: "est en train de se sentir",
+496:      nous: "sommes en train de nous sentir", vous: "êtes en train de vous sentir", ils: "sont en train de se sentir", elles: "sont en train de se sentir"
+499:  "se laver": {
+501:      je: "me lave", tu: "te laves", il: "se lave", elle: "se lave",
+502:      nous: "nous lavons", vous: "vous lavez", ils: "se lavent", elles: "se lavent"
+505:      je: "me suis lavé(e)", tu: "t'es lavé(e)", il: "s'est lavé", elle: "s'est lavée",
+506:      nous: "nous sommes lavé(e)s", vous: "vous êtes lavé(e)s", ils: "se sont lavés", elles: "se sont lavées"
+509:      je: "me lavai", tu: "te lavas", il: "se lava", elle: "se lava",
+510:      nous: "nous lavâmes", vous: "vous lavâtes", ils: "se lavèrent", elles: "se lavèrent"
+513:      je: "me lavais", tu: "te lavais", il: "se lavait", elle: "se lavait",
+514:      nous: "nous lavions", vous: "vous laviez", ils: "se lavaient", elles: "se lavaient"
+517:      je: "m'étais lavé(e)", tu: "t'étais lavé(e)", il: "s'était lavé", elle: "s'était lavée",
+518:      nous: "nous étions lavé(e)s", vous: "vous étiez lavé(e)s", ils: "s'étaient lavés", elles: "s'étaient lavées"
+521:      je: "me laverais", tu: "te laverais", il: "se laverait", elle: "se laverait",
+522:      nous: "nous laverions", vous: "vous laveriez", ils: "se laveraient", elles: "se laveraient"
+525:      je: "me laverai", tu: "te laveras", il: "se lavera", elle: "se lavera",
+526:      nous: "nous laverons", vous: "vous laverez", ils: "se laveront", elles: "se laveront"
+529:      je: "vais me laver", tu: "vas te laver", il: "va se laver", elle: "va se laver",
+530:      nous: "allons nous laver", vous: "allez vous laver", ils: "vont se laver", elles: "vont se laver"
+533:      je: "suis en train de me laver", tu: "es en train de te laver", il: "est en train de se laver", elle: "est en train de se laver",
+534:      nous: "sommes en train de nous laver", vous: "êtes en train de vous laver", ils: "sont en train de se laver", elles: "sont en train de se laver"
+537:  "se réveiller": {
+539:      je: "me réveille", tu: "te réveilles", il: "se réveille", elle: "se réveille",
+540:      nous: "nous réveillons", vous: "vous réveillez", ils: "se réveillent", elles: "se réveillent"
+543:      je: "me suis réveillé(e)", tu: "t'es réveillé(e)", il: "s'est réveillé", elle: "s'est réveillée",
+544:      nous: "nous sommes réveillé(e)s", vous: "vous êtes réveillé(e)s", ils: "se sont réveillés", elles: "se sont réveillées"
+547:      je: "me réveillai", tu: "te réveillas", il: "se réveilla", elle: "se réveilla",
+548:      nous: "nous réveillâmes", vous: "vous réveillâtes", ils: "se réveillèrent", elles: "se réveillèrent"
+551:      je: "me réveillais", tu: "te réveillais", il: "se réveillait", elle: "se réveillait",
+552:      nous: "nous réveillions", vous: "vous réveilliez", ils: "se réveillaient", elles: "se réveillaient"
+555:      je: "m'étais réveillé(e)", tu: "t'étais réveillé(e)", il: "s'était réveillé", elle: "s'était réveillée",
+556:      nous: "nous étions réveillé(e)s", vous: "vous étiez réveillé(e)s", ils: "s'étaient réveillés", elles: "s'étaient réveillées"
+559:      je: "me réveillerais", tu: "te réveillerais", il: "se réveillerait", elle: "se réveillerait",
+560:      nous: "nous réveillerions", vous: "vous réveilleriez", ils: "se réveilleraient", elles: "se réveilleraient"
+563:      je: "me réveillerai", tu: "te réveilleras", il: "se réveillera", elle: "se réveillera",
+564:      nous: "nous réveillerons", vous: "vous réveillerez", ils: "se réveilleront", elles: "se réveilleront"
+567:      je: "vais me réveiller", tu: "vas te réveiller", il: "va se réveiller", elle: "va se réveiller",
+568:      nous: "allons nous réveiller", vous: "allez vous réveiller", ils: "vont se réveiller", elles: "vont se réveiller"
+571:      je: "suis en train de me réveiller", tu: "es en train de te réveiller", il: "est en train de se réveiller", elle: "est en train de se réveiller",
+572:      nous: "sommes en train de nous réveiller", vous: "êtes en train de vous réveiller", ils: "sont en train de se réveiller", elles: "sont en train de se réveiller"
+575:  "s'habiller": {
+577:      je: "m'habille", tu: "t'habilles", il: "s'habille", elle: "s'habille",
+578:      nous: "nous habillons", vous: "vous habillez", ils: "s'habillent", elles: "s'habillent"
+581:      je: "me suis habillé(e)", tu: "t'es habillé(e)", il: "s'est habillé", elle: "s'est habillée",
+582:      nous: "nous sommes habillé(e)s", vous: "vous êtes habillé(e)s", ils: "se sont habillés", elles: "se sont habillées"
+585:      je: "m'habillai", tu: "t'habillas", il: "s'habilla", elle: "s'habilla",
+586:      nous: "nous habillâmes", vous: "vous habillâtes", ils: "s'habillèrent", elles: "s'habillèrent"
+589:      je: "m'habillais", tu: "t'habillais", il: "s'habillait", elle: "s'habillait",
+590:      nous: "nous habillions", vous: "vous habilliez", ils: "s'habillaient", elles: "s'habillaient"
+593:      je: "m'étais habillé(e)", tu: "t'étais habillé(e)", il: "s'était habillé", elle: "s'était habillée",
+594:      nous: "nous étions habillé(e)s", vous: "vous étiez habillé(e)s", ils: "s'étaient habillés", elles: "s'étaient habillées"
+597:      je: "m'habillerais", tu: "t'habillerais", il: "s'habillerait", elle: "s'habillerait",
+598:      nous: "nous habillerions", vous: "vous habilleriez", ils: "s'habilleraient", elles: "s'habilleraient"
+601:      je: "m'habillerai", tu: "t'habilleras", il: "s'habillera", elle: "s'habillera",
+602:      nous: "nous habillerons", vous: "vous habillerez", ils: "s'habilleront", elles: "s'habilleront"
+605:      je: "vais m'habiller", tu: "vas t'habiller", il: "va s'habiller", elle: "va s'habiller",
+606:      nous: "allons nous habiller", vous: "allez vous habiller", ils: "vont s'habiller", elles: "vont s'habiller"
+609:      je: "suis en train de m'habiller", tu: "es en train de t'habiller", il: "est en train de s'habiller", elle: "est en train de s'habiller",
+610:      nous: "sommes en train de nous habiller", vous: "êtes en train de vous habiller", ils: "sont en train de s'habiller", elles: "sont en train de s'habiller"
+737:  "se lever": [
+749:  "s'appeler": [
+761:  "se sentir": [
+773:  "se laver": [
+785:  "se réveiller": [
+797:  "s'habiller": [
+816:  if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
+881:  if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
+974:        // If context already contains "pas", don't duplicate
+999:        // Special case: "rien" replaces "pas"
+1003:        // If context already contains "pas", don't duplicate
+1015:    if (parts.length >= 4) { // "suis en train de faire"
+1017:      const enTrainDePart = parts.slice(1).join(' '); // "en train de + infinitive"
+1028:        // Special case: "rien" replaces "pas"
+1032:        // If context already contains "pas", don't duplicate
+1043:    // Special case: "rien" replaces "pas"
+1050:    // If context already contains "pas", don't add another "pas"
+1071:    // Convert present to future before negation: "He makes" → "He will make"
+1095:  sentence = sentence.replace(/\bHe see\b/g, "He sees");
+1096:  sentence = sentence.replace(/\bShe see\b/g, "She sees");
+1099:  sentence = sentence.replace(/\bHe do\b/g, "He does");
+1100:  sentence = sentence.replace(/\bShe do\b/g, "She does");
+1103:  sentence = sentence.replace(/\bHe go\b/g, "He goes");
+1104:  sentence = sentence.replace(/\bShe go\b/g, "She goes");
+1107:  sentence = sentence.replace(/\bHe say\b/g, "He says");
+1108:  sentence = sentence.replace(/\bShe say\b/g, "She says");
+1111:  sentence = sentence.replace(/\bHe know\b/g, "He knows");
+1112:  sentence = sentence.replace(/\bShe know\b/g, "She knows");
+1115:  sentence = sentence.replace(/\bHe want\b/g, "He wants");
+1116:  sentence = sentence.replace(/\bShe want\b/g, "She wants");
+1119:  sentence = sentence.replace(/\bHe come\b/g, "He comes");
+1120:  sentence = sentence.replace(/\bShe come\b/g, "She comes");
+1129:  // CRITICAL: Fix any existing "will don't" double negations FIRST
+1130:  if (sentence.includes("will don't")) {
+1131:    return sentence.replace("will don't", "won't");
+1135:  if (sentence.includes(" no ") || sentence.includes("nothing") || sentence.includes("never") || 
+1136:      sentence.includes("nowhere") || sentence.includes("nobody") || sentence.includes("n't")) {
+1141:  if (sentence.includes(" will ")) {
+1142:    return sentence.replace(" will ", " won't ");
+1145:  // For simple "to be" forms without trailing space (e.g., "I am", "He is")
+1146:  if (sentence.endsWith(" am")) {
+1147:    return sentence.replace(" am", " am not");
+1149:  if (sentence.endsWith(" is")) {
+1150:    return sentence.replace(" is", " is not");
+1152:  if (sentence.endsWith(" are")) {
+1153:    return sentence.replace(" are", " are not");
+1156:  // For "to be" verbs with trailing content
+1157:  if (sentence.includes(" am ") || sentence.includes(" is ") || sentence.includes(" are ")) {
+1159:      .replace(" am ", " am not ")
+1160:      .replace(" is ", " is not ")
+1161:      .replace(" are ", " are not ");
+1165:  if (sentence.includes(" have ") || sentence.includes(" has ")) {
+1167:      .replace(" have ", " haven't ")
+1168:      .replace(" has ", " hasn't ");
+1171:  // For simple "to have" forms without trailing space
+1172:  if (sentence.endsWith(" have")) {
+1173:    return sentence.replace(" have", " don't have");
+1175:  if (sentence.endsWith(" has")) {
+1176:    return sentence.replace(" has", " doesn't have");
+1180:  // IMPORTANT: Handle "had" as main verb (not auxiliary) by checking for main verb usage
+1181:  if (sentence.includes(" went") || sentence.includes(" did") || sentence.includes(" made") || 
+1182:      sentence.includes(" had") || sentence.includes(" saw") || sentence.includes(" said") ||
+1183:      sentence.includes(" ate") || sentence.includes(" drank") || sentence.includes(" walked") ||
+1184:      sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived") ||
+1185:      sentence.includes(" goes") || sentence.includes(" says") || sentence.includes(" does") ||
+1186:      sentence.includes(" makes") || sentence.includes(" sees") || sentence.includes(" knows") ||
+1187:      sentence.includes(" wants") || sentence.includes(" comes") || sentence.includes(" feels")) {
+1198:  if (sentence.includes(" had ") && !sentence.includes("didn't")) {
+1199:    return sentence.replace(" had ", " hadn't ");
+1210:      if (verb.endsWith("ed") || ["had", "went", "did", "made", "saw", "said", "ate", "drank", "came", "took", "got", "knew", "thought", "felt"].includes(verb)) {
+1218:  if (sentence.includes(" will have")) {
+1219:    return sentence.replace(" will have", " won't have");
+1221:  if (sentence.includes(" will be")) {
+1222:    return sentence.replace(" will be", " won't be");
+1224:  if (sentence.includes(" will do")) {
+1225:    return sentence.replace(" will do", " won't do");
+1227:  if (sentence.includes(" will make")) {
+1228:    return sentence.replace(" will make", " won't make");
+1230:  if (sentence.includes(" will go")) {
+1231:    return sentence.replace(" will go", " won't go");
+1233:  if (sentence.includes(" will see")) {
+1234:    return sentence.replace(" will see", " won't see");
+1236:  if (sentence.includes(" will say")) {
+1237:    return sentence.replace(" will say", " won't say");
+1239:  if (sentence.includes(" will know")) {
+1240:    return sentence.replace(" will know", " won't know");
+1242:  if (sentence.includes(" will want")) {
+1243:    return sentence.replace(" will want", " won't want");
+1245:  if (sentence.includes(" will come")) {
+1246:    return sentence.replace(" will come", " won't come");
+1248:  if (sentence.includes(" will get")) {
+1249:    return sentence.replace(" will get", " won't get");
+1251:  if (sentence.includes(" will feel")) {
+1252:    return sentence.replace(" will feel", " won't feel");
+1254:  if (sentence.includes(" will wash")) {
+1255:    return sentence.replace(" will wash", " won't wash");
+1257:  if (sentence.includes(" will wake")) {
+1258:    return sentence.replace(" will wake", " won't wake");
+1260:  // General "will" replacement for any remaining cases
+1261:  if (sentence.includes(" will ")) {
+1262:    return sentence.replace(" will ", " won't ");
+1265:  // For other verbs - add "don't" or "doesn't" ONLY if not already handled by will/future cases
+1266:  if (!sentence.includes("will") && !sentence.includes("won't")) {
+1272:      if (subject === "He" || subject === "She") {
+1321:    // Handle doubled consonants (e.g., "walked" -> "walk", "stopped" -> "stop")
+1416:  // Apply gender-specific replacements for "They" patterns
+1475:    console.log(`🔧 Tense lookup failed: "${normalizedTense}" not found in ${JSON.stringify(Object.keys(verbData))}`);
+1506:      // Simple question: just "I am" -> "Je suis" or "I am not" -> "Je ne suis pas"
+1558:            : `Incorrect. The correct answer is "${correctAnswer}"`
+1676:          englishQuestion = englishQuestion.replace(/ will /g, " won't ");
+1689:          .replace("don't ", "")
+1690:          .replace("doesn't ", "")
+1691:          .replace("can't ", "can ")
+1692:          .replace(" not", "")
+1693:          .replace("I am not", "I am")
+1694:          .replace("He is not", "He is") 
+1695:          .replace("She is not", "She is")
+1696:          .replace("We are not", "We are")
+1697:          .replace("You are not", "You are")
+1698:          .replace("They are not", "They are");
+1703:      // Passé composé = completed action ("I ate" / "I have eaten")
+1835:      // Imparfait = ongoing/habitual past action ("I used to eat" / "I was eating")
+1934:      // Plus-que-parfait = past perfect ("I had eaten")
+2132:      // Conditional = "would" expressions ("I would be", "He would have", etc.)
+2231:      // Futur simple = "will" expressions ("I will be", "He will have", etc.)
+2330:      // Futur proche = "going to" expressions ("I am going to be", "He is going to have", etc.)
+2429:      // Présent progressif = "am/is/are + -ing" expressions

@@ -1,0 +1,223 @@
+server/vite.ts:1:import express, { type Express } from "express";
+server/vite.ts:2:import fs from "fs";
+server/vite.ts:3:import path from "path";
+server/vite.ts:4:import { createServer as createViteServer, createLogger } from "vite";
+server/vite.ts:5:import { type Server } from "http";
+server/vite.ts:6:import viteConfig from "../vite.config";
+server/vite.ts:7:import { nanoid } from "nanoid";
+server/vite.ts:11:export function log(message: string, source = "express") {
+server/vite.ts:12:  const formattedTime = new Date().toLocaleTimeString("en-US", {
+server/vite.ts:13:    hour: "numeric",
+server/vite.ts:14:    minute: "2-digit",
+server/vite.ts:15:    second: "2-digit",
+server/vite.ts:40:    appType: "custom",
+server/vite.ts:51:        "client",
+server/vite.ts:52:        "index.html",
+server/vite.ts:56:      let template = await fs.promises.readFile(clientTemplate, "utf-8");
+server/vite.ts:58:        `src="/src/main.tsx"`,
+server/vite.ts:59:        `src="/src/main.tsx?v=${nanoid()}"`,
+server/vite.ts:62:      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+server/vite.ts:71:  const distPath = path.resolve(import.meta.dirname, "public");
+server/vite.ts:83:    res.sendFile(path.resolve(distPath, "index.html"));
+server/index.ts:1:import express, { type Request, Response, NextFunction } from "express";
+server/index.ts:2:import { registerRoutes } from "./routes";
+server/index.ts:3:import { setupVite, serveStatic, log } from "./vite";
+server/index.ts:20:  res.on("finish", () => {
+server/index.ts:22:    if (path.startsWith("/api")) {
+server/index.ts:44:    const message = err.message || "Internal Server Error";
+server/index.ts:53:  if (app.get("env") === "development") {
+server/services/gemini.ts:1:import { GoogleGenAI } from "@google/genai";
+server/services/gemini.ts:5:// - Note that the newest Gemini model series is "gemini-2.5-flash" or gemini-2.5-pro"
+server/services/gemini.ts:44:Verb: "${verb}"
+server/services/gemini.ts:45:Tense: "${tenseName}"
+server/services/gemini.ts:50:Présent (Present): e.g., "I do" -> Je fais.
+server/services/gemini.ts:51:Passé Composé (Past Perfect): e.g., "I did" / "I have done" -> J'ai fait.
+server/services/gemini.ts:52:Imparfait (Imperfect): e.g., "I was doing" / "I used to do" -> Je faisais.
+server/services/gemini.ts:53:Futur Simple (Simple Future): e.g., "I will do" -> Je ferai.
+server/services/gemini.ts:54:Présent Progressif (Present Continuous): e.g., "I am doing" -> Je suis en train de faire.
+server/services/gemini.ts:55:Présent + depuis (Present Perfect Continuous): e.g., "I have been doing" -> Je fais... depuis... OR Ça fait... que je fais....
+server/services/gemini.ts:56:Conditionnel Présent (Present Conditional): e.g., "I would do" -> Je ferais.
+server/services/gemini.ts:57:Conditionnel Passé (Conditional Perfect): e.g., "I would have done" -> J'aurais fait.
+server/services/gemini.ts:67:For the correct answer: Explain why it is correct by referencing the grammatical rule (e.g., "This correctly uses the conditional of 'avoir' with the past participle.").
+server/services/gemini.ts:68:For incorrect answers: Explain the specific error (e.g., "This is the Pluperfect tense, not the Conditional Perfect.", "This uses the wrong auxiliary verb.").
+server/services/gemini.ts:69:Crucially: Do not state "This is correct" or "This is incorrect."
+server/services/gemini.ts:74:  "questions": [
+server/services/gemini.ts:76:      "question": "...",
+server/services/gemini.ts:77:      "hint": "...",
+server/services/gemini.ts:78:      "answerOptions": [
+server/services/gemini.ts:80:          "text": "...",
+server/services/gemini.ts:81:          "rationale": "...",
+server/services/gemini.ts:82:          "isCorrect": true
+server/services/gemini.ts:85:          "text": "...",
+server/services/gemini.ts:86:          "rationale": "...",
+server/services/gemini.ts:87:          "isCorrect": false
+server/services/gemini.ts:90:          "text": "...",
+server/services/gemini.ts:91:          "rationale": "...",
+server/services/gemini.ts:92:          "isCorrect": false
+server/services/gemini.ts:95:          "text": "...",
+server/services/gemini.ts:96:          "rationale": "...",
+server/services/gemini.ts:97:          "isCorrect": false
+server/services/gemini.ts:115:        model: "gemini-2.5-pro",
+server/services/gemini.ts:117:          systemInstruction: "You are an expert French language tutor. Generate a complete French verb quiz in valid JSON format according to the specifications provided.",
+server/services/gemini.ts:118:          responseMimeType: "application/json",
+server/services/gemini.ts:120:            type: "object",
+server/services/gemini.ts:123:                type: "array",
+server/services/gemini.ts:125:                  type: "object",
+server/services/gemini.ts:127:                    question: { type: "string" },
+server/services/gemini.ts:128:                    hint: { type: "string" },
+server/services/gemini.ts:130:                      type: "array",
+server/services/gemini.ts:132:                        type: "object",
+server/services/gemini.ts:134:                          text: { type: "string" },
+server/services/gemini.ts:135:                          rationale: { type: "string" },
+server/services/gemini.ts:136:                          isCorrect: { type: "boolean" }
+server/services/gemini.ts:138:                        required: ["text", "rationale", "isCorrect"]
+server/services/gemini.ts:142:                  required: ["question", "hint", "answerOptions"]
+server/services/gemini.ts:146:            required: ["questions"]
+server/services/gemini.ts:159:        throw new Error("Empty response from Gemini model");
+server/services/gemini.ts:182:        throw new Error("The AI service is currently experiencing high demand. Please try again in a few moments.");
+server/services/gemini.ts:184:        throw new Error("Failed to generate quiz: " + errorMessage);
+server/storage.ts:1:import { users, quizzes, type User, type InsertUser, type Quiz, type InsertQuiz } from "@shared/schema";
+server/storage.ts:2:import { db } from "./db";
+server/storage.ts:3:import { eq, and } from "drizzle-orm";
+server/quiz-templates.ts:1:import { GeneratedQuiz } from "./gemini-quiz";
+server/quiz-templates.ts:6:  "être-présent": {
+server/quiz-templates.ts:9:        question: "I am happy.",
+server/quiz-templates.ts:10:        hint: "Use the present tense form of être for je",
+server/quiz-templates.ts:13:            text: "Je suis heureux.",
+server/quiz-templates.ts:14:            rationale: "This uses the correct present tense conjugation of être for je.",
+server/quiz-templates.ts:18:            text: "Je es heureux.",
+server/quiz-templates.ts:19:            rationale: "The conjugation 'es' is for tu, not je.",
+server/quiz-templates.ts:23:            text: "Je est heureux.",
+server/quiz-templates.ts:24:            rationale: "The conjugation 'est' is for il/elle, not je.",
+server/quiz-templates.ts:28:            text: "J'étais heureux.",
+server/quiz-templates.ts:29:            rationale: "This uses the imperfect tense, not present tense.",
+server/quiz-templates.ts:36:  "avoir-présent": {
+server/quiz-templates.ts:39:        question: "I am happy.",
+server/quiz-templates.ts:40:        hint: "Use the present tense form of être for je",
+server/quiz-templates.ts:43:            text: "Je suis heureux.",
+server/quiz-templates.ts:44:            rationale: "This uses the correct present tense conjugation of être for je.",
+server/quiz-templates.ts:48:            text: "Je es heureux.",
+server/quiz-templates.ts:49:            rationale: "The conjugation 'es' is for tu, not je.",
+server/quiz-templates.ts:53:            text: "Je est heureux.",
+server/quiz-templates.ts:54:            rationale: "The conjugation 'est' is for il/elle, not je.",
+server/quiz-templates.ts:58:            text: "J'étais heureux.",
+server/quiz-templates.ts:59:            rationale: "This uses the imperfect tense, not present tense.",
+server/quiz-templates.ts:65:        question: "You are tired.",
+server/quiz-templates.ts:66:        hint: "Use the present tense form of être for tu",
+server/quiz-templates.ts:69:            text: "Tu es fatigué.",
+server/quiz-templates.ts:70:            rationale: "This is the correct present tense conjugation of être for tu.",
+server/quiz-templates.ts:74:            text: "Tu suis fatigué.",
+server/quiz-templates.ts:75:            rationale: "The conjugation 'suis' is for je, not tu.",
+server/quiz-templates.ts:79:            text: "Tu êtes fatigué.",
+server/quiz-templates.ts:80:            rationale: "The conjugation 'êtes' is for vous, not tu.",
+server/quiz-templates.ts:84:            text: "Tu sera fatigué.",
+server/quiz-templates.ts:85:            rationale: "This uses the future tense, not present tense.",
+server/quiz-templates.ts:91:        question: "He is a student.",
+server/quiz-templates.ts:92:        hint: "Use the present tense form of être for il",
+server/quiz-templates.ts:95:            text: "Il est étudiant.",
+server/quiz-templates.ts:96:            rationale: "This is the correct present tense conjugation of être for il.",
+server/quiz-templates.ts:100:            text: "Il es étudiant.",
+server/quiz-templates.ts:101:            rationale: "The conjugation 'es' is for tu, not il.",
+server/quiz-templates.ts:105:            text: "Il suis étudiant.",
+server/quiz-templates.ts:106:            rationale: "The conjugation 'suis' is for je, not il.",
+server/quiz-templates.ts:110:            text: "Il était étudiant.",
+server/quiz-templates.ts:111:            rationale: "This uses the imperfect tense, not present tense.",
+server/quiz-templates.ts:117:        question: "We are friends.",
+server/quiz-templates.ts:118:        hint: "Use the present tense form of être for nous",
+server/quiz-templates.ts:121:            text: "Nous sommes amis.",
+server/quiz-templates.ts:122:            rationale: "This is the correct present tense conjugation of être for nous.",
+server/quiz-templates.ts:126:            text: "Nous sont amis.",
+server/quiz-templates.ts:127:            rationale: "The conjugation 'sont' is for ils/elles, not nous.",
+server/quiz-templates.ts:131:            text: "Nous êtes amis.",
+server/quiz-templates.ts:132:            rationale: "The conjugation 'êtes' is for vous, not nous.",
+server/quiz-templates.ts:136:            text: "Nous avons amis.",
+server/quiz-templates.ts:137:            rationale: "This uses the wrong verb 'avoir' instead of être.",
+server/quiz-templates.ts:143:        question: "You (plural) are ready.",
+server/quiz-templates.ts:144:        hint: "Use the present tense form of être for vous",
+server/quiz-templates.ts:147:            text: "Vous êtes prêts.",
+server/quiz-templates.ts:148:            rationale: "This is the correct present tense conjugation of être for vous.",
+server/quiz-templates.ts:152:            text: "Vous es prêts.",
+server/quiz-templates.ts:153:            rationale: "The conjugation 'es' is for tu, not vous.",
+server/quiz-templates.ts:157:            text: "Vous sommes prêts.",
+server/quiz-templates.ts:158:            rationale: "The conjugation 'sommes' is for nous, not vous.",
+server/quiz-templates.ts:162:            text: "Vous serez prêts.",
+server/quiz-templates.ts:163:            rationale: "This uses the future tense, not present tense.",
+server/quiz-templates.ts:190:      question: "She is not here.",
+server/quiz-templates.ts:191:      hint: "Use the negative form with ne...pas around être",
+server/quiz-templates.ts:194:          text: "Elle n'est pas ici.",
+server/quiz-templates.ts:195:          rationale: "This correctly places ne...pas around the conjugated verb.",
+server/quiz-templates.ts:199:          text: "Elle ne pas est ici.",
+server/quiz-templates.ts:200:          rationale: "The negation is incorrectly placed before the verb.",
+server/quiz-templates.ts:204:          text: "Elle est ne pas ici.",
+server/quiz-templates.ts:205:          rationale: "The negation should wrap around the verb, not come after.",
+server/quiz-templates.ts:209:          text: "Elle n'était pas ici.",
+server/quiz-templates.ts:210:          rationale: "This uses the imperfect tense instead of present tense.",
+server/gemini-quiz.ts:1:import { GoogleGenAI } from "@google/genai";
+server/gemini-quiz.ts:24:Verb: "${verb}"
+server/gemini-quiz.ts:25:Tense: "${tense}"
+server/gemini-quiz.ts:30:- Présent (Present): e.g., "I do" -> Je fais.
+server/gemini-quiz.ts:31:- Passé Composé (Past Perfect): e.g., "I did" / "I have done" -> J'ai fait.
+server/gemini-quiz.ts:32:- Imparfait (Imperfect): e.g., "I was doing" / "I used to do" -> Je faisais.
+server/gemini-quiz.ts:33:- Futur Simple (Simple Future): e.g., "I will do" -> Je ferai.
+server/gemini-quiz.ts:34:- Présent Progressif (Present Continuous): e.g., "I am doing" -> Je suis en train de faire.
+server/gemini-quiz.ts:35:- Présent + depuis (Present Perfect Continuous): e.g., "I have been doing" -> Je fais... depuis... OR Ça fait... que je fais....
+server/gemini-quiz.ts:36:- Conditionnel Présent (Present Conditional): e.g., "I would do" -> Je ferais.
+server/gemini-quiz.ts:37:- Conditionnel Passé (Conditional Perfect): e.g., "I would have done" -> J'aurais fait.
+server/gemini-quiz.ts:43:- Negation: Include approximately 4-5 negative sentences, correctly wrapping the negation (ne...pas, ne...rien, etc.) around the conjugated auxiliary verb in compound tenses. CRITICAL: Never duplicate "pas" - if the context already contains "pas", do not add another "pas" (avoid "pas pas" errors).
+server/gemini-quiz.ts:49:  - Crucially: Do not state "This is correct" or "This is incorrect."
+server/gemini-quiz.ts:57:  "questions": [
+server/gemini-quiz.ts:59:      "question": "...",
+server/gemini-quiz.ts:60:      "hint": "...",
+server/gemini-quiz.ts:61:      "answerOptions": [
+server/gemini-quiz.ts:63:          "text": "...",
+server/gemini-quiz.ts:64:          "rationale": "...",
+server/gemini-quiz.ts:65:          "isCorrect": true
+server/gemini-quiz.ts:83:      model: "gemini-2.5-flash", // Use faster model
+server/gemini-quiz.ts:85:        responseMimeType: "application/json",
+server/gemini-quiz.ts:87:      contents: [{ role: "user", parts: [{ text: prompt }] }],
+server/gemini-quiz.ts:102:          throw new Error("Invalid quiz structure - missing questions array");
+server/gemini-quiz.ts:113:      throw new Error("Empty response from Gemini");
+server/db.ts:3:import ws from "ws";
+server/db.ts:4:import * as schema from "@shared/schema";
+server/db.ts:10:    "DATABASE_URL must be set. Did you forget to provision a database?",
+server/routes.ts:1:import type { Express } from "express";
+server/routes.ts:2:import { createServer, type Server } from "http";
+server/routes.ts:3:import path from "path";
+server/routes.ts:4:import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
+server/routes.ts:5:import { generateFrenchVerbQuiz } from "./gemini-quiz";
+server/routes.ts:6:import { generateInternalQuiz } from "./quiz-generator";
+server/routes.ts:7:import { ZodError } from "zod";
+server/routes.ts:8:import { db } from "./db";
+server/routes.ts:9:import { courseProgress, completedCourses } from "@shared/schema";
+server/routes.ts:10:import { eq, and } from "drizzle-orm";
+server/routes.ts:15:  app.get("/verbmaster", (req, res) => {
+server/routes.ts:16:    res.sendFile(path.join(import.meta.dirname, "french-master.html"));
+server/routes.ts:20:  app.get("/frenchverb", (req, res) => {
+server/routes.ts:22:<html lang="en">
+server/routes.ts:24:    <meta charset="UTF-8" />
+server/routes.ts:25:    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+server/routes.ts:27:    <script type="module" src="/@vite/client"></script>
+server/routes.ts:30:    <div id="root"></div>
+server/routes.ts:31:    <script type="module" src="/src/main-frenchverb.tsx?v=${Date.now()}"></script>
+server/routes.ts:39:  app.post("/api/get-quiz", async (req, res, next) => {
+server/routes.ts:109:          error: "Invalid input",
+server/routes.ts:114:      console.error("Quiz generation error:", error);
+server/routes.ts:117:        error: (error as Error).message || "Failed to generate quiz"
+server/routes.ts:123:  app.get("/api/course-progress/:userId", async (req, res) => {
+server/routes.ts:129:      console.error("Error fetching course progress:", error);
+server/routes.ts:130:      res.status(500).json({ success: false, error: "Failed to fetch course progress" });
+server/routes.ts:135:  app.post("/api/course-progress", async (req, res) => {
+server/routes.ts:163:      console.error("Error saving course progress:", error);
+server/routes.ts:164:      res.status(500).json({ success: false, error: "Failed to save course progress" });
+server/routes.ts:169:  app.get("/api/completed-courses/:userId", async (req, res) => {
+server/routes.ts:175:      console.error("Error fetching completed courses:", error);
+server/routes.ts:176:      res.status(500).json({ success: false, error: "Failed to fetch completed courses" });
+server/routes.ts:181:  app.post("/api/completed-courses", async (req, res) => {
+server/routes.ts:187:      console.error("Error saving completed course:", error);
+server/routes.ts:188:      res.status(500).json({ success: false, error: "Failed to save completed course" });
+server/routes.ts:193:  app.delete("/api/completed-courses/:userId/:courseType/:timeFrame", async (req, res) => {
+server/routes.ts:216:      res.json({ success: true, message: "Course reset successfully" });
+server/routes.ts:218:      console.error("Error resetting course:", error);
+server/routes.ts:219:      res.status(500).json({ success: false, error: "Failed to reset course" });
+server/routes.ts:224:  app.get("/api/health", (req, res) => {
+server/routes.ts:227:      message: "French Verb Master API is running",
