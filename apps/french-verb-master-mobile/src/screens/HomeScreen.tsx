@@ -1,199 +1,170 @@
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { Text, Card, Button, Portal, Modal, List } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
-import type { StackNavigationProp } from '@react-navigation/stack';
-import type { RootStackParamList } from '../../App';
+import { 
+  Text, 
+  Card, 
+  Button, 
+  Surface,
+  Menu,
+  Divider 
+} from 'react-native-paper';
 
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+const DIFFICULTIES = ['Beginner', 'Easy', 'Moderate', 'Difficult'];
+const VERBS = ['être', 'avoir', 'faire', 'dire', 'aller', 'voir', 'savoir', 'pouvoir', 'vouloir', 'venir'];
+const TIME_FRAMES = ['Present', 'Past', 'Future'];
 
-const DIFFICULTIES = [
-  { key: 'Beginner', label: 'Beginner', description: '4 most used verbs, simple conjugations' },
-  { key: 'Easy', label: 'Easy', description: '6 verbs with present tense focus' },
-  { key: 'Moderate', label: 'Moderate', description: '8 verbs including 3 reflexive verbs' },
-  { key: 'Difficult', label: 'Difficult', description: '13 verbs including 6 reflexive verbs' },
-];
+export default function HomeScreen({ navigation }: any) {
+  const [difficulty, setDifficulty] = useState('');
+  const [verb, setVerb] = useState('');
+  const [timeFrame, setTimeFrame] = useState('');
+  const [showDifficultyMenu, setShowDifficultyMenu] = useState(false);
+  const [showVerbMenu, setShowVerbMenu] = useState(false);
+  const [showTimeMenu, setShowTimeMenu] = useState(false);
 
-const VERBS = [
-  { key: 'être', label: 'être (to be)' },
-  { key: 'avoir', label: 'avoir (to have)' },
-  { key: 'faire', label: 'faire (to do/make)' },
-  { key: 'dire', label: 'dire (to say)' },
-  { key: 'aller', label: 'aller (to go)' },
-  { key: 'voir', label: 'voir (to see)' },
-];
-
-const TIME_FRAMES = [
-  { key: 'present', label: 'Present' },
-  { key: 'past', label: 'Past' },
-  { key: 'future', label: 'Future' },
-];
-
-export default function HomeScreen() {
-  const navigation = useNavigation<HomeScreenNavigationProp>();
-  const [selectedDifficulty, setSelectedDifficulty] = useState('');
-  const [selectedVerb, setSelectedVerb] = useState('');
-  const [selectedTimeFrame, setSelectedTimeFrame] = useState('');
-  const [modalVisible, setModalVisible] = useState('');
-
-  const handleStartQuiz = () => {
-    if (selectedDifficulty && selectedVerb && selectedTimeFrame) {
-      navigation.navigate('Quiz', {
-        verb: selectedVerb,
-        timeFrame: selectedTimeFrame,
-        tenseType: 'Présent', // Default tense
-        difficulty: selectedDifficulty,
-      });
+  const startQuiz = () => {
+    if (difficulty && verb && timeFrame) {
+      navigation.navigate('Quiz', { difficulty, verb, timeFrame });
     }
   };
 
-  const handleMiniCourses = () => {
-    if (selectedDifficulty) {
-      navigation.navigate('Courses', {
-        difficulty: selectedDifficulty,
-      });
-    }
+  const openCourses = () => {
+    navigation.navigate('Courses');
   };
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
+      <Surface style={styles.header}>
         <Text variant="headlineLarge" style={styles.title}>
           French Verb Master
         </Text>
         <Text variant="titleMedium" style={styles.subtitle}>
           For serious students
         </Text>
-        <Text variant="bodyMedium" style={styles.description}>
+        <Text style={styles.description}>
           Master French verb conjugations, the key to fluency, with personalized quizzes and mini-courses.
         </Text>
-      </View>
+      </Surface>
 
       <Card style={styles.card}>
         <Card.Content>
-          <Text variant="titleMedium" style={styles.stepTitle}>
-            Step 1: Choose Difficulty
+          <Text variant="titleLarge" style={styles.sectionTitle}>
+            Quick Quiz
           </Text>
-          <Button
-            mode="outlined"
-            onPress={() => setModalVisible('difficulty')}
-            style={styles.button}
-          >
-            {selectedDifficulty || 'Select Difficulty'}
-          </Button>
+          
+          <View style={styles.dropdownContainer}>
+            <Menu
+              visible={showDifficultyMenu}
+              onDismiss={() => setShowDifficultyMenu(false)}
+              anchor={
+                <Button 
+                  mode="outlined" 
+                  onPress={() => setShowDifficultyMenu(true)}
+                  style={styles.dropdown}
+                >
+                  {difficulty || 'Choose Difficulty'}
+                </Button>
+              }
+            >
+              {DIFFICULTIES.map((diff) => (
+                <Menu.Item
+                  key={diff}
+                  onPress={() => {
+                    setDifficulty(diff);
+                    setShowDifficultyMenu(false);
+                  }}
+                  title={diff}
+                />
+              ))}
+            </Menu>
+          </View>
+
+          {difficulty && (
+            <View style={styles.dropdownContainer}>
+              <Menu
+                visible={showVerbMenu}
+                onDismiss={() => setShowVerbMenu(false)}
+                anchor={
+                  <Button 
+                    mode="outlined" 
+                    onPress={() => setShowVerbMenu(true)}
+                    style={styles.dropdown}
+                  >
+                    {verb || 'Choose Verb'}
+                  </Button>
+                }
+              >
+                {VERBS.map((v) => (
+                  <Menu.Item
+                    key={v}
+                    onPress={() => {
+                      setVerb(v);
+                      setShowVerbMenu(false);
+                    }}
+                    title={v}
+                  />
+                ))}
+              </Menu>
+            </View>
+          )}
+
+          {verb && (
+            <View style={styles.dropdownContainer}>
+              <Menu
+                visible={showTimeMenu}
+                onDismiss={() => setShowTimeMenu(false)}
+                anchor={
+                  <Button 
+                    mode="outlined" 
+                    onPress={() => setShowTimeMenu(true)}
+                    style={styles.dropdown}
+                  >
+                    {timeFrame || 'Choose Time Frame'}
+                  </Button>
+                }
+              >
+                {TIME_FRAMES.map((time) => (
+                  <Menu.Item
+                    key={time}
+                    onPress={() => {
+                      setTimeFrame(time);
+                      setShowTimeMenu(false);
+                    }}
+                    title={time}
+                  />
+                ))}
+              </Menu>
+            </View>
+          )}
+
+          {difficulty && verb && timeFrame && (
+            <Button 
+              mode="contained" 
+              onPress={startQuiz}
+              style={styles.startButton}
+            >
+              Start Quiz
+            </Button>
+          )}
         </Card.Content>
       </Card>
 
-      {selectedDifficulty && (
-        <Card style={styles.card}>
-          <Card.Content>
-            <Text variant="titleMedium" style={styles.stepTitle}>
-              Step 2: Choose Verb
-            </Text>
-            <Button
-              mode="outlined"
-              onPress={() => setModalVisible('verb')}
-              style={styles.button}
-            >
-              {selectedVerb ? VERBS.find(v => v.key === selectedVerb)?.label : 'Select Verb'}
-            </Button>
-          </Card.Content>
-        </Card>
-      )}
-
-      {selectedVerb && (
-        <Card style={styles.card}>
-          <Card.Content>
-            <Text variant="titleMedium" style={styles.stepTitle}>
-              Step 3: Choose Time Frame
-            </Text>
-            <Button
-              mode="outlined"
-              onPress={() => setModalVisible('timeFrame')}
-              style={styles.button}
-            >
-              {selectedTimeFrame ? TIME_FRAMES.find(t => t.key === selectedTimeFrame)?.label : 'Select Time Frame'}
-            </Button>
-          </Card.Content>
-        </Card>
-      )}
-
-      {selectedDifficulty && selectedVerb && selectedTimeFrame && (
-        <View style={styles.actionButtons}>
-          <Button
-            mode="contained"
-            onPress={handleStartQuiz}
-            style={[styles.button, styles.primaryButton]}
-          >
-            Start Quiz
-          </Button>
-          <Button
-            mode="outlined"
-            onPress={handleMiniCourses}
-            style={styles.button}
-          >
+      <Card style={styles.card}>
+        <Card.Content>
+          <Text variant="titleLarge" style={styles.sectionTitle}>
             Mini-Courses
+          </Text>
+          <Text style={styles.courseDescription}>
+            Structured learning paths with sequential progression
+          </Text>
+          <Button 
+            mode="contained" 
+            onPress={openCourses}
+            style={styles.courseButton}
+          >
+            View Courses
           </Button>
-        </View>
-      )}
-
-      {/* Modals */}
-      <Portal>
-        <Modal visible={modalVisible === 'difficulty'} onDismiss={() => setModalVisible('')}>
-          <Card style={styles.modal}>
-            <Card.Content>
-              <Text variant="titleLarge">Select Difficulty</Text>
-              {DIFFICULTIES.map((difficulty) => (
-                <List.Item
-                  key={difficulty.key}
-                  title={difficulty.label}
-                  description={difficulty.description}
-                  onPress={() => {
-                    setSelectedDifficulty(difficulty.key);
-                    setModalVisible('');
-                  }}
-                />
-              ))}
-            </Card.Content>
-          </Card>
-        </Modal>
-
-        <Modal visible={modalVisible === 'verb'} onDismiss={() => setModalVisible('')}>
-          <Card style={styles.modal}>
-            <Card.Content>
-              <Text variant="titleLarge">Select Verb</Text>
-              {VERBS.map((verb) => (
-                <List.Item
-                  key={verb.key}
-                  title={verb.label}
-                  onPress={() => {
-                    setSelectedVerb(verb.key);
-                    setModalVisible('');
-                  }}
-                />
-              ))}
-            </Card.Content>
-          </Card>
-        </Modal>
-
-        <Modal visible={modalVisible === 'timeFrame'} onDismiss={() => setModalVisible('')}>
-          <Card style={styles.modal}>
-            <Card.Content>
-              <Text variant="titleLarge">Select Time Frame</Text>
-              {TIME_FRAMES.map((timeFrame) => (
-                <List.Item
-                  key={timeFrame.key}
-                  title={timeFrame.label}
-                  onPress={() => {
-                    setSelectedTimeFrame(timeFrame.key);
-                    setModalVisible('');
-                  }}
-                />
-              ))}
-            </Card.Content>
-          </Card>
-        </Modal>
-      </Portal>
+        </Card.Content>
+      </Card>
     </ScrollView>
   );
 }
@@ -201,48 +172,53 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1a1a2e',
-    padding: 16,
+    backgroundColor: '#0f0f0f',
   },
   header: {
-    alignItems: 'center',
-    marginBottom: 24,
+    padding: 20,
+    margin: 16,
+    borderRadius: 12,
   },
   title: {
     color: '#ffffff',
+    fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 8,
   },
   subtitle: {
-    color: '#8b5cf6',
+    color: '#a855f7',
     fontStyle: 'italic',
-    marginBottom: 16,
+    textAlign: 'center',
+    marginTop: 4,
   },
   description: {
-    color: '#cccccc',
+    color: '#a1a1aa',
     textAlign: 'center',
+    marginTop: 12,
     lineHeight: 20,
   },
   card: {
-    marginBottom: 16,
-    backgroundColor: '#16213e',
+    margin: 16,
+    backgroundColor: '#1a1a1a',
   },
-  stepTitle: {
+  sectionTitle: {
     color: '#ffffff',
+    marginBottom: 16,
+  },
+  dropdownContainer: {
     marginBottom: 12,
   },
-  button: {
-    marginVertical: 4,
+  dropdown: {
+    width: '100%',
   },
-  primaryButton: {
-    backgroundColor: '#8b5cf6',
+  startButton: {
+    marginTop: 16,
+    backgroundColor: '#a855f7',
   },
-  actionButtons: {
-    marginTop: 24,
+  courseDescription: {
+    color: '#a1a1aa',
+    marginBottom: 16,
   },
-  modal: {
-    margin: 20,
-    backgroundColor: '#16213e',
-    maxHeight: 400,
+  courseButton: {
+    backgroundColor: '#7c3aed',
   },
 });
