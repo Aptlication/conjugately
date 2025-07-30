@@ -2,71 +2,53 @@
 
 *For serious students.*
 
-A React Native mobile app for mastering French verb conjugations with AI-powered quizzes and structured mini-courses.
+A mobile-optimized web application for mastering French verb conjugations with AI-powered quizzes and structured mini-courses.
 
 ## Features
 
 - 4-tier difficulty system (Beginner, Easy, Moderate, Difficult)
-- AI-generated quizzes with Google Gemini
-- Sequential course progression
-- Dark theme with purple accents
-- Cross-platform (iOS, Android, Web)
+- Touch-optimized interface for mobile devices
+- Dark theme with purple accents matching main app
+- Responsive design that works on all screen sizes
+- Same quiz flow as web version
 
 ## Tech Stack
 
-- React Native 0.79.5
-- Expo SDK 53
-- React 19
-- TypeScript 5.8
-- React Navigation 6
-- React Native Paper (Material Design 3)
-- TanStack Query
-- React Hook Form + Zod
+- HTML5 with responsive design
+- CSS3 with mobile-first approach
+- Vanilla JavaScript for interactivity
+- Python HTTP server for development
 
 ## Getting Started
 
-1. Install dependencies:
+1. Start the development server:
    ```bash
-   npm install
+   python3 -m http.server 8080
    ```
 
-2. Start the development server:
-   ```bash
-   npm start
-   ```
+2. Access the app:
+   - Local: http://localhost:8080
+   - Mobile: Use Replit preview URL with :8080 port
 
-3. Choose your platform:
-   - Press `i` for iOS simulator
-   - Press `a` for Android emulator  
-   - Press `w` for web browser
-   - Scan QR code with Expo Go app
+## Development & Deployment
 
-## API Integration
+- **Development**: Edit files in Replit and test locally
+- **Deployment**: Can be deployed as separate Replit app
+- **Integration**: Ready to connect to existing backend API
 
-The app connects to the same backend API as the web version:
-- Quiz generation
-- Course progress tracking
-- User management
+## Next Steps
 
-Make sure the backend server is running on the expected URL.
+- Connect to backend API endpoints
+- Implement real quiz functionality
+- Add course progression features
+- Deploy as standalone mobile app
 
 ## Project Structure
 
 ```
-src/
-├── screens/          # Main app screens
-├── services/         # API calls and utilities
-└── types/           # TypeScript definitions
-```
-
-## Deployment
-
-Use Expo's build services to create production builds:
-
-```bash
-# iOS
-expo build:ios
-
-# Android
-expo build:android
+apps/french-verb-master-mobile/
+├── index.html        # Main mobile app interface
+├── package.json      # Project configuration
+├── .replit          # Replit deployment config
+└── README.md        # This file
 ```
