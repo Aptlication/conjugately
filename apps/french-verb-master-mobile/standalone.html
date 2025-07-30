@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Verb Master Mobile</title>
+    <meta name="theme-color" content="#a855f7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="French Verb Master">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #a855f7;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .description {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .step-number {
+            background: #a855f7;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option {
+            background: #1f1f1f;
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .option:hover {
+            border-color: #a855f7;
+            background: #252525;
+        }
+
+        .option.selected {
+            border-color: #a855f7;
+            background: #2d1b69;
+            color: #ffffff;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+        }
+
+        .btn-secondary {
+            background: #1f1f1f;
+            color: #ffffff;
+            border: 2px solid #333;
+        }
+
+        .btn-secondary:hover {
+            border-color: #a855f7;
+            background: #252525;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">French Verb Master</h1>
+            <p class="subtitle">For serious students.</p>
+        </div>
+
+        <p class="description">
+            Master French verb conjugations with AI-powered quizzes and structured mini-courses.
+        </p>
+
+        <!-- Step 1: Choose Difficulty -->
+        <div class="step" id="step1">
+            <h2 class="step-title">
+                <span class="step-number">1</span>
+                Choose Difficulty
+            </h2>
+            <div class="options">
+                <div class="option" onclick="selectDifficulty('Beginner')">
+                    <strong>Beginner</strong><br>
+                    4 essential verbs, simple conjugations
+                </div>
+                <div class="option" onclick="selectDifficulty('Easy')">
+                    <strong>Easy</strong><br>
+                    6 common verbs, basic tenses
+                </div>
+                <div class="option" onclick="selectDifficulty('Moderate')">
+                    <strong>Moderate</strong><br>
+                    8 verbs including reflexive forms
+                </div>
+                <div class="option" onclick="selectDifficulty('Difficult')">
+                    <strong>Difficult</strong><br>
+                    13 verbs, all tenses and forms
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Choose Verb -->
+        <div class="step hidden" id="step2">
+            <h2 class="step-title">
+                <span class="step-number">2</span>
+                Choose Verb
+            </h2>
+            <div class="options" id="verbOptions">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Step 3: Choose Time Frame -->
+        <div class="step hidden" id="step3">
+            <h2 class="step-title">
+                <span class="step-number">3</span>
+                Choose Time Frame
+            </h2>
+            <div class="options">
+                <div class="option" onclick="selectTimeFrame('Present')">Present</div>
+                <div class="option" onclick="selectTimeFrame('Past')">Past</div>
+                <div class="option" onclick="selectTimeFrame('Future')">Future</div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-secondary" onclick="viewCourses()">View Courses</button>
+            <button class="btn btn-primary" id="startQuizBtn" onclick="startQuiz()" disabled>Start Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedDifficulty = '';
+        let selectedVerb = '';
+        let selectedTimeFrame = '';
+
+        const verbs = {
+            'Beginner': ['être (to be)', 'avoir (to have)', 'faire (to do)', 'aller (to go)'],
+            'Easy': ['être (to be)', 'avoir (to have)', 'faire (to do)', 'dire (to say)', 'aller (to go)', 'voir (to see)'],
+            'Moderate': ['être (to be)', 'avoir (to have)', 'faire (to do)', 'dire (to say)', 'aller (to go)', 'se lever (to get up)', 's\'appeler (to be called)', 'se sentir (to feel)'],
+            'Difficult': ['être (to be)', 'avoir (to have)', 'faire (to do)', 'dire (to say)', 'aller (to go)', 'voir (to see)', 'savoir (to know)', 'pouvoir (to be able)', 'vouloir (to want)', 'venir (to come)', 'se laver (to wash)', 'se réveiller (to wake up)', 's\'habiller (to get dressed)']
+        };
+
+        function selectDifficulty(difficulty) {
+            selectedDifficulty = difficulty;
+            
+            // Update UI
+            document.querySelectorAll('#step1 .option').forEach(opt => opt.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            // Show verb options
+            populateVerbOptions(difficulty);
+            document.getElementById('step2').classList.remove('hidden');
+            
+            // Reset subsequent steps
+            selectedVerb = '';
+            selectedTimeFrame = '';
+            document.getElementById('step3').classList.add('hidden');
+            updateStartButton();
+        }
+
+        function populateVerbOptions(difficulty) {
+            const verbOptions = document.getElementById('verbOptions');
+            verbOptions.innerHTML = '';
+            
+            verbs[difficulty].forEach(verb => {
+                const option = document.createElement('div');
+                option.className = 'option';
+                option.textContent = verb;
+                option.onclick = () => selectVerb(verb);
+                verbOptions.appendChild(option);
+            });
+        }
+
+        function selectVerb(verb) {
+            selectedVerb = verb;
+            
+            // Update UI
+            document.querySelectorAll('#step2 .option').forEach(opt => opt.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            // Show time frame options
+            document.getElementById('step3').classList.remove('hidden');
+            
+            // Reset subsequent step
+            selectedTimeFrame = '';
+            updateStartButton();
+        }
+
+        function selectTimeFrame(timeFrame) {
+            selectedTimeFrame = timeFrame;
+            
+            // Update UI
+            document.querySelectorAll('#step3 .option').forEach(opt => opt.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            updateStartButton();
+        }
+
+        function updateStartButton() {
+            const btn = document.getElementById('startQuizBtn');
+            btn.disabled = !(selectedDifficulty && selectedVerb && selectedTimeFrame);
+        }
+
+        function startQuiz() {
+            alert(`Starting quiz:\nDifficulty: ${selectedDifficulty}\nVerb: ${selectedVerb}\nTime Frame: ${selectedTimeFrame}\n\nThis would connect to your backend API to generate a quiz!`);
+        }
+
+        function viewCourses() {
+            alert('Mini-courses feature coming soon!\n\nThis would show structured learning paths with sequential progression.');
+        }
+    </script>
+</body>
+</html>
