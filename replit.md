@@ -388,3 +388,9 @@ Preferred communication style: Simple, everyday language.
 - **Mobile-Optimized UI**: Touch-friendly dark theme interface with proper mobile styling
 - **Feature Parity**: All 4-tier difficulty system, quiz generation, and course progression available on mobile
 - **Production Ready**: Complete project with proper configuration, build scripts, and comprehensive documentation
+
+### January 29, 2025 - Deployment & App Organization ✓
+- **Web App Deployment**: Triggered deployment for French Verb Master web application
+- **Mobile App Organization**: Moved React Native app to apps/french-verb-master-mobile/ for better project structure
+- **Organized Structure**: Clean separation between web (root) and mobile (apps/) versions
+- **Ready for Production**: Both web and mobile versions ready for deployment and distribution
