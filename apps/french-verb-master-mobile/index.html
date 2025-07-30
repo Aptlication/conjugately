@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Verb Master Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #a855f7;
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #a1a1aa;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .label {
+            font-size: 16px;
+            margin: 16px 0 8px 0;
+            font-weight: 500;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .button {
+            padding: 12px 16px;
+            background-color: #374151;
+            color: #d1d5db;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+
+        .button:hover {
+            background-color: #4b5563;
+        }
+
+        .button.selected {
+            background-color: #a855f7;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .start-button {
+            width: 100%;
+            padding: 16px;
+            background-color: #a855f7;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .start-button:hover {
+            background-color: #9333ea;
+        }
+
+        .course-description {
+            color: #a1a1aa;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .course-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #7c3aed;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .course-button:hover {
+            background-color: #6d28d9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .coming-soon {
+            color: #a855f7;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">French Verb Master</h1>
+        <p class="subtitle">For serious students</p>
+        <p class="description">
+            Master French verb conjugations, the key to fluency, with personalized quizzes and mini-courses.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title">Quick Quiz</h2>
+        
+        <div class="label">1. Choose Difficulty</div>
+        <div class="button-group" id="difficultyGroup">
+            <button class="button" onclick="selectDifficulty('Beginner')">Beginner</button>
+            <button class="button" onclick="selectDifficulty('Easy')">Easy</button>
+            <button class="button" onclick="selectDifficulty('Moderate')">Moderate</button>
+            <button class="button" onclick="selectDifficulty('Difficult')">Difficult</button>
+        </div>
+
+        <div id="verbSection" class="hidden">
+            <div class="label">2. Choose Verb</div>
+            <div class="button-group" id="verbGroup">
+                <button class="button" onclick="selectVerb('être')">être</button>
+                <button class="button" onclick="selectVerb('avoir')">avoir</button>
+                <button class="button" onclick="selectVerb('faire')">faire</button>
+                <button class="button" onclick="selectVerb('dire')">dire</button>
+                <button class="button" onclick="selectVerb('aller')">aller</button>
+                <button class="button" onclick="selectVerb('voir')">voir</button>
+            </div>
+        </div>
+
+        <div id="timeSection" class="hidden">
+            <div class="label">3. Choose Time Frame</div>
+            <div class="button-group" id="timeGroup">
+                <button class="button" onclick="selectTimeFrame('Present')">Present</button>
+                <button class="button" onclick="selectTimeFrame('Past')">Past</button>
+                <button class="button" onclick="selectTimeFrame('Future')">Future</button>
+            </div>
+        </div>
+
+        <button id="startButton" class="start-button hidden" onclick="startQuiz()">
+            Start Quiz
+        </button>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title">Mini-Courses</h2>
+        <p class="course-description">
+            Structured learning paths with sequential progression
+        </p>
+        <button class="course-button" onclick="viewCourses()">View Courses</button>
+    </div>
+
+    <script>
+        let selectedDifficulty = '';
+        let selectedVerb = '';
+        let selectedTimeFrame = '';
+
+        function selectDifficulty(difficulty) {
+            selectedDifficulty = difficulty;
+            updateButtonSelection('difficultyGroup', difficulty);
+            document.getElementById('verbSection').classList.remove('hidden');
+            resetSelection('verbGroup');
+            resetSelection('timeGroup');
+            document.getElementById('timeSection').classList.add('hidden');
+            document.getElementById('startButton').classList.add('hidden');
+            selectedVerb = '';
+            selectedTimeFrame = '';
+        }
+
+        function selectVerb(verb) {
+            selectedVerb = verb;
+            updateButtonSelection('verbGroup', verb);
+            document.getElementById('timeSection').classList.remove('hidden');
+            resetSelection('timeGroup');
+            document.getElementById('startButton').classList.add('hidden');
+            selectedTimeFrame = '';
+        }
+
+        function selectTimeFrame(timeFrame) {
+            selectedTimeFrame = timeFrame;
+            updateButtonSelection('timeGroup', timeFrame);
+            document.getElementById('startButton').classList.remove('hidden');
+        }
+
+        function updateButtonSelection(groupId, selectedValue) {
+            const buttons = document.querySelectorAll(`#${groupId} .button`);
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+                if (button.textContent === selectedValue) {
+                    button.classList.add('selected');
+                }
+            });
+        }
+
+        function resetSelection(groupId) {
+            const buttons = document.querySelectorAll(`#${groupId} .button`);
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+        }
+
+        function startQuiz() {
+            alert(`Starting quiz:\nDifficulty: ${selectedDifficulty}\nVerb: ${selectedVerb}\nTime Frame: ${selectedTimeFrame}\n\nThis would connect to your backend API to generate a quiz!`);
+        }
+
+        function viewCourses() {
+            alert('Mini-courses feature coming soon!\n\nThis would show structured learning paths with sequential progression.');
+        }
+    </script>
+</body>
+</html>
