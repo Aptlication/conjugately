@@ -60,9 +60,9 @@ export default function ResultsScreen() {
           <Text variant="titleLarge" style={styles.reviewTitle}>
             Question Review
           </Text>
-          {questions.map((question, index) => {
-            const userAnswer = question.answers.find(a => a.text === question.userAnswer);
-            const correctAnswer = question.answers.find(a => a.isCorrect);
+          {questions.map((question: any, index: number) => {
+            const userAnswer = question.answers.find((a: any) => a.text === question.userAnswer);
+            const correctAnswer = question.answers.find((a: any) => a.isCorrect);
             const isCorrect = userAnswer?.isCorrect || false;
 
             return (
