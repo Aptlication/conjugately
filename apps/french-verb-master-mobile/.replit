@@ -1,8 +1,8 @@
-run = "python3 -m http.server 8080"
+run = "python3 main.py"
 
 [deployment]
-run = ["sh", "-c", "python3 -m http.server 8080"]
+run = ["sh", "-c", "python3 main.py"]
 
 [[ports]]
-localPort = 8080
+localPort = 80
 externalPort = 80
