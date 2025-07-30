@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>French Verb Master Mobile</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#a855f7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="French Verb Master">
     <style>
         * {
             margin: 0;
@@ -258,6 +263,17 @@
 
         function viewCourses() {
             alert('Mini-courses feature coming soon!\n\nThis would show structured learning paths with sequential progression.');
+        }
+
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('ServiceWorker registered successfully');
+                })
+                .catch(function(error) {
+                    console.log('ServiceWorker registration failed');
+                });
         }
     </script>
 </body>
