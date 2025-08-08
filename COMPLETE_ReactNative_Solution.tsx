@@ -64,6 +64,9 @@ interface QuizSelections {
 interface DropdownItem {
   label: string;
   value: string;
+  description?: string;
+  color?: string;
+  icon?: string;
 }
 
 interface CustomDropdownProps {
@@ -107,20 +110,31 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
     }
   };
 
-  const renderItem = ({ item }: { item: DropdownItem }) => (
+  const renderItem = ({ item }: { item: any }) => (
     <TouchableOpacity
       style={[
         dropdownStyles.modalItem,
         item.value === value && dropdownStyles.modalItemSelected,
+        item.color && { borderLeftWidth: 4, borderLeftColor: item.color }
       ]}
       onPress={() => handleSelect(item.value)}
     >
-      <Text style={[
-        dropdownStyles.modalItemText,
-        item.value === value && dropdownStyles.modalItemTextSelected,
-      ]}>
-        {item.label}
-      </Text>
+      <View style={dropdownStyles.modalItemContent}>
+        <View style={dropdownStyles.modalItemHeader}>
+          {item.icon && <Text style={dropdownStyles.modalItemIcon}>{item.icon}</Text>}
+          <Text style={[
+            dropdownStyles.modalItemText,
+            item.value === value && dropdownStyles.modalItemTextSelected,
+          ]}>
+            {item.label}
+          </Text>
+        </View>
+        {item.description && (
+          <Text style={dropdownStyles.modalItemDescription}>
+            {item.description}
+          </Text>
+        )}
+      </View>
       {item.value === value && (
         <Icon name="check" size={20} color="#6C63FF" />
       )}
@@ -217,69 +231,113 @@ const QuizSelectionScreen: React.FC<QuizSelectionScreenProps> = ({
   // ======================================================================================
 
   const difficulties = [
-    { label: 'Beginner (4 verbs: être, avoir, faire, aller)', value: 'beginner' },
-    { label: 'Easy (6 verbs: + dire, voir)', value: 'easy' },
-    { label: 'Moderate (8 verbs: + savoir, pouvoir)', value: 'moderate' },
-    { label: 'Difficult (13 verbs: + 5 reflexive verbs)', value: 'difficult' },
+    { 
+      label: 'Beginner', 
+      value: 'beginner',
+      description: 'Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • 3 basic tenses',
+      color: '#4A90E2',
+      icon: '🔵'
+    },
+    { 
+      label: 'Easy', 
+      value: 'easy',
+      description: 'Top 6 verbs (être, avoir, faire, dire, aller, voir) • Multiple tenses (Present, Past, Future)',
+      color: '#7ED321',
+      icon: '🟢'
+    },
+    { 
+      label: 'Moderate', 
+      value: 'moderate',
+      description: '8 verbs (5 regular + 3 reflexive) • Present, past, and future tenses',
+      color: '#F5A623',
+      icon: '🟡'
+    },
+    { 
+      label: 'Difficult', 
+      value: 'difficult',
+      description: '13 verbs (10 regular + 3 reflexive) • All tenses and time frames',
+      color: '#D0021B',
+      icon: '🔴'
+    },
   ];
 
   const getVerbsForDifficulty = (difficulty: string) => {
     const allVerbs = [
-      { label: 'être (to be)', value: 'être' },
-      { label: 'avoir (to have)', value: 'avoir' },
-      { label: 'faire (to do/make)', value: 'faire' },
-      { label: 'aller (to go)', value: 'aller' },
-      { label: 'dire (to say)', value: 'dire' },
-      { label: 'voir (to see)', value: 'voir' },
-      { label: 'savoir (to know)', value: 'savoir' },
-      { label: 'pouvoir (can/to be able)', value: 'pouvoir' },
-      { label: 'vouloir (to want)', value: 'vouloir' },
-      { label: 'venir (to come)', value: 'venir' },
-      { label: 'se lever (to get up)', value: 'se lever' },
-      { label: "s'appeler (to be called)", value: "s'appeler" },
-      { label: 'se sentir (to feel)', value: 'se sentir' },
+      { label: 'être (to be)', value: 'être', description: 'Most essential French verb' },
+      { label: 'avoir (to have)', value: 'avoir', description: 'Second most essential verb' },
+      { label: 'faire (to do/make)', value: 'faire', description: 'Very common irregular verb' },
+      { label: 'aller (to go)', value: 'aller', description: 'Essential for future tense' },
+      { label: 'dire (to say)', value: 'dire', description: 'Important communication verb' },
+      { label: 'voir (to see)', value: 'voir', description: 'Common perception verb' },
+      { label: 'savoir (to know)', value: 'savoir', description: 'Know facts/information' },
+      { label: 'pouvoir (can/to be able)', value: 'pouvoir', description: 'Express ability/permission' },
+      { label: 'vouloir (to want)', value: 'vouloir', description: 'Express desires/wishes' },
+      { label: 'venir (to come)', value: 'venir', description: 'Movement and recent past' },
+      { label: 'se lever (to get up)', value: 'se lever', description: 'Reflexive verb - daily routine' },
+      { label: "s'appeler (to be called)", value: "s'appeler", description: 'Reflexive verb - introduce yourself' },
+      { label: 'se sentir (to feel)', value: 'se sentir', description: 'Reflexive verb - emotions' },
     ];
 
     switch (difficulty) {
-      case 'beginner': return allVerbs.slice(0, 4);
-      case 'easy': return allVerbs.slice(0, 6);
-      case 'moderate': return allVerbs.slice(0, 8);
-      case 'difficult': return allVerbs;
+      case 'beginner': return allVerbs.slice(0, 4); // Top 4 verbs
+      case 'easy': return allVerbs.slice(0, 6); // Top 6 verbs
+      case 'moderate': return allVerbs.slice(0, 8); // 8 verbs (5 regular + 3 reflexive)
+      case 'difficult': return allVerbs; // All 13 verbs
       default: return [];
     }
   };
 
   const timeFrames = [
-    { label: 'Present Tenses (Présent, Présent Progressif)', value: 'present' },
-    { label: 'Past Tenses (Passé Composé, Imparfait, etc.)', value: 'past' },
-    { label: 'Future Tenses (Futur Simple, Futur Proche)', value: 'future' },
-    { label: 'All Time Frames (Mixed Practice)', value: 'all' },
+    { 
+      label: 'Present Tenses', 
+      value: 'present',
+      description: 'Présent, Présent Progressif - Current actions and states',
+      icon: '🕐'
+    },
+    { 
+      label: 'Past Tenses', 
+      value: 'past',
+      description: 'Passé Composé, Imparfait, Passé Simple, Plus-que-parfait - Past actions',
+      icon: '⏮️'
+    },
+    { 
+      label: 'Future Tenses', 
+      value: 'future',
+      description: 'Futur Simple, Futur Proche, Conditionnel - Future plans and possibilities',
+      icon: '⏭️'
+    },
+    { 
+      label: 'All Time Frames', 
+      value: 'all',
+      description: 'Mixed practice across all tenses - Advanced challenge',
+      icon: '🔄'
+    },
   ];
 
   const getTensesForTimeFrame = (timeFrame: string) => {
     const allTenses = {
       present: [
-        { label: 'Présent', value: 'présent' },
-        { label: 'Présent Progressif', value: 'présent_progressif' },
+        { label: 'Présent', value: 'présent', description: 'Simple present tense - je suis, tu as' },
+        { label: 'Présent Progressif', value: 'présent_progressif', description: 'Present continuous - je suis en train de' },
       ],
       past: [
-        { label: 'Passé Composé', value: 'passé_composé' },
-        { label: 'Passé Simple', value: 'passé_simple' },
-        { label: 'Imparfait', value: 'imparfait' },
-        { label: 'Plus-que-parfait', value: 'plus_que_parfait' },
+        { label: 'Passé Composé', value: 'passé_composé', description: 'Perfect past - j\'ai fait, je suis allé(e)' },
+        { label: 'Passé Simple', value: 'passé_simple', description: 'Literary past - je fis, j\'allai' },
+        { label: 'Imparfait', value: 'imparfait', description: 'Imperfect past - j\'étais, j\'avais' },
+        { label: 'Plus-que-parfait', value: 'plus_que_parfait', description: 'Past perfect - j\'avais fait' },
       ],
       future: [
-        { label: 'Futur Simple', value: 'futur_simple' },
-        { label: 'Futur Proche', value: 'futur_proche' },
-        { label: 'Conditionnel', value: 'conditionnel' },
+        { label: 'Futur Simple', value: 'futur_simple', description: 'Simple future - je serai, j\'aurai' },
+        { label: 'Futur Proche', value: 'futur_proche', description: 'Near future - je vais faire' },
+        { label: 'Conditionnel', value: 'conditionnel', description: 'Conditional - je serais, j\'aurais' },
       ],
       all: [
-        { label: 'All Tenses (Random Mix)', value: 'all_tenses' },
-        { label: 'Présent', value: 'présent' },
-        { label: 'Passé Composé', value: 'passé_composé' },
-        { label: 'Futur Simple', value: 'futur_simple' },
-        { label: 'Imparfait', value: 'imparfait' },
-        { label: 'Conditionnel', value: 'conditionnel' },
+        { label: 'All Tenses (Random Mix)', value: 'all_tenses', description: 'Mixed practice across all tenses' },
+        { label: 'Présent', value: 'présent', description: 'Simple present tense' },
+        { label: 'Passé Composé', value: 'passé_composé', description: 'Perfect past tense' },
+        { label: 'Futur Simple', value: 'futur_simple', description: 'Simple future tense' },
+        { label: 'Imparfait', value: 'imparfait', description: 'Imperfect past tense' },
+        { label: 'Conditionnel', value: 'conditionnel', description: 'Conditional tense' },
       ],
     };
 
@@ -810,7 +868,7 @@ const dropdownStyles = StyleSheet.create({
   modalItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingHorizontal: 20,
     paddingVertical: 16,
     borderBottomWidth: 1,
@@ -819,14 +877,33 @@ const dropdownStyles = StyleSheet.create({
   modalItemSelected: {
     backgroundColor: 'rgba(108, 99, 255, 0.1)',
   },
+  modalItemContent: {
+    flex: 1,
+    marginRight: 12,
+  },
+  modalItemHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  modalItemIcon: {
+    fontSize: 16,
+    marginRight: 8,
+  },
   modalItemText: {
     fontSize: 16,
     color: '#FFFFFF',
-    flex: 1,
+    fontWeight: '600',
   },
   modalItemTextSelected: {
     color: '#6C63FF',
-    fontWeight: '500',
+    fontWeight: '600',
+  },
+  modalItemDescription: {
+    fontSize: 14,
+    color: '#B8B8CC',
+    lineHeight: 20,
+    marginTop: 4,
   },
 });
 
