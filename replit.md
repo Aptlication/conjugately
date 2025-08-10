@@ -38,8 +38,9 @@ Preferred communication style: Simple, everyday language.
 - **Type Safety**: Full TypeScript implementation with shared schemas ensuring runtime validation and compile-time safety.
 - **Component-Based UI**: Utilizes modern React patterns with reusable components and a consistent design system.
 - **Quiz System**: Hybrid AI + template system for reliable quiz delivery, even if AI times out. Quizzes include English-to-French translation, multiple-choice answers, hints, and rationales.
-- **Course System**: Structured learning flow with sequential progression (Present → Past → Future tenses), tiered difficulty levels (Beginner, Easy, Moderate, Difficult) featuring increasing verb sets (4-6-8-13 verbs including reflexive verbs), and a simplified 1-section + final exam structure per time frame.
-- **Grammar & Negation**: Comprehensive French negation system for all tenses, proper French contractions, and accurate English grammar in generated questions.
+- **Course System**: Progressive difficulty system with logical unlocking (Beginner→Easy→Moderate→Difficult), where Difficult level only appears after completing any Moderate course exam. Structured learning flow with sequential progression (Present → Past → Future tenses), tiered difficulty levels featuring increasing verb sets (4→6→8→13 verbs), and comprehensive grammar fixes for English negation patterns.
+- **Grammar & Negation**: Comprehensive French negation system for all tenses, proper French contractions, and accurate English grammar in generated questions. Enhanced auxiliary vs main verb detection for "had" constructions and improved "will" negation handling to prevent double negation errors.
+- **Recent Fixes (January 2025)**: Fixed missing Present Progressive (Présent Progressif) quizzes for reflexive verbs (se lever, s'appeler, se sentir) through improved tense normalization mapping. Resolved specific permutation issues for dire/voir Imparfait and Plus-que-parfait tenses. Enhanced grammar conversion to properly handle "will don't" and "had don't" constructions with better auxiliary vs main verb detection.
 
 ## External Dependencies
 

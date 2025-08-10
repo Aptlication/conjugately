@@ -29,12 +29,12 @@ const TIME_FRAMES = {
 // Difficulty configurations
 const DIFFICULTY_CONFIGS = {
   "Easy": {
-    verbs: ["être", "avoir", "faire"],
-    timeFrames: ["Present"],
-    tenses: ["Présent"]
+    verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
+    timeFrames: ["Present", "Past"],
+    tenses: ["Présent", "Passé Composé"]
   },
   "Moderate": {
-    verbs: ["être", "avoir", "faire", "dire", "aller", "se lever", "s'appeler", "se sentir"],
+    verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"],
     timeFrames: ["Present", "Past", "Future"],
     tenses: ["Présent", "Présent Progressif", "Passé Composé", "Futur Simple", "Futur Proche"]
   },

@@ -1203,15 +1203,17 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // For auxiliary verbs in compound tenses (e.g., "He had eaten" -> "He hadn't eaten" for pluperfect)
   // Only apply this AFTER checking for main verb usage above
   // Check if "had" is auxiliary (followed by past participle) vs main verb
-  if (sentence.includes(" had ") && !sentence.includes("didn't")) {
+  if (sentence.includes(" had ") && !sentence.includes("didn't") && !sentence.includes("hadn't")) {
     // Look for common past participles after "had" to confirm auxiliary usage
-    const auxiliaryPatterns = [" had been", " had done", " had made", " had gone", " had seen", " had said", " had eaten", " had taken", " had given"];
+    const auxiliaryPatterns = [" had been", " had done", " had made", " had gone", " had seen", " had said", " had eaten", " had taken", " had given", " had worked", " had studied", " had lived"];
     const isAuxiliary = auxiliaryPatterns.some(pattern => sentence.includes(pattern));
     
     if (isAuxiliary) {
       return sentence.replace(" had ", " hadn't ");
+    } else {
+      // Handle "had" as main verb (e.g., "I had breakfast" -> "I didn't have breakfast")
+      return sentence.replace(" had ", " didn't have ");
     }
-    // If "had" is main verb (e.g., "I had breakfast"), it was handled in the main verb section above
   }
   
   // For sentences ending with a period (past tense statements)
@@ -1461,17 +1463,23 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
   
   // Normalize tense names - map frontend tense names to backend tense keys
-  const normalizedTense = tense.toLowerCase()
-    .replace('présent progressif', 'présent_progressif')
-    .replace('présent', 'present')
-    .replace('passé composé', 'passé_composé')
-    .replace('passé simple', 'passé_simple')
-    .replace('plus-que-parfait', 'plus_que_parfait')
-    .replace('imparfait', 'imparfait')
-    .replace('conditionnel', 'conditionnel')
-    .replace('futur simple', 'futur_simple')
-    .replace('futur proche', 'futur_proche')
-    .replace(/\s+/g, '_');
+  let normalizedTense = tense.toLowerCase();
+  
+  // Handle specific tense mappings BEFORE general replacements
+  if (normalizedTense === 'présent progressif' || normalizedTense === 'present progressive') {
+    normalizedTense = 'présent_progressif';
+  } else {
+    normalizedTense = normalizedTense
+      .replace('présent', 'present')
+      .replace('passé composé', 'passé_composé')
+      .replace('passé simple', 'passé_simple')
+      .replace('plus-que-parfait', 'plus_que_parfait')
+      .replace('imparfait', 'imparfait')
+      .replace('conditionnel', 'conditionnel')
+      .replace('futur simple', 'futur_simple')
+      .replace('futur proche', 'futur_proche')
+      .replace(/\s+/g, '_');
+  }
   
   console.log(`🔧 Tense normalization: "${tense}" → "${normalizedTense}"`);
   
