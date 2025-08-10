@@ -1,0 +1,51 @@
+FRENCH VERB MASTER - APP ICON DESCRIPTION FOR GEMINI AI
+================================================================
+
+Create a modern, professional app icon for "French Verb Master" - an advanced AI-powered French language learning application focused on verb conjugation mastery.
+
+DESIGN REQUIREMENTS:
+- Square format (1024x1024 pixels)
+- Clean, modern design suitable for iOS/Android app stores
+- Professional educational app aesthetic
+- Instantly recognizable as a French learning tool
+
+VISUAL ELEMENTS TO INCLUDE:
+- French flag colors (blue, white, red) or French cultural elements
+- Educational symbols (book, graduation cap, or academic icons)
+- Language/verb conjugation symbols (stylized "V" for verbs, conjugation arrows, or French accent marks)
+- Modern gradient or contemporary design elements
+- Typography element showcasing "French" or "Verb" in elegant font
+
+STYLE PREFERENCES:
+- Contemporary flat design or subtle gradients
+- Purple/violet accent colors (brand color: #A855F7) combined with French flag colors
+- Clean, minimalist approach avoiding clutter
+- Professional yet approachable for serious language students
+- High contrast for visibility on device screens
+
+AVOID:
+- Overly cartoonish or childish designs
+- Cluttered or busy compositions
+- Generic language app clichés
+- Low contrast color combinations
+- Text that's too small to read at small sizes
+
+BRAND PERSONALITY:
+- Sophisticated and professional
+- Focused on serious language learning
+- AI-powered and modern
+- Specifically French (not generic language learning)
+- Academic excellence and mastery-oriented
+
+TECHNICAL NOTES:
+- Must work well at all sizes (from 1024x1024 down to 29x29 pixels)
+- Should be distinctive when viewed alongside other apps
+- Professional enough for educational institution use
+- Appealing to adult learners and serious students
+
+INSPIRATION CONCEPTS:
+- Elegant French typography with educational elements
+- Stylized "V" for "Verb" integrated with French cultural symbols
+- Modern academic badge or crest design
+- French architectural elements (Eiffel Tower silhouette) with educational symbols
+- Conjugation flow arrows in French flag colors with purple accents
