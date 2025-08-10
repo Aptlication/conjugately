@@ -117,7 +117,7 @@ function App() {
 
   const DIFFICULTY_CONFIGS = {
     "Beginner": { 
-      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs
+      verbs: ["être", "avoir", "faire"], // 3 most used verbs for beginner
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"],
       simpleFormat: true, // Use subject+verb format (Je suis, Tu es) instead of full sentences
@@ -125,14 +125,13 @@ function App() {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
           { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
-          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 }
         ],
         finalExam: { 
-          questions: 40, 
+          questions: 30, 
           questionsPerVerb: 10, 
-          passThreshold: 36,
-          description: "10 questions from each of the 4 verbs"
+          passThreshold: 27,
+          description: "10 questions from each of the 3 verbs"
         }
       }
     },
@@ -181,7 +180,7 @@ function App() {
       }
     },
     "Difficult": { 
-      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir"], // 10 regular + 3 reflexive verbs
+      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs for difficult mode
       timeFrames: Object.keys(TIME_FRAMES), 
       tenses: Object.values(TIME_FRAMES).flat(),
       requiresModerateCompletion: true, // Only unlocks after Moderate is completed
@@ -190,22 +189,13 @@ function App() {
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
           { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
           { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
-          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 },
-          { name: "Unit 7: savoir (to know)", verb: "savoir", questions: 20 },
-          { name: "Unit 8: pouvoir (to be able to)", verb: "pouvoir", questions: 20 },
-          { name: "Unit 9: vouloir (to want)", verb: "vouloir", questions: 20 },
-          { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
-          { name: "Unit 11: se laver (to wash oneself)", verb: "se laver", questions: 20 },
-          { name: "Unit 12: se réveiller (to wake up)", verb: "se réveiller", questions: 20 },
-          { name: "Unit 13: s'habiller (to get dressed)", verb: "s'habiller", questions: 20 }
+          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
         ],
         finalExam: { 
-          questions: 130, 
+          questions: 40, 
           questionsPerVerb: 10, 
-          passThreshold: 117,
-          description: "10 questions from each of the 13 verbs"
+          passThreshold: 36,
+          description: "10 questions from each of the 4 verbs"
         }
       }
     }
