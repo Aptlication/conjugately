@@ -1186,7 +1186,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // For past tense verbs (ended in -ed or irregular) OR present forms in past contexts
   // IMPORTANT: Handle "had" as main verb (not auxiliary) by checking for main verb usage
   if (sentence.includes(" went") || sentence.includes(" did") || sentence.includes(" made") || 
-      sentence.includes(" had") || sentence.includes(" saw") || sentence.includes(" said") ||
+      sentence.includes(" saw") || sentence.includes(" said") ||
       sentence.includes(" ate") || sentence.includes(" drank") || sentence.includes(" walked") ||
       sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived") ||
       sentence.includes(" goes") || sentence.includes(" says") || sentence.includes(" does") ||
@@ -1202,8 +1202,16 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   
   // For auxiliary verbs in compound tenses (e.g., "He had eaten" -> "He hadn't eaten" for pluperfect)
   // Only apply this AFTER checking for main verb usage above
+  // Check if "had" is auxiliary (followed by past participle) vs main verb
   if (sentence.includes(" had ") && !sentence.includes("didn't")) {
-    return sentence.replace(" had ", " hadn't ");
+    // Look for common past participles after "had" to confirm auxiliary usage
+    const auxiliaryPatterns = [" had been", " had done", " had made", " had gone", " had seen", " had said", " had eaten", " had taken", " had given"];
+    const isAuxiliary = auxiliaryPatterns.some(pattern => sentence.includes(pattern));
+    
+    if (isAuxiliary) {
+      return sentence.replace(" had ", " hadn't ");
+    }
+    // If "had" is main verb (e.g., "I had breakfast"), it was handled in the main verb section above
   }
   
   // For sentences ending with a period (past tense statements)

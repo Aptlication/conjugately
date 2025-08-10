@@ -110,8 +110,8 @@ function App() {
   };
   
   const TIME_FRAMES = {
-    "Past": ["Passé Composé", "Imparfait", "Plus-que-parfait", "Passé Simple"],
     "Present": ["Présent", "Présent Progressif"], 
+    "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
     "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
   };
 
@@ -120,6 +120,7 @@ function App() {
       verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"],
+      simpleFormat: true, // Use subject+verb format (Je suis, Tu es) instead of full sentences
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
@@ -159,7 +160,7 @@ function App() {
     "Moderate": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "se lever", "s'appeler", "se sentir"], // 8 verbs (5 regular + 3 reflexive)
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"],
+      tenses: ["Présent", "Présent Progressif", "Passé Composé", "Futur Simple", "Futur Proche"],
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
@@ -1505,7 +1506,7 @@ function App() {
               onClick={handleStartOver}
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700"
             >
-              Try another Mini-Course
+              Try another Quiz
             </button>
           </div>
         </div>
