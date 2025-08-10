@@ -137,8 +137,8 @@ function App() {
     },
     "Easy": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], // 6 most used verbs
-      timeFrames: ["Present", "Past"], 
-      tenses: ["Présent", "Passé Composé"],
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
@@ -159,7 +159,7 @@ function App() {
     "Moderate": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"], // 8 most used verbs
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Présent Progressif", "Passé Composé", "Futur Simple", "Futur Proche"],
+      tenses: ["Présent", "Présent Progressif", "Passé Composé", "Passé Simple", "Futur Simple", "Futur Proche"],
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
@@ -181,8 +181,8 @@ function App() {
     },
     "Difficult": { 
       verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs for difficult mode
-      timeFrames: Object.keys(TIME_FRAMES), 
-      tenses: Object.values(TIME_FRAMES).flat(),
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Composé", "Futur Simple"],
       requiresModerateCompletion: true, // Only unlocks after Moderate is completed
       courseStructure: {
         units: [
