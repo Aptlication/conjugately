@@ -1597,7 +1597,9 @@ function App() {
   }
 
   // Show individual verb unit introduction
-  if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= 4 && quizData.length === 0) {
+  // For non-Difficult courses, limit to 3 units (exclude Unit 4: aller)
+  const maxUnitIndex = (courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') ? 4 : 3;
+  if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= maxUnitIndex && quizData.length === 0) {
     const verbs = ["être", "avoir", "faire", "aller"];
     const currentVerb = verbs[courseInfo.currentVerbIndex - 1];
     const verbInfo = {
@@ -2544,7 +2546,9 @@ function App() {
               
               {(() => {
                 const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
-                const units = config?.courseStructure?.units || [];
+                const allUnits = config?.courseStructure?.units || [];
+                // For non-Difficult courses, limit to first 3 units only
+                const units = selectedCourseLevel === 'Difficult' ? allUnits : allUnits.slice(0, 3);
                 const finalExam = config?.courseStructure?.finalExam;
                 
                 return (
@@ -2580,7 +2584,7 @@ function App() {
                         <h4 className="text-xl font-semibold text-white">What You'll Learn</h4>
                       </div>
                       <ul className="space-y-2 text-slate-300 mb-4">
-                        <li>• Master the {config.verbs.length} most essential French verbs</li>
+                        <li>• Master the {selectedCourseLevel === 'Difficult' ? config.verbs.length : Math.min(3, config.verbs.length)} most essential French verbs</li>
                         <li>• Practice {selectedCourseTimeFrame === "Present" ? "Présent" : selectedCourseTimeFrame === "Past" ? "Passé Composé" : "Futur Simple"} conjugations</li>
                         <li>• Learn proper French grammar patterns</li>
                         <li>• Build confidence with structured progression</li>
@@ -2592,7 +2596,7 @@ function App() {
                           <div className="text-center">
                             <div className="text-lg font-semibold text-yellow-200 mb-1">We have high standards!</div>
                             <p className="text-sm text-slate-300">
-                              Final exam requires 90% ({finalExam.passThreshold}/{finalExam.questions}) to pass and unlock the next course.
+                              Final exam requires 90% ({selectedCourseLevel === 'Difficult' ? finalExam.passThreshold : Math.ceil((selectedCourseLevel === 'Difficult' ? finalExam.questions : units.length * 10) * 0.9)}/{selectedCourseLevel === 'Difficult' ? finalExam.questions : units.length * 10}) to pass and unlock the next course.
                             </p>
                           </div>
                         </div>
