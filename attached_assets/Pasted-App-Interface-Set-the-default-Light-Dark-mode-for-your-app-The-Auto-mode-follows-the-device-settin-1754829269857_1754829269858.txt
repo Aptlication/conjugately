@@ -1,0 +1,69 @@
+App Interface
+Set the default Light/Dark mode for your app. The Auto mode follows the device setting for Light & Dark Mode, but you can set Light or Dark to force a mode irrespective of the device setting. The current mode can also be changed at runtime using the Median JavaScript Bridge.
+iOS
+Android
+Control whether the orientation of your app changes automatically as the device is rotated or remains fixed in portrait or landscape mode. Note that Fixed Portrait for iPad will automatically disable multi-tasking.
+iOS
+iPhone
+iPad
+Android
+Phone
+Tablet
+Keep the device screen on all the time for many purposes such as a in-vehicle display app, museum kiosk app, trade show demo, etc. In addition to an app configuration which will be enabled at all times this setting can also be set and cleared via the JavaScript Bridge.
+Control whether your app is displayed in full screen. This mode can also be set at runtime from your website using the JavaScript Bridge. Note that on Android when full screen mode enabled the keyboard will overlay on top of your web content which can cause issues for users completing forms.
+iOS
+Android
+With native page transitions enabled a loading spinner will show when loading new pages within your app. The current page will fade out, the loading spinner will be displayed, and then the new page will fade in when it has finished loading.
+Alpha transparency level
+0.5
+
+iOS
+Loading Spinner Color
+#808080
+#808080
+Android
+Loading Spinner Color
+#808080
+#808080
+Pull-to-refresh adds the ability for the user to refresh the current page by swiping down from the top of the screen. This functionality can be independently enabled for iOS and Android.
+iOS
+Android
+Pull to Refresh Icon Color
+#1A100B
+Add swipe gestures to your app to enable swiping to go back and forward in the navigation history. On Android, arrow indicators will show on the screen to indicate when there is a page available to go back to or to go forward to.
+Android
+Navigation Background Color
+#FFFFFF
+#333333
+Navigation Active Color
+#000000
+#FFFFFF
+Navigation Inactive Color
+#666666
+#666666
+Add pinch-to-zoom functionality so that users can use two fingers to zoom in and out within your app. This feature is disabled by default as in some scenarios the behavior may not be required.
+iOS
+Android
+When enabled the text on pages displayed within your iOS app will adjust in size according to your device's settings using the CSS property -webkit-text-size-adjust
+iOS
+Set a specific scale for text in your app that is styled using relative units and ignore the device setting. e.g. Set 100% to force the default size or set 90% for smaller text than default.
+Android
+Set a maximum number of windows that are opened simultaneously to improve performance for resource-intensive apps. Once the maximum number of windows has been reached, then previously opened windows will be automatically closed starting with the window that was open first. Enable "Auto Close" so that when your primary website URL (app home screen) is opened, all other previously opened windows will be automatically closed.
+The app's viewport is the visible area of the window where content is visible. To adjust the scale of pages shown within your app, you can force a page width. Before modifying this setting, we first suggest altering the viewport meta tag on your website.
+ By default your user's default device language will be set within your app for all web content which will then display in the corresponding language in the same manner it is displayed in a regular browser, i.e. if there is an `Accept-Language` header present. The native UI components in the native app layer have been localized to various languages as contributed by customers. These must be selected to enable for your app.
+Customize the offline page that will be shown when your app is offline.
+iOS
+Offline Page
+Connection Timeout Threshold
+
+10s
+
+Preview
+
+Android
+Offline Page
+Connection Timeout Threshold
+
+10s
+
+Preview
