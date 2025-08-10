@@ -1133,6 +1133,31 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // Handle different verb forms for negation
   let sentence = englishSentence.trim();
   
+  // CRITICAL FIX: Handle "used to" constructions FIRST - they should NEVER use "don't"
+  if (sentence.includes("used to don't") || sentence.includes("used to doesn't")) {
+    return sentence.replace("used to don't", "didn't use to").replace("used to doesn't", "didn't use to");
+  }
+  
+  // CRITICAL FIX: Prevent malformed contractions FIRST
+  if (sentence.includes("doingn't") || sentence.includes("beingn't") || sentence.includes("goingn't") || 
+      sentence.includes("sayingn't") || sentence.includes("gettingn't") || sentence.includes("feelingn't")) {
+    sentence = sentence
+      .replace(/doingn't/g, "not doing")
+      .replace(/beingn't/g, "not being") 
+      .replace(/goingn't/g, "not going")
+      .replace(/sayingn't/g, "not saying")
+      .replace(/gettingn't/g, "not getting")
+      .replace(/feelingn't/g, "not feeling")
+      .replace(/washingn't/g, "not washing")
+      .replace(/wakingn't/g, "not waking");
+    return sentence;
+  }
+  
+  // CRITICAL FIX: Prevent "had hadn't" double negations FIRST
+  if (sentence.includes("had hadn't")) {
+    return sentence.replace("had hadn't", "hadn't had");
+  }
+  
   // CRITICAL: Fix any existing "will don't" double negations FIRST
   if (sentence.includes("will don't")) {
     return sentence.replace("will don't", "won't");
@@ -1216,19 +1241,10 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
     }
   }
   
-  // CRITICAL FIX: Prevent "doingn't" and other malformed contractions
-  if (sentence.includes("doingn't") || sentence.includes("beingn't") || sentence.includes("goingn't") || sentence.includes("sayingn't")) {
-    // Fix malformed progressive negations
-    sentence = sentence
-      .replace("doingn't", "not doing")
-      .replace("beingn't", "not being") 
-      .replace("goingn't", "not going")
-      .replace("sayingn't", "not saying")
-      .replace("gettingn't", "not getting")
-      .replace("feelingn't", "not feeling")
-      .replace("washingn't", "not washing")
-      .replace("wakingn't", "not waking");
-    return sentence;
+  // Handle remaining "used to" constructions for proper negation
+  if (sentence.includes("used to ") && !sentence.includes("didn't") && !sentence.includes("never")) {
+    // Apply negation correctly for "used to" - use "didn't use to"
+    return sentence.replace("used to ", "didn't use to ");
   }
   
   // For sentences ending with a period (past tense statements)
@@ -1576,6 +1592,19 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if (shouldBeNegative) {
         // Convert to negative
         englishConjugation = convertToNegativeEnglish(englishConjugation, pronoun);
+        
+        // CRITICAL: Final cleanup pass to catch any remaining grammar errors
+        englishConjugation = englishConjugation
+          .replace(/used to don't/g, "didn't use to")
+          .replace(/used to doesn't/g, "didn't use to")
+          .replace(/doingn't/g, "not doing")
+          .replace(/beingn't/g, "not being")
+          .replace(/goingn't/g, "not going")
+          .replace(/gettingn't/g, "not getting")
+          .replace(/sayingn't/g, "not saying")
+          .replace(/feelingn't/g, "not feeling")
+          .replace(/had hadn't/g, "hadn't had");
+          
         correctAnswer = buildNegativeFrench(pronoun, conjugation, "", normalizedTense, verb);
       } else {
         correctAnswer = applyContractions(pronoun, conjugation);
@@ -1743,14 +1772,24 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         }
         
         // CRITICAL: Final cleanup of any grammar issues that slipped through
-        englishQuestion = englishQuestion.replace(/will don't/g, "won't");
-        englishQuestion = englishQuestion.replace(/will doesn't/g, "won't");
-        englishQuestion = englishQuestion.replace(/will am/g, "will be");
-        englishQuestion = englishQuestion.replace(/will is/g, "will be");
-        englishQuestion = englishQuestion.replace(/will are/g, "will be");
-        englishQuestion = englishQuestion.replace(/won't am/g, "won't be");
-        englishQuestion = englishQuestion.replace(/won't is/g, "won't be");
-        englishQuestion = englishQuestion.replace(/won't are/g, "won't be");
+        englishQuestion = englishQuestion
+          .replace(/will don't/g, "won't")
+          .replace(/will doesn't/g, "won't")
+          .replace(/used to don't/g, "didn't use to")
+          .replace(/used to doesn't/g, "didn't use to")
+          .replace(/doingn't/g, "not doing")
+          .replace(/beingn't/g, "not being")
+          .replace(/goingn't/g, "not going")
+          .replace(/gettingn't/g, "not getting")
+          .replace(/sayingn't/g, "not saying")
+          .replace(/feelingn't/g, "not feeling")
+          .replace(/had hadn't/g, "hadn't had")
+          .replace(/will am/g, "will be")
+          .replace(/will is/g, "will be")
+          .replace(/will are/g, "will be")
+          .replace(/won't am/g, "won't be")
+          .replace(/won't is/g, "won't be")
+          .replace(/won't are/g, "won't be");
       }
     } else {
       // For positive questions, only process if context is NOT already negative

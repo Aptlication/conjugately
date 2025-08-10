@@ -1542,13 +1542,15 @@ function App() {
                     <span className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center text-sm font-bold">3</span>
                     <span>Unit 3: faire (20 questions)</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center text-sm font-bold">4</span>
-                    <span>Unit 4: aller (20 questions)</span>
-                  </div>
+                  {(courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') && (
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                      <span>Unit 4: aller (20 questions)</span>
+                    </div>
+                  )}
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam (40 questions)</span>
+                    <span className="font-semibold">Final Exam ({(courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') ? '40' : '30'} questions)</span>
                   </div>
                 </div>
               </div>
@@ -1556,7 +1558,7 @@ function App() {
               <div className="bg-white/5 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-green-200">✨ What You'll Learn</h3>
                 <ul className="space-y-2 text-slate-300">
-                  <li>• Master the 4 most essential French verbs</li>
+                  <li>• Master the {(courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') ? '4' : '3'} most essential French verbs</li>
                   <li>• Practice {courseInfo.tense} conjugations</li>
                   <li>• Learn proper French grammar patterns</li>
                   <li>• Build confidence with structured progression</li>
@@ -1565,7 +1567,7 @@ function App() {
                 
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                   <p className="text-yellow-200 font-semibold">We have high standards!</p>
-                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% (36/40) to pass and unlock the next course.</p>
+                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% ({(courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') ? '36/40' : '27/30'}) to pass and unlock the next course.</p>
                 </div>
               </div>
             </div>
@@ -1585,7 +1587,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Exam (40 questions)
+                🏆 Take Final Exam ({(courseInfo?.courseLevel === 'Difficult' || selectedDifficulty === 'Difficult') ? '40' : '30'} questions)
               </button>
             </div>
           </div>
