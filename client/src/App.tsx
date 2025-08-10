@@ -1754,12 +1754,10 @@ function App() {
                 setSelectedTimeFrame("");
                 setSelectedTenseType("");
                 
-                // If switching to beginner and current verb isn't in top 4, reset
-                if (newDifficulty === "Beginner") {
-                  const beginnerVerbs = ["être", "avoir", "faire", "aller"];
-                  if (selectedVerb && !beginnerVerbs.includes(selectedVerb)) {
-                    setSelectedVerb("");
-                  }
+                // If switching difficulty and current verb isn't available, reset
+                const difficultyVerbs = DIFFICULTY_CONFIGS[newDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || [];
+                if (selectedVerb && !difficultyVerbs.includes(selectedVerb)) {
+                  setSelectedVerb("");
                 }
               }}
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
@@ -1801,9 +1799,7 @@ function App() {
               <option value="" className="bg-gray-800 text-white">
                 {selectedDifficulty ? "Select a verb..." : "Choose difficulty first..."}
               </option>
-              {selectedDifficulty && (selectedDifficulty === "Beginner" 
-                ? ["être", "avoir", "faire", "aller"]
-                : DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
+              {selectedDifficulty && (DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
               ).map((verb) => (
                 <option key={verb} value={verb} className="bg-gray-800 text-white">
                   {verb} ({VERB_MEANINGS[verb as keyof typeof VERB_MEANINGS]})
