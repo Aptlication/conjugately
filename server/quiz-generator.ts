@@ -1205,15 +1205,30 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // Check if "had" is auxiliary (followed by past participle) vs main verb
   if (sentence.includes(" had ") && !sentence.includes("didn't") && !sentence.includes("hadn't")) {
     // Look for common past participles after "had" to confirm auxiliary usage
-    const auxiliaryPatterns = [" had been", " had done", " had made", " had gone", " had seen", " had said", " had eaten", " had taken", " had given", " had worked", " had studied", " had lived"];
+    const auxiliaryPatterns = [" had been", " had done", " had made", " had gone", " had seen", " had said", " had eaten", " had taken", " had given", " had worked", " had studied", " had lived", " had felt", " had gotten", " had woken", " had come", " had known", " had wanted"];
     const isAuxiliary = auxiliaryPatterns.some(pattern => sentence.includes(pattern));
     
     if (isAuxiliary) {
       return sentence.replace(" had ", " hadn't ");
     } else {
-      // Handle "had" as main verb (e.g., "I had breakfast" -> "I didn't have breakfast")
+      // Handle "had" as main verb (e.g., "I had breakfast" -> "I didn't have breakfast")  
       return sentence.replace(" had ", " didn't have ");
     }
+  }
+  
+  // CRITICAL FIX: Prevent "doingn't" and other malformed contractions
+  if (sentence.includes("doingn't") || sentence.includes("beingn't") || sentence.includes("goingn't") || sentence.includes("sayingn't")) {
+    // Fix malformed progressive negations
+    sentence = sentence
+      .replace("doingn't", "not doing")
+      .replace("beingn't", "not being") 
+      .replace("goingn't", "not going")
+      .replace("sayingn't", "not saying")
+      .replace("gettingn't", "not getting")
+      .replace("feelingn't", "not feeling")
+      .replace("washingn't", "not washing")
+      .replace("wakingn't", "not waking");
+    return sentence;
   }
   
   // For sentences ending with a period (past tense statements)
@@ -1349,22 +1364,22 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
   };
   
   const englishVerbs = {
-    'être': { present: 'be', passé_simple: 'was', passé_composé: 'was', futur_simple: 'will be' },
-    'avoir': { present: 'have', passé_simple: 'had', passé_composé: 'had', futur_simple: 'will have' },
-    'faire': { present: 'do/make', passé_simple: 'did/made', passé_composé: 'did/made', futur_simple: 'will do/make' },
-    'dire': { present: 'say', passé_simple: 'said', passé_composé: 'said', futur_simple: 'will say' },
-    'aller': { present: 'go', passé_simple: 'went', passé_composé: 'went', futur_simple: 'will go' },
-    'voir': { present: 'see', passé_simple: 'saw', passé_composé: 'saw', futur_simple: 'will see' },
-    'savoir': { present: 'know', passé_simple: 'knew', passé_composé: 'knew', futur_simple: 'will know' },
-    'pouvoir': { present: 'can', passé_simple: 'could', passé_composé: 'could', futur_simple: 'will be able to' },
-    'vouloir': { present: 'want', passé_simple: 'wanted', passé_composé: 'wanted', futur_simple: 'will want' },
-    'venir': { present: 'come', passé_simple: 'came', passé_composé: 'came', futur_simple: 'will come' },
-    'se lever': { present: 'get up', passé_simple: 'got up', passé_composé: 'got up', futur_simple: 'will get up' },
-    's\'appeler': { present: 'be called', passé_simple: 'was called', passé_composé: 'was called', futur_simple: 'will be called' },
-    'se sentir': { present: 'feel', passé_simple: 'felt', passé_composé: 'felt', futur_simple: 'will feel' },
-    'se laver': { present: 'wash', passé_simple: 'washed', passé_composé: 'washed', futur_simple: 'will wash' },
-    'se réveiller': { present: 'wake up', passé_simple: 'woke up', passé_composé: 'woke up', futur_simple: 'will wake up' },
-    's\'habiller': { present: 'get dressed', passé_simple: 'got dressed', passé_composé: 'got dressed', futur_simple: 'will get dressed' }
+    'être': { present: 'be', passé_simple: 'was', passé_composé: 'was', futur_simple: 'will be', présent_progressif: 'being', plus_que_parfait: 'had been', imparfait: 'was' },
+    'avoir': { present: 'have', passé_simple: 'had', passé_composé: 'had', futur_simple: 'will have', présent_progressif: 'having', plus_que_parfait: 'had had', imparfait: 'had' },
+    'faire': { present: 'do/make', passé_simple: 'did/made', passé_composé: 'did/made', futur_simple: 'will do/make', présent_progressif: 'doing/making', plus_que_parfait: 'had done/made', imparfait: 'was doing/making' },
+    'dire': { present: 'say', passé_simple: 'said', passé_composé: 'said', futur_simple: 'will say', présent_progressif: 'saying', plus_que_parfait: 'had said', imparfait: 'was saying' },
+    'aller': { present: 'go', passé_simple: 'went', passé_composé: 'went', futur_simple: 'will go', présent_progressif: 'going', plus_que_parfait: 'had gone', imparfait: 'was going' },
+    'voir': { present: 'see', passé_simple: 'saw', passé_composé: 'saw', futur_simple: 'will see', présent_progressif: 'seeing', plus_que_parfait: 'had seen', imparfait: 'was seeing' },
+    'savoir': { present: 'know', passé_simple: 'knew', passé_composé: 'knew', futur_simple: 'will know', présent_progressif: 'knowing', plus_que_parfait: 'had known', imparfait: 'knew' },
+    'pouvoir': { present: 'can', passé_simple: 'could', passé_composé: 'could', futur_simple: 'will be able to', présent_progressif: 'being able to', plus_que_parfait: 'had been able to', imparfait: 'could' },
+    'vouloir': { present: 'want', passé_simple: 'wanted', passé_composé: 'wanted', futur_simple: 'will want', présent_progressif: 'wanting', plus_que_parfait: 'had wanted', imparfait: 'wanted' },
+    'venir': { present: 'come', passé_simple: 'came', passé_composé: 'came', futur_simple: 'will come', présent_progressif: 'coming', plus_que_parfait: 'had come', imparfait: 'was coming' },
+    'se lever': { present: 'get up', passé_simple: 'got up', passé_composé: 'got up', futur_simple: 'will get up', présent_progressif: 'getting up', plus_que_parfait: 'had gotten up', imparfait: 'was getting up' },
+    's\'appeler': { present: 'be called', passé_simple: 'was called', passé_composé: 'was called', futur_simple: 'will be called', présent_progressif: 'being called', plus_que_parfait: 'had been called', imparfait: 'was called' },
+    'se sentir': { present: 'feel', passé_simple: 'felt', passé_composé: 'felt', futur_simple: 'will feel', présent_progressif: 'feeling', plus_que_parfait: 'had felt', imparfait: 'was feeling' },
+    'se laver': { present: 'wash', passé_simple: 'washed', passé_composé: 'washed', futur_simple: 'will wash', présent_progressif: 'washing', plus_que_parfait: 'had washed', imparfait: 'was washing' },
+    'se réveiller': { present: 'wake up', passé_simple: 'woke up', passé_composé: 'woke up', futur_simple: 'will wake up', présent_progressif: 'waking up', plus_que_parfait: 'had woken up', imparfait: 'was waking up' },
+    's\'habiller': { present: 'get dressed', passé_simple: 'got dressed', passé_composé: 'got dressed', futur_simple: 'will get dressed', présent_progressif: 'getting dressed', plus_que_parfait: 'had gotten dressed', imparfait: 'was getting dressed' }
   };
   
   const englishPronoun = englishPronouns[pronoun as keyof typeof englishPronouns] || pronoun;
@@ -1393,6 +1408,34 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (pronoun === 'je' || pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} have`;
       return `${englishPronoun} have`;
     }
+  }
+  
+  // Handle Present Progressive (Présent Progressif) 
+  if (tense === 'présent_progressif') {
+    const baseVerb = verbData[tense as keyof typeof verbData] || verbData.présent_progressif;
+    
+    if (pronoun === 'je') return `I am ${baseVerb}`;
+    if (pronoun === 'tu') return `You are ${baseVerb}`;
+    if (pronoun === 'il') return `He is ${baseVerb}`;
+    if (pronoun === 'elle') return `She is ${baseVerb}`;
+    if (pronoun === 'nous') return `We are ${baseVerb}`;
+    if (pronoun === 'vous') return `You are ${baseVerb}`;
+    if (pronoun === 'ils') return `They are ${baseVerb}`;
+    if (pronoun === 'elles') return `They are ${baseVerb}`;
+    
+    return `${englishPronoun} are ${baseVerb}`;
+  }
+  
+  // Handle Plus-que-parfait
+  if (tense === 'plus_que_parfait') {
+    const baseVerb = verbData[tense as keyof typeof verbData] || verbData.plus_que_parfait;
+    return `${englishPronoun} ${baseVerb}`;
+  }
+  
+  // Handle Imparfait
+  if (tense === 'imparfait') {
+    const baseVerb = verbData[tense as keyof typeof verbData] || verbData.imparfait;
+    return `${englishPronoun} ${baseVerb}`;
   }
   
   // General conjugation logic for present tense
