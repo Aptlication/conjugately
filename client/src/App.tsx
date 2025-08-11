@@ -1883,37 +1883,49 @@ function App() {
             </select>
           </div>
 
-          {selectedDifficulty === "Difficult" && (
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-4">
-                <label className="text-lg font-semibold">4. Choose Specific Tense</label>
-                <button
-                  onClick={handleChooseTenseType}
-                  disabled={!selectedTimeFrame}
-                  className={`px-4 py-2 rounded-lg font-medium ${
-                    selectedTimeFrame
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                      : 'bg-slate-600 text-slate-400 cursor-not-allowed'
-                  }`}
-                >
-                  Choose for me
-                </button>
-              </div>
-              <select
-                value={selectedTenseType}
-                onChange={(e) => setSelectedTenseType(e.target.value)}
-                disabled={!selectedTimeFrame}
-                className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                  selectedTimeFrame ? 'bg-white/10' : 'bg-white/5 opacity-50'
+          <div className="mb-8">
+            <div className="flex justify-between items-center mb-4">
+              <label className={`text-lg font-semibold ${selectedDifficulty === "Difficult" ? '' : 'opacity-50'}`}>
+                4. Choose Specific Tense 
+                {selectedDifficulty !== "Difficult" && (
+                  <span className="text-sm text-slate-400 ml-2">🔒 (Difficult level only)</span>
+                )}
+              </label>
+              <button
+                onClick={handleChooseTenseType}
+                disabled={selectedDifficulty !== "Difficult" || !selectedTimeFrame}
+                className={`px-4 py-2 rounded-lg font-medium ${
+                  selectedDifficulty === "Difficult" && selectedTimeFrame
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
+                    : 'bg-slate-600 text-slate-400 cursor-not-allowed'
                 }`}
               >
-                <option value="" className="bg-gray-800 text-white">Select tense type...</option>
-                {selectedTimeFrame && TIME_FRAMES[selectedTimeFrame as keyof typeof TIME_FRAMES].map((tense) => (
-                  <option key={tense} value={tense} className="bg-gray-800 text-white">{tense}</option>
-                ))}
-              </select>
+                Choose for me
+              </button>
             </div>
-          )}
+            <select
+              value={selectedTenseType}
+              onChange={(e) => setSelectedTenseType(e.target.value)}
+              disabled={selectedDifficulty !== "Difficult" || !selectedTimeFrame}
+              className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
+                selectedDifficulty === "Difficult" && selectedTimeFrame 
+                  ? 'bg-white/10' 
+                  : 'bg-white/5 opacity-50'
+              }`}
+            >
+              <option value="" className="bg-gray-800 text-white">
+                {selectedDifficulty !== "Difficult" 
+                  ? "Select Difficult level first..." 
+                  : !selectedTimeFrame 
+                  ? "Select time frame first..."
+                  : "Select tense type..."
+                }
+              </option>
+              {selectedDifficulty === "Difficult" && selectedTimeFrame && TIME_FRAMES[selectedTimeFrame as keyof typeof TIME_FRAMES].map((tense) => (
+                <option key={tense} value={tense} className="bg-gray-800 text-white">{tense}</option>
+              ))}
+            </select>
+          </div>
 
           <button
             onClick={handleStartQuiz}
