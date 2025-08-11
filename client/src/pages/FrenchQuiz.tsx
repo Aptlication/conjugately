@@ -13,10 +13,11 @@ interface QuizQuestion {
 
 type QuizState = 'config' | 'loading' | 'active' | 'results';
 
-// Top 10 French verbs
+// Complete French verbs including reflexive verbs for full coverage
 const FRENCH_VERBS = [
   "être", "avoir", "faire", "dire", "aller", 
-  "voir", "savoir", "pouvoir", "vouloir", "venir"
+  "voir", "savoir", "pouvoir", "vouloir", "venir",
+  "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "s'habiller"
 ];
 
 // Time frames and their corresponding tenses
@@ -39,7 +40,7 @@ const DIFFICULTY_CONFIGS = {
     tenses: ["Présent", "Présent Progressif", "Passé Composé", "Futur Simple", "Futur Proche"]
   },
   "Difficult": {
-    verbs: [...FRENCH_VERBS],
+    verbs: [...FRENCH_VERBS], // All 16 verbs including reflexive verbs
     timeFrames: Object.keys(TIME_FRAMES),
     tenses: Object.values(TIME_FRAMES).flat()
   }

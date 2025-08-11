@@ -86,8 +86,8 @@ function App() {
   const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
 
 
-  // Most used French verbs in order of frequency
-  const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir"];
+  // Most used French verbs in order of frequency - including reflexive verbs for complete coverage
+  const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "s'habiller"];
   
   // Verb meanings mapping for dropdown display
   const VERB_MEANINGS = {
@@ -180,22 +180,31 @@ function App() {
       }
     },
     "Difficult": { 
-      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs for difficult mode
+      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir"], // Complete set with reflexive verbs
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Composé", "Futur Simple"],
+      tenses: ["Présent", "Passé Composé", "Passé Simple", "Imparfait", "Plus-que-parfait", "Futur Simple"],
       requiresModerateCompletion: true, // Only unlocks after Moderate is completed
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
           { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
           { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
-          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
+          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
+          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 },
+          { name: "Unit 7: savoir (to know)", verb: "savoir", questions: 20 },
+          { name: "Unit 8: pouvoir (can/to be able)", verb: "pouvoir", questions: 20 },
+          { name: "Unit 9: vouloir (to want)", verb: "vouloir", questions: 20 },
+          { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
+          { name: "Unit 11: se lever (to get up)", verb: "se lever", questions: 20 },
+          { name: "Unit 12: s'appeler (to be called)", verb: "s'appeler", questions: 20 },
+          { name: "Unit 13: se sentir (to feel)", verb: "se sentir", questions: 20 }
         ],
         finalExam: { 
-          questions: 40, 
+          questions: 130, 
           questionsPerVerb: 10, 
-          passThreshold: 36,
-          description: "10 questions from each of the 4 verbs"
+          passThreshold: 117,
+          description: "10 questions from each of the 13 verbs"
         }
       }
     }
