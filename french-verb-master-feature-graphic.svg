@@ -35,10 +35,12 @@
   <g id="leftContent">
     <!-- Official App Icon - Diamond VM Logo -->
     <g transform="translate(120, 150)">
-      <!-- Diamond Background (Blue) -->
-      <polygon points="0,-50 50,0 0,50 -50,0" fill="#002395" stroke="white" stroke-width="3"/>
-      <!-- VM Text -->
-      <text x="0" y="8" text-anchor="middle" fill="white" font-family="serif" font-weight="bold" font-size="32">VM</text>
+      <!-- White Diamond Border -->
+      <polygon points="0,-55 55,0 0,55 -55,0" fill="white"/>
+      <!-- Blue Diamond Background -->
+      <polygon points="0,-50 50,0 0,50 -50,0" fill="#002395"/>
+      <!-- VM Text - Professional Typography -->
+      <text x="0" y="12" text-anchor="middle" fill="white" font-family="Times, serif" font-weight="bold" font-size="38" letter-spacing="2px">VM</text>
     </g>
     
     <!-- Main Title -->
