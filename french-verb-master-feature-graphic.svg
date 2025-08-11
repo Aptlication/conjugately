@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1024" height="500" viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Gradient -->
+  <!-- Background and Gradients -->
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1b3a;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2d1b69;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4338ca;stop-opacity:1" />
+    <!-- French Flag Background -->
+    <linearGradient id="frenchFlag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#002395;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#002395;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#ed2939;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ed2939;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Dark Overlay -->
+    <linearGradient id="darkOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.6" />
     </linearGradient>
     
     <!-- Text Gradient -->
@@ -13,28 +23,23 @@
       <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
     </linearGradient>
-    
-    <!-- French Flag Colors -->
-    <linearGradient id="flagGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#002395;stop-opacity:0.8" />
-      <stop offset="33%" style="stop-color:#ffffff;stop-opacity:0.8" />
-      <stop offset="67%" style="stop-color:#ffffff;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#ed2939;stop-opacity:0.8" />
-    </linearGradient>
   </defs>
   
-  <!-- Main Background -->
-  <rect width="1024" height="500" fill="url(#bgGradient)"/>
+  <!-- Main Background - French Flag -->
+  <rect width="1024" height="500" fill="url(#frenchFlag)"/>
   
-  <!-- French Flag Accent Strip -->
-  <rect x="0" y="0" width="1024" height="8" fill="url(#flagGradient)"/>
-  <rect x="0" y="492" width="1024" height="8" fill="url(#flagGradient)"/>
+  <!-- Dark Overlay for Text Readability -->
+  <rect width="1024" height="500" fill="url(#darkOverlay)"/>
   
   <!-- Left Side Content -->
   <g id="leftContent">
-    <!-- App Icon Placeholder (circular) -->
-    <circle cx="120" cy="150" r="45" fill="#4338ca" stroke="#fbbf24" stroke-width="3"/>
-    <text x="120" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="24">FVM</text>
+    <!-- Official App Icon - Diamond VM Logo -->
+    <g transform="translate(120, 150)">
+      <!-- Diamond Background (Blue) -->
+      <polygon points="0,-50 50,0 0,50 -50,0" fill="#002395" stroke="white" stroke-width="3"/>
+      <!-- VM Text -->
+      <text x="0" y="8" text-anchor="middle" fill="white" font-family="serif" font-weight="bold" font-size="32">VM</text>
+    </g>
     
     <!-- Main Title -->
     <text x="60" y="240" fill="url(#textGradient)" font-family="Arial, sans-serif" font-weight="bold" font-size="42">French Verb Master</text>
