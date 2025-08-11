@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="1280" viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="720" height="1280" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="720" height="120" fill="#1e293b"/>
+  <text x="360" y="70" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="32">French Verb Master</text>
+  
+  <!-- Welcome Section -->
+  <text x="360" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="600">Master French Verbs</text>
+  <text x="360" y="220" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Context + Repetition Learning</text>
+  
+  <!-- Difficulty Level Cards -->
+  <!-- Beginner -->
+  <rect x="40" y="280" width="640" height="120" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="80" cy="340" r="20" fill="#10b981"/>
+  <text x="80" y="346" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="14">1</text>
+  <text x="120" y="325" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="24">Beginner</text>
+  <text x="120" y="350" fill="white" font-family="Arial, sans-serif" font-size="16">Essential verbs: être, avoir, faire</text>
+  <text x="120" y="375" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Present, past, and future tenses</text>
+  
+  <!-- Easy -->
+  <rect x="40" y="420" width="640" height="120" rx="16" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <circle cx="80" cy="480" r="20" fill="#6b7280"/>
+  <text x="80" y="486" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="14">2</text>
+  <text x="120" y="465" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="bold" font-size="24">Easy</text>
+  <text x="120" y="490" fill="white" font-family="Arial, sans-serif" font-size="16">6 key verbs with expanded practice</text>
+  <text x="120" y="515" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Present, past, and future tenses</text>
+  
+  <!-- Moderate -->
+  <rect x="40" y="560" width="640" height="120" rx="16" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <circle cx="80" cy="620" r="20" fill="#6b7280"/>
+  <text x="80" y="626" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="14">3</text>
+  <text x="120" y="605" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="bold" font-size="24">Moderate</text>
+  <text x="120" y="630" fill="white" font-family="Arial, sans-serif" font-size="16">8 verbs with complex contexts</text>
+  <text x="120" y="655" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Present, past, and future tenses</text>
+  
+  <!-- Advanced -->
+  <rect x="40" y="700" width="640" height="120" rx="16" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <circle cx="80" cy="760" r="20" fill="#6b7280"/>
+  <text x="80" y="766" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="14">4</text>
+  <text x="120" y="745" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="bold" font-size="24">Advanced</text>
+  <text x="120" y="770" fill="white" font-family="Arial, sans-serif" font-size="16">13 verbs including reflexives</text>
+  <text x="120" y="795" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">All tenses and time frames</text>
+  
+  <!-- Mini Courses Button -->
+  <rect x="40" y="860" width="640" height="80" rx="16" fill="#4338ca" stroke="#6366f1" stroke-width="2"/>
+  <text x="360" y="910" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="22">📚 Mini-Courses Available</text>
+  
+  <!-- Quick Quiz Button -->
+  <rect x="40" y="960" width="640" height="80" rx="16" fill="#059669" stroke="#10b981" stroke-width="2"/>
+  <text x="360" y="1010" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="22">⚡ Quick Quiz</text>
+  
+  <!-- Stats Footer -->
+  <rect x="0" y="1200" width="720" height="80" fill="#1e293b"/>
+  <text x="180" y="1235" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">🎯 Quizzes Taken</text>
+  <text x="180" y="1260" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="20">24</text>
+  
+  <text x="540" y="1235" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">📈 Accuracy</text>
+  <text x="540" y="1260" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="20">87%</text>
+</svg>

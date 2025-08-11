@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="1280" viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="720" height="1280" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="720" height="120" fill="#059669"/>
+  <text x="360" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="32">🎉 Excellent Work!</text>
+  <text x="360" y="80" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="18">Quiz Complete</text>
+  <text x="360" y="105" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="14">Beginner • être (to be) • Present Tense</text>
+  
+  <!-- Score Display -->
+  <rect x="40" y="140" width="640" height="160" rx="16" fill="#065f46" stroke="#10b981" stroke-width="3"/>
+  <circle cx="360" cy="220" r="60" fill="#10b981"/>
+  <text x="360" y="235" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="36">85%</text>
+  <text x="360" y="270" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-weight="bold" font-size="24">17 out of 20</text>
+  <text x="360" y="290" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="16">Great job on verb conjugations!</text>
+  
+  <!-- Performance Breakdown -->
+  <rect x="40" y="320" width="640" height="200" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="355" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="20">📊 Performance Breakdown</text>
+  
+  <!-- Correct Answers -->
+  <rect x="60" y="375" width="280" height="60" rx="8" fill="#065f46"/>
+  <text x="80" y="400" fill="#d1fae5" font-family="Arial, sans-serif" font-weight="bold" font-size="16">✓ Correct</text>
+  <text x="80" y="420" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="14">17 questions</text>
+  <text x="300" y="410" text-anchor="end" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="24">85%</text>
+  
+  <!-- Incorrect Answers -->
+  <rect x="380" y="375" width="280" height="60" rx="8" fill="#7f1d1d"/>
+  <text x="400" y="400" fill="#fecaca" font-family="Arial, sans-serif" font-weight="bold" font-size="16">✗ Incorrect</text>
+  <text x="400" y="420" fill="#fca5a5" font-family="Arial, sans-serif" font-size="14">3 questions</text>
+  <text x="640" y="410" text-anchor="end" fill="#ef4444" font-family="Arial, sans-serif" font-weight="bold" font-size="24">15%</text>
+  
+  <!-- Time Stats -->
+  <rect x="60" y="450" width="600" height="50" rx="8" fill="#0f172a"/>
+  <text x="80" y="475" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">⏱ Time: 12:34 • ⚡ Avg per question: 38s • 🎯 Accuracy: 85%</text>
+  
+  <!-- Areas to Review -->
+  <rect x="40" y="540" width="640" height="180" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="575" fill="#fca5a5" font-family="Arial, sans-serif" font-weight="bold" font-size="20">📝 Areas to Review</text>
+  
+  <rect x="60" y="590" width="600" height="40" rx="6" fill="#7f1d1d"/>
+  <text x="80" y="610" fill="#fecaca" font-family="Arial, sans-serif" font-size="14">Question 8: "They are students" → "Ils sont étudiants"</text>
+  <text x="80" y="625" fill="#fca5a5" font-family="Arial, sans-serif" font-size="12">Review: Plural forms of être</text>
+  
+  <rect x="60" y="640" width="600" height="40" rx="6" fill="#7f1d1d"/>
+  <text x="80" y="660" fill="#fecaca" font-family="Arial, sans-serif" font-size="14">Question 15: "I am not tired" → "Je ne suis pas fatigué"</text>
+  <text x="80" y="675" fill="#fca5a5" font-family="Arial, sans-serif" font-size="12">Review: Negation with être</text>
+  
+  <rect x="60" y="690" width="600" height="20" rx="6" fill="#0f172a"/>
+  <text x="80" y="705" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">+ 1 more question to review</text>
+  
+  <!-- Achievements -->
+  <rect x="40" y="740" width="640" height="100" rx="16" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="60" y="775" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="20">🏆 Achievements Unlocked</text>
+  <text x="80" y="800" fill="#fde047" font-family="Arial, sans-serif" font-size="14">⭐ First Quiz Master - Complete your first quiz with 80%+</text>
+  <text x="80" y="820" fill="#fbbf24" font-family="Arial, sans-serif" font-size="14">🎯 Accuracy Expert - Maintain 85% accuracy</text>
+  
+  <!-- Next Steps -->
+  <rect x="40" y="860" width="640" height="120" rx="16" fill="#1e293b" stroke="#4338ca" stroke-width="2"/>
+  <text x="60" y="895" fill="#c7d2fe" font-family="Arial, sans-serif" font-weight="bold" font-size="20">🚀 What's Next?</text>
+  <text x="80" y="920" fill="white" font-family="Arial, sans-serif" font-size="14">• Review incorrect answers with our explanations</text>
+  <text x="80" y="940" fill="white" font-family="Arial, sans-serif" font-size="14">• Try Past Tense quiz with être</text>
+  <text x="80" y="960" fill="white" font-family="Arial, sans-serif" font-size="14">• Continue with avoir (to have) verb</text>
+  
+  <!-- Action Buttons -->
+  <rect x="40" y="1000" width="200" height="60" rx="12" fill="#ef4444"/>
+  <text x="140" y="1040" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Review Errors</text>
+  
+  <rect x="260" y="1000" width="200" height="60" rx="12" fill="#4338ca"/>
+  <text x="360" y="1040" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Next Quiz</text>
+  
+  <rect x="480" y="1000" width="200" height="60" rx="12" fill="#059669"/>
+  <text x="580" y="1040" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Share Score</text>
+  
+  <!-- Progress Towards Goal -->
+  <rect x="40" y="1080" width="640" height="80" rx="12" fill="#1e293b"/>
+  <text x="360" y="1105" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Progress Towards Fluency</text>
+  <rect x="60" y="1110" width="600" height="12" rx="6" fill="#374151"/>
+  <rect x="60" y="1110" width="180" height="12" rx="6" fill="#10b981"/>
+  <text x="360" y="1145" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Beginner Level: 30% Complete</text>
+  
+  <!-- Motivational Message -->
+  <rect x="40" y="1180" width="640" height="60" rx="12" fill="#065f46"/>
+  <text x="360" y="1210" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-weight="bold" font-size="18">Keep going! You're building fluency one verb at a time! 🌟</text>
+</svg>

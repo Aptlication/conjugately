@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="1280" viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="720" height="1280" fill="#0f172a"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="720" height="120" fill="#1e293b"/>
+  <text x="360" y="50" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="28">📈 Your Progress</text>
+  <text x="360" y="80" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Track Your French Fluency Journey</text>
+  <text x="360" y="105" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">Member since: January 2025</text>
+  
+  <!-- Overall Stats Cards -->
+  <rect x="40" y="140" width="200" height="100" rx="12" fill="#065f46"/>
+  <text x="140" y="165" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="14">Total Quizzes</text>
+  <text x="140" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="32">47</text>
+  <text x="140" y="220" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="12">+3 this week</text>
+  
+  <rect x="260" y="140" width="200" height="100" rx="12" fill="#7c2d12"/>
+  <text x="360" y="165" text-anchor="middle" fill="#fed7aa" font-family="Arial, sans-serif" font-size="14">Avg Accuracy</text>
+  <text x="360" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="32">89%</text>
+  <text x="360" y="220" text-anchor="middle" fill="#fdba74" font-family="Arial, sans-serif" font-size="12">↑ 4% improved</text>
+  
+  <rect x="480" y="140" width="200" height="100" rx="12" fill="#1e1b4b"/>
+  <text x="580" y="165" text-anchor="middle" fill="#c7d2fe" font-family="Arial, sans-serif" font-size="14">Study Streak</text>
+  <text x="580" y="195" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="32">12</text>
+  <text x="580" y="220" text-anchor="middle" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="12">days 🔥</text>
+  
+  <!-- Level Progress -->
+  <rect x="40" y="260" width="640" height="120" rx="16" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="60" y="290" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="20">🎯 Current Level: Moderate</text>
+  <text x="60" y="315" fill="white" font-family="Arial, sans-serif" font-size="16">Progress to Advanced Level</text>
+  
+  <rect x="60" y="325" width="600" height="16" rx="8" fill="#374151"/>
+  <rect x="60" y="325" width="420" height="16" rx="8" fill="#fbbf24"/>
+  <text x="60" y="360" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">70% Complete • 3 more course exams needed</text>
+  
+  <!-- Weekly Activity Chart -->
+  <rect x="40" y="400" width="640" height="200" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="435" fill="#c7d2fe" font-family="Arial, sans-serif" font-weight="bold" font-size="20">📅 This Week's Activity</text>
+  
+  <!-- Bar Chart Days -->
+  <text x="100" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Mon</text>
+  <rect x="85" y="480" width="30" height="80" rx="4" fill="#4338ca"/>
+  <text x="100" y="575" text-anchor="middle" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="10">3 quiz</text>
+  
+  <text x="160" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Tue</text>
+  <rect x="145" y="500" width="30" height="60" rx="4" fill="#059669"/>
+  <text x="160" y="575" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="10">2 quiz</text>
+  
+  <text x="220" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Wed</text>
+  <rect x="205" y="440" width="30" height="120" rx="4" fill="#10b981"/>
+  <text x="220" y="575" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="10">5 quiz</text>
+  
+  <text x="280" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Thu</text>
+  <rect x="265" y="460" width="30" height="100" rx="4" fill="#fbbf24"/>
+  <text x="280" y="575" text-anchor="middle" fill="#fde047" font-family="Arial, sans-serif" font-size="10">4 quiz</text>
+  
+  <text x="340" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Fri</text>
+  <rect x="325" y="490" width="30" height="70" rx="4" fill="#ef4444"/>
+  <text x="340" y="575" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">2 quiz</text>
+  
+  <text x="400" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Sat</text>
+  <rect x="385" y="450" width="30" height="110" rx="4" fill="#8b5cf6"/>
+  <text x="400" y="575" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="10">4 quiz</text>
+  
+  <text x="460" y="470" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Sun</text>
+  <rect x="445" y="520" width="30" height="40" rx="4" fill="#6b7280"/>
+  <text x="460" y="575" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="10">1 quiz</text>
+  
+  <!-- Verb Mastery Progress -->
+  <rect x="40" y="620" width="640" height="180" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="655" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="20">🎯 Verb Mastery Progress</text>
+  
+  <!-- Verb Progress Bars -->
+  <text x="80" y="680" fill="#d1fae5" font-family="Arial, sans-serif" font-size="14">être (to be)</text>
+  <rect x="80" y="685" width="400" height="8" rx="4" fill="#374151"/>
+  <rect x="80" y="685" width="360" height="8" rx="4" fill="#10b981"/>
+  <text x="500" y="693" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="12">90%</text>
+  
+  <text x="80" y="710" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="14">avoir (to have)</text>
+  <rect x="80" y="715" width="400" height="8" rx="4" fill="#374151"/>
+  <rect x="80" y="715" width="320" height="8" rx="4" fill="#10b981"/>
+  <text x="500" y="723" fill="#10b981" font-family="Arial, sans-serif" font-weight="bold" font-size="12">80%</text>
+  
+  <text x="80" y="740" fill="#fde047" font-family="Arial, sans-serif" font-size="14">faire (to do/make)</text>
+  <rect x="80" y="745" width="400" height="8" rx="4" fill="#374151"/>
+  <rect x="80" y="745" width="280" height="8" rx="4" fill="#fbbf24"/>
+  <text x="500" y="753" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="12">70%</text>
+  
+  <text x="80" y="770" fill="#fca5a5" font-family="Arial, sans-serif" font-size="14">aller (to go)</text>
+  <rect x="80" y="775" width="400" height="8" rx="4" fill="#374151"/>
+  <rect x="80" y="775" width="160" height="8" rx="4" fill="#ef4444"/>
+  <text x="500" y="783" fill="#ef4444" font-family="Arial, sans-serif" font-weight="bold" font-size="12">40%</text>
+  
+  <!-- Recent Achievements -->
+  <rect x="40" y="820" width="640" height="140" rx="16" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="60" y="855" fill="#fbbf24" font-family="Arial, sans-serif" font-weight="bold" font-size="20">🏆 Recent Achievements</text>
+  
+  <rect x="60" y="870" width="600" height="30" rx="6" fill="#065f46"/>
+  <text x="80" y="890" fill="#d1fae5" font-family="Arial, sans-serif" font-size="14">⭐ Week Warrior - Complete 20+ quizzes in one week</text>
+  
+  <rect x="60" y="910" width="600" height="30" rx="6" fill="#7c2d12"/>
+  <text x="80" y="930" fill="#fed7aa" font-family="Arial, sans-serif" font-size="14">🎯 Accuracy Master - Achieve 90%+ average accuracy</text>
+  
+  <!-- Quick Actions -->
+  <rect x="40" y="980" width="200" height="60" rx="12" fill="#4338ca"/>
+  <text x="140" y="1020" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Continue Quiz</text>
+  
+  <rect x="260" y="980" width="200" height="60" rx="12" fill="#059669"/>
+  <text x="360" y="1020" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Review Errors</text>
+  
+  <rect x="480" y="980" width="200" height="60" rx="12" fill="#7c2d12"/>
+  <text x="580" y="1020" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">View Goals</text>
+  
+  <!-- Learning Insights -->
+  <rect x="40" y="1060" width="640" height="100" rx="12" fill="#1e293b"/>
+  <text x="60" y="1090" fill="#c7d2fe" font-family="Arial, sans-serif" font-weight="bold" font-size="16">💡 Learning Insights</text>
+  <text x="60" y="1115" fill="white" font-family="Arial, sans-serif" font-size="14">• Your best learning time: 7-9 PM (89% avg accuracy)</text>
+  <text x="60" y="1135" fill="white" font-family="Arial, sans-serif" font-size="14">• Focus area: Past tense conjugations need practice</text>
+  <text x="60" y="1155" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">• Recommendation: Review être past tense patterns</text>
+  
+  <!-- Bottom Goal Progress -->
+  <rect x="40" y="1180" width="640" height="80" rx="12" fill="#065f46"/>
+  <text x="360" y="1205" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-weight="bold" font-size="16">🎯 Monthly Goal: Complete 60 Quizzes</text>
+  <rect x="60" y="1215" width="600" height="12" rx="6" fill="#374151"/>
+  <rect x="60" y="1215" width="470" height="12" rx="6" fill="#10b981"/>
+  <text x="360" y="1245" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="14">47/60 Complete • 13 quizzes to go!</text>
+</svg>
