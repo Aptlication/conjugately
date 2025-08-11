@@ -1133,6 +1133,21 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   // Handle different verb forms for negation
   let sentence = englishSentence.trim();
   
+  // CRITICAL FIX: Handle malformed negations FIRST before processing normal patterns
+  // Fix incorrectly placed "didn't" patterns
+  if (sentence.includes("didn't (") || sentence.includes("don't (") || sentence.includes("doesn't (")) {
+    // Fix "You didn't (informal) did" -> "You (informal) didn't do"
+    sentence = sentence
+      .replace(/You didn't \(informal\) did\/made/g, "You (informal) didn't do/make")
+      .replace(/You didn't \(formal\/plural\) did\/made/g, "You (formal/plural) didn't do/make")
+      .replace(/They didn't \(masculine\) did\/made/g, "They (masculine) didn't do/make")
+      .replace(/They didn't \(feminine\) did\/made/g, "They (feminine) didn't do/make")
+      .replace(/You don't \(informal\)/g, "You (informal) don't")
+      .replace(/You don't \(formal\/plural\)/g, "You (formal/plural) don't")
+      .replace(/They don't \(masculine\)/g, "They (masculine) don't")
+      .replace(/They don't \(feminine\)/g, "They (feminine) don't");
+  }
+  
   // CRITICAL FIX: Handle "used to" constructions FIRST - they should NEVER use "don't"
   if (sentence.includes("used to don't") || sentence.includes("used to doesn't")) {
     return sentence.replace("used to don't", "didn't use to").replace("used to doesn't", "didn't use to");
@@ -1230,7 +1245,8 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
       sentence.includes(" talked") || sentence.includes(" worked") || sentence.includes(" lived") ||
       sentence.includes(" goes") || sentence.includes(" says") || sentence.includes(" does") ||
       sentence.includes(" makes") || sentence.includes(" sees") || sentence.includes(" knows") ||
-      sentence.includes(" wants") || sentence.includes(" comes") || sentence.includes(" feels")) {
+      sentence.includes(" wants") || sentence.includes(" comes") || sentence.includes(" feels") ||
+      sentence.includes(" did/made") || sentence.includes(" does/makes")) {
     const words = sentence.split(" ");
     if (words.length >= 2) {
       const subject = words[0];
@@ -1241,6 +1257,11 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   
   // For auxiliary verbs in compound tenses (e.g., "He had eaten" -> "He hadn't eaten" for pluperfect)
   // Only apply this AFTER checking for main verb usage above
+  // CRITICAL FIX: Handle "had" as main verb first (most common case)
+  if (sentence.includes(" had") && !sentence.includes("didn't") && !sentence.includes("hadn't")) {
+    return sentence.replace(" had", " didn't have");
+  }
+  
   // Check if "had" is auxiliary (followed by past participle) vs main verb
   if (sentence.includes(" had ") && !sentence.includes("didn't") && !sentence.includes("hadn't")) {
     // Look for common past participles after "had" to confirm auxiliary usage
@@ -1370,7 +1391,9 @@ function getBaseVerb(pastVerb: string): string {
     'knows': 'know',
     'wants': 'want',
     'comes': 'come',
-    'feels': 'feel'
+    'feels': 'feel',
+    'did/made': 'do/make',
+    'does/makes': 'do/make'
   };
   
   if (irregularVerbs[pastVerb]) {
@@ -1424,7 +1447,7 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} are`;
       return `${englishPronoun} is`;
     }
-    if (tense === 'passé_simple') {
+    if (tense === 'passé_simple' || tense === 'passé_composé') {
       if (pronoun === 'je' || pronoun === 'il' || pronoun === 'elle') return `${englishPronoun} was`;
       if (pronoun === 'tu' || pronoun === 'vous' || pronoun === 'nous' || pronoun === 'ils' || pronoun === 'elles') return `${englishPronoun} were`;
       return `${englishPronoun} were`;
