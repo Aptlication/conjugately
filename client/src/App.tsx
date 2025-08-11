@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 
 function App() {
   // French Verb Master - No reminder version
@@ -2931,6 +2932,15 @@ function App() {
             </div>
           </div>
         )}
+        
+        {/* Privacy Policy Footer Link */}
+        <div className="fixed bottom-4 right-4">
+          <Link href="/privacy">
+            <button className="px-3 py-2 bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm border border-slate-500/50 rounded-lg text-slate-300 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
