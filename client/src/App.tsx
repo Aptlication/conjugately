@@ -1861,7 +1861,7 @@ function App() {
                 } else if (selectedDifficulty === "Moderate") {
                   const moderateTenseMap = {
                     "Past": "Passé Composé",
-                    "Present": "Présent Progressif", 
+                    "Present": "Présent", 
                     "Future": "Futur Proche"
                   };
                   setSelectedTenseType(moderateTenseMap[e.target.value as keyof typeof moderateTenseMap] || "");
