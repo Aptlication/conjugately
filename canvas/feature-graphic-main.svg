@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="500" viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buttonGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buttonGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buttonGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1024" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Main Title -->
+  <text x="512" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="56">French Verb</text>
+  <text x="512" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="56">Master</text>
+  
+  <!-- Subtitle -->
+  <text x="512" y="180" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-style="italic" font-size="24">For serious students.</text>
+  
+  <!-- Description Text -->
+  <text x="512" y="220" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Master French verb conjugations—</text>
+  <text x="512" y="245" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">the key to fluency—with your own</text>
+  <text x="512" y="270" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">personalized quizzes and optional</text>
+  <text x="512" y="295" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">mini-courses.</text>
+  
+  <!-- Choose All for Me Button -->
+  <rect x="362" y="320" width="300" height="50" rx="25" fill="url(#buttonGradient1)" stroke="none"/>
+  <text x="415" y="340" fill="white" font-family="Arial, sans-serif" font-size="16">🎲</text>
+  <text x="445" y="350" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="18">Choose All for Me</text>
+  
+  <!-- Mini-Courses Button -->
+  <rect x="412" y="385" width="200" height="45" rx="22" fill="url(#buttonGradient2)" stroke="none"/>
+  <text x="445" y="402" fill="white" font-family="Arial, sans-serif" font-size="16">📚</text>
+  <text x="470" y="412" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="16">Mini-Courses</text>
+  
+  <!-- Bottom Section Box -->
+  <rect x="50" y="440" width="500" height="50" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Choose Difficulty Section -->
+  <text x="70" y="460" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="18">1. Choose</text>
+  <text x="70" y="478" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="18">Difficulty</text>
+  
+  <!-- Choose for me button (small) -->
+  <rect x="400" y="448" width="120" height="32" rx="16" fill="url(#buttonGradient3)" stroke="none"/>
+  <text x="460" y="468" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="14">Choose for me</text>
+  
+  <!-- Select difficulty dropdown mockup -->
+  <rect x="200" y="455" width="180" height="25" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="210" y="472" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="14">Select difficulty level...</text>
+  
+  <!-- Privacy Policy link -->
+  <text x="930" y="485" text-anchor="end" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="12">Privacy Policy</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="80" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="870" cy="120" r="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="100" cy="200" r="2" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="900" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="80" cy="350" r="1" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="950" cy="200" r="2" fill="rgba(255,255,255,0.3)"/>
+</svg>
