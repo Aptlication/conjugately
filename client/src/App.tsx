@@ -1787,9 +1787,9 @@ function App() {
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
-              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
-              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, Present and Past tenses</option>
-              <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), all 3 time frames</option>
+              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es), Present, past, and future tenses</option>
+              <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, Present, past, and future tenses</option>
+              <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), Present, past, and future tenses</option>
               <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
