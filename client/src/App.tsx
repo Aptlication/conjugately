@@ -1791,7 +1791,7 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
               <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, Present and Past tenses</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), all 3 time frames</option>
-<option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
+              <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
 
