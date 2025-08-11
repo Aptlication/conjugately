@@ -183,7 +183,6 @@ function App() {
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir"], // Complete set with reflexive verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Passé Simple", "Imparfait", "Plus-que-parfait", "Futur Simple"],
-      requiresModerateCompletion: true, // Only unlocks after Moderate is completed
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
