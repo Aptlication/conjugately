@@ -211,18 +211,34 @@ function App() {
   };
 
   const handleStartQuiz = async () => {
-    // For beginner, automatically set tense if not already set
+    // For non-Difficult levels, automatically set tense if not already set
     let finalTenseType = selectedTenseType;
-    if (selectedDifficulty === "Beginner" && !selectedTenseType && selectedTimeFrame) {
-      const beginnerTenseMap = {
-        "Past": "Passé Simple",
-        "Present": "Présent", 
-        "Future": "Futur Simple"
-      };
-      finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+    if (selectedDifficulty !== "Difficult" && !selectedTenseType && selectedTimeFrame) {
+      if (selectedDifficulty === "Beginner") {
+        const beginnerTenseMap = {
+          "Past": "Passé Simple",
+          "Present": "Présent", 
+          "Future": "Futur Simple"
+        };
+        finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+      } else if (selectedDifficulty === "Easy") {
+        const easyTenseMap = {
+          "Past": "Passé Composé",
+          "Present": "Présent", 
+          "Future": "Futur Simple"
+        };
+        finalTenseType = easyTenseMap[selectedTimeFrame as keyof typeof easyTenseMap] || "";
+      } else if (selectedDifficulty === "Moderate") {
+        const moderateTenseMap = {
+          "Past": "Passé Composé",
+          "Present": "Présent Progressif", 
+          "Future": "Futur Proche"
+        };
+        finalTenseType = moderateTenseMap[selectedTimeFrame as keyof typeof moderateTenseMap] || "";
+      }
     }
     
-    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty !== "Beginner")) return;
+    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty === "Difficult")) return;
     setQuizState('loading');
 
     try {
@@ -1836,7 +1852,7 @@ function App() {
               value={selectedTimeFrame}
               onChange={(e) => { 
                 setSelectedTimeFrame(e.target.value); 
-                // For beginner difficulty, automatically set tense based on time frame
+                // For non-Difficult levels, automatically set tense based on time frame and difficulty
                 if (selectedDifficulty === "Beginner") {
                   const beginnerTenseMap = {
                     "Past": "Passé Simple",
@@ -1844,7 +1860,22 @@ function App() {
                     "Future": "Futur Simple"
                   };
                   setSelectedTenseType(beginnerTenseMap[e.target.value as keyof typeof beginnerTenseMap] || "");
+                } else if (selectedDifficulty === "Easy") {
+                  const easyTenseMap = {
+                    "Past": "Passé Composé",
+                    "Present": "Présent", 
+                    "Future": "Futur Simple"
+                  };
+                  setSelectedTenseType(easyTenseMap[e.target.value as keyof typeof easyTenseMap] || "");
+                } else if (selectedDifficulty === "Moderate") {
+                  const moderateTenseMap = {
+                    "Past": "Passé Composé",
+                    "Present": "Présent Progressif", 
+                    "Future": "Futur Proche"
+                  };
+                  setSelectedTenseType(moderateTenseMap[e.target.value as keyof typeof moderateTenseMap] || "");
                 } else {
+                  // For Difficult level, reset tense selection to let user choose
                   setSelectedTenseType("");
                 }
               }}
@@ -1860,7 +1891,7 @@ function App() {
             </select>
           </div>
 
-          {selectedDifficulty !== "Beginner" && (
+          {selectedDifficulty === "Difficult" && (
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
                 <label className="text-lg font-semibold">4. Choose Specific Tense</label>
@@ -1894,25 +1925,25 @@ function App() {
 
           <button
             onClick={handleStartQuiz}
-            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty !== "Beginner")}
+            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty === "Difficult")}
             className={`w-full p-4 text-lg font-bold rounded-xl transition-all ${
-              (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner"))
+              (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Difficult"))
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
                 : 'bg-slate-600 text-slate-400 cursor-not-allowed'
             }`}
           >
-            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner")
-              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType})`
+            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Difficult")
+              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Difficult" ? selectedTenseType : selectedTimeFrame})`
               : "Complete all selections to start quiz"
             }
           </button>
         </div>
 
-        {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty === "Beginner") && (
+        {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Difficult") && (
           <div className="max-w-2xl mx-auto mt-8 bg-green-500/20 border border-green-500/30 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold mb-2">Quiz Preview</h3>
             <p className="text-green-200">
-              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Beginner" ? selectedTimeFrame : selectedTenseType}</strong> ({selectedDifficulty} difficulty)
+              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Difficult" ? selectedTenseType : selectedTimeFrame}</strong> ({selectedDifficulty} difficulty)
             </p>
           </div>
         )}
