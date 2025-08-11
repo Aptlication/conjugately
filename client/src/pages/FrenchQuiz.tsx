@@ -22,7 +22,7 @@ const FRENCH_VERBS = [
 
 // Time frames and their corresponding tenses
 const TIME_FRAMES = {
-  "Present": ["Présent", "Présent Progressif"],
+  "Present": ["Présent"], // Only present simple for basic levels
   "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
   "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
 };
@@ -37,7 +37,7 @@ const DIFFICULTY_CONFIGS = {
   "Moderate": {
     verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"],
     timeFrames: ["Present", "Past", "Future"],
-    tenses: ["Présent", "Présent Progressif", "Passé Composé", "Futur Simple", "Futur Proche"]
+    tenses: ["Présent", "Passé Composé", "Futur Simple", "Futur Proche"]
   },
   "Difficult": {
     verbs: [...FRENCH_VERBS], // All 16 verbs including reflexive verbs

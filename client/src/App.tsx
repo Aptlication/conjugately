@@ -110,7 +110,7 @@ function App() {
   };
   
   const TIME_FRAMES = {
-    "Present": ["Présent", "Présent Progressif"], 
+    "Present": ["Présent"], // Only present simple for basic levels 
     "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
     "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
   };
@@ -159,7 +159,7 @@ function App() {
     "Moderate": { 
       verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"], // 8 most used verbs
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Présent Progressif", "Passé Composé", "Passé Simple", "Futur Simple", "Futur Proche"],
+      tenses: ["Présent", "Passé Composé", "Passé Simple", "Futur Simple", "Futur Proche"], // Removed Présent Progressif for consistency
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
@@ -230,7 +230,7 @@ function App() {
       } else if (selectedDifficulty === "Moderate") {
         const moderateTenseMap = {
           "Past": "Passé Composé",
-          "Present": "Présent Progressif", 
+          "Present": "Présent", 
           "Future": "Futur Proche"
         };
         finalTenseType = moderateTenseMap[selectedTimeFrame as keyof typeof moderateTenseMap] || "";
