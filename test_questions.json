@@ -1,0 +1,132 @@
+[
+  {
+    "question": "I used to do.",
+    "hint": "Conjugate faire for je in Imparfait",
+    "answerOptions": [
+      {
+        "text": "Je ferai mes devoirs",
+        "rationale": "This uses an incorrect form of faire.",
+        "isCorrect": false
+      },
+      {
+        "text": "J'ai fait mes devoirs",
+        "rationale": "Wrong tense or wrong pronoun conjugation.",
+        "isCorrect": false
+      },
+      {
+        "text": "Je fais mes devoirs",
+        "rationale": "Incorrect conjugation for je.",
+        "isCorrect": false
+      },
+      {
+        "text": "Je faisais mes devoirs",
+        "rationale": "Correct conjugation of faire for je in Imparfait.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "You used to make.",
+    "hint": "Conjugate faire for tu in Imparfait",
+    "answerOptions": [
+      {
+        "text": "Tu feras le dîner",
+        "rationale": "This uses an incorrect form of faire.",
+        "isCorrect": false
+      },
+      {
+        "text": "Tu faisais le dîner",
+        "rationale": "Correct conjugation of faire for tu in Imparfait.",
+        "isCorrect": true
+      },
+      {
+        "text": "Tu es en train de faire le dîner",
+        "rationale": "Incorrect conjugation for tu.",
+        "isCorrect": false
+      },
+      {
+        "text": "Tu vas faire le dîner",
+        "rationale": "Wrong tense or wrong pronoun conjugation.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "He used to do.",
+    "hint": "Conjugate faire for il in Imparfait",
+    "answerOptions": [
+      {
+        "text": "Il va faire du sport",
+        "rationale": "Incorrect conjugation for il.",
+        "isCorrect": false
+      },
+      {
+        "text": "Il avait fait du sport",
+        "rationale": "This uses an incorrect form of faire.",
+        "isCorrect": false
+      },
+      {
+        "text": "Il faisait du sport",
+        "rationale": "Correct conjugation of faire for il in Imparfait.",
+        "isCorrect": true
+      },
+      {
+        "text": "Il ferait du sport",
+        "rationale": "Wrong tense or wrong pronoun conjugation.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "She used to make.",
+    "hint": "Conjugate faire for elle in Imparfait",
+    "answerOptions": [
+      {
+        "text": "Elle ne faisait pas un gâteau",
+        "rationale": "Correct conjugation of faire for elle in Imparfait.",
+        "isCorrect": true
+      },
+      {
+        "text": "Elle ne fait pas un gâteau",
+        "rationale": "Incorrect conjugation for elle.",
+        "isCorrect": false
+      },
+      {
+        "text": "Elle ne fera pas un gâteau",
+        "rationale": "This uses an incorrect form of faire.",
+        "isCorrect": false
+      },
+      {
+        "text": "Elle n'a fait pas un gâteau",
+        "rationale": "Wrong tense or wrong pronoun conjugation.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "We used to do.",
+    "hint": "Conjugate faire for nous in Imparfait",
+    "answerOptions": [
+      {
+        "text": "Nous ferons les courses",
+        "rationale": "Incorrect conjugation for nous.",
+        "isCorrect": false
+      },
+      {
+        "text": "Nous avions fait les courses",
+        "rationale": "This uses an incorrect form of faire.",
+        "isCorrect": false
+      },
+      {
+        "text": "Nous faisions les courses",
+        "rationale": "Correct conjugation of faire for nous in Imparfait.",
+        "isCorrect": true
+      },
+      {
+        "text": "Nous avons fait les courses",
+        "rationale": "Wrong tense or wrong pronoun conjugation.",
+        "isCorrect": false
+      }
+    ]
+  }
+]

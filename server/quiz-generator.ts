@@ -1796,6 +1796,54 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     // Convert English to proper tense based on French tense
     let englishQuestion = fixEnglishGrammar(context.en);
     
+    // CRITICAL: Remove progressive forms for past tense in non-difficult levels
+    // Only present tense should show dual forms like "I eat / I am eating"
+    // Past tense in Beginner/Easy/Moderate should be simple: "I ate" (not "I ate / I was eating")
+    if ((normalizedTense === 'passé_composé' || normalizedTense === 'imparfait' || normalizedTense === 'passé_simple' || normalizedTense === 'plus_que_parfait') 
+        && difficulty !== 'Difficult') {
+      // Remove progressive forms for non-difficult past tense questions
+      englishQuestion = englishQuestion
+        // Remove " / I was verb+ing" patterns
+        .replace(/ \/ I was [a-z]+ing[^.]*/, '')
+        .replace(/ \/ You were [a-z]+ing[^.]*/, '')
+        .replace(/ \/ He was [a-z]+ing[^.]*/, '')
+        .replace(/ \/ She was [a-z]+ing[^.]*/, '')
+        .replace(/ \/ We were [a-z]+ing[^.]*/, '')
+        .replace(/ \/ You \(plural\) were [a-z]+ing[^.]*/, '')
+        .replace(/ \/ They were [a-z]+ing[^.]*/, '')
+        // Remove " / I am not verb+ing" negative patterns
+        .replace(/ \/ I am not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ You are not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ He is not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ She is not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ We are not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ You \(plural\) are not [a-z]+ing[^.]*/, '')
+        .replace(/ \/ They are not [a-z]+ing[^.]*/, '')
+        // Handle complex progressive patterns
+        .replace(/ \/ I was being [^.]*/, '')
+        .replace(/ \/ You were being [^.]*/, '')
+        .replace(/ \/ He was being [^.]*/, '')
+        .replace(/ \/ She was being [^.]*/, '')
+        .replace(/ \/ We were being [^.]*/, '')
+        .replace(/ \/ You \(plural\) were being [^.]*/, '')
+        .replace(/ \/ They were being [^.]*/, '')
+        // Handle getting/waking up/dressing patterns
+        .replace(/ \/ I was getting [^.]*/, '')
+        .replace(/ \/ You were getting [^.]*/, '')
+        .replace(/ \/ He was getting [^.]*/, '')
+        .replace(/ \/ She was getting [^.]*/, '')
+        .replace(/ \/ We were getting [^.]*/, '')
+        .replace(/ \/ You \(plural\) were getting [^.]*/, '')
+        .replace(/ \/ They were getting [^.]*/, '')
+        .replace(/ \/ I was waking [^.]*/, '')
+        .replace(/ \/ You were waking [^.]*/, '')
+        .replace(/ \/ He was waking [^.]*/, '')
+        .replace(/ \/ She was waking [^.]*/, '')
+        .replace(/ \/ We were waking [^.]*/, '')
+        .replace(/ \/ You \(plural\) were waking [^.]*/, '')
+        .replace(/ \/ They were waking [^.]*/, '');
+    }
+    
     // CRITICAL: Apply tense conversion FIRST, then handle negation
     if (normalizedTense === 'futur_simple') {
       // For future tense: convert present to future first, BEFORE any negation logic
@@ -1880,6 +1928,25 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/We are/g, 'We were')
         .replace(/You \(plural\) are/g, 'You (plural) were')
         .replace(/They are/g, 'They were')
+      
+      // CRITICAL: Remove ALL progressive forms AFTER tense conversion for non-difficult levels
+      if (difficulty !== 'Difficult') {
+        englishQuestion = englishQuestion
+          // Remove ALL progressive patterns - any "/ [pronoun] was/were [verb]ing" or "/ [pronoun] was/were not [verb]ing"
+          .replace(/ \/ [^.]*?\bwas\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          // Also remove progressive patterns with "being" (was/were being)
+          .replace(/ \/ [^.]*?\bwas being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't being\b[^.]*/g, '');
+      }
       
       // Handle negative forms FIRST before positive forms to prevent conflicts
       englishQuestion = englishQuestion
@@ -2157,6 +2224,25 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They don't/g, 'They didn\'t use to')
         .replace(/can't/g, 'couldn\'t');
       
+      // CRITICAL: Remove ALL progressive forms AFTER tense conversion for non-difficult levels
+      if (difficulty !== 'Difficult') {
+        englishQuestion = englishQuestion
+          // Remove ALL progressive patterns - any "/ [pronoun] was/were [verb]ing" or "/ [pronoun] was/were not [verb]ing"
+          .replace(/ \/ [^.]*?\bwas\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          // Also remove progressive patterns with "being" (was/were being)
+          .replace(/ \/ [^.]*?\bwas being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't being\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't being\b[^.]*/g, '');
+      }
+      
       // Apply gender-specific pronouns for all courses
       englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'plus_que_parfait') {
@@ -2256,6 +2342,21 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They don't/g, 'They hadn\'t')
         .replace(/can't/g, 'couldn\'t have');
       
+      // CRITICAL: Remove ALL progressive forms AFTER tense conversion for non-difficult levels
+      if (difficulty !== 'Difficult') {
+        englishQuestion = englishQuestion
+          // Remove ALL progressive patterns for Plus-que-parfait
+          .replace(/ \/ [^.]*?\bhad been\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bhad not been\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bhadn't been\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't\b[^.]*?\b\w+ing\b[^.]*/g, '');
+      }
+      
       // Apply gender-specific pronouns for all courses
       englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
     } else if (normalizedTense === 'passé_simple') {
@@ -2354,6 +2455,18 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/You \(plural\) don't/g, 'You (plural) didn\'t')
         .replace(/They don't/g, 'They didn\'t')
         .replace(/can't/g, 'couldn\'t');
+      
+      // CRITICAL: Remove ALL progressive forms AFTER tense conversion for non-difficult levels
+      if (difficulty !== 'Difficult') {
+        englishQuestion = englishQuestion
+          // Remove ALL progressive patterns for Passé Simple
+          .replace(/ \/ [^.]*?\bwas\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwas not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwere not\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bwasn't\b[^.]*?\b\w+ing\b[^.]*/g, '')
+          .replace(/ \/ [^.]*?\bweren't\b[^.]*?\b\w+ing\b[^.]*/g, '');
+      }
       
       // Apply gender-specific pronouns for all courses
       englishQuestion = convertToGenderSpecificPronouns(englishQuestion, difficulty);
