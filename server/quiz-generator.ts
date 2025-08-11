@@ -1193,6 +1193,20 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
       .replace(" are ", " are not ");
   }
   
+  // CRITICAL FIX: Handle "was/were" past tense of "to be" - NEVER use "don't/doesn't"
+  if (sentence.endsWith(" was")) {
+    return sentence.replace(" was", " wasn't");
+  }
+  if (sentence.endsWith(" were")) {
+    return sentence.replace(" were", " weren't");
+  }
+  if (sentence.includes(" was ")) {
+    return sentence.replace(" was ", " wasn't ");
+  }
+  if (sentence.includes(" were ")) {
+    return sentence.replace(" were ", " weren't ");
+  }
+  
   // For compound tenses with "have/has" auxiliary verbs (perfect tenses)
   if (sentence.includes(" have ") || sentence.includes(" has ")) {
     return sentence
