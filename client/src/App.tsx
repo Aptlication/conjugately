@@ -1791,15 +1791,7 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es)</option>
               <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, Present and Past tenses</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), all 3 time frames</option>
-{/* Only show Difficult option if user has completed Moderate */}
-              {(() => {
-                const hasModerateCompletion = completedCourses.some(course => 
-                  course.courseType === "moderate" && course.examPassed
-                );
-                return hasModerateCompletion ? (
-                  <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
-                ) : null;
-              })()}
+<option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
 
@@ -1953,66 +1945,46 @@ function App() {
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
               <h3 className="text-2xl font-bold text-center mb-6">Choose Difficulty Level</h3>
               <div className="space-y-3 mb-6">
-                {/* Check if user has completed any Moderate time frame course */}
-                {(() => {
-                  const hasModerateCompletion = completedCourses.some(course => 
-                    course.courseType === "moderate" && course.examPassed
-                  );
-                  
-                  return (
-                    <>
-                      <button
-                        onClick={() => handleDifficultySelect("Beginner")}
-                        className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
-                      >
-                        <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
-                        <div className="text-slate-300 text-sm mt-1">
-                          Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
-                        </div>
-                      </button>
-                      
-                      <button
-                        onClick={() => handleDifficultySelect("Easy")}
-                        className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
-                      >
-                        <div className="text-green-200 font-semibold text-lg">🟢 Easy</div>
-                        <div className="text-slate-300 text-sm mt-1">
-                          Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present and Past tenses
-                        </div>
-                      </button>
-                      
-                      <button
-                        onClick={() => handleDifficultySelect("Moderate")}
-                        className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
-                      >
-                        <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate</div>
-                        <div className="text-slate-300 text-sm mt-1">
-                          8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir) • Present, past, and future tenses
-                        </div>
-                      </button>
-                      
-                      {/* Only show Difficult if user has completed Moderate */}
-                      {hasModerateCompletion ? (
-                        <button
-                          onClick={() => handleDifficultySelect("Difficult")}
-                          className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
-                        >
-                          <div className="text-red-200 font-semibold text-lg">🔴 Difficult</div>
-                          <div className="text-slate-300 text-sm mt-1">
-                            13 verbs (10 regular + 3 reflexive) • All tenses and time frames
-                          </div>
-                        </button>
-                      ) : (
-                        <div className="w-full p-4 text-left bg-gray-500/20 border border-gray-500/30 rounded-xl opacity-50">
-                          <div className="text-gray-400 font-semibold text-lg">🔒 Difficult</div>
-                          <div className="text-gray-500 text-sm mt-1">
-                            Complete any Moderate course exam first to unlock this level
-                          </div>
-                        </div>
-                      )}
-                    </>
-                  );
-                })()}
+                <button
+                  onClick={() => handleDifficultySelect("Beginner")}
+                  className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
+                >
+                  <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Easy")}
+                  className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
+                >
+                  <div className="text-green-200 font-semibold text-lg">🟢 Easy</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present and Past tenses
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Moderate")}
+                  className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
+                >
+                  <div className="text-yellow-200 font-semibold text-lg">🟡 Moderate</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir) • Present, past, and future tenses
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Difficult")}
+                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
+                >
+                  <div className="text-red-200 font-semibold text-lg">🔴 Difficult</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    13 verbs (10 regular + 3 reflexive) • All tenses and time frames
+                  </div>
+                </button>
+
 
               </div>
               
@@ -2829,11 +2801,8 @@ function App() {
                     !progress.isCompleted
                   );
                   
-                  // For Difficult level, require Moderate completion first
-                  const moderateCompleted = completedCourses.some(course => 
-                    course.courseType === "moderate" && course.examPassed
-                  );
-                  const isLocked = !moderateCompleted;
+                  // Difficult level is now unlocked for everyone
+                  const isLocked = false;
                   
                   const iconMap = {
                     "Past": "⏮️",
