@@ -1126,6 +1126,14 @@ function fixEnglishGrammar(sentence: string): string {
   sentence = sentence.replace(/\bHe come\b/g, "He comes");
   sentence = sentence.replace(/\bShe come\b/g, "She comes");
   
+  // Handle "make" verb conjugation errors
+  sentence = sentence.replace(/\bHe make\b/g, "He makes");
+  sentence = sentence.replace(/\bShe make\b/g, "She makes");
+  
+  // Handle "have" verb conjugation errors
+  sentence = sentence.replace(/\bHe have\b/g, "He has");
+  sentence = sentence.replace(/\bShe have\b/g, "She has");
+  
   return sentence;
 }
 
