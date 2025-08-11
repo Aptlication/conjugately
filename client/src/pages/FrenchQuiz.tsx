@@ -39,7 +39,7 @@ const DIFFICULTY_CONFIGS = {
     timeFrames: ["Present", "Past", "Future"],
     tenses: ["Présent", "Passé Composé", "Futur Simple", "Futur Proche"]
   },
-  "Difficult": {
+  "Advanced": {
     verbs: [...FRENCH_VERBS], // All 16 verbs including reflexive verbs
     timeFrames: Object.keys(TIME_FRAMES),
     tenses: Object.values(TIME_FRAMES).flat()
@@ -518,11 +518,11 @@ export default function FrenchQuiz() {
                     </button>
                     
                     <button
-                      onClick={() => handleDifficultySelect("Difficult")}
+                      onClick={() => handleDifficultySelect("Advanced")}
                       className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl hover:bg-red-500/30 transition-all duration-200 group"
                     >
                       <div className="text-red-300 font-semibold text-lg group-hover:text-red-200">
-                        🔴 Difficult
+                        🔴 Advanced
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         All 10 verbs • All tenses and time frames

@@ -1870,10 +1870,10 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     // Convert English to proper tense based on French tense
     let englishQuestion = fixEnglishGrammar(context.en);
     
-    // CRITICAL: Remove progressive forms for ALL tenses in non-difficult levels
-    // Only Difficult level should show dual forms like "I eat / I am eating"
+    // CRITICAL: Remove progressive forms for ALL tenses in non-advanced levels
+    // Only Advanced level should show dual forms like "I eat / I am eating"
     // All other levels should be simple: "I eat lunch" (not "I eat / I am eating lunch")
-    if (difficulty !== 'Difficult') {
+    if (difficulty !== 'Advanced') {
       englishQuestion = removeProgressiveFormsOnly(englishQuestion);
     }
     
@@ -1889,7 +1889,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if ((context as any).negative) {
         englishQuestion = fixEnglishGrammar(context.en); // Keep predefined negatives
         // CRITICAL: Apply progressive form removal for negative contexts too
-        if (difficulty !== 'Difficult') {
+        if (difficulty !== 'Advanced') {
           englishQuestion = removeProgressiveFormsOnly(englishQuestion);
         }
       } else {
@@ -1900,7 +1900,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           // For other tenses, apply negation to original context (before tense conversion)
           englishQuestion = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun);
           // CRITICAL: Apply progressive form removal for negative contexts too
-          if (difficulty !== 'Difficult') {
+          if (difficulty !== 'Advanced') {
             englishQuestion = removeProgressiveFormsOnly(englishQuestion);
           }
         }
@@ -1930,7 +1930,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if (!(context as any).negative) {
         englishQuestion = context.en; // Use as-is for positive contexts
         // CRITICAL: Apply progressive form removal again for positive contexts
-        if (difficulty !== 'Difficult') {
+        if (difficulty !== 'Advanced') {
           englishQuestion = removeProgressiveFormsOnly(englishQuestion);
         }
       } else {
@@ -2255,8 +2255,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They don't/g, 'They didn\'t use to')
         .replace(/can't/g, 'couldn\'t');
       
-      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-difficult levels
-      if (difficulty !== 'Difficult') {
+      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-advanced levels
+      if (difficulty !== 'Advanced') {
         englishQuestion = removeProgressiveFormsOnly(englishQuestion);
       }
       
@@ -2359,8 +2359,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They don't/g, 'They hadn\'t')
         .replace(/can't/g, 'couldn\'t have');
       
-      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-difficult levels
-      if (difficulty !== 'Difficult') {
+      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-advanced levels
+      if (difficulty !== 'Advanced') {
         englishQuestion = removeProgressiveFormsOnly(englishQuestion);
       }
       
@@ -2463,8 +2463,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They don't/g, 'They didn\'t')
         .replace(/can't/g, 'couldn\'t');
       
-      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-difficult levels
-      if (difficulty !== 'Difficult') {
+      // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-advanced levels
+      if (difficulty !== 'Advanced') {
         englishQuestion = removeProgressiveFormsOnly(englishQuestion);
       }
       

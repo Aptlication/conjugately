@@ -24,7 +24,7 @@ export default function FreshApp() {
   const DIFFICULTY_CONFIGS = {
     "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
     "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
-    "Difficult": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
+    "Advanced": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
   };
 
   const handleStartQuiz = async () => {
@@ -532,10 +532,10 @@ export default function FreshApp() {
                 </button>
                 
                 <button
-                  onClick={() => handleDifficultySelect("Difficult")}
+                  onClick={() => handleDifficultySelect("Advanced")}
                   style={{ width: '100%', padding: '16px', textAlign: 'left', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: '12px', color: 'white', cursor: 'pointer' }}
                 >
-                  <div style={{ color: '#f87171', fontWeight: '600', fontSize: '18px' }}>🔴 Difficult</div>
+                  <div style={{ color: '#f87171', fontWeight: '600', fontSize: '18px' }}>🔴 Advanced</div>
                   <div style={{ color: '#cbd5e1', fontSize: '14px', marginTop: '4px' }}>
                     All 10 verbs • All tenses and time frames
                   </div>
