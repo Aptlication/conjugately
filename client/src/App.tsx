@@ -216,7 +216,7 @@ function App() {
     if (selectedDifficulty !== "Difficult" && !selectedTenseType && selectedTimeFrame) {
       if (selectedDifficulty === "Beginner") {
         const beginnerTenseMap = {
-          "Past": "Passé Simple",
+          "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple"
         };
@@ -1847,7 +1847,7 @@ function App() {
                 // For non-Difficult levels, automatically set tense based on time frame and difficulty
                 if (selectedDifficulty === "Beginner") {
                   const beginnerTenseMap = {
-                    "Past": "Passé Simple",
+                    "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple"
                   };
