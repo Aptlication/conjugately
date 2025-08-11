@@ -378,7 +378,7 @@ function App() {
     } else if (difficulty === "Moderate") {
       setShowMiniCoursesModal(false);
       setShowModerateCourseModal(true);
-    } else if (difficulty === "Difficult") {
+    } else if (difficulty === "Advanced") {
       setShowMiniCoursesModal(false);
       setShowDifficultCourseModal(true);
     }
@@ -2032,10 +2032,10 @@ function App() {
                   </div>
                 </button>
                 <button
-                  onClick={() => handleMiniCourseSelect("Difficult")}
+                  onClick={() => handleMiniCourseSelect("Advanced")}
                   className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
                 >
-                  <div className="text-red-200 font-semibold text-lg">🔴 Difficult Course</div>
+                  <div className="text-red-200 font-semibold text-lg">🔴 Advanced Course</div>
                   <div className="text-slate-300 text-sm mt-1">
                     13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
                   </div>
@@ -2603,6 +2603,48 @@ function App() {
                 );
               })()}
               
+              {/* Individual Unit Selection Grid */}
+              <div className="mb-8">
+                <h4 className="text-xl font-semibold text-center mb-6 text-white">Select a Unit to Practice</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  {(() => {
+                    const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
+                    const allUnits = config?.courseStructure?.units || [];
+                    // For non-Advanced courses, limit to appropriate number of units
+                    const units = selectedCourseLevel === 'Advanced' ? allUnits : allUnits.slice(0, 
+                      selectedCourseLevel === 'Beginner' ? 4 : 
+                      selectedCourseLevel === 'Easy' ? 6 : 
+                      selectedCourseLevel === 'Moderate' ? 8 : allUnits.length
+                    );
+                    
+                    return units.map((unit: any, index: number) => (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          setSelectedUnit(unit);
+                          setShowCourseOverviewModal(false);
+                          setShowUnitIntroModal(true);
+                        }}
+                        className="p-4 text-left bg-purple-500/20 border border-purple-500/30 rounded-xl text-white hover:bg-purple-500/30 transition-colors"
+                      >
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                            {index + 1}
+                          </div>
+                          <div className="font-semibold text-lg">
+                            Unit {index + 1}: {unit.verb}
+                          </div>
+                        </div>
+                        <div className="text-purple-200 text-sm ml-11">
+                          ({VERB_MEANINGS[unit.verb as keyof typeof VERB_MEANINGS] || unit.verb}) ({unit.questions} questions)
+                        </div>
+                      </button>
+                    ));
+                  })()}
+                </div>
+              </div>
+              
+              {/* Action Buttons */}
               <div className="space-y-3">
                 <button
                   onClick={() => {
@@ -2778,29 +2820,29 @@ function App() {
 
 
 
-        {/* Difficult Course Modal */}
+        {/* Advanced Course Modal */}
         {showDifficultCourseModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
-              <h3 className="text-2xl font-bold text-center mb-4">🔴 Difficult Course</h3>
+              <h3 className="text-2xl font-bold text-center mb-4">🔴 Advanced Course</h3>
               <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
               <div className="space-y-3 mb-6">
                 {["Present", "Past", "Future"].map((timeFrame, index) => {
-                  // Check completion status for Difficult course
+                  // Check completion status for Advanced course
                   const completed = completedCourses.find(course => 
-                    course.courseType === "difficult" && 
+                    course.courseType === "advanced" && 
                     course.timeFrame === timeFrame
                   );
                   const isCompleted = completed && completed.examPassed;
                   
                   // Check for in-progress
                   const inProgress = courseProgressData.find(progress => 
-                    progress.courseType === "difficult" && 
+                    progress.courseType === "advanced" && 
                     progress.timeFrame === timeFrame &&
                     !progress.isCompleted
                   );
                   
-                  // Difficult level is now unlocked for everyone
+                  // Advanced level is now unlocked for everyone
                   const isLocked = false;
                   
                   const iconMap = {
@@ -2866,7 +2908,7 @@ function App() {
                       {/* Reset button for completed courses */}
                       {isCompleted && (
                         <button
-                          onClick={(e) => handleResetCourse("difficult", timeFrame, e)}
+                          onClick={(e) => handleResetCourse("advanced", timeFrame, e)}
                           className="absolute top-2 right-2 w-6 h-6 bg-blue-500/70 hover:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold transition-colors"
                           title="Reset course (mark as not passed)"
                         >
