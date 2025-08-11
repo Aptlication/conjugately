@@ -1950,7 +1950,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • 3 basic tenses
+                    Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • Present, past, and future tenses
                   </div>
                 </button>
                 
@@ -1960,7 +1960,7 @@ function App() {
                 >
                   <div className="text-green-200 font-semibold text-lg">🟢 Easy</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present and Past tenses
+                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present, past, and future tenses
                   </div>
                 </button>
                 
