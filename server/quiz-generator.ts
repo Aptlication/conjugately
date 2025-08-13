@@ -615,16 +615,19 @@ const VERB_CONJUGATIONS = {
 // Question templates with contexts
 const QUESTION_CONTEXTS = {
   être: [
-    { en: "I am / I am being happy.", fr_context: "heureux/heureuse", pronoun: "je" },
-    { en: "You are / You are being tired.", fr_context: "fatigué(e)", pronoun: "tu" },
-    { en: "He is / He is being a student.", fr_context: "étudiant", pronoun: "il" },
-    { en: "She is / She is being a teacher.", fr_context: "professeure", pronoun: "elle" },
-    { en: "We are / We are being friends.", fr_context: "amis", pronoun: "nous" },
-    { en: "You (plural) are / You are being ready.", fr_context: "prêts", pronoun: "vous" },
-    { en: "They are / They are being busy.", fr_context: "occupés", pronoun: "ils" },
-    { en: "I am not / I am not being here.", fr_context: "ici", negative: true, pronoun: "je" },
-    { en: "She is not / She is not being sick.", fr_context: "malade", negative: true, pronoun: "elle" },
-    { en: "We are not / We are not being late.", fr_context: "en retard", negative: true, pronoun: "nous" }
+    { en: "I am happy.", fr_context: "heureux", pronoun: "je", gender: "masculine" },
+    { en: "I am happy.", fr_context: "heureuse", pronoun: "je", gender: "feminine" },
+    { en: "You are tired.", fr_context: "fatigué", pronoun: "tu", gender: "masculine" },
+    { en: "You are tired.", fr_context: "fatiguée", pronoun: "tu", gender: "feminine" },
+    { en: "He is here.", fr_context: "ici", pronoun: "il" },
+    { en: "She is a teacher.", fr_context: "professeure", pronoun: "elle" },
+    { en: "We are ready.", fr_context: "prêts", pronoun: "nous", gender: "masculine" },
+    { en: "We are ready.", fr_context: "prêtes", pronoun: "nous", gender: "feminine" },
+    { en: "You (plural) are teachers.", fr_context: "professeurs", pronoun: "vous" },
+    { en: "They are busy.", fr_context: "occupés", pronoun: "ils", gender: "masculine" },
+    { en: "They are busy.", fr_context: "occupées", pronoun: "elles", gender: "feminine" },
+    { en: "I am not here.", fr_context: "ici", negative: true, pronoun: "je" },
+    { en: "She is not here.", fr_context: "ici", negative: true, pronoun: "elle" }
   ],
   avoir: [
     { en: "I have / I am having a car.", fr_context: "une voiture", pronoun: "je" },

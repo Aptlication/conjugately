@@ -6,27 +6,53 @@ export const QUIZ_TEMPLATES: Record<string, GeneratedQuiz> = {
   "être-présent": {
     questions: [
       {
-        question: "I am happy.",
-        hint: "Use the present tense form of être for je",
+        question: "I am happy. (male speaker)",
+        hint: "Use the present tense form of être for je, masculine adjective",
         answerOptions: [
           {
             text: "Je suis heureux.",
-            rationale: "This uses the correct present tense conjugation of être for je.",
+            rationale: "Correct present tense conjugation with masculine adjective agreement.",
             isCorrect: true
           },
           {
-            text: "Je es heureux.",
-            rationale: "The conjugation 'es' is for tu, not je.",
+            text: "Je suis heureuse.",
+            rationale: "Wrong gender - 'heureuse' is feminine, but speaker is male.",
             isCorrect: false
           },
           {
-            text: "Je est heureux.",
-            rationale: "The conjugation 'est' is for il/elle, not je.",
+            text: "Je suis contentes.",
+            rationale: "Wrong adjective and gender - should be 'heureux' for masculine singular.",
             isCorrect: false
           },
           {
-            text: "J'étais heureux.",
-            rationale: "This uses the imperfect tense, not present tense.",
+            text: "Je suis prêt.",
+            rationale: "Wrong adjective - means 'ready' not 'happy'.",
+            isCorrect: false
+          }
+        ]
+      },
+      {
+        question: "I am happy. (female speaker)",
+        hint: "Use the present tense form of être for je, feminine adjective",
+        answerOptions: [
+          {
+            text: "Je suis heureuse.",
+            rationale: "Correct present tense conjugation with feminine adjective agreement.",
+            isCorrect: true
+          },
+          {
+            text: "Je suis heureux.",
+            rationale: "Wrong gender - 'heureux' is masculine, but speaker is female.",
+            isCorrect: false
+          },
+          {
+            text: "Je suis occupée.",
+            rationale: "Wrong adjective - means 'busy' not 'happy'.",
+            isCorrect: false
+          },
+          {
+            text: "Je suis prête.",
+            rationale: "Wrong adjective - means 'ready' not 'happy'.",
             isCorrect: false
           }
         ]
