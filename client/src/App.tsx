@@ -6,7 +6,7 @@ function App() {
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
-  const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
+  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
   const [showMiniCoursesModal, setShowMiniCoursesModal] = useState(false);
   const [showNoviceCourseModal, setShowNoviceCourseModal] = useState(false);
   const [showBeginnerCourseModal, setShowBeginnerCourseModal] = useState(false);
@@ -20,7 +20,7 @@ function App() {
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
-  const [selectedAdvancedy, setSelectedAdvancedy] = useState<string | null>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -233,22 +233,22 @@ function App() {
   const handleStartQuiz = async () => {
     // For non-Advanced levels, automatically set tense if not already set
     let finalTenseType = selectedTenseType;
-    if (selectedAdvancedy !== "Advanced" && !selectedTenseType && selectedTimeFrame) {
-      if (selectedAdvancedy === "Novice") {
+    if (selectedDifficulty !== "Advanced" && !selectedTenseType && selectedTimeFrame) {
+      if (selectedDifficulty === "Novice") {
         const beginnerTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple"
         };
         finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
-      } else if (selectedAdvancedy === "Elementary") {
+      } else if (selectedDifficulty === "Elementary") {
         const easyTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple"
         };
         finalTenseType = easyTenseMap[selectedTimeFrame as keyof typeof easyTenseMap] || "";
-      } else if (selectedAdvancedy === "Intermediate") {
+      } else if (selectedDifficulty === "Intermediate") {
         const moderateTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
@@ -258,7 +258,7 @@ function App() {
       }
     }
     
-    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedAdvancedy === "Advanced")) return;
+    if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty === "Advanced")) return;
     setQuizState('loading');
 
     try {
@@ -270,7 +270,7 @@ function App() {
           verb: selectedVerb,
           timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
           tenseType: finalTenseType,
-          ...(selectedAdvancedy && { difficulty: selectedAdvancedy }),
+          ...(selectedDifficulty && { difficulty: selectedDifficulty }),
         }),
       });
 
@@ -319,7 +319,7 @@ function App() {
     }
   };
 
-  const handleAdvancedySelect = async (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+  const handleDifficultySelect = async (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     const config = DIFFICULTY_CONFIGS[difficulty];
     const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
     setSelectedVerb(randomVerb);
@@ -334,8 +334,8 @@ function App() {
     }
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
-    setShowAdvancedyModal(false);
-    setSelectedAdvancedy(difficulty);
+    setShowDifficultyModal(false);
+    setSelectedDifficulty(difficulty);
   };
 
   const handleStartFinalExam = async (timeFrame: string, tense: string) => {
@@ -390,7 +390,10 @@ function App() {
   };
 
   const handleMiniCourseSelect = (difficulty: string) => {
-    if (difficulty === "Novice") {
+    if (difficulty === "Beginner") {
+      setShowMiniCoursesModal(false);
+      setShowBeginnerCourseModal(true);
+    } else if (difficulty === "Novice") {
       setShowMiniCoursesModal(false);
       setShowNoviceCourseModal(true);
     } else if (difficulty === "Elementary") {
@@ -405,9 +408,9 @@ function App() {
     }
   };
 
-  const handleNoviceCourseTimeFrame = async (timeFrame: string) => {
+  const handleBeginnerCourseTimeFrame = async (timeFrame: string) => {
     const beginnerTenseMap = {
-      "Past": "Passé Simple",
+      "Past": "Passé Composé",
       "Present": "Présent", 
       "Future": "Futur Simple"
     };
@@ -426,7 +429,7 @@ function App() {
         await resetCourse("beginner", timeFrame);
         await loadUserData(); // Refresh data
       } else {
-        setShowNoviceCourseModal(false);
+        setShowBeginnerCourseModal(false);
         return;
       }
     }
@@ -444,13 +447,14 @@ function App() {
         setCourseInfo({
           timeFrame,
           tense,
+          courseLevel: 'Beginner',
           currentVerbIndex: existingProgress.currentVerbIndex,
           completedVerbs: existingProgress.completedVerbs || [],
           totalScore: existingProgress.totalScore,
           totalQuestions: existingProgress.totalQuestions
         });
         
-        setShowNoviceCourseModal(false);
+        setShowBeginnerCourseModal(false);
         setQuizState('config'); // Show proper course flow
         return;
       } else {
@@ -463,6 +467,78 @@ function App() {
     const newCourseInfo = {
       timeFrame,
       tense,
+      courseLevel: 'Beginner',
+      currentVerbIndex: 0, // Start with course overview
+      completedVerbs: [],
+      totalScore: 0,
+      totalQuestions: 0
+    };
+    
+    setCourseInfo(newCourseInfo);
+    setShowBeginnerCourseModal(false);
+    setQuizState('config');
+  };
+
+  const handleNoviceCourseTimeFrame = async (timeFrame: string) => {
+    const noviceTenseMap = {
+      "Past": "Passé Composé", // Changed from Passé Simple to Passé Composé for consistency
+      "Present": "Présent", 
+      "Future": "Futur Simple"
+    };
+    
+    const tense = noviceTenseMap[timeFrame as keyof typeof noviceTenseMap];
+    
+    // Check if course is already completed
+    const isCompleted = completedCourses.some(course => 
+      course.courseType === "novice" && 
+      course.timeFrame === timeFrame && 
+      course.examPassed
+    );
+    
+    if (isCompleted) {
+      if (confirm(`You've already completed the ${timeFrame} course with a passing grade. Would you like to reset and retake it?`)) {
+        await resetCourse("novice", timeFrame);
+        await loadUserData(); // Refresh data
+      } else {
+        setShowNoviceCourseModal(false);
+        return;
+      }
+    }
+    
+    // Check for existing progress
+    const existingProgress = courseProgressData.find(progress => 
+      progress.courseType === "novice" && 
+      progress.timeFrame === timeFrame &&
+      !progress.isCompleted
+    );
+    
+    if (existingProgress) {
+      if (confirm(`You have progress saved for the ${timeFrame} course. Would you like to continue where you left off?`)) {
+        // Resume from saved progress
+        setCourseInfo({
+          timeFrame,
+          tense,
+          courseLevel: 'Novice',
+          currentVerbIndex: existingProgress.currentVerbIndex,
+          completedVerbs: existingProgress.completedVerbs || [],
+          totalScore: existingProgress.totalScore,
+          totalQuestions: existingProgress.totalQuestions
+        });
+        
+        setShowNoviceCourseModal(false);
+        setQuizState('config'); // Show proper course flow
+        return;
+      } else {
+        // Start fresh - delete existing progress
+        await resetCourse("novice", timeFrame);
+      }
+    }
+    
+    // Start new course
+    const newCourseInfo = {
+      timeFrame,
+      tense,
+      courseLevel: 'Novice',
       currentVerbIndex: 0,
       completedVerbs: [],
       totalScore: 0,
@@ -1000,7 +1076,7 @@ function App() {
     setSelectedVerb("");
     setSelectedTimeFrame("");
     setSelectedTenseType("");
-    setSelectedAdvancedy(null);
+    setSelectedDifficulty(null);
     setQuizState('config');
     setQuizData([]);
     setCurrentQuestionIndex(0);
@@ -1577,7 +1653,7 @@ function App() {
                     <span className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center text-sm font-bold">3</span>
                     <span>Unit 3: faire (20 questions)</span>
                   </div>
-                  {(courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') && (
+                  {(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') && (
                     <div className="flex items-center gap-3">
                       <span className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center text-sm font-bold">4</span>
                       <span>Unit 4: aller (20 questions)</span>
@@ -1585,7 +1661,7 @@ function App() {
                   )}
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') ? '40' : '30'} questions)</span>
+                    <span className="font-semibold">Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)</span>
                   </div>
                 </div>
               </div>
@@ -1593,7 +1669,7 @@ function App() {
               <div className="bg-white/5 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-green-200">✨ What You'll Learn</h3>
                 <ul className="space-y-2 text-slate-300">
-                  <li>• Master the {(courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') ? '4' : '3'} most essential French verbs</li>
+                  <li>• Master the {(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '4' : '3'} most essential French verbs</li>
                   <li>• Practice {courseInfo.tense} conjugations</li>
                   <li>• Learn proper French grammar patterns</li>
                   <li>• Build confidence with structured progression</li>
@@ -1602,7 +1678,7 @@ function App() {
                 
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                   <p className="text-yellow-200 font-semibold">We have high standards!</p>
-                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% ({(courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') ? '36/40' : '27/30'}) to pass and unlock the next course.</p>
+                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '36/40' : '27/30'}) to pass and unlock the next course.</p>
                 </div>
               </div>
             </div>
@@ -1622,7 +1698,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') ? '40' : '30'} questions)
+                🏆 Take Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)
               </button>
             </div>
           </div>
@@ -1633,7 +1709,7 @@ function App() {
 
   // Show individual verb unit introduction
   // For non-Advanced courses, limit to 3 units (exclude Unit 4: aller)
-  const maxUnitIndex = (courseInfo?.courseLevel === 'Advanced' || selectedAdvancedy === 'Advanced') ? 4 : 3;
+  const maxUnitIndex = (courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? 4 : 3;
   if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= maxUnitIndex && quizData.length === 0) {
     const verbs = ["être", "avoir", "faire", "aller"];
     const currentVerb = verbs[courseInfo.currentVerbIndex - 1];
@@ -1760,7 +1836,7 @@ function App() {
             <button
               onClick={() => {
                 console.log('Choose All for Me clicked');
-                setShowAdvancedyModal(true);
+                setShowDifficultyModal(true);
               }}
               className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
             >
@@ -1781,19 +1857,19 @@ function App() {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">1. Choose Advancedy</label>
+              <label className="text-lg font-semibold">1. Choose Difficulty</label>
               <button
-                onClick={() => setShowAdvancedyModal(true)}
+                onClick={() => setShowDifficultyModal(true)}
                 className="px-4 py-2 rounded-lg font-medium bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
               >
                 Choose for me
               </button>
             </div>
             <select
-              value={selectedAdvancedy || ""}
+              value={selectedDifficulty || ""}
               onChange={(e) => {
                 const newAdvancedy = e.target.value;
-                setSelectedAdvancedy(newAdvancedy);
+                setSelectedDifficulty(newAdvancedy);
                 // Reset dependent selections when difficulty changes
                 setSelectedVerb("");
                 setSelectedTimeFrame("");
@@ -1808,7 +1884,8 @@ function App() {
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
-              <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - Top 4 verbs, simple subject + verb (Je suis, Tu es), Present, past, and future tenses</option>
+              <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
+              <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 3 verbs (être, avoir, faire), Present, past, and future tenses</option>
               <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - Top 6 verbs, Present, past, and future tenses</option>
               <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), Present, past, and future tenses</option>
               <option value="Advanced" className="bg-gray-800 text-white">🔴 Advanced - 13 verbs (10 regular + 3 reflexive), all tenses</option>
@@ -1828,15 +1905,15 @@ function App() {
             <select
               value={selectedVerb}
               onChange={(e) => setSelectedVerb(e.target.value)}
-              disabled={!selectedAdvancedy}
+              disabled={!selectedDifficulty}
               className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedAdvancedy ? 'bg-white/10' : 'bg-white/5 opacity-50'
+                selectedDifficulty ? 'bg-white/10' : 'bg-white/5 opacity-50'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">
-                {selectedAdvancedy ? "Select a verb..." : "Choose difficulty first..."}
+                {selectedDifficulty ? "Select a verb..." : "Choose difficulty first..."}
               </option>
-              {selectedAdvancedy && (DIFFICULTY_CONFIGS[selectedAdvancedy as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
+              {selectedDifficulty && (DIFFICULTY_CONFIGS[selectedDifficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || FRENCH_VERBS
               ).map((verb) => (
                 <option key={verb} value={verb} className="bg-gray-800 text-white">
                   {verb} ({VERB_MEANINGS[verb as keyof typeof VERB_MEANINGS]})
@@ -1850,7 +1927,7 @@ function App() {
               <label className="text-lg font-semibold">3. Choose Time Frame</label>
               <button
                 onClick={handleChooseTimeFrame}
-                disabled={!selectedAdvancedy || !selectedVerb}
+                disabled={!selectedDifficulty || !selectedVerb}
                 className={`px-4 py-2 rounded-lg font-medium ${
                   selectedVerb
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -1865,21 +1942,21 @@ function App() {
               onChange={(e) => { 
                 setSelectedTimeFrame(e.target.value); 
                 // For non-Advanced levels, automatically set tense based on time frame and difficulty
-                if (selectedAdvancedy === "Novice") {
+                if (selectedDifficulty === "Novice") {
                   const beginnerTenseMap = {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple"
                   };
                   setSelectedTenseType(beginnerTenseMap[e.target.value as keyof typeof beginnerTenseMap] || "");
-                } else if (selectedAdvancedy === "Elementary") {
+                } else if (selectedDifficulty === "Elementary") {
                   const easyTenseMap = {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple"
                   };
                   setSelectedTenseType(easyTenseMap[e.target.value as keyof typeof easyTenseMap] || "");
-                } else if (selectedAdvancedy === "Intermediate") {
+                } else if (selectedDifficulty === "Intermediate") {
                   const moderateTenseMap = {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
@@ -1893,7 +1970,7 @@ function App() {
               }}
               disabled={!selectedVerb}
               className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedAdvancedy && selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
+                selectedDifficulty && selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select time frame...</option>
@@ -1903,7 +1980,7 @@ function App() {
             </select>
           </div>
 
-          {selectedAdvancedy === "Advanced" && (
+          {selectedDifficulty === "Advanced" && (
             <div className="mb-8">
               <div className="flex justify-between items-center mb-4">
                 <label className="text-lg font-semibold">4. Choose Specific Tense</label>
@@ -1937,56 +2014,66 @@ function App() {
 
           <button
             onClick={handleStartQuiz}
-            disabled={!selectedAdvancedy || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedAdvancedy === "Advanced")}
+            disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty === "Advanced")}
             className={`w-full p-4 text-lg font-bold rounded-xl transition-all ${
-              (selectedAdvancedy && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedAdvancedy !== "Advanced"))
+              (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced"))
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
                 : 'bg-slate-600 text-slate-400 cursor-not-allowed'
             }`}
           >
-            {selectedAdvancedy && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedAdvancedy !== "Advanced")
-              ? `Start ${selectedVerb} Quiz (${selectedAdvancedy} - ${selectedAdvancedy === "Advanced" ? selectedTenseType : selectedTimeFrame})`
+            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced")
+              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame})`
               : "Complete all selections to start quiz"
             }
           </button>
         </div>
 
-        {selectedAdvancedy && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedAdvancedy !== "Advanced") && (
+        {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") && (
           <div className="max-w-2xl mx-auto mt-8 bg-green-500/20 border border-green-500/30 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold mb-2">Quiz Preview</h3>
             <p className="text-green-200">
-              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedAdvancedy === "Advanced" ? selectedTenseType : selectedTimeFrame}</strong> ({selectedAdvancedy} difficulty)
+              Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame}</strong> ({selectedDifficulty} difficulty)
             </p>
           </div>
         )}
 
-        {showAdvancedyModal && (
+        {showDifficultyModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
-              <h3 className="text-2xl font-bold text-center mb-6">Choose Advancedy Level</h3>
+              <h3 className="text-2xl font-bold text-center mb-6">Choose Difficulty Level</h3>
               <div className="space-y-3 mb-6">
                 <button
-                  onClick={() => handleAdvancedySelect("Novice")}
+                  onClick={() => handleDifficultySelect("Beginner")}
+                  className="w-full p-4 text-left bg-gray-500/20 border border-gray-500/30 rounded-xl text-white hover:bg-gray-500/30"
+                >
+                  <div className="text-gray-200 font-semibold text-lg">⚪ Beginner</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    Subject pronoun focus (Je suis, Tu es, Il/Elle est) • 3 verbs (être, avoir, faire) • Present, past, and future tenses
+                  </div>
+                </button>
+                
+                <button
+                  onClick={() => handleDifficultySelect("Novice")}
                   className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Novice</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • Present, past, and future tenses
+                    3 verbs (être, avoir, faire) • Present, past, and future tenses
                   </div>
                 </button>
                 
                 <button
-                  onClick={() => handleAdvancedySelect("Elementary")}
+                  onClick={() => handleDifficultySelect("Elementary")}
                   className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl text-white hover:bg-green-500/30"
                 >
                   <div className="text-green-200 font-semibold text-lg">🟢 Elementary</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    Top 6 verbs (être, avoir, faire, dire, aller, voir) • Present, past, and future tenses
+                    6 verbs (être, avoir, faire, dire, aller, voir) • Present, past, and future tenses
                   </div>
                 </button>
                 
                 <button
-                  onClick={() => handleAdvancedySelect("Intermediate")}
+                  onClick={() => handleDifficultySelect("Intermediate")}
                   className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Intermediate</div>
@@ -1996,7 +2083,7 @@ function App() {
                 </button>
                 
                 <button
-                  onClick={() => handleAdvancedySelect("Advanced")}
+                  onClick={() => handleDifficultySelect("Advanced")}
                   className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
                 >
                   <div className="text-red-200 font-semibold text-lg">🔴 Advanced</div>
@@ -2004,12 +2091,10 @@ function App() {
                     13 verbs (10 regular + 3 reflexive) • All tenses and time frames
                   </div>
                 </button>
-
-
               </div>
               
               <button
-                onClick={() => setShowAdvancedyModal(false)}
+                onClick={() => setShowDifficultyModal(false)}
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
               >
                 Cancel
@@ -2026,12 +2111,21 @@ function App() {
               <p className="text-slate-300 text-center mb-6">Choose a difficulty level for structured learning</p>
               <div className="space-y-3 mb-6">
                 <button
+                  onClick={() => handleMiniCourseSelect("Beginner")}
+                  className="w-full p-4 text-left bg-gray-500/20 border border-gray-500/30 rounded-xl text-white hover:bg-gray-500/30"
+                >
+                  <div className="text-gray-200 font-semibold text-lg">⚪ Beginner Course</div>
+                  <div className="text-slate-300 text-sm mt-1">
+                    3 Units (20 questions each) + Final Exam (30 questions, 90% to pass)
+                  </div>
+                </button>
+                <button
                   onClick={() => handleMiniCourseSelect("Novice")}
                   className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Novice Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)
+                    3 Units (20 questions each) + Final Exam (30 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2160,6 +2254,148 @@ function App() {
                   <div className="text-slate-300 text-sm mt-1">
                     Complete the course and return to main menu
                   </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Beginner Course Time Frame Modal */}
+        {showBeginnerCourseModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4">⚪ Beginner Course</h3>
+              <p className="text-slate-300 text-center mb-6">Master subject pronouns with essential French verbs</p>
+              <div className="space-y-3 mb-6">
+                {["Present", "Past", "Future"].map((timeFrame, index) => {
+                  const beginnerTenseMap = {
+                    "Past": "Passé Composé",
+                    "Present": "Présent", 
+                    "Future": "Futur Simple"
+                  };
+                  const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
+                  
+                  // Check completion status
+                  const completed = completedCourses.find(course => 
+                    course.courseType === "beginner" && 
+                    course.timeFrame === timeFrame
+                  );
+                  const isCompleted = completed && completed.examPassed;
+                  
+                  // Check for in-progress
+                  const inProgress = courseProgressData.find(progress => 
+                    progress.courseType === "beginner" && 
+                    progress.timeFrame === timeFrame &&
+                    !progress.isCompleted
+                  );
+                  
+                  // Sequential progression: Present -> Past -> Future
+                  let isLocked = false;
+                  
+                  if (timeFrame === "Past") {
+                    // Past is locked until Present exam is passed
+                    const presentCompleted = completedCourses.find(course => 
+                      course.courseType === "beginner" && 
+                      course.timeFrame === "Present" && 
+                      course.examPassed
+                    );
+                    isLocked = !presentCompleted;
+                  } else if (timeFrame === "Future") {
+                    // Future is locked until Past exam is passed
+                    const pastCompleted = completedCourses.find(course => 
+                      course.courseType === "beginner" && 
+                      course.timeFrame === "Past" && 
+                      course.examPassed
+                    );
+                    isLocked = !pastCompleted;
+                  }
+                  
+                  const iconMap = {
+                    "Past": "⏮️",
+                    "Present": "▶️",
+                    "Future": "⏭️"
+                  };
+                  
+                  const stepNumbers = {
+                    "Present": "1",
+                    "Past": "2", 
+                    "Future": "3"
+                  };
+                  
+                  return (
+                    <div key={timeFrame} className="relative">
+                      <button
+                        onClick={() => !isLocked && handleBeginnerCourseTimeFrame(timeFrame)}
+                        disabled={isLocked}
+                        className={`w-full p-4 text-left ${
+                          isLocked
+                            ? 'bg-gray-500/20 border border-gray-500/30 opacity-50 cursor-not-allowed'
+                            : isCompleted && completed?.examPassed
+                            ? 'bg-green-600/30 border border-green-400/50 hover:bg-green-600/40'
+                            : isCompleted 
+                            ? 'bg-green-600/20 border border-green-500/30 hover:bg-green-600/30' 
+                            : inProgress
+                            ? 'bg-orange-600/20 border border-orange-500/30 hover:bg-orange-600/30'
+                            : timeFrame === "Past"
+                            ? 'bg-gray-500/20 border border-gray-500/30 hover:bg-gray-500/30'
+                            : timeFrame === "Present"
+                            ? 'bg-gray-500/20 border border-gray-500/30 hover:bg-gray-500/30'
+                            : 'bg-gray-500/20 border border-gray-500/30 hover:bg-gray-500/30'
+                        } rounded-xl text-white`}
+                      >
+                        <div className={`font-semibold text-lg flex items-center gap-2 ${
+                          isLocked ? 'text-gray-400' :
+                          isCompleted && completed?.examPassed ? 'text-green-100' :
+                          isCompleted ? 'text-green-200' :
+                          inProgress ? 'text-orange-200' :
+                          'text-gray-200'
+                        }`}>
+                          <span className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-xs font-bold">
+                            {stepNumbers[timeFrame as keyof typeof stepNumbers]}
+                          </span>
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense - {tense}
+                          {isCompleted && completed?.examPassed && <span className="ml-auto text-green-300">✓</span>}
+                          {inProgress && <span className="ml-auto text-orange-300">📝</span>}
+                          {isLocked && <span className="ml-auto text-gray-400">🔒</span>}
+                        </div>
+                        <div className={`text-sm mt-1 ${
+                          isLocked ? 'text-gray-400' :
+                          isCompleted && completed?.examPassed ? 'text-green-200' :
+                          isCompleted ? 'text-green-300' :
+                          inProgress ? 'text-orange-300' :
+                          'text-gray-300'
+                        }`}>
+                          {isCompleted && completed?.examPassed 
+                            ? `✅ Passed with ${completed.examScore || 'N/A'} points (Click to retake)`
+                            : isCompleted 
+                            ? "❌ Failed exam - Click to retry"
+                            : inProgress 
+                            ? "📝 In Progress - Click to continue"
+                            : isLocked 
+                            ? "🔒 Complete previous course first"
+                            : "3 units (être, avoir, faire) + Final Exam (27/30 to pass)"
+                          }
+                        </div>
+                        {isCompleted && !isLocked && (
+                          <button
+                            onClick={(e) => handleResetCourse("beginner", timeFrame, e)}
+                            className="absolute top-2 right-2 w-6 h-6 bg-red-500/20 hover:bg-red-500/40 rounded-full flex items-center justify-center text-red-300 text-xs"
+                            title="Reset this course"
+                          >
+                            ↺
+                          </button>
+                        )}
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowBeginnerCourseModal(false)}
+                  className="flex-1 px-6 py-3 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700"
+                >
+                  Cancel
                 </button>
               </div>
             </div>

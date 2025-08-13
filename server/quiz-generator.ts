@@ -1649,11 +1649,11 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   
   // Use verified beginner pronoun questions for Beginner difficulty
   if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
-    // Map frontend tenses to our verified question tenses
-    let mappedTense = tense.toLowerCase();
-    if (mappedTense === 'present') mappedTense = 'Présent';
-    if (mappedTense === 'passé simple') mappedTense = 'Passé Composé';
-    if (mappedTense === 'futur simple') mappedTense = 'Futur Simple';
+    // Map frontend tenses to our verified question tenses (exact case matching)
+    let mappedTense = tense;
+    if (tense.toLowerCase() === 'présent' || tense.toLowerCase() === 'present') mappedTense = 'Présent';
+    if (tense.toLowerCase() === 'passé simple' || tense.toLowerCase() === 'passé composé') mappedTense = 'Passé Composé';
+    if (tense.toLowerCase() === 'futur simple') mappedTense = 'Futur Simple';
     
     console.log(`🎓 Using verified beginner pronoun questions for ${verb} - ${mappedTense} (original: ${tense})`);
     

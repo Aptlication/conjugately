@@ -1,0 +1,118 @@
+# french_mcq_novice.py
+# Novice French Verb Master – Subject Pronoun Focus
+# Covers être, avoir, faire, aller in Présent, Passé Composé, Futur Simple
+# Each question has 4 answer choices (A–D), only one correct
+
+mcq_data = [
+    # ===== ÊTRE – Présent =====
+    {"question": "I am (Présent)", 
+     "options": ["Je suis", "Tu es", "Il est", "Nous sommes"], 
+     "answer": "A"},
+    {"question": "You are (informal, Présent)", 
+     "options": ["Tu es", "Je suis", "Il est", "Elles sont"], 
+     "answer": "A"},
+    {"question": "He is (Présent)", 
+     "options": ["Il est", "Elle est", "Tu es", "Ils sont"], 
+     "answer": "A"},
+    {"question": "We are (Présent)", 
+     "options": ["Nous sommes", "Vous êtes", "Ils sont", "Je suis"], 
+     "answer": "A"},
+    {"question": "They are (female, Présent)", 
+     "options": ["Elles sont", "Ils sont", "Elles étaient", "Elles seront"], 
+     "answer": "A"},
+
+    # ===== ÊTRE – Passé Composé =====
+    {"question": "I have been (Passé Composé)", 
+     "options": ["J'ai été", "Tu as été", "Il a été", "Nous avons été"], 
+     "answer": "A"},
+    {"question": "She has been (Passé Composé)", 
+     "options": ["Elle a été", "Il a été", "Tu as été", "Elles ont été"], 
+     "answer": "A"},
+    {"question": "We have been (Passé Composé)", 
+     "options": ["Nous avons été", "Vous avez été", "Ils ont été", "J'ai été"], 
+     "answer": "A"},
+
+    # ===== ÊTRE – Futur Simple =====
+    {"question": "I will be (Futur Simple)", 
+     "options": ["Je serai", "Tu seras", "Il sera", "Nous serons"], 
+     "answer": "A"},
+    {"question": "He will be (Futur Simple)", 
+     "options": ["Il sera", "Je serai", "Tu seras", "Ils seront"], 
+     "answer": "A"},
+    {"question": "You will be (formal/plural, Futur Simple)", 
+     "options": ["Vous serez", "Nous serons", "Ils seront", "Je serai"], 
+     "answer": "A"},
+
+    # ===== AVOIR – Présent =====
+    {"question": "I have (Présent)", 
+     "options": ["J'ai", "Il a", "Elle a", "Tu as"], 
+     "answer": "A"},
+    {"question": "He has (Présent)", 
+     "options": ["Il a", "J'ai", "Elle a", "Tu as"], 
+     "answer": "A"},
+    {"question": "They have (male/mixed, Présent)", 
+     "options": ["Ils ont", "Elles ont", "Nous avons", "Il a"], 
+     "answer": "A"},
+
+    # ===== AVOIR – Passé Composé =====
+    {"question": "I had (Passé Composé)", 
+     "options": ["J'ai eu", "Tu as eu", "Il a eu", "Nous avons eu"], 
+     "answer": "A"},
+    {"question": "You had (informal, Passé Composé)", 
+     "options": ["Tu as eu", "J'ai eu", "Elle a eu", "Nous avons eu"], 
+     "answer": "A"},
+
+    # ===== AVOIR – Futur Simple =====
+    {"question": "I will have (Futur Simple)", 
+     "options": ["J'aurai", "Il aura", "Tu auras", "Nous aurons"], 
+     "answer": "A"},
+    {"question": "They will have (female, Futur Simple)", 
+     "options": ["Elles auront", "Ils auront", "Nous aurons", "Elle aura"], 
+     "answer": "A"},
+
+    # ===== FAIRE – Présent =====
+    {"question": "I do (Présent)", 
+     "options": ["Je fais", "Tu fais", "Il fait", "Nous faisons"], 
+     "answer": "A"},
+    {"question": "He does (Présent)", 
+     "options": ["Il fait", "Je fais", "Nous faisons", "Ils font"], 
+     "answer": "A"},
+    {"question": "You do (plural/formal, Présent)", 
+     "options": ["Vous faites", "Tu fais", "Nous faisons", "Ils font"], 
+     "answer": "A"},
+
+    # ===== FAIRE – Passé Composé =====
+    {"question": "I did (Passé Composé)", 
+     "options": ["J'ai fait", "Tu as fait", "Il a fait", "Nous avons fait"], 
+     "answer": "A"},
+    {"question": "They did (male/mixed, Passé Composé)", 
+     "options": ["Ils ont fait", "Elles ont fait", "Nous avons fait", "J'ai fait"], 
+     "answer": "A"},
+
+    # ===== FAIRE – Futur Simple =====
+    {"question": "I will do (Futur Simple)", 
+     "options": ["Je ferai", "Tu feras", "Il fera", "Nous ferons"], 
+     "answer": "A"},
+    {"question": "We will do (Futur Simple)", 
+     "options": ["Nous ferons", "Vous ferez", "Ils feront", "Je ferai"], 
+     "answer": "A"}
+]
+
+def run_quiz():
+    score = 0
+    for idx, q in enumerate(mcq_data, 1):
+        print(f"\nQ{idx}: {q['question']}")
+        for i, opt in enumerate(q['options']):
+            letter = chr(65 + i)  # 'A', 'B', 'C', 'D'
+            print(f"  {letter}. {opt}")
+        ans = input("Your answer (A/B/C/D): ").strip().upper()
+        if ans == q['answer']:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Incorrect. Correct answer: {q['answer']} "
+                  f"({q['options'][ord(q['answer']) - 65]})")
+    print(f"\nYour final score: {score}/{len(mcq_data)}")
+
+if __name__ == "__main__":
+    run_quiz()
