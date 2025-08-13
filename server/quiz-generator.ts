@@ -1,4 +1,5 @@
 import { GeneratedQuiz } from "./gemini-quiz";
+import { getRandomBeginnerQuestions, type BeginnerQuestion } from "./beginner-quiz-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1644,6 +1645,27 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
 
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
+  
+  // Use verified beginner questions for Beginner difficulty
+  if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
+    const normalizedTense = tense.toLowerCase().replace('_', '_');
+    console.log(`🎓 Using verified beginner questions for ${verb} - ${normalizedTense}`);
+    
+    const beginnerQuestions = getRandomBeginnerQuestions(verb, normalizedTense === 'present' ? 'présent' : normalizedTense, 20);
+    
+    if (beginnerQuestions.length > 0) {
+      console.log(`✅ Found ${beginnerQuestions.length} verified beginner questions`);
+      return {
+        questions: beginnerQuestions.map(q => ({
+          question: q.question,
+          hint: q.hint,
+          answerOptions: q.answerOptions
+        }))
+      };
+    } else {
+      console.log(`⚠️ No verified questions found for ${verb} - ${normalizedTense}, falling back to generated`);
+    }
+  }
   
   // Normalize tense names - map frontend tense names to backend tense keys
   let normalizedTense = tense.toLowerCase();
