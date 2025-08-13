@@ -827,11 +827,102 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Weren't we taking the bus? (Imparfait)", "options": ["Ne prenions-nous pas le bus ?", "Ne preniez-vous pas le bus ?", "Ne prenaient-ils pas le bus ?", "Ne prenais-je pas le bus ?"], "answer": "A"},
       {"question": "Weren't they taking notes? (female) (Imparfait)", "options": ["Ne prenaient-elles pas des notes ?", "Ne prenaient-ils pas des notes ?", "Ne preniez-vous pas des notes ?", "Ne prenions-nous pas des notes ?"], "answer": "A"}
     ]
+  },
+
+  "venir": {
+    "present": [
+      {"question": "I come from France. (Présent)", "options": ["Je viens de France.", "Tu viens de France.", "Il vient de France.", "Nous venons de France."], "answer": "A"},
+      {"question": "You come from Paris. (informal) (Présent)", "options": ["Tu viens de Paris.", "Je viens de Paris.", "Il vient de Paris.", "Vous venez de Paris."], "answer": "A"},
+      {"question": "He comes from London. (Présent)", "options": ["Il vient de Londres.", "Elle vient de Londres.", "Tu viens de Londres.", "Ils viennent de Londres."], "answer": "A"},
+      {"question": "She comes from Spain. (Présent)", "options": ["Elle vient d'Espagne.", "Il vient d'Espagne.", "Elles viennent d'Espagne.", "Tu viens d'Espagne."], "answer": "A"},
+      {"question": "We come to help you. (Présent)", "options": ["Nous venons vous aider.", "Vous venez nous aider.", "Ils viennent vous aider.", "Je viens vous aider."], "answer": "A"},
+      {"question": "You come to see us. (formal/plural) (Présent)", "options": ["Vous venez nous voir.", "Tu viens nous voir.", "Nous venons vous voir.", "Ils viennent nous voir."], "answer": "A"},
+      {"question": "They come to visit. (male/mixed) (Présent)", "options": ["Ils viennent rendre visite.", "Elles viennent rendre visite.", "Ils venaient rendre visite.", "Ils viendront rendre visite."], "answer": "A"},
+      {"question": "They come to visit. (female) (Présent)", "options": ["Elles viennent rendre visite.", "Ils viennent rendre visite.", "Elles venaient rendre visite.", "Elles viendront rendre visite."], "answer": "A"},
+      {"question": "Do I come too late? (Présent)", "options": ["Viens-je trop tard ?", "Viens-tu trop tard ?", "Vient-il trop tard ?", "Venons-nous trop tard ?"], "answer": "A"},
+      {"question": "Do you come often? (informal) (Présent)", "options": ["Viens-tu souvent ?", "Viens-je souvent ?", "Vient-il souvent ?", "Venez-vous souvent ?"], "answer": "A"},
+      {"question": "Does he come here? (Présent)", "options": ["Vient-il ici ?", "Vient-elle ici ?", "Viens-je ici ?", "Viens-tu ici ?"], "answer": "A"},
+      {"question": "Does she come every day? (Présent)", "options": ["Vient-elle chaque jour ?", "Vient-il chaque jour ?", "Viens-tu chaque jour ?", "Venez-vous chaque jour ?"], "answer": "A"},
+      {"question": "Do we come by car? (Présent)", "options": ["Venons-nous en voiture ?", "Viens-je en voiture ?", "Venez-vous en voiture ?", "Viennent-ils en voiture ?"], "answer": "A"},
+      {"question": "Do you come by train? (formal/plural) (Présent)", "options": ["Venez-vous en train ?", "Viens-tu en train ?", "Venons-nous en train ?", "Viennent-ils en train ?"], "answer": "A"},
+      {"question": "Do they come for dinner? (male/mixed) (Présent)", "options": ["Viennent-ils pour le dîner ?", "Viennent-elles pour le dîner ?", "Venez-vous pour le dîner ?", "Viens-tu pour le dîner ?"], "answer": "A"},
+      {"question": "Do they come for dinner? (female) (Présent)", "options": ["Viennent-elles pour le dîner ?", "Viennent-ils pour le dîner ?", "Venez-vous pour le dîner ?", "Viens-tu pour le dîner ?"], "answer": "A"},
+      {"question": "I do not come often. (Présent)", "options": ["Je ne viens pas souvent.", "Tu ne viens pas souvent.", "Il ne vient pas souvent.", "Nous ne venons pas souvent."], "answer": "A"},
+      {"question": "He does not come anymore. (Présent)", "options": ["Il ne vient plus.", "Je ne viens plus.", "Tu ne viens plus.", "Ils ne viennent plus."], "answer": "A"},
+      {"question": "Don't we come too late? (Présent)", "options": ["Ne venons-nous pas trop tard ?", "Ne venez-vous pas trop tard ?", "Ne viennent-ils pas trop tard ?", "Ne viens-je pas trop tard ?"], "answer": "A"},
+      {"question": "Don't they come to visit? (female) (Présent)", "options": ["Ne viennent-elles pas rendre visite ?", "Ne viennent-ils pas rendre visite ?", "Ne venez-vous pas rendre visite ?", "Ne venons-nous pas rendre visite ?"], "answer": "A"}
+    ],
+    "passé_composé": [
+      {"question": "I came from France. (Passé Composé)", "options": ["Je suis venu de France.", "Tu es venu de France.", "Il est venu de France.", "Nous sommes venus de France."], "answer": "A"},
+      {"question": "You came from Paris. (informal) (Passé Composé)", "options": ["Tu es venu de Paris.", "Je suis venu de Paris.", "Il est venu de Paris.", "Vous êtes venu de Paris."], "answer": "A"},
+      {"question": "He came from London. (Passé Composé)", "options": ["Il est venu de Londres.", "Elle est venue de Londres.", "Tu es venu de Londres.", "Ils sont venus de Londres."], "answer": "A"},
+      {"question": "She came from Spain. (Passé Composé)", "options": ["Elle est venue d'Espagne.", "Il est venu d'Espagne.", "Elles sont venues d'Espagne.", "Tu es venu d'Espagne."], "answer": "A"},
+      {"question": "We came to help you. (Passé Composé)", "options": ["Nous sommes venus vous aider.", "Vous êtes venus nous aider.", "Ils sont venus vous aider.", "Je suis venu vous aider."], "answer": "A"},
+      {"question": "You came to see us. (formal/plural) (Passé Composé)", "options": ["Vous êtes venus nous voir.", "Tu es venu nous voir.", "Nous sommes venus vous voir.", "Ils sont venus nous voir."], "answer": "A"},
+      {"question": "They came to visit. (male/mixed) (Passé Composé)", "options": ["Ils sont venus rendre visite.", "Elles sont venues rendre visite.", "Ils étaient venus rendre visite.", "Ils viendront rendre visite."], "answer": "A"},
+      {"question": "They came to visit. (female) (Passé Composé)", "options": ["Elles sont venues rendre visite.", "Ils sont venus rendre visite.", "Elles étaient venues rendre visite.", "Elles viendront rendre visite."], "answer": "A"},
+      {"question": "Did I come too late? (Passé Composé)", "options": ["Suis-je venu trop tard ?", "Es-tu venu trop tard ?", "Est-il venu trop tard ?", "Sommes-nous venus trop tard ?"], "answer": "A"},
+      {"question": "Did you come often? (informal) (Passé Composé)", "options": ["Es-tu venu souvent ?", "Suis-je venu souvent ?", "Est-il venu souvent ?", "Êtes-vous venus souvent ?"], "answer": "A"},
+      {"question": "Did he come here? (Passé Composé)", "options": ["Est-il venu ici ?", "Est-elle venue ici ?", "Suis-je venu ici ?", "Es-tu venu ici ?"], "answer": "A"},
+      {"question": "Did she come every day? (Passé Composé)", "options": ["Est-elle venue chaque jour ?", "Est-il venu chaque jour ?", "Es-tu venu chaque jour ?", "Êtes-vous venus chaque jour ?"], "answer": "A"},
+      {"question": "Did we come by car? (Passé Composé)", "options": ["Sommes-nous venus en voiture ?", "Suis-je venu en voiture ?", "Êtes-vous venus en voiture ?", "Sont-ils venus en voiture ?"], "answer": "A"},
+      {"question": "Did you come by train? (formal/plural) (Passé Composé)", "options": ["Êtes-vous venus en train ?", "Es-tu venu en train ?", "Sommes-nous venus en train ?", "Sont-ils venus en train ?"], "answer": "A"},
+      {"question": "Did they come for dinner? (male/mixed) (Passé Composé)", "options": ["Sont-ils venus pour le dîner ?", "Sont-elles venues pour le dîner ?", "Êtes-vous venus pour le dîner ?", "Es-tu venu pour le dîner ?"], "answer": "A"},
+      {"question": "Did they come for dinner? (female) (Passé Composé)", "options": ["Sont-elles venues pour le dîner ?", "Sont-ils venus pour le dîner ?", "Êtes-vous venues pour le dîner ?", "Es-tu venue pour le dîner ?"], "answer": "A"},
+      {"question": "I did not come often. (Passé Composé)", "options": ["Je ne suis pas venu souvent.", "Tu n'es pas venu souvent.", "Il n'est pas venu souvent.", "Nous ne sommes pas venus souvent."], "answer": "A"},
+      {"question": "He did not come anymore. (Passé Composé)", "options": ["Il n'est plus venu.", "Je ne suis plus venu.", "Tu n'es plus venu.", "Ils ne sont plus venus."], "answer": "A"},
+      {"question": "Didn't we come too late? (Passé Composé)", "options": ["Ne sommes-nous pas venus trop tard ?", "N'êtes-vous pas venus trop tard ?", "Ne sont-ils pas venus trop tard ?", "Ne suis-je pas venu trop tard ?"], "answer": "A"},
+      {"question": "Didn't they come to visit? (female) (Passé Composé)", "options": ["Ne sont-elles pas venues rendre visite ?", "Ne sont-ils pas venus rendre visite ?", "N'êtes-vous pas venues rendre visite ?", "Ne sommes-nous pas venues rendre visite ?"], "answer": "A"}
+    ],
+    "futur_simple": [
+      {"question": "I will come to your house. (Futur Simple)", "options": ["Je viendrai chez toi.", "Tu viendras chez moi.", "Il viendra chez toi.", "Nous viendrons chez toi."], "answer": "A"},
+      {"question": "You will come tomorrow. (informal) (Futur Simple)", "options": ["Tu viendras demain.", "Je viendrai demain.", "Il viendra demain.", "Vous viendrez demain."], "answer": "A"},
+      {"question": "He will come next week. (Futur Simple)", "options": ["Il viendra la semaine prochaine.", "Elle viendra la semaine prochaine.", "Tu viendras la semaine prochaine.", "Ils viendront la semaine prochaine."], "answer": "A"},
+      {"question": "She will come soon. (Futur Simple)", "options": ["Elle viendra bientôt.", "Il viendra bientôt.", "Elles viendront bientôt.", "Tu viendras bientôt."], "answer": "A"},
+      {"question": "We will come together. (Futur Simple)", "options": ["Nous viendrons ensemble.", "Vous viendrez ensemble.", "Ils viendront ensemble.", "Je viendrai ensemble."], "answer": "A"},
+      {"question": "You will come early. (formal/plural) (Futur Simple)", "options": ["Vous viendrez tôt.", "Tu viendras tôt.", "Nous viendrons tôt.", "Ils viendront tôt."], "answer": "A"},
+      {"question": "They will come to the meeting. (male/mixed) (Futur Simple)", "options": ["Ils viendront à la réunion.", "Elles viendront à la réunion.", "Ils viendraient à la réunion.", "Ils venaient à la réunion."], "answer": "A"},
+      {"question": "They will come to the meeting. (female) (Futur Simple)", "options": ["Elles viendront à la réunion.", "Ils viendront à la réunion.", "Elles viendraient à la réunion.", "Elles venaient à la réunion."], "answer": "A"},
+      {"question": "Will I come on time? (Futur Simple)", "options": ["Viendrai-je à l'heure ?", "Viendras-tu à l'heure ?", "Viendra-t-il à l'heure ?", "Viendrons-nous à l'heure ?"], "answer": "A"},
+      {"question": "Will you come later? (informal) (Futur Simple)", "options": ["Viendras-tu plus tard ?", "Viendrai-je plus tard ?", "Viendra-t-il plus tard ?", "Viendrez-vous plus tard ?"], "answer": "A"},
+      {"question": "Will he come with us? (Futur Simple)", "options": ["Viendra-t-il avec nous ?", "Viendra-t-elle avec nous ?", "Viendrai-je avec vous ?", "Viendras-tu avec nous ?"], "answer": "A"},
+      {"question": "Will she come for dinner? (Futur Simple)", "options": ["Viendra-t-elle pour le dîner ?", "Viendra-t-il pour le dîner ?", "Viendras-tu pour le dîner ?", "Viendrez-vous pour le dîner ?"], "answer": "A"},
+      {"question": "Will we come by car? (Futur Simple)", "options": ["Viendrons-nous en voiture ?", "Viendrai-je en voiture ?", "Viendrez-vous en voiture ?", "Viendront-ils en voiture ?"], "answer": "A"},
+      {"question": "Will you come by train? (formal/plural) (Futur Simple)", "options": ["Viendrez-vous en train ?", "Viendras-tu en train ?", "Viendrons-nous en train ?", "Viendront-ils en train ?"], "answer": "A"},
+      {"question": "Will they come on time? (male/mixed) (Futur Simple)", "options": ["Viendront-ils à l'heure ?", "Viendront-elles à l'heure ?", "Viendrez-vous à l'heure ?", "Viendras-tu à l'heure ?"], "answer": "A"},
+      {"question": "Will they come on time? (female) (Futur Simple)", "options": ["Viendront-elles à l'heure ?", "Viendront-ils à l'heure ?", "Viendrez-vous à l'heure ?", "Viendras-tu à l'heure ?"], "answer": "A"},
+      {"question": "I will not come tomorrow. (Futur Simple)", "options": ["Je ne viendrai pas demain.", "Tu ne viendras pas demain.", "Il ne viendra pas demain.", "Nous ne viendrons pas demain."], "answer": "A"},
+      {"question": "He will not come next week. (Futur Simple)", "options": ["Il ne viendra pas la semaine prochaine.", "Je ne viendrai pas la semaine prochaine.", "Tu ne viendras pas la semaine prochaine.", "Ils ne viendront pas la semaine prochaine."], "answer": "A"},
+      {"question": "Won't we come together? (Futur Simple)", "options": ["Ne viendrons-nous pas ensemble ?", "Ne viendrez-vous pas ensemble ?", "Ne viendront-ils pas ensemble ?", "Ne viendrai-je pas ensemble ?"], "answer": "A"},
+      {"question": "Won't they come soon? (female) (Futur Simple)", "options": ["Ne viendront-elles pas bientôt ?", "Ne viendront-ils pas bientôt ?", "Ne viendrez-vous pas bientôt ?", "Ne viendrons-nous pas bientôt ?"], "answer": "A"}
+    ],
+    "imparfait": [
+      {"question": "I was coming from France. (Imparfait)", "options": ["Je venais de France.", "Tu venais de France.", "Il venait de France.", "Nous venions de France."], "answer": "A"},
+      {"question": "You were coming from Paris. (informal) (Imparfait)", "options": ["Tu venais de Paris.", "Je venais de Paris.", "Il venait de Paris.", "Vous veniez de Paris."], "answer": "A"},
+      {"question": "He was coming from London. (Imparfait)", "options": ["Il venait de Londres.", "Elle venait de Londres.", "Tu venais de Londres.", "Ils venaient de Londres."], "answer": "A"},
+      {"question": "She was coming from Spain. (Imparfait)", "options": ["Elle venait d'Espagne.", "Il venait d'Espagne.", "Elles venaient d'Espagne.", "Tu venais d'Espagne."], "answer": "A"},
+      {"question": "We were coming to help you. (Imparfait)", "options": ["Nous venions vous aider.", "Vous veniez nous aider.", "Ils venaient vous aider.", "Je venais vous aider."], "answer": "A"},
+      {"question": "You were coming to see us. (formal/plural) (Imparfait)", "options": ["Vous veniez nous voir.", "Tu venais nous voir.", "Nous venions vous voir.", "Ils venaient nous voir."], "answer": "A"},
+      {"question": "They were coming to visit. (male/mixed) (Imparfait)", "options": ["Ils venaient rendre visite.", "Elles venaient rendre visite.", "Ils viendraient rendre visite.", "Ils viendront rendre visite."], "answer": "A"},
+      {"question": "They were coming to visit. (female) (Imparfait)", "options": ["Elles venaient rendre visite.", "Ils venaient rendre visite.", "Elles viendraient rendre visite.", "Elles viendront rendre visite."], "answer": "A"},
+      {"question": "Was I coming too late? (Imparfait)", "options": ["Venais-je trop tard ?", "Venaist-tu trop tard ?", "Venait-il trop tard ?", "Venions-nous trop tard ?"], "answer": "A"},
+      {"question": "Were you coming often? (informal) (Imparfait)", "options": ["Venais-tu souvent ?", "Venais-je souvent ?", "Venait-il souvent ?", "Veniez-vous souvent ?"], "answer": "A"},
+      {"question": "Was he coming here? (Imparfait)", "options": ["Venait-il ici ?", "Venait-elle ici ?", "Venais-je ici ?", "Venais-tu ici ?"], "answer": "A"},
+      {"question": "Was she coming every day? (Imparfait)", "options": ["Venait-elle chaque jour ?", "Venait-il chaque jour ?", "Venais-tu chaque jour ?", "Veniez-vous chaque jour ?"], "answer": "A"},
+      {"question": "Were we coming by car? (Imparfait)", "options": ["Venions-nous en voiture ?", "Venais-je en voiture ?", "Veniez-vous en voiture ?", "Venaient-ils en voiture ?"], "answer": "A"},
+      {"question": "Were you coming by train? (formal/plural) (Imparfait)", "options": ["Veniez-vous en train ?", "Venais-tu en train ?", "Venions-nous en train ?", "Venaient-ils en train ?"], "answer": "A"},
+      {"question": "Were they coming for dinner? (male/mixed) (Imparfait)", "options": ["Venaient-ils pour le dîner ?", "Venaient-elles pour le dîner ?", "Veniez-vous pour le dîner ?", "Venais-tu pour le dîner ?"], "answer": "A"},
+      {"question": "Were they coming for dinner? (female) (Imparfait)", "options": ["Venaient-elles pour le dîner ?", "Venaient-ils pour le dîner ?", "Veniez-vous pour le dîner ?", "Venais-tu pour le dîner ?"], "answer": "A"},
+      {"question": "I was not coming often. (Imparfait)", "options": ["Je ne venais pas souvent.", "Tu ne venais pas souvent.", "Il ne venait pas souvent.", "Nous ne venions pas souvent."], "answer": "A"},
+      {"question": "He was not coming anymore. (Imparfait)", "options": ["Il ne venait plus.", "Je ne venais plus.", "Tu ne venais plus.", "Ils ne venaient plus."], "answer": "A"},
+      {"question": "Weren't we coming too late? (Imparfait)", "options": ["Ne venions-nous pas trop tard ?", "Ne veniez-vous pas trop tard ?", "Ne venaient-ils pas trop tard ?", "Ne venais-je pas trop tard ?"], "answer": "A"},
+      {"question": "Weren't they coming to visit? (female) (Imparfait)", "options": ["Ne venaient-elles pas rendre visite ?", "Ne venaient-ils pas rendre visite ?", "Ne veniez-vous pas rendre visite ?", "Ne venions-nous pas rendre visite ?"], "answer": "A"}
+    ]
   }
 
-  // TODO: Continue adding other verbs (savoir, venir)
-  // Each will have 4 tenses × 20 questions = 80 questions per verb
-  // Total: 11 verbs × 80 questions = 880 questions
+  // NOTE: We need to add SAVOIR to complete the 11 verbs × 80 questions = 880 questions total
+  // Currently missing: SAVOIR (80 questions)
+  // Current total: 10 verbs × 80 questions = 800 questions
 };
 
 // Function to get random Intermediate questions for a specific verb and tense
