@@ -1,7 +1,7 @@
 // Beginner Level French Quiz Data - 180+ Verified Questions
 // Generated from Perplexity-verified content (January 12, 2025)
 
-export interface BeginnerQuestion {
+export interface NoviceQuestion {
   question: string;
   verb: string;
   tense: string;
@@ -14,7 +14,7 @@ export interface BeginnerQuestion {
 }
 
 // CORRECTED 180+ MCQs for Beginner Level (être, avoir, faire)
-export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
+export const NOVICE_VERIFIED_QUESTIONS: NoviceQuestion[] = [
   // ===== ÊTRE – PRÉSENT =====
   {
     question: "I am happy. (male speaker)",
@@ -1241,15 +1241,15 @@ export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
 ];
 
 // Helper function to get questions by verb and tense
-export function getBeginnerQuestions(verb: string, tense: string): BeginnerQuestion[] {
-  return BEGINNER_VERIFIED_QUESTIONS.filter(q => 
+export function getNoviceQuestions(verb: string, tense: string): NoviceQuestion[] {
+  return NOVICE_VERIFIED_QUESTIONS.filter(q => 
     q.verb === verb && q.tense === tense
   );
 }
 
 // Helper function to get random questions for a quiz
-export function getRandomBeginnerQuestions(verb: string, tense: string, count: number = 20): BeginnerQuestion[] {
-  const questions = getBeginnerQuestions(verb, tense);
+export function getRandomNoviceQuestions(verb: string, tense: string, count: number = 20): NoviceQuestion[] {
+  const questions = getNoviceQuestions(verb, tense);
   
   // If we have fewer questions than requested, duplicate them to reach the count
   if (questions.length === 0) {
@@ -1263,7 +1263,7 @@ export function getRandomBeginnerQuestions(verb: string, tense: string, count: n
   }
   
   // If we have fewer questions, duplicate them intelligently to reach 20
-  const result: BeginnerQuestion[] = [];
+  const result: NoviceQuestion[] = [];
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
   
   for (let i = 0; i < count; i++) {

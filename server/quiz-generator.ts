@@ -1,5 +1,5 @@
 import { GeneratedQuiz } from "./gemini-quiz";
-import { getRandomBeginnerQuestions, type BeginnerQuestion } from "./beginner-quiz-data";
+import { getRandomNoviceQuestions, type NoviceQuestion } from "./beginner-quiz-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1067,7 +1067,7 @@ function buildNegativeFrench(pronoun: string, conjugation: string, context: stri
   }
 }
 
-// Helper function to get English conjugation for Beginner mode
+// Helper function to get English conjugation for Novice mode
 // Convert positive English sentences to negative
 // Helper function to convert tense before applying negation (prevents "will don't")
 function convertTenseBeforeNegation(sentence: string, tense: string, pronoun: string): string {
@@ -1646,17 +1646,17 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
   
-  // Use verified beginner questions for Beginner difficulty
-  if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
+  // Use verified beginner questions for Novice difficulty
+  if (difficulty === 'Novice' && ['être', 'avoir', 'faire'].includes(verb)) {
     // Map frontend tenses to our verified question tenses
     let mappedTense = tense.toLowerCase();
     if (mappedTense === 'present') mappedTense = 'présent';
-    if (mappedTense === 'passé simple') mappedTense = 'passé_composé'; // Beginner uses passé composé instead
+    if (mappedTense === 'passé simple') mappedTense = 'passé_composé'; // Novice uses passé composé instead
     if (mappedTense === 'futur simple') mappedTense = 'futur_simple';
     
     console.log(`🎓 Using verified beginner questions for ${verb} - ${mappedTense} (original: ${tense})`);
     
-    const beginnerQuestions = getRandomBeginnerQuestions(verb, mappedTense, 20);
+    const beginnerQuestions = getRandomNoviceQuestions(verb, mappedTense, 20);
     
     if (beginnerQuestions.length > 0) {
       console.log(`✅ Found ${beginnerQuestions.length} verified beginner questions`);
@@ -1712,9 +1712,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   const questions = [];
   const pronouns = ['je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles'];
   
-  // Handle Beginner mode - use contexts but with simple processing
-  if (difficulty === 'Beginner') {
-    console.log('🔧 Generating Beginner mode quiz (using contexts with simple processing)');
+  // Handle Novice mode - use contexts but with simple processing
+  if (difficulty === 'Novice') {
+    console.log('🔧 Generating Novice mode quiz (using contexts with simple processing)');
     
     // Ensure exactly 30% of questions are negative (6 out of 20)
     const totalQuestions = 20;
@@ -1738,11 +1738,11 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       
       // Use context but remove progressive forms for simplicity
       let englishQuestion = fixEnglishGrammar(context.en);
-      englishQuestion = removeProgressiveFormsOnly(englishQuestion); // Apply to Beginner too
+      englishQuestion = removeProgressiveFormsOnly(englishQuestion); // Apply to Novice too
       let correctAnswer;
       
       if (shouldBeNegative) {
-        // Convert to negative using the same logic as non-Beginner modes
+        // Convert to negative using the same logic as non-Novice modes
         if ((context as any).negative) {
           englishQuestion = fixEnglishGrammar(context.en);
           englishQuestion = removeProgressiveFormsOnly(englishQuestion);
@@ -1792,7 +1792,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
       
       questions.push({
-        question: englishQuestion, // Use context-based questions for Beginner too
+        question: englishQuestion, // Use context-based questions for Novice too
         hint: `Think about the correct conjugation of "${verb}" for "${pronoun}"`,
         answerOptions: shuffledAnswers.map(answer => ({
           text: answer,

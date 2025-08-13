@@ -8,7 +8,7 @@ function App() {
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showDifficultyModal, setShowDifficultyModal] = useState(false);
   const [showMiniCoursesModal, setShowMiniCoursesModal] = useState(false);
-  const [showBeginnerCourseModal, setShowBeginnerCourseModal] = useState(false);
+  const [showNoviceCourseModal, setShowNoviceCourseModal] = useState(false);
   const [showEasyCourseModal, setShowEasyCourseModal] = useState(false);
   const [showModerateCourseModal, setShowModerateCourseModal] = useState(false);
   const [showDifficultCourseModal, setShowDifficultCourseModal] = useState(false);
@@ -117,8 +117,8 @@ function App() {
   };
 
   const DIFFICULTY_CONFIGS = {
-    "Beginner": { 
-      verbs: ["être", "avoir", "faire"], // 3 most used verbs for beginner
+    "Novice": { 
+      verbs: ["être", "avoir", "faire"], // 3 most used verbs for novice
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Simple", "Futur Simple"],
       simpleFormat: true, // Use subject+verb format (Je suis, Tu es) instead of full sentences
@@ -214,7 +214,7 @@ function App() {
     // For non-Difficult levels, automatically set tense if not already set
     let finalTenseType = selectedTenseType;
     if (selectedDifficulty !== "Difficult" && !selectedTenseType && selectedTimeFrame) {
-      if (selectedDifficulty === "Beginner") {
+      if (selectedDifficulty === "Novice") {
         const beginnerTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
@@ -336,7 +336,7 @@ function App() {
             verb: currentVerb,
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
             tenseType: tense,
-            difficulty: "Beginner",
+            difficulty: "Novice",
             isExam: true,
           })
         });
@@ -370,9 +370,9 @@ function App() {
   };
 
   const handleMiniCourseSelect = (difficulty: string) => {
-    if (difficulty === "Beginner") {
+    if (difficulty === "Novice") {
       setShowMiniCoursesModal(false);
-      setShowBeginnerCourseModal(true);
+      setShowNoviceCourseModal(true);
     } else if (difficulty === "Easy") {
       setShowMiniCoursesModal(false);
       setShowEasyCourseModal(true);
@@ -385,7 +385,7 @@ function App() {
     }
   };
 
-  const handleBeginnerCourseTimeFrame = async (timeFrame: string) => {
+  const handleNoviceCourseTimeFrame = async (timeFrame: string) => {
     const beginnerTenseMap = {
       "Past": "Passé Simple",
       "Present": "Présent", 
@@ -406,7 +406,7 @@ function App() {
         await resetCourse("beginner", timeFrame);
         await loadUserData(); // Refresh data
       } else {
-        setShowBeginnerCourseModal(false);
+        setShowNoviceCourseModal(false);
         return;
       }
     }
@@ -430,7 +430,7 @@ function App() {
           totalQuestions: existingProgress.totalQuestions
         });
         
-        setShowBeginnerCourseModal(false);
+        setShowNoviceCourseModal(false);
         setQuizState('config'); // Show proper course flow
         return;
       } else {
@@ -450,7 +450,7 @@ function App() {
     };
     
     setCourseInfo(newCourseInfo);
-    setShowBeginnerCourseModal(false);
+    setShowNoviceCourseModal(false);
     
     // Save initial progress to database
     await saveCourseProgress(newCourseInfo);
@@ -509,7 +509,7 @@ function App() {
             verb: currentVerb,
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
             tenseType: tense,
-            difficulty: "Beginner",
+            difficulty: "Novice",
           })
         });
 
@@ -990,7 +990,7 @@ function App() {
     setShowInstructionPopup(false);
     setShowEasyCourseModal(false);
     setShowModerateCourseModal(false);
-    setShowBeginnerCourseModal(false);
+    setShowNoviceCourseModal(false);
     setCourseInfo(null);
     setShowCourseProgress(false);
     setShowExamOption(false);
@@ -1398,7 +1398,7 @@ function App() {
                               verb: verb,
                               timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
                               tenseType: courseInfo.tense,
-                              difficulty: "Beginner",
+                              difficulty: "Novice",
                             })
                           });
                           
@@ -1695,7 +1695,7 @@ function App() {
                         verb: currentVerb,
                         timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
                         tenseType: courseInfo.tense,
-                        difficulty: "Beginner",
+                        difficulty: "Novice",
                       })
                     });
                     
@@ -1788,7 +1788,7 @@ function App() {
               className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
-              <option value="Beginner" className="bg-gray-800 text-white">🔵 Beginner - Top 4 verbs, simple subject + verb (Je suis, Tu es), Present, past, and future tenses</option>
+              <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - Top 4 verbs, simple subject + verb (Je suis, Tu es), Present, past, and future tenses</option>
               <option value="Easy" className="bg-gray-800 text-white">🟢 Easy - Top 6 verbs, Present, past, and future tenses</option>
               <option value="Moderate" className="bg-gray-800 text-white">🟡 Moderate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), Present, past, and future tenses</option>
               <option value="Difficult" className="bg-gray-800 text-white">🔴 Difficult - 13 verbs (10 regular + 3 reflexive), all tenses</option>
@@ -1845,7 +1845,7 @@ function App() {
               onChange={(e) => { 
                 setSelectedTimeFrame(e.target.value); 
                 // For non-Difficult levels, automatically set tense based on time frame and difficulty
-                if (selectedDifficulty === "Beginner") {
+                if (selectedDifficulty === "Novice") {
                   const beginnerTenseMap = {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
@@ -1946,10 +1946,10 @@ function App() {
               <h3 className="text-2xl font-bold text-center mb-6">Choose Difficulty Level</h3>
               <div className="space-y-3 mb-6">
                 <button
-                  onClick={() => handleDifficultySelect("Beginner")}
+                  onClick={() => handleDifficultySelect("Novice")}
                   className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
                 >
-                  <div className="text-blue-200 font-semibold text-lg">🔵 Beginner</div>
+                  <div className="text-blue-200 font-semibold text-lg">🔵 Novice</div>
                   <div className="text-slate-300 text-sm mt-1">
                     Top 4 verbs (être, avoir, faire, aller) • Simple subject + verb (Je suis, Tu es) • Present, past, and future tenses
                   </div>
@@ -2006,10 +2006,10 @@ function App() {
               <p className="text-slate-300 text-center mb-6">Choose a difficulty level for structured learning</p>
               <div className="space-y-3 mb-6">
                 <button
-                  onClick={() => handleMiniCourseSelect("Beginner")}
+                  onClick={() => handleMiniCourseSelect("Novice")}
                   className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl text-white hover:bg-blue-500/30"
                 >
-                  <div className="text-blue-200 font-semibold text-lg">🔵 Beginner Course</div>
+                  <div className="text-blue-200 font-semibold text-lg">🔵 Novice Course</div>
                   <div className="text-slate-300 text-sm mt-1">
                     4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)
                   </div>
@@ -2096,7 +2096,7 @@ function App() {
                             verb: verb,
                             timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
                             tenseType: courseInfo.tense,
-                            difficulty: "Beginner",
+                            difficulty: "Novice",
                           })
                         });
                         
@@ -2146,11 +2146,11 @@ function App() {
           </div>
         )}
 
-        {/* Beginner Course Time Frame Modal */}
-        {showBeginnerCourseModal && (
+        {/* Novice Course Time Frame Modal */}
+        {showNoviceCourseModal && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
-              <h3 className="text-2xl font-bold text-center mb-4">📘 Beginner Course</h3>
+              <h3 className="text-2xl font-bold text-center mb-4">📘 Novice Course</h3>
               <p className="text-slate-300 text-center mb-6">Choose any tense to start your learning journey</p>
               <div className="space-y-3 mb-6">
                 {["Present", "Past", "Future"].map((timeFrame, index) => {
@@ -2163,14 +2163,14 @@ function App() {
                   
                   // Check completion status
                   const completed = completedCourses.find(course => 
-                    course.courseType === "beginner" && 
+                    course.courseType === "novice" && 
                     course.timeFrame === timeFrame
                   );
                   const isCompleted = completed && completed.examPassed;
                   
                   // Check for in-progress
                   const inProgress = courseProgressData.find(progress => 
-                    progress.courseType === "beginner" && 
+                    progress.courseType === "novice" && 
                     progress.timeFrame === timeFrame &&
                     !progress.isCompleted
                   );
@@ -2181,7 +2181,7 @@ function App() {
                   if (timeFrame === "Past") {
                     // Past is locked until Present exam is passed
                     const presentCompleted = completedCourses.find(course => 
-                      course.courseType === "beginner" && 
+                      course.courseType === "novice" && 
                       course.timeFrame === "Present" && 
                       course.examPassed
                     );
@@ -2189,7 +2189,7 @@ function App() {
                   } else if (timeFrame === "Future") {
                     // Future is locked until Past exam is passed
                     const pastCompleted = completedCourses.find(course => 
-                      course.courseType === "beginner" && 
+                      course.courseType === "novice" && 
                       course.timeFrame === "Past" && 
                       course.examPassed
                     );
@@ -2211,7 +2211,7 @@ function App() {
                   return (
                     <div key={timeFrame} className="relative">
                       <button
-                        onClick={() => !isLocked && handleBeginnerCourseTimeFrame(timeFrame)}
+                        onClick={() => !isLocked && handleNoviceCourseTimeFrame(timeFrame)}
                         disabled={isLocked}
                         className={`w-full p-4 text-left ${
                           isLocked
@@ -2279,7 +2279,7 @@ function App() {
               </div>
               <button
                 onClick={() => {
-                  setShowBeginnerCourseModal(false);
+                  setShowNoviceCourseModal(false);
                   setShowMiniCoursesModal(true);
                 }}
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
@@ -2312,7 +2312,7 @@ function App() {
                     !progress.isCompleted
                   );
                   
-                  // For Easy level, require Beginner completion first
+                  // For Easy level, require Novice completion first
                   const beginnerCompleted = completedCourses.some(course => 
                     course.courseType === "beginner" && course.examPassed
                   );
@@ -2367,7 +2367,7 @@ function App() {
                           {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame} Tense Course
                           {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
                           {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
-                          {isLocked && <span className="text-sm">🔒 Complete Beginner exam first</span>}
+                          {isLocked && <span className="text-sm">🔒 Complete Novice exam first</span>}
                         </div>
                         <div className="text-slate-300 text-sm mt-1">
                           6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
@@ -2613,7 +2613,7 @@ function App() {
                     const allUnits = config?.courseStructure?.units || [];
                     // For non-Advanced courses, limit to appropriate number of units
                     const units = selectedCourseLevel === 'Advanced' ? allUnits : allUnits.slice(0, 
-                      selectedCourseLevel === 'Beginner' ? 4 : 
+                      selectedCourseLevel === 'Novice' ? 4 : 
                       selectedCourseLevel === 'Easy' ? 6 : 
                       selectedCourseLevel === 'Moderate' ? 8 : allUnits.length
                     );
