@@ -1,0 +1,165 @@
+// Intermediate Level Quiz Data - Perplexity Validated
+// 11 verbs × 4 tenses × 20 questions = 880 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, savoir, venir
+// Tenses: Présent, Passé Composé, Futur Simple, Imparfait
+
+export interface IntermediateQuizQuestion {
+  question: string;
+  options: string[];
+  answer: string; // A, B, C, or D
+}
+
+export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQuizQuestion[]>> = {
+  "être": {
+    "present": [
+      {"question": "I am happy. (male) (Présent)", "options": ["Je suis heureux.", "Je suis heureuse.", "Il est heureux.", "Nous sommes heureux."], "answer": "A"},
+      {"question": "You are happy. (female, informal) (Présent)", "options": ["Tu es heureuse.", "Tu es heureux.", "Vous êtes heureuses.", "Elle est heureuse."], "answer": "A"},
+      {"question": "He is tall. (Présent)", "options": ["Il est grand.", "Elle est grande.", "Tu es grand.", "Ils sont grands."], "answer": "A"},
+      {"question": "She is ready. (Présent)", "options": ["Elle est prête.", "Il est prêt.", "Elles sont prêtes.", "Tu es prêt."], "answer": "A"},
+      {"question": "We are tired. (male/mixed) (Présent)", "options": ["Nous sommes fatigués.", "Vous êtes fatigués.", "Ils sont fatigués.", "Je suis fatigué."], "answer": "A"},
+      {"question": "You are ready. (formal/plural, male) (Présent)", "options": ["Vous êtes prêts.", "Tu es prêt.", "Nous sommes prêts.", "Ils sont prêts."], "answer": "A"},
+      {"question": "They are at home. (male/mixed) (Présent)", "options": ["Ils sont à la maison.", "Elles sont à la maison.", "Ils étaient à la maison.", "Ils seront à la maison."], "answer": "A"},
+      {"question": "They are in France. (female) (Présent)", "options": ["Elles sont en France.", "Ils sont en France.", "Elles étaient en France.", "Elles seront en France."], "answer": "A"},
+      {"question": "Am I late? (Présent)", "options": ["Suis-je en retard ?", "Es-tu en retard ?", "Est-il en retard ?", "Sommes-nous en retard ?"], "answer": "A"},
+      {"question": "Are you ready? (informal, male) (Présent)", "options": ["Es-tu prêt ?", "Suis-je prêt ?", "Est-il prêt ?", "Êtes-vous prêts ?"], "answer": "A"},
+      {"question": "Is he tired? (Présent)", "options": ["Est-il fatigué ?", "Est-elle fatiguée ?", "Suis-je fatigué ?", "Es-tu fatigué ?"], "answer": "A"},
+      {"question": "Is she in Paris? (Présent)", "options": ["Est-elle à Paris ?", "Est-il à Paris ?", "Es-tu à Paris ?", "Êtes-vous à Paris ?"], "answer": "A"},
+      {"question": "Are we hungry? (Présent)", "options": ["Avons-nous faim ?", "Ai-je faim ?", "Avez-vous faim ?", "Ont-ils faim ?"], "answer": "A"},
+      {"question": "Are you at home? (formal/plural) (Présent)", "options": ["Êtes-vous à la maison ?", "Es-tu à la maison ?", "Sommes-nous à la maison ?", "Sont-ils à la maison ?"], "answer": "A"},
+      {"question": "Are they ready? (male/mixed) (Présent)", "options": ["Sont-ils prêts ?", "Sont-elles prêtes ?", "Êtes-vous prêts ?", "Es-tu prêt ?"], "answer": "A"},
+      {"question": "Are they here? (female) (Présent)", "options": ["Sont-elles ici ?", "Sont-ils ici ?", "Êtes-vous ici ?", "Es-tu ici ?"], "answer": "A"},
+      {"question": "I am not happy. (male) (Présent)", "options": ["Je ne suis pas heureux.", "Tu n'es pas heureux.", "Il n'est pas heureux.", "Nous ne sommes pas heureux."], "answer": "A"},
+      {"question": "He is not tired. (Présent)", "options": ["Il n'est pas fatigué.", "Je ne suis pas fatigué.", "Tu n'es pas fatigué.", "Ils ne sont pas fatigués."], "answer": "A"},
+      {"question": "Aren't we late? (Présent)", "options": ["Ne sommes-nous pas en retard ?", "N'êtes-vous pas en retard ?", "Ne sont-ils pas en retard ?", "Ne suis-je pas en retard ?"], "answer": "A"},
+      {"question": "Aren't they ready? (female) (Présent)", "options": ["Ne sont-elles pas prêtes ?", "Ne sont-ils pas prêts ?", "N'êtes-vous pas prêts ?", "Ne sommes-nous pas prêts ?"], "answer": "A"}
+    ],
+    "passé_composé": [
+      {"question": "I have been happy. (male) (Passé Composé)", "options": ["J'ai été heureux.", "Tu as été heureux.", "Il a été heureux.", "Nous avons été heureux."], "answer": "A"},
+      {"question": "You have been in Paris. (informal) (Passé Composé)", "options": ["Tu as été à Paris.", "J'ai été à Paris.", "Il a été à Paris.", "Vous avez été à Paris."], "answer": "A"},
+      {"question": "He has been tired. (Passé Composé)", "options": ["Il a été fatigué.", "Elle a été fatiguée.", "Tu as été fatigué.", "Nous avons été fatigués."], "answer": "A"},
+      {"question": "She has been ready. (Passé Composé)", "options": ["Elle a été prête.", "Il a été prêt.", "Elles ont été prêtes.", "Tu as été prêt."], "answer": "A"},
+      {"question": "We have been late. (Passé Composé)", "options": ["Nous avons été en retard.", "Vous avez été en retard.", "Ils ont été en retard.", "J'ai été en retard."], "answer": "A"},
+      {"question": "You have been tired. (formal/plural, male) (Passé Composé)", "options": ["Vous avez été fatigués.", "Tu as été fatigué.", "Nous avons été fatigués.", "Ils ont été fatigués."], "answer": "A"},
+      {"question": "They have been happy. (male/mixed) (Passé Composé)", "options": ["Ils ont été heureux.", "Elles ont été heureuses.", "Ils étaient heureux.", "Ils seront heureux."], "answer": "A"},
+      {"question": "They have been in London. (female) (Passé Composé)", "options": ["Elles ont été à Londres.", "Ils ont été à Londres.", "Elles étaient à Londres.", "Elles seront à Londres."], "answer": "A"},
+      {"question": "Have I been ready? (Passé Composé)", "options": ["Ai-je été prêt ?", "As-tu été prêt ?", "A-t-il été prêt ?", "Avons-nous été prêts ?"], "answer": "A"},
+      {"question": "Have you been happy? (informal) (Passé Composé)", "options": ["As-tu été heureux ?", "Ai-je été heureux ?", "A-t-il été heureux ?", "Avez-vous été heureux ?"], "answer": "A"},
+      {"question": "Has he been late? (Passé Composé)", "options": ["A-t-il été en retard ?", "A-t-elle été en retard ?", "Ai-je été en retard ?", "As-tu été en retard ?"], "answer": "A"},
+      {"question": "Has she been in Paris? (Passé Composé)", "options": ["A-t-elle été à Paris ?", "A-t-il été à Paris ?", "As-tu été à Paris ?", "Avez-vous été à Paris ?"], "answer": "A"},
+      {"question": "Have we been tired? (Passé Composé)", "options": ["Avons-nous été fatigués ?", "Ai-je été fatigué ?", "Avez-vous été fatigués ?", "Ont-ils été fatigués ?"], "answer": "A"},
+      {"question": "Have you been ready? (formal/plural) (Passé Composé)", "options": ["Avez-vous été prêts ?", "As-tu été prêt ?", "Avons-nous été prêts ?", "Ont-ils été prêts ?"], "answer": "A"},
+      {"question": "Have they been happy? (male/mixed) (Passé Composé)", "options": ["Ont-ils été heureux ?", "Ont-elles été heureuses ?", "Avez-vous été heureux ?", "As-tu été heureux ?"], "answer": "A"},
+      {"question": "Have they been happy? (female) (Passé Composé)", "options": ["Ont-elles été heureuses ?", "Ont-ils été heureux ?", "Avez-vous été heureuses ?", "As-tu été heureuse ?"], "answer": "A"},
+      {"question": "I have not been happy. (male) (Passé Composé)", "options": ["Je n'ai pas été heureux.", "Tu n'as pas été heureux.", "Il n'a pas été heureux.", "Nous n'avons pas été heureux."], "answer": "A"},
+      {"question": "He has not been late. (Passé Composé)", "options": ["Il n'a pas été en retard.", "Je n'ai pas été en retard.", "Tu n'as pas été en retard.", "Ils n'ont pas été en retard."], "answer": "A"},
+      {"question": "Haven't we been ready? (Passé Composé)", "options": ["N'avons-nous pas été prêts ?", "N'avez-vous pas été prêts ?", "N'ont-ils pas été prêts ?", "N'ai-je pas été prêt ?"], "answer": "A"},
+      {"question": "Haven't they been ready? (female) (Passé Composé)", "options": ["N'ont-elles pas été prêtes ?", "N'ont-ils pas été prêts ?", "N'avez-vous pas été prêtes ?", "N'avons-nous pas été prêts ?"], "answer": "A"}
+    ],
+    "futur_simple": [
+      {"question": "I will be happy. (male) (Futur Simple)", "options": ["Je serai heureux.", "Tu seras heureux.", "Il sera heureux.", "Nous serons heureux."], "answer": "A"},
+      {"question": "You will be tired. (female, informal) (Futur Simple)", "options": ["Tu seras fatiguée.", "Je serai fatiguée.", "Elle sera fatiguée.", "Vous serez fatiguées."], "answer": "A"},
+      {"question": "He will be ready. (Futur Simple)", "options": ["Il sera prêt.", "Elle sera prête.", "Tu seras prêt.", "Ils seront prêts."], "answer": "A"},
+      {"question": "She will be in Paris. (Futur Simple)", "options": ["Elle sera à Paris.", "Il sera à Paris.", "Elles seront à Paris.", "Tu seras à Paris."], "answer": "A"},
+      {"question": "We will be on time. (Futur Simple)", "options": ["Nous serons à l'heure.", "Vous serez à l'heure.", "Ils seront à l'heure.", "Je serai à l'heure."], "answer": "A"},
+      {"question": "You will be late. (formal/plural) (Futur Simple)", "options": ["Vous serez en retard.", "Tu seras en retard.", "Nous serons en retard.", "Ils seront en retard."], "answer": "A"},
+      {"question": "They will be at home. (male/mixed) (Futur Simple)", "options": ["Ils seront à la maison.", "Elles seront à la maison.", "Ils seraient à la maison.", "Ils étaient à la maison."], "answer": "A"},
+      {"question": "They will be at the office. (female) (Futur Simple)", "options": ["Elles seront au bureau.", "Ils seront au bureau.", "Elles seraient au bureau.", "Elles étaient au bureau."], "answer": "A"},
+      {"question": "Will I be ready? (Futur Simple)", "options": ["Serai-je prêt ?", "Seras-tu prêt ?", "Sera-t-il prêt ?", "Serons-nous prêts ?"], "answer": "A"},
+      {"question": "Will you be happy? (informal) (Futur Simple)", "options": ["Seras-tu heureux ?", "Serai-je heureux ?", "Sera-t-il heureux ?", "Serez-vous heureux ?"], "answer": "A"},
+      {"question": "Will he be late? (Futur Simple)", "options": ["Sera-t-il en retard ?", "Sera-t-elle en retard ?", "Serai-je en retard ?", "Seras-tu en retard ?"], "answer": "A"},
+      {"question": "Will she be at home? (Futur Simple)", "options": ["Sera-t-elle à la maison ?", "Sera-t-il à la maison ?", "Seras-tu à la maison ?", "Serez-vous à la maison ?"], "answer": "A"},
+      {"question": "Will we be on time? (Futur Simple)", "options": ["Serons-nous à l'heure ?", "Serai-je à l'heure ?", "Serez-vous à l'heure ?", "Seront-ils à l'heure ?"], "answer": "A"},
+      {"question": "Will you be tired? (formal/plural) (Futur Simple)", "options": ["Serez-vous fatigués ?", "Seras-tu fatigué ?", "Serons-nous fatigués ?", "Seront-ils fatigués ?"], "answer": "A"},
+      {"question": "Will they be ready? (male/mixed) (Futur Simple)", "options": ["Seront-ils prêts ?", "Seront-elles prêtes ?", "Serez-vous prêts ?", "Es-tu prêt ?"], "answer": "A"},
+      {"question": "Will they be ready? (female) (Futur Simple)", "options": ["Seront-elles prêtes ?", "Seront-ils prêts ?", "Serez-vous prêtes ?", "Es-tu prête ?"], "answer": "A"},
+      {"question": "I will not be happy. (male) (Futur Simple)", "options": ["Je ne serai pas heureux.", "Tu ne seras pas heureux.", "Il ne sera pas heureux.", "Nous ne serons pas heureux."], "answer": "A"},
+      {"question": "He will not be late. (Futur Simple)", "options": ["Il ne sera pas en retard.", "Je ne serai pas en retard.", "Tu ne seras pas en retard.", "Ils ne seront pas en retard."], "answer": "A"},
+      {"question": "Won't we be ready? (Futur Simple)", "options": ["Ne serons-nous pas prêts ?", "Ne serez-vous pas prêts ?", "Ne seront-ils pas prêts ?", "Ne serai-je pas prêt ?"], "answer": "A"},
+      {"question": "Won't they be happy? (female) (Futur Simple)", "options": ["Ne seront-elles pas heureuses ?", "Ne seront-ils pas heureux ?", "Ne serez-vous pas heureuses ?", "Ne serons-nous pas heureuses ?"], "answer": "A"}
+    ],
+    "imparfait": [
+      {"question": "I was happy. (male) (Imparfait)", "options": ["J'étais heureux.", "Tu étais heureux.", "Il était heureux.", "Nous étions heureux."], "answer": "A"},
+      {"question": "You were happy. (female, informal) (Imparfait)", "options": ["Tu étais heureuse.", "Je étais heureuse.", "Elle était heureuse.", "Vous étiez heureuses."], "answer": "A"},
+      {"question": "He was tired. (Imparfait)", "options": ["Il était fatigué.", "Elle était fatiguée.", "Tu étais fatigué.", "Ils étaient fatigués."], "answer": "A"},
+      {"question": "She was ready. (Imparfait)", "options": ["Elle était prête.", "Il était prêt.", "Elles étaient prêtes.", "Tu étais prêt."], "answer": "A"},
+      {"question": "We were at home. (Imparfait)", "options": ["Nous étions à la maison.", "Vous étiez à la maison.", "Ils étaient à la maison.", "J'étais à la maison."], "answer": "A"},
+      {"question": "You were at the office. (formal/plural) (Imparfait)", "options": ["Vous étiez au bureau.", "Tu étais au bureau.", "Nous étions au bureau.", "Ils étaient au bureau."], "answer": "A"},
+      {"question": "They were in Paris. (male/mixed) (Imparfait)", "options": ["Ils étaient à Paris.", "Elles étaient à Paris.", "Ils seront à Paris.", "Ils seraient à Paris."], "answer": "A"},
+      {"question": "They were in France. (female) (Imparfait)", "options": ["Elles étaient en France.", "Ils étaient en France.", "Elles seront en France.", "Elles seraient en France."], "answer": "A"},
+      {"question": "Was I happy? (male) (Imparfait)", "options": ["Étais-je heureux ?", "Étais-tu heureux ?", "Était-il heureux ?", "Étions-nous heureux ?"], "answer": "A"},
+      {"question": "Were you ready? (informal, male) (Imparfait)", "options": ["Étais-tu prêt ?", "Étais-je prêt ?", "Était-il prêt ?", "Étiez-vous prêts ?"], "answer": "A"},
+      {"question": "Was he late? (Imparfait)", "options": ["Était-il en retard ?", "Était-elle en retard ?", "Étais-je en retard ?", "Étais-tu en retard ?"], "answer": "A"},
+      {"question": "Was she tired? (Imparfait)", "options": ["Était-elle fatiguée ?", "Était-il fatigué ?", "Étais-tu fatigué ?", "Étiez-vous fatigués ?"], "answer": "A"},
+      {"question": "Were we ready? (Imparfait)", "options": ["Étions-nous prêts ?", "Étais-je prêt ?", "Étiez-vous prêts ?", "Étaient-ils prêts ?"], "answer": "A"},
+      {"question": "Were you happy? (formal/plural, male) (Imparfait)", "options": ["Étiez-vous heureux ?", "Étais-tu heureux ?", "Étions-nous heureux ?", "Étaient-ils heureux ?"], "answer": "A"},
+      {"question": "Were they ready? (male/mixed) (Imparfait)", "options": ["Étaient-ils prêts ?", "Étaient-elles prêtes ?", "Étiez-vous prêts ?", "Es-tu prêt ?"], "answer": "A"},
+      {"question": "Were they ready? (female) (Imparfait)", "options": ["Étaient-elles prêtes ?", "Étaient-ils prêts ?", "Étiez-vous prêtes ?", "Es-tu prête ?"], "answer": "A"},
+      {"question": "I was not happy. (male) (Imparfait)", "options": ["Je n'étais pas heureux.", "Tu n'étais pas heureux.", "Il n'était pas heureux.", "Nous n'étions pas heureux."], "answer": "A"},
+      {"question": "He was not tired. (Imparfait)", "options": ["Il n'était pas fatigué.", "Je n'étais pas fatigué.", "Tu n'étais pas fatigué.", "Ils n'étaient pas fatigués."], "answer": "A"},
+      {"question": "Weren't we ready? (Imparfait)", "options": ["N'étions-nous pas prêts ?", "N'étiez-vous pas prêts ?", "N'étaient-ils pas prêts ?", "N'étais-je pas prêt ?"], "answer": "A"},
+      {"question": "Weren't they happy? (female) (Imparfait)", "options": ["N'étaient-elles pas heureuses ?", "N'étaient-ils pas heureux ?", "N'étiez-vous pas heureuses ?", "N'étions-nous pas heureuses ?"], "answer": "A"}
+    ]
+  }
+
+  // TODO: Continue adding other verbs (avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, savoir, venir)
+  // Each will have 4 tenses × 20 questions = 80 questions per verb
+  // Total: 11 verbs × 80 questions = 880 questions
+};
+
+// Function to get random Intermediate questions for a specific verb and tense
+export function getRandomIntermediateQuestions(verb: string, tense: string, count: number): IntermediateQuizQuestion[] {
+  const verbData = INTERMEDIATE_QUIZ_DATA[verb];
+  if (!verbData) {
+    console.log(`⚠️  No Intermediate questions found for verb: ${verb}`);
+    return [];
+  }
+  
+  const questions = verbData[tense];
+  if (!questions) {
+    console.log(`⚠️  No Intermediate questions found for verb: ${verb}, tense: ${tense}`);
+    return [];
+  }
+  
+  // Shuffle and return requested count
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  const result = shuffled.slice(0, Math.min(count, shuffled.length));
+  
+  // If we need more questions than available, repeat with shuffled options
+  while (result.length < count && questions.length > 0) {
+    const additional = [...questions].sort(() => Math.random() - 0.5);
+    for (const q of additional) {
+      if (result.length >= count) break;
+      // Create variation with shuffled options
+      const shuffledOptions = [...q.options].sort(() => Math.random() - 0.5);
+      const correctIndex = q.options.findIndex((_, i) => String.fromCharCode(65 + i) === q.answer);
+      const correctText = q.options[correctIndex];
+      const newCorrectIndex = shuffledOptions.findIndex(opt => opt === correctText);
+      const newAnswer = String.fromCharCode(65 + newCorrectIndex);
+      
+      result.push({
+        ...q,
+        options: shuffledOptions,
+        answer: newAnswer
+      });
+    }
+  }
+  
+  return result.slice(0, count);
+}
+
+// Convert Intermediate quiz data to the format expected by the quiz generator
+export function convertIntermediateToQuizFormat(intermediateQuestions: IntermediateQuizQuestion[]): any[] {
+  return intermediateQuestions.map(q => {
+    const correctIndex = q.options.findIndex((_, i) => String.fromCharCode(65 + i) === q.answer);
+    
+    return {
+      question: q.question,
+      hint: `Select the correct conjugation`,
+      answerOptions: q.options.map((option, index) => ({
+        text: option,
+        rationale: index === correctIndex ? "Correct conjugation!" : "Incorrect conjugation.",
+        isCorrect: index === correctIndex
+      }))
+    };
+  });
+}
