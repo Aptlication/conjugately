@@ -513,10 +513,46 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "futur_simple": [
       {"question": "I will say the truth. (Futur Simple)", "options": ["Je dirai la vérité.", "Tu diras la vérité.", "Il dira la vérité.", "Nous dirons la vérité."], "answer": "A"},
       {"question": "You will say good morning. (informal) (Futur Simple)", "options": ["Tu diras bonjour.", "Je dirai bonjour.", "Il dira bonjour.", "Vous direz bonjour."], "answer": "A"},
-      // TODO: Awaiting remaining Futur Simple questions (18 more)
+      {"question": "He will say nothing. (Futur Simple)", "options": ["Il ne dira rien.", "Elle ne dira rien.", "Tu ne diras rien.", "Ils ne diront rien."], "answer": "A"},
+      {"question": "She will say a few words. (Futur Simple)", "options": ["Elle dira quelques mots.", "Il dira quelques mots.", "Elles diront quelques mots.", "Tu diras quelques mots."], "answer": "A"},
+      {"question": "We will say thank you. (Futur Simple)", "options": ["Nous dirons merci.", "Vous direz merci.", "Ils diront merci.", "Je dirai merci."], "answer": "A"},
+      {"question": "You will say the same thing. (formal/plural) (Futur Simple)", "options": ["Vous direz la même chose.", "Tu diras la même chose.", "Nous dirons la même chose.", "Ils diront la même chose."], "answer": "A"},
+      {"question": "They will say hello. (male/mixed) (Futur Simple)", "options": ["Ils diront bonjour.", "Elles diront bonjour.", "Ils diraient bonjour.", "Ils disaient bonjour."], "answer": "A"},
+      {"question": "They will say hello. (female) (Futur Simple)", "options": ["Elles diront bonjour.", "Ils diront bonjour.", "Elles diraient bonjour.", "Elles disaient bonjour."], "answer": "A"},
+      {"question": "Will I say it correctly? (Futur Simple)", "options": ["Le dirai-je correctement ?", "Le diras-tu correctement ?", "Le dira-t-il correctement ?", "Le dirons-nous correctement ?"], "answer": "A"},
+      {"question": "Will you say it often? (informal) (Futur Simple)", "options": ["Le diras-tu souvent ?", "Le dirai-je souvent ?", "Le dira-t-il souvent ?", "Le direz-vous souvent ?"], "answer": "A"},
+      {"question": "Will he say the truth? (Futur Simple)", "options": ["Dira-t-il la vérité ?", "Dira-t-elle la vérité ?", "Dirai-je la vérité ?", "Diras-tu la vérité ?"], "answer": "A"},
+      {"question": "Will she say that? (Futur Simple)", "options": ["Dira-t-elle cela ?", "Dira-t-il cela ?", "Diras-tu cela ?", "Direz-vous cela ?"], "answer": "A"},
+      {"question": "Will we say yes? (Futur Simple)", "options": ["Dirons-nous oui ?", "Dirai-je oui ?", "Direz-vous oui ?", "Diront-ils oui ?"], "answer": "A"},
+      {"question": "Will you say no? (formal/plural) (Futur Simple)", "options": ["Direz-vous non ?", "Diras-tu non ?", "Dirons-nous non ?", "Diront-ils non ?"], "answer": "A"},
+      {"question": "Will they say something? (male/mixed) (Futur Simple)", "options": ["Diront-ils quelque chose ?", "Diront-elles quelque chose ?", "Direz-vous quelque chose ?", "Diras-tu quelque chose ?"], "answer": "A"},
+      {"question": "Will they say something? (female) (Futur Simple)", "options": ["Diront-elles quelque chose ?", "Diront-ils quelque chose ?", "Direz-vous quelque chose ?", "Diras-tu quelque chose ?"], "answer": "A"},
+      {"question": "I will not say a word. (Futur Simple)", "options": ["Je ne dirai pas un mot.", "Tu ne diras pas un mot.", "Il ne dira pas un mot.", "Nous ne dirons pas un mot."], "answer": "A"},
+      {"question": "He will not say anything. (Futur Simple)", "options": ["Il ne dira rien.", "Je ne dirai rien.", "Tu ne diras rien.", "Ils ne diront rien."], "answer": "A"},
+      {"question": "Won't we say thank you? (Futur Simple)", "options": ["Ne dirons-nous pas merci ?", "Ne direz-vous pas merci ?", "Ne diront-ils pas merci ?", "Ne dirai-je pas merci ?"], "answer": "A"},
+      {"question": "Won't they say hello? (female) (Futur Simple)", "options": ["Ne diront-elles pas bonjour ?", "Ne diront-ils pas bonjour ?", "Ne direz-vous pas bonjour ?", "Ne dirons-nous pas bonjour ?"], "answer": "A"}
     ],
     "imparfait": [
-      // TODO: Awaiting all Imparfait questions (20 questions)
+      {"question": "I was saying the truth. (Imparfait)", "options": ["Je disais la vérité.", "Tu disais la vérité.", "Il disait la vérité.", "Nous disions la vérité."], "answer": "A"},
+      {"question": "You were saying good morning. (informal) (Imparfait)", "options": ["Tu disais bonjour.", "Je disais bonjour.", "Il disait bonjour.", "Vous disiez bonjour."], "answer": "A"},
+      {"question": "He was saying nothing. (Imparfait)", "options": ["Il ne disait rien.", "Elle ne disait rien.", "Tu ne disais rien.", "Ils ne disaient rien."], "answer": "A"},
+      {"question": "She was saying a few words. (Imparfait)", "options": ["Elle disait quelques mots.", "Il disait quelques mots.", "Elles disaient quelques mots.", "Tu disais quelques mots."], "answer": "A"},
+      {"question": "We were saying thank you. (Imparfait)", "options": ["Nous disions merci.", "Vous disiez merci.", "Ils disaient merci.", "Je disais merci."], "answer": "A"},
+      {"question": "You were saying the same thing. (formal/plural) (Imparfait)", "options": ["Vous disiez la même chose.", "Tu disais la même chose.", "Nous disions la même chose.", "Ils disaient la même chose."], "answer": "A"},
+      {"question": "They were saying hello. (male/mixed) (Imparfait)", "options": ["Ils disaient bonjour.", "Elles disaient bonjour.", "Ils diront bonjour.", "Ils diraient bonjour."], "answer": "A"},
+      {"question": "They were saying hello. (female) (Imparfait)", "options": ["Elles disaient bonjour.", "Ils disaient bonjour.", "Elles diront bonjour.", "Elles diraient bonjour."], "answer": "A"},
+      {"question": "Was I saying it correctly? (Imparfait)", "options": ["Le disais-je correctement ?", "Le disais-tu correctement ?", "Le disait-il correctement ?", "Le disions-nous correctement ?"], "answer": "A"},
+      {"question": "Were you saying it often? (informal) (Imparfait)", "options": ["Le disais-tu souvent ?", "Le disais-je souvent ?", "Le disait-il souvent ?", "Le disiez-vous souvent ?"], "answer": "A"},
+      {"question": "Was he saying the truth? (Imparfait)", "options": ["Disait-il la vérité ?", "Disait-elle la vérité ?", "Disais-je la vérité ?", "Disais-tu la vérité ?"], "answer": "A"},
+      {"question": "Was she saying that? (Imparfait)", "options": ["Disait-elle cela ?", "Disait-il cela ?", "Disais-tu cela ?", "Disiez-vous cela ?"], "answer": "A"},
+      {"question": "Were we saying yes? (Imparfait)", "options": ["Disions-nous oui ?", "Disais-je oui ?", "Disiez-vous oui ?", "Disaient-ils oui ?"], "answer": "A"},
+      {"question": "Were you saying no? (formal/plural) (Imparfait)", "options": ["Disiez-vous non ?", "Disais-tu non ?", "Disions-nous non ?", "Disaient-ils non ?"], "answer": "A"},
+      {"question": "Were they saying something? (male/mixed) (Imparfait)", "options": ["Disaient-ils quelque chose ?", "Disaient-elles quelque chose ?", "Disiez-vous quelque chose ?", "Disais-tu quelque chose ?"], "answer": "A"},
+      {"question": "Were they saying something? (female) (Imparfait)", "options": ["Disaient-elles quelque chose ?", "Disaient-ils quelque chose ?", "Disiez-vous quelque chose ?", "Disais-tu quelque chose ?"], "answer": "A"},
+      {"question": "I was not saying a word. (Imparfait)", "options": ["Je ne disais pas un mot.", "Tu ne disais pas un mot.", "Il ne disait pas un mot.", "Nous ne disions pas un mot."], "answer": "A"},
+      {"question": "He was not saying anything. (Imparfait)", "options": ["Il ne disait rien.", "Je ne disais rien.", "Tu ne disais rien.", "Ils ne disaient rien."], "answer": "A"},
+      {"question": "Weren't we saying thank you? (Imparfait)", "options": ["Ne disions-nous pas merci ?", "Ne disiez-vous pas merci ?", "Ne disaient-ils pas merci ?", "Ne disais-je pas merci ?"], "answer": "A"},
+      {"question": "Weren't they saying hello? (female) (Imparfait)", "options": ["Ne disaient-elles pas bonjour ?", "Ne disaient-ils pas bonjour ?", "Ne disiez-vous pas bonjour ?", "Ne disions-nous pas bonjour ?"], "answer": "A"}
     ]
   }
 
