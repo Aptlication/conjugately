@@ -2516,7 +2516,7 @@ function App() {
                     };
                     continueQuiz();
                   }}
-                  className="w-full px-6 py-4 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700 text-lg"
+                  className="w-full px-6 py-4 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 text-lg"
                 >
                   Got it! Start Quiz
                 </button>
@@ -2568,7 +2568,7 @@ function App() {
                     };
                     continueQuiz();
                   }}
-                  className="w-full px-6 py-3 bg-gray-700/50 text-gray-300 rounded-xl font-medium hover:bg-gray-700/70"
+                  className="w-full px-6 py-3 bg-red-600 text-white rounded-xl font-medium hover:bg-red-700"
                 >
                   Don't remind me again
                 </button>
