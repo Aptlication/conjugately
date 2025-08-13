@@ -456,7 +456,7 @@ function generateBeginnerQuestions(verb: string, tense: string, count: number): 
       if (questions.length < count) {
         questions.push({
           ...q,
-          question: q.question + " (review)"
+          question: q.question
         });
       }
     });
