@@ -243,9 +243,100 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Weren't we doing enough? (Imparfait)", "options": ["Ne faisions-nous pas assez ?", "Ne faisiez-vous pas assez ?", "Ne faisaient-ils pas assez ?", "Ne faisais-je pas assez ?"], "answer": "A"},
       {"question": "Weren't they doing the dishes? (female) (Imparfait)", "options": ["Ne faisaient-elles pas la vaisselle ?", "Ne faisaient-ils pas la vaisselle ?", "Ne faisiez-vous pas la vaisselle ?", "Ne faisions-nous pas la vaisselle ?"], "answer": "A"}
     ]
+  },
+
+  "aller": {
+    "present": [
+      {"question": "I go to school. (Présent)", "options": ["Je vais à l'école.", "Tu vas à l'école.", "Il va à l'école.", "Nous allons à l'école."], "answer": "A"},
+      {"question": "You go to the park. (informal) (Présent)", "options": ["Tu vas au parc.", "Je vais au parc.", "Il va au parc.", "Vous allez au parc."], "answer": "A"},
+      {"question": "He goes to the cinema. (Présent)", "options": ["Il va au cinéma.", "Elle va au cinéma.", "Tu vas au cinéma.", "Ils vont au cinéma."], "answer": "A"},
+      {"question": "She goes to the beach. (Présent)", "options": ["Elle va à la plage.", "Il va à la plage.", "Elles vont à la plage.", "Tu vas à la plage."], "answer": "A"},
+      {"question": "We go to France. (Présent)", "options": ["Nous allons en France.", "Vous allez en France.", "Ils vont en France.", "Je vais en France."], "answer": "A"},
+      {"question": "You go to work. (formal/plural) (Présent)", "options": ["Vous allez au travail.", "Tu vas au travail.", "Nous allons au travail.", "Ils vont au travail."], "answer": "A"},
+      {"question": "They go to the supermarket. (male/mixed) (Présent)", "options": ["Ils vont au supermarché.", "Elles vont au supermarché.", "Ils allaient au supermarché.", "Ils iront au supermarché."], "answer": "A"},
+      {"question": "They go to the library. (female) (Présent)", "options": ["Elles vont à la bibliothèque.", "Ils vont à la bibliothèque.", "Elles allaient à la bibliothèque.", "Elles iront à la bibliothèque."], "answer": "A"},
+      {"question": "Do I go often? (Présent)", "options": ["Vais-je souvent ?", "Vas-tu souvent ?", "Va-t-il souvent ?", "Allons-nous souvent ?"], "answer": "A"},
+      {"question": "Do you go sometimes? (informal) (Présent)", "options": ["Vas-tu parfois ?", "Vais-je parfois ?", "Va-t-il parfois ?", "Allez-vous parfois ?"], "answer": "A"},
+      {"question": "Does he go to Paris? (Présent)", "options": ["Va-t-il à Paris ?", "Va-t-elle à Paris ?", "Vais-je à Paris ?", "Vas-tu à Paris ?"], "answer": "A"},
+      {"question": "Does she go to London? (Présent)", "options": ["Va-t-elle à Londres ?", "Va-t-il à Londres ?", "Vas-tu à Londres ?", "Allez-vous à Londres ?"], "answer": "A"},
+      {"question": "Do we go by car? (Présent)", "options": ["Allons-nous en voiture ?", "Vais-je en voiture ?", "Allez-vous en voiture ?", "Vont-ils en voiture ?"], "answer": "A"},
+      {"question": "Do you go by train? (formal/plural) (Présent)", "options": ["Allez-vous en train ?", "Vas-tu en train ?", "Allons-nous en train ?", "Vont-ils en train ?"], "answer": "A"},
+      {"question": "Do they go regularly? (male/mixed) (Présent)", "options": ["Vont-ils régulièrement ?", "Vont-elles régulièrement ?", "Allez-vous régulièrement ?", "Vas-tu régulièrement ?"], "answer": "A"},
+      {"question": "Do they go regularly? (female) (Présent)", "options": ["Vont-elles régulièrement ?", "Vont-ils régulièrement ?", "Allez-vous régulièrement ?", "Vas-tu régulièrement ?"], "answer": "A"},
+      {"question": "I do not go to school. (Présent)", "options": ["Je ne vais pas à l'école.", "Tu ne vas pas à l'école.", "Il ne va pas à l'école.", "Nous n'allons pas à l'école."], "answer": "A"},
+      {"question": "He does not go to the cinema. (Présent)", "options": ["Il ne va pas au cinéma.", "Je ne vais pas au cinéma.", "Tu ne vas pas au cinéma.", "Ils ne vont pas au cinéma."], "answer": "A"},
+      {"question": "Don't we go to the park? (Présent)", "options": ["N'allons-nous pas au parc ?", "N'allez-vous pas au parc ?", "Ne vont-ils pas au parc ?", "Ne vais-je pas au parc ?"], "answer": "A"},
+      {"question": "Don't they go to the beach? (female) (Présent)", "options": ["Ne vont-elles pas à la plage ?", "Ne vont-ils pas à la plage ?", "N'allez-vous pas à la plage ?", "N'allons-nous pas à la plage ?"], "answer": "A"}
+    ],
+    "passé_composé": [
+      {"question": "I went to school. (Passé Composé)", "options": ["Je suis allé à l'école.", "Tu es allé à l'école.", "Il est allé à l'école.", "Nous sommes allés à l'école."], "answer": "A"},
+      {"question": "You went to the park. (informal) (Passé Composé)", "options": ["Tu es allé au parc.", "Je suis allé au parc.", "Il est allé au parc.", "Vous êtes allé au parc."], "answer": "A"},
+      {"question": "He went to the cinema. (Passé Composé)", "options": ["Il est allé au cinéma.", "Elle est allée au cinéma.", "Tu es allé au cinéma.", "Ils sont allés au cinéma."], "answer": "A"},
+      {"question": "She went to the beach. (Passé Composé)", "options": ["Elle est allée à la plage.", "Il est allé à la plage.", "Elles sont allées à la plage.", "Tu es allé à la plage."], "answer": "A"},
+      {"question": "We went to France. (Passé Composé)", "options": ["Nous sommes allés en France.", "Vous êtes allés en France.", "Ils sont allés en France.", "Je suis allé en France."], "answer": "A"},
+      {"question": "You went to work. (formal/plural) (Passé Composé)", "options": ["Vous êtes allés au travail.", "Tu es allé au travail.", "Nous sommes allés au travail.", "Ils sont allés au travail."], "answer": "A"},
+      {"question": "They went to the supermarket. (male/mixed) (Passé Composé)", "options": ["Ils sont allés au supermarché.", "Elles sont allées au supermarché.", "Ils étaient allés au supermarché.", "Ils iront au supermarché."], "answer": "A"},
+      {"question": "They went to the library. (female) (Passé Composé)", "options": ["Elles sont allées à la bibliothèque.", "Ils sont allés à la bibliothèque.", "Elles étaient allées à la bibliothèque.", "Elles iront à la bibliothèque."], "answer": "A"},
+      {"question": "Did I go often? (Passé Composé)", "options": ["Suis-je allé souvent ?", "Es-tu allé souvent ?", "Est-il allé souvent ?", "Sommes-nous allés souvent ?"], "answer": "A"},
+      {"question": "Did you go sometimes? (informal) (Passé Composé)", "options": ["Es-tu allé parfois ?", "Suis-je allé parfois ?", "Est-il allé parfois ?", "Êtes-vous allés parfois ?"], "answer": "A"},
+      {"question": "Did he go to Paris? (Passé Composé)", "options": ["Est-il allé à Paris ?", "Est-elle allée à Paris ?", "Suis-je allé à Paris ?", "Es-tu allé à Paris ?"], "answer": "A"},
+      {"question": "Did she go to London? (Passé Composé)", "options": ["Est-elle allée à Londres ?", "Est-il allé à Londres ?", "Es-tu allé à Londres ?", "Êtes-vous allés à Londres ?"], "answer": "A"},
+      {"question": "Did we go by car? (Passé Composé)", "options": ["Sommes-nous allés en voiture ?", "Suis-je allé en voiture ?", "Êtes-vous allés en voiture ?", "Sont-ils allés en voiture ?"], "answer": "A"},
+      {"question": "Did you go by train? (formal/plural) (Passé Composé)", "options": ["Êtes-vous allés en train ?", "Es-tu allé en train ?", "Sommes-nous allés en train ?", "Sont-ils allés en train ?"], "answer": "A"},
+      {"question": "Did they go regularly? (male/mixed) (Passé Composé)", "options": ["Sont-ils allés régulièrement ?", "Sont-elles allées régulièrement ?", "Êtes-vous allés régulièrement ?", "Es-tu allé régulièrement ?"], "answer": "A"},
+      {"question": "Did they go regularly? (female) (Passé Composé)", "options": ["Sont-elles allées régulièrement ?", "Sont-ils allés régulièrement ?", "Êtes-vous allées régulièrement ?", "Es-tu allée régulièrement ?"], "answer": "A"},
+      {"question": "I did not go to school. (Passé Composé)", "options": ["Je ne suis pas allé à l'école.", "Tu n'es pas allé à l'école.", "Il n'est pas allé à l'école.", "Nous ne sommes pas allés à l'école."], "answer": "A"},
+      {"question": "He did not go to the cinema. (Passé Composé)", "options": ["Il n'est pas allé au cinéma.", "Je ne suis pas allé au cinéma.", "Tu n'es pas allé au cinéma.", "Ils ne sont pas allés au cinéma."], "answer": "A"},
+      {"question": "Didn't we go to the park? (Passé Composé)", "options": ["Ne sommes-nous pas allés au parc ?", "N'êtes-vous pas allés au parc ?", "Ne sont-ils pas allés au parc ?", "Ne suis-je pas allé au parc ?"], "answer": "A"},
+      {"question": "Didn't they go to the beach? (female) (Passé Composé)", "options": ["Ne sont-elles pas allées à la plage ?", "Ne sont-ils pas allés à la plage ?", "N'êtes-vous pas allées à la plage ?", "Ne sommes-nous pas allées à la plage ?"], "answer": "A"}
+    ],
+    "futur_simple": [
+      {"question": "I will go to school. (Futur Simple)", "options": ["J'irai à l'école.", "Tu iras à l'école.", "Il ira à l'école.", "Nous irons à l'école."], "answer": "A"},
+      {"question": "You will go to the park. (informal) (Futur Simple)", "options": ["Tu iras au parc.", "J'irai au parc.", "Il ira au parc.", "Vous irez au parc."], "answer": "A"},
+      {"question": "He will go to the cinema. (Futur Simple)", "options": ["Il ira au cinéma.", "Elle ira au cinéma.", "Tu iras au cinéma.", "Ils iront au cinéma."], "answer": "A"},
+      {"question": "She will go to the beach. (Futur Simple)", "options": ["Elle ira à la plage.", "Il ira à la plage.", "Elles iront à la plage.", "Tu iras à la plage."], "answer": "A"},
+      {"question": "We will go to France. (Futur Simple)", "options": ["Nous irons en France.", "Vous irez en France.", "Ils iront en France.", "J'irai en France."], "answer": "A"},
+      {"question": "You will go to work. (formal/plural) (Futur Simple)", "options": ["Vous irez au travail.", "Tu iras au travail.", "Nous irons au travail.", "Ils iront au travail."], "answer": "A"},
+      {"question": "They will go to the supermarket. (male/mixed) (Futur Simple)", "options": ["Ils iront au supermarché.", "Elles iront au supermarché.", "Ils iraient au supermarché.", "Ils allaient au supermarché."], "answer": "A"},
+      {"question": "They will go to the library. (female) (Futur Simple)", "options": ["Elles iront à la bibliothèque.", "Ils iront à la bibliothèque.", "Elles iraient à la bibliothèque.", "Elles allaient à la bibliothèque."], "answer": "A"},
+      {"question": "Will I go often? (Futur Simple)", "options": ["Irai-je souvent ?", "Iras-tu souvent ?", "Ira-t-il souvent ?", "Irons-nous souvent ?"], "answer": "A"},
+      {"question": "Will you go sometimes? (informal) (Futur Simple)", "options": ["Iras-tu parfois ?", "Irai-je parfois ?", "Ira-t-il parfois ?", "Irez-vous parfois ?"], "answer": "A"},
+      {"question": "Will he go to Paris? (Futur Simple)", "options": ["Ira-t-il à Paris ?", "Ira-t-elle à Paris ?", "Irai-je à Paris ?", "Iras-tu à Paris ?"], "answer": "A"},
+      {"question": "Will she go to London? (Futur Simple)", "options": ["Ira-t-elle à Londres ?", "Ira-t-il à Londres ?", "Iras-tu à Londres ?", "Irez-vous à Londres ?"], "answer": "A"},
+      {"question": "Will we go by car? (Futur Simple)", "options": ["Irons-nous en voiture ?", "Irai-je en voiture ?", "Irez-vous en voiture ?", "Iront-ils en voiture ?"], "answer": "A"},
+      {"question": "Will you go by train? (formal/plural) (Futur Simple)", "options": ["Irez-vous en train ?", "Iras-tu en train ?", "Irons-nous en train ?", "Iront-ils en train ?"], "answer": "A"},
+      {"question": "Will they go regularly? (male/mixed) (Futur Simple)", "options": ["Iront-ils régulièrement ?", "Iront-elles régulièrement ?", "Irez-vous régulièrement ?", "Iras-tu régulièrement ?"], "answer": "A"},
+      {"question": "Will they go regularly? (female) (Futur Simple)", "options": ["Iront-elles régulièrement ?", "Iront-ils régulièrement ?", "Irez-vous régulièrement ?", "Iras-tu régulièrement ?"], "answer": "A"},
+      {"question": "I will not go to school. (Futur Simple)", "options": ["Je n'irai pas à l'école.", "Tu n'iras pas à l'école.", "Il n'ira pas à l'école.", "Nous n'irons pas à l'école."], "answer": "A"},
+      {"question": "He will not go to the cinema. (Futur Simple)", "options": ["Il n'ira pas au cinéma.", "Je n'irai pas au cinéma.", "Tu n'iras pas au cinéma.", "Ils n'iront pas au cinéma."], "answer": "A"},
+      {"question": "Won't we go to the park? (Futur Simple)", "options": ["N'irons-nous pas au parc ?", "N'irez-vous pas au parc ?", "N'iront-ils pas au parc ?", "N'irai-je pas au parc ?"], "answer": "A"},
+      {"question": "Won't they go to the beach? (female) (Futur Simple)", "options": ["N'iront-elles pas à la plage ?", "N'iront-ils pas à la plage ?", "N'irez-vous pas à la plage ?", "N'irons-nous pas à la plage ?"], "answer": "A"}
+    ],
+    "imparfait": [
+      {"question": "I was going to school. (Imparfait)", "options": ["J'allais à l'école.", "Tu allais à l'école.", "Il allait à l'école.", "Nous allions à l'école."], "answer": "A"},
+      {"question": "You were going to the park. (informal) (Imparfait)", "options": ["Tu allais au parc.", "J'allais au parc.", "Il allait au parc.", "Vous alliez au parc."], "answer": "A"},
+      {"question": "He was going to the cinema. (Imparfait)", "options": ["Il allait au cinéma.", "Elle allait au cinéma.", "Tu allais au cinéma.", "Ils allaient au cinéma."], "answer": "A"},
+      {"question": "She was going to the beach. (Imparfait)", "options": ["Elle allait à la plage.", "Il allait à la plage.", "Elles allaient à la plage.", "Tu allais à la plage."], "answer": "A"},
+      {"question": "We were going to France. (Imparfait)", "options": ["Nous allions en France.", "Vous alliez en France.", "Ils allaient en France.", "J'allais en France."], "answer": "A"},
+      {"question": "You were going to work. (formal/plural) (Imparfait)", "options": ["Vous alliez au travail.", "Tu allais au travail.", "Nous allions au travail.", "Ils allaient au travail."], "answer": "A"},
+      {"question": "They were going to the supermarket. (male/mixed) (Imparfait)", "options": ["Ils allaient au supermarché.", "Elles allaient au supermarché.", "Ils iront au supermarché.", "Ils iraient au supermarché."], "answer": "A"},
+      {"question": "They were going to the library. (female) (Imparfait)", "options": ["Elles allaient à la bibliothèque.", "Ils allaient à la bibliothèque.", "Elles iront à la bibliothèque.", "Elles iraient à la bibliothèque."], "answer": "A"},
+      {"question": "Was I going often? (Imparfait)", "options": ["Allais-je souvent ?", "Allais-tu souvent ?", "Allait-il souvent ?", "Allions-nous souvent ?"], "answer": "A"},
+      {"question": "Were you going sometimes? (informal) (Imparfait)", "options": ["Allais-tu parfois ?", "Allais-je parfois ?", "Allait-il parfois ?", "Alliez-vous parfois ?"], "answer": "A"},
+      {"question": "Was he going to Paris? (Imparfait)", "options": ["Allait-il à Paris ?", "Allait-elle à Paris ?", "Allais-je à Paris ?", "Allais-tu à Paris ?"], "answer": "A"},
+      {"question": "Was she going to London? (Imparfait)", "options": ["Allait-elle à Londres ?", "Allait-il à Londres ?", "Allais-tu à Londres ?", "Alliez-vous à Londres ?"], "answer": "A"},
+      {"question": "Were we going by car? (Imparfait)", "options": ["Allions-nous en voiture ?", "Allais-je en voiture ?", "Alliez-vous en voiture ?", "Allaient-ils en voiture ?"], "answer": "A"},
+      {"question": "Were you going by train? (formal/plural) (Imparfait)", "options": ["Alliez-vous en train ?", "Allais-tu en train ?", "Allions-nous en train ?", "Allaient-ils en train ?"], "answer": "A"},
+      {"question": "Were they going regularly? (male/mixed) (Imparfait)", "options": ["Allaient-ils régulièrement ?", "Allaient-elles régulièrement ?", "Alliez-vous régulièrement ?", "Allais-tu régulièrement ?"], "answer": "A"},
+      {"question": "Were they going regularly? (female) (Imparfait)", "options": ["Allaient-elles régulièrement ?", "Allaient-ils régulièrement ?", "Alliez-vous régulièrement ?", "Allais-tu régulièrement ?"], "answer": "A"},
+      {"question": "I was not going to school. (Imparfait)", "options": ["Je n'allais pas à l'école.", "Tu n'allais pas à l'école.", "Il n'allait pas à l'école.", "Nous n'allions pas à l'école."], "answer": "A"},
+      {"question": "He was not going to the cinema. (Imparfait)", "options": ["Il n'allait pas au cinéma.", "Je n'allais pas au cinéma.", "Tu n'allais pas au cinéma.", "Ils n'allaient pas au cinéma."], "answer": "A"},
+      {"question": "Weren't we going to the park? (Imparfait)", "options": ["N'allions-nous pas au parc ?", "N'alliez-vous pas au parc ?", "N'allaient-ils pas au parc ?", "N'allais-je pas au parc ?"], "answer": "A"},
+      {"question": "Weren't they going to the beach? (female) (Imparfait)", "options": ["N'allaient-elles pas à la plage ?", "N'allaient-ils pas à la plage ?", "N'alliez-vous pas à la plage ?", "N'allions-nous pas à la plage ?"], "answer": "A"}
+    ]
   }
 
-  // TODO: Continue adding other verbs (aller, voir, dire, pouvoir, vouloir, prendre, savoir, venir)
+  // TODO: Continue adding other verbs (voir, dire, pouvoir, vouloir, prendre, savoir, venir)
   // Each will have 4 tenses × 20 questions = 80 questions per verb
   // Total: 11 verbs × 80 questions = 880 questions
 };
