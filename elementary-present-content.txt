@@ -1,0 +1,1482 @@
+# Elementary Level Present Tense Quiz Questions
+# French Verb Master - Grammar Validation
+# Generated on 2025-08-13T16:56:00.405Z
+# For Perplexity AI verification
+
+This file contains all Elementary level present tense quiz questions for the following verbs:
+- être
+- avoir
+- faire
+- dire
+- aller
+- voir
+
+
+
+### ÊTRE - Présent
+==================================================
+
+Question 1: I am happy.
+Hint: Conjugate être for je in Présent
+Answer Options:
+  A) Je fus heureux
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) J'ai été heureux
+     Rationale: Incorrect conjugation for je.
+  C) Je suis heureux ✓ CORRECT
+     Rationale: Correct conjugation of être for je in Présent.
+  D) Je étais heureux
+     Rationale: This uses an incorrect form of être.
+
+Question 2: I am happy.
+Hint: Conjugate être for je in Présent
+Answer Options:
+  A) Je serai heureuse
+     Rationale: This uses an incorrect form of être.
+  B) Je suis heureuse ✓ CORRECT
+     Rationale: Correct conjugation of être for je in Présent.
+  C) Je vais être heureuse
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je suis en train d'être heureuse
+     Rationale: Incorrect conjugation for je.
+
+Question 3: You are not tired.
+Hint: Conjugate être for tu in Présent
+Answer Options:
+  A) Tu n'es en train d'être pas fatigué
+     Rationale: This uses an incorrect form of être.
+  B) Tu n'as été pas fatigué
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Tu ne vas être pas fatigué
+     Rationale: Incorrect conjugation for tu.
+  D) Tu n'es pas fatigué ✓ CORRECT
+     Rationale: Correct conjugation of être for tu in Présent.
+
+Question 4: You are tired.
+Hint: Conjugate être for tu in Présent
+Answer Options:
+  A) Tu avais été fatiguée
+     Rationale: Incorrect conjugation for tu.
+  B) Tu seras fatiguée
+     Rationale: This uses an incorrect form of être.
+  C) Tu es fatiguée ✓ CORRECT
+     Rationale: Correct conjugation of être for tu in Présent.
+  D) Tu es en train d'être fatiguée
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 5: He is not here.
+Hint: Conjugate être for il in Présent
+Answer Options:
+  A) Il n'est en train d'être pas ici
+     Rationale: This uses an incorrect form of être.
+  B) Il ne serait pas ici
+     Rationale: Incorrect conjugation for il.
+  C) Il n'est pas ici ✓ CORRECT
+     Rationale: Correct conjugation of être for il in Présent.
+  D) Il n'a été pas ici
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 6: She is a teacher.
+Hint: Conjugate être for elle in Présent
+Answer Options:
+  A) Elle est professeure ✓ CORRECT
+     Rationale: Correct conjugation of être for elle in Présent.
+  B) Elle va être professeure
+     Rationale: Incorrect conjugation for elle.
+  C) Elle sera professeure
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle serait professeure
+     Rationale: This uses an incorrect form of être.
+
+Question 7: We are not ready.
+Hint: Conjugate être for nous in Présent
+Answer Options:
+  A) Nous ne sommes pas prêts ✓ CORRECT
+     Rationale: Correct conjugation of être for nous in Présent.
+  B) Nous ne serons pas prêts
+     Rationale: This uses an incorrect form of être.
+  C) Nous n'avions été pas prêts
+     Rationale: Incorrect conjugation for nous.
+  D) Nous n'avons été pas prêts
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 8: We are not ready.
+Hint: Conjugate être for nous in Présent
+Answer Options:
+  A) Nous ne sommes pas prêtes ✓ CORRECT
+     Rationale: Correct conjugation of être for nous in Présent.
+  B) Nous n'avons été pas prêtes
+     Rationale: Incorrect conjugation for nous.
+  C) Nous ne fûmes pas prêtes
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous ne serons pas prêtes
+     Rationale: This uses an incorrect form of être.
+
+Question 9: You (plural) are teachers.
+Hint: Conjugate être for vous in Présent
+Answer Options:
+  A) Vous avez été professeurs
+     Rationale: This uses an incorrect form of être.
+  B) Vous aviez été professeurs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Vous seriez professeurs
+     Rationale: Incorrect conjugation for vous.
+  D) Vous êtes professeurs ✓ CORRECT
+     Rationale: Correct conjugation of être for vous in Présent.
+
+Question 10: They are busy.
+Hint: Conjugate être for ils in Présent
+Answer Options:
+  A) Ils sont occupés ✓ CORRECT
+     Rationale: Correct conjugation of être for ils in Présent.
+  B) Ils avaient été occupés
+     Rationale: This uses an incorrect form of être.
+  C) Ils vont être occupés
+     Rationale: Incorrect conjugation for ils.
+  D) Ils seraient occupés
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 11: They are busy.
+Hint: Conjugate être for elles in Présent
+Answer Options:
+  A) Elles ont été occupées
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elles furent occupées
+     Rationale: This uses an incorrect form of être.
+  C) Elles étaient occupées
+     Rationale: Incorrect conjugation for elles.
+  D) Elles sont occupées ✓ CORRECT
+     Rationale: Correct conjugation of être for elles in Présent.
+
+Question 12: I am here.
+Hint: Conjugate être for je in Présent
+Answer Options:
+  A) J'avais été
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Je étais
+     Rationale: Incorrect conjugation for je.
+  C) Je suis ici ✓ CORRECT
+     Rationale: Correct conjugation of être for je in Présent.
+  D) Je serai
+     Rationale: This uses an incorrect form of être.
+
+Question 13: She is here.
+Hint: Conjugate être for elle in Présent
+Answer Options:
+  A) Elle fut
+     Rationale: This uses an incorrect form of être.
+  B) Elle est ici ✓ CORRECT
+     Rationale: Correct conjugation of être for elle in Présent.
+  C) Elle va être
+     Rationale: Incorrect conjugation for elle.
+  D) Elle a été
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 14: I am not happy.
+Hint: Conjugate être for je in Présent
+Answer Options:
+  A) Je ne suis pas heureux ✓ CORRECT
+     Rationale: Correct conjugation of être for je in Présent.
+  B) Je n'avais été pas heureux
+     Rationale: This uses an incorrect form of être.
+  C) Je ne serai pas heureux
+     Rationale: Incorrect conjugation for je.
+  D) Je ne serais pas heureux
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 15: I am happy.
+Hint: Conjugate être for je in Présent
+Answer Options:
+  A) J'avais été heureuse
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Je fus heureuse
+     Rationale: This uses an incorrect form of être.
+  C) J'ai été heureuse
+     Rationale: Incorrect conjugation for je.
+  D) Je suis heureuse ✓ CORRECT
+     Rationale: Correct conjugation of être for je in Présent.
+
+Question 16: You are not tired.
+Hint: Conjugate être for tu in Présent
+Answer Options:
+  A) Tu n'as été pas fatigué
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Tu ne seras pas fatigué
+     Rationale: Incorrect conjugation for tu.
+  C) Tu n'es pas fatigué ✓ CORRECT
+     Rationale: Correct conjugation of être for tu in Présent.
+  D) Tu ne vas être pas fatigué
+     Rationale: This uses an incorrect form of être.
+
+Question 17: You are tired.
+Hint: Conjugate être for tu in Présent
+Answer Options:
+  A) Tu fus fatiguée
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Tu as été fatiguée
+     Rationale: Incorrect conjugation for tu.
+  C) Tu es fatiguée ✓ CORRECT
+     Rationale: Correct conjugation of être for tu in Présent.
+  D) Tu seras fatiguée
+     Rationale: This uses an incorrect form of être.
+
+Question 18: He is here.
+Hint: Conjugate être for il in Présent
+Answer Options:
+  A) Il était ici
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Il sera ici
+     Rationale: Incorrect conjugation for il.
+  C) Il est ici ✓ CORRECT
+     Rationale: Correct conjugation of être for il in Présent.
+  D) Il fut ici
+     Rationale: This uses an incorrect form of être.
+
+Question 19: She is a teacher.
+Hint: Conjugate être for elle in Présent
+Answer Options:
+  A) Elle est professeure ✓ CORRECT
+     Rationale: Correct conjugation of être for elle in Présent.
+  B) Elle fut professeure
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Elle avait été professeure
+     Rationale: This uses an incorrect form of être.
+  D) Elle sera professeure
+     Rationale: Incorrect conjugation for elle.
+
+Question 20: We are ready.
+Hint: Conjugate être for nous in Présent
+Answer Options:
+  A) Nous étions prêts
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Nous avions été prêts
+     Rationale: Incorrect conjugation for nous.
+  C) Nous allons être prêts
+     Rationale: This uses an incorrect form of être.
+  D) Nous sommes prêts ✓ CORRECT
+     Rationale: Correct conjugation of être for nous in Présent.
+
+
+### AVOIR - Présent
+==================================================
+
+Question 1: I have a car.
+Hint: Conjugate avoir for je in Présent
+Answer Options:
+  A) J'eus une voiture
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Je suis en train d'avoir une voiture
+     Rationale: Incorrect conjugation for je.
+  C) J'ai une voiture ✓ CORRECT
+     Rationale: Correct conjugation of avoir for je in Présent.
+  D) Je vais avoir une voiture
+     Rationale: This uses an incorrect form of avoir.
+
+Question 2: You have time.
+Hint: Conjugate avoir for tu in Présent
+Answer Options:
+  A) Tu vas avoir du temps
+     Rationale: This uses an incorrect form of avoir.
+  B) Tu as du temps ✓ CORRECT
+     Rationale: Correct conjugation of avoir for tu in Présent.
+  C) Tu avais du temps
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Tu es en train d'avoir du temps
+     Rationale: Incorrect conjugation for tu.
+
+Question 3: He has money.
+Hint: Conjugate avoir for il in Présent
+Answer Options:
+  A) Il a eu de l'argent
+     Rationale: This uses an incorrect form of avoir.
+  B) Il a de l'argent ✓ CORRECT
+     Rationale: Correct conjugation of avoir for il in Présent.
+  C) Il avait eu de l'argent
+     Rationale: Incorrect conjugation for il.
+  D) Il aura de l'argent
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 4: She has a dog.
+Hint: Conjugate avoir for elle in Présent
+Answer Options:
+  A) Elle eut un chien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle avait eu un chien
+     Rationale: This uses an incorrect form of avoir.
+  C) Elle a eu un chien
+     Rationale: Incorrect conjugation for elle.
+  D) Elle a un chien ✓ CORRECT
+     Rationale: Correct conjugation of avoir for elle in Présent.
+
+Question 5: We have homework.
+Hint: Conjugate avoir for nous in Présent
+Answer Options:
+  A) Nous avons des devoirs ✓ CORRECT
+     Rationale: Correct conjugation of avoir for nous in Présent.
+  B) Nous avions eu des devoirs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous avons eu des devoirs
+     Rationale: This uses an incorrect form of avoir.
+  D) Nous allons avoir des devoirs
+     Rationale: Incorrect conjugation for nous.
+
+Question 6: You (plural) have luck.
+Hint: Conjugate avoir for vous in Présent
+Answer Options:
+  A) Vous auriez de la chance
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Vous avez eu de la chance
+     Rationale: Incorrect conjugation for vous.
+  C) Vous avez de la chance ✓ CORRECT
+     Rationale: Correct conjugation of avoir for vous in Présent.
+  D) Vous eûtes de la chance
+     Rationale: This uses an incorrect form of avoir.
+
+Question 7: They have problems.
+Hint: Conjugate avoir for ils in Présent
+Answer Options:
+  A) Ils n'ont pas des problèmes ✓ CORRECT
+     Rationale: Correct conjugation of avoir for ils in Présent.
+  B) Ils ne sont en train d'avoir pas des problèmes
+     Rationale: Incorrect conjugation for ils.
+  C) Ils n'avaient pas des problèmes
+     Rationale: This uses an incorrect form of avoir.
+  D) Ils ne vont avoir pas des problèmes
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 8: I don't have anything.
+Hint: Conjugate avoir for je in Présent
+Answer Options:
+  A) Je n'ai rien ✓ CORRECT
+     Rationale: Correct conjugation of avoir for je in Présent.
+  B) Je n'ai eu rien
+     Rationale: Incorrect conjugation for je.
+  C) Je n'eus rien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je n'aurais rien
+     Rationale: This uses an incorrect form of avoir.
+
+Question 9: She has a choice.
+Hint: Conjugate avoir for elle in Présent
+Answer Options:
+  A) Elle a le choix ✓ CORRECT
+     Rationale: Correct conjugation of avoir for elle in Présent.
+  B) Elle est en train d'avoir le choix
+     Rationale: Incorrect conjugation for elle.
+  C) Elle va avoir le choix
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle aura le choix
+     Rationale: This uses an incorrect form of avoir.
+
+Question 10: We have time.
+Hint: Conjugate avoir for nous in Présent
+Answer Options:
+  A) Nous n'avons eu pas le temps
+     Rationale: Incorrect conjugation for nous.
+  B) Nous ne sommes en train d'avoir pas le temps
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous n'avons pas le temps ✓ CORRECT
+     Rationale: Correct conjugation of avoir for nous in Présent.
+  D) Nous n'eûmes pas le temps
+     Rationale: This uses an incorrect form of avoir.
+
+Question 11: I have a car.
+Hint: Conjugate avoir for je in Présent
+Answer Options:
+  A) J'aurais une voiture
+     Rationale: This uses an incorrect form of avoir.
+  B) Je vais avoir une voiture
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) J'avais eu une voiture
+     Rationale: Incorrect conjugation for je.
+  D) J'ai une voiture ✓ CORRECT
+     Rationale: Correct conjugation of avoir for je in Présent.
+
+Question 12: You have time.
+Hint: Conjugate avoir for tu in Présent
+Answer Options:
+  A) Tu as du temps ✓ CORRECT
+     Rationale: Correct conjugation of avoir for tu in Présent.
+  B) Tu auras du temps
+     Rationale: Incorrect conjugation for tu.
+  C) Tu avais du temps
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Tu avais eu du temps
+     Rationale: This uses an incorrect form of avoir.
+
+Question 13: He has money.
+Hint: Conjugate avoir for il in Présent
+Answer Options:
+  A) Il n'a pas de l'argent ✓ CORRECT
+     Rationale: Correct conjugation of avoir for il in Présent.
+  B) Il n'aurait pas de l'argent
+     Rationale: Incorrect conjugation for il.
+  C) Il n'aura pas de l'argent
+     Rationale: This uses an incorrect form of avoir.
+  D) Il n'avait eu pas de l'argent
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 14: She has a dog.
+Hint: Conjugate avoir for elle in Présent
+Answer Options:
+  A) Elle eut un chien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle a eu un chien
+     Rationale: Incorrect conjugation for elle.
+  C) Elle avait eu un chien
+     Rationale: This uses an incorrect form of avoir.
+  D) Elle a un chien ✓ CORRECT
+     Rationale: Correct conjugation of avoir for elle in Présent.
+
+Question 15: We have homework.
+Hint: Conjugate avoir for nous in Présent
+Answer Options:
+  A) Nous allons avoir des devoirs
+     Rationale: Incorrect conjugation for nous.
+  B) Nous avons des devoirs ✓ CORRECT
+     Rationale: Correct conjugation of avoir for nous in Présent.
+  C) Nous avions eu des devoirs
+     Rationale: This uses an incorrect form of avoir.
+  D) Nous avions des devoirs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 16: You (plural) have luck.
+Hint: Conjugate avoir for vous in Présent
+Answer Options:
+  A) Vous n'avez pas de la chance ✓ CORRECT
+     Rationale: Correct conjugation of avoir for vous in Présent.
+  B) Vous n'eûtes pas de la chance
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Vous n'aurez pas de la chance
+     Rationale: This uses an incorrect form of avoir.
+  D) Vous n'avez eu pas de la chance
+     Rationale: Incorrect conjugation for vous.
+
+Question 17: They have problems.
+Hint: Conjugate avoir for ils in Présent
+Answer Options:
+  A) Ils auraient des problèmes
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Ils ont eu des problèmes
+     Rationale: This uses an incorrect form of avoir.
+  C) Ils ont des problèmes ✓ CORRECT
+     Rationale: Correct conjugation of avoir for ils in Présent.
+  D) Ils sont en train d'avoir des problèmes
+     Rationale: Incorrect conjugation for ils.
+
+Question 18: I don't have anything.
+Hint: Conjugate avoir for je in Présent
+Answer Options:
+  A) Je n'avais eu rien
+     Rationale: This uses an incorrect form of avoir.
+  B) Je n'aurai rien
+     Rationale: Incorrect conjugation for je.
+  C) Je n'ai rien ✓ CORRECT
+     Rationale: Correct conjugation of avoir for je in Présent.
+  D) Je n'aurais rien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 19: She has a choice.
+Hint: Conjugate avoir for elle in Présent
+Answer Options:
+  A) Elle a le choix ✓ CORRECT
+     Rationale: Correct conjugation of avoir for elle in Présent.
+  B) Elle va avoir le choix
+     Rationale: Incorrect conjugation for elle.
+  C) Elle avait le choix
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle avait eu le choix
+     Rationale: This uses an incorrect form of avoir.
+
+Question 20: We have time.
+Hint: Conjugate avoir for nous in Présent
+Answer Options:
+  A) Nous aurons le temps
+     Rationale: This uses an incorrect form of avoir.
+  B) Nous eûmes le temps
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous avions eu le temps
+     Rationale: Incorrect conjugation for nous.
+  D) Nous avons le temps ✓ CORRECT
+     Rationale: Correct conjugation of avoir for nous in Présent.
+
+
+### FAIRE - Présent
+==================================================
+
+Question 1: I do homework.
+Hint: Conjugate faire for je in Présent
+Answer Options:
+  A) Je ne fais pas mes devoirs ✓ CORRECT
+     Rationale: Correct conjugation of faire for je in Présent.
+  B) Je ne faisais pas mes devoirs
+     Rationale: This uses an incorrect form of faire.
+  C) Je ne ferai pas mes devoirs
+     Rationale: Incorrect conjugation for je.
+  D) Je ne fis pas mes devoirs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 2: You make dinner.
+Hint: Conjugate faire for tu in Présent
+Answer Options:
+  A) Tu es en train de faire le dîner
+     Rationale: Incorrect conjugation for tu.
+  B) Tu fis le dîner
+     Rationale: This uses an incorrect form of faire.
+  C) Tu fais le dîner ✓ CORRECT
+     Rationale: Correct conjugation of faire for tu in Présent.
+  D) Tu as fait le dîner
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 3: He does exercise.
+Hint: Conjugate faire for il in Présent
+Answer Options:
+  A) Il faisait du sport
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Il avait fait du sport
+     Rationale: Incorrect conjugation for il.
+  C) Il fait du sport ✓ CORRECT
+     Rationale: Correct conjugation of faire for il in Présent.
+  D) Il est en train de faire du sport
+     Rationale: This uses an incorrect form of faire.
+
+Question 4: She makes a cake.
+Hint: Conjugate faire for elle in Présent
+Answer Options:
+  A) Elle fait un gâteau ✓ CORRECT
+     Rationale: Correct conjugation of faire for elle in Présent.
+  B) Elle fit un gâteau
+     Rationale: Incorrect conjugation for elle.
+  C) Elle faisait un gâteau
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle ferait un gâteau
+     Rationale: This uses an incorrect form of faire.
+
+Question 5: We do shopping.
+Hint: Conjugate faire for nous in Présent
+Answer Options:
+  A) Nous avions fait les courses
+     Rationale: Incorrect conjugation for nous.
+  B) Nous sommes en train de faire les courses
+     Rationale: This uses an incorrect form of faire.
+  C) Nous faisions les courses
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous faisons les courses ✓ CORRECT
+     Rationale: Correct conjugation of faire for nous in Présent.
+
+Question 6: You (plural) make music.
+Hint: Conjugate faire for vous in Présent
+Answer Options:
+  A) Vous avez fait de la musique
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Vous faites de la musique ✓ CORRECT
+     Rationale: Correct conjugation of faire for vous in Présent.
+  C) Vous fîtes de la musique
+     Rationale: Incorrect conjugation for vous.
+  D) Vous feriez de la musique
+     Rationale: This uses an incorrect form of faire.
+
+Question 7: They do work.
+Hint: Conjugate faire for ils in Présent
+Answer Options:
+  A) Ils font du travail ✓ CORRECT
+     Rationale: Correct conjugation of faire for ils in Présent.
+  B) Ils feraient du travail
+     Rationale: This uses an incorrect form of faire.
+  C) Ils vont faire du travail
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Ils faisaient du travail
+     Rationale: Incorrect conjugation for ils.
+
+Question 8: I don't do anything.
+Hint: Conjugate faire for je in Présent
+Answer Options:
+  A) Je ne vais faire rien
+     Rationale: Incorrect conjugation for je.
+  B) Je ne ferais rien
+     Rationale: This uses an incorrect form of faire.
+  C) Je ne fais rien ✓ CORRECT
+     Rationale: Correct conjugation of faire for je in Présent.
+  D) Je ne ferai rien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 9: She make mistakes.
+Hint: Conjugate faire for elle in Présent
+Answer Options:
+  A) Elle fera
+     Rationale: Incorrect conjugation for elle.
+  B) Elle avait fait
+     Rationale: This uses an incorrect form of faire.
+  C) Elle faisait
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle fait ✓ CORRECT
+     Rationale: Correct conjugation of faire for elle in Présent.
+
+Question 10: We don't do that.
+Hint: Conjugate faire for nous in Présent
+Answer Options:
+  A) Nous ne faisons pas ça ✓ CORRECT
+     Rationale: Correct conjugation of faire for nous in Présent.
+  B) Nous ne fîmes pas ça
+     Rationale: Incorrect conjugation for nous.
+  C) Nous ne ferons pas ça
+     Rationale: This uses an incorrect form of faire.
+  D) Nous ne faisions pas ça
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 11: I do homework.
+Hint: Conjugate faire for je in Présent
+Answer Options:
+  A) Je ne fais pas mes devoirs ✓ CORRECT
+     Rationale: Correct conjugation of faire for je in Présent.
+  B) Je ne faisais pas mes devoirs
+     Rationale: Incorrect conjugation for je.
+  C) Je ne suis en train de faire pas mes devoirs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je ne ferai pas mes devoirs
+     Rationale: This uses an incorrect form of faire.
+
+Question 12: You make dinner.
+Hint: Conjugate faire for tu in Présent
+Answer Options:
+  A) Tu fais le dîner ✓ CORRECT
+     Rationale: Correct conjugation of faire for tu in Présent.
+  B) Tu es en train de faire le dîner
+     Rationale: This uses an incorrect form of faire.
+  C) Tu ferais le dîner
+     Rationale: Incorrect conjugation for tu.
+  D) Tu avais fait le dîner
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 13: He does exercise.
+Hint: Conjugate faire for il in Présent
+Answer Options:
+  A) Il ne fait pas du sport ✓ CORRECT
+     Rationale: Correct conjugation of faire for il in Présent.
+  B) Il ne va faire pas du sport
+     Rationale: Incorrect conjugation for il.
+  C) Il n'est en train de faire pas du sport
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Il n'avait fait pas du sport
+     Rationale: This uses an incorrect form of faire.
+
+Question 14: She makes a cake.
+Hint: Conjugate faire for elle in Présent
+Answer Options:
+  A) Elle fait un gâteau ✓ CORRECT
+     Rationale: Correct conjugation of faire for elle in Présent.
+  B) Elle a fait un gâteau
+     Rationale: Incorrect conjugation for elle.
+  C) Elle avait fait un gâteau
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle fit un gâteau
+     Rationale: This uses an incorrect form of faire.
+
+Question 15: We do shopping.
+Hint: Conjugate faire for nous in Présent
+Answer Options:
+  A) Nous sommes en train de faire les courses
+     Rationale: This uses an incorrect form of faire.
+  B) Nous fîmes les courses
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous avons fait les courses
+     Rationale: Incorrect conjugation for nous.
+  D) Nous faisons les courses ✓ CORRECT
+     Rationale: Correct conjugation of faire for nous in Présent.
+
+Question 16: You (plural) make music.
+Hint: Conjugate faire for vous in Présent
+Answer Options:
+  A) Vous allez faire de la musique
+     Rationale: This uses an incorrect form of faire.
+  B) Vous faites de la musique ✓ CORRECT
+     Rationale: Correct conjugation of faire for vous in Présent.
+  C) Vous avez fait de la musique
+     Rationale: Incorrect conjugation for vous.
+  D) Vous fîtes de la musique
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 17: They do work.
+Hint: Conjugate faire for ils in Présent
+Answer Options:
+  A) Ils font du travail ✓ CORRECT
+     Rationale: Correct conjugation of faire for ils in Présent.
+  B) Ils vont faire du travail
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Ils avaient fait du travail
+     Rationale: Incorrect conjugation for ils.
+  D) Ils firent du travail
+     Rationale: This uses an incorrect form of faire.
+
+Question 18: I do anything.
+Hint: Conjugate faire for je in Présent
+Answer Options:
+  A) Je suis en train de faire
+     Rationale: This uses an incorrect form of faire.
+  B) Je fais rien ✓ CORRECT
+     Rationale: Correct conjugation of faire for je in Présent.
+  C) Je ferais
+     Rationale: Incorrect conjugation for je.
+  D) J'avais fait
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 19: She doesn't make mistakes.
+Hint: Conjugate faire for elle in Présent
+Answer Options:
+  A) Elle n'a fait pas d'erreurs
+     Rationale: Incorrect conjugation for elle.
+  B) Elle ne fera pas d'erreurs
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Elle ne fit pas d'erreurs
+     Rationale: This uses an incorrect form of faire.
+  D) Elle ne fait pas d'erreurs ✓ CORRECT
+     Rationale: Correct conjugation of faire for elle in Présent.
+
+Question 20: We do that.
+Hint: Conjugate faire for nous in Présent
+Answer Options:
+  A) Nous faisions
+     Rationale: This uses an incorrect form of faire.
+  B) Nous fîmes
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous allons faire
+     Rationale: Incorrect conjugation for nous.
+  D) Nous faisons ✓ CORRECT
+     Rationale: Correct conjugation of faire for nous in Présent.
+
+
+### DIRE - Présent
+==================================================
+
+Question 1: I say hello.
+Hint: Conjugate dire for je in Présent
+Answer Options:
+  A) Je dis bonjour ✓ CORRECT
+     Rationale: Correct conjugation of dire for je in Présent.
+  B) J'ai dit bonjour
+     Rationale: Incorrect conjugation for je.
+  C) Je dirai bonjour
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je disais bonjour
+     Rationale: This uses an incorrect form of dire.
+
+Question 2: You say the truth.
+Hint: Conjugate dire for tu in Présent
+Answer Options:
+  A) Tu diras la vérité
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Tu disais la vérité
+     Rationale: Incorrect conjugation for tu.
+  C) Tu dirais la vérité
+     Rationale: This uses an incorrect form of dire.
+  D) Tu dis la vérité ✓ CORRECT
+     Rationale: Correct conjugation of dire for tu in Présent.
+
+Question 3: He says yes.
+Hint: Conjugate dire for il in Présent
+Answer Options:
+  A) Il dit oui ✓ CORRECT
+     Rationale: Correct conjugation of dire for il in Présent.
+  B) Il est en train de dire oui
+     Rationale: Incorrect conjugation for il.
+  C) Il va dire oui
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Il dira oui
+     Rationale: This uses an incorrect form of dire.
+
+Question 4: She says no.
+Hint: Conjugate dire for elle in Présent
+Answer Options:
+  A) Elle est en train de dire non
+     Rationale: This uses an incorrect form of dire.
+  B) Elle dit non ✓ CORRECT
+     Rationale: Correct conjugation of dire for elle in Présent.
+  C) Elle va dire non
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle disait non
+     Rationale: Incorrect conjugation for elle.
+
+Question 5: We say goodbye.
+Hint: Conjugate dire for nous in Présent
+Answer Options:
+  A) Nous disons au revoir ✓ CORRECT
+     Rationale: Correct conjugation of dire for nous in Présent.
+  B) Nous dirons au revoir
+     Rationale: Incorrect conjugation for nous.
+  C) Nous avons dit au revoir
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous sommes en train de dire au revoir
+     Rationale: This uses an incorrect form of dire.
+
+Question 6: You (plural) say thanks.
+Hint: Conjugate dire for vous in Présent
+Answer Options:
+  A) Vous n'aviez dit pas merci
+     Rationale: This uses an incorrect form of dire.
+  B) Vous n'avez dit pas merci
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Vous n'allez dire pas merci
+     Rationale: Incorrect conjugation for vous.
+  D) Vous ne dites pas merci ✓ CORRECT
+     Rationale: Correct conjugation of dire for vous in Présent.
+
+Question 7: They say something.
+Hint: Conjugate dire for ils in Présent
+Answer Options:
+  A) Ils ne disent pas quelque chose ✓ CORRECT
+     Rationale: Correct conjugation of dire for ils in Présent.
+  B) Ils n'ont dit pas quelque chose
+     Rationale: Incorrect conjugation for ils.
+  C) Ils ne sont en train de dire pas quelque chose
+     Rationale: This uses an incorrect form of dire.
+  D) Ils ne dirent pas quelque chose
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 8: I don't say anything.
+Hint: Conjugate dire for je in Présent
+Answer Options:
+  A) Je n'avais dit rien
+     Rationale: This uses an incorrect form of dire.
+  B) Je ne dis rien ✓ CORRECT
+     Rationale: Correct conjugation of dire for je in Présent.
+  C) Je ne disais rien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je n'ai dit rien
+     Rationale: Incorrect conjugation for je.
+
+Question 9: She say that.
+Hint: Conjugate dire for elle in Présent
+Answer Options:
+  A) Elle est en train de dire
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle a dit
+     Rationale: Incorrect conjugation for elle.
+  C) Elle disait
+     Rationale: This uses an incorrect form of dire.
+  D) Elle dit ✓ CORRECT
+     Rationale: Correct conjugation of dire for elle in Présent.
+
+Question 10: We say bad words.
+Hint: Conjugate dire for nous in Présent
+Answer Options:
+  A) Nous dîmes
+     Rationale: This uses an incorrect form of dire.
+  B) Nous disons ✓ CORRECT
+     Rationale: Correct conjugation of dire for nous in Présent.
+  C) Nous avions dit
+     Rationale: Incorrect conjugation for nous.
+  D) Nous sommes en train de dire
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 11: I say hello.
+Hint: Conjugate dire for je in Présent
+Answer Options:
+  A) Je dirais bonjour
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Je dirai bonjour
+     Rationale: Incorrect conjugation for je.
+  C) Je dis bonjour ✓ CORRECT
+     Rationale: Correct conjugation of dire for je in Présent.
+  D) J'avais dit bonjour
+     Rationale: This uses an incorrect form of dire.
+
+Question 12: You say the truth.
+Hint: Conjugate dire for tu in Présent
+Answer Options:
+  A) Tu dis la vérité ✓ CORRECT
+     Rationale: Correct conjugation of dire for tu in Présent.
+  B) Tu disais la vérité
+     Rationale: Incorrect conjugation for tu.
+  C) Tu dirais la vérité
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Tu es en train de dire la vérité
+     Rationale: This uses an incorrect form of dire.
+
+Question 13: He says yes.
+Hint: Conjugate dire for il in Présent
+Answer Options:
+  A) Il dirait oui
+     Rationale: This uses an incorrect form of dire.
+  B) Il disait oui
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Il dira oui
+     Rationale: Incorrect conjugation for il.
+  D) Il dit oui ✓ CORRECT
+     Rationale: Correct conjugation of dire for il in Présent.
+
+Question 14: She says no.
+Hint: Conjugate dire for elle in Présent
+Answer Options:
+  A) Elle n'a dit pas non
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle ne disait pas non
+     Rationale: Incorrect conjugation for elle.
+  C) Elle ne dirait pas non
+     Rationale: This uses an incorrect form of dire.
+  D) Elle ne dit pas non ✓ CORRECT
+     Rationale: Correct conjugation of dire for elle in Présent.
+
+Question 15: We say goodbye.
+Hint: Conjugate dire for nous in Présent
+Answer Options:
+  A) Nous disons au revoir ✓ CORRECT
+     Rationale: Correct conjugation of dire for nous in Présent.
+  B) Nous avions dit au revoir
+     Rationale: Incorrect conjugation for nous.
+  C) Nous dirons au revoir
+     Rationale: This uses an incorrect form of dire.
+  D) Nous dîmes au revoir
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 16: You (plural) say thanks.
+Hint: Conjugate dire for vous in Présent
+Answer Options:
+  A) Vous avez dit merci
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Vous allez dire merci
+     Rationale: Incorrect conjugation for vous.
+  C) Vous dites merci ✓ CORRECT
+     Rationale: Correct conjugation of dire for vous in Présent.
+  D) Vous dîtes merci
+     Rationale: This uses an incorrect form of dire.
+
+Question 17: They say something.
+Hint: Conjugate dire for ils in Présent
+Answer Options:
+  A) Ils dirent quelque chose
+     Rationale: This uses an incorrect form of dire.
+  B) Ils sont en train de dire quelque chose
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Ils diraient quelque chose
+     Rationale: Incorrect conjugation for ils.
+  D) Ils disent quelque chose ✓ CORRECT
+     Rationale: Correct conjugation of dire for ils in Présent.
+
+Question 18: I say anything.
+Hint: Conjugate dire for je in Présent
+Answer Options:
+  A) Je disais
+     Rationale: This uses an incorrect form of dire.
+  B) Je dirais
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) J'ai dit
+     Rationale: Incorrect conjugation for je.
+  D) Je dis rien ✓ CORRECT
+     Rationale: Correct conjugation of dire for je in Présent.
+
+Question 19: She doesn't say that.
+Hint: Conjugate dire for elle in Présent
+Answer Options:
+  A) Elle ne dit pas ça ✓ CORRECT
+     Rationale: Correct conjugation of dire for elle in Présent.
+  B) Elle n'est en train de dire pas ça
+     Rationale: This uses an incorrect form of dire.
+  C) Elle n'a dit pas ça
+     Rationale: Incorrect conjugation for elle.
+  D) Elle ne disait pas ça
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 20: We don't say bad words.
+Hint: Conjugate dire for nous in Présent
+Answer Options:
+  A) Nous n'avions dit pas de gros mots
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Nous n'allons dire pas de gros mots
+     Rationale: This uses an incorrect form of dire.
+  C) Nous ne dîmes pas de gros mots
+     Rationale: Incorrect conjugation for nous.
+  D) Nous ne disons pas de gros mots ✓ CORRECT
+     Rationale: Correct conjugation of dire for nous in Présent.
+
+
+### ALLER - Présent
+==================================================
+
+Question 1: I go to school.
+Hint: Conjugate aller for je in Présent
+Answer Options:
+  A) Je vais à l'école ✓ CORRECT
+     Rationale: Correct conjugation of aller for je in Présent.
+  B) Je vais aller à l'école
+     Rationale: This uses an incorrect form of aller.
+  C) Je suis allé(e) à l'école
+     Rationale: Incorrect conjugation for je.
+  D) Je étais allé(e) à l'école
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 2: You go home.
+Hint: Conjugate aller for tu in Présent
+Answer Options:
+  A) Tu vas à la maison ✓ CORRECT
+     Rationale: Correct conjugation of aller for tu in Présent.
+  B) Tu es allé(e) à la maison
+     Rationale: This uses an incorrect form of aller.
+  C) Tu es en train d'aller à la maison
+     Rationale: Incorrect conjugation for tu.
+  D) Tu vas aller à la maison
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 3: He goes to work.
+Hint: Conjugate aller for il in Présent
+Answer Options:
+  A) Il n'allait pas au travail
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Il ne va pas au travail ✓ CORRECT
+     Rationale: Correct conjugation of aller for il in Présent.
+  C) Il ne va aller pas au travail
+     Rationale: This uses an incorrect form of aller.
+  D) Il n'est en train d'aller pas au travail
+     Rationale: Incorrect conjugation for il.
+
+Question 4: She goes to the store.
+Hint: Conjugate aller for elle in Présent
+Answer Options:
+  A) Elle ne était allée pas au magasin
+     Rationale: This uses an incorrect form of aller.
+  B) Elle n'irait pas au magasin
+     Rationale: Incorrect conjugation for elle.
+  C) Elle ne va aller pas au magasin
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Elle ne va pas au magasin ✓ CORRECT
+     Rationale: Correct conjugation of aller for elle in Présent.
+
+Question 5: We go to the park.
+Hint: Conjugate aller for nous in Présent
+Answer Options:
+  A) Nous allons au parc ✓ CORRECT
+     Rationale: Correct conjugation of aller for nous in Présent.
+  B) Nous étions allé(e)s au parc
+     Rationale: Incorrect conjugation for nous.
+  C) Nous allions au parc
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous allâmes au parc
+     Rationale: This uses an incorrect form of aller.
+
+Question 6: You (plural) go to the cinema.
+Hint: Conjugate aller for vous in Présent
+Answer Options:
+  A) Vous allez au cinéma ✓ CORRECT
+     Rationale: Correct conjugation of aller for vous in Présent.
+  B) Vous irez au cinéma
+     Rationale: Incorrect conjugation for vous.
+  C) Vous étiez allé(e)s au cinéma
+     Rationale: This uses an incorrect form of aller.
+  D) Vous allez aller au cinéma
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 7: They go to the beach.
+Hint: Conjugate aller for ils in Présent
+Answer Options:
+  A) Ils sont en train d'aller à la plage
+     Rationale: This uses an incorrect form of aller.
+  B) Ils allèrent à la plage
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Ils sont allés à la plage
+     Rationale: Incorrect conjugation for ils.
+  D) Ils vont à la plage ✓ CORRECT
+     Rationale: Correct conjugation of aller for ils in Présent.
+
+Question 8: I go there.
+Hint: Conjugate aller for je in Présent
+Answer Options:
+  A) Je vais là-bas ✓ CORRECT
+     Rationale: Correct conjugation of aller for je in Présent.
+  B) J'allais
+     Rationale: This uses an incorrect form of aller.
+  C) J'irais
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je vais aller
+     Rationale: Incorrect conjugation for je.
+
+Question 9: She go out.
+Hint: Conjugate aller for elle in Présent
+Answer Options:
+  A) Elle alla
+     Rationale: This uses an incorrect form of aller.
+  B) Elle est en train d'aller
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Elle ira
+     Rationale: Incorrect conjugation for elle.
+  D) Elle va sortir ✓ CORRECT
+     Rationale: Correct conjugation of aller for elle in Présent.
+
+Question 10: We don't go often.
+Hint: Conjugate aller for nous in Présent
+Answer Options:
+  A) Nous n'allons aller pas souvent
+     Rationale: This uses an incorrect form of aller.
+  B) Nous n'allâmes pas souvent
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous ne sommes allé(e)s pas souvent
+     Rationale: Incorrect conjugation for nous.
+  D) Nous n'allons pas souvent ✓ CORRECT
+     Rationale: Correct conjugation of aller for nous in Présent.
+
+Question 11: I go to school.
+Hint: Conjugate aller for je in Présent
+Answer Options:
+  A) Je vais à l'école ✓ CORRECT
+     Rationale: Correct conjugation of aller for je in Présent.
+  B) J'allai à l'école
+     Rationale: Incorrect conjugation for je.
+  C) Je étais allé(e) à l'école
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je suis allé(e) à l'école
+     Rationale: This uses an incorrect form of aller.
+
+Question 12: You go home.
+Hint: Conjugate aller for tu in Présent
+Answer Options:
+  A) Tu étais allé(e) à la maison
+     Rationale: This uses an incorrect form of aller.
+  B) Tu vas aller à la maison
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Tu es allé(e) à la maison
+     Rationale: Incorrect conjugation for tu.
+  D) Tu vas à la maison ✓ CORRECT
+     Rationale: Correct conjugation of aller for tu in Présent.
+
+Question 13: He goes to work.
+Hint: Conjugate aller for il in Présent
+Answer Options:
+  A) Il ne va pas au travail ✓ CORRECT
+     Rationale: Correct conjugation of aller for il in Présent.
+  B) Il ne était allé pas au travail
+     Rationale: Incorrect conjugation for il.
+  C) Il ne va aller pas au travail
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Il n'est en train d'aller pas au travail
+     Rationale: This uses an incorrect form of aller.
+
+Question 14: She goes to the store.
+Hint: Conjugate aller for elle in Présent
+Answer Options:
+  A) Elle allait au magasin
+     Rationale: This uses an incorrect form of aller.
+  B) Elle alla au magasin
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Elle va au magasin ✓ CORRECT
+     Rationale: Correct conjugation of aller for elle in Présent.
+  D) Elle est allée au magasin
+     Rationale: Incorrect conjugation for elle.
+
+Question 15: We go to the park.
+Hint: Conjugate aller for nous in Présent
+Answer Options:
+  A) Nous sommes en train d'aller au parc
+     Rationale: This uses an incorrect form of aller.
+  B) Nous allons au parc ✓ CORRECT
+     Rationale: Correct conjugation of aller for nous in Présent.
+  C) Nous irons au parc
+     Rationale: Incorrect conjugation for nous.
+  D) Nous allions au parc
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 16: You (plural) go to the cinema.
+Hint: Conjugate aller for vous in Présent
+Answer Options:
+  A) Vous allez au cinéma ✓ CORRECT
+     Rationale: Correct conjugation of aller for vous in Présent.
+  B) Vous êtes allé(e)s au cinéma
+     Rationale: Incorrect conjugation for vous.
+  C) Vous iriez au cinéma
+     Rationale: This uses an incorrect form of aller.
+  D) Vous allâtes au cinéma
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 17: They go to the beach.
+Hint: Conjugate aller for ils in Présent
+Answer Options:
+  A) Ils ne vont pas à la plage ✓ CORRECT
+     Rationale: Correct conjugation of aller for ils in Présent.
+  B) Ils n'allaient pas à la plage
+     Rationale: This uses an incorrect form of aller.
+  C) Ils n'iraient pas à la plage
+     Rationale: Incorrect conjugation for ils.
+  D) Ils ne sont allés pas à la plage
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 18: I don't go there.
+Hint: Conjugate aller for je in Présent
+Answer Options:
+  A) Je ne vais pas là-bas ✓ CORRECT
+     Rationale: Correct conjugation of aller for je in Présent.
+  B) Je ne suis en train d'aller pas là-bas
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Je n'allai pas là-bas
+     Rationale: This uses an incorrect form of aller.
+  D) Je n'allais pas là-bas
+     Rationale: Incorrect conjugation for je.
+
+Question 19: She go out.
+Hint: Conjugate aller for elle in Présent
+Answer Options:
+  A) Elle alla
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle va sortir ✓ CORRECT
+     Rationale: Correct conjugation of aller for elle in Présent.
+  C) Elle va aller
+     Rationale: This uses an incorrect form of aller.
+  D) Elle est en train d'aller
+     Rationale: Incorrect conjugation for elle.
+
+Question 20: We go often.
+Hint: Conjugate aller for nous in Présent
+Answer Options:
+  A) Nous irons
+     Rationale: This uses an incorrect form of aller.
+  B) Nous allions
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Nous étions allé(e)s
+     Rationale: Incorrect conjugation for nous.
+  D) Nous allons souvent ✓ CORRECT
+     Rationale: Correct conjugation of aller for nous in Présent.
+
+
+### VOIR - Présent
+==================================================
+
+Question 1: I see the problem.
+Hint: Conjugate voir for je in Présent
+Answer Options:
+  A) Je vois le problème ✓ CORRECT
+     Rationale: Correct conjugation of voir for je in Présent.
+  B) Je vis le problème
+     Rationale: Incorrect conjugation for je.
+  C) Je verrai le problème
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) J'avais vu le problème
+     Rationale: This uses an incorrect form of voir.
+
+Question 2: You see the movie.
+Hint: Conjugate voir for tu in Présent
+Answer Options:
+  A) Tu ne vois pas le film ✓ CORRECT
+     Rationale: Correct conjugation of voir for tu in Présent.
+  B) Tu ne verras pas le film
+     Rationale: Incorrect conjugation for tu.
+  C) Tu ne voyais pas le film
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Tu n'es en train de voir pas le film
+     Rationale: This uses an incorrect form of voir.
+
+Question 3: He sees his friend.
+Hint: Conjugate voir for il in Présent
+Answer Options:
+  A) Il voit son ami ✓ CORRECT
+     Rationale: Correct conjugation of voir for il in Présent.
+  B) Il avait vu son ami
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Il vit son ami
+     Rationale: Incorrect conjugation for il.
+  D) Il est en train de voir son ami
+     Rationale: This uses an incorrect form of voir.
+
+Question 4: She sees the cat.
+Hint: Conjugate voir for elle in Présent
+Answer Options:
+  A) Elle verra le chat
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle voit le chat ✓ CORRECT
+     Rationale: Correct conjugation of voir for elle in Présent.
+  C) Elle a vu le chat
+     Rationale: Incorrect conjugation for elle.
+  D) Elle est en train de voir le chat
+     Rationale: This uses an incorrect form of voir.
+
+Question 5: We see the truth.
+Hint: Conjugate voir for nous in Présent
+Answer Options:
+  A) Nous verrons la vérité
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Nous voyons la vérité ✓ CORRECT
+     Rationale: Correct conjugation of voir for nous in Présent.
+  C) Nous voyions la vérité
+     Rationale: This uses an incorrect form of voir.
+  D) Nous avions vu la vérité
+     Rationale: Incorrect conjugation for nous.
+
+Question 6: You (plural) see the light.
+Hint: Conjugate voir for vous in Présent
+Answer Options:
+  A) Vous voyez la lumière ✓ CORRECT
+     Rationale: Correct conjugation of voir for vous in Présent.
+  B) Vous verriez la lumière
+     Rationale: This uses an incorrect form of voir.
+  C) Vous verrez la lumière
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Vous allez voir la lumière
+     Rationale: Incorrect conjugation for vous.
+
+Question 7: They see the ocean.
+Hint: Conjugate voir for ils in Présent
+Answer Options:
+  A) Ils sont en train de voir l'océan
+     Rationale: Incorrect conjugation for ils.
+  B) Ils voient l'océan ✓ CORRECT
+     Rationale: Correct conjugation of voir for ils in Présent.
+  C) Ils verraient l'océan
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Ils voyaient l'océan
+     Rationale: This uses an incorrect form of voir.
+
+Question 8: I see anything.
+Hint: Conjugate voir for je in Présent
+Answer Options:
+  A) Je vais voir
+     Rationale: This uses an incorrect form of voir.
+  B) J'ai vu
+     Rationale: Incorrect conjugation for je.
+  C) Je vois rien ✓ CORRECT
+     Rationale: Correct conjugation of voir for je in Présent.
+  D) Je suis en train de voir
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 9: She sees well.
+Hint: Conjugate voir for elle in Présent
+Answer Options:
+  A) Elle avait vu bien
+     Rationale: This uses an incorrect form of voir.
+  B) Elle verrait bien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Elle voyait bien
+     Rationale: Incorrect conjugation for elle.
+  D) Elle voit bien ✓ CORRECT
+     Rationale: Correct conjugation of voir for elle in Présent.
+
+Question 10: We see him.
+Hint: Conjugate voir for nous in Présent
+Answer Options:
+  A) Nous avions vu
+     Rationale: Incorrect conjugation for nous.
+  B) Nous voyons le ✓ CORRECT
+     Rationale: Correct conjugation of voir for nous in Présent.
+  C) Nous verrons
+     Rationale: This uses an incorrect form of voir.
+  D) Nous avons vu
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 11: I see the problem.
+Hint: Conjugate voir for je in Présent
+Answer Options:
+  A) Je vois le problème ✓ CORRECT
+     Rationale: Correct conjugation of voir for je in Présent.
+  B) Je verrais le problème
+     Rationale: Incorrect conjugation for je.
+  C) Je voyais le problème
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Je vis le problème
+     Rationale: This uses an incorrect form of voir.
+
+Question 12: You see the movie.
+Hint: Conjugate voir for tu in Présent
+Answer Options:
+  A) Tu ne vis pas le film
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Tu ne verrais pas le film
+     Rationale: Incorrect conjugation for tu.
+  C) Tu ne vois pas le film ✓ CORRECT
+     Rationale: Correct conjugation of voir for tu in Présent.
+  D) Tu ne verras pas le film
+     Rationale: This uses an incorrect form of voir.
+
+Question 13: He sees his friend.
+Hint: Conjugate voir for il in Présent
+Answer Options:
+  A) Il voit son ami ✓ CORRECT
+     Rationale: Correct conjugation of voir for il in Présent.
+  B) Il verrait son ami
+     Rationale: Incorrect conjugation for il.
+  C) Il a vu son ami
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Il va voir son ami
+     Rationale: This uses an incorrect form of voir.
+
+Question 14: She sees the cat.
+Hint: Conjugate voir for elle in Présent
+Answer Options:
+  A) Elle n'est en train de voir pas le chat
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle ne va voir pas le chat
+     Rationale: Incorrect conjugation for elle.
+  C) Elle n'a vu pas le chat
+     Rationale: This uses an incorrect form of voir.
+  D) Elle ne voit pas le chat ✓ CORRECT
+     Rationale: Correct conjugation of voir for elle in Présent.
+
+Question 15: We see the truth.
+Hint: Conjugate voir for nous in Présent
+Answer Options:
+  A) Nous ne voyons pas la vérité ✓ CORRECT
+     Rationale: Correct conjugation of voir for nous in Présent.
+  B) Nous ne vîmes pas la vérité
+     Rationale: Incorrect conjugation for nous.
+  C) Nous n'allons voir pas la vérité
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous ne sommes en train de voir pas la vérité
+     Rationale: This uses an incorrect form of voir.
+
+Question 16: You (plural) see the light.
+Hint: Conjugate voir for vous in Présent
+Answer Options:
+  A) Vous verriez la lumière
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Vous voyez la lumière ✓ CORRECT
+     Rationale: Correct conjugation of voir for vous in Présent.
+  C) Vous verrez la lumière
+     Rationale: This uses an incorrect form of voir.
+  D) Vous avez vu la lumière
+     Rationale: Incorrect conjugation for vous.
+
+Question 17: They see the ocean.
+Hint: Conjugate voir for ils in Présent
+Answer Options:
+  A) Ils ne virent pas l'océan
+     Rationale: This uses an incorrect form of voir.
+  B) Ils ne verront pas l'océan
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  C) Ils ne verraient pas l'océan
+     Rationale: Incorrect conjugation for ils.
+  D) Ils ne voient pas l'océan ✓ CORRECT
+     Rationale: Correct conjugation of voir for ils in Présent.
+
+Question 18: I see anything.
+Hint: Conjugate voir for je in Présent
+Answer Options:
+  A) Je vois rien ✓ CORRECT
+     Rationale: Correct conjugation of voir for je in Présent.
+  B) Je voyais
+     Rationale: This uses an incorrect form of voir.
+  C) Je verrais
+     Rationale: Incorrect conjugation for je.
+  D) Je vis
+     Rationale: Wrong tense or wrong pronoun conjugation.
+
+Question 19: She sees well.
+Hint: Conjugate voir for elle in Présent
+Answer Options:
+  A) Elle ne vit pas bien
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  B) Elle ne voyait pas bien
+     Rationale: Incorrect conjugation for elle.
+  C) Elle ne va voir pas bien
+     Rationale: This uses an incorrect form of voir.
+  D) Elle ne voit pas bien ✓ CORRECT
+     Rationale: Correct conjugation of voir for elle in Présent.
+
+Question 20: We see him.
+Hint: Conjugate voir for nous in Présent
+Answer Options:
+  A) Nous voyons le ✓ CORRECT
+     Rationale: Correct conjugation of voir for nous in Présent.
+  B) Nous sommes en train de voir
+     Rationale: Incorrect conjugation for nous.
+  C) Nous verrons
+     Rationale: Wrong tense or wrong pronoun conjugation.
+  D) Nous allons voir
+     Rationale: This uses an incorrect form of voir.
+
+---
+END OF ELEMENTARY PRESENT TENSE QUESTIONS
+Total verbs covered: 6
+Please verify French grammar accuracy, gender agreement, and conjugations.
