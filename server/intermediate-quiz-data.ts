@@ -103,10 +103,48 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "avoir": {
     "present": [
-      // TODO: Awaiting 20 Présent questions from Perplexity validation
+      {"question": "I have a car. (Présent)", "options": ["J'ai une voiture.", "Tu as une voiture.", "Il a une voiture.", "Nous avons une voiture."], "answer": "A"},
+      {"question": "You have a dog. (informal) (Présent)", "options": ["Tu as un chien.", "J'ai un chien.", "Il a un chien.", "Vous avez un chien."], "answer": "A"},
+      {"question": "He has a house. (Présent)", "options": ["Il a une maison.", "Elle a une maison.", "Tu as une maison.", "Ils ont une maison."], "answer": "A"},
+      {"question": "She has a bag. (Présent)", "options": ["Elle a un sac.", "Il a un sac.", "Elles ont un sac.", "Tu as un sac."], "answer": "A"},
+      {"question": "We have time. (Présent)", "options": ["Nous avons du temps.", "Vous avez du temps.", "Ils ont du temps.", "J'ai du temps."], "answer": "A"},
+      {"question": "You have many friends. (formal/plural) (Présent)", "options": ["Vous avez beaucoup d'amis.", "Tu as beaucoup d'amis.", "Nous avons beaucoup d'amis.", "Ils ont beaucoup d'amis."], "answer": "A"},
+      {"question": "They have bikes. (male/mixed) (Présent)", "options": ["Ils ont des vélos.", "Elles ont des vélos.", "Ils avaient des vélos.", "Ils auront des vélos."], "answer": "A"},
+      {"question": "They have cats. (female) (Présent)", "options": ["Elles ont des chats.", "Ils ont des chats.", "Elles avaient des chats.", "Elles auront des chats."], "answer": "A"},
+      {"question": "Do I have your keys? (Présent)", "options": ["Ai-je tes clés ?", "As-tu mes clés ?", "A-t-il tes clés ?", "Avons-nous tes clés ?"], "answer": "A"},
+      {"question": "Do you have my book? (informal) (Présent)", "options": ["As-tu mon livre ?", "Ai-je ton livre ?", "A-t-il mon livre ?", "Avez-vous mon livre ?"], "answer": "A"},
+      {"question": "Does he have our address? (Présent)", "options": ["A-t-il notre adresse ?", "A-t-elle notre adresse ?", "Ai-je notre adresse ?", "As-tu notre adresse ?"], "answer": "A"},
+      {"question": "Does she have the tickets? (Présent)", "options": ["A-t-elle les billets ?", "A-t-il les billets ?", "As-tu les billets ?", "Avez-vous les billets ?"], "answer": "A"},
+      {"question": "Do we have bread? (Présent)", "options": ["Avons-nous du pain ?", "Ai-je du pain ?", "Avez-vous du pain ?", "Ont-ils du pain ?"], "answer": "A"},
+      {"question": "Do you have the maps? (formal/plural) (Présent)", "options": ["Avez-vous les cartes ?", "As-tu les cartes ?", "Avons-nous les cartes ?", "Ont-ils les cartes ?"], "answer": "A"},
+      {"question": "Do they have water? (male/mixed) (Présent)", "options": ["Ont-ils de l'eau ?", "Ont-elles de l'eau ?", "Avez-vous de l'eau ?", "As-tu de l'eau ?"], "answer": "A"},
+      {"question": "Do they have water? (female) (Présent)", "options": ["Ont-elles de l'eau ?", "Ont-ils de l'eau ?", "Avez-vous de l'eau ?", "As-tu de l'eau ?"], "answer": "A"},
+      {"question": "I do not have a car. (Présent)", "options": ["Je n'ai pas de voiture.", "Tu n'as pas de voiture.", "Il n'a pas de voiture.", "Nous n'avons pas de voiture."], "answer": "A"},
+      {"question": "He does not have a house. (Présent)", "options": ["Il n'a pas de maison.", "Je n'ai pas de maison.", "Tu n'as pas de maison.", "Ils n'ont pas de maison."], "answer": "A"},
+      {"question": "Don't we have time? (Présent)", "options": ["N'avons-nous pas de temps ?", "N'avez-vous pas de temps ?", "N'ont-ils pas de temps ?", "N'ai-je pas de temps ?"], "answer": "A"},
+      {"question": "Don't they have bikes? (female) (Présent)", "options": ["N'ont-elles pas de vélos ?", "N'ont-ils pas de vélos ?", "N'avez-vous pas de vélos ?", "N'avons-nous pas de vélos ?"], "answer": "A"}
     ],
     "passé_composé": [
-      // TODO: Awaiting 20 Passé Composé questions from Perplexity validation
+      {"question": "I have had a good day. (Passé Composé)", "options": ["J'ai eu une bonne journée.", "Tu as eu une bonne journée.", "Il a eu une bonne journée.", "Nous avons eu une bonne journée."], "answer": "A"},
+      {"question": "You have had coffee. (informal) (Passé Composé)", "options": ["Tu as eu du café.", "J'ai eu du café.", "Il a eu du café.", "Vous avez eu du café."], "answer": "A"},
+      {"question": "He has had problems. (Passé Composé)", "options": ["Il a eu des problèmes.", "Elle a eu des problèmes.", "Tu as eu des problèmes.", "Ils ont eu des problèmes."], "answer": "A"},
+      {"question": "She has had luck. (Passé Composé)", "options": ["Elle a eu de la chance.", "Il a eu de la chance.", "Elles ont eu de la chance.", "Tu as eu de la chance."], "answer": "A"},
+      {"question": "We have had some rain. (Passé Composé)", "options": ["Nous avons eu de la pluie.", "Vous avez eu de la pluie.", "Ils ont eu de la pluie.", "J'ai eu de la pluie."], "answer": "A"},
+      {"question": "You have had many friends. (formal/plural) (Passé Composé)", "options": ["Vous avez eu beaucoup d'amis.", "Tu as eu beaucoup d'amis.", "Nous avons eu beaucoup d'amis.", "Ils ont eu beaucoup d'amis."], "answer": "A"},
+      {"question": "They have had the documents. (male/mixed) (Passé Composé)", "options": ["Ils ont eu les documents.", "Elles ont eu les documents.", "Ils avaient les documents.", "Ils auront les documents."], "answer": "A"},
+      {"question": "They have had the gifts. (female) (Passé Composé)", "options": ["Elles ont eu les cadeaux.", "Ils ont eu les cadeaux.", "Elles avaient les cadeaux.", "Elles auront les cadeaux."], "answer": "A"},
+      {"question": "Have I had enough? (Passé Composé)", "options": ["Ai-je eu assez ?", "As-tu eu assez ?", "A-t-il eu assez ?", "Avons-nous eu assez ?"], "answer": "A"},
+      {"question": "Have you had a problem? (informal) (Passé Composé)", "options": ["As-tu eu un problème ?", "Ai-je eu un problème ?", "A-t-il eu un problème ?", "Avez-vous eu un problème ?"], "answer": "A"},
+      {"question": "Has he had a meal? (Passé Composé)", "options": ["A-t-il eu un repas ?", "A-t-elle eu un repas ?", "Ai-je eu un repas ?", "As-tu eu un repas ?"], "answer": "A"},
+      {"question": "Has she had help? (Passé Composé)", "options": ["A-t-elle eu de l'aide ?", "A-t-il eu de l'aide ?", "As-tu eu de l'aide ?", "Avez-vous eu de l'aide ?"], "answer": "A"},
+      {"question": "Have we had rain? (Passé Composé)", "options": ["Avons-nous eu de la pluie ?", "Ai-je eu de la pluie ?", "Avez-vous eu de la pluie ?", "Ont-ils eu de la pluie ?"], "answer": "A"},
+      {"question": "Have you had dinner? (formal/plural) (Passé Composé)", "options": ["Avez-vous eu le dîner ?", "As-tu eu le dîner ?", "Avons-nous eu le dîner ?", "Ont-ils eu le dîner ?"], "answer": "A"},
+      {"question": "Have they had problems? (male/mixed) (Passé Composé)", "options": ["Ont-ils eu des problèmes ?", "Ont-elles eu des problèmes ?", "Avez-vous eu des problèmes ?", "As-tu eu des problèmes ?"], "answer": "A"},
+      {"question": "Have they had gifts? (female) (Passé Composé)", "options": ["Ont-elles eu des cadeaux ?", "Ont-ils eu des cadeaux ?", "Avez-vous eu des cadeaux ?", "As-tu eu des cadeaux ?"], "answer": "A"},
+      {"question": "I have not had problems. (Passé Composé)", "options": ["Je n'ai pas eu de problèmes.", "Tu n'as pas eu de problèmes.", "Il n'a pas eu de problèmes.", "Nous n'avons pas eu de problèmes."], "answer": "A"},
+      {"question": "He has not had help. (Passé Composé)", "options": ["Il n'a pas eu d'aide.", "Je n'ai pas eu d'aide.", "Tu n'as pas eu d'aide.", "Ils n'ont pas eu d'aide."], "answer": "A"},
+      {"question": "Haven't we had rain? (Passé Composé)", "options": ["N'avons-nous pas eu de pluie ?", "N'avez-vous pas eu de pluie ?", "N'ont-ils pas eu de pluie ?", "N'ai-je pas eu de pluie ?"], "answer": "A"},
+      {"question": "Haven't they had luck? (female) (Passé Composé)", "options": ["N'ont-elles pas eu de la chance ?", "N'ont-ils pas eu de la chance ?", "N'avez-vous pas eu de la chance ?", "N'avons-nous pas eu de la chance ?"], "answer": "A"}
     ],
     "futur_simple": [
       {"question": "I will have a car. (Futur Simple)", "options": ["J'aurai une voiture.", "Tu auras une voiture.", "Il aura une voiture.", "Nous aurons une voiture."], "answer": "A"},
