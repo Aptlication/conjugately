@@ -1,5 +1,6 @@
 import { GeneratedQuiz } from "./gemini-quiz";
 import { getRandomNoviceQuestions, type NoviceQuestion } from "./beginner-quiz-data";
+import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1646,7 +1647,33 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
   console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
   
-  // Use verified beginner questions for Novice difficulty
+  // Use verified beginner pronoun questions for Beginner difficulty
+  if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
+    // Map frontend tenses to our verified question tenses
+    let mappedTense = tense.toLowerCase();
+    if (mappedTense === 'present') mappedTense = 'Présent';
+    if (mappedTense === 'passé simple') mappedTense = 'Passé Composé';
+    if (mappedTense === 'futur simple') mappedTense = 'Futur Simple';
+    
+    console.log(`🎓 Using verified beginner pronoun questions for ${verb} - ${mappedTense} (original: ${tense})`);
+    
+    const beginnerQuestions = getRandomBeginnerPronounQuestions(verb, mappedTense, 20);
+    
+    if (beginnerQuestions.length > 0) {
+      console.log(`✅ Found ${beginnerQuestions.length} verified beginner pronoun questions`);
+      return {
+        questions: beginnerQuestions.map(q => ({
+          question: q.question,
+          hint: q.hint,
+          answerOptions: q.answerOptions
+        }))
+      };
+    } else {
+      console.log(`⚠️ No verified beginner pronoun questions found for ${verb} - ${mappedTense}, falling back to generated`);
+    }
+  }
+
+  // Use verified novice questions for Novice difficulty
   if (difficulty === 'Novice' && ['être', 'avoir', 'faire'].includes(verb)) {
     // Map frontend tenses to our verified question tenses
     let mappedTense = tense.toLowerCase();
@@ -1654,14 +1681,14 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     if (mappedTense === 'passé simple') mappedTense = 'passé_composé'; // Novice uses passé composé instead
     if (mappedTense === 'futur simple') mappedTense = 'futur_simple';
     
-    console.log(`🎓 Using verified beginner questions for ${verb} - ${mappedTense} (original: ${tense})`);
+    console.log(`🎓 Using verified novice questions for ${verb} - ${mappedTense} (original: ${tense})`);
     
-    const beginnerQuestions = getRandomNoviceQuestions(verb, mappedTense, 20);
+    const noviceQuestions = getRandomNoviceQuestions(verb, mappedTense, 20);
     
-    if (beginnerQuestions.length > 0) {
-      console.log(`✅ Found ${beginnerQuestions.length} verified beginner questions`);
+    if (noviceQuestions.length > 0) {
+      console.log(`✅ Found ${noviceQuestions.length} verified novice questions`);
       return {
-        questions: beginnerQuestions.map(q => ({
+        questions: noviceQuestions.map(q => ({
           question: q.question,
           hint: q.hint,
           answerOptions: q.answerOptions
@@ -2005,7 +2032,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         .replace(/They are/g, 'They were')
       
       // CRITICAL: Remove ONLY progressive verb forms while preserving context for non-difficult levels
-      if (difficulty !== 'Difficult') {
+      if (difficulty !== 'Advanced') {
         englishQuestion = removeProgressiveFormsOnly(englishQuestion);
       }
       

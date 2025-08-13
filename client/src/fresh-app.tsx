@@ -5,7 +5,7 @@ export default function FreshApp() {
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
-  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
+  const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -22,8 +22,8 @@ export default function FreshApp() {
   };
 
   const DIFFICULTY_CONFIGS = {
-    "Easy": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
-    "Moderate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
+    "Elementary": { verbs: ["être", "avoir", "faire"], timeFrames: ["Present"], tenses: ["Présent"] },
+    "Intermediate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
     "Advanced": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
   };
 
@@ -79,14 +79,14 @@ export default function FreshApp() {
     }
   };
 
-  const handleDifficultySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+  const handleAdvancedySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     const config = DIFFICULTY_CONFIGS[difficulty];
     const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
     setSelectedVerb(randomVerb);
     const randomTimeFrame = config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)];
     setSelectedTimeFrame(randomTimeFrame);
     let availableTenses: string[] = [];
-    if (difficulty === "Easy") {
+    if (difficulty === "Elementary") {
       availableTenses = [...config.tenses];
     } else {
       const timeFrameTenses = TIME_FRAMES[randomTimeFrame as keyof typeof TIME_FRAMES] || [];
@@ -94,7 +94,7 @@ export default function FreshApp() {
     }
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
-    setShowDifficultyModal(false);
+    setShowAdvancedyModal(false);
   };
 
   const handleAnswerSelect = (answerIndex: number) => {
@@ -359,7 +359,7 @@ export default function FreshApp() {
 
         <div style={{ textAlign: 'center', marginBottom: '24px' }}>
           <button
-            onClick={() => setShowDifficultyModal(true)}
+            onClick={() => setShowAdvancedyModal(true)}
             style={{ padding: '16px 32px', fontSize: '18px', fontWeight: 'bold', color: 'white', background: 'linear-gradient(to right, #4f46e5, #7c3aed, #ec4899)', border: 'none', borderRadius: '16px', cursor: 'pointer', transform: 'scale(1)', transition: 'transform 0.2s' }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
@@ -504,35 +504,35 @@ export default function FreshApp() {
           </div>
         )}
 
-        {showDifficultyModal && (
+        {showAdvancedyModal && (
           <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
             <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '16px', padding: '32px', maxWidth: '400px', width: '100%', margin: '16px' }}>
               <h3 style={{ fontSize: '24px', fontWeight: 'bold', textAlign: 'center', marginBottom: '24px' }}>
-                Choose Difficulty Level
+                Choose Advancedy Level
               </h3>
               <div style={{ marginBottom: '24px' }}>
                 <button
-                  onClick={() => handleDifficultySelect("Easy")}
+                  onClick={() => handleAdvancedySelect("Elementary")}
                   style={{ width: '100%', padding: '16px', textAlign: 'left', background: 'rgba(16, 185, 129, 0.2)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '12px', color: 'white', cursor: 'pointer', marginBottom: '12px' }}
                 >
-                  <div style={{ color: '#6ee7b7', fontWeight: '600', fontSize: '18px' }}>🟢 Easy</div>
+                  <div style={{ color: '#6ee7b7', fontWeight: '600', fontSize: '18px' }}>🟢 Elementary</div>
                   <div style={{ color: '#cbd5e1', fontSize: '14px', marginTop: '4px' }}>
                     Basic verbs (être, avoir, faire) • Present tense only
                   </div>
                 </button>
                 
                 <button
-                  onClick={() => handleDifficultySelect("Moderate")}
+                  onClick={() => handleAdvancedySelect("Intermediate")}
                   style={{ width: '100%', padding: '16px', textAlign: 'left', background: 'rgba(245, 158, 11, 0.2)', border: '1px solid rgba(245, 158, 11, 0.3)', borderRadius: '12px', color: 'white', cursor: 'pointer', marginBottom: '12px' }}
                 >
-                  <div style={{ color: '#fbbf24', fontWeight: '600', fontSize: '18px' }}>🟡 Moderate</div>
+                  <div style={{ color: '#fbbf24', fontWeight: '600', fontSize: '18px' }}>🟡 Intermediate</div>
                   <div style={{ color: '#cbd5e1', fontSize: '14px', marginTop: '4px' }}>
                     6 common verbs • Present, past, and future tenses
                   </div>
                 </button>
                 
                 <button
-                  onClick={() => handleDifficultySelect("Advanced")}
+                  onClick={() => handleAdvancedySelect("Advanced")}
                   style={{ width: '100%', padding: '16px', textAlign: 'left', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: '12px', color: 'white', cursor: 'pointer' }}
                 >
                   <div style={{ color: '#f87171', fontWeight: '600', fontSize: '18px' }}>🔴 Advanced</div>
@@ -543,7 +543,7 @@ export default function FreshApp() {
               </div>
               
               <button
-                onClick={() => setShowDifficultyModal(false)}
+                onClick={() => setShowAdvancedyModal(false)}
                 style={{ width: '100%', padding: '12px', color: '#94a3b8', background: 'transparent', border: '1px solid #475569', borderRadius: '12px', cursor: 'pointer' }}
               >
                 Cancel

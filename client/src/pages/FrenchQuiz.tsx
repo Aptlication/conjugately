@@ -27,14 +27,14 @@ const TIME_FRAMES = {
   "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
 };
 
-// Difficulty configurations
+// Advancedy configurations
 const DIFFICULTY_CONFIGS = {
-  "Easy": {
+  "Elementary": {
     verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
     timeFrames: ["Present", "Past"],
     tenses: ["Présent", "Passé Composé"]
   },
-  "Moderate": {
+  "Intermediate": {
     verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"],
     timeFrames: ["Present", "Past", "Future"],
     tenses: ["Présent", "Passé Composé", "Futur Simple", "Futur Proche"]
@@ -53,7 +53,7 @@ export default function FrenchQuiz() {
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
-  const [showDifficultyModal, setShowDifficultyModal] = useState(false);
+  const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
   
   // Quiz state
   const [quizState, setQuizState] = useState<QuizState>('config');
@@ -85,10 +85,10 @@ export default function FrenchQuiz() {
   };
 
   const handleChooseAll = () => {
-    setShowDifficultyModal(true);
+    setShowAdvancedyModal(true);
   };
 
-  const handleDifficultySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+  const handleAdvancedySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     const config = DIFFICULTY_CONFIGS[difficulty];
     
     // Select random verb from difficulty config
@@ -101,7 +101,7 @@ export default function FrenchQuiz() {
     
     // Select appropriate tense based on time frame and difficulty
     let availableTenses: string[] = [];
-    if (difficulty === "Easy") {
+    if (difficulty === "Elementary") {
       availableTenses = [...config.tenses];
     } else {
       // Filter tenses that belong to the selected time frame
@@ -114,7 +114,7 @@ export default function FrenchQuiz() {
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
     
-    setShowDifficultyModal(false);
+    setShowAdvancedyModal(false);
   };
 
   const handleStartQuiz = async () => {
@@ -485,20 +485,20 @@ export default function FrenchQuiz() {
               </div>
             )}
 
-            {/* Difficulty Selection Modal */}
-            {showDifficultyModal && (
+            {/* Advancedy Selection Modal */}
+            {showAdvancedyModal && (
               <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
                   <h3 className="text-2xl font-bold text-white text-center mb-6">
-                    Choose Difficulty Level
+                    Choose Advancedy Level
                   </h3>
                   <div className="space-y-4">
                     <button
-                      onClick={() => handleDifficultySelect("Easy")}
+                      onClick={() => handleAdvancedySelect("Elementary")}
                       className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl hover:bg-green-500/30 transition-all duration-200 group"
                     >
                       <div className="text-green-300 font-semibold text-lg group-hover:text-green-200">
-                        🟢 Easy
+                        🟢 Elementary
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         Basic verbs (être, avoir, faire) • Present tense only
@@ -506,11 +506,11 @@ export default function FrenchQuiz() {
                     </button>
                     
                     <button
-                      onClick={() => handleDifficultySelect("Moderate")}
+                      onClick={() => handleAdvancedySelect("Intermediate")}
                       className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl hover:bg-yellow-500/30 transition-all duration-200 group"
                     >
                       <div className="text-yellow-300 font-semibold text-lg group-hover:text-yellow-200">
-                        🟡 Moderate
+                        🟡 Intermediate
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
                         6 common verbs • Present, past, and future tenses
@@ -518,7 +518,7 @@ export default function FrenchQuiz() {
                     </button>
                     
                     <button
-                      onClick={() => handleDifficultySelect("Advanced")}
+                      onClick={() => handleAdvancedySelect("Advanced")}
                       className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl hover:bg-red-500/30 transition-all duration-200 group"
                     >
                       <div className="text-red-300 font-semibold text-lg group-hover:text-red-200">
@@ -531,7 +531,7 @@ export default function FrenchQuiz() {
                   </div>
                   
                   <button
-                    onClick={() => setShowDifficultyModal(false)}
+                    onClick={() => setShowAdvancedyModal(false)}
                     className="w-full mt-6 p-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
                   >
                     Cancel
