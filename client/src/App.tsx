@@ -182,25 +182,28 @@ function App() {
       }
     },
     "Intermediate": { 
-      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"], // 8 most used verbs
+      verbs: ["être", "avoir", "faire", "aller", "voir", "dire", "pouvoir", "vouloir", "prendre", "venir", "savoir"], // All 11 intermediate verbs complete
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Composé", "Passé Simple", "Futur Simple", "Futur Proche"], // Removed Présent Progressif for consistency
+      tenses: ["Présent", "Passé Composé", "Futur Simple", "Imparfait"], // 4 tenses as implemented
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
           { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
           { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
-          { name: "Unit 6: se lever (to get up)", verb: "se lever", questions: 20 },
-          { name: "Unit 7: s'appeler (to be called)", verb: "s'appeler", questions: 20 },
-          { name: "Unit 8: se sentir (to feel)", verb: "se sentir", questions: 20 }
+          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 },
+          { name: "Unit 5: voir (to see)", verb: "voir", questions: 20 },
+          { name: "Unit 6: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 7: pouvoir (can/to be able)", verb: "pouvoir", questions: 20 },
+          { name: "Unit 8: vouloir (to want)", verb: "vouloir", questions: 20 },
+          { name: "Unit 9: prendre (to take)", verb: "prendre", questions: 20 },
+          { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
+          { name: "Unit 11: savoir (to know)", verb: "savoir", questions: 20 }
         ],
         finalExam: { 
-          questions: 80, 
+          questions: 110, 
           questionsPerVerb: 10, 
-          passThreshold: 72,
-          description: "10 questions from each of the 8 verbs"
+          passThreshold: 99,
+          description: "10 questions from each of the 11 verbs"
         }
       }
     },
@@ -1898,7 +1901,7 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
               <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 3 verbs (être, avoir, faire), Present, past, and future tenses</option>
               <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - Top 6 verbs, Present, past, and future tenses</option>
-              <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir), Present, past, and future tenses</option>
+              <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 11 verbs (être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir), Present, past, and future tenses</option>
               <option value="Advanced" className="bg-gray-800 text-white">🔴 Advanced - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
@@ -2089,7 +2092,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Intermediate</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    8 verbs (être, avoir, faire, dire, aller, voir, savoir, pouvoir) • Present, past, and future tenses
+                    11 verbs (être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir) • Present, past, and future tenses
                   </div>
                 </button>
                 
