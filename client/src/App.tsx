@@ -13,6 +13,10 @@ function App() {
   const [showElementaryCourseModal, setShowElementaryCourseModal] = useState(false);
   const [showIntermediateCourseModal, setShowIntermediateCourseModal] = useState(false);
   const [showAdvancedCourseModal, setShowAdvancedCourseModal] = useState(false);
+  const [showBeginnerPronounGuide, setShowBeginnerPronounGuide] = useState(false);
+  const [beginnerGuideShown, setBeginnerGuideShown] = useState(() => {
+    return localStorage.getItem('beginnerPronounGuideShown') === 'true';
+  });
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -259,6 +263,13 @@ function App() {
     }
     
     if (!selectedVerb || !selectedTimeFrame || (!finalTenseType && selectedDifficulty === "Advanced")) return;
+    
+    // Show beginner pronoun guide for Beginner difficulty (if not shown before)
+    if (selectedDifficulty === 'Beginner' && !beginnerGuideShown) {
+      setShowBeginnerPronounGuide(true);
+      return;
+    }
+    
     setQuizState('loading');
 
     try {
@@ -2396,6 +2407,170 @@ function App() {
                   className="flex-1 px-6 py-3 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700"
                 >
                   Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Beginner Pronoun Guide Modal */}
+        {showBeginnerPronounGuide && (
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-lg w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-4 text-gray-200">📚 French Pronouns Guide</h3>
+              <p className="text-slate-300 text-center mb-6">Learn the basic French pronouns before starting your quiz:</p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">👤</span>
+                  <div>
+                    <span className="font-semibold text-white">Je</span>
+                    <span className="text-gray-300 ml-2">= I</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">🫵</span>
+                  <div>
+                    <span className="font-semibold text-white">Tu</span>
+                    <span className="text-gray-300 ml-2">= You (informal)</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">👔</span>
+                  <div>
+                    <span className="font-semibold text-white">Vous</span>
+                    <span className="text-gray-300 ml-2">= You (formal/plural)</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">👨‍👩‍👧‍👦</span>
+                  <div>
+                    <span className="font-semibold text-white">Nous</span>
+                    <span className="text-gray-300 ml-2">= We</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">👥</span>
+                  <div>
+                    <span className="font-semibold text-white">Ils</span>
+                    <span className="text-gray-300 ml-2">= They (masculine & mixed)</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
+                  <span className="text-2xl">👩‍👩‍👧‍👧</span>
+                  <div>
+                    <span className="font-semibold text-white">Elles</span>
+                    <span className="text-gray-300 ml-2">= They (feminine)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col gap-3">
+                <button
+                  onClick={() => {
+                    setShowBeginnerPronounGuide(false);
+                    setQuizState('loading');
+                    // Continue with quiz generation
+                    const continueQuiz = async () => {
+                      try {
+                        const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                        let finalTenseType = selectedTenseType;
+                        if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
+                          const beginnerTenseMap = {
+                            "Past": "Passé Composé",
+                            "Present": "Présent", 
+                            "Future": "Futur Simple"
+                          };
+                          finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+                        }
+                        
+                        const response = await fetch('/api/get-quiz', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            verb: selectedVerb,
+                            timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
+                            tenseType: finalTenseType,
+                            difficulty: selectedDifficulty,
+                          }),
+                        });
+
+                        const data = await response.json();
+                        if (data.success) {
+                          setQuizData(data.quiz.questions);
+                          setCurrentQuestionIndex(0);
+                          setUserAnswers({});
+                          setSelectedAnswerIndex(null);
+                          setIsAnswerConfirmed(false);
+                          setQuizState('active');
+                        }
+                      } catch (error) {
+                        console.error('Error starting quiz:', error);
+                        setQuizState('config');
+                      }
+                    };
+                    continueQuiz();
+                  }}
+                  className="w-full px-6 py-4 bg-gray-600 text-white rounded-xl font-semibold hover:bg-gray-700 text-lg"
+                >
+                  Got it! Start Quiz
+                </button>
+                
+                <button
+                  onClick={() => {
+                    localStorage.setItem('beginnerPronounGuideShown', 'true');
+                    setBeginnerGuideShown(true);
+                    setShowBeginnerPronounGuide(false);
+                    setQuizState('loading');
+                    // Continue with quiz generation
+                    const continueQuiz = async () => {
+                      try {
+                        const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                        let finalTenseType = selectedTenseType;
+                        if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
+                          const beginnerTenseMap = {
+                            "Past": "Passé Composé",
+                            "Present": "Présent", 
+                            "Future": "Futur Simple"
+                          };
+                          finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+                        }
+                        
+                        const response = await fetch('/api/get-quiz', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            verb: selectedVerb,
+                            timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
+                            tenseType: finalTenseType,
+                            difficulty: selectedDifficulty,
+                          }),
+                        });
+
+                        const data = await response.json();
+                        if (data.success) {
+                          setQuizData(data.quiz.questions);
+                          setCurrentQuestionIndex(0);
+                          setUserAnswers({});
+                          setSelectedAnswerIndex(null);
+                          setIsAnswerConfirmed(false);
+                          setQuizState('active');
+                        }
+                      } catch (error) {
+                        console.error('Error starting quiz:', error);
+                        setQuizState('config');
+                      }
+                    };
+                    continueQuiz();
+                  }}
+                  className="w-full px-6 py-3 bg-gray-700/50 text-gray-300 rounded-xl font-medium hover:bg-gray-700/70"
+                >
+                  Don't remind me again
                 </button>
               </div>
             </div>
