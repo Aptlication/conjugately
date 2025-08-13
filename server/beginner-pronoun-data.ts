@@ -426,43 +426,37 @@ function generateBeginnerQuestions(verb: string, tense: string, count: number): 
 
   const questions: BeginnerPronounQuestion[] = [];
   const entries = Object.entries(conjugations);
+  const allFrenchOptions = entries.map(([_, french]) => french);
   
-  // Create questions for each pronoun combination
+  // Create multiple variations for each pronoun combination
   entries.forEach(([englishForm, frenchForm]) => {
-    // Generate 3 different question variations for each pronoun
-    const wrongOptions = entries
-      .filter(([_, french]) => french !== frenchForm)
-      .map(([_, french]) => french)
-      .slice(0, 3); // Take first 3 different options
+    const availableWrong = allFrenchOptions.filter(option => option !== frenchForm);
     
-    if (wrongOptions.length >= 3) {
-      questions.push({
-        question: englishForm,
-        hint: `Conjugation of ${verb} for this pronoun in ${tense}`,
-        answerOptions: [
+    // Create 3 different question variations with different wrong answer combinations
+    for (let variation = 0; variation < 3 && questions.length < count; variation++) {
+      // Shuffle wrong options for each variation
+      const shuffledWrong = [...availableWrong].sort(() => Math.random() - 0.5);
+      const wrongOptions = shuffledWrong.slice(0, 3);
+      
+      if (wrongOptions.length >= 3) {
+        // Create shuffled answer options for each variation
+        const answerOptions = [
           { text: frenchForm, rationale: `Correct! '${frenchForm}' is '${englishForm}' in French.`, isCorrect: true },
           { text: wrongOptions[0], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false },
           { text: wrongOptions[1], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false },
           { text: wrongOptions[2], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false }
-        ]
-      });
+        ].sort(() => Math.random() - 0.5); // Randomize order
+        
+        questions.push({
+          question: englishForm,
+          hint: `Conjugation of ${verb} for this pronoun in ${tense}`,
+          answerOptions
+        });
+      }
     }
   });
 
-  // If we need more questions, repeat with variations
-  while (questions.length < count && questions.length > 0) {
-    const baseQuestions = [...questions];
-    baseQuestions.forEach(q => {
-      if (questions.length < count) {
-        questions.push({
-          ...q,
-          question: q.question
-        });
-      }
-    });
-  }
-
-  // Shuffle and return requested count
+  // Shuffle all questions and return requested count
   return questions.sort(() => Math.random() - 0.5).slice(0, count);
 }
 
