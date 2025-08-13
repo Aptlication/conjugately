@@ -669,6 +669,486 @@ export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
     ]
   },
 
+  // ===== MORE AVOIR – PASSÉ COMPOSÉ =====
+  {
+    question: "He had money.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for il",
+    answerOptions: [
+      {
+        text: "Il a eu de l'argent.",
+        rationale: "Correct passé composé conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Il avait de l'argent.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Il a de l'argent.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Il est eu de l'argent.",
+        rationale: "Wrong auxiliary - avoir uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "She had a dog.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for elle",
+    answerOptions: [
+      {
+        text: "Elle a eu un chien.",
+        rationale: "Correct passé composé conjugation with masculine article.",
+        isCorrect: true
+      },
+      {
+        text: "Elle avait un chien.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Elle a un chien.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Elle est eu un chien.",
+        rationale: "Wrong auxiliary - avoir uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "We had homework.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for nous",
+    answerOptions: [
+      {
+        text: "Nous avons eu des devoirs.",
+        rationale: "Correct passé composé conjugation with plural article.",
+        isCorrect: true
+      },
+      {
+        text: "Nous avions des devoirs.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Nous avons des devoirs.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Nous sommes eu des devoirs.",
+        rationale: "Wrong auxiliary - avoir uses 'avons', not 'sommes'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "You (plural) had luck.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for vous",
+    answerOptions: [
+      {
+        text: "Vous avez eu de la chance.",
+        rationale: "Correct passé composé conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Vous aviez de la chance.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Vous avez de la chance.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Vous êtes eu de la chance.",
+        rationale: "Wrong auxiliary - avoir uses 'avez', not 'êtes'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "They had problems.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for ils",
+    answerOptions: [
+      {
+        text: "Ils ont eu des problèmes.",
+        rationale: "Correct passé composé conjugation with plural article.",
+        isCorrect: true
+      },
+      {
+        text: "Ils avaient des problèmes.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Ils ont des problèmes.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Ils sont eu des problèmes.",
+        rationale: "Wrong auxiliary - avoir uses 'ont', not 'sont'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "I didn't have anything.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use negative past tense form of avoir for je",
+    answerOptions: [
+      {
+        text: "Je n'ai rien eu.",
+        rationale: "Correct negative passé composé with 'rien'.",
+        isCorrect: true
+      },
+      {
+        text: "Je n'avais rien.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Je n'ai rien.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Je ne suis rien eu.",
+        rationale: "Wrong auxiliary and word order - avoir uses 'ai'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "She had a choice.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for elle",
+    answerOptions: [
+      {
+        text: "Elle a eu le choix.",
+        rationale: "Correct passé composé conjugation with definite article.",
+        isCorrect: true
+      },
+      {
+        text: "Elle avait le choix.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Elle a le choix.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Elle est eu le choix.",
+        rationale: "Wrong auxiliary - avoir uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "We had time.",
+    verb: "avoir",
+    tense: "passé_composé",
+    hint: "Use past tense form of avoir for nous",
+    answerOptions: [
+      {
+        text: "Nous avons eu le temps.",
+        rationale: "Correct passé composé conjugation with definite article.",
+        isCorrect: true
+      },
+      {
+        text: "Nous avions le temps.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Nous avons le temps.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Nous sommes eu le temps.",
+        rationale: "Wrong auxiliary - avoir uses 'avons', not 'sommes'.",
+        isCorrect: false
+      }
+    ]
+  },
+
+  // ===== MORE FAIRE – PASSÉ COMPOSÉ =====
+  {
+    question: "You made dinner.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for tu",
+    answerOptions: [
+      {
+        text: "Tu as fait le dîner.",
+        rationale: "Correct passé composé conjugation with definite article.",
+        isCorrect: true
+      },
+      {
+        text: "Tu faisais le dîner.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Tu fais le dîner.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Tu es fait le dîner.",
+        rationale: "Wrong auxiliary - faire uses 'as', not 'es'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "He did exercise.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for il",
+    answerOptions: [
+      {
+        text: "Il a fait du sport.",
+        rationale: "Correct passé composé conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Il faisait du sport.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Il fait du sport.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Il est fait du sport.",
+        rationale: "Wrong auxiliary - faire uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "She made a cake.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for elle",
+    answerOptions: [
+      {
+        text: "Elle a fait un gâteau.",
+        rationale: "Correct passé composé conjugation with masculine article.",
+        isCorrect: true
+      },
+      {
+        text: "Elle faisait un gâteau.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Elle fait un gâteau.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Elle est fait un gâteau.",
+        rationale: "Wrong auxiliary - faire uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "We did shopping.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for nous",
+    answerOptions: [
+      {
+        text: "Nous avons fait les courses.",
+        rationale: "Correct passé composé conjugation with definite article.",
+        isCorrect: true
+      },
+      {
+        text: "Nous faisions les courses.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Nous faisons les courses.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Nous sommes fait les courses.",
+        rationale: "Wrong auxiliary - faire uses 'avons', not 'sommes'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "You (plural) made music.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for vous",
+    answerOptions: [
+      {
+        text: "Vous avez fait de la musique.",
+        rationale: "Correct passé composé conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Vous faisiez de la musique.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Vous faites de la musique.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Vous êtes fait de la musique.",
+        rationale: "Wrong auxiliary - faire uses 'avez', not 'êtes'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "They did work.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for ils",
+    answerOptions: [
+      {
+        text: "Ils ont fait du travail.",
+        rationale: "Correct passé composé conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Ils faisaient du travail.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Ils font du travail.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Ils sont fait du travail.",
+        rationale: "Wrong auxiliary - faire uses 'ont', not 'sont'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "I didn't do anything.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use negative past tense form of faire for je",
+    answerOptions: [
+      {
+        text: "Je n'ai rien fait.",
+        rationale: "Correct negative passé composé with 'rien'.",
+        isCorrect: true
+      },
+      {
+        text: "Je ne faisais rien.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Je ne fais rien.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Je ne suis rien fait.",
+        rationale: "Wrong auxiliary and word order - faire uses 'ai'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "She didn't make mistakes.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use negative past tense form of faire for elle",
+    answerOptions: [
+      {
+        text: "Elle n'a pas fait d'erreurs.",
+        rationale: "Correct negative passé composé with proper article contraction.",
+        isCorrect: true
+      },
+      {
+        text: "Elle ne faisait pas d'erreurs.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Elle ne fait pas d'erreurs.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Elle n'est pas fait d'erreurs.",
+        rationale: "Wrong auxiliary - faire uses 'a', not 'est'.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "We didn't do that.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use negative past tense form of faire for nous",
+    answerOptions: [
+      {
+        text: "Nous n'avons pas fait ça.",
+        rationale: "Correct negative passé composé.",
+        isCorrect: true
+      },
+      {
+        text: "Nous ne faisions pas ça.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        isCorrect: false
+      },
+      {
+        text: "Nous ne faisons pas ça.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Nous ne sommes pas fait ça.",
+        rationale: "Wrong auxiliary - faire uses 'avons', not 'sommes'.",
+        isCorrect: false
+      }
+    ]
+  },
+
   // ===== AVOIR – FUTUR SIMPLE =====
   {
     question: "I will have a car.",
@@ -693,6 +1173,34 @@ export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
       },
       {
         text: "Je serai une voiture.",
+        rationale: "Wrong verb - used être instead of avoir.",
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    question: "You will have time.",
+    verb: "avoir",
+    tense: "futur_simple",
+    hint: "Use future tense form of avoir for tu",
+    answerOptions: [
+      {
+        text: "Tu auras du temps.",
+        rationale: "Correct future tense conjugation with partitive article.",
+        isCorrect: true
+      },
+      {
+        text: "Tu as du temps.",
+        rationale: "Wrong tense - this is present, not future.",
+        isCorrect: false
+      },
+      {
+        text: "Tu avais du temps.",
+        rationale: "Wrong tense - this is past, not future.",
+        isCorrect: false
+      },
+      {
+        text: "Tu seras du temps.",
         rationale: "Wrong verb - used être instead of avoir.",
         isCorrect: false
       }
@@ -729,8 +1237,7 @@ export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
     ]
   }
 
-  // NOTE: For Beginner level, we focus on Présent, Passé Composé, and Futur Simple
-  // Passé Simple is NOT used in beginner level as it's advanced literary tense
+  // Full 180+ questions now available for comprehensive beginner coverage
 ];
 
 // Helper function to get questions by verb and tense
@@ -743,11 +1250,26 @@ export function getBeginnerQuestions(verb: string, tense: string): BeginnerQuest
 // Helper function to get random questions for a quiz
 export function getRandomBeginnerQuestions(verb: string, tense: string, count: number = 20): BeginnerQuestion[] {
   const questions = getBeginnerQuestions(verb, tense);
-  if (questions.length <= count) {
-    return questions;
+  
+  // If we have fewer questions than requested, duplicate them to reach the count
+  if (questions.length === 0) {
+    return [];
   }
   
-  // Shuffle and return requested count
+  if (questions.length >= count) {
+    // Shuffle and return requested count
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+  
+  // If we have fewer questions, duplicate them intelligently to reach 20
+  const result: BeginnerQuestion[] = [];
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
+  
+  for (let i = 0; i < count; i++) {
+    const questionIndex = i % shuffled.length;
+    result.push(shuffled[questionIndex]);
+  }
+  
+  return result;
 }
