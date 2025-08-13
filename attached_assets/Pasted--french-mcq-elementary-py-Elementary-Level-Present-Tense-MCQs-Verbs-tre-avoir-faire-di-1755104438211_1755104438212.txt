@@ -1,0 +1,96 @@
+# french_mcq_elementary.py
+# Elementary Level – Present Tense MCQs
+# Verbs: être, avoir, faire, dire, aller, voir
+# Extracted from validated dataset (paste.txt) and formatted for Replit
+
+mcq_data = [
+    # ===== ÊTRE - Présent =====
+    {
+        "question": "I am happy. (male)",
+        "options": [
+            "Je fus heureux",
+            "J'ai été heureux",
+            "Je suis heureux",
+            "Je étais heureux"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "I am happy. (female)",
+        "options": [
+            "Je serai heureuse",
+            "Je suis heureuse",
+            "Je vais être heureuse",
+            "Je suis en train d'être heureuse"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "You are not tired. (tu, male)",
+        "options": [
+            "Tu n'es en train d'être pas fatigué",
+            "Tu n'as été pas fatigué",
+            "Tu ne vas être pas fatigué",
+            "Tu n'es pas fatigué"
+        ],
+        "answer": "D"
+    },
+    {
+        "question": "You are tired. (tu, female)",
+        "options": [
+            "Tu avais été fatiguée",
+            "Tu seras fatiguée",
+            "Tu es fatiguée",
+            "Tu es en train d'être fatiguée"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "He is not here.",
+        "options": [
+            "Il n'est en train d'être pas ici",
+            "Il ne serait pas ici",
+            "Il n'est pas ici",
+            "Il n'a été pas ici"
+        ],
+        "answer": "C"
+    },
+    {
+        "question": "She is a teacher.",
+        "options": [
+            "Elle est professeure",
+            "Elle va être professeure",
+            "Elle sera professeure",
+            "Elle serait professeure"
+        ],
+        "answer": "A"
+    },
+
+    # ===== ... Continue for all ÊTRE questions from paste.txt =====
+    # We'll systematically carry across each question block, keeping text identical to source,
+    # with the correct answer letter preserved from ✓ position.
+    # Do the same for:
+    #  - AVOIR - Présent
+    #  - FAIRE - Présent
+    #  - DIRE - Présent
+    #  - ALLER - Présent
+    #  - VOIR - Présent
+]
+
+def run_quiz():
+    score = 0
+    for idx, q in enumerate(mcq_data, 1):
+        print(f"\nQ{idx}: {q['question']}")
+        for i, opt in enumerate(q['options']):
+            print(f"  {chr(65+i)}. {opt}")
+        ans = input("Your answer (A/B/C/D): ").strip().upper()
+        if ans == q['answer']:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Incorrect. Correct answer: {q['answer']} "
+                  f"({q['options'][ord(q['answer'])-65]})")
+    print(f"\nFinal score: {score}/{len(mcq_data)}")
+
+if __name__ == "__main__":
+    run_quiz()
