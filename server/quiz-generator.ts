@@ -1,5 +1,5 @@
 import { GeneratedQuiz } from "./gemini-quiz";
-import { getRandomNoviceQuestions, type NoviceQuestion } from "./beginner-quiz-data";
+import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQuestion } from "./novice-quiz-data";
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
 
 // French verb conjugation data
@@ -1674,28 +1674,25 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   }
 
   // Use verified novice questions for Novice difficulty
-  if (difficulty === 'Novice' && ['être', 'avoir', 'faire'].includes(verb)) {
+  if (difficulty === 'Novice' && ['être', 'avoir', 'faire', 'aller'].includes(verb)) {
     // Map frontend tenses to our verified question tenses
     let mappedTense = tense.toLowerCase();
-    if (mappedTense === 'present') mappedTense = 'présent';
-    if (mappedTense === 'passé simple') mappedTense = 'passé_composé'; // Novice uses passé composé instead
+    if (mappedTense === 'présent' || mappedTense === 'present') mappedTense = 'present';
+    if (mappedTense === 'passé simple' || mappedTense === 'passé composé') mappedTense = 'passé_composé'; // Novice uses passé composé instead
     if (mappedTense === 'futur simple') mappedTense = 'futur_simple';
     
-    console.log(`🎓 Using verified novice questions for ${verb} - ${mappedTense} (original: ${tense})`);
+    console.log(`🎓 Using corrected verified novice questions for ${verb} - ${mappedTense} (original: ${tense})`);
     
     const noviceQuestions = getRandomNoviceQuestions(verb, mappedTense, 20);
     
     if (noviceQuestions.length > 0) {
-      console.log(`✅ Found ${noviceQuestions.length} verified novice questions`);
+      console.log(`✅ Found ${noviceQuestions.length} corrected verified novice questions`);
+      const convertedQuestions = convertNoviceToQuizFormat(noviceQuestions);
       return {
-        questions: noviceQuestions.map(q => ({
-          question: q.question,
-          hint: q.hint,
-          answerOptions: q.answerOptions
-        }))
+        questions: convertedQuestions
       };
     } else {
-      console.log(`⚠️ No verified questions found for ${verb} - ${mappedTense}, falling back to generated`);
+      console.log(`⚠️ No corrected verified questions found for ${verb} - ${mappedTense}, falling back to generated`);
     }
   }
   
