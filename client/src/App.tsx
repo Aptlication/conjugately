@@ -2415,54 +2415,54 @@ function App() {
 
         {/* Beginner Pronoun Guide Modal */}
         {showBeginnerPronounGuide && (
-          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-lg w-full mx-4">
+          <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 max-w-lg w-full max-h-[90vh] overflow-y-auto">
               <h3 className="text-2xl font-bold text-center mb-4 text-gray-200">📚 French Pronouns Guide</h3>
               <p className="text-slate-300 text-center mb-6">Learn the basic French pronouns before starting your quiz:</p>
               
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">👤</span>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">👤</span>
                   <div>
                     <span className="font-semibold text-white">Je</span>
                     <span className="text-gray-300 ml-2">= I</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">🫵</span>
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">🫵</span>
                   <div>
                     <span className="font-semibold text-white">Tu</span>
                     <span className="text-gray-300 ml-2">= You (informal)</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">👔</span>
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">👔</span>
                   <div>
                     <span className="font-semibold text-white">Vous</span>
                     <span className="text-gray-300 ml-2">= You (formal/plural)</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">👨‍👩‍👧‍👦</span>
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">👨‍👩‍👧‍👦</span>
                   <div>
                     <span className="font-semibold text-white">Nous</span>
                     <span className="text-gray-300 ml-2">= We</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">👥</span>
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">👥</span>
                   <div>
                     <span className="font-semibold text-white">Ils</span>
                     <span className="text-gray-300 ml-2">= They (masculine & mixed)</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 p-3 bg-gray-600/20 rounded-lg">
-                  <span className="text-2xl">👩‍👩‍👧‍👧</span>
+                <div className="flex items-center gap-2 p-2 bg-gray-600/20 rounded-lg">
+                  <span className="text-xl">👩‍👩‍👧‍👧</span>
                   <div>
                     <span className="font-semibold text-white">Elles</span>
                     <span className="text-gray-300 ml-2">= They (feminine)</span>
