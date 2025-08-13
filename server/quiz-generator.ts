@@ -1648,10 +1648,15 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
   
   // Use verified beginner questions for Beginner difficulty
   if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
-    const normalizedTense = tense.toLowerCase().replace('_', '_');
-    console.log(`🎓 Using verified beginner questions for ${verb} - ${normalizedTense}`);
+    // Map frontend tenses to our verified question tenses
+    let mappedTense = tense.toLowerCase();
+    if (mappedTense === 'present') mappedTense = 'présent';
+    if (mappedTense === 'passé simple') mappedTense = 'passé_composé'; // Beginner uses passé composé instead
+    if (mappedTense === 'futur simple') mappedTense = 'futur_simple';
     
-    const beginnerQuestions = getRandomBeginnerQuestions(verb, normalizedTense === 'present' ? 'présent' : normalizedTense, 20);
+    console.log(`🎓 Using verified beginner questions for ${verb} - ${mappedTense} (original: ${tense})`);
+    
+    const beginnerQuestions = getRandomBeginnerQuestions(verb, mappedTense, 20);
     
     if (beginnerQuestions.length > 0) {
       console.log(`✅ Found ${beginnerQuestions.length} verified beginner questions`);
@@ -1663,7 +1668,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         }))
       };
     } else {
-      console.log(`⚠️ No verified questions found for ${verb} - ${normalizedTense}, falling back to generated`);
+      console.log(`⚠️ No verified questions found for ${verb} - ${mappedTense}, falling back to generated`);
     }
   }
   

@@ -581,95 +581,156 @@ export const BEGINNER_VERIFIED_QUESTIONS: BeginnerQuestion[] = [
     ]
   },
 
-  // Add more questions for Passé Composé
-  // ===== ÊTRE – PASSÉ COMPOSÉ =====
+  // ===== AVOIR – PASSÉ COMPOSÉ =====  
   {
-    question: "I was tired. (male speaker)",
-    verb: "être",
+    question: "I had a car.",
+    verb: "avoir",
     tense: "passé_composé",
-    hint: "Use past tense form of être for je with masculine adjective",
+    hint: "Use past tense form of avoir for je",
     answerOptions: [
       {
-        text: "J'ai été fatigué.",
-        rationale: "Correct passé composé with masculine adjective agreement.",
+        text: "J'ai eu une voiture.",
+        rationale: "Correct passé composé conjugation of avoir.",
         isCorrect: true
       },
       {
-        text: "J'ai été fatiguée.",
-        rationale: "Wrong gender - 'fatiguée' is feminine, but speaker is male.",
+        text: "J'avais une voiture.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
         isCorrect: false
       },
       {
-        text: "Je suis fatigué.",
+        text: "J'ai une voiture.",
         rationale: "Wrong tense - this is present, not past.",
         isCorrect: false
       },
       {
-        text: "J'étais fatigué.",
-        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        text: "Je suis eu une voiture.",
+        rationale: "Wrong auxiliary - avoir uses 'ai', not 'suis'.",
         isCorrect: false
       }
     ]
   },
   {
-    question: "I was tired. (female speaker)",
-    verb: "être",
+    question: "You had time.",
+    verb: "avoir",
     tense: "passé_composé",
-    hint: "Use past tense form of être for je with feminine adjective",
+    hint: "Use past tense form of avoir for tu",
     answerOptions: [
       {
-        text: "J'ai été fatiguée.",
-        rationale: "Correct passé composé with feminine adjective agreement.",
+        text: "Tu as eu du temps.",
+        rationale: "Correct passé composé conjugation with partitive article.",
         isCorrect: true
       },
       {
-        text: "J'ai été fatigué.",
-        rationale: "Wrong gender - 'fatigué' is masculine, but speaker is female.",
+        text: "Tu avais du temps.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
         isCorrect: false
       },
       {
-        text: "Je suis fatiguée.",
+        text: "Tu as du temps.",
         rationale: "Wrong tense - this is present, not past.",
         isCorrect: false
       },
       {
-        text: "J'étais fatiguée.",
-        rationale: "Wrong tense - this is imperfect, not passé composé.",
+        text: "Tu es eu du temps.",
+        rationale: "Wrong auxiliary - avoir uses 'as', not 'es'.",
         isCorrect: false
       }
     ]
   },
 
-  // Add Futur Simple questions
-  // ===== ÊTRE – FUTUR SIMPLE =====
+  // ===== FAIRE – PASSÉ COMPOSÉ =====
   {
-    question: "I will be happy. (male speaker)",
-    verb: "être",
-    tense: "futur_simple",
-    hint: "Use future tense of être with masculine adjective",
+    question: "I did homework.",
+    verb: "faire",
+    tense: "passé_composé",
+    hint: "Use past tense form of faire for je",
     answerOptions: [
       {
-        text: "Je serai heureux.",
-        rationale: "Correct future tense with masculine adjective agreement.",
+        text: "J'ai fait mes devoirs.",
+        rationale: "Correct passé composé conjugation of faire.",
         isCorrect: true
       },
       {
-        text: "Je serai heureuse.",
-        rationale: "Wrong gender - 'heureuse' is feminine, but speaker is male.",
+        text: "Je faisais mes devoirs.",
+        rationale: "Wrong tense - this is imperfect, not passé composé.",
         isCorrect: false
       },
       {
-        text: "Je suis heureux.",
+        text: "Je fais mes devoirs.",
+        rationale: "Wrong tense - this is present, not past.",
+        isCorrect: false
+      },
+      {
+        text: "Je suis fait mes devoirs.",
+        rationale: "Wrong auxiliary - faire uses 'ai', not 'suis'.",
+        isCorrect: false
+      }
+    ]
+  },
+
+  // ===== AVOIR – FUTUR SIMPLE =====
+  {
+    question: "I will have a car.",
+    verb: "avoir",
+    tense: "futur_simple",
+    hint: "Use future tense form of avoir for je",
+    answerOptions: [
+      {
+        text: "J'aurai une voiture.",
+        rationale: "Correct future tense conjugation of avoir.",
+        isCorrect: true
+      },
+      {
+        text: "J'ai une voiture.",
         rationale: "Wrong tense - this is present, not future.",
         isCorrect: false
       },
       {
-        text: "J'ai été heureux.",
+        text: "J'avais une voiture.",
         rationale: "Wrong tense - this is past, not future.",
+        isCorrect: false
+      },
+      {
+        text: "Je serai une voiture.",
+        rationale: "Wrong verb - used être instead of avoir.",
+        isCorrect: false
+      }
+    ]
+  },
+
+  // ===== FAIRE – FUTUR SIMPLE =====
+  {
+    question: "I will do homework.",
+    verb: "faire",
+    tense: "futur_simple",
+    hint: "Use future tense form of faire for je",
+    answerOptions: [
+      {
+        text: "Je ferai mes devoirs.",
+        rationale: "Correct future tense conjugation of faire.",
+        isCorrect: true
+      },
+      {
+        text: "Je fais mes devoirs.",
+        rationale: "Wrong tense - this is present, not future.",
+        isCorrect: false
+      },
+      {
+        text: "Je faisais mes devoirs.",
+        rationale: "Wrong tense - this is past, not future.",
+        isCorrect: false
+      },
+      {
+        text: "Je serai mes devoirs.",
+        rationale: "Wrong verb - used être instead of faire.",
         isCorrect: false
       }
     ]
   }
+
+  // NOTE: For Beginner level, we focus on Présent, Passé Composé, and Futur Simple
+  // Passé Simple is NOT used in beginner level as it's advanced literary tense
 ];
 
 // Helper function to get questions by verb and tense
