@@ -1592,9 +1592,10 @@ function App() {
             <div className="space-y-4 max-h-96 overflow-y-auto">
               {quizData.map((question, index) => {
                 const userAnswerIndex = userAnswers[index];
-                const userAnswer = userAnswerIndex !== undefined ? question.answerOptions[userAnswerIndex] : null;
-                const correctAnswer = question.answerOptions.find((option: any) => option.isCorrect);
-                const isCorrect = userAnswer?.isCorrect || false;
+                const userAnswer = userAnswerIndex !== undefined ? question.options[userAnswerIndex] : null;
+                const correctIndex = question.correctAnswer.charCodeAt(0) - 65;
+                const correctAnswer = question.options[correctIndex];
+                const isCorrect = userAnswerIndex === correctIndex;
 
                 return (
                   <div key={index} className={`p-4 rounded-xl border ${
