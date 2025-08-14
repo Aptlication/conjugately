@@ -1908,7 +1908,7 @@ function App() {
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
-              <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 3 verbs (être, avoir, faire), Present, past, and future tenses</option>
+              <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 4 verbs (être, avoir, faire, aller), Present, past, and future tenses</option>
               <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - Top 6 verbs, Present, past, and future tenses</option>
               <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 11 verbs (être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir), Present, past, and future tenses</option>
               <option value="Advanced" className="bg-gray-800 text-white">🔴 Advanced - 13 verbs (10 regular + 3 reflexive), all tenses</option>
@@ -2148,7 +2148,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Novice Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    3 Units (20 questions each) + Final Exam (30 questions, 90% to pass)
+                    4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)
                   </div>
                 </button>
                 <button
