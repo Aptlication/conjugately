@@ -1144,8 +1144,20 @@ function App() {
     const currentQuestion = quizData[currentQuestionIndex];
     
     // Add safety check for currentQuestion
-    if (!currentQuestion || !currentQuestion.options) {
-      console.error('Current question is undefined or missing options:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
+    if (!currentQuestion) {
+      console.error('🔴 FIXED CODE: Current question is undefined:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
+      setQuizState('config');
+      return null;
+    }
+    
+    if (!currentQuestion.options) {
+      console.error('🔴 FIXED CODE: Current question missing options array:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
+      setQuizState('config');
+      return null;
+    }
+    
+    if (!Array.isArray(currentQuestion.options) || currentQuestion.options.length === 0) {
+      console.error('🔴 FIXED CODE: Options array is empty or invalid:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
       setQuizState('config');
       return null;
     }
