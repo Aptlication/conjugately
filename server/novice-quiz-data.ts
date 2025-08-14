@@ -1,8 +1,9 @@
-// Novice Level Subject-Verb Conjugation Quiz Data
+// Novice Level Full-Sentence Quiz Data
 // Corrected and validated content from user
-// Verbs: être, avoir, faire, aller
-// Tenses: Présent, Passé Composé, Futur Simple
+// Verbs: aller, faire, avoir, être (4 verbs)
+// Tenses: Présent, Passé Composé, Futur Simple (3 tenses each)
 // 20 questions per verb per tense = 240 total questions
+// Enhanced full-sentence approach with context
 
 export interface NoviceQuizQuestion {
   question: string;
@@ -11,28 +12,28 @@ export interface NoviceQuizQuestion {
 }
 
 export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[]>> = {
-  "être": {
+  "aller": {
     "present": [
-      {"question": "I am (Présent)", "options": ["Je suis", "Tu es", "Il est", "Nous sommes"], "answer": "A"},
-      {"question": "You are (informal)", "options": ["Tu es", "Je suis", "Il est", "Ils sont"], "answer": "A"},
-      {"question": "He is (Présent)", "options": ["Il est", "Elle est", "Tu es", "Ils sont"], "answer": "A"},
-      {"question": "She is (Présent)", "options": ["Elle est", "Il est", "Elles sont", "Tu es"], "answer": "A"},
-      {"question": "We are (Présent)", "options": ["Nous sommes", "Vous êtes", "Ils sont", "Je suis"], "answer": "A"},
-      {"question": "You are (formal/plural)", "options": ["Vous êtes", "Tu es", "Nous sommes", "Ils sont"], "answer": "A"},
-      {"question": "They are (male/mixed)", "options": ["Ils sont", "Elles sont", "Ils étaient", "Ils seront"], "answer": "A"},
-      {"question": "They are (female)", "options": ["Elles sont", "Ils sont", "Elles étaient", "Elles seront"], "answer": "A"},
-      {"question": "Am I?", "options": ["Suis-je ?", "Es-tu ?", "Est-il ?", "Sommes-nous ?"], "answer": "A"},
-      {"question": "Are you? (informal)", "options": ["Es-tu ?", "Suis-je ?", "Est-il ?", "Êtes-vous ?"], "answer": "A"},
-      {"question": "Is he?", "options": ["Est-il ?", "Est-elle ?", "Suis-je ?", "Es-tu ?"], "answer": "A"},
-      {"question": "Is she?", "options": ["Est-elle ?", "Est-il ?", "Es-tu ?", "Êtes-vous ?"], "answer": "A"},
-      {"question": "Are we?", "options": ["Sommes-nous ?", "Suis-je ?", "Êtes-vous ?", "Sont-ils ?"], "answer": "A"},
-      {"question": "Are you? (formal/plural)", "options": ["Êtes-vous ?", "Es-tu ?", "Sommes-nous ?", "Sont-ils ?"], "answer": "A"},
-      {"question": "Are they? (male/mixed)", "options": ["Sont-ils ?", "Sont-elles ?", "Êtes-vous ?", "Es-tu ?"], "answer": "A"},
-      {"question": "Are they? (female)", "options": ["Sont-elles ?", "Sont-ils ?", "Êtes-vous ?", "Es-tu ?"], "answer": "A"},
-      {"question": "I am not", "options": ["Je ne suis pas", "Tu n'es pas", "Il n'est pas", "Nous ne sommes pas"], "answer": "A"},
-      {"question": "He is not", "options": ["Il n'est pas", "Je ne suis pas", "Tu n'es pas", "Ils ne sont pas"], "answer": "A"},
-      {"question": "Aren't we?", "options": ["Ne sommes-nous pas ?", "N'êtes-vous pas ?", "Ne sont-ils pas ?", "Ne suis-je pas ?"], "answer": "A"},
-      {"question": "Aren't they? (female)", "options": ["Ne sont-elles pas ?", "Ne sont-ils pas ?", "N'êtes-vous pas ?", "Ne sommes-nous pas ?"], "answer": "A"}
+      {"question": "I am going / I go to the market. (Présent)", "options": ["Je vais au marché.", "Tu vas au marché.", "Il va au marché.", "Nous allons au marché."], "answer": "A"},
+      {"question": "You are not going / You do not go to school. (Présent - Negative)", "options": ["Tu ne vas pas à l'école.", "Je ne vais pas à l'école.", "Il ne va pas à l'école.", "Nous n'allons pas à l'école."], "answer": "A"},
+      {"question": "Is he going / Does he go home? (Présent - Question)", "options": ["Va-t-il à la maison ?", "Vas-tu à la maison ?", "Allons-nous à la maison ?", "Vont-ils à la maison ?"], "answer": "A"},
+      {"question": "We are going / We go to the beach. (Présent)", "options": ["Nous allons à la plage.", "Vous allez à la plage.", "Ils vont à la plage.", "Je vais à la plage."], "answer": "A"},
+      {"question": "She is not going / She does not go to the store. (Présent - Negative)", "options": ["Elle ne va pas au magasin.", "Il ne va pas au magasin.", "Tu ne vas pas au magasin.", "Nous n'allons pas au magasin."], "answer": "A"},
+      {"question": "Are you going / Do you go with us? (Présent - Question, formal/plural)", "options": ["Allez-vous avec nous ?", "Vas-tu avec nous ?", "Va-t-elle avec nous ?", "Vont-ils avec nous ?"], "answer": "A"},
+      {"question": "They are going / They go to the cinema. (Présent)", "options": ["Ils vont au cinéma.", "Elles vont au cinéma.", "Ils allaient au cinéma.", "Ils iront au cinéma."], "answer": "A"},
+      {"question": "I am not going / I do not go to work today. (Présent - Negative)", "options": ["Je ne vais pas au travail aujourd'hui.", "Tu ne vas pas au travail aujourd'hui.", "Il ne va pas au travail aujourd'hui.", "Nous n'allons pas au travail aujourd'hui."], "answer": "A"},
+      {"question": "Are we going / Do we go to the market? (Présent - Question)", "options": ["Allons-nous au marché ?", "Vas-tu au marché ?", "Va-t-il au marché ?", "Vont-ils au marché ?"], "answer": "A"},
+      {"question": "You are going / You go to the party. (Présent)", "options": ["Tu vas à la fête.", "Je vais à la fête.", "Il va à la fête.", "Vous allez à la fête."], "answer": "A"},
+      {"question": "I am going / I go sometimes to the park. (Présent)", "options": ["Je vais parfois au parc.", "Tu vas parfois au parc.", "Il va parfois au parc.", "Nous allons parfois au parc."], "answer": "A"},
+      {"question": "She is going / She goes every day to school. (Présent)", "options": ["Elle va tous les jours à l'école.", "Il va tous les jours à l'école.", "Tu vas tous les jours à l'école.", "Nous allons tous les jours à l'école."], "answer": "A"},
+      {"question": "They are not going / They do not go to the gym. (Présent - Negative, female)", "options": ["Elles ne vont pas au gymnase.", "Ils ne vont pas au gymnase.", "Vous n'allez pas au gymnase.", "Nous n'allons pas au gymnase."], "answer": "A"},
+      {"question": "Are you going / Do you go to the library? (Présent - Question, informal)", "options": ["Vas-tu à la bibliothèque ?", "Va-t-il à la bibliothèque ?", "Allons-nous à la bibliothèque ?", "Vont-ils à la bibliothèque ?"], "answer": "A"},
+      {"question": "He is going / He goes to work. (Présent)", "options": ["Il va au travail.", "Elle va au travail.", "Tu vas au travail.", "Ils vont au travail."], "answer": "A"},
+      {"question": "I am not going / I do not go to the market today. (Présent - Negative)", "options": ["Je ne vais pas au marché aujourd'hui.", "Tu ne vas pas au marché aujourd'hui.", "Il ne va pas au marché aujourd'hui.", "Nous n'allons pas au marché aujourd'hui."], "answer": "A"},
+      {"question": "Are they going / Do they go to the museum? (Présent - Question, male)", "options": ["Vont-ils au musée ?", "Vont-elles au musée ?", "Allez-vous au musée ?", "Vas-tu au musée ?"], "answer": "A"},
+      {"question": "She is going / She goes with her friends. (Présent)", "options": ["Elle va avec ses amis.", "Il va avec ses amis.", "Tu vas avec tes amis.", "Nous allons avec nos amis."], "answer": "A"},
+      {"question": "We are not going / We do not go to the city. (Présent - Negative)", "options": ["Nous n'allons pas en ville.", "Vous n'allez pas en ville.", "Ils ne vont pas en ville.", "Je ne vais pas en ville."], "answer": "A"},
+      {"question": "Are you going / Do you go to the stadium? (Présent - Question, formal)", "options": ["Allez-vous au stade ?", "Vas-tu au stade ?", "Va-t-il au stade ?", "Vont-ils au stade ?"], "answer": "A"}
     ],
     "passé_composé": [
       {"question": "I have been", "options": ["J'ai été", "Tu as été", "Il a été", "Nous avons été"], "answer": "A"},
