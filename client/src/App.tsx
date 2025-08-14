@@ -142,21 +142,22 @@ function App() {
       }
     },
     "Novice": { 
-      verbs: ["être", "avoir", "faire"], // 3 most used verbs for novice
+      verbs: ["être", "avoir", "faire", "aller"], // 4 most used verbs for novice (now includes aller)
       timeFrames: ["Present", "Past", "Future"], 
-      tenses: ["Présent", "Passé Simple", "Futur Simple"],
+      tenses: ["Présent", "Passé Composé", "Futur Simple"],
       simpleFormat: true, // Use subject+verb format (Je suis, Tu es) instead of full sentences
       courseStructure: {
         units: [
           { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
           { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 }
+          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
+          { name: "Unit 4: aller (to go)", verb: "aller", questions: 20 }
         ],
         finalExam: { 
-          questions: 30, 
+          questions: 40, 
           questionsPerVerb: 10, 
-          passThreshold: 27,
-          description: "10 questions from each of the 3 verbs"
+          passThreshold: 36,
+          description: "10 questions from each of the 4 verbs"
         }
       }
     },
@@ -1137,6 +1138,14 @@ function App() {
 
   if (quizState === 'active' && quizData.length) {
     const currentQuestion = quizData[currentQuestionIndex];
+    
+    // Add safety check for currentQuestion
+    if (!currentQuestion || !currentQuestion.answerOptions) {
+      console.error('Current question is undefined or missing answerOptions:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
+      setQuizState('config');
+      return null;
+    }
+    
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
         <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
