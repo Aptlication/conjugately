@@ -1117,8 +1117,12 @@ function App() {
     let correctAnswers = 0;
     quizData.forEach((question, index) => {
       const userAnswerIndex = userAnswers[index];
-      if (userAnswerIndex !== undefined && question.answerOptions[userAnswerIndex]?.isCorrect) {
-        correctAnswers++;
+      if (userAnswerIndex !== undefined) {
+        // Convert the correctAnswer (A, B, C, D) to index (0, 1, 2, 3)
+        const correctIndex = question.correctAnswer.charCodeAt(0) - 65;
+        if (userAnswerIndex === correctIndex) {
+          correctAnswers++;
+        }
       }
     });
     return { correctAnswers, totalQuestions: quizData.length };
@@ -1140,8 +1144,8 @@ function App() {
     const currentQuestion = quizData[currentQuestionIndex];
     
     // Add safety check for currentQuestion
-    if (!currentQuestion || !currentQuestion.answerOptions) {
-      console.error('Current question is undefined or missing answerOptions:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
+    if (!currentQuestion || !currentQuestion.options) {
+      console.error('Current question is undefined or missing options:', { currentQuestion, currentQuestionIndex, quizDataLength: quizData.length });
       setQuizState('config');
       return null;
     }
@@ -1210,7 +1214,7 @@ function App() {
           </div>
 
           <div className="mb-8">
-            {currentQuestion.answerOptions.map((option: any, index: number) => (
+            {currentQuestion.options.map((option: string, index: number) => (
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
@@ -1225,7 +1229,7 @@ function App() {
                 <span className="w-8 h-8 rounded-full border-2 border-current flex items-center justify-center mr-4 text-sm font-bold">
                   {String.fromCharCode(65 + index)}
                 </span>
-                {option.text}
+                {option}
               </button>
             ))}
           </div>
@@ -1234,11 +1238,11 @@ function App() {
 
           {selectedAnswerIndex !== null && isAnswerConfirmed && (
             <div className={`mb-6 p-4 rounded-xl border ${
-              currentQuestion.answerOptions[selectedAnswerIndex].isCorrect
+              String.fromCharCode(65 + selectedAnswerIndex) === currentQuestion.correctAnswer
                 ? 'border-green-500/30 bg-green-500/20 text-green-200'
                 : 'border-red-500/30 bg-red-500/20 text-red-200'
             }`}>
-              <p>📝 {currentQuestion.answerOptions[selectedAnswerIndex].rationale}</p>
+              <p>📝 {currentQuestion.rationale}</p>
             </div>
           )}
 
