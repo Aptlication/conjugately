@@ -2081,7 +2081,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Novice</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    3 verbs (être, avoir, faire) • Present, past, and future tenses
+                    4 verbs (être, avoir, faire, aller) • Present, past, and future tenses
                   </div>
                 </button>
                 
