@@ -1617,17 +1617,17 @@ function App() {
                               Your answer:
                             </span>
                             <span className={isCorrect ? 'text-green-200' : 'text-red-200'}>
-                              {userAnswer ? userAnswer.text : 'No answer selected'}
+                              {userAnswer || 'No answer selected'}
                             </span>
                           </div>
                           {!isCorrect && correctAnswer && (
                             <div className="flex items-center gap-2">
                               <span className="text-green-300">Correct answer:</span>
-                              <span className="text-green-200">{correctAnswer.text}</span>
+                              <span className="text-green-200">{correctAnswer}</span>
                             </div>
                           )}
                           <div className="text-slate-300 text-xs mt-2">
-                            {userAnswer?.rationale || correctAnswer?.rationale}
+                            {question.rationale}
                           </div>
                         </div>
                       </div>
