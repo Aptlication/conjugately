@@ -25,6 +25,8 @@ function App() {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+  const [completedCourses, setCompletedCourses] = useState<any[]>([]);
+  const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -88,8 +90,6 @@ function App() {
   } | null>(null);
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [showExamOption, setShowExamOption] = useState(false);
-  const [completedCourses, setCompletedCourses] = useState<any[]>([]);
-  const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
 
 
   // Most used French verbs in order of frequency - including reflexive verbs for complete coverage
