@@ -1559,6 +1559,8 @@ function convertIngToSimple(verbIng: string): string {
     'taking': 'take',
     'getting': 'get',
     'waking': 'wake',
+    'washing': 'wash',
+    'dressing': 'dress',
     'leaving': 'leave',
     'calling': 'call'
   };
@@ -1703,6 +1705,7 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
     .replace(/They feel/g, 'They feel (male/mixed)')
     .replace(/They wash/g, 'They wash (male/mixed)')
     .replace(/They wake up/g, 'They wake up (male/mixed)')
+    .replace(/They call/g, 'They call (male/mixed)')
     .replace(/They dress/g, 'They dress (male/mixed)')
     .replace(/They don't/g, 'They don\'t (male/mixed)')
     .replace(/They used to/g, 'They used to (male/mixed)')
@@ -1718,6 +1721,10 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
     .replace(/They wanted/g, 'They wanted (male/mixed)')
     .replace(/They came/g, 'They came (male/mixed)')
     .replace(/They took/g, 'They took (male/mixed)')
+    .replace(/They washed/g, 'They washed (male/mixed)')
+    .replace(/They woke/g, 'They woke (male/mixed)')
+    .replace(/They called/g, 'They called (male/mixed)')
+    .replace(/They dressed/g, 'They dressed (male/mixed)')
     .replace(/They will/g, 'They will (male/mixed)')
     .replace(/They would/g, 'They would (male/mixed)');
 }
