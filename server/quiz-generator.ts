@@ -884,7 +884,7 @@ function generateExamDistractors(correctForm: string, verb: string, tense: strin
   const distractors: string[] = [];
   const verbData = VERB_CONJUGATIONS[verb as keyof typeof VERB_CONJUGATIONS];
   
-  if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
+  if (!verbData) return ["manque", "erreur", "faux"];
   
   // Strategy 1: Same verb, different tenses (1 distractor max)
   Object.entries(verbData).forEach(([t, conjugations]) => {
@@ -949,7 +949,7 @@ function generateDistractors(correctForm: string, verb: string, tense: string, p
   const distractors: string[] = [];
   const verbData = VERB_CONJUGATIONS[verb as keyof typeof VERB_CONJUGATIONS];
   
-  if (!verbData) return ["incorrect1", "incorrect2", "incorrect3"];
+  if (!verbData) return ["manque", "erreur", "faux"];
   
   // Wrong tenses for same pronoun (maintains proper pronoun agreement)
   Object.entries(verbData).forEach(([t, conjugations]) => {
@@ -1997,9 +1997,14 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       wrongAnswers.push(wrong);
     });
     
-    // Ensure we have exactly 4 options
+    // Ensure we have exactly 4 options by generating proper French fallback answers
     while (wrongAnswers.length < 3) {
-      wrongAnswers.push(`${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} [incorrect]`);
+      // Generate proper French wrong answers as fallbacks instead of placeholder text
+      const fallbackPronouns = ['je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles'];
+      const fallbackPronoun = fallbackPronouns[wrongAnswers.length % fallbackPronouns.length];
+      const fallbackConjugation = tenseData[fallbackPronoun] || "manque";
+      const fallbackAnswer = applyContractions(fallbackPronoun, fallbackConjugation);
+      wrongAnswers.push(fallbackAnswer);
     }
     
     const allAnswers = [
