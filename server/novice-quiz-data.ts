@@ -320,11 +320,14 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
       isCorrect: optionIndex === correctIndex
     }));
 
+    // Shuffle the answer options to randomize correct answer position
+    const shuffledAnswerOptions = [...answerOptions].sort(() => Math.random() - 0.5);
+
     return {
       id: index + 1,
       question: q.question,
       hint: `Focus on the subject and verb agreement.`,
-      answerOptions: answerOptions
+      answerOptions: shuffledAnswerOptions
     };
   });
 }
