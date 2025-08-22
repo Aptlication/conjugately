@@ -1935,15 +1935,7 @@ function App() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">2. Choose a French Verb</label>
-              <button
-                onClick={handleChooseVerb}
-                className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700"
-              >
-                Choose for me
-              </button>
-            </div>
+            <label className="text-lg font-semibold mb-4 block">2. Choose a French Verb</label>
             <select
               value={selectedVerb}
               onChange={(e) => setSelectedVerb(e.target.value)}
@@ -1965,20 +1957,7 @@ function App() {
           </div>
 
           <div className="mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">3. Choose Time Frame</label>
-              <button
-                onClick={handleChooseTimeFrame}
-                disabled={!selectedDifficulty || !selectedVerb}
-                className={`px-4 py-2 rounded-lg font-medium ${
-                  selectedVerb
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                    : 'bg-slate-600 text-slate-400 cursor-not-allowed'
-                }`}
-              >
-                Choose for me
-              </button>
-            </div>
+            <label className="text-lg font-semibold mb-4 block">3. Choose Time Frame</label>
             <select
               value={selectedTimeFrame}
               onChange={(e) => { 
@@ -2024,20 +2003,7 @@ function App() {
 
           {selectedDifficulty === "Advanced" && (
             <div className="mb-8">
-              <div className="flex justify-between items-center mb-4">
-                <label className="text-lg font-semibold">4. Choose Specific Tense</label>
-                <button
-                  onClick={handleChooseTenseType}
-                  disabled={!selectedTimeFrame}
-                  className={`px-4 py-2 rounded-lg font-medium ${
-                    selectedTimeFrame
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                      : 'bg-slate-600 text-slate-400 cursor-not-allowed'
-                  }`}
-                >
-                  Choose for me
-                </button>
-              </div>
+              <label className="text-lg font-semibold mb-4 block">4. Choose Specific Tense</label>
               <select
                 value={selectedTenseType}
                 onChange={(e) => setSelectedTenseType(e.target.value)}
