@@ -1645,7 +1645,7 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
 }
 
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
-  console.log(`🔧 Generating internal quiz for ${verb} - ${tense}${isExam ? ' (FINAL EXAM with enhanced distractors)' : ' (regular unit quiz)'}`);
+  console.log(`🔧 Using internal quiz system for ${verb} - ${tense}${isExam ? ' (FINAL EXAM)' : ''}`);
   
   // Use verified beginner pronoun questions for Beginner difficulty
   if (difficulty === 'Beginner' && ['être', 'avoir', 'faire'].includes(verb)) {
