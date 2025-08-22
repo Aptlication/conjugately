@@ -1789,8 +1789,10 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if (isExam) {
         // Use enhanced exam distractors (mixed verbs from different difficulty levels)
         const distractors = generateExamDistractors(conjugation, verb, normalizedTense, pronoun);
-        wrongAnswers = distractors.slice(0, 3).map(form => {
-          if (shouldBeNegative) {
+        wrongAnswers = distractors.slice(0, 3).map((form, index) => {
+          // Mix positive and negative distractors for better pedagogy
+          const makeDistractorNegative = index === 0; // Only first distractor is negative
+          if (makeDistractorNegative) {
             return buildNegativeFrench(pronoun, form, "", normalizedTense, verb);
           } else {
             return applyContractions(pronoun, form);
@@ -1801,9 +1803,11 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         wrongAnswers = pronouns
           .filter(p => p !== pronoun)
           .slice(0, 3)
-          .map(wrongPronoun => {
+          .map((wrongPronoun, index) => {
             const wrongConjugation = tenseData[wrongPronoun];
-            if (shouldBeNegative) {
+            // Mix positive and negative distractors for better pedagogy
+            const makeDistractorNegative = index === 0; // Only first distractor is negative
+            if (makeDistractorNegative) {
               return buildNegativeFrench(wrongPronoun, wrongConjugation, "", normalizedTense, verb);
             } else {
               return applyContractions(wrongPronoun, wrongConjugation);
@@ -1890,10 +1894,12 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     const distractors = isExam 
       ? generateExamDistractors(correctForm, verb, normalizedTense, pronoun)
       : generateDistractors(correctForm, verb, normalizedTense, pronoun);
-    distractors.slice(0, 3).forEach(form => {
+    distractors.slice(0, 3).forEach((form, index) => {
       let wrong;
       
-      if (shouldBeNegative) {
+      // Mix positive and negative distractors for better pedagogy
+      const makeDistractorNegative = index === 0; // Only first distractor is negative
+      if (makeDistractorNegative) {
         // Use the same comprehensive negation logic for distractors
         wrong = buildNegativeFrench(pronoun, form, context.fr_context, normalizedTense, verb);
       } else {
