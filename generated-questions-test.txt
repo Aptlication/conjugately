@@ -1,4 +1,4 @@
-I won't do homework.
+I will not do homework.
 You will make dinner.
 He will do exercise.
 She will make a cake.
@@ -6,5 +6,5 @@ We will do shopping.
 You (plural) will make music.
 They (masculine) will do work.
 I will do anything.
-She will don't make mistakes.
+She will not make mistakes.
 We will do that.

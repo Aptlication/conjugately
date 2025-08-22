@@ -18,4 +18,4 @@ Total entries: 205
 ✅ None found
 
 ### 5. Generated Quiz Grammar Issues:
-9:She will don't make mistakes.
+9:She will not make mistakes.

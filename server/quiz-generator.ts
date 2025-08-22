@@ -1188,7 +1188,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   
   // CRITICAL: Fix any existing "will don't" double negations FIRST
   if (sentence.includes("will don't")) {
-    return sentence.replace("will don't", "won't");
+    return sentence.replace("will don't", "will not");
   }
   
   // Handle predefined negative contexts - don't apply double negation
@@ -1199,7 +1199,7 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   
   // CRITICAL: Handle ALL future tense cases FIRST to prevent "will don't" constructions
   if (sentence.includes(" will ")) {
-    return sentence.replace(" will ", " won't ");
+    return sentence.replace(" will ", " will not ");
   }
   
   // For simple "to be" forms without trailing space (e.g., "I am", "He is")
@@ -1312,54 +1312,54 @@ function convertToNegativeEnglish(englishSentence: string, pronoun: string): str
   
   // For future tense with "will" - handle all cases first to prevent "will don't" constructions
   if (sentence.includes(" will have")) {
-    return sentence.replace(" will have", " won't have");
+    return sentence.replace(" will have", " will not have");
   }
   if (sentence.includes(" will be")) {
-    return sentence.replace(" will be", " won't be");
+    return sentence.replace(" will be", " will not be");
   }
   if (sentence.includes(" will do")) {
-    return sentence.replace(" will do", " won't do");
+    return sentence.replace(" will do", " will not do");
   }
   if (sentence.includes(" will make")) {
-    return sentence.replace(" will make", " won't make");
+    return sentence.replace(" will make", " will not make");
   }
   if (sentence.includes(" will go")) {
-    return sentence.replace(" will go", " won't go");
+    return sentence.replace(" will go", " will not go");
   }
   if (sentence.includes(" will see")) {
-    return sentence.replace(" will see", " won't see");
+    return sentence.replace(" will see", " will not see");
   }
   if (sentence.includes(" will say")) {
-    return sentence.replace(" will say", " won't say");
+    return sentence.replace(" will say", " will not say");
   }
   if (sentence.includes(" will know")) {
-    return sentence.replace(" will know", " won't know");
+    return sentence.replace(" will know", " will not know");
   }
   if (sentence.includes(" will want")) {
-    return sentence.replace(" will want", " won't want");
+    return sentence.replace(" will want", " will not want");
   }
   if (sentence.includes(" will come")) {
-    return sentence.replace(" will come", " won't come");
+    return sentence.replace(" will come", " will not come");
   }
   if (sentence.includes(" will get")) {
-    return sentence.replace(" will get", " won't get");
+    return sentence.replace(" will get", " will not get");
   }
   if (sentence.includes(" will feel")) {
-    return sentence.replace(" will feel", " won't feel");
+    return sentence.replace(" will feel", " will not feel");
   }
   if (sentence.includes(" will wash")) {
-    return sentence.replace(" will wash", " won't wash");
+    return sentence.replace(" will wash", " will not wash");
   }
   if (sentence.includes(" will wake")) {
-    return sentence.replace(" will wake", " won't wake");
+    return sentence.replace(" will wake", " will not wake");
   }
   // General "will" replacement for any remaining cases
   if (sentence.includes(" will ")) {
-    return sentence.replace(" will ", " won't ");
+    return sentence.replace(" will ", " will not ");
   }
   
   // For other verbs - add "don't" or "doesn't" ONLY if not already handled by will/future cases
-  if (!sentence.includes("will") && !sentence.includes("won't")) {
+  if (!sentence.includes("will") && !sentence.includes("will not")) {
     const words = sentence.split(" ");
     if (words.length >= 2) {
       const subject = words[0];
@@ -1953,9 +1953,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           englishQuestion = removeProgressiveFormsOnly(englishQuestion);
         }
       } else {
-        // For future tense, simply replace "will" with "won't" - NO other negation logic
+        // For future tense, simply replace "will" with "will not" - NO other negation logic
         if (normalizedTense === 'futur_simple') {
-          englishQuestion = englishQuestion.replace(/ will /g, " won't ");
+          englishQuestion = englishQuestion.replace(/ will /g, " will not ");
         } else {
           // For other tenses, apply negation to original context (before tense conversion)
           englishQuestion = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun);
@@ -1967,8 +1967,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         
         // CRITICAL: Final cleanup of any grammar issues that slipped through
         englishQuestion = englishQuestion
-          .replace(/will don't/g, "won't")
-          .replace(/will doesn't/g, "won't")
+          .replace(/will don't/g, "will not")
+          .replace(/will doesn't/g, "will not")
           .replace(/used to don't/g, "didn't use to")
           .replace(/used to doesn't/g, "didn't use to")
           .replace(/doingn't/g, "not doing")
@@ -1981,9 +1981,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           .replace(/will am/g, "will be")
           .replace(/will is/g, "will be")
           .replace(/will are/g, "will be")
-          .replace(/won't am/g, "won't be")
-          .replace(/won't is/g, "won't be")
-          .replace(/won't are/g, "won't be");
+          .replace(/will not am/g, "will not be")
+          .replace(/will not is/g, "will not be")
+          .replace(/will not are/g, "will not be");
       }
     } else {
       // For positive questions, only process if context is NOT already negative
