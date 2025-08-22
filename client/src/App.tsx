@@ -1898,15 +1898,7 @@ function App() {
 
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <label className="text-lg font-semibold">1. Choose Difficulty</label>
-              <button
-                onClick={() => setShowDifficultyModal(true)}
-                className="px-4 py-2 rounded-lg font-medium bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700"
-              >
-                Choose for me
-              </button>
-            </div>
+            <label className="text-lg font-semibold mb-4 block">1. Choose Difficulty</label>
             <select
               value={selectedDifficulty || ""}
               onChange={(e) => {
