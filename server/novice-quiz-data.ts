@@ -307,12 +307,24 @@ export function getRandomNoviceQuestions(verb: string, tense: string, count: num
 }
 
 export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[]) {
-  return noviceQuestions.map((q, index) => ({
-    id: index + 1,
-    question: q.question,
-    options: q.options,
-    correctAnswer: q.answer,
-    hint: `Focus on the subject and verb agreement.`,
-    rationale: `The correct answer follows French conjugation rules for this verb and tense.`
-  }));
+  return noviceQuestions.map((q, index) => {
+    // Determine correct answer index (A=0, B=1, C=2, D=3)
+    const correctIndex = q.answer === 'A' ? 0 : q.answer === 'B' ? 1 : q.answer === 'C' ? 2 : 3;
+    
+    // Convert options to answerOptions format
+    const answerOptions = q.options.map((optionText, optionIndex) => ({
+      text: optionText,
+      rationale: optionIndex === correctIndex 
+        ? "Correct! This follows proper French conjugation rules."
+        : "This is not the correct conjugation for this subject and tense.",
+      isCorrect: optionIndex === correctIndex
+    }));
+
+    return {
+      id: index + 1,
+      question: q.question,
+      hint: `Focus on the subject and verb agreement.`,
+      answerOptions: answerOptions
+    };
+  });
 }
