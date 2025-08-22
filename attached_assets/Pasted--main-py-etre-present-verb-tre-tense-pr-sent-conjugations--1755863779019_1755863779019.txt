@@ -1,0 +1,142 @@
+# main.py
+
+etre_present = {
+    "verb": "être",
+    "tense": "présent",
+    "conjugations": {
+        "je": "suis",
+        "tu": "es",
+        "il / elle / on": "est",
+        "nous": "sommes",
+        "vous": "êtes",
+        "ils / elles": "sont"
+    },
+    "examples": [
+        {"en": "I am happy.", "fr": "Je suis heureux / heureuse."},
+        {"en": "You are tired.", "fr": "Tu es fatigué / fatiguée."},
+        {"en": "He is a student.", "fr": "Il est étudiant."},
+        {"en": "She is a teacher.", "fr": "Elle est professeure."},
+        {"en": "We are friends.", "fr": "Nous sommes amis."},
+        {"en": "You (plural) are ready.", "fr": "Vous êtes prêts."},
+        {"en": "They are busy.", "fr": "Ils sont occupés."},
+        {"en": "They (fem) are at school.", "fr": "Elles sont à l’école."},
+        {"en": "I am not here.", "fr": "Je ne suis pas ici."},
+        {"en": "She is not sick.", "fr": "Elle n’est pas malade."},
+        {"en": "We are not late.", "fr": "Nous ne sommes pas en retard."}
+    ],
+    "quiz": [
+        {
+            "question": "I am happy.",
+            "hint": "Use je + être (present)",
+            "options": {
+                "A": "Je suis heureux.",
+                "B": "Je es heureux.",
+                "C": "Je est heureux.",
+                "D": "J’étais heureux."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: je suis."
+        },
+        {
+            "question": "You are tired.",
+            "hint": "Use tu + être (present)",
+            "options": {
+                "A": "Tu es fatigué.",
+                "B": "Tu suis fatigué.",
+                "C": "Tu êtes fatigué.",
+                "D": "Tu sera fatigué."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: tu es."
+        },
+        {
+            "question": "He is a student.",
+            "options": {
+                "A": "Il est étudiant.",
+                "B": "Il es étudiant.",
+                "C": "Il suis étudiant.",
+                "D": "Il était étudiant."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: il est."
+        },
+        {
+            "question": "We are friends.",
+            "options": {
+                "A": "Nous sommes amis.",
+                "B": "Nous sont amis.",
+                "C": "Nous êtes amis.",
+                "D": "Nous avons amis."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: nous sommes."
+        },
+        {
+            "question": "You (plural) are ready.",
+            "options": {
+                "A": "Vous êtes prêts.",
+                "B": "Vous es prêts.",
+                "C": "Vous sommes prêts.",
+                "D": "Vous serez prêts."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: vous êtes."
+        },
+        {
+            "question": "She is not here.",
+            "hint": "Negation ne...pas around être",
+            "options": {
+                "A": "Elle n’est pas ici.",
+                "B": "Elle ne pas est ici.",
+                "C": "Elle est ne pas ici.",
+                "D": "Elle n’était pas ici."
+            },
+            "answer": "A",
+            "explanation": "Correct negation: Elle n’est pas."
+        },
+        {
+            "question": "They are busy.",
+            "options": {
+                "A": "Ils sont occupés.",
+                "B": "Ils es occupés.",
+                "C": "Ils sommes occupés.",
+                "D": "Ils étaient occupés."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: ils sont."
+        },
+        {
+            "question": "She is a teacher.",
+            "options": {
+                "A": "Elle est professeure.",
+                "B": "Elle suis professeure.",
+                "C": "Elle sont professeure.",
+                "D": "Elle sera professeure."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: elle est."
+        },
+        {
+            "question": "We are not late.",
+            "options": {
+                "A": "Nous ne sommes pas en retard.",
+                "B": "Nous sommes pas en retard.",
+                "C": "Nous ne sont pas en retard.",
+                "D": "Nous avons en retard."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation with negation."
+        },
+        {
+            "question": "I am not here.",
+            "options": {
+                "A": "Je ne suis pas ici.",
+                "B": "Je suis pas ici.",
+                "C": "Je es pas ici.",
+                "D": "J’ai pas ici."
+            },
+            "answer": "A",
+            "explanation": "Correct negation: Je ne suis pas."
+        }
+    ]
+}
