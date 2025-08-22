@@ -1556,6 +1556,7 @@ function convertIngToSimple(verbIng: string): string {
     'knowing': 'know',
     'wanting': 'want',
     'coming': 'come',
+    'taking': 'take',
     'getting': 'get',
     'waking': 'wake',
     'leaving': 'leave',
@@ -1582,6 +1583,7 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
     'pouvoir': { present: 'can', passé_simple: 'could', passé_composé: 'could', futur_simple: 'will be able to', présent_progressif: 'being able to', plus_que_parfait: 'had been able to', imparfait: 'could' },
     'vouloir': { present: 'want', passé_simple: 'wanted', passé_composé: 'wanted', futur_simple: 'will want', présent_progressif: 'wanting', plus_que_parfait: 'had wanted', imparfait: 'wanted' },
     'venir': { present: 'come', passé_simple: 'came', passé_composé: 'came', futur_simple: 'will come', présent_progressif: 'coming', plus_que_parfait: 'had come', imparfait: 'was coming' },
+    'prendre': { present: 'take', passé_simple: 'took', passé_composé: 'took', futur_simple: 'will take', présent_progressif: 'taking', plus_que_parfait: 'had taken', imparfait: 'was taking' },
     'se lever': { present: 'get up', passé_simple: 'got up', passé_composé: 'got up', futur_simple: 'will get up', présent_progressif: 'getting up', plus_que_parfait: 'had gotten up', imparfait: 'was getting up' },
     's\'appeler': { present: 'be called', passé_simple: 'was called', passé_composé: 'was called', futur_simple: 'will be called', présent_progressif: 'being called', plus_que_parfait: 'had been called', imparfait: 'was called' },
     'se sentir': { present: 'feel', passé_simple: 'felt', passé_composé: 'felt', futur_simple: 'will feel', présent_progressif: 'feeling', plus_que_parfait: 'had felt', imparfait: 'was feeling' },
@@ -1660,6 +1662,7 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
       if (verb === 'pouvoir') return `${englishPronoun} can`;
       if (verb === 'vouloir') return `${englishPronoun} wants`;
       if (verb === 'venir') return `${englishPronoun} comes`;
+      if (verb === 'prendre') return `${englishPronoun} takes`;
       if (verb === 'se lever') return `${englishPronoun} gets up`;
       if (verb === 's\'appeler') return `${englishPronoun} is called`;
       if (verb === 'se sentir') return `${englishPronoun} feels`;
@@ -1694,6 +1697,7 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
     .replace(/They can/g, 'They can (male/mixed)')
     .replace(/They want/g, 'They want (male/mixed)')
     .replace(/They come/g, 'They come (male/mixed)')
+    .replace(/They take/g, 'They take (male/mixed)')
     .replace(/They get up/g, 'They get up (male/mixed)')
     .replace(/They are called/g, 'They are called (male/mixed)')
     .replace(/They feel/g, 'They feel (male/mixed)')
@@ -1703,6 +1707,7 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
     .replace(/They don't/g, 'They don\'t (male/mixed)')
     .replace(/They used to/g, 'They used to (male/mixed)')
     .replace(/They were/g, 'They were (male/mixed)')
+    .replace(/They would/g, 'They would (male/mixed)')
     .replace(/They did/g, 'They did (male/mixed)')
     .replace(/They went/g, 'They went (male/mixed)')
     .replace(/They made/g, 'They made (male/mixed)')
@@ -1712,6 +1717,7 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
     .replace(/They could/g, 'They could (male/mixed)')
     .replace(/They wanted/g, 'They wanted (male/mixed)')
     .replace(/They came/g, 'They came (male/mixed)')
+    .replace(/They took/g, 'They took (male/mixed)')
     .replace(/They will/g, 'They will (male/mixed)')
     .replace(/They would/g, 'They would (male/mixed)');
 }
