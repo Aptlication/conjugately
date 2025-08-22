@@ -75,6 +75,7 @@ export default function FrenchQuiz() {
 
 
   const handleChooseVerb = () => {
+    console.log('handleChooseVerb called - should only select a verb');
     const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
     setSelectedVerb(randomVerb);
   };
@@ -95,6 +96,7 @@ export default function FrenchQuiz() {
   };
 
   const handleChooseAll = () => {
+    console.log('handleChooseAll called - should open modal');
     setShowAdvancedyModal(true);
   };
 
