@@ -311,6 +311,9 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
     // Determine correct answer index (A=0, B=1, C=2, D=3)
     const correctIndex = q.answer === 'A' ? 0 : q.answer === 'B' ? 1 : q.answer === 'C' ? 2 : 3;
     
+    // Remove tense indicators from question text (e.g., "(Futur Simple)", "(Présent - Negative)")
+    const cleanQuestion = q.question.replace(/\s*\([^)]*\)\s*$/g, '').trim();
+    
     // Convert options to answerOptions format
     const answerOptions = q.options.map((optionText, optionIndex) => ({
       text: optionText,
@@ -325,7 +328,7 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
 
     return {
       id: index + 1,
-      question: q.question,
+      question: cleanQuestion,
       hint: `Focus on the subject and verb agreement.`,
       answerOptions: shuffledAnswerOptions
     };
