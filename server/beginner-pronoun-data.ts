@@ -495,6 +495,208 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "Je ferai", rationale: "This means 'I will do'.", isCorrect: false }
         ]
       }
+    ],
+    "Futur Simple": [
+      {
+        question: "I will do / I will make",
+        hint: "First person singular of faire in future tense",
+        answerOptions: [
+          { text: "Je ferai", rationale: "Correct! 'Je ferai' is 'I will do/make' in French.", isCorrect: true },
+          { text: "Tu feras", rationale: "This means 'you will do/make' (informal).", isCorrect: false },
+          { text: "Il fera", rationale: "This means 'he will do/make'.", isCorrect: false },
+          { text: "Nous ferons", rationale: "This means 'we will do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You will do / You will make (informal)",
+        hint: "Second person singular informal of faire in future",
+        answerOptions: [
+          { text: "Tu feras", rationale: "Correct! 'Tu feras' is 'you will do/make' (informal) in French.", isCorrect: true },
+          { text: "Je ferai", rationale: "This means 'I will do/make'.", isCorrect: false },
+          { text: "Vous ferez", rationale: "This means 'you will do/make' (formal/plural).", isCorrect: false },
+          { text: "Ils feront", rationale: "This means 'they will do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He will do / He will make",
+        hint: "Third person singular masculine of faire in future",
+        answerOptions: [
+          { text: "Il fera", rationale: "Correct! 'Il fera' is 'he will do/make' in French.", isCorrect: true },
+          { text: "Elle fera", rationale: "This means 'she will do/make'.", isCorrect: false },
+          { text: "Tu feras", rationale: "This means 'you will do/make' (informal).", isCorrect: false },
+          { text: "Ils feront", rationale: "This means 'they will do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "She will do / She will make",
+        hint: "Third person singular feminine of faire in future",
+        answerOptions: [
+          { text: "Elle fera", rationale: "Correct! 'Elle fera' is 'she will do/make' in French.", isCorrect: true },
+          { text: "Il fera", rationale: "This means 'he will do/make'.", isCorrect: false },
+          { text: "Elles feront", rationale: "This means 'they will do/make' (feminine).", isCorrect: false },
+          { text: "Tu feras", rationale: "This means 'you will do/make' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We will do / We will make",
+        hint: "First person plural of faire in future",
+        answerOptions: [
+          { text: "Nous ferons", rationale: "Correct! 'Nous ferons' is 'we will do/make' in French.", isCorrect: true },
+          { text: "Vous ferez", rationale: "This means 'you will do/make' (formal/plural).", isCorrect: false },
+          { text: "Ils feront", rationale: "This means 'they will do/make'.", isCorrect: false },
+          { text: "Je ferai", rationale: "This means 'I will do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You will do / You will make (formal/plural)",
+        hint: "Second person formal/plural of faire in future",
+        answerOptions: [
+          { text: "Vous ferez", rationale: "Correct! 'Vous ferez' is 'you will do/make' (formal/plural) in French.", isCorrect: true },
+          { text: "Tu feras", rationale: "This means 'you will do/make' (informal).", isCorrect: false },
+          { text: "Nous ferons", rationale: "This means 'we will do/make'.", isCorrect: false },
+          { text: "Ils feront", rationale: "This means 'they will do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They will do / They will make (male/mixed)",
+        hint: "Third person plural masculine/mixed of faire in future",
+        answerOptions: [
+          { text: "Ils feront", rationale: "Correct! 'Ils feront' is 'they will do/make' (masculine/mixed) in French.", isCorrect: true },
+          { text: "Elles feront", rationale: "This means 'they will do/make' (feminine).", isCorrect: false },
+          { text: "Ils faisaient", rationale: "This means 'they were doing/making' (past tense).", isCorrect: false },
+          { text: "Ils ont fait", rationale: "This means 'they have done/made' (past tense).", isCorrect: false }
+        ]
+      },
+      {
+        question: "They will do / They will make (female)",
+        hint: "Third person plural feminine of faire in future",
+        answerOptions: [
+          { text: "Elles feront", rationale: "Correct! 'Elles feront' is 'they will do/make' (feminine) in French.", isCorrect: true },
+          { text: "Ils feront", rationale: "This means 'they will do/make' (masculine/mixed).", isCorrect: false },
+          { text: "Elles faisaient", rationale: "This means 'they were doing/making' (past tense).", isCorrect: false },
+          { text: "Elles ont fait", rationale: "This means 'they have done/made' (past tense).", isCorrect: false }
+        ]
+      },
+      {
+        question: "I will not do / I will not make",
+        hint: "First person singular negative of faire in future",
+        answerOptions: [
+          { text: "Je ne ferai pas", rationale: "Correct! 'Je ne ferai pas' is 'I will not do/make' in French.", isCorrect: true },
+          { text: "Tu ne feras pas", rationale: "This means 'you will not do/make' (informal).", isCorrect: false },
+          { text: "Il ne fera pas", rationale: "This means 'he will not do/make'.", isCorrect: false },
+          { text: "Nous ne ferons pas", rationale: "This means 'we will not do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You will not do / You will not make (informal)",
+        hint: "Second person singular negative of faire in future",
+        answerOptions: [
+          { text: "Tu ne feras pas", rationale: "Correct! 'Tu ne feras pas' is 'you will not do/make' (informal) in French.", isCorrect: true },
+          { text: "Je ne ferai pas", rationale: "This means 'I will not do/make'.", isCorrect: false },
+          { text: "Vous ne ferez pas", rationale: "This means 'you will not do/make' (formal/plural).", isCorrect: false },
+          { text: "Ils ne feront pas", rationale: "This means 'they will not do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He will not do / He will not make",
+        hint: "Third person singular masculine negative of faire in future",
+        answerOptions: [
+          { text: "Il ne fera pas", rationale: "Correct! 'Il ne fera pas' is 'he will not do/make' in French.", isCorrect: true },
+          { text: "Elle ne fera pas", rationale: "This means 'she will not do/make'.", isCorrect: false },
+          { text: "Tu ne feras pas", rationale: "This means 'you will not do/make' (informal).", isCorrect: false },
+          { text: "Ils ne feront pas", rationale: "This means 'they will not do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "She will not do / She will not make",
+        hint: "Third person singular feminine negative of faire in future",
+        answerOptions: [
+          { text: "Elle ne fera pas", rationale: "Correct! 'Elle ne fera pas' is 'she will not do/make' in French.", isCorrect: true },
+          { text: "Il ne fera pas", rationale: "This means 'he will not do/make'.", isCorrect: false },
+          { text: "Elles ne feront pas", rationale: "This means 'they will not do/make' (feminine).", isCorrect: false },
+          { text: "Tu ne feras pas", rationale: "This means 'you will not do/make' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We will not do / We will not make",
+        hint: "First person plural negative of faire in future",
+        answerOptions: [
+          { text: "Nous ne ferons pas", rationale: "Correct! 'Nous ne ferons pas' is 'we will not do/make' in French.", isCorrect: true },
+          { text: "Vous ne ferez pas", rationale: "This means 'you will not do/make' (formal/plural).", isCorrect: false },
+          { text: "Ils ne feront pas", rationale: "This means 'they will not do/make'.", isCorrect: false },
+          { text: "Je ne ferai pas", rationale: "This means 'I will not do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You will not do / You will not make (formal/plural)",
+        hint: "Second person formal/plural negative of faire in future",
+        answerOptions: [
+          { text: "Vous ne ferez pas", rationale: "Correct! 'Vous ne ferez pas' is 'you will not do/make' (formal/plural) in French.", isCorrect: true },
+          { text: "Tu ne feras pas", rationale: "This means 'you will not do/make' (informal).", isCorrect: false },
+          { text: "Nous ne ferons pas", rationale: "This means 'we will not do/make'.", isCorrect: false },
+          { text: "Ils ne feront pas", rationale: "This means 'they will not do/make'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They will not do / They will not make (male/mixed)",
+        hint: "Third person plural masculine/mixed negative of faire in future",
+        answerOptions: [
+          { text: "Ils ne feront pas", rationale: "Correct! 'Ils ne feront pas' is 'they will not do/make' (masculine/mixed) in French.", isCorrect: true },
+          { text: "Elles ne feront pas", rationale: "This means 'they will not do/make' (feminine).", isCorrect: false },
+          { text: "Ils n'ont pas fait", rationale: "This means 'they have not done/made' (past tense).", isCorrect: false },
+          { text: "Ils ne faisaient pas", rationale: "This means 'they were not doing/making' (past tense).", isCorrect: false }
+        ]
+      },
+      {
+        question: "They will not do / They will not make (female)",
+        hint: "Third person plural feminine negative of faire in future",
+        answerOptions: [
+          { text: "Elles ne feront pas", rationale: "Correct! 'Elles ne feront pas' is 'they will not do/make' (feminine) in French.", isCorrect: true },
+          { text: "Ils ne feront pas", rationale: "This means 'they will not do/make' (masculine/mixed).", isCorrect: false },
+          { text: "Elles n'ont pas fait", rationale: "This means 'they have not done/made' (past tense).", isCorrect: false },
+          { text: "Elles ne faisaient pas", rationale: "This means 'they were not doing/making' (past tense).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will I do / Will I make?",
+        hint: "First person singular interrogative of faire in future",
+        answerOptions: [
+          { text: "Ferai-je ?", rationale: "Correct! 'Ferai-je ?' is 'Will I do/make?' in French.", isCorrect: true },
+          { text: "Feras-tu ?", rationale: "This means 'Will you do/make?' (informal).", isCorrect: false },
+          { text: "Fera-t-il ?", rationale: "This means 'Will he do/make?'.", isCorrect: false },
+          { text: "Ferons-nous ?", rationale: "This means 'Will we do/make?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will you do / Will you make? (informal)",
+        hint: "Second person singular interrogative of faire in future",
+        answerOptions: [
+          { text: "Feras-tu ?", rationale: "Correct! 'Feras-tu ?' is 'Will you do/make?' (informal) in French.", isCorrect: true },
+          { text: "Ferai-je ?", rationale: "This means 'Will I do/make?'.", isCorrect: false },
+          { text: "Fera-t-il ?", rationale: "This means 'Will he do/make?'.", isCorrect: false },
+          { text: "Ferez-vous ?", rationale: "This means 'Will you do/make?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will he do / Will he make?",
+        hint: "Third person singular masculine interrogative of faire in future",
+        answerOptions: [
+          { text: "Fera-t-il ?", rationale: "Correct! 'Fera-t-il ?' is 'Will he do/make?' in French.", isCorrect: true },
+          { text: "Fera-t-elle ?", rationale: "This means 'Will she do/make?'.", isCorrect: false },
+          { text: "Ferai-je ?", rationale: "This means 'Will I do/make?'.", isCorrect: false },
+          { text: "Feras-tu ?", rationale: "This means 'Will you do/make?' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will she do / Will she make?",
+        hint: "Third person singular feminine interrogative of faire in future",
+        answerOptions: [
+          { text: "Fera-t-elle ?", rationale: "Correct! 'Fera-t-elle ?' is 'Will she do/make?' in French.", isCorrect: true },
+          { text: "Fera-t-il ?", rationale: "This means 'Will he do/make?'.", isCorrect: false },
+          { text: "Feras-tu ?", rationale: "This means 'Will you do/make?' (informal).", isCorrect: false },
+          { text: "Ferez-vous ?", rationale: "This means 'Will you do/make?' (formal/plural).", isCorrect: false }
+        ]
+      }
     ]
   }
 };

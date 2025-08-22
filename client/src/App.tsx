@@ -242,13 +242,20 @@ function App() {
     // For non-Advanced levels, automatically set tense if not already set
     let finalTenseType = selectedTenseType;
     if (selectedDifficulty !== "Advanced" && !selectedTenseType && selectedTimeFrame) {
-      if (selectedDifficulty === "Novice") {
+      if (selectedDifficulty === "Beginner") {
         const beginnerTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple"
         };
         finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+      } else if (selectedDifficulty === "Novice") {
+        const noviceTenseMap = {
+          "Past": "Passé Composé",
+          "Present": "Présent", 
+          "Future": "Futur Simple"
+        };
+        finalTenseType = noviceTenseMap[selectedTimeFrame as keyof typeof noviceTenseMap] || "";
       } else if (selectedDifficulty === "Elementary") {
         const easyTenseMap = {
           "Past": "Passé Composé",
