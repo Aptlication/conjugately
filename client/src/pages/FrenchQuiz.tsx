@@ -27,17 +27,27 @@ const TIME_FRAMES = {
   "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
 };
 
-// Advancedy configurations
+// Complete difficulty configurations for all 5 levels
 const DIFFICULTY_CONFIGS = {
+  "Beginner": {
+    verbs: ["être", "avoir", "faire"],
+    timeFrames: ["Present", "Past", "Future"],
+    tenses: ["Présent", "Passé Composé", "Futur Simple"]
+  },
+  "Novice": {
+    verbs: ["être", "avoir", "faire"],
+    timeFrames: ["Present", "Past", "Future"],
+    tenses: ["Présent", "Passé Composé", "Futur Simple"]
+  },
   "Elementary": {
     verbs: ["être", "avoir", "faire", "dire", "aller", "voir"],
-    timeFrames: ["Present", "Past"],
-    tenses: ["Présent", "Passé Composé"]
+    timeFrames: ["Present", "Past", "Future"],
+    tenses: ["Présent", "Passé Composé", "Futur Simple"]
   },
   "Intermediate": {
-    verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir"],
+    verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "prendre"],
     timeFrames: ["Present", "Past", "Future"],
-    tenses: ["Présent", "Passé Composé", "Futur Simple", "Futur Proche"]
+    tenses: ["Présent", "Passé Composé", "Futur Simple", "Imparfait"]
   },
   "Advanced": {
     verbs: [...FRENCH_VERBS], // All 16 verbs including reflexive verbs
@@ -485,14 +495,38 @@ export default function FrenchQuiz() {
               </div>
             )}
 
-            {/* Advancedy Selection Modal */}
+            {/* Difficulty Selection Modal */}
             {showAdvancedyModal && (
               <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
                 <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
                   <h3 className="text-2xl font-bold text-white text-center mb-6">
-                    Choose Advancedy Level
+                    Choose Difficulty Level
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
+                    <button
+                      onClick={() => handleAdvancedySelect("Beginner")}
+                      className="w-full p-4 text-left bg-blue-500/20 border border-blue-500/30 rounded-xl hover:bg-blue-500/30 transition-all duration-200 group"
+                    >
+                      <div className="text-blue-300 font-semibold text-lg group-hover:text-blue-200">
+                        🔵 Beginner
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        3 basic verbs (être, avoir, faire) • Present, past, future tenses
+                      </div>
+                    </button>
+                    
+                    <button
+                      onClick={() => handleAdvancedySelect("Novice")}
+                      className="w-full p-4 text-left bg-cyan-500/20 border border-cyan-500/30 rounded-xl hover:bg-cyan-500/30 transition-all duration-200 group"
+                    >
+                      <div className="text-cyan-300 font-semibold text-lg group-hover:text-cyan-200">
+                        🔷 Novice
+                      </div>
+                      <div className="text-slate-300 text-sm mt-1">
+                        3 basic verbs (être, avoir, faire) • Present, past, future tenses
+                      </div>
+                    </button>
+                    
                     <button
                       onClick={() => handleAdvancedySelect("Elementary")}
                       className="w-full p-4 text-left bg-green-500/20 border border-green-500/30 rounded-xl hover:bg-green-500/30 transition-all duration-200 group"
@@ -501,7 +535,7 @@ export default function FrenchQuiz() {
                         🟢 Elementary
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        Basic verbs (être, avoir, faire) • Present tense only
+                        6 common verbs • Present, past, future tenses
                       </div>
                     </button>
                     
@@ -513,7 +547,7 @@ export default function FrenchQuiz() {
                         🟡 Intermediate
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        6 common verbs • Present, past, and future tenses
+                        11 verbs • Present, past, future tenses + Imparfait
                       </div>
                     </button>
                     
@@ -525,7 +559,7 @@ export default function FrenchQuiz() {
                         🔴 Advanced
                       </div>
                       <div className="text-slate-300 text-sm mt-1">
-                        All 10 verbs • All tenses and time frames
+                        All 16 verbs including reflexive • All tenses and time frames
                       </div>
                     </button>
                   </div>
