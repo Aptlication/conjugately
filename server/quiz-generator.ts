@@ -384,6 +384,44 @@ const VERB_CONJUGATIONS = {
       nous: "sommes en train de venir", vous: "êtes en train de venir", ils: "sont en train de venir", elles: "sont en train de venir"
     }
   },
+  prendre: {
+    present: {
+      je: "prends", tu: "prends", il: "prend", elle: "prend",
+      nous: "prenons", vous: "prenez", ils: "prennent", elles: "prennent"
+    },
+    passé_composé: {
+      je: "ai pris", tu: "as pris", il: "a pris", elle: "a pris",
+      nous: "avons pris", vous: "avez pris", ils: "ont pris", elles: "ont pris"
+    },
+    passé_simple: {
+      je: "pris", tu: "pris", il: "prit", elle: "prit",
+      nous: "prîmes", vous: "prîtes", ils: "prirent", elles: "prirent"
+    },
+    imparfait: {
+      je: "prenais", tu: "prenais", il: "prenait", elle: "prenait",
+      nous: "prenions", vous: "preniez", ils: "prenaient", elles: "prenaient"
+    },
+    plus_que_parfait: {
+      je: "avais pris", tu: "avais pris", il: "avait pris", elle: "avait pris",
+      nous: "avions pris", vous: "aviez pris", ils: "avaient pris", elles: "avaient pris"
+    },
+    conditionnel: {
+      je: "prendrais", tu: "prendrais", il: "prendrait", elle: "prendrait",
+      nous: "prendrions", vous: "prendriez", ils: "prendraient", elles: "prendraient"
+    },
+    futur_simple: {
+      je: "prendrai", tu: "prendras", il: "prendra", elle: "prendra",
+      nous: "prendrons", vous: "prendrez", ils: "prendront", elles: "prendront"
+    },
+    futur_proche: {
+      je: "vais prendre", tu: "vas prendre", il: "va prendre", elle: "va prendre",
+      nous: "allons prendre", vous: "allez prendre", ils: "vont prendre", elles: "vont prendre"
+    },
+    présent_progressif: {
+      je: "suis en train de prendre", tu: "es en train de prendre", il: "est en train de prendre", elle: "est en train de prendre",
+      nous: "sommes en train de prendre", vous: "êtes en train de prendre", ils: "sont en train de prendre", elles: "sont en train de prendre"
+    }
+  },
   "se lever": {
     present: {
       je: "me lève", tu: "te lèves", il: "se lève", elle: "se lève",
@@ -734,6 +772,19 @@ const QUESTION_CONTEXTS = {
     { en: "I don't come / I am not coming often.", fr_context: "pas souvent", negative: true, pronoun: "je" },
     { en: "She doesn't come / She is not coming today.", fr_context: "pas aujourd'hui", negative: true, pronoun: "elle" },
     { en: "We don't come / We are not coming here.", fr_context: "pas ici", negative: true, pronoun: "nous" }
+  ],
+  prendre: [
+    { en: "I take / I am taking the bus.", fr_context: "le bus", pronoun: "je" },
+    { en: "You take / You are taking medicine.", fr_context: "des médicaments", pronoun: "tu" },
+    { en: "He takes / He is taking a break.", fr_context: "une pause", pronoun: "il" },
+    { en: "She takes / She is taking pictures.", fr_context: "des photos", pronoun: "elle" },
+    { en: "We take / We are taking time.", fr_context: "du temps", pronoun: "nous" },
+    { en: "You (plural) take / You are taking notes.", fr_context: "des notes", pronoun: "vous" },
+    { en: "They take / They are taking risks. (male/mixed)", fr_context: "des risques", pronoun: "ils" },
+    { en: "They take / They are taking risks. (female)", fr_context: "des risques", pronoun: "elles" },
+    { en: "I don't take / I am not taking sugar.", fr_context: "pas de sucre", negative: true, pronoun: "je" },
+    { en: "She doesn't take / She is not taking the train.", fr_context: "pas le train", negative: true, pronoun: "elle" },
+    { en: "We don't take / We are not taking chances.", fr_context: "pas de risques", negative: true, pronoun: "nous" }
   ],
   aller: [
     { en: "I go / I am going to school.", fr_context: "à l'école", pronoun: "je" },
