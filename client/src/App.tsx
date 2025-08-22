@@ -2552,57 +2552,59 @@ function App() {
                   Got it! Start Quiz
                 </button>
                 
-                <button
-                  onClick={() => {
-                    localStorage.setItem('beginnerPronounGuideShown', 'true');
-                    setBeginnerGuideShown(true);
-                    setShowBeginnerPronounGuide(false);
-                    setQuizState('loading');
-                    // Continue with quiz generation
-                    const continueQuiz = async () => {
-                      try {
-                        const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
-                        let finalTenseType = selectedTenseType;
-                        if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
-                          const beginnerTenseMap = {
-                            "Past": "Passé Composé",
-                            "Present": "Présent", 
-                            "Future": "Futur Simple"
-                          };
-                          finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
-                        }
-                        
-                        const response = await fetch('/api/get-quiz', {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({
-                            verb: selectedVerb,
-                            timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
-                            tenseType: finalTenseType,
-                            difficulty: selectedDifficulty,
-                          }),
-                        });
+                <div className="text-center mt-4 pt-3 border-t border-white/20">
+                  <button
+                    onClick={() => {
+                      localStorage.setItem('beginnerPronounGuideShown', 'true');
+                      setBeginnerGuideShown(true);
+                      setShowBeginnerPronounGuide(false);
+                      setQuizState('loading');
+                      // Continue with quiz generation
+                      const continueQuiz = async () => {
+                        try {
+                          const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                          let finalTenseType = selectedTenseType;
+                          if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
+                            const beginnerTenseMap = {
+                              "Past": "Passé Composé",
+                              "Present": "Présent", 
+                              "Future": "Futur Simple"
+                            };
+                            finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
+                          }
+                          
+                          const response = await fetch('/api/get-quiz', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                              verb: selectedVerb,
+                              timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
+                              tenseType: finalTenseType,
+                              difficulty: selectedDifficulty,
+                            }),
+                          });
 
-                        const data = await response.json();
-                        if (data.success) {
-                          setQuizData(data.quiz.questions);
-                          setCurrentQuestionIndex(0);
-                          setUserAnswers({});
-                          setSelectedAnswerIndex(null);
-                          setIsAnswerConfirmed(false);
-                          setQuizState('active');
+                          const data = await response.json();
+                          if (data.success) {
+                            setQuizData(data.quiz.questions);
+                            setCurrentQuestionIndex(0);
+                            setUserAnswers({});
+                            setSelectedAnswerIndex(null);
+                            setIsAnswerConfirmed(false);
+                            setQuizState('active');
+                          }
+                        } catch (error) {
+                          console.error('Error starting quiz:', error);
+                          setQuizState('config');
                         }
-                      } catch (error) {
-                        console.error('Error starting quiz:', error);
-                        setQuizState('config');
-                      }
-                    };
-                    continueQuiz();
-                  }}
-                  className="w-full px-6 py-3 bg-red-600 text-white rounded-xl font-medium hover:bg-red-700"
-                >
-                  Don't remind me again
-                </button>
+                      };
+                      continueQuiz();
+                    }}
+                    className="text-blue-300 hover:text-blue-200 text-sm underline hover:no-underline transition-colors"
+                  >
+                    Don't remind me again
+                  </button>
+                </div>
               </div>
             </div>
           </div>

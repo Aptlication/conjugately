@@ -1,0 +1,139 @@
+etre_passe_compose = {
+    "verb": "être",
+    "tense": "passé composé",
+    "conjugations": {
+        "je": "j’ai été",
+        "tu": "tu as été",
+        "il / elle / on": "il / elle / on a été",
+        "nous": "nous avons été",
+        "vous": "vous avez été",
+        "ils / elles": "ils / elles ont été"
+    },
+    "examples": [
+        {"en": "I was happy.", "fr": "J’ai été heureux / heureuse."},
+        {"en": "You were tired.", "fr": "Tu as été fatigué / fatiguée."},
+        {"en": "He was a student.", "fr": "Il a été étudiant."},
+        {"en": "She was a teacher.", "fr": "Elle a été professeure."},
+        {"en": "We were friends.", "fr": "Nous avons été amis."},
+        {"en": "You (plural) were ready.", "fr": "Vous avez été prêts."},
+        {"en": "They were busy.", "fr": "Ils ont été occupés."},
+        {"en": "They (fem.) were at school.", "fr": "Elles ont été à l’école."},
+        {"en": "I have not been here.", "fr": "Je n’ai pas été ici."},
+        {"en": "She has not been sick.", "fr": "Elle n’a pas été malade."},
+        {"en": "We were not late.", "fr": "Nous n’avons pas été en retard."}
+    ],
+    "quiz": [
+        {
+            "question": "I was happy.",
+            "hint": "Use passé composé: je + avoir + été",
+            "options": {
+                "A": "J’ai été heureux.",
+                "B": "Je suis été heureux.",
+                "C": "Je étais heureux.",
+                "D": "Je serai heureux."
+            },
+            "answer": "A",
+            "explanation": "Passé composé of être uses avoir + été: J’ai été."
+        },
+        {
+            "question": "You were tired.",
+            "options": {
+                "A": "Tu as été fatigué.",
+                "B": "Tu es été fatigué.",
+                "C": "Tu étais fatigué.",
+                "D": "Tu seras fatigué."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: Tu as été."
+        },
+        {
+            "question": "He was a student.",
+            "options": {
+                "A": "Il a été étudiant.",
+                "B": "Il est été étudiant.",
+                "C": "Il était étudiant.",
+                "D": "Il sera étudiant."
+            },
+            "answer": "A",
+            "explanation": "Passé composé form is: Il a été."
+        },
+        {
+            "question": "We were friends.",
+            "options": {
+                "A": "Nous avons été amis.",
+                "B": "Nous sommes été amis.",
+                "C": "Nous étions amis.",
+                "D": "Nous serons amis."
+            },
+            "answer": "A",
+            "explanation": "Correct passé composé: Nous avons été."
+        },
+        {
+            "question": "You (plural) were ready.",
+            "options": {
+                "A": "Vous avez été prêts.",
+                "B": "Vous êtes été prêts.",
+                "C": "Vous étiez prêts.",
+                "D": "Vous serez prêts."
+            },
+            "answer": "A",
+            "explanation": "Correct: Vous avez été."
+        },
+        {
+            "question": "They were busy.",
+            "options": {
+                "A": "Ils ont été occupés.",
+                "B": "Ils sont été occupés.",
+                "C": "Ils étaient occupés.",
+                "D": "Ils seront occupés."
+            },
+            "answer": "A",
+            "explanation": "Correct conjugation: Ils ont été."
+        },
+        {
+            "question": "I have not been here.",
+            "hint": "Negation: ne...pas around avoir",
+            "options": {
+                "A": "Je n’ai pas été ici.",
+                "B": "Je suis pas été ici.",
+                "C": "Je ai pas été ici.",
+                "D": "Je ne étais pas ici."
+            },
+            "answer": "A",
+            "explanation": "Negation: Je n’ai pas été."
+        },
+        {
+            "question": "She has not been sick.",
+            "options": {
+                "A": "Elle n’a pas été malade.",
+                "B": "Elle est pas été malade.",
+                "C": "Elle n’était pas malade.",
+                "D": "Elle sera pas malade."
+            },
+            "answer": "A",
+            "explanation": "Correct negation with avoir: n’a pas été."
+        },
+        {
+            "question": "We were not late.",
+            "options": {
+                "A": "Nous n’avons pas été en retard.",
+                "B": "Nous sommes pas été en retard.",
+                "C": "Nous avons été pas en retard.",
+                "D": "Nous ne étions pas en retard."
+            },
+            "answer": "A",
+            "explanation": "Correct negation: Nous n’avons pas été."
+        },
+        {
+            "question": "They (fem.) were at school.",
+            "options": {
+                "A": "Elles ont été à l’école.",
+                "B": "Elles sont été à l’école.",
+                "C": "Elles étaient à l’école.",
+                "D": "Elles seront à l’école."
+            },
+            "answer": "A",
+            "explanation": "Passé composé form: Elles ont été."
+        }
+    ]
+}
