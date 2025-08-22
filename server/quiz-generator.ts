@@ -2927,6 +2927,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       englishQuestion += '.';
     }
 
+    // Create the question with processed English and the shuffled answers
     questions.push({
       question: englishQuestion,
       hint: `Conjugate ${verb} for ${pronoun} in ${tense}`,
