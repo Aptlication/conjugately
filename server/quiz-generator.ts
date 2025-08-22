@@ -626,8 +626,8 @@ const QUESTION_CONTEXTS = {
     { en: "We are ready.", fr_context: "prêts", pronoun: "nous", gender: "masculine" },
     { en: "We are ready.", fr_context: "prêtes", pronoun: "nous", gender: "feminine" },
     { en: "You (plural) are teachers.", fr_context: "professeurs", pronoun: "vous" },
-    { en: "They (masculine) are busy.", fr_context: "occupés", pronoun: "ils", gender: "masculine" },
-    { en: "They (feminine) are busy.", fr_context: "occupées", pronoun: "elles", gender: "feminine" },
+    { en: "They are busy. (male/mixed)", fr_context: "occupés", pronoun: "ils", gender: "masculine" },
+    { en: "They are busy. (female)", fr_context: "occupées", pronoun: "elles", gender: "feminine" },
     { en: "I am not here.", fr_context: "ici", negative: true, pronoun: "je" },
     { en: "She is not here.", fr_context: "ici", negative: true, pronoun: "elle" }
   ],
@@ -638,8 +638,8 @@ const QUESTION_CONTEXTS = {
     { en: "She has / She is having a dog.", fr_context: "un chien", pronoun: "elle" },
     { en: "We have / We are having homework.", fr_context: "des devoirs", pronoun: "nous" },
     { en: "You (plural) have / You are having luck.", fr_context: "de la chance", pronoun: "vous" },
-    { en: "They (masculine) have / They are having problems.", fr_context: "des problèmes", pronoun: "ils" },
-    { en: "They (feminine) have / They are having problems.", fr_context: "des problèmes", pronoun: "elles" },
+    { en: "They have / They are having problems. (male/mixed)", fr_context: "des problèmes", pronoun: "ils" },
+    { en: "They have / They are having problems. (female)", fr_context: "des problèmes", pronoun: "elles" },
     { en: "I don't have / I am not having anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She has / She is having a choice.", fr_context: "le choix", negative: false, pronoun: "elle" },
     { en: "We have / We are having time.", fr_context: "le temps", negative: false, pronoun: "nous" }
@@ -651,8 +651,8 @@ const QUESTION_CONTEXTS = {
     { en: "She makes / She is making a cake.", fr_context: "un gâteau", pronoun: "elle" },
     { en: "We do / We are doing shopping.", fr_context: "les courses", pronoun: "nous" },
     { en: "You (plural) make / You are making music.", fr_context: "de la musique", pronoun: "vous" },
-    { en: "They (masculine) do / They are doing work.", fr_context: "du travail", pronoun: "ils" },
-    { en: "They (feminine) do / They are doing work.", fr_context: "du travail", pronoun: "elles" },
+    { en: "They do / They are doing work. (male/mixed)", fr_context: "du travail", pronoun: "ils" },
+    { en: "They do / They are doing work. (female)", fr_context: "du travail", pronoun: "elles" },
     { en: "I don't do / I am not doing anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't make / She is not making mistakes.", fr_context: "pas d'erreurs", negative: true, pronoun: "elle" },
     { en: "We don't do / We are not doing that.", fr_context: "pas ça", negative: true, pronoun: "nous" }
@@ -664,8 +664,8 @@ const QUESTION_CONTEXTS = {
     { en: "She sees / She is seeing the cat.", fr_context: "le chat", pronoun: "elle" },
     { en: "We see / We are seeing the truth.", fr_context: "la vérité", pronoun: "nous" },
     { en: "You (plural) see / You are seeing the light.", fr_context: "la lumière", pronoun: "vous" },
-    { en: "They (masculine) see / They are seeing the ocean.", fr_context: "l'océan", pronoun: "ils" },
-    { en: "They (feminine) see / They are seeing the ocean.", fr_context: "l'océan", pronoun: "elles" },
+    { en: "They see / They are seeing the ocean. (male/mixed)", fr_context: "l'océan", pronoun: "ils" },
+    { en: "They see / They are seeing the ocean. (female)", fr_context: "l'océan", pronoun: "elles" },
     { en: "I don't see / I am not seeing anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She sees / She is seeing well.", fr_context: "bien", pronoun: "elle" },
     { en: "We don't see / We are not seeing him.", fr_context: "le", negative: true, pronoun: "nous" }
@@ -677,8 +677,8 @@ const QUESTION_CONTEXTS = {
     { en: "She says / She is saying no.", fr_context: "non", pronoun: "elle" },
     { en: "We say / We are saying goodbye.", fr_context: "au revoir", pronoun: "nous" },
     { en: "You (plural) say / You are saying thanks.", fr_context: "merci", pronoun: "vous" },
-    { en: "They (masculine) say / They are saying something.", fr_context: "quelque chose", pronoun: "ils" },
-    { en: "They (feminine) say / They are saying something.", fr_context: "quelque chose", pronoun: "elles" },
+    { en: "They say / They are saying something. (male/mixed)", fr_context: "quelque chose", pronoun: "ils" },
+    { en: "They say / They are saying something. (female)", fr_context: "quelque chose", pronoun: "elles" },
     { en: "I don't say / I am not saying anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't say / She is not saying that.", fr_context: "pas ça", negative: true, pronoun: "elle" },
     { en: "We don't say / We are not saying bad words.", fr_context: "pas de gros mots", negative: true, pronoun: "nous" }
@@ -690,8 +690,8 @@ const QUESTION_CONTEXTS = {
     { en: "She knows / She is knowing the secret.", fr_context: "le secret", pronoun: "elle" },
     { en: "We know / We are knowing the truth.", fr_context: "la vérité", pronoun: "nous" },
     { en: "You (plural) know / You are knowing music.", fr_context: "la musique", pronoun: "vous" },
-    { en: "They (masculine) know / They are knowing something.", fr_context: "quelque chose", pronoun: "ils" },
-    { en: "They (feminine) know / They are knowing something.", fr_context: "quelque chose", pronoun: "elles" },
+    { en: "They know / They are knowing something. (male/mixed)", fr_context: "quelque chose", pronoun: "ils" },
+    { en: "They know / They are knowing something. (female)", fr_context: "quelque chose", pronoun: "elles" },
     { en: "I don't know / I am not knowing anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't know / She is not knowing him.", fr_context: "le", negative: true, pronoun: "elle" },
     { en: "We don't know / We are not knowing where.", fr_context: "pas où", negative: true, pronoun: "nous" }
@@ -703,8 +703,8 @@ const QUESTION_CONTEXTS = {
     { en: "She can / She is able to sing.", fr_context: "chanter", pronoun: "elle" },
     { en: "We can / We are able to help.", fr_context: "aider", pronoun: "nous" },
     { en: "You (plural) can / You are able to come.", fr_context: "venir", pronoun: "vous" },
-    { en: "They (masculine) can / They are able to work.", fr_context: "travailler", pronoun: "ils" },
-    { en: "They (feminine) can / They are able to work.", fr_context: "travailler", pronoun: "elles" },
+    { en: "They can / They are able to work. (male/mixed)", fr_context: "travailler", pronoun: "ils" },
+    { en: "They can / They are able to work. (female)", fr_context: "travailler", pronoun: "elles" },
     { en: "I can't / I am not able to sleep.", fr_context: "pas dormir", negative: true, pronoun: "je" },
     { en: "She can't / She is not able to come.", fr_context: "pas venir", negative: true, pronoun: "elle" },
     { en: "We can't / We are not able to wait.", fr_context: "pas attendre", negative: true, pronoun: "nous" }
@@ -716,8 +716,8 @@ const QUESTION_CONTEXTS = {
     { en: "She wants / She is wanting to learn.", fr_context: "apprendre", pronoun: "elle" },
     { en: "We want / We are wanting peace.", fr_context: "la paix", pronoun: "nous" },
     { en: "You (plural) want / You are wanting to eat.", fr_context: "manger", pronoun: "vous" },
-    { en: "They (masculine) want / They are wanting freedom.", fr_context: "la liberté", pronoun: "ils" },
-    { en: "They (feminine) want / They are wanting freedom.", fr_context: "la liberté", pronoun: "elles" },
+    { en: "They want / They are wanting freedom. (male/mixed)", fr_context: "la liberté", pronoun: "ils" },
+    { en: "They want / They are wanting freedom. (female)", fr_context: "la liberté", pronoun: "elles" },
     { en: "I don't want / I am not wanting anything.", fr_context: "rien", negative: true, pronoun: "je" },
     { en: "She doesn't want / She is not wanting to go.", fr_context: "pas partir", negative: true, pronoun: "elle" },
     { en: "We don't want / We are not wanting problems.", fr_context: "pas de problèmes", negative: true, pronoun: "nous" }
@@ -729,8 +729,8 @@ const QUESTION_CONTEXTS = {
     { en: "She comes / She is coming tomorrow.", fr_context: "demain", pronoun: "elle" },
     { en: "We come / We are coming together.", fr_context: "ensemble", pronoun: "nous" },
     { en: "You (plural) come / You are coming often.", fr_context: "souvent", pronoun: "vous" },
-    { en: "They (masculine) come / They are coming late.", fr_context: "en retard", pronoun: "ils" },
-    { en: "They (feminine) come / They are coming late.", fr_context: "en retard", pronoun: "elles" },
+    { en: "They come / They are coming late. (male/mixed)", fr_context: "en retard", pronoun: "ils" },
+    { en: "They come / They are coming late. (female)", fr_context: "en retard", pronoun: "elles" },
     { en: "I don't come / I am not coming often.", fr_context: "pas souvent", negative: true, pronoun: "je" },
     { en: "She doesn't come / She is not coming today.", fr_context: "pas aujourd'hui", negative: true, pronoun: "elle" },
     { en: "We don't come / We are not coming here.", fr_context: "pas ici", negative: true, pronoun: "nous" }
@@ -742,8 +742,8 @@ const QUESTION_CONTEXTS = {
     { en: "She goes / She is going to the store.", fr_context: "au magasin", pronoun: "elle" },
     { en: "We go / We are going to the park.", fr_context: "au parc", pronoun: "nous" },
     { en: "You (plural) go / You are going to the cinema.", fr_context: "au cinéma", pronoun: "vous" },
-    { en: "They (masculine) go / They are going to the beach.", fr_context: "à la plage", pronoun: "ils" },
-    { en: "They (feminine) go / They are going to the beach.", fr_context: "à la plage", pronoun: "elles" },
+    { en: "They go / They are going to the beach. (male/mixed)", fr_context: "à la plage", pronoun: "ils" },
+    { en: "They go / They are going to the beach. (female)", fr_context: "à la plage", pronoun: "elles" },
     { en: "I don't go / I am not going there.", fr_context: "là-bas", negative: true, pronoun: "je" },
     { en: "She doesn't go / She is not going out.", fr_context: "sortir", negative: true, pronoun: "elle" },
     { en: "We don't go / We are not going often.", fr_context: "souvent", negative: true, pronoun: "nous" }
@@ -755,8 +755,8 @@ const QUESTION_CONTEXTS = {
     { en: "She gets up / She is getting up quickly.", fr_context: "rapidement", pronoun: "elle" },
     { en: "We get up / We are getting up together.", fr_context: "ensemble", pronoun: "nous" },
     { en: "You (plural) get up / You are getting up slowly.", fr_context: "lentement", pronoun: "vous" },
-    { en: "They (masculine) get up / They are getting up first.", fr_context: "en premier", pronoun: "ils" },
-    { en: "They (feminine) get up / They are getting up first.", fr_context: "en premier", pronoun: "elles" },
+    { en: "They get up / They are getting up first. (male/mixed)", fr_context: "en premier", pronoun: "ils" },
+    { en: "They get up / They are getting up first. (female)", fr_context: "en premier", pronoun: "elles" },
     { en: "I don't get up / I am not getting up early.", fr_context: "pas tôt", negative: true, pronoun: "je" },
     { en: "She doesn't get up / She is not getting up easily.", fr_context: "pas facilement", negative: true, pronoun: "elle" },
     { en: "We don't get up / We are not getting up late.", fr_context: "pas tard", negative: true, pronoun: "nous" }
@@ -768,8 +768,8 @@ const QUESTION_CONTEXTS = {
     { en: "She is called / She is being called Sophie.", fr_context: "Sophie", pronoun: "elle" },
     { en: "We are called / We are being called students.", fr_context: "étudiants", pronoun: "nous" },
     { en: "You (plural) are called / You are being called friends.", fr_context: "amis", pronoun: "vous" },
-    { en: "They (masculine) are called / They are being called teachers.", fr_context: "professeurs", pronoun: "ils" },
-    { en: "They (feminine) are called / They are being called teachers.", fr_context: "professeurs", pronoun: "elles" },
+    { en: "They are called / They are being called teachers. (male/mixed)", fr_context: "professeurs", pronoun: "ils" },
+    { en: "They are called / They are being called teachers. (female)", fr_context: "professeurs", pronoun: "elles" },
     { en: "I am not called / I am not being called that.", fr_context: "pas comme ça", negative: true, pronoun: "je" },
     { en: "She is not called / She is not being called Marie.", fr_context: "pas Marie", negative: true, pronoun: "elle" },
     { en: "We are not called / We are not being called beginners.", fr_context: "pas débutants", negative: true, pronoun: "nous" }
@@ -781,8 +781,8 @@ const QUESTION_CONTEXTS = {
     { en: "She feels / She is feeling sad.", fr_context: "triste", pronoun: "elle" },
     { en: "We feel / We are feeling confident.", fr_context: "confiants", pronoun: "nous" },
     { en: "You (plural) feel / You are feeling ready.", fr_context: "prêts", pronoun: "vous" },
-    { en: "They (masculine) feel / They are feeling nervous.", fr_context: "nerveux", pronoun: "ils" },
-    { en: "They (feminine) feel / They are feeling nervous.", fr_context: "nerveuses", pronoun: "elles" },
+    { en: "They feel / They are feeling nervous. (male/mixed)", fr_context: "nerveux", pronoun: "ils" },
+    { en: "They feel / They are feeling nervous. (female)", fr_context: "nerveuses", pronoun: "elles" },
     { en: "I don't feel / I am not feeling well.", fr_context: "pas bien", negative: true, pronoun: "je" },
     { en: "She doesn't feel / She is not feeling safe.", fr_context: "pas en sécurité", negative: true, pronoun: "elle" },
     { en: "We don't feel / We are not feeling comfortable.", fr_context: "pas à l'aise", negative: true, pronoun: "nous" }
@@ -794,8 +794,8 @@ const QUESTION_CONTEXTS = {
     { en: "She washes / She is washing her hair.", fr_context: "les cheveux", pronoun: "elle" },
     { en: "We wash / We are washing ourselves daily.", fr_context: "tous les jours", pronoun: "nous" },
     { en: "You (plural) wash / You are washing quickly.", fr_context: "rapidement", pronoun: "vous" },
-    { en: "They (masculine) wash / They are washing carefully.", fr_context: "soigneusement", pronoun: "ils" },
-    { en: "They (feminine) wash / They are washing carefully.", fr_context: "soigneusement", pronoun: "elles" },
+    { en: "They wash / They are washing carefully. (male/mixed)", fr_context: "soigneusement", pronoun: "ils" },
+    { en: "They wash / They are washing carefully. (female)", fr_context: "soigneusement", pronoun: "elles" },
     { en: "I don't wash / I am not washing often.", fr_context: "pas souvent", negative: true, pronoun: "je" },
     { en: "She doesn't wash / She is not washing well.", fr_context: "pas bien", negative: true, pronoun: "elle" },
     { en: "We don't wash / We are not washing there.", fr_context: "pas là", negative: true, pronoun: "nous" }
@@ -807,8 +807,8 @@ const QUESTION_CONTEXTS = {
     { en: "She wakes up / She is waking up naturally.", fr_context: "naturellement", pronoun: "elle" },
     { en: "We wake up / We are waking up together.", fr_context: "ensemble", pronoun: "nous" },
     { en: "You (plural) wake up / You are waking up slowly.", fr_context: "lentement", pronoun: "vous" },
-    { en: "They (masculine) wake up / They are waking up refreshed.", fr_context: "reposés", pronoun: "ils" },
-    { en: "They (feminine) wake up / They are waking up refreshed.", fr_context: "reposées", pronoun: "elles" },
+    { en: "They wake up / They are waking up refreshed. (male/mixed)", fr_context: "reposés", pronoun: "ils" },
+    { en: "They wake up / They are waking up refreshed. (female)", fr_context: "reposées", pronoun: "elles" },
     { en: "I don't wake up / I am not waking up easily.", fr_context: "pas facilement", negative: true, pronoun: "je" },
     { en: "She doesn't wake up / She is not waking up early.", fr_context: "pas tôt", negative: true, pronoun: "elle" },
     { en: "We don't wake up / We are not waking up late.", fr_context: "pas tard", negative: true, pronoun: "nous" }
@@ -820,8 +820,8 @@ const QUESTION_CONTEXTS = {
     { en: "She dresses / She is dressing warmly.", fr_context: "chaudement", pronoun: "elle" },
     { en: "We dress / We are dressing similarly.", fr_context: "de la même façon", pronoun: "nous" },
     { en: "You (plural) dress / You are dressing formally.", fr_context: "formellement", pronoun: "vous" },
-    { en: "They (masculine) dress / They are dressing casually.", fr_context: "décontracté", pronoun: "ils" },
-    { en: "They (feminine) dress / They are dressing casually.", fr_context: "décontracté", pronoun: "elles" },
+    { en: "They dress / They are dressing casually. (male/mixed)", fr_context: "décontracté", pronoun: "ils" },
+    { en: "They dress / They are dressing casually. (female)", fr_context: "décontracté", pronoun: "elles" },
     { en: "I don't dress up / I am not dressing up.", fr_context: "pas chic", negative: true, pronoun: "je" },
     { en: "She doesn't dress / She is not dressing warmly.", fr_context: "pas chaudement", negative: true, pronoun: "elle" },
     { en: "We don't dress / We are not dressing alike.", fr_context: "pas pareil", negative: true, pronoun: "nous" }
@@ -1632,37 +1632,37 @@ function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: s
   
   // Apply gender-specific replacements for "They" patterns
   return englishQuestion
-    .replace(/They have/g, 'They (masculine) have')
-    .replace(/They are/g, 'They (masculine) are')
-    .replace(/They do/g, 'They (masculine) do')
-    .replace(/They make/g, 'They (masculine) make')
-    .replace(/They go/g, 'They (masculine) go')
-    .replace(/They see/g, 'They (masculine) see')
-    .replace(/They say/g, 'They (masculine) say')
-    .replace(/They know/g, 'They (masculine) know')
-    .replace(/They can/g, 'They (masculine) can')
-    .replace(/They want/g, 'They (masculine) want')
-    .replace(/They come/g, 'They (masculine) come')
-    .replace(/They get up/g, 'They (masculine) get up')
-    .replace(/They are called/g, 'They (masculine) are called')
-    .replace(/They feel/g, 'They (masculine) feel')
-    .replace(/They wash/g, 'They (masculine) wash')
-    .replace(/They wake up/g, 'They (masculine) wake up')
-    .replace(/They dress/g, 'They (masculine) dress')
-    .replace(/They don't/g, 'They (masculine) don\'t')
-    .replace(/They used to/g, 'They (masculine) used to')
-    .replace(/They were/g, 'They (masculine) were')
-    .replace(/They did/g, 'They (masculine) did')
-    .replace(/They went/g, 'They (masculine) went')
-    .replace(/They made/g, 'They (masculine) made')
-    .replace(/They saw/g, 'They (masculine) saw')
-    .replace(/They said/g, 'They (masculine) said')
-    .replace(/They knew/g, 'They (masculine) knew')
-    .replace(/They could/g, 'They (masculine) could')
-    .replace(/They wanted/g, 'They (masculine) wanted')
-    .replace(/They came/g, 'They (masculine) came')
-    .replace(/They will/g, 'They (masculine) will')
-    .replace(/They would/g, 'They (masculine) would');
+    .replace(/They have/g, 'They have (male/mixed)')
+    .replace(/They are/g, 'They are (male/mixed)')
+    .replace(/They do/g, 'They do (male/mixed)')
+    .replace(/They make/g, 'They make (male/mixed)')
+    .replace(/They go/g, 'They go (male/mixed)')
+    .replace(/They see/g, 'They see (male/mixed)')
+    .replace(/They say/g, 'They say (male/mixed)')
+    .replace(/They know/g, 'They know (male/mixed)')
+    .replace(/They can/g, 'They can (male/mixed)')
+    .replace(/They want/g, 'They want (male/mixed)')
+    .replace(/They come/g, 'They come (male/mixed)')
+    .replace(/They get up/g, 'They get up (male/mixed)')
+    .replace(/They are called/g, 'They are called (male/mixed)')
+    .replace(/They feel/g, 'They feel (male/mixed)')
+    .replace(/They wash/g, 'They wash (male/mixed)')
+    .replace(/They wake up/g, 'They wake up (male/mixed)')
+    .replace(/They dress/g, 'They dress (male/mixed)')
+    .replace(/They don't/g, 'They don\'t (male/mixed)')
+    .replace(/They used to/g, 'They used to (male/mixed)')
+    .replace(/They were/g, 'They were (male/mixed)')
+    .replace(/They did/g, 'They did (male/mixed)')
+    .replace(/They went/g, 'They went (male/mixed)')
+    .replace(/They made/g, 'They made (male/mixed)')
+    .replace(/They saw/g, 'They saw (male/mixed)')
+    .replace(/They said/g, 'They said (male/mixed)')
+    .replace(/They knew/g, 'They knew (male/mixed)')
+    .replace(/They could/g, 'They could (male/mixed)')
+    .replace(/They wanted/g, 'They wanted (male/mixed)')
+    .replace(/They came/g, 'They came (male/mixed)')
+    .replace(/They will/g, 'They will (male/mixed)')
+    .replace(/They would/g, 'They would (male/mixed)');
 }
 
 export function generateInternalQuiz(verb: string, tense: string, difficulty?: string, isExam?: boolean): GeneratedQuiz {
