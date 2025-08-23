@@ -1,0 +1,142 @@
+```python
+# novice_etre_future_simple.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings
+# Verb: être
+# Tense: Futur Simple
+# 20 questions
+# Full sentences including objects
+# Includes grouping of English phrases that translate to the same French form (e.g., "He will be / He will be doing")
+# Formatted with spaces around slashes and inside parentheses as per instructions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I will be / I shall be happy",
+        "correct": "Je serai heureux",
+        "distractors": ["Tu seras heureux", "Il sera heureux", "Nous serons heureux"]
+    },
+    {
+        "question": "You will be / You shall be ready (informal)",
+        "correct": "Tu seras prêt",
+        "distractors": ["Je serai prêt", "Vous serez prêts", "Ils seront prêts"]
+    },
+    {
+        "question": "He will be / He shall be tired",
+        "correct": "Il sera fatigué",
+        "distractors": ["Elle sera fatiguée", "Tu seras fatigué", "Ils seront fatigués"]
+    },
+    {
+        "question": "She will be / She shall be late",
+        "correct": "Elle sera en retard",
+        "distractors": ["Il sera en retard", "Elles seront en retard", "Tu seras en retard"]
+    },
+    {
+        "question": "We will be / We shall be happy",
+        "correct": "Nous serons heureux",
+        "distractors": ["Vous serez heureux", "Ils seront heureux", "Je serai heureux"]
+    },
+    {
+        "question": "You will be / You shall be kind (formal / plural)",
+        "correct": "Vous serez gentils",
+        "distractors": ["Tu seras gentil", "Nous serons gentils", "Ils seront gentils"]
+    },
+    {
+        "question": "They will be / They shall be teachers (male / mixed)",
+        "correct": "Ils seront professeurs",
+        "distractors": ["Elles seront professeures", "Ils étaient professeurs", "Ils seront professeurs"]
+    },
+    {
+        "question": "They will be / They shall be friends (female)",
+        "correct": "Elles seront amies",
+        "distractors": ["Ils seront amis", "Elles étaient amies", "Elles seront amies"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I will not be / I shall not be tired",
+        "correct": "Je ne serai pas fatigué",
+        "distractors": ["Tu ne seras pas fatigué", "Il ne sera pas fatigué", "Nous ne serons pas fatigués"]
+    },
+    {
+        "question": "You will not be / You shall not be late (informal)",
+        "correct": "Tu ne seras pas en retard",
+        "distractors": ["Je ne serai pas en retard", "Vous ne serez pas en retard", "Ils ne seront pas en retard"]
+    },
+    {
+        "question": "He will not be / He shall not be ready",
+        "correct": "Il ne sera pas prêt",
+        "distractors": ["Elle ne sera pas prête", "Tu ne seras pas prêt", "Ils ne seront pas prêts"]
+    },
+    {
+        "question": "She will not be / She shall not be kind",
+        "correct": "Elle ne sera pas gentille",
+        "distractors": ["Il ne sera pas gentil", "Elles ne seront pas gentilles", "Tu ne seras pas gentil"]
+    },
+    {
+        "question": "We will not be / We shall not be happy",
+        "correct": "Nous ne serons pas heureux",
+        "distractors": ["Vous ne serez pas heureux", "Ils ne seront pas heureux", "Je ne serai pas heureux"]
+    },
+    {
+        "question": "You will not be / You shall not be teachers (formal / plural)",
+        "correct": "Vous ne serez pas professeurs",
+        "distractors": ["Tu ne seras pas professeur", "Nous ne serons pas professeurs", "Ils ne seront pas professeurs"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Will I be happy?",
+        "correct": "Serai-je heureux ?",
+        "distractors": ["Seras-tu heureux ?", "Sera-t-il heureux ?", "Serons-nous heureux ?"]
+    },
+    {
+        "question": "Will you be ready? (informal)",
+        "correct": "Seras-tu prêt ?",
+        "distractors": ["Serai-je prêt ?", "Sera-t-il prêt ?", "Serez-vous prêts ?"]
+    },
+    {
+        "question": "Will he be tired?",
+        "correct": "Sera-t-il fatigué ?",
+        "distractors": ["Sera-t-elle fatiguée ?", "Serai-je fatigué ?", "Seras-tu fatigué ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Won't I be happy?",
+        "correct": "Ne serai-je pas heureux ?",
+        "distractors": ["Ne seras-tu pas heureux ?", "Ne sera-t-il pas heureux ?", "Ne serons-nous pas heureux ?"]
+    },
+    {
+        "question": "Won't you be late? (informal)",
+        "correct": "Ne seras-tu pas en retard ?",
+        "distractors": ["Ne serai-je pas en retard ?", "Ne sera-t-il pas en retard ?", "Ne serez-vous pas en retard ?"]
+    },
+    {
+        "question": "Won't he be kind?",
+        "correct": "Ne sera-t-il pas gentil ?",
+        "distractors": ["Ne sera-t-elle pas gentille ?", "Ne serai-je pas gentil ?", "Ne seras-tu pas gentil ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# The mcq_formatted list contains 20 full sentence questions with answers randomly placed among options A-D
+```
