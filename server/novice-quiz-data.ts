@@ -14,26 +14,33 @@ export interface NoviceQuizQuestion {
 export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[]>> = {
   "aller": {
     "present": [
-      {"question": "I am going / I go to the market. (Présent)", "options": ["Je vais au marché.", "Tu vas au marché.", "Il va au marché.", "Nous allons au marché."], "answer": "A"},
-      {"question": "You are not going / You do not go to school. (Présent - Negative, informal)", "options": ["Tu ne vas pas à l'école.", "Je ne vais pas à l'école.", "Il ne va pas à l'école.", "Nous n'allons pas à l'école."], "answer": "A"},
-      {"question": "Is he going / Does he go home? (Présent - Question)", "options": ["Va-t-il à la maison ?", "Vas-tu à la maison ?", "Allons-nous à la maison ?", "Vont-ils à la maison ?"], "answer": "A"},
-      {"question": "We are going / We go to the beach. (Présent)", "options": ["Nous allons à la plage.", "Vous allez à la plage.", "Ils vont à la plage.", "Je vais à la plage."], "answer": "A"},
-      {"question": "She is not going / She does not go to the store. (Présent - Negative)", "options": ["Elle ne va pas au magasin.", "Il ne va pas au magasin.", "Tu ne vas pas au magasin.", "Nous n'allons pas au magasin."], "answer": "A"},
-      {"question": "Are you going / Do you go with us? (Présent - Question, formal/plural)", "options": ["Allez-vous avec nous ?", "Vas-tu avec nous ?", "Va-t-elle avec nous ?", "Vont-ils avec nous ?"], "answer": "A"},
-      {"question": "They are going / They go to the cinema. (Présent, male/mixed)", "options": ["Ils vont au cinéma.", "Elles vont au cinéma.", "Ils allaient au cinéma.", "Ils iront au cinéma."], "answer": "A"},
-      {"question": "I am not going / I do not go to work today. (Présent - Negative)", "options": ["Je ne vais pas au travail aujourd'hui.", "Tu ne vas pas au travail aujourd'hui.", "Il ne va pas au travail aujourd'hui.", "Nous n'allons pas au travail aujourd'hui."], "answer": "A"},
-      {"question": "Are we going / Do we go to the market? (Présent - Question)", "options": ["Allons-nous au marché ?", "Vas-tu au marché ?", "Va-t-il au marché ?", "Vont-ils au marché ?"], "answer": "A"},
-      {"question": "You are going / You go to the party. (Présent, informal)", "options": ["Tu vas à la fête.", "Je vais à la fête.", "Il va à la fête.", "Vous allez à la fête."], "answer": "A"},
-      {"question": "I am going / I go sometimes to the park. (Présent)", "options": ["Je vais parfois au parc.", "Tu vas parfois au parc.", "Il va parfois au parc.", "Nous allons parfois au parc."], "answer": "A"},
-      {"question": "She is going / She goes every day to school. (Présent)", "options": ["Elle va tous les jours à l'école.", "Il va tous les jours à l'école.", "Tu vas tous les jours à l'école.", "Nous allons tous les jours à l'école."], "answer": "A"},
-      {"question": "They are not going / They do not go to the gym. (Présent - Negative, female)", "options": ["Elles ne vont pas au gymnase.", "Ils ne vont pas au gymnase.", "Vous n'allez pas au gymnase.", "Nous n'allons pas au gymnase."], "answer": "A"},
-      {"question": "Are you going / Do you go to the library? (Présent - Question, informal)", "options": ["Vas-tu à la bibliothèque ?", "Va-t-il à la bibliothèque ?", "Allons-nous à la bibliothèque ?", "Vont-ils à la bibliothèque ?"], "answer": "A"},
-      {"question": "He is going / He goes to work. (Présent)", "options": ["Il va au travail.", "Elle va au travail.", "Tu vas au travail.", "Ils vont au travail."], "answer": "A"},
-      {"question": "I am not going / I do not go to the market today. (Présent - Negative)", "options": ["Je ne vais pas au marché aujourd'hui.", "Tu ne vas pas au marché aujourd'hui.", "Il ne va pas au marché aujourd'hui.", "Nous n'allons pas au marché aujourd'hui."], "answer": "A"},
-      {"question": "Are they going / Do they go to the museum? (Présent - Question, male)", "options": ["Vont-ils au musée ?", "Vont-elles au musée ?", "Allez-vous au musée ?", "Vas-tu au musée ?"], "answer": "A"},
-      {"question": "She is going / She goes with her friends. (Présent)", "options": ["Elle va avec ses amis.", "Il va avec ses amis.", "Tu vas avec tes amis.", "Nous allons avec nos amis."], "answer": "A"},
-      {"question": "We are not going / We do not go to the city. (Présent - Negative)", "options": ["Nous n'allons pas en ville.", "Vous n'allez pas en ville.", "Ils ne vont pas en ville.", "Je ne vais pas en ville."], "answer": "A"},
-      {"question": "Are you going / Do you go to the stadium? (Présent - Question, formal)", "options": ["Allez-vous au stade ?", "Vas-tu au stade ?", "Va-t-il au stade ?", "Vont-ils au stade ?"], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I go to school / I am going to school", "options": ["Tu vas à l'école", "Je vais à l'école", "Il va à l'école", "Nous allons à l'école"], "answer": "B"},
+      {"question": "You go to the park / You are going to the park (informal)", "options": ["Je vais au parc", "Vous allez au parc", "Tu vas au parc", "Ils vont au parc"], "answer": "C"},
+      {"question": "He goes to the market / He is going to the market", "options": ["Elle va au marché", "Tu vas au marché", "Ils vont au marché", "Il va au marché"], "answer": "D"},
+      {"question": "She goes to the store / She is going to the store", "options": ["Il va au magasin", "Elle va au magasin", "Elles vont au magasin", "Tu vas au magasin"], "answer": "B"},
+      {"question": "We go to the cinema / We are going to the cinema", "options": ["Vous allez au cinéma", "Ils vont au cinéma", "Je vais au cinéma", "Nous allons au cinéma"], "answer": "D"},
+      {"question": "You go to the party / You are going to the party (formal / plural)", "options": ["Tu vas à la fête", "Nous allons à la fête", "Vous allez à la fête", "Ils vont à la fête"], "answer": "C"},
+      {"question": "They go to the museum / They are going to the museum (male / mixed)", "options": ["Elles vont au musée", "Ils étaient au musée", "Ils iront au musée", "Ils vont au musée"], "answer": "D"},
+      {"question": "They go to the museum / They are going to the museum (female)", "options": ["Ils vont au musée", "Elles étaient au musée", "Elles iront au musée", "Elles vont au musée"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I do not go to school / I am not going to school", "options": ["Tu ne vas pas à l'école", "Il ne va pas à l'école", "Je ne vais pas à l'école", "Nous n'allons pas à l'école"], "answer": "C"},
+      {"question": "You do not go to the park / You are not going to the park (informal)", "options": ["Je ne vais pas au parc", "Tu ne vas pas au parc", "Vous n'allez pas au parc", "Ils ne vont pas au parc"], "answer": "B"},
+      {"question": "He does not go to the market / He is not going to the market", "options": ["Elle ne va pas au marché", "Tu ne vas pas au marché", "Ils ne vont pas au marché", "Il ne va pas au marché"], "answer": "D"},
+      {"question": "She does not go to the store / She is not going to the store", "options": ["Il ne va pas au magasin", "Elle ne va pas au magasin", "Elles ne vont pas au magasin", "Tu ne vas pas au magasin"], "answer": "B"},
+      {"question": "We do not go to the cinema / We are not going to the cinema", "options": ["Vous n'allez pas au cinéma", "Ils ne vont pas au cinéma", "Je ne vais pas au cinéma", "Nous n'allons pas au cinéma"], "answer": "D"},
+      {"question": "You do not go to the party / You are not going to the party (formal / plural)", "options": ["Tu ne vas pas à la fête", "Vous n'allez pas à la fête", "Nous n'allons pas à la fête", "Ils ne vont pas à la fête"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Do I go to school / Am I going to school?", "options": ["Vas-tu à l'école ?", "Va-t-il à l'école ?", "Vais-je à l'école ?", "Allons-nous à l'école ?"], "answer": "C"},
+      {"question": "Do you go to the park / Are you going to the park? (informal)", "options": ["Vais-je au parc ?", "Vas-tu au parc ?", "Va-t-il au parc ?", "Allez-vous au parc ?"], "answer": "B"},
+      {"question": "Does he go to the market / Is he going to the market?", "options": ["Va-t-elle au marché ?", "Vais-je au marché ?", "Vas-tu au marché ?", "Va-t-il au marché ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Don't I go to school / Am I not going to school?", "options": ["Ne vas-tu pas à l'école ?", "Ne va-t-il pas à l'école ?", "N'allons-nous pas à l'école ?", "Ne vais-je pas à l'école ?"], "answer": "D"},
+      {"question": "Don't you go to the park / Are you not going to the park? (informal)", "options": ["Ne vais-je pas au parc ?", "Ne vas-tu pas au parc ?", "Ne va-t-il pas au parc ?", "N'allez-vous pas au parc ?"], "answer": "B"},
+      {"question": "Doesn't he go to the market / Is he not going to the market?", "options": ["Ne va-t-elle pas au marché ?", "Ne vais-je pas au marché ?", "Ne vas-tu pas au marché ?", "Ne va-t-il pas au marché ?"], "answer": "D"}
     ],
     "passé_composé": [
       {"question": "I went to the store. (Passé Composé)", "options": ["Je suis allé au magasin.", "Tu es allé au magasin.", "Il est allé au magasin.", "Nous sommes allés au magasin."], "answer": "A"},

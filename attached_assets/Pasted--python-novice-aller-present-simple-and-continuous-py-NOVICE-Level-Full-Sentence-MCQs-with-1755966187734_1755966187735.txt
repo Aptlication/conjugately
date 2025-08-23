@@ -1,0 +1,144 @@
+```python
+# novice_aller_present_simple_and_continuous.py
+# NOVICE Level – Full Sentence MCQs with Present Simple and Present Continuous English Phrase Groupings
+# Verb: aller
+# Tense: Présent (Present Simple with Present Continuous equivalents)
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form 
+# (e.g., "He goes / He is going", "She is late" (present continuous) grouped with present simple)
+# English phrases use natural alternative verbs where appropriate
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I go to school / I am going to school",
+        "correct": "Je vais à l'école",
+        "distractors": ["Tu vas à l'école", "Il va à l'école", "Nous allons à l'école"]
+    },
+    {
+        "question": "You go to the park / You are going to the park (informal)",
+        "correct": "Tu vas au parc",
+        "distractors": ["Je vais au parc", "Vous allez au parc", "Ils vont au parc"]
+    },
+    {
+        "question": "He goes to the market / He is going to the market",
+        "correct": "Il va au marché",
+        "distractors": ["Elle va au marché", "Tu vas au marché", "Ils vont au marché"]
+    },
+    {
+        "question": "She goes to the store / She is going to the store",
+        "correct": "Elle va au magasin",
+        "distractors": ["Il va au magasin", "Elles vont au magasin", "Tu vas au magasin"]
+    },
+    {
+        "question": "We go to the cinema / We are going to the cinema",
+        "correct": "Nous allons au cinéma",
+        "distractors": ["Vous allez au cinéma", "Ils vont au cinéma", "Je vais au cinéma"]
+    },
+    {
+        "question": "You go to the party / You are going to the party (formal / plural)",
+        "correct": "Vous allez à la fête",
+        "distractors": ["Tu vas à la fête", "Nous allons à la fête", "Ils vont à la fête"]
+    },
+    {
+        "question": "They go to the museum / They are going to the museum (male / mixed)",
+        "correct": "Ils vont au musée",
+        "distractors": ["Elles vont au musée", "Ils étaient au musée", "Ils iront au musée"]
+    },
+    {
+        "question": "They go to the museum / They are going to the museum (female)",
+        "correct": "Elles vont au musée",
+        "distractors": ["Ils vont au musée", "Elles étaient au musée", "Elles iront au musée"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I do not go to school / I am not going to school",
+        "correct": "Je ne vais pas à l'école",
+        "distractors": ["Tu ne vas pas à l'école", "Il ne va pas à l'école", "Nous n'allons pas à l'école"]
+    },
+    {
+        "question": "You do not go to the park / You are not going to the park (informal)",
+        "correct": "Tu ne vas pas au parc",
+        "distractors": ["Je ne vais pas au parc", "Vous n'allez pas au parc", "Ils ne vont pas au parc"]
+    },
+    {
+        "question": "He does not go to the market / He is not going to the market",
+        "correct": "Il ne va pas au marché",
+        "distractors": ["Elle ne va pas au marché", "Tu ne vas pas au marché", "Ils ne vont pas au marché"]
+    },
+    {
+        "question": "She does not go to the store / She is not going to the store",
+        "correct": "Elle ne va pas au magasin",
+        "distractors": ["Il ne va pas au magasin", "Elles ne vont pas au magasin", "Tu ne vas pas au magasin"]
+    },
+    {
+        "question": "We do not go to the cinema / We are not going to the cinema",
+        "correct": "Nous n'allons pas au cinéma",
+        "distractors": ["Vous n'allez pas au cinéma", "Ils ne vont pas au cinéma", "Je ne vais pas au cinéma"]
+    },
+    {
+        "question": "You do not go to the party / You are not going to the party (formal / plural)",
+        "correct": "Vous n'allez pas à la fête",
+        "distractors": ["Tu ne vas pas à la fête", "Nous n'allons pas à la fête", "Ils ne vont pas à la fête"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Do I go to school / Am I going to school?",
+        "correct": "Vais-je à l'école ?",
+        "distractors": ["Vas-tu à l'école ?", "Va-t-il à l'école ?", "Allons-nous à l'école ?"]
+    },
+    {
+        "question": "Do you go to the park / Are you going to the park? (informal)",
+        "correct": "Vas-tu au parc ?",
+        "distractors": ["Vais-je au parc ?", "Va-t-il au parc ?", "Allez-vous au parc ?"]
+    },
+    {
+        "question": "Does he go to the market / Is he going to the market?",
+        "correct": "Va-t-il au marché ?",
+        "distractors": ["Va-t-elle au marché ?", "Vais-je au marché ?", "Vas-tu au marché ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Don’t I go to school / Am I not going to school?",
+        "correct": "Ne vais-je pas à l'école ?",
+        "distractors": ["Ne vas-tu pas à l'école ?", "Ne va-t-il pas à l'école ?", "N'allons-nous pas à l'école ?"]
+    },
+    {
+        "question": "Don’t you go to the park / Are you not going to the park? (informal)",
+        "correct": "Ne vas-tu pas au parc ?",
+        "distractors": ["Ne vais-je pas au parc ?", "Ne va-t-il pas au parc ?", "N'allez-vous pas au parc ?"]
+    },
+    {
+        "question": "Doesn’t he go to the market / Is he not going to the market?",
+        "correct": "Ne va-t-il pas au marché ?",
+        "distractors": ["Ne va-t-elle pas au marché ?", "Ne vais-je pas au marché ?", "Ne vas-tu pas au marché ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with randomized answer placement among options A-D
+```
