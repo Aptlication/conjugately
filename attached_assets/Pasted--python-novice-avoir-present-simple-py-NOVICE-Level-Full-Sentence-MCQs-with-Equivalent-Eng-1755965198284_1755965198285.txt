@@ -1,0 +1,143 @@
+```python
+# novice_avoir_present_simple.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: avoir
+# Tense: Présent (Present Simple)
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He has / He is having")
+# English phrases use natural alternative verbs where appropriate
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I have a car",
+        "correct": "J'ai une voiture",
+        "distractors": ["Tu as une voiture", "Il a une voiture", "Nous avons une voiture"]
+    },
+    {
+        "question": "You have / You are having a problem (informal)",
+        "correct": "Tu as un problème",
+        "distractors": ["J'ai un problème", "Vous avez un problème", "Ils ont un problème"]
+    },
+    {
+        "question": "He has a dog",
+        "correct": "Il a un chien",
+        "distractors": ["Elle a un chien", "Tu as un chien", "Ils ont un chien"]
+    },
+    {
+        "question": "She has a cat",
+        "correct": "Elle a un chat",
+        "distractors": ["Il a un chat", "Elles ont un chat", "Tu as un chat"]
+    },
+    {
+        "question": "We have a house",
+        "correct": "Nous avons une maison",
+        "distractors": ["Vous avez une maison", "Ils ont une maison", "J'ai une maison"]
+    },
+    {
+        "question": "You have / You are having a party (formal / plural)",
+        "correct": "Vous avez une fête",
+        "distractors": ["Tu as une fête", "Nous avons une fête", "Ils ont une fête"]
+    },
+    {
+        "question": "They have books (male / mixed)",
+        "correct": "Ils ont des livres",
+        "distractors": ["Elles ont des livres", "Ils avaient des livres", "Ils auront des livres"]
+    },
+    {
+        "question": "They have keys (female)",
+        "correct": "Elles ont des clés",
+        "distractors": ["Ils ont des clés", "Elles avaient des clés", "Elles auront des clés"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I do not have a car",
+        "correct": "Je n'ai pas de voiture",
+        "distractors": ["Tu n'as pas de voiture", "Il n'a pas de voiture", "Nous n'avons pas de voiture"]
+    },
+    {
+        "question": "You do not have / You are not having a problem (informal)",
+        "correct": "Tu n'as pas de problème",
+        "distractors": ["Je n'ai pas de problème", "Vous n'avez pas de problème", "Ils n'ont pas de problème"]
+    },
+    {
+        "question": "He does not have a dog",
+        "correct": "Il n'a pas de chien",
+        "distractors": ["Elle n'a pas de chien", "Tu n'as pas de chien", "Ils n'ont pas de chien"]
+    },
+    {
+        "question": "She does not have a cat",
+        "correct": "Elle n'a pas de chat",
+        "distractors": ["Il n'a pas de chat", "Elles n'ont pas de chat", "Tu n'as pas de chat"]
+    },
+    {
+        "question": "We do not have a house",
+        "correct": "Nous n'avons pas de maison",
+        "distractors": ["Vous n'avez pas de maison", "Ils n'ont pas de maison", "Je n'ai pas de maison"]
+    },
+    {
+        "question": "You do not have / You are not having a party (formal / plural)",
+        "correct": "Vous n'avez pas de fête",
+        "distractors": ["Tu n'as pas de fête", "Nous n'avons pas de fête", "Ils n'ont pas de fête"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Do I have a car?",
+        "correct": "Ai-je une voiture ?",
+        "distractors": ["As-tu une voiture ?", "A-t-il une voiture ?", "Avons-nous une voiture ?"]
+    },
+    {
+        "question": "Do you have / Are you having a problem? (informal)",
+        "correct": "As-tu un problème ?",
+        "distractors": ["Ai-je un problème ?", "A-t-il un problème ?", "Avez-vous un problème ?"]
+    },
+    {
+        "question": "Does he have a dog?",
+        "correct": "A-t-il un chien ?",
+        "distractors": ["A-t-elle un chien ?", "Ai-je un chien ?", "As-tu un chien ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Don’t I have a car?",
+        "correct": "N'ai-je pas de voiture ?",
+        "distractors": ["N'as-tu pas de voiture ?", "N'a-t-il pas de voiture ?", "N'avons-nous pas de voiture ?"]
+    },
+    {
+        "question": "Don’t you have / Aren’t you having a problem? (informal)",
+        "correct": "N'as-tu pas de problème ?",
+        "distractors": ["N'ai-je pas de problème ?", "N'a-t-il pas de problème ?", "N'avez-vous pas de problème ?"]
+    },
+    {
+        "question": "Doesn’t he have a dog?",
+        "correct": "N'a-t-il pas de chien ?",
+        "distractors": ["N'a-t-elle pas de chien ?", "N'ai-je pas de chien ?", "N'as-tu pas de chien ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with randomized answer placement among options A-D
+```

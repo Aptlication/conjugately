@@ -1,0 +1,143 @@
+```python
+# novice_avoir_passe_compose.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: avoir
+# Tense: Passé Composé
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He had / He has had")
+# English phrases use natural alternative verbs where appropriate
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I had a car / I have had a car",
+        "correct": "J'ai eu une voiture",
+        "distractors": ["Tu as eu une voiture", "Il a eu une voiture", "Nous avons eu une voiture"]
+    },
+    {
+        "question": "You had a problem / You have had a problem (informal)",
+        "correct": "Tu as eu un problème",
+        "distractors": ["J'ai eu un problème", "Vous avez eu un problème", "Ils ont eu un problème"]
+    },
+    {
+        "question": "He had a dog / He has had a dog",
+        "correct": "Il a eu un chien",
+        "distractors": ["Elle a eu un chien", "Tu as eu un chien", "Ils ont eu un chien"]
+    },
+    {
+        "question": "She had a cat / She has had a cat",
+        "correct": "Elle a eu un chat",
+        "distractors": ["Il a eu un chat", "Elles ont eu un chat", "Tu as eu un chat"]
+    },
+    {
+        "question": "We had a house / We have had a house",
+        "correct": "Nous avons eu une maison",
+        "distractors": ["Vous avez eu une maison", "Ils ont eu une maison", "J'ai eu une maison"]
+    },
+    {
+        "question": "You had a party / You have had a party (formal / plural)",
+        "correct": "Vous avez eu une fête",
+        "distractors": ["Tu as eu une fête", "Nous avons eu une fête", "Ils ont eu une fête"]
+    },
+    {
+        "question": "They had books / They have had books (male / mixed)",
+        "correct": "Ils ont eu des livres",
+        "distractors": ["Elles ont eu des livres", "Ils avaient des livres", "Ils auront des livres"]
+    },
+    {
+        "question": "They had keys / They have had keys (female)",
+        "correct": "Elles ont eu des clés",
+        "distractors": ["Ils ont eu des clés", "Elles avaient des clés", "Elles auront des clés"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I had not a car / I have not had a car",
+        "correct": "Je n'ai pas eu de voiture",
+        "distractors": ["Tu n'as pas eu de voiture", "Il n'a pas eu de voiture", "Nous n'avons pas eu de voiture"]
+    },
+    {
+        "question": "You had not a problem / You have not had a problem (informal)",
+        "correct": "Tu n'as pas eu de problème",
+        "distractors": ["Je n'ai pas eu de problème", "Vous n'avez pas eu de problème", "Ils n'ont pas eu de problème"]
+    },
+    {
+        "question": "He had not a dog / He has not had a dog",
+        "correct": "Il n'a pas eu de chien",
+        "distractors": ["Elle n'a pas eu de chien", "Tu n'as pas eu de chien", "Ils n'ont pas eu de chien"]
+    },
+    {
+        "question": "She had not a cat / She has not had a cat",
+        "correct": "Elle n'a pas eu de chat",
+        "distractors": ["Il n'a pas eu de chat", "Elles n'ont pas eu de chat", "Tu n'as pas eu de chat"]
+    },
+    {
+        "question": "We had not a house / We have not had a house",
+        "correct": "Nous n'avons pas eu de maison",
+        "distractors": ["Vous n'avez pas eu de maison", "Ils n'ont pas eu de maison", "Je n'ai pas eu de maison"]
+    },
+    {
+        "question": "You had not a party / You have not had a party (formal / plural)",
+        "correct": "Vous n'avez pas eu de fête",
+        "distractors": ["Tu n'as pas eu de fête", "Nous n'avons pas eu de fête", "Ils n'ont pas eu de fête"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Had I a car? / Have I had a car?",
+        "correct": "Ai-je eu une voiture ?",
+        "distractors": ["As-tu eu une voiture ?", "A-t-il eu une voiture ?", "Avons-nous eu une voiture ?"]
+    },
+    {
+        "question": "Had you a problem? / Have you had a problem? (informal)",
+        "correct": "As-tu eu un problème ?",
+        "distractors": ["Ai-je eu un problème ?", "A-t-il eu un problème ?", "Avez-vous eu un problème ?"]
+    },
+    {
+        "question": "Had he a dog? / Has he had a dog?",
+        "correct": "A-t-il eu un chien ?",
+        "distractors": ["A-t-elle eu un chien ?", "Ai-je eu un chien ?", "As-tu eu un chien ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Hadn't I a car? / Haven't I had a car?",
+        "correct": "N'ai-je pas eu de voiture ?",
+        "distractors": ["N'as-tu pas eu de voiture ?", "N'a-t-il pas eu de voiture ?", "N'avons-nous pas eu de voiture ?"]
+    },
+    {
+        "question": "Hadn't you a problem? / Haven't you had a problem? (informal)",
+        "correct": "N'as-tu pas eu de problème ?",
+        "distractors": ["N'ai-je pas eu de problème ?", "N'a-t-il pas eu de problème ?", "N'avez-vous pas eu de problème ?"]
+    },
+    {
+        "question": "Hadn't he a dog? / Hasn't he had a dog?",
+        "correct": "N'a-t-il pas eu de chien ?",
+        "distractors": ["N'a-t-elle pas eu de chien ?", "N'ai-je pas eu de chien ?", "N'as-tu pas eu de chien ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```

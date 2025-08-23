@@ -271,26 +271,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "Doesn't he have a dog?", "options": ["N'a-t-elle pas de chien ?", "N'ai-je pas de chien ?", "N'as-tu pas de chien ?", "N'a-t-il pas de chien ?"], "answer": "D"}
     ],
     "passé_composé": [
-      {"question": "I had a good day. (Passé Composé)", "options": ["J'ai eu une bonne journée.", "Tu as eu une bonne journée.", "Il a eu une bonne journée.", "Nous avons eu une bonne journée."], "answer": "A"},
-      {"question": "You did not have coffee. (Passé Composé - Negative)", "options": ["Tu n'as pas eu de café.", "Je n'ai pas eu de café.", "Il n'a pas eu de café.", "Nous n'avons pas eu de café."], "answer": "A"},
-      {"question": "Did he have problems? (Passé Composé - Question)", "options": ["A-t-il eu des problèmes ?", "As-tu eu des problèmes ?", "Ai-je eu des problèmes ?", "Avez-vous eu des problèmes ?"], "answer": "A"},
-      {"question": "We had some rain. (Passé Composé)", "options": ["Nous avons eu de la pluie.", "Vous avez eu de la pluie.", "Ils ont eu de la pluie.", "J'ai eu de la pluie."], "answer": "A"},
-      {"question": "She did not have luck. (Passé Composé - Negative)", "options": ["Elle n'a pas eu de chance.", "Il n'a pas eu de chance.", "Tu n'as pas eu de chance.", "Nous n'avons pas eu de chance."], "answer": "A"},
-      {"question": "Did you (formal) have dinner? (Passé Composé - Question)", "options": ["Avez-vous eu le dîner ?", "As-tu eu le dîner ?", "Ai-je eu le dîner ?", "Avons-nous eu le dîner ?"], "answer": "A"},
-      {"question": "They had gifts. (male/mixed) (Passé Composé)", "options": ["Ils ont eu des cadeaux.", "Elles ont eu des cadeaux.", "Ils avaient des cadeaux.", "Ils auront des cadeaux."], "answer": "A"},
-      {"question": "I did not have problems. (Passé Composé - Negative)", "options": ["Je n'ai pas eu de problèmes.", "Tu n'as pas eu de problèmes.", "Il n'a pas eu de problèmes.", "Nous n'avons pas eu de problèmes."], "answer": "A"},
-      {"question": "Did we have time? (Passé Composé - Question)", "options": ["Avons-nous eu du temps ?", "Ai-je eu du temps ?", "Avez-vous eu du temps ?", "Ont-ils eu du temps ?"], "answer": "A"},
-      {"question": "You had many friends. (Passé Composé)", "options": ["Tu as eu beaucoup d'amis.", "J'ai eu beaucoup d'amis.", "Il a eu beaucoup d'amis.", "Vous avez eu beaucoup d'amis."], "answer": "A"},
-      {"question": "I had a meeting yesterday. (Passé Composé)", "options": ["J'ai eu une réunion hier.", "Tu as eu une réunion hier.", "Il a eu une réunion hier.", "Nous avons eu une réunion hier."], "answer": "A"},
-      {"question": "She did not have money. (Passé Composé - Negative)", "options": ["Elle n'a pas eu d'argent.", "Il n'a pas eu d'argent.", "Tu n'as pas eu d'argent.", "Nous n'avons pas eu d'argent."], "answer": "A"},
-      {"question": "Did you have water? (Passé Composé - Question, informal)", "options": ["As-tu eu de l'eau ?", "Ai-je eu de l'eau ?", "A-t-il eu de l'eau ?", "Avez-vous eu de l'eau ?"], "answer": "A"},
-      {"question": "We had a beautiful vacation. (Passé Composé)", "options": ["Nous avons eu de belles vacances.", "Vous avez eu de belles vacances.", "Ils ont eu de belles vacances.", "J'ai eu de belles vacances."], "answer": "A"},
-      {"question": "He did not have patience. (Passé Composé - Negative)", "options": ["Il n'a pas eu de patience.", "Je n'ai pas eu de patience.", "Tu n'as pas eu de patience.", "Ils n'ont pas eu de patience."], "answer": "A"},
-      {"question": "Did they have children? (Passé Composé - Question, male/mixed)", "options": ["Ont-ils eu des enfants ?", "Ont-elles eu des enfants ?", "Avez-vous eu des enfants ?", "As-tu eu des enfants ?"], "answer": "A"},
-      {"question": "I did not have troubles. (Passé Composé - Negative)", "options": ["Je n'ai pas eu d'ennuis.", "Tu n'as pas eu d'ennuis.", "Il n'a pas eu d'ennuis.", "Nous n'avons pas eu d'ennuis."], "answer": "A"},
-      {"question": "Did we have enough food? (Passé Composé - Question)", "options": ["Avons-nous eu assez de nourriture ?", "Ai-je eu assez de nourriture ?", "Avez-vous eu assez de nourriture ?", "Ont-ils eu assez de nourriture ?"], "answer": "A"},
-      {"question": "You had great ideas. (Passé Composé)", "options": ["Tu as eu de bonnes idées.", "J'ai eu de bonnes idées.", "Il a eu de bonnes idées.", "Vous avez eu de bonnes idées."], "answer": "A"},
-      {"question": "They did not have luck (female). (Passé Composé - Negative)", "options": ["Elles n'ont pas eu de chance.", "Ils n'ont pas eu de chance.", "Vous n'avez pas eu de chance.", "Nous n'avons pas eu de chance."], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I had a car / I have had a car", "options": ["Tu as eu une voiture", "J'ai eu une voiture", "Il a eu une voiture", "Nous avons eu une voiture"], "answer": "B"},
+      {"question": "You had a problem / You have had a problem (informal)", "options": ["J'ai eu un problème", "Vous avez eu un problème", "Tu as eu un problème", "Ils ont eu un problème"], "answer": "C"},
+      {"question": "He had a dog / He has had a dog", "options": ["Elle a eu un chien", "Tu as eu un chien", "Ils ont eu un chien", "Il a eu un chien"], "answer": "D"},
+      {"question": "She had a cat / She has had a cat", "options": ["Il a eu un chat", "Elle a eu un chat", "Elles ont eu un chat", "Tu as eu un chat"], "answer": "B"},
+      {"question": "We had a house / We have had a house", "options": ["Vous avez eu une maison", "Ils ont eu une maison", "J'ai eu une maison", "Nous avons eu une maison"], "answer": "D"},
+      {"question": "You had a party / You have had a party (formal / plural)", "options": ["Tu as eu une fête", "Nous avons eu une fête", "Vous avez eu une fête", "Ils ont eu une fête"], "answer": "C"},
+      {"question": "They had books / They have had books (male / mixed)", "options": ["Elles ont eu des livres", "Ils avaient des livres", "Ils auront des livres", "Ils ont eu des livres"], "answer": "D"},
+      {"question": "They had keys / They have had keys (female)", "options": ["Ils ont eu des clés", "Elles avaient des clés", "Elles auront des clés", "Elles ont eu des clés"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I did not have a car / I have not had a car", "options": ["Tu n'as pas eu de voiture", "Il n'a pas eu de voiture", "Je n'ai pas eu de voiture", "Nous n'avons pas eu de voiture"], "answer": "C"},
+      {"question": "You did not have a problem / You have not had a problem (informal)", "options": ["Je n'ai pas eu de problème", "Tu n'as pas eu de problème", "Vous n'avez pas eu de problème", "Ils n'ont pas eu de problème"], "answer": "B"},
+      {"question": "He did not have a dog / He has not had a dog", "options": ["Elle n'a pas eu de chien", "Tu n'as pas eu de chien", "Ils n'ont pas eu de chien", "Il n'a pas eu de chien"], "answer": "D"},
+      {"question": "She did not have a cat / She has not had a cat", "options": ["Il n'a pas eu de chat", "Elle n'a pas eu de chat", "Elles n'ont pas eu de chat", "Tu n'as pas eu de chat"], "answer": "B"},
+      {"question": "We did not have a house / We have not had a house", "options": ["Vous n'avez pas eu de maison", "Ils n'ont pas eu de maison", "Je n'ai pas eu de maison", "Nous n'avons pas eu de maison"], "answer": "D"},
+      {"question": "You did not have a party / You have not had a party (formal / plural)", "options": ["Tu n'as pas eu de fête", "Vous n'avez pas eu de fête", "Nous n'avons pas eu de fête", "Ils n'ont pas eu de fête"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Did I have a car? / Have I had a car?", "options": ["As-tu eu une voiture ?", "A-t-il eu une voiture ?", "Ai-je eu une voiture ?", "Avons-nous eu une voiture ?"], "answer": "C"},
+      {"question": "Did you have a problem? / Have you had a problem? (informal)", "options": ["Ai-je eu un problème ?", "As-tu eu un problème ?", "A-t-il eu un problème ?", "Avez-vous eu un problème ?"], "answer": "B"},
+      {"question": "Did he have a dog? / Has he had a dog?", "options": ["A-t-elle eu un chien ?", "Ai-je eu un chien ?", "As-tu eu un chien ?", "A-t-il eu un chien ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Didn't I have a car? / Haven't I had a car?", "options": ["N'as-tu pas eu de voiture ?", "N'a-t-il pas eu de voiture ?", "N'avons-nous pas eu de voiture ?", "N'ai-je pas eu de voiture ?"], "answer": "D"},
+      {"question": "Didn't you have a problem? / Haven't you had a problem? (informal)", "options": ["N'ai-je pas eu de problème ?", "N'as-tu pas eu de problème ?", "N'a-t-il pas eu de problème ?", "N'avez-vous pas eu de problème ?"], "answer": "B"},
+      {"question": "Didn't he have a dog? / Hasn't he had a dog?", "options": ["N'a-t-elle pas eu de chien ?", "N'ai-je pas eu de chien ?", "N'as-tu pas eu de chien ?", "N'a-t-il pas eu de chien ?"], "answer": "D"}
     ],
     "futur_simple": [
       {"question": "I will have a car. (Futur Simple)", "options": ["J'aurai une voiture.", "Tu auras une voiture.", "Il aura une voiture.", "Nous aurons une voiture."], "answer": "A"},
