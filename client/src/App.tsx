@@ -117,6 +117,7 @@ function App() {
     "pouvoir": "to be able to/can",
     "vouloir": "to want",
     "venir": "to come",
+    "besoin": "to need",
     "se lever": "to get up",
     "s'appeler": "to be called",
     "se sentir": "to feel",
