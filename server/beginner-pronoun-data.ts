@@ -1026,8 +1026,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I have made",
         hint: "First person singular of faire in passé composé",
         answerOptions: [
-          { text: "J'ai fait", rationale: "Correct! 'J'ai fait' is 'I have made' in French passé composé.", isCorrect: true },
           { text: "Tu as fait", rationale: "This means 'you have made' (informal).", isCorrect: false },
+          { text: "J'ai fait", rationale: "Correct! 'J'ai fait' is 'I have made' in French passé composé.", isCorrect: true },
           { text: "Il a fait", rationale: "This means 'he has made'.", isCorrect: false },
           { text: "Nous avons fait", rationale: "This means 'we have made'.", isCorrect: false }
         ]
@@ -1036,9 +1036,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You have made (informal)",
         hint: "Second person singular of faire in passé composé",
         answerOptions: [
-          { text: "Tu as fait", rationale: "Correct! 'Tu as fait' is 'you have made' (informal) in French passé composé.", isCorrect: true },
           { text: "J'ai fait", rationale: "This means 'I have made'.", isCorrect: false },
           { text: "Vous avez fait", rationale: "This means 'you have made' (formal/plural).", isCorrect: false },
+          { text: "Tu as fait", rationale: "Correct! 'Tu as fait' is 'you have made' (informal) in French passé composé.", isCorrect: true },
           { text: "Ils ont fait", rationale: "This means 'they have made'.", isCorrect: false }
         ]
       },
@@ -1046,18 +1046,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He has made",
         hint: "Third person singular masculine of faire in passé composé",
         answerOptions: [
-          { text: "Il a fait", rationale: "Correct! 'Il a fait' is 'he has made' in French passé composé.", isCorrect: true },
           { text: "Elle a fait", rationale: "This means 'she has made'.", isCorrect: false },
           { text: "Tu as fait", rationale: "This means 'you have made' (informal).", isCorrect: false },
-          { text: "Ils ont fait", rationale: "This means 'they have made'.", isCorrect: false }
+          { text: "Ils ont fait", rationale: "This means 'they have made'.", isCorrect: false },
+          { text: "Il a fait", rationale: "Correct! 'Il a fait' is 'he has made' in French passé composé.", isCorrect: true }
         ]
       },
       {
         question: "She has made",
         hint: "Third person singular feminine of faire in passé composé",
         answerOptions: [
-          { text: "Elle a fait", rationale: "Correct! 'Elle a fait' is 'she has made' in French passé composé.", isCorrect: true },
           { text: "Il a fait", rationale: "This means 'he has made'.", isCorrect: false },
+          { text: "Elle a fait", rationale: "Correct! 'Elle a fait' is 'she has made' in French passé composé.", isCorrect: true },
           { text: "Elles ont fait", rationale: "This means 'they have made' (feminine).", isCorrect: false },
           { text: "Tu as fait", rationale: "This means 'you have made' (informal).", isCorrect: false }
         ]
@@ -1066,19 +1066,19 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We have made",
         hint: "First person plural of faire in passé composé",
         answerOptions: [
-          { text: "Nous avons fait", rationale: "Correct! 'Nous avons fait' is 'we have made' in French passé composé.", isCorrect: true },
           { text: "Vous avez fait", rationale: "This means 'you have made' (formal/plural).", isCorrect: false },
           { text: "Ils ont fait", rationale: "This means 'they have made'.", isCorrect: false },
-          { text: "J'ai fait", rationale: "This means 'I have made'.", isCorrect: false }
+          { text: "J'ai fait", rationale: "This means 'I have made'.", isCorrect: false },
+          { text: "Nous avons fait", rationale: "Correct! 'Nous avons fait' is 'we have made' in French passé composé.", isCorrect: true }
         ]
       },
       {
         question: "You have made (formal/plural)",
         hint: "Second person formal/plural of faire in passé composé",
         answerOptions: [
-          { text: "Vous avez fait", rationale: "Correct! 'Vous avez fait' is 'you have made' (formal/plural) in French passé composé.", isCorrect: true },
           { text: "Tu as fait", rationale: "This means 'you have made' (informal).", isCorrect: false },
           { text: "Nous avons fait", rationale: "This means 'we have made'.", isCorrect: false },
+          { text: "Vous avez fait", rationale: "Correct! 'Vous avez fait' is 'you have made' (formal/plural) in French passé composé.", isCorrect: true },
           { text: "Ils ont fait", rationale: "This means 'they have made'.", isCorrect: false }
         ]
       },
@@ -1086,18 +1086,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "They have made (male/mixed)",
         hint: "Third person plural masculine/mixed of faire in passé composé",
         answerOptions: [
-          { text: "Ils ont fait", rationale: "Correct! 'Ils ont fait' is 'they have made' (masculine/mixed) in French passé composé.", isCorrect: true },
           { text: "Elles ont fait", rationale: "This means 'they have made' (feminine only).", isCorrect: false },
           { text: "Ils faisaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
-          { text: "Ils ont été", rationale: "This means 'they have been' (être), not 'they have made' (faire).", isCorrect: false }
+          { text: "Ils ont été", rationale: "This means 'they have been' (être), not 'they have made' (faire).", isCorrect: false },
+          { text: "Ils ont fait", rationale: "Correct! 'Ils ont fait' is 'they have made' (masculine/mixed) in French passé composé.", isCorrect: true }
         ]
       },
       {
         question: "They have made (female)",
         hint: "Third person plural feminine of faire in passé composé",
         answerOptions: [
-          { text: "Elles ont fait", rationale: "Correct! 'Elles ont fait' is 'they have made' (feminine) in French passé composé.", isCorrect: true },
           { text: "Ils ont fait", rationale: "This means 'they have made' (masculine/mixed).", isCorrect: false },
+          { text: "Elles ont fait", rationale: "Correct! 'Elles ont fait' is 'they have made' (feminine) in French passé composé.", isCorrect: true },
           { text: "Elles faisaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
           { text: "Elles ont été", rationale: "This means 'they have been' (être), not 'they have made' (faire).", isCorrect: false }
         ]
@@ -1108,9 +1108,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I have not made",
         hint: "First person singular negative of faire in passé composé",
         answerOptions: [
-          { text: "Je n'ai pas fait", rationale: "Correct! 'Je n'ai pas fait' is 'I have not made' using French negation ne...pas.", isCorrect: true },
           { text: "Tu n'as pas fait", rationale: "This means 'you have not made' (informal).", isCorrect: false },
           { text: "Il n'a pas fait", rationale: "This means 'he has not made'.", isCorrect: false },
+          { text: "Je n'ai pas fait", rationale: "Correct! 'Je n'ai pas fait' is 'I have not made' using French negation ne...pas.", isCorrect: true },
           { text: "Nous n'avons pas fait", rationale: "This means 'we have not made'.", isCorrect: false }
         ]
       },
@@ -1118,8 +1118,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You have not made (informal)",
         hint: "Second person singular negative of faire in passé composé",
         answerOptions: [
-          { text: "Tu n'as pas fait", rationale: "Correct! 'Tu n'as pas fait' is 'you have not made' (informal) using French negation.", isCorrect: true },
           { text: "Je n'ai pas fait", rationale: "This means 'I have not made'.", isCorrect: false },
+          { text: "Tu n'as pas fait", rationale: "Correct! 'Tu n'as pas fait' is 'you have not made' (informal) using French negation.", isCorrect: true },
           { text: "Vous n'avez pas fait", rationale: "This means 'you have not made' (formal/plural).", isCorrect: false },
           { text: "Ils n'ont pas fait", rationale: "This means 'they have not made'.", isCorrect: false }
         ]
@@ -1128,18 +1128,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He has not made",
         hint: "Third person singular masculine negative of faire in passé composé",
         answerOptions: [
-          { text: "Il n'a pas fait", rationale: "Correct! 'Il n'a pas fait' is 'he has not made' using French negation ne...pas.", isCorrect: true },
           { text: "Elle n'a pas fait", rationale: "This means 'she has not made'.", isCorrect: false },
           { text: "Tu n'as pas fait", rationale: "This means 'you have not made' (informal).", isCorrect: false },
-          { text: "Ils n'ont pas fait", rationale: "This means 'they have not made'.", isCorrect: false }
+          { text: "Ils n'ont pas fait", rationale: "This means 'they have not made'.", isCorrect: false },
+          { text: "Il n'a pas fait", rationale: "Correct! 'Il n'a pas fait' is 'he has not made' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "She has not made",
         hint: "Third person singular feminine negative of faire in passé composé",
         answerOptions: [
-          { text: "Elle n'a pas fait", rationale: "Correct! 'Elle n'a pas fait' is 'she has not made' using French negation ne...pas.", isCorrect: true },
           { text: "Il n'a pas fait", rationale: "This means 'he has not made'.", isCorrect: false },
+          { text: "Elle n'a pas fait", rationale: "Correct! 'Elle n'a pas fait' is 'she has not made' using French negation ne...pas.", isCorrect: true },
           { text: "Elles n'ont pas fait", rationale: "This means 'they have not made' (feminine).", isCorrect: false },
           { text: "Tu n'as pas fait", rationale: "This means 'you have not made' (informal).", isCorrect: false }
         ]
@@ -1148,18 +1148,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We have not made",
         hint: "First person plural negative of faire in passé composé",
         answerOptions: [
-          { text: "Nous n'avons pas fait", rationale: "Correct! 'Nous n'avons pas fait' is 'we have not made' using French negation ne...pas.", isCorrect: true },
           { text: "Vous n'avez pas fait", rationale: "This means 'you have not made' (formal/plural).", isCorrect: false },
           { text: "Ils n'ont pas fait", rationale: "This means 'they have not made'.", isCorrect: false },
-          { text: "Je n'ai pas fait", rationale: "This means 'I have not made'.", isCorrect: false }
+          { text: "Je n'ai pas fait", rationale: "This means 'I have not made'.", isCorrect: false },
+          { text: "Nous n'avons pas fait", rationale: "Correct! 'Nous n'avons pas fait' is 'we have not made' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "You have not made (formal/plural)",
         hint: "Second person formal/plural negative of faire in passé composé",
         answerOptions: [
-          { text: "Vous n'avez pas fait", rationale: "Correct! 'Vous n'avez pas fait' is 'you have not made' (formal/plural) using French negation.", isCorrect: true },
           { text: "Tu n'as pas fait", rationale: "This means 'you have not made' (informal).", isCorrect: false },
+          { text: "Vous n'avez pas fait", rationale: "Correct! 'Vous n'avez pas fait' is 'you have not made' (formal/plural) using French negation.", isCorrect: true },
           { text: "Nous n'avons pas fait", rationale: "This means 'we have not made'.", isCorrect: false },
           { text: "Ils n'ont pas fait", rationale: "This means 'they have not made'.", isCorrect: false }
         ]
@@ -1170,9 +1170,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Have I made?",
         hint: "Interrogative form of first person singular faire in passé composé",
         answerOptions: [
-          { text: "Ai-je fait ?", rationale: "Correct! 'Ai-je fait ?' is 'Have I made?' in French interrogative form with inversion.", isCorrect: true },
           { text: "As-tu fait ?", rationale: "This means 'Have you made?' (informal).", isCorrect: false },
           { text: "A-t-il fait ?", rationale: "This means 'Has he made?'.", isCorrect: false },
+          { text: "Ai-je fait ?", rationale: "Correct! 'Ai-je fait ?' is 'Have I made?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Avons-nous fait ?", rationale: "This means 'Have we made?'.", isCorrect: false }
         ]
       },
@@ -1180,8 +1180,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Have you made? (informal)",
         hint: "Interrogative form of second person singular faire in passé composé",
         answerOptions: [
-          { text: "As-tu fait ?", rationale: "Correct! 'As-tu fait ?' is 'Have you made?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Ai-je fait ?", rationale: "This means 'Have I made?'.", isCorrect: false },
+          { text: "As-tu fait ?", rationale: "Correct! 'As-tu fait ?' is 'Have you made?' (informal) in French interrogative form.", isCorrect: true },
           { text: "A-t-il fait ?", rationale: "This means 'Has he made?'.", isCorrect: false },
           { text: "Avez-vous fait ?", rationale: "This means 'Have you made?' (formal/plural).", isCorrect: false }
         ]
@@ -1190,10 +1190,10 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Has he made?",
         hint: "Interrogative form of third person singular masculine faire in passé composé",
         answerOptions: [
-          { text: "A-t-il fait ?", rationale: "Correct! 'A-t-il fait ?' is 'Has he made?' in French interrogative form with liaison 't'.", isCorrect: true },
           { text: "A-t-elle fait ?", rationale: "This means 'Has she made?'.", isCorrect: false },
           { text: "Ai-je fait ?", rationale: "This means 'Have I made?'.", isCorrect: false },
-          { text: "As-tu fait ?", rationale: "This means 'Have you made?' (informal).", isCorrect: false }
+          { text: "As-tu fait ?", rationale: "This means 'Have you made?' (informal).", isCorrect: false },
+          { text: "A-t-il fait ?", rationale: "Correct! 'A-t-il fait ?' is 'Has he made?' in French interrogative form with liaison 't'.", isCorrect: true }
         ]
       },
 
@@ -1202,18 +1202,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Haven't I made?",
         hint: "Negative interrogative form of first person singular faire in passé composé",
         answerOptions: [
-          { text: "N'ai-je pas fait ?", rationale: "Correct! 'N'ai-je pas fait ?' is 'Haven't I made?' in French negative interrogative form.", isCorrect: true },
           { text: "N'as-tu pas fait ?", rationale: "This means 'Haven't you made?' (informal).", isCorrect: false },
           { text: "N'a-t-il pas fait ?", rationale: "This means 'Hasn't he made?'.", isCorrect: false },
-          { text: "N'avons-nous pas fait ?", rationale: "This means 'Haven't we made?'.", isCorrect: false }
+          { text: "N'avons-nous pas fait ?", rationale: "This means 'Haven't we made?'.", isCorrect: false },
+          { text: "N'ai-je pas fait ?", rationale: "Correct! 'N'ai-je pas fait ?' is 'Haven't I made?' in French negative interrogative form.", isCorrect: true }
         ]
       },
       {
         question: "Haven't you made? (informal)",
         hint: "Negative interrogative form of second person singular faire in passé composé",
         answerOptions: [
-          { text: "N'as-tu pas fait ?", rationale: "Correct! 'N'as-tu pas fait ?' is 'Haven't you made?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "N'ai-je pas fait ?", rationale: "This means 'Haven't I made?'.", isCorrect: false },
+          { text: "N'as-tu pas fait ?", rationale: "Correct! 'N'as-tu pas fait ?' is 'Haven't you made?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "N'a-t-il pas fait ?", rationale: "This means 'Hasn't he made?'.", isCorrect: false },
           { text: "N'avez-vous pas fait ?", rationale: "This means 'Haven't you made?' (formal/plural).", isCorrect: false }
         ]
@@ -1222,9 +1222,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Hasn't he made?",
         hint: "Negative interrogative form of third person singular masculine faire in passé composé",
         answerOptions: [
-          { text: "N'a-t-il pas fait ?", rationale: "Correct! 'N'a-t-il pas fait ?' is 'Hasn't he made?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'a-t-elle pas fait ?", rationale: "This means 'Hasn't she made?'.", isCorrect: false },
           { text: "N'ai-je pas fait ?", rationale: "This means 'Haven't I made?'.", isCorrect: false },
+          { text: "N'a-t-il pas fait ?", rationale: "Correct! 'N'a-t-il pas fait ?' is 'Hasn't he made?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'as-tu pas fait ?", rationale: "This means 'Haven't you made?' (informal).", isCorrect: false }
         ]
       }
