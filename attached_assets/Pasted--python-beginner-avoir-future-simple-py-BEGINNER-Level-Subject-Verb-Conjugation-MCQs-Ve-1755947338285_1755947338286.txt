@@ -1,0 +1,59 @@
+```python
+# beginner_avoir_future_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: avoir
+# Tense: Futur Simple
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {"question": "I will have", "correct": "J'aurai", "distractors": ["Tu auras", "Il aura", "Nous aurons"]},
+    {"question": "You will have (informal)", "correct": "Tu auras", "distractors": ["J'aurai", "Vous aurez", "Ils auront"]},
+    {"question": "He will have", "correct": "Il aura", "distractors": ["Elle aura", "Tu auras", "Ils auront"]},
+    {"question": "She will have", "correct": "Elle aura", "distractors": ["Il aura", "Elles auront", "Tu auras"]},
+    {"question": "We will have", "correct": "Nous aurons", "distractors": ["Vous aurez", "Ils auront", "J'aurai"]},
+    {"question": "You will have (formal/plural)", "correct": "Vous aurez", "distractors": ["Tu auras", "Nous aurons", "Ils auront"]},
+    {"question": "They will have (male/mixed)", "correct": "Ils auront", "distractors": ["Elles auront", "Ils avaient", "Ils ont eu"]},
+    {"question": "They will have (female)", "correct": "Elles auront", "distractors": ["Ils auront", "Elles avaient", "Elles ont eu"]},
+
+    # Negative statements (6 questions)
+    {"question": "I will not have", "correct": "Je n'aurai pas", "distractors": ["Tu ne auras pas", "Il ne aura pas", "Nous ne aurons pas"]},
+    {"question": "You will not have (informal)", "correct": "Tu n'auras pas", "distractors": ["Je ne aurai pas", "Vous ne aurez pas", "Ils ne auront pas"]},
+    {"question": "He will not have", "correct": "Il n'aura pas", "distractors": ["Elle ne aura pas", "Tu ne auras pas", "Ils ne auront pas"]},
+    {"question": "She will not have", "correct": "Elle n'aura pas", "distractors": ["Il ne aura pas", "Elles ne auront pas", "Tu ne auras pas"]},
+    {"question": "We will not have", "correct": "Nous n'aurons pas", "distractors": ["Vous ne aurez pas", "Ils ne auront pas", "Je ne aurai pas"]},
+    {"question": "You will not have (formal/plural)", "correct": "Vous n'aurez pas", "distractors": ["Tu ne auras pas", "Nous ne aurons pas", "Ils ne auront pas"]},
+
+    # Positive questions (3 questions)
+    {"question": "Will I have?", "correct": "Aurais-je ?", "distractors": ["Auras-tu ?", "Aura-t-il ?", "Aurons-nous ?"]},
+    {"question": "Will you have? (informal)", "correct": "Auras-tu ?", "distractors": ["Aurais-je ?", "Aura-t-il ?", "Aurez-vous ?"]},
+    {"question": "Will he have?", "correct": "Aura-t-il ?", "distractors": ["Aura-t-elle ?", "Aurais-je ?", "Auras-tu ?"]},
+
+    # Negative questions (3 questions)
+    {"question": "Won't I have?", "correct": "Ne aurai-je pas ?", "distractors": ["Ne auras-tu pas ?", "Ne aura-t-il pas ?", "Ne aurons-nous pas ?"]},
+    {"question": "Won't you have? (informal)", "correct": "Ne auras-tu pas ?", "distractors": ["Ne aurai-je pas ?", "Ne aura-t-il pas ?", "Ne aurez-vous pas ?"]},
+    {"question": "Won't he have?", "correct": "Ne aura-t-il pas ?", "distractors": ["Ne aura-t-elle pas ?", "Ne aurai-je pas ?", "Ne auras-tu pas ?"]},
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted now contains 20 questions with correct answers randomly assigned among options A-D
+```
