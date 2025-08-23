@@ -1,0 +1,45 @@
+```python
+# beginner_avoir_present_simple_and_continuous.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: avoir
+# Tense: Present Simple and Present Continuous (with spaces between auxiliary and main verb)
+# 20 questions
+# Using underscores to represent spaces as instructed (e.g., "I am _ having")
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+mcq_data = [
+    # Positive statements (8 questions)
+    {"question": "I have", "options": ["J'ai", "Tu as", "Il a", "Nous avons"], "answer": "A"},
+    {"question": "You have (informal)", "options": ["Tu as", "J'ai", "Vous avez", "Ils ont"], "answer": "A"},
+    {"question": "He has", "options": ["Il a", "Elle a", "Tu as", "Ils ont"], "answer": "A"},
+    {"question": "She has", "options": ["Elle a", "Il a", "Elles ont", "Tu as"], "answer": "A"},
+    {"question": "We have", "options": ["Nous avons", "Vous avez", "Ils ont", "J'ai"], "answer": "A"},
+    {"question": "You have (formal/plural)", "options": ["Vous avez", "Tu as", "Nous avons", "Ils ont"], "answer": "A"},
+    {"question": "They have (male/mixed)", "options": ["Ils ont", "Elles ont", "Ils avaient", "Ils ont été"], "answer": "A"},
+    {"question": "They have (female)", "options": ["Elles ont", "Ils ont", "Elles avaient", "Elles ont été"], "answer": "A"},
+
+    # Negative statements (6 questions)
+    {"question": "I do not have", "options": ["Je n'ai pas", "Tu n'as pas", "Il n'a pas", "Nous n'avons pas"], "answer": "A"},
+    {"question": "You do not have (informal)", "options": ["Tu n'as pas", "Je n'ai pas", "Vous n'avez pas", "Ils n'ont pas"], "answer": "A"},
+    {"question": "He does not have", "options": ["Il n'a pas", "Elle n'a pas", "Tu n'as pas", "Ils n'ont pas"], "answer": "A"},
+    {"question": "She does not have", "options": ["Elle n'a pas", "Il n'a pas", "Elles n'ont pas", "Tu n'as pas"], "answer": "A"},
+    {"question": "We do not have", "options": ["Nous n'avons pas", "Vous n'avez pas", "Ils n'ont pas", "Je n'ai pas"], "answer": "A"},
+    {"question": "You do not have (formal/plural)", "options": ["Vous n'avez pas", "Tu n'as pas", "Nous n'avons pas", "Ils n'ont pas"], "answer": "A"},
+
+    # Positive questions (3 questions)
+    {"question": "Do I have?", "options": ["Ai-je ?", "As-tu ?", "A-t-il ?", "Avons-nous ?"], "answer": "A"},
+    {"question": "Do you have? (informal)", "options": ["As-tu ?", "Ai-je ?", "A-t-il ?", "Avez-vous ?"], "answer": "A"},
+    {"question": "Does he have?", "options": ["A-t-il ?", "A-t-elle ?", "Ai-je ?", "As-tu ?"], "answer": "A"},
+
+    # Negative questions (3 questions)
+    {"question": "Don't I have?", "options": ["Ne ai-je pas ?", "Ne as-tu pas ?", "Ne a-t-il pas ?", "Ne avons-nous pas ?"], "answer": "A"},
+    {"question": "Don't you have? (informal)", "options": ["Ne as-tu pas ?", "Ne ai-je pas ?", "Ne a-t-il pas ?", "Ne avez-vous pas ?"], "answer": "A"},
+    {"question": "Doesn't he have?", "options": ["Ne a-t-il pas ?", "Ne a-t-elle pas ?", "Ne ai-je pas ?", "Ne as-tu pas ?"], "answer": "A"},
+]
+```
+Note: Spaces between words are as normal in French conjugations. If you want underscore (_) representing spaces literally in the English prompts or answers, please confirm. The current version uses regular spacing as natural in French.
