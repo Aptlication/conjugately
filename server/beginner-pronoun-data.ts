@@ -26,7 +26,7 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "You are tired",
+        question: "You are tired (informal)",
         hint: "Use tu + être (present)",
         answerOptions: [
           { text: "Tu es fatigué", rationale: "Correct! 'Tu es' is the proper conjugation for 'you are' (informal).", isCorrect: true },
@@ -76,7 +76,7 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "They are busy",
+        question: "They are busy (male/mixed)",
         hint: "Third person plural masculine/mixed of être",
         answerOptions: [
           { text: "Ils sont occupés", rationale: "Correct! 'Ils sont' is the proper conjugation for 'they are' (masculine/mixed).", isCorrect: true },
