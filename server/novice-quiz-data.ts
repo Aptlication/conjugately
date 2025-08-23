@@ -332,8 +332,9 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
     // Determine correct answer index (A=0, B=1, C=2, D=3)
     const correctIndex = q.answer === 'A' ? 0 : q.answer === 'B' ? 1 : q.answer === 'C' ? 2 : 3;
     
-    // Remove tense indicators from question text (e.g., "(Futur Simple)", "(Présent - Negative)")
-    const cleanQuestion = q.question.replace(/\s*\([^)]*\)\s*$/g, '').trim();
+    // Remove only tense indicators from question text, preserve formality/gender labels
+    // Remove patterns like "(Futur Simple)", "(Présent - Negative)", but keep "(informal)", "(formal / plural)", "(male / mixed)", "(female)"
+    const cleanQuestion = q.question.replace(/\s*\((Futur Simple|Présent|Passé Composé|Imparfait|Plus-que-parfait|Passé Simple)([^)]*)\)\s*$/g, '').trim();
     
     // Convert options to answerOptions format
     const answerOptions = q.options.map((optionText, optionIndex) => ({
