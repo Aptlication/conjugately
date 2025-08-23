@@ -172,23 +172,24 @@ function App() {
       }
     },
     "Elementary": { 
-      verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], // 6 most used verbs
+      verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"], // 7 new verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
         units: [
-          { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
-          { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
-          { name: "Unit 3: faire (to do/make)", verb: "faire", questions: 20 },
-          { name: "Unit 4: dire (to say)", verb: "dire", questions: 20 },
-          { name: "Unit 5: aller (to go)", verb: "aller", questions: 20 },
-          { name: "Unit 6: voir (to see)", verb: "voir", questions: 20 }
+          { name: "Unit 1: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 2: voir (to see)", verb: "voir", questions: 20 },
+          { name: "Unit 3: savoir (to know)", verb: "savoir", questions: 20 },
+          { name: "Unit 4: vouloir (to want)", verb: "vouloir", questions: 20 },
+          { name: "Unit 5: venir (to come)", verb: "venir", questions: 20 },
+          { name: "Unit 6: pouvoir (to be able)", verb: "pouvoir", questions: 20 },
+          { name: "Unit 7: besoin (to need)", verb: "besoin", questions: 20 }
         ],
         finalExam: { 
-          questions: 60, 
+          questions: 70, 
           questionsPerVerb: 10, 
-          passThreshold: 54,
-          description: "10 questions from each of the 6 verbs"
+          passThreshold: 63,
+          description: "10 questions from each of the 7 verbs"
         }
       }
     },
