@@ -1,0 +1,143 @@
+```python
+# novice_etre_passe_compose.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: être
+# Tense: Passé Composé
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "She has been / She was")
+# English phrases use natural alternative verbs where appropriate (e.g., "He is tired" instead of "He is doing tired")
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I have been happy / I was happy",
+        "correct": "J'ai été heureux",
+        "distractors": ["Tu as été heureux", "Il a été heureux", "Nous avons été heureux"]
+    },
+    {
+        "question": "You have been ready / You were ready (informal)",
+        "correct": "Tu as été prêt",
+        "distractors": ["J'ai été prêt", "Vous avez été prêts", "Ils ont été prêts"]
+    },
+    {
+        "question": "He has been tired / He was tired",
+        "correct": "Il a été fatigué",
+        "distractors": ["Elle a été fatiguée", "Tu as été fatigué", "Ils ont été fatigués"]
+    },
+    {
+        "question": "She has been late / She was late",
+        "correct": "Elle a été en retard",
+        "distractors": ["Il a été en retard", "Elles ont été en retard", "Tu as été en retard"]
+    },
+    {
+        "question": "We have been happy / We were happy",
+        "correct": "Nous avons été heureux",
+        "distractors": ["Vous avez été heureux", "Ils ont été heureux", "J'ai été heureux"]
+    },
+    {
+        "question": "You have been kind / You were kind (formal / plural)",
+        "correct": "Vous avez été gentils",
+        "distractors": ["Tu as été gentil", "Nous avons été gentils", "Ils ont été gentils"]
+    },
+    {
+        "question": "They have been teachers / They were teachers (male / mixed)",
+        "correct": "Ils ont été professeurs",
+        "distractors": ["Elles ont été professeures", "Ils étaient professeurs", "Ils seront professeurs"]
+    },
+    {
+        "question": "They have been friends / They were friends (female)",
+        "correct": "Elles ont été amies",
+        "distractors": ["Ils ont été amis", "Elles étaient amies", "Elles seront amies"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I have not been tired / I was not tired",
+        "correct": "Je n'ai pas été fatigué",
+        "distractors": ["Tu n'as pas été fatigué", "Il n'a pas été fatigué", "Nous n'avons pas été fatigués"]
+    },
+    {
+        "question": "You have not been late / You were not late (informal)",
+        "correct": "Tu n'as pas été en retard",
+        "distractors": ["Je n'ai pas été en retard", "Vous n'avez pas été en retard", "Ils n'ont pas été en retard"]
+    },
+    {
+        "question": "He has not been ready / He was not ready",
+        "correct": "Il n'a pas été prêt",
+        "distractors": ["Elle n'a pas été prête", "Tu n'as pas été prêt", "Ils n'ont pas été prêts"]
+    },
+    {
+        "question": "She has not been kind / She was not kind",
+        "correct": "Elle n'a pas été gentille",
+        "distractors": ["Il n'a pas été gentil", "Elles n'ont pas été gentilles", "Tu n'as pas été gentil"]
+    },
+    {
+        "question": "We have not been happy / We were not happy",
+        "correct": "Nous n'avons pas été heureux",
+        "distractors": ["Vous n'avez pas été heureux", "Ils n'ont pas été heureux", "Je n'ai pas été heureux"]
+    },
+    {
+        "question": "You have not been teachers / You were not teachers (formal / plural)",
+        "correct": "Vous n'avez pas été professeurs",
+        "distractors": ["Tu n'as pas été professeur", "Nous n'avons pas été professeurs", "Ils n'ont pas été professeurs"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Have / Has I been happy? / Was I happy?",
+        "correct": "Ai-je été heureux ?",
+        "distractors": ["As-tu été heureux ?", "A-t-il été heureux ?", "Avons-nous été heureux ?"]
+    },
+    {
+        "question": "Have / Has you been ready? / Were you ready? (informal)",
+        "correct": "As-tu été prêt ?",
+        "distractors": ["Ai-je été prêt ?", "A-t-il été prêt ?", "Avez-vous été prêts ?"]
+    },
+    {
+        "question": "Has / Have he been tired? / Was he tired?",
+        "correct": "A-t-il été fatigué ?",
+        "distractors": ["A-t-elle été fatiguée ?", "Ai-je été fatigué ?", "As-tu été fatigué ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Haven't / Has not I been happy? / Wasn't I happy?",
+        "correct": "N'ai-je pas été heureux ?",
+        "distractors": ["N'as-tu pas été heureux ?", "N'a-t-il pas été heureux ?", "N'avons-nous pas été heureux ?"]
+    },
+    {
+        "question": "Haven't / Has not you been late? / Weren't you late? (informal)",
+        "correct": "N'as-tu pas été en retard ?",
+        "distractors": ["N'ai-je pas été en retard ?", "N'a-t-il pas été en retard ?", "N'avez-vous pas été en retard ?"]
+    },
+    {
+        "question": "Hasn't / Has not he been kind? / Wasn't he kind?",
+        "correct": "N'a-t-il pas été gentil ?",
+        "distractors": ["N'a-t-elle pas été gentille ?", "N'ai-je pas été gentil ?", "N'as-tu pas été gentil ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```

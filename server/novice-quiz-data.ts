@@ -113,32 +113,32 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
     ],
     "passé_composé": [
       // Positive statements (8 questions)
-      {"question": "I have been / I was happy", "options": ["Tu as été heureux", "J'ai été heureux", "Il a été heureux", "Nous avons été heureux"], "answer": "B"},
-      {"question": "You have been / You were ready (informal)", "options": ["J'ai été prêt", "Vous avez été prêts", "Tu as été prêt", "Ils ont été prêts"], "answer": "C"},
-      {"question": "He has been / He was tired", "options": ["Elle a été fatiguée", "Tu as été fatigué", "Ils ont été fatigués", "Il a été fatigué"], "answer": "D"},
-      {"question": "She has been / She was late", "options": ["Il a été en retard", "Elle a été en retard", "Elles ont été en retard", "Tu as été en retard"], "answer": "B"},
-      {"question": "We have been / We were happy", "options": ["Vous avez été heureux", "Ils ont été heureux", "J'ai été heureux", "Nous avons été heureux"], "answer": "D"},
-      {"question": "You have been / You were kind (formal / plural)", "options": ["Tu as été gentil", "Nous avons été gentils", "Vous avez été gentils", "Ils ont été gentils"], "answer": "C"},
-      {"question": "They have been / They were teachers (male / mixed)", "options": ["Elles ont été professeures", "Ils étaient professeurs", "Ils seront professeurs", "Ils ont été professeurs"], "answer": "D"},
-      {"question": "They have been / They were friends (female)", "options": ["Ils ont été amis", "Elles ont été amies", "Elles étaient amies", "Elles seront amies"], "answer": "B"},
+      {"question": "I have been happy / I was happy", "options": ["Tu as été heureux", "J'ai été heureux", "Il a été heureux", "Nous avons été heureux"], "answer": "B"},
+      {"question": "You have been ready / You were ready (informal)", "options": ["J'ai été prêt", "Vous avez été prêts", "Tu as été prêt", "Ils ont été prêts"], "answer": "C"},
+      {"question": "He has been tired / He was tired", "options": ["Elle a été fatiguée", "Tu as été fatigué", "Ils ont été fatigués", "Il a été fatigué"], "answer": "D"},
+      {"question": "She has been late / She was late", "options": ["Il a été en retard", "Elle a été en retard", "Elles ont été en retard", "Tu as été en retard"], "answer": "B"},
+      {"question": "We have been happy / We were happy", "options": ["Vous avez été heureux", "Ils ont été heureux", "J'ai été heureux", "Nous avons été heureux"], "answer": "D"},
+      {"question": "You have been kind / You were kind (formal / plural)", "options": ["Tu as été gentil", "Nous avons été gentils", "Vous avez été gentils", "Ils ont été gentils"], "answer": "C"},
+      {"question": "They have been teachers / They were teachers (male / mixed)", "options": ["Elles ont été professeures", "Ils étaient professeurs", "Ils seront professeurs", "Ils ont été professeurs"], "answer": "D"},
+      {"question": "They have been friends / They were friends (female)", "options": ["Ils ont été amis", "Elles ont été amies", "Elles étaient amies", "Elles seront amies"], "answer": "B"},
 
       // Negative statements (6 questions)
-      {"question": "I have not been / I was not tired", "options": ["Tu n'as pas été fatigué", "Il n'a pas été fatigué", "Je n'ai pas été fatigué", "Nous n'avons pas été fatigués"], "answer": "C"},
-      {"question": "You have not been / You were not late (informal)", "options": ["Je n'ai pas été en retard", "Tu n'as pas été en retard", "Vous n'êtes pas en retard", "Ils n'ont pas été en retard"], "answer": "B"},
-      {"question": "He has not been / He was not ready", "options": ["Elle n'a pas été prête", "Tu n'as pas été prêt", "Ils n'ont pas été prêts", "Il n'a pas été prêt"], "answer": "D"},
-      {"question": "She has not been / She was not kind", "options": ["Il n'a pas été gentil", "Elle n'a pas été gentille", "Elles n'ont pas été gentilles", "Tu n'as pas été gentil"], "answer": "B"},
-      {"question": "We have not been / We were not happy", "options": ["Vous n'avez pas été heureux", "Ils n'ont pas été heureux", "Je n'ai pas été heureux", "Nous n'avons pas été heureux"], "answer": "D"},
-      {"question": "You have not been / You were not teachers (formal / plural)", "options": ["Tu n'as pas été professeur", "Vous n'avez pas été professeurs", "Nous n'avons pas été professeurs", "Ils n'ont pas été professeurs"], "answer": "B"},
+      {"question": "I have not been tired / I was not tired", "options": ["Tu n'as pas été fatigué", "Il n'a pas été fatigué", "Je n'ai pas été fatigué", "Nous n'avons pas été fatigués"], "answer": "C"},
+      {"question": "You have not been late / You were not late (informal)", "options": ["Je n'ai pas été en retard", "Tu n'as pas été en retard", "Vous n'avez pas été en retard", "Ils n'ont pas été en retard"], "answer": "B"},
+      {"question": "He has not been ready / He was not ready", "options": ["Elle n'a pas été prête", "Tu n'as pas été prêt", "Ils n'ont pas été prêts", "Il n'a pas été prêt"], "answer": "D"},
+      {"question": "She has not been kind / She was not kind", "options": ["Il n'a pas été gentil", "Elle n'a pas été gentille", "Elles n'ont pas été gentilles", "Tu n'as pas été gentil"], "answer": "B"},
+      {"question": "We have not been happy / We were not happy", "options": ["Vous n'avez pas été heureux", "Ils n'ont pas été heureux", "Je n'ai pas été heureux", "Nous n'avons pas été heureux"], "answer": "D"},
+      {"question": "You have not been teachers / You were not teachers (formal / plural)", "options": ["Tu n'as pas été professeur", "Vous n'avez pas été professeurs", "Nous n'avons pas été professeurs", "Ils n'ont pas été professeurs"], "answer": "B"},
 
       // Positive questions (3 questions)
-      {"question": "Have / Has I been happy?", "options": ["As-tu été heureux ?", "A-t-il été heureux ?", "Ai-je été heureux ?", "Avons-nous été heureux ?"], "answer": "C"},
-      {"question": "Have / Has you been ready? (informal)", "options": ["Ai-je été prêt ?", "As-tu été prêt ?", "A-t-il été prêt ?", "Avez-vous été prêts ?"], "answer": "B"},
-      {"question": "Has / Have he been tired?", "options": ["A-t-elle été fatiguée ?", "Ai-je été fatigué ?", "As-tu été fatigué ?", "A-t-il été fatigué ?"], "answer": "D"},
+      {"question": "Have / Has I been happy? / Was I happy?", "options": ["As-tu été heureux ?", "A-t-il été heureux ?", "Ai-je été heureux ?", "Avons-nous été heureux ?"], "answer": "C"},
+      {"question": "Have / Has you been ready? / Were you ready? (informal)", "options": ["Ai-je été prêt ?", "As-tu été prêt ?", "A-t-il été prêt ?", "Avez-vous été prêts ?"], "answer": "B"},
+      {"question": "Has / Have he been tired? / Was he tired?", "options": ["A-t-elle été fatiguée ?", "Ai-je été fatigué ?", "As-tu été fatigué ?", "A-t-il été fatigué ?"], "answer": "D"},
 
       // Negative questions (3 questions)
-      {"question": "Haven't / Has not I been happy?", "options": ["N'as-tu pas été heureux ?", "N'a-t-il pas été heureux ?", "N'avons-nous pas été heureux ?", "N'ai-je pas été heureux ?"], "answer": "D"},
-      {"question": "Haven't / Has not you been late? (informal)", "options": ["N'ai-je pas été en retard ?", "N'as-tu pas été en retard ?", "N'a-t-il pas été en retard ?", "N'avez-vous pas été en retard ?"], "answer": "B"},
-      {"question": "Hasn't / Has not he been kind?", "options": ["N'a-t-elle pas été gentille ?", "N'ai-je pas été gentil ?", "N'a-t-il pas été gentil ?", "N'as-tu pas été gentil ?"], "answer": "C"}
+      {"question": "Haven't / Has not I been happy? / Wasn't I happy?", "options": ["N'as-tu pas été heureux ?", "N'a-t-il pas été heureux ?", "N'avons-nous pas été heureux ?", "N'ai-je pas été heureux ?"], "answer": "D"},
+      {"question": "Haven't / Has not you been late? / Weren't you late? (informal)", "options": ["N'ai-je pas été en retard ?", "N'as-tu pas été en retard ?", "N'a-t-il pas été en retard ?", "N'avez-vous pas été en retard ?"], "answer": "B"},
+      {"question": "Hasn't / Has not he been kind? / Wasn't he kind?", "options": ["N'a-t-elle pas été gentille ?", "N'ai-je pas été gentil ?", "N'a-t-il pas été gentil ?", "N'as-tu pas été gentil ?"], "answer": "C"}
     ],
     "futur_simple": [
       // Positive statements (8 questions)
