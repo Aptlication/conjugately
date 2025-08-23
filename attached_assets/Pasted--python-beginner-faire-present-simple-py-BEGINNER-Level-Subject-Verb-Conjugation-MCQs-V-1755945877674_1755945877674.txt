@@ -1,0 +1,43 @@
+```python
+# beginner_faire_present_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: faire
+# Tense: Présent (Present Simple)
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+mcq_data = [
+    # Positive statements (8 questions)
+    {"question": "I do / I make", "options": ["Je fais", "Tu fais", "Il fait", "Nous faisons"], "answer": "A"},
+    {"question": "You do / You make (informal)", "options": ["Tu fais", "Je fais", "Vous faites", "Ils font"], "answer": "A"},
+    {"question": "He does / He makes", "options": ["Il fait", "Elle fait", "Tu fais", "Ils font"], "answer": "A"},
+    {"question": "She does / She makes", "options": ["Elle fait", "Il fait", "Elles font", "Tu fais"], "answer": "A"},
+    {"question": "We do / We make", "options": ["Nous faisons", "Vous faites", "Ils font", "Je fais"], "answer": "A"},
+    {"question": "You do / You make (formal/plural)", "options": ["Vous faites", "Tu fais", "Nous faisons", "Ils font"], "answer": "A"},
+    {"question": "They do / They make (male/mixed)", "options": ["Ils font", "Elles font", "Ils faisaient", "Ils ont fait"], "answer": "A"},
+    {"question": "They do / They make (female)", "options": ["Elles font", "Ils font", "Elles faisaient", "Elles ont fait"], "answer": "A"},
+
+    # Negative statements (6 questions)
+    {"question": "I do not do / I do not make", "options": ["Je ne fais pas", "Tu ne fais pas", "Il ne fait pas", "Nous ne faisons pas"], "answer": "A"},
+    {"question": "You do not do / You do not make (informal)", "options": ["Tu ne fais pas", "Je ne fais pas", "Vous ne faites pas", "Ils ne font pas"], "answer": "A"},
+    {"question": "He does not do / He does not make", "options": ["Il ne fait pas", "Elle ne fait pas", "Tu ne fais pas", "Ils ne font pas"], "answer": "A"},
+    {"question": "She does not do / She does not make", "options": ["Elle ne fait pas", "Il ne fait pas", "Elles ne font pas", "Tu ne fais pas"], "answer": "A"},
+    {"question": "We do not do / We do not make", "options": ["Nous ne faisons pas", "Vous ne faites pas", "Ils ne font pas", "Je ne fais pas"], "answer": "A"},
+    {"question": "You do not do / You do not make (formal/plural)", "options": ["Vous ne faites pas", "Tu ne fais pas", "Nous ne faisons pas", "Ils ne font pas"], "answer": "A"},
+
+    # Positive questions (3 questions)
+    {"question": "Do I do / Do I make?", "options": ["Fais-je ?", "Fais-tu ?", "Fait-il ?", "Faisons-nous ?"], "answer": "A"},
+    {"question": "Do you do / Do you make? (informal)", "options": ["Fais-tu ?", "Fais-je ?", "Fait-il ?", "Faites-vous ?"], "answer": "A"},
+    {"question": "Does he do / Does he make?", "options": ["Fait-il ?", "Fait-elle ?", "Fais-je ?", "Fais-tu ?"], "answer": "A"},
+
+    # Negative questions (3 questions)
+    {"question": "Don't I do / Don't I make?", "options": ["Ne fais-je pas ?", "Ne fais-tu pas ?", "Ne fait-il pas ?", "Ne faisons-nous pas ?"], "answer": "A"},
+    {"question": "Don't you do / Don't you make? (informal)", "options": ["Ne fais-tu pas ?", "Ne fais-je pas ?", "Ne fait-il pas ?", "Ne faites-vous pas ?"], "answer": "A"},
+    {"question": "Doesn't he do / Doesn't he make?", "options": ["Ne fait-il pas ?", "Ne fait-elle pas ?", "Ne fais-je pas ?", "Ne fais-tu pas ?"], "answer": "A"},
+]
+```

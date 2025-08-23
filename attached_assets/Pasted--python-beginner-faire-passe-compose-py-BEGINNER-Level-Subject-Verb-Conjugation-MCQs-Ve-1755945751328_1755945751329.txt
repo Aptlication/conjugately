@@ -1,0 +1,43 @@
+```python
+# beginner_faire_passe_compose.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: faire
+# Tense: Passé Composé
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+mcq_data = [
+    # Positive statements (8 questions)
+    {"question": "I have made", "options": ["J'ai fait", "Tu as fait", "Il a fait", "Nous avons fait"], "answer": "A"},
+    {"question": "You have made (informal)", "options": ["Tu as fait", "J'ai fait", "Vous avez fait", "Ils ont fait"], "answer": "A"},
+    {"question": "He has made", "options": ["Il a fait", "Elle a fait", "Tu as fait", "Ils ont fait"], "answer": "A"},
+    {"question": "She has made", "options": ["Elle a fait", "Il a fait", "Elles ont fait", "Tu as fait"], "answer": "A"},
+    {"question": "We have made", "options": ["Nous avons fait", "Vous avez fait", "Ils ont fait", "J'ai fait"], "answer": "A"},
+    {"question": "You have made (formal/plural)", "options": ["Vous avez fait", "Tu as fait", "Nous avons fait", "Ils ont fait"], "answer": "A"},
+    {"question": "They have made (male/mixed)", "options": ["Ils ont fait", "Elles ont fait", "Ils faisaient", "Ils ont été"], "answer": "A"},
+    {"question": "They have made (female)", "options": ["Elles ont fait", "Ils ont fait", "Elles faisaient", "Elles ont été"], "answer": "A"},
+
+    # Negative statements (6 questions)
+    {"question": "I have not made", "options": ["Je n'ai pas fait", "Tu n'as pas fait", "Il n'a pas fait", "Nous n'avons pas fait"], "answer": "A"},
+    {"question": "You have not made (informal)", "options": ["Tu n'as pas fait", "Je n'ai pas fait", "Vous n'avez pas fait", "Ils n'ont pas fait"], "answer": "A"},
+    {"question": "He has not made", "options": ["Il n'a pas fait", "Elle n'a pas fait", "Tu n'as pas fait", "Ils n'ont pas fait"], "answer": "A"},
+    {"question": "She has not made", "options": ["Elle n'a pas fait", "Il n'a pas fait", "Elles n'ont pas fait", "Tu n'as pas fait"], "answer": "A"},
+    {"question": "We have not made", "options": ["Nous n'avons pas fait", "Vous n'avez pas fait", "Ils n'ont pas fait", "Je n'ai pas fait"], "answer": "A"},
+    {"question": "You have not made (formal/plural)", "options": ["Vous n'avez pas fait", "Tu n'as pas fait", "Nous n'avons pas fait", "Ils n'ont pas fait"], "answer": "A"},
+
+    # Positive questions (3 questions)
+    {"question": "Have I made?", "options": ["Ai-je fait ?", "As-tu fait ?", "A-t-il fait ?", "Avons-nous fait ?"], "answer": "A"},
+    {"question": "Have you made? (informal)", "options": ["As-tu fait ?", "Ai-je fait ?", "A-t-il fait ?", "Avez-vous fait ?"], "answer": "A"},
+    {"question": "Has he made?", "options": ["A-t-il fait ?", "A-t-elle fait ?", "Ai-je fait ?", "As-tu fait ?"], "answer": "A"},
+
+    # Negative questions (3 questions)
+    {"question": "Haven't I made?", "options": ["N'ai-je pas fait ?", "N'as-tu pas fait ?", "N'a-t-il pas fait ?", "N'avons-nous pas fait ?"], "answer": "A"},
+    {"question": "Haven't you made? (informal)", "options": ["N'as-tu pas fait ?", "N'ai-je pas fait ?", "N'a-t-il pas fait ?", "N'avez-vous pas fait ?"], "answer": "A"},
+    {"question": "Hasn't he made?", "options": ["N'a-t-il pas fait ?", "N'a-t-elle pas fait ?", "N'ai-je pas fait ?", "N'as-tu pas fait ?"], "answer": "A"},
+]
+```
