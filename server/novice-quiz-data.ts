@@ -141,26 +141,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "Hasn't / Has not he been kind?", "options": ["N'a-t-elle pas été gentille ?", "N'ai-je pas été gentil ?", "N'a-t-il pas été gentil ?", "N'as-tu pas été gentil ?"], "answer": "C"}
     ],
     "futur_simple": [
-      {"question": "I will be happy. (Futur Simple)", "options": ["Je serai heureux.", "Tu seras heureux.", "Il sera heureux.", "Nous serons heureux."], "answer": "A"},
-      {"question": "You will not be tired. (Futur Simple - Negative, informal)", "options": ["Tu ne seras pas fatigué.", "Je ne serai pas fatigué.", "Il ne sera pas fatigué.", "Nous ne serons pas fatigués."], "answer": "A"},
-      {"question": "Will he be ready? (Futur Simple - Question)", "options": ["Sera-t-il prêt ?", "Seras-tu prêt ?", "Serai-je prêt ?", "Serez-vous prêts ?"], "answer": "A"},
-      {"question": "We will be happy tomorrow. (Futur Simple)", "options": ["Nous serons heureux demain.", "Vous serez heureux demain.", "Ils seront heureux demain.", "Je serai heureux demain."], "answer": "A"},
-      {"question": "She will not be here. (Futur Simple - Negative)", "options": ["Elle ne sera pas ici.", "Il ne sera pas ici.", "Tu ne seras pas ici.", "Nous ne serons pas ici."], "answer": "A"},
-      {"question": "Will you (formal) be tired? (Futur Simple - Question)", "options": ["Serez-vous fatigué ?", "Seras-tu fatigué ?", "Sera-t-il fatigué ?", "Seront-ils fatigués ?"], "answer": "A"},
-      {"question": "They will be at home. (male/mixed) (Futur Simple)", "options": ["Ils seront à la maison.", "Elles seront à la maison.", "Ils seraient à la maison.", "Ils étaient à la maison."], "answer": "A"},
-      {"question": "They will not be here. (female) (Futur Simple - Negative)", "options": ["Elles ne seront pas ici.", "Ils ne seront pas ici.", "Vous ne serez pas ici.", "Nous ne serons pas ici."], "answer": "A"},
-      {"question": "Will I be late? (Futur Simple - Question)", "options": ["Serai-je en retard ?", "Seras-tu en retard ?", "Sera-t-il en retard ?", "Serons-nous en retard ?"], "answer": "A"},
-      {"question": "Will you (informal) be ready? (Futur Simple - Question)", "options": ["Seras-tu prêt ?", "Serai-je prêt ?", "Sera-t-il prêt ?", "Serez-vous prêts ?"], "answer": "A"},
-      {"question": "Will he be here? (Futur Simple - Question)", "options": ["Sera-t-il ici ?", "Sera-t-elle ici ?", "Seras-tu ici ?", "Serez-vous ici ?"], "answer": "A"},
-      {"question": "Will she be tired? (Futur Simple - Question)", "options": ["Sera-t-elle fatiguée ?", "Sera-t-il fatigué ?", "Seras-tu fatigué ?", "Serez-vous fatigués ?"], "answer": "A"},
-      {"question": "Will we be ready? (Futur Simple - Question)", "options": ["Serons-nous prêts ?", "Serai-je prêt ?", "Serez-vous prêts ?", "Seront-ils prêts ?"], "answer": "A"},
-      {"question": "Will you (formal) be happy? (Futur Simple - Question)", "options": ["Serez-vous heureux ?", "Seras-tu heureux ?", "Serai-je heureux ?", "Seront-ils heureux ?"], "answer": "A"},
-      {"question": "Will they be here? (male/mixed) (Futur Simple - Question)", "options": ["Seront-ils ici ?", "Seront-elles ici ?", "Serez-vous ici ?", "Seras-tu ici ?"], "answer": "A"},
-      {"question": "Will they be here? (female) (Futur Simple - Question)", "options": ["Seront-elles ici ?", "Seront-ils ici ?", "Serez-vous ici ?", "Seras-tu ici ?"], "answer": "A"},
-      {"question": "I will not be busy. (Futur Simple - Negative)", "options": ["Je ne serai pas occupé.", "Tu ne seras pas occupé.", "Il ne sera pas occupé.", "Nous ne serons pas occupés."], "answer": "A"},
-      {"question": "He will not be late. (Futur Simple - Negative)", "options": ["Il ne sera pas en retard.", "Je ne serai pas en retard.", "Tu ne seras pas en retard.", "Ils ne seront pas en retard."], "answer": "A"},
-      {"question": "Won't we be ready? (Futur Simple - Negative Question)", "options": ["Ne serons-nous pas prêts ?", "Ne serez-vous pas prêts ?", "Ne seront-ils pas prêts ?", "Ne serai-je pas prêt ?"], "answer": "A"},
-      {"question": "Won't they be tired? (female) (Futur Simple - Negative Question)", "options": ["Ne seront-elles pas fatiguées ?", "Ne seront-ils pas fatigués ?", "Ne serez-vous pas fatigués ?", "Ne serons-nous pas fatigués ?"], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I will be / I shall be happy", "options": ["Tu seras heureux", "Je serai heureux", "Il sera heureux", "Nous serons heureux"], "answer": "B"},
+      {"question": "You will be / You shall be ready (informal)", "options": ["Je serai prêt", "Vous serez prêts", "Tu seras prêt", "Ils seront prêts"], "answer": "C"},
+      {"question": "He will be / He shall be tired", "options": ["Elle sera fatiguée", "Tu seras fatigué", "Ils seront fatigués", "Il sera fatigué"], "answer": "D"},
+      {"question": "She will be / She shall be late", "options": ["Il sera en retard", "Elle sera en retard", "Elles seront en retard", "Tu seras en retard"], "answer": "B"},
+      {"question": "We will be / We shall be happy", "options": ["Vous serez heureux", "Ils seront heureux", "Je serai heureux", "Nous serons heureux"], "answer": "D"},
+      {"question": "You will be / You shall be kind (formal / plural)", "options": ["Tu seras gentil", "Nous serons gentils", "Vous serez gentils", "Ils seront gentils"], "answer": "C"},
+      {"question": "They will be / They shall be teachers (male / mixed)", "options": ["Elles seront professeures", "Ils étaient professeurs", "Ils seront professeurs", "Ils seront professeurs"], "answer": "D"},
+      {"question": "They will be / They shall be friends (female)", "options": ["Ils seront amis", "Elles seront amies", "Elles étaient amies", "Elles seront amies"], "answer": "B"},
+
+      // Negative statements (6 questions)
+      {"question": "I will not be / I shall not be tired", "options": ["Tu ne seras pas fatigué", "Il ne sera pas fatigué", "Je ne serai pas fatigué", "Nous ne serons pas fatigués"], "answer": "C"},
+      {"question": "You will not be / You shall not be late (informal)", "options": ["Je ne serai pas en retard", "Tu ne seras pas en retard", "Vous ne serez pas en retard", "Ils ne seront pas en retard"], "answer": "B"},
+      {"question": "He will not be / He shall not be ready", "options": ["Elle ne sera pas prête", "Tu ne seras pas prêt", "Ils ne seront pas prêts", "Il ne sera pas prêt"], "answer": "D"},
+      {"question": "She will not be / She shall not be kind", "options": ["Il ne sera pas gentil", "Elle ne sera pas gentille", "Elles ne seront pas gentilles", "Tu ne seras pas gentil"], "answer": "B"},
+      {"question": "We will not be / We shall not be happy", "options": ["Vous ne serez pas heureux", "Ils ne seront pas heureux", "Je ne serai pas heureux", "Nous ne serons pas heureux"], "answer": "D"},
+      {"question": "You will not be / You shall not be teachers (formal / plural)", "options": ["Tu ne seras pas professeur", "Vous ne serez pas professeurs", "Nous ne serons pas professeurs", "Ils ne seront pas professeurs"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Will I be happy?", "options": ["Seras-tu heureux ?", "Sera-t-il heureux ?", "Serai-je heureux ?", "Serons-nous heureux ?"], "answer": "C"},
+      {"question": "Will you be ready? (informal)", "options": ["Serai-je prêt ?", "Seras-tu prêt ?", "Sera-t-il prêt ?", "Serez-vous prêts ?"], "answer": "B"},
+      {"question": "Will he be tired?", "options": ["Sera-t-elle fatiguée ?", "Serai-je fatigué ?", "Seras-tu fatigué ?", "Sera-t-il fatigué ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Won't I be happy?", "options": ["Ne seras-tu pas heureux ?", "Ne sera-t-il pas heureux ?", "Ne serons-nous pas heureux ?", "Ne serai-je pas heureux ?"], "answer": "D"},
+      {"question": "Won't you be late? (informal)", "options": ["Ne serai-je pas en retard ?", "Ne seras-tu pas en retard ?", "Ne sera-t-il pas en retard ?", "Ne serez-vous pas en retard ?"], "answer": "B"},
+      {"question": "Won't he be kind?", "options": ["Ne sera-t-elle pas gentille ?", "Ne serai-je pas gentil ?", "Ne sera-t-il pas gentil ?", "Ne seras-tu pas gentil ?"], "answer": "C"}
     ]
   },
 
