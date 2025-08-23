@@ -433,34 +433,211 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
       }
     ],
     "Futur Simple": [
+      // Positive statements (8 questions)
       {
         question: "I will be",
-        hint: "First person singular of être in future tense",
+        hint: "First person singular of être in futur simple",
         answerOptions: [
-          { text: "Je serai", rationale: "Correct! 'Je serai' is 'I will be' in French.", isCorrect: true },
           { text: "Tu seras", rationale: "This means 'you will be' (informal).", isCorrect: false },
+          { text: "Je serai", rationale: "Correct! 'Je serai' is 'I will be' in French futur simple.", isCorrect: true },
           { text: "Il sera", rationale: "This means 'he will be'.", isCorrect: false },
           { text: "Nous serons", rationale: "This means 'we will be'.", isCorrect: false }
         ]
       },
       {
-        question: "He will be",
-        hint: "Third person singular masculine of être in future",
+        question: "You will be (informal)",
+        hint: "Second person singular of être in futur simple",
         answerOptions: [
-          { text: "Il sera", rationale: "Correct! 'Il sera' is 'he will be' in French.", isCorrect: true },
           { text: "Je serai", rationale: "This means 'I will be'.", isCorrect: false },
+          { text: "Vous serez", rationale: "This means 'you will be' (formal/plural).", isCorrect: false },
+          { text: "Tu seras", rationale: "Correct! 'Tu seras' is 'you will be' (informal) in French futur simple.", isCorrect: true },
+          { text: "Ils seront", rationale: "This means 'they will be'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He will be",
+        hint: "Third person singular masculine of être in futur simple",
+        answerOptions: [
+          { text: "Elle sera", rationale: "This means 'she will be'.", isCorrect: false },
           { text: "Tu seras", rationale: "This means 'you will be' (informal).", isCorrect: false },
-          { text: "Ils seront", rationale: "This means 'they will be' (masculine/mixed).", isCorrect: false }
+          { text: "Ils seront", rationale: "This means 'they will be'.", isCorrect: false },
+          { text: "Il sera", rationale: "Correct! 'Il sera' is 'he will be' in French futur simple.", isCorrect: true }
+        ]
+      },
+      {
+        question: "She will be",
+        hint: "Third person singular feminine of être in futur simple",
+        answerOptions: [
+          { text: "Il sera", rationale: "This means 'he will be'.", isCorrect: false },
+          { text: "Elle sera", rationale: "Correct! 'Elle sera' is 'she will be' in French futur simple.", isCorrect: true },
+          { text: "Elles seront", rationale: "This means 'they will be' (feminine).", isCorrect: false },
+          { text: "Tu seras", rationale: "This means 'you will be' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We will be",
+        hint: "First person plural of être in futur simple",
+        answerOptions: [
+          { text: "Vous serez", rationale: "This means 'you will be' (formal/plural).", isCorrect: false },
+          { text: "Ils seront", rationale: "This means 'they will be'.", isCorrect: false },
+          { text: "Je serai", rationale: "This means 'I will be'.", isCorrect: false },
+          { text: "Nous serons", rationale: "Correct! 'Nous serons' is 'we will be' in French futur simple.", isCorrect: true }
         ]
       },
       {
         question: "You will be (formal/plural)",
-        hint: "Second person plural/formal of être in future",
+        hint: "Second person formal/plural of être in futur simple",
         answerOptions: [
-          { text: "Vous serez", rationale: "Correct! 'Vous serez' is 'you will be' (formal/plural) in French.", isCorrect: true },
+          { text: "Tu seras", rationale: "This means 'you will be' (informal).", isCorrect: false },
           { text: "Nous serons", rationale: "This means 'we will be'.", isCorrect: false },
+          { text: "Vous serez", rationale: "Correct! 'Vous serez' is 'you will be' (formal/plural) in French futur simple.", isCorrect: true },
+          { text: "Ils seront", rationale: "This means 'they will be'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They will be (male/mixed)",
+        hint: "Third person plural masculine/mixed of être in futur simple",
+        answerOptions: [
+          { text: "Elles seront", rationale: "This means 'they will be' (feminine only).", isCorrect: false },
+          { text: "Ils étaient", rationale: "This is imperfect past tense, not future tense.", isCorrect: false },
+          { text: "Ils ont été", rationale: "This is passé composé past tense, not future tense.", isCorrect: false },
+          { text: "Ils seront", rationale: "Correct! 'Ils seront' is 'they will be' (masculine/mixed) in French futur simple.", isCorrect: true }
+        ]
+      },
+      {
+        question: "They will be (female)",
+        hint: "Third person plural feminine of être in futur simple",
+        answerOptions: [
           { text: "Ils seront", rationale: "This means 'they will be' (masculine/mixed).", isCorrect: false },
-          { text: "Je serai", rationale: "This means 'I will be'.", isCorrect: false }
+          { text: "Elles seront", rationale: "Correct! 'Elles seront' is 'they will be' (feminine) in French futur simple.", isCorrect: true },
+          { text: "Elles étaient", rationale: "This is imperfect past tense, not future tense.", isCorrect: false },
+          { text: "Elles ont été", rationale: "This is passé composé past tense, not future tense.", isCorrect: false }
+        ]
+      },
+
+      // Negative statements (6 questions)
+      {
+        question: "I will not be",
+        hint: "First person singular negative of être in futur simple",
+        answerOptions: [
+          { text: "Tu ne seras pas", rationale: "This means 'you will not be' (informal).", isCorrect: false },
+          { text: "Il ne sera pas", rationale: "This means 'he will not be'.", isCorrect: false },
+          { text: "Je ne serai pas", rationale: "Correct! 'Je ne serai pas' is 'I will not be' using French negation ne...pas.", isCorrect: true },
+          { text: "Nous ne serons pas", rationale: "This means 'we will not be'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You will not be (informal)",
+        hint: "Second person singular negative of être in futur simple",
+        answerOptions: [
+          { text: "Je ne serai pas", rationale: "This means 'I will not be'.", isCorrect: false },
+          { text: "Tu ne seras pas", rationale: "Correct! 'Tu ne seras pas' is 'you will not be' (informal) using French negation.", isCorrect: true },
+          { text: "Vous ne serez pas", rationale: "This means 'you will not be' (formal/plural).", isCorrect: false },
+          { text: "Ils ne seront pas", rationale: "This means 'they will not be'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He will not be",
+        hint: "Third person singular masculine negative of être in futur simple",
+        answerOptions: [
+          { text: "Elle ne sera pas", rationale: "This means 'she will not be'.", isCorrect: false },
+          { text: "Tu ne seras pas", rationale: "This means 'you will not be' (informal).", isCorrect: false },
+          { text: "Ils ne seront pas", rationale: "This means 'they will not be'.", isCorrect: false },
+          { text: "Il ne sera pas", rationale: "Correct! 'Il ne sera pas' is 'he will not be' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "She will not be",
+        hint: "Third person singular feminine negative of être in futur simple",
+        answerOptions: [
+          { text: "Il ne sera pas", rationale: "This means 'he will not be'.", isCorrect: false },
+          { text: "Elle ne sera pas", rationale: "Correct! 'Elle ne sera pas' is 'she will not be' using French negation ne...pas.", isCorrect: true },
+          { text: "Elles ne seront pas", rationale: "This means 'they will not be' (feminine).", isCorrect: false },
+          { text: "Tu ne seras pas", rationale: "This means 'you will not be' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We will not be",
+        hint: "First person plural negative of être in futur simple",
+        answerOptions: [
+          { text: "Vous ne serez pas", rationale: "This means 'you will not be' (formal/plural).", isCorrect: false },
+          { text: "Ils ne seront pas", rationale: "This means 'they will not be'.", isCorrect: false },
+          { text: "Je ne serai pas", rationale: "This means 'I will not be'.", isCorrect: false },
+          { text: "Nous ne serons pas", rationale: "Correct! 'Nous ne serons pas' is 'we will not be' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "You will not be (formal/plural)",
+        hint: "Second person formal/plural negative of être in futur simple",
+        answerOptions: [
+          { text: "Tu ne seras pas", rationale: "This means 'you will not be' (informal).", isCorrect: false },
+          { text: "Vous ne serez pas", rationale: "Correct! 'Vous ne serez pas' is 'you will not be' (formal/plural) using French negation.", isCorrect: true },
+          { text: "Nous ne serons pas", rationale: "This means 'we will not be'.", isCorrect: false },
+          { text: "Ils ne seront pas", rationale: "This means 'they will not be'.", isCorrect: false }
+        ]
+      },
+
+      // Positive questions (3 questions)
+      {
+        question: "Will I be?",
+        hint: "Interrogative form of first person singular être in futur simple",
+        answerOptions: [
+          { text: "Seras-tu ?", rationale: "This means 'Will you be?' (informal).", isCorrect: false },
+          { text: "Sera-t-il ?", rationale: "This means 'Will he be?'.", isCorrect: false },
+          { text: "Serai-je ?", rationale: "Correct! 'Serai-je ?' is 'Will I be?' in French interrogative form with inversion.", isCorrect: true },
+          { text: "Serons-nous ?", rationale: "This means 'Will we be?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will you be? (informal)",
+        hint: "Interrogative form of second person singular être in futur simple",
+        answerOptions: [
+          { text: "Serai-je ?", rationale: "This means 'Will I be?'.", isCorrect: false },
+          { text: "Seras-tu ?", rationale: "Correct! 'Seras-tu ?' is 'Will you be?' (informal) in French interrogative form.", isCorrect: true },
+          { text: "Sera-t-il ?", rationale: "This means 'Will he be?'.", isCorrect: false },
+          { text: "Serez-vous ?", rationale: "This means 'Will you be?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Will he be?",
+        hint: "Interrogative form of third person singular masculine être in futur simple",
+        answerOptions: [
+          { text: "Sera-t-elle ?", rationale: "This means 'Will she be?'.", isCorrect: false },
+          { text: "Serai-je ?", rationale: "This means 'Will I be?'.", isCorrect: false },
+          { text: "Seras-tu ?", rationale: "This means 'Will you be?' (informal).", isCorrect: false },
+          { text: "Sera-t-il ?", rationale: "Correct! 'Sera-t-il ?' is 'Will he be?' in French interrogative form with liaison 't'.", isCorrect: true }
+        ]
+      },
+
+      // Negative questions (3 questions)
+      {
+        question: "Won't I be?",
+        hint: "Negative interrogative form of first person singular être in futur simple",
+        answerOptions: [
+          { text: "Ne seras-tu pas ?", rationale: "This means 'Won't you be?' (informal).", isCorrect: false },
+          { text: "Ne sera-t-il pas ?", rationale: "This means 'Won't he be?'.", isCorrect: false },
+          { text: "Ne serons-nous pas ?", rationale: "This means 'Won't we be?'.", isCorrect: false },
+          { text: "Ne serai-je pas ?", rationale: "Correct! 'Ne serai-je pas ?' is 'Won't I be?' in French negative interrogative form.", isCorrect: true }
+        ]
+      },
+      {
+        question: "Won't you be? (informal)",
+        hint: "Negative interrogative form of second person singular être in futur simple",
+        answerOptions: [
+          { text: "Ne serai-je pas ?", rationale: "This means 'Won't I be?'.", isCorrect: false },
+          { text: "Ne seras-tu pas ?", rationale: "Correct! 'Ne seras-tu pas ?' is 'Won't you be?' (informal) in French negative interrogative.", isCorrect: true },
+          { text: "Ne sera-t-il pas ?", rationale: "This means 'Won't he be?'.", isCorrect: false },
+          { text: "Ne serez-vous pas ?", rationale: "This means 'Won't you be?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Won't he be?",
+        hint: "Negative interrogative form of third person singular masculine être in futur simple",
+        answerOptions: [
+          { text: "Ne sera-t-elle pas ?", rationale: "This means 'Won't she be?'.", isCorrect: false },
+          { text: "Ne serai-je pas ?", rationale: "This means 'Won't I be?'.", isCorrect: false },
+          { text: "Ne sera-t-il pas ?", rationale: "Correct! 'Ne sera-t-il pas ?' is 'Won't he be?' in French negative interrogative with liaison 't'.", isCorrect: true },
+          { text: "Ne seras-tu pas ?", rationale: "This means 'Won't you be?' (informal).", isCorrect: false }
         ]
       }
     ]
