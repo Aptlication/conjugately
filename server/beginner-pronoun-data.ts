@@ -56,7 +56,7 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "You (plural) are ready",
+        question: "You are ready (formal/plural)",
         hint: "Second person formal/plural of être",
         answerOptions: [
           { text: "Vous êtes prêts", rationale: "Correct! 'Vous êtes' is the proper conjugation for 'you are' (formal/plural).", isCorrect: true },
@@ -282,7 +282,7 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "You do (plural/formal)",
+        question: "You do (formal/plural)",
         hint: "Second person plural/formal of faire",
         answerOptions: [
           { text: "Vous faites", rationale: "Correct! 'Vous faites' is 'you do' (plural/formal) in French.", isCorrect: true },
