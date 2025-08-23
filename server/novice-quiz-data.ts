@@ -222,7 +222,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "We did sport yesterday. (Passé Composé)", "options": ["Nous avons fait du sport hier.", "Vous avez fait du sport hier.", "Ils ont fait du sport hier.", "J'ai fait du sport hier."], "answer": "A"},
       {"question": "She did not do the shopping. (Passé Composé - Negative)", "options": ["Elle n'a pas fait les courses.", "Il n'a pas fait les courses.", "Tu n'as pas fait les courses.", "Nous n'avons pas fait les courses."], "answer": "A"},
       {"question": "Did you (formal) do your work? (Passé Composé - Question)", "options": ["Avez-vous fait votre travail ?", "As-tu fait ton travail ?", "A-t-il fait son travail ?", "Ont-ils fait leur travail ?"], "answer": "A"},
-      {"question": "They did their homework. (Passé Composé, male/mixed)", "options": ["Ils ont fait leurs devoirs.", "Elles ont fait leurs devoirs.", "Ils avaient fait leurs devoirs.", "Ils feront leurs devoirs."], "answer": "A"},
+      {"question": "They did their homework (male / mixed)", "options": ["Ils ont fait leurs devoirs.", "Elles ont fait leurs devoirs.", "Ils avaient fait leurs devoirs.", "Ils feront leurs devoirs."], "answer": "A"},
       {"question": "I did not do the cleaning. (Passé Composé - Negative)", "options": ["Je n'ai pas fait le ménage.", "Tu n'as pas fait le ménage.", "Il n'a pas fait le ménage.", "Nous n'avons pas fait le ménage."], "answer": "A"},
       {"question": "Did we do everything? (Passé Composé - Question)", "options": ["Avons-nous tout fait ?", "Ai-je tout fait ?", "Avez-vous tout fait ?", "Ont-ils tout fait ?"], "answer": "A"},
       {"question": "You did a great job. (Passé Composé, informal)", "options": ["Tu as fait un excellent travail.", "J'ai fait un excellent travail.", "Il a fait un excellent travail.", "Vous avez fait un excellent travail."], "answer": "A"},
@@ -231,11 +231,11 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "Did you do well? (Passé Composé - Question, informal)", "options": ["As-tu bien fait ?", "A-t-il bien fait ?", "Avons-nous bien fait ?", "Ont-ils bien fait ?"], "answer": "A"},
       {"question": "We did our best. (Passé Composé)", "options": ["Nous avons fait de notre mieux.", "Vous avez fait de votre mieux.", "Ils ont fait de leur mieux.", "J'ai fait de mon mieux."], "answer": "A"},
       {"question": "He did not do the laundry. (Passé Composé - Negative)", "options": ["Il n'a pas fait la lessive.", "Je n'ai pas fait la lessive.", "Tu n'as pas fait la lessive.", "Ils n'ont pas fait la lessive."], "answer": "A"},
-      {"question": "Did they do the work? (Passé Composé - Question, male/mixed)", "options": ["Ont-ils fait le travail ?", "Ont-elles fait le travail ?", "Avez-vous fait le travail ?", "As-tu fait le travail ?"], "answer": "A"},
+      {"question": "Did they do the work? (male / mixed)", "options": ["Ont-ils fait le travail ?", "Ont-elles fait le travail ?", "Avez-vous fait le travail ?", "As-tu fait le travail ?"], "answer": "A"},
       {"question": "I did not do mistakes. (Passé Composé - Negative)", "options": ["Je n'ai pas fait d'erreurs.", "Tu n'as pas fait d'erreurs.", "Il n'a pas fait d'erreurs.", "Nous n'avons pas fait d'erreurs."], "answer": "A"},
       {"question": "Did we do the right thing? (Passé Composé - Question)", "options": ["Avons-nous fait la bonne chose ?", "Avez-vous fait la bonne chose ?", "Ont-ils fait la bonne chose ?", "Ai-je fait la bonne chose ?"], "answer": "A"},
       {"question": "You did great work yesterday. (Passé Composé, informal)", "options": ["Tu as fait un excellent travail hier.", "J'ai fait un excellent travail hier.", "Il a fait un excellent travail hier.", "Vous avez fait un excellent travail hier."], "answer": "A"},
-      {"question": "They did not do their duty. (Passé Composé - Negative, female)", "options": ["Elles n'ont pas fait leur devoir.", "Ils n'ont pas fait leur devoir.", "Vous n'avez pas fait votre devoir.", "Nous n'avons pas fait notre devoir."], "answer": "A"}
+      {"question": "They did not do their duty (female)", "options": ["Elles n'ont pas fait leur devoir.", "Ils n'ont pas fait leur devoir.", "Vous n'avez pas fait votre devoir.", "Nous n'avons pas fait notre devoir."], "answer": "A"}
     ],
     "futur_simple": [
       // Positive statements (8 questions)
