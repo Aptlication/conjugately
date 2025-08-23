@@ -320,6 +320,216 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Ils ont fait des plans", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
       ]
     }
+  ],
+
+  "besoin": [
+    // Positive statements (8 questions)
+    {
+      question: "I need a book / I am needing a book",
+      hint: "Use 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "Tu as besoin d'un livre", rationale: "Wrong person - this is 'you need', not 'I need'.", isCorrect: false },
+        { text: "J'ai besoin d'un livre", rationale: "Correct! 'J'ai besoin d'un livre' means 'I need a book'.", isCorrect: true },
+        { text: "Il a besoin d'un livre", rationale: "Wrong person - this is 'he needs', not 'I need'.", isCorrect: false },
+        { text: "Nous avons besoin d'un livre", rationale: "Wrong person - this is 'we need', not 'I need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You need a problem / You are needing a problem (informal)",
+      hint: "Use 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "J'ai besoin d'un problème", rationale: "Wrong person - this is 'I need', not 'you need'.", isCorrect: false },
+        { text: "Vous avez besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
+        { text: "Tu as besoin d'un problème", rationale: "Correct! 'Tu as besoin d'un problème' means 'You need a problem' (informal).", isCorrect: true },
+        { text: "Ils ont besoin d'un problème", rationale: "Wrong person - this is 'they need', not 'you need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He needs help / He is needing help",
+      hint: "Use 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "Elle a besoin d'aide", rationale: "Wrong gender - this is 'she needs', not 'he needs'.", isCorrect: false },
+        { text: "Tu as besoin d'aide", rationale: "Wrong person - this is 'you need', not 'he needs'.", isCorrect: false },
+        { text: "Ils ont besoin d'aide", rationale: "Wrong number - this is 'they need', not 'he needs'.", isCorrect: false },
+        { text: "Il a besoin d'aide", rationale: "Correct! 'Il a besoin d'aide' means 'He needs help'.", isCorrect: true }
+      ]
+    },
+    {
+      question: "She needs a rest / She is needing a rest",
+      hint: "Use 'avoir besoin de' with elle and repos",
+      answerOptions: [
+        { text: "Il a besoin de repos", rationale: "Wrong gender - this is 'he needs', not 'she needs'.", isCorrect: false },
+        { text: "Elle a besoin de repos", rationale: "Correct! 'Elle a besoin de repos' means 'She needs a rest'.", isCorrect: true },
+        { text: "Elles ont besoin de repos", rationale: "Wrong number - this is 'they need' (fem. plural), not 'she needs'.", isCorrect: false },
+        { text: "Tu as besoin de repos", rationale: "Wrong person - this is 'you need', not 'she needs'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We need water / We are needing water",
+      hint: "Use 'avoir besoin de' with nous and eau",
+      answerOptions: [
+        { text: "Vous avez besoin d'eau", rationale: "Wrong person - this is 'you need' (formal/plural), not 'we need'.", isCorrect: false },
+        { text: "Ils ont besoin d'eau", rationale: "Wrong person - this is 'they need', not 'we need'.", isCorrect: false },
+        { text: "J'ai besoin d'eau", rationale: "Wrong person - this is 'I need', not 'we need'.", isCorrect: false },
+        { text: "Nous avons besoin d'eau", rationale: "Correct! 'Nous avons besoin d'eau' means 'We need water'.", isCorrect: true }
+      ]
+    },
+    {
+      question: "You need to eat / You are needing to eat (formal / plural)",
+      hint: "Use 'avoir besoin de' with vous and manger",
+      answerOptions: [
+        { text: "Tu as besoin de manger", rationale: "Wrong formality - this is informal tu, question asks for formal/plural vous.", isCorrect: false },
+        { text: "Nous avons besoin de manger", rationale: "Wrong person - this is 'we need', not 'you need'.", isCorrect: false },
+        { text: "Vous avez besoin de manger", rationale: "Correct! 'Vous avez besoin de manger' means 'You need to eat' (formal/plural).", isCorrect: true },
+        { text: "Ils ont besoin de manger", rationale: "Wrong person - this is 'they need', not 'you need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They need to go (male / mixed)",
+      hint: "Use 'avoir besoin de' with ils and aller",
+      answerOptions: [
+        { text: "Elles ont besoin d'aller", rationale: "Wrong gender - this is feminine they, question asks for male/mixed.", isCorrect: false },
+        { text: "Ils avaient besoin d'aller", rationale: "Wrong tense - this is imperfect, not present.", isCorrect: false },
+        { text: "Ils auront besoin d'aller", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils ont besoin d'aller", rationale: "Correct! 'Ils ont besoin d'aller' means 'They need to go' (male/mixed).", isCorrect: true }
+      ]
+    },
+    {
+      question: "They need to sleep (female)",
+      hint: "Use 'avoir besoin de' with elles and dormir",
+      answerOptions: [
+        { text: "Ils ont besoin de dormir", rationale: "Wrong gender - this is masculine they, question asks for female.", isCorrect: false },
+        { text: "Elles avaient besoin de dormir", rationale: "Wrong tense - this is imperfect, not present.", isCorrect: false },
+        { text: "Elles auront besoin de dormir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ont besoin de dormir", rationale: "Correct! 'Elles ont besoin de dormir' means 'They need to sleep' (female).", isCorrect: true }
+      ]
+    },
+
+    // Negative statements (6 questions)
+    {
+      question: "I do not need a book / I am not needing a book",
+      hint: "Use negative 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "Tu n'as pas besoin d'un livre", rationale: "Wrong person - this is 'you don't need', not 'I don't need'.", isCorrect: false },
+        { text: "Il n'a pas besoin d'un livre", rationale: "Wrong person - this is 'he doesn't need', not 'I don't need'.", isCorrect: false },
+        { text: "Je n'ai pas besoin d'un livre", rationale: "Correct! 'Je n'ai pas besoin d'un livre' means 'I do not need a book'.", isCorrect: true },
+        { text: "Nous n'avons pas besoin d'un livre", rationale: "Wrong person - this is 'we don't need', not 'I don't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You do not need a problem / You are not needing a problem (informal)",
+      hint: "Use negative 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "Je n'ai pas besoin d'un problème", rationale: "Wrong person - this is 'I don't need', not 'you don't need'.", isCorrect: false },
+        { text: "Tu n'as pas besoin d'un problème", rationale: "Correct! 'Tu n'as pas besoin d'un problème' means 'You do not need a problem' (informal).", isCorrect: true },
+        { text: "Vous n'avez pas besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
+        { text: "Ils n'ont pas besoin d'un problème", rationale: "Wrong person - this is 'they don't need', not 'you don't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He does not need help / He is not needing help",
+      hint: "Use negative 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "Elle n'a pas besoin d'aide", rationale: "Wrong gender - this is 'she doesn't need', not 'he doesn't need'.", isCorrect: false },
+        { text: "Tu n'as pas besoin d'aide", rationale: "Wrong person - this is 'you don't need', not 'he doesn't need'.", isCorrect: false },
+        { text: "Ils n'ont pas besoin d'aide", rationale: "Wrong number - this is 'they don't need', not 'he doesn't need'.", isCorrect: false },
+        { text: "Il n'a pas besoin d'aide", rationale: "Correct! 'Il n'a pas besoin d'aide' means 'He does not need help'.", isCorrect: true }
+      ]
+    },
+    {
+      question: "She does not need rest / She is not needing rest",
+      hint: "Use negative 'avoir besoin de' with elle and repos",
+      answerOptions: [
+        { text: "Il n'a pas besoin de repos", rationale: "Wrong gender - this is 'he doesn't need', not 'she doesn't need'.", isCorrect: false },
+        { text: "Elle n'a pas besoin de repos", rationale: "Correct! 'Elle n'a pas besoin de repos' means 'She does not need rest'.", isCorrect: true },
+        { text: "Elles n'ont pas besoin de repos", rationale: "Wrong number - this is 'they don't need' (fem. plural), not 'she doesn't need'.", isCorrect: false },
+        { text: "Tu n'as pas besoin de repos", rationale: "Wrong person - this is 'you don't need', not 'she doesn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We do not need water / We are not needing water",
+      hint: "Use negative 'avoir besoin de' with nous and eau",
+      answerOptions: [
+        { text: "Vous n'avez pas besoin d'eau", rationale: "Wrong person - this is 'you don't need' (formal/plural), not 'we don't need'.", isCorrect: false },
+        { text: "Ils n'ont pas besoin d'eau", rationale: "Wrong person - this is 'they don't need', not 'we don't need'.", isCorrect: false },
+        { text: "Je n'ai pas besoin d'eau", rationale: "Wrong person - this is 'I don't need', not 'we don't need'.", isCorrect: false },
+        { text: "Nous n'avons pas besoin d'eau", rationale: "Correct! 'Nous n'avons pas besoin d'eau' means 'We do not need water'.", isCorrect: true }
+      ]
+    },
+    {
+      question: "You do not need to eat / You are not needing to eat (formal / plural)",
+      hint: "Use negative 'avoir besoin de' with vous and manger",
+      answerOptions: [
+        { text: "Tu n'as pas besoin de manger", rationale: "Wrong formality - this is informal tu, question asks for formal/plural vous.", isCorrect: false },
+        { text: "Vous n'avez pas besoin de manger", rationale: "Correct! 'Vous n'avez pas besoin de manger' means 'You do not need to eat' (formal/plural).", isCorrect: true },
+        { text: "Nous n'avons pas besoin de manger", rationale: "Wrong person - this is 'we don't need', not 'you don't need'.", isCorrect: false },
+        { text: "Ils n'ont pas besoin de manger", rationale: "Wrong person - this is 'they don't need', not 'you don't need'.", isCorrect: false }
+      ]
+    },
+
+    // Positive questions (3 questions)
+    {
+      question: "Do I need a book? / Am I needing a book?",
+      hint: "Use question form of 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "As-tu besoin d'un livre ?", rationale: "Wrong person - this asks 'Do you need', not 'Do I need'.", isCorrect: false },
+        { text: "A-t-il besoin d'un livre ?", rationale: "Wrong person - this asks 'Does he need', not 'Do I need'.", isCorrect: false },
+        { text: "Ai-je besoin d'un livre ?", rationale: "Correct! 'Ai-je besoin d'un livre ?' means 'Do I need a book?'", isCorrect: true },
+        { text: "Avons-nous besoin d'un livre ?", rationale: "Wrong person - this asks 'Do we need', not 'Do I need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you need a problem? / Are you needing a problem? (informal)",
+      hint: "Use question form of 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "Ai-je besoin d'un problème ?", rationale: "Wrong person - this asks 'Do I need', not 'Do you need'.", isCorrect: false },
+        { text: "As-tu besoin d'un problème ?", rationale: "Correct! 'As-tu besoin d'un problème ?' means 'Do you need a problem?' (informal).", isCorrect: true },
+        { text: "A-t-il besoin d'un problème ?", rationale: "Wrong person - this asks 'Does he need', not 'Do you need'.", isCorrect: false },
+        { text: "Avez-vous besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Does he need help? / Is he needing help?",
+      hint: "Use question form of 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "A-t-elle besoin d'aide ?", rationale: "Wrong gender - this asks 'Does she need', not 'Does he need'.", isCorrect: false },
+        { text: "Ai-je besoin d'aide ?", rationale: "Wrong person - this asks 'Do I need', not 'Does he need'.", isCorrect: false },
+        { text: "As-tu besoin d'aide ?", rationale: "Wrong person - this asks 'Do you need', not 'Does he need'.", isCorrect: false },
+        { text: "A-t-il besoin d'aide ?", rationale: "Correct! 'A-t-il besoin d'aide ?' means 'Does he need help?'", isCorrect: true }
+      ]
+    },
+
+    // Negative questions (3 questions)
+    {
+      question: "Don't I need a book? / Am I not needing a book?",
+      hint: "Use negative question form of 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "N'as-tu pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Don't you need', not 'Don't I need'.", isCorrect: false },
+        { text: "N'a-t-il pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Doesn't he need', not 'Don't I need'.", isCorrect: false },
+        { text: "N'avons-nous pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Don't we need', not 'Don't I need'.", isCorrect: false },
+        { text: "N'ai-je pas besoin d'un livre ?", rationale: "Correct! 'N'ai-je pas besoin d'un livre ?' means 'Don't I need a book?'", isCorrect: true }
+      ]
+    },
+    {
+      question: "Don't you need a problem? / Are you not needing a problem? (informal)",
+      hint: "Use negative question form of 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "N'ai-je pas besoin d'un problème ?", rationale: "Wrong person - this asks 'Don't I need', not 'Don't you need'.", isCorrect: false },
+        { text: "N'as-tu pas besoin d'un problème ?", rationale: "Correct! 'N'as-tu pas besoin d'un problème ?' means 'Don't you need a problem?' (informal).", isCorrect: true },
+        { text: "N'a-t-il pas besoin d'un problème ?", rationale: "Wrong person - this asks 'Doesn't he need', not 'Don't you need'.", isCorrect: false },
+        { text: "N'avez-vous pas besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't he need help? / Isn't he needing help?",
+      hint: "Use negative question form of 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "N'a-t-elle pas besoin d'aide ?", rationale: "Wrong gender - this asks 'Doesn't she need', not 'Doesn't he need'.", isCorrect: false },
+        { text: "N'ai-je pas besoin d'aide ?", rationale: "Wrong person - this asks 'Don't I need', not 'Doesn't he need'.", isCorrect: false },
+        { text: "N'as-tu pas besoin d'aide ?", rationale: "Wrong person - this asks 'Don't you need', not 'Doesn't he need'.", isCorrect: false },
+        { text: "N'a-t-il pas besoin d'aide ?", rationale: "Correct! 'N'a-t-il pas besoin d'aide ?' means 'Doesn't he need help?'", isCorrect: true }
+      ]
+    }
   ]
 };
 
