@@ -238,26 +238,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "They did not do their duty. (Passé Composé - Negative, female)", "options": ["Elles n'ont pas fait leur devoir.", "Ils n'ont pas fait leur devoir.", "Vous n'avez pas fait votre devoir.", "Nous n'avons pas fait notre devoir."], "answer": "A"}
     ],
     "futur_simple": [
-      {"question": "I will do my homework tomorrow. (Futur Simple)", "options": ["Je ferai mes devoirs demain.", "Tu feras tes devoirs demain.", "Il fera ses devoirs demain.", "Nous ferons nos devoirs demain."], "answer": "A"},
-      {"question": "You will not do the dishes. (Futur Simple - Negative, informal)", "options": ["Tu ne feras pas la vaisselle.", "Je ne ferai pas la vaisselle.", "Il ne fera pas la vaisselle.", "Nous ne ferons pas la vaisselle."], "answer": "A"},
-      {"question": "Will he do the cooking? (Futur Simple - Question)", "options": ["Fera-t-il la cuisine ?", "Feras-tu la cuisine ?", "Ferai-je la cuisine ?", "Ferez-vous la cuisine ?"], "answer": "A"},
-      {"question": "We will do sports next week. (Futur Simple)", "options": ["Nous ferons du sport la semaine prochaine.", "Vous ferez du sport la semaine prochaine.", "Ils feront du sport la semaine prochaine.", "Je ferai du sport la semaine prochaine."], "answer": "A"},
-      {"question": "She will not do the shopping. (Futur Simple - Negative)", "options": ["Elle ne fera pas les courses.", "Il ne fera pas les courses.", "Tu ne feras pas les courses.", "Nous ne ferons pas les courses."], "answer": "A"},
-      {"question": "Will you (formal) do your work? (Futur Simple - Question)", "options": ["Ferez-vous votre travail ?", "Feras-tu ton travail ?", "Fera-t-il son travail ?", "Feront-ils leur travail ?"], "answer": "A"},
-      {"question": "They will do their homework. (Futur Simple, male/mixed)", "options": ["Ils feront leurs devoirs.", "Elles feront leurs devoirs.", "Ils feraient leurs devoirs.", "Ils faisaient leurs devoirs."], "answer": "A"},
-      {"question": "I will not do the cleaning. (Futur Simple - Negative)", "options": ["Je ne ferai pas le ménage.", "Tu ne feras pas le ménage.", "Il ne fera pas le ménage.", "Nous ne ferons pas le ménage."], "answer": "A"},
-      {"question": "Will we do all the tasks? (Futur Simple - Question)", "options": ["Ferons-nous toutes les tâches ?", "Ferai-je toutes les tâches ?", "Ferez-vous toutes les tâches ?", "Feront-ils toutes les tâches ?"], "answer": "A"},
-      {"question": "You will do a great job. (Futur Simple, informal)", "options": ["Tu feras un excellent travail.", "Je ferai un excellent travail.", "Il fera un excellent travail.", "Vous ferez un excellent travail."], "answer": "A"},
-      {"question": "I will do exercise tomorrow morning. (Futur Simple)", "options": ["Je ferai de l'exercice demain matin.", "Tu feras de l'exercice demain matin.", "Il fera de l'exercice demain matin.", "Nous ferons de l'exercice demain matin."], "answer": "A"},
-      {"question": "She will not do her project. (Futur Simple - Negative)", "options": ["Elle ne fera pas son projet.", "Il ne fera pas son projet.", "Tu ne feras pas ton projet.", "Nous ne ferons pas notre projet."], "answer": "A"},
-      {"question": "Will you do well? (Futur Simple - Question, informal)", "options": ["Feras-tu bien ?", "Fera-t-il bien ?", "Ferons-nous bien ?", "Feront-ils bien ?"], "answer": "A"},
-      {"question": "We will do our best. (Futur Simple)", "options": ["Nous ferons de notre mieux.", "Vous ferez de votre mieux.", "Ils feront de leur mieux.", "Je ferai de mon mieux."], "answer": "A"},
-      {"question": "He will not do the laundry. (Futur Simple - Negative)", "options": ["Il ne fera pas la lessive.", "Je ne ferai pas la lessive.", "Tu ne feras pas la lessive.", "Ils ne feront pas la lessive."], "answer": "A"},
-      {"question": "Will they do the work? (Futur Simple - Question, male/mixed)", "options": ["Feront-ils le travail ?", "Feront-elles le travail ?", "Ferez-vous le travail ?", "Feras-tu le travail ?"], "answer": "A"},
-      {"question": "I will not do mistakes. (Futur Simple - Negative)", "options": ["Je ne ferai pas d'erreurs.", "Tu ne feras pas d'erreurs.", "Il ne fera pas d'erreurs.", "Nous ne ferons pas d'erreurs."], "answer": "A"},
-      {"question": "Will we do the right thing? (Futur Simple - Question)", "options": ["Ferons-nous la bonne chose ?", "Ferez-vous la bonne chose ?", "Feront-ils la bonne chose ?", "Ferai-je la bonne chose ?"], "answer": "A"},
-      {"question": "You will do great work tomorrow. (Futur Simple, informal)", "options": ["Tu feras un excellent travail demain.", "Je ferai un excellent travail demain.", "Il fera un excellent travail demain.", "Vous ferez un excellent travail demain."], "answer": "A"},
-      {"question": "They will not do their duty. (Futur Simple - Negative, female)", "options": ["Elles ne feront pas leur devoir.", "Ils ne feront pas leur devoir.", "Vous ne ferez pas votre devoir.", "Nous ne ferons pas notre devoir."], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I will do my homework", "options": ["Tu feras tes devoirs", "Je ferai mes devoirs", "Il fera ses devoirs", "Nous ferons nos devoirs"], "answer": "B"},
+      {"question": "You will do the dishes (informal)", "options": ["Je ferai la vaisselle", "Vous ferez la vaisselle", "Tu feras la vaisselle", "Ils feront la vaisselle"], "answer": "C"},
+      {"question": "He will do the shopping", "options": ["Elle fera les courses", "Tu feras les courses", "Ils feront les courses", "Il fera les courses"], "answer": "D"},
+      {"question": "She will do the cooking", "options": ["Il fera la cuisine", "Elle fera la cuisine", "Elles feront la cuisine", "Tu feras la cuisine"], "answer": "B"},
+      {"question": "We will do some work", "options": ["Vous ferez du travail", "Ils feront du travail", "Je ferai du travail", "Nous ferons du travail"], "answer": "D"},
+      {"question": "You will do the cleaning (formal / plural)", "options": ["Tu feras le ménage", "Nous ferons le ménage", "Vous ferez le ménage", "Ils feront le ménage"], "answer": "C"},
+      {"question": "They will do the laundry (male / mixed)", "options": ["Elles feront la lessive", "Ils faisaient la lessive", "Ils feront la lessive", "Ils font la lessive"], "answer": "C"},
+      {"question": "They will do the laundry (female)", "options": ["Ils feront la lessive", "Elles faisaient la lessive", "Elles font la lessive", "Elles feront la lessive"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I will not do my homework", "options": ["Tu ne feras pas tes devoirs", "Il ne fera pas ses devoirs", "Je ne ferai pas mes devoirs", "Nous ne ferons pas nos devoirs"], "answer": "C"},
+      {"question": "You will not do the dishes (informal)", "options": ["Je ne ferai pas la vaisselle", "Tu ne feras pas la vaisselle", "Vous ne ferez pas la vaisselle", "Ils ne feront pas la vaisselle"], "answer": "B"},
+      {"question": "He will not do the shopping", "options": ["Elle ne fera pas les courses", "Tu ne feras pas les courses", "Ils ne feront pas les courses", "Il ne fera pas les courses"], "answer": "D"},
+      {"question": "She will not do the cooking", "options": ["Il ne fera pas la cuisine", "Elle ne fera pas la cuisine", "Elles ne feront pas la cuisine", "Tu ne feras pas la cuisine"], "answer": "B"},
+      {"question": "We will not do any work", "options": ["Vous ne ferez pas de travail", "Ils ne feront pas de travail", "Je ne ferai pas de travail", "Nous ne ferons pas de travail"], "answer": "D"},
+      {"question": "You will not do the cleaning (formal / plural)", "options": ["Tu ne feras pas le ménage", "Vous ne ferez pas le ménage", "Nous ne ferons pas le ménage", "Ils ne feront pas le ménage"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Will I do my homework?", "options": ["Feras-tu tes devoirs ?", "Fera-t-il ses devoirs ?", "Ferai-je mes devoirs ?", "Ferons-nous nos devoirs ?"], "answer": "C"},
+      {"question": "Will you do the dishes? (informal)", "options": ["Ferai-je la vaisselle ?", "Feras-tu la vaisselle ?", "Fera-t-il la vaisselle ?", "Ferez-vous la vaisselle ?"], "answer": "B"},
+      {"question": "Will he do the shopping?", "options": ["Fera-t-elle les courses ?", "Ferai-je les courses ?", "Feras-tu les courses ?", "Fera-t-il les courses ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Won't I do my homework?", "options": ["Ne feras-tu pas tes devoirs ?", "Ne fera-t-il pas ses devoirs ?", "Ne ferons-nous pas nos devoirs ?", "Ne ferai-je pas mes devoirs ?"], "answer": "D"},
+      {"question": "Won't you do the dishes? (informal)", "options": ["Ne ferai-je pas la vaisselle ?", "Ne feras-tu pas la vaisselle ?", "Ne fera-t-il pas la vaisselle ?", "Ne ferez-vous pas la vaisselle ?"], "answer": "B"},
+      {"question": "Won't he do the shopping?", "options": ["Ne fera-t-elle pas les courses ?", "Ne ferai-je pas les courses ?", "Ne feras-tu pas les courses ?", "Ne fera-t-il pas les courses ?"], "answer": "D"}
     ]
   },
 

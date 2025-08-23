@@ -1,0 +1,143 @@
+```python
+# novice_faire_future_simple.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: faire
+# Tense: Futur Simple
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He will do / He will be doing")
+# English phrases use natural alternative verbs where appropriate
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I will do my homework",
+        "correct": "Je ferai mes devoirs",
+        "distractors": ["Tu feras tes devoirs", "Il fera ses devoirs", "Nous ferons nos devoirs"]
+    },
+    {
+        "question": "You will do the dishes (informal)",
+        "correct": "Tu feras la vaisselle",
+        "distractors": ["Je ferai la vaisselle", "Vous ferez la vaisselle", "Ils feront la vaisselle"]
+    },
+    {
+        "question": "He will do the shopping",
+        "correct": "Il fera les courses",
+        "distractors": ["Elle fera les courses", "Tu feras les courses", "Ils feront les courses"]
+    },
+    {
+        "question": "She will do the cooking",
+        "correct": "Elle fera la cuisine",
+        "distractors": ["Il fera la cuisine", "Elles feront la cuisine", "Tu feras la cuisine"]
+    },
+    {
+        "question": "We will do some work",
+        "correct": "Nous ferons du travail",
+        "distractors": ["Vous ferez du travail", "Ils feront du travail", "Je ferai du travail"]
+    },
+    {
+        "question": "You will do the cleaning (formal / plural)",
+        "correct": "Vous ferez le ménage",
+        "distractors": ["Tu feras le ménage", "Nous ferons le ménage", "Ils feront le ménage"]
+    },
+    {
+        "question": "They will do the laundry (male / mixed)",
+        "correct": "Ils feront la lessive",
+        "distractors": ["Elles feront la lessive", "Ils faisaient la lessive", "Ils feront la lessive"]
+    },
+    {
+        "question": "They will do the laundry (female)",
+        "correct": "Elles feront la lessive",
+        "distractors": ["Ils feront la lessive", "Elles faisaient la lessive", "Elles feront la lessive"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I will not do my homework",
+        "correct": "Je ne ferai pas mes devoirs",
+        "distractors": ["Tu ne feras pas tes devoirs", "Il ne fera pas ses devoirs", "Nous ne ferons pas nos devoirs"]
+    },
+    {
+        "question": "You will not do the dishes (informal)",
+        "correct": "Tu ne feras pas la vaisselle",
+        "distractors": ["Je ne ferai pas la vaisselle", "Vous ne ferez pas la vaisselle", "Ils ne feront pas la vaisselle"]
+    },
+    {
+        "question": "He will not do the shopping",
+        "correct": "Il ne fera pas les courses",
+        "distractors": ["Elle ne fera pas les courses", "Tu ne feras pas les courses", "Ils ne feront pas les courses"]
+    },
+    {
+        "question": "She will not do the cooking",
+        "correct": "Elle ne fera pas la cuisine",
+        "distractors": ["Il ne fera pas la cuisine", "Elles ne feront pas la cuisine", "Tu ne feras pas la cuisine"]
+    },
+    {
+        "question": "We will not do any work",
+        "correct": "Nous ne ferons pas de travail",
+        "distractors": ["Vous ne ferez pas de travail", "Ils ne feront pas de travail", "Je ne ferai pas de travail"]
+    },
+    {
+        "question": "You will not do the cleaning (formal / plural)",
+        "correct": "Vous ne ferez pas le ménage",
+        "distractors": ["Tu ne feras pas le ménage", "Nous ne ferons pas le ménage", "Ils ne feront pas le ménage"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Will I do my homework?",
+        "correct": "Ferai-je mes devoirs ?",
+        "distractors": ["Feras-tu tes devoirs ?", "Fera-t-il ses devoirs ?", "Ferons-nous nos devoirs ?"]
+    },
+    {
+        "question": "Will you do the dishes? (informal)",
+        "correct": "Feras-tu la vaisselle ?",
+        "distractors": ["Ferai-je la vaisselle ?", "Fera-t-il la vaisselle ?", "Ferez-vous la vaisselle ?"]
+    },
+    {
+        "question": "Will he do the shopping?",
+        "correct": "Fera-t-il les courses ?",
+        "distractors": ["Fera-t-elle les courses ?", "Ferai-je les courses ?", "Feras-tu les courses ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Won't I do my homework?",
+        "correct": "Ne ferai-je pas mes devoirs ?",
+        "distractors": ["Ne feras-tu pas tes devoirs ?", "Ne fera-t-il pas ses devoirs ?", "Ne ferons-nous pas nos devoirs ?"]
+    },
+    {
+        "question": "Won't you do the dishes? (informal)",
+        "correct": "Ne feras-tu pas la vaisselle ?",
+        "distractors": ["Ne ferai-je pas la vaisselle ?", "Ne fera-t-il pas la vaisselle ?", "Ne ferez-vous pas la vaisselle ?"]
+    },
+    {
+        "question": "Won't he do the shopping?",
+        "correct": "Ne fera-t-il pas les courses ?",
+        "distractors": ["Ne fera-t-elle pas les courses ?", "Ne ferai-je pas les courses ?", "Ne feras-tu pas les courses ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```
