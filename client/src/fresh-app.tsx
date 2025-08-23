@@ -57,7 +57,7 @@ function FreshAppCore({ user }: { user: any }) {
   };
 
   const DIFFICULTY_CONFIGS = {
-    "Elementary": { verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"], timeFrames: ["Present"], tenses: ["Présent"] },
+    "Elementary": { verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"], timeFrames: ["Present", "Past", "Future"], tenses: ["Présent", "Passé Composé", "Futur Simple"] },
     "Intermediate": { verbs: ["être", "avoir", "faire", "dire", "aller", "voir"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
     "Advanced": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
   };
