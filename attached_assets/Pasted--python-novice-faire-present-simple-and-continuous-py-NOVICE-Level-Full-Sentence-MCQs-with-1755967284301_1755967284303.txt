@@ -1,0 +1,143 @@
+```python
+# novice_faire_present_simple_and_continuous.py
+# NOVICE Level – Full Sentence MCQs with Present Simple and Present Continuous English Phrase Groupings
+# Verb: faire
+# Tense: Présent (Present Simple with Present Continuous equivalents)
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He does / He is doing")
+# English phrases use natural alternative verbs where appropriate, including "/ is (or are) doing"
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I do my homework / I am doing my homework",
+        "correct": "Je fais mes devoirs",
+        "distractors": ["Tu fais tes devoirs", "Il fait ses devoirs", "Nous faisons nos devoirs"]
+    },
+    {
+        "question": "You do / You are doing the dishes (informal)",
+        "correct": "Tu fais la vaisselle",
+        "distractors": ["Je fais la vaisselle", "Vous faites la vaisselle", "Ils font la vaisselle"]
+    },
+    {
+        "question": "He does / He is doing the shopping",
+        "correct": "Il fait les courses",
+        "distractors": ["Elle fait les courses", "Tu fais les courses", "Ils font les courses"]
+    },
+    {
+        "question": "She does / She is doing the cooking",
+        "correct": "Elle fait la cuisine",
+        "distractors": ["Il fait la cuisine", "Elles font la cuisine", "Tu fais la cuisine"]
+    },
+    {
+        "question": "We do / We are doing some work",
+        "correct": "Nous faisons du travail",
+        "distractors": ["Vous faites du travail", "Ils font du travail", "Je fais du travail"]
+    },
+    {
+        "question": "You do / You are doing the cleaning (formal / plural)",
+        "correct": "Vous faites le ménage",
+        "distractors": ["Tu fais le ménage", "Nous faisons le ménage", "Ils font le ménage"]
+    },
+    {
+        "question": "They do / They are doing the laundry (male / mixed)",
+        "correct": "Ils font la lessive",
+        "distractors": ["Elles font la lessive", "Ils faisaient la lessive", "Ils feront la lessive"]
+    },
+    {
+        "question": "They do / They are doing the laundry (female)",
+        "correct": "Elles font la lessive",
+        "distractors": ["Ils font la lessive", "Elles faisaient la lessive", "Elles feront la lessive"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I do not do / am not doing my homework",
+        "correct": "Je ne fais pas mes devoirs",
+        "distractors": ["Tu ne fais pas tes devoirs", "Il ne fait pas ses devoirs", "Nous ne faisons pas nos devoirs"]
+    },
+    {
+        "question": "You do not do / are not doing the dishes (informal)",
+        "correct": "Tu ne fais pas la vaisselle",
+        "distractors": ["Je ne fais pas la vaisselle", "Vous ne faites pas la vaisselle", "Ils ne font pas la vaisselle"]
+    },
+    {
+        "question": "He does not do / is not doing the shopping",
+        "correct": "Il ne fait pas les courses",
+        "distractors": ["Elle ne fait pas les courses", "Tu ne fais pas les courses", "Ils ne font pas les courses"]
+    },
+    {
+        "question": "She does not do / is not doing the cooking",
+        "correct": "Elle ne fait pas la cuisine",
+        "distractors": ["Il ne fait pas la cuisine", "Elles ne font pas la cuisine", "Tu ne fais pas la cuisine"]
+    },
+    {
+        "question": "We do not do / are not doing any work",
+        "correct": "Nous ne faisons pas de travail",
+        "distractors": ["Vous ne faites pas de travail", "Ils ne font pas de travail", "Je ne fais pas de travail"]
+    },
+    {
+        "question": "You do not do / are not doing the cleaning (formal / plural)",
+        "correct": "Vous ne faites pas le ménage",
+        "distractors": ["Tu ne fais pas le ménage", "Nous ne faisons pas le ménage", "Ils ne font pas le ménage"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Do I do / Am I doing my homework?",
+        "correct": "Fais-je mes devoirs ?",
+        "distractors": ["Fais-tu tes devoirs ?", "Fait-il ses devoirs ?", "Faisons-nous nos devoirs ?"]
+    },
+    {
+        "question": "Do you do / Are you doing the dishes? (informal)",
+        "correct": "Fais-tu la vaisselle ?",
+        "distractors": ["Fais-je la vaisselle ?", "Fait-il la vaisselle ?", "Faites-vous la vaisselle ?"]
+    },
+    {
+        "question": "Does he do / Is he doing the shopping?",
+        "correct": "Fait-il les courses ?",
+        "distractors": ["Fait-elle les courses ?", "Fais-je les courses ?", "Fais-tu les courses ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Don’t I do / Am I not doing my homework?",
+        "correct": "Ne fais-je pas mes devoirs ?",
+        "distractors": ["Ne fais-tu pas tes devoirs ?", "Ne fait-il pas ses devoirs ?", "Ne faisons-nous pas nos devoirs ?"]
+    },
+    {
+        "question": "Don’t you do / Are you not doing the dishes? (informal)",
+        "correct": "Ne fais-tu pas la vaisselle ?",
+        "distractors": ["Ne fais-je pas la vaisselle ?", "Ne fait-il pas la vaisselle ?", "Ne faites-vous pas la vaisselle ?"]
+    },
+    {
+        "question": "Doesn’t he do / Is he not doing the shopping?",
+        "correct": "Ne fait-il pas les courses ?",
+        "distractors": ["Ne fait-elle pas les courses ?", "Ne fais-je pas les courses ?", "Ne fais-tu pas les courses ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with randomized answer placement among options A-D
+```

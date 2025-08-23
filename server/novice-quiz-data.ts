@@ -187,26 +187,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
 
   "faire": {
     "present": [
-      {"question": "I do / I am doing my homework. (Présent)", "options": ["Je fais mes devoirs.", "Tu fais tes devoirs.", "Il fait ses devoirs.", "Nous faisons nos devoirs."], "answer": "A"},
-      {"question": "You are not doing the dishes. (Présent - Negative, informal)", "options": ["Tu ne fais pas la vaisselle.", "Je ne fais pas la vaisselle.", "Il ne fait pas la vaisselle.", "Nous ne faisons pas la vaisselle."], "answer": "A"},
-      {"question": "Is he doing the cooking? (Présent - Question)", "options": ["Fait-il la cuisine ?", "Fais-tu la cuisine ?", "Fait-elle la cuisine ?", "Font-ils la cuisine ?"], "answer": "A"},
-      {"question": "We do / we are doing sports every day. (Présent)", "options": ["Nous faisons du sport tous les jours.", "Vous faites du sport tous les jours.", "Ils font du sport tous les jours.", "Je fais du sport tous les jours."], "answer": "A"},
-      {"question": "She is not doing the shopping today. (Présent - Negative)", "options": ["Elle ne fait pas les courses aujourd'hui.", "Il ne fait pas les courses aujourd'hui.", "Tu ne fais pas les courses aujourd'hui.", "Nous ne faisons pas les courses aujourd'hui."], "answer": "A"},
-      {"question": "Are you (formal) doing your work? (Présent - Question)", "options": ["Faites-vous votre travail ?", "Fais-tu ton travail ?", "Fait-il son travail ?", "Font-ils leur travail ?"], "answer": "A"},
-      {"question": "They are doing their homework. (Présent, male/mixed)", "options": ["Ils font leurs devoirs.", "Elles font leurs devoirs.", "Ils faisaient leurs devoirs.", "Ils feront leurs devoirs."], "answer": "A"},
-      {"question": "I am not doing the cleaning. (Présent - Negative)", "options": ["Je ne fais pas le ménage.", "Tu ne fais pas le ménage.", "Il ne fait pas le ménage.", "Nous ne faisons pas le ménage."], "answer": "A"},
-      {"question": "Are we doing enough? (Présent - Question)", "options": ["Faisons-nous assez ?", "Faites-vous assez ?", "Font-ils assez ?", "Fais-je assez ?"], "answer": "A"},
-      {"question": "You do a good job. (Présent, informal)", "options": ["Tu fais un bon travail.", "Je fais un bon travail.", "Il fait un bon travail.", "Vous faites un bon travail."], "answer": "A"},
-      {"question": "I do / I am doing exercise every morning. (Présent)", "options": ["Je fais de l'exercice tous les matins.", "Tu fais de l'exercice tous les matins.", "Il fait de l'exercice tous les matins.", "Nous faisons de l'exercice tous les matins."], "answer": "A"},
-      {"question": "She is not doing her project. (Présent - Negative)", "options": ["Elle ne fait pas son projet.", "Il ne fait pas son projet.", "Tu ne fais pas ton projet.", "Nous ne faisons pas notre projet."], "answer": "A"},
-      {"question": "Are you doing well? (Présent - Question, informal)", "options": ["Fais-tu bien ?", "Fait-il bien ?", "Faisons-nous bien ?", "Font-ils bien ?"], "answer": "A"},
-      {"question": "We are doing our best. (Présent)", "options": ["Nous faisons de notre mieux.", "Vous faites de votre mieux.", "Ils font de leur mieux.", "Je fais de mon mieux."], "answer": "A"},
-      {"question": "He is not doing the laundry. (Présent - Negative)", "options": ["Il ne fait pas la lessive.", "Je ne fais pas la lessive.", "Tu ne fais pas la lessive.", "Ils ne font pas la lessive."], "answer": "A"},
-      {"question": "Are they doing the work? (Présent - Question, male/mixed)", "options": ["Font-ils le travail ?", "Font-elles le travail ?", "Faites-vous le travail ?", "Fais-tu le travail ?"], "answer": "A"},
-      {"question": "I am not doing mistakes. (Présent - Negative)", "options": ["Je ne fais pas d'erreurs.", "Tu ne fais pas d'erreurs.", "Il ne fait pas d'erreurs.", "Nous ne faisons pas d'erreurs."], "answer": "A"},
-      {"question": "Are we doing the right thing? (Présent - Question)", "options": ["Faisons-nous la bonne chose ?", "Faites-vous la bonne chose ?", "Font-ils la bonne chose ?", "Fais-je la bonne chose ?"], "answer": "A"},
-      {"question": "You are doing great work. (Présent, informal)", "options": ["Tu fais un excellent travail.", "Je fais un excellent travail.", "Il fait un excellent travail.", "Vous faites un excellent travail."], "answer": "A"},
-      {"question": "They are not doing their duty. (Présent - Negative, female)", "options": ["Elles ne font pas leur devoir.", "Ils ne font pas leur devoir.", "Vous ne faites pas votre devoir.", "Nous ne faisons pas notre devoir."], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I do my homework / I am doing my homework", "options": ["Tu fais tes devoirs", "Je fais mes devoirs", "Il fait ses devoirs", "Nous faisons nos devoirs"], "answer": "B"},
+      {"question": "You do / You are doing the dishes (informal)", "options": ["Je fais la vaisselle", "Vous faites la vaisselle", "Tu fais la vaisselle", "Ils font la vaisselle"], "answer": "C"},
+      {"question": "He does / He is doing the shopping", "options": ["Elle fait les courses", "Tu fais les courses", "Ils font les courses", "Il fait les courses"], "answer": "D"},
+      {"question": "She does / She is doing the cooking", "options": ["Il fait la cuisine", "Elle fait la cuisine", "Elles font la cuisine", "Tu fais la cuisine"], "answer": "B"},
+      {"question": "We do / We are doing some work", "options": ["Vous faites du travail", "Ils font du travail", "Je fais du travail", "Nous faisons du travail"], "answer": "D"},
+      {"question": "You do / You are doing the cleaning (formal / plural)", "options": ["Tu fais le ménage", "Nous faisons le ménage", "Vous faites le ménage", "Ils font le ménage"], "answer": "C"},
+      {"question": "They do / They are doing the laundry (male / mixed)", "options": ["Elles font la lessive", "Ils faisaient la lessive", "Ils feront la lessive", "Ils font la lessive"], "answer": "D"},
+      {"question": "They do / They are doing the laundry (female)", "options": ["Ils font la lessive", "Elles faisaient la lessive", "Elles feront la lessive", "Elles font la lessive"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I do not do / am not doing my homework", "options": ["Tu ne fais pas tes devoirs", "Il ne fait pas ses devoirs", "Je ne fais pas mes devoirs", "Nous ne faisons pas nos devoirs"], "answer": "C"},
+      {"question": "You do not do / are not doing the dishes (informal)", "options": ["Je ne fais pas la vaisselle", "Tu ne fais pas la vaisselle", "Vous ne faites pas la vaisselle", "Ils ne font pas la vaisselle"], "answer": "B"},
+      {"question": "He does not do / is not doing the shopping", "options": ["Elle ne fait pas les courses", "Tu ne fais pas les courses", "Ils ne font pas les courses", "Il ne fait pas les courses"], "answer": "D"},
+      {"question": "She does not do / is not doing the cooking", "options": ["Il ne fait pas la cuisine", "Elle ne fait pas la cuisine", "Elles ne font pas la cuisine", "Tu ne fais pas la cuisine"], "answer": "B"},
+      {"question": "We do not do / are not doing any work", "options": ["Vous ne faites pas de travail", "Ils ne font pas de travail", "Je ne fais pas de travail", "Nous ne faisons pas de travail"], "answer": "D"},
+      {"question": "You do not do / are not doing the cleaning (formal / plural)", "options": ["Tu ne fais pas le ménage", "Vous ne faites pas le ménage", "Nous ne faisons pas le ménage", "Ils ne font pas le ménage"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Do I do / Am I doing my homework?", "options": ["Fais-tu tes devoirs ?", "Fait-il ses devoirs ?", "Fais-je mes devoirs ?", "Faisons-nous nos devoirs ?"], "answer": "C"},
+      {"question": "Do you do / Are you doing the dishes? (informal)", "options": ["Fais-je la vaisselle ?", "Fais-tu la vaisselle ?", "Fait-il la vaisselle ?", "Faites-vous la vaisselle ?"], "answer": "B"},
+      {"question": "Does he do / Is he doing the shopping?", "options": ["Fait-elle les courses ?", "Fais-je les courses ?", "Fais-tu les courses ?", "Fait-il les courses ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Don't I do / Am I not doing my homework?", "options": ["Ne fais-tu pas tes devoirs ?", "Ne fait-il pas ses devoirs ?", "Ne faisons-nous pas nos devoirs ?", "Ne fais-je pas mes devoirs ?"], "answer": "D"},
+      {"question": "Don't you do / Are you not doing the dishes? (informal)", "options": ["Ne fais-je pas la vaisselle ?", "Ne fais-tu pas la vaisselle ?", "Ne fait-il pas la vaisselle ?", "Ne faites-vous pas la vaisselle ?"], "answer": "B"},
+      {"question": "Doesn't he do / Is he not doing the shopping?", "options": ["Ne fait-elle pas les courses ?", "Ne fais-je pas les courses ?", "Ne fais-tu pas les courses ?", "Ne fait-il pas les courses ?"], "answer": "D"}
     ],
     "passé_composé": [
       {"question": "I did / I have done my homework. (Passé Composé)", "options": ["J'ai fait mes devoirs.", "Tu as fait tes devoirs.", "Il a fait ses devoirs.", "Nous avons fait nos devoirs."], "answer": "A"},
