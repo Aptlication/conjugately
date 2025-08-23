@@ -224,34 +224,211 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
       }
     ],
     "Passé Composé": [
+      // Positive statements (8 questions)
       {
         question: "I have been",
-        hint: "Past participle of être with auxiliary avoir",
+        hint: "First person singular of être in passé composé",
         answerOptions: [
-          { text: "J'ai été", rationale: "Correct! 'J'ai été' is 'I have been' in French.", isCorrect: true },
           { text: "Tu as été", rationale: "This means 'you have been' (informal).", isCorrect: false },
+          { text: "J'ai été", rationale: "Correct! 'J'ai été' is 'I have been' in French passé composé.", isCorrect: true },
           { text: "Il a été", rationale: "This means 'he has been'.", isCorrect: false },
           { text: "Nous avons été", rationale: "This means 'we have been'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You have been (informal)",
+        hint: "Second person singular of être in passé composé",
+        answerOptions: [
+          { text: "J'ai été", rationale: "This means 'I have been'.", isCorrect: false },
+          { text: "Vous avez été", rationale: "This means 'you have been' (formal/plural).", isCorrect: false },
+          { text: "Tu as été", rationale: "Correct! 'Tu as été' is 'you have been' (informal) in French passé composé.", isCorrect: true },
+          { text: "Ils ont été", rationale: "This means 'they have been'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He has been",
+        hint: "Third person singular masculine of être in passé composé",
+        answerOptions: [
+          { text: "Elle a été", rationale: "This means 'she has been'.", isCorrect: false },
+          { text: "Tu as été", rationale: "This means 'you have been' (informal).", isCorrect: false },
+          { text: "Ils ont été", rationale: "This means 'they have been'.", isCorrect: false },
+          { text: "Il a été", rationale: "Correct! 'Il a été' is 'he has been' in French passé composé.", isCorrect: true }
         ]
       },
       {
         question: "She has been",
         hint: "Third person singular feminine of être in passé composé",
         answerOptions: [
-          { text: "Elle a été", rationale: "Correct! 'Elle a été' is 'she has been' in French.", isCorrect: true },
           { text: "Il a été", rationale: "This means 'he has been'.", isCorrect: false },
-          { text: "Tu as été", rationale: "This means 'you have been' (informal).", isCorrect: false },
-          { text: "Elles ont été", rationale: "This means 'they have been' (feminine plural).", isCorrect: false }
+          { text: "Elle a été", rationale: "Correct! 'Elle a été' is 'she has been' in French passé composé.", isCorrect: true },
+          { text: "Elles ont été", rationale: "This means 'they have been' (feminine).", isCorrect: false },
+          { text: "Tu as été", rationale: "This means 'you have been' (informal).", isCorrect: false }
         ]
       },
       {
         question: "We have been",
         hint: "First person plural of être in passé composé",
         answerOptions: [
-          { text: "Nous avons été", rationale: "Correct! 'Nous avons été' is 'we have been' in French.", isCorrect: true },
           { text: "Vous avez été", rationale: "This means 'you have been' (formal/plural).", isCorrect: false },
+          { text: "Ils ont été", rationale: "This means 'they have been'.", isCorrect: false },
+          { text: "J'ai été", rationale: "This means 'I have been'.", isCorrect: false },
+          { text: "Nous avons été", rationale: "Correct! 'Nous avons été' is 'we have been' in French passé composé.", isCorrect: true }
+        ]
+      },
+      {
+        question: "You have been (formal/plural)",
+        hint: "Second person formal/plural of être in passé composé",
+        answerOptions: [
+          { text: "Tu as été", rationale: "This means 'you have been' (informal).", isCorrect: false },
+          { text: "Nous avons été", rationale: "This means 'we have been'.", isCorrect: false },
+          { text: "Vous avez été", rationale: "Correct! 'Vous avez été' is 'you have been' (formal/plural) in French passé composé.", isCorrect: true },
+          { text: "Ils ont été", rationale: "This means 'they have been'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They have been (male/mixed)",
+        hint: "Third person plural masculine/mixed of être in passé composé",
+        answerOptions: [
+          { text: "Elles ont été", rationale: "This means 'they have been' (feminine only).", isCorrect: false },
+          { text: "Ils étaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
+          { text: "Ils seront", rationale: "This is future tense, not passé composé.", isCorrect: false },
+          { text: "Ils ont été", rationale: "Correct! 'Ils ont été' is 'they have been' (masculine/mixed) in French passé composé.", isCorrect: true }
+        ]
+      },
+      {
+        question: "They have been (female)",
+        hint: "Third person plural feminine of être in passé composé",
+        answerOptions: [
           { text: "Ils ont été", rationale: "This means 'they have been' (masculine/mixed).", isCorrect: false },
-          { text: "J'ai été", rationale: "This means 'I have been'.", isCorrect: false }
+          { text: "Elles ont été", rationale: "Correct! 'Elles ont été' is 'they have been' (feminine) in French passé composé.", isCorrect: true },
+          { text: "Elles étaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
+          { text: "Elles seront", rationale: "This is future tense, not passé composé.", isCorrect: false }
+        ]
+      },
+
+      // Negative statements (6 questions)
+      {
+        question: "I have not been",
+        hint: "First person singular negative of être in passé composé",
+        answerOptions: [
+          { text: "Tu n'as pas été", rationale: "This means 'you have not been' (informal).", isCorrect: false },
+          { text: "Il n'a pas été", rationale: "This means 'he has not been'.", isCorrect: false },
+          { text: "Je n'ai pas été", rationale: "Correct! 'Je n'ai pas été' is 'I have not been' using French negation ne...pas.", isCorrect: true },
+          { text: "Nous n'avons pas été", rationale: "This means 'we have not been'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You have not been (informal)",
+        hint: "Second person singular negative of être in passé composé",
+        answerOptions: [
+          { text: "Je n'ai pas été", rationale: "This means 'I have not been'.", isCorrect: false },
+          { text: "Tu n'as pas été", rationale: "Correct! 'Tu n'as pas été' is 'you have not been' (informal) using French negation.", isCorrect: true },
+          { text: "Vous n'avez pas été", rationale: "This means 'you have not been' (formal/plural).", isCorrect: false },
+          { text: "Ils n'ont pas été", rationale: "This means 'they have not been'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He has not been",
+        hint: "Third person singular masculine negative of être in passé composé",
+        answerOptions: [
+          { text: "Elle n'a pas été", rationale: "This means 'she has not been'.", isCorrect: false },
+          { text: "Tu n'as pas été", rationale: "This means 'you have not been' (informal).", isCorrect: false },
+          { text: "Ils n'ont pas été", rationale: "This means 'they have not been'.", isCorrect: false },
+          { text: "Il n'a pas été", rationale: "Correct! 'Il n'a pas été' is 'he has not been' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "She has not been",
+        hint: "Third person singular feminine negative of être in passé composé",
+        answerOptions: [
+          { text: "Il n'a pas été", rationale: "This means 'he has not been'.", isCorrect: false },
+          { text: "Elle n'a pas été", rationale: "Correct! 'Elle n'a pas été' is 'she has not been' using French negation ne...pas.", isCorrect: true },
+          { text: "Elles n'ont pas été", rationale: "This means 'they have not been' (feminine).", isCorrect: false },
+          { text: "Tu n'as pas été", rationale: "This means 'you have not been' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We have not been",
+        hint: "First person plural negative of être in passé composé",
+        answerOptions: [
+          { text: "Vous n'avez pas été", rationale: "This means 'you have not been' (formal/plural).", isCorrect: false },
+          { text: "Ils n'ont pas été", rationale: "This means 'they have not been'.", isCorrect: false },
+          { text: "Je n'ai pas été", rationale: "This means 'I have not been'.", isCorrect: false },
+          { text: "Nous n'avons pas été", rationale: "Correct! 'Nous n'avons pas été' is 'we have not been' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "You have not been (formal/plural)",
+        hint: "Second person formal/plural negative of être in passé composé",
+        answerOptions: [
+          { text: "Tu n'as pas été", rationale: "This means 'you have not been' (informal).", isCorrect: false },
+          { text: "Vous n'avez pas été", rationale: "Correct! 'Vous n'avez pas été' is 'you have not been' (formal/plural) using French negation.", isCorrect: true },
+          { text: "Nous n'avons pas été", rationale: "This means 'we have not been'.", isCorrect: false },
+          { text: "Ils n'ont pas été", rationale: "This means 'they have not been'.", isCorrect: false }
+        ]
+      },
+
+      // Positive questions (3 questions)
+      {
+        question: "Have I been?",
+        hint: "Interrogative form of first person singular être in passé composé",
+        answerOptions: [
+          { text: "As-tu été ?", rationale: "This means 'Have you been?' (informal).", isCorrect: false },
+          { text: "A-t-il été ?", rationale: "This means 'Has he been?'.", isCorrect: false },
+          { text: "Ai-je été ?", rationale: "Correct! 'Ai-je été ?' is 'Have I been?' in French interrogative form with inversion.", isCorrect: true },
+          { text: "Avons-nous été ?", rationale: "This means 'Have we been?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Have you been? (informal)",
+        hint: "Interrogative form of second person singular être in passé composé",
+        answerOptions: [
+          { text: "Ai-je été ?", rationale: "This means 'Have I been?'.", isCorrect: false },
+          { text: "As-tu été ?", rationale: "Correct! 'As-tu été ?' is 'Have you been?' (informal) in French interrogative form.", isCorrect: true },
+          { text: "A-t-il été ?", rationale: "This means 'Has he been?'.", isCorrect: false },
+          { text: "Avez-vous été ?", rationale: "This means 'Have you been?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Has he been?",
+        hint: "Interrogative form of third person singular masculine être in passé composé",
+        answerOptions: [
+          { text: "A-t-elle été ?", rationale: "This means 'Has she been?'.", isCorrect: false },
+          { text: "Ai-je été ?", rationale: "This means 'Have I been?'.", isCorrect: false },
+          { text: "As-tu été ?", rationale: "This means 'Have you been?' (informal).", isCorrect: false },
+          { text: "A-t-il été ?", rationale: "Correct! 'A-t-il été ?' is 'Has he been?' in French interrogative form with liaison 't'.", isCorrect: true }
+        ]
+      },
+
+      // Negative questions (3 questions)
+      {
+        question: "Haven't I been?",
+        hint: "Negative interrogative form of first person singular être in passé composé",
+        answerOptions: [
+          { text: "N'as-tu pas été ?", rationale: "This means 'Haven't you been?' (informal).", isCorrect: false },
+          { text: "N'a-t-il pas été ?", rationale: "This means 'Hasn't he been?'.", isCorrect: false },
+          { text: "N'avons-nous pas été ?", rationale: "This means 'Haven't we been?'.", isCorrect: false },
+          { text: "N'ai-je pas été ?", rationale: "Correct! 'N'ai-je pas été ?' is 'Haven't I been?' in French negative interrogative form.", isCorrect: true }
+        ]
+      },
+      {
+        question: "Haven't you been? (informal)",
+        hint: "Negative interrogative form of second person singular être in passé composé",
+        answerOptions: [
+          { text: "N'ai-je pas été ?", rationale: "This means 'Haven't I been?'.", isCorrect: false },
+          { text: "N'as-tu pas été ?", rationale: "Correct! 'N'as-tu pas été ?' is 'Haven't you been?' (informal) in French negative interrogative.", isCorrect: true },
+          { text: "N'a-t-il pas été ?", rationale: "This means 'Hasn't he been?'.", isCorrect: false },
+          { text: "N'avez-vous pas été ?", rationale: "This means 'Haven't you been?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Hasn't he been?",
+        hint: "Negative interrogative form of third person singular masculine être in passé composé",
+        answerOptions: [
+          { text: "N'a-t-elle pas été ?", rationale: "This means 'Hasn't she been?'.", isCorrect: false },
+          { text: "N'ai-je pas été ?", rationale: "This means 'Haven't I been?'.", isCorrect: false },
+          { text: "N'a-t-il pas été ?", rationale: "Correct! 'N'a-t-il pas été ?' is 'Hasn't he been?' in French negative interrogative with liaison 't'.", isCorrect: true },
+          { text: "N'as-tu pas été ?", rationale: "This means 'Haven't you been?' (informal).", isCorrect: false }
         ]
       }
     ],

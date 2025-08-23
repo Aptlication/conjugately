@@ -1,0 +1,59 @@
+```python
+# beginner_etre_future_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: être
+# Tense: Futur Simple
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {"question": "I will be", "correct": "Je serai", "distractors": ["Tu seras", "Il sera", "Nous serons"]},
+    {"question": "You will be (informal)", "correct": "Tu seras", "distractors": ["Je serai", "Vous serez", "Ils seront"]},
+    {"question": "He will be", "correct": "Il sera", "distractors": ["Elle sera", "Tu seras", "Ils seront"]},
+    {"question": "She will be", "correct": "Elle sera", "distractors": ["Il sera", "Elles seront", "Tu seras"]},
+    {"question": "We will be", "correct": "Nous serons", "distractors": ["Vous serez", "Ils seront", "Je serai"]},
+    {"question": "You will be (formal/plural)", "correct": "Vous serez", "distractors": ["Tu seras", "Nous serons", "Ils seront"]},
+    {"question": "They will be (male/mixed)", "correct": "Ils seront", "distractors": ["Elles seront", "Ils étaient", "Ils ont été"]},
+    {"question": "They will be (female)", "correct": "Elles seront", "distractors": ["Ils seront", "Elles étaient", "Elles ont été"]},
+
+    # Negative statements (6 questions)
+    {"question": "I will not be", "correct": "Je ne serai pas", "distractors": ["Tu ne seras pas", "Il ne sera pas", "Nous ne serons pas"]},
+    {"question": "You will not be (informal)", "correct": "Tu ne seras pas", "distractors": ["Je ne serai pas", "Vous ne serez pas", "Ils ne seront pas"]},
+    {"question": "He will not be", "correct": "Il ne sera pas", "distractors": ["Elle ne sera pas", "Tu ne seras pas", "Ils ne seront pas"]},
+    {"question": "She will not be", "correct": "Elle ne sera pas", "distractors": ["Il ne sera pas", "Elles ne seront pas", "Tu ne seras pas"]},
+    {"question": "We will not be", "correct": "Nous ne serons pas", "distractors": ["Vous ne serez pas", "Ils ne seront pas", "Je ne serai pas"]},
+    {"question": "You will not be (formal/plural)", "correct": "Vous ne serez pas", "distractors": ["Tu ne seras pas", "Nous ne serons pas", "Ils ne seront pas"]},
+
+    # Positive questions (3 questions)
+    {"question": "Will I be?", "correct": "Serai-je ?", "distractors": ["Seras-tu ?", "Sera-t-il ?", "Serons-nous ?"]},
+    {"question": "Will you be? (informal)", "correct": "Seras-tu ?", "distractors": ["Serai-je ?", "Sera-t-il ?", "Serez-vous ?"]},
+    {"question": "Will he be?", "correct": "Sera-t-il ?", "distractors": ["Sera-t-elle ?", "Serai-je ?", "Seras-tu ?"]},
+
+    # Negative questions (3 questions)
+    {"question": "Won't I be?", "correct": "Ne serai-je pas ?", "distractors": ["Ne seras-tu pas ?", "Ne sera-t-il pas ?", "Ne serons-nous pas ?"]},
+    {"question": "Won't you be? (informal)", "correct": "Ne seras-tu pas ?", "distractors": ["Ne serai-je pas ?", "Ne sera-t-il pas ?", "Ne serez-vous pas ?"]},
+    {"question": "Won't he be?", "correct": "Ne sera-t-il pas ?", "distractors": ["Ne sera-t-elle pas ?", "Ne serai-je pas ?", "Ne seras-tu pas ?"]},
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted now contains 20 questions with correct answers randomly assigned among options A-D
+```
