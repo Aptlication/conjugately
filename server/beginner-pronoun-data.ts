@@ -606,8 +606,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I will have",
         hint: "First person singular of avoir in future tense",
         answerOptions: [
-          { text: "J'aurai", rationale: "Correct! 'J'aurai' is 'I will have' in French future tense.", isCorrect: true },
           { text: "Tu auras", rationale: "This means 'you will have' (informal).", isCorrect: false },
+          { text: "J'aurai", rationale: "Correct! 'J'aurai' is 'I will have' in French future tense.", isCorrect: true },
           { text: "Il aura", rationale: "This means 'he will have'.", isCorrect: false },
           { text: "Nous aurons", rationale: "This means 'we will have'.", isCorrect: false }
         ]
@@ -616,9 +616,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You will have (informal)",
         hint: "Second person singular of avoir in future tense",
         answerOptions: [
-          { text: "Tu auras", rationale: "Correct! 'Tu auras' is 'you will have' (informal) in French future tense.", isCorrect: true },
           { text: "J'aurai", rationale: "This means 'I will have'.", isCorrect: false },
           { text: "Vous aurez", rationale: "This means 'you will have' (formal/plural).", isCorrect: false },
+          { text: "Tu auras", rationale: "Correct! 'Tu auras' is 'you will have' (informal) in French future tense.", isCorrect: true },
           { text: "Ils auront", rationale: "This means 'they will have'.", isCorrect: false }
         ]
       },
@@ -626,18 +626,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He will have",
         hint: "Third person singular masculine of avoir in future tense",
         answerOptions: [
-          { text: "Il aura", rationale: "Correct! 'Il aura' is 'he will have' in French future tense.", isCorrect: true },
           { text: "Elle aura", rationale: "This means 'she will have'.", isCorrect: false },
           { text: "Tu auras", rationale: "This means 'you will have' (informal).", isCorrect: false },
-          { text: "Ils auront", rationale: "This means 'they will have'.", isCorrect: false }
+          { text: "Ils auront", rationale: "This means 'they will have'.", isCorrect: false },
+          { text: "Il aura", rationale: "Correct! 'Il aura' is 'he will have' in French future tense.", isCorrect: true }
         ]
       },
       {
         question: "She will have",
         hint: "Third person singular feminine of avoir in future tense",
         answerOptions: [
-          { text: "Elle aura", rationale: "Correct! 'Elle aura' is 'she will have' in French future tense.", isCorrect: true },
           { text: "Il aura", rationale: "This means 'he will have'.", isCorrect: false },
+          { text: "Elle aura", rationale: "Correct! 'Elle aura' is 'she will have' in French future tense.", isCorrect: true },
           { text: "Elles auront", rationale: "This means 'they will have' (feminine).", isCorrect: false },
           { text: "Tu auras", rationale: "This means 'you will have' (informal).", isCorrect: false }
         ]
@@ -646,19 +646,19 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We will have",
         hint: "First person plural of avoir in future tense",
         answerOptions: [
-          { text: "Nous aurons", rationale: "Correct! 'Nous aurons' is 'we will have' in French future tense.", isCorrect: true },
           { text: "Vous aurez", rationale: "This means 'you will have' (formal/plural).", isCorrect: false },
           { text: "Ils auront", rationale: "This means 'they will have'.", isCorrect: false },
-          { text: "J'aurai", rationale: "This means 'I will have'.", isCorrect: false }
+          { text: "J'aurai", rationale: "This means 'I will have'.", isCorrect: false },
+          { text: "Nous aurons", rationale: "Correct! 'Nous aurons' is 'we will have' in French future tense.", isCorrect: true }
         ]
       },
       {
         question: "You will have (formal/plural)",
         hint: "Second person formal/plural of avoir in future tense",
         answerOptions: [
-          { text: "Vous aurez", rationale: "Correct! 'Vous aurez' is 'you will have' (formal/plural) in French future tense.", isCorrect: true },
           { text: "Tu auras", rationale: "This means 'you will have' (informal).", isCorrect: false },
           { text: "Nous aurons", rationale: "This means 'we will have'.", isCorrect: false },
+          { text: "Vous aurez", rationale: "Correct! 'Vous aurez' is 'you will have' (formal/plural) in French future tense.", isCorrect: true },
           { text: "Ils auront", rationale: "This means 'they will have'.", isCorrect: false }
         ]
       },
@@ -666,20 +666,20 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "They will have (male/mixed)",
         hint: "Third person plural masculine/mixed of avoir in future tense",
         answerOptions: [
-          { text: "Ils auront", rationale: "Correct! 'Ils auront' is 'they will have' (masculine/mixed) in French future tense.", isCorrect: true },
           { text: "Elles auront", rationale: "This means 'they will have' (feminine only).", isCorrect: false },
           { text: "Ils avaient", rationale: "This is imperfect past tense, not future.", isCorrect: false },
-          { text: "Ils ont eu", rationale: "This is past perfect tense, not future.", isCorrect: false }
+          { text: "Ils ont eu", rationale: "This is passé composé (past), not future.", isCorrect: false },
+          { text: "Ils auront", rationale: "Correct! 'Ils auront' is 'they will have' (masculine/mixed) in French future tense.", isCorrect: true }
         ]
       },
       {
         question: "They will have (female)",
         hint: "Third person plural feminine of avoir in future tense",
         answerOptions: [
-          { text: "Elles auront", rationale: "Correct! 'Elles auront' is 'they will have' (feminine) in French future tense.", isCorrect: true },
           { text: "Ils auront", rationale: "This means 'they will have' (masculine/mixed).", isCorrect: false },
+          { text: "Elles auront", rationale: "Correct! 'Elles auront' is 'they will have' (feminine) in French future tense.", isCorrect: true },
           { text: "Elles avaient", rationale: "This is imperfect past tense, not future.", isCorrect: false },
-          { text: "Elles ont eu", rationale: "This is past perfect tense, not future.", isCorrect: false }
+          { text: "Elles ont eu", rationale: "This is passé composé (past), not future.", isCorrect: false }
         ]
       },
 
@@ -688,9 +688,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I will not have",
         hint: "First person singular negative of avoir in future tense",
         answerOptions: [
-          { text: "Je n'aurai pas", rationale: "Correct! 'Je n'aurai pas' is 'I will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Tu n'auras pas", rationale: "This means 'you will not have' (informal).", isCorrect: false },
           { text: "Il n'aura pas", rationale: "This means 'he will not have'.", isCorrect: false },
+          { text: "Je n'aurai pas", rationale: "Correct! 'Je n'aurai pas' is 'I will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Nous n'aurons pas", rationale: "This means 'we will not have'.", isCorrect: false }
         ]
       },
@@ -698,8 +698,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You will not have (informal)",
         hint: "Second person singular negative of avoir in future tense",
         answerOptions: [
-          { text: "Tu n'auras pas", rationale: "Correct! 'Tu n'auras pas' is 'you will not have' (informal) using French negation.", isCorrect: true },
           { text: "Je n'aurai pas", rationale: "This means 'I will not have'.", isCorrect: false },
+          { text: "Tu n'auras pas", rationale: "Correct! 'Tu n'auras pas' is 'you will not have' (informal) using French negation.", isCorrect: true },
           { text: "Vous n'aurez pas", rationale: "This means 'you will not have' (formal/plural).", isCorrect: false },
           { text: "Ils n'auront pas", rationale: "This means 'they will not have'.", isCorrect: false }
         ]
@@ -708,18 +708,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He will not have",
         hint: "Third person singular masculine negative of avoir in future tense",
         answerOptions: [
-          { text: "Il n'aura pas", rationale: "Correct! 'Il n'aura pas' is 'he will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Elle n'aura pas", rationale: "This means 'she will not have'.", isCorrect: false },
           { text: "Tu n'auras pas", rationale: "This means 'you will not have' (informal).", isCorrect: false },
-          { text: "Ils n'auront pas", rationale: "This means 'they will not have'.", isCorrect: false }
+          { text: "Ils n'auront pas", rationale: "This means 'they will not have'.", isCorrect: false },
+          { text: "Il n'aura pas", rationale: "Correct! 'Il n'aura pas' is 'he will not have' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "She will not have",
         hint: "Third person singular feminine negative of avoir in future tense",
         answerOptions: [
-          { text: "Elle n'aura pas", rationale: "Correct! 'Elle n'aura pas' is 'she will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Il n'aura pas", rationale: "This means 'he will not have'.", isCorrect: false },
+          { text: "Elle n'aura pas", rationale: "Correct! 'Elle n'aura pas' is 'she will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Elles n'auront pas", rationale: "This means 'they will not have' (feminine).", isCorrect: false },
           { text: "Tu n'auras pas", rationale: "This means 'you will not have' (informal).", isCorrect: false }
         ]
@@ -728,18 +728,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We will not have",
         hint: "First person plural negative of avoir in future tense",
         answerOptions: [
-          { text: "Nous n'aurons pas", rationale: "Correct! 'Nous n'aurons pas' is 'we will not have' using French negation ne...pas.", isCorrect: true },
           { text: "Vous n'aurez pas", rationale: "This means 'you will not have' (formal/plural).", isCorrect: false },
           { text: "Ils n'auront pas", rationale: "This means 'they will not have'.", isCorrect: false },
-          { text: "Je n'aurai pas", rationale: "This means 'I will not have'.", isCorrect: false }
+          { text: "Je n'aurai pas", rationale: "This means 'I will not have'.", isCorrect: false },
+          { text: "Nous n'aurons pas", rationale: "Correct! 'Nous n'aurons pas' is 'we will not have' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "You will not have (formal/plural)",
         hint: "Second person formal/plural negative of avoir in future tense",
         answerOptions: [
-          { text: "Vous n'aurez pas", rationale: "Correct! 'Vous n'aurez pas' is 'you will not have' (formal/plural) using French negation.", isCorrect: true },
           { text: "Tu n'auras pas", rationale: "This means 'you will not have' (informal).", isCorrect: false },
+          { text: "Vous n'aurez pas", rationale: "Correct! 'Vous n'aurez pas' is 'you will not have' (formal/plural) using French negation.", isCorrect: true },
           { text: "Nous n'aurons pas", rationale: "This means 'we will not have'.", isCorrect: false },
           { text: "Ils n'auront pas", rationale: "This means 'they will not have'.", isCorrect: false }
         ]
@@ -750,9 +750,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Will I have?",
         hint: "Interrogative form of first person singular avoir in future tense",
         answerOptions: [
-          { text: "Aurai-je ?", rationale: "Correct! 'Aurai-je ?' is 'Will I have?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Auras-tu ?", rationale: "This means 'Will you have?' (informal).", isCorrect: false },
           { text: "Aura-t-il ?", rationale: "This means 'Will he have?'.", isCorrect: false },
+          { text: "Aurai-je ?", rationale: "Correct! 'Aurai-je ?' is 'Will I have?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Aurons-nous ?", rationale: "This means 'Will we have?'.", isCorrect: false }
         ]
       },
@@ -760,8 +760,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Will you have? (informal)",
         hint: "Interrogative form of second person singular avoir in future tense",
         answerOptions: [
-          { text: "Auras-tu ?", rationale: "Correct! 'Auras-tu ?' is 'Will you have?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Aurai-je ?", rationale: "This means 'Will I have?'.", isCorrect: false },
+          { text: "Auras-tu ?", rationale: "Correct! 'Auras-tu ?' is 'Will you have?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Aura-t-il ?", rationale: "This means 'Will he have?'.", isCorrect: false },
           { text: "Aurez-vous ?", rationale: "This means 'Will you have?' (formal/plural).", isCorrect: false }
         ]
@@ -770,10 +770,10 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Will he have?",
         hint: "Interrogative form of third person singular masculine avoir in future tense",
         answerOptions: [
-          { text: "Aura-t-il ?", rationale: "Correct! 'Aura-t-il ?' is 'Will he have?' in French interrogative form with liaison 't'.", isCorrect: true },
           { text: "Aura-t-elle ?", rationale: "This means 'Will she have?'.", isCorrect: false },
           { text: "Aurai-je ?", rationale: "This means 'Will I have?'.", isCorrect: false },
-          { text: "Auras-tu ?", rationale: "This means 'Will you have?' (informal).", isCorrect: false }
+          { text: "Auras-tu ?", rationale: "This means 'Will you have?' (informal).", isCorrect: false },
+          { text: "Aura-t-il ?", rationale: "Correct! 'Aura-t-il ?' is 'Will he have?' in French interrogative form with liaison 't'.", isCorrect: true }
         ]
       },
 
@@ -782,18 +782,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Won't I have?",
         hint: "Negative interrogative form of first person singular avoir in future tense",
         answerOptions: [
-          { text: "N'aurai-je pas ?", rationale: "This is the correct negative interrogative form, though the given answer was different.", isCorrect: false },
-          { text: "N'auras-tu pas ?", rationale: "Correct based on the provided answer key! This means 'Won't you have?' (informal).", isCorrect: true },
+          { text: "N'auras-tu pas ?", rationale: "This means 'Won't you have?' (informal).", isCorrect: false },
           { text: "N'aura-t-il pas ?", rationale: "This means 'Won't he have?'.", isCorrect: false },
-          { text: "N'aurons-nous pas ?", rationale: "This means 'Won't we have?'.", isCorrect: false }
+          { text: "N'aurons-nous pas ?", rationale: "This means 'Won't we have?'.", isCorrect: false },
+          { text: "N'aurai-je pas ?", rationale: "Correct! 'N'aurai-je pas ?' is 'Won't I have?' in French negative interrogative form.", isCorrect: true }
         ]
       },
       {
         question: "Won't you have? (informal)",
         hint: "Negative interrogative form of second person singular avoir in future tense",
         answerOptions: [
+          { text: "N'aurai-je pas ?", rationale: "This means 'Won't I have?'.", isCorrect: false },
           { text: "N'auras-tu pas ?", rationale: "Correct! 'N'auras-tu pas ?' is 'Won't you have?' (informal) in French negative interrogative.", isCorrect: true },
-          { text: "Ne vais-je pas avoir ?", rationale: "This uses near future, not simple future tense.", isCorrect: false },
           { text: "N'aura-t-il pas ?", rationale: "This means 'Won't he have?'.", isCorrect: false },
           { text: "N'aurez-vous pas ?", rationale: "This means 'Won't you have?' (formal/plural).", isCorrect: false }
         ]
@@ -802,9 +802,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Won't he have?",
         hint: "Negative interrogative form of third person singular masculine avoir in future tense",
         answerOptions: [
-          { text: "N'aura-t-il pas ?", rationale: "Correct! 'N'aura-t-il pas ?' is 'Won't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'aura-t-elle pas ?", rationale: "This means 'Won't she have?'.", isCorrect: false },
-          { text: "Ne vais-je pas avoir ?", rationale: "This uses near future, not simple future tense.", isCorrect: false },
+          { text: "N'aurai-je pas ?", rationale: "This means 'Won't I have?'.", isCorrect: false },
+          { text: "N'aura-t-il pas ?", rationale: "Correct! 'N'aura-t-il pas ?' is 'Won't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'auras-tu pas ?", rationale: "This means 'Won't you have?' (informal).", isCorrect: false }
         ]
       }
