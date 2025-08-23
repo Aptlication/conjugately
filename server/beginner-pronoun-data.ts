@@ -188,8 +188,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I have",
         hint: "First person singular of avoir in present tense",
         answerOptions: [
-          { text: "J'ai", rationale: "Correct! 'J'ai' is 'I have' in French present tense.", isCorrect: true },
           { text: "Tu as", rationale: "This means 'you have' (informal).", isCorrect: false },
+          { text: "J'ai", rationale: "Correct! 'J'ai' is 'I have' in French present tense.", isCorrect: true },
           { text: "Il a", rationale: "This means 'he has'.", isCorrect: false },
           { text: "Nous avons", rationale: "This means 'we have'.", isCorrect: false }
         ]
@@ -198,9 +198,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You have (informal)",
         hint: "Second person singular of avoir in present tense",
         answerOptions: [
-          { text: "Tu as", rationale: "Correct! 'Tu as' is 'you have' (informal) in French present tense.", isCorrect: true },
           { text: "J'ai", rationale: "This means 'I have'.", isCorrect: false },
           { text: "Vous avez", rationale: "This means 'you have' (formal/plural).", isCorrect: false },
+          { text: "Tu as", rationale: "Correct! 'Tu as' is 'you have' (informal) in French present tense.", isCorrect: true },
           { text: "Ils ont", rationale: "This means 'they have'.", isCorrect: false }
         ]
       },
@@ -208,18 +208,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He has",
         hint: "Third person singular masculine of avoir in present tense",
         answerOptions: [
-          { text: "Il a", rationale: "Correct! 'Il a' is 'he has' in French present tense.", isCorrect: true },
           { text: "Elle a", rationale: "This means 'she has'.", isCorrect: false },
           { text: "Tu as", rationale: "This means 'you have' (informal).", isCorrect: false },
-          { text: "Ils ont", rationale: "This means 'they have'.", isCorrect: false }
+          { text: "Ils ont", rationale: "This means 'they have'.", isCorrect: false },
+          { text: "Il a", rationale: "Correct! 'Il a' is 'he has' in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "She has",
         hint: "Third person singular feminine of avoir in present tense",
         answerOptions: [
-          { text: "Elle a", rationale: "Correct! 'Elle a' is 'she has' in French present tense.", isCorrect: true },
           { text: "Il a", rationale: "This means 'he has'.", isCorrect: false },
+          { text: "Elle a", rationale: "Correct! 'Elle a' is 'she has' in French present tense.", isCorrect: true },
           { text: "Elles ont", rationale: "This means 'they have' (feminine).", isCorrect: false },
           { text: "Tu as", rationale: "This means 'you have' (informal).", isCorrect: false }
         ]
@@ -228,19 +228,19 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We have",
         hint: "First person plural of avoir in present tense",
         answerOptions: [
-          { text: "Nous avons", rationale: "Correct! 'Nous avons' is 'we have' in French present tense.", isCorrect: true },
           { text: "Vous avez", rationale: "This means 'you have' (formal/plural).", isCorrect: false },
           { text: "Ils ont", rationale: "This means 'they have'.", isCorrect: false },
-          { text: "J'ai", rationale: "This means 'I have'.", isCorrect: false }
+          { text: "J'ai", rationale: "This means 'I have'.", isCorrect: false },
+          { text: "Nous avons", rationale: "Correct! 'Nous avons' is 'we have' in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "You have (formal/plural)",
         hint: "Second person formal/plural of avoir in present tense",
         answerOptions: [
-          { text: "Vous avez", rationale: "Correct! 'Vous avez' is 'you have' (formal/plural) in French present tense.", isCorrect: true },
           { text: "Tu as", rationale: "This means 'you have' (informal).", isCorrect: false },
           { text: "Nous avons", rationale: "This means 'we have'.", isCorrect: false },
+          { text: "Vous avez", rationale: "Correct! 'Vous avez' is 'you have' (formal/plural) in French present tense.", isCorrect: true },
           { text: "Ils ont", rationale: "This means 'they have'.", isCorrect: false }
         ]
       },
@@ -248,18 +248,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "They have (male/mixed)",
         hint: "Third person plural masculine/mixed of avoir in present tense",
         answerOptions: [
-          { text: "Ils ont", rationale: "Correct! 'Ils ont' is 'they have' (masculine/mixed) in French present tense.", isCorrect: true },
           { text: "Elles ont", rationale: "This means 'they have' (feminine only).", isCorrect: false },
           { text: "Ils avaient", rationale: "This is imperfect past tense, not present.", isCorrect: false },
-          { text: "Ils ont été", rationale: "This means 'they have been' (être), not 'they have' (avoir).", isCorrect: false }
+          { text: "Ils ont été", rationale: "This means 'they have been' (être), not 'they have' (avoir).", isCorrect: false },
+          { text: "Ils ont", rationale: "Correct! 'Ils ont' is 'they have' (masculine/mixed) in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "They have (female)",
         hint: "Third person plural feminine of avoir in present tense",
         answerOptions: [
-          { text: "Elles ont", rationale: "Correct! 'Elles ont' is 'they have' (feminine) in French present tense.", isCorrect: true },
           { text: "Ils ont", rationale: "This means 'they have' (masculine/mixed).", isCorrect: false },
+          { text: "Elles ont", rationale: "Correct! 'Elles ont' is 'they have' (feminine) in French present tense.", isCorrect: true },
           { text: "Elles avaient", rationale: "This is imperfect past tense, not present.", isCorrect: false },
           { text: "Elles ont été", rationale: "This means 'they have been' (être), not 'they have' (avoir).", isCorrect: false }
         ]
@@ -270,9 +270,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I do not have",
         hint: "First person singular negative of avoir in present tense",
         answerOptions: [
-          { text: "Je n'ai pas", rationale: "Correct! 'Je n'ai pas' is 'I do not have' using French negation ne...pas.", isCorrect: true },
           { text: "Tu n'as pas", rationale: "This means 'you do not have' (informal).", isCorrect: false },
           { text: "Il n'a pas", rationale: "This means 'he does not have'.", isCorrect: false },
+          { text: "Je n'ai pas", rationale: "Correct! 'Je n'ai pas' is 'I do not have' using French negation ne...pas.", isCorrect: true },
           { text: "Nous n'avons pas", rationale: "This means 'we do not have'.", isCorrect: false }
         ]
       },
@@ -280,8 +280,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You do not have (informal)",
         hint: "Second person singular negative of avoir in present tense",
         answerOptions: [
-          { text: "Tu n'as pas", rationale: "Correct! 'Tu n'as pas' is 'you do not have' (informal) using French negation.", isCorrect: true },
           { text: "Je n'ai pas", rationale: "This means 'I do not have'.", isCorrect: false },
+          { text: "Tu n'as pas", rationale: "Correct! 'Tu n'as pas' is 'you do not have' (informal) using French negation.", isCorrect: true },
           { text: "Vous n'avez pas", rationale: "This means 'you do not have' (formal/plural).", isCorrect: false },
           { text: "Ils n'ont pas", rationale: "This means 'they do not have'.", isCorrect: false }
         ]
@@ -290,18 +290,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He does not have",
         hint: "Third person singular masculine negative of avoir in present tense",
         answerOptions: [
-          { text: "Il n'a pas", rationale: "Correct! 'Il n'a pas' is 'he does not have' using French negation ne...pas.", isCorrect: true },
           { text: "Elle n'a pas", rationale: "This means 'she does not have'.", isCorrect: false },
           { text: "Tu n'as pas", rationale: "This means 'you do not have' (informal).", isCorrect: false },
-          { text: "Ils n'ont pas", rationale: "This means 'they do not have'.", isCorrect: false }
+          { text: "Ils n'ont pas", rationale: "This means 'they do not have'.", isCorrect: false },
+          { text: "Il n'a pas", rationale: "Correct! 'Il n'a pas' is 'he does not have' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "She does not have",
         hint: "Third person singular feminine negative of avoir in present tense",
         answerOptions: [
-          { text: "Elle n'a pas", rationale: "Correct! 'Elle n'a pas' is 'she does not have' using French negation ne...pas.", isCorrect: true },
           { text: "Il n'a pas", rationale: "This means 'he does not have'.", isCorrect: false },
+          { text: "Elle n'a pas", rationale: "Correct! 'Elle n'a pas' is 'she does not have' using French negation ne...pas.", isCorrect: true },
           { text: "Elles n'ont pas", rationale: "This means 'they do not have' (feminine).", isCorrect: false },
           { text: "Tu n'as pas", rationale: "This means 'you do not have' (informal).", isCorrect: false }
         ]
@@ -310,18 +310,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We do not have",
         hint: "First person plural negative of avoir in present tense",
         answerOptions: [
-          { text: "Nous n'avons pas", rationale: "Correct! 'Nous n'avons pas' is 'we do not have' using French negation ne...pas.", isCorrect: true },
           { text: "Vous n'avez pas", rationale: "This means 'you do not have' (formal/plural).", isCorrect: false },
           { text: "Ils n'ont pas", rationale: "This means 'they do not have'.", isCorrect: false },
-          { text: "Je n'ai pas", rationale: "This means 'I do not have'.", isCorrect: false }
+          { text: "Je n'ai pas", rationale: "This means 'I do not have'.", isCorrect: false },
+          { text: "Nous n'avons pas", rationale: "Correct! 'Nous n'avons pas' is 'we do not have' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "You do not have (formal/plural)",
         hint: "Second person formal/plural negative of avoir in present tense",
         answerOptions: [
-          { text: "Vous n'avez pas", rationale: "Correct! 'Vous n'avez pas' is 'you do not have' (formal/plural) using French negation.", isCorrect: true },
           { text: "Tu n'as pas", rationale: "This means 'you do not have' (informal).", isCorrect: false },
+          { text: "Vous n'avez pas", rationale: "Correct! 'Vous n'avez pas' is 'you do not have' (formal/plural) using French negation.", isCorrect: true },
           { text: "Nous n'avons pas", rationale: "This means 'we do not have'.", isCorrect: false },
           { text: "Ils n'ont pas", rationale: "This means 'they do not have'.", isCorrect: false }
         ]
@@ -332,9 +332,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Do I have?",
         hint: "Interrogative form of first person singular avoir in present tense",
         answerOptions: [
-          { text: "Ai-je ?", rationale: "Correct! 'Ai-je ?' is 'Do I have?' in French interrogative form with inversion.", isCorrect: true },
           { text: "As-tu ?", rationale: "This means 'Do you have?' (informal).", isCorrect: false },
           { text: "A-t-il ?", rationale: "This means 'Does he have?'.", isCorrect: false },
+          { text: "Ai-je ?", rationale: "Correct! 'Ai-je ?' is 'Do I have?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Avons-nous ?", rationale: "This means 'Do we have?'.", isCorrect: false }
         ]
       },
@@ -342,8 +342,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Do you have? (informal)",
         hint: "Interrogative form of second person singular avoir in present tense",
         answerOptions: [
-          { text: "As-tu ?", rationale: "Correct! 'As-tu ?' is 'Do you have?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Ai-je ?", rationale: "This means 'Do I have?'.", isCorrect: false },
+          { text: "As-tu ?", rationale: "Correct! 'As-tu ?' is 'Do you have?' (informal) in French interrogative form.", isCorrect: true },
           { text: "A-t-il ?", rationale: "This means 'Does he have?'.", isCorrect: false },
           { text: "Avez-vous ?", rationale: "This means 'Do you have?' (formal/plural).", isCorrect: false }
         ]
@@ -352,10 +352,10 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Does he have?",
         hint: "Interrogative form of third person singular masculine avoir in present tense",
         answerOptions: [
-          { text: "A-t-il ?", rationale: "Correct! 'A-t-il ?' is 'Does he have?' in French interrogative form with liaison 't'.", isCorrect: true },
           { text: "A-t-elle ?", rationale: "This means 'Does she have?'.", isCorrect: false },
           { text: "Ai-je ?", rationale: "This means 'Do I have?'.", isCorrect: false },
-          { text: "As-tu ?", rationale: "This means 'Do you have?' (informal).", isCorrect: false }
+          { text: "As-tu ?", rationale: "This means 'Do you have?' (informal).", isCorrect: false },
+          { text: "A-t-il ?", rationale: "Correct! 'A-t-il ?' is 'Does he have?' in French interrogative form with liaison 't'.", isCorrect: true }
         ]
       },
 
@@ -364,18 +364,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Don't I have?",
         hint: "Negative interrogative form of first person singular avoir in present tense",
         answerOptions: [
-          { text: "N'ai-je pas ?", rationale: "Correct! 'N'ai-je pas ?' is 'Don't I have?' in French negative interrogative form.", isCorrect: true },
           { text: "N'as-tu pas ?", rationale: "This means 'Don't you have?' (informal).", isCorrect: false },
           { text: "N'a-t-il pas ?", rationale: "This means 'Doesn't he have?'.", isCorrect: false },
-          { text: "N'avons-nous pas ?", rationale: "This means 'Don't we have?'.", isCorrect: false }
+          { text: "N'avons-nous pas ?", rationale: "This means 'Don't we have?'.", isCorrect: false },
+          { text: "N'ai-je pas ?", rationale: "Correct! 'N'ai-je pas ?' is 'Don't I have?' in French negative interrogative form.", isCorrect: true }
         ]
       },
       {
         question: "Don't you have? (informal)",
         hint: "Negative interrogative form of second person singular avoir in present tense",
         answerOptions: [
-          { text: "N'as-tu pas ?", rationale: "Correct! 'N'as-tu pas ?' is 'Don't you have?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "N'ai-je pas ?", rationale: "This means 'Don't I have?'.", isCorrect: false },
+          { text: "N'as-tu pas ?", rationale: "Correct! 'N'as-tu pas ?' is 'Don't you have?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "N'a-t-il pas ?", rationale: "This means 'Doesn't he have?'.", isCorrect: false },
           { text: "N'avez-vous pas ?", rationale: "This means 'Don't you have?' (formal/plural).", isCorrect: false }
         ]
@@ -384,9 +384,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Doesn't he have?",
         hint: "Negative interrogative form of third person singular masculine avoir in present tense",
         answerOptions: [
-          { text: "N'a-t-il pas ?", rationale: "Correct! 'N'a-t-il pas ?' is 'Doesn't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'a-t-elle pas ?", rationale: "This means 'Doesn't she have?'.", isCorrect: false },
           { text: "N'ai-je pas ?", rationale: "This means 'Don't I have?'.", isCorrect: false },
+          { text: "N'a-t-il pas ?", rationale: "Correct! 'N'a-t-il pas ?' is 'Doesn't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'as-tu pas ?", rationale: "This means 'Don't you have?' (informal).", isCorrect: false }
         ]
       }
