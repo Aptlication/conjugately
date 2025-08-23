@@ -1,0 +1,59 @@
+```python
+# novice_etre_passe_compose.py
+# NOVICE Level – Subject-Verb Conjugation MCQs
+# Verb: être
+# Tense: Passé Composé
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {"question": "I have been", "correct": "J'ai été", "distractors": ["Tu as été", "Il a été", "Nous avons été"]},
+    {"question": "You have been (informal)", "correct": "Tu as été", "distractors": ["J'ai été", "Vous avez été", "Ils ont été"]},
+    {"question": "He has been", "correct": "Il a été", "distractors": ["Elle a été", "Tu as été", "Ils ont été"]},
+    {"question": "She has been", "correct": "Elle a été", "distractors": ["Il a été", "Elles ont été", "Tu as été"]},
+    {"question": "We have been", "correct": "Nous avons été", "distractors": ["Vous avez été", "Ils ont été", "J'ai été"]},
+    {"question": "You have been (formal/plural)", "correct": "Vous avez été", "distractors": ["Tu as été", "Nous avons été", "Ils ont été"]},
+    {"question": "They have been (male/mixed)", "correct": "Ils ont été", "distractors": ["Elles ont été", "Ils étaient", "Ils ont été"]},
+    {"question": "They have been (female)", "correct": "Elles ont été", "distractors": ["Ils ont été", "Elles étaient", "Elles ont été"]},
+
+    # Negative statements (6 questions)
+    {"question": "I have not been", "correct": "Je n'ai pas été", "distractors": ["Tu n'as pas été", "Il n'a pas été", "Nous n'avons pas été"]},
+    {"question": "You have not been (informal)", "correct": "Tu n'as pas été", "distractors": ["Je n'ai pas été", "Vous n'avez pas été", "Ils n'ont pas été"]},
+    {"question": "He has not been", "correct": "Il n'a pas été", "distractors": ["Elle n'a pas été", "Tu n'as pas été", "Ils n'ont pas été"]},
+    {"question": "She has not been", "correct": "Elle n'a pas été", "distractors": ["Il n'a pas été", "Elles n'ont pas été", "Tu n'as pas été"]},
+    {"question": "We have not been", "correct": "Nous n'avons pas été", "distractors": ["Vous n'avez pas été", "Ils n'ont pas été", "Je n'ai pas été"]},
+    {"question": "You have not been (formal/plural)", "correct": "Vous n'avez pas été", "distractors": ["Tu n'as pas été", "Nous n'avons pas été", "Ils n'ont pas été"]},
+
+    # Positive questions (3 questions)
+    {"question": "Have I been?", "correct": "Ai-je été ?", "distractors": ["As-tu été ?", "A-t-il été ?", "Avons-nous été ?"]},
+    {"question": "Have you been? (informal)", "correct": "As-tu été ?", "distractors": ["Ai-je été ?", "A-t-il été ?", "Avez-vous été ?"]},
+    {"question": "Has he been?", "correct": "A-t-il été ?", "distractors": ["A-t-elle été ?", "Ai-je été ?", "As-tu été ?"]},
+
+    # Negative questions (3 questions)
+    {"question": "Haven't I been?", "correct": "N'ai-je pas été ?", "distractors": ["N'as-tu pas été ?", "N'a-t-il pas été ?", "N'avons-nous pas été ?"]},
+    {"question": "Haven't you been? (informal)", "correct": "N'as-tu pas été ?", "distractors": ["N'ai-je pas été ?", "N'a-t-il pas été ?", "N'avez-vous pas été ?"]},
+    {"question": "Hasn't he been?", "correct": "N'a-t-il pas été ?", "distractors": ["N'a-t-elle pas été ?", "N'ai-je pas été ?", "N'as-tu pas été ?"]},
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted now contains 20 questions with correct answers randomly assigned among options A-D
+```

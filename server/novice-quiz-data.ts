@@ -105,26 +105,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "He is not French. (Présent - Negative)", "options": ["Il n'est pas français.", "Elle n'est pas française.", "Tu n'es pas français.", "Nous ne sommes pas français."], "answer": "A"}
     ],
     "passé_composé": [
-      {"question": "I was happy. (Passé Composé)", "options": ["J'ai été heureux.", "Tu as été heureux.", "Il a été heureux.", "Nous avons été heureux."], "answer": "A"},
-      {"question": "You were not tired. (Passé Composé - Negative, informal)", "options": ["Tu n'as pas été fatigué.", "Je n'ai pas été fatigué.", "Il n'a pas été fatigué.", "Nous n'avons pas été fatigués."], "answer": "A"},
-      {"question": "Was he ready? (Passé Composé - Question)", "options": ["A-t-il été prêt ?", "As-tu été prêt ?", "Ai-je été prêt ?", "Avez-vous été prêts ?"], "answer": "A"},
-      {"question": "We were happy last week. (Passé Composé)", "options": ["Nous avons été heureux la semaine dernière.", "Vous avez été heureux la semaine dernière.", "Ils ont été heureux la semaine dernière.", "J'ai été heureux la semaine dernière."], "answer": "A"},
-      {"question": "She was not here. (Passé Composé - Negative)", "options": ["Elle n'a pas été ici.", "Il n'a pas été ici.", "Tu n'as pas été ici.", "Nous n'avons pas été ici."], "answer": "A"},
-      {"question": "Were you (formal) tired? (Passé Composé - Question)", "options": ["Avez-vous été fatigué ?", "As-tu été fatigué ?", "A-t-il été fatigué ?", "Ont-ils été fatigués ?"], "answer": "A"},
-      {"question": "They were at home. (male/mixed) (Passé Composé)", "options": ["Ils ont été à la maison.", "Elles ont été à la maison.", "Ils avaient été à la maison.", "Ils seront à la maison."], "answer": "A"},
-      {"question": "They were not here. (female) (Passé Composé - Negative)", "options": ["Elles n'ont pas été ici.", "Ils n'ont pas été ici.", "Vous n'avez pas été ici.", "Nous n'avons pas été ici."], "answer": "A"},
-      {"question": "Was I late? (Passé Composé - Question)", "options": ["Ai-je été en retard ?", "As-tu été en retard ?", "A-t-il été en retard ?", "Avons-nous été en retard ?"], "answer": "A"},
-      {"question": "Were you (informal) ready? (Passé Composé - Question)", "options": ["As-tu été prêt ?", "Ai-je été prêt ?", "A-t-il été prêt ?", "Avez-vous été prêts ?"], "answer": "A"},
-      {"question": "Was he here? (Passé Composé - Question)", "options": ["A-t-il été ici ?", "A-t-elle été ici ?", "As-tu été ici ?", "Avez-vous été ici ?"], "answer": "A"},
-      {"question": "Was she tired? (Passé Composé - Question)", "options": ["A-t-elle été fatiguée ?", "A-t-il été fatigué ?", "As-tu été fatigué ?", "Avez-vous été fatigués ?"], "answer": "A"},
-      {"question": "Were we ready? (Passé Composé - Question)", "options": ["Avons-nous été prêts ?", "Ai-je été prêt ?", "Avez-vous été prêts ?", "Ont-ils été prêts ?"], "answer": "A"},
-      {"question": "Were you (formal) happy? (Passé Composé - Question)", "options": ["Avez-vous été heureux ?", "As-tu été heureux ?", "Ai-je été heureux ?", "Ont-ils été heureux ?"], "answer": "A"},
-      {"question": "Were they here? (male/mixed) (Passé Composé - Question)", "options": ["Ont-ils été ici ?", "Ont-elles été ici ?", "Avez-vous été ici ?", "As-tu été ici ?"], "answer": "A"},
-      {"question": "Were they here? (female) (Passé Composé - Question)", "options": ["Ont-elles été ici ?", "Ont-ils été ici ?", "Avez-vous été ici ?", "As-tu été ici ?"], "answer": "A"},
-      {"question": "I was not busy. (Passé Composé - Negative)", "options": ["Je n'ai pas été occupé.", "Tu n'as pas été occupé.", "Il n'a pas été occupé.", "Nous n'avons pas été occupés."], "answer": "A"},
-      {"question": "He was not late. (Passé Composé - Negative)", "options": ["Il n'a pas été en retard.", "Je n'ai pas été en retard.", "Tu n'as pas été en retard.", "Ils n'ont pas été en retard."], "answer": "A"},
-      {"question": "Weren't we ready? (Passé Composé - Negative Question)", "options": ["N'avons-nous pas été prêts ?", "N'avez-vous pas été prêts ?", "N'ont-ils pas été prêts ?", "N'ai-je pas été prêt ?"], "answer": "A"},
-      {"question": "Weren't they tired? (female) (Passé Composé - Negative Question)", "options": ["N'ont-elles pas été fatiguées ?", "N'ont-ils pas été fatigués ?", "N'avez-vous pas été fatigués ?", "N'avons-nous pas été fatigués ?"], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I have been", "options": ["Tu as été", "J'ai été", "Il a été", "Nous avons été"], "answer": "B"},
+      {"question": "You have been (informal)", "options": ["J'ai été", "Vous avez été", "Tu as été", "Ils ont été"], "answer": "C"},
+      {"question": "He has been", "options": ["Elle a été", "Tu as été", "Ils ont été", "Il a été"], "answer": "D"},
+      {"question": "She has been", "options": ["Il a été", "Elle a été", "Elles ont été", "Tu as été"], "answer": "B"},
+      {"question": "We have been", "options": ["Vous avez été", "Ils ont été", "J'ai été", "Nous avons été"], "answer": "D"},
+      {"question": "You have been (formal/plural)", "options": ["Tu as été", "Nous avons été", "Vous avez été", "Ils ont été"], "answer": "C"},
+      {"question": "They have been (male/mixed)", "options": ["Elles ont été", "Ils étaient", "Ils ont été", "Ils ont été"], "answer": "D"},
+      {"question": "They have been (female)", "options": ["Ils ont été", "Elles ont été", "Elles étaient", "Elles ont été"], "answer": "B"},
+
+      // Negative statements (6 questions)
+      {"question": "I have not been", "options": ["Tu n'as pas été", "Il n'a pas été", "Je n'ai pas été", "Nous n'avons pas été"], "answer": "C"},
+      {"question": "You have not been (informal)", "options": ["Je n'ai pas été", "Tu n'as pas été", "Vous n'avez pas été", "Ils n'ont pas été"], "answer": "B"},
+      {"question": "He has not been", "options": ["Elle n'a pas été", "Tu n'as pas été", "Ils n'ont pas été", "Il n'a pas été"], "answer": "D"},
+      {"question": "She has not been", "options": ["Il n'a pas été", "Elle n'a pas été", "Elles n'ont pas été", "Tu n'as pas été"], "answer": "B"},
+      {"question": "We have not been", "options": ["Vous n'avez pas été", "Ils n'ont pas été", "Je n'ai pas été", "Nous n'avons pas été"], "answer": "D"},
+      {"question": "You have not been (formal/plural)", "options": ["Tu n'as pas été", "Vous n'avez pas été", "Nous n'avons pas été", "Ils n'ont pas été"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Have I been?", "options": ["As-tu été ?", "A-t-il été ?", "Ai-je été ?", "Avons-nous été ?"], "answer": "C"},
+      {"question": "Have you been? (informal)", "options": ["Ai-je été ?", "As-tu été ?", "A-t-il été ?", "Avez-vous été ?"], "answer": "B"},
+      {"question": "Has he been?", "options": ["A-t-elle été ?", "Ai-je été ?", "As-tu été ?", "A-t-il été ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Haven't I been?", "options": ["N'as-tu pas été ?", "N'a-t-il pas été ?", "N'avons-nous pas été ?", "N'ai-je pas été ?"], "answer": "D"},
+      {"question": "Haven't you been? (informal)", "options": ["N'ai-je pas été ?", "N'as-tu pas été ?", "N'a-t-il pas été ?", "N'avez-vous pas été ?"], "answer": "B"},
+      {"question": "Hasn't he been?", "options": ["N'a-t-elle pas été ?", "N'ai-je pas été ?", "N'a-t-il pas été ?", "N'as-tu pas été ?"], "answer": "C"}
     ],
     "futur_simple": [
       {"question": "I will be happy. (Futur Simple)", "options": ["Je serai heureux.", "Tu seras heureux.", "Il sera heureux.", "Nous serons heureux."], "answer": "A"},
