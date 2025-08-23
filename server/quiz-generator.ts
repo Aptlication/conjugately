@@ -1685,8 +1685,18 @@ function getEnglishConjugation(pronoun: string, verb: string, tense: string): st
 // Helper function to convert generic "They" to gender-specific pronouns for all courses
 function convertToGenderSpecificPronouns(englishQuestion: string, difficulty?: string): string {
   // Apply gender specification for ALL difficulty levels
+  // But ONLY if the question doesn't already contain gender notations
   
-  // Apply gender-specific replacements for "They" patterns
+  // Check if question already contains gender/pronoun clarifications
+  if (englishQuestion.includes('(male/mixed)') || 
+      englishQuestion.includes('(female)') || 
+      englishQuestion.includes('(formal/plural)') ||
+      englishQuestion.includes('(informal)') ||
+      englishQuestion.includes('(plural)')) {
+    return englishQuestion; // Return as-is if already contains gender notation
+  }
+  
+  // Apply gender-specific replacements for "They" patterns ONLY if not already present
   return englishQuestion
     .replace(/They have/g, 'They have (male/mixed)')
     .replace(/They are/g, 'They are (male/mixed)')
