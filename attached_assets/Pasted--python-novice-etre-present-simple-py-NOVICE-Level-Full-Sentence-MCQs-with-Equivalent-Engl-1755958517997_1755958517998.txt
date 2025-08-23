@@ -1,0 +1,143 @@
+```python
+# novice_etre_present_simple.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: être
+# Tense: Présent (Present Simple)
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He does / He is doing")
+# English phrases use natural alternative verbs where appropriate (e.g., "He is tired" instead of "He is doing tired")
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I am happy",
+        "correct": "Je suis heureux",
+        "distractors": ["Tu es heureux", "Il est heureux", "Nous sommes heureux"]
+    },
+    {
+        "question": "You are ready (informal)",
+        "correct": "Tu es prêt",
+        "distractors": ["Je suis prêt", "Vous êtes prêts", "Ils sont prêts"]
+    },
+    {
+        "question": "He is tired / He is feeling tired",
+        "correct": "Il est fatigué",
+        "distractors": ["Elle est fatiguée", "Tu es fatigué", "Ils sont fatigués"]
+    },
+    {
+        "question": "She is late",
+        "correct": "Elle est en retard",
+        "distractors": ["Il est en retard", "Elles sont en retard", "Tu es en retard"]
+    },
+    {
+        "question": "We are happy",
+        "correct": "Nous sommes heureux",
+        "distractors": ["Vous êtes heureux", "Ils sont heureux", "Je suis heureux"]
+    },
+    {
+        "question": "You are kind (formal / plural)",
+        "correct": "Vous êtes gentils",
+        "distractors": ["Tu es gentil", "Nous sommes gentils", "Ils sont gentils"]
+    },
+    {
+        "question": "They are teachers (male / mixed)",
+        "correct": "Ils sont professeurs",
+        "distractors": ["Elles sont professeures", "Ils étaient professeurs", "Ils seront professeurs"]
+    },
+    {
+        "question": "They are friends (female)",
+        "correct": "Elles sont amies",
+        "distractors": ["Ils sont amis", "Elles étaient amies", "Elles seront amies"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I am not tired",
+        "correct": "Je ne suis pas fatigué",
+        "distractors": ["Tu n'es pas fatigué", "Il n'est pas fatigué", "Nous ne sommes pas fatigués"]
+    },
+    {
+        "question": "You are not late (informal)",
+        "correct": "Tu n'es pas en retard",
+        "distractors": ["Je ne suis pas en retard", "Vous n'êtes pas en retard", "Ils ne sont pas en retard"]
+    },
+    {
+        "question": "He is not ready",
+        "correct": "Il n'est pas prêt",
+        "distractors": ["Elle n'est pas prête", "Tu n'es pas prêt", "Ils ne sont pas prêts"]
+    },
+    {
+        "question": "She is not kind",
+        "correct": "Elle n'est pas gentille",
+        "distractors": ["Il n'est pas gentil", "Elles ne sont pas gentilles", "Tu n'es pas gentil"]
+    },
+    {
+        "question": "We are not happy",
+        "correct": "Nous ne sommes pas heureux",
+        "distractors": ["Vous n'êtes pas heureux", "Ils ne sont pas heureux", "Je ne suis pas heureux"]
+    },
+    {
+        "question": "You are not teachers (formal / plural)",
+        "correct": "Vous n'êtes pas professeurs",
+        "distractors": ["Tu n'es pas professeur", "Nous ne sommes pas professeurs", "Ils ne sont pas professeurs"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Am I happy?",
+        "correct": "Suis-je heureux ?",
+        "distractors": ["Es-tu heureux ?", "Est-il heureux ?", "Sommes-nous heureux ?"]
+    },
+    {
+        "question": "Are you ready? (informal)",
+        "correct": "Es-tu prêt ?",
+        "distractors": ["Suis-je prêt ?", "Est-il prêt ?", "Êtes-vous prêts ?"]
+    },
+    {
+        "question": "Is he tired / Is he feeling tired?",
+        "correct": "Est-il fatigué ?",
+        "distractors": ["Est-elle fatiguée ?", "Suis-je fatigué ?", "Es-tu fatigué ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Aren't I happy?",
+        "correct": "Ne suis-je pas heureux ?",
+        "distractors": ["N'es-tu pas heureux ?", "N'est-il pas heureux ?", "Ne sommes-nous pas heureux ?"]
+    },
+    {
+        "question": "Aren't you late? (informal)",
+        "correct": "N'es-tu pas en retard ?",
+        "distractors": ["Ne suis-je pas en retard ?", "N'est-il pas en retard ?", "N'êtes-vous pas en retard ?"]
+    },
+    {
+        "question": "Isn't he kind?",
+        "correct": "N'est-il pas gentil ?",
+        "distractors": ["N'est-elle pas gentille ?", "Ne suis-je pas gentil ?", "N'es-tu pas gentil ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```
