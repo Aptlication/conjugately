@@ -40,9 +40,9 @@ const DIFFICULTY_CONFIGS = {
     tenses: ["Présent", "Passé Composé", "Futur Simple"]
   },
   "Elementary": {
-    verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"],
-    timeFrames: ["Present", "Past", "Future"],
-    tenses: ["Présent", "Passé Composé", "Futur Simple"]
+    verbs: [], // Empty - ready for new content
+    timeFrames: [],
+    tenses: []
   },
   "Intermediate": {
     verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "prendre"],
