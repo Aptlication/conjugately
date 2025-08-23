@@ -262,7 +262,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "I did not have troubles. (Passé Composé - Negative)", "options": ["Je n'ai pas eu d'ennuis.", "Tu n'as pas eu d'ennuis.", "Il n'a pas eu d'ennuis.", "Nous n'avons pas eu d'ennuis."], "answer": "A"},
       {"question": "Did we have enough food? (Passé Composé - Question)", "options": ["Avons-nous eu assez de nourriture ?", "Ai-je eu assez de nourriture ?", "Avez-vous eu assez de nourriture ?", "Ont-ils eu assez de nourriture ?"], "answer": "A"},
       {"question": "You had great ideas. (Passé Composé)", "options": ["Tu as eu de bonnes idées.", "J'ai eu de bonnes idées.", "Il a eu de bonnes idées.", "Vous avez eu de bonnes idées."], "answer": "A"},
-      {"question": "They did not have luck. (Passé Composé - Negative, female)", "options": ["Elles n'ont pas eu de chance.", "Ils n'ont pas eu de chance.", "Vous n'avez pas eu de chance.", "Nous n'avons pas eu de chance."], "answer": "A"}
+      {"question": "They did not have luck (female). (Passé Composé - Negative)", "options": ["Elles n'ont pas eu de chance.", "Ils n'ont pas eu de chance.", "Vous n'avez pas eu de chance.", "Nous n'avons pas eu de chance."], "answer": "A"}
     ],
     "futur_simple": [
       {"question": "I will have a car. (Futur Simple)", "options": ["J'aurai une voiture.", "Tu auras une voiture.", "Il aura une voiture.", "Nous aurons une voiture."], "answer": "A"},
@@ -284,7 +284,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "I will not have problems. (Futur Simple - Negative)", "options": ["Je n'aurai pas de problèmes.", "Tu n'auras pas de problèmes.", "Il n'aura pas de problèmes.", "Nous n'aurons pas de problèmes."], "answer": "A"},
       {"question": "Will we have enough food? (Futur Simple - Question)", "options": ["Aurons-nous assez de nourriture ?", "Aurai-je assez de nourriture ?", "Aurez-vous assez de nourriture ?", "Auront-ils assez de nourriture ?"], "answer": "A"},
       {"question": "You will have great ideas. (Futur Simple)", "options": ["Tu auras de bonnes idées.", "J'aurai de bonnes idées.", "Il aura de bonnes idées.", "Vous aurez de bonnes idées."], "answer": "A"},
-      {"question": "They will not have luck. (Futur Simple - Negative, female)", "options": ["Elles n'auront pas de chance.", "Ils n'auront pas de chance.", "Vous n'aurez pas de chance.", "Nous n'aurons pas de chance."], "answer": "A"}
+      {"question": "They will not have luck (female). (Futur Simple - Negative)", "options": ["Elles n'auront pas de chance.", "Ils n'auront pas de chance.", "Vous n'aurez pas de chance.", "Nous n'aurons pas de chance."], "answer": "A"}
     ]
   }
 };
