@@ -29,6 +29,8 @@ function App() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
   const [completedCourses, setCompletedCourses] = useState<any[]>([]);
   const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
+  const [showProgressModal, setShowProgressModal] = useState(false);
+  const [progressModalData, setProgressModalData] = useState<{timeFrame: string, tense: string, courseLevel: string, existingProgress: any} | null>(null);
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -472,25 +474,15 @@ function App() {
     );
     
     if (existingProgress) {
-      if (confirm(`You have progress saved for the ${timeFrame} course. Would you like to continue where you left off?`)) {
-        // Resume from saved progress
-        setCourseInfo({
-          timeFrame,
-          tense,
-          courseLevel: 'Beginner',
-          currentVerbIndex: existingProgress.currentVerbIndex,
-          completedVerbs: existingProgress.completedVerbs || [],
-          totalScore: existingProgress.totalScore,
-          totalQuestions: existingProgress.totalQuestions
-        });
-        
-        setShowBeginnerCourseModal(false);
-        setQuizState('config'); // Show proper course flow
-        return;
-      } else {
-        // Start fresh - delete existing progress
-        await resetCourse("beginner", timeFrame);
-      }
+      // Show custom modal instead of browser confirm
+      setProgressModalData({
+        timeFrame,
+        tense,
+        courseLevel: 'Beginner',
+        existingProgress
+      });
+      setShowProgressModal(true);
+      return;
     }
     
     // Start new course
@@ -498,7 +490,7 @@ function App() {
       timeFrame,
       tense,
       courseLevel: 'Beginner',
-      currentVerbIndex: 0, // Start with course overview
+      currentVerbIndex: 0,
       completedVerbs: [],
       totalScore: 0,
       totalQuestions: 0
@@ -543,25 +535,15 @@ function App() {
     );
     
     if (existingProgress) {
-      if (confirm(`You have progress saved for the ${timeFrame} course. Would you like to continue where you left off?`)) {
-        // Resume from saved progress
-        setCourseInfo({
-          timeFrame,
-          tense,
-          courseLevel: 'Novice',
-          currentVerbIndex: existingProgress.currentVerbIndex,
-          completedVerbs: existingProgress.completedVerbs || [],
-          totalScore: existingProgress.totalScore,
-          totalQuestions: existingProgress.totalQuestions
-        });
-        
-        setShowNoviceCourseModal(false);
-        setQuizState('config'); // Show proper course flow
-        return;
-      } else {
-        // Start fresh - delete existing progress
-        await resetCourse("novice", timeFrame);
-      }
+      // Show custom modal instead of browser confirm
+      setProgressModalData({
+        timeFrame,
+        tense,
+        courseLevel: 'Novice',
+        existingProgress
+      });
+      setShowProgressModal(true);
+      return;
     }
     
     // Start new course
@@ -581,6 +563,69 @@ function App() {
     // Save initial progress to database
     await saveCourseProgress(newCourseInfo);
     setQuizState('config'); // Show course overview
+  };
+
+  const handleProgressContinue = async () => {
+    if (!progressModalData) return;
+    
+    const { timeFrame, tense, courseLevel, existingProgress } = progressModalData;
+    
+    // Resume from saved progress
+    const resumedCourseInfo = {
+      timeFrame,
+      tense,
+      courseLevel,
+      currentVerbIndex: existingProgress.currentVerbIndex,
+      completedVerbs: existingProgress.completedVerbs || [],
+      totalScore: existingProgress.totalScore,
+      totalQuestions: existingProgress.totalQuestions
+    };
+    
+    setCourseInfo(resumedCourseInfo);
+    setShowProgressModal(false);
+    setProgressModalData(null);
+    
+    if (courseLevel === 'Beginner') {
+      setShowBeginnerCourseModal(false);
+    } else if (courseLevel === 'Novice') {
+      setShowNoviceCourseModal(false);
+    }
+    
+    setQuizState('config');
+  };
+
+  const handleProgressStartFresh = async () => {
+    if (!progressModalData) return;
+    
+    const { timeFrame, tense, courseLevel } = progressModalData;
+    
+    // Delete existing progress and start fresh
+    await resetCourse(courseLevel.toLowerCase(), timeFrame);
+    
+    // Start new course
+    const newCourseInfo = {
+      timeFrame,
+      tense,
+      courseLevel,
+      currentVerbIndex: 0,
+      completedVerbs: [],
+      totalScore: 0,
+      totalQuestions: 0
+    };
+    
+    setCourseInfo(newCourseInfo);
+    setShowProgressModal(false);
+    setProgressModalData(null);
+    
+    if (courseLevel === 'Beginner') {
+      setShowBeginnerCourseModal(false);
+    } else if (courseLevel === 'Novice') {
+      setShowNoviceCourseModal(false);
+    }
+    
+    // Save initial progress to database
+    await saveCourseProgress(newCourseInfo);
+    setQuizState('config');
   };
 
   const resetCourse = async (courseType: string, timeFrame: string) => {
@@ -2042,6 +2087,37 @@ function App() {
             <p className="text-green-200">
               Ready to generate 20 questions for <strong>{selectedVerb}</strong> conjugations in <strong>{selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame}</strong> ({selectedDifficulty} difficulty)
             </p>
+          </div>
+        )}
+
+        {showProgressModal && progressModalData && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <h3 className="text-2xl font-bold text-center mb-6">Continue Progress?</h3>
+              <p className="text-white/80 text-center mb-6">
+                You have progress saved for the <strong>{progressModalData.timeFrame}</strong> course. Would you like to continue where you left off?
+              </p>
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => handleProgressContinue()}
+                  className="flex-1 bg-blue-500/20 border border-blue-500/30 rounded-xl px-4 py-3 text-white hover:bg-blue-500/30 font-semibold"
+                >
+                  Continue
+                </button>
+                <button
+                  onClick={() => handleProgressStartFresh()}
+                  className="flex-1 bg-gray-500/20 border border-gray-500/30 rounded-xl px-4 py-3 text-white hover:bg-gray-500/30 font-semibold"
+                >
+                  Start Fresh
+                </button>
+              </div>
+              <button
+                onClick={() => setShowProgressModal(false)}
+                className="w-full mt-3 bg-red-500/20 border border-red-500/30 rounded-xl px-4 py-2 text-white hover:bg-red-500/30"
+              >
+                Cancel
+              </button>
+            </div>
           </div>
         )}
 
