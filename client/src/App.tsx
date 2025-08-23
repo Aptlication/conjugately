@@ -629,8 +629,13 @@ function App() {
   };
 
   const resetCourse = async (courseType: string, timeFrame: string) => {
+    if (!user?.id) {
+      console.error('User not authenticated, cannot reset course');
+      return;
+    }
+    
     try {
-      await fetch(`/api/completed-courses/1/${courseType}/${timeFrame}`, {
+      await fetch(`/api/completed-courses/${user.id}/${courseType}/${timeFrame}`, {
         method: 'DELETE'
       });
       await loadUserData(); // Refresh data
@@ -640,12 +645,17 @@ function App() {
   };
 
   const saveCourseProgress = async (courseInfo: any) => {
+    if (!user?.id) {
+      console.error('User not authenticated, cannot save course progress');
+      return;
+    }
+    
     try {
       await fetch('/api/course-progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userId: user?.id || 1,
+          userId: user.id,
           courseType: "beginner",
           timeFrame: courseInfo.timeFrame,
           tense: courseInfo.tense,
