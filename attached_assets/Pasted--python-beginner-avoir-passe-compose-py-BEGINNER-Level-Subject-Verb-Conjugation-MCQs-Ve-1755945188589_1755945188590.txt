@@ -1,0 +1,43 @@
+```python
+# beginner_avoir_passe_compose.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: avoir
+# Tense: Passé Composé
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+mcq_data = [
+    # Positive statements (8 questions)
+    {"question": "I have had", "options": ["J'ai eu", "Tu as eu", "Il a eu", "Nous avons eu"], "answer": "A"},
+    {"question": "You have had (informal)", "options": ["Tu as eu", "J'ai eu", "Vous avez eu", "Ils ont eu"], "answer": "A"},
+    {"question": "He has had", "options": ["Il a eu", "Elle a eu", "Tu as eu", "Ils ont eu"], "answer": "A"},
+    {"question": "She has had", "options": ["Elle a eu", "Il a eu", "Elles ont eu", "Tu as eu"], "answer": "A"},
+    {"question": "We have had", "options": ["Nous avons eu", "Vous avez eu", "Ils ont eu", "J'ai eu"], "answer": "A"},
+    {"question": "You have had (formal/plural)", "options": ["Vous avez eu", "Tu as eu", "Nous avons eu", "Ils ont eu"], "answer": "A"},
+    {"question": "They have had (male/mixed)", "options": ["Ils ont eu", "Elles ont eu", "Ils avaient", "Ils ont était"], "answer": "A"},
+    {"question": "They have had (female)", "options": ["Elles ont eu", "Ils ont eu", "Elles avaient", "Elles ont été"], "answer": "A"},
+
+    # Negative statements (6 questions)
+    {"question": "I have not had", "options": ["Je n'ai pas eu", "Tu n'as pas eu", "Il n'a pas eu", "Nous n'avons pas eu"], "answer": "A"},
+    {"question": "You have not had (informal)", "options": ["Tu n'as pas eu", "Je n'ai pas eu", "Vous n'avez pas eu", "Ils n'ont pas eu"], "answer": "A"},
+    {"question": "He has not had", "options": ["Il n'a pas eu", "Elle n'a pas eu", "Tu n'as pas eu", "Ils n'ont pas eu"], "answer": "A"},
+    {"question": "She has not had", "options": ["Elle n'a pas eu", "Il n'a pas eu", "Elles n'ont pas eu", "Tu n'as pas eu"], "answer": "A"},
+    {"question": "We have not had", "options": ["Nous n'avons pas eu", "Vous n'avez pas eu", "Ils n'ont pas eu", "Je n'ai pas eu"], "answer": "A"},
+    {"question": "You have not had (formal/plural)", "options": ["Vous n'avez pas eu", "Tu n'as pas eu", "Nous n'avons pas eu", "Ils n'ont pas eu"], "answer": "A"},
+
+    # Positive questions (3 questions)
+    {"question": "Have I had?", "options": ["Ai-je eu ?", "As-tu eu ?", "A-t-il eu ?", "Avons-nous eu ?"], "answer": "A"},
+    {"question": "Have you had? (informal)", "options": ["As-tu eu ?", "Ai-je eu ?", "A-t-il eu ?", "Avez-vous eu ?"], "answer": "A"},
+    {"question": "Has he had?", "options": ["A-t-il eu ?", "A-t-elle eu ?", "Ai-je eu ?", "As-tu eu ?"], "answer": "A"},
+
+    # Negative questions (3 questions)
+    {"question": "Haven't I had?", "options": ["N'ai-je pas eu ?", "N'as-tu pas eu ?", "N'a-t-il pas eu ?", "N'avons-nous pas eu ?"], "answer": "A"},
+    {"question": "Haven't you had? (informal)", "options": ["N'as-tu pas eu ?", "N'ai-je pas eu ?", "N'a-t-il pas eu ?", "N'avez-vous pas eu ?"], "answer": "A"},
+    {"question": "Hasn't he had?", "options": ["N'a-t-il pas eu ?", "N'a-t-elle pas eu ?", "N'ai-je pas eu ?", "N'as-tu pas eu ?"], "answer": "A"},
+]
+```

@@ -215,24 +215,211 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
       }
     ],
     "Passé Composé": [
+      // Positive statements (8 questions)
       {
-        question: "I had",
+        question: "I have had",
         hint: "First person singular of avoir in passé composé",
         answerOptions: [
-          { text: "J'ai eu", rationale: "Correct! 'J'ai eu' is 'I had' in French.", isCorrect: true },
-          { text: "Tu as eu", rationale: "This means 'you had' (informal).", isCorrect: false },
-          { text: "Il a eu", rationale: "This means 'he had'.", isCorrect: false },
-          { text: "Nous avons eu", rationale: "This means 'we had'.", isCorrect: false }
+          { text: "J'ai eu", rationale: "Correct! 'J'ai eu' is 'I have had' in French passé composé.", isCorrect: true },
+          { text: "Tu as eu", rationale: "This means 'you have had' (informal).", isCorrect: false },
+          { text: "Il a eu", rationale: "This means 'he has had'.", isCorrect: false },
+          { text: "Nous avons eu", rationale: "This means 'we have had'.", isCorrect: false }
         ]
       },
       {
-        question: "You had (informal)",
+        question: "You have had (informal)",
         hint: "Second person singular of avoir in passé composé",
         answerOptions: [
-          { text: "Tu as eu", rationale: "Correct! 'Tu as eu' is 'you had' (informal) in French.", isCorrect: true },
-          { text: "J'ai eu", rationale: "This means 'I had'.", isCorrect: false },
-          { text: "Elle a eu", rationale: "This means 'she had'.", isCorrect: false },
-          { text: "Nous avons eu", rationale: "This means 'we had'.", isCorrect: false }
+          { text: "Tu as eu", rationale: "Correct! 'Tu as eu' is 'you have had' (informal) in French passé composé.", isCorrect: true },
+          { text: "J'ai eu", rationale: "This means 'I have had'.", isCorrect: false },
+          { text: "Vous avez eu", rationale: "This means 'you have had' (formal/plural).", isCorrect: false },
+          { text: "Ils ont eu", rationale: "This means 'they have had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He has had",
+        hint: "Third person singular masculine of avoir in passé composé",
+        answerOptions: [
+          { text: "Il a eu", rationale: "Correct! 'Il a eu' is 'he has had' in French passé composé.", isCorrect: true },
+          { text: "Elle a eu", rationale: "This means 'she has had'.", isCorrect: false },
+          { text: "Tu as eu", rationale: "This means 'you have had' (informal).", isCorrect: false },
+          { text: "Ils ont eu", rationale: "This means 'they have had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "She has had",
+        hint: "Third person singular feminine of avoir in passé composé",
+        answerOptions: [
+          { text: "Elle a eu", rationale: "Correct! 'Elle a eu' is 'she has had' in French passé composé.", isCorrect: true },
+          { text: "Il a eu", rationale: "This means 'he has had'.", isCorrect: false },
+          { text: "Elles ont eu", rationale: "This means 'they have had' (feminine).", isCorrect: false },
+          { text: "Tu as eu", rationale: "This means 'you have had' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We have had",
+        hint: "First person plural of avoir in passé composé",
+        answerOptions: [
+          { text: "Nous avons eu", rationale: "Correct! 'Nous avons eu' is 'we have had' in French passé composé.", isCorrect: true },
+          { text: "Vous avez eu", rationale: "This means 'you have had' (formal/plural).", isCorrect: false },
+          { text: "Ils ont eu", rationale: "This means 'they have had'.", isCorrect: false },
+          { text: "J'ai eu", rationale: "This means 'I have had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You have had (formal/plural)",
+        hint: "Second person formal/plural of avoir in passé composé",
+        answerOptions: [
+          { text: "Vous avez eu", rationale: "Correct! 'Vous avez eu' is 'you have had' (formal/plural) in French passé composé.", isCorrect: true },
+          { text: "Tu as eu", rationale: "This means 'you have had' (informal).", isCorrect: false },
+          { text: "Nous avons eu", rationale: "This means 'we have had'.", isCorrect: false },
+          { text: "Ils ont eu", rationale: "This means 'they have had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They have had (male/mixed)",
+        hint: "Third person plural masculine/mixed of avoir in passé composé",
+        answerOptions: [
+          { text: "Ils ont eu", rationale: "Correct! 'Ils ont eu' is 'they have had' (masculine/mixed) in French passé composé.", isCorrect: true },
+          { text: "Elles ont eu", rationale: "This means 'they have had' (feminine only).", isCorrect: false },
+          { text: "Ils avaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
+          { text: "Ils ont était", rationale: "This is incorrect - 'été' not 'était', and wrong auxiliary verb.", isCorrect: false }
+        ]
+      },
+      {
+        question: "They have had (female)",
+        hint: "Third person plural feminine of avoir in passé composé",
+        answerOptions: [
+          { text: "Elles ont eu", rationale: "Correct! 'Elles ont eu' is 'they have had' (feminine) in French passé composé.", isCorrect: true },
+          { text: "Ils ont eu", rationale: "This means 'they have had' (masculine/mixed).", isCorrect: false },
+          { text: "Elles avaient", rationale: "This is imperfect past tense, not passé composé.", isCorrect: false },
+          { text: "Elles ont été", rationale: "This means 'they have been' (être), not 'they have had' (avoir).", isCorrect: false }
+        ]
+      },
+
+      // Negative statements (6 questions)
+      {
+        question: "I have not had",
+        hint: "First person singular negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Je n'ai pas eu", rationale: "Correct! 'Je n'ai pas eu' is 'I have not had' using French negation ne...pas.", isCorrect: true },
+          { text: "Tu n'as pas eu", rationale: "This means 'you have not had' (informal).", isCorrect: false },
+          { text: "Il n'a pas eu", rationale: "This means 'he has not had'.", isCorrect: false },
+          { text: "Nous n'avons pas eu", rationale: "This means 'we have not had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You have not had (informal)",
+        hint: "Second person singular negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Tu n'as pas eu", rationale: "Correct! 'Tu n'as pas eu' is 'you have not had' (informal) using French negation.", isCorrect: true },
+          { text: "Je n'ai pas eu", rationale: "This means 'I have not had'.", isCorrect: false },
+          { text: "Vous n'avez pas eu", rationale: "This means 'you have not had' (formal/plural).", isCorrect: false },
+          { text: "Ils n'ont pas eu", rationale: "This means 'they have not had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "He has not had",
+        hint: "Third person singular masculine negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Il n'a pas eu", rationale: "Correct! 'Il n'a pas eu' is 'he has not had' using French negation ne...pas.", isCorrect: true },
+          { text: "Elle n'a pas eu", rationale: "This means 'she has not had'.", isCorrect: false },
+          { text: "Tu n'as pas eu", rationale: "This means 'you have not had' (informal).", isCorrect: false },
+          { text: "Ils n'ont pas eu", rationale: "This means 'they have not had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "She has not had",
+        hint: "Third person singular feminine negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Elle n'a pas eu", rationale: "Correct! 'Elle n'a pas eu' is 'she has not had' using French negation ne...pas.", isCorrect: true },
+          { text: "Il n'a pas eu", rationale: "This means 'he has not had'.", isCorrect: false },
+          { text: "Elles n'ont pas eu", rationale: "This means 'they have not had' (feminine).", isCorrect: false },
+          { text: "Tu n'as pas eu", rationale: "This means 'you have not had' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We have not had",
+        hint: "First person plural negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Nous n'avons pas eu", rationale: "Correct! 'Nous n'avons pas eu' is 'we have not had' using French negation ne...pas.", isCorrect: true },
+          { text: "Vous n'avez pas eu", rationale: "This means 'you have not had' (formal/plural).", isCorrect: false },
+          { text: "Ils n'ont pas eu", rationale: "This means 'they have not had'.", isCorrect: false },
+          { text: "Je n'ai pas eu", rationale: "This means 'I have not had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "You have not had (formal/plural)",
+        hint: "Second person formal/plural negative of avoir in passé composé",
+        answerOptions: [
+          { text: "Vous n'avez pas eu", rationale: "Correct! 'Vous n'avez pas eu' is 'you have not had' (formal/plural) using French negation.", isCorrect: true },
+          { text: "Tu n'as pas eu", rationale: "This means 'you have not had' (informal).", isCorrect: false },
+          { text: "Nous n'avons pas eu", rationale: "This means 'we have not had'.", isCorrect: false },
+          { text: "Ils n'ont pas eu", rationale: "This means 'they have not had'.", isCorrect: false }
+        ]
+      },
+
+      // Positive questions (3 questions)
+      {
+        question: "Have I had?",
+        hint: "Interrogative form of first person singular avoir in passé composé",
+        answerOptions: [
+          { text: "Ai-je eu ?", rationale: "Correct! 'Ai-je eu ?' is 'Have I had?' in French interrogative form with inversion.", isCorrect: true },
+          { text: "As-tu eu ?", rationale: "This means 'Have you had?' (informal).", isCorrect: false },
+          { text: "A-t-il eu ?", rationale: "This means 'Has he had?'.", isCorrect: false },
+          { text: "Avons-nous eu ?", rationale: "This means 'Have we had?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Have you had? (informal)",
+        hint: "Interrogative form of second person singular avoir in passé composé",
+        answerOptions: [
+          { text: "As-tu eu ?", rationale: "Correct! 'As-tu eu ?' is 'Have you had?' (informal) in French interrogative form.", isCorrect: true },
+          { text: "Ai-je eu ?", rationale: "This means 'Have I had?'.", isCorrect: false },
+          { text: "A-t-il eu ?", rationale: "This means 'Has he had?'.", isCorrect: false },
+          { text: "Avez-vous eu ?", rationale: "This means 'Have you had?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Has he had?",
+        hint: "Interrogative form of third person singular masculine avoir in passé composé",
+        answerOptions: [
+          { text: "A-t-il eu ?", rationale: "Correct! 'A-t-il eu ?' is 'Has he had?' in French interrogative form with liaison 't'.", isCorrect: true },
+          { text: "A-t-elle eu ?", rationale: "This means 'Has she had?'.", isCorrect: false },
+          { text: "Ai-je eu ?", rationale: "This means 'Have I had?'.", isCorrect: false },
+          { text: "As-tu eu ?", rationale: "This means 'Have you had?' (informal).", isCorrect: false }
+        ]
+      },
+
+      // Negative questions (3 questions)
+      {
+        question: "Haven't I had?",
+        hint: "Negative interrogative form of first person singular avoir in passé composé",
+        answerOptions: [
+          { text: "N'ai-je pas eu ?", rationale: "Correct! 'N'ai-je pas eu ?' is 'Haven't I had?' in French negative interrogative form.", isCorrect: true },
+          { text: "N'as-tu pas eu ?", rationale: "This means 'Haven't you had?' (informal).", isCorrect: false },
+          { text: "N'a-t-il pas eu ?", rationale: "This means 'Hasn't he had?'.", isCorrect: false },
+          { text: "N'avons-nous pas eu ?", rationale: "This means 'Haven't we had?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Haven't you had? (informal)",
+        hint: "Negative interrogative form of second person singular avoir in passé composé",
+        answerOptions: [
+          { text: "N'as-tu pas eu ?", rationale: "Correct! 'N'as-tu pas eu ?' is 'Haven't you had?' (informal) in French negative interrogative.", isCorrect: true },
+          { text: "N'ai-je pas eu ?", rationale: "This means 'Haven't I had?'.", isCorrect: false },
+          { text: "N'a-t-il pas eu ?", rationale: "This means 'Hasn't he had?'.", isCorrect: false },
+          { text: "N'avez-vous pas eu ?", rationale: "This means 'Haven't you had?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Hasn't he had?",
+        hint: "Negative interrogative form of third person singular masculine avoir in passé composé",
+        answerOptions: [
+          { text: "N'a-t-il pas eu ?", rationale: "Correct! 'N'a-t-il pas eu ?' is 'Hasn't he had?' in French negative interrogative with liaison 't'.", isCorrect: true },
+          { text: "N'a-t-elle pas eu ?", rationale: "This means 'Hasn't she had?'.", isCorrect: false },
+          { text: "N'ai-je pas eu ?", rationale: "This means 'Haven't I had?'.", isCorrect: false },
+          { text: "N'as-tu pas eu ?", rationale: "This means 'Haven't you had?' (informal).", isCorrect: false }
         ]
       }
     ],
