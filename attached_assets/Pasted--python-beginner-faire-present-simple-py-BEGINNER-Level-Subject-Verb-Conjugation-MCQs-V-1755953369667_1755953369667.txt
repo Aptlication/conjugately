@@ -1,0 +1,59 @@
+```python
+# beginner_faire_present_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: faire
+# Tense: Présent (Present Simple)
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {"question": "I do / I make", "correct": "Je fais", "distractors": ["Tu fais", "Il fait", "Nous faisons"]},
+    {"question": "You do / You make (informal)", "correct": "Tu fais", "distractors": ["Je fais", "Vous faites", "Ils font"]},
+    {"question": "He does / He makes", "correct": "Il fait", "distractors": ["Elle fait", "Tu fais", "Ils font"]},
+    {"question": "She does / She makes", "correct": "Elle fait", "distractors": ["Il fait", "Elles font", "Tu fais"]},
+    {"question": "We do / We make", "correct": "Nous faisons", "distractors": ["Vous faites", "Ils font", "Je fais"]},
+    {"question": "You do / You make (formal/plural)", "correct": "Vous faites", "distractors": ["Tu fais", "Nous faisons", "Ils font"]},
+    {"question": "They do / They make (male/mixed)", "correct": "Ils font", "distractors": ["Elles font", "Ils faisaient", "Ils ont fait"]},
+    {"question": "They do / They make (female)", "correct": "Elles font", "distractors": ["Ils font", "Elles faisaient", "Elles ont fait"]},
+
+    # Negative statements (6 questions)
+    {"question": "I do not do / I do not make", "correct": "Je ne fais pas", "distractors": ["Tu ne fais pas", "Il ne fait pas", "Nous ne faisons pas"]},
+    {"question": "You do not do / You do not make (informal)", "correct": "Tu ne fais pas", "distractors": ["Je ne fais pas", "Vous ne faites pas", "Ils ne font pas"]},
+    {"question": "He does not do / He does not make", "correct": "Il ne fait pas", "distractors": ["Elle ne fait pas", "Tu ne fais pas", "Ils ne font pas"]},
+    {"question": "She does not do / She does not make", "correct": "Elle ne fait pas", "distractors": ["Il ne fait pas", "Elles ne font pas", "Tu ne fais pas"]},
+    {"question": "We do not do / We do not make", "correct": "Nous ne faisons pas", "distractors": ["Vous ne faites pas", "Ils ne font pas", "Je ne fais pas"]},
+    {"question": "You do not do / You do not make (formal/plural)", "correct": "Vous ne faites pas", "distractors": ["Tu ne fais pas", "Nous ne faisons pas", "Ils ne font pas"]},
+
+    # Positive questions (3 questions)
+    {"question": "Do I do / Do I make?", "correct": "Fais-je ?", "distractors": ["Fais-tu ?", "Fait-il ?", "Faisons-nous ?"]},
+    {"question": "Do you do / Do you make? (informal)", "correct": "Fais-tu ?", "distractors": ["Fais-je ?", "Fait-il ?", "Faites-vous ?"]},
+    {"question": "Does he do / Does he make?", "correct": "Fait-il ?", "distractors": ["Fait-elle ?", "Fais-je ?", "Fais-tu ?"]},
+
+    # Negative questions (3 questions)
+    {"question": "Don't I do / Don't I make?", "correct": "Ne fais-je pas ?", "distractors": ["Ne fais-tu pas ?", "Ne fait-il pas ?", "Ne faisons-nous pas ?"]},
+    {"question": "Don't you do / Don't you make? (informal)", "correct": "Ne fais-tu pas ?", "distractors": ["Ne fais-je pas ?", "Ne fait-il pas ?", "Ne faites-vous pas ?"]},
+    {"question": "Doesn't he do / Doesn't he make?", "correct": "Ne fait-il pas ?", "distractors": ["Ne fait-elle pas ?", "Ne fais-je pas ?", "Ne fais-tu pas ?"]},
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted now contains 20 questions with correct answers randomly assigned among options A-D
+```

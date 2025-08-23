@@ -817,8 +817,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I do / I make",
         hint: "First person singular of faire in present tense",
         answerOptions: [
-          { text: "Je fais", rationale: "Correct! 'Je fais' is 'I do / I make' in French present tense.", isCorrect: true },
           { text: "Tu fais", rationale: "This means 'you do / you make' (informal).", isCorrect: false },
+          { text: "Je fais", rationale: "Correct! 'Je fais' is 'I do / I make' in French present tense.", isCorrect: true },
           { text: "Il fait", rationale: "This means 'he does / he makes'.", isCorrect: false },
           { text: "Nous faisons", rationale: "This means 'we do / we make'.", isCorrect: false }
         ]
@@ -827,9 +827,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You do / You make (informal)",
         hint: "Second person singular of faire in present tense",
         answerOptions: [
-          { text: "Tu fais", rationale: "Correct! 'Tu fais' is 'you do / you make' (informal) in French present tense.", isCorrect: true },
           { text: "Je fais", rationale: "This means 'I do / I make'.", isCorrect: false },
           { text: "Vous faites", rationale: "This means 'you do / you make' (formal/plural).", isCorrect: false },
+          { text: "Tu fais", rationale: "Correct! 'Tu fais' is 'you do / you make' (informal) in French present tense.", isCorrect: true },
           { text: "Ils font", rationale: "This means 'they do / they make'.", isCorrect: false }
         ]
       },
@@ -837,18 +837,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He does / He makes",
         hint: "Third person singular masculine of faire in present tense",
         answerOptions: [
-          { text: "Il fait", rationale: "Correct! 'Il fait' is 'he does / he makes' in French present tense.", isCorrect: true },
           { text: "Elle fait", rationale: "This means 'she does / she makes'.", isCorrect: false },
           { text: "Tu fais", rationale: "This means 'you do / you make' (informal).", isCorrect: false },
-          { text: "Ils font", rationale: "This means 'they do / they make'.", isCorrect: false }
+          { text: "Ils font", rationale: "This means 'they do / they make'.", isCorrect: false },
+          { text: "Il fait", rationale: "Correct! 'Il fait' is 'he does / he makes' in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "She does / She makes",
         hint: "Third person singular feminine of faire in present tense",
         answerOptions: [
-          { text: "Elle fait", rationale: "Correct! 'Elle fait' is 'she does / she makes' in French present tense.", isCorrect: true },
           { text: "Il fait", rationale: "This means 'he does / he makes'.", isCorrect: false },
+          { text: "Elle fait", rationale: "Correct! 'Elle fait' is 'she does / she makes' in French present tense.", isCorrect: true },
           { text: "Elles font", rationale: "This means 'they do / they make' (feminine).", isCorrect: false },
           { text: "Tu fais", rationale: "This means 'you do / you make' (informal).", isCorrect: false }
         ]
@@ -857,19 +857,19 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We do / We make",
         hint: "First person plural of faire in present tense",
         answerOptions: [
-          { text: "Nous faisons", rationale: "Correct! 'Nous faisons' is 'we do / we make' in French present tense.", isCorrect: true },
           { text: "Vous faites", rationale: "This means 'you do / you make' (formal/plural).", isCorrect: false },
           { text: "Ils font", rationale: "This means 'they do / they make'.", isCorrect: false },
-          { text: "Je fais", rationale: "This means 'I do / I make'.", isCorrect: false }
+          { text: "Je fais", rationale: "This means 'I do / I make'.", isCorrect: false },
+          { text: "Nous faisons", rationale: "Correct! 'Nous faisons' is 'we do / we make' in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "You do / You make (formal/plural)",
         hint: "Second person formal/plural of faire in present tense",
         answerOptions: [
-          { text: "Vous faites", rationale: "Correct! 'Vous faites' is 'you do / you make' (formal/plural) in French present tense.", isCorrect: true },
           { text: "Tu fais", rationale: "This means 'you do / you make' (informal).", isCorrect: false },
           { text: "Nous faisons", rationale: "This means 'we do / we make'.", isCorrect: false },
+          { text: "Vous faites", rationale: "Correct! 'Vous faites' is 'you do / you make' (formal/plural) in French present tense.", isCorrect: true },
           { text: "Ils font", rationale: "This means 'they do / they make'.", isCorrect: false }
         ]
       },
@@ -877,18 +877,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "They do / They make (male/mixed)",
         hint: "Third person plural masculine/mixed of faire in present tense",
         answerOptions: [
-          { text: "Ils font", rationale: "Correct! 'Ils font' is 'they do / they make' (masculine/mixed) in French present tense.", isCorrect: true },
           { text: "Elles font", rationale: "This means 'they do / they make' (feminine only).", isCorrect: false },
           { text: "Ils faisaient", rationale: "This is imperfect past tense, not present tense.", isCorrect: false },
-          { text: "Ils ont fait", rationale: "This is passé composé (past), not present tense.", isCorrect: false }
+          { text: "Ils ont fait", rationale: "This is passé composé (past), not present tense.", isCorrect: false },
+          { text: "Ils font", rationale: "Correct! 'Ils font' is 'they do / they make' (masculine/mixed) in French present tense.", isCorrect: true }
         ]
       },
       {
         question: "They do / They make (female)",
         hint: "Third person plural feminine of faire in present tense",
         answerOptions: [
-          { text: "Elles font", rationale: "Correct! 'Elles font' is 'they do / they make' (feminine) in French present tense.", isCorrect: true },
           { text: "Ils font", rationale: "This means 'they do / they make' (masculine/mixed).", isCorrect: false },
+          { text: "Elles font", rationale: "Correct! 'Elles font' is 'they do / they make' (feminine) in French present tense.", isCorrect: true },
           { text: "Elles faisaient", rationale: "This is imperfect past tense, not present tense.", isCorrect: false },
           { text: "Elles ont fait", rationale: "This is passé composé (past), not present tense.", isCorrect: false }
         ]
@@ -899,9 +899,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "I do not do / I do not make",
         hint: "First person singular negative of faire in present tense",
         answerOptions: [
-          { text: "Je ne fais pas", rationale: "Correct! 'Je ne fais pas' is 'I do not do / I do not make' using French negation ne...pas.", isCorrect: true },
           { text: "Tu ne fais pas", rationale: "This means 'you do not do / you do not make' (informal).", isCorrect: false },
           { text: "Il ne fait pas", rationale: "This means 'he does not do / he does not make'.", isCorrect: false },
+          { text: "Je ne fais pas", rationale: "Correct! 'Je ne fais pas' is 'I do not do / I do not make' using French negation ne...pas.", isCorrect: true },
           { text: "Nous ne faisons pas", rationale: "This means 'we do not do / we do not make'.", isCorrect: false }
         ]
       },
@@ -909,8 +909,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "You do not do / You do not make (informal)",
         hint: "Second person singular negative of faire in present tense",
         answerOptions: [
-          { text: "Tu ne fais pas", rationale: "Correct! 'Tu ne fais pas' is 'you do not do / you do not make' (informal) using French negation.", isCorrect: true },
           { text: "Je ne fais pas", rationale: "This means 'I do not do / I do not make'.", isCorrect: false },
+          { text: "Tu ne fais pas", rationale: "Correct! 'Tu ne fais pas' is 'you do not do / you do not make' (informal) using French negation.", isCorrect: true },
           { text: "Vous ne faites pas", rationale: "This means 'you do not do / you do not make' (formal/plural).", isCorrect: false },
           { text: "Ils ne font pas", rationale: "This means 'they do not do / they do not make'.", isCorrect: false }
         ]
@@ -919,18 +919,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "He does not do / He does not make",
         hint: "Third person singular masculine negative of faire in present tense",
         answerOptions: [
-          { text: "Il ne fait pas", rationale: "Correct! 'Il ne fait pas' is 'he does not do / he does not make' using French negation ne...pas.", isCorrect: true },
           { text: "Elle ne fait pas", rationale: "This means 'she does not do / she does not make'.", isCorrect: false },
           { text: "Tu ne fais pas", rationale: "This means 'you do not do / you do not make' (informal).", isCorrect: false },
-          { text: "Ils ne font pas", rationale: "This means 'they do not do / they do not make'.", isCorrect: false }
+          { text: "Ils ne font pas", rationale: "This means 'they do not do / they do not make'.", isCorrect: false },
+          { text: "Il ne fait pas", rationale: "Correct! 'Il ne fait pas' is 'he does not do / he does not make' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "She does not do / She does not make",
         hint: "Third person singular feminine negative of faire in present tense",
         answerOptions: [
-          { text: "Elle ne fait pas", rationale: "Correct! 'Elle ne fait pas' is 'she does not do / she does not make' using French negation ne...pas.", isCorrect: true },
           { text: "Il ne fait pas", rationale: "This means 'he does not do / he does not make'.", isCorrect: false },
+          { text: "Elle ne fait pas", rationale: "Correct! 'Elle ne fait pas' is 'she does not do / she does not make' using French negation ne...pas.", isCorrect: true },
           { text: "Elles ne font pas", rationale: "This means 'they do not do / they do not make' (feminine).", isCorrect: false },
           { text: "Tu ne fais pas", rationale: "This means 'you do not do / you do not make' (informal).", isCorrect: false }
         ]
@@ -939,18 +939,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "We do not do / We do not make",
         hint: "First person plural negative of faire in present tense",
         answerOptions: [
-          { text: "Nous ne faisons pas", rationale: "Correct! 'Nous ne faisons pas' is 'we do not do / we do not make' using French negation ne...pas.", isCorrect: true },
           { text: "Vous ne faites pas", rationale: "This means 'you do not do / you do not make' (formal/plural).", isCorrect: false },
           { text: "Ils ne font pas", rationale: "This means 'they do not do / they do not make'.", isCorrect: false },
-          { text: "Je ne fais pas", rationale: "This means 'I do not do / I do not make'.", isCorrect: false }
+          { text: "Je ne fais pas", rationale: "This means 'I do not do / I do not make'.", isCorrect: false },
+          { text: "Nous ne faisons pas", rationale: "Correct! 'Nous ne faisons pas' is 'we do not do / we do not make' using French negation ne...pas.", isCorrect: true }
         ]
       },
       {
         question: "You do not do / You do not make (formal/plural)",
         hint: "Second person formal/plural negative of faire in present tense",
         answerOptions: [
-          { text: "Vous ne faites pas", rationale: "Correct! 'Vous ne faites pas' is 'you do not do / you do not make' (formal/plural) using French negation.", isCorrect: true },
           { text: "Tu ne fais pas", rationale: "This means 'you do not do / you do not make' (informal).", isCorrect: false },
+          { text: "Vous ne faites pas", rationale: "Correct! 'Vous ne faites pas' is 'you do not do / you do not make' (formal/plural) using French negation.", isCorrect: true },
           { text: "Nous ne faisons pas", rationale: "This means 'we do not do / we do not make'.", isCorrect: false },
           { text: "Ils ne font pas", rationale: "This means 'they do not do / they do not make'.", isCorrect: false }
         ]
@@ -961,9 +961,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Do I do / Do I make?",
         hint: "Interrogative form of first person singular faire in present tense",
         answerOptions: [
-          { text: "Fais-je ?", rationale: "Correct! 'Fais-je ?' is 'Do I do / Do I make?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Fais-tu ?", rationale: "This means 'Do you do / Do you make?' (informal).", isCorrect: false },
           { text: "Fait-il ?", rationale: "This means 'Does he do / Does he make?'.", isCorrect: false },
+          { text: "Fais-je ?", rationale: "Correct! 'Fais-je ?' is 'Do I do / Do I make?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Faisons-nous ?", rationale: "This means 'Do we do / Do we make?'.", isCorrect: false }
         ]
       },
@@ -971,8 +971,8 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Do you do / Do you make? (informal)",
         hint: "Interrogative form of second person singular faire in present tense",
         answerOptions: [
-          { text: "Fais-tu ?", rationale: "Correct! 'Fais-tu ?' is 'Do you do / Do you make?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Fais-je ?", rationale: "This means 'Do I do / Do I make?'.", isCorrect: false },
+          { text: "Fais-tu ?", rationale: "Correct! 'Fais-tu ?' is 'Do you do / Do you make?' (informal) in French interrogative form.", isCorrect: true },
           { text: "Fait-il ?", rationale: "This means 'Does he do / Does he make?'.", isCorrect: false },
           { text: "Faites-vous ?", rationale: "This means 'Do you do / Do you make?' (formal/plural).", isCorrect: false }
         ]
@@ -981,10 +981,10 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Does he do / Does he make?",
         hint: "Interrogative form of third person singular masculine faire in present tense",
         answerOptions: [
-          { text: "Fait-il ?", rationale: "Correct! 'Fait-il ?' is 'Does he do / Does he make?' in French interrogative form with inversion.", isCorrect: true },
           { text: "Fait-elle ?", rationale: "This means 'Does she do / Does she make?'.", isCorrect: false },
           { text: "Fais-je ?", rationale: "This means 'Do I do / Do I make?'.", isCorrect: false },
-          { text: "Fais-tu ?", rationale: "This means 'Do you do / Do you make?' (informal).", isCorrect: false }
+          { text: "Fais-tu ?", rationale: "This means 'Do you do / Do you make?' (informal).", isCorrect: false },
+          { text: "Fait-il ?", rationale: "Correct! 'Fait-il ?' is 'Does he do / Does he make?' in French interrogative form with inversion.", isCorrect: true }
         ]
       },
 
@@ -993,18 +993,18 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Don't I do / Don't I make?",
         hint: "Negative interrogative form of first person singular faire in present tense",
         answerOptions: [
-          { text: "Ne fais-je pas ?", rationale: "Correct! 'Ne fais-je pas ?' is 'Don't I do / Don't I make?' in French negative interrogative form.", isCorrect: true },
           { text: "Ne fais-tu pas ?", rationale: "This means 'Don't you do / Don't you make?' (informal).", isCorrect: false },
           { text: "Ne fait-il pas ?", rationale: "This means 'Doesn't he do / Doesn't he make?'.", isCorrect: false },
-          { text: "Ne faisons-nous pas ?", rationale: "This means 'Don't we do / Don't we make?'.", isCorrect: false }
+          { text: "Ne faisons-nous pas ?", rationale: "This means 'Don't we do / Don't we make?'.", isCorrect: false },
+          { text: "Ne fais-je pas ?", rationale: "Correct! 'Ne fais-je pas ?' is 'Don't I do / Don't I make?' in French negative interrogative form.", isCorrect: true }
         ]
       },
       {
         question: "Don't you do / Don't you make? (informal)",
         hint: "Negative interrogative form of second person singular faire in present tense",
         answerOptions: [
-          { text: "Ne fais-tu pas ?", rationale: "Correct! 'Ne fais-tu pas ?' is 'Don't you do / Don't you make?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "Ne fais-je pas ?", rationale: "This means 'Don't I do / Don't I make?'.", isCorrect: false },
+          { text: "Ne fais-tu pas ?", rationale: "Correct! 'Ne fais-tu pas ?' is 'Don't you do / Don't you make?' (informal) in French negative interrogative.", isCorrect: true },
           { text: "Ne fait-il pas ?", rationale: "This means 'Doesn't he do / Doesn't he make?'.", isCorrect: false },
           { text: "Ne faites-vous pas ?", rationale: "This means 'Don't you do / Don't you make?' (formal/plural).", isCorrect: false }
         ]
@@ -1013,9 +1013,9 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         question: "Doesn't he do / Doesn't he make?",
         hint: "Negative interrogative form of third person singular masculine faire in present tense",
         answerOptions: [
-          { text: "Ne fait-il pas ?", rationale: "Correct! 'Ne fait-il pas ?' is 'Doesn't he do / Doesn't he make?' in French negative interrogative form.", isCorrect: true },
           { text: "Ne fait-elle pas ?", rationale: "This means 'Doesn't she do / Doesn't she make?'.", isCorrect: false },
           { text: "Ne fais-je pas ?", rationale: "This means 'Don't I do / Don't I make?'.", isCorrect: false },
+          { text: "Ne fait-il pas ?", rationale: "Correct! 'Ne fait-il pas ?' is 'Doesn't he do / Doesn't he make?' in French negative interrogative form.", isCorrect: true },
           { text: "Ne fais-tu pas ?", rationale: "This means 'Don't you do / Don't you make?' (informal).", isCorrect: false }
         ]
       }
