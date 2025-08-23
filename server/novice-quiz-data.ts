@@ -43,26 +43,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "Doesn't he go to the market / Is he not going to the market?", "options": ["Ne va-t-elle pas au marché ?", "Ne vais-je pas au marché ?", "Ne vas-tu pas au marché ?", "Ne va-t-il pas au marché ?"], "answer": "D"}
     ],
     "passé_composé": [
-      {"question": "I went to the store. (Passé Composé)", "options": ["Je suis allé au magasin.", "Tu es allé au magasin.", "Il est allé au magasin.", "Nous sommes allés au magasin."], "answer": "A"},
-      {"question": "You did not go to school. (Passé Composé - Negative, informal)", "options": ["Tu n'es pas allé à l'école.", "Je ne suis pas allé à l'école.", "Il n'est pas allé à l'école.", "Nous ne sommes pas allés à l'école."], "answer": "A"},
-      {"question": "Did she go to the park? (Passé Composé - Question)", "options": ["Est-elle allée au parc ?", "Est-il allé au parc ?", "Es-tu allé au parc ?", "Sont-ils allés au parc ?"], "answer": "A"},
-      {"question": "We went to Paris last summer. (Passé Composé)", "options": ["Nous sommes allés à Paris l'été dernier.", "Vous êtes allés à Paris l'été dernier.", "Ils sont allés à Paris l'été dernier.", "Je suis allé à Paris l'été dernier."], "answer": "A"},
-      {"question": "He did not go to the party. (Passé Composé - Negative)", "options": ["Il n'est pas allé à la fête.", "Je ne suis pas allé à la fête.", "Tu n'es pas allé à la fête.", "Ils ne sont pas allés à la fête."], "answer": "A"},
-      {"question": "Did you (formal) go to the meeting? (Passé Composé - Question)", "options": ["Êtes-vous allé à la réunion ?", "Es-tu allé à la réunion ?", "Est-il allé à la réunion ?", "Sont-ils allés à la réunion ?"], "answer": "A"},
-      {"question": "They went by car. (Passé Composé, male/mixed)", "options": ["Ils sont allés en voiture.", "Elles sont allées en voiture.", "Ils allaient en voiture.", "Ils iront en voiture."], "answer": "A"},
-      {"question": "I did not go yesterday. (Passé Composé - Negative)", "options": ["Je ne suis pas allé hier.", "Tu n'es pas allé hier.", "Il n'est pas allé hier.", "Nous ne sommes pas allés hier."], "answer": "A"},
-      {"question": "Did we go to the restaurant? (Passé Composé - Question)", "options": ["Sommes-nous allés au restaurant ?", "Es-tu allé au restaurant ?", "Est-il allé au restaurant ?", "Sont-ils allés au restaurant ?"], "answer": "A"},
-      {"question": "You went to the library. (Passé Composé, informal)", "options": ["Tu es allé à la bibliothèque.", "Je suis allé à la bibliothèque.", "Il est allé à la bibliothèque.", "Vous êtes allé à la bibliothèque."], "answer": "A"},
-      {"question": "I went yesterday to the market. (Passé Composé)", "options": ["Je suis allé hier au marché.", "Tu es allé hier au marché.", "Il est allé hier au marché.", "Nous sommes allés hier au marché."], "answer": "A"},
-      {"question": "She did not go to school last week. (Passé Composé - Negative)", "options": ["Elle n'est pas allée à l'école la semaine dernière.", "Il n'est pas allé à l'école la semaine dernière.", "Tu n'es pas allé à l'école la semaine dernière.", "Nous ne sommes pas allés à l'école la semaine dernière."], "answer": "A"},
-      {"question": "Did you go to the gym yesterday? (Passé Composé - Question, informal)", "options": ["Es-tu allé au gymnase hier ?", "Suis-je allé au gymnase hier ?", "Est-il allé au gymnase hier ?", "Êtes-vous allés au gymnase hier ?"], "answer": "A"},
-      {"question": "We went to the cinema last weekend. (Passé Composé)", "options": ["Nous sommes allés au cinéma le week-end dernier.", "Vous êtes allés au cinéma le week-end dernier.", "Ils sont allés au cinéma le week-end dernier.", "Je suis allé au cinéma le week-end dernier."], "answer": "A"},
-      {"question": "Didn't he go to work yesterday? (Passé Composé - Question)", "options": ["N'est-il pas allé au travail hier ?", "N'est-elle pas allée au travail hier ?", "N'es-tu pas allé au travail hier ?", "N'avons-nous pas allés au travail hier ?"], "answer": "A"},
-      {"question": "They did not go to the restaurant last night. (Passé Composé - Negative, male/mixed)", "options": ["Ils ne sont pas allés au restaurant hier soir.", "Elles ne sont pas allées au restaurant hier soir.", "Vous n'êtes pas allés au restaurant hier soir.", "Nous ne sommes pas allés au restaurant hier soir."], "answer": "A"},
-      {"question": "Did I go to the market this morning? (Passé Composé - Question)", "options": ["Suis-je allé au marché ce matin ?", "Es-tu allé au marché ce matin ?", "Est-il allé au marché ce matin ?", "Sont-ils allés au marché ce matin ?"], "answer": "A"},
-      {"question": "You went to the library last week. (Passé Composé, informal)", "options": ["Tu es allé à la bibliothèque la semaine dernière.", "Je suis allé à la bibliothèque la semaine dernière.", "Il est allé à la bibliothèque la semaine dernière.", "Vous êtes allé à la bibliothèque la semaine dernière."], "answer": "A"},
-      {"question": "I did not go to the park last Sunday. (Passé Composé - Negative)", "options": ["Je ne suis pas allé au parc dimanche dernier.", "Tu n'es pas allé au parc dimanche dernier.", "Il n'est pas allé au parc dimanche dernier.", "Nous ne sommes pas allés au parc dimanche dernier."], "answer": "A"},
-      {"question": "Did we go to the museum yesterday? (Passé Composé - Question)", "options": ["Sommes-nous allés au musée hier ?", "Es-tu allé au musée hier ?", "Est-il allé au musée hier ?", "Sont-ils allés au musée hier ?"], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I went to school / I have gone to school", "options": ["Tu es allé à l'école", "Je suis allé à l'école", "Il est allé à l'école", "Nous sommes allés à l'école"], "answer": "B"},
+      {"question": "You went to the park / You have gone to the park (informal)", "options": ["Je suis allé au parc", "Vous êtes allés au parc", "Tu es allé au parc", "Ils sont allés au parc"], "answer": "C"},
+      {"question": "He went to the market / He has gone to the market", "options": ["Elle est allée au marché", "Tu es allé au marché", "Ils sont allés au marché", "Il est allé au marché"], "answer": "D"},
+      {"question": "She went to the store / She has gone to the store", "options": ["Il est allé au magasin", "Elle est allée au magasin", "Elles sont allées au magasin", "Tu es allé au magasin"], "answer": "B"},
+      {"question": "We went to the cinema / We have gone to the cinema", "options": ["Vous êtes allés au cinéma", "Ils sont allés au cinéma", "Je suis allé au cinéma", "Nous sommes allés au cinéma"], "answer": "D"},
+      {"question": "You went to the party / You have gone to the party (formal / plural)", "options": ["Tu es allé à la fête", "Nous sommes allés à la fête", "Vous êtes allés à la fête", "Ils sont allés à la fête"], "answer": "C"},
+      {"question": "They went to the museum / They have gone to the museum (male / mixed)", "options": ["Elles sont allées au musée", "Ils étaient au musée", "Ils iront au musée", "Ils sont allés au musée"], "answer": "D"},
+      {"question": "They went to the museum / They have gone to the museum (female)", "options": ["Ils sont allés au musée", "Elles étaient au musée", "Elles iront au musée", "Elles sont allées au musée"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I did not go to school / I have not gone to school", "options": ["Tu n'es pas allé à l'école", "Il n'est pas allé à l'école", "Je ne suis pas allé à l'école", "Nous ne sommes pas allés à l'école"], "answer": "C"},
+      {"question": "You did not go to the park / You have not gone to the park (informal)", "options": ["Je ne suis pas allé au parc", "Tu n'es pas allé au parc", "Vous n'êtes pas allés au parc", "Ils ne sont pas allés au parc"], "answer": "B"},
+      {"question": "He did not go to the market / He has not gone to the market", "options": ["Elle n'est pas allée au marché", "Tu n'es pas allé au marché", "Ils ne sont pas allés au marché", "Il n'est pas allé au marché"], "answer": "D"},
+      {"question": "She did not go to the store / She has not gone to the store", "options": ["Il n'est pas allé au magasin", "Elle n'est pas allée au magasin", "Elles ne sont pas allées au magasin", "Tu n'es pas allé au magasin"], "answer": "B"},
+      {"question": "We did not go to the cinema / We have not gone to the cinema", "options": ["Vous n'êtes pas allés au cinéma", "Ils ne sont pas allés au cinéma", "Je ne suis pas allé au cinéma", "Nous ne sommes pas allés au cinéma"], "answer": "D"},
+      {"question": "You did not go to the party / You have not gone to the party (formal / plural)", "options": ["Tu n'es pas allé à la fête", "Vous n'êtes pas allés à la fête", "Nous ne sommes pas allés à la fête", "Ils ne sont pas allés à la fête"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Did I go to school? / Have I gone to school?", "options": ["Es-tu allé à l'école ?", "Est-il allé à l'école ?", "Suis-je allé à l'école ?", "Sommes-nous allés à l'école ?"], "answer": "C"},
+      {"question": "Did you go to the park? / Have you gone to the park? (informal)", "options": ["Suis-je allé au parc ?", "Es-tu allé au parc ?", "Est-il allé au parc ?", "Êtes-vous allés au parc ?"], "answer": "B"},
+      {"question": "Did he go to the market? / Has he gone to the market?", "options": ["Est-elle allée au marché ?", "Suis-je allé au marché ?", "Es-tu allé au marché ?", "Est-il allé au marché ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Didn't I go to school? / Haven't I gone to school?", "options": ["N'es-tu pas allé à l'école ?", "N'est-il pas allé à l'école ?", "Ne sommes-nous pas allés à l'école ?", "Ne suis-je pas allé à l'école ?"], "answer": "D"},
+      {"question": "Didn't you go to the park? / Haven't you gone to the park? (informal)", "options": ["Ne suis-je pas allé au parc ?", "N'es-tu pas allé au parc ?", "N'est-il pas allé au parc ?", "N'êtes-vous pas allés au parc ?"], "answer": "B"},
+      {"question": "Didn't he go to the market? / Hasn't he gone to the market?", "options": ["N'est-elle pas allée au marché ?", "Ne suis-je pas allé au marché ?", "N'es-tu pas allé au marché ?", "N'est-il pas allé au marché ?"], "answer": "D"}
     ],
     "futur_simple": [
       {"question": "I will go to the beach. (Futur Simple)", "options": ["J'irai à la plage.", "Tu iras à la plage.", "Il ira à la plage.", "Nous irons à la plage."], "answer": "A"},

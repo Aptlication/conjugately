@@ -1,0 +1,143 @@
+```python
+# novice_aller_passe_compose.py
+# NOVICE Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb: aller
+# Tense: Passé Composé
+# 20 questions
+# Full sentences including objects
+# Groupings of English expressions that translate to the same French form (e.g., "He went / He has gone")
+# English phrases use natural alternative verbs where appropriate
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I went to school / I have gone to school",
+        "correct": "Je suis allé à l'école",
+        "distractors": ["Tu es allé à l'école", "Il est allé à l'école", "Nous sommes allés à l'école"]
+    },
+    {
+        "question": "You went to the park / You have gone to the park (informal)",
+        "correct": "Tu es allé au parc",
+        "distractors": ["Je suis allé au parc", "Vous êtes allés au parc", "Ils sont allés au parc"]
+    },
+    {
+        "question": "He went to the market / He has gone to the market",
+        "correct": "Il est allé au marché",
+        "distractors": ["Elle est allée au marché", "Tu es allé au marché", "Ils sont allés au marché"]
+    },
+    {
+        "question": "She went to the store / She has gone to the store",
+        "correct": "Elle est allée au magasin",
+        "distractors": ["Il est allé au magasin", "Elles sont allées au magasin", "Tu es allé au magasin"]
+    },
+    {
+        "question": "We went to the cinema / We have gone to the cinema",
+        "correct": "Nous sommes allés au cinéma",
+        "distractors": ["Vous êtes allés au cinéma", "Ils sont allés au cinéma", "Je suis allé au cinéma"]
+    },
+    {
+        "question": "You went to the party / You have gone to the party (formal / plural)",
+        "correct": "Vous êtes allés à la fête",
+        "distractors": ["Tu es allé à la fête", "Nous sommes allés à la fête", "Ils sont allés à la fête"]
+    },
+    {
+        "question": "They went to the museum / They have gone to the museum (male / mixed)",
+        "correct": "Ils sont allés au musée",
+        "distractors": ["Elles sont allées au musée", "Ils étaient au musée", "Ils iront au musée"]
+    },
+    {
+        "question": "They went to the museum / They have gone to the museum (female)",
+        "correct": "Elles sont allées au musée",
+        "distractors": ["Ils sont allés au musée", "Elles étaient au musée", "Elles iront au musée"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I did not go to school / I have not gone to school",
+        "correct": "Je ne suis pas allé à l'école",
+        "distractors": ["Tu n'es pas allé à l'école", "Il n'est pas allé à l'école", "Nous ne sommes pas allés à l'école"]
+    },
+    {
+        "question": "You did not go to the park / You have not gone to the park (informal)",
+        "correct": "Tu n'es pas allé au parc",
+        "distractors": ["Je ne suis pas allé au parc", "Vous n'êtes pas allés au parc", "Ils ne sont pas allés au parc"]
+    },
+    {
+        "question": "He did not go to the market / He has not gone to the market",
+        "correct": "Il n'est pas allé au marché",
+        "distractors": ["Elle n'est pas allée au marché", "Tu n'es pas allé au marché", "Ils ne sont pas allés au marché"]
+    },
+    {
+        "question": "She did not go to the store / She has not gone to the store",
+        "correct": "Elle n'est pas allée au magasin",
+        "distractors": ["Il n'est pas allé au magasin", "Elles ne sont pas allées au magasin", "Tu n'es pas allé au magasin"]
+    },
+    {
+        "question": "We did not go to the cinema / We have not gone to the cinema",
+        "correct": "Nous ne sommes pas allés au cinéma",
+        "distractors": ["Vous n'êtes pas allés au cinéma", "Ils ne sont pas allés au cinéma", "Je ne suis pas allé au cinéma"]
+    },
+    {
+        "question": "You did not go to the party / You have not gone to the party (formal / plural)",
+        "correct": "Vous n'êtes pas allés à la fête",
+        "distractors": ["Tu n'es pas allé à la fête", "Nous ne sommes pas allés à la fête", "Ils ne sont pas allés à la fête"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Did I go to school? / Have I gone to school?",
+        "correct": "Suis-je allé à l'école ?",
+        "distractors": ["Es-tu allé à l'école ?", "Est-il allé à l'école ?", "Sommes-nous allés à l'école ?"]
+    },
+    {
+        "question": "Did you go to the park? / Have you gone to the park? (informal)",
+        "correct": "Es-tu allé au parc ?",
+        "distractors": ["Suis-je allé au parc ?", "Est-il allé au parc ?", "Êtes-vous allés au parc ?"]
+    },
+    {
+        "question": "Did he go to the market? / Has he gone to the market?",
+        "correct": "Est-il allé au marché ?",
+        "distractors": ["Est-elle allée au marché ?", "Suis-je allé au marché ?", "Es-tu allé au marché ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Didn't I go to school? / Haven't I gone to school?",
+        "correct": "Ne suis-je pas allé à l'école ?",
+        "distractors": ["N'es-tu pas allé à l'école ?", "N'est-il pas allé à l'école ?", "Ne sommes-nous pas allés à l'école ?"]
+    },
+    {
+        "question": "Didn't you go to the park? / Haven't you gone to the park? (informal)",
+        "correct": "N'es-tu pas allé au parc ?",
+        "distractors": ["Ne suis-je pas allé au parc ?", "N'est-il pas allé au parc ?", "N'êtes-vous pas allés au parc ?"]
+    },
+    {
+        "question": "Didn't he go to the market? / Hasn't he gone to the market?",
+        "correct": "N'est-il pas allé au marché ?",
+        "distractors": ["N'est-elle pas allée au marché ?", "Ne suis-je pas allé au marché ?", "N'es-tu pas allé au marché ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```
