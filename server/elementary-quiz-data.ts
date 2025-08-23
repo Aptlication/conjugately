@@ -11,12 +11,34 @@ export interface ElementaryQuizQuestion {
 
 // Elementary Level Present Tense Quiz Data
 export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion[]> = {
-  // Empty - ready for new content
+  "besoin": [
+    {
+      question: "I need water / I am needing water",
+      hint: "Use present tense of 'avoir besoin de' with je and eau",
+      answerOptions: [
+        { text: "J'aurai besoin d'eau", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "J'ai besoin d'eau", rationale: "Correct! 'J'ai besoin d'eau' means 'I need water' in present tense.", isCorrect: true },
+        { text: "J'avais besoin d'eau", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai eu besoin d'eau", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    }
+  ]
 };
 
 // Elementary Level Passé Composé Quiz Data
 export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQuestion[]> = {
-  // Empty - ready for new content
+  "besoin": [
+    {
+      question: "I needed a book / I have needed a book",
+      hint: "Use passé composé of 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "Tu as eu besoin d'un livre", rationale: "Wrong person - this is 'you needed', not 'I needed'.", isCorrect: false },
+        { text: "J'ai eu besoin d'un livre", rationale: "Correct! 'J'ai eu besoin d'un livre' means 'I needed a book' in passé composé.", isCorrect: true },
+        { text: "Il a eu besoin d'un livre", rationale: "Wrong person - this is 'he needed', not 'I needed'.", isCorrect: false },
+        { text: "Nous avons eu besoin d'un livre", rationale: "Wrong person - this is 'we needed', not 'I needed'.", isCorrect: false }
+      ]
+    }
+  ]
 };
 
 // Function to get random Elementary present tense questions for a specific verb

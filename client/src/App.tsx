@@ -172,16 +172,24 @@ function App() {
       }
     },
     "Elementary": { 
-      verbs: [], // Empty - ready for new content
-      timeFrames: [], 
-      tenses: [],
+      verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"], // 7 verbs
+      timeFrames: ["Present", "Past", "Future"], 
+      tenses: ["Présent", "Passé Composé", "Futur Simple"],
       courseStructure: {
-        units: [],
+        units: [
+          { name: "Unit 1: dire (to say)", verb: "dire", questions: 20 },
+          { name: "Unit 2: voir (to see)", verb: "voir", questions: 20 },
+          { name: "Unit 3: savoir (to know)", verb: "savoir", questions: 20 },
+          { name: "Unit 4: vouloir (to want)", verb: "vouloir", questions: 20 },
+          { name: "Unit 5: venir (to come)", verb: "venir", questions: 20 },
+          { name: "Unit 6: pouvoir (to be able)", verb: "pouvoir", questions: 20 },
+          { name: "Unit 7: besoin (to need)", verb: "besoin", questions: 20 }
+        ],
         finalExam: { 
-          questions: 0, 
-          questionsPerVerb: 0, 
-          passThreshold: 0,
-          description: "Empty - ready for new content"
+          questions: 70, 
+          questionsPerVerb: 10, 
+          passThreshold: 63,
+          description: "10 questions from each of the 7 verbs"
         }
       }
     },
@@ -2006,7 +2014,7 @@ function App() {
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
               <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 4 verbs (être, avoir, faire, aller), Present, past, and future tenses</option>
-              <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - Ready for new content</option>
+              <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - 7 verbs, Present, past, and future tenses</option>
               <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 11 verbs (être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir), Present, past, and future tenses</option>
               <option value="Advanced" className="bg-gray-800 text-white">🔴 Advanced - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>

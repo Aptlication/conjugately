@@ -1,7 +1,7 @@
 import { GeneratedQuiz } from "./gemini-quiz";
 import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQuestion } from "./novice-quiz-data";
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
-// Elementary import removed - ready for new implementation
+import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1796,7 +1796,33 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     }
   }
 
-  // Elementary handling removed - ready for new implementation
+  // Use verified Elementary questions for Elementary difficulty
+  if (difficulty === 'Elementary' && ['dire', 'voir', 'savoir', 'vouloir', 'venir', 'pouvoir', 'besoin'].includes(verb)) {
+    console.log(`🎓 Using verified Elementary questions for ${verb} - ${tense}`);
+    
+    let elementaryQuestions: ElementaryQuizQuestion[] = [];
+    
+    // Handle different tenses for Elementary level
+    if (tense.toLowerCase() === 'présent' || tense.toLowerCase() === 'present') {
+      elementaryQuestions = getRandomElementaryPresentQuestions(verb, 20);
+      console.log(`✅ Found ${elementaryQuestions.length} Elementary present questions for ${verb}`);
+    } else if (tense.toLowerCase() === 'passé composé' || tense.toLowerCase() === 'passé simple') {
+      elementaryQuestions = getRandomElementaryPasseComposeQuestions(verb, 20);
+      console.log(`✅ Found ${elementaryQuestions.length} Elementary passé composé questions for ${verb}`);
+    }
+    
+    if (elementaryQuestions.length > 0) {
+      return {
+        questions: elementaryQuestions.map(q => ({
+          question: q.question,
+          hint: q.hint,
+          answerOptions: q.answerOptions
+        }))
+      };
+    } else {
+      console.log(`⚠️ No verified Elementary questions found for ${verb} - ${tense}, falling back to generated`);
+    }
+  }
   
   // Normalize tense names - map frontend tense names to backend tense keys
   let normalizedTense = tense.toLowerCase();
