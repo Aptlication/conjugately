@@ -1,0 +1,59 @@
+```python
+# beginner_etre_present_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: être
+# Tense: Présent (Present Simple)
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {"question": "I am", "correct": "Je suis", "distractors": ["Tu es", "Il est", "Nous sommes"]},
+    {"question": "You are (informal)", "correct": "Tu es", "distractors": ["Je suis", "Vous êtes", "Ils sont"]},
+    {"question": "He is", "correct": "Il est", "distractors": ["Elle est", "Tu es", "Ils sont"]},
+    {"question": "She is", "correct": "Elle est", "distractors": ["Il est", "Elles sont", "Tu es"]},
+    {"question": "We are", "correct": "Nous sommes", "distractors": ["Vous êtes", "Ils sont", "Je suis"]},
+    {"question": "You are (formal/plural)", "correct": "Vous êtes", "distractors": ["Tu es", "Nous sommes", "Ils sont"]},
+    {"question": "They are (male/mixed)", "correct": "Ils sont", "distractors": ["Elles sont", "Ils étaient", "Ils seront"]},
+    {"question": "They are (female)", "correct": "Elles sont", "distractors": ["Ils sont", "Elles étaient", "Elles seront"]},
+
+    # Negative statements (6 questions)
+    {"question": "I am not", "correct": "Je ne suis pas", "distractors": ["Tu n'es pas", "Il n'est pas", "Nous ne sommes pas"]},
+    {"question": "You are not (informal)", "correct": "Tu n'es pas", "distractors": ["Je ne suis pas", "Vous n'êtes pas", "Ils ne sont pas"]},
+    {"question": "He is not", "correct": "Il n'est pas", "distractors": ["Elle n'est pas", "Tu n'es pas", "Ils ne sont pas"]},
+    {"question": "She is not", "correct": "Elle n'est pas", "distractors": ["Il n'est pas", "Elles ne sont pas", "Tu n'es pas"]},
+    {"question": "We are not", "correct": "Nous ne sommes pas", "distractors": ["Vous n'êtes pas", "Ils ne sont pas", "Je ne suis pas"]},
+    {"question": "You are not (formal/plural)", "correct": "Vous n'êtes pas", "distractors": ["Tu n'es pas", "Nous ne sommes pas", "Ils ne sont pas"]},
+
+    # Positive questions (3 questions)
+    {"question": "Am I?", "correct": "Suis-je ?", "distractors": ["Es-tu ?", "Est-il ?", "Sommes-nous ?"]},
+    {"question": "Are you? (informal)", "correct": "Es-tu ?", "distractors": ["Suis-je ?", "Est-il ?", "Êtes-vous ?"]},
+    {"question": "Is he?", "correct": "Est-il ?", "distractors": ["Est-elle ?", "Suis-je ?", "Es-tu ?"]},
+
+    # Negative questions (3 questions)
+    {"question": "Aren't I?", "correct": "Ne suis-je pas ?", "distractors": ["N'es-tu pas ?", "N'est-il pas ?", "Ne sommes-nous pas ?"]},
+    {"question": "Aren't you? (informal)", "correct": "N'es-tu pas ?", "distractors": ["Ne suis-je pas ?", "N'est-il pas ?", "N'êtes-vous pas ?"]},
+    {"question": "Isn't he?", "correct": "N'est-il pas ?", "distractors": ["N'est-elle pas ?", "Ne suis-je pas ?", "N'es-tu pas ?"]},
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted now contains 20 questions with correct answers randomly assigned among options A-D
+```

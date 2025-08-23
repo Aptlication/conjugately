@@ -15,104 +15,211 @@ export interface BeginnerPronounQuestion {
 export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerPronounQuestion[]>> = {
   "être": {
     "Présent": [
+      // Positive statements (8 questions)
       {
-        question: "I am happy",
-        hint: "Use je + être (present)",
+        question: "I am",
+        hint: "First person singular of être in present tense",
         answerOptions: [
-          { text: "Je suis heureux", rationale: "Correct! 'Je suis' is the proper conjugation for 'I am' in French.", isCorrect: true },
-          { text: "Je es heureux", rationale: "Incorrect conjugation - 'es' is for 'tu' (you informal).", isCorrect: false },
-          { text: "Je est heureux", rationale: "Incorrect conjugation - 'est' is for 'il/elle' (he/she).", isCorrect: false },
-          { text: "J'étais heureux", rationale: "This is past tense (imperfect), not present.", isCorrect: false }
+          { text: "Tu es", rationale: "This means 'you are' (informal).", isCorrect: false },
+          { text: "Je suis", rationale: "Correct! 'Je suis' is 'I am' in French present tense.", isCorrect: true },
+          { text: "Il est", rationale: "This means 'he is'.", isCorrect: false },
+          { text: "Nous sommes", rationale: "This means 'we are'.", isCorrect: false }
         ]
       },
       {
-        question: "You are tired (informal)",
-        hint: "Use tu + être (present)",
+        question: "You are (informal)",
+        hint: "Second person singular of être in present tense",
         answerOptions: [
-          { text: "Tu es fatigué", rationale: "Correct! 'Tu es' is the proper conjugation for 'you are' (informal).", isCorrect: true },
-          { text: "Tu suis fatigué", rationale: "Incorrect - 'suis' is for 'je' (I), not 'tu'.", isCorrect: false },
-          { text: "Tu êtes fatigué", rationale: "Incorrect - 'êtes' is for 'vous' (you formal/plural), not 'tu'.", isCorrect: false },
-          { text: "Tu sera fatigué", rationale: "This is future tense, not present.", isCorrect: false }
+          { text: "Je suis", rationale: "This means 'I am'.", isCorrect: false },
+          { text: "Vous êtes", rationale: "This means 'you are' (formal/plural).", isCorrect: false },
+          { text: "Tu es", rationale: "Correct! 'Tu es' is 'you are' (informal) in French present tense.", isCorrect: true },
+          { text: "Ils sont", rationale: "This means 'they are'.", isCorrect: false }
         ]
       },
       {
-        question: "He is a student",
-        hint: "Third person singular masculine of être",
+        question: "He is",
+        hint: "Third person singular masculine of être in present tense",
         answerOptions: [
-          { text: "Il est étudiant", rationale: "Correct! 'Il est' is the proper conjugation for 'he is'.", isCorrect: true },
-          { text: "Il es étudiant", rationale: "Incorrect - 'es' is for 'tu' (you informal), not 'il'.", isCorrect: false },
-          { text: "Il suis étudiant", rationale: "Incorrect - 'suis' is for 'je' (I), not 'il'.", isCorrect: false },
-          { text: "Il était étudiant", rationale: "This is past tense (imperfect), not present.", isCorrect: false }
+          { text: "Elle est", rationale: "This means 'she is'.", isCorrect: false },
+          { text: "Tu es", rationale: "This means 'you are' (informal).", isCorrect: false },
+          { text: "Ils sont", rationale: "This means 'they are'.", isCorrect: false },
+          { text: "Il est", rationale: "Correct! 'Il est' is 'he is' in French present tense.", isCorrect: true }
         ]
       },
       {
-        question: "We are friends",
-        hint: "First person plural of être",
+        question: "She is",
+        hint: "Third person singular feminine of être in present tense",
         answerOptions: [
-          { text: "Nous sommes amis", rationale: "Correct! 'Nous sommes' is the proper conjugation for 'we are'.", isCorrect: true },
-          { text: "Nous sont amis", rationale: "Incorrect - 'sont' is for 'ils/elles' (they), not 'nous'.", isCorrect: false },
-          { text: "Nous êtes amis", rationale: "Incorrect - 'êtes' is for 'vous' (you formal/plural), not 'nous'.", isCorrect: false },
-          { text: "Nous avons amis", rationale: "Incorrect verb - this uses 'avoir' (to have), not 'être' (to be).", isCorrect: false }
+          { text: "Il est", rationale: "This means 'he is'.", isCorrect: false },
+          { text: "Elle est", rationale: "Correct! 'Elle est' is 'she is' in French present tense.", isCorrect: true },
+          { text: "Elles sont", rationale: "This means 'they are' (feminine).", isCorrect: false },
+          { text: "Tu es", rationale: "This means 'you are' (informal).", isCorrect: false }
         ]
       },
       {
-        question: "You are ready (formal/plural)",
-        hint: "Second person formal/plural of être",
+        question: "We are",
+        hint: "First person plural of être in present tense",
         answerOptions: [
-          { text: "Vous êtes prêts", rationale: "Correct! 'Vous êtes' is the proper conjugation for 'you are' (formal/plural).", isCorrect: true },
-          { text: "Vous es prêts", rationale: "Incorrect - 'es' is for 'tu' (you informal), not 'vous'.", isCorrect: false },
-          { text: "Vous sommes prêts", rationale: "Incorrect - 'sommes' is for 'nous' (we), not 'vous'.", isCorrect: false },
-          { text: "Vous serez prêts", rationale: "This is future tense, not present.", isCorrect: false }
+          { text: "Vous êtes", rationale: "This means 'you are' (formal/plural).", isCorrect: false },
+          { text: "Ils sont", rationale: "This means 'they are'.", isCorrect: false },
+          { text: "Je suis", rationale: "This means 'I am'.", isCorrect: false },
+          { text: "Nous sommes", rationale: "Correct! 'Nous sommes' is 'we are' in French present tense.", isCorrect: true }
         ]
       },
       {
-        question: "She is not here",
-        hint: "Negation ne...pas around être",
+        question: "You are (formal/plural)",
+        hint: "Second person formal/plural of être in present tense",
         answerOptions: [
-          { text: "Elle n'est pas ici", rationale: "Correct! French negation uses 'ne...pas' around the verb.", isCorrect: true },
-          { text: "Elle ne pas est ici", rationale: "Incorrect word order - 'ne...pas' must surround the verb.", isCorrect: false },
-          { text: "Elle est ne pas ici", rationale: "Incorrect placement - 'ne...pas' must surround the verb.", isCorrect: false },
-          { text: "Elle n'était pas ici", rationale: "This is past tense (imperfect), not present.", isCorrect: false }
+          { text: "Tu es", rationale: "This means 'you are' (informal).", isCorrect: false },
+          { text: "Nous sommes", rationale: "This means 'we are'.", isCorrect: false },
+          { text: "Vous êtes", rationale: "Correct! 'Vous êtes' is 'you are' (formal/plural) in French present tense.", isCorrect: true },
+          { text: "Ils sont", rationale: "This means 'they are'.", isCorrect: false }
         ]
       },
       {
-        question: "They are busy (male/mixed)",
-        hint: "Third person plural masculine/mixed of être",
+        question: "They are (male/mixed)",
+        hint: "Third person plural masculine/mixed of être in present tense",
         answerOptions: [
-          { text: "Ils sont occupés", rationale: "Correct! 'Ils sont' is the proper conjugation for 'they are' (masculine/mixed).", isCorrect: true },
-          { text: "Ils es occupés", rationale: "Incorrect - 'es' is for 'tu' (you informal), not 'ils'.", isCorrect: false },
-          { text: "Ils sommes occupés", rationale: "Incorrect - 'sommes' is for 'nous' (we), not 'ils'.", isCorrect: false },
-          { text: "Ils étaient occupés", rationale: "This is past tense (imperfect), not present.", isCorrect: false }
+          { text: "Elles sont", rationale: "This means 'they are' (feminine only).", isCorrect: false },
+          { text: "Ils étaient", rationale: "This is imperfect past tense, not present tense.", isCorrect: false },
+          { text: "Ils seront", rationale: "This is future tense, not present tense.", isCorrect: false },
+          { text: "Ils sont", rationale: "Correct! 'Ils sont' is 'they are' (masculine/mixed) in French present tense.", isCorrect: true }
         ]
       },
       {
-        question: "She is a teacher",
-        hint: "Third person singular feminine of être",
+        question: "They are (female)",
+        hint: "Third person plural feminine of être in present tense",
         answerOptions: [
-          { text: "Elle est professeure", rationale: "Correct! 'Elle est' is the proper conjugation for 'she is'.", isCorrect: true },
-          { text: "Elle suis professeure", rationale: "Incorrect - 'suis' is for 'je' (I), not 'elle'.", isCorrect: false },
-          { text: "Elle sont professeure", rationale: "Incorrect - 'sont' is for 'ils/elles' (they), not 'elle'.", isCorrect: false },
-          { text: "Elle sera professeure", rationale: "This is future tense, not present.", isCorrect: false }
+          { text: "Ils sont", rationale: "This means 'they are' (masculine/mixed).", isCorrect: false },
+          { text: "Elles sont", rationale: "Correct! 'Elles sont' is 'they are' (feminine) in French present tense.", isCorrect: true },
+          { text: "Elles étaient", rationale: "This is imperfect past tense, not present tense.", isCorrect: false },
+          { text: "Elles seront", rationale: "This is future tense, not present tense.", isCorrect: false }
+        ]
+      },
+
+      // Negative statements (6 questions)
+      {
+        question: "I am not",
+        hint: "First person singular negative of être in present tense",
+        answerOptions: [
+          { text: "Tu n'es pas", rationale: "This means 'you are not' (informal).", isCorrect: false },
+          { text: "Il n'est pas", rationale: "This means 'he is not'.", isCorrect: false },
+          { text: "Je ne suis pas", rationale: "Correct! 'Je ne suis pas' is 'I am not' using French negation ne...pas.", isCorrect: true },
+          { text: "Nous ne sommes pas", rationale: "This means 'we are not'.", isCorrect: false }
         ]
       },
       {
-        question: "We are not late",
-        hint: "First person plural with negation",
+        question: "You are not (informal)",
+        hint: "Second person singular negative of être in present tense",
         answerOptions: [
-          { text: "Nous ne sommes pas en retard", rationale: "Correct! Proper conjugation with French negation 'ne...pas'.", isCorrect: true },
-          { text: "Nous sommes pas en retard", rationale: "Incorrect - missing 'ne' for proper French negation.", isCorrect: false },
-          { text: "Nous ne sont pas en retard", rationale: "Incorrect - 'sont' is for 'ils/elles' (they), not 'nous'.", isCorrect: false },
-          { text: "Nous avons en retard", rationale: "Incorrect verb - this uses 'avoir' (to have), not 'être' (to be).", isCorrect: false }
+          { text: "Je ne suis pas", rationale: "This means 'I am not'.", isCorrect: false },
+          { text: "Tu n'es pas", rationale: "Correct! 'Tu n'es pas' is 'you are not' (informal) using French negation.", isCorrect: true },
+          { text: "Vous n'êtes pas", rationale: "This means 'you are not' (formal/plural).", isCorrect: false },
+          { text: "Ils ne sont pas", rationale: "This means 'they are not'.", isCorrect: false }
         ]
       },
       {
-        question: "I am not here",
-        hint: "First person singular with negation",
+        question: "He is not",
+        hint: "Third person singular masculine negative of être in present tense",
         answerOptions: [
-          { text: "Je ne suis pas ici", rationale: "Correct! Proper conjugation with French negation 'ne...pas'.", isCorrect: true },
-          { text: "Je suis pas ici", rationale: "Incorrect - missing 'ne' for proper French negation.", isCorrect: false },
-          { text: "Je es pas ici", rationale: "Incorrect conjugation - 'es' is for 'tu' (you informal), not 'je'.", isCorrect: false },
-          { text: "J'ai pas ici", rationale: "Incorrect verb - this uses 'avoir' (to have), not 'être' (to be).", isCorrect: false }
+          { text: "Elle n'est pas", rationale: "This means 'she is not'.", isCorrect: false },
+          { text: "Tu n'es pas", rationale: "This means 'you are not' (informal).", isCorrect: false },
+          { text: "Ils ne sont pas", rationale: "This means 'they are not'.", isCorrect: false },
+          { text: "Il n'est pas", rationale: "Correct! 'Il n'est pas' is 'he is not' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "She is not",
+        hint: "Third person singular feminine negative of être in present tense",
+        answerOptions: [
+          { text: "Il n'est pas", rationale: "This means 'he is not'.", isCorrect: false },
+          { text: "Elle n'est pas", rationale: "Correct! 'Elle n'est pas' is 'she is not' using French negation ne...pas.", isCorrect: true },
+          { text: "Elles ne sont pas", rationale: "This means 'they are not' (feminine).", isCorrect: false },
+          { text: "Tu n'es pas", rationale: "This means 'you are not' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "We are not",
+        hint: "First person plural negative of être in present tense",
+        answerOptions: [
+          { text: "Vous n'êtes pas", rationale: "This means 'you are not' (formal/plural).", isCorrect: false },
+          { text: "Ils ne sont pas", rationale: "This means 'they are not'.", isCorrect: false },
+          { text: "Je ne suis pas", rationale: "This means 'I am not'.", isCorrect: false },
+          { text: "Nous ne sommes pas", rationale: "Correct! 'Nous ne sommes pas' is 'we are not' using French negation ne...pas.", isCorrect: true }
+        ]
+      },
+      {
+        question: "You are not (formal/plural)",
+        hint: "Second person formal/plural negative of être in present tense",
+        answerOptions: [
+          { text: "Tu n'es pas", rationale: "This means 'you are not' (informal).", isCorrect: false },
+          { text: "Vous n'êtes pas", rationale: "Correct! 'Vous n'êtes pas' is 'you are not' (formal/plural) using French negation.", isCorrect: true },
+          { text: "Nous ne sommes pas", rationale: "This means 'we are not'.", isCorrect: false },
+          { text: "Ils ne sont pas", rationale: "This means 'they are not'.", isCorrect: false }
+        ]
+      },
+
+      // Positive questions (3 questions)
+      {
+        question: "Am I?",
+        hint: "Interrogative form of first person singular être in present tense",
+        answerOptions: [
+          { text: "Es-tu ?", rationale: "This means 'Are you?' (informal).", isCorrect: false },
+          { text: "Est-il ?", rationale: "This means 'Is he?'.", isCorrect: false },
+          { text: "Suis-je ?", rationale: "Correct! 'Suis-je ?' is 'Am I?' in French interrogative form with inversion.", isCorrect: true },
+          { text: "Sommes-nous ?", rationale: "This means 'Are we?'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "Are you? (informal)",
+        hint: "Interrogative form of second person singular être in present tense",
+        answerOptions: [
+          { text: "Suis-je ?", rationale: "This means 'Am I?'.", isCorrect: false },
+          { text: "Es-tu ?", rationale: "Correct! 'Es-tu ?' is 'Are you?' (informal) in French interrogative form.", isCorrect: true },
+          { text: "Est-il ?", rationale: "This means 'Is he?'.", isCorrect: false },
+          { text: "Êtes-vous ?", rationale: "This means 'Are you?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Is he?",
+        hint: "Interrogative form of third person singular masculine être in present tense",
+        answerOptions: [
+          { text: "Est-elle ?", rationale: "This means 'Is she?'.", isCorrect: false },
+          { text: "Suis-je ?", rationale: "This means 'Am I?'.", isCorrect: false },
+          { text: "Es-tu ?", rationale: "This means 'Are you?' (informal).", isCorrect: false },
+          { text: "Est-il ?", rationale: "Correct! 'Est-il ?' is 'Is he?' in French interrogative form with inversion.", isCorrect: true }
+        ]
+      },
+
+      // Negative questions (3 questions)
+      {
+        question: "Aren't I?",
+        hint: "Negative interrogative form of first person singular être in present tense",
+        answerOptions: [
+          { text: "N'es-tu pas ?", rationale: "This means 'Aren't you?' (informal).", isCorrect: false },
+          { text: "N'est-il pas ?", rationale: "This means 'Isn't he?'.", isCorrect: false },
+          { text: "Ne sommes-nous pas ?", rationale: "This means 'Aren't we?'.", isCorrect: false },
+          { text: "Ne suis-je pas ?", rationale: "Correct! 'Ne suis-je pas ?' is 'Aren't I?' in French negative interrogative form.", isCorrect: true }
+        ]
+      },
+      {
+        question: "Aren't you? (informal)",
+        hint: "Negative interrogative form of second person singular être in present tense",
+        answerOptions: [
+          { text: "Ne suis-je pas ?", rationale: "This means 'Aren't I?'.", isCorrect: false },
+          { text: "N'es-tu pas ?", rationale: "Correct! 'N'es-tu pas ?' is 'Aren't you?' (informal) in French negative interrogative.", isCorrect: true },
+          { text: "N'est-il pas ?", rationale: "This means 'Isn't he?'.", isCorrect: false },
+          { text: "N'êtes-vous pas ?", rationale: "This means 'Aren't you?' (formal/plural).", isCorrect: false }
+        ]
+      },
+      {
+        question: "Isn't he?",
+        hint: "Negative interrogative form of third person singular masculine être in present tense",
+        answerOptions: [
+          { text: "N'est-elle pas ?", rationale: "This means 'Isn't she?'.", isCorrect: false },
+          { text: "Ne suis-je pas ?", rationale: "This means 'Aren't I?'.", isCorrect: false },
+          { text: "N'est-il pas ?", rationale: "Correct! 'N'est-il pas ?' is 'Isn't he?' in French negative interrogative form.", isCorrect: true },
+          { text: "N'es-tu pas ?", rationale: "This means 'Aren't you?' (informal).", isCorrect: false }
         ]
       }
     ],
