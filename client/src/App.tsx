@@ -1463,7 +1463,8 @@ function App() {
       console.log(`Exam passed: ${examPassed} (need ${requiredScore}/${totalQuestions} or higher)`);
       
       // Save completed course and update progress if passed - do this once when exam is complete
-      if (examPassed && !completedCourses.some(course => 
+      // CRITICAL FIX: Check if user is authenticated before trying to save
+      if (examPassed && user?.id && !completedCourses.some(course => 
         course.courseType === (courseInfo.courseLevel?.toLowerCase() || "beginner") && 
         course.timeFrame === courseInfo.timeFrame
       )) {
@@ -1476,7 +1477,7 @@ function App() {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
-                userId: user?.id || 1,
+                userId: user.id, // Now guaranteed to exist due to check above
                 courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,
@@ -1500,7 +1501,7 @@ function App() {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
-                userId: user?.id || 1,
+                userId: user.id, // Now guaranteed to exist due to check above
                 courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,
@@ -1529,6 +1530,35 @@ function App() {
           }
         };
         saveCompletedCourse();
+      } else if (examPassed && !user?.id) {
+        // If user passed but isn't authenticated, show login prompt
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
+                <h2 className="text-4xl font-bold mb-4">🏆 Exam Passed!</h2>
+                <div className="mb-6">
+                  <div className="text-6xl font-bold mb-2 text-green-400">{percentage}%</div>
+                  <p className="text-xl text-slate-300">You got {correctAnswers} out of {totalQuestions} questions correct</p>
+                  <p className="text-lg text-red-400 mt-4">⚠️ Please log in to save your progress!</p>
+                  <p className="text-sm text-slate-400 mt-2">Your amazing score won't be saved until you log in.</p>
+                </div>
+                <button
+                  onClick={() => window.location.href = '/api/login'}
+                  className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 mr-4"
+                >
+                  Log In to Save Progress
+                </button>
+                <button
+                  onClick={handleStartOver}
+                  className="px-8 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl font-semibold hover:from-gray-700 hover:to-gray-800"
+                >
+                  Continue Without Saving
+                </button>
+              </div>
+            </div>
+          </div>
+        );
       }
       
       return (
