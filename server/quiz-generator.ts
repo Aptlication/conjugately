@@ -1867,17 +1867,24 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       if (shouldBeNegative) {
         // Convert to negative using the same logic as non-Novice modes
         if ((context as any).negative) {
+          // Context is already negative, use as-is
           englishQuestion = fixEnglishGrammar(context.en);
           englishQuestion = removeProgressiveFormsOnly(englishQuestion);
           correctAnswer = buildNegativeFrench(pronoun, conjugation, context.fr_context, normalizedTense, verb);
         } else {
-          englishQuestion = convertToNegativeEnglish(englishQuestion, pronoun);
+          // Convert positive context to negative
+          englishQuestion = convertToNegativeEnglish(fixEnglishGrammar(context.en), pronoun);
+          englishQuestion = removeProgressiveFormsOnly(englishQuestion);
           correctAnswer = buildNegativeFrench(pronoun, conjugation, context.fr_context, normalizedTense, verb);
         }
       } else {
-        // For positive contexts
+        // For positive contexts - ensure consistency  
+        if ((context as any).negative) {
+          // Skip negative contexts when we want positive questions
+          continue;
+        }
         correctAnswer = applyContractions(pronoun, conjugation);
-        if (context.fr_context && !(context as any).negative) {
+        if (context.fr_context) {
           correctAnswer += ` ${context.fr_context}`;
         }
       }
@@ -1904,12 +1911,18 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
           .slice(0, 3)
           .map((wrongPronoun, index) => {
             const wrongConjugation = tenseData[wrongPronoun];
-            // Mix positive and negative distractors for better pedagogy
-            const makeDistractorNegative = index === 0; // Only first distractor is negative
-            if (makeDistractorNegative) {
-              return buildNegativeFrench(wrongPronoun, wrongConjugation, "", normalizedTense, verb);
+            // CRITICAL FIX: Match the polarity of the correct answer
+            if (shouldBeNegative) {
+              // If correct answer is negative, wrong answers should be positive  
+              return applyContractions(wrongPronoun, wrongConjugation) + (context.fr_context ? ` ${context.fr_context}` : "");
             } else {
-              return applyContractions(wrongPronoun, wrongConjugation);
+              // If correct answer is positive, wrong answers should be mixed
+              const makeDistractorNegative = index === 0; // Only first distractor is negative
+              if (makeDistractorNegative) {
+                return buildNegativeFrench(wrongPronoun, wrongConjugation, context.fr_context, normalizedTense, verb);
+              } else {
+                return applyContractions(wrongPronoun, wrongConjugation) + (context.fr_context ? ` ${context.fr_context}` : "");
+              }
             }
           });
       }
