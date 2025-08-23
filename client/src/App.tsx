@@ -388,7 +388,7 @@ function App() {
             verb: currentVerb,
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
             tenseType: tense,
-            difficulty: "Novice",
+            difficulty: "Beginner",
             isExam: true,
           })
         });
