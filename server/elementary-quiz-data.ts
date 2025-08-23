@@ -875,12 +875,248 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
   ]
 };
 
+// Elementary Level Passé Composé Quiz Data
+export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQuestion[]> = {
+  "besoin": [
+    {
+      question: "I needed a book / I have needed a book",
+      hint: "Use passé composé of 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "Tu as eu besoin d'un livre", rationale: "Wrong person - this is 'you needed', not 'I needed'.", isCorrect: false },
+        { text: "J'ai eu besoin d'un livre", rationale: "Correct! 'J'ai eu besoin d'un livre' means 'I needed a book' in passé composé.", isCorrect: true },
+        { text: "Il a eu besoin d'un livre", rationale: "Wrong person - this is 'he needed', not 'I needed'.", isCorrect: false },
+        { text: "Nous avons eu besoin d'un livre", rationale: "Wrong person - this is 'we needed', not 'I needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You needed a problem / You have needed a problem (informal)",
+      hint: "Use passé composé of 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "J'ai eu besoin d'un problème", rationale: "Wrong person - this is 'I needed', not 'you needed'.", isCorrect: false },
+        { text: "Tu as eu besoin d'un problème", rationale: "Correct! 'Tu as eu besoin d'un problème' means 'You needed a problem' (informal).", isCorrect: true },
+        { text: "Vous avez eu besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
+        { text: "Ils ont eu besoin d'un problème", rationale: "Wrong person - this is 'they needed', not 'you needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He needed help / He has needed help",
+      hint: "Use passé composé of 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "Elle a eu besoin d'aide", rationale: "Wrong gender - this is 'she needed', not 'he needed'.", isCorrect: false },
+        { text: "Il a eu besoin d'aide", rationale: "Correct! 'Il a eu besoin d'aide' means 'He needed help' in passé composé.", isCorrect: true },
+        { text: "Tu as eu besoin d'aide", rationale: "Wrong person - this is 'you needed', not 'he needed'.", isCorrect: false },
+        { text: "Ils ont eu besoin d'aide", rationale: "Wrong person - this is 'they needed', not 'he needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She needed rest / She has needed rest",
+      hint: "Use passé composé of 'avoir besoin de' with elle and repos",
+      answerOptions: [
+        { text: "Il a eu besoin de repos", rationale: "Wrong gender - this is 'he needed', not 'she needed'.", isCorrect: false },
+        { text: "Elle a eu besoin de repos", rationale: "Correct! 'Elle a eu besoin de repos' means 'She needed rest' in passé composé.", isCorrect: true },
+        { text: "Elles ont eu besoin de repos", rationale: "Wrong number - this is 'they needed' (plural), not 'she needed'.", isCorrect: false },
+        { text: "Tu as eu besoin de repos", rationale: "Wrong person - this is 'you needed', not 'she needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We needed water / We have needed water",
+      hint: "Use passé composé of 'avoir besoin de' with nous and eau",
+      answerOptions: [
+        { text: "Vous avez eu besoin d'eau", rationale: "Wrong person - this is 'you needed', not 'we needed'.", isCorrect: false },
+        { text: "Nous avons eu besoin d'eau", rationale: "Correct! 'Nous avons eu besoin d'eau' means 'We needed water' in passé composé.", isCorrect: true },
+        { text: "Ils ont eu besoin d'eau", rationale: "Wrong person - this is 'they needed', not 'we needed'.", isCorrect: false },
+        { text: "J'ai eu besoin d'eau", rationale: "Wrong person - this is 'I needed', not 'we needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You needed to eat / You have needed to eat (formal / plural)",
+      hint: "Use passé composé of 'avoir besoin de' with vous and manger",
+      answerOptions: [
+        { text: "Tu as eu besoin de manger", rationale: "Wrong formality - this is informal, question asks for formal vous.", isCorrect: false },
+        { text: "Vous avez eu besoin de manger", rationale: "Correct! 'Vous avez eu besoin de manger' means 'You needed to eat' (formal/plural).", isCorrect: true },
+        { text: "Nous avons eu besoin de manger", rationale: "Wrong person - this is 'we needed', not 'you needed'.", isCorrect: false },
+        { text: "Ils ont eu besoin de manger", rationale: "Wrong person - this is 'they needed', not 'you needed'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They needed to go (male / mixed)",
+      hint: "Use passé composé of 'avoir besoin de' with ils and aller",
+      answerOptions: [
+        { text: "Elles ont eu besoin d'aller", rationale: "Wrong gender - this is feminine 'they needed', not masculine/mixed.", isCorrect: false },
+        { text: "Ils ont eu besoin d'aller", rationale: "Correct! 'Ils ont eu besoin d'aller' means 'They needed to go' (male/mixed).", isCorrect: true },
+        { text: "Ils avaient besoin d'aller", rationale: "Wrong tense - this is imperfect, not passé composé.", isCorrect: false },
+        { text: "Ils auront besoin d'aller", rationale: "Wrong tense - this is future, not passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They needed to sleep (female)",
+      hint: "Use passé composé of 'avoir besoin de' with elles and dormir",
+      answerOptions: [
+        { text: "Ils ont eu besoin de dormir", rationale: "Wrong gender - this is masculine/mixed 'they needed', not feminine.", isCorrect: false },
+        { text: "Elles ont eu besoin de dormir", rationale: "Correct! 'Elles ont eu besoin de dormir' means 'They needed to sleep' (female).", isCorrect: true },
+        { text: "Elles avaient besoin de dormir", rationale: "Wrong tense - this is imperfect, not passé composé.", isCorrect: false },
+        { text: "Elles auront besoin de dormir", rationale: "Wrong tense - this is future, not passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "I did not need a book / I have not needed a book",
+      hint: "Use negative passé composé of 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "Tu n'as pas eu besoin d'un livre", rationale: "Wrong person - this is 'you didn't need', not 'I didn't need'.", isCorrect: false },
+        { text: "Je n'ai pas eu besoin d'un livre", rationale: "Correct! 'Je n'ai pas eu besoin d'un livre' means 'I did not need a book'.", isCorrect: true },
+        { text: "Il n'a pas eu besoin d'un livre", rationale: "Wrong person - this is 'he didn't need', not 'I didn't need'.", isCorrect: false },
+        { text: "Nous n'avons pas eu besoin d'un livre", rationale: "Wrong person - this is 'we didn't need', not 'I didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You did not need a problem / You have not needed a problem (informal)",
+      hint: "Use negative passé composé of 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "Je n'ai pas eu besoin d'un problème", rationale: "Wrong person - this is 'I didn't need', not 'you didn't need'.", isCorrect: false },
+        { text: "Tu n'as pas eu besoin d'un problème", rationale: "Correct! 'Tu n'as pas eu besoin d'un problème' means 'You did not need a problem' (informal).", isCorrect: true },
+        { text: "Vous n'avez pas eu besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
+        { text: "Ils n'ont pas eu besoin d'un problème", rationale: "Wrong person - this is 'they didn't need', not 'you didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He did not need help / He has not needed help",
+      hint: "Use negative passé composé of 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "Elle n'a pas eu besoin d'aide", rationale: "Wrong gender - this is 'she didn't need', not 'he didn't need'.", isCorrect: false },
+        { text: "Il n'a pas eu besoin d'aide", rationale: "Correct! 'Il n'a pas eu besoin d'aide' means 'He did not need help'.", isCorrect: true },
+        { text: "Tu n'as pas eu besoin d'aide", rationale: "Wrong person - this is 'you didn't need', not 'he didn't need'.", isCorrect: false },
+        { text: "Ils n'ont pas eu besoin d'aide", rationale: "Wrong person - this is 'they didn't need', not 'he didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She did not need rest / She has not needed rest",
+      hint: "Use negative passé composé of 'avoir besoin de' with elle and repos",
+      answerOptions: [
+        { text: "Il n'a pas eu besoin de repos", rationale: "Wrong gender - this is 'he didn't need', not 'she didn't need'.", isCorrect: false },
+        { text: "Elle n'a pas eu besoin de repos", rationale: "Correct! 'Elle n'a pas eu besoin de repos' means 'She did not need rest'.", isCorrect: true },
+        { text: "Elles n'ont pas eu besoin de repos", rationale: "Wrong number - this is 'they didn't need' (plural), not 'she didn't need'.", isCorrect: false },
+        { text: "Tu n'as pas eu besoin de repos", rationale: "Wrong person - this is 'you didn't need', not 'she didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We did not need water / We have not needed water",
+      hint: "Use negative passé composé of 'avoir besoin de' with nous and eau",
+      answerOptions: [
+        { text: "Vous n'avez pas eu besoin d'eau", rationale: "Wrong person - this is 'you didn't need', not 'we didn't need'.", isCorrect: false },
+        { text: "Nous n'avons pas eu besoin d'eau", rationale: "Correct! 'Nous n'avons pas eu besoin d'eau' means 'We did not need water'.", isCorrect: true },
+        { text: "Ils n'ont pas eu besoin d'eau", rationale: "Wrong person - this is 'they didn't need', not 'we didn't need'.", isCorrect: false },
+        { text: "Je n'ai pas eu besoin d'eau", rationale: "Wrong person - this is 'I didn't need', not 'we didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You did not need to eat / You have not needed to eat (formal / plural)",
+      hint: "Use negative passé composé of 'avoir besoin de' with vous and manger",
+      answerOptions: [
+        { text: "Tu n'as pas eu besoin de manger", rationale: "Wrong formality - this is informal, question asks for formal vous.", isCorrect: false },
+        { text: "Vous n'avez pas eu besoin de manger", rationale: "Correct! 'Vous n'avez pas eu besoin de manger' means 'You did not need to eat' (formal/plural).", isCorrect: true },
+        { text: "Nous n'avons pas eu besoin de manger", rationale: "Wrong person - this is 'we didn't need', not 'you didn't need'.", isCorrect: false },
+        { text: "Ils n'ont pas eu besoin de manger", rationale: "Wrong person - this is 'they didn't need', not 'you didn't need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did I need a book? / Have I needed a book?",
+      hint: "Use question form of passé composé 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "As-tu eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Did you need', not 'Did I need'.", isCorrect: false },
+        { text: "Ai-je eu besoin d'un livre ?", rationale: "Correct! 'Ai-je eu besoin d'un livre ?' means 'Did I need a book?'", isCorrect: true },
+        { text: "A-t-il eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Did he need', not 'Did I need'.", isCorrect: false },
+        { text: "Avons-nous eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Did we need', not 'Did I need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you need a problem? / Have you needed a problem? (informal)",
+      hint: "Use question form of passé composé 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "Ai-je eu besoin d'un problème ?", rationale: "Wrong person - this asks 'Did I need', not 'Did you need'.", isCorrect: false },
+        { text: "As-tu eu besoin d'un problème ?", rationale: "Correct! 'As-tu eu besoin d'un problème ?' means 'Did you need a problem?' (informal).", isCorrect: true },
+        { text: "A-t-il eu besoin d'un problème ?", rationale: "Wrong person - this asks 'Did he need', not 'Did you need'.", isCorrect: false },
+        { text: "Avez-vous eu besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did he need help? / Has he needed help?",
+      hint: "Use question form of passé composé 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "A-t-elle eu besoin d'aide ?", rationale: "Wrong gender - this asks 'Did she need', not 'Did he need'.", isCorrect: false },
+        { text: "A-t-il eu besoin d'aide ?", rationale: "Correct! 'A-t-il eu besoin d'aide ?' means 'Did he need help?'", isCorrect: true },
+        { text: "Ai-je eu besoin d'aide ?", rationale: "Wrong person - this asks 'Did I need', not 'Did he need'.", isCorrect: false },
+        { text: "As-tu eu besoin d'aide ?", rationale: "Wrong person - this asks 'Did you need', not 'Did he need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Didn't I need a book? / Haven't I needed a book?",
+      hint: "Use negative question form of passé composé 'avoir besoin de' with je and un livre",
+      answerOptions: [
+        { text: "N'as-tu pas eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Didn't you need', not 'Didn't I need'.", isCorrect: false },
+        { text: "N'ai-je pas eu besoin d'un livre ?", rationale: "Correct! 'N'ai-je pas eu besoin d'un livre ?' means 'Didn't I need a book?'", isCorrect: true },
+        { text: "N'a-t-il pas eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Didn't he need', not 'Didn't I need'.", isCorrect: false },
+        { text: "N'avons-nous pas eu besoin d'un livre ?", rationale: "Wrong person - this asks 'Didn't we need', not 'Didn't I need'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Didn't you need a problem? / Haven't you needed a problem? (informal)",
+      hint: "Use negative question form of passé composé 'avoir besoin de' with tu and un problème",
+      answerOptions: [
+        { text: "N'ai-je pas eu besoin d'un problème ?", rationale: "Wrong person - this asks 'Didn't I need', not 'Didn't you need'.", isCorrect: false },
+        { text: "N'as-tu pas eu besoin d'un problème ?", rationale: "Correct! 'N'as-tu pas eu besoin d'un problème ?' means 'Didn't you need a problem?' (informal).", isCorrect: true },
+        { text: "N'a-t-il pas eu besoin d'un problème ?", rationale: "Wrong person - this asks 'Didn't he need', not 'Didn't you need'.", isCorrect: false },
+        { text: "N'avez-vous pas eu besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Didn't he need help? / Hasn't he needed help?",
+      hint: "Use negative question form of passé composé 'avoir besoin de' with il and aide",
+      answerOptions: [
+        { text: "N'a-t-elle pas eu besoin d'aide ?", rationale: "Wrong gender - this asks 'Didn't she need', not 'Didn't he need'.", isCorrect: false },
+        { text: "N'a-t-il pas eu besoin d'aide ?", rationale: "Correct! 'N'a-t-il pas eu besoin d'aide ?' means 'Didn't he need help?'", isCorrect: true },
+        { text: "N'ai-je pas eu besoin d'aide ?", rationale: "Wrong person - this asks 'Didn't I need', not 'Didn't he need'.", isCorrect: false },
+        { text: "N'as-tu pas eu besoin d'aide ?", rationale: "Wrong person - this asks 'Didn't you need', not 'Didn't he need'.", isCorrect: false }
+      ]
+    }
+  ]
+};
+
 // Function to get random Elementary present tense questions for a specific verb
 export function getRandomElementaryPresentQuestions(verb: string, count: number): ElementaryQuizQuestion[] {
   const questions = ELEMENTARY_PRESENT_QUESTIONS[verb] || [];
   
   if (questions.length === 0) {
     console.log(`⚠️  No Elementary present questions found for verb: ${verb}`);
+    return [];
+  }
+  
+  // Shuffle and return requested count
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  const result = shuffled.slice(0, Math.min(count, shuffled.length));
+  
+  // If we need more questions than available, repeat with shuffled options
+  while (result.length < count && questions.length > 0) {
+    const additional = [...questions].sort(() => Math.random() - 0.5);
+    for (const q of additional) {
+      if (result.length >= count) break;
+      // Create variation with shuffled answer options
+      const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
+      result.push({
+        ...q,
+        answerOptions: shuffledOptions
+      });
+    }
+  }
+  
+  return result.slice(0, count);
+}
+
+// Function to get random Elementary Passé Composé questions for a specific verb
+export function getRandomElementaryPasseComposeQuestions(verb: string, count: number): ElementaryQuizQuestion[] {
+  const questions = ELEMENTARY_PASSE_COMPOSE_QUESTIONS[verb] || [];
+  
+  if (questions.length === 0) {
+    console.log(`⚠️  No Elementary passé composé questions found for verb: ${verb}`);
     return [];
   }
   
