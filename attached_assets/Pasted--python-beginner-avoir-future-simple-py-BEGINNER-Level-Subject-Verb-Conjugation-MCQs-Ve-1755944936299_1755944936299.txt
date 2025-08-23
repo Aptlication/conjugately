@@ -1,0 +1,43 @@
+```python
+# beginner_avoir_future_simple.py
+# BEGINNER Level – Subject-Verb Conjugation MCQs
+# Verb: avoir
+# Tense: Futur Simple
+# 20 questions
+# Question Type Distribution:
+#  15% positive questions (3 questions)
+#  15% negative questions (3 questions)
+#  40% positive statements (8 questions)
+#  30% negative statements (6 questions)
+# Includes specification for "you" (formal/plural) and "they" (male/mixed, female)
+
+mcq_data = [
+    # Positive statements (8 questions)
+    {"question": "I will have", "options": ["J'aurai", "Tu auras", "Il aura", "Nous aurons"], "answer": "A"},
+    {"question": "You will have (informal)", "options": ["Tu auras", "J'aurai", "Vous aurez", "Ils auront"], "answer": "A"},
+    {"question": "He will have", "options": ["Il aura", "Elle aura", "Tu auras", "Ils auront"], "answer": "A"},
+    {"question": "She will have", "options": ["Elle aura", "Il aura", "Elles auront", "Tu auras"], "answer": "A"},
+    {"question": "We will have", "options": ["Nous aurons", "Vous aurez", "Ils auront", "J'aurai"], "answer": "A"},
+    {"question": "You will have (formal/plural)", "options": ["Vous aurez", "Tu auras", "Nous aurons", "Ils auront"], "answer": "A"},
+    {"question": "They will have (male/mixed)", "options": ["Ils auront", "Elles auront", "Ils avaient", "Ils ont eu"], "answer": "A"},
+    {"question": "They will have (female)", "options": ["Elles auront", "Ils auront", "Elles avaient", "Elles ont eu"], "answer": "A"},
+
+    # Negative statements (6 questions)
+    {"question": "I will not have", "options": ["Je n'aurai pas", "Tu n'auras pas", "Il n'aura pas", "Nous n'aurons pas"], "answer": "A"},
+    {"question": "You will not have (informal)", "options": ["Tu n'auras pas", "Je n'aurai pas", "Vous n'aurez pas", "Ils n'auront pas"], "answer": "A"},
+    {"question": "He will not have", "options": ["Il n'aura pas", "Elle n'aura pas", "Tu n'auras pas", "Ils n'auront pas"], "answer": "A"},
+    {"question": "She will not have", "options": ["Elle n'aura pas", "Il n'aura pas", "Elles n'auront pas", "Tu n'auras pas"], "answer": "A"},
+    {"question": "We will not have", "options": ["Nous n'aurons pas", "Vous n'aurez pas", "Ils n'auront pas", "Je n'aurai pas"], "answer": "A"},
+    {"question": "You will not have (formal/plural)", "options": ["Vous n'aurez pas", "Tu n'auras pas", "Nous n'aurons pas", "Ils n'auront pas"], "answer": "A"},
+
+    # Positive questions (3 questions)
+    {"question": "Will I have?", "options": ["Aurais-je ?", "Auras-tu ?", "Aura-t-il ?", "Aurons-nous ?"], "answer": "A"},
+    {"question": "Will you have? (informal)", "options": ["Auras-tu ?", "Aurais-je ?", "Aura-t-il ?", "Aurez-vous ?"], "answer": "A"},
+    {"question": "Will he have?", "options": ["Aura-t-il ?", "Aura-t-elle ?", "Aurais-je ?", "Auras-tu ?"], "answer": "A"},
+
+    # Negative questions (3 questions)
+    {"question": "Won't I have?", "options": ["Ne vais-je pas avoir ?", "N'auras-tu pas ?", "N'aura-t-il pas ?", "N'aurons-nous pas ?"], "answer": "B"},
+    {"question": "Won't you have? (informal)", "options": ["N'auras-tu pas ?", "Ne vais-je pas avoir ?", "N'aura-t-il pas ?", "N'aurez-vous pas ?"], "answer": "A"},
+    {"question": "Won't he have?", "options": ["N'aura-t-il pas ?", "N'aura-t-elle pas ?", "Ne vais-je pas avoir ?", "N'auras-tu pas ?"], "answer": "A"},
+]
+```
