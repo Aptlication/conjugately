@@ -1201,6 +1201,10 @@ function fixEnglishGrammar(sentence: string): string {
   sentence = sentence.replace(/\bHe make\b/g, "He makes");
   sentence = sentence.replace(/\bShe make\b/g, "She makes");
   
+  // Additional make verb patterns to catch edge cases
+  sentence = sentence.replace(/\bHe make mistakes\b/g, "He makes mistakes");
+  sentence = sentence.replace(/\bShe make mistakes\b/g, "She makes mistakes");
+  
   // Handle "have" verb conjugation errors
   sentence = sentence.replace(/\bHe have\b/g, "He has");
   sentence = sentence.replace(/\bShe have\b/g, "She has");
