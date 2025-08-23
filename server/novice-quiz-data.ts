@@ -242,26 +242,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
 
   "avoir": {
     "present": [
-      {"question": "I have a car. (Présent)", "options": ["J'ai une voiture.", "Tu as une voiture.", "Il a une voiture.", "Nous avons une voiture."], "answer": "A"},
-      {"question": "You do not have a dog. (Présent - Negative, informal)", "options": ["Tu n'as pas de chien.", "Je n'ai pas de chien.", "Il n'a pas de chien.", "Nous n'avons pas de chien."], "answer": "A"},
-      {"question": "Does he have a house? (Présent - Question)", "options": ["A-t-il une maison ?", "As-tu une maison ?", "Ai-je une maison ?", "Avez-vous une maison ?"], "answer": "A"},
-      {"question": "We have time today. (Présent)", "options": ["Nous avons du temps aujourd'hui.", "Vous avez du temps aujourd'hui.", "Ils ont du temps aujourd'hui.", "J'ai du temps aujourd'hui."], "answer": "A"},
-      {"question": "She does not have a bag. (Présent - Negative)", "options": ["Elle n'a pas de sac.", "Il n'a pas de sac.", "Tu n'as pas de sac.", "Nous n'avons pas de sac."], "answer": "A"},
-      {"question": "Do you (formal) have many friends? (Présent - Question)", "options": ["Avez-vous beaucoup d'amis ?", "As-tu beaucoup d'amis ?", "Ai-je beaucoup d'amis ?", "Avons-nous beaucoup d'amis ?"], "answer": "A"},
-      {"question": "They have bikes. (male/mixed) (Présent)", "options": ["Ils ont des vélos.", "Elles ont des vélos.", "Ils avaient des vélos.", "Ils auront des vélos."], "answer": "A"},
-      {"question": "I do not have your keys. (Présent - Negative)", "options": ["Je n'ai pas tes clés.", "Tu n'as pas mes clés.", "Il n'a pas ses clés.", "Nous n'avons pas leurs clés."], "answer": "A"},
-      {"question": "Do we have bread? (Présent - Question)", "options": ["Avons-nous du pain ?", "Ai-je du pain ?", "Avez-vous du pain ?", "Ont-ils du pain ?"], "answer": "A"},
-      {"question": "You have many books. (Présent, informal)", "options": ["Tu as beaucoup de livres.", "J'ai beaucoup de livres.", "Il a beaucoup de livres.", "Vous avez beaucoup de livres."], "answer": "A"},
-      {"question": "I have a good job. (Présent)", "options": ["J'ai un bon travail.", "Tu as un bon travail.", "Il a un bon travail.", "Nous avons un bon travail."], "answer": "A"},
-      {"question": "She does not have money. (Présent - Negative)", "options": ["Elle n'a pas d'argent.", "Il n'a pas d'argent.", "Tu n'as pas d'argent.", "Nous n'avons pas d'argent."], "answer": "A"},
-      {"question": "Do you have water? (Présent - Question, informal)", "options": ["As-tu de l'eau ?", "Ai-je de l'eau ?", "A-t-il de l'eau ?", "Avez-vous de l'eau ?"], "answer": "A"},
-      {"question": "We have a beautiful house. (Présent)", "options": ["Nous avons une belle maison.", "Vous avez une belle maison.", "Ils ont une belle maison.", "J'ai une belle maison."], "answer": "A"},
-      {"question": "He does not have patience. (Présent - Negative)", "options": ["Il n'a pas de patience.", "Je n'ai pas de patience.", "Tu n'as pas de patience.", "Ils n'ont pas de patience."], "answer": "A"},
-      {"question": "Do they have children? (Présent - Question, male/mixed)", "options": ["Ont-ils des enfants ?", "Ont-elles des enfants ?", "Avez-vous des enfants ?", "As-tu des enfants ?"], "answer": "A"},
-      {"question": "I do not have problems. (Présent - Negative)", "options": ["Je n'ai pas de problèmes.", "Tu n'as pas de problèmes.", "Il n'a pas de problèmes.", "Nous n'avons pas de problèmes."], "answer": "A"},
-      {"question": "Do we have enough food? (Présent - Question)", "options": ["Avons-nous assez de nourriture ?", "Ai-je assez de nourriture ?", "Avez-vous assez de nourriture ?", "Ont-ils assez de nourriture ?"], "answer": "A"},
-      {"question": "You have great ideas. (Présent, informal)", "options": ["Tu as de bonnes idées.", "J'ai de bonnes idées.", "Il a de bonnes idées.", "Vous avez de bonnes idées."], "answer": "A"},
-      {"question": "They do not have luck. (Présent - Negative, female)", "options": ["Elles n'ont pas de chance.", "Ils n'ont pas de chance.", "Vous n'avez pas de chance.", "Nous n'avons pas de chance."], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I have a car", "options": ["Tu as une voiture", "J'ai une voiture", "Il a une voiture", "Nous avons une voiture"], "answer": "B"},
+      {"question": "You have / You are having a problem (informal)", "options": ["J'ai un problème", "Vous avez un problème", "Tu as un problème", "Ils ont un problème"], "answer": "C"},
+      {"question": "He has a dog", "options": ["Elle a un chien", "Tu as un chien", "Ils ont un chien", "Il a un chien"], "answer": "D"},
+      {"question": "She has a cat", "options": ["Il a un chat", "Elle a un chat", "Elles ont un chat", "Tu as un chat"], "answer": "B"},
+      {"question": "We have a house", "options": ["Vous avez une maison", "Ils ont une maison", "J'ai une maison", "Nous avons une maison"], "answer": "D"},
+      {"question": "You have / You are having a party (formal / plural)", "options": ["Tu as une fête", "Nous avons une fête", "Vous avez une fête", "Ils ont une fête"], "answer": "C"},
+      {"question": "They have books (male / mixed)", "options": ["Elles ont des livres", "Ils avaient des livres", "Ils auront des livres", "Ils ont des livres"], "answer": "D"},
+      {"question": "They have keys (female)", "options": ["Ils ont des clés", "Elles avaient des clés", "Elles auront des clés", "Elles ont des clés"], "answer": "D"},
+
+      // Negative statements (6 questions)
+      {"question": "I do not have a car", "options": ["Tu n'as pas de voiture", "Il n'a pas de voiture", "Je n'ai pas de voiture", "Nous n'avons pas de voiture"], "answer": "C"},
+      {"question": "You do not have / You are not having a problem (informal)", "options": ["Je n'ai pas de problème", "Tu n'as pas de problème", "Vous n'avez pas de problème", "Ils n'ont pas de problème"], "answer": "B"},
+      {"question": "He does not have a dog", "options": ["Elle n'a pas de chien", "Tu n'as pas de chien", "Ils n'ont pas de chien", "Il n'a pas de chien"], "answer": "D"},
+      {"question": "She does not have a cat", "options": ["Il n'a pas de chat", "Elle n'a pas de chat", "Elles n'ont pas de chat", "Tu n'as pas de chat"], "answer": "B"},
+      {"question": "We do not have a house", "options": ["Vous n'avez pas de maison", "Ils n'ont pas de maison", "Je n'ai pas de maison", "Nous n'avons pas de maison"], "answer": "D"},
+      {"question": "You do not have / You are not having a party (formal / plural)", "options": ["Tu n'as pas de fête", "Vous n'avez pas de fête", "Nous n'avons pas de fête", "Ils n'ont pas de fête"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Do I have a car?", "options": ["As-tu une voiture ?", "A-t-il une voiture ?", "Ai-je une voiture ?", "Avons-nous une voiture ?"], "answer": "C"},
+      {"question": "Do you have / Are you having a problem? (informal)", "options": ["Ai-je un problème ?", "As-tu un problème ?", "A-t-il un problème ?", "Avez-vous un problème ?"], "answer": "B"},
+      {"question": "Does he have a dog?", "options": ["A-t-elle un chien ?", "Ai-je un chien ?", "As-tu un chien ?", "A-t-il un chien ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Don't I have a car?", "options": ["N'as-tu pas de voiture ?", "N'a-t-il pas de voiture ?", "N'avons-nous pas de voiture ?", "N'ai-je pas de voiture ?"], "answer": "D"},
+      {"question": "Don't you have / Aren't you having a problem? (informal)", "options": ["N'ai-je pas de problème ?", "N'as-tu pas de problème ?", "N'a-t-il pas de problème ?", "N'avez-vous pas de problème ?"], "answer": "B"},
+      {"question": "Doesn't he have a dog?", "options": ["N'a-t-elle pas de chien ?", "N'ai-je pas de chien ?", "N'as-tu pas de chien ?", "N'a-t-il pas de chien ?"], "answer": "D"}
     ],
     "passé_composé": [
       {"question": "I had a good day. (Passé Composé)", "options": ["J'ai eu une bonne journée.", "Tu as eu une bonne journée.", "Il a eu une bonne journée.", "Nous avons eu une bonne journée."], "answer": "A"},
