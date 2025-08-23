@@ -83,26 +83,33 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
   
   "être": {
     "present": [
-      {"question": "I am happy. (Présent)", "options": ["Je suis heureux.", "Je es heureux.", "Je est heureux.", "J'étais heureux."], "answer": "A"},
-      {"question": "You are tired. (Présent - informal)", "options": ["Tu es fatigué.", "Tu suis fatigué.", "Tu êtes fatigué.", "Tu sera fatigué."], "answer": "A"},
-      {"question": "He is a student. (Présent)", "options": ["Il est étudiant.", "Il es étudiant.", "Il suis étudiant.", "Il était étudiant."], "answer": "A"},
-      {"question": "We are friends. (Présent)", "options": ["Nous sommes amis.", "Nous sont amis.", "Nous êtes amis.", "Nous avons amis."], "answer": "A"},
-      {"question": "You are ready. (Présent, formal/plural)", "options": ["Vous êtes prêts.", "Vous es prêts.", "Vous sommes prêts.", "Vous serez prêts."], "answer": "A"},
-      {"question": "She is not here. (Présent - Negative)", "options": ["Elle n'est pas ici.", "Elle ne pas est ici.", "Elle est ne pas ici.", "Elle n'était pas ici."], "answer": "A"},
-      {"question": "They are busy. (Présent - masculine/mixed)", "options": ["Ils sont occupés.", "Ils es occupés.", "Ils sommes occupés.", "Ils étaient occupés."], "answer": "A"},
-      {"question": "She is a teacher. (Présent)", "options": ["Elle est professeure.", "Elle suis professeure.", "Elle sont professeure.", "Elle sera professeure."], "answer": "A"},
-      {"question": "We are not late. (Présent - Negative)", "options": ["Nous ne sommes pas en retard.", "Nous sommes pas en retard.", "Nous ne sont pas en retard.", "Nous avons en retard."], "answer": "A"},
-      {"question": "I am not here. (Présent - Negative)", "options": ["Je ne suis pas ici.", "Je suis pas ici.", "Je es pas ici.", "J'ai pas ici."], "answer": "A"},
-      {"question": "Are you tired? (Présent - Question, formal)", "options": ["Êtes-vous fatigué ?", "Es-tu fatigué ?", "Est-il fatigué ?", "Sont-ils fatigués ?"], "answer": "A"},
-      {"question": "Is he ready? (Présent - Question)", "options": ["Est-il prêt ?", "Est-elle prête ?", "Es-tu prêt ?", "Êtes-vous prêts ?"], "answer": "A"},
-      {"question": "Are we happy? (Présent - Question)", "options": ["Sommes-nous heureux ?", "Suis-je heureux ?", "Êtes-vous heureux ?", "Sont-ils heureux ?"], "answer": "A"},
-      {"question": "They are not at school. (Présent - Negative, feminine)", "options": ["Elles ne sont pas à l'école.", "Ils ne sont pas à l'école.", "Vous n'êtes pas à l'école.", "Nous ne sommes pas à l'école."], "answer": "A"},
-      {"question": "Is she a doctor? (Présent - Question)", "options": ["Est-elle docteur ?", "Est-il docteur ?", "Es-tu docteur ?", "Êtes-vous docteur ?"], "answer": "A"},
-      {"question": "You are not sick. (Présent - Negative, informal)", "options": ["Tu n'es pas malade.", "Je ne suis pas malade.", "Il n'est pas malade.", "Nous ne sommes pas malades."], "answer": "A"},
-      {"question": "They are at home. (Présent - masculine/mixed)", "options": ["Ils sont à la maison.", "Elles sont à la maison.", "Ils étaient à la maison.", "Ils seront à la maison."], "answer": "A"},
-      {"question": "Am I late? (Présent - Question)", "options": ["Suis-je en retard ?", "Es-tu en retard ?", "Est-il en retard ?", "Sommes-nous en retard ?"], "answer": "A"},
-      {"question": "You are very kind. (Présent - formal)", "options": ["Vous êtes très gentil.", "Tu es très gentil.", "Il est très gentil.", "Nous sommes très gentils."], "answer": "A"},
-      {"question": "He is not French. (Présent - Negative)", "options": ["Il n'est pas français.", "Elle n'est pas française.", "Tu n'es pas français.", "Nous ne sommes pas français."], "answer": "A"}
+      // Positive statements (8 questions)
+      {"question": "I am happy", "options": ["Tu es heureux", "Je suis heureux", "Il est heureux", "Nous sommes heureux"], "answer": "B"},
+      {"question": "You are ready (informal)", "options": ["Je suis prêt", "Vous êtes prêts", "Tu es prêt", "Ils sont prêts"], "answer": "C"},
+      {"question": "He is tired", "options": ["Elle est fatiguée", "Tu es fatigué", "Ils sont fatigués", "Il est fatigué"], "answer": "D"},
+      {"question": "She is late", "options": ["Il est en retard", "Elle est en retard", "Elles sont en retard", "Tu es en retard"], "answer": "B"},
+      {"question": "We are happy", "options": ["Vous êtes heureux", "Ils sont heureux", "Je suis heureux", "Nous sommes heureux"], "answer": "D"},
+      {"question": "You are kind (formal/plural)", "options": ["Tu es gentil", "Nous sommes gentils", "Vous êtes gentils", "Ils sont gentils"], "answer": "C"},
+      {"question": "They are teachers (male/mixed)", "options": ["Elles sont professeures", "Ils étaient professeurs", "Ils seront professeurs", "Ils sont professeurs"], "answer": "D"},
+      {"question": "They are friends (female)", "options": ["Ils sont amis", "Elles sont amies", "Elles étaient amies", "Elles seront amies"], "answer": "B"},
+
+      // Negative statements (6 questions)
+      {"question": "I am not tired", "options": ["Tu n'es pas fatigué", "Il n'est pas fatigué", "Je ne suis pas fatigué", "Nous ne sommes pas fatigués"], "answer": "C"},
+      {"question": "You are not late (informal)", "options": ["Je ne suis pas en retard", "Tu n'es pas en retard", "Vous n'êtes pas en retard", "Ils ne sont pas en retard"], "answer": "B"},
+      {"question": "He is not ready", "options": ["Elle n'est pas prête", "Tu n'es pas prêt", "Ils ne sont pas prêts", "Il n'est pas prêt"], "answer": "D"},
+      {"question": "She is not kind", "options": ["Il n'est pas gentil", "Elle n'est pas gentille", "Elles ne sont pas gentilles", "Tu n'es pas gentil"], "answer": "B"},
+      {"question": "We are not happy", "options": ["Vous n'êtes pas heureux", "Ils ne sont pas heureux", "Je ne suis pas heureux", "Nous ne sommes pas heureux"], "answer": "D"},
+      {"question": "You are not teachers (formal/plural)", "options": ["Tu n'es pas professeur", "Vous n'êtes pas professeurs", "Nous ne sommes pas professeurs", "Ils ne sont pas professeurs"], "answer": "B"},
+
+      // Positive questions (3 questions)
+      {"question": "Am I happy?", "options": ["Es-tu heureux ?", "Est-il heureux ?", "Suis-je heureux ?", "Sommes-nous heureux ?"], "answer": "C"},
+      {"question": "Are you ready? (informal)", "options": ["Suis-je prêt ?", "Es-tu prêt ?", "Est-il prêt ?", "Êtes-vous prêts ?"], "answer": "B"},
+      {"question": "Is he tired?", "options": ["Est-elle fatiguée ?", "Suis-je fatigué ?", "Es-tu fatigué ?", "Est-il fatigué ?"], "answer": "D"},
+
+      // Negative questions (3 questions)
+      {"question": "Aren't I happy?", "options": ["N'es-tu pas heureux ?", "N'est-il pas heureux ?", "Ne sommes-nous pas heureux ?", "Ne suis-je pas heureux ?"], "answer": "D"},
+      {"question": "Aren't you late? (informal)", "options": ["Ne suis-je pas en retard ?", "N'es-tu pas en retard ?", "N'est-il pas en retard ?", "N'êtes-vous pas en retard ?"], "answer": "B"},
+      {"question": "Isn't he kind?", "options": ["N'est-elle pas gentille ?", "Ne suis-je pas gentil ?", "N'est-il pas gentil ?", "N'es-tu pas gentil ?"], "answer": "C"}
     ],
     "passé_composé": [
       // Positive statements (8 questions)
