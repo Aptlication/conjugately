@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import { useAuth } from "@/hooks/useAuth";
 
 function App() {
   // French Verb Master - No reminder version
+  const { user, isLoading, isAuthenticated } = useAuth();
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
@@ -30,14 +32,18 @@ function App() {
 
   // Load completed courses and progress on app start
   useEffect(() => {
-    loadUserData();
-  }, []);
+    if (isAuthenticated && user?.id) {
+      loadUserData();
+    }
+  }, [isAuthenticated, user?.id]);
 
   const loadUserData = async () => {
+    if (!user?.id) return;
+    
     try {
       const [completedResponse, progressResponse] = await Promise.all([
-        fetch('/api/completed-courses/1'),
-        fetch('/api/course-progress/1')
+        fetch(`/api/completed-courses/${user.id}`),
+        fetch(`/api/course-progress/${user.id}`)
       ]);
       
       if (completedResponse.ok) {
@@ -57,12 +63,14 @@ function App() {
   const handleResetCourse = async (courseType: string, timeFrame: string, event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent triggering the course button click
     
+    if (!user?.id) return;
+    
     if (!confirm(`Are you sure you want to reset the ${courseType} ${timeFrame} course? This will mark it as not passed and allow you to retake it.`)) {
       return;
     }
 
     try {
-      const response = await fetch(`/api/completed-courses/1/${courseType}/${timeFrame}`, {
+      const response = await fetch(`/api/completed-courses/${user.id}/${courseType}/${timeFrame}`, {
         method: 'DELETE',
       });
 
@@ -592,7 +600,7 @@ function App() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userId: 1,
+          userId: user?.id || 1,
           courseType: "beginner",
           timeFrame: courseInfo.timeFrame,
           tense: courseInfo.tense,
@@ -1423,7 +1431,7 @@ function App() {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
-                userId: 1,
+                userId: user?.id || 1,
                 courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,
@@ -1447,7 +1455,7 @@ function App() {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
-                userId: 1,
+                userId: user?.id || 1,
                 courseType: courseInfo.courseLevel?.toLowerCase() || "beginner",
                 timeFrame: courseInfo.timeFrame,
                 tense: courseInfo.tense,

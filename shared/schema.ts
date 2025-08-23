@@ -1,11 +1,33 @@
-import { pgTable, text, serial, integer, boolean, json } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, json, varchar, timestamp, index } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+import { sql } from 'drizzle-orm';
 
+// Session storage table.
+// (IMPORTANT) This table is mandatory for Replit Auth, don't drop it.
+export const sessions = pgTable(
+  "sessions",
+  {
+    sid: varchar("sid").primaryKey(),
+    sess: json("sess").notNull(),
+    expire: timestamp("expire").notNull(),
+  },
+  (table) => [index("IDX_session_expire").on(table.expire)],
+);
+
+// User storage table - keeping existing structure for now
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   username: text("username").notNull().unique(),
   password: text("password").notNull(),
+  // Add Replit Auth fields while preserving existing structure
+  replitUserId: varchar("replit_user_id").unique(), // Replit's actual user ID
+  email: varchar("email"),
+  firstName: varchar("first_name"),
+  lastName: varchar("last_name"),
+  profileImageUrl: varchar("profile_image_url"),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
 });
 
 export const quizzes = pgTable("quizzes", {
@@ -18,7 +40,7 @@ export const quizzes = pgTable("quizzes", {
 
 export const courseProgress = pgTable("course_progress", {
   id: serial("id").primaryKey(),
-  userId: integer("user_id").notNull().default(1), // Default user for now
+  userId: integer("user_id").notNull().default(1), // Keep existing integer structure
   courseType: text("course_type").notNull(), // "beginner", "moderate", etc.
   timeFrame: text("time_frame").notNull(), // "Past", "Present", "Future"
   tense: text("tense").notNull(), // "Passé Simple", "Présent", etc.
@@ -52,11 +74,6 @@ export const completedCourses = pgTable("completed_courses", {
   examPassed: boolean("exam_passed").notNull(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-});
-
 export const insertQuizSchema = createInsertSchema(quizzes).pick({
   verb: true,
   timeFrame: true,
@@ -80,8 +97,9 @@ export const quizRequestSchema = z.object({
   isExam: z.boolean().optional(),
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
+export type UpsertUser = typeof users.$inferInsert;
 export type User = typeof users.$inferSelect;
+export type InsertUser = typeof users.$inferInsert;
 export type InsertQuiz = z.infer<typeof insertQuizSchema>;
 export type Quiz = typeof quizzes.$inferSelect;
 export type QuizRequest = z.infer<typeof quizRequestSchema>;

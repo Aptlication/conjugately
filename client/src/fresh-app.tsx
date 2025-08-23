@@ -1,7 +1,42 @@
 import { useState } from "react";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
+import { useAuth } from "@/hooks/useAuth";
+
+// Fresh App Wrapper with Auth
+function FreshAppWithAuth() {
+  const { user, isLoading, isAuthenticated } = useAuth();
+  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+  
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-white text-3xl mb-4">French Verb Master</h1>
+          <p className="text-gray-300 mb-6">Please log in to continue</p>
+          <a 
+            href="/api/login" 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded"
+          >
+            Log In
+          </a>
+        </div>
+      </div>
+    );
+  }
+  
+  return <FreshAppCore user={user} />;
+}
 
 // Complete French Verb Master Application - Fresh Implementation
-export default function FreshApp() {
+function FreshAppCore({ user }: { user: any }) {
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
@@ -560,5 +595,12 @@ export default function FreshApp() {
         }
       `}</style>
     </div>
+  );
+}
+
+// Export the wrapped component
+export default function FreshApp() {
+  return (
+    <FreshAppWithAuth />
   );
 }
