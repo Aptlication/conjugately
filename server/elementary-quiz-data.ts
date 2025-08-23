@@ -1,6 +1,6 @@
 // Elementary Level Present Tense Quiz Data
 // Validated by Perplexity AI for French grammar accuracy
-// Covers 6 verbs: être, avoir, faire, dire, aller, voir
+// Covers 7 verbs: dire, voir, savoir, vouloir, venir, pouvoir, besoin
 
 export interface ElementaryQuizQuestion {
   question: string;
@@ -13,521 +13,863 @@ export interface ElementaryQuizQuestion {
 }
 
 export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion[]> = {
-  "être": [
+  "dire": [
     {
-      question: "I am happy. (male)",
-      hint: "Conjugate être for je in Présent with masculine adjective",
+      question: "I say the truth / I am saying the truth",
+      hint: "Use present tense of 'dire' with je and la vérité",
       answerOptions: [
-        { text: "Je fus heureux", rationale: "Wrong tense - this is passé simple, not present.", isCorrect: false },
-        { text: "J'ai été heureux", rationale: "Wrong tense - this is passé composé, not present.", isCorrect: false },
-        { text: "Je suis heureux", rationale: "Correct! Present tense of être with masculine adjective agreement.", isCorrect: true },
-        { text: "Je étais heureux", rationale: "Wrong tense - this is imparfait, not present.", isCorrect: false }
+        { text: "Je dirai la vérité", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Je dis la vérité", rationale: "Correct! 'Je dis la vérité' means 'I say the truth' in present tense.", isCorrect: true },
+        { text: "Je disais la vérité", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai dit la vérité", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "I am happy. (female)",
-      hint: "Conjugate être for je in Présent with feminine adjective",
+      question: "You don't say anything / You are not saying anything (informal)",
+      hint: "Use negative present tense of 'dire' with tu and rien",
       answerOptions: [
-        { text: "Je serai heureuse", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
-        { text: "Je suis heureuse", rationale: "Correct! Present tense of être with feminine adjective agreement.", isCorrect: true },
-        { text: "Je vais être heureuse", rationale: "Wrong tense - this is futur proche, not present.", isCorrect: false },
-        { text: "Je suis en train d'être heureuse", rationale: "Wrong tense - this is présent progressif, not simple present.", isCorrect: false }
+        { text: "Tu ne disais rien", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne diras rien", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu ne dis rien", rationale: "Correct! 'Tu ne dis rien' means 'You don't say anything' (informal).", isCorrect: true },
+        { text: "Tu n'as dit rien", rationale: "Wrong tense and grammar - this uses past perfect incorrectly.", isCorrect: false }
       ]
     },
     {
-      question: "You are not tired. (tu, male)",
-      hint: "Conjugate être for tu in Présent with negation",
+      question: "He says hello / He is saying hello",
+      hint: "Use present tense of 'dire' with il and bonjour",
       answerOptions: [
-        { text: "Tu n'es en train d'être pas fatigué", rationale: "Wrong tense and incorrect negation placement.", isCorrect: false },
-        { text: "Tu n'as été pas fatigué", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false },
-        { text: "Tu ne vas être pas fatigué", rationale: "Wrong tense and incorrect negation placement.", isCorrect: false },
-        { text: "Tu n'es pas fatigué", rationale: "Correct! Present tense negative form with proper negation structure.", isCorrect: true }
+        { text: "Il disait bonjour", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il dit bonjour", rationale: "Correct! 'Il dit bonjour' means 'He says hello' in present tense.", isCorrect: true },
+        { text: "Il dira bonjour", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a dit bonjour", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You are tired. (tu, female)",
-      hint: "Conjugate être for tu in Présent with feminine adjective",
+      question: "She doesn't say no / She is not saying no",
+      hint: "Use negative present tense of 'dire' with elle and non",
       answerOptions: [
-        { text: "Tu avais été fatiguée", rationale: "Wrong tense - this is plus-que-parfait.", isCorrect: false },
-        { text: "Tu seras fatiguée", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Tu es fatiguée", rationale: "Correct! Present tense with feminine adjective agreement.", isCorrect: true },
-        { text: "Tu es en train d'être fatiguée", rationale: "Wrong tense - this is présent progressif, not simple present.", isCorrect: false }
+        { text: "Elle n'a dit non", rationale: "Wrong tense and grammar - this uses past perfect incorrectly.", isCorrect: false },
+        { text: "Elle ne dira pas non", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne dit pas non", rationale: "Correct! 'Elle ne dit pas non' means 'She doesn't say no'.", isCorrect: true },
+        { text: "Elle ne disait pas non", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "He is not here.",
-      hint: "Conjugate être for il in Présent with negation",
+      question: "We say yes / We are saying yes",
+      hint: "Use present tense of 'dire' with nous and oui",
       answerOptions: [
-        { text: "Il n'est en train d'être pas ici", rationale: "Wrong tense and incorrect negation placement.", isCorrect: false },
-        { text: "Il ne serait pas ici", rationale: "Wrong tense - this is conditional.", isCorrect: false },
-        { text: "Il n'est pas ici", rationale: "Correct! Present tense negative form with proper structure.", isCorrect: true },
-        { text: "Il n'a été pas ici", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+        { text: "Nous avons dit oui", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous disons oui", rationale: "Correct! 'Nous disons oui' means 'We say yes' in present tense.", isCorrect: true },
+        { text: "Nous dirons oui", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous disions oui", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "She is a teacher.",
-      hint: "Conjugate être for elle in Présent with profession",
+      question: "You say thank you / You are saying thank you (formal)",
+      hint: "Use present tense of 'dire' with vous and merci",
       answerOptions: [
-        { text: "Elle est professeure", rationale: "Correct! Present tense with feminine profession form.", isCorrect: true },
-        { text: "Elle va être professeure", rationale: "Wrong tense - this is futur proche.", isCorrect: false },
-        { text: "Elle sera professeure", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Elle serait professeure", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Vous disiez merci", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous dites merci", rationale: "Correct! 'Vous dites merci' means 'You say thank you' (formal).", isCorrect: true },
+        { text: "Vous direz merci", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez dit merci", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We are not ready. (nous, male)",
-      hint: "Conjugate être for nous in Présent with masculine plural adjective",
+      question: "They say good morning / They are saying good morning (male / mixed)",
+      hint: "Use present tense of 'dire' with ils and bonjour",
       answerOptions: [
-        { text: "Nous ne sommes pas prêts", rationale: "Correct! Present tense negative with masculine plural adjective.", isCorrect: true },
-        { text: "Nous ne serons pas prêts", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Nous n'avions été pas prêts", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false },
-        { text: "Nous n'avons été pas prêts", rationale: "Wrong tense and incorrect negation placement.", isCorrect: false }
+        { text: "Ils diront bonjour", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils disaient bonjour", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils disent bonjour", rationale: "Correct! 'Ils disent bonjour' means 'They say good morning' (male/mixed).", isCorrect: true },
+        { text: "Ils ont dit bonjour", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We are not ready. (nous, female)",
-      hint: "Conjugate être for nous in Présent with feminine plural adjective",
+      question: "They don't say goodbye / They are not saying goodbye (female)",
+      hint: "Use negative present tense of 'dire' with elles and au revoir",
       answerOptions: [
-        { text: "Nous ne sommes pas prêtes", rationale: "Correct! Present tense negative with feminine plural adjective.", isCorrect: true },
-        { text: "Nous n'avons été pas prêtes", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false },
-        { text: "Nous ne fûmes pas prêtes", rationale: "Wrong tense - this is passé simple.", isCorrect: false },
-        { text: "Nous ne serons pas prêtes", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Elles ne disaient pas au revoir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne diront pas au revoir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne disent pas au revoir", rationale: "Correct! 'Elles ne disent pas au revoir' means 'They don't say goodbye' (female).", isCorrect: true },
+        { text: "Elles n'ont dit pas au revoir", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You (plural) are teachers.",
-      hint: "Conjugate être for vous in Présent with masculine plural profession",
+      question: "Do I say it correctly? / Am I saying it correctly?",
+      hint: "Use question form of 'dire' with je and correctement",
       answerOptions: [
-        { text: "Vous avez été professeurs", rationale: "Wrong tense - this is passé composé.", isCorrect: false },
-        { text: "Vous aviez été professeurs", rationale: "Wrong tense - this is plus-que-parfait.", isCorrect: false },
-        { text: "Vous seriez professeurs", rationale: "Wrong tense - this is conditional.", isCorrect: false },
-        { text: "Vous êtes professeurs", rationale: "Correct! Present tense with masculine plural profession.", isCorrect: true }
+        { text: "Dirai-je cela correctement ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je dis cela correctement ?", rationale: "Correct! 'Est-ce que je dis cela correctement ?' means 'Do I say it correctly?'", isCorrect: true },
+        { text: "Disais-je cela correctement ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je dit cela correctement ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You (plural) are teachers. (female teachers)",
-      hint: "Conjugate être for vous in Présent with feminine plural profession",
+      question: "Do you say please? / Are you saying please? (informal)",
+      hint: "Use question form of 'dire' with tu and s'il te plaît",
       answerOptions: [
-        { text: "Vous êtes professeures", rationale: "Correct! Present tense with feminine plural profession.", isCorrect: true },
-        { text: "Vous seriez professeures", rationale: "Wrong tense - this is conditional.", isCorrect: false },
-        { text: "Vous aviez été professeures", rationale: "Wrong tense - this is plus-que-parfait.", isCorrect: false },
-        { text: "Vous avez été professeures", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Disais-tu s'il te plaît ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Diras-tu s'il te plaît ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Dis-tu s'il te plaît ?", rationale: "Correct! 'Dis-tu s'il te plaît ?' means 'Do you say please?' (informal).", isCorrect: true },
+        { text: "As-tu dit s'il te plaît ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't he say sorry? / Isn't he saying sorry?",
+      hint: "Use negative question form of 'dire' with il and pardon",
+      answerOptions: [
+        { text: "Ne dira-t-il pas pardon ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne dit-il pas pardon ?", rationale: "Correct! 'Ne dit-il pas pardon ?' means 'Doesn't he say sorry?'", isCorrect: true },
+        { text: "Ne disait-il pas pardon ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-il pas dit pardon ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Don't they say the words? / Aren't they saying the words? (female)",
+      hint: "Use negative question form of 'dire' with elles and les mots",
+      answerOptions: [
+        { text: "Ne diront-elles pas les mots ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne disaient-elles pas les mots ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne disent-elles pas les mots ?", rationale: "Correct! 'Ne disent-elles pas les mots ?' means 'Don't they say the words?' (female).", isCorrect: true },
+        { text: "N'ont-elles pas dit les mots ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     }
   ],
 
-  "avoir": [
+  "voir": [
     {
-      question: "I have a cat.",
-      hint: "Conjugate avoir for je in Présent",
+      question: "I see you / I am seeing you",
+      hint: "Use present tense of 'voir' with je and vous",
       answerOptions: [
-        { text: "J'ai un chat", rationale: "Correct! Present tense of avoir for je.", isCorrect: true },
-        { text: "Je ai un chat", rationale: "Missing apostrophe - should be J'ai.", isCorrect: false },
-        { text: "J'avais un chat", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "J'aurai un chat", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Je verrai vous", rationale: "Wrong tense and pronoun - this is future with wrong object pronoun.", isCorrect: false },
+        { text: "Je vois vous", rationale: "Wrong pronoun - should use 'te' or 'vous' as object pronoun 'vous'.", isCorrect: false },
+        { text: "Je vous vois", rationale: "Correct! 'Je vous vois' means 'I see you' with proper object pronoun placement.", isCorrect: true },
+        { text: "J'ai vu vous", rationale: "Wrong tense and pronoun placement.", isCorrect: false }
       ]
     },
     {
-      question: "I don't have time.",
-      hint: "Conjugate avoir for je in Présent with negation",
+      question: "You don't see the problem / You are not seeing the problem (informal)",
+      hint: "Use negative present tense of 'voir' with tu and le problème",
       answerOptions: [
-        { text: "Je n'ai pas le temps", rationale: "Correct! Present tense negative form of avoir.", isCorrect: true },
-        { text: "Je ne ai pas le temps", rationale: "Wrong contraction - should be n'ai.", isCorrect: false },
-        { text: "Je n'avais pas le temps", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Je n'aurai pas le temps", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Tu ne voyais pas le problème", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne vois pas le problème", rationale: "Correct! 'Tu ne vois pas le problème' means 'You don't see the problem' (informal).", isCorrect: true },
+        { text: "Tu ne verras pas le problème", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu n'as vu pas le problème", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You have a question.",
-      hint: "Conjugate avoir for tu in Présent",
+      question: "He sees the movie / He is seeing the movie",
+      hint: "Use present tense of 'voir' with il and le film",
       answerOptions: [
-        { text: "Tu as une question", rationale: "Correct! Present tense of avoir for tu.", isCorrect: true },
-        { text: "Tu avais une question", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Tu auras une question", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Tu aurais une question", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Il voyait le film", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il voit le film", rationale: "Correct! 'Il voit le film' means 'He sees the movie' in present tense.", isCorrect: true },
+        { text: "Il verra le film", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a vu le film", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You don't have a car.",
-      hint: "Conjugate avoir for tu in Présent with negation",
+      question: "She doesn't see the car / She is not seeing the car",
+      hint: "Use negative present tense of 'voir' with elle and la voiture",
       answerOptions: [
-        { text: "Tu n'as pas de voiture", rationale: "Correct! Present tense negative with partitive article.", isCorrect: true },
-        { text: "Tu ne as pas de voiture", rationale: "Wrong contraction - should be n'as.", isCorrect: false },
-        { text: "Tu n'avais pas de voiture", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Tu n'auras pas de voiture", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Elle n'a vu la voiture", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle ne verra pas la voiture", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne voit pas la voiture", rationale: "Correct! 'Elle ne voit pas la voiture' means 'She doesn't see the car'.", isCorrect: true },
+        { text: "Elle ne voyait pas la voiture", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "He has money.",
-      hint: "Conjugate avoir for il in Présent",
+      question: "We see the stars / We are seeing the stars",
+      hint: "Use present tense of 'voir' with nous and les étoiles",
       answerOptions: [
-        { text: "Il a de l'argent", rationale: "Correct! Present tense with partitive article.", isCorrect: true },
-        { text: "Il avait de l'argent", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Il aura de l'argent", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Il aurait de l'argent", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Nous avons vu les étoiles", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous voyons les étoiles", rationale: "Correct! 'Nous voyons les étoiles' means 'We see the stars' in present tense.", isCorrect: true },
+        { text: "Nous verrons les étoiles", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous voyions les étoiles", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "She doesn't have children.",
-      hint: "Conjugate avoir for elle in Présent with negation",
+      question: "You see the doctor / You are seeing the doctor (formal)",
+      hint: "Use present tense of 'voir' with vous and le médecin",
       answerOptions: [
-        { text: "Elle n'a pas d'enfants", rationale: "Correct! Present tense negative with partitive article.", isCorrect: true },
-        { text: "Elle ne a pas d'enfants", rationale: "Wrong contraction - should be n'a.", isCorrect: false },
-        { text: "Elle n'avait pas d'enfants", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Elle n'aura pas d'enfants", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Vous voyiez le médecin", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous voyez le médecin", rationale: "Correct! 'Vous voyez le médecin' means 'You see the doctor' (formal).", isCorrect: true },
+        { text: "Vous verrez le médecin", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez vu le médecin", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We have homework.",
-      hint: "Conjugate avoir for nous in Présent",
+      question: "They see the house / They are seeing the house (male / mixed)",
+      hint: "Use present tense of 'voir' with ils and la maison",
       answerOptions: [
-        { text: "Nous avons des devoirs", rationale: "Correct! Present tense with plural indefinite article.", isCorrect: true },
-        { text: "Nous avions des devoirs", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Nous aurons des devoirs", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Nous aurions des devoirs", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Ils verront la maison", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils voyaient la maison", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils voient la maison", rationale: "Correct! 'Ils voient la maison' means 'They see the house' (male/mixed).", isCorrect: true },
+        { text: "Ils ont vu la maison", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We don't have problems.",
-      hint: "Conjugate avoir for nous in Présent with negation",
+      question: "They don't see the solution / They are not seeing the solution (female)",
+      hint: "Use negative present tense of 'voir' with elles and la solution",
       answerOptions: [
-        { text: "Nous n'avons pas de problèmes", rationale: "Correct! Present tense negative with partitive article.", isCorrect: true },
-        { text: "Nous ne avons pas de problèmes", rationale: "Wrong contraction - should be n'avons.", isCorrect: false },
-        { text: "Nous n'avions pas de problèmes", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Nous n'aurons pas de problèmes", rationale: "Wrong tense - this is future.", isCorrect: false }
+        { text: "Elles ne voyaient pas la solution", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne verront pas la solution", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne voient pas la solution", rationale: "Correct! 'Elles ne voient pas la solution' means 'They don't see the solution' (female).", isCorrect: true },
+        { text: "Elles n'ont vu pas la solution", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You (plural) have experience.",
-      hint: "Conjugate avoir for vous in Présent",
+      question: "Do I see clearly? / Am I seeing clearly?",
+      hint: "Use question form of 'voir' with je and clairement",
       answerOptions: [
-        { text: "Vous avez de l'expérience", rationale: "Correct! Present tense with partitive article.", isCorrect: true },
-        { text: "Vous aviez de l'expérience", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Vous aurez de l'expérience", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Vous auriez de l'expérience", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Verrai-je clairement ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je vois clairement ?", rationale: "Correct! 'Est-ce que je vois clairement ?' means 'Do I see clearly?'", isCorrect: true },
+        { text: "Voyais-je clairement ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je vu clairement ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "They have keys.",
-      hint: "Conjugate avoir for ils in Présent",
+      question: "Do you see the bird? / Are you seeing the bird? (informal)",
+      hint: "Use question form of 'voir' with tu and l'oiseau",
       answerOptions: [
-        { text: "Ils ont des clés", rationale: "Correct! Present tense with plural indefinite article.", isCorrect: true },
-        { text: "Ils avaient des clés", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Ils auront des clés", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Ils auraient des clés", rationale: "Wrong tense - this is conditional.", isCorrect: false }
+        { text: "Voyais-tu l'oiseau ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Verras-tu l'oiseau ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vois-tu l'oiseau ?", rationale: "Correct! 'Vois-tu l'oiseau ?' means 'Do you see the bird?' (informal).", isCorrect: true },
+        { text: "As-tu vu l'oiseau ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't she see the cat? / Isn't she seeing the cat?",
+      hint: "Use negative question form of 'voir' with elle and le chat",
+      answerOptions: [
+        { text: "Ne verra-t-elle pas le chat ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne voit-elle pas le chat ?", rationale: "Correct! 'Ne voit-elle pas le chat ?' means 'Doesn't she see the cat?'", isCorrect: true },
+        { text: "Ne voyait-elle pas le chat ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-elle pas vu le chat ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Don't they see the light? / Aren't they seeing the light? (male / mixed)",
+      hint: "Use negative question form of 'voir' with ils and la lumière",
+      answerOptions: [
+        { text: "Ne verront-ils pas la lumière ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne voyaient-ils pas la lumière ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne voient-ils pas la lumière ?", rationale: "Correct! 'Ne voient-ils pas la lumière ?' means 'Don't they see the light?' (male/mixed).", isCorrect: true },
+        { text: "N'ont-ils pas vu la lumière ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     }
   ],
 
-  "faire": [
+  "savoir": [
     {
-      question: "I do my homework.",
-      hint: "Conjugate faire for je in Présent",
+      question: "I know the answer / I am knowing the answer",
+      hint: "Use present tense of 'savoir' with je and la réponse",
       answerOptions: [
-        { text: "Je fais mes devoirs", rationale: "Correct! Present tense of faire for je.", isCorrect: true },
-        { text: "Je faisais mes devoirs", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Je ferai mes devoirs", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "J'ai fait mes devoirs", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Je saurai la réponse", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Je sais la réponse", rationale: "Correct! 'Je sais la réponse' means 'I know the answer' in present tense.", isCorrect: true },
+        { text: "Je savais la réponse", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai su la réponse", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "I don't make mistakes.",
-      hint: "Conjugate faire for je in Présent with negation",
+      question: "You don't know French / You are not knowing French (informal)",
+      hint: "Use negative present tense of 'savoir' with tu and le français",
       answerOptions: [
-        { text: "Je ne fais pas d'erreurs", rationale: "Correct! Present tense negative with partitive article.", isCorrect: true },
-        { text: "Je ne faisais pas d'erreurs", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Je ne ferai pas d'erreurs", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Je n'ai pas fait d'erreurs", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Tu ne savais pas le français", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne sauras pas le français", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu ne sais pas le français", rationale: "Correct! 'Tu ne sais pas le français' means 'You don't know French' (informal).", isCorrect: true },
+        { text: "Tu n'as su pas le français", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You do sports.",
-      hint: "Conjugate faire for tu in Présent",
+      question: "He knows how to swim / He is knowing how to swim",
+      hint: "Use present tense of 'savoir' with il and nager",
       answerOptions: [
-        { text: "Tu fais du sport", rationale: "Correct! Present tense with partitive article.", isCorrect: true },
-        { text: "Tu faisais du sport", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Tu feras du sport", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Tu as fait du sport", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Il savait nager", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il sait nager", rationale: "Correct! 'Il sait nager' means 'He knows how to swim' in present tense.", isCorrect: true },
+        { text: "Il saura nager", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a su nager", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You don't do the cooking.",
-      hint: "Conjugate faire for tu in Présent with negation",
+      question: "She doesn't know the truth / She is not knowing the truth",
+      hint: "Use negative present tense of 'savoir' with elle and la vérité",
       answerOptions: [
-        { text: "Tu ne fais pas la cuisine", rationale: "Correct! Present tense negative form.", isCorrect: true },
-        { text: "Tu ne faisais pas la cuisine", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Tu ne feras pas la cuisine", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Tu n'as pas fait la cuisine", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Elle n'a su la vérité", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle ne saura pas la vérité", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne sait pas la vérité", rationale: "Correct! 'Elle ne sait pas la vérité' means 'She doesn't know the truth'.", isCorrect: true },
+        { text: "Elle ne savait pas la vérité", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "He makes coffee.",
-      hint: "Conjugate faire for il in Présent",
+      question: "We know the way / We are knowing the way",
+      hint: "Use present tense of 'savoir' with nous and le chemin",
       answerOptions: [
-        { text: "Il fait du café", rationale: "Correct! Present tense with partitive article.", isCorrect: true },
-        { text: "Il faisait du café", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Il fera du café", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Il a fait du café", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Nous avons su le chemin", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous savons le chemin", rationale: "Correct! 'Nous savons le chemin' means 'We know the way' in present tense.", isCorrect: true },
+        { text: "Nous saurons le chemin", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous savions le chemin", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "She doesn't do the shopping.",
-      hint: "Conjugate faire for elle in Présent with negation",
+      question: "You know how to cook / You are knowing how to cook (formal)",
+      hint: "Use present tense of 'savoir' with vous and cuisiner",
       answerOptions: [
-        { text: "Elle ne fait pas les courses", rationale: "Correct! Present tense negative form.", isCorrect: true },
-        { text: "Elle ne faisait pas les courses", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Elle ne fera pas les courses", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Elle n'a pas fait les courses", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Vous saviez cuisiner", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous savez cuisiner", rationale: "Correct! 'Vous savez cuisiner' means 'You know how to cook' (formal).", isCorrect: true },
+        { text: "Vous saurez cuisiner", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez su cuisiner", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We do projects.",
-      hint: "Conjugate faire for nous in Présent",
+      question: "They know the lesson / They are knowing the lesson (male / mixed)",
+      hint: "Use present tense of 'savoir' with ils and la leçon",
       answerOptions: [
-        { text: "Nous faisons des projets", rationale: "Correct! Present tense with plural indefinite article.", isCorrect: true },
-        { text: "Nous faisions des projets", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Nous ferons des projets", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Nous avons fait des projets", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Ils sauront la leçon", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils savaient la leçon", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils savent la leçon", rationale: "Correct! 'Ils savent la leçon' means 'They know the lesson' (male/mixed).", isCorrect: true },
+        { text: "Ils ont su la leçon", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We don't make noise.",
-      hint: "Conjugate faire for nous in Présent with negation",
+      question: "They don't know how to dance / They are not knowing how to dance (female)",
+      hint: "Use negative present tense of 'savoir' with elles and danser",
       answerOptions: [
-        { text: "Nous ne faisons pas de bruit", rationale: "Correct! Present tense negative with partitive article.", isCorrect: true },
-        { text: "Nous ne faisions pas de bruit", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Nous ne ferons pas de bruit", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Nous n'avons pas fait de bruit", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Elles ne savaient pas danser", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne sauront pas danser", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne savent pas danser", rationale: "Correct! 'Elles ne savent pas danser' means 'They don't know how to dance' (female).", isCorrect: true },
+        { text: "Elles n'ont su pas danser", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You (plural) do exercises.",
-      hint: "Conjugate faire for vous in Présent",
+      question: "Do I know where it is? / Am I knowing where it is?",
+      hint: "Use question form of 'savoir' with je and où c'est",
       answerOptions: [
-        { text: "Vous faites des exercices", rationale: "Correct! Present tense with plural indefinite article.", isCorrect: true },
-        { text: "Vous faisiez des exercices", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Vous ferez des exercices", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Vous avez fait des exercices", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Saurai-je où c'est ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je sais où c'est ?", rationale: "Correct! 'Est-ce que je sais où c'est ?' means 'Do I know where it is?'", isCorrect: true },
+        { text: "Savais-je où c'est ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je su où c'est ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "They make plans.",
-      hint: "Conjugate faire for ils in Présent",
+      question: "Do you know how to read? / Are you knowing how to read? (informal)",
+      hint: "Use question form of 'savoir' with tu and lire",
       answerOptions: [
-        { text: "Ils font des plans", rationale: "Correct! Present tense with plural indefinite article.", isCorrect: true },
-        { text: "Ils faisaient des plans", rationale: "Wrong tense - this is imparfait.", isCorrect: false },
-        { text: "Ils feront des plans", rationale: "Wrong tense - this is future.", isCorrect: false },
-        { text: "Ils ont fait des plans", rationale: "Wrong tense - this is passé composé.", isCorrect: false }
+        { text: "Savais-tu lire ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Sauras-tu lire ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Sais-tu lire ?", rationale: "Correct! 'Sais-tu lire ?' means 'Do you know how to read?' (informal).", isCorrect: true },
+        { text: "As-tu su lire ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't he know the name? / Isn't he knowing the name?",
+      hint: "Use negative question form of 'savoir' with il and le nom",
+      answerOptions: [
+        { text: "Ne saura-t-il pas le nom ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne sait-il pas le nom ?", rationale: "Correct! 'Ne sait-il pas le nom ?' means 'Doesn't he know the name?'", isCorrect: true },
+        { text: "Ne savait-il pas le nom ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-il pas su le nom ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Don't they know the secret? / Aren't they knowing the secret? (female)",
+      hint: "Use negative question form of 'savoir' with elles and le secret",
+      answerOptions: [
+        { text: "Ne sauront-elles pas le secret ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne savaient-elles pas le secret ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne savent-elles pas le secret ?", rationale: "Correct! 'Ne savent-elles pas le secret ?' means 'Don't they know the secret?' (female).", isCorrect: true },
+        { text: "N'ont-elles pas su le secret ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    }
+  ],
+
+  "vouloir": [
+    {
+      question: "I want some water / I am wanting some water",
+      hint: "Use present tense of 'vouloir' with je and de l'eau",
+      answerOptions: [
+        { text: "Je voudrai de l'eau", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Je veux de l'eau", rationale: "Correct! 'Je veux de l'eau' means 'I want some water' in present tense.", isCorrect: true },
+        { text: "Je voulais de l'eau", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai voulu de l'eau", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You don't want coffee / You are not wanting coffee (informal)",
+      hint: "Use negative present tense of 'vouloir' with tu and du café",
+      answerOptions: [
+        { text: "Tu ne voulais pas du café", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne voudras pas du café", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu ne veux pas de café", rationale: "Correct! 'Tu ne veux pas de café' means 'You don't want coffee' (informal) - note 'de' after negation.", isCorrect: true },
+        { text: "Tu n'as voulu pas du café", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He wants to go / He is wanting to go",
+      hint: "Use present tense of 'vouloir' with il and aller",
+      answerOptions: [
+        { text: "Il voulait aller", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il veut aller", rationale: "Correct! 'Il veut aller' means 'He wants to go' in present tense.", isCorrect: true },
+        { text: "Il voudra aller", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a voulu aller", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She doesn't want help / She is not wanting help",
+      hint: "Use negative present tense of 'vouloir' with elle and aide",
+      answerOptions: [
+        { text: "Elle n'a voulu aide", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle ne voudra pas d'aide", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne veut pas d'aide", rationale: "Correct! 'Elle ne veut pas d'aide' means 'She doesn't want help' - note 'd'aide' after negation.", isCorrect: true },
+        { text: "Elle ne voulait pas d'aide", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We want to eat / We are wanting to eat",
+      hint: "Use present tense of 'vouloir' with nous and manger",
+      answerOptions: [
+        { text: "Nous avons voulu manger", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous voulons manger", rationale: "Correct! 'Nous voulons manger' means 'We want to eat' in present tense.", isCorrect: true },
+        { text: "Nous voudrons manger", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous voulions manger", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You want to sleep / You are wanting to sleep (formal)",
+      hint: "Use present tense of 'vouloir' with vous and dormir",
+      answerOptions: [
+        { text: "Vous vouliez dormir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous voulez dormir", rationale: "Correct! 'Vous voulez dormir' means 'You want to sleep' (formal).", isCorrect: true },
+        { text: "Vous voudrez dormir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez voulu dormir", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They want bread / They are wanting bread (male / mixed)",
+      hint: "Use present tense of 'vouloir' with ils and du pain",
+      answerOptions: [
+        { text: "Ils voudront du pain", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils voulaient du pain", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils veulent du pain", rationale: "Correct! 'Ils veulent du pain' means 'They want bread' (male/mixed).", isCorrect: true },
+        { text: "Ils ont voulu du pain", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They don't want to work / They are not wanting to work (female)",
+      hint: "Use negative present tense of 'vouloir' with elles and travailler",
+      answerOptions: [
+        { text: "Elles ne voulaient pas travailler", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne voudront pas travailler", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne veulent pas travailler", rationale: "Correct! 'Elles ne veulent pas travailler' means 'They don't want to work' (female).", isCorrect: true },
+        { text: "Elles n'ont voulu pas travailler", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do I want this? / Am I wanting this?",
+      hint: "Use question form of 'vouloir' with je and cela",
+      answerOptions: [
+        { text: "Voudrai-je cela ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je veux cela ?", rationale: "Correct! 'Est-ce que je veux cela ?' means 'Do I want this?'", isCorrect: true },
+        { text: "Voulais-je cela ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je voulu cela ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you want to come? / Are you wanting to come? (informal)",
+      hint: "Use question form of 'vouloir' with tu and venir",
+      answerOptions: [
+        { text: "Voulais-tu venir ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Voudras-tu venir ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Veux-tu venir ?", rationale: "Correct! 'Veux-tu venir ?' means 'Do you want to come?' (informal).", isCorrect: true },
+        { text: "As-tu voulu venir ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't she want tea? / Isn't she wanting tea?",
+      hint: "Use negative question form of 'vouloir' with elle and du thé",
+      answerOptions: [
+        { text: "Ne voudra-t-elle pas du thé ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne veut-elle pas de thé ?", rationale: "Correct! 'Ne veut-elle pas de thé ?' means 'Doesn't she want tea?' - note 'de' after negation.", isCorrect: true },
+        { text: "Ne voulait-elle pas du thé ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-elle pas voulu du thé ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Don't they want to play? / Aren't they wanting to play? (male / mixed)",
+      hint: "Use negative question form of 'vouloir' with ils and jouer",
+      answerOptions: [
+        { text: "Ne voudront-ils pas jouer ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne voulaient-ils pas jouer ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne veulent-ils pas jouer ?", rationale: "Correct! 'Ne veulent-ils pas jouer ?' means 'Don't they want to play?' (male/mixed).", isCorrect: true },
+        { text: "N'ont-ils pas voulu jouer ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    }
+  ],
+
+  "venir": [
+    {
+      question: "I come home / I am coming home",
+      hint: "Use present tense of 'venir' with je and à la maison",
+      answerOptions: [
+        { text: "Je viendrai à la maison", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Je viens à la maison", rationale: "Correct! 'Je viens à la maison' means 'I come home' in present tense.", isCorrect: true },
+        { text: "Je venais à la maison", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Je suis venu à la maison", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You don't come here / You are not coming here (informal)",
+      hint: "Use negative present tense of 'venir' with tu and ici",
+      answerOptions: [
+        { text: "Tu ne venais pas ici", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne viendras pas ici", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu ne viens pas ici", rationale: "Correct! 'Tu ne viens pas ici' means 'You don't come here' (informal).", isCorrect: true },
+        { text: "Tu n'es venu pas ici", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He comes often / He is coming often",
+      hint: "Use present tense of 'venir' with il and souvent",
+      answerOptions: [
+        { text: "Il venait souvent", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il vient souvent", rationale: "Correct! 'Il vient souvent' means 'He comes often' in present tense.", isCorrect: true },
+        { text: "Il viendra souvent", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il est venu souvent", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She doesn't come early / She is not coming early",
+      hint: "Use negative present tense of 'venir' with elle and tôt",
+      answerOptions: [
+        { text: "Elle n'est venue tôt", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle ne viendra pas tôt", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne vient pas tôt", rationale: "Correct! 'Elle ne vient pas tôt' means 'She doesn't come early'.", isCorrect: true },
+        { text: "Elle ne venait pas tôt", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We come together / We are coming together",
+      hint: "Use present tense of 'venir' with nous and ensemble",
+      answerOptions: [
+        { text: "Nous sommes venus ensemble", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous venons ensemble", rationale: "Correct! 'Nous venons ensemble' means 'We come together' in present tense.", isCorrect: true },
+        { text: "Nous viendrons ensemble", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous venions ensemble", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You come by car / You are coming by car (formal)",
+      hint: "Use present tense of 'venir' with vous and en voiture",
+      answerOptions: [
+        { text: "Vous veniez en voiture", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous venez en voiture", rationale: "Correct! 'Vous venez en voiture' means 'You come by car' (formal).", isCorrect: true },
+        { text: "Vous viendrez en voiture", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous êtes venus en voiture", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They come late / They are coming late (male / mixed)",
+      hint: "Use present tense of 'venir' with ils and en retard",
+      answerOptions: [
+        { text: "Ils viendront en retard", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils venaient en retard", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils viennent en retard", rationale: "Correct! 'Ils viennent en retard' means 'They come late' (male/mixed).", isCorrect: true },
+        { text: "Ils sont venus en retard", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They don't come tonight / They are not coming tonight (female)",
+      hint: "Use negative present tense of 'venir' with elles and ce soir",
+      answerOptions: [
+        { text: "Elles ne venaient pas ce soir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne viendront pas ce soir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne viennent pas ce soir", rationale: "Correct! 'Elles ne viennent pas ce soir' means 'They don't come tonight' (female).", isCorrect: true },
+        { text: "Elles ne sont venues pas ce soir", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do I come tomorrow? / Am I coming tomorrow?",
+      hint: "Use question form of 'venir' with je and demain",
+      answerOptions: [
+        { text: "Viendrai-je demain ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je viens demain ?", rationale: "Correct! 'Est-ce que je viens demain ?' means 'Do I come tomorrow?'", isCorrect: true },
+        { text: "Venais-je demain ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Suis-je venu demain ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you come with us? / Are you coming with us? (informal)",
+      hint: "Use question form of 'venir' with tu and avec nous",
+      answerOptions: [
+        { text: "Venais-tu avec nous ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Viendras-tu avec nous ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Viens-tu avec nous ?", rationale: "Correct! 'Viens-tu avec nous ?' means 'Do you come with us?' (informal).", isCorrect: true },
+        { text: "Es-tu venu avec nous ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Doesn't he come on time? / Isn't he coming on time?",
+      hint: "Use negative question form of 'venir' with il and à l'heure",
+      answerOptions: [
+        { text: "Ne viendra-t-il pas à l'heure ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne vient-il pas à l'heure ?", rationale: "Correct! 'Ne vient-il pas à l'heure ?' means 'Doesn't he come on time?'", isCorrect: true },
+        { text: "Ne venait-il pas à l'heure ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'est-il pas venu à l'heure ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Don't they come alone? / Aren't they coming alone? (female)",
+      hint: "Use negative question form of 'venir' with elles and seules",
+      answerOptions: [
+        { text: "Ne viendront-elles pas seules ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne venaient-elles pas seules ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne viennent-elles pas seules ?", rationale: "Correct! 'Ne viennent-elles pas seules ?' means 'Don't they come alone?' (female).", isCorrect: true },
+        { text: "Ne sont-elles pas venues seules ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    }
+  ],
+
+  "pouvoir": [
+    {
+      question: "I can work / I am able to work",
+      hint: "Use present tense of 'pouvoir' with je and travailler",
+      answerOptions: [
+        { text: "Je pourrai travailler", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Je peux travailler", rationale: "Correct! 'Je peux travailler' means 'I can work' in present tense.", isCorrect: true },
+        { text: "Je pouvais travailler", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai pu travailler", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You can't drive / You are not able to drive (informal)",
+      hint: "Use negative present tense of 'pouvoir' with tu and conduire",
+      answerOptions: [
+        { text: "Tu ne pouvais pas conduire", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu ne pourras pas conduire", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu ne peux pas conduire", rationale: "Correct! 'Tu ne peux pas conduire' means 'You can't drive' (informal).", isCorrect: true },
+        { text: "Tu n'as pu pas conduire", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He can sing / He is able to sing",
+      hint: "Use present tense of 'pouvoir' with il and chanter",
+      answerOptions: [
+        { text: "Il pouvait chanter", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il peut chanter", rationale: "Correct! 'Il peut chanter' means 'He can sing' in present tense.", isCorrect: true },
+        { text: "Il pourra chanter", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a pu chanter", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She can't come / She is not able to come",
+      hint: "Use negative present tense of 'pouvoir' with elle and venir",
+      answerOptions: [
+        { text: "Elle n'a pu venir", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle ne pourra pas venir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle ne peut pas venir", rationale: "Correct! 'Elle ne peut pas venir' means 'She can't come'.", isCorrect: true },
+        { text: "Elle ne pouvait pas venir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We can help / We are able to help",
+      hint: "Use present tense of 'pouvoir' with nous and aider",
+      answerOptions: [
+        { text: "Nous avons pu aider", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous pouvons aider", rationale: "Correct! 'Nous pouvons aider' means 'We can help' in present tense.", isCorrect: true },
+        { text: "Nous pourrons aider", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous pouvions aider", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You can understand / You are able to understand (formal)",
+      hint: "Use present tense of 'pouvoir' with vous and comprendre",
+      answerOptions: [
+        { text: "Vous pouviez comprendre", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous pouvez comprendre", rationale: "Correct! 'Vous pouvez comprendre' means 'You can understand' (formal).", isCorrect: true },
+        { text: "Vous pourrez comprendre", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez pu comprendre", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They can run / They are able to run (male / mixed)",
+      hint: "Use present tense of 'pouvoir' with ils and courir",
+      answerOptions: [
+        { text: "Ils pourront courir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils pouvaient courir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils peuvent courir", rationale: "Correct! 'Ils peuvent courir' means 'They can run' (male/mixed).", isCorrect: true },
+        { text: "Ils ont pu courir", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They can't sleep / They are not able to sleep (female)",
+      hint: "Use negative present tense of 'pouvoir' with elles and dormir",
+      answerOptions: [
+        { text: "Elles ne pouvaient pas dormir", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles ne pourront pas dormir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles ne peuvent pas dormir", rationale: "Correct! 'Elles ne peuvent pas dormir' means 'They can't sleep' (female).", isCorrect: true },
+        { text: "Elles n'ont pu pas dormir", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can I call? / Am I able to call?",
+      hint: "Use question form of 'pouvoir' with je and appeler",
+      answerOptions: [
+        { text: "Pourrai-je appeler ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que je peux appeler ?", rationale: "Correct! 'Est-ce que je peux appeler ?' means 'Can I call?'", isCorrect: true },
+        { text: "Pouvais-je appeler ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je pu appeler ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can you wait? / Are you able to wait? (informal)",
+      hint: "Use question form of 'pouvoir' with tu and attendre",
+      answerOptions: [
+        { text: "Pouvais-tu attendre ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Pourras-tu attendre ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Peux-tu attendre ?", rationale: "Correct! 'Peux-tu attendre ?' means 'Can you wait?' (informal).", isCorrect: true },
+        { text: "As-tu pu attendre ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can't she hear? / Isn't she able to hear?",
+      hint: "Use negative question form of 'pouvoir' with elle and entendre",
+      answerOptions: [
+        { text: "Ne pourra-t-elle pas entendre ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne peut-elle pas entendre ?", rationale: "Correct! 'Ne peut-elle pas entendre ?' means 'Can't she hear?'", isCorrect: true },
+        { text: "Ne pouvait-elle pas entendre ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-elle pas pu entendre ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can't they learn? / Aren't they able to learn? (male / mixed)",
+      hint: "Use negative question form of 'pouvoir' with ils and apprendre",
+      answerOptions: [
+        { text: "Ne pourront-ils pas apprendre ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ne pouvaient-ils pas apprendre ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ne peuvent-ils pas apprendre ?", rationale: "Correct! 'Ne peuvent-ils pas apprendre ?' means 'Can't they learn?' (male/mixed).", isCorrect: true },
+        { text: "N'ont-ils pas pu apprendre ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     }
   ],
 
   "besoin": [
-    // Positive statements (8 questions)
     {
       question: "I need a book / I am needing a book",
-      hint: "Use 'avoir besoin de' with je and un livre",
+      hint: "Use present tense of 'avoir besoin de' with je and un livre",
       answerOptions: [
-        { text: "Tu as besoin d'un livre", rationale: "Wrong person - this is 'you need', not 'I need'.", isCorrect: false },
-        { text: "J'ai besoin d'un livre", rationale: "Correct! 'J'ai besoin d'un livre' means 'I need a book'.", isCorrect: true },
-        { text: "Il a besoin d'un livre", rationale: "Wrong person - this is 'he needs', not 'I need'.", isCorrect: false },
-        { text: "Nous avons besoin d'un livre", rationale: "Wrong person - this is 'we need', not 'I need'.", isCorrect: false }
+        { text: "J'aurai besoin d'un livre", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "J'ai besoin d'un livre", rationale: "Correct! 'J'ai besoin d'un livre' means 'I need a book' in present tense.", isCorrect: true },
+        { text: "J'avais besoin d'un livre", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "J'ai eu besoin d'un livre", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You need a problem / You are needing a problem (informal)",
-      hint: "Use 'avoir besoin de' with tu and un problème",
+      question: "You don't need help / You are not needing help (informal)",
+      hint: "Use negative present tense of 'avoir besoin de' with tu and aide",
       answerOptions: [
-        { text: "J'ai besoin d'un problème", rationale: "Wrong person - this is 'I need', not 'you need'.", isCorrect: false },
-        { text: "Vous avez besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
-        { text: "Tu as besoin d'un problème", rationale: "Correct! 'Tu as besoin d'un problème' means 'You need a problem' (informal).", isCorrect: true },
-        { text: "Ils ont besoin d'un problème", rationale: "Wrong person - this is 'they need', not 'you need'.", isCorrect: false }
+        { text: "Tu n'avais pas besoin d'aide", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Tu n'auras pas besoin d'aide", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Tu n'as pas besoin d'aide", rationale: "Correct! 'Tu n'as pas besoin d'aide' means 'You don't need help' (informal).", isCorrect: true },
+        { text: "Tu n'as eu pas besoin d'aide", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "He needs help / He is needing help",
-      hint: "Use 'avoir besoin de' with il and aide",
+      question: "He needs money / He is needing money",
+      hint: "Use present tense of 'avoir besoin de' with il and argent",
       answerOptions: [
-        { text: "Elle a besoin d'aide", rationale: "Wrong gender - this is 'she needs', not 'he needs'.", isCorrect: false },
-        { text: "Tu as besoin d'aide", rationale: "Wrong person - this is 'you need', not 'he needs'.", isCorrect: false },
-        { text: "Ils ont besoin d'aide", rationale: "Wrong number - this is 'they need', not 'he needs'.", isCorrect: false },
-        { text: "Il a besoin d'aide", rationale: "Correct! 'Il a besoin d'aide' means 'He needs help'.", isCorrect: true }
+        { text: "Il avait besoin d'argent", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Il a besoin d'argent", rationale: "Correct! 'Il a besoin d'argent' means 'He needs money' in present tense.", isCorrect: true },
+        { text: "Il aura besoin d'argent", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Il a eu besoin d'argent", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "She needs a rest / She is needing a rest",
-      hint: "Use 'avoir besoin de' with elle and repos",
+      question: "She doesn't need a car / She is not needing a car",
+      hint: "Use negative present tense of 'avoir besoin de' with elle and une voiture",
       answerOptions: [
-        { text: "Il a besoin de repos", rationale: "Wrong gender - this is 'he needs', not 'she needs'.", isCorrect: false },
-        { text: "Elle a besoin de repos", rationale: "Correct! 'Elle a besoin de repos' means 'She needs a rest'.", isCorrect: true },
-        { text: "Elles ont besoin de repos", rationale: "Wrong number - this is 'they need' (fem. plural), not 'she needs'.", isCorrect: false },
-        { text: "Tu as besoin de repos", rationale: "Wrong person - this is 'you need', not 'she needs'.", isCorrect: false }
+        { text: "Elle n'a eu besoin d'une voiture", rationale: "Wrong tense and missing negation particle 'pas'.", isCorrect: false },
+        { text: "Elle n'aura pas besoin d'une voiture", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elle n'a pas besoin d'une voiture", rationale: "Correct! 'Elle n'a pas besoin d'une voiture' means 'She doesn't need a car'.", isCorrect: true },
+        { text: "Elle n'avait pas besoin d'une voiture", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We need water / We are needing water",
-      hint: "Use 'avoir besoin de' with nous and eau",
+      question: "We need time / We are needing time",
+      hint: "Use present tense of 'avoir besoin de' with nous and temps",
       answerOptions: [
-        { text: "Vous avez besoin d'eau", rationale: "Wrong person - this is 'you need' (formal/plural), not 'we need'.", isCorrect: false },
-        { text: "Ils ont besoin d'eau", rationale: "Wrong person - this is 'they need', not 'we need'.", isCorrect: false },
-        { text: "J'ai besoin d'eau", rationale: "Wrong person - this is 'I need', not 'we need'.", isCorrect: false },
-        { text: "Nous avons besoin d'eau", rationale: "Correct! 'Nous avons besoin d'eau' means 'We need water'.", isCorrect: true }
+        { text: "Nous avons eu besoin de temps", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false },
+        { text: "Nous avons besoin de temps", rationale: "Correct! 'Nous avons besoin de temps' means 'We need time' in present tense.", isCorrect: true },
+        { text: "Nous aurons besoin de temps", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Nous avions besoin de temps", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false }
       ]
     },
     {
-      question: "You need to eat / You are needing to eat (formal / plural)",
-      hint: "Use 'avoir besoin de' with vous and manger",
+      question: "You need rest / You are needing rest (formal)",
+      hint: "Use present tense of 'avoir besoin de' with vous and repos",
       answerOptions: [
-        { text: "Tu as besoin de manger", rationale: "Wrong formality - this is informal tu, question asks for formal/plural vous.", isCorrect: false },
-        { text: "Nous avons besoin de manger", rationale: "Wrong person - this is 'we need', not 'you need'.", isCorrect: false },
-        { text: "Vous avez besoin de manger", rationale: "Correct! 'Vous avez besoin de manger' means 'You need to eat' (formal/plural).", isCorrect: true },
-        { text: "Ils ont besoin de manger", rationale: "Wrong person - this is 'they need', not 'you need'.", isCorrect: false }
+        { text: "Vous aviez besoin de repos", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Vous avez besoin de repos", rationale: "Correct! 'Vous avez besoin de repos' means 'You need rest' (formal).", isCorrect: true },
+        { text: "Vous aurez besoin de repos", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Vous avez eu besoin de repos", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "They need to go (male / mixed)",
-      hint: "Use 'avoir besoin de' with ils and aller",
+      question: "They need water / They are needing water (male / mixed)",
+      hint: "Use present tense of 'avoir besoin de' with ils and eau",
       answerOptions: [
-        { text: "Elles ont besoin d'aller", rationale: "Wrong gender - this is feminine they, question asks for male/mixed.", isCorrect: false },
-        { text: "Ils avaient besoin d'aller", rationale: "Wrong tense - this is imperfect, not present.", isCorrect: false },
-        { text: "Ils auront besoin d'aller", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
-        { text: "Ils ont besoin d'aller", rationale: "Correct! 'Ils ont besoin d'aller' means 'They need to go' (male/mixed).", isCorrect: true }
+        { text: "Ils auront besoin d'eau", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Ils avaient besoin d'eau", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ils ont besoin d'eau", rationale: "Correct! 'Ils ont besoin d'eau' means 'They need water' (male/mixed).", isCorrect: true },
+        { text: "Ils ont eu besoin d'eau", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "They need to sleep (female)",
-      hint: "Use 'avoir besoin de' with elles and dormir",
+      question: "They don't need food / They are not needing food (female)",
+      hint: "Use negative present tense of 'avoir besoin de' with elles and nourriture",
       answerOptions: [
-        { text: "Ils ont besoin de dormir", rationale: "Wrong gender - this is masculine they, question asks for female.", isCorrect: false },
-        { text: "Elles avaient besoin de dormir", rationale: "Wrong tense - this is imperfect, not present.", isCorrect: false },
-        { text: "Elles auront besoin de dormir", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
-        { text: "Elles ont besoin de dormir", rationale: "Correct! 'Elles ont besoin de dormir' means 'They need to sleep' (female).", isCorrect: true }
-      ]
-    },
-
-    // Negative statements (6 questions)
-    {
-      question: "I do not need a book / I am not needing a book",
-      hint: "Use negative 'avoir besoin de' with je and un livre",
-      answerOptions: [
-        { text: "Tu n'as pas besoin d'un livre", rationale: "Wrong person - this is 'you don't need', not 'I don't need'.", isCorrect: false },
-        { text: "Il n'a pas besoin d'un livre", rationale: "Wrong person - this is 'he doesn't need', not 'I don't need'.", isCorrect: false },
-        { text: "Je n'ai pas besoin d'un livre", rationale: "Correct! 'Je n'ai pas besoin d'un livre' means 'I do not need a book'.", isCorrect: true },
-        { text: "Nous n'avons pas besoin d'un livre", rationale: "Wrong person - this is 'we don't need', not 'I don't need'.", isCorrect: false }
+        { text: "Elles n'avaient pas besoin de nourriture", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Elles n'auront pas besoin de nourriture", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Elles n'ont pas besoin de nourriture", rationale: "Correct! 'Elles n'ont pas besoin de nourriture' means 'They don't need food' (female).", isCorrect: true },
+        { text: "Elles n'ont eu pas besoin de nourriture", rationale: "Wrong tense and incorrect negation structure.", isCorrect: false }
       ]
     },
     {
-      question: "You do not need a problem / You are not needing a problem (informal)",
-      hint: "Use negative 'avoir besoin de' with tu and un problème",
+      question: "Do I need a break? / Am I needing a break?",
+      hint: "Use question form of 'avoir besoin de' with je and une pause",
       answerOptions: [
-        { text: "Je n'ai pas besoin d'un problème", rationale: "Wrong person - this is 'I don't need', not 'you don't need'.", isCorrect: false },
-        { text: "Tu n'as pas besoin d'un problème", rationale: "Correct! 'Tu n'as pas besoin d'un problème' means 'You do not need a problem' (informal).", isCorrect: true },
-        { text: "Vous n'avez pas besoin d'un problème", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false },
-        { text: "Ils n'ont pas besoin d'un problème", rationale: "Wrong person - this is 'they don't need', not 'you don't need'.", isCorrect: false }
+        { text: "Aurai-je besoin d'une pause ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "Est-ce que j'ai besoin d'une pause ?", rationale: "Correct! 'Est-ce que j'ai besoin d'une pause ?' means 'Do I need a break?'", isCorrect: true },
+        { text: "Avais-je besoin d'une pause ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Ai-je eu besoin d'une pause ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "He does not need help / He is not needing help",
-      hint: "Use negative 'avoir besoin de' with il and aide",
+      question: "Do you need sugar? / Are you needing sugar? (informal)",
+      hint: "Use question form of 'avoir besoin de' with tu and sucre",
       answerOptions: [
-        { text: "Elle n'a pas besoin d'aide", rationale: "Wrong gender - this is 'she doesn't need', not 'he doesn't need'.", isCorrect: false },
-        { text: "Tu n'as pas besoin d'aide", rationale: "Wrong person - this is 'you don't need', not 'he doesn't need'.", isCorrect: false },
-        { text: "Ils n'ont pas besoin d'aide", rationale: "Wrong number - this is 'they don't need', not 'he doesn't need'.", isCorrect: false },
-        { text: "Il n'a pas besoin d'aide", rationale: "Correct! 'Il n'a pas besoin d'aide' means 'He does not need help'.", isCorrect: true }
+        { text: "Avais-tu besoin de sucre ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "Auras-tu besoin de sucre ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "As-tu besoin de sucre ?", rationale: "Correct! 'As-tu besoin de sucre ?' means 'Do you need sugar?' (informal).", isCorrect: true },
+        { text: "As-tu eu besoin de sucre ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "She does not need rest / She is not needing rest",
-      hint: "Use negative 'avoir besoin de' with elle and repos",
+      question: "Doesn't he need sleep? / Isn't he needing sleep?",
+      hint: "Use negative question form of 'avoir besoin de' with il and sommeil",
       answerOptions: [
-        { text: "Il n'a pas besoin de repos", rationale: "Wrong gender - this is 'he doesn't need', not 'she doesn't need'.", isCorrect: false },
-        { text: "Elle n'a pas besoin de repos", rationale: "Correct! 'Elle n'a pas besoin de repos' means 'She does not need rest'.", isCorrect: true },
-        { text: "Elles n'ont pas besoin de repos", rationale: "Wrong number - this is 'they don't need' (fem. plural), not 'she doesn't need'.", isCorrect: false },
-        { text: "Tu n'as pas besoin de repos", rationale: "Wrong person - this is 'you don't need', not 'she doesn't need'.", isCorrect: false }
+        { text: "N'aura-t-il pas besoin de sommeil ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "N'a-t-il pas besoin de sommeil ?", rationale: "Correct! 'N'a-t-il pas besoin de sommeil ?' means 'Doesn't he need sleep?'", isCorrect: true },
+        { text: "N'avait-il pas besoin de sommeil ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'a-t-il pas eu besoin de sommeil ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     },
     {
-      question: "We do not need water / We are not needing water",
-      hint: "Use negative 'avoir besoin de' with nous and eau",
+      question: "Don't they need permission? / Aren't they needing permission? (female)",
+      hint: "Use negative question form of 'avoir besoin de' with elles and permission",
       answerOptions: [
-        { text: "Vous n'avez pas besoin d'eau", rationale: "Wrong person - this is 'you don't need' (formal/plural), not 'we don't need'.", isCorrect: false },
-        { text: "Ils n'ont pas besoin d'eau", rationale: "Wrong person - this is 'they don't need', not 'we don't need'.", isCorrect: false },
-        { text: "Je n'ai pas besoin d'eau", rationale: "Wrong person - this is 'I don't need', not 'we don't need'.", isCorrect: false },
-        { text: "Nous n'avons pas besoin d'eau", rationale: "Correct! 'Nous n'avons pas besoin d'eau' means 'We do not need water'.", isCorrect: true }
-      ]
-    },
-    {
-      question: "You do not need to eat / You are not needing to eat (formal / plural)",
-      hint: "Use negative 'avoir besoin de' with vous and manger",
-      answerOptions: [
-        { text: "Tu n'as pas besoin de manger", rationale: "Wrong formality - this is informal tu, question asks for formal/plural vous.", isCorrect: false },
-        { text: "Vous n'avez pas besoin de manger", rationale: "Correct! 'Vous n'avez pas besoin de manger' means 'You do not need to eat' (formal/plural).", isCorrect: true },
-        { text: "Nous n'avons pas besoin de manger", rationale: "Wrong person - this is 'we don't need', not 'you don't need'.", isCorrect: false },
-        { text: "Ils n'ont pas besoin de manger", rationale: "Wrong person - this is 'they don't need', not 'you don't need'.", isCorrect: false }
-      ]
-    },
-
-    // Positive questions (3 questions)
-    {
-      question: "Do I need a book? / Am I needing a book?",
-      hint: "Use question form of 'avoir besoin de' with je and un livre",
-      answerOptions: [
-        { text: "As-tu besoin d'un livre ?", rationale: "Wrong person - this asks 'Do you need', not 'Do I need'.", isCorrect: false },
-        { text: "A-t-il besoin d'un livre ?", rationale: "Wrong person - this asks 'Does he need', not 'Do I need'.", isCorrect: false },
-        { text: "Ai-je besoin d'un livre ?", rationale: "Correct! 'Ai-je besoin d'un livre ?' means 'Do I need a book?'", isCorrect: true },
-        { text: "Avons-nous besoin d'un livre ?", rationale: "Wrong person - this asks 'Do we need', not 'Do I need'.", isCorrect: false }
-      ]
-    },
-    {
-      question: "Do you need a problem? / Are you needing a problem? (informal)",
-      hint: "Use question form of 'avoir besoin de' with tu and un problème",
-      answerOptions: [
-        { text: "Ai-je besoin d'un problème ?", rationale: "Wrong person - this asks 'Do I need', not 'Do you need'.", isCorrect: false },
-        { text: "As-tu besoin d'un problème ?", rationale: "Correct! 'As-tu besoin d'un problème ?' means 'Do you need a problem?' (informal).", isCorrect: true },
-        { text: "A-t-il besoin d'un problème ?", rationale: "Wrong person - this asks 'Does he need', not 'Do you need'.", isCorrect: false },
-        { text: "Avez-vous besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
-      ]
-    },
-    {
-      question: "Does he need help? / Is he needing help?",
-      hint: "Use question form of 'avoir besoin de' with il and aide",
-      answerOptions: [
-        { text: "A-t-elle besoin d'aide ?", rationale: "Wrong gender - this asks 'Does she need', not 'Does he need'.", isCorrect: false },
-        { text: "Ai-je besoin d'aide ?", rationale: "Wrong person - this asks 'Do I need', not 'Does he need'.", isCorrect: false },
-        { text: "As-tu besoin d'aide ?", rationale: "Wrong person - this asks 'Do you need', not 'Does he need'.", isCorrect: false },
-        { text: "A-t-il besoin d'aide ?", rationale: "Correct! 'A-t-il besoin d'aide ?' means 'Does he need help?'", isCorrect: true }
-      ]
-    },
-
-    // Negative questions (3 questions)
-    {
-      question: "Don't I need a book? / Am I not needing a book?",
-      hint: "Use negative question form of 'avoir besoin de' with je and un livre",
-      answerOptions: [
-        { text: "N'as-tu pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Don't you need', not 'Don't I need'.", isCorrect: false },
-        { text: "N'a-t-il pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Doesn't he need', not 'Don't I need'.", isCorrect: false },
-        { text: "N'avons-nous pas besoin d'un livre ?", rationale: "Wrong person - this asks 'Don't we need', not 'Don't I need'.", isCorrect: false },
-        { text: "N'ai-je pas besoin d'un livre ?", rationale: "Correct! 'N'ai-je pas besoin d'un livre ?' means 'Don't I need a book?'", isCorrect: true }
-      ]
-    },
-    {
-      question: "Don't you need a problem? / Are you not needing a problem? (informal)",
-      hint: "Use negative question form of 'avoir besoin de' with tu and un problème",
-      answerOptions: [
-        { text: "N'ai-je pas besoin d'un problème ?", rationale: "Wrong person - this asks 'Don't I need', not 'Don't you need'.", isCorrect: false },
-        { text: "N'as-tu pas besoin d'un problème ?", rationale: "Correct! 'N'as-tu pas besoin d'un problème ?' means 'Don't you need a problem?' (informal).", isCorrect: true },
-        { text: "N'a-t-il pas besoin d'un problème ?", rationale: "Wrong person - this asks 'Doesn't he need', not 'Don't you need'.", isCorrect: false },
-        { text: "N'avez-vous pas besoin d'un problème ?", rationale: "Wrong formality - this is formal/plural, question asks for informal tu.", isCorrect: false }
-      ]
-    },
-    {
-      question: "Doesn't he need help? / Isn't he needing help?",
-      hint: "Use negative question form of 'avoir besoin de' with il and aide",
-      answerOptions: [
-        { text: "N'a-t-elle pas besoin d'aide ?", rationale: "Wrong gender - this asks 'Doesn't she need', not 'Doesn't he need'.", isCorrect: false },
-        { text: "N'ai-je pas besoin d'aide ?", rationale: "Wrong person - this asks 'Don't I need', not 'Doesn't he need'.", isCorrect: false },
-        { text: "N'as-tu pas besoin d'aide ?", rationale: "Wrong person - this asks 'Don't you need', not 'Doesn't he need'.", isCorrect: false },
-        { text: "N'a-t-il pas besoin d'aide ?", rationale: "Correct! 'N'a-t-il pas besoin d'aide ?' means 'Doesn't he need help?'", isCorrect: true }
+        { text: "N'auront-elles pas besoin de permission ?", rationale: "Wrong tense - this is future, not present.", isCorrect: false },
+        { text: "N'avaient-elles pas besoin de permission ?", rationale: "Wrong tense - this is imperfect past, not present.", isCorrect: false },
+        { text: "N'ont-elles pas besoin de permission ?", rationale: "Correct! 'N'ont-elles pas besoin de permission ?' means 'Don't they need permission?' (female).", isCorrect: true },
+        { text: "N'ont-elles pas eu besoin de permission ?", rationale: "Wrong tense - this is past perfect, not present.", isCorrect: false }
       ]
     }
   ]
