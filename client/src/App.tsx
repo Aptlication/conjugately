@@ -377,11 +377,6 @@ function App() {
 
 
 
-  const handleChooseVerb = () => {
-    const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
-    setSelectedVerb(randomVerb);
-  };
-
   // Helper function to check if a verb is reflexive
   const isReflexiveVerb = (verb: string) => {
     return verb.startsWith('se ') || verb.startsWith("s'");
@@ -409,6 +404,11 @@ function App() {
       setReflexiveModalDismissed(true);
       localStorage.setItem('reflexiveModalDismissed', 'true');
     }
+  };
+
+  const handleChooseVerb = () => {
+    const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
+    handleVerbSelection(randomVerb);
   };
 
   const handleChooseTimeFrame = () => {
