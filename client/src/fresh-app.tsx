@@ -582,7 +582,7 @@ function FreshAppCore({ user }: { user: any }) {
                       e.target.style.color = '#1e3a8a';
                     }}
                   >
-                    Don't remind me about selection requirements
+                    Don't remind me again.
                   </span>
                 )}
               </div>

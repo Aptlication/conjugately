@@ -593,7 +593,7 @@ export default function FrenchQuiz() {
                               }}
                               className="text-xs text-blue-900 underline hover:text-blue-800 transition-colors cursor-pointer"
                             >
-                              Don't remind me about selection requirements
+                              Don't remind me again.
                             </span>
                           )}
                         </div>
