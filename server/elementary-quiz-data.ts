@@ -867,6 +867,206 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Ils ne disons rien.", rationale: "Option C", isCorrect: false },
         { text: "Ils ne dis rien.", rationale: "Option D", isCorrect: false }
       ]
+    },
+    {
+      question: "You (formal) say / are saying that it's important.",
+      hint: "Use formal vous conjugation: vous dites",
+      answerOptions: [
+        { text: "Vous disent que c'est important.", rationale: "Option A", isCorrect: false },
+        { text: "Vous dis que c'est important.", rationale: "Option B", isCorrect: false },
+        { text: "Vous dites que c'est important.", rationale: "Option C", isCorrect: true },
+        { text: "Vous dit que c'est important.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We say / are saying what we think.",
+      hint: "Use first person plural: nous disons",
+      answerOptions: [
+        { text: "Nous disons ce que nous pensons.", rationale: "Option A", isCorrect: true },
+        { text: "Nous dit ce que nous pensons.", rationale: "Option B", isCorrect: false },
+        { text: "Nous disent ce que nous pensons.", rationale: "Option C", isCorrect: false },
+        { text: "Nous dis ce que nous pensons.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (feminine) always say / are always saying hello.",
+      hint: "Use feminine plural: elles disent",
+      answerOptions: [
+        { text: "Elles dit toujours bonjour.", rationale: "Option A", isCorrect: false },
+        { text: "Elles disons toujours bonjour.", rationale: "Option B", isCorrect: false },
+        { text: "Elles dis toujours bonjour.", rationale: "Option C", isCorrect: false },
+        { text: "Elles disent toujours bonjour.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "He doesn't say / isn't saying a word.",
+      hint: "Use masculine singular with negation: il ne dit pas",
+      answerOptions: [
+        { text: "Il ne disons pas un mot.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne dit pas un mot.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne dis pas un mot.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne disent pas un mot.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I say / am saying that it's possible.",
+      hint: "Use first person singular: je dis",
+      answerOptions: [
+        { text: "Je dis que c'est possible.", rationale: "Option A", isCorrect: true },
+        { text: "Je dit que c'est possible.", rationale: "Option B", isCorrect: false },
+        { text: "Je disons que c'est possible.", rationale: "Option C", isCorrect: false },
+        { text: "Je dites que c'est possible.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) say / are saying something interesting.",
+      hint: "Use informal tu conjugation: tu dis",
+      answerOptions: [
+        { text: "Tu dit quelque chose d'intéressant.", rationale: "Option A", isCorrect: false },
+        { text: "Tu dis quelque chose d'intéressant.", rationale: "Option B", isCorrect: true },
+        { text: "Tu disons quelque chose d'intéressant.", rationale: "Option C", isCorrect: false },
+        { text: "Tu dites quelque chose d'intéressant.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "What are you (formal) saying / do you say?",
+      hint: "Use formal interrogative: que dites-vous",
+      answerOptions: [
+        { text: "Que disent-ils ?", rationale: "Option A", isCorrect: false },
+        { text: "Que dis-tu ?", rationale: "Option B", isCorrect: false },
+        { text: "Que dites-vous ?", rationale: "Option C", isCorrect: true },
+        { text: "Que dit-il ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (masculine) say / are saying that they are ready.",
+      hint: "Use masculine plural: ils disent",
+      answerOptions: [
+        { text: "Ils dit qu'ils sont prêts.", rationale: "Option A", isCorrect: false },
+        { text: "Ils disons qu'ils sont prêts.", rationale: "Option B", isCorrect: false },
+        { text: "Ils dis qu'ils sont prêts.", rationale: "Option C", isCorrect: false },
+        { text: "Ils disent qu'ils sont prêts.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "She says / is saying no.",
+      hint: "Use feminine singular: elle dit",
+      answerOptions: [
+        { text: "Elle dit non.", rationale: "Option A", isCorrect: true },
+        { text: "Elle dis non.", rationale: "Option B", isCorrect: false },
+        { text: "Elle disons non.", rationale: "Option C", isCorrect: false },
+        { text: "Elle disent non.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do we say / are we saying the truth?",
+      hint: "Use first person plural interrogative: disons-nous",
+      answerOptions: [
+        { text: "Dit-on la vérité ?", rationale: "Option A", isCorrect: false },
+        { text: "Disons-nous la vérité ?", rationale: "Option B", isCorrect: true },
+        { text: "Dites-vous la vérité ?", rationale: "Option C", isCorrect: false },
+        { text: "Disent-ils la vérité ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) don't say / aren't saying that.",
+      hint: "Use informal negation: tu ne dis pas",
+      answerOptions: [
+        { text: "Tu ne dites pas ça.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne dit pas ça.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne dis pas ça.", rationale: "Option C", isCorrect: true },
+        { text: "Tu ne disons pas ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why does he say / is he saying that?",
+      hint: "Use masculine singular interrogative: pourquoi dit-il",
+      answerOptions: [
+        { text: "Pourquoi dis-tu cela ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi dit-il cela ?", rationale: "Option B", isCorrect: true },
+        { text: "Pourquoi disons-nous cela ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourquoi disent-ils cela ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I never say / am never saying that.",
+      hint: "Use first person singular with negation: je ne dis jamais",
+      answerOptions: [
+        { text: "Je ne dit jamais ça.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne disons jamais ça.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne dis jamais ça.", rationale: "Option C", isCorrect: true },
+        { text: "Je ne dites jamais ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We say / are saying goodbye to our friends.",
+      hint: "Use first person plural: nous disons",
+      answerOptions: [
+        { text: "Nous disons au revoir à nos amis.", rationale: "Option A", isCorrect: true },
+        { text: "Nous dit au revoir à nos amis.", rationale: "Option B", isCorrect: false },
+        { text: "Nous disent au revoir à nos amis.", rationale: "Option C", isCorrect: false },
+        { text: "Nous dis au revoir à nos amis.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "What do you (informal) say / are you saying?",
+      hint: "Use informal interrogative: que dis-tu",
+      answerOptions: [
+        { text: "Que dit-il ?", rationale: "Option A", isCorrect: false },
+        { text: "Que disons-nous ?", rationale: "Option B", isCorrect: false },
+        { text: "Que dites-vous ?", rationale: "Option C", isCorrect: false },
+        { text: "Que dis-tu ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "She says / is saying it is false.",
+      hint: "Use feminine singular: elle dit",
+      answerOptions: [
+        { text: "Elle disons que c'est faux.", rationale: "Option A", isCorrect: false },
+        { text: "Elle dit que c'est faux.", rationale: "Option B", isCorrect: true },
+        { text: "Elle dis que c'est faux.", rationale: "Option C", isCorrect: false },
+        { text: "Elle disent que c'est faux.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I say / am saying yes!",
+      hint: "Use first person singular: je dis",
+      answerOptions: [
+        { text: "Je dis oui !", rationale: "Option A", isCorrect: true },
+        { text: "Je dit oui !", rationale: "Option B", isCorrect: false },
+        { text: "Je disons oui !", rationale: "Option C", isCorrect: false },
+        { text: "Je dites oui !", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) are not saying / do not say anything.",
+      hint: "Use formal negation: vous ne dites rien",
+      answerOptions: [
+        { text: "Vous ne dis rien.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne dit rien.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne disent rien.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne dites rien.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (feminine) do not say / are not saying their names.",
+      hint: "Use feminine plural with negation: elles ne disent pas",
+      answerOptions: [
+        { text: "Elles ne dit pas leurs noms.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne disons pas leurs noms.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne disent pas leurs noms.", rationale: "Option C", isCorrect: true },
+        { text: "Elles ne dis pas leurs noms.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (masculine) say / are saying good evening.",
+      hint: "Use masculine plural: ils disent",
+      answerOptions: [
+        { text: "Ils disent bonsoir.", rationale: "Option A", isCorrect: true },
+        { text: "Ils dit bonsoir.", rationale: "Option B", isCorrect: false },
+        { text: "Ils disons bonsoir.", rationale: "Option C", isCorrect: false },
+        { text: "Ils dis bonsoir.", rationale: "Option D", isCorrect: false }
+      ]
     }
   ]
 };

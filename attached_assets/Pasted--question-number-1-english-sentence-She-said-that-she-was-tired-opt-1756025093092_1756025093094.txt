@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She said that she was tired.",
+    "options": {
+      "A": "Elle a dit qu'elle était fatiguée.",
+      "B": "Elle as dit qu'elle était fatiguée.",
+      "C": "Elle est dit qu'elle était fatiguée.",
+      "D": "Elle as dit qu'elle était fatiguée."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "They (masculine) didn't say a word.",
+    "options": {
+      "A": "Ils n'ont pas dit un mot.",
+      "B": "Ils ne sont pas dit un mot.",
+      "C": "Ils n'as pas dit un mot.",
+      "D": "Ils n'avez pas dit un mot."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "Why didn't you (informal) say anything?",
+    "options": {
+      "A": "Pourquoi n'ont-ils rien dit ?",
+      "B": "Pourquoi n'avez-vous rien dit ?",
+      "C": "Pourquoi n'as-tu rien dit ?",
+      "D": "Pourquoi n'a-t-il rien dit ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He didn't say anything.",
+    "options": {
+      "A": "Il n'as rien dit.",
+      "B": "Il n'a rien dit.",
+      "C": "Il n'ont rien dit.",
+      "D": "Il n'avez rien dit."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "You (formal) said the right answer.",
+    "options": {
+      "A": "Vous avez dit la bonne réponse.",
+      "B": "Vous as dit la bonne réponse.",
+      "C": "Vous ont dit la bonne réponse.",
+      "D": "Vous êtes dit la bonne réponse."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "I told a secret to Paul.",
+    "options": {
+      "A": "Je suis dit un secret à Paul.",
+      "B": "J'ai dit un secret à Paul.",
+      "C": "Je as dit un secret à Paul.",
+      "D": "J'ai dit un secret à Paul."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "We said goodbye.",
+    "options": {
+      "A": "Nous avons dit au revoir.",
+      "B": "Nous as dit au revoir.",
+      "C": "Nous sont dit au revoir.",
+      "D": "Nous ont dit au revoir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "I told the truth.",
+    "options": {
+      "A": "J'ai dit la vérité.",
+      "B": "Je as dit la vérité.",
+      "C": "Je suis dit la vérité.",
+      "D": "J'ont dit la vérité."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Did she say goodbye?",
+    "options": {
+      "A": "Est-ce qu'elle ont dit au revoir ?",
+      "B": "Est-ce qu'elle as dit au revoir ?",
+      "C": "Est-ce qu'elle est dit au revoir ?",
+      "D": "Est-ce qu'elle a dit au revoir ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "They (feminine) didn't say hello.",
+    "options": {
+      "A": "Elles n'as pas dit bonjour.",
+      "B": "Elles n'a pas dit bonjour.",
+      "C": "Elles n'avez pas dit bonjour.",
+      "D": "Elles n'ont pas dit bonjour."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "You (informal) said thank you.",
+    "options": {
+      "A": "Tu ont dit merci.",
+      "B": "Tu as dit merci.",
+      "C": "Tu avez dit merci.",
+      "D": "Tu est dit merci."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "What did they (masculine) say?",
+    "options": {
+      "A": "Qu'a-t-il dit ?",
+      "B": "Qu'avez-vous dit ?",
+      "C": "Qu'ont-ils dit ?",
+      "D": "Qu'as-tu dit ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "We didn't say the same thing.",
+    "options": {
+      "A": "Nous n'avez pas dit la même chose.",
+      "B": "Nous n'ont pas dit la même chose.",
+      "C": "Nous n'avons pas dit la même chose.",
+      "D": "Nous ne sommes pas dit la même chose."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "Did you (formal) say hello?",
+    "options": {
+      "A": "Avez-vous dit bonjour ?",
+      "B": "As-tu dit bonjour ?",
+      "C": "Ont-ils dit bonjour ?",
+      "D": "A-t-il dit bonjour ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "He said that he was leaving.",
+    "options": {
+      "A": "Il as dit qu'il partait.",
+      "B": "Il ont dit qu'il partait.",
+      "C": "Il a dit qu'il partait.",
+      "D": "Il est dit qu'il partait."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "We told the truth.",
+    "options": {
+      "A": "Nous as dit la vérité.",
+      "B": "Nous avons dit la vérité.",
+      "C": "Nous ont dit la vérité.",
+      "D": "Nous êtes dit la vérité."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "You (formal) didn't say the right sentence.",
+    "options": {
+      "A": "Vous n'ont pas dit la bonne phrase.",
+      "B": "Vous ne êtes pas dit la bonne phrase.",
+      "C": "Vous n'as pas dit la bonne phrase.",
+      "D": "Vous n'avez pas dit la bonne phrase."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Did they (feminine) say their name?",
+    "options": {
+      "A": "Est-ce qu'elles ont dit leur nom ?",
+      "B": "Est-ce qu'elles as dit leur nom ?",
+      "C": "Est-ce qu'elles a dit leur nom ?",
+      "D": "Est-ce qu'elles sont dit leur nom ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "One said yes.",
+    "options": {
+      "A": "On est dit oui.",
+      "B": "On a dit oui.",
+      "C": "On ont dit oui.",
+      "D": "On as dit oui."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "I didn't say that.",
+    "options": {
+      "A": "Je n'est pas dit cela.",
+      "B": "Je n'ont pas dit cela.",
+      "C": "Je n'as pas dit cela.",
+      "D": "Je n'ai pas dit cela."
+    },
+    "correct_answer": "D"
+  }
+]
