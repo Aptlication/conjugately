@@ -60,6 +60,8 @@ export default function FrenchQuiz() {
   // Debug: Simple render test
   console.log("FrenchQuiz component is rendering!");
   // Configuration state
+  const [selectedDifficulty, setSelectedDifficulty] = useState<keyof typeof DIFFICULTY_CONFIGS>("Elementary");
+  const [isDifficultyLocked, setIsDifficultyLocked] = useState(false);
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
@@ -75,12 +77,34 @@ export default function FrenchQuiz() {
 
 
 
+  const handleDifficultyLockToggle = () => {
+    setIsDifficultyLocked(!isDifficultyLocked);
+  };
+
+  const handleDifficultyChange = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
+    if (!isDifficultyLocked) {
+      setSelectedDifficulty(difficulty);
+      // Reset selections when difficulty changes
+      setSelectedVerb("");
+      setSelectedTimeFrame("");
+      setSelectedTenseType("");
+    }
+  };
+
+  // Get available verbs for selected difficulty
+  const getAvailableVerbs = () => {
+    return DIFFICULTY_CONFIGS[selectedDifficulty].verbs;
+  };
+
   const handleChooseAll = () => {
     setShowAdvancedyModal(true);
   };
 
   const handleAdvancedySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     const config = DIFFICULTY_CONFIGS[difficulty];
+    
+    // Set the difficulty
+    setSelectedDifficulty(difficulty);
     
     // Select random verb from difficulty config
     const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
@@ -128,6 +152,7 @@ export default function FrenchQuiz() {
           verb: selectedVerb,
           timeFrame: timeFrameMapping[selectedTimeFrame as keyof typeof timeFrameMapping],
           tenseType: selectedTenseType,
+          difficulty: selectedDifficulty
         }),
       });
 
@@ -359,10 +384,50 @@ export default function FrenchQuiz() {
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-2xl">
                 <div className="space-y-8">
                   
-                  {/* Step 1: Verb Selection */}
+                  {/* Step 1: Difficulty Selection */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <label className="text-lg font-semibold text-white">
+                        1. Choose Difficulty
+                      </label>
+                      <button
+                        onClick={handleDifficultyLockToggle}
+                        className="text-white hover:text-purple-300 transition-colors"
+                        title={isDifficultyLocked ? "Click to unlock difficulty selection" : "Click to lock current difficulty"}
+                      >
+                        {isDifficultyLocked ? (
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                          </svg>
+                        )}
+                      </button>
+                    </div>
+                    <select
+                      value={selectedDifficulty}
+                      onChange={(e) => handleDifficultyChange(e.target.value as keyof typeof DIFFICULTY_CONFIGS)}
+                      disabled={isDifficultyLocked}
+                      className={`w-full p-4 rounded-xl border text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all ${
+                        isDifficultyLocked 
+                          ? 'bg-green-500/20 border-green-500/30 cursor-not-allowed opacity-75' 
+                          : 'bg-white/10 border-white/20'
+                      }`}
+                    >
+                      <option value="Beginner" className="bg-slate-800 text-white">🔵 Beginner - 3 verbs, Present/past/future tenses</option>
+                      <option value="Novice" className="bg-slate-800 text-white">🔷 Novice - 3 verbs, Present/past/future tenses</option>
+                      <option value="Elementary" className="bg-slate-800 text-white">🟢 Elementary - 7 verbs, Present/past/future tenses</option>
+                      <option value="Intermediate" className="bg-slate-800 text-white">🟡 Intermediate - 11 verbs, Present/past/future + Imparfait</option>
+                      <option value="Advanced" className="bg-slate-800 text-white">🔴 Advanced - All 16 verbs, All tenses and time frames</option>
+                    </select>
+                  </div>
+
+                  {/* Step 2: Verb Selection */}
                   <div className="space-y-4">
                     <label className="text-lg font-semibold text-white">
-                      1. Choose a French Verb
+                      2. Choose a French Verb
                     </label>
                     <select
                       value={selectedVerb}
@@ -370,7 +435,7 @@ export default function FrenchQuiz() {
                       className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select a verb...</option>
-                      {FRENCH_VERBS.map((verb) => (
+                      {getAvailableVerbs().map((verb) => (
                         <option key={verb} value={verb} className="bg-slate-800 text-white">
                           {verb}
                         </option>
@@ -378,10 +443,10 @@ export default function FrenchQuiz() {
                     </select>
                   </div>
 
-                  {/* Step 2: Time Frame Selection */}
+                  {/* Step 3: Time Frame Selection */}
                   <div className="space-y-4">
                     <label className="text-lg font-semibold text-white">
-                      2. Choose Time Frame
+                      3. Choose Time Frame
                     </label>
                     <select
                       value={selectedTimeFrame}
@@ -401,10 +466,10 @@ export default function FrenchQuiz() {
                     </select>
                   </div>
 
-                  {/* Step 3: Tense Type Selection */}
+                  {/* Step 4: Tense Type Selection */}
                   <div className="space-y-4">
                     <label className="text-lg font-semibold text-white">
-                      3. Choose Specific Tense
+                      4. Choose Specific Tense
                     </label>
                     <select
                       value={selectedTenseType}
