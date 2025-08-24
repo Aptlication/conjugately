@@ -3092,6 +3092,208 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Saura-t-il que je suis là ?", rationale: "Option D", isCorrect: true }
       ]
     }
+  ],
+  "voir": [
+    {
+      question: "She will not see / is not going to see her friends.",
+      hint: "Use future simple negative: elle ne verra pas",
+      answerOptions: [
+        { text: "Elle ne verront pas ses amis.", rationale: "Option A", isCorrect: false },
+        { text: "Elle ne verra pas ses amis.", rationale: "Option B", isCorrect: true },
+        { text: "Elle ne verras pas ses amis.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne verrez pas ses amis.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Will you (formal) see / Are you going to see the difference?",
+      hint: "Use future simple interrogative: verrez-vous",
+      answerOptions: [
+        { text: "Verrez-vous la différence ?", rationale: "Option A", isCorrect: true },
+        { text: "Verrons-vous la différence ?", rationale: "Option B", isCorrect: false },
+        { text: "Verra-vous la différence ?", rationale: "Option C", isCorrect: false },
+        { text: "Verras-vous la différence ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will see / are going to see a play.",
+      hint: "Use future simple of voir: nous verrons",
+      answerOptions: [
+        { text: "Nous verrons une pièce de théâtre.", rationale: "Option A", isCorrect: true },
+        { text: "Nous verrez une pièce de théâtre.", rationale: "Option B", isCorrect: false },
+        { text: "Nous verront une pièce de théâtre.", rationale: "Option C", isCorrect: false },
+        { text: "Nous verra une pièce de théâtre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will see / are going to see the new exhibition.",
+      hint: "Use future simple of voir: elles verront",
+      answerOptions: [
+        { text: "Elles verrons la nouvelle exposition.", rationale: "Option A", isCorrect: false },
+        { text: "Elles verra la nouvelle exposition.", rationale: "Option B", isCorrect: false },
+        { text: "Elles verrez la nouvelle exposition.", rationale: "Option C", isCorrect: false },
+        { text: "Elles verront la nouvelle exposition.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) will see / are going to see for yourself.",
+      hint: "Use future simple of voir: tu verras",
+      answerOptions: [
+        { text: "Tu verrai par toi-même.", rationale: "Option A", isCorrect: false },
+        { text: "Tu verras par toi-même.", rationale: "Option B", isCorrect: true },
+        { text: "Tu verra par toi-même.", rationale: "Option C", isCorrect: false },
+        { text: "Tu verrez par toi-même.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will see / is going to see you tomorrow.",
+      hint: "Use future simple of voir: il te verra",
+      answerOptions: [
+        { text: "Il te verra demain.", rationale: "Option A", isCorrect: true },
+        { text: "Il te verras demain.", rationale: "Option B", isCorrect: false },
+        { text: "Il te verrons demain.", rationale: "Option C", isCorrect: false },
+        { text: "Il te verrez demain.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will not see / are not going to see anything.",
+      hint: "Use future simple negative: vous ne verrez rien",
+      answerOptions: [
+        { text: "Vous ne verrez rien.", rationale: "Option A", isCorrect: true },
+        { text: "Vous ne verrons rien.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne verras rien.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne verront rien.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will see / am going to see what I can do.",
+      hint: "Use future simple of voir: je verrai",
+      answerOptions: [
+        { text: "Je verrai ce que je peux faire.", rationale: "Option A", isCorrect: true },
+        { text: "Je verras ce que je peux faire.", rationale: "Option B", isCorrect: false },
+        { text: "Je verra ce que je peux faire.", rationale: "Option C", isCorrect: false },
+        { text: "Je verrons ce que je peux faire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will see / are going to see the consequences.",
+      hint: "Use future simple of voir: ils verront",
+      answerOptions: [
+        { text: "Ils verrons les conséquences.", rationale: "Option A", isCorrect: false },
+        { text: "Ils verra les conséquences.", rationale: "Option B", isCorrect: false },
+        { text: "Ils verront les conséquences.", rationale: "Option C", isCorrect: true },
+        { text: "Ils verrez les conséquences.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will we see / are we going to see each other?",
+      hint: "Use future simple interrogative: nous verrons-nous",
+      answerOptions: [
+        { text: "Quand nous verrons-nous ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand nous verrez-nous ?", rationale: "Option B", isCorrect: false },
+        { text: "Quand nous verrons-nous ?", rationale: "Option C", isCorrect: true },
+        { text: "Quand nous verront-nous ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not see / am not going to see him today.",
+      hint: "Use future simple negative: je ne le verrai pas",
+      answerOptions: [
+        { text: "Je ne le verras pas aujourd'hui.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne le verra pas aujourd'hui.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne le verrons pas aujourd'hui.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne le verrai pas aujourd'hui.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Will they (female) see / Are they going to see us?",
+      hint: "Use future simple interrogative: nous verront-elles",
+      answerOptions: [
+        { text: "Nous verrons-elles ?", rationale: "Option A", isCorrect: false },
+        { text: "Nous verront-elles ?", rationale: "Option B", isCorrect: true },
+        { text: "Nous verra-elles ?", rationale: "Option C", isCorrect: false },
+        { text: "Nous verrez-elles ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will not see / is not going to see the problem.",
+      hint: "Use future simple negative: il ne verra pas",
+      answerOptions: [
+        { text: "Il ne verras pas le problème.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne verrons pas le problème.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne verra pas le problème.", rationale: "Option C", isCorrect: true },
+        { text: "Il ne verrez pas le problème.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will see / are going to see that it's easy.",
+      hint: "Use future simple of voir: tu verras",
+      answerOptions: [
+        { text: "Tu verras que c'est facile.", rationale: "Option A", isCorrect: true },
+        { text: "Tu verra que c'est facile.", rationale: "Option B", isCorrect: false },
+        { text: "Tu verrez que c'est facile.", rationale: "Option C", isCorrect: false },
+        { text: "Tu verrons que c'est facile.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will see / is going to see the doctor.",
+      hint: "Use future simple of voir: elle verra",
+      answerOptions: [
+        { text: "Elle verras le médecin.", rationale: "Option A", isCorrect: false },
+        { text: "Elle verra le médecin.", rationale: "Option B", isCorrect: true },
+        { text: "Elle verrons le médecin.", rationale: "Option C", isCorrect: false },
+        { text: "Elle verrez le médecin.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will see / am going to see my family next week.",
+      hint: "Use future simple of voir: je verrai",
+      answerOptions: [
+        { text: "Je verrai ma famille la semaine prochaine.", rationale: "Option A", isCorrect: true },
+        { text: "Je verras ma famille la semaine prochaine.", rationale: "Option B", isCorrect: false },
+        { text: "Je verra ma famille la semaine prochaine.", rationale: "Option C", isCorrect: false },
+        { text: "Je verrons ma famille la semaine prochaine.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will see / are going to see a big change.",
+      hint: "Use future simple of voir: vous verrez",
+      answerOptions: [
+        { text: "Vous verrons un grand changement.", rationale: "Option A", isCorrect: false },
+        { text: "Vous verras un grand changement.", rationale: "Option B", isCorrect: false },
+        { text: "Vous verrez un grand changement.", rationale: "Option C", isCorrect: true },
+        { text: "Vous verront un grand changement.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will not see / are not going to see the end of it.",
+      hint: "Use future simple negative: nous n'en verrons pas",
+      answerOptions: [
+        { text: "Nous n'en verrons pas la fin.", rationale: "Option A", isCorrect: true },
+        { text: "Nous n'en verrez pas la fin.", rationale: "Option B", isCorrect: false },
+        { text: "Nous n'en verront pas la fin.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'en verra pas la fin.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "One day you (informal) will see / are going to see.",
+      hint: "Use future simple of voir: tu verras",
+      answerOptions: [
+        { text: "Un jour tu verra.", rationale: "Option A", isCorrect: false },
+        { text: "Un jour tu verrez.", rationale: "Option B", isCorrect: false },
+        { text: "Un jour tu verrons.", rationale: "Option C", isCorrect: false },
+        { text: "Un jour tu verras.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) will not see / are not going to see us.",
+      hint: "Use future simple negative: ils ne nous verront pas",
+      answerOptions: [
+        { text: "Ils ne nous verrons pas.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne nous verrez pas.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne nous verras pas.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne nous verront pas.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 
