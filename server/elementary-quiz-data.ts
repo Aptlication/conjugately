@@ -1674,6 +1674,208 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Tu ne peux pas faire ça.", rationale: "Option D", isCorrect: true }
       ]
     }
+  ],
+  "venir": [
+    {
+      question: "She comes / is coming to the party.",
+      hint: "Use present tense of venir: elle vient",
+      answerOptions: [
+        { text: "Elle viennent à la fête.", rationale: "Option A", isCorrect: false },
+        { text: "Elle vient à la fête.", rationale: "Option B", isCorrect: true },
+        { text: "Elle venons à la fête.", rationale: "Option C", isCorrect: false },
+        { text: "Elle viens à la fête.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) come / are coming with us.",
+      hint: "Use present tense of venir: vous venez",
+      answerOptions: [
+        { text: "Vous venons avec nous.", rationale: "Option A", isCorrect: false },
+        { text: "Vous venez avec nous.", rationale: "Option B", isCorrect: true },
+        { text: "Vous viennent avec nous.", rationale: "Option C", isCorrect: false },
+        { text: "Vous viens avec nous.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When do you (informal) come / are you coming?",
+      hint: "Use present tense interrogative: quand viens-tu",
+      answerOptions: [
+        { text: "Quand viens-tu ?", rationale: "Option A", isCorrect: true },
+        { text: "Quand venez-vous ?", rationale: "Option B", isCorrect: false },
+        { text: "Quand vient-il ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand venons-nous ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He doesn't come / isn't coming from Spain.",
+      hint: "Use present tense negative: il ne vient pas",
+      answerOptions: [
+        { text: "Il ne vient pas d'Espagne.", rationale: "Option A", isCorrect: true },
+        { text: "Il ne viens pas d'Espagne.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne venons pas d'Espagne.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne viennent pas d'Espagne.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We come / are coming to see you.",
+      hint: "Use present tense of venir: nous venons",
+      answerOptions: [
+        { text: "Nous viennent vous voir.", rationale: "Option A", isCorrect: false },
+        { text: "Nous venez vous voir.", rationale: "Option B", isCorrect: false },
+        { text: "Nous venons vous voir.", rationale: "Option C", isCorrect: true },
+        { text: "Nous viens vous voir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) come / are coming from the same city.",
+      hint: "Use present tense of venir: ils viennent",
+      answerOptions: [
+        { text: "Ils vient de la même ville.", rationale: "Option A", isCorrect: false },
+        { text: "Ils venons de la même ville.", rationale: "Option B", isCorrect: false },
+        { text: "Ils viennent de la même ville.", rationale: "Option C", isCorrect: true },
+        { text: "Ils viens de la même ville.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) don't come / aren't coming today.",
+      hint: "Use present tense negative: elles ne viennent pas",
+      answerOptions: [
+        { text: "Elles ne vient pas aujourd'hui.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne viennent pas aujourd'hui.", rationale: "Option B", isCorrect: true },
+        { text: "Elles ne venons pas aujourd'hui.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne venez pas aujourd'hui.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I don't come / am not coming from Paris.",
+      hint: "Use present tense negative: je ne viens pas",
+      answerOptions: [
+        { text: "Je ne vient pas de Paris.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne venons pas de Paris.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne viennent pas de Paris.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne viens pas de Paris.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "One comes / is coming to help.",
+      hint: "Use present tense of venir: on vient",
+      answerOptions: [
+        { text: "On vient pour aider.", rationale: "Option A", isCorrect: true },
+        { text: "On venons pour aider.", rationale: "Option B", isCorrect: false },
+        { text: "On viennent pour aider.", rationale: "Option C", isCorrect: false },
+        { text: "On viens pour aider.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I come / am coming from the office.",
+      hint: "Use present tense of venir: je viens",
+      answerOptions: [
+        { text: "Je vient du bureau.", rationale: "Option A", isCorrect: false },
+        { text: "Je venons du bureau.", rationale: "Option B", isCorrect: false },
+        { text: "Je viens du bureau.", rationale: "Option C", isCorrect: true },
+        { text: "Je viennent du bureau.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We don't come / aren't coming to the meeting.",
+      hint: "Use present tense negative: nous ne venons pas",
+      answerOptions: [
+        { text: "Nous ne venons pas à la réunion.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne viennent pas à la réunion.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne venez pas à la réunion.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne vient pas à la réunion.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He comes / is coming to visit.",
+      hint: "Use present tense of venir: il vient",
+      answerOptions: [
+        { text: "Il vient rendre visite.", rationale: "Option A", isCorrect: true },
+        { text: "Il viens rendre visite.", rationale: "Option B", isCorrect: false },
+        { text: "Il venons rendre visite.", rationale: "Option C", isCorrect: false },
+        { text: "Il viennent rendre visite.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) come / are coming for dinner.",
+      hint: "Use present tense of venir: elles viennent",
+      answerOptions: [
+        { text: "Elles vient pour le dîner.", rationale: "Option A", isCorrect: false },
+        { text: "Elles venons pour le dîner.", rationale: "Option B", isCorrect: false },
+        { text: "Elles viennent pour le dîner.", rationale: "Option C", isCorrect: true },
+        { text: "Elles venez pour le dîner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you (formal) come / are you coming from far?",
+      hint: "Use present tense interrogative: venez-vous",
+      answerOptions: [
+        { text: "Venez-vous de loin ?", rationale: "Option A", isCorrect: true },
+        { text: "Viens-tu de loin ?", rationale: "Option B", isCorrect: false },
+        { text: "Vient-il de loin ?", rationale: "Option C", isCorrect: false },
+        { text: "Venons-nous de loin ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) come / are coming with me.",
+      hint: "Use present tense of venir: tu viens",
+      answerOptions: [
+        { text: "Tu viens avec moi.", rationale: "Option A", isCorrect: true },
+        { text: "Tu vient avec moi.", rationale: "Option B", isCorrect: false },
+        { text: "Tu venons avec moi.", rationale: "Option C", isCorrect: false },
+        { text: "Tu viennent avec moi.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) do not come / are not coming from here.",
+      hint: "Use present tense negative: ils ne viennent pas",
+      answerOptions: [
+        { text: "Ils ne vient pas d'ici.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne venons pas d'ici.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne viennent pas d'ici.", rationale: "Option C", isCorrect: true },
+        { text: "Ils ne venez pas d'ici.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Does he come / is he coming alone?",
+      hint: "Use present tense interrogative: vient-il",
+      answerOptions: [
+        { text: "Viennent-ils seuls ?", rationale: "Option A", isCorrect: false },
+        { text: "Vient-il seul ?", rationale: "Option B", isCorrect: true },
+        { text: "Viens-tu seul ?", rationale: "Option C", isCorrect: false },
+        { text: "Venez-vous seul ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why do we come / are we coming so late?",
+      hint: "Use present tense interrogative: pourquoi venons-nous",
+      answerOptions: [
+        { text: "Pourquoi venons-nous si tard ?", rationale: "Option A", isCorrect: true },
+        { text: "Pourquoi venez-vous si tard ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi viennent-ils si tard ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourquoi vient-il si tard ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) don't come / aren't coming from the right direction.",
+      hint: "Use present tense negative: tu ne viens pas",
+      answerOptions: [
+        { text: "Tu ne viens pas de la bonne direction.", rationale: "Option A", isCorrect: true },
+        { text: "Tu ne vient pas de la bonne direction.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne venons pas de la bonne direction.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne viennent pas de la bonne direction.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why don't they (female) come / aren't they coming?",
+      hint: "Use present tense interrogative negative: pourquoi ne viennent-elles pas",
+      answerOptions: [
+        { text: "Pourquoi ne vient-elle pas ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi ne venons-nous pas ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi ne viennent-elles pas ?", rationale: "Option C", isCorrect: true },
+        { text: "Pourquoi ne venez-vous pas ?", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 

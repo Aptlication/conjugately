@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She comes / is coming to the party.",
+    "options": {
+      "A": "Elle viennent à la fête.",
+      "B": "Elle vient à la fête.",
+      "C": "Elle venons à la fête.",
+      "D": "Elle viens à la fête."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "You (formal) come / are coming with us.",
+    "options": {
+      "A": "Vous venons avec nous.",
+      "B": "Vous venez avec nous.",
+      "C": "Vous viennent avec nous.",
+      "D": "Vous viens avec nous."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "When do you (informal) come / are you coming?",
+    "options": {
+      "A": "Quand viens-tu ?",
+      "B": "Quand venez-vous ?",
+      "C": "Quand vient-il ?",
+      "D": "Quand venons-nous ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He doesn't come / isn't coming from Spain.",
+    "options": {
+      "A": "Il ne vient pas d'Espagne.",
+      "B": "Il ne viens pas d'Espagne.",
+      "C": "Il ne venons pas d'Espagne.",
+      "D": "Il ne viennent pas d'Espagne."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "We come / are coming to see you.",
+    "options": {
+      "A": "Nous viennent vous voir.",
+      "B": "Nous venez vous voir.",
+      "C": "Nous venons vous voir.",
+      "D": "Nous viens vous voir."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "They (male/mixed) come / are coming from the same city.",
+    "options": {
+      "A": "Ils vient de la même ville.",
+      "B": "Ils venons de la même ville.",
+      "C": "Ils viennent de la même ville.",
+      "D": "Ils viens de la même ville."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (female) don't come / aren't coming today.",
+    "options": {
+      "A": "Elles ne vient pas aujourd'hui.",
+      "B": "Elles ne viennent pas aujourd'hui.",
+      "C": "Elles ne venons pas aujourd'hui.",
+      "D": "Elles ne venez pas aujourd'hui."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "I don't come / am not coming from Paris.",
+    "options": {
+      "A": "Je ne vient pas de Paris.",
+      "B": "Je ne venons pas de Paris.",
+      "C": "Je ne viennent pas de Paris.",
+      "D": "Je ne viens pas de Paris."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "One comes / is coming to help.",
+    "options": {
+      "A": "On vient pour aider.",
+      "B": "On venons pour aider.",
+      "C": "On viennent pour aider.",
+      "D": "On viens pour aider."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "I come / am coming from the office.",
+    "options": {
+      "A": "Je vient du bureau.",
+      "B": "Je venons du bureau.",
+      "C": "Je viens du bureau.",
+      "D": "Je viennent du bureau."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We don't come / aren't coming to the meeting.",
+    "options": {
+      "A": "Nous ne venons pas à la réunion.",
+      "B": "Nous ne viennent pas à la réunion.",
+      "C": "Nous ne venez pas à la réunion.",
+      "D": "Nous ne vient pas à la réunion."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "He comes / is coming to visit.",
+    "options": {
+      "A": "Il vient rendre visite.",
+      "B": "Il viens rendre visite.",
+      "C": "Il venons rendre visite.",
+      "D": "Il viennent rendre visite."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "They (female) come / are coming for dinner.",
+    "options": {
+      "A": "Elles vient pour le dîner.",
+      "B": "Elles venons pour le dîner.",
+      "C": "Elles viennent pour le dîner.",
+      "D": "Elles venez pour le dîner."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "Do you (formal) come / are you coming from far?",
+    "options": {
+      "A": "Venez-vous de loin ?",
+      "B": "Viens-tu de loin ?",
+      "C": "Vient-il de loin ?",
+      "D": "Venons-nous de loin ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "You (informal) come / are coming with me.",
+    "options": {
+      "A": "Tu viens avec moi.",
+      "B": "Tu vient avec moi.",
+      "C": "Tu venons avec moi.",
+      "D": "Tu viennent avec moi."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "They (male/mixed) do not come / are not coming from here.",
+    "options": {
+      "A": "Ils ne vient pas d'ici.",
+      "B": "Ils ne venons pas d'ici.",
+      "C": "Ils ne viennent pas d'ici.",
+      "D": "Ils ne venez pas d'ici."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "Does he come / is he coming alone?",
+    "options": {
+      "A": "Viennent-ils seuls ?",
+      "B": "Vient-il seul ?",
+      "C": "Viens-tu seul ?",
+      "D": "Venez-vous seul ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Why do we come / are we coming so late?",
+    "options": {
+      "A": "Pourquoi venons-nous si tard ?",
+      "B": "Pourquoi venez-vous si tard ?",
+      "C": "Pourquoi viennent-ils si tard ?",
+      "D": "Pourquoi vient-il si tard ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "You (informal) don't come / aren't coming from the right direction.",
+    "options": {
+      "A": "Tu ne viens pas de la bonne direction.",
+      "B": "Tu ne vient pas de la bonne direction.",
+      "C": "Tu ne venons pas de la bonne direction.",
+      "D": "Tu ne viennent pas de la bonne direction."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "Why don't they (female) come / aren't they coming?",
+    "options": {
+      "A": "Pourquoi ne vient-elle pas ?",
+      "B": "Pourquoi ne venons-nous pas ?",
+      "C": "Pourquoi ne viennent-elles pas ?",
+      "D": "Pourquoi ne venez-vous pas ?"
+    },
+    "correct_answer": "C"
+  }
+]
