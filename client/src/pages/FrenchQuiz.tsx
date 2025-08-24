@@ -539,7 +539,7 @@ export default function FrenchQuiz() {
                     <button
                       onClick={handleStartQuiz}
                       disabled={!selectedVerb || !selectedTimeFrame || !selectedTenseType}
-                      className="w-full p-4 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                      className="w-full p-4 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:bg-yellow-200 disabled:text-gray-700 disabled:cursor-not-allowed shadow-lg"
                     >
                       {selectedVerb && selectedTimeFrame && selectedTenseType 
                         ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
