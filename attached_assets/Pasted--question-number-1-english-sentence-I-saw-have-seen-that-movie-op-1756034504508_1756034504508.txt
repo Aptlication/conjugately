@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "I saw / have seen that movie.",
+    "options": {
+      "A": "Je suis vu ce film.",
+      "B": "J'ai vu ce film.",
+      "C": "J'ai vus ce film.",
+      "D": "Je voyais ce film."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "Did you (informal) see / have you seen his new car?",
+    "options": {
+      "A": "As-tu vu sa nouvelle voiture ?",
+      "B": "As-tu vus sa nouvelle voiture ?",
+      "C": "Voyais-tu sa nouvelle voiture ?",
+      "D": "Es-tu vu sa nouvelle voiture ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "You (formal) saw / have seen the results.",
+    "options": {
+      "A": "Vous êtes vu les résultats.",
+      "B": "Vous voyiez les résultats.",
+      "C": "Vous avez vus les résultats.",
+      "D": "Vous avez vu les résultats."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "We saw / have seen the exhibition.",
+    "options": {
+      "A": "Nous sommes vus l'exposition.",
+      "B": "Nous voyions l'exposition.",
+      "C": "Nous avons vu l'exposition.",
+      "D": "Nous avons vus l'exposition."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "He saw / has seen a ghost.",
+    "options": {
+      "A": "Il a vu un fantôme.",
+      "B": "Il voyait un fantôme.",
+      "C": "Il est vu un fantôme.",
+      "D": "Il a vus un fantôme."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "She didn't see / hasn't seen the message.",
+    "options": {
+      "A": "Elle ne voyait pas le message.",
+      "B": "Elle n'a pas vu le message.",
+      "C": "Elle n'est pas vue le message.",
+      "D": "Elle n'a pas vue le message."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (female) saw / have seen everything.",
+    "options": {
+      "A": "Elles ont vu tout.",
+      "B": "Elles sont vues tout.",
+      "C": "Elles ont vues tout.",
+      "D": "Elles voyaient tout."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "They (male/mixed) saw / have seen the match.",
+    "options": {
+      "A": "Ils sont vus le match.",
+      "B": "Ils voyaient le match.",
+      "C": "Ils ont vus le match.",
+      "D": "Ils ont vu le match."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "She saw / has seen her friends yesterday.",
+    "options": {
+      "A": "Elle voyait ses amis hier.",
+      "B": "Elle est vue ses amis hier.",
+      "C": "Elle a vu ses amis hier.",
+      "D": "Elle a vue ses amis hier."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "We never saw / have never seen such a thing.",
+    "options": {
+      "A": "Nous n'avons jamais vu une telle chose.",
+      "B": "Nous ne sommes jamais vus une telle chose.",
+      "C": "Nous ne voyions jamais une telle chose.",
+      "D": "Nous n'avons jamais vus une telle chose."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "Did he see / Has he seen the email?",
+    "options": {
+      "A": "A-t-il vu l'email ?",
+      "B": "Voyait-il l'email ?",
+      "C": "Est-il vu l'email ?",
+      "D": "A-t-il vus l'email ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "They (male/mixed) didn't see / haven't seen the film.",
+    "options": {
+      "A": "Ils ne voyaient pas le film.",
+      "B": "Ils ne sont pas vus le film.",
+      "C": "Ils n'ont pas vus le film.",
+      "D": "Ils n'ont pas vu le film."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "Have you (formal) seen / Did you see the news?",
+    "options": {
+      "A": "Avez-vous vus les nouvelles ?",
+      "B": "Voyiez-vous les nouvelles ?",
+      "C": "Avez-vous vu les nouvelles ?",
+      "D": "Êtes-vous vu les nouvelles ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "I haven't seen / didn't see anything.",
+    "options": {
+      "A": "Je n'ai pas vus rien.",
+      "B": "Je n'ai pas vu rien.",
+      "C": "Je n'ai rien vu.",
+      "D": "Je ne voyais rien."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "I haven't seen / didn't see my glasses.",
+    "options": {
+      "A": "Je ne voyais pas mes lunettes.",
+      "B": "Je n'ai pas vu mes lunettes.",
+      "C": "Je ne suis pas vu mes lunettes.",
+      "D": "Je n'ai pas vus mes lunettes."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "You (informal) haven't seen / didn't see the stop sign.",
+    "options": {
+      "A": "Tu n'as pas vus le panneau stop.",
+      "B": "Tu ne voyais pas le panneau stop.",
+      "C": "Tu n'es pas vu le panneau stop.",
+      "D": "Tu n'as pas vu le panneau stop."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "We didn't see / haven't seen them.",
+    "options": {
+      "A": "Nous ne les avons pas vus.",
+      "B": "Nous ne les voyions pas.",
+      "C": "Nous ne les avons pas vu.",
+      "D": "Nous ne les sommes pas vus."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "He hasn't seen / didn't see his keys.",
+    "options": {
+      "A": "Il ne voyait pas ses clés.",
+      "B": "Il n'a pas vu ses clés.",
+      "C": "Il n'est pas vu ses clés.",
+      "D": "Il n'a pas vus ses clés."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (female) haven't seen / didn't see the show.",
+    "options": {
+      "A": "Elles n'ont pas vu le spectacle.",
+      "B": "Elles ne sont pas vues le spectacle.",
+      "C": "Elles n'ont pas vues le spectacle.",
+      "D": "Elles ne voyaient pas le spectacle."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "She has already seen / already saw this play.",
+    "options": {
+      "A": "Elle a déjà vus cette pièce.",
+      "B": "Elle voyait déjà cette pièce.",
+      "C": "Elle est déjà vue cette pièce.",
+      "D": "Elle a déjà vu cette pièce."
+    },
+    "correct_answer": "D"
+  }
+]
