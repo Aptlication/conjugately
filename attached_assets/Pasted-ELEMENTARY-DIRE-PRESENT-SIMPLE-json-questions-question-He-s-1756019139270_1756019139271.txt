@@ -1,0 +1,213 @@
+ELEMENTARY > DIRE > PRESENT SIMPLE
+
+
+```json
+{
+  "questions": [
+    {
+      "question": "He says / He is saying the answer.",
+      "options": {
+        "A": "Il dit la réponse.",
+        "B": "Ils disent la réponse.",
+        "C": "Il disent la réponse.",
+        "D": "Ils dit la réponse."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "You (informal) say / are saying that every day.",
+      "options": {
+        "A": "Tu dis ça tous les jours.",
+        "B": "Tu disons ça tous les jours.",
+        "C": "Vous dites ça tous les jours.",
+        "D": "Tu dites ça tous les jours."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "We say / We are saying the truth.",
+      "options": {
+        "A": "Nous dites la vérité.",
+        "B": "Nous disons la vérité.",
+        "C": "Nous dis la vérité.",
+        "D": "Nous disent la vérité."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "They (female group) do not say / are not saying anything.",
+      "options": {
+        "A": "Elles ne disons rien.",
+        "B": "Elles ne dites rien.",
+        "C": "Elles ne disent rien.",
+        "D": "Elles ne dis rien."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "Does she say / is she saying the answer?",
+      "options": {
+        "A": "Est-ce qu’elle dites la réponse ?",
+        "B": "Est-ce qu’elle dit la réponse ?",
+        "C": "Est-ce qu’elle dis la réponse ?",
+        "D": "Est-ce qu’elle disent la réponse ?"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "He does not say / is not saying much.",
+      "options": {
+        "A": "Il ne dit pas grand-chose.",
+        "B": "Ils ne disent pas grand-chose.",
+        "C": "Il ne dis pas grand-chose.",
+        "D": "Il ne disent pas grand-chose."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "I do not say / am not saying anything.",
+      "options": {
+        "A": "Je ne dis rien.",
+        "B": "Je ne disons rien.",
+        "C": "Je ne dites rien.",
+        "D": "Je ne disent rien."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "You (formal) say / are saying important things.",
+      "options": {
+        "A": "Tu dis des choses importantes.",
+        "B": "Vous dites des choses importantes.",
+        "C": "Vous disons des choses importantes.",
+        "D": "Vous dis des choses importantes."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "We never say / are never saying that.",
+      "options": {
+        "A": "Nous ne disons jamais ça.",
+        "B": "Nous ne dites jamais ça.",
+        "C": "Nous ne disent jamais ça.",
+        "D": "Nous ne dis jamais ça."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "Do you (plural) say / are you saying good morning every day?",
+      "options": {
+        "A": "Dites-vous bonjour chaque jour ?",
+        "B": "Dis-tu bonjour chaque jour ?",
+        "C": "Disons-vous bonjour chaque jour ?",
+        "D": "Disez-vous bonjour chaque jour ?"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "They (male/mixed) say / are saying the truth.",
+      "options": {
+        "A": "Ils disent la vérité.",
+        "B": "Ils dites la vérité.",
+        "C": "Ils disons la vérité.",
+        "D": "Ils dit la vérité."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "You (informal) do not say / are not saying please.",
+      "options": {
+        "A": "Tu ne dis pas s’il te plaît.",
+        "B": "Vous ne dites pas s’il te plaît.",
+        "C": "Tu ne dites pas s’il te plaît.",
+        "D": "Vous ne dis pas s’il te plaît."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "They (female) say / are saying thank you.",
+      "options": {
+        "A": "Elles disent merci.",
+        "B": "Elles dites merci.",
+        "C": "Elles disons merci.",
+        "D": "Elles dit merci."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "We are saying / say goodbye now.",
+      "options": {
+        "A": "Nous disons au revoir maintenant.",
+        "B": "Nous dites au revoir maintenant.",
+        "C": "Nous disent au revoir maintenant.",
+        "D": "Nous dis au revoir maintenant."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "Do you (informal) say / are you saying your name?",
+      "options": {
+        "A": "Dis-tu ton nom ?",
+        "B": "Dites-tu ton nom ?",
+        "C": "Dites-vous ton nom ?",
+        "D": "Dis-tu ton noms ?"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "She says / is saying everything now.",
+      "options": {
+        "A": "Elle dit tout maintenant.",
+        "B": "Elle dites tout maintenant.",
+        "C": "Elle disent tout maintenant.",
+        "D": "Elle dis tout maintenant."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "question": "He says / is saying nothing.",
+      "options": {
+        "A": "Il ne dit rien.",
+        "B": "Ils ne disent rien.",
+        "C": "Il ne dis rien.",
+        "D": "Il ne disent rien."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "question": "We do not say / are not saying that often.",
+      "options": {
+        "A": "Nous ne disons pas ça souvent.",
+        "B": "Nous ne dites pas ça souvent.",
+        "C": "Nous ne disent pas ça souvent.",
+        "D": "Nous ne dis pas ça souvent."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "question": "I say / am saying the truth now.",
+      "options": {
+        "A": "Je dis la vérité maintenant.",
+        "B": "Je dites la vérité maintenant.",
+        "C": "Je disent la vérité maintenant.",
+        "D": "Je disons la vérité maintenant."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "question": "They do not say / are not saying anything.",
+      "options": {
+        "A": "Ils ne disent rien.",
+        "B": "Ils ne dites rien.",
+        "C": "Ils ne disons rien.",
+        "D": "Ils ne dis rien."
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
+```
+
+
+
+
