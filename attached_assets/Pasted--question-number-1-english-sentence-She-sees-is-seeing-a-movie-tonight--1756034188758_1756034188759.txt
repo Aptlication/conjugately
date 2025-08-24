@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She sees / is seeing a movie tonight.",
+    "options": {
+      "A": "Elle voyons un film ce soir.",
+      "B": "Elle vois un film ce soir.",
+      "C": "Elle voit un film ce soir.",
+      "D": "Elle voient un film ce soir."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "I see / am seeing the birds in the sky.",
+    "options": {
+      "A": "Je vois les oiseaux dans le ciel.",
+      "B": "Je voient les oiseaux dans le ciel.",
+      "C": "Je voyons les oiseaux dans le ciel.",
+      "D": "Je voit les oiseaux dans le ciel."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "Why do you (formal) see / are you seeing a doctor?",
+    "options": {
+      "A": "Pourquoi vous voient un médecin ?",
+      "B": "Pourquoi vous vois un médecin ?",
+      "C": "Pourquoi vous voyons un médecin ?",
+      "D": "Pourquoi vous voyez un médecin ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He sees / is seeing his reflection in the mirror.",
+    "options": {
+      "A": "Il voit son reflet dans le miroir.",
+      "B": "Il voient son reflet dans le miroir.",
+      "C": "Il vois son reflet dans le miroir.",
+      "D": "Il voyons son reflet dans le miroir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "We see / are seeing our parents this weekend.",
+    "options": {
+      "A": "Nous voyons nos parents ce week-end.",
+      "B": "Nous voit nos parents ce week-end.",
+      "C": "Nous voient nos parents ce week-end.",
+      "D": "Nous vois nos parents ce week-end."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "We see / are seeing what you mean.",
+    "options": {
+      "A": "Nous voient ce que tu veux dire.",
+      "B": "Nous vois ce que tu veux dire.",
+      "C": "Nous voit ce que tu veux dire.",
+      "D": "Nous voyons ce que tu veux dire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (male/mixed) see / are seeing a better future.",
+    "options": {
+      "A": "Ils voit un avenir meilleur.",
+      "B": "Ils vois un avenir meilleur.",
+      "C": "Ils voyez un avenir meilleur.",
+      "D": "Ils voient un avenir meilleur."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "One sees / is seeing the Eiffel Tower from here.",
+    "options": {
+      "A": "On voient la Tour Eiffel d'ici.",
+      "B": "On vois la Tour Eiffel d'ici.",
+      "C": "On voyez la Tour Eiffel d'ici.",
+      "D": "On voit la Tour Eiffel d'ici."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Do we see / Are we seeing the same thing?",
+    "options": {
+      "A": "Est-ce que nous voient la même chose ?",
+      "B": "Est-ce que nous voyons la même chose ?",
+      "C": "Est-ce que nous voit la même chose ?",
+      "D": "Est-ce que nous vois la même chose ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "I see / am seeing my cat.",
+    "options": {
+      "A": "Je voit mon chat.",
+      "B": "Je vois mon chat.",
+      "C": "Je voient mon chat.",
+      "D": "Je voyez mon chat."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "Do you (informal) see / Are you seeing that star?",
+    "options": {
+      "A": "Est-ce que tu voient cette étoile ?",
+      "B": "Est-ce que tu voit cette étoile ?",
+      "C": "Est-ce que tu vois cette étoile ?",
+      "D": "Est-ce que tu voyons cette étoile ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "You (informal) see / are seeing the red car.",
+    "options": {
+      "A": "Tu voient la voiture rouge.",
+      "B": "Tu vois la voiture rouge.",
+      "C": "Tu voyons la voiture rouge.",
+      "D": "Tu voit la voiture rouge."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "You (formal) don't see / aren't seeing the problem.",
+    "options": {
+      "A": "Vous ne voyez pas le problème.",
+      "B": "Vous ne voyons pas le problème.",
+      "C": "Vous ne voient pas le problème.",
+      "D": "Vous ne vois pas le problème."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "What do you (formal) see / are you seeing?",
+    "options": {
+      "A": "Que voient-vous ?",
+      "B": "Que voyez-vous ?",
+      "C": "Que vois-vous ?",
+      "D": "Que voyons-vous ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "He doesn't see / isn't seeing us.",
+    "options": {
+      "A": "Il ne voient pas nous.",
+      "B": "Il ne voit pas nous.",
+      "C": "Il ne voyez pas nous.",
+      "D": "Il ne vois pas nous."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "They (male/mixed) see / are seeing their family often.",
+    "options": {
+      "A": "Ils voit leur famille souvent.",
+      "B": "Ils voient leur famille souvent.",
+      "C": "Ils voyons leur famille souvent.",
+      "D": "Ils vois leur famille souvent."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "I don't see / am not seeing my keys.",
+    "options": {
+      "A": "Je ne voient pas mes clés.",
+      "B": "Je ne voit pas mes clés.",
+      "C": "Je ne voyez pas mes clés.",
+      "D": "Je ne vois pas mes clés."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (female) don't see / aren't seeing the point.",
+    "options": {
+      "A": "Elles ne voit pas l'intérêt.",
+      "B": "Elles ne voyons pas l'intérêt.",
+      "C": "Elles ne voient pas l'intérêt.",
+      "D": "Elles ne vois pas l'intérêt."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (female) see / are seeing the beautiful landscape.",
+    "options": {
+      "A": "Elles voient le beau paysage.",
+      "B": "Elles voit le beau paysage.",
+      "C": "Elles voyons le beau paysage.",
+      "D": "Elles vois le beau paysage."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "We don't see / aren't seeing anything.",
+    "options": {
+      "A": "Nous ne voient rien.",
+      "B": "Nous ne vois rien.",
+      "C": "Nous ne voyons rien.",
+      "D": "Nous ne voit rien."
+    },
+    "correct_answer": "C"
+  }
+]

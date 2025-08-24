@@ -1270,6 +1270,208 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "voir": [
+    {
+      question: "She sees / is seeing a movie tonight.",
+      hint: "Use present tense of voir: elle voit",
+      answerOptions: [
+        { text: "Elle voyons un film ce soir.", rationale: "Option A", isCorrect: false },
+        { text: "Elle vois un film ce soir.", rationale: "Option B", isCorrect: false },
+        { text: "Elle voit un film ce soir.", rationale: "Option C", isCorrect: true },
+        { text: "Elle voient un film ce soir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I see / am seeing the birds in the sky.",
+      hint: "Use present tense of voir: je vois",
+      answerOptions: [
+        { text: "Je vois les oiseaux dans le ciel.", rationale: "Option A", isCorrect: true },
+        { text: "Je voient les oiseaux dans le ciel.", rationale: "Option B", isCorrect: false },
+        { text: "Je voyons les oiseaux dans le ciel.", rationale: "Option C", isCorrect: false },
+        { text: "Je voit les oiseaux dans le ciel.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why do you (formal) see / are you seeing a doctor?",
+      hint: "Use present tense interrogative: pourquoi vous voyez",
+      answerOptions: [
+        { text: "Pourquoi vous voient un médecin ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi vous vois un médecin ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi vous voyons un médecin ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourquoi vous voyez un médecin ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "He sees / is seeing his reflection in the mirror.",
+      hint: "Use present tense of voir: il voit",
+      answerOptions: [
+        { text: "Il voit son reflet dans le miroir.", rationale: "Option A", isCorrect: true },
+        { text: "Il voient son reflet dans le miroir.", rationale: "Option B", isCorrect: false },
+        { text: "Il vois son reflet dans le miroir.", rationale: "Option C", isCorrect: false },
+        { text: "Il voyons son reflet dans le miroir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We see / are seeing our parents this weekend.",
+      hint: "Use present tense of voir: nous voyons",
+      answerOptions: [
+        { text: "Nous voyons nos parents ce week-end.", rationale: "Option A", isCorrect: true },
+        { text: "Nous voit nos parents ce week-end.", rationale: "Option B", isCorrect: false },
+        { text: "Nous voient nos parents ce week-end.", rationale: "Option C", isCorrect: false },
+        { text: "Nous vois nos parents ce week-end.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We see / are seeing what you mean.",
+      hint: "Use present tense of voir: nous voyons",
+      answerOptions: [
+        { text: "Nous voient ce que tu veux dire.", rationale: "Option A", isCorrect: false },
+        { text: "Nous vois ce que tu veux dire.", rationale: "Option B", isCorrect: false },
+        { text: "Nous voit ce que tu veux dire.", rationale: "Option C", isCorrect: false },
+        { text: "Nous voyons ce que tu veux dire.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) see / are seeing a better future.",
+      hint: "Use present tense of voir: ils voient",
+      answerOptions: [
+        { text: "Ils voit un avenir meilleur.", rationale: "Option A", isCorrect: false },
+        { text: "Ils vois un avenir meilleur.", rationale: "Option B", isCorrect: false },
+        { text: "Ils voyez un avenir meilleur.", rationale: "Option C", isCorrect: false },
+        { text: "Ils voient un avenir meilleur.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "One sees / is seeing the Eiffel Tower from here.",
+      hint: "Use present tense of voir: on voit",
+      answerOptions: [
+        { text: "On voient la Tour Eiffel d'ici.", rationale: "Option A", isCorrect: false },
+        { text: "On vois la Tour Eiffel d'ici.", rationale: "Option B", isCorrect: false },
+        { text: "On voyez la Tour Eiffel d'ici.", rationale: "Option C", isCorrect: false },
+        { text: "On voit la Tour Eiffel d'ici.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Do we see / Are we seeing the same thing?",
+      hint: "Use present tense interrogative: est-ce que nous voyons",
+      answerOptions: [
+        { text: "Est-ce que nous voient la même chose ?", rationale: "Option A", isCorrect: false },
+        { text: "Est-ce que nous voyons la même chose ?", rationale: "Option B", isCorrect: true },
+        { text: "Est-ce que nous voit la même chose ?", rationale: "Option C", isCorrect: false },
+        { text: "Est-ce que nous vois la même chose ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I see / am seeing my cat.",
+      hint: "Use present tense of voir: je vois",
+      answerOptions: [
+        { text: "Je voit mon chat.", rationale: "Option A", isCorrect: false },
+        { text: "Je vois mon chat.", rationale: "Option B", isCorrect: true },
+        { text: "Je voient mon chat.", rationale: "Option C", isCorrect: false },
+        { text: "Je voyez mon chat.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you (informal) see / Are you seeing that star?",
+      hint: "Use present tense interrogative: est-ce que tu vois",
+      answerOptions: [
+        { text: "Est-ce que tu voient cette étoile ?", rationale: "Option A", isCorrect: false },
+        { text: "Est-ce que tu voit cette étoile ?", rationale: "Option B", isCorrect: false },
+        { text: "Est-ce que tu vois cette étoile ?", rationale: "Option C", isCorrect: true },
+        { text: "Est-ce que tu voyons cette étoile ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) see / are seeing the red car.",
+      hint: "Use present tense of voir: tu vois",
+      answerOptions: [
+        { text: "Tu voient la voiture rouge.", rationale: "Option A", isCorrect: false },
+        { text: "Tu vois la voiture rouge.", rationale: "Option B", isCorrect: true },
+        { text: "Tu voyons la voiture rouge.", rationale: "Option C", isCorrect: false },
+        { text: "Tu voit la voiture rouge.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) don't see / aren't seeing the problem.",
+      hint: "Use present tense negative: vous ne voyez pas",
+      answerOptions: [
+        { text: "Vous ne voyez pas le problème.", rationale: "Option A", isCorrect: true },
+        { text: "Vous ne voyons pas le problème.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne voient pas le problème.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne vois pas le problème.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "What do you (formal) see / are you seeing?",
+      hint: "Use present tense interrogative: que voyez-vous",
+      answerOptions: [
+        { text: "Que voient-vous ?", rationale: "Option A", isCorrect: false },
+        { text: "Que voyez-vous ?", rationale: "Option B", isCorrect: true },
+        { text: "Que vois-vous ?", rationale: "Option C", isCorrect: false },
+        { text: "Que voyons-vous ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He doesn't see / isn't seeing us.",
+      hint: "Use present tense negative: il ne voit pas",
+      answerOptions: [
+        { text: "Il ne voient pas nous.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne voit pas nous.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne voyez pas nous.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne vois pas nous.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) see / are seeing their family often.",
+      hint: "Use present tense of voir: ils voient",
+      answerOptions: [
+        { text: "Ils voit leur famille souvent.", rationale: "Option A", isCorrect: false },
+        { text: "Ils voient leur famille souvent.", rationale: "Option B", isCorrect: true },
+        { text: "Ils voyons leur famille souvent.", rationale: "Option C", isCorrect: false },
+        { text: "Ils vois leur famille souvent.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I don't see / am not seeing my keys.",
+      hint: "Use present tense negative: je ne vois pas",
+      answerOptions: [
+        { text: "Je ne voient pas mes clés.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne voit pas mes clés.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne voyez pas mes clés.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne vois pas mes clés.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) don't see / aren't seeing the point.",
+      hint: "Use present tense negative: elles ne voient pas",
+      answerOptions: [
+        { text: "Elles ne voit pas l'intérêt.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne voyons pas l'intérêt.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne voient pas l'intérêt.", rationale: "Option C", isCorrect: true },
+        { text: "Elles ne vois pas l'intérêt.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) see / are seeing the beautiful landscape.",
+      hint: "Use present tense of voir: elles voient",
+      answerOptions: [
+        { text: "Elles voient le beau paysage.", rationale: "Option A", isCorrect: true },
+        { text: "Elles voit le beau paysage.", rationale: "Option B", isCorrect: false },
+        { text: "Elles voyons le beau paysage.", rationale: "Option C", isCorrect: false },
+        { text: "Elles vois le beau paysage.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We don't see / aren't seeing anything.",
+      hint: "Use present tense negative: nous ne voyons rien",
+      answerOptions: [
+        { text: "Nous ne voient rien.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne vois rien.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne voyons rien.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne voit rien.", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 
