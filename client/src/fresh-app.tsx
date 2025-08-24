@@ -646,17 +646,15 @@ function FreshAppCore({ user }: { user: any }) {
               </div>
               
               <div>
-                <label style={{ display: 'flex', alignItems: 'center', marginBottom: '12px', color: 'rgba(255,255,255,0.8)', cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    style={{ width: '16px', height: '16px', marginRight: '12px' }}
-                    onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
-                  />
-                  <span style={{ fontSize: '14px', color: '#60a5fa', textDecoration: 'underline' }}>Don't remind me about reflexive verbs again</span>
-                </label>
+                <button
+                  onClick={() => handleReflexiveModalDismiss(true)}
+                  style={{ fontSize: '14px', color: '#60a5fa', textDecoration: 'underline', background: 'transparent', border: 'none', cursor: 'pointer', marginBottom: '12px' }}
+                >
+                  Don't remind me about reflexive verbs again
+                </button>
                 
                 <button
-                  onClick={() => handleReflexiveModalDismiss(reflexiveModalDismissed)}
+                  onClick={() => handleReflexiveModalDismiss(false)}
                   style={{ width: '100%', padding: '12px', background: '#7c3aed', color: 'white', fontWeight: '600', borderRadius: '12px', border: 'none', cursor: 'pointer' }}
                 >
                   Start Quiz

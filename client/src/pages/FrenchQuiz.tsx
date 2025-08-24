@@ -706,17 +706,15 @@ export default function FrenchQuiz() {
                   </div>
                   
                   <div className="space-y-3">
-                    <label className="flex items-center space-x-3 text-white/80 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="w-4 h-4 text-purple-600 bg-white/20 border-white/30 rounded focus:ring-purple-500"
-                        onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
-                      />
-                      <span className="text-sm text-blue-400 underline">Don't remind me about reflexive verbs again</span>
-                    </label>
+                    <button
+                      onClick={() => handleReflexiveModalDismiss(true)}
+                      className="text-sm text-blue-400 underline hover:text-blue-300 transition-colors bg-transparent border-none cursor-pointer"
+                    >
+                      Don't remind me about reflexive verbs again
+                    </button>
                     
                     <button
-                      onClick={() => handleReflexiveModalDismiss(reflexiveModalDismissed)}
+                      onClick={() => handleReflexiveModalDismiss(false)}
                       className="w-full p-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
                     >
                       Start Quiz
