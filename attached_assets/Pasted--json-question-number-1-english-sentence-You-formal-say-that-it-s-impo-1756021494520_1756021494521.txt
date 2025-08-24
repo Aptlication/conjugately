@@ -1,0 +1,224 @@
+```json
+[
+  {
+    "question_number": 1,
+    "english_sentence": "You (formal) say that it's important.",
+    "options": {
+      "A": "Vous disent que c'est important.",
+      "B": "Vous dis que c'est important.",
+      "C": "Vous dites que c'est important.",
+      "D": "Vous dit que c'est important."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "We say what we think.",
+    "options": {
+      "A": "Nous disons ce que nous pensons.",
+      "B": "Nous dit ce que nous pensons.",
+      "C": "Nous disent ce que nous pensons.",
+      "D": "Nous dis ce que nous pensons."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (feminine) always say hello.",
+    "options": {
+      "A": "Elles dit toujours bonjour.",
+      "B": "Elles disons toujours bonjour.",
+      "C": "Elles dis toujours bonjour.",
+      "D": "Elles disent toujours bonjour."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He doesn't say a word.",
+    "options": {
+      "A": "Il ne disons pas un mot.",
+      "B": "Il ne dit pas un mot.",
+      "C": "Il ne dis pas un mot.",
+      "D": "Il ne disent pas un mot."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "I say that it's possible.",
+    "options": {
+      "A": "Je dis que c'est possible.",
+      "B": "Je dit que c'est possible.",
+      "C": "Je disons que c'est possible.",
+      "D": "Je dites que c'est possible."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "You (informal) say something interesting.",
+    "options": {
+      "A": "Tu dit quelque chose d'intéressant.",
+      "B": "Tu dis quelque chose d'intéressant.",
+      "C": "Tu disons quelque chose d'intéressant.",
+      "D": "Tu dites quelque chose d'intéressant."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "What are you (formal) saying?",
+    "options": {
+      "A": "Que disent-ils ?",
+      "B": "Que dis-tu ?",
+      "C": "Que dites-vous ?",
+      "D": "Que dit-il ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "They (masculine) say that they are ready.",
+    "options": {
+      "A": "Ils dit qu'ils sont prêts.",
+      "B": "Ils disons qu'ils sont prêts.",
+      "C": "Ils dis qu'ils sont prêts.",
+      "D": "Ils disent qu'ils sont prêts."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "She says no.",
+    "options": {
+      "A": "Elle dit non.",
+      "B": "Elle dis non.",
+      "C": "Elle disons non.",
+      "D": "Elle disent non."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "Do we say the truth?",
+    "options": {
+      "A": "Dit-on la vérité ?",
+      "B": "Disons-nous la vérité ?",
+      "C": "Dites-vous la vérité ?",
+      "D": "Disent-ils la vérité ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "You (informal) don't say that.",
+    "options": {
+      "A": "Tu ne dites pas ça.",
+      "B": "Tu ne dit pas ça.",
+      "C": "Tu ne dis pas ça.",
+      "D": "Tu ne disons pas ça."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "Why does he say that?",
+    "options": {
+      "A": "Pourquoi dis-tu cela ?",
+      "B": "Pourquoi dit-il cela ?",
+      "C": "Pourquoi disons-nous cela ?",
+      "D": "Pourquoi disent-ils cela ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "I never say that.",
+    "options": {
+      "A": "Je ne dit jamais ça.",
+      "B": "Je ne disons jamais ça.",
+      "C": "Je ne dis jamais ça.",
+      "D": "Je ne dites jamais ça."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "We say goodbye to our friends.",
+    "options": {
+      "A": "Nous disons au revoir à nos amis.",
+      "B": "Nous dit au revoir à nos amis.",
+      "C": "Nous disent au revoir à nos amis.",
+      "D": "Nous dis au revoir à nos amis."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "What do you (informal) say?",
+    "options": {
+      "A": "Que dit-il ?",
+      "B": "Que disons-nous ?",
+      "C": "Que dites-vous ?",
+      "D": "Que dis-tu ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "She says it is false.",
+    "options": {
+      "A": "Elle disons que c'est faux.",
+      "B": "Elle dit que c'est faux.",
+      "C": "Elle dis que c'est faux.",
+      "D": "Elle disent que c'est faux."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "I say yes!",
+    "options": {
+      "A": "Je dis oui !",
+      "B": "Je dit oui !",
+      "C": "Je disons oui !",
+      "D": "Je dites oui !"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "You (formal) are not saying anything.",
+    "options": {
+      "A": "Vous ne dis rien.",
+      "B": "Vous ne dit rien.",
+      "C": "Vous ne disent rien.",
+      "D": "Vous ne dites rien."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (feminine) do not say their names.",
+    "options": {
+      "A": "Elles ne dit pas leurs noms.",
+      "B": "Elles ne disons pas leurs noms.",
+      "C": "Elles ne disent pas leurs noms.",
+      "D": "Elles ne dis pas leurs noms."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "They (masculine) say good evening.",
+    "options": {
+      "A": "Ils disent bonsoir.",
+      "B": "Ils dit bonsoir.",
+      "C": "Ils disons bonsoir.",
+      "D": "Ils dis bonsoir."
+    },
+    "correct_answer": "A"
+  }
+]
+```
