@@ -232,10 +232,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "You (informal) say / are saying that every day.",
       hint: "Use informal second person: tu dis",
       answerOptions: [
-        { text: "Tu dis ça tous les jours.", rationale: "Option A", isCorrect: false },
+        { text: "Tu dis ça tous les jours.", rationale: "Option A", isCorrect: true },
         { text: "Tu disons ça tous les jours.", rationale: "Option B", isCorrect: false },
         { text: "Vous dites ça tous les jours.", rationale: "Option C", isCorrect: false },
-        { text: "Tu dites ça tous les jours.", rationale: "Option D", isCorrect: true }
+        { text: "Tu dites ça tous les jours.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
@@ -272,10 +272,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "He does not say / is not saying much.",
       hint: "Use third person singular with negation: il ne dit pas",
       answerOptions: [
-        { text: "Il ne dit pas grand-chose.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne dit pas grand-chose.", rationale: "Option A", isCorrect: true },
         { text: "Ils ne disent pas grand-chose.", rationale: "Option B", isCorrect: false },
         { text: "Il ne dis pas grand-chose.", rationale: "Option C", isCorrect: false },
-        { text: "Il ne disent pas grand-chose.", rationale: "Option D", isCorrect: true }
+        { text: "Il ne disent pas grand-chose.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
@@ -302,9 +302,9 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "We never say / are never saying that.",
       hint: "Use first person plural with negation: nous ne disons jamais",
       answerOptions: [
-        { text: "Nous ne disons jamais ça.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne disons jamais ça.", rationale: "Option A", isCorrect: true },
         { text: "Nous ne dites jamais ça.", rationale: "Option B", isCorrect: false },
-        { text: "Nous ne disent jamais ça.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne disent jamais ça.", rationale: "Option C", isCorrect: false },
         { text: "Nous ne dis jamais ça.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -312,19 +312,19 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do you (plural) say / are you saying good morning every day?",
       hint: "Use plural interrogative inversion: dites-vous",
       answerOptions: [
-        { text: "Dites-vous bonjour chaque jour ?", rationale: "Option A", isCorrect: false },
+        { text: "Dites-vous bonjour chaque jour ?", rationale: "Option A", isCorrect: true },
         { text: "Dis-tu bonjour chaque jour ?", rationale: "Option B", isCorrect: false },
         { text: "Disons-vous bonjour chaque jour ?", rationale: "Option C", isCorrect: false },
-        { text: "Disez-vous bonjour chaque jour ?", rationale: "Option D", isCorrect: true }
+        { text: "Disez-vous bonjour chaque jour ?", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "They (male/mixed) say / are saying the truth.",
       hint: "Use masculine plural: ils disent",
       answerOptions: [
-        { text: "Ils disent la vérité.", rationale: "Option A", isCorrect: false },
+        { text: "Ils disent la vérité.", rationale: "Option A", isCorrect: true },
         { text: "Ils dites la vérité.", rationale: "Option B", isCorrect: false },
-        { text: "Ils disons la vérité.", rationale: "Option C", isCorrect: true },
+        { text: "Ils disons la vérité.", rationale: "Option C", isCorrect: false },
         { text: "Ils dit la vérité.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -332,8 +332,8 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "You (informal) do not say / are not saying please.",
       hint: "Use informal 'tu' with negation: tu ne dis pas",
       answerOptions: [
-        { text: "Tu ne dis pas s'il te plaît.", rationale: "Option A", isCorrect: false },
-        { text: "Vous ne dites pas s'il te plaît.", rationale: "Option B", isCorrect: true },
+        { text: "Tu ne dis pas s'il te plaît.", rationale: "Option A", isCorrect: true },
+        { text: "Vous ne dites pas s'il te plaît.", rationale: "Option B", isCorrect: false },
         { text: "Tu ne dites pas s'il te plaît.", rationale: "Option C", isCorrect: false },
         { text: "Vous ne dis pas s'il te plaît.", rationale: "Option D", isCorrect: false }
       ]
@@ -342,18 +342,18 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "They (female) say / are saying thank you.",
       hint: "Use feminine plural: elles disent",
       answerOptions: [
-        { text: "Elles disent merci.", rationale: "Option A", isCorrect: false },
+        { text: "Elles disent merci.", rationale: "Option A", isCorrect: true },
         { text: "Elles dites merci.", rationale: "Option B", isCorrect: false },
         { text: "Elles disons merci.", rationale: "Option C", isCorrect: false },
-        { text: "Elles dit merci.", rationale: "Option D", isCorrect: true }
+        { text: "Elles dit merci.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "We are saying / say goodbye now.",
       hint: "Use first person plural: nous disons",
       answerOptions: [
-        { text: "Nous disons au revoir maintenant.", rationale: "Option A", isCorrect: false },
-        { text: "Nous dites au revoir maintenant.", rationale: "Option B", isCorrect: true },
+        { text: "Nous disons au revoir maintenant.", rationale: "Option A", isCorrect: true },
+        { text: "Nous dites au revoir maintenant.", rationale: "Option B", isCorrect: false },
         { text: "Nous disent au revoir maintenant.", rationale: "Option C", isCorrect: false },
         { text: "Nous dis au revoir maintenant.", rationale: "Option D", isCorrect: false }
       ]
@@ -362,19 +362,19 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do you (informal) say / are you saying your name?",
       hint: "Use informal interrogative inversion: dis-tu",
       answerOptions: [
-        { text: "Dis-tu ton nom ?", rationale: "Option A", isCorrect: false },
+        { text: "Dis-tu ton nom ?", rationale: "Option A", isCorrect: true },
         { text: "Dites-tu ton nom ?", rationale: "Option B", isCorrect: false },
         { text: "Dites-vous ton nom ?", rationale: "Option C", isCorrect: false },
-        { text: "Dis-tu ton noms ?", rationale: "Option D", isCorrect: true }
+        { text: "Dis-tu ton noms ?", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "She says / is saying everything now.",
       hint: "Use third person singular feminine: elle dit",
       answerOptions: [
-        { text: "Elle dit tout maintenant.", rationale: "Option A", isCorrect: false },
+        { text: "Elle dit tout maintenant.", rationale: "Option A", isCorrect: true },
         { text: "Elle dites tout maintenant.", rationale: "Option B", isCorrect: false },
-        { text: "Elle disent tout maintenant.", rationale: "Option C", isCorrect: true },
+        { text: "Elle disent tout maintenant.", rationale: "Option C", isCorrect: false },
         { text: "Elle dis tout maintenant.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -382,8 +382,8 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "He says / is saying nothing.",
       hint: "Use third person singular with negation: il ne dit rien",
       answerOptions: [
-        { text: "Il ne dit rien.", rationale: "Option A", isCorrect: false },
-        { text: "Ils ne disent rien.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne dit rien.", rationale: "Option A", isCorrect: true },
+        { text: "Ils ne disent rien.", rationale: "Option B", isCorrect: false },
         { text: "Il ne dis rien.", rationale: "Option C", isCorrect: false },
         { text: "Il ne disent rien.", rationale: "Option D", isCorrect: false }
       ]
@@ -402,19 +402,19 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "I say / am saying the truth now.",
       hint: "Use first person singular: je dis",
       answerOptions: [
-        { text: "Je dis la vérité maintenant.", rationale: "Option A", isCorrect: false },
+        { text: "Je dis la vérité maintenant.", rationale: "Option A", isCorrect: true },
         { text: "Je dites la vérité maintenant.", rationale: "Option B", isCorrect: false },
         { text: "Je disent la vérité maintenant.", rationale: "Option C", isCorrect: false },
-        { text: "Je disons la vérité maintenant.", rationale: "Option D", isCorrect: true }
+        { text: "Je disons la vérité maintenant.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "They do not say / are not saying anything.",
       hint: "Use third person plural with negation: ils ne disent rien",
       answerOptions: [
-        { text: "Ils ne disent rien.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne disent rien.", rationale: "Option A", isCorrect: true },
         { text: "Ils ne dites rien.", rationale: "Option B", isCorrect: false },
-        { text: "Ils ne disons rien.", rationale: "Option C", isCorrect: true },
+        { text: "Ils ne disons rien.", rationale: "Option C", isCorrect: false },
         { text: "Ils ne dis rien.", rationale: "Option D", isCorrect: false }
       ]
     }
