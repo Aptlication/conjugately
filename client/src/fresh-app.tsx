@@ -652,7 +652,7 @@ function FreshAppCore({ user }: { user: any }) {
                     style={{ width: '16px', height: '16px', marginRight: '12px' }}
                     onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
                   />
-                  <span style={{ fontSize: '14px' }}>Don't remind me about reflexive verbs again</span>
+                  <span style={{ fontSize: '14px', color: '#60a5fa', textDecoration: 'underline' }}>Don't remind me about reflexive verbs again</span>
                 </label>
                 
                 <button

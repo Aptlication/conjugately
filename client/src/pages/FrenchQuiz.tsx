@@ -712,7 +712,7 @@ export default function FrenchQuiz() {
                         className="w-4 h-4 text-purple-600 bg-white/20 border-white/30 rounded focus:ring-purple-500"
                         onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
                       />
-                      <span className="text-sm">Don't remind me about reflexive verbs again</span>
+                      <span className="text-sm text-blue-400 underline">Don't remind me about reflexive verbs again</span>
                     </label>
                     
                     <button
