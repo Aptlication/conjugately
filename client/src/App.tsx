@@ -104,7 +104,7 @@ function App() {
 
 
   // Most used French verbs in order of frequency - including reflexive verbs for complete coverage
-  const FRENCH_VERBS = ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "s'habiller"];
+  const FRENCH_VERBS = ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder", "devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"];
   
   // Verb meanings mapping for dropdown display
   const VERB_MEANINGS = {

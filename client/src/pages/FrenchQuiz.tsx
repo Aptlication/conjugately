@@ -15,9 +15,10 @@ type QuizState = 'config' | 'loading' | 'active' | 'results';
 
 // Complete French verbs including reflexive verbs for full coverage
 const FRENCH_VERBS = [
-  "être", "avoir", "faire", "dire", "aller", 
-  "voir", "savoir", "pouvoir", "vouloir", "venir",
-  "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "s'habiller"
+  "s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", 
+  "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder", 
+  "devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", 
+  "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"
 ];
 
 // Time frames and their corresponding tenses
@@ -45,12 +46,12 @@ const DIFFICULTY_CONFIGS = {
     tenses: ["Présent", "Passé Composé", "Futur Simple"]
   },
   "Intermediate": {
-    verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "prendre"],
+    verbs: ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder"],
     timeFrames: ["Present", "Past", "Future"],
     tenses: ["Présent", "Passé Composé", "Futur Simple", "Imparfait"]
   },
   "Advanced": {
-    verbs: [...FRENCH_VERBS], // All 16 verbs including reflexive verbs
+    verbs: ["devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"],
     timeFrames: Object.keys(TIME_FRAMES),
     tenses: Object.values(TIME_FRAMES).flat()
   }
