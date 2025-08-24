@@ -560,7 +560,7 @@ function FreshAppCore({ user }: { user: any }) {
               `Start ${selectedVerb} Quiz (${selectedTenseType})`
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete 1, 2 & 3 to start quiz"}</span>
                 {!selectionReminderDismissed && (
                   <span
                     onClick={(e) => {

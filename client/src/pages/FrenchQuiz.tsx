@@ -583,7 +583,7 @@ export default function FrenchQuiz() {
                         `Start ${selectedVerb} Quiz (${selectedTenseType})`
                       ) : (
                         <div className="flex flex-col items-center space-y-2">
-                          <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                          <span>{selectionReminderDismissed ? "Start Quiz" : "Complete 1, 2 & 3 to start quiz"}</span>
                           {!selectionReminderDismissed && (
                             <span
                               onClick={(e) => {

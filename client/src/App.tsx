@@ -2225,7 +2225,7 @@ function App() {
               `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame})`
             ) : (
               <div className="flex flex-col items-center space-y-2">
-                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete 1, 2 & 3 to start quiz"}</span>
                 {!selectionReminderDismissed && (
                   <span
                     onClick={(e) => {
