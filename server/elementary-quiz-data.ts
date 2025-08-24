@@ -1068,6 +1068,208 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Ils dis bonsoir.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "savoir": [
+    {
+      question: "He knows / is knowing how to drive.",
+      hint: "Use third person singular: il sait",
+      answerOptions: [
+        { text: "Il savais conduire.", rationale: "Option A", isCorrect: false },
+        { text: "Il sait conduire.", rationale: "Option B", isCorrect: true },
+        { text: "Il sais conduire.", rationale: "Option C", isCorrect: false },
+        { text: "Il saura conduire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She knows / is knowing how to draw.",
+      hint: "Use feminine singular: elle sait",
+      answerOptions: [
+        { text: "Elle savais dessiner.", rationale: "Option A", isCorrect: false },
+        { text: "Elle sais dessiner.", rationale: "Option B", isCorrect: false },
+        { text: "Elle saura dessiner.", rationale: "Option C", isCorrect: false },
+        { text: "Elle sait dessiner.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "I know / am knowing the answer.",
+      hint: "Use first person singular: je sais",
+      answerOptions: [
+        { text: "Je sais la réponse.", rationale: "Option A", isCorrect: true },
+        { text: "Je savais la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Je saurai la réponse.", rationale: "Option C", isCorrect: false },
+        { text: "J'ai su la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) know / are knowing the answer.",
+      hint: "Use formal vous conjugation: vous savez",
+      answerOptions: [
+        { text: "Vous saviez la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Vous saurez la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Vous savez la réponse.", rationale: "Option C", isCorrect: true },
+        { text: "Vous savent la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We know / are knowing the address.",
+      hint: "Use first person plural: nous savons",
+      answerOptions: [
+        { text: "Nous savions l'adresse.", rationale: "Option A", isCorrect: false },
+        { text: "Nous savons l'adresse.", rationale: "Option B", isCorrect: true },
+        { text: "Nous savent l'adresse.", rationale: "Option C", isCorrect: false },
+        { text: "Nous avons su l'adresse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do they (female) know / are they knowing the news?",
+      hint: "Use feminine plural interrogative form",
+      answerOptions: [
+        { text: "Saviez-elles les nouvelles ?", rationale: "Option A", isCorrect: false },
+        { text: "Sait-elle les nouvelles ?", rationale: "Option B", isCorrect: false },
+        { text: "Sauront-elles les nouvelles ?", rationale: "Option C", isCorrect: false },
+        { text: "Elles savent les nouvelles ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) know / are knowing how to cook.",
+      hint: "Use informal tu conjugation: tu sais",
+      answerOptions: [
+        { text: "Tu sais cuisiner.", rationale: "Option A", isCorrect: true },
+        { text: "Tu sait cuisiner.", rationale: "Option B", isCorrect: false },
+        { text: "Tu savais cuisiner.", rationale: "Option C", isCorrect: false },
+        { text: "Tu sauras cuisiner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) know / are knowing everything.",
+      hint: "Use masculine plural: ils savent",
+      answerOptions: [
+        { text: "Ils sait tout.", rationale: "Option A", isCorrect: false },
+        { text: "Ils savions tout.", rationale: "Option B", isCorrect: false },
+        { text: "Ils savent tout.", rationale: "Option C", isCorrect: true },
+        { text: "Ils sauront tout.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) know / are knowing how to swim.",
+      hint: "Use feminine plural: elles savent",
+      answerOptions: [
+        { text: "Elles sait nager.", rationale: "Option A", isCorrect: false },
+        { text: "Elles savent nager.", rationale: "Option B", isCorrect: true },
+        { text: "Elles savons nager.", rationale: "Option C", isCorrect: false },
+        { text: "Elles savaient nager.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We don't know / aren't knowing the answer.",
+      hint: "Use first person plural with negation: nous ne savons pas",
+      answerOptions: [
+        { text: "Nous ne savent pas la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne savions pas la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Nous n'avons pas su la réponse.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne savons pas la réponse.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "She knows / is knowing the truth.",
+      hint: "Use feminine singular: elle sait",
+      answerOptions: [
+        { text: "Elle sait la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Elle sais la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Elle savons la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Elle savaient la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He doesn't know / isn't knowing the story.",
+      hint: "Use masculine singular with negation: il ne sait pas",
+      answerOptions: [
+        { text: "Il ne savait pas l'histoire.", rationale: "Option A", isCorrect: false },
+        { text: "Il n'a pas su l'histoire.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne sait pas l'histoire.", rationale: "Option C", isCorrect: true },
+        { text: "Il ne sais pas l'histoire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you (formal) know / are you knowing the time?",
+      hint: "Use formal interrogative: vous savez",
+      answerOptions: [
+        { text: "Savez-vous l'heure ?", rationale: "Option A", isCorrect: false },
+        { text: "Vous savez l'heure ?", rationale: "Option B", isCorrect: true },
+        { text: "Vous saviez l'heure ?", rationale: "Option C", isCorrect: false },
+        { text: "Vous saurez l'heure ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) know / are knowing nothing.",
+      hint: "Use formal negation: vous ne savez rien",
+      answerOptions: [
+        { text: "Vous ne savez.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne saviez rien.", rationale: "Option B", isCorrect: false },
+        { text: "Vous n'avez rien su.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne savez rien.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We know / are knowing that it's important.",
+      hint: "Use first person plural: nous savons",
+      answerOptions: [
+        { text: "Nous savons que c'est important.", rationale: "Option A", isCorrect: true },
+        { text: "Nous savent que c'est important.", rationale: "Option B", isCorrect: false },
+        { text: "Nous savions que c'est important.", rationale: "Option C", isCorrect: false },
+        { text: "Nous saurons que c'est important.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We know / are knowing how to play the guitar.",
+      hint: "Use first person plural: nous savons",
+      answerOptions: [
+        { text: "Nous savent jouer de la guitare.", rationale: "Option A", isCorrect: false },
+        { text: "Nous savions jouer de la guitare.", rationale: "Option B", isCorrect: false },
+        { text: "Nous savons jouer de la guitare.", rationale: "Option C", isCorrect: true },
+        { text: "Nous saurons jouer de la guitare.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I don't know / am not knowing.",
+      hint: "Use first person singular with negation: je ne sais pas",
+      answerOptions: [
+        { text: "Je ne sais.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne sais pas.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne savais pas.", rationale: "Option C", isCorrect: false },
+        { text: "Je n'ai pas su.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I know / am knowing what he thinks.",
+      hint: "Use first person singular: je sais",
+      answerOptions: [
+        { text: "J'ai su ce qu'il pense.", rationale: "Option A", isCorrect: false },
+        { text: "Je savais ce qu'il pense.", rationale: "Option B", isCorrect: false },
+        { text: "Je saurai ce qu'il pense.", rationale: "Option C", isCorrect: false },
+        { text: "Je sais ce qu'il pense.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) know / are knowing the rules.",
+      hint: "Use masculine plural: ils savent",
+      answerOptions: [
+        { text: "Ils savent les règles.", rationale: "Option A", isCorrect: true },
+        { text: "Ils sait les règles.", rationale: "Option B", isCorrect: false },
+        { text: "Ils savons les règles.", rationale: "Option C", isCorrect: false },
+        { text: "Ils savaient les règles.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you (informal) know / are you knowing the password?",
+      hint: "Use informal interrogative: tu sais",
+      answerOptions: [
+        { text: "Tu savais le mot de passe ?", rationale: "Option A", isCorrect: false },
+        { text: "Tu sauras le mot de passe ?", rationale: "Option B", isCorrect: false },
+        { text: "Tu sais le mot de passe ?", rationale: "Option C", isCorrect: true },
+        { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 

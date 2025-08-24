@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "He knows how to drive.",
+    "options": {
+      "A": "Il savais conduire.",
+      "B": "Il sait conduire.",
+      "C": "Il sais conduire.",
+      "D": "Il saura conduire."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "She knows how to draw.",
+    "options": {
+      "A": "Elle savais dessiner.",
+      "B": "Elle sais dessiner.",
+      "C": "Elle saura dessiner.",
+      "D": "Elle sait dessiner."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "I know the answer.",
+    "options": {
+      "A": "Je sais la réponse.",
+      "B": "Je savais la réponse.",
+      "C": "Je saurai la réponse.",
+      "D": "J'ai su la réponse."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "You (formal) know the answer.",
+    "options": {
+      "A": "Vous saviez la réponse.",
+      "B": "Vous saurez la réponse.",
+      "C": "Vous savez la réponse.",
+      "D": "Vous savent la réponse."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "We know the address.",
+    "options": {
+      "A": "Nous savions l'adresse.",
+      "B": "Nous savons l'adresse.",
+      "C": "Nous savent l'adresse.",
+      "D": "Nous avons su l'adresse."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "Do they (female) know the news?",
+    "options": {
+      "A": "Saviez-elles les nouvelles ?",
+      "B": "Sait-elle les nouvelles ?",
+      "C": "Sauront-elles les nouvelles ?",
+      "D": "Elles savent les nouvelles ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "You (informal) know how to cook.",
+    "options": {
+      "A": "Tu sais cuisiner.",
+      "B": "Tu sait cuisiner.",
+      "C": "Tu savais cuisiner.",
+      "D": "Tu sauras cuisiner."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "They (male/mixed) know everything.",
+    "options": {
+      "A": "Ils sait tout.",
+      "B": "Ils savions tout.",
+      "C": "Ils savent tout.",
+      "D": "Ils sauront tout."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "They (female) know how to swim.",
+    "options": {
+      "A": "Elles sait nager.",
+      "B": "Elles savent nager.",
+      "C": "Elles savons nager.",
+      "D": "Elles savaient nager."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "We don't know the answer.",
+    "options": {
+      "A": "Nous ne savent pas la réponse.",
+      "B": "Nous ne savions pas la réponse.",
+      "C": "Nous n'avons pas su la réponse.",
+      "D": "Nous ne savons pas la réponse."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "She knows the truth.",
+    "options": {
+      "A": "Elle sait la vérité.",
+      "B": "Elle sais la vérité.",
+      "C": "Elle savons la vérité.",
+      "D": "Elle savaient la vérité."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "He doesn't know the story.",
+    "options": {
+      "A": "Il ne savait pas l'histoire.",
+      "B": "Il n'a pas su l'histoire.",
+      "C": "Il ne sait pas l'histoire.",
+      "D": "Il ne sais pas l'histoire."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "Do you (formal) know the time?",
+    "options": {
+      "A": "Savez-vous l'heure ?",
+      "B": "Vous savez l'heure ?",
+      "C": "Vous saviez l'heure ?",
+      "D": "Vous saurez l'heure ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "You (formal) know nothing.",
+    "options": {
+      "A": "Vous ne savez.",
+      "B": "Vous ne saviez rien.",
+      "C": "Vous n'avez rien su.",
+      "D": "Vous ne savez rien."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "We know that it's important.",
+    "options": {
+      "A": "Nous savons que c'est important.",
+      "B": "Nous savent que c'est important.",
+      "C": "Nous savions que c'est important.",
+      "D": "Nous saurons que c'est important."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "We know how to play the guitar.",
+    "options": {
+      "A": "Nous savent jouer de la guitare.",
+      "B": "Nous savions jouer de la guitare.",
+      "C": "Nous savons jouer de la guitare.",
+      "D": "Nous saurons jouer de la guitare."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "I don't know.",
+    "options": {
+      "A": "Je ne sais.",
+      "B": "Je ne sais pas.",
+      "C": "Je ne savais pas.",
+      "D": "Je n'ai pas su."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "I know what he thinks.",
+    "options": {
+      "A": "J'ai su ce qu'il pense.",
+      "B": "Je savais ce qu'il pense.",
+      "C": "Je saurai ce qu'il pense.",
+      "D": "Je sais ce qu'il pense."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (male/mixed) know the rules.",
+    "options": {
+      "A": "Ils savent les règles.",
+      "B": "Ils sait les règles.",
+      "C": "Ils savons les règles.",
+      "D": "Ils savaient les règles."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "Do you (informal) know the password?",
+    "options": {
+      "A": "Tu savais le mot de passe ?",
+      "B": "Tu sauras le mot de passe ?",
+      "C": "Tu sais le mot de passe ?",
+      "D": "Tu sait le mot de passe ?"
+    },
+    "correct_answer": "C"
+  }
+]
