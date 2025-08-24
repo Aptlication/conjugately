@@ -4708,6 +4708,208 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Comment pourra-ils savoir ?", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "vouloir": [
+    {
+      question: "She will want / is going to want a new dress.",
+      hint: "Use irregular future form: elle voudra",
+      answerOptions: [
+        { text: "Elle voudra une nouvelle robe.", rationale: "Option A", isCorrect: true },
+        { text: "Elle voudras une nouvelle robe.", rationale: "Option B", isCorrect: false },
+        { text: "Elle voudrez une nouvelle robe.", rationale: "Option C", isCorrect: false },
+        { text: "Elle voudront une nouvelle robe.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will want / am going to want to leave early.",
+      hint: "Use irregular future form: je voudrai",
+      answerOptions: [
+        { text: "Je voudrai partir tôt.", rationale: "Option A", isCorrect: true },
+        { text: "Je voudras partir tôt.", rationale: "Option B", isCorrect: false },
+        { text: "Je voudra partir tôt.", rationale: "Option C", isCorrect: false },
+        { text: "Je voudrons partir tôt.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will not want / are not going to want to miss that.",
+      hint: "Use irregular future negative: nous ne voudrons pas",
+      answerOptions: [
+        { text: "Nous ne voudra pas manquer ça.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne voudrez pas manquer ça.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne voudrons pas manquer ça.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne voudront pas manquer ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will not want / is not going to want to come.",
+      hint: "Use irregular future negative: il ne voudra pas",
+      answerOptions: [
+        { text: "Il ne voudra pas venir.", rationale: "Option A", isCorrect: true },
+        { text: "Il ne voudras pas venir.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne voudrons pas venir.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne voudrez pas venir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will want / are going to want to rest.",
+      hint: "Use irregular future form: vous voudrez",
+      answerOptions: [
+        { text: "Vous voudrez vous reposer.", rationale: "Option A", isCorrect: true },
+        { text: "Vous voudrons vous reposer.", rationale: "Option B", isCorrect: false },
+        { text: "Vous voudras vous reposer.", rationale: "Option C", isCorrect: false },
+        { text: "Vous voudront vous reposer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will want / are going to want another piece.",
+      hint: "Use irregular future form: tu voudras",
+      answerOptions: [
+        { text: "Tu voudra un autre morceau.", rationale: "Option A", isCorrect: false },
+        { text: "Tu voudrez un autre morceau.", rationale: "Option B", isCorrect: false },
+        { text: "Tu voudras un autre morceau.", rationale: "Option C", isCorrect: true },
+        { text: "Tu voudrai un autre morceau.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will want / are going to want to know the truth.",
+      hint: "Use irregular future form: ils voudront",
+      answerOptions: [
+        { text: "Ils voudra savoir la vérité.", rationale: "Option A", isCorrect: false },
+        { text: "Ils voudrez savoir la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Ils voudrons savoir la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Ils voudront savoir la vérité.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Will you (formal) want / Are you going to want to join us?",
+      hint: "Use irregular future interrogative: voudrez-vous",
+      answerOptions: [
+        { text: "Voudrez-vous nous joindre ?", rationale: "Option A", isCorrect: true },
+        { text: "Voudrons-nous nous joindre ?", rationale: "Option B", isCorrect: false },
+        { text: "Voudra-t-il nous joindre ?", rationale: "Option C", isCorrect: false },
+        { text: "Voudras-tu nous joindre ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will want / are going to want to try.",
+      hint: "Use irregular future form: nous voudrons",
+      answerOptions: [
+        { text: "Nous voudrons essayer.", rationale: "Option A", isCorrect: true },
+        { text: "Nous voudrez essayer.", rationale: "Option B", isCorrect: false },
+        { text: "Nous voudra essayer.", rationale: "Option C", isCorrect: false },
+        { text: "Nous voudront essayer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not want / am not going to want to do that.",
+      hint: "Use irregular future negative: je ne voudrai pas",
+      answerOptions: [
+        { text: "Je ne voudras pas faire ça.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne voudrai pas faire ça.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne voudra pas faire ça.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne voudrons pas faire ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will want / are going to want to see the show.",
+      hint: "Use irregular future form: elles voudront",
+      answerOptions: [
+        { text: "Elles voudra voir le spectacle.", rationale: "Option A", isCorrect: false },
+        { text: "Elles voudrons voir le spectacle.", rationale: "Option B", isCorrect: false },
+        { text: "Elles voudrez voir le spectacle.", rationale: "Option C", isCorrect: false },
+        { text: "Elles voudront voir le spectacle.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) will not want / are not going to want to wait.",
+      hint: "Use irregular future negative: tu ne voudras pas",
+      answerOptions: [
+        { text: "Tu ne voudra pas attendre.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne voudrez pas attendre.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne voudras pas attendre.", rationale: "Option C", isCorrect: true },
+        { text: "Tu ne voudrai pas attendre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will want / is going to want to sleep.",
+      hint: "Use irregular future form: il voudra",
+      answerOptions: [
+        { text: "Il voudra dormir.", rationale: "Option A", isCorrect: true },
+        { text: "Il voudras dormir.", rationale: "Option B", isCorrect: false },
+        { text: "Il voudrez dormir.", rationale: "Option C", isCorrect: false },
+        { text: "Il voudront dormir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will not want / are not going to want to come.",
+      hint: "Use irregular future negative: ils ne voudront pas",
+      answerOptions: [
+        { text: "Ils ne voudra pas venir.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne voudrez pas venir.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne voudrons pas venir.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne voudront pas venir.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "I will want / am going to want a better explanation.",
+      hint: "Use irregular future form: je voudrai",
+      answerOptions: [
+        { text: "Je voudras une meilleure explication.", rationale: "Option A", isCorrect: false },
+        { text: "Je voudra une meilleure explication.", rationale: "Option B", isCorrect: false },
+        { text: "Je voudrons une meilleure explication.", rationale: "Option C", isCorrect: false },
+        { text: "Je voudrai une meilleure explication.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We will not want / are not going to want to participate.",
+      hint: "Use irregular future negative: nous ne voudrons pas",
+      answerOptions: [
+        { text: "Nous ne voudra pas participer.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne voudrez pas participer.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne voudrons pas participer.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne voudront pas participer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "What will you (informal) want / are you going to want to do?",
+      hint: "Use irregular future interrogative: que voudras-tu",
+      answerOptions: [
+        { text: "Que voudra-t-il faire ?", rationale: "Option A", isCorrect: false },
+        { text: "Que voudras-tu faire ?", rationale: "Option B", isCorrect: true },
+        { text: "Que voudrez-vous faire ?", rationale: "Option C", isCorrect: false },
+        { text: "Que voudrons-nous faire ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will not want / are not going to want to stay.",
+      hint: "Use irregular future negative: elles ne voudront pas",
+      answerOptions: [
+        { text: "Elles ne voudra pas rester.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne voudront pas rester.", rationale: "Option B", isCorrect: true },
+        { text: "Elles ne voudrons pas rester.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne voudrez pas rester.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will not want / is not going to want to share.",
+      hint: "Use irregular future negative: elle ne voudra pas",
+      answerOptions: [
+        { text: "Elle ne voudra pas partager.", rationale: "Option A", isCorrect: true },
+        { text: "Elle ne voudras pas partager.", rationale: "Option B", isCorrect: false },
+        { text: "Elle ne voudrons pas partager.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne voudrez pas partager.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will not want / are not going to want to lose.",
+      hint: "Use irregular future negative: vous ne voudrez pas",
+      answerOptions: [
+        { text: "Vous ne voudra pas perdre.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne voudrons pas perdre.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne voudrez pas perdre.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne voudront pas perdre.", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 
