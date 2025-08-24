@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "You (formal) can / are able to see it.",
+    "options": {
+      "A": "Vous pouvez le voir.",
+      "B": "Vous pouvons le voir.",
+      "C": "Vous peuvent le voir.",
+      "D": "Vous peux le voir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "She can / is able to drive.",
+    "options": {
+      "A": "Elle peuvent conduire.",
+      "B": "Elle peux conduire.",
+      "C": "Elle pouvons conduire.",
+      "D": "Elle peut conduire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (female) can / are able to win.",
+    "options": {
+      "A": "Elles peut gagner.",
+      "B": "Elles pouvons gagner.",
+      "C": "Elles peuvent gagner.",
+      "D": "Elles peux gagner."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He cannot / is not able to sleep.",
+    "options": {
+      "A": "Il ne pouvons pas dormir.",
+      "B": "Il ne peuvent pas dormir.",
+      "C": "Il ne peut pas dormir.",
+      "D": "Il ne peux pas dormir."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "I can / am able to do better.",
+    "options": {
+      "A": "Je peut faire mieux.",
+      "B": "Je pouvons faire mieux.",
+      "C": "Je peux faire mieux.",
+      "D": "Je peuvent faire mieux."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "Can you (formal) / Are you able to repeat?",
+    "options": {
+      "A": "Peut-vous répéter ?",
+      "B": "Pouvons-vous répéter ?",
+      "C": "Peux-tu répéter ?",
+      "D": "Pouvez-vous répéter ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "You (formal) cannot / are not able to leave.",
+    "options": {
+      "A": "Vous ne peut pas partir.",
+      "B": "Vous ne pouvez pas partir.",
+      "C": "Vous ne pouvons pas partir.",
+      "D": "Vous ne peuvent pas partir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "One can / is able to try.",
+    "options": {
+      "A": "On pouvons essayer.",
+      "B": "On peut essayer.",
+      "C": "On peuvent essayer.",
+      "D": "On peux essayer."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "We cannot / are not able to come.",
+    "options": {
+      "A": "Nous ne pouvons pas venir.",
+      "B": "Nous ne peuvent pas venir.",
+      "C": "Nous ne pouvez pas venir.",
+      "D": "Nous ne peut pas venir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "Can I / Am I able to enter?",
+    "options": {
+      "A": "Peux-je entrer ?",
+      "B": "Puis-je entrer ?",
+      "C": "Peut-je entrer ?",
+      "D": "Pouvons-je entrer ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We can / are able to start.",
+    "options": {
+      "A": "Nous peuvent commencer.",
+      "B": "Nous peux commencer.",
+      "C": "Nous pouvons commencer.",
+      "D": "Nous peut commencer."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "Can you (informal) / Are you able to explain?",
+    "options": {
+      "A": "Peut-tu expliquer ?",
+      "B": "Pouvez-vous expliquer ?",
+      "C": "Peux-tu expliquer ?",
+      "D": "Pouvons-tu expliquer ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "You (informal) can / are able to choose.",
+    "options": {
+      "A": "Tu peut choisir.",
+      "B": "Tu peux choisir.",
+      "C": "Tu peuvent choisir.",
+      "D": "Tu pouvons choisir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "They (male/mixed) cannot / are not able to decide.",
+    "options": {
+      "A": "Ils ne peut pas décider.",
+      "B": "Ils ne pouvons pas décider.",
+      "C": "Ils ne pouvez pas décider.",
+      "D": "Ils ne peuvent pas décider."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "I can / am able to help.",
+    "options": {
+      "A": "Je peux aider.",
+      "B": "Je peut aider.",
+      "C": "Je pouvons aider.",
+      "D": "Je peuvent aider."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "We cannot / are not able to see anything.",
+    "options": {
+      "A": "Nous ne pouvons rien voir.",
+      "B": "Nous ne peuvent rien voir.",
+      "C": "Nous ne pouvez rien voir.",
+      "D": "Nous ne pouvons rien voir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "They (female) cannot / are not able to hear.",
+    "options": {
+      "A": "Elles ne peut pas entendre.",
+      "B": "Elles ne peuvent pas entendre.",
+      "C": "Elles ne pouvons pas entendre.",
+      "D": "Elles ne peux pas entendre."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Can she / Is she able to do it?",
+    "options": {
+      "A": "Peut-elle le faire ?",
+      "B": "Pouvons-elle le faire ?",
+      "C": "Peux-elle le faire ?",
+      "D": "Peuvent-elle le faire ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (male/mixed) can / are able to wait.",
+    "options": {
+      "A": "Ils peuvent attendre.",
+      "B": "Ils peut attendre.",
+      "C": "Ils pouvons attendre.",
+      "D": "Ils peux attendre."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "You (informal) cannot / are not able to do that.",
+    "options": {
+      "A": "Tu ne pouvons pas faire ça.",
+      "B": "Tu ne peuvent pas faire ça.",
+      "C": "Tu ne peut pas faire ça.",
+      "D": "Tu ne peux pas faire ça."
+    },
+    "correct_answer": "D"
+  }
+]

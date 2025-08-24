@@ -1472,6 +1472,208 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Nous ne voit rien.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "pouvoir": [
+    {
+      question: "You (formal) can / are able to see it.",
+      hint: "Use present tense of pouvoir: vous pouvez",
+      answerOptions: [
+        { text: "Vous pouvez le voir.", rationale: "Option A", isCorrect: true },
+        { text: "Vous pouvons le voir.", rationale: "Option B", isCorrect: false },
+        { text: "Vous peuvent le voir.", rationale: "Option C", isCorrect: false },
+        { text: "Vous peux le voir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She can / is able to drive.",
+      hint: "Use present tense of pouvoir: elle peut",
+      answerOptions: [
+        { text: "Elle peuvent conduire.", rationale: "Option A", isCorrect: false },
+        { text: "Elle peux conduire.", rationale: "Option B", isCorrect: false },
+        { text: "Elle pouvons conduire.", rationale: "Option C", isCorrect: false },
+        { text: "Elle peut conduire.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) can / are able to win.",
+      hint: "Use present tense of pouvoir: elles peuvent",
+      answerOptions: [
+        { text: "Elles peut gagner.", rationale: "Option A", isCorrect: false },
+        { text: "Elles pouvons gagner.", rationale: "Option B", isCorrect: false },
+        { text: "Elles peuvent gagner.", rationale: "Option C", isCorrect: true },
+        { text: "Elles peux gagner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He cannot / is not able to sleep.",
+      hint: "Use present tense negative: il ne peut pas",
+      answerOptions: [
+        { text: "Il ne pouvons pas dormir.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne peuvent pas dormir.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne peut pas dormir.", rationale: "Option C", isCorrect: true },
+        { text: "Il ne peux pas dormir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I can / am able to do better.",
+      hint: "Use present tense of pouvoir: je peux",
+      answerOptions: [
+        { text: "Je peut faire mieux.", rationale: "Option A", isCorrect: false },
+        { text: "Je pouvons faire mieux.", rationale: "Option B", isCorrect: false },
+        { text: "Je peux faire mieux.", rationale: "Option C", isCorrect: true },
+        { text: "Je peuvent faire mieux.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can you (formal) / Are you able to repeat?",
+      hint: "Use present tense interrogative: pouvez-vous",
+      answerOptions: [
+        { text: "Peut-vous répéter ?", rationale: "Option A", isCorrect: false },
+        { text: "Pouvons-vous répéter ?", rationale: "Option B", isCorrect: false },
+        { text: "Peux-tu répéter ?", rationale: "Option C", isCorrect: false },
+        { text: "Pouvez-vous répéter ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (formal) cannot / are not able to leave.",
+      hint: "Use present tense negative: vous ne pouvez pas",
+      answerOptions: [
+        { text: "Vous ne peut pas partir.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne pouvez pas partir.", rationale: "Option B", isCorrect: true },
+        { text: "Vous ne pouvons pas partir.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne peuvent pas partir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "One can / is able to try.",
+      hint: "Use present tense of pouvoir: on peut",
+      answerOptions: [
+        { text: "On pouvons essayer.", rationale: "Option A", isCorrect: false },
+        { text: "On peut essayer.", rationale: "Option B", isCorrect: true },
+        { text: "On peuvent essayer.", rationale: "Option C", isCorrect: false },
+        { text: "On peux essayer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We cannot / are not able to come.",
+      hint: "Use present tense negative: nous ne pouvons pas",
+      answerOptions: [
+        { text: "Nous ne pouvons pas venir.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne peuvent pas venir.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne pouvez pas venir.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne peut pas venir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can I / Am I able to enter?",
+      hint: "Use present tense interrogative: puis-je",
+      answerOptions: [
+        { text: "Peux-je entrer ?", rationale: "Option A", isCorrect: false },
+        { text: "Puis-je entrer ?", rationale: "Option B", isCorrect: true },
+        { text: "Peut-je entrer ?", rationale: "Option C", isCorrect: false },
+        { text: "Pouvons-je entrer ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We can / are able to start.",
+      hint: "Use present tense of pouvoir: nous pouvons",
+      answerOptions: [
+        { text: "Nous peuvent commencer.", rationale: "Option A", isCorrect: false },
+        { text: "Nous peux commencer.", rationale: "Option B", isCorrect: false },
+        { text: "Nous pouvons commencer.", rationale: "Option C", isCorrect: true },
+        { text: "Nous peut commencer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can you (informal) / Are you able to explain?",
+      hint: "Use present tense interrogative: peux-tu",
+      answerOptions: [
+        { text: "Peut-tu expliquer ?", rationale: "Option A", isCorrect: false },
+        { text: "Pouvez-vous expliquer ?", rationale: "Option B", isCorrect: false },
+        { text: "Peux-tu expliquer ?", rationale: "Option C", isCorrect: true },
+        { text: "Pouvons-tu expliquer ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) can / are able to choose.",
+      hint: "Use present tense of pouvoir: tu peux",
+      answerOptions: [
+        { text: "Tu peut choisir.", rationale: "Option A", isCorrect: false },
+        { text: "Tu peux choisir.", rationale: "Option B", isCorrect: true },
+        { text: "Tu peuvent choisir.", rationale: "Option C", isCorrect: false },
+        { text: "Tu pouvons choisir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) cannot / are not able to decide.",
+      hint: "Use present tense negative: ils ne peuvent pas",
+      answerOptions: [
+        { text: "Ils ne peut pas décider.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne pouvons pas décider.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne pouvez pas décider.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne peuvent pas décider.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "I can / am able to help.",
+      hint: "Use present tense of pouvoir: je peux",
+      answerOptions: [
+        { text: "Je peux aider.", rationale: "Option A", isCorrect: true },
+        { text: "Je peut aider.", rationale: "Option B", isCorrect: false },
+        { text: "Je pouvons aider.", rationale: "Option C", isCorrect: false },
+        { text: "Je peuvent aider.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We cannot / are not able to see anything.",
+      hint: "Use present tense negative: nous ne pouvons rien voir",
+      answerOptions: [
+        { text: "Nous ne pouvons rien voir.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne peuvent rien voir.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne pouvez rien voir.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne pouvons rien voir.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) cannot / are not able to hear.",
+      hint: "Use present tense negative: elles ne peuvent pas",
+      answerOptions: [
+        { text: "Elles ne peut pas entendre.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne peuvent pas entendre.", rationale: "Option B", isCorrect: true },
+        { text: "Elles ne pouvons pas entendre.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne peux pas entendre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Can she / Is she able to do it?",
+      hint: "Use present tense interrogative: peut-elle",
+      answerOptions: [
+        { text: "Peut-elle le faire ?", rationale: "Option A", isCorrect: true },
+        { text: "Pouvons-elle le faire ?", rationale: "Option B", isCorrect: false },
+        { text: "Peux-elle le faire ?", rationale: "Option C", isCorrect: false },
+        { text: "Peuvent-elle le faire ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) can / are able to wait.",
+      hint: "Use present tense of pouvoir: ils peuvent",
+      answerOptions: [
+        { text: "Ils peuvent attendre.", rationale: "Option A", isCorrect: true },
+        { text: "Ils peut attendre.", rationale: "Option B", isCorrect: false },
+        { text: "Ils pouvons attendre.", rationale: "Option C", isCorrect: false },
+        { text: "Ils peux attendre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) cannot / are not able to do that.",
+      hint: "Use present tense negative: tu ne peux pas",
+      answerOptions: [
+        { text: "Tu ne pouvons pas faire ça.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne peuvent pas faire ça.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne peut pas faire ça.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne peux pas faire ça.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 
