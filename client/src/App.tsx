@@ -2226,6 +2226,18 @@ function App() {
               : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
             }
           </button>
+          
+          {!(selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced")) && !selectionReminderDismissed && (
+            <button
+              onClick={() => {
+                setSelectionReminderDismissed(true);
+                localStorage.setItem('selectionReminderDismissed', 'true');
+              }}
+              className="mt-3 text-sm bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-teal-600 transition-all duration-200"
+            >
+              Don't remind me about selection requirements
+            </button>
+          )}
         </div>
 
         {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") && (

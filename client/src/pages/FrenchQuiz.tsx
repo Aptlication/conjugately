@@ -81,6 +81,9 @@ export default function FrenchQuiz() {
   const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
     return localStorage.getItem('reflexiveModalDismissed') === 'true';
   });
+  const [selectionReminderDismissed, setSelectionReminderDismissed] = useState(() => {
+    return localStorage.getItem('selectionReminderDismissed') === 'true';
+  });
   
   // Quiz state
   const [quizState, setQuizState] = useState<QuizState>('config');
@@ -578,9 +581,21 @@ export default function FrenchQuiz() {
                     >
                       {selectedVerb && selectedTimeFrame && selectedTenseType 
                         ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
-                        : "Complete all selections to start quiz"
+                        : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
                       }
                     </button>
+                    
+                    {!(selectedVerb && selectedTimeFrame && selectedTenseType) && !selectionReminderDismissed && (
+                      <button
+                        onClick={() => {
+                          setSelectionReminderDismissed(true);
+                          localStorage.setItem('selectionReminderDismissed', 'true');
+                        }}
+                        className="mt-3 text-sm bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-teal-600 transition-all duration-200"
+                      >
+                        Don't remind me about selection requirements
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

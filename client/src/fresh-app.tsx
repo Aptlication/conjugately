@@ -46,6 +46,9 @@ function FreshAppCore({ user }: { user: any }) {
   const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
     return localStorage.getItem('reflexiveModalDismissed') === 'true';
   });
+  const [selectionReminderDismissed, setSelectionReminderDismissed] = useState(() => {
+    return localStorage.getItem('selectionReminderDismissed') === 'true';
+  });
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -555,9 +558,37 @@ function FreshAppCore({ user }: { user: any }) {
           >
             {selectedVerb && selectedTimeFrame && selectedTenseType 
               ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
-              : "Complete all selections to start quiz"
+              : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
             }
           </button>
+          
+          {!(selectedVerb && selectedTimeFrame && selectedTenseType) && !selectionReminderDismissed && (
+            <button
+              onClick={() => {
+                setSelectionReminderDismissed(true);
+                localStorage.setItem('selectionReminderDismissed', 'true');
+              }}
+              style={{
+                marginTop: '12px',
+                fontSize: '14px',
+                background: 'linear-gradient(to right, #3b82f6, #14b8a6)',
+                color: 'white',
+                padding: '8px 16px',
+                borderRadius: '8px',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'linear-gradient(to right, #2563eb, #0d9488)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = 'linear-gradient(to right, #3b82f6, #14b8a6)';
+              }}
+            >
+              Don't remind me about selection requirements
+            </button>
+          )}
         </div>
 
         {selectedVerb && selectedTimeFrame && selectedTenseType && (
