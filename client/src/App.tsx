@@ -2229,11 +2229,12 @@ function App() {
                 {!selectionReminderDismissed && (
                   <span
                     onClick={(e) => {
+                      e.preventDefault();
                       e.stopPropagation();
                       setSelectionReminderDismissed(true);
                       localStorage.setItem('selectionReminderDismissed', 'true');
                     }}
-                    className="text-xs text-blue-900 underline hover:text-blue-800 transition-colors cursor-pointer"
+                    className="text-xs text-blue-900 underline hover:text-blue-800 transition-colors cursor-pointer select-none"
                   >
                     Don't remind me again.
                   </span>

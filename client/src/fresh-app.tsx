@@ -564,6 +564,7 @@ function FreshAppCore({ user }: { user: any }) {
                 {!selectionReminderDismissed && (
                   <span
                     onClick={(e) => {
+                      e.preventDefault();
                       e.stopPropagation();
                       setSelectionReminderDismissed(true);
                       localStorage.setItem('selectionReminderDismissed', 'true');
@@ -573,7 +574,8 @@ function FreshAppCore({ user }: { user: any }) {
                       color: '#1e3a8a',
                       textDecoration: 'underline',
                       cursor: 'pointer',
-                      transition: 'color 0.2s'
+                      transition: 'color 0.2s',
+                      userSelect: 'none'
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.color = '#1e40af';
