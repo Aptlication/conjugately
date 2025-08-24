@@ -196,7 +196,7 @@ function App() {
       }
     },
     "Intermediate": { 
-      verbs: ["être", "avoir", "faire", "aller", "voir", "dire", "pouvoir", "vouloir", "prendre", "venir", "savoir"], // All 11 intermediate verbs complete
+      verbs: ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder"], // All 18 intermediate verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Futur Simple", "Imparfait"], // 4 tenses as implemented
       courseStructure: {
@@ -222,7 +222,7 @@ function App() {
       }
     },
     "Advanced": { 
-      verbs: ["être", "avoir", "faire", "dire", "aller", "voir", "savoir", "pouvoir", "vouloir", "venir", "se lever", "s'appeler", "se sentir"], // Complete set with reflexive verbs
+      verbs: ["devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"], // Complete set with 23 verbs
       timeFrames: ["Present", "Past", "Future"], 
       tenses: ["Présent", "Passé Composé", "Passé Simple", "Imparfait", "Plus-que-parfait", "Futur Simple"],
       courseStructure: {
