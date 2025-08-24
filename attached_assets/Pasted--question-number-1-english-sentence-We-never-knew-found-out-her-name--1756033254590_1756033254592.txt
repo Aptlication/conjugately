@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "We never knew / found out her name.",
+    "options": {
+      "A": "Nous ne savions jamais son nom.",
+      "B": "Nous n'avons jamais su son nom.",
+      "C": "Nous ne sommes jamais su son nom.",
+      "D": "Nous n'avons jamais sus son nom."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "I knew / have known the answer.",
+    "options": {
+      "A": "Je suis su la réponse.",
+      "B": "Je savais la réponse.",
+      "C": "J'ai su la réponse.",
+      "D": "J'ai sus la réponse."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "She found out / has found out the truth.",
+    "options": {
+      "A": "Elle a su la vérité.",
+      "B": "Elle est sue la vérité.",
+      "C": "Elle a sue la vérité.",
+      "D": "Elle savait la vérité."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "You (formal) knew / found out the news yesterday.",
+    "options": {
+      "A": "Vous saviez la nouvelle hier.",
+      "B": "Vous avez su la nouvelle hier.",
+      "C": "Vous êtes su la nouvelle hier.",
+      "D": "Vous avez sus la nouvelle hier."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "Why did they (female) not know / find out?",
+    "options": {
+      "A": "Pourquoi ne savaient-elles pas ?",
+      "B": "Pourquoi n'ont-elles pas su ?",
+      "C": "Pourquoi ne sont-elles pas sues ?",
+      "D": "Pourquoi n'ont-elles pas sues ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "Did she know / find out that we were here?",
+    "options": {
+      "A": "Savait-elle que nous étions là ?",
+      "B": "A-t-elle sue que nous étions là ?",
+      "C": "A-t-elle su que nous étions là ?",
+      "D": "Est-elle sue que nous étions là ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "We found out / have found out the secret.",
+    "options": {
+      "A": "Nous avons su le secret.",
+      "B": "Nous sommes su le secret.",
+      "C": "Nous avons sus le secret.",
+      "D": "Nous savions le secret."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "They (male/mixed) did not know / find out the answer.",
+    "options": {
+      "A": "Ils n'ont pas su la réponse.",
+      "B": "Ils ne sont pas su la réponse.",
+      "C": "Ils ne savaient pas la réponse.",
+      "D": "Ils n'ont pas sus la réponse."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "He knew / found out how to fix it.",
+    "options": {
+      "A": "Il est su comment le réparer.",
+      "B": "Il a su comment le réparer.",
+      "C": "Il savait comment le réparer.",
+      "D": "Il a sus comment le réparer."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "They (female) knew / have known the risks.",
+    "options": {
+      "A": "Elles sont sues les risques.",
+      "B": "Elles savaient les risques.",
+      "C": "Elles ont sues les risques.",
+      "D": "Elles ont su les risques."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We didn't know / find out the result.",
+    "options": {
+      "A": "Nous ne sommes pas su le résultat.",
+      "B": "Nous ne savions pas le résultat.",
+      "C": "Nous n'avons pas sus le résultat.",
+      "D": "Nous n'avons pas su le résultat."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "She has known / found out how to swim since last year.",
+    "options": {
+      "A": "Elle est sue nager depuis l'année dernière.",
+      "B": "Elle savait nager depuis l'année dernière.",
+      "C": "Elle a sue nager depuis l'année dernière.",
+      "D": "Elle a su nager depuis l'année dernière."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "He didn't know / find out what to do.",
+    "options": {
+      "A": "Il ne savait pas quoi faire.",
+      "B": "Il n'est pas su quoi faire.",
+      "C": "Il n'a pas sus quoi faire.",
+      "D": "Il n'a pas su quoi faire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "Did you (informal) know / find out how to get here?",
+    "options": {
+      "A": "As-tu su comment venir ici ?",
+      "B": "As-tu sus comment venir ici ?",
+      "C": "Savais-tu comment venir ici ?",
+      "D": "Es-tu su comment venir ici ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "They (male/mixed) suddenly knew / found out where to go.",
+    "options": {
+      "A": "Ils sont su soudainement où aller.",
+      "B": "Ils savaient soudainement où aller.",
+      "C": "Ils ont su soudainement où aller.",
+      "D": "Ils ont sus soudainement où aller."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "Did you (informal) find out the time of the meeting?",
+    "options": {
+      "A": "Savais-tu l'heure de la réunion ?",
+      "B": "Es-tu su l'heure de la réunion ?",
+      "C": "As-tu sus l'heure de la réunion ?",
+      "D": "As-tu su l'heure de la réunion ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "At that moment, you (informal) knew / found out.",
+    "options": {
+      "A": "À ce moment, tu as sus.",
+      "B": "À ce moment, tu savais.",
+      "C": "À ce moment, tu as su.",
+      "D": "À ce moment, tu es su."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Have you (formal) known / found out how to do that for a long time?",
+    "options": {
+      "A": "Avez-vous sus faire cela depuis longtemps ?",
+      "B": "Saviez-vous faire cela depuis longtemps ?",
+      "C": "Avez-vous su faire cela depuis longtemps ?",
+      "D": "Êtes-vous su faire cela depuis longtemps ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "I knew / found out that he was right.",
+    "options": {
+      "A": "J'ai su qu'il avait raison.",
+      "B": "Je suis su qu'il avait raison.",
+      "C": "Je savais qu'il avait raison.",
+      "D": "J'ai sus qu'il avait raison."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "I did not know / find out what to say.",
+    "options": {
+      "A": "Je ne savais pas quoi dire.",
+      "B": "Je n'ai pas su quoi dire.",
+      "C": "Je ne suis pas su quoi dire.",
+      "D": "Je n'ai pas sus quoi dire."
+    },
+    "correct_answer": "B"
+  }
+]

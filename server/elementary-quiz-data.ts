@@ -1883,6 +1883,206 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "As-tu su le mot de passe ?", rationale: "Option C", isCorrect: true },
         { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
       ]
+    },
+    {
+      question: "We never knew / found out her name.",
+      hint: "Use passé composé negative: nous n'avons jamais su",
+      answerOptions: [
+        { text: "Nous ne savions jamais son nom.", rationale: "Option A", isCorrect: false },
+        { text: "Nous n'avons jamais su son nom.", rationale: "Option B", isCorrect: true },
+        { text: "Nous ne sommes jamais su son nom.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'avons jamais sus son nom.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I knew / have known the answer.",
+      hint: "Use passé composé of savoir: j'ai su",
+      answerOptions: [
+        { text: "Je suis su la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Je savais la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "J'ai su la réponse.", rationale: "Option C", isCorrect: true },
+        { text: "J'ai sus la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She found out / has found out the truth.",
+      hint: "Use passé composé of savoir: elle a su",
+      answerOptions: [
+        { text: "Elle a su la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Elle est sue la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Elle a sue la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Elle savait la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) knew / found out the news yesterday.",
+      hint: "Use passé composé of savoir: vous avez su",
+      answerOptions: [
+        { text: "Vous saviez la nouvelle hier.", rationale: "Option A", isCorrect: false },
+        { text: "Vous avez su la nouvelle hier.", rationale: "Option B", isCorrect: true },
+        { text: "Vous êtes su la nouvelle hier.", rationale: "Option C", isCorrect: false },
+        { text: "Vous avez sus la nouvelle hier.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why did they (female) not know / find out?",
+      hint: "Use passé composé negative interrogative: pourquoi n'ont-elles pas su",
+      answerOptions: [
+        { text: "Pourquoi ne savaient-elles pas ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi n'ont-elles pas su ?", rationale: "Option B", isCorrect: true },
+        { text: "Pourquoi ne sont-elles pas sues ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourquoi n'ont-elles pas sues ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did she know / find out that we were here?",
+      hint: "Use passé composé interrogative: a-t-elle su",
+      answerOptions: [
+        { text: "Savait-elle que nous étions là ?", rationale: "Option A", isCorrect: false },
+        { text: "A-t-elle sue que nous étions là ?", rationale: "Option B", isCorrect: false },
+        { text: "A-t-elle su que nous étions là ?", rationale: "Option C", isCorrect: true },
+        { text: "Est-elle sue que nous étions là ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We found out / have found out the secret.",
+      hint: "Use passé composé of savoir: nous avons su",
+      answerOptions: [
+        { text: "Nous avons su le secret.", rationale: "Option A", isCorrect: true },
+        { text: "Nous sommes su le secret.", rationale: "Option B", isCorrect: false },
+        { text: "Nous avons sus le secret.", rationale: "Option C", isCorrect: false },
+        { text: "Nous savions le secret.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) did not know / find out the answer.",
+      hint: "Use passé composé negative: ils n'ont pas su",
+      answerOptions: [
+        { text: "Ils n'ont pas su la réponse.", rationale: "Option A", isCorrect: true },
+        { text: "Ils ne sont pas su la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne savaient pas la réponse.", rationale: "Option C", isCorrect: false },
+        { text: "Ils n'ont pas sus la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He knew / found out how to fix it.",
+      hint: "Use passé composé of savoir: il a su",
+      answerOptions: [
+        { text: "Il est su comment le réparer.", rationale: "Option A", isCorrect: false },
+        { text: "Il a su comment le réparer.", rationale: "Option B", isCorrect: true },
+        { text: "Il savait comment le réparer.", rationale: "Option C", isCorrect: false },
+        { text: "Il a sus comment le réparer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) knew / have known the risks.",
+      hint: "Use passé composé of savoir: elles ont su",
+      answerOptions: [
+        { text: "Elles sont sues les risques.", rationale: "Option A", isCorrect: false },
+        { text: "Elles savaient les risques.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ont sues les risques.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ont su les risques.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We didn't know / find out the result.",
+      hint: "Use passé composé negative: nous n'avons pas su",
+      answerOptions: [
+        { text: "Nous ne sommes pas su le résultat.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne savions pas le résultat.", rationale: "Option B", isCorrect: false },
+        { text: "Nous n'avons pas sus le résultat.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'avons pas su le résultat.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "She has known / found out how to swim since last year.",
+      hint: "Use passé composé of savoir: elle a su",
+      answerOptions: [
+        { text: "Elle est sue nager depuis l'année dernière.", rationale: "Option A", isCorrect: false },
+        { text: "Elle savait nager depuis l'année dernière.", rationale: "Option B", isCorrect: false },
+        { text: "Elle a sue nager depuis l'année dernière.", rationale: "Option C", isCorrect: false },
+        { text: "Elle a su nager depuis l'année dernière.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "He didn't know / find out what to do.",
+      hint: "Use passé composé negative: il n'a pas su",
+      answerOptions: [
+        { text: "Il ne savait pas quoi faire.", rationale: "Option A", isCorrect: false },
+        { text: "Il n'est pas su quoi faire.", rationale: "Option B", isCorrect: false },
+        { text: "Il n'a pas sus quoi faire.", rationale: "Option C", isCorrect: false },
+        { text: "Il n'a pas su quoi faire.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Did you (informal) know / find out how to get here?",
+      hint: "Use passé composé interrogative: as-tu su",
+      answerOptions: [
+        { text: "As-tu su comment venir ici ?", rationale: "Option A", isCorrect: true },
+        { text: "As-tu sus comment venir ici ?", rationale: "Option B", isCorrect: false },
+        { text: "Savais-tu comment venir ici ?", rationale: "Option C", isCorrect: false },
+        { text: "Es-tu su comment venir ici ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) suddenly knew / found out where to go.",
+      hint: "Use passé composé of savoir: ils ont su",
+      answerOptions: [
+        { text: "Ils sont su soudainement où aller.", rationale: "Option A", isCorrect: false },
+        { text: "Ils savaient soudainement où aller.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ont su soudainement où aller.", rationale: "Option C", isCorrect: true },
+        { text: "Ils ont sus soudainement où aller.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (informal) find out the time of the meeting?",
+      hint: "Use passé composé interrogative: as-tu su",
+      answerOptions: [
+        { text: "Savais-tu l'heure de la réunion ?", rationale: "Option A", isCorrect: false },
+        { text: "Es-tu su l'heure de la réunion ?", rationale: "Option B", isCorrect: false },
+        { text: "As-tu sus l'heure de la réunion ?", rationale: "Option C", isCorrect: false },
+        { text: "As-tu su l'heure de la réunion ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "At that moment, you (informal) knew / found out.",
+      hint: "Use passé composé of savoir: tu as su",
+      answerOptions: [
+        { text: "À ce moment, tu as sus.", rationale: "Option A", isCorrect: false },
+        { text: "À ce moment, tu savais.", rationale: "Option B", isCorrect: false },
+        { text: "À ce moment, tu as su.", rationale: "Option C", isCorrect: true },
+        { text: "À ce moment, tu es su.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Have you (formal) known / found out how to do that for a long time?",
+      hint: "Use passé composé interrogative: avez-vous su",
+      answerOptions: [
+        { text: "Avez-vous sus faire cela depuis longtemps ?", rationale: "Option A", isCorrect: false },
+        { text: "Saviez-vous faire cela depuis longtemps ?", rationale: "Option B", isCorrect: false },
+        { text: "Avez-vous su faire cela depuis longtemps ?", rationale: "Option C", isCorrect: true },
+        { text: "Êtes-vous su faire cela depuis longtemps ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I knew / found out that he was right.",
+      hint: "Use passé composé of savoir: j'ai su",
+      answerOptions: [
+        { text: "J'ai su qu'il avait raison.", rationale: "Option A", isCorrect: true },
+        { text: "Je suis su qu'il avait raison.", rationale: "Option B", isCorrect: false },
+        { text: "Je savais qu'il avait raison.", rationale: "Option C", isCorrect: false },
+        { text: "J'ai sus qu'il avait raison.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I did not know / find out what to say.",
+      hint: "Use passé composé negative: je n'ai pas su",
+      answerOptions: [
+        { text: "Je ne savais pas quoi dire.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'ai pas su quoi dire.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne suis pas su quoi dire.", rationale: "Option C", isCorrect: false },
+        { text: "Je n'ai pas sus quoi dire.", rationale: "Option D", isCorrect: false }
+      ]
     }
   ]
 };
