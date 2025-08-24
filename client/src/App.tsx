@@ -26,7 +26,8 @@ function App() {
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>("Elementary");
+  const [isDifficultyLocked, setIsDifficultyLocked] = useState(false);
   const [completedCourses, setCompletedCourses] = useState<any[]>([]);
   const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
   const [showProgressModal, setShowProgressModal] = useState(false);
@@ -370,6 +371,26 @@ function App() {
     setSelectedTenseType(randomTense);
     setShowDifficultyModal(false);
     setSelectedDifficulty(difficulty);
+  };
+
+  const handleDifficultyLockToggle = () => {
+    setIsDifficultyLocked(!isDifficultyLocked);
+  };
+
+  const handleDifficultyChange = (difficulty: string) => {
+    if (!isDifficultyLocked) {
+      setSelectedDifficulty(difficulty);
+      // Reset dependent selections when difficulty changes
+      setSelectedVerb("");
+      setSelectedTimeFrame("");
+      setSelectedTenseType("");
+      
+      // If switching difficulty and current verb isn't available, reset
+      const difficultyVerbs = DIFFICULTY_CONFIGS[difficulty as keyof typeof DIFFICULTY_CONFIGS]?.verbs || [];
+      if (selectedVerb && !difficultyVerbs.includes(selectedVerb)) {
+        setSelectedVerb("");
+      }
+    }
   };
 
   const handleStartFinalExam = async (timeFrame: string, tense: string) => {
@@ -1993,24 +2014,33 @@ function App() {
 
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-8">
-            <label className="text-lg font-semibold mb-4 block">1. Choose Difficulty</label>
+            <div className="flex items-center gap-3 mb-4">
+              <label className="text-lg font-semibold">1. Choose Difficulty</label>
+              <button
+                onClick={handleDifficultyLockToggle}
+                className="text-white hover:text-purple-300 transition-colors"
+                title={isDifficultyLocked ? "Click to unlock difficulty selection" : "Click to lock current difficulty"}
+              >
+                {isDifficultyLocked ? (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                  </svg>
+                )}
+              </button>
+            </div>
             <select
               value={selectedDifficulty || ""}
-              onChange={(e) => {
-                const newAdvancedy = e.target.value;
-                setSelectedDifficulty(newAdvancedy);
-                // Reset dependent selections when difficulty changes
-                setSelectedVerb("");
-                setSelectedTimeFrame("");
-                setSelectedTenseType("");
-                
-                // If switching difficulty and current verb isn't available, reset
-                const difficultyVerbs = DIFFICULTY_CONFIGS[newAdvancedy as keyof typeof DIFFICULTY_CONFIGS]?.verbs || [];
-                if (selectedVerb && !difficultyVerbs.includes(selectedVerb)) {
-                  setSelectedVerb("");
-                }
-              }}
-              className="w-full p-4 rounded-xl border border-white/20 bg-white/10 text-white text-lg"
+              onChange={(e) => handleDifficultyChange(e.target.value)}
+              disabled={isDifficultyLocked}
+              className={`w-full p-4 rounded-xl border text-white text-lg transition-all ${
+                isDifficultyLocked 
+                  ? 'bg-green-500/20 border-green-500/30 cursor-not-allowed opacity-75' 
+                  : 'bg-white/10 border-white/20'
+              }`}
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
