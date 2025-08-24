@@ -631,193 +631,203 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
   ],
   "dire": [
     {
-      question: "I said / have said the truth.",
-      hint: "Use passé composé of dire: j'ai dit",
+      question: "You (formal) said goodbye.",
+      hint: "Use passé composé of dire: vous avez dit",
       answerOptions: [
-        { text: "J'ai dit la vérité.", rationale: "Option A", isCorrect: true },
-        { text: "J'as dit la vérité.", rationale: "Option B", isCorrect: false },
-        { text: "J'ai dits la vérité.", rationale: "Option C", isCorrect: false },
-        { text: "J'ai dite la vérité.", rationale: "Option D", isCorrect: false }
+        { text: "Vous ont dit au revoir.", rationale: "Option A", isCorrect: false },
+        { text: "Vous avez dit au revoir.", rationale: "Option B", isCorrect: true },
+        { text: "Vous a dit au revoir.", rationale: "Option C", isCorrect: false },
+        { text: "Vous as dit au revoir.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "You (informal) said / have said that yesterday.",
-      hint: "Use passé composé of dire: tu as dit",
+      question: "They (female) said thank you.",
+      hint: "Use passé composé of dire: elles ont dit",
       answerOptions: [
-        { text: "Tu a dit ça hier.", rationale: "Option A", isCorrect: false },
-        { text: "Tu as dit ça hier.", rationale: "Option B", isCorrect: true },
-        { text: "Tu as dits ça hier.", rationale: "Option C", isCorrect: false },
-        { text: "Tu as dite ça hier.", rationale: "Option D", isCorrect: false }
+        { text: "Elles as dit merci.", rationale: "Option A", isCorrect: false },
+        { text: "Elles avons dit merci.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ont dit merci.", rationale: "Option C", isCorrect: true },
+        { text: "Elles a dit merci.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "He said / has said something important.",
-      hint: "Use passé composé of dire: il a dit",
+      question: "Did you (informal) say that?",
+      hint: "Use passé composé interrogative: as-tu dit",
       answerOptions: [
-        { text: "Il a dit quelque chose d'important.", rationale: "Option A", isCorrect: true },
-        { text: "Il as dit quelque chose d'important.", rationale: "Option B", isCorrect: false },
-        { text: "Il a dite quelque chose d'important.", rationale: "Option C", isCorrect: false },
-        { text: "Il a dits quelque chose d'important.", rationale: "Option D", isCorrect: false }
+        { text: "As-tu dit cela ?", rationale: "Option A", isCorrect: true },
+        { text: "Ont-ils dit cela ?", rationale: "Option B", isCorrect: false },
+        { text: "A-t-il dit cela ?", rationale: "Option C", isCorrect: false },
+        { text: "Avons-nous dit cela ?", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "We said / have said hello.",
+      question: "What did he say?",
+      hint: "Use passé composé interrogative: qu'est-ce qu'il a dit",
+      answerOptions: [
+        { text: "Qu'est-ce qu'il ont dit ?", rationale: "Option A", isCorrect: false },
+        { text: "Qu'est-ce qu'il as dit ?", rationale: "Option B", isCorrect: false },
+        { text: "Qu'est-ce qu'il a dit ?", rationale: "Option C", isCorrect: true },
+        { text: "Qu'est-ce qu'il avons dit ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She said it was important.",
+      hint: "Use passé composé of dire: elle a dit",
+      answerOptions: [
+        { text: "Elle avons dit que c'était important.", rationale: "Option A", isCorrect: false },
+        { text: "Elle as dit que c'était important.", rationale: "Option B", isCorrect: false },
+        { text: "Elle ont dit que c'était important.", rationale: "Option C", isCorrect: false },
+        { text: "Elle a dit que c'était important.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We said hello.",
       hint: "Use passé composé of dire: nous avons dit",
       answerOptions: [
         { text: "Nous avons dit bonjour.", rationale: "Option A", isCorrect: true },
-        { text: "Nous avons dite bonjour.", rationale: "Option B", isCorrect: false },
-        { text: "Nous avons dits bonjour.", rationale: "Option C", isCorrect: false },
-        { text: "Nous avons dit bonjours.", rationale: "Option D", isCorrect: false }
+        { text: "Nous a dit bonjour.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ont dit bonjour.", rationale: "Option C", isCorrect: false },
+        { text: "Nous as dit bonjour.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "You (formal/plural) said / have said the same thing.",
-      hint: "Use passé composé of dire: vous avez dit",
+      question: "Did they (male) say when?",
+      hint: "Use passé composé interrogative: ont-ils dit",
       answerOptions: [
-        { text: "Vous avez dit la même chose.", rationale: "Option A", isCorrect: true },
-        { text: "Vous avez dite la même chose.", rationale: "Option B", isCorrect: false },
-        { text: "Vous avez dits la même chose.", rationale: "Option C", isCorrect: false },
-        { text: "Vous avez dit la mêmes choses.", rationale: "Option D", isCorrect: false }
+        { text: "A-t-il dit quand ?", rationale: "Option A", isCorrect: false },
+        { text: "Ont-ils dit quand ?", rationale: "Option B", isCorrect: true },
+        { text: "Avez-vous dit quand ?", rationale: "Option C", isCorrect: false },
+        { text: "As-tu dit quand ?", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "They (male/mixed group) said / have said nothing.",
-      hint: "Use passé composé of dire: ils n'ont rien dit",
+      question: "You (informal) didn't say why.",
+      hint: "Use passé composé negative: tu n'as pas dit",
       answerOptions: [
-        { text: "Ils ont dit rien.", rationale: "Option A", isCorrect: false },
-        { text: "Ils ont rien dit.", rationale: "Option B", isCorrect: false },
-        { text: "Ils ont dites rien.", rationale: "Option C", isCorrect: false },
-        { text: "Ils n'ont rien dit.", rationale: "Option D", isCorrect: true }
+        { text: "Tu n'avons pas dit pourquoi.", rationale: "Option A", isCorrect: false },
+        { text: "Tu n'a pas dit pourquoi.", rationale: "Option B", isCorrect: false },
+        { text: "Tu n'ont pas dit pourquoi.", rationale: "Option C", isCorrect: false },
+        { text: "Tu n'as pas dit pourquoi.", rationale: "Option D", isCorrect: true }
       ]
     },
     {
-      question: "They (female) said / have said everything.",
-      hint: "Use passé composé of dire: elles ont dit",
+      question: "I didn't say that.",
+      hint: "Use passé composé negative: je n'ai pas dit",
       answerOptions: [
-        { text: "Elles ont dit tout.", rationale: "Option A", isCorrect: true },
-        { text: "Elles ont dites tout.", rationale: "Option B", isCorrect: false },
-        { text: "Elles ont dit toute.", rationale: "Option C", isCorrect: false },
-        { text: "Elles ont dits toute.", rationale: "Option D", isCorrect: false }
+        { text: "Je n'as pas dit ça.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'a pas dit ça.", rationale: "Option B", isCorrect: false },
+        { text: "Je n'ai pas dit ça.", rationale: "Option C", isCorrect: true },
+        { text: "Je n'ont pas dit ça.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "I did not say / have not said that.",
-      hint: "Use passé composé of dire: je n'ai pas dit",
-      answerOptions: [
-        { text: "Je n'ai pas dit ça.", rationale: "Option A", isCorrect: true },
-        { text: "Je n'ai pas dite ça.", rationale: "Option B", isCorrect: false },
-        { text: "Je n'ai pas dits ça.", rationale: "Option C", isCorrect: false },
-        { text: "Je n'ai pas dit ça pas.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "She did not say / has not said anything.",
-      hint: "Use passé composé of dire: elle n'a rien dit",
-      answerOptions: [
-        { text: "Elle n'a rien dit.", rationale: "Option A", isCorrect: true },
-        { text: "Elle n'a rien dite.", rationale: "Option B", isCorrect: false },
-        { text: "Elle n'a rien dits.", rationale: "Option C", isCorrect: false },
-        { text: "Elle n'a rien dites.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "We did not say / have not said a word.",
-      hint: "Use passé composé of dire: nous n'avons pas dit",
-      answerOptions: [
-        { text: "Nous n'avons pas dit un mot.", rationale: "Option A", isCorrect: true },
-        { text: "Nous n'avons pas dite un mot.", rationale: "Option B", isCorrect: false },
-        { text: "Nous n'avons pas dits un mot.", rationale: "Option C", isCorrect: false },
-        { text: "Nous n'avons pas dit un mots.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (informal) didn't say / haven't said anything.",
-      hint: "Use passé composé of dire: tu n'as rien dit",
-      answerOptions: [
-        { text: "Tu n'as rien dit.", rationale: "Option A", isCorrect: true },
-        { text: "Tu n'as rien dites.", rationale: "Option B", isCorrect: false },
-        { text: "Tu n'as rien dite.", rationale: "Option C", isCorrect: false },
-        { text: "Tu n'as rien dits.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "They (male/mixed) have not said the truth.",
-      hint: "Use passé composé of dire: ils n'ont pas dit",
-      answerOptions: [
-        { text: "Ils n'ont pas dit la vérité.", rationale: "Option A", isCorrect: true },
-        { text: "Ils n'ont pas dite la vérité.", rationale: "Option B", isCorrect: false },
-        { text: "Ils n'ont pas dits la vérité.", rationale: "Option C", isCorrect: false },
-        { text: "Ils n'ont pas dite la vérités.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (formal/plural) did not say / have not said that.",
-      hint: "Use passé composé of dire: vous n'avez pas dit",
-      answerOptions: [
-        { text: "Vous n'avez pas dit ça.", rationale: "Option A", isCorrect: true },
-        { text: "Vous n'avez pas dite ça.", rationale: "Option B", isCorrect: false },
-        { text: "Vous n'avez pas dits ça.", rationale: "Option C", isCorrect: false },
-        { text: "Vous n'avez pas dit ça pas.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "He has said / said something important.",
+      question: "He said the truth.",
       hint: "Use passé composé of dire: il a dit",
       answerOptions: [
-        { text: "Il a dit quelque chose d'important.", rationale: "Option A", isCorrect: true },
-        { text: "Il a dite quelque chose d'important.", rationale: "Option B", isCorrect: false },
-        { text: "Il a dits quelque chose d'important.", rationale: "Option C", isCorrect: false },
-        { text: "Il a dit quelque chose d'importants.", rationale: "Option D", isCorrect: false }
+        { text: "Il a dit la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Il ont dit la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Il as dit la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Il avons dit la vérité.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "She has said / said nothing.",
-      hint: "Use passé composé of dire: elle n'a rien dit",
+      question: "You (plural) said nothing.",
+      hint: "Use passé composé negative: vous n'avez rien dit",
       answerOptions: [
-        { text: "Elle n'a rien dit.", rationale: "Option A", isCorrect: true },
-        { text: "Elle n'a rien dite.", rationale: "Option B", isCorrect: false },
-        { text: "Elle n'a rien dits.", rationale: "Option C", isCorrect: false },
-        { text: "Elle n'a rien dites.", rationale: "Option D", isCorrect: false }
+        { text: "Vous n'ont rien dit.", rationale: "Option A", isCorrect: false },
+        { text: "Vous n'as rien dit.", rationale: "Option B", isCorrect: false },
+        { text: "Vous n'a rien dit.", rationale: "Option C", isCorrect: false },
+        { text: "Vous n'avez rien dit.", rationale: "Option D", isCorrect: true }
       ]
     },
     {
-      question: "We have said / said yes.",
+      question: "I said yes.",
+      hint: "Use passé composé of dire: j'ai dit",
+      answerOptions: [
+        { text: "J'ai dit oui.", rationale: "Option A", isCorrect: true },
+        { text: "J'as dit oui.", rationale: "Option B", isCorrect: false },
+        { text: "J'a dit oui.", rationale: "Option C", isCorrect: false },
+        { text: "J'ont dit oui.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) didn't say anything.",
+      hint: "Use passé composé negative: elles n'ont rien dit",
+      answerOptions: [
+        { text: "Elles n'ont rien dit.", rationale: "Option A", isCorrect: true },
+        { text: "Elles n'a rien dit.", rationale: "Option B", isCorrect: false },
+        { text: "Elles n'avons rien dit.", rationale: "Option C", isCorrect: false },
+        { text: "Elles n'as rien dit.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We said the same thing.",
       hint: "Use passé composé of dire: nous avons dit",
       answerOptions: [
-        { text: "Nous avons dit oui.", rationale: "Option A", isCorrect: true },
-        { text: "Nous avons dite oui.", rationale: "Option B", isCorrect: false },
-        { text: "Nous avons dits oui.", rationale: "Option C", isCorrect: false },
-        { text: "Nous avons dit ouis.", rationale: "Option D", isCorrect: false }
+        { text: "Nous a dit la même chose.", rationale: "Option A", isCorrect: false },
+        { text: "Nous as dit la même chose.", rationale: "Option B", isCorrect: false },
+        { text: "Nous avons dit la même chose.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ont dit la même chose.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "You (informal) said / have said a lie.",
+      question: "We didn't say a word.",
+      hint: "Use passé composé negative: nous n'avons pas dit",
+      answerOptions: [
+        { text: "Nous n'a pas dit un mot.", rationale: "Option A", isCorrect: false },
+        { text: "Nous n'avons pas dit un mot.", rationale: "Option B", isCorrect: true },
+        { text: "Nous n'as pas dit un mot.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'ont pas dit un mot.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male) said so.",
+      hint: "Use passé composé of dire: ils l'ont dit",
+      answerOptions: [
+        { text: "Ils l'a dit.", rationale: "Option A", isCorrect: false },
+        { text: "Ils l'avons dit.", rationale: "Option B", isCorrect: false },
+        { text: "Ils l'as dit.", rationale: "Option C", isCorrect: false },
+        { text: "Ils l'ont dit.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) said everything.",
       hint: "Use passé composé of dire: tu as dit",
       answerOptions: [
-        { text: "Tu as dit un mensonge.", rationale: "Option A", isCorrect: true },
-        { text: "Tu as dite un mensonge.", rationale: "Option B", isCorrect: false },
-        { text: "Tu as dits un mensonge.", rationale: "Option C", isCorrect: false },
-        { text: "Tu as dit un mensonges.", rationale: "Option D", isCorrect: false }
+        { text: "Tu a dit tout.", rationale: "Option A", isCorrect: false },
+        { text: "Tu as dit tout.", rationale: "Option B", isCorrect: true },
+        { text: "Tu avons dit tout.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ont dit tout.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "They (female) said / have said something.",
-      hint: "Use passé composé of dire: elles ont dit",
+      question: "She said no.",
+      hint: "Use passé composé of dire: elle a dit",
       answerOptions: [
-        { text: "Elles ont dit quelque chose.", rationale: "Option A", isCorrect: true },
-        { text: "Elles ont dites quelque chose.", rationale: "Option B", isCorrect: false },
-        { text: "Elles ont dits quelque chose.", rationale: "Option C", isCorrect: false },
-        { text: "Elles ont dite quelque chosé.", rationale: "Option D", isCorrect: false }
+        { text: "Elle avons dit non.", rationale: "Option A", isCorrect: false },
+        { text: "Elle a dit non.", rationale: "Option B", isCorrect: true },
+        { text: "Elle as dit non.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ont dit non.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
-      question: "I have said / said it before.",
-      hint: "Use passé composé of dire: je l'ai dit",
+      question: "What have I said?",
+      hint: "Use passé composé interrogative: qu'est-ce que j'ai dit",
       answerOptions: [
-        { text: "Je l'ai dit avant.", rationale: "Option A", isCorrect: true },
-        { text: "Je l'ai dite avant.", rationale: "Option B", isCorrect: false },
-        { text: "Je l'ai dits avant.", rationale: "Option C", isCorrect: false },
-        { text: "Je l'ai dite avont.", rationale: "Option D", isCorrect: false }
+        { text: "Qu'est-ce que j'a dit ?", rationale: "Option A", isCorrect: false },
+        { text: "Qu'est-ce que j'ont dit ?", rationale: "Option B", isCorrect: false },
+        { text: "Qu'est-ce que j'as dit ?", rationale: "Option C", isCorrect: false },
+        { text: "Qu'est-ce que j'ai dit ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (formal) never said it.",
+      hint: "Use passé composé negative: vous ne l'avez jamais dit",
+      answerOptions: [
+        { text: "Vous ne l'a jamais dit.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne l'ont jamais dit.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne l'avez jamais dit.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne l'as jamais dit.", rationale: "Option D", isCorrect: false }
       ]
     }
   ]

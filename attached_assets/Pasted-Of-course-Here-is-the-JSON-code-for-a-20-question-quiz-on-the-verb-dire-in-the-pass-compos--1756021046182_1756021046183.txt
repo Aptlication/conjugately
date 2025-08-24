@@ -1,0 +1,228 @@
+Of course. Here is the JSON code for a 20-question quiz on the verb **dire** in the **passé composé**. ✅
+
+This code was generated following the strict, multi-stage protocol to guarantee a perfectly balanced distribution of correct answers (5 for each option letter A, B, C, and D).
+
+```json
+[
+  {
+    "question_number": 1,
+    "english_sentence": "You (formal) said goodbye.",
+    "options": {
+      "A": "Vous ont dit au revoir.",
+      "B": "Vous avez dit au revoir.",
+      "C": "Vous a dit au revoir.",
+      "D": "Vous as dit au revoir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "They (female) said thank you.",
+    "options": {
+      "A": "Elles as dit merci.",
+      "B": "Elles avons dit merci.",
+      "C": "Elles ont dit merci.",
+      "D": "Elles a dit merci."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "Did you (informal) say that?",
+    "options": {
+      "A": "As-tu dit cela ?",
+      "B": "Ont-ils dit cela ?",
+      "C": "A-t-il dit cela ?",
+      "D": "Avons-nous dit cela ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "What did he say?",
+    "options": {
+      "A": "Qu'est-ce qu'il ont dit ?",
+      "B": "Qu'est-ce qu'il as dit ?",
+      "C": "Qu'est-ce qu'il a dit ?",
+      "D": "Qu'est-ce qu'il avons dit ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "She said it was important.",
+    "options": {
+      "A": "Elle avons dit que c'était important.",
+      "B": "Elle as dit que c'était important.",
+      "C": "Elle ont dit que c'était important.",
+      "D": "Elle a dit que c'était important."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "We said hello.",
+    "options": {
+      "A": "Nous avons dit bonjour.",
+      "B": "Nous a dit bonjour.",
+      "C": "Nous ont dit bonjour.",
+      "D": "Nous as dit bonjour."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "Did they (male) say when?",
+    "options": {
+      "A": "A-t-il dit quand ?",
+      "B": "Ont-ils dit quand ?",
+      "C": "Avez-vous dit quand ?",
+      "D": "As-tu dit quand ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "You (informal) didn't say why.",
+    "options": {
+      "A": "Tu n'avons pas dit pourquoi.",
+      "B": "Tu n'a pas dit pourquoi.",
+      "C": "Tu n'ont pas dit pourquoi.",
+      "D": "Tu n'as pas dit pourquoi."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "I didn't say that.",
+    "options": {
+      "A": "Je n'as pas dit ça.",
+      "B": "Je n'a pas dit ça.",
+      "C": "Je n'ai pas dit ça.",
+      "D": "Je n'ont pas dit ça."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "He said the truth.",
+    "options": {
+      "A": "Il a dit la vérité.",
+      "B": "Il ont dit la vérité.",
+      "C": "Il as dit la vérité.",
+      "D": "Il avons dit la vérité."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "You (plural) said nothing.",
+    "options": {
+      "A": "Vous n'ont rien dit.",
+      "B": "Vous n'as rien dit.",
+      "C": "Vous n'a rien dit.",
+      "D": "Vous n'avez rien dit."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "I said yes.",
+    "options": {
+      "A": "J'ai dit oui.",
+      "B": "J'as dit oui.",
+      "C": "J'a dit oui.",
+      "D": "J'ont dit oui."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "They (female) didn't say anything.",
+    "options": {
+      "A": "Elles n'ont rien dit.",
+      "B": "Elles n'a rien dit.",
+      "C": "Elles n'avons rien dit.",
+      "D": "Elles n'as rien dit."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "We said the same thing.",
+    "options": {
+      "A": "Nous a dit la même chose.",
+      "B": "Nous as dit la même chose.",
+      "C": "Nous avons dit la même chose.",
+      "D": "Nous ont dit la même chose."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "We didn't say a word.",
+    "options": {
+      "A": "Nous n'a pas dit un mot.",
+      "B": "Nous n'avons pas dit un mot.",
+      "C": "Nous n'as pas dit un mot.",
+      "D": "Nous n'ont pas dit un mot."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "They (male) said so.",
+    "options": {
+      "A": "Ils l'a dit.",
+      "B": "Ils l'avons dit.",
+      "C": "Ils l'as dit.",
+      "D": "Ils l'ont dit."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "You (informal) said everything.",
+    "options": {
+      "A": "Tu a dit tout.",
+      "B": "Tu as dit tout.",
+      "C": "Tu avons dit tout.",
+      "D": "Tu ont dit tout."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "She said no.",
+    "options": {
+      "A": "Elle avons dit non.",
+      "B": "Elle a dit non.",
+      "C": "Elle as dit non.",
+      "D": "Elle ont dit non."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "What have I said?",
+    "options": {
+      "A": "Qu'est-ce que j'a dit ?",
+      "B": "Qu'est-ce que j'ont dit ?",
+      "C": "Qu'est-ce que j'as dit ?",
+      "D": "Qu'est-ce que j'ai dit ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "You (formal) never said it.",
+    "options": {
+      "A": "Vous ne l'a jamais dit.",
+      "B": "Vous ne l'ont jamais dit.",
+      "C": "Vous ne l'avez jamais dit.",
+      "D": "Vous ne l'as jamais dit."
+    },
+    "correct_answer": "C"
+  }
+]
+```
