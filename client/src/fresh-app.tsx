@@ -563,7 +563,7 @@ function FreshAppCore({ user }: { user: any }) {
                 <span>{selectionReminderDismissed ? "Start Quiz" : "Complete 1, 2 & 3 to start quiz"}</span>
                 {!selectionReminderDismissed && (
                   <span
-                    onClick={(e) => {
+                    onPointerDown={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
                       setSelectionReminderDismissed(true);
@@ -575,7 +575,8 @@ function FreshAppCore({ user }: { user: any }) {
                       textDecoration: 'underline',
                       cursor: 'pointer',
                       transition: 'color 0.2s',
-                      userSelect: 'none'
+                      userSelect: 'none',
+                      pointerEvents: 'auto'
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.color = '#1e40af';

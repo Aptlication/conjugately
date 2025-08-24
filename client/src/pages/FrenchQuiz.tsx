@@ -586,13 +586,14 @@ export default function FrenchQuiz() {
                           <span>{selectionReminderDismissed ? "Start Quiz" : "Complete 1, 2 & 3 to start quiz"}</span>
                           {!selectionReminderDismissed && (
                             <span
-                              onClick={(e) => {
+                              onPointerDown={(e) => {
                                 e.preventDefault();
                                 e.stopPropagation();
                                 setSelectionReminderDismissed(true);
                                 localStorage.setItem('selectionReminderDismissed', 'true');
                               }}
                               className="text-xs text-blue-900 underline hover:text-blue-800 transition-colors cursor-pointer select-none"
+                              style={{ pointerEvents: 'auto' }}
                             >
                               Don't remind me again.
                             </span>
