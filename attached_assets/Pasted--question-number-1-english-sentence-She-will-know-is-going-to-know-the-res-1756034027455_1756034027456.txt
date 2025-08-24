@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will know / is going to know the results tomorrow.",
+    "options": {
+      "A": "Elle saura les résultats demain.",
+      "B": "Elle sauras les résultats demain.",
+      "C": "Elle saurez les résultats demain.",
+      "D": "Elle sauront les résultats demain."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "They (male/mixed) will know / are going to know the answer soon.",
+    "options": {
+      "A": "Ils saura la réponse bientôt.",
+      "B": "Ils saurez la réponse bientôt.",
+      "C": "Ils saurons la réponse bientôt.",
+      "D": "Ils sauront la réponse bientôt."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "I will not know / am not going to know what to do.",
+    "options": {
+      "A": "Je ne sauras pas quoi faire.",
+      "B": "Je ne saurai pas quoi faire.",
+      "C": "Je ne saura pas quoi faire.",
+      "D": "Je ne saurons pas quoi faire."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "We will know / are going to know how to respond.",
+    "options": {
+      "A": "Nous saurons comment répondre.",
+      "B": "Nous saurez comment répondre.",
+      "C": "Nous saura comment répondre.",
+      "D": "Nous sauront comment répondre."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "Will you (informal) know / be going to know the way?",
+    "options": {
+      "A": "Sauras-tu le chemin ?",
+      "B": "Saurez-tu le chemin ?",
+      "C": "Saurai-tu le chemin ?",
+      "D": "Saurons-tu le chemin ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "You (formal) will know / are going to know everything.",
+    "options": {
+      "A": "Vous saurons tout.",
+      "B": "Vous saurez tout.",
+      "C": "Vous sauras tout.",
+      "D": "Vous sauront tout."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (female) will not know / are not going to know the secret.",
+    "options": {
+      "A": "Elles ne saurez pas le secret.",
+      "B": "Elles ne saurons pas le secret.",
+      "C": "Elles ne sauront pas le secret.",
+      "D": "Elles ne saura pas le secret."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "One day, he will know / is going to know.",
+    "options": {
+      "A": "Un jour, il saurez.",
+      "B": "Un jour, il sauras.",
+      "C": "Un jour, il saura.",
+      "D": "Un jour, il saurons."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "I will know / am going to know the truth.",
+    "options": {
+      "A": "Je saura la vérité.",
+      "B": "Je sauras la vérité.",
+      "C": "Je saurez la vérité.",
+      "D": "Je saurai la vérité."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "When will we know / are we going to know the date?",
+    "options": {
+      "A": "Quand saura-nous la date ?",
+      "B": "Quand saurez-nous la date ?",
+      "C": "Quand saurons-nous la date ?",
+      "D": "Quand sauront-nous la date ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "They (male/mixed) will know / are going to know how to drive.",
+    "options": {
+      "A": "Ils saurons conduire.",
+      "B": "Ils saurez conduire.",
+      "C": "Ils sauront conduire.",
+      "D": "Ils saura conduire."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "She will not know / is not going to know my address.",
+    "options": {
+      "A": "Elle ne saura pas mon adresse.",
+      "B": "Elle ne saurez pas mon adresse.",
+      "C": "Elle ne sauras pas mon adresse.",
+      "D": "Elle ne saurons pas mon adresse."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "You (informal) will know / are going to know how to swim.",
+    "options": {
+      "A": "Tu saurai nager.",
+      "B": "Tu sauras nager.",
+      "C": "Tu saura nager.",
+      "D": "Tu saurez nager."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "How will you (formal) know / are you going to know?",
+    "options": {
+      "A": "Comment sauras-vous ?",
+      "B": "Comment saurons-vous ?",
+      "C": "Comment saurez-vous ?",
+      "D": "Comment sauront-vous ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "He will not know / is not going to know the answer.",
+    "options": {
+      "A": "Il ne sauras pas la réponse.",
+      "B": "Il ne saurons pas la réponse.",
+      "C": "Il ne saura pas la réponse.",
+      "D": "Il ne saurez pas la réponse."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "You (formal) will not know / are not going to know the details.",
+    "options": {
+      "A": "Vous ne saurez pas les détails.",
+      "B": "Vous ne saurons pas les détails.",
+      "C": "Vous ne sauras pas les détails.",
+      "D": "Vous ne sauront pas les détails."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "We will not know / are not going to know the time.",
+    "options": {
+      "A": "Nous ne saurez pas l'heure.",
+      "B": "Nous ne saurons pas l'heure.",
+      "C": "Nous ne saura pas l'heure.",
+      "D": "Nous ne sauront pas l'heure."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (female) will know / are going to know the story.",
+    "options": {
+      "A": "Elles saura l'histoire.",
+      "B": "Elles saurons l'histoire.",
+      "C": "Elles saurez l'histoire.",
+      "D": "Elles sauront l'histoire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "I will know / am going to know how to do it.",
+    "options": {
+      "A": "Je sauras le faire.",
+      "B": "Je saura le faire.",
+      "C": "Je saurons le faire.",
+      "D": "Je saurai le faire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "Will he know / Is he going to know that I am here?",
+    "options": {
+      "A": "Saurez-il que je suis là ?",
+      "B": "Sauras-il que je suis là ?",
+      "C": "Saurons-il que je suis là ?",
+      "D": "Saura-t-il que je suis là ?"
+    },
+    "correct_answer": "D"
+  }
+]
