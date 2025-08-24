@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She could / was able to finish her work.",
+    "options": {
+      "A": "Elle a pu finir son travail.",
+      "B": "Elle a pue finir son travail.",
+      "C": "Elle est pue finir son travail.",
+      "D": "Elle pouvait finir son travail."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "I couldn't / wasn't able to come yesterday.",
+    "options": {
+      "A": "Je n'ai pas pus venir hier.",
+      "B": "Je n'ai pas pu venir hier.",
+      "C": "Je ne suis pas pu venir hier.",
+      "D": "Je ne pouvais pas venir hier."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (female) could / were able to solve the problem.",
+    "options": {
+      "A": "Elles ont pu résoudre le problème.",
+      "B": "Elles sont pues résoudre le problème.",
+      "C": "Elles ont pues résoudre le problème.",
+      "D": "Elles pouvaient résoudre le problème."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "They (male/mixed) couldn't / weren't able to find the keys.",
+    "options": {
+      "A": "Ils n'ont pas pus trouver les clés.",
+      "B": "Ils ne pouvaient pas trouver les clés.",
+      "C": "Ils ne sont pas pu trouver les clés.",
+      "D": "Ils n'ont pas pu trouver les clés."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "Could you (formal) / Were you able to speak to him?",
+    "options": {
+      "A": "Avez-vous pus lui parler ?",
+      "B": "Avez-vous pu lui parler ?",
+      "C": "Pouviez-vous lui parler ?",
+      "D": "Êtes-vous pu lui parler ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "He could / was able to open the door.",
+    "options": {
+      "A": "Il pouvait ouvrir la porte.",
+      "B": "Il a pus ouvrir la porte.",
+      "C": "Il a pu ouvrir la porte.",
+      "D": "Il est pu ouvrir la porte."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "You (informal) couldn't / weren't able to see the show.",
+    "options": {
+      "A": "Tu ne pouvais pas voir le spectacle.",
+      "B": "Tu n'as pas pu voir le spectacle.",
+      "C": "Tu n'as pas pus voir le spectacle.",
+      "D": "Tu n'es pas pu voir le spectacle."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "Could she / Was she able to call you?",
+    "options": {
+      "A": "A-t-elle pu t'appeler ?",
+      "B": "Pouvait-elle t'appeler ?",
+      "C": "A-t-elle pue t'appeler ?",
+      "D": "Est-elle pue t'appeler ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "We could / were able to leave earlier.",
+    "options": {
+      "A": "Nous avons pu partir plus tôt.",
+      "B": "Nous pouvions partir plus tôt.",
+      "C": "Nous sommes pu partir plus tôt.",
+      "D": "Nous avons pus partir plus tôt."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "He finally could / was finally able to do it.",
+    "options": {
+      "A": "Il pouvait enfin le faire.",
+      "B": "Il a enfin pus le faire.",
+      "C": "Il est enfin pu le faire.",
+      "D": "Il a enfin pu le faire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "They (female) could not / were not able to come.",
+    "options": {
+      "A": "Elles n'ont pas pues venir.",
+      "B": "Elles ne sont pas pues venir.",
+      "C": "Elles ne pouvaient pas venir.",
+      "D": "Elles n'ont pas pu venir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "Did you (informal) / Were you able to find your keys?",
+    "options": {
+      "A": "As-tu pus trouver tes clés ?",
+      "B": "Pouvais-tu trouver tes clés ?",
+      "C": "As-tu pu trouver tes clés ?",
+      "D": "Es-tu pu trouver tes clés ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "We couldn't / weren't able to help.",
+    "options": {
+      "A": "Nous ne pouvions pas aider.",
+      "B": "Nous n'avons pas pu aider.",
+      "C": "Nous n'avons pas pus aider.",
+      "D": "Nous ne sommes pas pu aider."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "You (formal) could / were able to convince them.",
+    "options": {
+      "A": "Vous avez pus les convaincre.",
+      "B": "Vous pouviez les convaincre.",
+      "C": "Vous avez pu les convaincre.",
+      "D": "Vous êtes pu les convaincre."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "I could / was able to get some rest.",
+    "options": {
+      "A": "J'ai pu me reposer.",
+      "B": "Je pouvais me reposer.",
+      "C": "J'ai pus me reposer.",
+      "D": "Je suis pu me reposer."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "Could they (male/mixed) / Were they able to understand?",
+    "options": {
+      "A": "Pouvaient-ils comprendre ?",
+      "B": "Ont-ils pus comprendre ?",
+      "C": "Ont-ils pu comprendre ?",
+      "D": "Sont-ils pu comprendre ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "She couldn't / wasn't able to say anything.",
+    "options": {
+      "A": "Elle n'a pas pu rien dire.",
+      "B": "Elle n'a rien pu dire.",
+      "C": "Elle ne pouvait rien dire.",
+      "D": "Elle n'a rien pue dire."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "We couldn't / weren't able to believe it.",
+    "options": {
+      "A": "Nous n'avons pas cru le croire.",
+      "B": "Nous ne pouvions pas le croire.",
+      "C": "Nous n'avons pas pu le croire.",
+      "D": "Nous n'avons pas pus le croire."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "I couldn't / wasn't able to sleep all night.",
+    "options": {
+      "A": "Je n'ai pas pus dormir de la nuit.",
+      "B": "Je ne pouvais pas dormir de la nuit.",
+      "C": "Je ne suis pas pu dormir de la nuit.",
+      "D": "Je n'ai pas pu dormir de la nuit."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "You (informal) could / were able to succeed.",
+    "options": {
+      "A": "Tu pouvais réussir.",
+      "B": "Tu as pus réussir.",
+      "C": "Tu es pu réussir.",
+      "D": "Tu as pu réussir."
+    },
+    "correct_answer": "D"
+  }
+]

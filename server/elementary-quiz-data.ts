@@ -2690,6 +2690,208 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Je n'ai pas sus quoi dire.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "pouvoir": [
+    {
+      question: "She could / was able to finish her work.",
+      hint: "Use passé composé of pouvoir: elle a pu",
+      answerOptions: [
+        { text: "Elle a pu finir son travail.", rationale: "Option A", isCorrect: true },
+        { text: "Elle a pue finir son travail.", rationale: "Option B", isCorrect: false },
+        { text: "Elle est pue finir son travail.", rationale: "Option C", isCorrect: false },
+        { text: "Elle pouvait finir son travail.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I couldn't / wasn't able to come yesterday.",
+      hint: "Use passé composé negative: je n'ai pas pu",
+      answerOptions: [
+        { text: "Je n'ai pas pus venir hier.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'ai pas pu venir hier.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne suis pas pu venir hier.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne pouvais pas venir hier.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) could / were able to solve the problem.",
+      hint: "Use passé composé of pouvoir: elles ont pu",
+      answerOptions: [
+        { text: "Elles ont pu résoudre le problème.", rationale: "Option A", isCorrect: true },
+        { text: "Elles sont pues résoudre le problème.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ont pues résoudre le problème.", rationale: "Option C", isCorrect: false },
+        { text: "Elles pouvaient résoudre le problème.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) couldn't / weren't able to find the keys.",
+      hint: "Use passé composé negative: ils n'ont pas pu",
+      answerOptions: [
+        { text: "Ils n'ont pas pus trouver les clés.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne pouvaient pas trouver les clés.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne sont pas pu trouver les clés.", rationale: "Option C", isCorrect: false },
+        { text: "Ils n'ont pas pu trouver les clés.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Could you (formal) / Were you able to speak to him?",
+      hint: "Use passé composé interrogative: avez-vous pu",
+      answerOptions: [
+        { text: "Avez-vous pus lui parler ?", rationale: "Option A", isCorrect: false },
+        { text: "Avez-vous pu lui parler ?", rationale: "Option B", isCorrect: true },
+        { text: "Pouviez-vous lui parler ?", rationale: "Option C", isCorrect: false },
+        { text: "Êtes-vous pu lui parler ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He could / was able to open the door.",
+      hint: "Use passé composé of pouvoir: il a pu",
+      answerOptions: [
+        { text: "Il pouvait ouvrir la porte.", rationale: "Option A", isCorrect: false },
+        { text: "Il a pus ouvrir la porte.", rationale: "Option B", isCorrect: false },
+        { text: "Il a pu ouvrir la porte.", rationale: "Option C", isCorrect: true },
+        { text: "Il est pu ouvrir la porte.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) couldn't / weren't able to see the show.",
+      hint: "Use passé composé negative: tu n'as pas pu",
+      answerOptions: [
+        { text: "Tu ne pouvais pas voir le spectacle.", rationale: "Option A", isCorrect: false },
+        { text: "Tu n'as pas pu voir le spectacle.", rationale: "Option B", isCorrect: true },
+        { text: "Tu n'as pas pus voir le spectacle.", rationale: "Option C", isCorrect: false },
+        { text: "Tu n'es pas pu voir le spectacle.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Could she / Was she able to call you?",
+      hint: "Use passé composé interrogative: a-t-elle pu",
+      answerOptions: [
+        { text: "A-t-elle pu t'appeler ?", rationale: "Option A", isCorrect: true },
+        { text: "Pouvait-elle t'appeler ?", rationale: "Option B", isCorrect: false },
+        { text: "A-t-elle pue t'appeler ?", rationale: "Option C", isCorrect: false },
+        { text: "Est-elle pue t'appeler ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We could / were able to leave earlier.",
+      hint: "Use passé composé of pouvoir: nous avons pu",
+      answerOptions: [
+        { text: "Nous avons pu partir plus tôt.", rationale: "Option A", isCorrect: true },
+        { text: "Nous pouvions partir plus tôt.", rationale: "Option B", isCorrect: false },
+        { text: "Nous sommes pu partir plus tôt.", rationale: "Option C", isCorrect: false },
+        { text: "Nous avons pus partir plus tôt.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He finally could / was finally able to do it.",
+      hint: "Use passé composé of pouvoir: il a enfin pu",
+      answerOptions: [
+        { text: "Il pouvait enfin le faire.", rationale: "Option A", isCorrect: false },
+        { text: "Il a enfin pus le faire.", rationale: "Option B", isCorrect: false },
+        { text: "Il est enfin pu le faire.", rationale: "Option C", isCorrect: false },
+        { text: "Il a enfin pu le faire.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) could not / were not able to come.",
+      hint: "Use passé composé negative: elles n'ont pas pu",
+      answerOptions: [
+        { text: "Elles n'ont pas pues venir.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne sont pas pues venir.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne pouvaient pas venir.", rationale: "Option C", isCorrect: false },
+        { text: "Elles n'ont pas pu venir.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Did you (informal) / Were you able to find your keys?",
+      hint: "Use passé composé interrogative: as-tu pu",
+      answerOptions: [
+        { text: "As-tu pus trouver tes clés ?", rationale: "Option A", isCorrect: false },
+        { text: "Pouvais-tu trouver tes clés ?", rationale: "Option B", isCorrect: false },
+        { text: "As-tu pu trouver tes clés ?", rationale: "Option C", isCorrect: true },
+        { text: "Es-tu pu trouver tes clés ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We couldn't / weren't able to help.",
+      hint: "Use passé composé negative: nous n'avons pas pu",
+      answerOptions: [
+        { text: "Nous ne pouvions pas aider.", rationale: "Option A", isCorrect: false },
+        { text: "Nous n'avons pas pu aider.", rationale: "Option B", isCorrect: true },
+        { text: "Nous n'avons pas pus aider.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne sommes pas pu aider.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) could / were able to convince them.",
+      hint: "Use passé composé of pouvoir: vous avez pu",
+      answerOptions: [
+        { text: "Vous avez pus les convaincre.", rationale: "Option A", isCorrect: false },
+        { text: "Vous pouviez les convaincre.", rationale: "Option B", isCorrect: false },
+        { text: "Vous avez pu les convaincre.", rationale: "Option C", isCorrect: true },
+        { text: "Vous êtes pu les convaincre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I could / was able to get some rest.",
+      hint: "Use passé composé of pouvoir: j'ai pu",
+      answerOptions: [
+        { text: "J'ai pu me reposer.", rationale: "Option A", isCorrect: true },
+        { text: "Je pouvais me reposer.", rationale: "Option B", isCorrect: false },
+        { text: "J'ai pus me reposer.", rationale: "Option C", isCorrect: false },
+        { text: "Je suis pu me reposer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Could they (male/mixed) / Were they able to understand?",
+      hint: "Use passé composé interrogative: ont-ils pu",
+      answerOptions: [
+        { text: "Pouvaient-ils comprendre ?", rationale: "Option A", isCorrect: false },
+        { text: "Ont-ils pus comprendre ?", rationale: "Option B", isCorrect: false },
+        { text: "Ont-ils pu comprendre ?", rationale: "Option C", isCorrect: true },
+        { text: "Sont-ils pu comprendre ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She couldn't / wasn't able to say anything.",
+      hint: "Use passé composé negative: elle n'a rien pu dire",
+      answerOptions: [
+        { text: "Elle n'a pas pu rien dire.", rationale: "Option A", isCorrect: false },
+        { text: "Elle n'a rien pu dire.", rationale: "Option B", isCorrect: true },
+        { text: "Elle ne pouvait rien dire.", rationale: "Option C", isCorrect: false },
+        { text: "Elle n'a rien pue dire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We couldn't / weren't able to believe it.",
+      hint: "Use passé composé negative: nous n'avons pas pu",
+      answerOptions: [
+        { text: "Nous n'avons pas cru le croire.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne pouvions pas le croire.", rationale: "Option B", isCorrect: false },
+        { text: "Nous n'avons pas pu le croire.", rationale: "Option C", isCorrect: true },
+        { text: "Nous n'avons pas pus le croire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I couldn't / wasn't able to sleep all night.",
+      hint: "Use passé composé negative: je n'ai pas pu",
+      answerOptions: [
+        { text: "Je n'ai pas pus dormir de la nuit.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne pouvais pas dormir de la nuit.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne suis pas pu dormir de la nuit.", rationale: "Option C", isCorrect: false },
+        { text: "Je n'ai pas pu dormir de la nuit.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) could / were able to succeed.",
+      hint: "Use passé composé of pouvoir: tu as pu",
+      answerOptions: [
+        { text: "Tu pouvais réussir.", rationale: "Option A", isCorrect: false },
+        { text: "Tu as pus réussir.", rationale: "Option B", isCorrect: false },
+        { text: "Tu es pu réussir.", rationale: "Option C", isCorrect: false },
+        { text: "Tu as pu réussir.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 
