@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will want / is going to want a new dress.",
+    "options": {
+      "A": "Elle voudra une nouvelle robe.",
+      "B": "Elle voudras une nouvelle robe.",
+      "C": "Elle voudrez une nouvelle robe.",
+      "D": "Elle voudront une nouvelle robe."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "I will want / am going to want to leave early.",
+    "options": {
+      "A": "Je voudrai partir tôt.",
+      "B": "Je voudras partir tôt.",
+      "C": "Je voudra partir tôt.",
+      "D": "Je voudrons partir tôt."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "We will not want / are not going to want to miss that.",
+    "options": {
+      "A": "Nous ne voudra pas manquer ça.",
+      "B": "Nous ne voudrez pas manquer ça.",
+      "C": "Nous ne voudrons pas manquer ça.",
+      "D": "Nous ne voudront pas manquer ça."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "He will not want / is not going to want to come.",
+    "options": {
+      "A": "Il ne voudra pas venir.",
+      "B": "Il ne voudras pas venir.",
+      "C": "Il ne voudrons pas venir.",
+      "D": "Il ne voudrez pas venir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "You (formal) will want / are going to want to rest.",
+    "options": {
+      "A": "Vous voudrez vous reposer.",
+      "B": "Vous voudrons vous reposer.",
+      "C": "Vous voudras vous reposer.",
+      "D": "Vous voudront vous reposer."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "You (informal) will want / are going to want another piece.",
+    "options": {
+      "A": "Tu voudra un autre morceau.",
+      "B": "Tu voudrez un autre morceau.",
+      "C": "Tu voudras un autre morceau.",
+      "D": "Tu voudrai un autre morceau."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (male/mixed) will want / are going to want to know the truth.",
+    "options": {
+      "A": "Ils voudra savoir la vérité.",
+      "B": "Ils voudrez savoir la vérité.",
+      "C": "Ils voudrons savoir la vérité.",
+      "D": "Ils voudront savoir la vérité."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "Will you (formal) want / Are you going to want to join us?",
+    "options": {
+      "A": "Voudrez-vous nous joindre ?",
+      "B": "Voudrons-nous nous joindre ?",
+      "C": "Voudra-t-il nous joindre ?",
+      "D": "Voudras-tu nous joindre ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "We will want / are going to want to try.",
+    "options": {
+      "A": "Nous voudrons essayer.",
+      "B": "Nous voudrez essayer.",
+      "C": "Nous voudra essayer.",
+      "D": "Nous voudront essayer."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "I will not want / am not going to want to do that.",
+    "options": {
+      "A": "Je ne voudras pas faire ça.",
+      "B": "Je ne voudrai pas faire ça.",
+      "C": "Je ne voudra pas faire ça.",
+      "D": "Je ne voudrons pas faire ça."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "They (female) will want / are going to want to see the show.",
+    "options": {
+      "A": "Elles voudra voir le spectacle.",
+      "B": "Elles voudrons voir le spectacle.",
+      "C": "Elles voudrez voir le spectacle.",
+      "D": "Elles voudront voir le spectacle."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "You (informal) will not want / are not going to want to wait.",
+    "options": {
+      "A": "Tu ne voudra pas attendre.",
+      "B": "Tu ne voudrez pas attendre.",
+      "C": "Tu ne voudras pas attendre.",
+      "D": "Tu ne voudrai pas attendre."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "He will want / is going to want to sleep.",
+    "options": {
+      "A": "Il voudra dormir.",
+      "B": "Il voudras dormir.",
+      "C": "Il voudrez dormir.",
+      "D": "Il voudront dormir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "They (male/mixed) will not want / are not going to want to come.",
+    "options": {
+      "A": "Ils ne voudra pas venir.",
+      "B": "Ils ne voudrez pas venir.",
+      "C": "Ils ne voudrons pas venir.",
+      "D": "Ils ne voudront pas venir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "I will want / am going to want a better explanation.",
+    "options": {
+      "A": "Je voudras une meilleure explication.",
+      "B": "Je voudra une meilleure explication.",
+      "C": "Je voudrons une meilleure explication.",
+      "D": "Je voudrai une meilleure explication."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "We will not want / are not going to want to participate.",
+    "options": {
+      "A": "Nous ne voudra pas participer.",
+      "B": "Nous ne voudrez pas participer.",
+      "C": "Nous ne voudrons pas participer.",
+      "D": "Nous ne voudront pas participer."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "What will you (informal) want / are you going to want to do?",
+    "options": {
+      "A": "Que voudra-t-il faire ?",
+      "B": "Que voudras-tu faire ?",
+      "C": "Que voudrez-vous faire ?",
+      "D": "Que voudrons-nous faire ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (female) will not want / are not going to want to stay.",
+    "options": {
+      "A": "Elles ne voudra pas rester.",
+      "B": "Elles ne voudront pas rester.",
+      "C": "Elles ne voudrons pas rester.",
+      "D": "Elles ne voudrez pas rester."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "She will not want / is not going to want to share.",
+    "options": {
+      "A": "Elle ne voudra pas partager.",
+      "B": "Elle ne voudras pas partager.",
+      "C": "Elle ne voudrons pas partager.",
+      "D": "Elle ne voudrez pas partager."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "You (formal) will not want / are not going to want to lose.",
+    "options": {
+      "A": "Vous ne voudra pas perdre.",
+      "B": "Vous ne voudrons pas perdre.",
+      "C": "Vous ne voudrez pas perdre.",
+      "D": "Vous ne voudront pas perdre."
+    },
+    "correct_answer": "C"
+  }
+]
