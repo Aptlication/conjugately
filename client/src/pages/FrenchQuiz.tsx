@@ -577,7 +577,7 @@ export default function FrenchQuiz() {
                     <button
                       onClick={handleStartQuiz}
                       disabled={!selectedVerb || !selectedTimeFrame || !selectedTenseType}
-                      className="w-full p-3 text-base font-bold text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:bg-gradient-to-r disabled:from-blue-500 disabled:to-teal-500 disabled:text-white disabled:cursor-not-allowed shadow-lg"
+                      className="w-full p-3 text-base font-bold text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:bg-gradient-to-r disabled:from-blue-900 disabled:to-purple-600 disabled:text-white disabled:cursor-not-allowed shadow-lg"
                     >
                       {selectedVerb && selectedTimeFrame && selectedTenseType ? (
                         `Start ${selectedVerb} Quiz (${selectedTenseType})`

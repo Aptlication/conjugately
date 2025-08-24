@@ -2218,7 +2218,7 @@ function App() {
             className={`w-full p-3 text-base font-bold rounded-xl transition-all ${
               (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced"))
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
-                : 'bg-gradient-to-r from-blue-500 to-teal-500 text-white cursor-not-allowed'
+                : 'bg-gradient-to-r from-blue-900 to-purple-600 text-white cursor-not-allowed'
             }`}
           >
             {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") ? (

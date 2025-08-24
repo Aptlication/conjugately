@@ -549,7 +549,7 @@ function FreshAppCore({ user }: { user: any }) {
               fontSize: '16px', 
               fontWeight: 'bold', 
               color: 'white',
-              background: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'linear-gradient(to right, #10b981, #3b82f6)' : 'linear-gradient(to right, #3b82f6, #14b8a6)',
+              background: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'linear-gradient(to right, #10b981, #3b82f6)' : 'linear-gradient(to right, #1e3a8a, #9333ea)',
               border: 'none',
               borderRadius: '12px',
               cursor: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'pointer' : 'not-allowed',
