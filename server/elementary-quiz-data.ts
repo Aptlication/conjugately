@@ -417,6 +417,56 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Ils ne disons rien.", rationale: "Option C", isCorrect: false },
         { text: "Ils ne dis rien.", rationale: "Option D", isCorrect: false }
       ]
+    },
+    {
+      question: "What are we saying?",
+      hint: "Use first person plural interrogative: que disons-nous",
+      answerOptions: [
+        { text: "Que dit-il ?", rationale: "Option A", isCorrect: false },
+        { text: "Que disons-nous ?", rationale: "Option B", isCorrect: true },
+        { text: "Que dites-vous ?", rationale: "Option C", isCorrect: false },
+        { text: "Que disent-ils ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) are not telling the truth.",
+      hint: "Use informal negation: tu ne dis pas",
+      answerOptions: [
+        { text: "Tu ne dit pas la vérité.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne dis pas la vérité.", rationale: "Option B", isCorrect: true },
+        { text: "Tu ne disons pas la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne dites pas la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She says that she is tired.",
+      hint: "Use third person singular: elle dit",
+      answerOptions: [
+        { text: "Elle dis qu'elle est fatiguée.", rationale: "Option A", isCorrect: false },
+        { text: "Elle dit qu'elle est fatiguée.", rationale: "Option B", isCorrect: true },
+        { text: "Elle dites qu'elle est fatiguée.", rationale: "Option C", isCorrect: false },
+        { text: "Elle disent qu'elle est fatiguée.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (masculine) say goodbye.",
+      hint: "Use third person plural masculine: ils disent",
+      answerOptions: [
+        { text: "Ils dis au revoir.", rationale: "Option A", isCorrect: false },
+        { text: "Ils disent au revoir.", rationale: "Option B", isCorrect: true },
+        { text: "Ils dit au revoir.", rationale: "Option C", isCorrect: false },
+        { text: "Ils disons au revoir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I'm telling you (plural) something.",
+      hint: "Use first person with plural object: je vous dis",
+      answerOptions: [
+        { text: "Je vous dit quelque chose.", rationale: "Option A", isCorrect: false },
+        { text: "Je vous dis quelque chose.", rationale: "Option B", isCorrect: true },
+        { text: "Je vous disons quelque chose.", rationale: "Option C", isCorrect: false },
+        { text: "Je vous disez quelque chose.", rationale: "Option D", isCorrect: false }
+      ]
     }
   ]
 };
