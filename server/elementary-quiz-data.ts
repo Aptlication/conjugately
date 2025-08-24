@@ -1682,6 +1682,208 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Vous ne l'as jamais dit.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "savoir": [
+    {
+      question: "He knew / has known how to drive.",
+      hint: "Use passé composé of savoir: il a su",
+      answerOptions: [
+        { text: "Il savait conduire.", rationale: "Option A", isCorrect: false },
+        { text: "Il a su conduire.", rationale: "Option B", isCorrect: true },
+        { text: "Il sait conduire.", rationale: "Option C", isCorrect: false },
+        { text: "Il saura conduire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She knew / has known how to draw.",
+      hint: "Use passé composé of savoir: elle a su",
+      answerOptions: [
+        { text: "Elle savait dessiner.", rationale: "Option A", isCorrect: false },
+        { text: "Elle sait dessiner.", rationale: "Option B", isCorrect: false },
+        { text: "Elle saura dessiner.", rationale: "Option C", isCorrect: false },
+        { text: "Elle a su dessiner.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "I knew / have known the answer.",
+      hint: "Use passé composé of savoir: j'ai su",
+      answerOptions: [
+        { text: "Je sais la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Je savais la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Je saurai la réponse.", rationale: "Option C", isCorrect: false },
+        { text: "J'ai su la réponse.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (formal) knew / have known the answer.",
+      hint: "Use passé composé of savoir: vous avez su",
+      answerOptions: [
+        { text: "Vous saviez la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Vous saurez la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Vous avez su la réponse.", rationale: "Option C", isCorrect: true },
+        { text: "Vous savent la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We knew / have known the address.",
+      hint: "Use passé composé of savoir: nous avons su",
+      answerOptions: [
+        { text: "Nous savions l'adresse.", rationale: "Option A", isCorrect: false },
+        { text: "Nous avons su l'adresse.", rationale: "Option B", isCorrect: true },
+        { text: "Nous savent l'adresse.", rationale: "Option C", isCorrect: false },
+        { text: "Nous savons l'adresse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did they (female) know / have they known the news?",
+      hint: "Use passé composé interrogative: ont-elles su",
+      answerOptions: [
+        { text: "Saviez-elles les nouvelles ?", rationale: "Option A", isCorrect: false },
+        { text: "Sait-elle les nouvelles ?", rationale: "Option B", isCorrect: false },
+        { text: "Sauront-elles les nouvelles ?", rationale: "Option C", isCorrect: false },
+        { text: "Ont-elles su les nouvelles ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) knew / have known how to cook.",
+      hint: "Use passé composé of savoir: tu as su",
+      answerOptions: [
+        { text: "Tu as su cuisiner.", rationale: "Option A", isCorrect: true },
+        { text: "Tu sait cuisiner.", rationale: "Option B", isCorrect: false },
+        { text: "Tu savais cuisiner.", rationale: "Option C", isCorrect: false },
+        { text: "Tu sauras cuisiner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) knew / have known everything.",
+      hint: "Use passé composé of savoir: ils ont su",
+      answerOptions: [
+        { text: "Ils sait tout.", rationale: "Option A", isCorrect: false },
+        { text: "Ils savions tout.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ont su tout.", rationale: "Option C", isCorrect: true },
+        { text: "Ils sauront tout.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) knew / have known how to swim.",
+      hint: "Use passé composé of savoir: elles ont su",
+      answerOptions: [
+        { text: "Elles sait nager.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ont su nager.", rationale: "Option B", isCorrect: true },
+        { text: "Elles savons nager.", rationale: "Option C", isCorrect: false },
+        { text: "Elles savaient nager.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We didn't know / haven't known the answer.",
+      hint: "Use passé composé negative: nous n'avons pas su",
+      answerOptions: [
+        { text: "Nous ne savent pas la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne savions pas la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Nous n'avons pas su la réponse.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne savons pas la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She knew / has known the truth.",
+      hint: "Use passé composé of savoir: elle a su",
+      answerOptions: [
+        { text: "Elle a su la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Elle sais la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Elle savons la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Elle savaient la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He didn't know / hasn't known the story.",
+      hint: "Use passé composé negative: il n'a pas su",
+      answerOptions: [
+        { text: "Il ne savait pas l'histoire.", rationale: "Option A", isCorrect: false },
+        { text: "Il n'a pas su l'histoire.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne sait pas l'histoire.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne sais pas l'histoire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (formal) know / have you known the time?",
+      hint: "Use passé composé interrogative: avez-vous su",
+      answerOptions: [
+        { text: "Savez-vous l'heure ?", rationale: "Option A", isCorrect: false },
+        { text: "Avez-vous su l'heure ?", rationale: "Option B", isCorrect: true },
+        { text: "Vous saviez l'heure ?", rationale: "Option C", isCorrect: false },
+        { text: "Vous saurez l'heure ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) knew / have known nothing.",
+      hint: "Use passé composé negative: vous n'avez rien su",
+      answerOptions: [
+        { text: "Vous ne savez.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne saviez rien.", rationale: "Option B", isCorrect: false },
+        { text: "Vous n'avez rien su.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne savez rien.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We knew / have known that it was important.",
+      hint: "Use passé composé of savoir: nous avons su",
+      answerOptions: [
+        { text: "Nous avons su que c'est important.", rationale: "Option A", isCorrect: true },
+        { text: "Nous savent que c'est important.", rationale: "Option B", isCorrect: false },
+        { text: "Nous savions que c'est important.", rationale: "Option C", isCorrect: false },
+        { text: "Nous saurons que c'est important.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We knew / have known how to play the guitar.",
+      hint: "Use passé composé of savoir: nous avons su",
+      answerOptions: [
+        { text: "Nous savent jouer de la guitare.", rationale: "Option A", isCorrect: false },
+        { text: "Nous savions jouer de la guitare.", rationale: "Option B", isCorrect: false },
+        { text: "Nous avons su jouer de la guitare.", rationale: "Option C", isCorrect: true },
+        { text: "Nous saurons jouer de la guitare.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I didn't know / haven't known.",
+      hint: "Use passé composé negative: je n'ai pas su",
+      answerOptions: [
+        { text: "Je ne sais.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'ai pas su.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne savais pas.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne sais pas.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I knew / have known what he was thinking.",
+      hint: "Use passé composé of savoir: j'ai su",
+      answerOptions: [
+        { text: "J'ai su ce qu'il pense.", rationale: "Option A", isCorrect: true },
+        { text: "Je savais ce qu'il pense.", rationale: "Option B", isCorrect: false },
+        { text: "Je saurai ce qu'il pense.", rationale: "Option C", isCorrect: false },
+        { text: "Je sais ce qu'il pense.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) knew / have known the rules.",
+      hint: "Use passé composé of savoir: ils ont su",
+      answerOptions: [
+        { text: "Ils ont su les règles.", rationale: "Option A", isCorrect: true },
+        { text: "Ils sait les règles.", rationale: "Option B", isCorrect: false },
+        { text: "Ils savons les règles.", rationale: "Option C", isCorrect: false },
+        { text: "Ils savaient les règles.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (informal) know / have you known the password?",
+      hint: "Use passé composé interrogative: as-tu su",
+      answerOptions: [
+        { text: "Tu savais le mot de passe ?", rationale: "Option A", isCorrect: false },
+        { text: "Tu sauras le mot de passe ?", rationale: "Option B", isCorrect: false },
+        { text: "As-tu su le mot de passe ?", rationale: "Option C", isCorrect: true },
+        { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 
