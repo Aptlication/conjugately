@@ -14,6 +14,9 @@ function App() {
   const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
     return localStorage.getItem('reflexiveModalDismissed') === 'true';
   });
+  const [selectionReminderDismissed, setSelectionReminderDismissed] = useState(() => {
+    return localStorage.getItem('selectionReminderDismissed') === 'true';
+  });
   const [showMiniCoursesModal, setShowMiniCoursesModal] = useState(false);
   const [showNoviceCourseModal, setShowNoviceCourseModal] = useState(false);
   const [showBeginnerCourseModal, setShowBeginnerCourseModal] = useState(false);
@@ -2220,7 +2223,7 @@ function App() {
           >
             {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced")
               ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame})`
-              : "Complete all selections to start quiz"
+              : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
             }
           </button>
         </div>
