@@ -3501,203 +3501,203 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
   ],
   "vouloir": [
     {
-      question: "She wanted / has wanted to leave.",
-      hint: "Use passé composé with avoir: elle a voulu",
+      question: "You (informal) always wanted / have always wanted this.",
+      hint: "Use passé composé with avoir: tu as toujours voulu",
       answerOptions: [
-        { text: "Elle a voulu partir.", rationale: "Option A", isCorrect: true },
-        { text: "Elle est voulue partir.", rationale: "Option B", isCorrect: false },
-        { text: "Elle a voulue partir.", rationale: "Option C", isCorrect: false },
-        { text: "Elle voulait partir.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "They (female) did not want / have not wanted to listen.",
-      hint: "Use passé composé negative with avoir: elles n'ont pas voulu",
-      answerOptions: [
-        { text: "Elles n'ont pas voulu écouter.", rationale: "Option A", isCorrect: true },
-        { text: "Elles ne sont pas voulues écouter.", rationale: "Option B", isCorrect: false },
-        { text: "Elles n'ont pas voulues écouter.", rationale: "Option C", isCorrect: false },
-        { text: "Elles ne voulaient pas écouter.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "We wanted / have wanted to see you.",
-      hint: "Use passé composé with avoir: nous avons voulu",
-      answerOptions: [
-        { text: "Nous avons voulu te voir.", rationale: "Option A", isCorrect: true },
-        { text: "Nous avons voulus te voir.", rationale: "Option B", isCorrect: false },
-        { text: "Nous sommes voulus te voir.", rationale: "Option C", isCorrect: false },
-        { text: "Nous voulions te voir.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "Did they (male/mixed) want / have they wanted to help?",
-      hint: "Use passé composé interrogative with avoir: ont-ils voulu",
-      answerOptions: [
-        { text: "Ont-ils voulus aider ?", rationale: "Option A", isCorrect: false },
-        { text: "Voulaient-ils aider ?", rationale: "Option B", isCorrect: false },
-        { text: "Ont-ils voulu aider ?", rationale: "Option C", isCorrect: true },
-        { text: "Sont-ils voulu aider ?", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "I wanted / have wanted to call you.",
-      hint: "Use passé composé with avoir: j'ai voulu",
-      answerOptions: [
-        { text: "J'ai voulu t'appeler.", rationale: "Option A", isCorrect: true },
-        { text: "J'ai voulus t'appeler.", rationale: "Option B", isCorrect: false },
-        { text: "Je suis voulu t'appeler.", rationale: "Option C", isCorrect: false },
-        { text: "Je voulais t'appeler.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (informal) wanted / have wanted a dog.",
-      hint: "Use passé composé with avoir: tu as voulu",
-      answerOptions: [
-        { text: "Tu as voulu un chien.", rationale: "Option A", isCorrect: true },
-        { text: "Tu es voulu un chien.", rationale: "Option B", isCorrect: false },
-        { text: "Tu as voulus un chien.", rationale: "Option C", isCorrect: false },
-        { text: "Tu voulais un chien.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "He did not want / has not wanted to say anything.",
-      hint: "Use passé composé negative with avoir: il n'a rien voulu dire",
-      answerOptions: [
-        { text: "Il n'a rien voulu dire.", rationale: "Option A", isCorrect: true },
-        { text: "Il n'a pas voulu rien dire.", rationale: "Option B", isCorrect: false },
-        { text: "Il ne voulait rien dire.", rationale: "Option C", isCorrect: false },
-        { text: "Il n'est rien voulu dire.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (formal) wanted / have wanted to speak.",
-      hint: "Use passé composé with avoir: vous avez voulu",
-      answerOptions: [
-        { text: "Vous avez voulus parler.", rationale: "Option A", isCorrect: false },
-        { text: "Vous vouliez parler.", rationale: "Option B", isCorrect: false },
-        { text: "Vous avez voulu parler.", rationale: "Option C", isCorrect: true },
-        { text: "Vous êtes voulu parler.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "He wanted / has wanted to travel.",
-      hint: "Use passé composé with avoir: il a voulu",
-      answerOptions: [
-        { text: "Il a voulu voyager.", rationale: "Option A", isCorrect: true },
-        { text: "Il est voulu voyager.", rationale: "Option B", isCorrect: false },
-        { text: "Il a voulus voyager.", rationale: "Option C", isCorrect: false },
-        { text: "Il voulait voyager.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "Why did she not want / has she not wanted to come?",
-      hint: "Use passé composé interrogative negative with avoir: pourquoi n'a-t-elle pas voulu",
-      answerOptions: [
-        { text: "Pourquoi n'a-t-elle pas voulu venir ?", rationale: "Option A", isCorrect: true },
-        { text: "Pourquoi n'est-elle pas voulue venir ?", rationale: "Option B", isCorrect: false },
-        { text: "Pourquoi ne voulait-elle pas venir ?", rationale: "Option C", isCorrect: false },
-        { text: "Pourquoi n'a-t-elle pas voulue venir ?", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "I did not want / have not wanted that.",
-      hint: "Use passé composé negative with avoir: je n'ai pas voulu",
-      answerOptions: [
-        { text: "Je n'ai pas voulu cela.", rationale: "Option A", isCorrect: true },
-        { text: "Je n'ai pas voulus cela.", rationale: "Option B", isCorrect: false },
-        { text: "Je ne suis pas voulu cela.", rationale: "Option C", isCorrect: false },
-        { text: "Je ne voulais pas cela.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "They (male/mixed) wanted / have wanted to change.",
-      hint: "Use passé composé with avoir: ils ont voulu",
-      answerOptions: [
-        { text: "Ils voulaient changer.", rationale: "Option A", isCorrect: false },
-        { text: "Ils ont voulu changer.", rationale: "Option B", isCorrect: true },
-        { text: "Ils sont voulus changer.", rationale: "Option C", isCorrect: false },
-        { text: "Ils ont voulus changer.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "She never wanted / has never wanted to get married.",
-      hint: "Use passé composé negative with avoir: elle n'a jamais voulu",
-      answerOptions: [
-        { text: "Elle n'a jamais voulue se marier.", rationale: "Option A", isCorrect: false },
-        { text: "Elle n'a jamais voulu se marier.", rationale: "Option B", isCorrect: true },
-        { text: "Elle ne voulait jamais se marier.", rationale: "Option C", isCorrect: false },
-        { text: "Elle n'est jamais voulue se marier.", rationale: "Option D", isCorrect: false }
-      ]
-    },
-    {
-      question: "We didn't want / haven't wanted to bother you.",
-      hint: "Use passé composé negative with avoir: nous n'avons pas voulu",
-      answerOptions: [
-        { text: "Nous n'avons pas voulus vous déranger.", rationale: "Option A", isCorrect: false },
-        { text: "Nous ne voulions pas vous déranger.", rationale: "Option B", isCorrect: false },
-        { text: "Nous ne sommes pas voulus vous déranger.", rationale: "Option C", isCorrect: false },
-        { text: "Nous n'avons pas voulu vous déranger.", rationale: "Option D", isCorrect: true }
+        { text: "Tu voulais toujours ça.", rationale: "Incorrect - this is imperfect tense (imparfait), not passé composé. Use 'tu as toujours voulu' for completed past action.", isCorrect: false },
+        { text: "Tu as toujours voulu ça.", rationale: "Correct! 'Tu as toujours voulu ça' uses passé composé with auxiliary avoir + past participle voulu to express 'you have always wanted this'.", isCorrect: true },
+        { text: "Tu es toujours voulu ça.", rationale: "Incorrect auxiliary - vouloir uses avoir, not être in passé composé. Should be 'tu as toujours voulu'.", isCorrect: false },
+        { text: "Tu as toujours voulus ça.", rationale: "Incorrect past participle agreement - voulu doesn't agree with the subject when using avoir auxiliary. Keep it as 'voulu'.", isCorrect: false }
       ]
     },
     {
       question: "You (informal) didn't want / haven't wanted to believe me.",
       hint: "Use passé composé negative with avoir: tu n'as pas voulu",
       answerOptions: [
-        { text: "Tu n'as pas voulus me croire.", rationale: "Option A", isCorrect: false },
-        { text: "Tu ne voulais pas me croire.", rationale: "Option B", isCorrect: false },
-        { text: "Tu ne m'as pas voulu croire.", rationale: "Option C", isCorrect: false },
-        { text: "Tu n'as pas voulu me croire.", rationale: "Option D", isCorrect: true }
+        { text: "Tu ne voulais pas me croire.", rationale: "Incorrect tense - this is imperfect (imparfait). The question asks for passé composé: 'tu n'as pas voulu'.", isCorrect: false },
+        { text: "Tu ne m'as pas voulu croire.", rationale: "Incorrect word order - the pronoun 'me' should come after 'pas': 'tu n'as pas voulu me croire'.", isCorrect: false },
+        { text: "Tu n'as pas voulu me croire.", rationale: "Correct! This uses passé composé negative structure: ne + auxiliary + pas + past participle + infinitive.", isCorrect: true },
+        { text: "Tu n'as pas voulus me croire.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with the subject. Keep as 'voulu'.", isCorrect: false }
       ]
     },
     {
-      question: "Did you (formal) want / Have you wanted to eat?",
-      hint: "Use passé composé interrogative with avoir: avez-vous voulu",
+      question: "He did not want / has not wanted to say anything.",
+      hint: "Use passé composé negative with rien: il n'a rien voulu dire",
       answerOptions: [
-        { text: "Avez-vous voulus manger ?", rationale: "Option A", isCorrect: false },
-        { text: "Vouliez-vous manger ?", rationale: "Option B", isCorrect: false },
-        { text: "Avez-vous voulu manger ?", rationale: "Option C", isCorrect: true },
-        { text: "Êtes-vous voulu manger ?", rationale: "Option D", isCorrect: false }
+        { text: "Il n'est rien voulu dire.", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'il n'a rien voulu dire'.", isCorrect: false },
+        { text: "Il n'a pas voulu rien dire.", rationale: "Double negative error - use either 'ne...pas' or 'ne...rien', not both. Correct: 'il n'a rien voulu dire'.", isCorrect: false },
+        { text: "Il ne voulait rien dire.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé with rien.", isCorrect: false },
+        { text: "Il n'a rien voulu dire.", rationale: "Correct! Uses passé composé negative with rien: ne + auxiliary + rien + past participle + infinitive.", isCorrect: true }
       ]
     },
     {
-      question: "They (female) wanted / have wanted to stay.",
-      hint: "Use passé composé with avoir: elles ont voulu",
+      question: "You (formal) wanted / have wanted to speak.",
+      hint: "Use passé composé with avoir: vous avez voulu",
       answerOptions: [
-        { text: "Elles ont voulues rester.", rationale: "Option A", isCorrect: false },
-        { text: "Elles voulaient rester.", rationale: "Option B", isCorrect: false },
-        { text: "Elles sont voulues rester.", rationale: "Option C", isCorrect: false },
-        { text: "Elles ont voulu rester.", rationale: "Option D", isCorrect: true }
+        { text: "Vous avez voulu parler.", rationale: "Correct! 'Vous avez voulu parler' properly uses passé composé with avoir auxiliary + voulu + infinitive.", isCorrect: true },
+        { text: "Vous êtes voulu parler.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé. Should be 'vous avez voulu'.", isCorrect: false },
+        { text: "Vous vouliez parler.", rationale: "Wrong tense - this is imperfect (imparfait). The question asks for passé composé: 'vous avez voulu'.", isCorrect: false },
+        { text: "Vous avez voulus parler.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree. Keep as 'voulu'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She never wanted / has never wanted to get married.",
+      hint: "Use passé composé negative with jamais: elle n'a jamais voulu",
+      answerOptions: [
+        { text: "Elle ne voulait jamais se marier.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé with jamais.", isCorrect: false },
+        { text: "Elle n'est jamais voulue se marier.", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'elle n'a jamais voulu'.", isCorrect: false },
+        { text: "Elle n'a jamais voulu se marier.", rationale: "Correct! Uses passé composé negative with jamais: ne + auxiliary + jamais + past participle + infinitive.", isCorrect: true },
+        { text: "Elle n'a jamais voulue se marier.", rationale: "Incorrect past participle agreement - voulu doesn't agree with subject when using avoir. Keep as 'voulu'.", isCorrect: false }
       ]
     },
     {
       question: "We wanted / have wanted to buy a house.",
       hint: "Use passé composé with avoir: nous avons voulu",
       answerOptions: [
-        { text: "Nous voulions acheter une maison.", rationale: "Option A", isCorrect: false },
-        { text: "Nous avons voulu acheter une maison.", rationale: "Option B", isCorrect: true },
-        { text: "Nous sommes voulus acheter une maison.", rationale: "Option C", isCorrect: false },
-        { text: "Nous avons voulus acheter une maison.", rationale: "Option D", isCorrect: false }
+        { text: "Nous voulions acheter une maison.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé: 'nous avons voulu'.", isCorrect: false },
+        { text: "Nous avons voulus acheter une maison.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Nous sommes voulus acheter une maison.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé. Should be 'nous avons voulu'.", isCorrect: false },
+        { text: "Nous avons voulu acheter une maison.", rationale: "Correct! 'Nous avons voulu acheter une maison' properly uses passé composé structure with avoir.", isCorrect: true }
       ]
     },
     {
-      question: "You (informal) always wanted / have always wanted this.",
-      hint: "Use passé composé with avoir: tu as toujours voulu",
+      question: "They (female) did not want / have not wanted to listen.",
+      hint: "Use passé composé negative with avoir: elles n'ont pas voulu",
       answerOptions: [
-        { text: "Tu as toujours voulu ça.", rationale: "Option A", isCorrect: true },
-        { text: "Tu as toujours voulus ça.", rationale: "Option B", isCorrect: false },
-        { text: "Tu voulais toujours ça.", rationale: "Option C", isCorrect: false },
-        { text: "Tu es toujours voulu ça.", rationale: "Option D", isCorrect: false }
+        { text: "Elles ne sont pas voulues écouter.", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'elles n'ont pas voulu'.", isCorrect: false },
+        { text: "Elles n'ont pas voulu écouter.", rationale: "Correct! Uses passé composé negative: ne + auxiliary + pas + past participle + infinitive.", isCorrect: true },
+        { text: "Elles n'ont pas voulues écouter.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with the subject.", isCorrect: false },
+        { text: "Elles ne voulaient pas écouter.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did they (male/mixed) want / have they wanted to help?",
+      hint: "Use passé composé interrogative with avoir: ont-ils voulu",
+      answerOptions: [
+        { text: "Ont-ils voulu aider ?", rationale: "Correct! This uses passé composé interrogative form: auxiliary + subject pronoun + past participle + infinitive.", isCorrect: true },
+        { text: "Sont-ils voulu aider ?", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'ont-ils voulu'.", isCorrect: false },
+        { text: "Voulaient-ils aider ?", rationale: "Wrong tense - this is imperfect (imparfait) interrogative. Question asks for passé composé.", isCorrect: false },
+        { text: "Ont-ils voulus aider ?", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with the subject.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why did she not want / has she not wanted to come?",
+      hint: "Use passé composé interrogative negative: pourquoi n'a-t-elle pas voulu",
+      answerOptions: [
+        { text: "Pourquoi n'est-elle pas voulue venir ?", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'pourquoi n'a-t-elle pas voulu'.", isCorrect: false },
+        { text: "Pourquoi ne voulait-elle pas venir ?", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Pourquoi n'a-t-elle pas voulue venir ?", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree. Also missing liaison 't'.", isCorrect: false },
+        { text: "Pourquoi n'a-t-elle pas voulu venir ?", rationale: "Correct! Uses passé composé interrogative negative with liaison 't' between auxiliary and pronoun.", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) wanted / have wanted to stay.",
+      hint: "Use passé composé with avoir: elles ont voulu",
+      answerOptions: [
+        { text: "Elles sont voulues rester.", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'elles ont voulu'.", isCorrect: false },
+        { text: "Elles ont voulu rester.", rationale: "Correct! 'Elles ont voulu rester' properly uses passé composé with avoir auxiliary + voulu.", isCorrect: true },
+        { text: "Elles voulaient rester.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Elles ont voulues rester.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree with subject.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We wanted / have wanted to see you.",
+      hint: "Use passé composé with avoir: nous avons voulu",
+      answerOptions: [
+        { text: "Nous sommes voulus te voir.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "Nous avons voulus te voir.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Nous voulions te voir.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Nous avons voulu te voir.", rationale: "Correct! Uses passé composé properly: nous avons + voulu + infinitive + object pronoun.", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) wanted / have wanted a dog.",
+      hint: "Use passé composé with avoir: tu as voulu",
+      answerOptions: [
+        { text: "Tu as voulu un chien.", rationale: "Correct! 'Tu as voulu un chien' uses passé composé correctly with avoir auxiliary + voulu.", isCorrect: true },
+        { text: "Tu voulais un chien.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Tu es voulu un chien.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "Tu as voulus un chien.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with the subject.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We didn't want / haven't wanted to bother you.",
+      hint: "Use passé composé negative with avoir: nous n'avons pas voulu",
+      answerOptions: [
+        { text: "Nous n'avons pas voulu vous déranger.", rationale: "Correct! Uses passé composé negative structure: ne + auxiliary + pas + past participle + infinitive.", isCorrect: true },
+        { text: "Nous ne sommes pas voulus vous déranger.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "Nous n'avons pas voulus vous déranger.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Nous ne voulions pas vous déranger.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "She wanted / has wanted to leave.",
+      hint: "Use passé composé with avoir: elle a voulu",
+      answerOptions: [
+        { text: "Elle a voulue partir.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Elle voulait partir.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Elle a voulu partir.", rationale: "Correct! 'Elle a voulu partir' uses passé composé properly with avoir + voulu + infinitive.", isCorrect: true },
+        { text: "Elle est voulue partir.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He wanted / has wanted to travel.",
+      hint: "Use passé composé with avoir: il a voulu",
+      answerOptions: [
+        { text: "Il voulait voyager.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Il a voulus voyager.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Il a voulu voyager.", rationale: "Correct! Uses passé composé structure correctly: il a + voulu + infinitive.", isCorrect: true },
+        { text: "Il est voulu voyager.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "I wanted / have wanted to call you.",
+      hint: "Use passé composé with avoir: j'ai voulu",
+      answerOptions: [
+        { text: "Je suis voulu t'appeler.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "J'ai voulus t'appeler.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree.", isCorrect: false },
+        { text: "Je voulais t'appeler.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "J'ai voulu t'appeler.", rationale: "Correct! 'J'ai voulu t'appeler' uses passé composé correctly with j'ai + voulu + infinitive.", isCorrect: true }
       ]
     },
     {
       question: "What did you (informal) want / have you wanted to do?",
-      hint: "Use passé composé interrogative with avoir: qu'as-tu voulu",
+      hint: "Use passé composé interrogative with que: qu'as-tu voulu",
       answerOptions: [
-        { text: "Qu'as-tu voulus faire ?", rationale: "Option A", isCorrect: false },
-        { text: "Que voulais-tu faire ?", rationale: "Option B", isCorrect: false },
-        { text: "Qu'as-tu voulu faire ?", rationale: "Option C", isCorrect: true },
-        { text: "Qu'es-tu voulu faire ?", rationale: "Option D", isCorrect: false }
+        { text: "Qu'as-tu voulu faire ?", rationale: "Correct! Uses passé composé interrogative with contraction qu' + auxiliary + subject + past participle.", isCorrect: true },
+        { text: "Que voulais-tu faire ?", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Qu'es-tu voulu faire ?", rationale: "Wrong auxiliary - vouloir uses avoir, not être. Should be 'qu'as-tu voulu'.", isCorrect: false },
+        { text: "Qu'as-tu voulus faire ?", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (formal) want / Have you wanted to eat?",
+      hint: "Use passé composé interrogative with avoir: avez-vous voulu",
+      answerOptions: [
+        { text: "Vouliez-vous manger ?", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Avez-vous voulu manger ?", rationale: "Correct! Uses passé composé interrogative: auxiliary + subject pronoun + past participle + infinitive.", isCorrect: true },
+        { text: "Avez-vous voulus manger ?", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false },
+        { text: "Êtes-vous voulu manger ?", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false }
+      ]
+    },
+    {
+      question: "I did not want / have not wanted that.",
+      hint: "Use passé composé negative with avoir: je n'ai pas voulu",
+      answerOptions: [
+        { text: "Je ne voulais pas cela.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Je n'ai pas voulu cela.", rationale: "Correct! Uses passé composé negative structure: ne + auxiliary + pas + past participle.", isCorrect: true },
+        { text: "Je ne suis pas voulu cela.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "Je n'ai pas voulus cela.", rationale: "Incorrect past participle agreement - with avoir, voulu doesn't agree with subject.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) wanted / have wanted to change.",
+      hint: "Use passé composé with avoir: ils ont voulu",
+      answerOptions: [
+        { text: "Ils voulaient changer.", rationale: "Wrong tense - this is imperfect (imparfait). Question asks for passé composé.", isCorrect: false },
+        { text: "Ils ont voulus changer.", rationale: "Incorrect past participle agreement - with avoir auxiliary, voulu doesn't agree.", isCorrect: false },
+        { text: "Ils sont voulus changer.", rationale: "Wrong auxiliary - vouloir uses avoir, not être in passé composé.", isCorrect: false },
+        { text: "Ils ont voulu changer.", rationale: "Correct! 'Ils ont voulu changer' uses passé composé correctly: ils ont + voulu + infinitive.", isCorrect: true }
       ]
     }
   ]

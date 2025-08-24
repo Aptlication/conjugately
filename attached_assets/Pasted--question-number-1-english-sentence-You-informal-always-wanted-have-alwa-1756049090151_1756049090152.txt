@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "You (informal) always wanted / have always wanted this.",
+    "options": {
+      "A": "Tu voulais toujours ça.",
+      "B": "Tu as toujours voulu ça.",
+      "C": "Tu es toujours voulu ça.",
+      "D": "Tu as toujours voulus ça."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "You (informal) didn't want / haven't wanted to believe me.",
+    "options": {
+      "A": "Tu ne voulais pas me croire.",
+      "B": "Tu ne m'as pas voulu croire.",
+      "C": "Tu n'as pas voulu me croire.",
+      "D": "Tu n'as pas voulus me croire."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "He did not want / has not wanted to say anything.",
+    "options": {
+      "A": "Il n'est rien voulu dire.",
+      "B": "Il n'a pas voulu rien dire.",
+      "C": "Il ne voulait rien dire.",
+      "D": "Il n'a rien voulu dire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "You (formal) wanted / have wanted to speak.",
+    "options": {
+      "A": "Vous avez voulu parler.",
+      "B": "Vous êtes voulu parler.",
+      "C": "Vous vouliez parler.",
+      "D": "Vous avez voulus parler."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "She never wanted / has never wanted to get married.",
+    "options": {
+      "A": "Elle ne voulait jamais se marier.",
+      "B": "Elle n'est jamais voulue se marier.",
+      "C": "Elle n'a jamais voulu se marier.",
+      "D": "Elle n'a jamais voulue se marier."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "We wanted / have wanted to buy a house.",
+    "options": {
+      "A": "Nous voulions acheter une maison.",
+      "B": "Nous avons voulus acheter une maison.",
+      "C": "Nous sommes voulus acheter une maison.",
+      "D": "Nous avons voulu acheter une maison."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (female) did not want / have not wanted to listen.",
+    "options": {
+      "A": "Elles ne sont pas voulues écouter.",
+      "B": "Elles n'ont pas voulu écouter.",
+      "C": "Elles n'ont pas voulues écouter.",
+      "D": "Elles ne voulaient pas écouter."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "Did they (male/mixed) want / have they wanted to help?",
+    "options": {
+      "A": "Ont-ils voulu aider ?",
+      "B": "Sont-ils voulu aider ?",
+      "C": "Voulaient-ils aider ?",
+      "D": "Ont-ils voulus aider ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Why did she not want / has she not wanted to come?",
+    "options": {
+      "A": "Pourquoi n'est-elle pas voulue venir ?",
+      "B": "Pourquoi ne voulait-elle pas venir ?",
+      "C": "Pourquoi n'a-t-elle pas voulue venir ?",
+      "D": "Pourquoi n'a-t-elle pas voulu venir ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "They (female) wanted / have wanted to stay.",
+    "options": {
+      "A": "Elles sont voulues rester.",
+      "B": "Elles ont voulu rester.",
+      "C": "Elles voulaient rester.",
+      "D": "Elles ont voulues rester."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We wanted / have wanted to see you.",
+    "options": {
+      "A": "Nous sommes voulus te voir.",
+      "B": "Nous avons voulus te voir.",
+      "C": "Nous voulions te voir.",
+      "D": "Nous avons voulu te voir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "You (informal) wanted / have wanted a dog.",
+    "options": {
+      "A": "Tu as voulu un chien.",
+      "B": "Tu voulais un chien.",
+      "C": "Tu es voulu un chien.",
+      "D": "Tu as voulus un chien."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "We didn't want / haven't wanted to bother you.",
+    "options": {
+      "A": "Nous n'avons pas voulu vous déranger.",
+      "B": "Nous ne sommes pas voulus vous déranger.",
+      "C": "Nous n'avons pas voulus vous déranger.",
+      "D": "Nous ne voulions pas vous déranger."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "She wanted / has wanted to leave.",
+    "options": {
+      "A": "Elle a voulue partir.",
+      "B": "Elle voulait partir.",
+      "C": "Elle a voulu partir.",
+      "D": "Elle est voulue partir."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "He wanted / has wanted to travel.",
+    "options": {
+      "A": "Il voulait voyager.",
+      "B": "Il a voulus voyager.",
+      "C": "Il a voulu voyager.",
+      "D": "Il est voulu voyager."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "I wanted / have wanted to call you.",
+    "options": {
+      "A": "Je suis voulu t'appeler.",
+      "B": "J'ai voulus t'appeler.",
+      "C": "Je voulais t'appeler.",
+      "D": "J'ai voulu t'appeler."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "What did you (informal) want / have you wanted to do?",
+    "options": {
+      "A": "Qu'as-tu voulu faire ?",
+      "B": "Que voulais-tu faire ?",
+      "C": "Qu'es-tu voulu faire ?",
+      "D": "Qu'as-tu voulus faire ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Did you (formal) want / Have you wanted to eat?",
+    "options": {
+      "A": "Vouliez-vous manger ?",
+      "B": "Avez-vous voulu manger ?",
+      "C": "Avez-vous voulus manger ?",
+      "D": "Êtes-vous voulu manger ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "I did not want / have not wanted that.",
+    "options": {
+      "A": "Je ne voulais pas cela.",
+      "B": "Je n'ai pas voulu cela.",
+      "C": "Je ne suis pas voulu cela.",
+      "D": "Je n'ai pas voulus cela."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "They (male/mixed) wanted / have wanted to change.",
+    "options": {
+      "A": "Ils voulaient changer.",
+      "B": "Ils ont voulus changer.",
+      "C": "Ils sont voulus changer.",
+      "D": "Ils ont voulu changer."
+    },
+    "correct_answer": "D"
+  }
+]
