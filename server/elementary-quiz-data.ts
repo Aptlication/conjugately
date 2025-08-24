@@ -219,137 +219,97 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
   ],
   "dire": [
     {
-      question: "He is saying the answer / He says the answer",
+      question: "He says / He is saying the answer",
       hint: "Use third person singular: il dit",
       answerOptions: [
         { text: "Il dit la réponse.", rationale: "Correct! 'Il dit' is the proper third person singular form of 'dire' in present tense.", isCorrect: true },
-        { text: "Il disent la réponse.", rationale: "Wrong conjugation - 'disent' is third person plural, not singular.", isCorrect: false },
-        { text: "Ils dit la réponse.", rationale: "Wrong subject pronoun - 'Ils' is plural but 'dit' is singular.", isCorrect: false },
-        { text: "Il dis la réponse.", rationale: "Wrong conjugation - 'dis' is first/second person singular, not third person.", isCorrect: false }
+        { text: "Ils disent la réponse.", rationale: "Wrong subject - 'Ils' is plural, question asks for singular 'he'.", isCorrect: false },
+        { text: "Il disent la réponse.", rationale: "Wrong conjugation - 'disent' is plural, but 'il' requires singular form.", isCorrect: false },
+        { text: "Ils dit la réponse.", rationale: "Wrong subject pronoun - 'Ils' is plural but 'dit' is singular.", isCorrect: false }
       ]
     },
     {
-      question: "They (female group) are not saying anything / They don't say anything",
+      question: "You (informal) say / are saying that every day",
+      hint: "Use informal second person: tu dis",
+      answerOptions: [
+        { text: "Tu dis ça tous les jours.", rationale: "Correct! 'Tu dis' is the proper informal second person singular form.", isCorrect: true },
+        { text: "Tu disons ça tous les jours.", rationale: "Wrong conjugation - 'disons' is first person plural, not second person singular.", isCorrect: false },
+        { text: "Vous dites ça tous les jours.", rationale: "Wrong formality - this is formal/plural 'you', question asks for informal.", isCorrect: false },
+        { text: "Tu dites ça tous les jours.", rationale: "Wrong conjugation - 'tu' requires 'dis', not 'dites'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We say / We are saying the truth",
+      hint: "Use first person plural: nous disons",
+      answerOptions: [
+        { text: "Nous dites la vérité.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
+        { text: "Nous disons la vérité.", rationale: "Correct! 'Nous disons' is the proper first person plural form of 'dire'.", isCorrect: true },
+        { text: "Nous dis la vérité.", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false },
+        { text: "Nous disent la vérité.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female group) do not say / are not saying anything",
       hint: "Use feminine plural with negation: elles ne disent rien",
       answerOptions: [
-        { text: "Elles ne disent rien.", rationale: "Correct! 'Elles ne disent rien' uses proper feminine plural conjugation with negation.", isCorrect: true },
         { text: "Elles ne disons rien.", rationale: "Wrong conjugation - 'disons' is first person plural, not third person.", isCorrect: false },
         { text: "Elles ne dites rien.", rationale: "Wrong conjugation - 'dites' is second person plural, not third person.", isCorrect: false },
+        { text: "Elles ne disent rien.", rationale: "Correct! 'Elles ne disent rien' uses proper feminine plural conjugation with negation.", isCorrect: true },
         { text: "Elles ne dis rien.", rationale: "Wrong conjugation - 'dis' is singular, but 'elles' requires plural form.", isCorrect: false }
       ]
     },
     {
-      question: "Are we saying the truth? / Do we say the truth?",
-      hint: "Use interrogative inversion: disons-nous",
-      answerOptions: [
-        { text: "Disons-nous la vérité ?", rationale: "Correct! 'Disons-nous' is the proper interrogative inversion for first person plural.", isCorrect: true },
-        { text: "Ditons-nous la vérité ?", rationale: "Wrong conjugation - 'ditons' is not a valid form of 'dire'.", isCorrect: false },
-        { text: "Dites-nous la vérité ?", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
-        { text: "Dis-nous la vérité ?", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (informal) never say that / You never say that",
-      hint: "Use informal 'tu' with negation: tu ne dis jamais",
-      answerOptions: [
-        { text: "Tu ne dis jamais ça.", rationale: "Correct! 'Tu ne dis jamais' uses proper informal second person singular with negation.", isCorrect: true },
-        { text: "Vous ne dites jamais ça.", rationale: "Wrong formality - this is formal/plural 'you', question asks for informal.", isCorrect: false },
-        { text: "Tu ne dit jamais ça.", rationale: "Wrong conjugation - 'dit' is third person, but 'tu' requires second person 'dis'.", isCorrect: false },
-        { text: "Vous ne dis jamais ça.", rationale: "Inconsistent - 'vous' requires 'dites', not 'dis'.", isCorrect: false }
-      ]
-    },
-    {
-      question: "She is not saying her name / She doesn't say her name",
-      hint: "Use third person singular feminine with negation: elle ne dit pas",
-      answerOptions: [
-        { text: "Elle ne dit pas son nom.", rationale: "Correct! 'Elle ne dit pas' uses proper third person singular feminine with negation.", isCorrect: true },
-        { text: "Elle ne dis pas son nom.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false },
-        { text: "Elles ne dit pas son nom.", rationale: "Wrong subject pronoun - 'Elles' is plural but 'dit' is singular.", isCorrect: false },
-        { text: "Elle ne disent pas son nom.", rationale: "Wrong conjugation - 'disent' is plural, but 'elle' requires singular form.", isCorrect: false }
-      ]
-    },
-    {
-      question: "We are saying hello / We say hello",
-      hint: "Use first person plural: nous disons",
-      answerOptions: [
-        { text: "Nous disons bonjour.", rationale: "Correct! 'Nous disons' is the proper first person plural form of 'dire'.", isCorrect: true },
-        { text: "Nous disent bonjour.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false },
-        { text: "Nous dites bonjour.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
-        { text: "Nous dis bonjour.", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (plural) are not saying anything important / You don't say anything important",
-      hint: "Use formal/plural 'vous' with negation: vous ne dites rien",
-      answerOptions: [
-        { text: "Vous ne dites rien d'important.", rationale: "Correct! 'Vous ne dites rien' uses proper formal/plural second person with negation.", isCorrect: true },
-        { text: "Tu ne dis rien d'important.", rationale: "Wrong formality - this is informal 'you', question asks for plural.", isCorrect: false },
-        { text: "Vous ne dites pas rien d'important.", rationale: "Double negative error - use either 'pas' or 'rien', not both.", isCorrect: false },
-        { text: "Vous ne disons rien d'important.", rationale: "Wrong conjugation - 'disons' is first person plural, not second person.", isCorrect: false }
-      ]
-    },
-    {
-      question: "Do you (formal) say that often? / Do you say that often?",
-      hint: "Use formal interrogative inversion: dites-vous",
-      answerOptions: [
-        { text: "Dites-vous cela souvent ?", rationale: "Correct! 'Dites-vous' is the proper formal interrogative inversion.", isCorrect: true },
-        { text: "Dis-tu cela souvent ?", rationale: "Wrong formality - this is informal 'you', question asks for formal.", isCorrect: false },
-        { text: "Disons-vous cela souvent ?", rationale: "Wrong conjugation - 'disons' is first person plural, not second person.", isCorrect: false },
-        { text: "Disez-vous cela souvent ?", rationale: "Wrong conjugation - 'disez' is not a valid form; correct form is 'dites'.", isCorrect: false }
-      ]
-    },
-    {
-      question: "I am always saying thank you / I always say thank you",
-      hint: "Use first person singular: je dis",
-      answerOptions: [
-        { text: "Je dis toujours merci.", rationale: "Correct! 'Je dis' is the proper first person singular form of 'dire'.", isCorrect: true },
-        { text: "J'ai dis toujours merci.", rationale: "Wrong tense - this uses passé composé, not present tense.", isCorrect: false },
-        { text: "Je disent toujours merci.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person singular.", isCorrect: false },
-        { text: "Je dites toujours merci.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person singular.", isCorrect: false }
-      ]
-    },
-    {
-      question: "They (masculine/mixed group) never say goodbye / They never say goodbye",
-      hint: "Use masculine plural with negation: ils ne disent jamais",
-      answerOptions: [
-        { text: "Ils ne disent jamais au revoir.", rationale: "Correct! 'Ils ne disent jamais' uses proper masculine plural with negation.", isCorrect: true },
-        { text: "Ils ne disent jamais bonjour.", rationale: "Wrong meaning - 'bonjour' means 'hello', not 'goodbye' (au revoir).", isCorrect: false },
-        { text: "Ils ne disent bonjour jamais au revoir.", rationale: "Confused word order and meaning - this doesn't make grammatical sense.", isCorrect: false },
-        { text: "Ils ne dites jamais au revoir.", rationale: "Wrong conjugation - 'dites' is second person, not third person.", isCorrect: false }
-      ]
-    },
-    {
-      question: "You (informal) do not say please / You don't say please",
-      hint: "Use informal 'tu' with negation: tu ne dis pas",
-      answerOptions: [
-        { text: "Tu ne dis pas s'il te plaît.", rationale: "Correct! 'Tu ne dis pas' uses proper informal second person with matching 'te' form.", isCorrect: true },
-        { text: "Vous ne dites pas s'il te plaît.", rationale: "Wrong formality mix - 'vous' should use 's'il vous plaît', not 's'il te plaît'.", isCorrect: false },
-        { text: "Tu ne dites pas s'il te plaît.", rationale: "Wrong conjugation - 'tu' requires 'dis', not 'dites'.", isCorrect: false },
-        { text: "Tu ne dites pas s'il vous plaît.", rationale: "Multiple errors - wrong conjugation and formality mismatch.", isCorrect: false }
-      ]
-    },
-    {
-      question: "Does she say the answer? / Does she say the answer?",
+      question: "Does she say / is she saying the answer?",
       hint: "Use 'est-ce que' structure: est-ce qu'elle dit",
       answerOptions: [
+        { text: "Est-ce qu'elle dites la réponse ?", rationale: "Wrong conjugation - 'dites' is second person plural, not third person singular.", isCorrect: false },
         { text: "Est-ce qu'elle dit la réponse ?", rationale: "Correct! 'Est-ce qu'elle dit' uses proper question structure with third person singular.", isCorrect: true },
-        { text: "Est-ce qu'elle disent la réponse ?", rationale: "Wrong conjugation - 'disent' is plural, but 'elle' requires singular form.", isCorrect: false },
         { text: "Est-ce qu'elle dis la réponse ?", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false },
-        { text: "Est-ce qu'elle dites la réponse ?", rationale: "Wrong conjugation - 'dites' is second person plural, not third person singular.", isCorrect: false }
+        { text: "Est-ce qu'elle disent la réponse ?", rationale: "Wrong conjugation - 'disent' is plural, but 'elle' requires singular form.", isCorrect: false }
       ]
     },
     {
-      question: "We never say that / We never say that",
+      question: "He does not say / is not saying much",
+      hint: "Use third person singular with negation: il ne dit pas",
+      answerOptions: [
+        { text: "Il ne dit pas grand-chose.", rationale: "Correct! 'Il ne dit pas grand-chose' uses proper third person singular with negation.", isCorrect: true },
+        { text: "Ils ne disent pas grand-chose.", rationale: "Wrong number - 'ils' is plural, question asks for singular 'he'.", isCorrect: false },
+        { text: "Il ne dis pas grand-chose.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false },
+        { text: "Il ne disent pas grand-chose.", rationale: "Wrong conjugation - 'disent' is plural, but 'il' requires singular form.", isCorrect: false }
+      ]
+    },
+    {
+      question: "I do not say / am not saying anything",
+      hint: "Use first person singular with negation: je ne dis rien",
+      answerOptions: [
+        { text: "Je ne dis rien.", rationale: "Correct! 'Je ne dis rien' uses proper first person singular with negation.", isCorrect: true },
+        { text: "Je ne disons rien.", rationale: "Wrong conjugation - 'disons' is first person plural, not singular.", isCorrect: false },
+        { text: "Je ne dites rien.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person singular.", isCorrect: false },
+        { text: "Je ne disent rien.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person singular.", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) say / are saying important things",
+      hint: "Use formal second person: vous dites",
+      answerOptions: [
+        { text: "Tu dis des choses importantes.", rationale: "Wrong formality - this is informal 'you', question asks for formal.", isCorrect: false },
+        { text: "Vous dites des choses importantes.", rationale: "Correct! 'Vous dites' is the proper formal second person plural form.", isCorrect: true },
+        { text: "Vous disons des choses importantes.", rationale: "Wrong conjugation - 'disons' is first person plural, not second person.", isCorrect: false },
+        { text: "Vous dis des choses importantes.", rationale: "Wrong conjugation - 'vous' requires 'dites', not 'dis'.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We never say / are never saying that",
       hint: "Use first person plural with negation: nous ne disons jamais",
       answerOptions: [
         { text: "Nous ne disons jamais ça.", rationale: "Correct! 'Nous ne disons jamais' uses proper first person plural with negation.", isCorrect: true },
-        { text: "Nous ne disent jamais ça.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false },
         { text: "Nous ne dites jamais ça.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
+        { text: "Nous ne disent jamais ça.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false },
         { text: "Nous ne dis jamais ça.", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false }
       ]
     },
     {
-      question: "Do you (plural) say good morning every day? / Do you say good morning every day?",
+      question: "Do you (plural) say / are you saying good morning every day?",
       hint: "Use plural interrogative inversion: dites-vous",
       answerOptions: [
         { text: "Dites-vous bonjour chaque jour ?", rationale: "Correct! 'Dites-vous' is the proper plural interrogative inversion.", isCorrect: true },
@@ -359,63 +319,103 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       ]
     },
     {
-      question: "He does not say much / He doesn't say much",
-      hint: "Use third person singular with negation: il ne dit pas",
+      question: "They (male/mixed) say / are saying the truth",
+      hint: "Use masculine plural: ils disent",
       answerOptions: [
-        { text: "Il ne dit pas grand-chose.", rationale: "Correct! 'Il ne dit pas grand-chose' uses proper third person singular with negation.", isCorrect: true },
-        { text: "Ils ne disent pas grand-chose.", rationale: "Wrong number - 'ils' is plural, question asks for singular 'he'.", isCorrect: false },
-        { text: "Il ne disent pas grand-chose.", rationale: "Wrong conjugation - 'disent' is plural, but 'il' requires singular form.", isCorrect: false },
-        { text: "Il ne dis pas grand-chose.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false }
+        { text: "Ils disent la vérité.", rationale: "Correct! 'Ils disent' is the proper masculine plural form of 'dire'.", isCorrect: true },
+        { text: "Ils dites la vérité.", rationale: "Wrong conjugation - 'dites' is second person plural, not third person.", isCorrect: false },
+        { text: "Ils disons la vérité.", rationale: "Wrong conjugation - 'disons' is first person plural, not third person.", isCorrect: false },
+        { text: "Ils dit la vérité.", rationale: "Wrong conjugation - 'dit' is singular, but 'ils' requires plural form.", isCorrect: false }
       ]
     },
     {
-      question: "I do not say anything / I don't say anything",
-      hint: "Use first person singular with negation: je ne dis rien",
+      question: "You (informal) do not say / are not saying please",
+      hint: "Use informal 'tu' with negation: tu ne dis pas",
       answerOptions: [
-        { text: "Je ne dis rien.", rationale: "Correct! 'Je ne dis rien' uses proper first person singular with negation.", isCorrect: true },
-        { text: "Je ne dis pas rien.", rationale: "Double negative error - use either 'pas' or 'rien', not both.", isCorrect: false },
-        { text: "Je ne dites rien.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person singular.", isCorrect: false },
-        { text: "Je ne disons rien.", rationale: "Wrong conjugation - 'disons' is first person plural, not singular.", isCorrect: false }
+        { text: "Tu ne dis pas s'il te plaît.", rationale: "Correct! 'Tu ne dis pas' uses proper informal second person with matching 'te' form.", isCorrect: true },
+        { text: "Vous ne dites pas s'il te plaît.", rationale: "Wrong formality mix - 'vous' should use 's'il vous plaît', not 's'il te plaît'.", isCorrect: false },
+        { text: "Tu ne dites pas s'il te plaît.", rationale: "Wrong conjugation - 'tu' requires 'dis', not 'dites'.", isCorrect: false },
+        { text: "Vous ne dis pas s'il te plaît.", rationale: "Multiple errors - wrong conjugation and formality mismatch.", isCorrect: false }
       ]
     },
     {
-      question: "Do they (female group) say thank you? / Do they say thank you?",
-      hint: "Use feminine plural interrogative inversion: disent-elles",
+      question: "They (female) say / are saying thank you",
+      hint: "Use feminine plural: elles disent",
       answerOptions: [
-        { text: "Disent-elles merci ?", rationale: "Correct! 'Disent-elles' is the proper feminine plural interrogative inversion.", isCorrect: true },
-        { text: "Dites-elles merci ?", rationale: "Wrong conjugation - 'dites' is second person, not third person plural.", isCorrect: false },
-        { text: "Dis-elles merci ?", rationale: "Wrong conjugation - 'dis' is singular, but 'elles' requires plural form.", isCorrect: false },
-        { text: "Disons-elles merci ?", rationale: "Wrong conjugation - 'disons' is first person plural, not third person.", isCorrect: false }
+        { text: "Elles disent merci.", rationale: "Correct! 'Elles disent' is the proper feminine plural form of 'dire'.", isCorrect: true },
+        { text: "Elles dites merci.", rationale: "Wrong conjugation - 'dites' is second person plural, not third person.", isCorrect: false },
+        { text: "Elles disons merci.", rationale: "Wrong conjugation - 'disons' is first person plural, not third person.", isCorrect: false },
+        { text: "Elles dit merci.", rationale: "Wrong conjugation - 'dit' is singular, but 'elles' requires plural form.", isCorrect: false }
       ]
     },
     {
-      question: "He always says no / He always says no",
-      hint: "Use third person singular: il dit",
+      question: "We are saying / say goodbye now",
+      hint: "Use first person plural: nous disons",
       answerOptions: [
-        { text: "Il dit toujours non.", rationale: "Correct! 'Il dit' is the proper third person singular form for continuous/habitual action.", isCorrect: true },
-        { text: "Il disent toujours non.", rationale: "Wrong conjugation - 'disent' is plural, but 'il' requires singular form.", isCorrect: false },
-        { text: "Ils dit toujours non.", rationale: "Wrong subject pronoun - 'ils' is plural but 'dit' is singular.", isCorrect: false },
-        { text: "Il dis toujours non.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false }
+        { text: "Nous disons au revoir maintenant.", rationale: "Correct! 'Nous disons' is the proper first person plural form of 'dire'.", isCorrect: true },
+        { text: "Nous dites au revoir maintenant.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
+        { text: "Nous disent au revoir maintenant.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false },
+        { text: "Nous dis au revoir maintenant.", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false }
       ]
     },
     {
-      question: "Do you (informal) say your name? / Do you say your name?",
+      question: "Do you (informal) say / are you saying your name?",
       hint: "Use informal interrogative inversion: dis-tu",
       answerOptions: [
-        { text: "Dis-tu ton nom ?", rationale: "Correct! 'Dis-tu' is the proper informal interrogative inversion with matching possessive 'ton'.", isCorrect: true },
-        { text: "Dites-tu ton nom ?", rationale: "Wrong conjugation - 'dites' is formal/plural, not informal singular.", isCorrect: false },
-        { text: "Dites-vous ton nom ?", rationale: "Formality mismatch - 'vous' should use 'votre', not 'ton'.", isCorrect: false },
-        { text: "Dis-tu ton noms ?", rationale: "Wrong noun form - 'nom' should be singular, not plural 'noms'.", isCorrect: false }
+        { text: "Dis-tu ton nom ?", rationale: "Correct! 'Dis-tu' is the proper informal interrogative inversion.", isCorrect: true },
+        { text: "Dites-tu ton nom ?", rationale: "Wrong conjugation - 'dites' is plural, but 'tu' requires singular form.", isCorrect: false },
+        { text: "Dites-vous ton nom ?", rationale: "Wrong formality - this is formal 'you', question asks for informal.", isCorrect: false },
+        { text: "Dis-tu ton noms ?", rationale: "Wrong noun form - 'ton nom' should be singular, not 'noms' (plural).", isCorrect: false }
       ]
     },
     {
-      question: "We never say that in class / We never say that in class",
-      hint: "Use first person plural with negation: nous ne disons jamais",
+      question: "She says / is saying everything now",
+      hint: "Use third person singular feminine: elle dit",
       answerOptions: [
-        { text: "Nous ne disons jamais ça en classe.", rationale: "Correct! 'Nous ne disons jamais' uses proper first person plural with negation.", isCorrect: true },
-        { text: "Nous ne dites jamais ça en classe.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
-        { text: "Nous ne dit jamais ça en classe.", rationale: "Wrong conjugation - 'dit' is singular, but 'nous' requires plural form.", isCorrect: false },
-        { text: "Nous ne disent jamais ça en classe.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false }
+        { text: "Elle dit tout maintenant.", rationale: "Correct! 'Elle dit' is the proper third person singular feminine form.", isCorrect: true },
+        { text: "Elle dites tout maintenant.", rationale: "Wrong conjugation - 'dites' is second person plural, not third person singular.", isCorrect: false },
+        { text: "Elle disent tout maintenant.", rationale: "Wrong conjugation - 'disent' is plural, but 'elle' requires singular form.", isCorrect: false },
+        { text: "Elle dis tout maintenant.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false }
+      ]
+    },
+    {
+      question: "He says / is saying nothing",
+      hint: "Use third person singular with negation: il ne dit rien",
+      answerOptions: [
+        { text: "Il ne dit rien.", rationale: "Correct! 'Il ne dit rien' uses proper third person singular with negation.", isCorrect: true },
+        { text: "Ils ne disent rien.", rationale: "Wrong number - 'ils' is plural, question asks for singular 'he'.", isCorrect: false },
+        { text: "Il ne dis rien.", rationale: "Wrong conjugation - 'dis' is first/second person, not third person.", isCorrect: false },
+        { text: "Il ne disent rien.", rationale: "Wrong conjugation - 'disent' is plural, but 'il' requires singular form.", isCorrect: false }
+      ]
+    },
+    {
+      question: "We do not say / are not saying that often",
+      hint: "Use first person plural with negation: nous ne disons pas",
+      answerOptions: [
+        { text: "Nous ne disons pas ça souvent.", rationale: "Correct! 'Nous ne disons pas' uses proper first person plural with negation.", isCorrect: true },
+        { text: "Nous ne dites pas ça souvent.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person.", isCorrect: false },
+        { text: "Nous ne disent pas ça souvent.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person.", isCorrect: false },
+        { text: "Nous ne dis pas ça souvent.", rationale: "Wrong conjugation - 'dis' is singular, but 'nous' requires plural form.", isCorrect: false }
+      ]
+    },
+    {
+      question: "I say / am saying the truth now",
+      hint: "Use first person singular: je dis",
+      answerOptions: [
+        { text: "Je dis la vérité maintenant.", rationale: "Correct! 'Je dis' is the proper first person singular form of 'dire'.", isCorrect: true },
+        { text: "Je dites la vérité maintenant.", rationale: "Wrong conjugation - 'dites' is second person plural, not first person singular.", isCorrect: false },
+        { text: "Je disent la vérité maintenant.", rationale: "Wrong conjugation - 'disent' is third person plural, not first person singular.", isCorrect: false },
+        { text: "Je disons la vérité maintenant.", rationale: "Wrong conjugation - 'disons' is first person plural, not singular.", isCorrect: false }
+      ]
+    },
+    {
+      question: "They do not say / are not saying anything",
+      hint: "Use third person plural with negation: ils ne disent rien",
+      answerOptions: [
+        { text: "Ils ne disent rien.", rationale: "Correct! 'Ils ne disent rien' uses proper third person plural with negation.", isCorrect: true },
+        { text: "Ils ne dites rien.", rationale: "Wrong conjugation - 'dites' is second person plural, not third person.", isCorrect: false },
+        { text: "Ils ne disons rien.", rationale: "Wrong conjugation - 'disons' is first person plural, not third person.", isCorrect: false },
+        { text: "Ils ne dis rien.", rationale: "Wrong conjugation - 'dis' is singular, but 'ils' requires plural form.", isCorrect: false }
       ]
     }
   ]
