@@ -1,0 +1,142 @@
+ELEMENTARY > BESOIN > PRESENT SIMPLE
+
+
+```python
+# elementary_besoin_present_simple.py
+# ELEMENTARY Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb Phrase: avoir besoin de (to need)
+# Tense: Présent (Present Simple)
+# 20 questions
+# Full sentences including objects
+# English expressions grouped to reflect natural usage (e.g., "I need" / "I am needing" grouped as same)
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I need a book / I am needing a book",
+        "correct": "J'ai besoin d'un livre",
+        "distractors": ["Tu as besoin d'un livre", "Il a besoin d'un livre", "Nous avons besoin d'un livre"]
+    },
+    {
+        "question": "You need a problem / You are needing a problem (informal)",
+        "correct": "Tu as besoin d'un problème",
+        "distractors": ["J'ai besoin d'un problème", "Vous avez besoin d'un problème", "Ils ont besoin d'un problème"]
+    },
+    {
+        "question": "He needs help / He is needing help",
+        "correct": "Il a besoin d'aide",
+        "distractors": ["Elle a besoin d'aide", "Tu as besoin d'aide", "Ils ont besoin d'aide"]
+    },
+    {
+        "question": "She needs a rest / She is needing a rest",
+        "correct": "Elle a besoin de repos",
+        "distractors": ["Il a besoin de repos", "Elles ont besoin de repos", "Tu as besoin de repos"]
+    },
+    {
+        "question": "We need water / We are needing water",
+        "correct": "Nous avons besoin d'eau",
+        "distractors": ["Vous avez besoin d'eau", "Ils ont besoin d'eau", "J'ai besoin d'eau"]
+    },
+    {
+        "question": "You need to eat / You are needing to eat (formal / plural)",
+        "correct": "Vous avez besoin de manger",
+        "distractors": ["Tu as besoin de manger", "Nous avons besoin de manger", "Ils ont besoin de manger"]
+    },
+    {
+        "question": "They need to go (male / mixed)",
+        "correct": "Ils ont besoin d'aller",
+        "distractors": ["Elles ont besoin d'aller", "Ils avaient besoin d'aller", "Ils auront besoin d'aller"]
+    },
+    {
+        "question": "They need to sleep (female)",
+        "correct": "Elles ont besoin de dormir",
+        "distractors": ["Ils ont besoin de dormir", "Elles avaient besoin de dormir", "Elles auront besoin de dormir"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I do not need a book / I am not needing a book",
+        "correct": "Je n'ai pas besoin d'un livre",
+        "distractors": ["Tu n'as pas besoin d'un livre", "Il n'a pas besoin d'un livre", "Nous n'avons pas besoin d'un livre"]
+    },
+    {
+        "question": "You do not need a problem / You are not needing a problem (informal)",
+        "correct": "Tu n'as pas besoin d'un problème",
+        "distractors": ["Je n'ai pas besoin d'un problème", "Vous n'avez pas besoin d'un problème", "Ils n'ont pas besoin d'un problème"]
+    },
+    {
+        "question": "He does not need help / He is not needing help",
+        "correct": "Il n'a pas besoin d'aide",
+        "distractors": ["Elle n'a pas besoin d'aide", "Tu n'as pas besoin d'aide", "Ils n'ont pas besoin d'aide"]
+    },
+    {
+        "question": "She does not need rest / She is not needing rest",
+        "correct": "Elle n'a pas besoin de repos",
+        "distractors": ["Il n'a pas besoin de repos", "Elles n'ont pas besoin de repos", "Tu n'as pas besoin de repos"]
+    },
+    {
+        "question": "We do not need water / We are not needing water",
+        "correct": "Nous n'avons pas besoin d'eau",
+        "distractors": ["Vous n'avez pas besoin d'eau", "Ils n'ont pas besoin d'eau", "Je n'ai pas besoin d'eau"]
+    },
+    {
+        "question": "You do not need to eat / You are not needing to eat (formal / plural)",
+        "correct": "Vous n'avez pas besoin de manger",
+        "distractors": ["Tu n'as pas besoin de manger", "Nous n'avons pas besoin de manger", "Ils n'ont pas besoin de manger"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Do I need a book? / Am I needing a book?",
+        "correct": "Ai-je besoin d'un livre ?",
+        "distractors": ["As-tu besoin d'un livre ?", "A-t-il besoin d'un livre ?", "Avons-nous besoin d'un livre ?"]
+    },
+    {
+        "question": "Do you need a problem? / Are you needing a problem? (informal)",
+        "correct": "As-tu besoin d'un problème ?",
+        "distractors": ["Ai-je besoin d'un problème ?", "A-t-il besoin d'un problème ?", "Avez-vous besoin d'un problème ?"]
+    },
+    {
+        "question": "Does he need help? / Is he needing help?",
+        "correct": "A-t-il besoin d'aide ?",
+        "distractors": ["A-t-elle besoin d'aide ?", "Ai-je besoin d'aide ?", "As-tu besoin d'aide ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Don’t I need a book? / Am I not needing a book?",
+        "correct": "N'ai-je pas besoin d'un livre ?",
+        "distractors": ["N'as-tu pas besoin d'un livre ?", "N'a-t-il pas besoin d'un livre ?", "N'avons-nous pas besoin d'un livre ?"]
+    },
+    {
+        "question": "Don’t you need a problem? / Are you not needing a problem? (informal)",
+        "correct": "N'as-tu pas besoin d'un problème ?",
+        "distractors": ["N'ai-je pas besoin d'un problème ?", "N'a-t-il pas besoin d'un problème ?", "N'avez-vous pas besoin d'un problème ?"]
+    },
+    {
+        "question": "Doesn’t he need help? / Isn’t he needing help?",
+        "correct": "N'a-t-il pas besoin d'aide ?",
+        "distractors": ["N'a-t-elle pas besoin d'aide ?", "N'ai-je pas besoin d'aide ?", "N'as-tu pas besoin d'aide ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```
+
+
+

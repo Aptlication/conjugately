@@ -1,0 +1,150 @@
+ELEMENTARY > BESOIN > PASSE COMPOSE
+
+
+```python
+# elementary_besoin_passe_compose.py
+# ELEMENTARY Level – Full Sentence MCQs with Equivalent English Phrase Groupings and Natural English Usage
+# Verb Phrase: avoir besoin de (to need)
+# Tense: Passé Composé (Past Perfect)
+# 20 questions
+# Full sentences including objects or infinitives after "de"
+# English expressions grouped naturally (e.g., "I needed" / "I have needed")
+# Formal/plural vs informal distinction for "you" explicitly shown in answers
+
+import random
+
+questions = [
+    # Positive statements (8 questions)
+    {
+        "question": "I needed a book / I have needed a book",
+        "correct": "J'ai eu besoin d'un livre",
+        "distractors": ["Tu as eu besoin d'un livre", "Il a eu besoin d'un livre", "Nous avons eu besoin d'un livre"]
+    },
+    {
+        "question": "You needed a problem / You have needed a problem (informal)",
+        "correct": "Tu as eu besoin d'un problème",
+        "distractors": ["J'ai eu besoin d'un problème", "Vous avez eu besoin d'un problème", "Ils ont eu besoin d'un problème"]
+    },
+    {
+        "question": "He needed help / He has needed help",
+        "correct": "Il a eu besoin d'aide",
+        "distractors": ["Elle a eu besoin d'aide", "Tu as eu besoin d'aide", "Ils ont eu besoin d'aide"]
+    },
+    {
+        "question": "She needed rest / She has needed rest",
+        "correct": "Elle a eu besoin de repos",
+        "distractors": ["Il a eu besoin de repos", "Elles ont eu besoin de repos", "Tu as eu besoin de repos"]
+    },
+    {
+        "question": "We needed water / We have needed water",
+        "correct": "Nous avons eu besoin d'eau",
+        "distractors": ["Vous avez eu besoin d'eau", "Ils ont eu besoin d'eau", "J'ai eu besoin d'eau"]
+    },
+    {
+        "question": "You needed to eat / You have needed to eat (formal / plural)",
+        "correct": "Vous avez eu besoin de manger",
+        "distractors": ["Tu as eu besoin de manger", "Nous avons eu besoin de manger", "Ils ont eu besoin de manger"]
+    },
+    {
+        "question": "They needed to go (male / mixed)",
+        "correct": "Ils ont eu besoin d'aller",
+        "distractors": ["Elles ont eu besoin d'aller", "Ils avaient besoin d'aller", "Ils auront besoin d'aller"]
+    },
+    {
+        "question": "They needed to sleep (female)",
+        "correct": "Elles ont eu besoin de dormir",
+        "distractors": ["Ils ont eu besoin de dormir", "Elles avaient besoin de dormir", "Elles auront besoin de dormir"]
+    },
+
+    # Negative statements (6 questions)
+    {
+        "question": "I did not need a book / I have not needed a book",
+        "correct": "Je n'ai pas eu besoin d'un livre",
+        "distractors": ["Tu n'as pas eu besoin d'un livre", "Il n'a pas eu besoin d'un livre", "Nous n'avons pas eu besoin d'un livre"]
+    },
+    {
+        "question": "You did not need a problem / You have not needed a problem (informal)",
+        "correct": "Tu n'as pas eu besoin d'un problème",
+        "distractors": ["Je n'ai pas eu besoin d'un problème", "Vous n'avez pas eu besoin d'un problème", "Ils n'ont pas eu besoin d'un problème"]
+    },
+    {
+        "question": "He did not need help / He has not needed help",
+        "correct": "Il n'a pas eu besoin d'aide",
+        "distractors": ["Elle n'a pas eu besoin d'aide", "Tu n'as pas eu besoin d'aide", "Ils n'ont pas eu besoin d'aide"]
+    },
+    {
+        "question": "She did not need rest / She has not needed rest",
+        "correct": "Elle n'a pas eu besoin de repos",
+        "distractors": ["Il n'a pas eu besoin de repos", "Elles n'ont pas eu besoin de repos", "Tu n'as pas eu besoin de repos"]
+    },
+    {
+        "question": "We did not need water / We have not needed water",
+        "correct": "Nous n'avons pas eu besoin d'eau",
+        "distractors": ["Vous n'avez pas eu besoin d'eau", "Ils n'ont pas eu besoin d'eau", "Je n'ai pas eu besoin d'eau"]
+    },
+    {
+        "question": "You did not need to eat / You have not needed to eat (formal / plural)",
+        "correct": "Vous n'avez pas eu besoin de manger",
+        "distractors": ["Tu n'as pas eu besoin de manger", "Nous n'avons pas eu besoin de manger", "Ils n'ont pas eu besoin de manger"]
+    },
+
+    # Positive questions (3 questions)
+    {
+        "question": "Did I need a book? / Have I needed a book?",
+        "correct": "Ai-je eu besoin d'un livre ?",
+        "distractors": ["As-tu eu besoin d'un livre ?", "A-t-il eu besoin d'un livre ?", "Avons-nous eu besoin d'un livre ?"]
+    },
+    {
+        "question": "Did you need a problem? / Have you needed a problem? (informal)",
+        "correct": "As-tu eu besoin d'un problème ?",
+        "distractors": ["Ai-je eu besoin d'un problème ?", "A-t-il eu besoin d'un problème ?", "Avez-vous eu besoin d'un problème ?"]
+    },
+    {
+        "question": "Did he need help? / Has he needed help?",
+        "correct": "A-t-il eu besoin d'aide ?",
+        "distractors": ["A-t-elle eu besoin d'aide ?", "Ai-je eu besoin d'aide ?", "As-tu eu besoin d'aide ?"]
+    },
+
+    # Negative questions (3 questions)
+    {
+        "question": "Didn’t I need a book? / Haven’t I needed a book?",
+        "correct": "N'ai-je pas eu besoin d'un livre ?",
+        "distractors": ["N'as-tu pas eu besoin d'un livre ?", "N'a-t-il pas eu besoin d'un livre ?", "N'avons-nous pas eu besoin d'un livre ?"]
+    },
+    {
+        "question": "Didn’t you need a problem? / Haven’t you needed a problem? (informal)",
+        "correct": "N'as-tu pas eu besoin d'un problème ?",
+        "distractors": ["N'ai-je pas eu besoin d'un problème ?", "N'a-t-il pas eu besoin d'un problème ?", "N'avez-vous pas eu besoin d'un problème ?"]
+    },
+    {
+        "question": "Didn’t he need help? / Haven’t he needed help?",
+        "correct": "N'a-t-il pas eu besoin d'aide ?",
+        "distractors": ["N'a-t-elle pas eu besoin d'aide ?", "N'ai-je pas eu besoin d'aide ?", "N'as-tu pas eu besoin d'aide ?"]
+    },
+]
+
+def create_mcq(question_data):
+    options = question_data["distractors"] + [question_data["correct"]]
+    random.shuffle(options)
+    correct_option = ['A', 'B', 'C', 'D'][options.index(question_data["correct"])]
+    return {
+        "question": question_data["question"],
+        "options": options,
+        "answer": correct_option
+    }
+
+mcq_formatted = [create_mcq(q) for q in questions]
+
+# mcq_formatted contains 20 full sentence questions with answers randomized among options A-D
+```
+
+[1](https://www.online-translator.com/conjugaison%20et%20d%C3%A9clinaison/fran%C3%A7ais/avoir%20besoin)
+[2](http://conjugaison.sensagent.com/fr/avoir_besoin)
+[3](https://leconjugueur.lefigaro.fr/php5/index.php?verbe=Avoir)
+[4](https://conjugueur.reverso.net/conjugaison-francais-verbe-avoir.html)
+[5](https://www.youtube.com/watch?v=6wiMBBGgxtU)
+[6](https://theperfectfrench.com/grammar/avoir-besoin-de-to-need-in-french/)
+[7](https://www.francaisfacile.com/cgi2/myexam/voir2.php?id=43560)
+[8](https://conjugaison.lemonde.fr/conjugaison/auxiliaire/avoir/)
+[9](https://www.frenchfacile.com/comment-conjuguer-verbe-avoir-present-indicatif/)
+
