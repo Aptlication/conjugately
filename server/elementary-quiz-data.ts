@@ -4910,6 +4910,208 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Vous ne voudront pas perdre.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "venir": [
+    {
+      question: "He will come / is going to come to the party.",
+      hint: "Use irregular future form: il viendra",
+      answerOptions: [
+        { text: "Il viendra à la fête.", rationale: "Option A", isCorrect: true },
+        { text: "Il viendras à la fête.", rationale: "Option B", isCorrect: false },
+        { text: "Il viendrez à la fête.", rationale: "Option C", isCorrect: false },
+        { text: "Il viendront à la fête.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will not come / are not going to come tomorrow.",
+      hint: "Use irregular future negative: elles ne viendront pas",
+      answerOptions: [
+        { text: "Elles ne viendra pas demain.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne viendrons pas demain.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne viendrez pas demain.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne viendront pas demain.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) will come / are going to come with us.",
+      hint: "Use irregular future form: tu viendras",
+      answerOptions: [
+        { text: "Tu viendrai avec nous.", rationale: "Option A", isCorrect: false },
+        { text: "Tu viendra avec nous.", rationale: "Option B", isCorrect: false },
+        { text: "Tu viendras avec nous.", rationale: "Option C", isCorrect: true },
+        { text: "Tu viendrez avec nous.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will you (formal) come / are you going to come?",
+      hint: "Use irregular future interrogative: quand viendrez-vous",
+      answerOptions: [
+        { text: "Quand viendra-t-il ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand viendrez-vous ?", rationale: "Option B", isCorrect: true },
+        { text: "Quand viendrons-nous ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand viendras-tu ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will not come / are not going to come late.",
+      hint: "Use irregular future negative: nous ne viendrons pas",
+      answerOptions: [
+        { text: "Nous ne viendrons pas en retard.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne viendrez pas en retard.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne viendra pas en retard.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne viendront pas en retard.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will come / is going to come to the meeting.",
+      hint: "Use irregular future form: elle viendra",
+      answerOptions: [
+        { text: "Elle viendras à la réunion.", rationale: "Option A", isCorrect: false },
+        { text: "Elle viendra à la réunion.", rationale: "Option B", isCorrect: true },
+        { text: "Elle viendrez à la réunion.", rationale: "Option C", isCorrect: false },
+        { text: "Elle viendront à la réunion.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Will you (informal) come / Are you going to come to my house?",
+      hint: "Use irregular future interrogative: viendras-tu",
+      answerOptions: [
+        { text: "Viendrez-vous chez moi ?", rationale: "Option A", isCorrect: false },
+        { text: "Viendras-tu chez moi ?", rationale: "Option B", isCorrect: true },
+        { text: "Viendra-t-il chez moi ?", rationale: "Option C", isCorrect: false },
+        { text: "Viendront-ils chez moi ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why won't you (informal) come / aren't you going to come?",
+      hint: "Use irregular future negative interrogative: pourquoi ne viendras-tu pas",
+      answerOptions: [
+        { text: "Pourquoi ne viendras-tu pas ?", rationale: "Option A", isCorrect: true },
+        { text: "Pourquoi ne viendra-t-il pas ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi ne viendrez-vous pas ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourquoi ne viendrons-nous pas ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will come / are going to come by train.",
+      hint: "Use irregular future form: ils viendront",
+      answerOptions: [
+        { text: "Ils viendra en train.", rationale: "Option A", isCorrect: false },
+        { text: "Ils viendrez en train.", rationale: "Option B", isCorrect: false },
+        { text: "Ils viendrons en train.", rationale: "Option C", isCorrect: false },
+        { text: "Ils viendront en train.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "One day, I will come / am going to come back.",
+      hint: "Use irregular future form: je viendrai",
+      answerOptions: [
+        { text: "Un jour, je viendras.", rationale: "Option A", isCorrect: false },
+        { text: "Un jour, je viendra.", rationale: "Option B", isCorrect: false },
+        { text: "Un jour, je viendrai.", rationale: "Option C", isCorrect: true },
+        { text: "Un jour, je viendrez.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will come / are going to come for dinner.",
+      hint: "Use irregular future form: nous viendrons",
+      answerOptions: [
+        { text: "Nous viendrez pour le dîner.", rationale: "Option A", isCorrect: false },
+        { text: "Nous viendront pour le dîner.", rationale: "Option B", isCorrect: false },
+        { text: "Nous viendrons pour le dîner.", rationale: "Option C", isCorrect: true },
+        { text: "Nous viendra pour le dîner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will come / am going to come to see you.",
+      hint: "Use irregular future form: je viendrai",
+      answerOptions: [
+        { text: "Je viendrai te voir.", rationale: "Option A", isCorrect: true },
+        { text: "Je viendras te voir.", rationale: "Option B", isCorrect: false },
+        { text: "Je viendra te voir.", rationale: "Option C", isCorrect: false },
+        { text: "Je viendrez te voir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not come / am not going to come alone.",
+      hint: "Use irregular future negative: je ne viendrai pas",
+      answerOptions: [
+        { text: "Je ne viendras pas seul.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne viendra pas seul.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne viendrez pas seul.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne viendrai pas seul.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "He will not come / is not going to come with her.",
+      hint: "Use irregular future negative: il ne viendra pas",
+      answerOptions: [
+        { text: "Il ne viendrez pas avec elle.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne viendras pas avec elle.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne viendra pas avec elle.", rationale: "Option C", isCorrect: true },
+        { text: "Il ne viendront pas avec elle.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will come / are going to come to visit us.",
+      hint: "Use irregular future form: elles viendront",
+      answerOptions: [
+        { text: "Elles viendront nous visiter.", rationale: "Option A", isCorrect: true },
+        { text: "Elles viendrons nous visiter.", rationale: "Option B", isCorrect: false },
+        { text: "Elles viendra nous visiter.", rationale: "Option C", isCorrect: false },
+        { text: "Elles viendrez nous visiter.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will come / are going to come later.",
+      hint: "Use irregular future form: vous viendrez",
+      answerOptions: [
+        { text: "Vous viendrons plus tard.", rationale: "Option A", isCorrect: false },
+        { text: "Vous viendras plus tard.", rationale: "Option B", isCorrect: false },
+        { text: "Vous viendrez plus tard.", rationale: "Option C", isCorrect: true },
+        { text: "Vous viendront plus tard.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will not come / is not going to come back.",
+      hint: "Use irregular future negative: elle ne viendra pas",
+      answerOptions: [
+        { text: "Elle ne viendra pas.", rationale: "Option A", isCorrect: true },
+        { text: "Elle ne viendrai pas.", rationale: "Option B", isCorrect: false },
+        { text: "Elle ne viendras pas.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne viendrez pas.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will they (male/mixed) come / are they going to come back?",
+      hint: "Use irregular future interrogative: quand viendront-ils",
+      answerOptions: [
+        { text: "Quand viendra-t-il revenir ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand viendront-ils revenir ?", rationale: "Option B", isCorrect: true },
+        { text: "Quand viendrez-vous revenir ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand viendrons-nous revenir ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will not come / are not going to come to the party.",
+      hint: "Use irregular future negative: vous ne viendrez pas",
+      answerOptions: [
+        { text: "Vous ne viendrons pas à la fête.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne viendrez pas à la fête.", rationale: "Option B", isCorrect: true },
+        { text: "Vous ne viendras pas à la fête.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne viendront pas à la fête.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will not come / are not going to come from there.",
+      hint: "Use irregular future negative: tu ne viendras pas",
+      answerOptions: [
+        { text: "Tu ne viendra pas de là.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne viendrez pas de là.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne viendrai pas de là.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne viendras pas de là.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 

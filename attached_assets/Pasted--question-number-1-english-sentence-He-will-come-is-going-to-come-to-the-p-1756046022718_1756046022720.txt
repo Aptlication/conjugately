@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "He will come / is going to come to the party.",
+    "options": {
+      "A": "Il viendra à la fête.",
+      "B": "Il viendras à la fête.",
+      "C": "Il viendrez à la fête.",
+      "D": "Il viendront à la fête."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "They (female) will not come / are not going to come tomorrow.",
+    "options": {
+      "A": "Elles ne viendra pas demain.",
+      "B": "Elles ne viendrons pas demain.",
+      "C": "Elles ne viendrez pas demain.",
+      "D": "Elles ne viendront pas demain."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "You (informal) will come / are going to come with us.",
+    "options": {
+      "A": "Tu viendrai avec nous.",
+      "B": "Tu viendra avec nous.",
+      "C": "Tu viendras avec nous.",
+      "D": "Tu viendrez avec nous."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "When will you (formal) come / are you going to come?",
+    "options": {
+      "A": "Quand viendra-t-il ?",
+      "B": "Quand viendrez-vous ?",
+      "C": "Quand viendrons-nous ?",
+      "D": "Quand viendras-tu ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "We will not come / are not going to come late.",
+    "options": {
+      "A": "Nous ne viendrons pas en retard.",
+      "B": "Nous ne viendrez pas en retard.",
+      "C": "Nous ne viendra pas en retard.",
+      "D": "Nous ne viendront pas en retard."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "She will come / is going to come to the meeting.",
+    "options": {
+      "A": "Elle viendras à la réunion.",
+      "B": "Elle viendra à la réunion.",
+      "C": "Elle viendrez à la réunion.",
+      "D": "Elle viendront à la réunion."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "Will you (informal) come / Are you going to come to my house?",
+    "options": {
+      "A": "Viendrez-vous chez moi ?",
+      "B": "Viendras-tu chez moi ?",
+      "C": "Viendra-t-il chez moi ?",
+      "D": "Viendront-ils chez moi ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "Why won't you (informal) come / aren't you going to come?",
+    "options": {
+      "A": "Pourquoi ne viendras-tu pas ?",
+      "B": "Pourquoi ne viendra-t-il pas ?",
+      "C": "Pourquoi ne viendrez-vous pas ?",
+      "D": "Pourquoi ne viendrons-nous pas ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "They (male/mixed) will come / are going to come by train.",
+    "options": {
+      "A": "Ils viendra en train.",
+      "B": "Ils viendrez en train.",
+      "C": "Ils viendrons en train.",
+      "D": "Ils viendront en train."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "One day, I will come / am going to come back.",
+    "options": {
+      "A": "Un jour, je viendras.",
+      "B": "Un jour, je viendra.",
+      "C": "Un jour, je viendrai.",
+      "D": "Un jour, je viendrez."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We will come / are going to come for dinner.",
+    "options": {
+      "A": "Nous viendrez pour le dîner.",
+      "B": "Nous viendront pour le dîner.",
+      "C": "Nous viendrons pour le dîner.",
+      "D": "Nous viendra pour le dîner."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "I will come / am going to come to see you.",
+    "options": {
+      "A": "Je viendrai te voir.",
+      "B": "Je viendras te voir.",
+      "C": "Je viendra te voir.",
+      "D": "Je viendrez te voir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "I will not come / am not going to come alone.",
+    "options": {
+      "A": "Je ne viendras pas seul.",
+      "B": "Je ne viendra pas seul.",
+      "C": "Je ne viendrez pas seul.",
+      "D": "Je ne viendrai pas seul."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "He will not come / is not going to come with her.",
+    "options": {
+      "A": "Il ne viendrez pas avec elle.",
+      "B": "Il ne viendras pas avec elle.",
+      "C": "Il ne viendra pas avec elle.",
+      "D": "Il ne viendront pas avec elle."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "They (female) will come / are going to come to visit us.",
+    "options": {
+      "A": "Elles viendront nous visiter.",
+      "B": "Elles viendrons nous visiter.",
+      "C": "Elles viendra nous visiter.",
+      "D": "Elles viendrez nous visiter."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "You (formal) will come / are going to come later.",
+    "options": {
+      "A": "Vous viendrons plus tard.",
+      "B": "Vous viendras plus tard.",
+      "C": "Vous viendrez plus tard.",
+      "D": "Vous viendront plus tard."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "She will not come / is not going to come back.",
+    "options": {
+      "A": "Elle ne viendra pas.",
+      "B": "Elle ne viendrai pas.",
+      "C": "Elle ne viendras pas.",
+      "D": "Elle ne viendrez pas."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "When will they (male/mixed) come / are they going to come back?",
+    "options": {
+      "A": "Quand viendra-t-il revenir ?",
+      "B": "Quand viendront-ils revenir ?",
+      "C": "Quand viendrez-vous revenir ?",
+      "D": "Quand viendrons-nous revenir ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "You (formal) will not come / are not going to come to the party.",
+    "options": {
+      "A": "Vous ne viendrons pas à la fête.",
+      "B": "Vous ne viendrez pas à la fête.",
+      "C": "Vous ne viendras pas à la fête.",
+      "D": "Vous ne viendront pas à la fête."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "You (informal) will not come / are not going to come from there.",
+    "options": {
+      "A": "Tu ne viendra pas de là.",
+      "B": "Tu ne viendrez pas de là.",
+      "C": "Tu ne viendrai pas de là.",
+      "D": "Tu ne viendras pas de là."
+    },
+    "correct_answer": "D"
+  }
+]
