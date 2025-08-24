@@ -1876,6 +1876,208 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
         { text: "Pourquoi ne venez-vous pas ?", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "vouloir": [
+    {
+      question: "She wants / is wanting a new car.",
+      hint: "Use irregular present form: elle veut",
+      answerOptions: [
+        { text: "Elle veut une nouvelle voiture.", rationale: "Option A", isCorrect: true },
+        { text: "Elle veux une nouvelle voiture.", rationale: "Option B", isCorrect: false },
+        { text: "Elle voulons une nouvelle voiture.", rationale: "Option C", isCorrect: false },
+        { text: "Elle veulent une nouvelle voiture.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) want / are wanting to leave.",
+      hint: "Use irregular present form: ils veulent",
+      answerOptions: [
+        { text: "Ils voulons partir.", rationale: "Option A", isCorrect: false },
+        { text: "Ils voulez partir.", rationale: "Option B", isCorrect: false },
+        { text: "Ils veut partir.", rationale: "Option C", isCorrect: false },
+        { text: "Ils veulent partir.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "What do you (formal) want / are you wanting?",
+      hint: "Use irregular present interrogative: que voulez-vous",
+      answerOptions: [
+        { text: "Que voulez-vous ?", rationale: "Option A", isCorrect: true },
+        { text: "Que voulons-nous ?", rationale: "Option B", isCorrect: false },
+        { text: "Que veulent-ils ?", rationale: "Option C", isCorrect: false },
+        { text: "Que veux-tu ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) want / are wanting to go out.",
+      hint: "Use irregular present form: tu veux",
+      answerOptions: [
+        { text: "Tu veut sortir.", rationale: "Option A", isCorrect: false },
+        { text: "Tu veux sortir.", rationale: "Option B", isCorrect: true },
+        { text: "Tu voulons sortir.", rationale: "Option C", isCorrect: false },
+        { text: "Tu voulez sortir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) do not want / are not wanting to eat.",
+      hint: "Use irregular present negative: elles ne veulent pas",
+      answerOptions: [
+        { text: "Elles ne veut pas manger.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne voulons pas manger.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne veulent pas manger.", rationale: "Option C", isCorrect: true },
+        { text: "Elles ne veux pas manger.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He does not want / is not wanting to work.",
+      hint: "Use irregular present negative: il ne veut pas",
+      answerOptions: [
+        { text: "Il ne veut pas travailler.", rationale: "Option A", isCorrect: true },
+        { text: "Il ne veux pas travailler.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne voulons pas travailler.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne veulent pas travailler.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I want / am wanting a coffee.",
+      hint: "Use irregular present form: je veux",
+      answerOptions: [
+        { text: "Je veut un café.", rationale: "Option A", isCorrect: false },
+        { text: "Je veux un café.", rationale: "Option B", isCorrect: true },
+        { text: "Je voulons un café.", rationale: "Option C", isCorrect: false },
+        { text: "Je voulez un café.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "One wants / is wanting to be happy.",
+      hint: "Use irregular present form: on veut",
+      answerOptions: [
+        { text: "On veux être heureux.", rationale: "Option A", isCorrect: false },
+        { text: "On voulons être heureux.", rationale: "Option B", isCorrect: false },
+        { text: "On veulent être heureux.", rationale: "Option C", isCorrect: false },
+        { text: "On veut être heureux.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Do you (informal) want / are you wanting a piece of cake?",
+      hint: "Use irregular present interrogative: veux-tu",
+      answerOptions: [
+        { text: "Veux-tu un morceau de gâteau ?", rationale: "Option A", isCorrect: true },
+        { text: "Veut-il un morceau de gâteau ?", rationale: "Option B", isCorrect: false },
+        { text: "Voulez-vous un morceau de gâteau ?", rationale: "Option C", isCorrect: false },
+        { text: "Voulons-nous un morceau de gâteau ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) do not want / are not wanting to listen.",
+      hint: "Use irregular present negative: vous ne voulez pas",
+      answerOptions: [
+        { text: "Vous ne veut pas écouter.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne voulez pas écouter.", rationale: "Option B", isCorrect: true },
+        { text: "Vous ne voulons pas écouter.", rationale: "Option C", isCorrect: false },
+        { text: "Vous ne veulent pas écouter.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I do not want / am not wanting to disturb.",
+      hint: "Use irregular present negative: je ne veux pas",
+      answerOptions: [
+        { text: "Je ne veux pas déranger.", rationale: "Option A", isCorrect: true },
+        { text: "Je ne veut pas déranger.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne voulons pas déranger.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne voulez pas déranger.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We do not want / are not wanting to be late.",
+      hint: "Use irregular present negative: nous ne voulons pas",
+      answerOptions: [
+        { text: "Nous ne veut pas être en retard.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne voulons pas être en retard.", rationale: "Option B", isCorrect: true },
+        { text: "Nous ne voulez pas être en retard.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne veulent pas être en retard.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We want / are wanting to see the manager.",
+      hint: "Use irregular present form: nous voulons",
+      answerOptions: [
+        { text: "Nous veut voir le directeur.", rationale: "Option A", isCorrect: false },
+        { text: "Nous voulons voir le directeur.", rationale: "Option B", isCorrect: true },
+        { text: "Nous voulez voir le directeur.", rationale: "Option C", isCorrect: false },
+        { text: "Nous veulent voir le directeur.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "What do they (male/mixed) want / are they wanting?",
+      hint: "Use irregular present interrogative: que veulent-ils",
+      answerOptions: [
+        { text: "Que veulent-ils ?", rationale: "Option A", isCorrect: true },
+        { text: "Que veut-il ?", rationale: "Option B", isCorrect: false },
+        { text: "Que voulons-nous ?", rationale: "Option C", isCorrect: false },
+        { text: "Que voulez-vous ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She does not want / is not wanting to answer.",
+      hint: "Use irregular present negative: elle ne veut pas",
+      answerOptions: [
+        { text: "Elle ne veux pas répondre.", rationale: "Option A", isCorrect: false },
+        { text: "Elle ne veut pas répondre.", rationale: "Option B", isCorrect: true },
+        { text: "Elle ne voulons pas répondre.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne veulent pas répondre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I do not want / am not wanting this.",
+      hint: "Use irregular present negative: je ne veux pas",
+      answerOptions: [
+        { text: "Je ne veux pas ça.", rationale: "Option A", isCorrect: true },
+        { text: "Je ne veut pas ça.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne voulons pas ça.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne veulent pas ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Do you (formal) want / are you wanting something else?",
+      hint: "Use irregular present interrogative: voulez-vous",
+      answerOptions: [
+        { text: "Voulez-vous autre chose ?", rationale: "Option A", isCorrect: true },
+        { text: "Veux-tu autre chose ?", rationale: "Option B", isCorrect: false },
+        { text: "Voulons-nous autre chose ?", rationale: "Option C", isCorrect: false },
+        { text: "Veulent-ils autre chose ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) want / are wanting to dance.",
+      hint: "Use irregular present form: elles veulent",
+      answerOptions: [
+        { text: "Elles veulent danser.", rationale: "Option A", isCorrect: true },
+        { text: "Elles veut danser.", rationale: "Option B", isCorrect: false },
+        { text: "Elles voulons danser.", rationale: "Option C", isCorrect: false },
+        { text: "Elles veux danser.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He wants / is wanting to travel.",
+      hint: "Use irregular present form: il veut",
+      answerOptions: [
+        { text: "Il veux voyager.", rationale: "Option A", isCorrect: false },
+        { text: "Il voulons voyager.", rationale: "Option B", isCorrect: false },
+        { text: "Il veut voyager.", rationale: "Option C", isCorrect: true },
+        { text: "Il veulent voyager.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We want / are wanting a dog.",
+      hint: "Use irregular present form: nous voulons",
+      answerOptions: [
+        { text: "Nous veut un chien.", rationale: "Option A", isCorrect: false },
+        { text: "Nous voulons un chien.", rationale: "Option B", isCorrect: true },
+        { text: "Nous voulez un chien.", rationale: "Option C", isCorrect: false },
+        { text: "Nous veulent un chien.", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 

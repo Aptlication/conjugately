@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She wants / is wanting a new car.",
+    "options": {
+      "A": "Elle veut une nouvelle voiture.",
+      "B": "Elle veux une nouvelle voiture.",
+      "C": "Elle voulons une nouvelle voiture.",
+      "D": "Elle veulent une nouvelle voiture."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "They (male/mixed) want / are wanting to leave.",
+    "options": {
+      "A": "Ils voulons partir.",
+      "B": "Ils voulez partir.",
+      "C": "Ils veut partir.",
+      "D": "Ils veulent partir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "What do you (formal) want / are you wanting?",
+    "options": {
+      "A": "Que voulez-vous ?",
+      "B": "Que voulons-nous ?",
+      "C": "Que veulent-ils ?",
+      "D": "Que veux-tu ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "You (informal) want / are wanting to go out.",
+    "options": {
+      "A": "Tu veut sortir.",
+      "B": "Tu veux sortir.",
+      "C": "Tu voulons sortir.",
+      "D": "Tu voulez sortir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "They (female) do not want / are not wanting to eat.",
+    "options": {
+      "A": "Elles ne veut pas manger.",
+      "B": "Elles ne voulons pas manger.",
+      "C": "Elles ne veulent pas manger.",
+      "D": "Elles ne veux pas manger."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "He does not want / is not wanting to work.",
+    "options": {
+      "A": "Il ne veut pas travailler.",
+      "B": "Il ne veux pas travailler.",
+      "C": "Il ne voulons pas travailler.",
+      "D": "Il ne veulent pas travailler."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "I want / am wanting a coffee.",
+    "options": {
+      "A": "Je veut un café.",
+      "B": "Je veux un café.",
+      "C": "Je voulons un café.",
+      "D": "Je voulez un café."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "One wants / is wanting to be happy.",
+    "options": {
+      "A": "On veux être heureux.",
+      "B": "On voulons être heureux.",
+      "C": "On veulent être heureux.",
+      "D": "On veut être heureux."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Do you (informal) want / are you wanting a piece of cake?",
+    "options": {
+      "A": "Veux-tu un morceau de gâteau ?",
+      "B": "Veut-il un morceau de gâteau ?",
+      "C": "Voulez-vous un morceau de gâteau ?",
+      "D": "Voulons-nous un morceau de gâteau ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "You (formal) do not want / are not wanting to listen.",
+    "options": {
+      "A": "Vous ne veut pas écouter.",
+      "B": "Vous ne voulez pas écouter.",
+      "C": "Vous ne voulons pas écouter.",
+      "D": "Vous ne veulent pas écouter."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "I do not want / am not wanting to disturb.",
+    "options": {
+      "A": "Je ne veux pas déranger.",
+      "B": "Je ne veut pas déranger.",
+      "C": "Je ne voulons pas déranger.",
+      "D": "Je ne voulez pas déranger."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "We do not want / are not wanting to be late.",
+    "options": {
+      "A": "Nous ne veut pas être en retard.",
+      "B": "Nous ne voulons pas être en retard.",
+      "C": "Nous ne voulez pas être en retard.",
+      "D": "Nous ne veulent pas être en retard."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "We want / are wanting to see the manager.",
+    "options": {
+      "A": "Nous veut voir le directeur.",
+      "B": "Nous voulons voir le directeur.",
+      "C": "Nous voulez voir le directeur.",
+      "D": "Nous veulent voir le directeur."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "What do they (male/mixed) want / are they wanting?",
+    "options": {
+      "A": "Que veulent-ils ?",
+      "B": "Que veut-il ?",
+      "C": "Que voulons-nous ?",
+      "D": "Que voulez-vous ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "She does not want / is not wanting to answer.",
+    "options": {
+      "A": "Elle ne veux pas répondre.",
+      "B": "Elle ne veut pas répondre.",
+      "C": "Elle ne voulons pas répondre.",
+      "D": "Elle ne veulent pas répondre."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "I do not want / am not wanting this.",
+    "options": {
+      "A": "Je ne veux pas ça.",
+      "B": "Je ne veut pas ça.",
+      "C": "Je ne voulons pas ça.",
+      "D": "Je ne veulent pas ça."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "Do you (formal) want / are you wanting something else?",
+    "options": {
+      "A": "Voulez-vous autre chose ?",
+      "B": "Veux-tu autre chose ?",
+      "C": "Voulons-nous autre chose ?",
+      "D": "Veulent-ils autre chose ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (female) want / are wanting to dance.",
+    "options": {
+      "A": "Elles veulent danser.",
+      "B": "Elles veut danser.",
+      "C": "Elles voulons danser.",
+      "D": "Elles veux danser."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "He wants / is wanting to travel.",
+    "options": {
+      "A": "Il veux voyager.",
+      "B": "Il voulons voyager.",
+      "C": "Il veut voyager.",
+      "D": "Il veulent voyager."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "We want / are wanting a dog.",
+    "options": {
+      "A": "Nous veut un chien.",
+      "B": "Nous voulons un chien.",
+      "C": "Nous voulez un chien.",
+      "D": "Nous veulent un chien."
+    },
+    "correct_answer": "B"
+  }
+]
