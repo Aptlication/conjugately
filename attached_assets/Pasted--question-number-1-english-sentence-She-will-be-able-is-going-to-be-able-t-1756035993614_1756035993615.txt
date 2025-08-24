@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will be able / is going to be able to come.",
+    "options": {
+      "A": "Elle pourra venir.",
+      "B": "Elle pourras venir.",
+      "C": "Elle pourrez venir.",
+      "D": "Elle pourront venir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "We will be able / are going to be able to see it.",
+    "options": {
+      "A": "Nous pourrez le voir.",
+      "B": "Nous pourrons le voir.",
+      "C": "Nous pourront le voir.",
+      "D": "Nous pourra le voir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "Will you (formal) be able / Are you going to be able to help?",
+    "options": {
+      "A": "Pourrez-vous aider ?",
+      "B": "Pourrons-vous aider ?",
+      "C": "Pourras-tu aider ?",
+      "D": "Pourra-t-il aider ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "They (male/mixed) will not be able / are not going to be able to win.",
+    "options": {
+      "A": "Ils ne pourra pas gagner.",
+      "B": "Ils ne pourront pas gagner.",
+      "C": "Ils ne pourrons pas gagner.",
+      "D": "Ils ne pourrez pas gagner."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "I will not be able / am not going to be able to finish.",
+    "options": {
+      "A": "Je ne pourrai pas finir.",
+      "B": "Je ne pourras pas finir.",
+      "C": "Je ne pourra pas finir.",
+      "D": "Je ne pourront pas finir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "You (informal) will be able / are going to be able to do it.",
+    "options": {
+      "A": "Tu pourra le faire.",
+      "B": "Tu pourras le faire.",
+      "C": "Tu pourrai le faire.",
+      "D": "Tu pourrez le faire."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "They (female) will be able / are going to be able to participate.",
+    "options": {
+      "A": "Elles pourront participer.",
+      "B": "Elles pourra participer.",
+      "C": "Elles pourrons participer.",
+      "D": "Elles pourrez participer."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "He will not be able / is not going to be able to come.",
+    "options": {
+      "A": "Il ne pourras pas venir.",
+      "B": "Il ne pourra pas venir.",
+      "C": "Il ne pourrons pas venir.",
+      "D": "Il ne pourront pas venir."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "One day, we will be able / are going to be able to travel.",
+    "options": {
+      "A": "Un jour, nous pourrez voyager.",
+      "B": "Un jour, nous pourront voyager.",
+      "C": "Un jour, nous pourrons voyager.",
+      "D": "Un jour, nous pourras voyager."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "You (formal) will not be able / are not going to be able to see him.",
+    "options": {
+      "A": "Vous ne pourront pas le voir.",
+      "B": "Vous ne pourrons pas le voir.",
+      "C": "Vous ne pourrez pas le voir.",
+      "D": "Vous ne pourras pas le voir."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "They (male/mixed) will be able / are going to be able to help us.",
+    "options": {
+      "A": "Ils pourront nous aider.",
+      "B": "Ils pourra nous aider.",
+      "C": "Ils pourrons nous aider.",
+      "D": "Ils pourrez nous aider."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "He will be able / is going to be able to explain.",
+    "options": {
+      "A": "Il pourras expliquer.",
+      "B": "Il pourront expliquer.",
+      "C": "Il pourra expliquer.",
+      "D": "Il pourrons expliquer."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "I will be able / am going to be able to call you.",
+    "options": {
+      "A": "Je pourras t'appeler.",
+      "B": "Je pourra t'appeler.",
+      "C": "Je pourrai t'appeler.",
+      "D": "Je pourront t'appeler."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "I will be able / am going to be able to succeed.",
+    "options": {
+      "A": "Je pourras réussir.",
+      "B": "Je pourra réussir.",
+      "C": "Je pourrai réussir.",
+      "D": "Je pourront réussir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "You (informal) will not be able / are not going to be able to do this.",
+    "options": {
+      "A": "Tu ne pourras pas faire ça.",
+      "B": "Tu ne pourra pas faire ça.",
+      "C": "Tu ne pourrai pas faire ça.",
+      "D": "Tu ne pourrez pas faire ça."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "When will she be able / is she going to be able to answer?",
+    "options": {
+      "A": "Quand pourra-t-elle répondre ?",
+      "B": "Quand pourras-t-elle répondre ?",
+      "C": "Quand pourront-elles répondre ?",
+      "D": "Quand pourrons-nous répondre ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "They (female) will not be able / are not going to be able to stay.",
+    "options": {
+      "A": "Elles ne pourront pas rester.",
+      "B": "Elles ne pourra pas rester.",
+      "C": "Elles ne pourrons pas rester.",
+      "D": "Elles ne pourrez pas rester."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "We will not be able / are not going to be able to come back.",
+    "options": {
+      "A": "Nous ne pourrons pas revenir.",
+      "B": "Nous ne pourront pas revenir.",
+      "C": "Nous ne pourrai pas revenir.",
+      "D": "Nous ne pourrez pas revenir."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "When will you (informal) be able / are you going to be able to leave?",
+    "options": {
+      "A": "Quand pourras-tu partir ?",
+      "B": "Quand pourrai-tu partir ?",
+      "C": "Quand pourra-tu partir ?",
+      "D": "Quand pourrez-tu partir ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "How will they (male/mixed) be able / are they going to be able to know?",
+    "options": {
+      "A": "Comment pourras-ils savoir ?",
+      "B": "Comment pourront-ils savoir ?",
+      "C": "Comment pourront-ils savoir ?",
+      "D": "Comment pourront-ils savoir ?"
+    },
+    "correct_answer": "D"
+  }
+]

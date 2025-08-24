@@ -3698,6 +3698,208 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Ils ne nous verront pas.", rationale: "Option D", isCorrect: true }
       ]
     }
+  ],
+  "pouvoir": [
+    {
+      question: "She will be able / is going to be able to come.",
+      hint: "Use future simple of pouvoir: elle pourra",
+      answerOptions: [
+        { text: "Elle pourra venir.", rationale: "Option A", isCorrect: true },
+        { text: "Elle pourras venir.", rationale: "Option B", isCorrect: false },
+        { text: "Elle pourrez venir.", rationale: "Option C", isCorrect: false },
+        { text: "Elle pourront venir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will be able / are going to be able to see it.",
+      hint: "Use future simple of pouvoir: nous pourrons",
+      answerOptions: [
+        { text: "Nous pourrez le voir.", rationale: "Option A", isCorrect: false },
+        { text: "Nous pourrons le voir.", rationale: "Option B", isCorrect: true },
+        { text: "Nous pourront le voir.", rationale: "Option C", isCorrect: false },
+        { text: "Nous pourra le voir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Will you (formal) be able / Are you going to be able to help?",
+      hint: "Use future simple interrogative: pourrez-vous",
+      answerOptions: [
+        { text: "Pourrez-vous aider ?", rationale: "Option A", isCorrect: true },
+        { text: "Pourrons-vous aider ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourras-tu aider ?", rationale: "Option C", isCorrect: false },
+        { text: "Pourra-t-il aider ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will not be able / are not going to be able to win.",
+      hint: "Use future simple negative: ils ne pourront pas",
+      answerOptions: [
+        { text: "Ils ne pourra pas gagner.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne pourront pas gagner.", rationale: "Option B", isCorrect: true },
+        { text: "Ils ne pourrons pas gagner.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne pourrez pas gagner.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not be able / am not going to be able to finish.",
+      hint: "Use future simple negative: je ne pourrai pas",
+      answerOptions: [
+        { text: "Je ne pourrai pas finir.", rationale: "Option A", isCorrect: true },
+        { text: "Je ne pourras pas finir.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne pourra pas finir.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne pourront pas finir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will be able / are going to be able to do it.",
+      hint: "Use future simple of pouvoir: tu pourras",
+      answerOptions: [
+        { text: "Tu pourra le faire.", rationale: "Option A", isCorrect: false },
+        { text: "Tu pourras le faire.", rationale: "Option B", isCorrect: true },
+        { text: "Tu pourrai le faire.", rationale: "Option C", isCorrect: false },
+        { text: "Tu pourrez le faire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will be able / are going to be able to participate.",
+      hint: "Use future simple of pouvoir: elles pourront",
+      answerOptions: [
+        { text: "Elles pourront participer.", rationale: "Option A", isCorrect: true },
+        { text: "Elles pourra participer.", rationale: "Option B", isCorrect: false },
+        { text: "Elles pourrons participer.", rationale: "Option C", isCorrect: false },
+        { text: "Elles pourrez participer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will not be able / is not going to be able to come.",
+      hint: "Use future simple negative: il ne pourra pas",
+      answerOptions: [
+        { text: "Il ne pourras pas venir.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne pourra pas venir.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne pourrons pas venir.", rationale: "Option C", isCorrect: false },
+        { text: "Il ne pourront pas venir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "One day, we will be able / are going to be able to travel.",
+      hint: "Use future simple of pouvoir: nous pourrons",
+      answerOptions: [
+        { text: "Un jour, nous pourrez voyager.", rationale: "Option A", isCorrect: false },
+        { text: "Un jour, nous pourront voyager.", rationale: "Option B", isCorrect: false },
+        { text: "Un jour, nous pourrons voyager.", rationale: "Option C", isCorrect: true },
+        { text: "Un jour, nous pourras voyager.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will not be able / are not going to be able to see him.",
+      hint: "Use future simple negative: vous ne pourrez pas",
+      answerOptions: [
+        { text: "Vous ne pourront pas le voir.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne pourrons pas le voir.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne pourrez pas le voir.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne pourras pas le voir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will be able / are going to be able to help us.",
+      hint: "Use future simple of pouvoir: ils pourront",
+      answerOptions: [
+        { text: "Ils pourront nous aider.", rationale: "Option A", isCorrect: true },
+        { text: "Ils pourra nous aider.", rationale: "Option B", isCorrect: false },
+        { text: "Ils pourrons nous aider.", rationale: "Option C", isCorrect: false },
+        { text: "Ils pourrez nous aider.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will be able / is going to be able to explain.",
+      hint: "Use future simple of pouvoir: il pourra",
+      answerOptions: [
+        { text: "Il pourras expliquer.", rationale: "Option A", isCorrect: false },
+        { text: "Il pourront expliquer.", rationale: "Option B", isCorrect: false },
+        { text: "Il pourra expliquer.", rationale: "Option C", isCorrect: true },
+        { text: "Il pourrons expliquer.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will be able / am going to be able to call you.",
+      hint: "Use future simple of pouvoir: je pourrai",
+      answerOptions: [
+        { text: "Je pourras t'appeler.", rationale: "Option A", isCorrect: false },
+        { text: "Je pourra t'appeler.", rationale: "Option B", isCorrect: false },
+        { text: "Je pourrai t'appeler.", rationale: "Option C", isCorrect: true },
+        { text: "Je pourront t'appeler.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will be able / am going to be able to succeed.",
+      hint: "Use future simple of pouvoir: je pourrai",
+      answerOptions: [
+        { text: "Je pourras réussir.", rationale: "Option A", isCorrect: false },
+        { text: "Je pourra réussir.", rationale: "Option B", isCorrect: false },
+        { text: "Je pourrai réussir.", rationale: "Option C", isCorrect: true },
+        { text: "Je pourront réussir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will not be able / are not going to be able to do this.",
+      hint: "Use future simple negative: tu ne pourras pas",
+      answerOptions: [
+        { text: "Tu ne pourras pas faire ça.", rationale: "Option A", isCorrect: true },
+        { text: "Tu ne pourra pas faire ça.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne pourrai pas faire ça.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne pourrez pas faire ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will she be able / is she going to be able to answer?",
+      hint: "Use future simple interrogative: quand pourra-t-elle",
+      answerOptions: [
+        { text: "Quand pourra-t-elle répondre ?", rationale: "Option A", isCorrect: true },
+        { text: "Quand pourras-t-elle répondre ?", rationale: "Option B", isCorrect: false },
+        { text: "Quand pourront-elles répondre ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand pourrons-nous répondre ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will not be able / are not going to be able to stay.",
+      hint: "Use future simple negative: elles ne pourront pas",
+      answerOptions: [
+        { text: "Elles ne pourront pas rester.", rationale: "Option A", isCorrect: true },
+        { text: "Elles ne pourra pas rester.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne pourrons pas rester.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne pourrez pas rester.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will not be able / are not going to be able to come back.",
+      hint: "Use future simple negative: nous ne pourrons pas",
+      answerOptions: [
+        { text: "Nous ne pourrons pas revenir.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne pourront pas revenir.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne pourrai pas revenir.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne pourrez pas revenir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will you (informal) be able / are you going to be able to leave?",
+      hint: "Use future simple interrogative: quand pourras-tu",
+      answerOptions: [
+        { text: "Quand pourras-tu partir ?", rationale: "Option A", isCorrect: true },
+        { text: "Quand pourrai-tu partir ?", rationale: "Option B", isCorrect: false },
+        { text: "Quand pourra-tu partir ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand pourrez-tu partir ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "How will they (male/mixed) be able / are they going to be able to know?",
+      hint: "Use future simple interrogative: comment pourront-ils",
+      answerOptions: [
+        { text: "Comment pourras-ils savoir ?", rationale: "Option A", isCorrect: false },
+        { text: "Comment pourront-ils savoir ?", rationale: "Option B", isCorrect: true },
+        { text: "Comment pourrez-ils savoir ?", rationale: "Option C", isCorrect: false },
+        { text: "Comment pourra-ils savoir ?", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 
