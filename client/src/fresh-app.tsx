@@ -41,6 +41,11 @@ function FreshAppCore({ user }: { user: any }) {
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
+  // Reflexive verb explanation modal states
+  const [showReflexiveModal, setShowReflexiveModal] = useState(false);
+  const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
+    return localStorage.getItem('reflexiveModalDismissed') === 'true';
+  });
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -97,6 +102,31 @@ function FreshAppCore({ user }: { user: any }) {
   const handleChooseVerb = () => {
     const randomVerb = FRENCH_VERBS[Math.floor(Math.random() * FRENCH_VERBS.length)];
     setSelectedVerb(randomVerb);
+  };
+
+  // Helper function to check if a verb is reflexive
+  const isReflexiveVerb = (verb: string) => {
+    return verb.startsWith('se ') || verb.startsWith("s'");
+  };
+
+  // Handler for verb selection with reflexive verb modal
+  const handleVerbSelection = (verb: string) => {
+    setSelectedVerb(verb);
+    
+    // Show reflexive modal if:
+    // 1. It's a reflexive verb
+    // 2. User is on Intermediate or Advanced level  
+    // 3. User hasn't dismissed the modal
+    // Note: fresh-app doesn't have difficulty levels, so we skip this check
+  };
+
+  // Handle dismissing the reflexive modal
+  const handleReflexiveModalDismiss = (dontRemindAgain: boolean) => {
+    setShowReflexiveModal(false);
+    if (dontRemindAgain) {
+      setReflexiveModalDismissed(true);
+      localStorage.setItem('reflexiveModalDismissed', 'true');
+    }
   };
 
   const handleChooseTimeFrame = () => {
@@ -413,7 +443,7 @@ function FreshAppCore({ user }: { user: any }) {
             </div>
             <select
               value={selectedVerb}
-              onChange={(e) => setSelectedVerb(e.target.value)}
+              onChange={(e) => handleVerbSelection(e.target.value)}
               style={{ width: '100%', padding: '16px', borderRadius: '12px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', fontSize: '16px' }}
             >
               <option value="" style={{ background: '#1f2937', color: 'white' }}>Select a verb...</option>
@@ -583,6 +613,55 @@ function FreshAppCore({ user }: { user: any }) {
               >
                 Cancel
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Reflexive Verb Explanation Modal */}
+        {showReflexiveModal && (
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
+            <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '16px', padding: '32px', maxWidth: '500px', width: '100%', margin: '16px' }}>
+              <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+                <div style={{ fontSize: '48px', marginBottom: '12px' }}>🪞</div>
+                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>Reflexive Verbs Quick Guide</h3>
+              </div>
+              
+              <div style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '24px' }}>
+                <p style={{ marginBottom: '16px' }}>
+                  Reflexive verbs are actions you do to yourself. They use <strong style={{ color: '#c084fc' }}>me, te, se, nous, vous, se</strong>.
+                </p>
+                
+                <div style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '8px', padding: '16px', marginBottom: '16px' }}>
+                  <h4 style={{ fontWeight: '600', color: '#ddd6fe', marginBottom: '8px' }}>Examples:</h4>
+                  <div style={{ fontSize: '14px' }}>
+                    <div style={{ marginBottom: '4px' }}><strong style={{ color: '#93c5fd' }}>se lever</strong> → "Je me lève" (I get up)</div>
+                    <div style={{ marginBottom: '4px' }}><strong style={{ color: '#93c5fd' }}>se laver</strong> → "Tu te laves" (You wash yourself)</div>
+                    <div><strong style={{ color: '#93c5fd' }}>se sentir</strong> → "Elle se sent bien" (She feels good)</div>
+                  </div>
+                </div>
+                
+                <p style={{ fontSize: '14px' }}>
+                  <strong style={{ color: '#fde047' }}>Pattern:</strong> The little word changes with each person (me, te, se...) but always goes before the verb.
+                </p>
+              </div>
+              
+              <div>
+                <label style={{ display: 'flex', alignItems: 'center', marginBottom: '12px', color: 'rgba(255,255,255,0.8)', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    style={{ width: '16px', height: '16px', marginRight: '12px' }}
+                    onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
+                  />
+                  <span style={{ fontSize: '14px' }}>Don't remind me about reflexive verbs again</span>
+                </label>
+                
+                <button
+                  onClick={() => handleReflexiveModalDismiss(reflexiveModalDismissed)}
+                  style={{ width: '100%', padding: '12px', background: '#7c3aed', color: 'white', fontWeight: '600', borderRadius: '12px', border: 'none', cursor: 'pointer' }}
+                >
+                  Start Quiz
+                </button>
+              </div>
             </div>
           </div>
         )}

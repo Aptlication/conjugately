@@ -76,6 +76,11 @@ export default function FrenchQuiz() {
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
+  // Reflexive verb explanation modal states
+  const [showReflexiveModal, setShowReflexiveModal] = useState(false);
+  const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
+    return localStorage.getItem('reflexiveModalDismissed') === 'true';
+  });
   
   // Quiz state
   const [quizState, setQuizState] = useState<QuizState>('config');
@@ -120,6 +125,35 @@ export default function FrenchQuiz() {
 
   const handleChooseAll = () => {
     setShowAdvancedyModal(true);
+  };
+
+  // Helper function to check if a verb is reflexive
+  const isReflexiveVerb = (verb: string) => {
+    return verb.startsWith('se ') || verb.startsWith("s'");
+  };
+
+  // Handler for verb selection with reflexive verb modal
+  const handleVerbSelection = (verb: string) => {
+    setSelectedVerb(verb);
+    
+    // Show reflexive modal if:
+    // 1. It's a reflexive verb
+    // 2. User is on Intermediate or Advanced level
+    // 3. User hasn't dismissed the modal
+    if (verb && isReflexiveVerb(verb) && 
+        (selectedDifficulty === 'Intermediate' || selectedDifficulty === 'Advanced') && 
+        !reflexiveModalDismissed) {
+      setShowReflexiveModal(true);
+    }
+  };
+
+  // Handle dismissing the reflexive modal
+  const handleReflexiveModalDismiss = (dontRemindAgain: boolean) => {
+    setShowReflexiveModal(false);
+    if (dontRemindAgain) {
+      setReflexiveModalDismissed(true);
+      localStorage.setItem('reflexiveModalDismissed', 'true');
+    }
   };
 
   const handleAdvancedySelect = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
@@ -480,7 +514,7 @@ export default function FrenchQuiz() {
                     </label>
                     <select
                       value={selectedVerb}
-                      onChange={(e) => setSelectedVerb(e.target.value)}
+                      onChange={(e) => handleVerbSelection(e.target.value)}
                       className="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select a verb...</option>
@@ -639,6 +673,55 @@ export default function FrenchQuiz() {
                   >
                     Cancel
                   </button>
+                </div>
+              </div>
+            )}
+
+            {/* Reflexive Verb Explanation Modal */}
+            {showReflexiveModal && (
+              <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-lg w-full mx-4">
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-3">🪞</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Reflexive Verbs Quick Guide</h3>
+                  </div>
+                  
+                  <div className="text-white/90 space-y-4 mb-6">
+                    <p>
+                      Reflexive verbs are actions you do to yourself. They use <strong className="text-purple-300">me, te, se, nous, vous, se</strong>.
+                    </p>
+                    
+                    <div className="bg-white/10 rounded-lg p-4 space-y-2">
+                      <h4 className="font-semibold text-purple-200">Examples:</h4>
+                      <div className="space-y-1 text-sm">
+                        <div><strong className="text-blue-300">se lever</strong> → "Je me lève" (I get up)</div>
+                        <div><strong className="text-blue-300">se laver</strong> → "Tu te laves" (You wash yourself)</div>
+                        <div><strong className="text-blue-300">se sentir</strong> → "Elle se sent bien" (She feels good)</div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm">
+                      <strong className="text-yellow-300">Pattern:</strong> The little word changes with each person (me, te, se...) but always goes before the verb.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <label className="flex items-center space-x-3 text-white/80 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="w-4 h-4 text-purple-600 bg-white/20 border-white/30 rounded focus:ring-purple-500"
+                        onChange={(e) => setReflexiveModalDismissed(e.target.checked)}
+                      />
+                      <span className="text-sm">Don't remind me about reflexive verbs again</span>
+                    </label>
+                    
+                    <button
+                      onClick={() => handleReflexiveModalDismiss(reflexiveModalDismissed)}
+                      className="w-full p-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+                    >
+                      Start Quiz
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
