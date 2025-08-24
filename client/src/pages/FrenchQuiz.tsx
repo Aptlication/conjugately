@@ -60,8 +60,17 @@ export default function FrenchQuiz() {
   // Debug: Simple render test
   console.log("FrenchQuiz component is rendering!");
   // Configuration state
-  const [selectedDifficulty, setSelectedDifficulty] = useState<keyof typeof DIFFICULTY_CONFIGS>("Elementary");
-  const [isDifficultyLocked, setIsDifficultyLocked] = useState(false);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<keyof typeof DIFFICULTY_CONFIGS>(() => {
+    // Persist selected difficulty across sessions
+    const saved = localStorage.getItem('selectedDifficulty');
+    return (saved && Object.keys(DIFFICULTY_CONFIGS).includes(saved)) ? 
+      saved as keyof typeof DIFFICULTY_CONFIGS : "Elementary";
+  });
+  const [isDifficultyLocked, setIsDifficultyLocked] = useState(() => {
+    // Persist lock state across sessions
+    const saved = localStorage.getItem('difficultyLockState');
+    return saved ? JSON.parse(saved) : false;
+  });
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
@@ -78,16 +87,28 @@ export default function FrenchQuiz() {
 
 
   const handleDifficultyLockToggle = () => {
-    setIsDifficultyLocked(!isDifficultyLocked);
+    const newLockState = !isDifficultyLocked;
+    setIsDifficultyLocked(newLockState);
+    // Persist lock state to localStorage
+    localStorage.setItem('difficultyLockState', JSON.stringify(newLockState));
   };
 
   const handleDifficultyChange = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     if (!isDifficultyLocked) {
       setSelectedDifficulty(difficulty);
+      // Persist selected difficulty to localStorage
+      localStorage.setItem('selectedDifficulty', difficulty);
+      
       // Reset selections when difficulty changes
       setSelectedVerb("");
       setSelectedTimeFrame("");
       setSelectedTenseType("");
+      
+      // Auto-lock difficulty after selection for focused learning
+      setTimeout(() => {
+        setIsDifficultyLocked(true);
+        localStorage.setItem('difficultyLockState', JSON.stringify(true));
+      }, 500); // Small delay so user sees the selection first
     }
   };
 
@@ -390,21 +411,48 @@ export default function FrenchQuiz() {
                       <label className="text-lg font-semibold text-white">
                         1. Choose Difficulty
                       </label>
-                      <button
-                        onClick={handleDifficultyLockToggle}
-                        className="text-white hover:text-purple-300 transition-colors"
-                        title={isDifficultyLocked ? "Click to unlock difficulty selection" : "Click to lock current difficulty"}
-                      >
-                        {isDifficultyLocked ? (
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
-                          </svg>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={handleDifficultyLockToggle}
+                          className={`flex items-center gap-2 px-3 py-1 rounded-lg text-sm transition-all ${
+                            isDifficultyLocked 
+                              ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30' 
+                              : 'bg-purple-500/20 text-purple-300 hover:bg-purple-500/30'
+                          }`}
+                          title={isDifficultyLocked ? "Difficulty is locked for focused learning. Click to unlock." : "Click to lock difficulty for focused learning"}
+                        >
+                          {isDifficultyLocked ? (
+                            <>
+                              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                              </svg>
+                              <span>Locked</span>
+                            </>
+                          ) : (
+                            <>
+                              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z" />
+                              </svg>
+                              <span>Click to Lock</span>
+                            </>
+                          )}
+                        </button>
+                        
+                        {isDifficultyLocked && (
+                          <button
+                            onClick={() => {
+                              setIsDifficultyLocked(false);
+                              localStorage.setItem('difficultyLockState', JSON.stringify(false));
+                              localStorage.removeItem('selectedDifficulty');
+                              setSelectedDifficulty("Elementary");
+                            }}
+                            className="px-2 py-1 text-xs text-red-300 hover:text-red-200 underline"
+                            title="Reset and unlock everything"
+                          >
+                            Reset All
+                          </button>
                         )}
-                      </button>
+                      </div>
                     </div>
                     <select
                       value={selectedDifficulty}
