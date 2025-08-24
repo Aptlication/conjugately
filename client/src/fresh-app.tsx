@@ -545,11 +545,11 @@ function FreshAppCore({ user }: { user: any }) {
             disabled={!selectedVerb || !selectedTimeFrame || !selectedTenseType}
             style={{ 
               width: '100%', 
-              padding: '16px', 
-              fontSize: '18px', 
+              padding: '12px', 
+              fontSize: '16px', 
               fontWeight: 'bold', 
               color: 'white',
-              background: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'linear-gradient(to right, #10b981, #3b82f6)' : '#374151',
+              background: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'linear-gradient(to right, #10b981, #3b82f6)' : 'linear-gradient(to right, #3b82f6, #14b8a6)',
               border: 'none',
               borderRadius: '12px',
               cursor: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 'pointer' : 'not-allowed',
@@ -570,16 +570,16 @@ function FreshAppCore({ user }: { user: any }) {
                     }}
                     style={{
                       fontSize: '12px',
-                      color: '#60a5fa',
+                      color: '#1e3a8a',
                       textDecoration: 'underline',
                       cursor: 'pointer',
                       transition: 'color 0.2s'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.color = '#93c5fd';
+                      e.target.style.color = '#1e40af';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.color = '#60a5fa';
+                      e.target.style.color = '#1e3a8a';
                     }}
                   >
                     Don't remind me about selection requirements

@@ -2215,10 +2215,10 @@ function App() {
           <button
             onClick={handleStartQuiz}
             disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty === "Advanced")}
-            className={`w-full p-4 text-lg font-bold rounded-xl transition-all ${
+            className={`w-full p-3 text-base font-bold rounded-xl transition-all ${
               (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced"))
                 ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
-                : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+                : 'bg-gradient-to-r from-blue-500 to-teal-500 text-white cursor-not-allowed'
             }`}
           >
             {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") ? (
@@ -2233,7 +2233,7 @@ function App() {
                       setSelectionReminderDismissed(true);
                       localStorage.setItem('selectionReminderDismissed', 'true');
                     }}
-                    className="text-xs text-blue-400 underline hover:text-blue-300 transition-colors cursor-pointer"
+                    className="text-xs text-blue-900 underline hover:text-blue-800 transition-colors cursor-pointer"
                   >
                     Don't remind me about selection requirements
                   </span>
