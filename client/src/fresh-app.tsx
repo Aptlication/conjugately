@@ -59,7 +59,7 @@ function FreshAppCore({ user }: { user: any }) {
   const DIFFICULTY_CONFIGS = {
     "Elementary": { verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"], timeFrames: ["Present", "Past", "Future"], tenses: ["Présent", "Passé Composé", "Futur Simple"] },
     "Intermediate": { verbs: ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder"], timeFrames: ["Present", "Past"], tenses: ["Présent", "Passé Composé", "Imparfait", "Futur Simple"] },
-    "Advanced": { verbs: [...FRENCH_VERBS], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
+    "Advanced": { verbs: ["devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"], timeFrames: Object.keys(TIME_FRAMES), tenses: Object.values(TIME_FRAMES).flat() }
   };
 
   const handleStartQuiz = async () => {

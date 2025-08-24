@@ -468,7 +468,7 @@ export default function FrenchQuiz() {
                       <option value="Novice" className="bg-slate-800 text-white">🔷 Novice - 3 verbs, Present/past/future tenses</option>
                       <option value="Elementary" className="bg-slate-800 text-white">🟢 Elementary - 7 verbs, Present/past/future tenses</option>
                       <option value="Intermediate" className="bg-slate-800 text-white">🟡 Intermediate - 18 verbs (7 reflexive + 11 non-reflexive), Present/past/future + Imparfait</option>
-                      <option value="Advanced" className="bg-slate-800 text-white">🔴 Advanced - All 16 verbs, All tenses and time frames</option>
+                      <option value="Advanced" className="bg-slate-800 text-white">🔴 Advanced - 23 verbs (12 non-reflexive + 11 reflexive), All tenses and time frames</option>
                     </select>
                   </div>
 
