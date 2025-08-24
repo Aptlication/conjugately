@@ -1,0 +1,226 @@
+
+
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will not see / is not going to see her friends.",
+    "options": {
+      "A": "Elle ne verront pas ses amis.",
+      "B": "Elle ne verra pas ses amis.",
+      "C": "Elle ne verras pas ses amis.",
+      "D": "Elle ne verrez pas ses amis."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "Will you (formal) see / Are you going to see the difference?",
+    "options": {
+      "A": "Verrez-vous la différence ?",
+      "B": "Verrons-vous la différence ?",
+      "C": "Verra-vous la différence ?",
+      "D": "Verras-vous la différence ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "We will see / are going to see a play.",
+    "options": {
+      "A": "Nous verrons une pièce de théâtre.",
+      "B": "Nous verrez une pièce de théâtre.",
+      "C": "Nous verront une pièce de théâtre.",
+      "D": "Nous verra une pièce de théâtre."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "They (female) will see / are going to see the new exhibition.",
+    "options": {
+      "A": "Elles verrons la nouvelle exposition.",
+      "B": "Elles verra la nouvelle exposition.",
+      "C": "Elles verrez la nouvelle exposition.",
+      "D": "Elles verront la nouvelle exposition."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "You (informal) will see / are going to see for yourself.",
+    "options": {
+      "A": "Tu verrai par toi-même.",
+      "B": "Tu verras par toi-même.",
+      "C": "Tu verra par toi-même.",
+      "D": "Tu verrez par toi-même."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "He will see / is going to see you tomorrow.",
+    "options": {
+      "A": "Il te verra demain.",
+      "B": "Il te verras demain.",
+      "C": "Il te verrons demain.",
+      "D": "Il te verrez demain."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "You (formal) will not see / are not going to see anything.",
+    "options": {
+      "A": "Vous ne verrez rien.",
+      "B": "Vous ne verrons rien.",
+      "C": "Vous ne verras rien.",
+      "D": "Vous ne verront rien."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "I will see / am going to see what I can do.",
+    "options": {
+      "A": "Je verrai ce que je peux faire.",
+      "B": "Je verras ce que je peux faire.",
+      "C": "Je verra ce que je peux faire.",
+      "D": "Je verrons ce que je peux faire."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "They (male/mixed) will see / are going to see the consequences.",
+    "options": {
+      "A": "Ils verrons les conséquences.",
+      "B": "Ils verra les conséquences.",
+      "C": "Ils verront les conséquences.",
+      "D": "Ils verrez les conséquences."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "When will we see / are we going to see each other?",
+    "options": {
+      "A": "Quand nous verrent-nous ?",
+      "B": "Quand nous verrez-nous ?",
+      "C": "Quand nous verrons-nous ?",
+      "D": "Quand nous verront-nous ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "I will not see / am not going to see him today.",
+    "options": {
+      "A": "Je ne le verras pas aujourd'hui.",
+      "B": "Je ne le verra pas aujourd'hui.",
+      "C": "Je ne le verrons pas aujourd'hui.",
+      "D": "Je ne le verrai pas aujourd'hui."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "Will they (female) see / Are they going to see us?",
+    "options": {
+      "A": "Nous verrons-elles ?",
+      "B": "Nous verront-elles ?",
+      "C": "Nous verra-elles ?",
+      "D": "Nous verrez-elles ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "He will not see / is not going to see the problem.",
+    "options": {
+      "A": "Il ne verras pas le problème.",
+      "B": "Il ne verrons pas le problème.",
+      "C": "Il ne verra pas le problème.",
+      "D": "Il ne verrez pas le problème."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "You (informal) will see / are going to see that it's easy.",
+    "options": {
+      "A": "Tu verras que c'est facile.",
+      "B": "Tu verra que c'est facile.",
+      "C": "Tu verrez que c'est facile.",
+      "D": "Tu verrons que c'est facile."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "She will see / is going to see the doctor.",
+    "options": {
+      "A": "Elle verras le médecin.",
+      "B": "Elle verra le médecin.",
+      "C": "Elle verrons le médecin.",
+      "D": "Elle verrez le médecin."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "I will see / am going to see my family next week.",
+    "options": {
+      "A": "Je verrai ma famille la semaine prochaine.",
+      "B": "Je verras ma famille la semaine prochaine.",
+      "C": "Je verra ma famille la semaine prochaine.",
+      "D": "Je verrons ma famille la semaine prochaine."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "You (formal) will see / are going to see a big change.",
+    "options": {
+      "A": "Vous verrons un grand changement.",
+      "B": "Vous verras un grand changement.",
+      "C": "Vous verrez un grand changement.",
+      "D": "Vous verront un grand changement."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "We will not see / are not going to see the end of it.",
+    "options": {
+      "A": "Nous n'en verrons pas la fin.",
+      "B": "Nous n'en verrez pas la fin.",
+      "C": "Nous n'en verront pas la fin.",
+      "D": "Nous n'en verra pas la fin."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "One day you (informal) will see / are going to see.",
+    "options": {
+      "A": "Un jour tu verra.",
+      "B": "Un jour tu verrez.",
+      "C": "Un jour tu verrons.",
+      "D": "Un jour tu verras."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "They (male/mixed) will not see / are not going to see us.",
+    "options": {
+      "A": "Ils ne nous verrons pas.",
+      "B": "Ils ne nous verrez pas.",
+      "C": "Ils ne nous verras pas.",
+      "D": "Ils ne nous verront pas."
+    },
+    "correct_answer": "D"
+  }
+]
+
+
