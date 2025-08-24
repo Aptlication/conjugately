@@ -2046,7 +2046,7 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
               <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 4 verbs (être, avoir, faire, aller), Present, past, and future tenses</option>
               <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - 7 verbs, Present, past, and future tenses</option>
-              <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 11 verbs (être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir), Present, past, and future tenses</option>
+              <option value="Intermediate" className="bg-gray-800 text-white">🟡 Intermediate - 18 verbs (7 reflexive + 11 non-reflexive), Present, past, and future tenses</option>
               <option value="Advanced" className="bg-gray-800 text-white">🔴 Advanced - 13 verbs (10 regular + 3 reflexive), all tenses</option>
             </select>
           </div>
