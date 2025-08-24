@@ -571,19 +571,18 @@ function FreshAppCore({ user }: { user: any }) {
               style={{
                 marginTop: '12px',
                 fontSize: '14px',
-                background: 'linear-gradient(to right, #3b82f6, #14b8a6)',
-                color: 'white',
-                padding: '8px 16px',
-                borderRadius: '8px',
+                color: '#60a5fa',
+                textDecoration: 'underline',
+                background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                transition: 'all 0.2s'
+                transition: 'color 0.2s'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'linear-gradient(to right, #2563eb, #0d9488)';
+                e.target.style.color = '#93c5fd';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'linear-gradient(to right, #3b82f6, #14b8a6)';
+                e.target.style.color = '#60a5fa';
               }}
             >
               Don't remind me about selection requirements

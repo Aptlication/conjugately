@@ -591,7 +591,7 @@ export default function FrenchQuiz() {
                           setSelectionReminderDismissed(true);
                           localStorage.setItem('selectionReminderDismissed', 'true');
                         }}
-                        className="mt-3 text-sm bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-teal-600 transition-all duration-200"
+                        className="mt-3 text-sm text-blue-400 underline hover:text-blue-300 transition-colors bg-transparent border-none cursor-pointer"
                       >
                         Don't remind me about selection requirements
                       </button>
