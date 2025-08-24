@@ -556,38 +556,39 @@ function FreshAppCore({ user }: { user: any }) {
               opacity: (selectedVerb && selectedTimeFrame && selectedTenseType) ? 1 : 0.5
             }}
           >
-            {selectedVerb && selectedTimeFrame && selectedTenseType 
-              ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
-              : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
-            }
+            {selectedVerb && selectedTimeFrame && selectedTenseType ? (
+              `Start ${selectedVerb} Quiz (${selectedTenseType})`
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                {!selectionReminderDismissed && (
+                  <span
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectionReminderDismissed(true);
+                      localStorage.setItem('selectionReminderDismissed', 'true');
+                    }}
+                    style={{
+                      fontSize: '12px',
+                      color: '#60a5fa',
+                      textDecoration: 'underline',
+                      cursor: 'pointer',
+                      transition: 'color 0.2s'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = '#93c5fd';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color = '#60a5fa';
+                    }}
+                  >
+                    Don't remind me about selection requirements
+                  </span>
+                )}
+              </div>
+            )}
           </button>
           
-          {!(selectedVerb && selectedTimeFrame && selectedTenseType) && !selectionReminderDismissed && (
-            <button
-              onClick={() => {
-                setSelectionReminderDismissed(true);
-                localStorage.setItem('selectionReminderDismissed', 'true');
-              }}
-              style={{
-                marginTop: '12px',
-                fontSize: '14px',
-                color: '#60a5fa',
-                textDecoration: 'underline',
-                background: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'color 0.2s'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.color = '#93c5fd';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = '#60a5fa';
-              }}
-            >
-              Don't remind me about selection requirements
-            </button>
-          )}
         </div>
 
         {selectedVerb && selectedTimeFrame && selectedTenseType && (

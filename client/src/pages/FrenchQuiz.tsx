@@ -579,23 +579,27 @@ export default function FrenchQuiz() {
                       disabled={!selectedVerb || !selectedTimeFrame || !selectedTenseType}
                       className="w-full p-4 text-lg font-bold text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 disabled:bg-yellow-200 disabled:text-gray-700 disabled:cursor-not-allowed shadow-lg"
                     >
-                      {selectedVerb && selectedTimeFrame && selectedTenseType 
-                        ? `Start ${selectedVerb} Quiz (${selectedTenseType})`
-                        : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
-                      }
+                      {selectedVerb && selectedTimeFrame && selectedTenseType ? (
+                        `Start ${selectedVerb} Quiz (${selectedTenseType})`
+                      ) : (
+                        <div className="flex flex-col items-center space-y-2">
+                          <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                          {!selectionReminderDismissed && (
+                            <span
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectionReminderDismissed(true);
+                                localStorage.setItem('selectionReminderDismissed', 'true');
+                              }}
+                              className="text-xs text-blue-400 underline hover:text-blue-300 transition-colors cursor-pointer"
+                            >
+                              Don't remind me about selection requirements
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </button>
                     
-                    {!(selectedVerb && selectedTimeFrame && selectedTenseType) && !selectionReminderDismissed && (
-                      <button
-                        onClick={() => {
-                          setSelectionReminderDismissed(true);
-                          localStorage.setItem('selectionReminderDismissed', 'true');
-                        }}
-                        className="mt-3 text-sm text-blue-400 underline hover:text-blue-300 transition-colors bg-transparent border-none cursor-pointer"
-                      >
-                        Don't remind me about selection requirements
-                      </button>
-                    )}
                   </div>
                 </div>
               </div>

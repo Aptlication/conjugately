@@ -2221,23 +2221,27 @@ function App() {
                 : 'bg-slate-600 text-slate-400 cursor-not-allowed'
             }`}
           >
-            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced")
-              ? `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame})`
-              : (selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz")
-            }
+            {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") ? (
+              `Start ${selectedVerb} Quiz (${selectedDifficulty} - ${selectedDifficulty === "Advanced" ? selectedTenseType : selectedTimeFrame})`
+            ) : (
+              <div className="flex flex-col items-center space-y-2">
+                <span>{selectionReminderDismissed ? "Start Quiz" : "Complete all selections to start quiz"}</span>
+                {!selectionReminderDismissed && (
+                  <span
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectionReminderDismissed(true);
+                      localStorage.setItem('selectionReminderDismissed', 'true');
+                    }}
+                    className="text-xs text-blue-400 underline hover:text-blue-300 transition-colors cursor-pointer"
+                  >
+                    Don't remind me about selection requirements
+                  </span>
+                )}
+              </div>
+            )}
           </button>
           
-          {!(selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced")) && !selectionReminderDismissed && (
-            <button
-              onClick={() => {
-                setSelectionReminderDismissed(true);
-                localStorage.setItem('selectionReminderDismissed', 'true');
-              }}
-              className="mt-3 text-sm text-blue-400 underline hover:text-blue-300 transition-colors bg-transparent border-none cursor-pointer"
-            >
-              Don't remind me about selection requirements
-            </button>
-          )}
         </div>
 
         {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") && (
