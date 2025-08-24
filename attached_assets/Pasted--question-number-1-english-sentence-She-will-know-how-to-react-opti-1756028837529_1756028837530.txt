@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will know how to react.",
+    "options": {
+      "A": "Elle saura comment réagir.",
+      "B": "Elle sait comment réagir.",
+      "C": "Elle savait comment réagir.",
+      "D": "Elle a su comment réagir."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "He will not know the answer.",
+    "options": {
+      "A": "Il ne sait pas la réponse.",
+      "B": "Il ne savait pas la réponse.",
+      "C": "Il ne saura pas la réponse.",
+      "D": "Il n'a pas su la réponse."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (female) will know the secret.",
+    "options": {
+      "A": "Elles savent le secret.",
+      "B": "Elles sauront le secret.",
+      "C": "Elles savaient le secret.",
+      "D": "Elles ont su le secret."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "She will know the way.",
+    "options": {
+      "A": "Elle sait le chemin.",
+      "B": "Elle savait le chemin.",
+      "C": "Elle a su le chemin.",
+      "D": "Elle saura le chemin."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "We will know the result next week.",
+    "options": {
+      "A": "Nous saurons le résultat la semaine prochaine.",
+      "B": "Nous savons le résultat la semaine prochaine.",
+      "C": "Nous savions le résultat la semaine prochaine.",
+      "D": "Nous avons su le résultat la semaine prochaine."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "In a moment, we will know.",
+    "options": {
+      "A": "Dans un instant, nous savons.",
+      "B": "Dans un instant, nous savions.",
+      "C": "Dans un instant, nous saurons.",
+      "D": "Dans un instant, nous avons su."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "When will you (formal) know the date?",
+    "options": {
+      "A": "Quand savez-vous la date ?",
+      "B": "Quand saurez-vous la date ?",
+      "C": "Quand saviez-vous la date ?",
+      "D": "Quand avez-vous su la date ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "You (informal) will know when the time comes.",
+    "options": {
+      "A": "Tu sais quand le moment viendra.",
+      "B": "Tu savais quand le moment viendra.",
+      "C": "Tu as su quand le moment viendra.",
+      "D": "Tu sauras quand le moment viendra."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "You (informal) will know the answer tomorrow.",
+    "options": {
+      "A": "Tu sauras la réponse demain.",
+      "B": "Tu sais la réponse demain.",
+      "C": "Tu savais la réponse demain.",
+      "D": "Tu as su la réponse demain."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "You (formal) will know the details later.",
+    "options": {
+      "A": "Vous savez les détails plus tard.",
+      "B": "Vous saviez les détails plus tard.",
+      "C": "Vous saurez les détails plus tard.",
+      "D": "Vous avez su les détails plus tard."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "I will not know if it is possible.",
+    "options": {
+      "A": "Je ne sais pas si c'est possible.",
+      "B": "Je ne saurai pas si c'est possible.",
+      "C": "Je ne savais pas si c'est possible.",
+      "D": "Je n'ai pas su si c'est possible."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "Will you (formal) know the verdict?",
+    "options": {
+      "A": "Savez-vous le verdict ?",
+      "B": "Saviez-vous le verdict ?",
+      "C": "Avez-vous su le verdict ?",
+      "D": "Saurez-vous le verdict ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "They (male/mixed) will know soon.",
+    "options": {
+      "A": "Ils sauront bientôt.",
+      "B": "Ils savent bientôt.",
+      "C": "Ils savaient bientôt.",
+      "D": "Ils ont su bientôt."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "I will know how to respond.",
+    "options": {
+      "A": "Je sais comment répondre.",
+      "B": "Je savais comment répondre.",
+      "C": "Je saurai comment répondre.",
+      "D": "J'ai su comment répondre."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "He will know what to do.",
+    "options": {
+      "A": "Il sait quoi faire.",
+      "B": "Il saura quoi faire.",
+      "C": "Il savait quoi faire.",
+      "D": "Il a su quoi faire."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "I will not know what to say.",
+    "options": {
+      "A": "Je ne sais pas quoi dire.",
+      "B": "Je ne savais pas quoi dire.",
+      "C": "Je n'ai pas su quoi dire.",
+      "D": "Je ne saurai pas quoi dire."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "One day, I will know the truth.",
+    "options": {
+      "A": "Un jour, je saurai la vérité.",
+      "B": "Un jour, je sais la vérité.",
+      "C": "Un jour, j'ai su la vérité.",
+      "D": "Un jour, je savais la vérité."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "You (informal) will know everything.",
+    "options": {
+      "A": "Tu sais tout.",
+      "B": "Tu savais tout.",
+      "C": "Tu sauras tout.",
+      "D": "Tu as su tout."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "We will never know the reason.",
+    "options": {
+      "A": "Nous ne savons jamais la raison.",
+      "B": "Nous ne saurons jamais la raison.",
+      "C": "Nous ne savions jamais la raison.",
+      "D": "Nous n'avons jamais su la raison."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "They (male/mixed) will know the consequences.",
+    "options": {
+      "A": "Ils savent les conséquences.",
+      "B": "Ils savaient les conséquences.",
+      "C": "Ils ont su les conséquences.",
+      "D": "Ils sauront les conséquences."
+    },
+    "correct_answer": "D"
+  }
+]

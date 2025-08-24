@@ -2084,6 +2084,208 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Je le diront avant.", rationale: "Option D", isCorrect: false }
       ]
     }
+  ],
+  "savoir": [
+    {
+      question: "She will know / is going to know how to react.",
+      hint: "Use future simple of savoir: elle saura",
+      answerOptions: [
+        { text: "Elle saura comment réagir.", rationale: "Option A", isCorrect: true },
+        { text: "Elle sait comment réagir.", rationale: "Option B", isCorrect: false },
+        { text: "Elle savait comment réagir.", rationale: "Option C", isCorrect: false },
+        { text: "Elle a su comment réagir.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will not know / is not going to know the answer.",
+      hint: "Use future simple of savoir with negation: il ne saura pas",
+      answerOptions: [
+        { text: "Il ne sait pas la réponse.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne savait pas la réponse.", rationale: "Option B", isCorrect: false },
+        { text: "Il ne saura pas la réponse.", rationale: "Option C", isCorrect: true },
+        { text: "Il n'a pas su la réponse.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will know / are going to know the secret.",
+      hint: "Use future simple of savoir: elles sauront",
+      answerOptions: [
+        { text: "Elles savent le secret.", rationale: "Option A", isCorrect: false },
+        { text: "Elles sauront le secret.", rationale: "Option B", isCorrect: true },
+        { text: "Elles savaient le secret.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ont su le secret.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will know / is going to know the way.",
+      hint: "Use future simple of savoir: elle saura",
+      answerOptions: [
+        { text: "Elle sait le chemin.", rationale: "Option A", isCorrect: false },
+        { text: "Elle savait le chemin.", rationale: "Option B", isCorrect: false },
+        { text: "Elle a su le chemin.", rationale: "Option C", isCorrect: false },
+        { text: "Elle saura le chemin.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We will know / are going to know the result next week.",
+      hint: "Use future simple of savoir: nous saurons",
+      answerOptions: [
+        { text: "Nous saurons le résultat la semaine prochaine.", rationale: "Option A", isCorrect: true },
+        { text: "Nous savons le résultat la semaine prochaine.", rationale: "Option B", isCorrect: false },
+        { text: "Nous savions le résultat la semaine prochaine.", rationale: "Option C", isCorrect: false },
+        { text: "Nous avons su le résultat la semaine prochaine.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "In a moment, we will know / are going to know.",
+      hint: "Use future simple of savoir: nous saurons",
+      answerOptions: [
+        { text: "Dans un instant, nous savons.", rationale: "Option A", isCorrect: false },
+        { text: "Dans un instant, nous savions.", rationale: "Option B", isCorrect: false },
+        { text: "Dans un instant, nous saurons.", rationale: "Option C", isCorrect: true },
+        { text: "Dans un instant, nous avons su.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When will you (formal) know / are you going to know the date?",
+      hint: "Use future simple interrogative: quand saurez-vous",
+      answerOptions: [
+        { text: "Quand savez-vous la date ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand saurez-vous la date ?", rationale: "Option B", isCorrect: true },
+        { text: "Quand saviez-vous la date ?", rationale: "Option C", isCorrect: false },
+        { text: "Quand avez-vous su la date ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will know / are going to know when the time comes.",
+      hint: "Use future simple of savoir: tu sauras",
+      answerOptions: [
+        { text: "Tu sais quand le moment viendra.", rationale: "Option A", isCorrect: false },
+        { text: "Tu savais quand le moment viendra.", rationale: "Option B", isCorrect: false },
+        { text: "Tu as su quand le moment viendra.", rationale: "Option C", isCorrect: false },
+        { text: "Tu sauras quand le moment viendra.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) will know / are going to know the answer tomorrow.",
+      hint: "Use future simple of savoir: tu sauras",
+      answerOptions: [
+        { text: "Tu sauras la réponse demain.", rationale: "Option A", isCorrect: true },
+        { text: "Tu sais la réponse demain.", rationale: "Option B", isCorrect: false },
+        { text: "Tu savais la réponse demain.", rationale: "Option C", isCorrect: false },
+        { text: "Tu as su la réponse demain.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) will know / are going to know the details later.",
+      hint: "Use future simple of savoir: vous saurez",
+      answerOptions: [
+        { text: "Vous savez les détails plus tard.", rationale: "Option A", isCorrect: false },
+        { text: "Vous saviez les détails plus tard.", rationale: "Option B", isCorrect: false },
+        { text: "Vous saurez les détails plus tard.", rationale: "Option C", isCorrect: true },
+        { text: "Vous avez su les détails plus tard.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not know / am not going to know if it is possible.",
+      hint: "Use future simple of savoir with negation: je ne saurai pas",
+      answerOptions: [
+        { text: "Je ne sais pas si c'est possible.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne saurai pas si c'est possible.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne savais pas si c'est possible.", rationale: "Option C", isCorrect: false },
+        { text: "Je n'ai pas su si c'est possible.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Will you (formal) know / are you going to know the verdict?",
+      hint: "Use future simple interrogative: saurez-vous",
+      answerOptions: [
+        { text: "Savez-vous le verdict ?", rationale: "Option A", isCorrect: false },
+        { text: "Saviez-vous le verdict ?", rationale: "Option B", isCorrect: false },
+        { text: "Avez-vous su le verdict ?", rationale: "Option C", isCorrect: false },
+        { text: "Saurez-vous le verdict ?", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) will know / are going to know soon.",
+      hint: "Use future simple of savoir: ils sauront",
+      answerOptions: [
+        { text: "Ils sauront bientôt.", rationale: "Option A", isCorrect: true },
+        { text: "Ils savent bientôt.", rationale: "Option B", isCorrect: false },
+        { text: "Ils savaient bientôt.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ont su bientôt.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will know / am going to know how to respond.",
+      hint: "Use future simple of savoir: je saurai",
+      answerOptions: [
+        { text: "Je sais comment répondre.", rationale: "Option A", isCorrect: false },
+        { text: "Je savais comment répondre.", rationale: "Option B", isCorrect: false },
+        { text: "Je saurai comment répondre.", rationale: "Option C", isCorrect: true },
+        { text: "J'ai su comment répondre.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will know / is going to know what to do.",
+      hint: "Use future simple of savoir: il saura",
+      answerOptions: [
+        { text: "Il sait quoi faire.", rationale: "Option A", isCorrect: false },
+        { text: "Il saura quoi faire.", rationale: "Option B", isCorrect: true },
+        { text: "Il savait quoi faire.", rationale: "Option C", isCorrect: false },
+        { text: "Il a su quoi faire.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not know / am not going to know what to say.",
+      hint: "Use future simple of savoir with negation: je ne saurai pas",
+      answerOptions: [
+        { text: "Je ne sais pas quoi dire.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne savais pas quoi dire.", rationale: "Option B", isCorrect: false },
+        { text: "Je n'ai pas su quoi dire.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne saurai pas quoi dire.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "One day, I will know / am going to know the truth.",
+      hint: "Use future simple of savoir: je saurai",
+      answerOptions: [
+        { text: "Un jour, je saurai la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Un jour, je sais la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Un jour, j'ai su la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Un jour, je savais la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will know / are going to know everything.",
+      hint: "Use future simple of savoir: tu sauras",
+      answerOptions: [
+        { text: "Tu sais tout.", rationale: "Option A", isCorrect: false },
+        { text: "Tu savais tout.", rationale: "Option B", isCorrect: false },
+        { text: "Tu sauras tout.", rationale: "Option C", isCorrect: true },
+        { text: "Tu as su tout.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will never know / are never going to know the reason.",
+      hint: "Use future simple of savoir with negation: nous ne saurons jamais",
+      answerOptions: [
+        { text: "Nous ne savons jamais la raison.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne saurons jamais la raison.", rationale: "Option B", isCorrect: true },
+        { text: "Nous ne savions jamais la raison.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'avons jamais su la raison.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) will know / are going to know the consequences.",
+      hint: "Use future simple of savoir: ils sauront",
+      answerOptions: [
+        { text: "Ils savent les conséquences.", rationale: "Option A", isCorrect: false },
+        { text: "Ils savaient les conséquences.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ont su les conséquences.", rationale: "Option C", isCorrect: false },
+        { text: "Ils sauront les conséquences.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 
