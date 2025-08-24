@@ -1030,6 +1030,198 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "N'aura-t-il pas besoin d'aide ?", rationale: "Correct! 'N'aura-t-il pas besoin d'aide ?' means 'Won't he need help?'.", isCorrect: true }
       ]
     }
+  ],
+  "dire": [
+    {
+      question: "I will say / am going to say the truth.",
+      hint: "Use future simple of dire: je dirai",
+      answerOptions: [
+        { text: "Je dirai la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Je dira la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Je diront la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Je diras la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will say / are going to say that soon.",
+      hint: "Use future simple of dire: tu diras",
+      answerOptions: [
+        { text: "Tu diras ça bientôt.", rationale: "Option A", isCorrect: false },
+        { text: "Tu dirai ça bientôt.", rationale: "Option B", isCorrect: false },
+        { text: "Tu direz ça bientôt.", rationale: "Option C", isCorrect: false },
+        { text: "Tu diront ça bientôt.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "He will say / is going to say something important.",
+      hint: "Use future simple of dire: il dira",
+      answerOptions: [
+        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: false },
+        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: true },
+        { text: "Il dirai quelque chose d'important.", rationale: "Option C", isCorrect: false },
+        { text: "Il diront quelque chose d'important.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will say / are going to say hello.",
+      hint: "Use future simple of dire: nous dirons",
+      answerOptions: [
+        { text: "Nous dirons bonjour.", rationale: "Option A", isCorrect: false },
+        { text: "Nous diras bonjour.", rationale: "Option B", isCorrect: false },
+        { text: "Nous direz bonjour.", rationale: "Option C", isCorrect: true },
+        { text: "Nous diront bonjour.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal/plural) will say / are going to say the same thing.",
+      hint: "Use future simple of dire: vous direz",
+      answerOptions: [
+        { text: "Vous direz la même chose.", rationale: "Option A", isCorrect: true },
+        { text: "Vous diront la même chose.", rationale: "Option B", isCorrect: false },
+        { text: "Vous diras la même chose.", rationale: "Option C", isCorrect: false },
+        { text: "Vous dirai la même chose.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed group) will say / are going to say nothing.",
+      hint: "Use future simple of dire: ils ne diront rien",
+      answerOptions: [
+        { text: "Ils ne diront rien.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne diras rien.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne dira rien.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne dirai rien.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) will say / are going to say everything.",
+      hint: "Use future simple of dire: elles diront",
+      answerOptions: [
+        { text: "Elles diront tout.", rationale: "Option A", isCorrect: false },
+        { text: "Elles diras tout.", rationale: "Option B", isCorrect: true },
+        { text: "Elles dira tout.", rationale: "Option C", isCorrect: false },
+        { text: "Elles dirai tout.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will not say / am not going to say that.",
+      hint: "Use future simple of dire: je ne dirai pas",
+      answerOptions: [
+        { text: "Je ne dirai pas ça.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne diras pas ça.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne dira pas ça.", rationale: "Option C", isCorrect: true },
+        { text: "Je ne diront pas ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will not say / is not going to say anything.",
+      hint: "Use future simple of dire: elle ne dira rien",
+      answerOptions: [
+        { text: "Elle ne dira rien.", rationale: "Option A", isCorrect: true },
+        { text: "Elle ne diras rien.", rationale: "Option B", isCorrect: false },
+        { text: "Elle ne diront rien.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne dirai rien.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will not say / are not going to say a word.",
+      hint: "Use future simple of dire: nous ne dirons pas",
+      answerOptions: [
+        { text: "Nous ne dirons pas un mot.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne diras pas un mot.", rationale: "Option B", isCorrect: true },
+        { text: "Nous ne dira pas un mot.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne diront pas un mot.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) will not say / are not going to say please.",
+      hint: "Use future simple of dire: tu ne diras pas",
+      answerOptions: [
+        { text: "Tu ne diras pas s'il te plaît.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne dira pas s'il te plaît.", rationale: "Option B", isCorrect: false },
+        { text: "Tu ne diront pas s'il te plaît.", rationale: "Option C", isCorrect: false },
+        { text: "Tu ne dirai pas s'il te plaît.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) will not say / are not going to say the truth.",
+      hint: "Use future simple of dire: ils ne diront pas",
+      answerOptions: [
+        { text: "Ils ne diront pas la vérité.", rationale: "Option A", isCorrect: true },
+        { text: "Ils ne diras pas la vérité.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ne dira pas la vérité.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne dirai pas la vérité.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal/plural) will not say / are not going to say that.",
+      hint: "Use future simple of dire: vous ne direz pas",
+      answerOptions: [
+        { text: "Vous ne direz pas ça.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne diront pas ça.", rationale: "Option B", isCorrect: false },
+        { text: "Vous ne diras pas ça.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne dirai pas ça.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He will say / is going to say something important.",
+      hint: "Use future simple of dire: il dira",
+      answerOptions: [
+        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: false },
+        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: true },
+        { text: "Il dira quelque chose d'important.", rationale: "Option C", isCorrect: false },
+        { text: "Il dirai quelque chose d'important.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She will say / is going to say nothing.",
+      hint: "Use future simple of dire: elle ne dira rien",
+      answerOptions: [
+        { text: "Elle ne dira rien.", rationale: "Option A", isCorrect: true },
+        { text: "Elle ne diras rien.", rationale: "Option B", isCorrect: false },
+        { text: "Elle ne dira rien.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne dirai rien.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We will say / are going to say yes.",
+      hint: "Use future simple of dire: nous dirons",
+      answerOptions: [
+        { text: "Nous dirons oui.", rationale: "Option A", isCorrect: false },
+        { text: "Nous diras oui.", rationale: "Option B", isCorrect: false },
+        { text: "Nous dira oui.", rationale: "Option C", isCorrect: false },
+        { text: "Nous dirai oui.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "You (informal) will say / are going to say a lie.",
+      hint: "Use future simple of dire: tu diras",
+      answerOptions: [
+        { text: "Tu diras un mensonge.", rationale: "Option A", isCorrect: false },
+        { text: "Tu dira un mensonge.", rationale: "Option B", isCorrect: true },
+        { text: "Tu diront un mensonge.", rationale: "Option C", isCorrect: false },
+        { text: "Tu dirai un mensonge.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) will say / are going to say something.",
+      hint: "Use future simple of dire: elles diront",
+      answerOptions: [
+        { text: "Elles diront quelque chose.", rationale: "Option A", isCorrect: true },
+        { text: "Elles diras quelque chose.", rationale: "Option B", isCorrect: false },
+        { text: "Elles dira quelque chose.", rationale: "Option C", isCorrect: false },
+        { text: "Elles dirai quelque chose.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I will say / am going to say it before.",
+      hint: "Use future simple of dire: je le dirai",
+      answerOptions: [
+        { text: "Je le dirai avant.", rationale: "Option A", isCorrect: true },
+        { text: "Je le diras avant.", rationale: "Option B", isCorrect: false },
+        { text: "Je le dira avant.", rationale: "Option C", isCorrect: false },
+        { text: "Je le diront avant.", rationale: "Option D", isCorrect: false }
+      ]
+    }
   ]
 };
 
