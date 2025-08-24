@@ -1683,6 +1683,208 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       ]
     }
   ],
+  "voir": [
+    {
+      question: "I saw / have seen that movie.",
+      hint: "Use passé composé of voir: j'ai vu",
+      answerOptions: [
+        { text: "Je suis vu ce film.", rationale: "Option A", isCorrect: false },
+        { text: "J'ai vu ce film.", rationale: "Option B", isCorrect: true },
+        { text: "J'ai vus ce film.", rationale: "Option C", isCorrect: false },
+        { text: "Je voyais ce film.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (informal) see / have you seen his new car?",
+      hint: "Use passé composé interrogative: as-tu vu",
+      answerOptions: [
+        { text: "As-tu vu sa nouvelle voiture ?", rationale: "Option A", isCorrect: true },
+        { text: "As-tu vus sa nouvelle voiture ?", rationale: "Option B", isCorrect: false },
+        { text: "Voyais-tu sa nouvelle voiture ?", rationale: "Option C", isCorrect: false },
+        { text: "Es-tu vu sa nouvelle voiture ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) saw / have seen the results.",
+      hint: "Use passé composé of voir: vous avez vu",
+      answerOptions: [
+        { text: "Vous êtes vu les résultats.", rationale: "Option A", isCorrect: false },
+        { text: "Vous voyiez les résultats.", rationale: "Option B", isCorrect: false },
+        { text: "Vous avez vus les résultats.", rationale: "Option C", isCorrect: false },
+        { text: "Vous avez vu les résultats.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We saw / have seen the exhibition.",
+      hint: "Use passé composé of voir: nous avons vu",
+      answerOptions: [
+        { text: "Nous sommes vus l'exposition.", rationale: "Option A", isCorrect: false },
+        { text: "Nous voyions l'exposition.", rationale: "Option B", isCorrect: false },
+        { text: "Nous avons vu l'exposition.", rationale: "Option C", isCorrect: true },
+        { text: "Nous avons vus l'exposition.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He saw / has seen a ghost.",
+      hint: "Use passé composé of voir: il a vu",
+      answerOptions: [
+        { text: "Il a vu un fantôme.", rationale: "Option A", isCorrect: true },
+        { text: "Il voyait un fantôme.", rationale: "Option B", isCorrect: false },
+        { text: "Il est vu un fantôme.", rationale: "Option C", isCorrect: false },
+        { text: "Il a vus un fantôme.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She didn't see / hasn't seen the message.",
+      hint: "Use passé composé negative: elle n'a pas vu",
+      answerOptions: [
+        { text: "Elle ne voyait pas le message.", rationale: "Option A", isCorrect: false },
+        { text: "Elle n'a pas vu le message.", rationale: "Option B", isCorrect: true },
+        { text: "Elle n'est pas vue le message.", rationale: "Option C", isCorrect: false },
+        { text: "Elle n'a pas vue le message.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) saw / have seen everything.",
+      hint: "Use passé composé of voir: elles ont vu",
+      answerOptions: [
+        { text: "Elles ont vu tout.", rationale: "Option A", isCorrect: true },
+        { text: "Elles sont vues tout.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ont vues tout.", rationale: "Option C", isCorrect: false },
+        { text: "Elles voyaient tout.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) saw / have seen the match.",
+      hint: "Use passé composé of voir: ils ont vu",
+      answerOptions: [
+        { text: "Ils sont vus le match.", rationale: "Option A", isCorrect: false },
+        { text: "Ils voyaient le match.", rationale: "Option B", isCorrect: false },
+        { text: "Ils ont vus le match.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ont vu le match.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "She saw / has seen her friends yesterday.",
+      hint: "Use passé composé of voir: elle a vu",
+      answerOptions: [
+        { text: "Elle voyait ses amis hier.", rationale: "Option A", isCorrect: false },
+        { text: "Elle est vue ses amis hier.", rationale: "Option B", isCorrect: false },
+        { text: "Elle a vu ses amis hier.", rationale: "Option C", isCorrect: true },
+        { text: "Elle a vue ses amis hier.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We never saw / have never seen such a thing.",
+      hint: "Use passé composé negative: nous n'avons jamais vu",
+      answerOptions: [
+        { text: "Nous n'avons jamais vu une telle chose.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne sommes jamais vus une telle chose.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne voyions jamais une telle chose.", rationale: "Option C", isCorrect: false },
+        { text: "Nous n'avons jamais vus une telle chose.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did he see / Has he seen the email?",
+      hint: "Use passé composé interrogative: a-t-il vu",
+      answerOptions: [
+        { text: "A-t-il vu l'email ?", rationale: "Option A", isCorrect: true },
+        { text: "Voyait-il l'email ?", rationale: "Option B", isCorrect: false },
+        { text: "Est-il vu l'email ?", rationale: "Option C", isCorrect: false },
+        { text: "A-t-il vus l'email ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) didn't see / haven't seen the film.",
+      hint: "Use passé composé negative: ils n'ont pas vu",
+      answerOptions: [
+        { text: "Ils ne voyaient pas le film.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne sont pas vus le film.", rationale: "Option B", isCorrect: false },
+        { text: "Ils n'ont pas vus le film.", rationale: "Option C", isCorrect: false },
+        { text: "Ils n'ont pas vu le film.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "Have you (formal) seen / Did you see the news?",
+      hint: "Use passé composé interrogative: avez-vous vu",
+      answerOptions: [
+        { text: "Avez-vous vus les nouvelles ?", rationale: "Option A", isCorrect: false },
+        { text: "Voyiez-vous les nouvelles ?", rationale: "Option B", isCorrect: false },
+        { text: "Avez-vous vu les nouvelles ?", rationale: "Option C", isCorrect: true },
+        { text: "Êtes-vous vu les nouvelles ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I haven't seen / didn't see anything.",
+      hint: "Use passé composé negative: je n'ai rien vu",
+      answerOptions: [
+        { text: "Je n'ai pas vus rien.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'ai pas vu rien.", rationale: "Option B", isCorrect: false },
+        { text: "Je n'ai rien vu.", rationale: "Option C", isCorrect: true },
+        { text: "Je ne voyais rien.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I haven't seen / didn't see my glasses.",
+      hint: "Use passé composé negative: je n'ai pas vu",
+      answerOptions: [
+        { text: "Je ne voyais pas mes lunettes.", rationale: "Option A", isCorrect: false },
+        { text: "Je n'ai pas vu mes lunettes.", rationale: "Option B", isCorrect: true },
+        { text: "Je ne suis pas vu mes lunettes.", rationale: "Option C", isCorrect: false },
+        { text: "Je n'ai pas vus mes lunettes.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) haven't seen / didn't see the stop sign.",
+      hint: "Use passé composé negative: tu n'as pas vu",
+      answerOptions: [
+        { text: "Tu n'as pas vus le panneau stop.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne voyais pas le panneau stop.", rationale: "Option B", isCorrect: false },
+        { text: "Tu n'es pas vu le panneau stop.", rationale: "Option C", isCorrect: false },
+        { text: "Tu n'as pas vu le panneau stop.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We didn't see / haven't seen them.",
+      hint: "Use passé composé negative: nous ne les avons pas vu",
+      answerOptions: [
+        { text: "Nous ne les avons pas vus.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne les voyions pas.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne les avons pas vu.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne les sommes pas vus.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He hasn't seen / didn't see his keys.",
+      hint: "Use passé composé negative: il n'a pas vu",
+      answerOptions: [
+        { text: "Il ne voyait pas ses clés.", rationale: "Option A", isCorrect: false },
+        { text: "Il n'a pas vu ses clés.", rationale: "Option B", isCorrect: true },
+        { text: "Il n'est pas vu ses clés.", rationale: "Option C", isCorrect: false },
+        { text: "Il n'a pas vus ses clés.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) haven't seen / didn't see the show.",
+      hint: "Use passé composé negative: elles n'ont pas vu",
+      answerOptions: [
+        { text: "Elles n'ont pas vu le spectacle.", rationale: "Option A", isCorrect: true },
+        { text: "Elles ne sont pas vues le spectacle.", rationale: "Option B", isCorrect: false },
+        { text: "Elles n'ont pas vues le spectacle.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne voyaient pas le spectacle.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She has already seen / already saw this play.",
+      hint: "Use passé composé of voir: elle a déjà vu",
+      answerOptions: [
+        { text: "Elle a déjà vus cette pièce.", rationale: "Option A", isCorrect: false },
+        { text: "Elle voyait déjà cette pièce.", rationale: "Option B", isCorrect: false },
+        { text: "Elle est déjà vue cette pièce.", rationale: "Option C", isCorrect: false },
+        { text: "Elle a déjà vu cette pièce.", rationale: "Option D", isCorrect: true }
+      ]
+    }
+  ],
   "dire": [
     {
       question: "You (formal) said goodbye.",
