@@ -1,7 +1,7 @@
 import { GeneratedQuiz } from "./gemini-quiz";
 import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQuestion } from "./novice-quiz-data";
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
-import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
+import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, getRandomElementaryFutureSimpleQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1809,6 +1809,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     } else if (tense.toLowerCase() === 'passé composé' || tense.toLowerCase() === 'passé simple') {
       elementaryQuestions = getRandomElementaryPasseComposeQuestions(verb, 20);
       console.log(`✅ Found ${elementaryQuestions.length} Elementary passé composé questions for ${verb}`);
+    } else if (tense.toLowerCase() === 'futur simple' || tense.toLowerCase() === 'future') {
+      elementaryQuestions = getRandomElementaryFutureSimpleQuestions(verb, 20);
+      console.log(`✅ Found ${elementaryQuestions.length} Elementary future simple questions for ${verb}`);
     }
     
     if (elementaryQuestions.length > 0) {

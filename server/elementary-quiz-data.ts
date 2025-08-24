@@ -698,3 +698,33 @@ export function getRandomElementaryPasseComposeQuestions(verb: string, count: nu
   
   return result.slice(0, count);
 }
+
+// Function to get random Elementary future simple questions for a specific verb
+export function getRandomElementaryFutureSimpleQuestions(verb: string, count: number): ElementaryQuizQuestion[] {
+  const questions = ELEMENTARY_FUTURE_SIMPLE_QUESTIONS[verb] || [];
+  
+  if (questions.length === 0) {
+    console.log(`⚠️  No Elementary future simple questions found for verb: ${verb}`);
+    return [];
+  }
+  
+  // Shuffle and return requested count
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  const result = shuffled.slice(0, Math.min(count, shuffled.length));
+  
+  // If we need more questions than available, repeat with shuffled options
+  while (result.length < count && questions.length > 0) {
+    const additional = [...questions].sort(() => Math.random() - 0.5);
+    for (const q of additional) {
+      if (result.length >= count) break;
+      // Create variation with shuffled answer options
+      const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
+      result.push({
+        ...q,
+        answerOptions: shuffledOptions
+      });
+    }
+  }
+  
+  return result.slice(0, count);
+}
