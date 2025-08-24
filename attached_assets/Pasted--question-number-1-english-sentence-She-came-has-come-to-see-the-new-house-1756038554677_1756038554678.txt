@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She came / has come to see the new house.",
+    "options": {
+      "A": "Elle est venue voir la nouvelle maison.",
+      "B": "Elle a venue voir la nouvelle maison.",
+      "C": "Elle est veni voir la nouvelle maison.",
+      "D": "Elle venait voir la nouvelle maison."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "You (formal) came / have come at the right time.",
+    "options": {
+      "A": "Vous avez venu au bon moment.",
+      "B": "Vous êtes venu au bon moment.",
+      "C": "Vous veniez au bon moment.",
+      "D": "Vous êtes venus au bon moment."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (male/mixed) came / have come to help.",
+    "options": {
+      "A": "Ils ont venus pour aider.",
+      "B": "Ils venaient pour aider.",
+      "C": "Ils sont venus pour aider.",
+      "D": "Ils sont venu pour aider."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "I came / have come with my family.",
+    "options": {
+      "A": "Je suis venu avec ma famille.",
+      "B": "J'ai venu avec ma famille.",
+      "C": "Je venais avec ma famille.",
+      "D": "Je suis venue avec ma famille."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "He came / has come alone.",
+    "options": {
+      "A": "Il est venu seul.",
+      "B": "Il a venu seul.",
+      "C": "Il venait seul.",
+      "D": "Il est venus seul."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "They (female) came / have come to the party.",
+    "options": {
+      "A": "Elles sont venues à la fête.",
+      "B": "Elles ont venues à la fête.",
+      "C": "Elles venaient à la fête.",
+      "D": "Elles sont venu à la fête."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "We did not come / have not come to disturb.",
+    "options": {
+      "A": "Nous ne sommes pas venus pour déranger.",
+      "B": "Nous n'avons pas venus pour déranger.",
+      "C": "Nous ne venions pas pour déranger.",
+      "D": "Nous ne sommes pas venu pour déranger."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "She did not come / has not come yesterday.",
+    "options": {
+      "A": "Elle ne venait pas hier.",
+      "B": "Elle n'est pas venue hier.",
+      "C": "Elle n'a pas venue hier.",
+      "D": "Elle n'est pas venu hier."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "You (informal) came / have come to my house.",
+    "options": {
+      "A": "Tu as venu chez moi.",
+      "B": "Tu es venu chez moi.",
+      "C": "Tu venais chez moi.",
+      "D": "Tu es venus chez moi."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "Did you (formal) come / Have you come by car?",
+    "options": {
+      "A": "Avez-vous venu en voiture ?",
+      "B": "Êtes-vous venus en voiture ?",
+      "C": "Veniez-vous en voiture ?",
+      "D": "Êtes-vous venu en voiture ?"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "They (male/mixed) did not come / have not come.",
+    "options": {
+      "A": "Ils n'ont pas venus.",
+      "B": "Ils ne sont pas venus.",
+      "C": "Ils ne venaient pas.",
+      "D": "Ils ne sont pas venu."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "We came / have come on foot.",
+    "options": {
+      "A": "Nous avons venus à pied.",
+      "B": "Nous sommes venus à pied.",
+      "C": "Nous venions à pied.",
+      "D": "Nous sommes venu à pied."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "Why did he come / has he come so late?",
+    "options": {
+      "A": "Pourquoi a-t-il venu si tard ?",
+      "B": "Pourquoi venait-il si tard ?",
+      "C": "Pourquoi est-il venu si tard ?",
+      "D": "Pourquoi est-il venus si tard ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "Why did you (informal) come / have you come?",
+    "options": {
+      "A": "Pourquoi as-tu venu ?",
+      "B": "Pourquoi venais-tu ?",
+      "C": "Pourquoi es-tu venu ?",
+      "D": "Pourquoi es-tu venus ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "When did they (female) come / have they come?",
+    "options": {
+      "A": "Quand ont-elles venues ?",
+      "B": "Quand venaient-elles ?",
+      "C": "Quand sont-elles venues ?",
+      "D": "Quand sont-elles venu ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "She came / has come back from her trip.",
+    "options": {
+      "A": "Elle a revenue de son voyage.",
+      "B": "Elle venait de son voyage.",
+      "C": "Elle est revenue de son voyage.",
+      "D": "Elle est revenu de son voyage."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "He did not come / has not come with his friends.",
+    "options": {
+      "A": "Il n'a pas venu avec ses amis.",
+      "B": "Il ne venait pas avec ses amis.",
+      "C": "Il n'est pas venus avec ses amis.",
+      "D": "Il n'est pas venu avec ses amis."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (female) did not come / have not come to the cinema.",
+    "options": {
+      "A": "Elles n'ont pas venues au cinéma.",
+      "B": "Elles ne venaient pas au cinéma.",
+      "C": "Elles ne sont pas venu au cinéma.",
+      "D": "Elles ne sont pas venues au cinéma."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "We did not come / have not come for nothing.",
+    "options": {
+      "A": "Nous n'avons pas venus pour rien.",
+      "B": "Nous ne venions pas pour rien.",
+      "C": "Nous ne sommes pas venu pour rien.",
+      "D": "Nous ne sommes pas venus pour rien."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "I did not come / have not come to bother you.",
+    "options": {
+      "A": "Je n'ai pas venu te déranger.",
+      "B": "Je ne venais pas te déranger.",
+      "C": "Je ne suis pas venus te déranger.",
+      "D": "Je ne suis pas venu te déranger."
+    },
+    "correct_answer": "D"
+  }
+]

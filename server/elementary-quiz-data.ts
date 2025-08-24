@@ -3094,6 +3094,208 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Tu as pu réussir.", rationale: "Option D", isCorrect: true }
       ]
     }
+  ],
+  "venir": [
+    {
+      question: "She came / has come to see the new house.",
+      hint: "Use passé composé with être: elle est venue",
+      answerOptions: [
+        { text: "Elle est venue voir la nouvelle maison.", rationale: "Option A", isCorrect: true },
+        { text: "Elle a venue voir la nouvelle maison.", rationale: "Option B", isCorrect: false },
+        { text: "Elle est veni voir la nouvelle maison.", rationale: "Option C", isCorrect: false },
+        { text: "Elle venait voir la nouvelle maison.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (formal) came / have come at the right time.",
+      hint: "Use passé composé with être: vous êtes venus (assuming mixed/male group)",
+      answerOptions: [
+        { text: "Vous avez venu au bon moment.", rationale: "Option A", isCorrect: false },
+        { text: "Vous êtes venu au bon moment.", rationale: "Option B", isCorrect: false },
+        { text: "Vous veniez au bon moment.", rationale: "Option C", isCorrect: false },
+        { text: "Vous êtes venus au bon moment.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (male/mixed) came / have come to help.",
+      hint: "Use passé composé with être: ils sont venus",
+      answerOptions: [
+        { text: "Ils ont venus pour aider.", rationale: "Option A", isCorrect: false },
+        { text: "Ils venaient pour aider.", rationale: "Option B", isCorrect: false },
+        { text: "Ils sont venus pour aider.", rationale: "Option C", isCorrect: true },
+        { text: "Ils sont venu pour aider.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "I came / have come with my family.",
+      hint: "Use passé composé with être: je suis venu (assuming masculine speaker)",
+      answerOptions: [
+        { text: "Je suis venu avec ma famille.", rationale: "Option A", isCorrect: true },
+        { text: "J'ai venu avec ma famille.", rationale: "Option B", isCorrect: false },
+        { text: "Je venais avec ma famille.", rationale: "Option C", isCorrect: false },
+        { text: "Je suis venue avec ma famille.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He came / has come alone.",
+      hint: "Use passé composé with être: il est venu",
+      answerOptions: [
+        { text: "Il est venu seul.", rationale: "Option A", isCorrect: true },
+        { text: "Il a venu seul.", rationale: "Option B", isCorrect: false },
+        { text: "Il venait seul.", rationale: "Option C", isCorrect: false },
+        { text: "Il est venus seul.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (female) came / have come to the party.",
+      hint: "Use passé composé with être: elles sont venues",
+      answerOptions: [
+        { text: "Elles sont venues à la fête.", rationale: "Option A", isCorrect: true },
+        { text: "Elles ont venues à la fête.", rationale: "Option B", isCorrect: false },
+        { text: "Elles venaient à la fête.", rationale: "Option C", isCorrect: false },
+        { text: "Elles sont venu à la fête.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We did not come / have not come to disturb.",
+      hint: "Use passé composé negative with être: nous ne sommes pas venus",
+      answerOptions: [
+        { text: "Nous ne sommes pas venus pour déranger.", rationale: "Option A", isCorrect: true },
+        { text: "Nous n'avons pas venus pour déranger.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne venions pas pour déranger.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne sommes pas venu pour déranger.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She did not come / has not come yesterday.",
+      hint: "Use passé composé negative with être: elle n'est pas venue",
+      answerOptions: [
+        { text: "Elle ne venait pas hier.", rationale: "Option A", isCorrect: false },
+        { text: "Elle n'est pas venue hier.", rationale: "Option B", isCorrect: true },
+        { text: "Elle n'a pas venue hier.", rationale: "Option C", isCorrect: false },
+        { text: "Elle n'est pas venu hier.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "You (informal) came / have come to my house.",
+      hint: "Use passé composé with être: tu es venu",
+      answerOptions: [
+        { text: "Tu as venu chez moi.", rationale: "Option A", isCorrect: false },
+        { text: "Tu es venu chez moi.", rationale: "Option B", isCorrect: true },
+        { text: "Tu venais chez moi.", rationale: "Option C", isCorrect: false },
+        { text: "Tu es venus chez moi.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Did you (formal) come / Have you come by car?",
+      hint: "Use passé composé interrogative with être: êtes-vous venus",
+      answerOptions: [
+        { text: "Avez-vous venu en voiture ?", rationale: "Option A", isCorrect: false },
+        { text: "Êtes-vous venus en voiture ?", rationale: "Option B", isCorrect: true },
+        { text: "Veniez-vous en voiture ?", rationale: "Option C", isCorrect: false },
+        { text: "Êtes-vous venu en voiture ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "They (male/mixed) did not come / have not come.",
+      hint: "Use passé composé negative with être: ils ne sont pas venus",
+      answerOptions: [
+        { text: "Ils n'ont pas venus.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne sont pas venus.", rationale: "Option B", isCorrect: true },
+        { text: "Ils ne venaient pas.", rationale: "Option C", isCorrect: false },
+        { text: "Ils ne sont pas venu.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "We came / have come on foot.",
+      hint: "Use passé composé with être: nous sommes venus",
+      answerOptions: [
+        { text: "Nous avons venus à pied.", rationale: "Option A", isCorrect: false },
+        { text: "Nous sommes venus à pied.", rationale: "Option B", isCorrect: true },
+        { text: "Nous venions à pied.", rationale: "Option C", isCorrect: false },
+        { text: "Nous sommes venu à pied.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why did he come / has he come so late?",
+      hint: "Use passé composé interrogative with être: pourquoi est-il venu",
+      answerOptions: [
+        { text: "Pourquoi a-t-il venu si tard ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi venait-il si tard ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi est-il venu si tard ?", rationale: "Option C", isCorrect: true },
+        { text: "Pourquoi est-il venus si tard ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "Why did you (informal) come / have you come?",
+      hint: "Use passé composé interrogative with être: pourquoi es-tu venu",
+      answerOptions: [
+        { text: "Pourquoi as-tu venu ?", rationale: "Option A", isCorrect: false },
+        { text: "Pourquoi venais-tu ?", rationale: "Option B", isCorrect: false },
+        { text: "Pourquoi es-tu venu ?", rationale: "Option C", isCorrect: true },
+        { text: "Pourquoi es-tu venus ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "When did they (female) come / have they come?",
+      hint: "Use passé composé interrogative with être: quand sont-elles venues",
+      answerOptions: [
+        { text: "Quand ont-elles venues ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand venaient-elles ?", rationale: "Option B", isCorrect: false },
+        { text: "Quand sont-elles venues ?", rationale: "Option C", isCorrect: true },
+        { text: "Quand sont-elles venu ?", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "She came / has come back from her trip.",
+      hint: "Use passé composé with être: elle est revenue",
+      answerOptions: [
+        { text: "Elle a revenue de son voyage.", rationale: "Option A", isCorrect: false },
+        { text: "Elle venait de son voyage.", rationale: "Option B", isCorrect: false },
+        { text: "Elle est revenue de son voyage.", rationale: "Option C", isCorrect: true },
+        { text: "Elle est revenu de son voyage.", rationale: "Option D", isCorrect: false }
+      ]
+    },
+    {
+      question: "He did not come / has not come with his friends.",
+      hint: "Use passé composé negative with être: il n'est pas venu",
+      answerOptions: [
+        { text: "Il n'a pas venu avec ses amis.", rationale: "Option A", isCorrect: false },
+        { text: "Il ne venait pas avec ses amis.", rationale: "Option B", isCorrect: false },
+        { text: "Il n'est pas venus avec ses amis.", rationale: "Option C", isCorrect: false },
+        { text: "Il n'est pas venu avec ses amis.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "They (female) did not come / have not come to the cinema.",
+      hint: "Use passé composé negative with être: elles ne sont pas venues",
+      answerOptions: [
+        { text: "Elles n'ont pas venues au cinéma.", rationale: "Option A", isCorrect: false },
+        { text: "Elles ne venaient pas au cinéma.", rationale: "Option B", isCorrect: false },
+        { text: "Elles ne sont pas venu au cinéma.", rationale: "Option C", isCorrect: false },
+        { text: "Elles ne sont pas venues au cinéma.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "We did not come / have not come for nothing.",
+      hint: "Use passé composé negative with être: nous ne sommes pas venus",
+      answerOptions: [
+        { text: "Nous n'avons pas venus pour rien.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne venions pas pour rien.", rationale: "Option B", isCorrect: false },
+        { text: "Nous ne sommes pas venu pour rien.", rationale: "Option C", isCorrect: false },
+        { text: "Nous ne sommes pas venus pour rien.", rationale: "Option D", isCorrect: true }
+      ]
+    },
+    {
+      question: "I did not come / have not come to bother you.",
+      hint: "Use passé composé negative with être: je ne suis pas venu",
+      answerOptions: [
+        { text: "Je n'ai pas venu te déranger.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne venais pas te déranger.", rationale: "Option B", isCorrect: false },
+        { text: "Je ne suis pas venus te déranger.", rationale: "Option C", isCorrect: false },
+        { text: "Je ne suis pas venu te déranger.", rationale: "Option D", isCorrect: true }
+      ]
+    }
   ]
 };
 
