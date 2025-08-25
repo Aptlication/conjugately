@@ -1009,9 +1009,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Didn't we know the news? (Imparfait)", "options": ["Ne savions-nous pas la nouvelle ?", "Ne saviez-vous pas la nouvelle ?", "Ne savaient-ils pas la nouvelle ?", "Ne savais-je pas la nouvelle ?"], "answer": "A"},
       {"question": "Didn't they know the rules? (female) (Imparfait)", "options": ["Ne savaient-elles pas les règles ?", "Ne savaient-ils pas les règles ?", "Ne saviez-vous pas les règles ?", "Ne savions-nous pas les règles ?"], "answer": "A"}
     ]
+  },
+  
+  "s'intéresser": {
+    "passé_composé": [
+      {"question": "He was / has been interested in history. (Passé Composé)", "options": ["Il s'est intéressé à l'histoire.", "Il s'est intéressés à l'histoire.", "Il a intéressé à l'histoire.", "Il s'était intéressé à l'histoire."], "answer": "A"},
+      {"question": "She was / has been interested in your project. (Passé Composé)", "options": ["Elle a intéressée à ton projet.", "Elle s'est intéressée à ton projet.", "Elle s'est intéressé à ton projet.", "Elle s'était intéressée à ton projet."], "answer": "B"},
+      {"question": "You (formal) were / have been interested in our work. (Passé Composé)", "options": ["Vous vous êtes intéressés à notre travail.", "Vous vous êtes intéressé à notre travail.", "Vous avez intéressé à notre travail.", "Vous vous étiez intéressés à notre travail."], "answer": "A"},
+      {"question": "I was not / have not been interested in that subject. (Passé Composé)", "options": ["Je ne me suis pas intéressée à ce sujet.", "Je ne m'ai pas intéressé à ce sujet.", "Je ne m'étais pas intéressé à ce sujet.", "Je ne me suis pas intéressé à ce sujet."], "answer": "D"},
+      {"question": "They (female) were / have been interested in the discussion. (Passé Composé)", "options": ["Elles se sont intéressées à la discussion.", "Elles ont intéressées à la discussion.", "Elles se sont intéressé à la discussion.", "Elles s'étaient intéressées à la discussion."], "answer": "A"},
+      {"question": "Were you (informal) / Have you been interested in the film? (Passé Composé)", "options": ["T'es-tu intéressée au film ?", "T'as-tu intéressé au film ?", "T'étais-tu intéressé au film ?", "T'es-tu intéressé au film ?"], "answer": "D"},
+      {"question": "We (female) were / have been interested in the same thing. (Passé Composé)", "options": ["Nous nous sommes intéressées à la même chose.", "Nous nous avons intéressées à la même chose.", "Nous nous étions intéressées à la même chose.", "Nous nous sommes intéressé à la même chose."], "answer": "A"},
+      {"question": "They (male/mixed) were not / have not been interested in the offer. (Passé Composé)", "options": ["Ils n'ont pas intéressés à l'offre.", "Ils ne se sont pas intéressés à l'offre.", "Ils ne s'étaient pas intéressés à l'offre.", "Ils ne se sont pas intéressé à l'offre."], "answer": "B"},
+      {"question": "Why was she / has she been interested in this book? (Passé Composé)", "options": ["Pourquoi s'est-elle intéressé à ce livre ?", "Pourquoi a-t-elle intéressée à ce livre ?", "Pourquoi s'est-elle intéressée à ce livre ?", "Pourquoi s'était-elle intéressée à ce livre ?"], "answer": "C"},
+      {"question": "We (male/mixed) were / have been interested in science. (Passé Composé)", "options": ["Nous nous avons intéressés à la science.", "Nous nous étions intéressés à la science.", "Nous nous sommes intéressés à la science.", "Nous nous sommes intéressé à la science."], "answer": "C"},
+      {"question": "He was not / has not been interested in the debate. (Passé Composé)", "options": ["Il n'a pas intéressé au débat.", "Il ne s'était pas intéressé au débat.", "Il ne s'est pas intéressé au débat.", "Il ne s'est pas intéressés au débat."], "answer": "C"},
+      {"question": "You (informal, female) were / have been interested in my story. (Passé Composé)", "options": ["Tu t'es intéressée à mon histoire.", "Tu t'as intéressée à mon histoire.", "Tu t'étais intéressée à mon histoire.", "Tu t'es intéressé à mon histoire."], "answer": "A"},
+      {"question": "I (male) was / have been interested in photography. (Passé Composé)", "options": ["Je me suis intéressé à la photographie.", "Je m'ai intéressé à la photographie.", "Je m'étais intéressé à la photographie.", "Je me suis intéressée à la photographie."], "answer": "A"},
+      {"question": "They (female) were not / have not been interested in the game. (Passé Composé)", "options": ["Elles n'ont pas intéressées au jeu.", "Elles ne se sont pas intéressées au jeu.", "Elles ne s'étaient pas intéressées au jeu.", "Elles ne se sont pas intéressé au jeu."], "answer": "B"},
+      {"question": "Why were you (formal) / have you been interested in this career? (Passé Composé)", "options": ["Pourquoi vous êtes-vous intéressés à cette carrière ?", "Pourquoi vous avez-vous intéressé à cette carrière ?", "Pourquoi vous étiez-vous intéressés à cette carrière ?", "Pourquoi vous êtes-vous intéressé à cette carrière ?"], "answer": "D"},
+      {"question": "You (informal, male) were not / have not been interested. (Passé Composé)", "options": ["Tu ne t'as pas intéressé.", "Tu ne t'étais pas intéressé.", "Tu ne t'es pas intéressé.", "Tu ne t'es pas intéressée."], "answer": "C"},
+      {"question": "We (mixed group) were not / have not been interested in their excuses. (Passé Composé)", "options": ["Nous ne nous avons pas intéressés à leurs excuses.", "Nous ne nous sommes pas intéressé à leurs excuses.", "Nous ne nous étions pas intéressés à leurs excuses.", "Nous ne nous sommes pas intéressés à leurs excuses."], "answer": "D"},
+      {"question": "They (male/mixed) were / have been interested by the new technology. (Passé Composé)", "options": ["Ils ont intéressés par la nouvelle technologie.", "Ils s'étaient intéressés par la nouvelle technologie.", "Ils se sont intéressé par la nouvelle technologie.", "Ils se sont intéressés par la nouvelle technologie."], "answer": "D"},
+      {"question": "I (female) was / have been interested in literature. (Passé Composé)", "options": ["Je m'ai intéressée à la littérature.", "Je me suis intéressée à la littérature.", "Je m'étais intéressée à la littérature.", "Je me suis intéressé à la littérature."], "answer": "B"},
+      {"question": "Were they (male/mixed) / Have they been interested in your proposal? (Passé Composé)", "options": ["Se sont-ils intéressé à votre proposition ?", "Ont-ils intéressés à votre proposition ?", "S'étaient-ils intéressés à votre proposition ?", "Se sont-ils intéressés à votre proposition ?"], "answer": "D"}
+    ]
   }
 
-  // INTERMEDIATE LEVEL COMPLETE! All 11 verbs × 80 questions = 880 questions total
+  // INTERMEDIATE LEVEL COMPLETE! All 12 verbs × 80 questions = 960 questions total (including s'intéresser)
 };
 
 // Function to get random Intermediate questions for a specific verb and tense
