@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She is interested / is being interested in art.",
+    "options": {
+      "A": "Elle t'intéresse à l'art.",
+      "B": "Elle s'intéresse à l'art.",
+      "C": "Elle m'intéresse à l'art.",
+      "D": "Elle nous intéressons à l'art."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "You (formal) are interested / are being interested in this subject.",
+    "options": {
+      "A": "Vous t'intéresses à ce sujet.",
+      "B": "Vous vous intéressez à ce sujet.",
+      "C": "Vous s'intéressent à ce sujet.",
+      "D": "Vous nous intéressons à ce sujet."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "They (male/mixed) are not interested / are not being interested in politics.",
+    "options": {
+      "A": "Ils ne vous intéressez pas à la politique.",
+      "B": "Ils ne nous intéressons pas à la politique.",
+      "C": "Ils ne s'intéressent pas à la politique.",
+      "D": "Ils ne m'intéresse pas à la politique."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "I am interested / am being interested in history.",
+    "options": {
+      "A": "Je m'intéresse à l'histoire.",
+      "B": "Je t'intéresses à l'histoire.",
+      "C": "Je s'intéresse à l'histoire.",
+      "D": "Je nous intéressons à l'histoire."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "He is not interested / is not being interested in sports.",
+    "options": {
+      "A": "Il ne nous intéressons pas au sport.",
+      "B": "Il ne s'intéresse pas au sport.",
+      "C": "Il ne vous intéressez pas au sport.",
+      "D": "Il ne t'intéresses pas au sport."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "We are interested / are being interested in cinema.",
+    "options": {
+      "A": "Nous vous intéressons au cinéma.",
+      "B": "Nous nous intéressons au cinéma.",
+      "C": "Nous s'intéressent au cinéma.",
+      "D": "Nous m'intéresse au cinéma."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "Are you (informal) interested / being interested in that?",
+    "options": {
+      "A": "T'intéresses-tu à ça ?",
+      "B": "S'intéresse-t-il à ça ?",
+      "C": "M'intéresse-je à ça ?",
+      "D": "Vous intéressez-vous à ça ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "Why is he interested / being interested in this project?",
+    "options": {
+      "A": "Pourquoi s'intéresse-t-il à ce projet ?",
+      "B": "Pourquoi t'intéresses-tu à ce projet ?",
+      "C": "Pourquoi nous intéressons-nous à ce projet ?",
+      "D": "Pourquoi m'intéresse-je à ce projet ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "They (female) are interested / are being interested in fashion.",
+    "options": {
+      "A": "Elles s'intéressent à la mode.",
+      "B": "Elles nous intéressons à la mode.",
+      "C": "Elles vous intéressez à la mode.",
+      "D": "Elles m'intéresse à la mode."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "You (informal) are interested / are being interested in music.",
+    "options": {
+      "A": "Tu nous intéressons à la musique.",
+      "B": "Tu vous intéressez à la musique.",
+      "C": "Tu t'intéresses à la musique.",
+      "D": "Tu s'intéresse à la musique."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "I am not interested / am not being interested in video games.",
+    "options": {
+      "A": "Je ne t'intéresses pas aux jeux vidéo.",
+      "B": "Je ne nous intéressons pas aux jeux vidéo.",
+      "C": "Je ne m'intéresse pas aux jeux vidéo.",
+      "D": "Je ne s'intéresse pas aux jeux vidéo."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "You (informal) are not interested / are not being interested in science.",
+    "options": {
+      "A": "Tu ne s'intéresses pas à la science.",
+      "B": "Tu ne nous intéressons pas à la science.",
+      "C": "Tu ne t'intéresses pas à la science.",
+      "D": "Tu ne vous intéressez pas à la science."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "We are not interested / are not being interested in this offer.",
+    "options": {
+      "A": "Nous ne s'intéressons pas à cette offre.",
+      "B": "Nous ne nous intéressons pas à cette offre.",
+      "C": "Nous ne vous intéressez pas à cette offre.",
+      "D": "Nous ne m'intéresse pas à cette offre."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "Are we interested / being interested in the same things?",
+    "options": {
+      "A": "Nous intéressons-nous aux mêmes choses ?",
+      "B": "Vous intéressez-vous aux mêmes choses ?",
+      "C": "S'intéressent-ils aux mêmes choses ?",
+      "D": "M'intéresse-je aux mêmes choses ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "They (male/mixed) are interested / are being interested in literature.",
+    "options": {
+      "A": "Ils nous intéressons à la littérature.",
+      "B": "Ils vous intéressez à la littérature.",
+      "C": "Ils m'intéresse à la littérature.",
+      "D": "Ils s'intéressent à la littérature."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "You (formal) are not interested / are not being interested in our problems.",
+    "options": {
+      "A": "Vous ne t'intéressez pas à nos problèmes.",
+      "B": "Vous ne nous intéressons pas à nos problèmes.",
+      "C": "Vous ne s'intéressent pas à nos problèmes.",
+      "D": "Vous ne vous intéressez pas à nos problèmes."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "One is interested / is being interested in what one sees.",
+    "options": {
+      "A": "On nous intéressons à ce qu'on voit.",
+      "B": "On vous intéressez à ce qu'on voit.",
+      "C": "On t'intéresse à ce qu'on voit.",
+      "D": "On s'intéresse à ce qu'on voit."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "Are they (female) interested / being interested in the movie?",
+    "options": {
+      "A": "S'intéressent-elles au film ?",
+      "B": "S'intéresse-t-elle au film ?",
+      "C": "Nous intéressons-nous au film ?",
+      "D": "Vous intéressez-vous au film ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "Why are you (formal) not interested / not being interested?",
+    "options": {
+      "A": "Pourquoi ne nous intéressons-nous pas ?",
+      "B": "Pourquoi ne s'intéressent-ils pas ?",
+      "C": "Pourquoi ne vous intéressez-vous pas ?",
+      "D": "Pourquoi ne t'intéresses-tu pas ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "I am interested / am being interested in your project.",
+    "options": {
+      "A": "Je t'intéresses à ton projet.",
+      "B": "Je nous intéressons à ton projet.",
+      "C": "Je s'intéresse à ton projet.",
+      "D": "Je m'intéresse à ton projet."
+    },
+    "correct_answer": "D"
+  }
+]

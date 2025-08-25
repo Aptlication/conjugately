@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "He was / has been interested in history.",
+    "options": {
+      "A": "Il s'est intéressé à l'histoire.",
+      "B": "Il s'est intéressés à l'histoire.",
+      "C": "Il a intéressé à l'histoire.",
+      "D": "Il s'était intéressé à l'histoire."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "She was / has been interested in your project.",
+    "options": {
+      "A": "Elle a intéressée à ton projet.",
+      "B": "Elle s'est intéressée à ton projet.",
+      "C": "Elle s'est intéressé à ton projet.",
+      "D": "Elle s'était intéressée à ton projet."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "You (formal) were / have been interested in our work.",
+    "options": {
+      "A": "Vous vous êtes intéressés à notre travail.",
+      "B": "Vous vous êtes intéressé à notre travail.",
+      "C": "Vous avez intéressé à notre travail.",
+      "D": "Vous vous étiez intéressés à notre travail."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "I was not / have not been interested in that subject.",
+    "options": {
+      "A": "Je ne me suis pas intéressée à ce sujet.",
+      "B": "Je ne m'ai pas intéressé à ce sujet.",
+      "C": "Je ne m'étais pas intéressé à ce sujet.",
+      "D": "Je ne me suis pas intéressé à ce sujet."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "They (female) were / have been interested in the discussion.",
+    "options": {
+      "A": "Elles se sont intéressées à la discussion.",
+      "B": "Elles ont intéressées à la discussion.",
+      "C": "Elles se sont intéressé à la discussion.",
+      "D": "Elles s'étaient intéressées à la discussion."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "Were you (informal) / Have you been interested in the film?",
+    "options": {
+      "A": "T'es-tu intéressée au film ?",
+      "B": "T'as-tu intéressé au film ?",
+      "C": "T'étais-tu intéressé au film ?",
+      "D": "T'es-tu intéressé au film ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "We (female) were / have been interested in the same thing.",
+    "options": {
+      "A": "Nous nous sommes intéressées à la même chose.",
+      "B": "Nous nous avons intéressées à la même chose.",
+      "C": "Nous nous étions intéressées à la même chose.",
+      "D": "Nous nous sommes intéressé à la même chose."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "They (male/mixed) were not / have not been interested in the offer.",
+    "options": {
+      "A": "Ils n'ont pas intéressés à l'offre.",
+      "B": "Ils ne se sont pas intéressés à l'offre.",
+      "C": "Ils ne s'étaient pas intéressés à l'offre.",
+      "D": "Ils ne se sont pas intéressé à l'offre."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Why was she / has she been interested in this book?",
+    "options": {
+      "A": "Pourquoi s'est-elle intéressé à ce livre ?",
+      "B": "Pourquoi a-t-elle intéressée à ce livre ?",
+      "C": "Pourquoi s'est-elle intéressée à ce livre ?",
+      "D": "Pourquoi s'était-elle intéressée à ce livre ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "We (male/mixed) were / have been interested in science.",
+    "options": {
+      "A": "Nous nous avons intéressés à la science.",
+      "B": "Nous nous étions intéressés à la science.",
+      "C": "Nous nous sommes intéressés à la science.",
+      "D": "Nous nous sommes intéressé à la science."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "He was not / has not been interested in the debate.",
+    "options": {
+      "A": "Il n'a pas intéressé au débat.",
+      "B": "Il ne s'était pas intéressé au débat.",
+      "C": "Il ne s'est pas intéressé au débat.",
+      "D": "Il ne s'est pas intéressés au débat."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "You (informal, female) were / have been interested in my story.",
+    "options": {
+      "A": "Tu t'es intéressée à mon histoire.",
+      "B": "Tu t'as intéressée à mon histoire.",
+      "C": "Tu t'étais intéressée à mon histoire.",
+      "D": "Tu t'es intéressé à mon histoire."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "I (male) was / have been interested in photography.",
+    "options": {
+      "A": "Je me suis intéressé à la photographie.",
+      "B": "Je m'ai intéressé à la photographie.",
+      "C": "Je m'étais intéressé à la photographie.",
+      "D": "Je me suis intéressée à la photographie."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "They (female) were not / have not been interested in the game.",
+    "options": {
+      "A": "Elles n'ont pas intéressées au jeu.",
+      "B": "Elles ne se sont pas intéressées au jeu.",
+      "C": "Elles ne s'étaient pas intéressées au jeu.",
+      "D": "Elles ne se sont pas intéressé au jeu."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "Why were you (formal) / have you been interested in this career?",
+    "options": {
+      "A": "Pourquoi vous êtes-vous intéressés à cette carrière ?",
+      "B": "Pourquoi vous avez-vous intéressé à cette carrière ?",
+      "C": "Pourquoi vous étiez-vous intéressés à cette carrière ?",
+      "D": "Pourquoi vous êtes-vous intéressé à cette carrière ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "You (informal, male) were not / have not been interested.",
+    "options": {
+      "A": "Tu ne t'as pas intéressé.",
+      "B": "Tu ne t'étais pas intéressé.",
+      "C": "Tu ne t'es pas intéressé.",
+      "D": "Tu ne t'es pas intéressée."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "We (mixed group) were not / have not been interested in their excuses.",
+    "options": {
+      "A": "Nous ne nous avons pas intéressés à leurs excuses.",
+      "B": "Nous ne nous sommes pas intéressé à leurs excuses.",
+      "C": "Nous ne nous étions pas intéressés à leurs excuses.",
+      "D": "Nous ne nous sommes pas intéressés à leurs excuses."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "They (male/mixed) were / have been interested by the new technology.",
+    "options": {
+      "A": "Ils ont intéressés par la nouvelle technologie.",
+      "B": "Ils s'étaient intéressés par la nouvelle technologie.",
+      "C": "Ils se sont intéressé par la nouvelle technologie.",
+      "D": "Ils se sont intéressés par la nouvelle technologie."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "I (female) was / have been interested in literature.",
+    "options": {
+      "A": "Je m'ai intéressée à la littérature.",
+      "B": "Je me suis intéressée à la littérature.",
+      "C": "Je m'étais intéressée à la littérature.",
+      "D": "Je me suis intéressé à la littérature."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "Were they (male/mixed) / Have they been interested in your proposal?",
+    "options": {
+      "A": "Se sont-ils intéressé à votre proposition ?",
+      "B": "Ont-ils intéressés à votre proposition ?",
+      "C": "S'étaient-ils intéressés à votre proposition ?",
+      "D": "Se sont-ils intéressés à votre proposition ?"
+    },
+    "correct_answer": "D"
+  }
+]

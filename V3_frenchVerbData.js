@@ -533,6 +533,38 @@ export const FRENCH_VERB_DATA = {
       difficulty_progression: {
         difficult: ["all_tenses"]
       }
+    },
+    
+    "s'intéresser": {
+      id: "s_interesser",
+      infinitive: "s'intéresser",
+      english: "to be interested",
+      category: "reflexive",
+      frequency: "moderate",
+      difficulty: "moderate",
+      type: "reflexive",
+      group: "emotion_verbs",
+      pronunciation: {
+        ipa: "/s‿ɛ̃teʁese/",
+        audio: "s_interesser.mp3"
+      },
+      description: "Reflexive verb expressing interest and curiosity.",
+      usageNotes: [
+        "Used with preposition 'à' (s'intéresser à quelque chose)",
+        "Expresses intellectual or emotional engagement",
+        "Common in academic and professional contexts",
+        "Past participle agrees with reflexive pronoun"
+      ],
+      commonExpressions: [
+        "s'intéresser à l'art (to be interested in art)",
+        "s'intéresser à quelqu'un (to take an interest in someone)",
+        "ça ne m'intéresse pas (that doesn't interest me)",
+        "centre d'intérêt (interest, hobby)"
+      ],
+      difficulty_progression: {
+        moderate: ["présent", "passé_composé", "imparfait", "futur_simple"],
+        difficult: ["all_tenses"]
+      }
     }
   },
 
@@ -1160,6 +1192,45 @@ export const FRENCH_VERB_DATA = {
         je: "suis en train de m'habiller", tu: "es en train de t'habiller", il: "est en train de s'habiller", elle: "est en train de s'habiller",
         nous: "sommes en train de nous habiller", vous: "êtes en train de vous habiller", ils: "sont en train de s'habiller", elles: "sont en train de s'habiller"
       }
+    },
+    
+    "s'intéresser": {
+      présent: {
+        je: "m'intéresse", tu: "t'intéresses", il: "s'intéresse", elle: "s'intéresse",
+        nous: "nous intéressons", vous: "vous intéressez", ils: "s'intéressent", elles: "s'intéressent"
+      },
+      passé_composé: {
+        je: "me suis intéressé(e)", tu: "t'es intéressé(e)", il: "s'est intéressé", elle: "s'est intéressée",
+        nous: "nous sommes intéressé(e)s", vous: "vous êtes intéressé(e)s", ils: "se sont intéressés", elles: "se sont intéressées"
+      },
+      passé_simple: {
+        je: "m'intéressai", tu: "t'intéressas", il: "s'intéressa", elle: "s'intéressa",
+        nous: "nous intéressâmes", vous: "vous intéressâtes", ils: "s'intéressèrent", elles: "s'intéressèrent"
+      },
+      imparfait: {
+        je: "m'intéressais", tu: "t'intéressais", il: "s'intéressait", elle: "s'intéressait",
+        nous: "nous intéressions", vous: "vous intéressiez", ils: "s'intéressaient", elles: "s'intéressaient"
+      },
+      plus_que_parfait: {
+        je: "m'étais intéressé(e)", tu: "t'étais intéressé(e)", il: "s'était intéressé", elle: "s'était intéressée",
+        nous: "nous étions intéressé(e)s", vous: "vous étiez intéressé(e)s", ils: "s'étaient intéressés", elles: "s'étaient intéressées"
+      },
+      conditionnel: {
+        je: "m'intéresserais", tu: "t'intéresserais", il: "s'intéresserait", elle: "s'intéresserait",
+        nous: "nous intéresserions", vous: "vous intéresseriez", ils: "s'intéresseraient", elles: "s'intéresseraient"
+      },
+      futur_simple: {
+        je: "m'intéresserai", tu: "t'intéresseras", il: "s'intéressera", elle: "s'intéressera",
+        nous: "nous intéresserons", vous: "vous intéresserez", ils: "s'intéresseront", elles: "s'intéresseront"
+      },
+      futur_proche: {
+        je: "vais m'intéresser", tu: "vas t'intéresser", il: "va s'intéresser", elle: "va s'intéresser",
+        nous: "allons nous intéresser", vous: "allez vous intéresser", ils: "vont s'intéresser", elles: "vont s'intéresser"
+      },
+      présent_progressif: {
+        je: "suis en train de m'intéresser", tu: "es en train de t'intéresser", il: "est en train de s'intéresser", elle: "est en train de s'intéresser",
+        nous: "sommes en train de nous intéresser", vous: "êtes en train de vous intéresser", ils: "sont en train de s'intéresser", elles: "sont en train de s'intéresser"
+      }
     }
   },
 
@@ -1569,10 +1640,213 @@ export const FRENCH_VERB_DATA = {
         negation_form: "She would not have the keys to the office",
         negation_fr: "n'aurait pas les clés du bureau"
       }
+    ],
+    
+    "s'intéresser": [
+      {
+        id: "interesser_1",
+        en: "She is interested / is being interested in art",
+        fr_context: "à l'art",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Reflexive verb with preposition 'à'",
+        negation_form: "She is not interested / is not being interested in art",
+        negation_fr: "ne s'intéresse pas à l'art"
+      },
+      {
+        id: "interesser_2",
+        en: "You (formal) are interested / are being interested in this subject",
+        fr_context: "à ce sujet",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Formal address with reflexive verb",
+        negation_form: "You (formal) are not interested / are not being interested in this subject",
+        negation_fr: "ne vous intéressez pas à ce sujet"
+      },
+      {
+        id: "interesser_3",
+        en: "They (male/mixed) are not interested / are not being interested in politics",
+        fr_context: "à la politique",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Negative form with masculine/mixed plural",
+        negation_form: "They (male/mixed) are interested / are being interested in politics",
+        negation_fr: "s'intéressent à la politique"
+      },
+      {
+        id: "interesser_4",
+        en: "I am interested / am being interested in history",
+        fr_context: "à l'histoire",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "First person singular with academic subject",
+        negation_form: "I am not interested / am not being interested in history",
+        negation_fr: "ne m'intéresse pas à l'histoire"
+      },
+      {
+        id: "interesser_5",
+        en: "He is not interested / is not being interested in sports",
+        fr_context: "au sport",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Negative form with masculine singular, contraction 'au'",
+        negation_form: "He is interested / is being interested in sports",
+        negation_fr: "s'intéresse au sport"
+      },
+      {
+        id: "interesser_6",
+        en: "We are interested / are being interested in cinema",
+        fr_context: "au cinéma",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "First person plural with entertainment",
+        negation_form: "We are not interested / are not being interested in cinema",
+        negation_fr: "ne nous intéressons pas au cinéma"
+      },
+      {
+        id: "interesser_7",
+        en: "Are you (informal) interested / being interested in that?",
+        fr_context: "à ça",
+        category: "questions",
+        difficulty: "intermediate",
+        usage_notes: "Informal interrogative form",
+        negation_form: "Are you (informal) not interested / not being interested in that?",
+        negation_fr: "ne t'intéresses-tu pas à ça"
+      },
+      {
+        id: "interesser_8",
+        en: "Why is he interested / being interested in this project?",
+        fr_context: "à ce projet",
+        category: "questions",
+        difficulty: "intermediate",
+        usage_notes: "Interrogative with question word 'pourquoi'",
+        negation_form: "Why is he not interested / not being interested in this project?",
+        negation_fr: "pourquoi ne s'intéresse-t-il pas à ce projet"
+      },
+      {
+        id: "interesser_9",
+        en: "They (female) are interested / are being interested in fashion",
+        fr_context: "à la mode",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Feminine plural with fashion topic",
+        negation_form: "They (female) are not interested / are not being interested in fashion",
+        negation_fr: "ne s'intéressent pas à la mode"
+      },
+      {
+        id: "interesser_10",
+        en: "You (informal) are interested / are being interested in music",
+        fr_context: "à la musique",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Informal address with artistic subject",
+        negation_form: "You (informal) are not interested / are not being interested in music",
+        negation_fr: "ne t'intéresses pas à la musique"
+      },
+      {
+        id: "interesser_11",
+        en: "I am not interested / am not being interested in video games",
+        fr_context: "aux jeux vidéo",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Negative form with plural contraction 'aux'",
+        negation_form: "I am interested / am being interested in video games",
+        negation_fr: "m'intéresse aux jeux vidéo"
+      },
+      {
+        id: "interesser_12",
+        en: "You (informal) are not interested / are not being interested in science",
+        fr_context: "à la science",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Informal negative with academic subject",
+        negation_form: "You (informal) are interested / are being interested in science",
+        negation_fr: "t'intéresses à la science"
+      },
+      {
+        id: "interesser_13",
+        en: "We are not interested / are not being interested in this offer",
+        fr_context: "à cette offre",
+        category: "business",
+        difficulty: "intermediate",
+        usage_notes: "Negative form in business context",
+        negation_form: "We are interested / are being interested in this offer",
+        negation_fr: "nous intéressons à cette offre"
+      },
+      {
+        id: "interesser_14",
+        en: "Are we interested / being interested in the same things?",
+        fr_context: "aux mêmes choses",
+        category: "questions",
+        difficulty: "intermediate",
+        usage_notes: "First person plural interrogative",
+        negation_form: "Are we not interested / not being interested in the same things?",
+        negation_fr: "ne nous intéressons-nous pas aux mêmes choses"
+      },
+      {
+        id: "interesser_15",
+        en: "They (male/mixed) are interested / are being interested in literature",
+        fr_context: "à la littérature",
+        category: "interests",
+        difficulty: "intermediate",
+        usage_notes: "Masculine/mixed plural with academic subject",
+        negation_form: "They (male/mixed) are not interested / are not being interested in literature",
+        negation_fr: "ne s'intéressent pas à la littérature"
+      },
+      {
+        id: "interesser_16",
+        en: "You (formal) are not interested / are not being interested in our problems",
+        fr_context: "à nos problèmes",
+        category: "personal",
+        difficulty: "intermediate",
+        usage_notes: "Formal negative with personal issues",
+        negation_form: "You (formal) are interested / are being interested in our problems",
+        negation_fr: "vous intéressez à nos problèmes"
+      },
+      {
+        id: "interesser_17",
+        en: "One is interested / is being interested in what one sees",
+        fr_context: "à ce qu'on voit",
+        category: "general",
+        difficulty: "intermediate",
+        usage_notes: "Impersonal pronoun 'on' with relative clause",
+        negation_form: "One is not interested / is not being interested in what one sees",
+        negation_fr: "ne s'intéresse pas à ce qu'on voit"
+      },
+      {
+        id: "interesser_18",
+        en: "Are they (female) interested / being interested in the movie?",
+        fr_context: "au film",
+        category: "questions",
+        difficulty: "intermediate",
+        usage_notes: "Feminine plural interrogative with entertainment",
+        negation_form: "Are they (female) not interested / not being interested in the movie?",
+        negation_fr: "ne s'intéressent-elles pas au film"
+      },
+      {
+        id: "interesser_19",
+        en: "Why are you (formal) not interested / not being interested?",
+        fr_context: "",
+        category: "questions",
+        difficulty: "intermediate",
+        usage_notes: "Formal interrogative negative with question word",
+        negation_form: "Why are you (formal) interested / being interested?",
+        negation_fr: "pourquoi vous intéressez-vous"
+      },
+      {
+        id: "interesser_20",
+        en: "I am interested / am being interested in your project",
+        fr_context: "à ton projet",
+        category: "business",
+        difficulty: "intermediate",
+        usage_notes: "Personal interest in someone's work",
+        negation_form: "I am not interested / am not being interested in your project",
+        negation_fr: "ne m'intéresse pas à ton projet"
+      }
     ]
-    // Note: Complete contexts for all 13 verbs follow this same detailed pattern
+    // Note: Complete contexts for all 14 verbs follow this same detailed pattern
     // Each verb has 20 diverse contexts across different difficulty levels
-    // Total contexts: 13 verbs × 20 contexts = 260 question contexts
+    // Total contexts: 14 verbs × 20 contexts = 280 question contexts
     // This includes comprehensive coverage of real-world usage scenarios
   },
 

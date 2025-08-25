@@ -1,0 +1,222 @@
+[
+  {
+    "question_number": 1,
+    "english_sentence": "She will not be / is not going to be interested in fashion.",
+    "options": {
+      "A": "Elle ne s'intéresseras pas à la mode.",
+      "B": "Elle ne s'intéresserez pas à la mode.",
+      "C": "Elle ne s'intéressera pas à la mode.",
+      "D": "Elle ne s'intéresseront pas à la mode."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 2,
+    "english_sentence": "When will you (informal) be / are you going to be interested?",
+    "options": {
+      "A": "Quand t'intéressera-t-il ?",
+      "B": "Quand t'intéresserons-nous ?",
+      "C": "Quand t'intéresserez-vous ?",
+      "D": "Quand t'intéresseras-tu ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 3,
+    "english_sentence": "Will we be / Are we going to be interested in this trip?",
+    "options": {
+      "A": "Nous intéresserons-nous à ce voyage ?",
+      "B": "Nous intéresserez-vous à ce voyage ?",
+      "C": "Nous intéresseront-ils à ce voyage ?",
+      "D": "Nous intéressera-t-il à ce voyage ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 4,
+    "english_sentence": "They (male/mixed) will not be / are not going to be interested in your excuses.",
+    "options": {
+      "A": "Ils ne s'intéresseront pas à tes excuses.",
+      "B": "Ils ne s'intéressera pas à tes excuses.",
+      "C": "Ils ne s'intéresserons pas à tes excuses.",
+      "D": "Ils ne s'intéresserez pas à tes excuses."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 5,
+    "english_sentence": "He will not be / is not going to be interested in this discussion.",
+    "options": {
+      "A": "Il ne s'intéresseras pas à cette discussion.",
+      "B": "Il ne s'intéressera pas à cette discussion.",
+      "C": "Il ne s'intéresserons pas à cette discussion.",
+      "D": "Il ne s'intéresseront pas à cette discussion."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 6,
+    "english_sentence": "One will be / is going to be interested in the outcome.",
+    "options": {
+      "A": "On s'intéresseras au résultat.",
+      "B": "On s'intéresserez au résultat.",
+      "C": "On s'intéresseront au résultat.",
+      "D": "On s'intéressera au résultat."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 7,
+    "english_sentence": "Will you (formal) be / Are you going to be interested in this offer?",
+    "options": {
+      "A": "Vous intéresserez-vous à cette offre ?",
+      "B": "Vous intéressera-t-il à cette offre ?",
+      "C": "Vous intéresserons-nous à cette offre ?",
+      "D": "Vous intéresseras-tu à cette offre ?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 8,
+    "english_sentence": "I will not be / am not going to be interested in this film.",
+    "options": {
+      "A": "Je ne m'intéresseras pas à ce film.",
+      "B": "Je ne m'intéresserai pas à ce film.",
+      "C": "Je ne m'intéressera pas à ce film.",
+      "D": "Je ne m'intéresserons pas à ce film."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 9,
+    "english_sentence": "Why will I be / am I going to be interested in that?",
+    "options": {
+      "A": "Pourquoi m'intéresseras-je à ça ?",
+      "B": "Pourquoi m'intéressera-je à ça ?",
+      "C": "Pourquoi m'intéresserons-je à ça ?",
+      "D": "Pourquoi m'intéresserai-je à ça ?"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 10,
+    "english_sentence": "I will be / am going to be interested in your results.",
+    "options": {
+      "A": "Je m'intéresserai à tes résultats.",
+      "B": "Je m'intéresseras à tes résultats.",
+      "C": "Je m'intéressera à tes résultats.",
+      "D": "Je m'intéresserons à tes résultats."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 11,
+    "english_sentence": "We will be / are going to be interested in this conference.",
+    "options": {
+      "A": "Nous nous intéresserons à cette conférence.",
+      "B": "Nous nous intéresserez à cette conférence.",
+      "C": "Nous nous intéresseront à cette conférence.",
+      "D": "Nous nous intéressera à cette conférence."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 12,
+    "english_sentence": "He will be / is going to be interested in science.",
+    "options": {
+      "A": "Il s'intéresseras à la science.",
+      "B": "Il s'intéresserez à la science.",
+      "C": "Il s'intéressera à la science.",
+      "D": "Il s'intéresseront à la science."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 13,
+    "english_sentence": "You (informal) will not be / are not going to be interested in my story.",
+    "options": {
+      "A": "Tu ne t'intéressera pas à mon histoire.",
+      "B": "Tu ne t'intéresserez pas à mon histoire.",
+      "C": "Tu ne t'intéresseras pas à mon histoire.",
+      "D": "Tu ne t'intéresserai pas à mon histoire."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 14,
+    "english_sentence": "She will be / is going to be interested in the project.",
+    "options": {
+      "A": "Elle s'intéressera au projet.",
+      "B": "Elle s'intéresseras au projet.",
+      "C": "Elle s'intéresserez au projet.",
+      "D": "Elle s'intéresseront au projet."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 15,
+    "english_sentence": "They (female) will be / are going to be interested in the concert.",
+    "options": {
+      "A": "Elles s'intéressera au concert.",
+      "B": "Elles s'intéresseront au concert.",
+      "C": "Elles s'intéresserons au concert.",
+      "D": "Elles s'intéresserez au concert."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 16,
+    "english_sentence": "Will they (male/mixed) be / Are they going to be interested in the match?",
+    "options": {
+      "A": "S'intéressera-t-il au match ?",
+      "B": "S'intéresserons-nous au match ?",
+      "C": "S'intéresseront-ils au match ?",
+      "D": "S'intéresserez-vous au match ?"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 17,
+    "english_sentence": "You (formal) will not be / are not going to be interested in this game.",
+    "options": {
+      "A": "Vous ne vous intéresserons pas à ce jeu.",
+      "B": "Vous ne vous intéresseront pas à ce jeu.",
+      "C": "Vous ne vous intéresserez pas à ce jeu.",
+      "D": "Vous ne vous intéresseras pas à ce jeu."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 18,
+    "english_sentence": "You (informal) will be / are going to be interested in this book.",
+    "options": {
+      "A": "Tu t'intéressera à ce livre.",
+      "B": "Tu t'intéresseras à ce livre.",
+      "C": "Tu t'intéresserez à ce livre.",
+      "D": "Tu t'intéresserai à ce livre."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 19,
+    "english_sentence": "They (female) will not be / are not going to be interested in this car.",
+    "options": {
+      "A": "Elles ne s'intéressera pas à cette voiture.",
+      "B": "Elles ne s'intéresserons pas à cette voiture.",
+      "C": "Elles ne s'intéresserez pas à cette voiture.",
+      "D": "Elles ne s'intéresseront pas à cette voiture."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 20,
+    "english_sentence": "We will not be / are not going to be interested in their problems.",
+    "options": {
+      "A": "Nous ne nous intéressera pas à leurs problèmes.",
+      "B": "Nous ne nous intéresserons pas à leurs problèmes.",
+      "C": "Nous ne nous intéresserez pas à leurs problèmes.",
+      "D": "Nous ne nous intéresseront pas à leurs problèmes."
+    },
+    "correct_answer": "B"
+  }
+]
