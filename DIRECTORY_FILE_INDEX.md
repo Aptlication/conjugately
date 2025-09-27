@@ -2,107 +2,114 @@
 
 This document provides a comprehensive index of all directories and files in the French Verb Master application project structure.
 
-## AA. 📁 Root Directory Structure
+## AA. 📁 Root Directory Structure [CLASSIFICATION SYSTEM]
 
-### A. Primary Directories
-1. **`client/`** - Frontend React application
+### A. Primary Directories [CATEGORY: APPLICATION_STRUCTURE]
+1. **`client/`** - Frontend React application [SUBCATEGORY: FRONTEND]
    (a) Contains all client-side code and components
    (b) Built with Vite and TypeScript
    (c) Uses shadcn/ui component library
 
-2. **`server/`** - Backend Express server  
+2. **`server/`** - Backend Express server [SUBCATEGORY: BACKEND]
    (a) API endpoints and server logic
    (b) Database integration and quiz generation
    (c) Authentication and session management
 
-3. **`apps/`** - Additional applications
+3. **`apps/`** - Additional applications [SUBCATEGORY: MOBILE_APPS]
    (a) Mobile web application variants
    (b) Progressive Web App (PWA) implementations
    (c) Platform-specific builds
 
-4. **`shared/`** - Shared code between client and server
+4. **`shared/`** - Shared code between client and server [SUBCATEGORY: SHARED_RESOURCES]
    (a) TypeScript type definitions
    (b) Database schemas
    (c) Common utilities
 
-5. **`scripts/`** - Build and utility scripts
+5. **`scripts/`** - Build and utility scripts [SUBCATEGORY: DEVELOPMENT_TOOLS]
    (a) Development automation tools
    (b) Data processing scripts
    (c) Testing and validation utilities
 
-6. **`attached_assets/`** - User-uploaded and temporary assets
+6. **`attached_assets/`** - User-uploaded and temporary assets [SUBCATEGORY: USER_CONTENT]
    (a) Image files and graphics
    (b) Text files with quiz data
    (c) Screenshot attachments
 
-7. **`canvas/`** - Design and marketing assets
+7. **`canvas/`** - Design and marketing assets [SUBCATEGORY: DESIGN_ASSETS]
    (a) Application screenshots
    (b) Feature graphics and promotional materials
    (c) SVG and PNG formats
 
-### B. Configuration Files
-1. **`package.json`** - Node.js project configuration
-2. **`package-lock.json`** - Dependency lock file
-3. **`tsconfig.json`** - TypeScript configuration
-4. **`vite.config.ts`** - Vite build tool configuration
-5. **`tailwind.config.ts`** - Tailwind CSS configuration
-6. **`postcss.config.js`** - PostCSS configuration
-7. **`drizzle.config.ts`** - Database ORM configuration
-8. **`components.json`** - shadcn/ui components configuration
-9. **`replit.md`** - Project documentation and preferences
+### B. Configuration Files [CATEGORY: ESSENTIAL_CONFIG]
+1. **Build & Dependencies** [SUBCATEGORY: BUILD_CONFIG]
+   (a) `package.json` - Node.js project configuration
+   (b) `package-lock.json` - Dependency lock file
+   (c) `tsconfig.json` - TypeScript configuration
+   (d) `vite.config.ts` - Vite build tool configuration
 
-## BB. 🖥️ Client-Side Structure (`client/`)
+2. **Styling & UI** [SUBCATEGORY: STYLING_CONFIG]
+   (a) `tailwind.config.ts` - Tailwind CSS configuration
+   (b) `postcss.config.js` - PostCSS configuration
+   (c) `components.json` - shadcn/ui components configuration
 
-### A. Source Directory (`src/`)
-1. **Core Application Files**
-   (a) `App.tsx` - Main application component
+3. **Database & Infrastructure** [SUBCATEGORY: INFRASTRUCTURE_CONFIG]
+   (a) `drizzle.config.ts` - Database ORM configuration
+
+4. **Project Documentation** [SUBCATEGORY: PROJECT_METADATA]
+   (a) `replit.md` - Project documentation and preferences
+
+## BB. 🖥️ Client-Side Structure (`client/`) [CATEGORY: FRONTEND_APPLICATION]
+
+### A. Source Directory (`src/`) [SUBCATEGORY: SOURCE_CODE]
+1. **Core Application Files** [CLASSIFICATION: CORE_COMPONENTS]
+   (a) `App.tsx` - Main application component [TYPE: REACT_COMPONENT]
        (i) Authentication wrapper
        (ii) Primary state management
        (iii) Route handling
-   (b) `fresh-app.tsx` - Fresh application implementation
+   (b) `fresh-app.tsx` - Fresh application implementation [TYPE: REACT_COMPONENT]
        (i) User interface components
        (ii) Quiz logic integration
        (iii) Modal management
-   (c) `main.tsx` - Application entry point
+   (c) `main.tsx` - Application entry point [TYPE: ENTRY_POINT]
        (i) React root mounting
        (ii) Router configuration
        (iii) Query client setup
-   (d) `main-frenchverb.tsx` - Alternative entry point
-   (e) `index.css` - Global styles and Tailwind imports
+   (d) `main-frenchverb.tsx` - Alternative entry point [TYPE: ENTRY_POINT]
+   (e) `index.css` - Global styles and Tailwind imports [TYPE: STYLESHEET]
 
-2. **Pages Directory (`pages/`)**
-   (a) `FrenchQuiz.tsx` - Main quiz interface
+2. **Pages Directory (`pages/`)** [CLASSIFICATION: PAGE_COMPONENTS]
+   (a) `FrenchQuiz.tsx` - Main quiz interface [TYPE: PAGE_COMPONENT]
        (i) Quiz configuration
        (ii) Question display
        (iii) Results processing
-   (b) `PrivacyPolicy.tsx` - Privacy policy page
-   (c) `SimpleQuiz.tsx` - Testing component
+   (b) `PrivacyPolicy.tsx` - Privacy policy page [TYPE: PAGE_COMPONENT]
+   (c) `SimpleQuiz.tsx` - Testing component [TYPE: TEST_COMPONENT]
 
-3. **Components Directory (`components/`)**
-   (a) `QuizInterface.tsx` - Quiz interaction component
-   (b) **UI Components (`ui/`)**
-       (i) `button.tsx` - Button component
-       (ii) `card.tsx` - Card layout component
-       (iii) `dialog.tsx` - Modal dialog component
-       (iv) `form.tsx` - Form handling component
-       (v) `input.tsx` - Input field component
-       (vi) `select.tsx` - Dropdown selection component
-       (vii) `toast.tsx` - Notification component
-       (viii) `progress.tsx` - Progress bar component
-       (ix) Additional UI primitives (35+ components)
+3. **Components Directory (`components/`)** [CLASSIFICATION: UI_COMPONENTS]
+   (a) `QuizInterface.tsx` - Quiz interaction component [TYPE: FEATURE_COMPONENT]
+   (b) **UI Components (`ui/`)** [SUBCATEGORY: UI_PRIMITIVES]
+       (i) `button.tsx` - Button component [TYPE: INPUT_COMPONENT]
+       (ii) `card.tsx` - Card layout component [TYPE: LAYOUT_COMPONENT]
+       (iii) `dialog.tsx` - Modal dialog component [TYPE: OVERLAY_COMPONENT]
+       (iv) `form.tsx` - Form handling component [TYPE: INPUT_COMPONENT]
+       (v) `input.tsx` - Input field component [TYPE: INPUT_COMPONENT]
+       (vi) `select.tsx` - Dropdown selection component [TYPE: INPUT_COMPONENT]
+       (vii) `toast.tsx` - Notification component [TYPE: FEEDBACK_COMPONENT]
+       (viii) `progress.tsx` - Progress bar component [TYPE: FEEDBACK_COMPONENT]
+       (ix) Additional UI primitives (35+ components) [TYPE: UI_LIBRARY]
 
-4. **Hooks Directory (`hooks/`)**
-   (a) `useAuth.ts` - Authentication state management
-   (b) `use-toast.ts` - Toast notification hook
-   (c) `use-mobile.tsx` - Mobile device detection
+4. **Hooks Directory (`hooks/`)** [CLASSIFICATION: REACT_HOOKS]
+   (a) `useAuth.ts` - Authentication state management [TYPE: STATE_HOOK]
+   (b) `use-toast.ts` - Toast notification hook [TYPE: UI_HOOK]
+   (c) `use-mobile.tsx` - Mobile device detection [TYPE: UTILITY_HOOK]
 
-5. **Library Directory (`lib/`)**
-   (a) `authUtils.ts` - Authentication utilities
-   (b) `queryClient.ts` - TanStack Query configuration
-   (c) `utils.ts` - General utility functions
+5. **Library Directory (`lib/`)** [CLASSIFICATION: UTILITIES]
+   (a) `authUtils.ts` - Authentication utilities [TYPE: AUTH_UTILITY]
+   (b) `queryClient.ts` - TanStack Query configuration [TYPE: API_UTILITY]
+   (c) `utils.ts` - General utility functions [TYPE: GENERAL_UTILITY]
 
-### B. Build Configuration
-1. **`index.html`** - HTML template for Vite build
+### B. Build Configuration [SUBCATEGORY: BUILD_ASSETS]
+1. **`index.html`** - HTML template for Vite build [TYPE: HTML_TEMPLATE]
 
 ## CC. 🖧 Server-Side Structure (`server/`)
 
