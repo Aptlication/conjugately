@@ -9,48 +9,137 @@ Based on the Landing Pages Index (LPI) and Directory File Index (DFI), here's a 
 4. Test files and validation reports dispersed
 5. Similar files with inconsistent naming
 
-## BB. Proposed New Structure
+## BB. Enhanced Classification System (Based on DFI Analysis)
 
-### A. Keep in Root (Essential Configuration)
-1. Configuration files that must remain in root:
-   - `package.json` / `package-lock.json`
-   - `tsconfig.json`
-   - `vite.config.ts` 
-   - `tailwind.config.ts`
-   - `postcss.config.js`
-   - `drizzle.config.ts`
-   - `components.json`
-   - `replit.md`
-   - Core data: `V3_frenchVerbData.js`
-   - Index files: `LANDING_PAGES_INDEX.md`, `DIRECTORY_FILE_INDEX.md`
+### A. Core Application Structure (Keep in Root)
+1. **Build & Configuration** [CATEGORY: ESSENTIAL]
+   (a) Node.js Project Files:
+       (i) `package.json` - Project dependencies and scripts
+       (ii) `package-lock.json` - Dependency version lock
+   (b) TypeScript Configuration:
+       (i) `tsconfig.json` - TypeScript compiler settings
+   (c) Build Tool Configuration:
+       (i) `vite.config.ts` - Vite bundler configuration
+       (ii) `postcss.config.js` - CSS processing configuration
+   (d) Styling Configuration:
+       (i) `tailwind.config.ts` - Tailwind CSS framework settings
+   (e) Database Configuration:
+       (i) `drizzle.config.ts` - ORM and database settings
+   (f) Component Configuration:
+       (i) `components.json` - shadcn/ui component library settings
 
-### B. Create New Organized Directories
+2. **Project Metadata** [CATEGORY: DOCUMENTATION]
+   (a) `replit.md` - Project preferences and architecture
+   (b) `LANDING_PAGES_INDEX.md` - Route and entry point reference
+   (c) `DIRECTORY_FILE_INDEX.md` - Complete file structure reference
 
-#### 1. `docs/` - Documentation & Analysis
-- Move all `.md` analysis files
-- Content validation reports
-- Grammar analysis files
-- Implementation guides
+3. **Core Data Assets** [CATEGORY: CORE_DATA]
+   (a) `V3_frenchVerbData.js` - Primary French verb database
 
-#### 2. `assets/` - Organized Asset Management  
-- `assets/graphics/` - Feature graphics and icons
-- `assets/screenshots/` - Application screenshots  
-- `assets/attachments/` - User uploaded content (from attached_assets/)
+### B. Proposed Reorganized Structure
 
-#### 3. `templates/` - Code Templates
-- `templates/react-native/` - All React Native components
-- `templates/mobile/` - Mobile-specific implementations
+#### 1. `docs/` - Documentation Hub [CATEGORY: DOCUMENTATION]
+   **A. Analysis & Validation Reports** [SUBCATEGORY: ANALYSIS]
+   1. Grammar & Content Analysis:
+      (a) `COMPLETE-ENGLISH-AUDIT.md` → `docs/analysis/grammar/`
+      (b) `COMPREHENSIVE-VALIDATION-REPORT.md` → `docs/analysis/validation/`
+      (c) `FINAL-VALIDATION-REPORT.md` → `docs/analysis/validation/`
+      (d) `GRAMMAR-ISSUES-REPORT.md` → `docs/analysis/grammar/`
+      (e) `english-analysis.md` → `docs/analysis/content/`
 
-#### 4. `content/` - Language Learning Content
-- `content/data/` - French verb data exports
-- `content/english/` - English text collections
-- `content/courses/` - Course-specific content
-- `content/validation/` - Content analysis results
+   **B. Course Documentation** [SUBCATEGORY: COURSES]
+   1. Level-Specific Materials:
+      (a) `BEGINNER_LEVEL_COMPLETE_CONTENT.md` → `docs/courses/beginner/`
+      (b) `BEGINNER_NOT NOVICE_ LEVEL_COMPLETE_CONTENT` → `docs/courses/level-definitions/`
+      (c) `CORRECTED_NOVICE_CONTENT` → `docs/courses/novice/corrections/`
+      (d) `CORRECTED_ELEMENTARY_CONTENT` → `docs/courses/elementary/corrections/`
 
-#### 5. `tests/` - Testing Resources
-- Test files and data
-- Generated test content
-- Error logs
+   **C. Implementation Guides** [SUBCATEGORY: GUIDES]
+   1. Development Documentation:
+      (a) `ReactNative_QuizFlow_Implementation_Guide.md` → `docs/guides/mobile/`
+      (b) `ReactNative_Dependencies.md` → `docs/guides/mobile/`
+
+#### 2. `assets/` - Media & Resource Management [CATEGORY: ASSETS]
+   **A. Application Graphics** [SUBCATEGORY: GRAPHICS]
+   1. Feature Graphics:
+      (a) `french-verb-master-feature-graphic-hd.png` → `assets/graphics/features/hd/`
+      (b) `french-verb-master-feature-graphic-hd.svg` → `assets/graphics/features/hd/`
+      (c) `french-verb-master-feature-graphic.png` → `assets/graphics/features/standard/`
+      (d) `french-verb-master-feature-graphic.svg` → `assets/graphics/features/standard/`
+   2. Application Icons:
+      (a) `French_Verb_Master_App_Icon_Description.txt` → `assets/graphics/icons/`
+
+   **B. Application Screenshots** [SUBCATEGORY: SCREENSHOTS]
+   1. UI Documentation:
+      (a) `canvas/screenshots/` → `assets/screenshots/ui/`
+      (b) `canvas/feature-graphic-main.*` → `assets/screenshots/marketing/`
+
+   **C. User Attachments** [SUBCATEGORY: USER_CONTENT]
+   1. Temporary & Upload Content:
+      (a) `attached_assets/` → `assets/attachments/temp/`
+
+#### 3. `templates/` - Reusable Code Templates [CATEGORY: TEMPLATES]
+   **A. React Native Components** [SUBCATEGORY: REACT_NATIVE]
+   1. Complete Solutions:
+      (a) `ReactNative_COPY_PASTE_READY.tsx` → `templates/react-native/complete/`
+      (b) `COMPLETE_ReactNative_Solution.tsx` → `templates/react-native/complete/`
+      (c) `ReactNative_MiniCourses_COPY_PASTE_READY.tsx` → `templates/react-native/courses/`
+   2. Individual Components:
+      (a) `ReactNative_QuizSelectionScreen.tsx` → `templates/react-native/quiz/`
+      (b) `ReactNative_ImprovedQuizScreen.tsx` → `templates/react-native/quiz/`
+      (c) `ReactNative_QuizScreen_READY.tsx` → `templates/react-native/quiz/`
+      (d) `ReactNative_CustomDropdown.tsx` → `templates/react-native/ui/`
+
+#### 4. `content/` - Educational Content Repository [CATEGORY: CONTENT]
+   **A. Language Data** [SUBCATEGORY: LANGUAGE_DATA]
+   1. French Verb Systems:
+      (a) `complete-french-verb-data.js` → `content/data/verbs/legacy/`
+      (b) `french-verb-data-export.js` → `content/data/verbs/exports/`
+      (c) `french-mini-courses-mobile.js` → `content/data/courses/mobile/`
+   2. Answer Keys & Solutions:
+      (a) `french-answers.txt` → `content/data/answers/`
+
+   **B. English Content Collections** [SUBCATEGORY: ENGLISH_CONTENT]
+   1. Comprehensive Text Extractions:
+      (a) `ALL-ENGLISH-TEXT.txt` → `content/english/complete/`
+      (b) `all-english-client.txt` → `content/english/by-source/client/`
+      (c) `all-english-server.txt` → `content/english/by-source/server/`
+      (d) `all-english-quiz.txt` → `content/english/by-source/quiz/`
+      (e) `all-english-templates.txt` → `content/english/by-source/templates/`
+   2. Sentence Collections:
+      (a) `base-english-sentences.txt` → `content/english/sentences/base/`
+      (b) `english-sentences.txt` → `content/english/sentences/primary/`
+      (c) `other-english-sentences.txt` → `content/english/sentences/supplementary/`
+      (d) `dynamic-english-text.txt` → `content/english/sentences/dynamic/`
+
+   **C. Course Materials** [SUBCATEGORY: COURSE_MATERIALS]
+   1. Level-Specific Content:
+      (a) `elementary-present-content.txt` → `content/courses/elementary/present/`
+   2. Python Course Data:
+      (a) `beginner_level_content.py` → `content/courses/python/beginner/`
+      (b) `beginner_level_content_corrected.py` → `content/courses/python/beginner/corrected/`
+
+#### 5. `testing/` - Quality Assurance Resources [CATEGORY: TESTING]
+   **A. Test Data** [SUBCATEGORY: TEST_DATA]
+   1. Question Banks:
+      (a) `test-questions.txt` → `testing/data/questions/text/`
+      (b) `test_questions.json` → `testing/data/questions/json/`
+   2. Generated Content:
+      (a) `generated-questions-test.txt` → `testing/data/generated/`
+   3. Error Tracking:
+      (a) `test-errors.txt` → `testing/logs/errors/`
+
+   **B. Validation Tools** [SUBCATEGORY: VALIDATION]
+   1. Grammar Checking:
+      (a) `grammar-check-script.js` → `testing/tools/grammar/`
+      (b) `grammar-issues-count.txt` → `testing/results/grammar/`
+
+#### 6. `scripts/` - Enhanced Development Tools [CATEGORY: UTILITIES]
+   **A. Content Processing** [SUBCATEGORY: CONTENT_PROCESSING]
+   1. Analysis Scripts:
+      (a) `audit-english-sentences.js` → `scripts/content/analysis/`
+   2. Data Population:
+      (a) `populate-quizzes.ts` → `scripts/database/population/`
 
 ## CC. Detailed Reorganization Map
 
