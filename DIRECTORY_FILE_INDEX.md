@@ -1,4 +1,4 @@
-# French Verb Master - Directory File Index (DFI)
+# French Verb Master - V2 Directory File Index (DFI)
 
 This document provides a comprehensive index of all directories and files in the French Verb Master application project structure.
 
