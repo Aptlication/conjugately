@@ -1012,6 +1012,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
   
   "s'intéresser": {
+    "présent": [
+      {"question": "I am interested in history. (Présent)", "options": ["Je m'intéresse à l'histoire.", "Je intéresse à l'histoire.", "Je m'intéresse l'histoire.", "Je me intéresses à l'histoire."], "answer": "A"},
+      {"question": "You are interested in music. (Présent)", "options": ["Tu t'intéresses à la musique.", "Tu m'intéresses à la musique.", "Tu t'intéresse à la musique.", "Tu te intéresses à la musique."], "answer": "A"},
+      {"question": "He is interested in sports. (Présent)", "options": ["Il s'intéresse aux sports.", "Il s'intéresses aux sports.", "Il s'intéresse à les sports.", "Il intéresse aux sports."], "answer": "A"},
+      {"question": "She is interested in art. (Présent)", "options": ["Elle s'intéresse à l'art.", "Elle s'intéresses à l'art.", "Elle se intéresse à l'art.", "Elle s'intéresse de l'art."], "answer": "A"},
+      {"question": "We are interested in science. (Présent)", "options": ["Nous nous intéressons à la science.", "Nous nous intéresse à la science.", "Nous se intéressons à la science.", "Nous nous intéressez à la science."], "answer": "A"},
+      {"question": "You (plural) are interested in literature. (Présent)", "options": ["Vous vous intéressez à la littérature.", "Vous vous intéressons à la littérature.", "Vous nous intéressez à la littérature.", "Vous vous intéresse à la littérature."], "answer": "A"},
+      {"question": "They (masculine) are interested in technology. (Présent)", "options": ["Ils s'intéressent à la technologie.", "Ils s'intéresse à la technologie.", "Ils se intéressent à la technologie.", "Ils s'intéressez à la technologie."], "answer": "A"},
+      {"question": "They (feminine) are interested in cooking. (Présent)", "options": ["Elles s'intéressent à la cuisine.", "Elles s'intéresse à la cuisine.", "Elles s'intéressons à la cuisine.", "Elles nous intéressent à la cuisine."], "answer": "A"},
+      {"question": "I am not interested in politics. (Présent)", "options": ["Je ne m'intéresse pas à la politique.", "Je ne pas m'intéresse à la politique.", "Je m'intéresse ne pas à la politique.", "Je ne m'intéresses pas à la politique."], "answer": "A"},
+      {"question": "You don't interest yourself in gossip. (Présent)", "options": ["Tu ne t'intéresses pas aux ragots.", "Tu ne pas t'intéresses aux ragots.", "Tu ne t'intéresse pas aux ragots.", "Tu t'intéresses ne pas aux ragots."], "answer": "A"},
+      {"question": "He doesn't interest himself in fashion. (Présent)", "options": ["Il ne s'intéresse pas à la mode.", "Il ne s'intéresses pas à la mode.", "Il s'intéresse ne pas à la mode.", "Il ne pas s'intéresse à la mode."], "answer": "A"},
+      {"question": "We are not interested in television. (Présent)", "options": ["Nous ne nous intéressons pas à la télévision.", "Nous ne nous intéresse pas à la télévision.", "Nous nous ne intéressons pas à la télévision.", "Nous ne pas nous intéressons à la télévision."], "answer": "A"},
+      {"question": "They are not interested in mathematics. (Présent)", "options": ["Ils ne s'intéressent pas aux mathématiques.", "Ils ne s'intéresse pas aux mathématiques.", "Ils s'intéressent ne pas aux mathématiques.", "Ils ne s'intéressent pas à les mathématiques."], "answer": "A"},
+      {"question": "I am interested in nothing. (Présent)", "options": ["Je ne m'intéresse à rien.", "Je ne m'intéresse pas à rien.", "Je ne rien m'intéresse à.", "Je m'intéresse ne à rien."], "answer": "A"},
+      {"question": "You are interested in travel. (Présent)", "options": ["Tu t'intéresses au voyage.", "Tu t'intéresses à la voyage.", "Tu t'intéresse au voyage.", "Tu t'intéresses à le voyage."], "answer": "A"},
+      {"question": "She is interested in movies. (Présent)", "options": ["Elle s'intéresse aux films.", "Elle s'intéresse à les films.", "Elle s'intéresses aux films.", "Elle s'intéresse au films."], "answer": "A"},
+      {"question": "We are interested in languages. (Présent)", "options": ["Nous nous intéressons aux langues.", "Nous nous intéressez aux langues.", "Nous nous intéressons à les langues.", "Nous se intéressons aux langues."], "answer": "A"},
+      {"question": "You (plural) are interested in photography. (Présent)", "options": ["Vous vous intéressez à la photographie.", "Vous vous intéressons à la photographie.", "Vous vous intéressez au photographie.", "Vous nous intéressez à la photographie."], "answer": "A"},
+      {"question": "They are interested in books. (Présent)", "options": ["Ils s'intéressent aux livres.", "Ils s'intéresse aux livres.", "Ils s'intéressent à les livres.", "Ils s'intéressent au livres."], "answer": "A"},
+      {"question": "I am interested in this subject. (Présent)", "options": ["Je m'intéresse à ce sujet.", "Je m'intéresse à cette sujet.", "Je m'intéresses à ce sujet.", "Je m'intéresse ce sujet."], "answer": "A"}
+    ],
     "passé_composé": [
       {"question": "He was / has been interested in history. (Passé Composé)", "options": ["Il s'est intéressé à l'histoire.", "Il s'est intéressés à l'histoire.", "Il a intéressé à l'histoire.", "Il s'était intéressé à l'histoire."], "answer": "A"},
       {"question": "She was / has been interested in your project. (Passé Composé)", "options": ["Elle a intéressée à ton projet.", "Elle s'est intéressée à ton projet.", "Elle s'est intéressé à ton projet.", "Elle s'était intéressée à ton projet."], "answer": "B"},
@@ -1058,7 +1080,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     ]
   }
 
-  // INTERMEDIATE LEVEL COMPLETE! All 12 verbs × 80 questions = 960 questions total (including s'intéresser)
+  // INTERMEDIATE LEVEL COMPLETE! All 12 verbs with multiple tenses = 980 questions total (including s'intéresser with présent, passé_composé, and futur_simple)
 };
 
 // Function to get random Intermediate questions for a specific verb and tense

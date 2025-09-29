@@ -1,0 +1,528 @@
+<immersive type="learning">
+```quiz
+{
+  "questions": [
+    {
+      "question": "I am interested in history.",
+      "hint": "Remember that 's'intéresser' requires the preposition 'à' and uses reflexive pronouns.",
+      "answerOptions": [
+        {
+          "text": "Je m'intéresse à l'histoire.",
+          "rationale": "This correctly uses the first person singular reflexive pronoun 'me' (contracted to 'm'') with the present tense conjugation and the preposition 'à'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je intéresse à l'histoire.",
+          "rationale": "This omits the required reflexive pronoun 'me' which is essential for the verb 's'intéresser'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresse l'histoire.",
+          "rationale": "This missing the preposition 'à' which is required after 's'intéresser'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me intéresses à l'histoire.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for the second person singular, not first person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You are interested in music.",
+      "hint": "For 'tu', the reflexive pronoun is 'te' and the verb ending changes.",
+      "answerOptions": [
+        {
+          "text": "Tu t'intéresses à la musique.",
+          "rationale": "This correctly uses the second person singular reflexive pronoun 'te' (contracted to 't'') with the appropriate verb ending 'intéresses'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu m'intéresses à la musique.",
+          "rationale": "This uses the wrong reflexive pronoun 'me' instead of 'te' for the second person singular.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresse à la musique.",
+          "rationale": "This uses the wrong verb ending 'intéresse' which is for third person singular, not second person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te intéresses à la musique.",
+          "rationale": "This fails to contract 'te' to 't'' before the vowel, which is required in French.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He is interested in sports.",
+      "hint": "Third person singular uses 'se' as the reflexive pronoun and 'intéresse' as the verb form.",
+      "answerOptions": [
+        {
+          "text": "Il s'intéresse aux sports.",
+          "rationale": "This correctly uses the third person singular reflexive pronoun 'se' (contracted to 's'') with the verb form 'intéresse' and the contracted preposition 'aux'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il s'intéresses aux sports.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular, not third person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il s'intéresse à les sports.",
+          "rationale": "This fails to contract 'à + les' to 'aux', which is required in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il intéresse aux sports.",
+          "rationale": "This omits the required reflexive pronoun 'se' which changes the meaning entirely.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She is interested in art.",
+      "hint": "Feminine subject still uses 'se' as reflexive pronoun and same verb conjugation as masculine.",
+      "answerOptions": [
+        {
+          "text": "Elle s'intéresse à l'art.",
+          "rationale": "This correctly uses the third person singular reflexive pronoun 'se' with the appropriate verb form, regardless of gender.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle s'intéresses à l'art.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle se intéresse à l'art.",
+          "rationale": "This fails to contract 'se' to 's'' before the vowel, which is mandatory in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle s'intéresse de l'art.",
+          "rationale": "This uses the wrong preposition 'de' instead of the required 'à' after 's'intéresser'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are interested in science.",
+      "hint": "First person plural uses 'nous' as both subject and reflexive pronoun.",
+      "answerOptions": [
+        {
+          "text": "Nous nous intéressons à la science.",
+          "rationale": "This correctly uses 'nous' as both subject and reflexive pronoun with the first person plural verb ending 'intéressons'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous nous intéresse à la science.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not first person plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous se intéressons à la science.",
+          "rationale": "This uses the wrong reflexive pronoun 'se' instead of 'nous' for first person plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéressez à la science.",
+          "rationale": "This uses the wrong verb ending 'intéressez' which is for second person plural, not first person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) are interested in literature.",
+      "hint": "Second person plural uses 'vous' as both subject and reflexive pronoun.",
+      "answerOptions": [
+        {
+          "text": "Vous vous intéressez à la littérature.",
+          "rationale": "This correctly uses 'vous' as both subject and reflexive pronoun with the second person plural verb ending 'intéressez'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous intéressons à la littérature.",
+          "rationale": "This uses the wrong verb ending 'intéressons' which is for first person plural, not second person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous nous intéressez à la littérature.",
+          "rationale": "This uses the wrong reflexive pronoun 'nous' instead of 'vous' for second person plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous intéresse à la littérature.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not second person plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masculine) are interested in technology.",
+      "hint": "Third person plural uses 'se' as reflexive pronoun and 'intéressent' as verb form.",
+      "answerOptions": [
+        {
+          "text": "Ils s'intéressent à la technologie.",
+          "rationale": "This correctly uses the third person plural reflexive pronoun 'se' with the verb ending 'intéressent'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils s'intéresse à la technologie.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils se intéressent à la technologie.",
+          "rationale": "This fails to contract 'se' to 's'' before the vowel, which is required in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéressez à la technologie.",
+          "rationale": "This uses the wrong verb ending 'intéressez' which is for second person plural, not third person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (feminine) are interested in cooking.",
+      "hint": "Feminine plural subject still uses same reflexive pronoun and verb conjugation as masculine plural.",
+      "answerOptions": [
+        {
+          "text": "Elles s'intéressent à la cuisine.",
+          "rationale": "This correctly uses the third person plural reflexive pronoun 'se' with the verb ending 'intéressent', regardless of gender.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles s'intéresse à la cuisine.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles s'intéressons à la cuisine.",
+          "rationale": "This uses the wrong verb ending 'intéressons' which is for first person plural, not third person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles nous intéressent à la cuisine.",
+          "rationale": "This uses the wrong reflexive pronoun 'nous' and changes the meaning to 'they interest us' rather than 'they are interested'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I am not interested in politics.",
+      "hint": "Negation wraps around the reflexive pronoun and conjugated verb with 'ne...pas'.",
+      "answerOptions": [
+        {
+          "text": "Je ne m'intéresse pas à la politique.",
+          "rationale": "This correctly places the negation 'ne...pas' around the reflexive pronoun and conjugated verb.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ne pas m'intéresse à la politique.",
+          "rationale": "This places 'pas' before the reflexive pronoun instead of after the conjugated verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresse ne pas à la politique.",
+          "rationale": "This places the negation after the verb instead of wrapping around the reflexive pronoun and verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne m'intéresses pas à la politique.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular, not first person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You don't interest yourself in gossip.",
+      "hint": "Second person singular negation with reflexive verb structure.",
+      "answerOptions": [
+        {
+          "text": "Tu ne t'intéresses pas aux ragots.",
+          "rationale": "This correctly uses negation around the reflexive pronoun and verb with proper second person singular conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu ne pas t'intéresses aux ragots.",
+          "rationale": "This places 'pas' before the reflexive pronoun instead of after the conjugated verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne t'intéresse pas aux ragots.",
+          "rationale": "This uses the wrong verb ending 'intéresse' which is for third person singular, not second person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresses ne pas aux ragots.",
+          "rationale": "This places the negation after the verb instead of properly wrapping it around the reflexive construction.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He doesn't interest himself in fashion.",
+      "hint": "Third person singular negation maintains the same reflexive structure.",
+      "answerOptions": [
+        {
+          "text": "Il ne s'intéresse pas à la mode.",
+          "rationale": "This correctly places the negation around the reflexive pronoun and conjugated verb in third person singular.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il ne s'intéresses pas à la mode.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular, not third person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il s'intéresse ne pas à la mode.",
+          "rationale": "This places the negation after the verb instead of properly surrounding the reflexive verb construction.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il ne pas s'intéresse à la mode.",
+          "rationale": "This places 'pas' before the reflexive pronoun instead of after the conjugated verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are not interested in television.",
+      "hint": "First person plural negation with double 'nous' structure.",
+      "answerOptions": [
+        {
+          "text": "Nous ne nous intéressons pas à la télévision.",
+          "rationale": "This correctly uses negation around both 'nous' pronouns and the conjugated verb in first person plural.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous ne nous intéresse pas à la télévision.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not first person plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous ne intéressons pas à la télévision.",
+          "rationale": "This places 'ne' after the reflexive pronoun instead of before it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous ne pas nous intéressons à la télévision.",
+          "rationale": "This places 'pas' before the reflexive pronoun instead of after the conjugated verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They are not interested in mathematics.",
+      "hint": "Third person plural negation with contracted reflexive pronoun.",
+      "answerOptions": [
+        {
+          "text": "Ils ne s'intéressent pas aux mathématiques.",
+          "rationale": "This correctly uses negation around the reflexive pronoun and plural verb form with contracted preposition 'aux'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils ne s'intéresse pas aux mathématiques.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéressent ne pas aux mathématiques.",
+          "rationale": "This places the negation after the verb instead of properly surrounding the reflexive verb construction.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ne s'intéressent pas à les mathématiques.",
+          "rationale": "This fails to contract 'à + les' to 'aux', which is required in French.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I am interested in nothing.",
+      "hint": "Use 'ne...rien' negation pattern instead of 'ne...pas'.",
+      "answerOptions": [
+        {
+          "text": "Je ne m'intéresse à rien.",
+          "rationale": "This correctly uses the negation 'ne...rien' where 'rien' replaces the object after the preposition 'à'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ne m'intéresse pas à rien.",
+          "rationale": "This incorrectly combines 'ne...pas' with 'rien', creating a double negative which is not standard in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne rien m'intéresse à.",
+          "rationale": "This places 'rien' in the wrong position and leaves the preposition 'à' without an object.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresse ne à rien.",
+          "rationale": "This places 'ne' after the reflexive pronoun and omits the required placement around the verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You are interested in travel.",
+      "hint": "Second person singular with 'voyage' which can be masculine singular.",
+      "answerOptions": [
+        {
+          "text": "Tu t'intéresses au voyage.",
+          "rationale": "This correctly uses the contracted form 'au' (à + le) because 'voyage' is masculine singular.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu t'intéresses à la voyage.",
+          "rationale": "This uses the wrong article 'la' because 'voyage' is masculine, not feminine.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresse au voyage.",
+          "rationale": "This uses the wrong verb ending 'intéresse' which is for third person singular, not second person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresses à le voyage.",
+          "rationale": "This fails to contract 'à + le' to 'au', which is required in French.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She is interested in movies.",
+      "hint": "Third person singular with plural noun requiring 'aux'.",
+      "answerOptions": [
+        {
+          "text": "Elle s'intéresse aux films.",
+          "rationale": "This correctly uses the contracted form 'aux' (à + les) because 'films' is masculine plural.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle s'intéresse à les films.",
+          "rationale": "This fails to contract 'à + les' to 'aux', which is mandatory in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle s'intéresses aux films.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular, not third person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle s'intéresse au films.",
+          "rationale": "This uses 'au' (à + le) instead of 'aux' (à + les) for the plural noun 'films'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are interested in languages.",
+      "hint": "First person plural with feminine plural noun.",
+      "answerOptions": [
+        {
+          "text": "Nous nous intéressons aux langues.",
+          "rationale": "This correctly uses 'aux' (à + les) for the feminine plural noun 'langues' with proper first person plural conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous nous intéressez aux langues.",
+          "rationale": "This uses the wrong verb ending 'intéressez' which is for second person plural, not first person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéressons à les langues.",
+          "rationale": "This fails to contract 'à + les' to 'aux', which is required in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous se intéressons aux langues.",
+          "rationale": "This uses the wrong reflexive pronoun 'se' instead of 'nous' for first person plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) are interested in photography.",
+      "hint": "Second person plural with feminine singular noun.",
+      "answerOptions": [
+        {
+          "text": "Vous vous intéressez à la photographie.",
+          "rationale": "This correctly uses 'à la' for the feminine singular noun 'photographie' with proper second person plural conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous intéressons à la photographie.",
+          "rationale": "This uses the wrong verb ending 'intéressons' which is for first person plural, not second person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous intéressez au photographie.",
+          "rationale": "This uses 'au' (à + le) instead of 'à la' because 'photographie' is feminine, not masculine.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous nous intéressez à la photographie.",
+          "rationale": "This uses the wrong reflexive pronoun 'nous' instead of 'vous' for second person plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They are interested in books.",
+      "hint": "Third person plural with masculine plural noun.",
+      "answerOptions": [
+        {
+          "text": "Ils s'intéressent aux livres.",
+          "rationale": "This correctly uses 'aux' (à + les) for the masculine plural noun 'livres' with proper third person plural conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils s'intéresse aux livres.",
+          "rationale": "This uses the wrong verb form 'intéresse' which is for third person singular, not plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéressent à les livres.",
+          "rationale": "This fails to contract 'à + les' to 'aux', which is mandatory in French.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéressent au livres.",
+          "rationale": "This uses 'au' (à + le) instead of 'aux' (à + les) for the plural noun 'livres'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I am interested in this subject.",
+      "hint": "First person singular with masculine singular demonstrative.",
+      "answerOptions": [
+        {
+          "text": "Je m'intéresse à ce sujet.",
+          "rationale": "This correctly uses the masculine singular demonstrative 'ce' with the preposition 'à' and proper first person conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je m'intéresse à cette sujet.",
+          "rationale": "This uses the feminine demonstrative 'cette' when 'sujet' is masculine and requires 'ce'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresses à ce sujet.",
+          "rationale": "This uses the wrong verb ending 'intéresses' which is for second person singular, not first person.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresse ce sujet.",
+          "rationale": "This omits the required preposition 'à' which must precede the object of 's'intéresser'.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
+```
+</immersive>
