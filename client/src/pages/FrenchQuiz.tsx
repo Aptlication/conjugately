@@ -738,7 +738,7 @@ export default function FrenchQuiz() {
                       onClick={() => handleReflexiveModalDismiss(false)}
                       className="w-full p-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
                     >
-                      Start Quiz
+                      Select Time Frame
                     </button>
                   </div>
                 </div>
