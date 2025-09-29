@@ -2134,10 +2134,13 @@ function App() {
                 className="bg-gray-800 text-white"
                 disabled={!isAdvancedDifficultyEnabled()}
               >
-                {isAdvancedDifficultyEnabled() 
-                  ? "🔴 Advanced - 23 verbs (12 non-reflexive + 11 reflexive), all tenses"
-                  : "🔒 Advanced - Coming Soon!"
-                }
+                {(() => {
+                  const isEnabled = isAdvancedDifficultyEnabled();
+                  console.log('Advanced difficulty enabled?', isEnabled);
+                  return isEnabled 
+                    ? "🔴 Advanced - 23 verbs (12 non-reflexive + 11 reflexive), all tenses"
+                    : "🔒 Advanced - Coming Soon!";
+                })()}
               </option>
             </select>
           </div>
