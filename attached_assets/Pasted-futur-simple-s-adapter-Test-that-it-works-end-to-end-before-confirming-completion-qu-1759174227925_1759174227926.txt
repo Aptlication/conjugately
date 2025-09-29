@@ -1,0 +1,207 @@
+futur simple - s'adapter
+
+"Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "question": "Will I adapt?",
+   "options": [
+     "[translate:Je m'adapterai?]",
+     "[translate:M'adapterai-je?]",
+     "[translate:J'adapterai?]",
+     "[translate:Je m'adapter?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Will you (tu) not adapt?",
+   "options": [
+     "[translate:Ne t'adapteras-tu pas?]",
+     "[translate:Tu t'adapteras?]",
+     "[translate:Tu ne t'adapteras pas?]",
+     "[translate:Tu adapteras?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will he adapt?",
+   "options": [
+     "[translate:S'adaptera-t-il?]",
+     "[translate:Il s'adaptera?]",
+     "[translate:Il adaptera?]",
+     "[translate:Il s'adapterait?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Will we not adapt?",
+   "options": [
+     "[translate:Nous ne nous adapterons pas?]",
+     "[translate:Nous nous adapterons pas?]",
+     "[translate:Nous nous adapterons?]",
+     "[translate:Ne nous adapterons-nous pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will she adapt?",
+   "options": [
+     "[translate:Se adaptera-t-elle?]",
+     "[translate:Elle s'adaptera?]",
+     "[translate:Elle adaptera?]",
+     "[translate:Elle s'adapterait?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) will adapt.",
+   "options": [
+     "[translate:Vous vous adapterez.]",
+     "[translate:Adapterez-vous?]",
+     "[translate:Vous adapterez?]",
+     "[translate:Vous avez adapté?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) will not adapt.",
+   "options": [
+     "[translate:Ils ne s'adapteront pas.]",
+     "[translate:Ils s'adapteront?]",
+     "[translate:Ils adapteront?]",
+     "[translate:Ils s'adapteraient?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will you (vous) adapt?",
+   "options": [
+     "[translate:Adapterez-vous?]",
+     "[translate:Vous vous adapterez?]",
+     "[translate:Vous adapterez?]",
+     "[translate:Vous vous êtes adaptés?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Will they (fem.) adapt?",
+   "options": [
+     "[translate:Adapteront-elles?]",
+     "[translate:Elles s'adapteront?]",
+     "[translate:S'adapteront-elles?]",
+     "[translate:Elles adapteront?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Will we not adapt?",
+   "options": [
+     "[translate:Nous nous adapterons?]",
+     "[translate:Ne nous adapterons-nous pas?]",
+     "[translate:Adapterons-nous?]",
+     "[translate:Nous ne nous adapterons pas?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "I will not adapt.",
+   "options": [
+     "[translate:Je ne m'adapterai pas.]",
+     "[translate:Je m'adapterai pas.]",
+     "[translate:Je m'adapterai?]",
+     "[translate:Je n'ai pas adapté.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "She will adapt.",
+   "options": [
+     "[translate:Elle s'adaptera.]",
+     "[translate:Adaptera-t-elle?]",
+     "[translate:Elle adapterait?]",
+     "[translate:Elle ne s'adaptera pas.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We will adapt.",
+   "options": [
+     "[translate:Nous nous adapterons.]",
+     "[translate:Adapterons-nous?]",
+     "[translate:Nous ne nous adapterons pas.]",
+     "[translate:Nous adapterons?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will you (tu) not adapt?",
+   "options": [
+     "[translate:Tu ne t'adapteras pas?]",
+     "[translate:T'adapteras-tu?]",
+     "[translate:Tu t'adapteras pas?]",
+     "[translate:T'adapteras-tu pas?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She will not adapt.",
+   "options": [
+     "[translate:Elle ne s'adaptera pas.]",
+     "[translate:Elle s'adaptera pas.]",
+     "[translate:Elle adapterait pas.]",
+     "[translate:Adaptera-t-elle?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "You (vous) will not adapt.",
+   "options": [
+     "[translate:Vous ne vous adapterez pas.]",
+     "[translate:Vous adapterez pas?]",
+     "[translate:Vous vous adapterez pas.]",
+     "[translate:Vous avez adapté?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He will not adapt.",
+   "options": [
+     "[translate:Il ne s'adaptera pas.]",
+     "[translate:Il s'adaptera pas.]",
+     "[translate:Il adapterait pas.]",
+     "[translate:Il s'adapterait?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) will adapt.",
+   "options": [
+     "[translate:Ils s'adapteront.]",
+     "[translate:Ils adapteront?]",
+     "[translate:Ils ne s'adapteront pas.]",
+     "[translate:Adapteront-ils?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will she not adapt?",
+   "options": [
+     "[translate:Ne s'adaptera-t-elle pas?]",
+     "[translate:Elle s'adaptera pas?]",
+     "[translate:S'est-elle adaptée?]",
+     "[translate:Elle n'adaptera pas?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "They (fem.) will not adapt.",
+   "options": [
+     "[translate:Elles ne s'adapteront pas.]",
+     "[translate:Elles s'adapteront pas.]",
+     "[translate:Elles adapteront pas.]",
+     "[translate:Elles s'adapteront?]"
+   ],
+   "answer": "B"
+ }
+]

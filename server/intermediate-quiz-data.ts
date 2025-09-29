@@ -1356,6 +1356,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) adapted.", "options": ["Ils se sont adaptés.", "Ils ont adapté.", "Ils s'est adaptés.", "Ils sont adaptés."], "answer": "A"},
       {"question": "Did she not adapt?", "options": ["Ne s'est-elle pas adaptée?", "Elle s'est pas adaptée?", "S'est-elle adapté?", "Elle n'est pas adaptée?"], "answer": "D"},
       {"question": "They (fem.) did not adapt.", "options": ["Elles ne se sont pas adaptées.", "Elles ne sont pas adapté.", "Elles s'est pas adaptées.", "Elles n'ont pas adapté."], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will I adapt?", "options": ["Je m'adapterai?", "M'adapterai-je?", "J'adapterai?", "Je m'adapter?"], "answer": "C"},
+      {"question": "Will you (tu) not adapt?", "options": ["Ne t'adapteras-tu pas?", "Tu t'adapteras?", "Tu ne t'adapteras pas?", "Tu adapteras?"], "answer": "A"},
+      {"question": "Will he adapt?", "options": ["S'adaptera-t-il?", "Il s'adaptera?", "Il adaptera?", "Il s'adapterait?"], "answer": "D"},
+      {"question": "Will we not adapt?", "options": ["Nous ne nous adapterons pas?", "Nous nous adapterons pas?", "Nous nous adapterons?", "Ne nous adapterons-nous pas?"], "answer": "B"},
+      {"question": "Will she adapt?", "options": ["Se adaptera-t-elle?", "Elle s'adaptera?", "Elle adaptera?", "Elle s'adapterait?"], "answer": "A"},
+      {"question": "You (vous) will adapt.", "options": ["Vous vous adapterez.", "Adapterez-vous?", "Vous adapterez?", "Vous avez adapté?"], "answer": "C"},
+      {"question": "They (masc.) will not adapt.", "options": ["Ils ne s'adapteront pas.", "Ils s'adapteront?", "Ils adapteront?", "Ils s'adapteraient?"], "answer": "B"},
+      {"question": "Will you (vous) adapt?", "options": ["Adapterez-vous?", "Vous vous adapterez?", "Vous adapterez?", "Vous vous êtes adaptés?"], "answer": "D"},
+      {"question": "Will they (fem.) adapt?", "options": ["Adapteront-elles?", "Elles s'adapteront?", "S'adapteront-elles?", "Elles adapteront?"], "answer": "C"},
+      {"question": "Will we not adapt?", "options": ["Nous nous adapterons?", "Ne nous adapterons-nous pas?", "Adapterons-nous?", "Nous ne nous adapterons pas?"], "answer": "A"},
+      {"question": "I will not adapt.", "options": ["Je ne m'adapterai pas.", "Je m'adapterai pas.", "Je m'adapterai?", "Je n'ai pas adapté."], "answer": "D"},
+      {"question": "She will adapt.", "options": ["Elle s'adaptera.", "Adaptera-t-elle?", "Elle adapterait?", "Elle ne s'adaptera pas."], "answer": "B"},
+      {"question": "We will adapt.", "options": ["Nous nous adapterons.", "Adapterons-nous?", "Nous ne nous adapterons pas.", "Nous adapterons?"], "answer": "A"},
+      {"question": "Will you (tu) not adapt?", "options": ["Tu ne t'adapteras pas?", "T'adapteras-tu?", "Tu t'adapteras pas?", "T'adapteras-tu pas?"], "answer": "C"},
+      {"question": "She will not adapt.", "options": ["Elle ne s'adaptera pas.", "Elle s'adaptera pas.", "Elle adapterait pas.", "Adaptera-t-elle?"], "answer": "B"},
+      {"question": "You (vous) will not adapt.", "options": ["Vous ne vous adapterez pas.", "Vous adapterez pas?", "Vous vous adapterez pas.", "Vous avez adapté?"], "answer": "D"},
+      {"question": "He will not adapt.", "options": ["Il ne s'adaptera pas.", "Il s'adaptera pas.", "Il adapterait pas.", "Il s'adapterait?"], "answer": "C"},
+      {"question": "They (masc.) will adapt.", "options": ["Ils s'adapteront.", "Ils adapteront?", "Ils ne s'adapteront pas.", "Adapteront-ils?"], "answer": "A"},
+      {"question": "Will she not adapt?", "options": ["Ne s'adaptera-t-elle pas?", "Elle s'adaptera pas?", "S'est-elle adaptée?", "Elle n'adaptera pas?"], "answer": "D"},
+      {"question": "They (fem.) will not adapt.", "options": ["Elles ne s'adapteront pas.", "Elles s'adapteront pas.", "Elles adapteront pas.", "Elles s'adapteront?"], "answer": "B"}
     ]
   }
 
