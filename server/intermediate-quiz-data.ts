@@ -1403,6 +1403,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) rejoice.", "options": ["Ils se réjouissent.", "Ils réjouissent?", "Ils ne se réjouissent pas.", "Ils réjouis?"], "answer": "A"},
       {"question": "Does she not rejoice?", "options": ["Ne se réjouit-elle pas?", "Elle se réjouit pas?", "Elle ne réjouit pas?", "Se réjouit-elle?"], "answer": "A"},
       {"question": "They (fem.) do not rejoice.", "options": ["Elles ne se réjouissent pas.", "Elles réjouissent pas.", "Elles se réjouissent pas.", "Elles se réjouissent?"], "answer": "A"}
+    ],
+    "passé_composé": [
+      {"question": "Did I rejoice?", "options": ["Je me suis réjoui(e)?", "J'ai réjoui?", "Me suis-je réjoui(e)?", "Ai-je réjoui(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not rejoice?", "options": ["Ne t'es-tu pas réjoui(e)?", "Tu t'es réjoui(e)?", "Tu n'as pas réjoui?", "T'es-tu réjoui?"], "answer": "A"},
+      {"question": "Did he rejoice?", "options": ["S'est-il réjoui?", "Il a réjoui?", "A-t-il réjoui?", "Il s'est réjoui?"], "answer": "D"},
+      {"question": "Did we not rejoice?", "options": ["Ne nous sommes-nous pas réjoui(e)s?", "Nous nous sommes réjouis?", "Nous n'avons pas réjoui?", "Nous sommes réjouis?"], "answer": "B"},
+      {"question": "Did she rejoice?", "options": ["Elle s'est réjouie?", "S'est-elle réjouie?", "Elle a réjoui?", "A-t-elle réjoui?"], "answer": "A"},
+      {"question": "You (vous) rejoiced.", "options": ["Vous avez réjoui?", "Vous vous êtes réjoui(e)(s).", "Vous s'êtes réjouis?", "Vous êtes réjoui?"], "answer": "C"},
+      {"question": "They (masc.) did not rejoice.", "options": ["Ils se sont pas réjouis.", "Ils ne se sont pas réjouis.", "Ils n'ont pas réjoui.", "Ils se ne sont pas réjoui."], "answer": "B"},
+      {"question": "Did you (vous) rejoice?", "options": ["Vous vous êtes réjoui(e)?", "Vous êtes-vous réjoui(e)?", "Vous avez réjoui?", "Avez-vous réjoui?"], "answer": "D"},
+      {"question": "Did they (fem.) rejoice?", "options": ["Elles ont réjoui?", "Elles se sont réjouies?", "Elles sont réjouies?", "Se sont-elles réjouies?"], "answer": "C"},
+      {"question": "Did we not rejoice?", "options": ["Nous ne nous sommes pas réjoui(e)s?", "Nous ne sommes pas réjouis?", "Ne nous sommes-nous pas réjouis?", "Nous nous sommes réjouis?"], "answer": "A"},
+      {"question": "I did not rejoice.", "options": ["Je ne me suis pas réjoui(e).", "Je n'ai pas réjoui.", "Je me suis pas réjoui.", "Je suis réjoui(e)."], "answer": "D"},
+      {"question": "She rejoiced.", "options": ["Elle a réjoui.", "Elle s'est réjouie.", "Elle s'est pas réjouie.", "Elle s'est réjoui."], "answer": "B"},
+      {"question": "We rejoiced.", "options": ["Nous nous sommes réjoui(e)s.", "Nous avons réjoui.", "Nous sommes réjoui.", "Nous s'est réjouis."], "answer": "A"},
+      {"question": "Did you (tu) not rejoice?", "options": ["Tu n'es pas réjoui(e)?", "Tu ne t'es pas réjoui(e)?", "Tu n'a pas réjoui(e)?", "Tu s'est réjoui(e)?"], "answer": "C"},
+      {"question": "She did not rejoice.", "options": ["Elle ne s'est pas réjouie.", "Elle s'est pas réjouie.", "Elle n'a pas réjoui.", "Elle ne se pas réjouie."], "answer": "B"},
+      {"question": "You (vous) did not rejoice.", "options": ["Vous vous êtes réjoui(e)(s).", "Vous n'avez pas réjoui.", "Vous ne vous êtes pas réjoui(e)(s).", "Vous n'êtes pas réjoui."], "answer": "D"},
+      {"question": "He did not rejoice.", "options": ["Il ne s'est pas réjoui.", "Il s'est pas réjoui.", "Il n'a pas réjoui.", "Il s'est réjoui."], "answer": "C"},
+      {"question": "They (masc.) rejoiced.", "options": ["Ils se sont réjouis.", "Ils ont réjoui.", "Ils s'est réjouis.", "Ils sont réjouis."], "answer": "A"},
+      {"question": "Did she not rejoice?", "options": ["Ne s'est-elle pas réjouie?", "Elle s'est pas réjouie?", "S'est-elle réjoui?", "Elle n'est pas réjouie?"], "answer": "D"},
+      {"question": "They (fem.) did not rejoice.", "options": ["Elles se sont pas réjouies.", "Elles ne sont pas réjoui.", "Elles ne se sont pas réjouies.", "Elles n'ont pas réjoui."], "answer": "B"}
     ]
   }
 

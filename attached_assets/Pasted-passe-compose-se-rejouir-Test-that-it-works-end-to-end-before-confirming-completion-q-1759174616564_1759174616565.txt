@@ -1,0 +1,206 @@
+passe compose - se rejouir
+
+"Test that it works end-to-end before confirming completion"
+
+[
+ {
+   "question": "Did I rejoice?",
+   "options": [
+     "[translate:Je me suis réjoui(e)?]",
+     "[translate:J'ai réjoui?]",
+     "[translate:Me suis-je réjoui(e)?]",
+     "[translate:Ai-je réjoui(e)?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did you (tu) not rejoice?",
+   "options": [
+     "[translate:Ne t'es-tu pas réjoui(e)?]",
+     "[translate:Tu t'es réjoui(e)?]",
+     "[translate:Tu n'as pas réjoui?]",
+     "[translate:T'es-tu réjoui?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did he rejoice?",
+   "options": [
+     "[translate:S'est-il réjoui?]",
+     "[translate:Il a réjoui?]",
+     "[translate:A-t-il réjoui?]",
+     "[translate:Il s'est réjoui?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did we not rejoice?",
+   "options": [
+     "[translate:Ne nous sommes-nous pas réjoui(e)s?]",
+     "[translate:Nous nous sommes réjouis?]",
+     "[translate:Nous n'avons pas réjoui?]",
+     "[translate:Nous sommes réjouis?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did she rejoice?",
+   "options": [
+     "[translate:Elle s'est réjouie?]",
+     "[translate:S'est-elle réjouie?]",
+     "[translate:Elle a réjoui?]",
+     "[translate:A-t-elle réjoui?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) rejoiced.",
+   "options": [
+     "[translate:Vous avez réjoui?]",
+     "[translate:Vous vous êtes réjoui(e)(s).]",
+     "[translate:Vous s'êtes réjouis?]",
+     "[translate:Vous êtes réjoui?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) did not rejoice.",
+   "options": [
+     "[translate:Ils se sont pas réjouis.]",
+     "[translate:Ils ne se sont pas réjouis.]",
+     "[translate:Ils n'ont pas réjoui.]",
+     "[translate:Ils se ne sont pas réjoui.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did you (vous) rejoice?",
+   "options": [
+     "[translate:Vous vous êtes réjoui(e)?]",
+     "[translate:Vous êtes-vous réjoui(e)?]",
+     "[translate:Vous avez réjoui?]",
+     "[translate:Avez-vous réjoui?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did they (fem.) rejoice?",
+   "options": [
+     "[translate:Elles ont réjoui?]",
+     "[translate:Elles se sont réjouies?]",
+     "[translate:Elles sont réjouies?]",
+     "[translate:Se sont-elles réjouies?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did we not rejoice?",
+   "options": [
+     "[translate:Nous ne nous sommes pas réjoui(e)s?]",
+     "[translate:Nous ne sommes pas réjouis?]",
+     "[translate:Ne nous sommes-nous pas réjouis?]",
+     "[translate:Nous nous sommes réjouis?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "I did not rejoice.",
+   "options": [
+     "[translate:Je ne me suis pas réjoui(e).]",
+     "[translate:Je n'ai pas réjoui.]",
+     "[translate:Je me suis pas réjoui.]",
+     "[translate:Je suis réjoui(e).]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "She rejoiced.",
+   "options": [
+     "[translate:Elle a réjoui.]",
+     "[translate:Elle s'est réjouie.]",
+     "[translate:Elle s'est pas réjouie.]",
+     "[translate:Elle s'est réjoui.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We rejoiced.",
+   "options": [
+     "[translate:Nous nous sommes réjoui(e)s.]",
+     "[translate:Nous avons réjoui.]",
+     "[translate:Nous sommes réjoui.]",
+     "[translate:Nous s'est réjouis.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (tu) not rejoice?",
+   "options": [
+     "[translate:Tu n'es pas réjoui(e)?]",
+     "[translate:Tu ne t'es pas réjoui(e)?]",
+     "[translate:Tu n'a pas réjoui(e)?]",
+     "[translate:Tu s'est réjoui(e)?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She did not rejoice.",
+   "options": [
+     "[translate:Elle ne s'est pas réjouie.]",
+     "[translate:Elle s'est pas réjouie.]",
+     "[translate:Elle n'a pas réjoui.]",
+     "[translate:Elle ne se pas réjouie.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "You (vous) did not rejoice.",
+   "options": [
+     "[translate:Vous vous êtes réjoui(e)(s).]",
+     "[translate:Vous n'avez pas réjoui.]",
+     "[translate:Vous ne vous êtes pas réjoui(e)(s).]",
+     "[translate:Vous n'êtes pas réjoui.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He did not rejoice.",
+   "options": [
+     "[translate:Il ne s'est pas réjoui.]",
+     "[translate:Il s'est pas réjoui.]",
+     "[translate:Il n'a pas réjoui.]",
+     "[translate:Il s'est réjoui.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) rejoiced.",
+   "options": [
+     "[translate:Ils se sont réjouis.]",
+     "[translate:Ils ont réjoui.]",
+     "[translate:Ils s'est réjouis.]",
+     "[translate:Ils sont réjouis.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did she not rejoice?",
+   "options": [
+     "[translate:Ne s'est-elle pas réjouie?]",
+     "[translate:Elle s'est pas réjouie?]",
+     "[translate:S'est-elle réjoui?]",
+     "[translate:Elle n'est pas réjouie?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "They (fem.) did not rejoice.",
+   "options": [
+     "[translate:Elles se sont pas réjouies.]",
+     "[translate:Elles ne sont pas réjoui.]",
+     "[translate:Elles ne se sont pas réjouies.]",
+     "[translate:Elles n'ont pas réjoui.]"
+   ],
+   "answer": "B"
+ }
+]
