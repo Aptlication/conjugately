@@ -1,0 +1,174 @@
+present - se rejouir
+
+"Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "question": "Do I rejoice?",
+   "options": [
+     "[translate:Je me réjouis?]",
+     "[translate:Me réjouis-je?]",
+     "[translate:Je me réjouissez?]",
+     "[translate:Je réjouis?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do you (tu) not rejoice?",
+   "options": [
+     "[translate:Ne te réjouis-tu pas?]",
+     "[translate:Tu te réjouis?]",
+     "[translate:Tu ne te réjouis pas?]",
+     "[translate:Tu réjouis?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Does he rejoice?",
+   "options": [
+     "[translate:Il se réjouit?]",
+     "[translate:Se réjouit-il?]",
+     "[translate:Il réjouit?]",
+     "[translate:Il se réjouis?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Do we not rejoice?",
+   "options": [
+     "[translate:Nous ne nous réjouissons pas?]",
+     "[translate:Nous nous réjouissons pas?]",
+     "[translate:Ne nous réjouissons-nous pas?]",
+     "[translate:Nous nous réjouissons?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Does she rejoice?",
+   "options": [
+     "[translate:Se réjouit-elle?]",
+     "[translate:Elle se réjouit?]",
+     "[translate:Elle réjouit?]",
+     "[translate:Elle se réjouis?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) rejoice.",
+   "options": [
+     "[translate:Vous vous réjouissez.]",
+     "[translate:Réjouissez-vous?]",
+     "[translate:Vous réjouissez?]",
+     "[translate:Vous réjouir?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) do not rejoice.",
+   "options": [
+     "[translate:Ils ne se réjouissent pas.]",
+     "[translate:Ils se réjouissent pas?]",
+     "[translate:Ils se réjouissent?]",
+     "[translate:Ne se réjouissent-ils pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Do you (vous) rejoice?",
+   "options": [
+     "[translate:Réjouissez-vous?]",
+     "[translate:Vous vous réjouissez?]",
+     "[translate:Vous réjouissez?]",
+     "[translate:Vous vous réjouissez-vous?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Do they (fem.) rejoice?",
+   "options": [
+     "[translate:Réjouissent-elles?]",
+     "[translate:Elles se réjouissent?]",
+     "[translate:Se réjouissent-elles?]",
+     "[translate:Elles réjouissent?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do we not rejoice?",
+   "options": [
+     "[translate:Nous ne nous réjouissons pas?]",
+     "[translate:Nous nous réjouissons?]",
+     "[translate:Ne nous réjouissons-nous pas?]",
+     "[translate:Nous réjouissons-nous?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "I do not rejoice.",
+   "options": [
+     "[translate:Je ne me réjouis pas.]",
+     "[translate:Je me réjouis pas.]",
+     "[translate:Je me réjouis?]",
+     "[translate:Je ne me réjouis pas.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "She rejoices.",
+   "options": [
+     "[translate:Elle se réjouit.]",
+     "[translate:Se réjouit-elle?]",
+     "[translate:Elle réjouit?]",
+     "[translate:Elle réjouis?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We rejoice.",
+   "options": [
+     "[translate:Nous nous réjouissons.]",
+     "[translate:Nous réjouissons-nous?]",
+     "[translate:Nous ne nous réjouissons pas.]",
+     "[translate:Nous réjouissons?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Do you (tu) not rejoice?",
+   "options": [
+     "[translate:Tu ne te réjouis pas?]",
+     "[translate:Ne te réjouis-tu pas?]",
+     "[translate:Tu te réjouis pas?]",
+     "[translate:Tu réjouis?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She does not rejoice.",
+   "options": [
+     "[translate:Elle ne se réjouit pas.]",
+     "[translate:Elle réjouit pas.]",
+     "[translate:Elle se réjouit pas.]",
+     "[translate:Elle réjouis pas.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "You (vous) do not rejoice.",
+   "options": [
+     "[translate:Vous ne vous réjouissez pas.]",
+     "[translate:Vous réjouissez-vous pas?]",
+     "[translate:Vous réjouissez?]",
+     "[translate:Vous réjouis?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He does not rejoice.",
+   "options": [
+     "[translate:Il ne se réjouit pas.]",
+     "[translate:Il réjouit pas.]",
+     "[translate:Il se réjouit pas.]",
+     "[translate:Il réjouis pas.]"
+   ],

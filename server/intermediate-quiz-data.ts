@@ -1379,6 +1379,31 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will she not adapt?", "options": ["Ne s'adaptera-t-elle pas?", "Elle s'adaptera pas?", "S'est-elle adaptée?", "Elle n'adaptera pas?"], "answer": "D"},
       {"question": "They (fem.) will not adapt.", "options": ["Elles ne s'adapteront pas.", "Elles s'adapteront pas.", "Elles adapteront pas.", "Elles s'adapteront?"], "answer": "B"}
     ]
+  },
+
+  "se réjouir": {
+    "présent": [
+      {"question": "Do I rejoice?", "options": ["Je me réjouis?", "Me réjouis-je?", "Je me réjouissez?", "Je réjouis?"], "answer": "C"},
+      {"question": "Do you (tu) not rejoice?", "options": ["Ne te réjouis-tu pas?", "Tu te réjouis?", "Tu ne te réjouis pas?", "Tu réjouis?"], "answer": "A"},
+      {"question": "Does he rejoice?", "options": ["Il se réjouit?", "Se réjouit-il?", "Il réjouit?", "Il se réjouis?"], "answer": "D"},
+      {"question": "Do we not rejoice?", "options": ["Nous ne nous réjouissons pas?", "Nous nous réjouissons pas?", "Ne nous réjouissons-nous pas?", "Nous nous réjouissons?"], "answer": "B"},
+      {"question": "Does she rejoice?", "options": ["Se réjouit-elle?", "Elle se réjouit?", "Elle réjouit?", "Elle se réjouis?"], "answer": "A"},
+      {"question": "You (vous) rejoice.", "options": ["Vous vous réjouissez.", "Réjouissez-vous?", "Vous réjouissez?", "Vous réjouir?"], "answer": "C"},
+      {"question": "They (masc.) do not rejoice.", "options": ["Ils ne se réjouissent pas.", "Ils se réjouissent pas?", "Ils se réjouissent?", "Ne se réjouissent-ils pas?"], "answer": "B"},
+      {"question": "Do you (vous) rejoice?", "options": ["Réjouissez-vous?", "Vous vous réjouissez?", "Vous réjouissez?", "Vous vous réjouissez-vous?"], "answer": "D"},
+      {"question": "Do they (fem.) rejoice?", "options": ["Réjouissent-elles?", "Elles se réjouissent?", "Se réjouissent-elles?", "Elles réjouissent?"], "answer": "C"},
+      {"question": "Do we not rejoice?", "options": ["Nous ne nous réjouissons pas?", "Nous nous réjouissons?", "Ne nous réjouissons-nous pas?", "Nous réjouissons-nous?"], "answer": "A"},
+      {"question": "I do not rejoice.", "options": ["Je ne me réjouis pas.", "Je me réjouis pas.", "Je me réjouis?", "Je ne me réjouis pas."], "answer": "D"},
+      {"question": "She rejoices.", "options": ["Elle se réjouit.", "Se réjouit-elle?", "Elle réjouit?", "Elle réjouis?"], "answer": "B"},
+      {"question": "We rejoice.", "options": ["Nous nous réjouissons.", "Nous réjouissons-nous?", "Nous ne nous réjouissons pas.", "Nous réjouissons?"], "answer": "A"},
+      {"question": "Do you (tu) not rejoice?", "options": ["Tu ne te réjouis pas?", "Ne te réjouis-tu pas?", "Tu te réjouis pas?", "Tu réjouis?"], "answer": "C"},
+      {"question": "She does not rejoice.", "options": ["Elle ne se réjouit pas.", "Elle réjouit pas.", "Elle se réjouit pas.", "Elle réjouis pas."], "answer": "B"},
+      {"question": "You (vous) do not rejoice.", "options": ["Vous ne vous réjouissez pas.", "Vous réjouissez-vous pas?", "Vous réjouissez?", "Vous réjouis?"], "answer": "D"},
+      {"question": "He does not rejoice.", "options": ["Il ne se réjouit pas.", "Il réjouit pas.", "Il se réjouit pas.", "Il réjouis pas."], "answer": "A"},
+      {"question": "They (masc.) rejoice.", "options": ["Ils se réjouissent.", "Ils réjouissent?", "Ils ne se réjouissent pas.", "Ils réjouis?"], "answer": "A"},
+      {"question": "Does she not rejoice?", "options": ["Ne se réjouit-elle pas?", "Elle se réjouit pas?", "Elle ne réjouit pas?", "Se réjouit-elle?"], "answer": "A"},
+      {"question": "They (fem.) do not rejoice.", "options": ["Elles ne se réjouissent pas.", "Elles réjouissent pas.", "Elles se réjouissent pas.", "Elles se réjouissent?"], "answer": "A"}
+    ]
   }
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
