@@ -2,6 +2,7 @@ import { useState } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "@/lib/queryClient";
 import { useAuth } from "@/hooks/useAuth";
+import { isAdvancedDifficultyEnabled } from "@shared/config";
 
 // Fresh App Wrapper with Auth
 function FreshAppWithAuth() {
@@ -41,6 +42,7 @@ function FreshAppCore({ user }: { user: any }) {
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
+  const [showAdvancedLockedModal, setShowAdvancedLockedModal] = useState(false);
   // Reflexive verb explanation modal states
   const [showReflexiveModal, setShowReflexiveModal] = useState(false);
   const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
@@ -55,6 +57,9 @@ function FreshAppCore({ user }: { user: any }) {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
+
+  // Cache the advanced difficulty state to avoid repeated function calls in JSX
+  const isAdvancedEnabled = isAdvancedDifficultyEnabled();
 
   const FRENCH_VERBS = ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder", "devoir", "passer", "penser", "arriver", "demander", "travailler", "finir", "commencer", "répondre", "apprendre", "envoyer", "recevoir", "se lever", "s'appeler", "se sentir", "se laver", "se réveiller", "se taire", "se servir", "se plaindre", "se concentrer", "se rendre compte", "se rappeler"];
   
@@ -579,10 +584,10 @@ function FreshAppCore({ user }: { user: any }) {
                       pointerEvents: 'auto'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.color = '#1e40af';
+                      (e.target as HTMLElement).style.color = '#1e40af';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.color = '#1e3a8a';
+                      (e.target as HTMLElement).style.color = '#1e3a8a';
                     }}
                   >
                     Don't remind me again.
@@ -631,12 +636,32 @@ function FreshAppCore({ user }: { user: any }) {
                 </button>
                 
                 <button
-                  onClick={() => handleAdvancedySelect("Advanced")}
-                  style={{ width: '100%', padding: '16px', textAlign: 'left', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.3)', borderRadius: '12px', color: 'white', cursor: 'pointer' }}
+                  onClick={() => isAdvancedEnabled ? handleAdvancedySelect("Advanced") : setShowAdvancedLockedModal(true)}
+                  style={{ 
+                    width: '100%', 
+                    padding: '16px', 
+                    textAlign: 'left', 
+                    background: isAdvancedEnabled ? 'rgba(239, 68, 68, 0.2)' : 'rgba(107, 114, 128, 0.1)', 
+                    border: isAdvancedEnabled ? '1px solid rgba(239, 68, 68, 0.3)' : '1px solid rgba(107, 114, 128, 0.2)', 
+                    borderRadius: '12px', 
+                    color: 'white', 
+                    cursor: isAdvancedEnabled ? 'pointer' : 'not-allowed',
+                    opacity: isAdvancedEnabled ? 1 : 0.6
+                  }}
                 >
-                  <div style={{ color: '#f87171', fontWeight: '600', fontSize: '18px' }}>🔴 Advanced</div>
+                  <div style={{ 
+                    color: isAdvancedEnabled ? '#f87171' : '#9ca3af', 
+                    fontWeight: '600', 
+                    fontSize: '18px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                  }}>
+                    {isAdvancedEnabled ? "🔴" : "🔒"} Advanced
+                    {!isAdvancedEnabled && <span style={{ fontSize: '12px', background: 'rgba(124, 58, 237, 0.2)', padding: '2px 8px', borderRadius: '4px' }}>Coming Soon</span>}
+                  </div>
                   <div style={{ color: '#cbd5e1', fontSize: '14px', marginTop: '4px' }}>
-                    All 10 verbs • All tenses and time frames
+                    {isAdvancedEnabled ? "All 10 verbs • All tenses and time frames" : "Available in future version • Full conjugation mastery"}
                   </div>
                 </button>
               </div>
@@ -646,6 +671,43 @@ function FreshAppCore({ user }: { user: any }) {
                 style={{ width: '100%', padding: '12px', color: '#94a3b8', background: 'transparent', border: '1px solid #475569', borderRadius: '12px', cursor: 'pointer' }}
               >
                 Cancel
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Advanced Level Locked Modal */}
+        {showAdvancedLockedModal && (
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
+            <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '16px', padding: '32px', maxWidth: '400px', width: '100%', margin: '16px' }}>
+              <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+                <div style={{ fontSize: '64px', marginBottom: '16px' }}>🔒</div>
+                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white', marginBottom: '8px' }}>Advanced Level Locked</h3>
+                <p style={{ color: '#c084fc', fontSize: '18px' }}>Coming in Future Version!</p>
+              </div>
+              
+              <div style={{ background: 'linear-gradient(to right, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2))', border: '1px solid rgba(124, 58, 237, 0.3)', borderRadius: '12px', padding: '24px', marginBottom: '24px' }}>
+                <h4 style={{ fontWeight: '600', color: '#c084fc', marginBottom: '12px' }}>🚀 What's Coming in Advanced:</h4>
+                <ul style={{ color: '#cbd5e1', fontSize: '14px', listStyle: 'none', padding: 0, margin: 0 }}>
+                  <li style={{ marginBottom: '8px' }}>• Complete mastery with 13 essential verbs</li>
+                  <li style={{ marginBottom: '8px' }}>• All French tenses and time frames</li>
+                  <li style={{ marginBottom: '8px' }}>• Advanced reflexive verb conjugations</li>
+                  <li style={{ marginBottom: '8px' }}>• Complex grammatical structures</li>
+                  <li>• Professional-level French fluency</li>
+                </ul>
+              </div>
+              
+              <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '16px', marginBottom: '24px' }}>
+                <p style={{ color: '#cbd5e1', fontSize: '14px', textAlign: 'center' }}>
+                  <strong style={{ color: '#fde047' }}>French Verb Master Version 1</strong> focuses on building a solid foundation with Elementary through Intermediate levels.
+                </p>
+              </div>
+              
+              <button
+                onClick={() => setShowAdvancedLockedModal(false)}
+                style={{ width: '100%', padding: '16px', background: 'linear-gradient(to right, #7c3aed, #3b82f6)', color: 'white', fontWeight: '600', borderRadius: '12px', border: 'none', cursor: 'pointer' }}
+              >
+                Got It! 👍
               </button>
             </div>
           </div>
