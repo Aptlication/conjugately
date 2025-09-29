@@ -1,0 +1,208 @@
+passe compose - s'ennuyer
+
+Replace the existing se debrouiller present tense content with the new questions from your attached file.
+
+“Test that it works end-to-end before confirming completion”
+
+[
+ {
+   "question": "Did I get bored?",
+   "options": [
+     "[translate:Me suis-je ennuyé(e)?]",
+     "[translate:J'ai ennuyé?]",
+     "[translate:Je me suis ennuyé?]",
+     "[translate:Ai-je ennuyé(e)?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (tu) not get bored?",
+   "options": [
+     "[translate:Tu t'es ennuyé(e)?]",
+     "[translate:Ne t'es-tu pas ennuyé(e)?]",
+     "[translate:Tu n'as pas ennuyé?]",
+     "[translate:T'es-tu ennuyé?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did he get bored?",
+   "options": [
+     "[translate:S'est-il ennuyé?]",
+     "[translate:Il a ennuyé?]",
+     "[translate:A-t-il ennuyé?]",
+     "[translate:Il s'est ennuyé?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did we not get bored?",
+   "options": [
+     "[translate:Ne nous sommes-nous pas ennuyé(e)s?]",
+     "[translate:Nous nous sommes pas ennuyés?]",
+     "[translate:Nous n'avons pas ennuyé?]",
+     "[translate:Nous sommes ennuyés?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did she get bored?",
+   "options": [
+     "[translate:Elle s'est ennuyée?]",
+     "[translate:S'est-elle ennuyée?]",
+     "[translate:Elle a ennuyé?]",
+     "[translate:A-t-elle ennuyée?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (plural) got bored.",
+   "options": [
+     "[translate:Vous avez ennuyé?]",
+     "[translate:Vous vous êtes ennuyé(e)(s).]",
+     "[translate:Vous s'êtes ennuyés?]",
+     "[translate:Vous êtes ennuyé?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "They (masc.) did not get bored.",
+   "options": [
+     "[translate:Ils n'ont pas ennuyé.]",
+     "[translate:Ils ne se sont pas ennuyés.]",
+     "[translate:Ils se sont pas ennuyés.]",
+     "[translate:Ils se ne sont pas ennuyé.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did you (formal) get bored?",
+   "options": [
+     "[translate:Vous vous êtes ennuyé(e)?]",
+     "[translate:Vous êtes-vous ennuyé(e)?]",
+     "[translate:Vous avez ennuyé?]",
+     "[translate:Avez-vous ennuyé?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did they (fem.) get bored?",
+   "options": [
+     "[translate:Elles ont ennuyé?]",
+     "[translate:Elles sont ennuyées?]",
+     "[translate:Elles se sont ennuyées?]",
+     "[translate:Se sont-elles ennuyées?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did we not get bored?",
+   "options": [
+     "[translate:Nous ne nous sommes pas ennuyé(e)s?]",
+     "[translate:Nous ne sommes pas ennuyés?]",
+     "[translate:Ne nous sommes-nous pas ennuyés?]",
+     "[translate:Nous nous sommes ennuyés?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "I did not get bored.",
+   "options": [
+     "[translate:Je ne me suis pas ennuyé(e).]",
+     "[translate:Je n'ai pas ennuyé.]",
+     "[translate:Je me suis pas ennuyé.]",
+     "[translate:Je suis ennuyé(e).]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She got bored.",
+   "options": [
+     "[translate:Elle a ennuyé.]",
+     "[translate:Elle s'est ennuyée.]",
+     "[translate:Elle s'est pas ennuyée.]",
+     "[translate:Elle s'est ennuyé.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "We got bored.",
+   "options": [
+     "[translate:Nous nous sommes ennuyé(e)s.]",
+     "[translate:Nous avons ennuyé.]",
+     "[translate:Nous sommes ennuyé.]",
+     "[translate:Nous s'est ennuyés.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (tu) not get bored?",
+   "options": [
+     "[translate:Tu n'es pas ennuyé(e)?]",
+     "[translate:Tu ne t'es pas ennuyé(e)?]",
+     "[translate:Tu n'a pas ennuyé(e)?]",
+     "[translate:Tu s'est ennuyé(e)?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "She did not get bored.",
+   "options": [
+     "[translate:Elle ne s'est pas ennuyée.]",
+     "[translate:Elle s'est pas ennuyée.]",
+     "[translate:Elle n'a pas ennuyé.]",
+     "[translate:Elle ne se pas ennuyée.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "You (plural) did not get bored.",
+   "options": [
+     "[translate:Vous vous êtes ennuyé(e)(s).]",
+     "[translate:Vous n'avez pas ennuyé.]",
+     "[translate:Vous ne vous êtes pas ennuyé(e)(s).]",
+     "[translate:Vous n'êtes pas ennuyé.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He did not get bored.",
+   "options": [
+     "[translate:Il ne s'est pas ennuyé.]",
+     "[translate:Il s'est pas ennuyé.]",
+     "[translate:Il n'a pas ennuyé.]",
+     "[translate:Il s'est ennuyé.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "They (masc.) got bored.",
+   "options": [
+     "[translate:Ils se sont ennuyés.]",
+     "[translate:Ils ont ennuyé.]",
+     "[translate:Ils s'est ennuyés.]",
+     "[translate:Ils sont ennuyés.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did she not get bored?",
+   "options": [
+     "[translate:Ne s'est-elle pas ennuyée?]",
+     "[translate:Elle s'est pas ennuyée?]",
+     "[translate:S'est-elle ennuyé?]",
+     "[translate:Elle n'est pas ennuyée?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (fem.) did not get bored.",
+   "options": [
+     "[translate:Elles ne se sont pas ennuyées.]",
+     "[translate:Elles ne sont pas ennuyé.]",
+     "[translate:Elles s'est pas ennuyées.]",
+     "[translate:Elles n'ont pas ennuyé.]"
+   ],
+   "answer": "D"
+ }
+]
