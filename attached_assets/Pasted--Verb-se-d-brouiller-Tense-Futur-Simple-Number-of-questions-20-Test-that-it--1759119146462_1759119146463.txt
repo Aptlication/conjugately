@@ -1,0 +1,586 @@
+**Verb:** se débrouiller  
+**Tense:** Futur Simple  
+**Number of questions:** 20
+
+"Test that it works end-to-end before confirming completion"
+
+<immersive type="learning">
+```quiz
+{
+  "questions": [
+    {
+      "question": "I will manage to get by.",
+      "hint": "First person singular uses 'me' and '-ai' ending in the futur simple.",
+      "answerOptions": [
+        {
+          "text": "Je me débrouillerai.",
+          "rationale": "This correctly uses 'me' with 'débrouillerai' (futur simple, first person singular).",
+          "isCorrect": true
+        },
+        {
+          "text": "Je me débrouilleras.",
+          "rationale": "This wrongly uses the second person ending '-as'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je débrouillerai.",
+          "rationale": "This omits the reflexive pronoun 'me'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me débrouille.",
+          "rationale": "This is the present tense, not futur simple.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (singular) will manage in France.",
+      "hint": "Second person singular requires 'te' and '-as' ending.",
+      "answerOptions": [
+        {
+          "text": "Tu te débrouilleras en France.",
+          "rationale": "This correctly uses 'te' with 'débrouilleras' (futur simple, 2nd person singular).",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu te débrouillerai en France.",
+          "rationale": "This incorrectly uses the first person ending '-ai'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu débrouilleras en France.",
+          "rationale": "This omits the reflexive pronoun 'te'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te débrouilles en France.",
+          "rationale": "This uses present tense, not futur simple.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He will manage by himself.",
+      "hint": "Third person singular uses 'se' and '-a' ending.",
+      "answerOptions": [
+        {
+          "text": "Il se débrouillera tout seul.",
+          "rationale": "This correctly uses 'se' with 'débrouillera' for 3rd person singular.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il se débrouilleront tout seul.",
+          "rationale": "This uses the plural ending '-ont' instead of singular '-a'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il débrouillera tout seul.",
+          "rationale": "This omits the reflexive pronoun 'se'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il se débrouille tout seul.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She will manage in Paris.",
+      "hint": "Feminine subject, but conjugation is the same as masculine for the verb in futur simple.",
+      "answerOptions": [
+        {
+          "text": "Elle se débrouillera à Paris.",
+          "rationale": "This is the correct reflexive and futur simple form for feminine subject.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle se débrouillerai à Paris.",
+          "rationale": "This uses the first person ending '-ai' instead of '-a'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle se débrouilles à Paris.",
+          "rationale": "This is present tense, not futur simple.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle débrouillera à Paris.",
+          "rationale": "This omits the required reflexive pronoun.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We will manage together.",
+      "hint": "First person plural requires 'nous' as subject and reflexive pronoun, with '-ons' ending.",
+      "answerOptions": [
+        {
+          "text": "Nous nous débrouillerons ensemble.",
+          "rationale": "This correctly uses double 'nous' with '-ons'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous nous débrouilleront ensemble.",
+          "rationale": "This uses the third person plural ending '-ont'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous débrouillerons ensemble.",
+          "rationale": "This omits the reflexive pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous débrouillons ensemble.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) will manage the situation.",
+      "hint": "Second person plural uses 'vous' and '-ez' ending.",
+      "answerOptions": [
+        {
+          "text": "Vous vous débrouillerez avec la situation.",
+          "rationale": "This correctly uses 'vous' and futur simple second person plural ending '-ez'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous débrouilleront avec la situation.",
+          "rationale": "This is a third person plural ending.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous débrouillez avec la situation.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous débrouillerez avec la situation.",
+          "rationale": "This omits reflexive pronoun 'vous'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masculine) will manage without help.",
+      "hint": "Third person masculine plural is formed with 'se' + '-ont'.",
+      "answerOptions": [
+        {
+          "text": "Ils se débrouilleront sans aide.",
+          "rationale": "This is the correct third person plural in futur simple.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils se débrouillerons sans aide.",
+          "rationale": "This uses the first person plural ending '-ons'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils débrouilleront sans aide.",
+          "rationale": "This omits the reflexive pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils se débrouillent sans aide.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (feminine) will manage easily.",
+      "hint": "Feminine plural uses same verb ending as masculine; gender only affects adjectives/pronouns.",
+      "answerOptions": [
+        {
+          "text": "Elles se débrouilleront facilement.",
+          "rationale": "This correctly uses 'elles se' + futur simple ending '-ont'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles se débrouillerons facilement.",
+          "rationale": "This is first person plural ending.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles débrouilleront facilement.",
+          "rationale": "This omits reflexive pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles se débrouillent facilement.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I won't manage alone.",
+      "hint": "Negation 'ne...pas' surrounds the conjugated verb.",
+      "answerOptions": [
+        {
+          "text": "Je ne me débrouillerai pas seul.",
+          "rationale": "This correctly places negation around future verb form with reflexive pronoun.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je me ne débrouillerai pas seul.",
+          "rationale": "This misplaces 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne me débrouille pas seul.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne débrouillerai pas seul.",
+          "rationale": "This omits 'me', the reflexive pronoun.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You will never manage that.",
+      "hint": "Negation 'ne...jamais' surrounds verb, 'jamais' replacing 'pas'.",
+      "answerOptions": [
+        {
+          "text": "Tu ne te débrouilleras jamais avec ça.",
+          "rationale": "This uses 'ne...jamais' around futur simple with correct pronoun.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu ne te débrouilles jamais avec ça.",
+          "rationale": "This is present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te ne débrouilleras jamais avec ça.",
+          "rationale": "This misplaces 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne débrouilleras jamais avec ça.",
+          "rationale": "This omits the reflexive pronoun.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He will not manage the problem.",
+      "hint": "Third person singular, negation 'ne...pas'.",
+      "answerOptions": [
+        {
+          "text": "Il ne se débrouillera pas avec le problème.",
+          "rationale": "This correctly places negation around verb and uses correct subject/pronoun.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il se ne débrouillera pas avec le problème.",
+          "rationale": "This misplaces 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il ne se débrouille pas avec le problème.",
+          "rationale": "Present tense, not future.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il ne débrouillera pas avec le problème.",
+          "rationale": "Omitting 'se' makes it non-reflexive.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She will not manage well.",
+      "hint": "Feminine subject, negation, 'bien' as adverb.",
+      "answerOptions": [
+        {
+          "text": "Elle ne se débrouillera pas bien.",
+          "rationale": "This is the negation with correct adverb placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle se ne débrouillera pas bien.",
+          "rationale": "Misplaces 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne se débrouille pas bien.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne débrouillera pas bien.",
+          "rationale": "Omitting reflexive pronoun.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We will not manage to finish in time.",
+      "hint": "First person plural, negation, 'finir à temps'.",
+      "answerOptions": [
+        {
+          "text": "Nous ne nous débrouillerons pas pour finir à temps.",
+          "rationale": "This places negation correctly and uses both 'nous' appropriately.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous nous ne débrouillerons pas pour finir à temps.",
+          "rationale": "Misplaces 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous ne nous débrouillons pas pour finir à temps.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous ne débrouillerons pas pour finir à temps.",
+          "rationale": "Omitting reflexive.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) won't manage alone.",
+      "hint": "Second person plural, negation.",
+      "answerOptions": [
+        {
+          "text": "Vous ne vous débrouillerez pas seuls.",
+          "rationale": "This uses plural subject/pronoun, correct verb and negation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous ne débrouillerez pas seuls.",
+          "rationale": "'Ne' is misplaced.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne vous débrouillez pas seuls.",
+          "rationale": "Present, not futur simple.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne débrouillerez pas seuls.",
+          "rationale": "Missing the reflexive pronoun.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masc.) will not manage the work.",
+      "hint": "Third person plural, negation.",
+      "answerOptions": [
+        {
+          "text": "Ils ne se débrouilleront pas avec le travail.",
+          "rationale": "Proper negation, pronoun and plural ending.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils se ne débrouilleront pas avec le travail.",
+          "rationale": "Misplaced 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ne se débrouillent pas avec le travail.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ne débrouilleront pas avec le travail.",
+          "rationale": "Omitting pronoun 'se'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (feminine) will not manage to do it.",
+      "hint": "Feminine plural, negation, 'le faire'.",
+      "answerOptions": [
+        {
+          "text": "Elles ne se débrouilleront pas pour le faire.",
+          "rationale": "This correctly uses negation, proper subject and pronoun for futur simple.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles se ne débrouilleront pas pour le faire.",
+          "rationale": "Misplacement of 'ne'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ne se débrouillent pas pour le faire.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ne débrouilleront pas pour le faire.",
+          "rationale": "Missing the reflexive pronoun 'se'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I will manage if necessary.",
+      "hint": "First person singular, affirmative.",
+      "answerOptions": [
+        {
+          "text": "Je me débrouillerai si nécessaire.",
+          "rationale": "Uses proper conjugation, reflexive pronoun and condition.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je me débrouilleras si nécessaire.",
+          "rationale": "Uses second person ending '-as'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je débrouillerai si nécessaire.",
+          "rationale": "Omitting 'me'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me débrouille si nécessaire.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (singular) will manage for the group.",
+      "hint": "Second person singular, affirmative.",
+      "answerOptions": [
+        {
+          "text": "Tu te débrouilleras pour le groupe.",
+          "rationale": "Correct reflexive usage and futur simple 2nd person.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu te débrouillerai pour le groupe.",
+          "rationale": "Wrong ending '-ai' (should be '-as').",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu débrouilleras pour le groupe.",
+          "rationale": "Missing pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te débrouilles pour le groupe.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He will manage with less money.",
+      "hint": "Third person singular with preposition 'avec'.",
+      "answerOptions": [
+        {
+          "text": "Il se débrouillera avec moins d'argent.",
+          "rationale": "Correct pronoun, verb and preposition usage.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il débrouillera avec moins d'argent.",
+          "rationale": "Missing 'se'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il se débrouille avec moins d'argent.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il se débrouillerai avec moins d'argent.",
+          "rationale": "Wrong ending '-ai' for third person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We will manage despite everything.",
+      "hint": "First person plural, 'malgré tout'.",
+      "answerOptions": [
+        {
+          "text": "Nous nous débrouillerons malgré tout.",
+          "rationale": "Correct first person plural futur simple form.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous débrouillerons malgré tout.",
+          "rationale": "Omitting one 'nous'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous débrouilleront malgré tout.",
+          "rationale": "Wrong ending '-ont'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous débrouillons malgré tout.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) will manage with this problem.",
+      "hint": "Second person plural, 'avec ce problème'.",
+      "answerOptions": [
+        {
+          "text": "Vous vous débrouillerez avec ce problème.",
+          "rationale": "Correct pronoun and '-ez' ending for futur simple.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous débrouillerez avec ce problème.",
+          "rationale": "Missing pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous débrouillez avec ce problème.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous débrouilleront avec ce problème.",
+          "rationale": "Wrong ending '-ont'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They will manage at school.",
+      "hint": "Third person plural, 'à l'école'.",
+      "answerOptions": [
+        {
+          "text": "Ils se débrouilleront à l'école.",
+          "rationale": "Correct form for third person plural in futur simple.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils se débrouillerons à l'école.",
+          "rationale": "First person plural ending.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils débrouilleront à l'école.",
+          "rationale": "Missing 'se'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils se débrouillent à l'école.",
+          "rationale": "Present tense.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
+```
+</immersive>
