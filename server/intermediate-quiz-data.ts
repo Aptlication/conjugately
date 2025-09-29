@@ -1105,6 +1105,31 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     ]
   },
 
+  "s'entraîner": {
+    "présent": [
+      {"question": "Do I train?", "options": ["Je m'entraîne ?", "M'entraîne-je ?", "J'entraîne ?", "Je m'entraînez ?"], "answer": "A"},
+      {"question": "Are you (tu) not training?", "options": ["Tu t'entraînes ?", "Ne t'entraînes-tu pas ?", "Tu ne t'entraînes pas ?", "Tu entraînes ?"], "answer": "B"},
+      {"question": "Is he training?", "options": ["S'entraîne-t-il ?", "Il s'entraîne ?", "Il entraîne ?", "Il s'entraînes ?"], "answer": "C"},
+      {"question": "Are we not training?", "options": ["Ne nous entraînons-nous pas ?", "Nous nous entraînons pas ?", "Nous entraînons ?", "Nous s'entraînons ?"], "answer": "D"},
+      {"question": "Is she training?", "options": ["Elle s'entraîne ?", "S'entraîne-t-elle ?", "Elle entraîne ?", "Elle s'entraînes ?"], "answer": "A"},
+      {"question": "You (vous) are training.", "options": ["Vous vous entraînez.", "Vous entraînez ?", "Vous vous entraîneurs.", "Vous avez entraîné ?"], "answer": "B"},
+      {"question": "They (masc.) are not training.", "options": ["Ils ne s'entraînent pas.", "Ils n'entraînent pas.", "Ne s'entraînent-ils pas ?", "Ils s'entraînent ?"], "answer": "C"},
+      {"question": "Are you (vous) training?", "options": ["Vous vous entraînez ?", "Vous entraînez-vous ?", "Vous vous êtes entraîné ?", "Vous entraînez ?"], "answer": "D"},
+      {"question": "Are they (fem.) training?", "options": ["Elles s'entraînent ?", "Elles entraînent ?", "S'entraînent-elles ?", "Elles se sont entraînées ?"], "answer": "A"},
+      {"question": "Are we not training?", "options": ["Nous ne nous entraînons pas ?", "Ne nous entraînons-nous pas ?", "Nous nous entraînons ?", "Nous entraînons ?"], "answer": "B"},
+      {"question": "I am not training.", "options": ["Je ne m'entraîne pas.", "Je m'entraîne ?", "J'entraîne pas.", "Je me suis entraîné."], "answer": "C"},
+      {"question": "She is training.", "options": ["Elle s'entraîne.", "Elle entraîne ?", "Elle s'entraîne pas.", "Elle s'est entraînée."], "answer": "D"},
+      {"question": "We are training.", "options": ["Nous nous entraînons.", "Nous entraînons-nous.", "Nous entraînons ?", "Nous ne nous entraînons pas."], "answer": "A"},
+      {"question": "Are you (tu) not training?", "options": ["Ne t'entraînes-tu pas ?", "Tu ne t'entraînes pas ?", "Tu entraînes pas ?", "Tu s'entraînes ?"], "answer": "B"},
+      {"question": "She is not training.", "options": ["Elle ne s'entraîne pas.", "Elle entraîne pas.", "Elle s'entraîne pas.", "Elle ne entraîne pas."], "answer": "C"},
+      {"question": "You (vous) are not training.", "options": ["Vous ne vous entraînez pas.", "Vous entraînez pas.", "Vous vous entraînez ?", "Vous avez entraîné ?"], "answer": "D"},
+      {"question": "He is not training.", "options": ["Il ne s'entraîne pas.", "Il s'entraîne pas.", "Il entraîne pas.", "Il s'entraîne ?"], "answer": "A"},
+      {"question": "They (masc.) are training.", "options": ["Ils s'entraînent.", "Ils entraînent ?", "Ils ne s'entraînent pas.", "Ils entraînent pas ?"], "answer": "B"},
+      {"question": "Is she not training?", "options": ["Ne s'entraîne-t-elle pas ?", "Elle s'entraîne pas ?", "Elle ne entraîne pas ?", "S'est-elle entraînée ?"], "answer": "C"},
+      {"question": "They (fem.) are not training.", "options": ["Elles ne s'entraînent pas.", "Elles s'entraînent pas.", "Elles entraînent pas.", "Elles s'entraînent ?"], "answer": "D"}
+    ]
+  },
+
   "s'ennuyer": {
     "présent": [
       {"question": "Are you (singular) bored?", "options": ["Tu t'ennuies ?", "Est-ce que tu t'ennuies ?", "Tu ennuies ?", "Tu s'ennuies ?"], "answer": "A"},

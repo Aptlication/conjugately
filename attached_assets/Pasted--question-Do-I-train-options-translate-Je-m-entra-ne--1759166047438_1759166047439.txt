@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Do I train?",
+    "options": [
+      "[translate:Je m'entraîne?]",
+      "[translate:M'entraîne-je?]",
+      "[translate:J'entraîne?]",
+      "[translate:Je m'entraînez?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Are you (tu) not training?",
+    "options": [
+      "[translate:Tu t'entraînes?]",
+      "[translate:Ne t'entraînes-tu pas?]",
+      "[translate:Tu ne t'entraînes pas?]",
+      "[translate:Tu entraînes?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Is he training?",
+    "options": [
+      "[translate:S'entraîne-t-il?]",
+      "[translate:Il s'entraîne?]",
+      "[translate:Il entraîne?]",
+      "[translate:Il s'entraînes?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Are we not training?",
+    "options": [
+      "[translate:Ne nous entraînons-nous pas?]",
+      "[translate:Nous nous entraînons pas?]",
+      "[translate:Nous entraînons?]",
+      "[translate:Nous s'entraînons?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Is she training?",
+    "options": [
+      "[translate:Elle s'entraîne?]",
+      "[translate:S'entraîne-t-elle?]",
+      "[translate:Elle entraîne?]",
+      "[translate:Elle s'entraînes?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You (vous) are training.",
+    "options": [
+      "[translate:Vous vous entraînez.]",
+      "[translate:Vous entraînez?]",
+      "[translate:Vous vous entraîneurs.]",
+      "[translate:Vous avez entraîné?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "They (masc.) are not training.",
+    "options": [
+      "[translate:Ils ne s'entraînent pas.]",
+      "[translate:Ils n'entraînent pas.]",
+      "[translate:Ne s'entraînent-ils pas?]",
+      "[translate:Ils s'entraînent?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Are you (vous) training?",
+    "options": [
+      "[translate:Vous vous entraînez?]",
+      "[translate:Vous entraînez-vous?]",
+      "[translate:Vous vous êtes entraîné?]",
+      "[translate:Vous entraînez?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Are they (fem.) training?",
+    "options": [
+      "[translate:Elles s'entraînent?]",
+      "[translate:Elles entraînent?]",
+      "[translate:S'entraînent-elles?]",
+      "[translate:Elles se sont entraînées?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Are we not training?",
+    "options": [
+      "[translate:Nous ne nous entraînons pas?]",
+      "[translate:Ne nous entraînons-nous pas?]",
+      "[translate:Nous nous entraînons?]",
+      "[translate:Nous entraînons?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "I am not training.",
+    "options": [
+      "[translate:Je ne m'entraîne pas.]",
+      "[translate:Je m'entraîne?]",
+      "[translate:J'entraîne pas.]",
+      "[translate:Je me suis entraîné.]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "She is training.",
+    "options": [
+      "[translate:Elle s'entraîne.]",
+      "[translate:Elle entraîne?]",
+      "[translate:Elle s'entraîne pas.]",
+      "[translate:Elle s'est entraînée.]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "We are training.",
+    "options": [
+      "[translate:Nous nous entraînons.]",
+      "[translate:Nous entraînons-nous.]",
+      "[translate:Nous entraînons?]",
+      "[translate:Nous ne nous entraînons pas.]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Are you (tu) not training?",
+    "options": [
+      "[translate:Ne t'entraînes-tu pas?]",
+      "[translate:Tu ne t'entraînes pas?]",
+      "[translate:Tu entraînes pas?]",
+      "[translate:Tu s'entraînes?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "She is not training.",
+    "options": [
+      "[translate:Elle ne s'entraîne pas.]", 
+      "[translate:Elle entraîne pas.]", 
+      "[translate:Elle s'entraîne pas.]", 
+      "[translate:Elle ne entraîne pas.]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "You (vous) are not training.",
+    "options": [
+      "[translate:Vous ne vous entraînez pas.]",
+      "[translate:Vous entraînez pas.]",
+      "[translate:Vous vous entraînez?]",
+      "[translate:Vous avez entraîné?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "He is not training.",
+    "options": [
+      "[translate:Il ne s'entraîne pas.]",
+      "[translate:Il s'entraîne pas.]",
+      "[translate:Il entraîne pas.]",
+      "[translate:Il s'entraîne?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "They (masc.) are training.",
+    "options": [
+      "[translate:Ils s'entraînent.]",
+      "[translate:Ils entraînent?]",
+      "[translate:Ils ne s'entraînent pas.]",
+      "[translate:Ils entraînent pas?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Is she not training?",
+    "options": [
+      "[translate:Ne s'entraîne-t-elle pas?]",
+      "[translate:Elle s'entraîne pas?]",
+      "[translate:Elle ne entraîne pas?]",
+      "[translate:S'est-elle entraînée?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "They (fem.) are not training.",
+    "options": [
+      "[translate:Elles ne s'entraînent pas.]",
+      "[translate:Elles s'entraînent pas.]",
+      "[translate:Elles entraînent pas.]",
+      "[translate:Elles s'entraînent?]"
+    ],
+    "answer": "D"
+  }
+]
