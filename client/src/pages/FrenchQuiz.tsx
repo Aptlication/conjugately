@@ -25,7 +25,7 @@ const FRENCH_VERBS = [
 const TIME_FRAMES = {
   "Present": ["Présent"], // Only present simple for basic levels
   "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
-  "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
+  "Future": ["Futur Simple", "Futur Antérieur"],
 };
 
 // Complete difficulty configurations for all 5 levels

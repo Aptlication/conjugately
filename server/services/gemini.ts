@@ -27,7 +27,7 @@ export async function generateFrenchVerbQuiz(verb: string, timeFrame: string, te
       future: {
         simple: 'Futur Simple',
         perfect: 'Futur Antérieur',
-        continuous: 'Futur Proche',
+        continuous: 'Futur Simple',
         conditional: 'Conditionnel Présent'
       }
     };

@@ -181,7 +181,7 @@ function App() {
   const TIME_FRAMES = {
     "Present": ["Présent"], // Only present simple for basic levels 
     "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
-    "Future": ["Futur Simple", "Futur Antérieur", "Futur Proche"],
+    "Future": ["Futur Simple", "Futur Antérieur"],
   };
 
   const DIFFICULTY_CONFIGS = {
@@ -331,7 +331,7 @@ function App() {
         const moderateTenseMap = {
           "Past": "Passé Composé",
           "Present": "Présent", 
-          "Future": "Futur Proche"
+          "Future": "Futur Simple"
         };
         finalTenseType = moderateTenseMap[selectedTimeFrame as keyof typeof moderateTenseMap] || "";
       }
@@ -2178,7 +2178,7 @@ function App() {
                   const moderateTenseMap = {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
-                    "Future": "Futur Proche"
+                    "Future": "Futur Simple"
                   };
                   setSelectedTenseType(moderateTenseMap[e.target.value as keyof typeof moderateTenseMap] || "");
                 } else {
