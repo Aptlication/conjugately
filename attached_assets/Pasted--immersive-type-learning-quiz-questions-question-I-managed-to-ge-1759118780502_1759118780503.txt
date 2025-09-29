@@ -1,0 +1,268 @@
+<immersive type="learning">
+```quiz
+{
+  "questions": [
+    {
+      "question": "I managed to get by.",
+      "hint": "In passé composé, 'se débrouiller' uses 'être' as the auxiliary and agrees with the subject.",
+      "answerOptions": [
+        {
+          "text": "Je me suis débrouillé(e).",
+          "rationale": "This correctly uses 'être' as the auxiliary, the reflexive pronoun 'me', and the past participle 'débrouillé' with possible gender agreement.",
+          "isCorrect": true
+        },
+        {
+          "text": "J'ai débrouillé.",
+          "rationale": "This incorrectly uses 'avoir' as the auxiliary instead of 'être' for a reflexive verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me débrouillais.",
+          "rationale": "This is in the imperfect tense, not passé composé.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je suis débrouillé.",
+          "rationale": "This omits the required reflexive pronoun 'me'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You managed on your own.",
+      "hint": "Second person singular uses 'es' as auxiliary with reflexive pronoun 'te'.",
+      "answerOptions": [
+        {
+          "text": "Tu t'es débrouillé(e) tout seul.",
+          "rationale": "This correctly uses 'être' as auxiliary with reflexive pronoun 'te' and past participle 'débrouillé'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu as débrouillé tout seul.",
+          "rationale": "This incorrectly uses auxiliary 'avoir' instead of 'être'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'es débrouilles tout seul.",
+          "rationale": "This uses a present tense ending, not past participle.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu débrouillas tout seul.",
+          "rationale": "This is passé simple, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He managed in the exam.",
+      "hint": "Third person masculine singular requires 'est' with correct participle form.",
+      "answerOptions": [
+        {
+          "text": "Il s'est débrouillé à l'examen.",
+          "rationale": "This correctly uses 's'' with 'être' auxiliary and masculine form 'débrouillé'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il est débrouillé à l'examen.",
+          "rationale": "This omits the reflexive pronoun 'se', which is required for a reflexive verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il a débrouillé à l'examen.",
+          "rationale": "This uses auxiliary 'avoir', which is not correct for 'se débrouiller'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il se débrouillait à l'examen.",
+          "rationale": "This is the imperfect tense form, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She managed with difficulty.",
+      "hint": "Feminine singular requires 'intéressée' with agreement - note the 'e'.",
+      "answerOptions": [
+        {
+          "text": "Elle s'est débrouillée avec difficulté.",
+          "rationale": "This correctly uses 's'' with feminine agreement of the past participle marked by 'e'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle s'est débrouillé avec difficulté.",
+          "rationale": "This omits the feminine agreement 'e' on the past participle for subject 'elle'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle a débrouillé avec difficulté.",
+          "rationale": "This uses wrong auxiliary 'avoir'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle se débrouille avec difficulté.",
+          "rationale": "This is present tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We managed just fine.",
+      "hint": "First person plural uses 'nous' for subject and reflexive pronoun.",
+      "answerOptions": [
+        {
+          "text": "Nous nous sommes débrouillés.",
+          "rationale": "This correctly uses 'nous' twice (subject and reflexive pronoun) with plural agreement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous sommes débrouillés.",
+          "rationale": "This omits the reflexive pronoun 'nous'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous avons débrouillés.",
+          "rationale": "This incorrectly uses 'avoir' auxiliary instead of 'être'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous débrouillons.",
+          "rationale": "This is present tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) managed well.",
+      "hint": "Second person plural uses 'êtes' with correct participle.",
+      "answerOptions": [
+        {
+          "text": "Vous vous êtes débrouillés.",
+          "rationale": "This correctly uses 'vous' as reflexive pronoun with auxiliary 'être' and plural agreement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous êtes débrouillés.",
+          "rationale": "This omits the reflexive pronoun 'vous'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous avez débrouillés.",
+          "rationale": "This incorrectly introduces 'avoir' auxiliary instead of 'être'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous débrouillez.",
+          "rationale": "This is present tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masculine) managed without help.",
+      "hint": "Third person masculine plural requires 'se' with plural agreement.",
+      "answerOptions": [
+        {
+          "text": "Ils se sont débrouillés sans aide.",
+          "rationale": "This correctly uses 'se' with auxiliary 'être' and masculine plural agreement 'débrouillés'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils se sont débrouillé sans aide.",
+          "rationale": "This lacks the plural 's' on participle agreement for subject 'ils'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ont débrouillé sans aide.",
+          "rationale": "This uses auxiliary 'avoir' instead of 'être'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils se débrouillaient sans aide.",
+          "rationale": "This is imperfect tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (feminine) managed perfectly.",
+      "hint": "Feminine plural agreement is marked with 'ées'.",
+      "answerOptions": [
+        {
+          "text": "Elles se sont débrouillées parfaitement.",
+          "rationale": "This correctly uses 'se' with auxiliary 'être' and feminine plural agreement 'débrouillées'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles se sont débrouillés parfaitement.",
+          "rationale": "This uses masculine plural agreement instead of feminine plural.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ont débrouillé parfaitement.",
+          "rationale": "This uses 'avoir' auxiliary incorrectly.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles se débrouillaient parfaitement.",
+          "rationale": "This is in imperfect tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I did not manage at all.",
+      "hint": "Negation 'ne...pas' surrounds the auxiliary 'être'.",
+      "answerOptions": [
+        {
+          "text": "Je ne me suis pas débrouillé(e).",
+          "rationale": "This correctly forms negation around the auxiliary 'suis' for reflexive verb in passé composé.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je me ne suis pas débrouillé(e).",
+          "rationale": "This places 'ne' after reflexive pronoun incorrectly.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je n'ai pas débrouillé.",
+          "rationale": "This uses auxiliary 'avoir', not 'être'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne me débrouillais pas.",
+          "rationale": "This is imperfect tense negation, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You never managed to finish.",
+      "hint": "Use 'ne...jamais' around auxiliary with reflexive verb.",
+      "answerOptions": [
+        {
+          "text": "Tu ne t'es jamais débrouillé(e) pour finir.",
+          "rationale": "This correctly uses 'ne...jamais' negation around auxiliary 'es' with reflexive form.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu t'es ne jamais débrouillé(e) pour finir.",
+          "rationale": "This misplaces 'ne' after reflexive pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu n'as jamais débrouillé pour finir.",
+          "rationale": "This uses wrong auxiliary 'avoir'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne t'es débrouillais jamais pour finir.",
+          "rationale": "This switches to imperfect tense, not passé composé.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
+```
+</immersive>

@@ -1102,6 +1102,18 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "How do you manage? (Présent)", "options": ["Comment te débrouilles-tu ?", "Comment débrouilles-tu ?", "Comment te débrouille-tu ?", "Comment me débrouilles-tu ?"], "answer": "A"},
       {"question": "We always manage somehow. (Présent)", "options": ["Nous nous débrouillons toujours d'une façon ou d'une autre.", "Nous débrouillons toujours d'une façon ou d'une autre.", "Nous nous débrouillent toujours d'une façon ou d'une autre.", "Nous me débrouillons toujours d'une façon ou d'une autre."], "answer": "A"},
       {"question": "They manage to find solutions. (Présent)", "options": ["Ils se débrouillent pour trouver des solutions.", "Ils débrouillent pour trouver des solutions.", "Ils se débrouillant pour trouver des solutions.", "Ils me débrouillent pour trouver des solutions."], "answer": "A"}
+    ],
+    "passé_composé": [
+      {"question": "I managed to get by. (Passé Composé)", "options": ["Je me suis débrouillé(e).", "J'ai débrouillé.", "Je me débrouillais.", "Je suis débrouillé."], "answer": "A"},
+      {"question": "You managed on your own. (Passé Composé)", "options": ["Tu t'es débrouillé(e) tout seul.", "Tu as débrouillé tout seul.", "Tu t'es débrouilles tout seul.", "Tu débrouillas tout seul."], "answer": "A"},
+      {"question": "He managed in the exam. (Passé Composé)", "options": ["Il s'est débrouillé à l'examen.", "Il est débrouillé à l'examen.", "Il a débrouillé à l'examen.", "Il se débrouillait à l'examen."], "answer": "A"},
+      {"question": "She managed with difficulty. (Passé Composé)", "options": ["Elle s'est débrouillée avec difficulté.", "Elle s'est débrouillé avec difficulté.", "Elle a débrouillé avec difficulté.", "Elle se débrouille avec difficulté."], "answer": "A"},
+      {"question": "We managed just fine. (Passé Composé)", "options": ["Nous nous sommes débrouillés.", "Nous sommes débrouillés.", "Nous avons débrouillés.", "Nous nous débrouillons."], "answer": "A"},
+      {"question": "You (plural) managed well. (Passé Composé)", "options": ["Vous vous êtes débrouillés.", "Vous êtes débrouillés.", "Vous vous avez débrouillés.", "Vous vous débrouillez."], "answer": "A"},
+      {"question": "They (masculine) managed without help. (Passé Composé)", "options": ["Ils se sont débrouillés sans aide.", "Ils se sont débrouillé sans aide.", "Ils ont débrouillé sans aide.", "Ils se débrouillaient sans aide."], "answer": "A"},
+      {"question": "They (feminine) managed perfectly. (Passé Composé)", "options": ["Elles se sont débrouillées parfaitement.", "Elles se sont débrouillés parfaitement.", "Elles ont débrouillé parfaitement.", "Elles se débrouillaient parfaitement."], "answer": "A"},
+      {"question": "I did not manage at all. (Passé Composé)", "options": ["Je ne me suis pas débrouillé(e).", "Je me ne suis pas débrouillé(e).", "Je n'ai pas débrouillé.", "Je ne me débrouillais pas."], "answer": "A"},
+      {"question": "You never managed to finish. (Passé Composé)", "options": ["Tu ne t'es jamais débrouillé(e) pour finir.", "Tu t'es ne jamais débrouillé(e) pour finir.", "Tu n'as jamais débrouillé pour finir.", "Tu ne t'es débrouillais jamais pour finir."], "answer": "A"}
     ]
   }
 
