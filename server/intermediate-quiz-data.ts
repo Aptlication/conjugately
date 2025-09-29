@@ -1149,6 +1149,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) trained.", "options": ["Ils sont entraînés.", "Ils se sont entraînés.", "Ils s'est entraînés.", "Ils ont entraîné."], "answer": "B"},
       {"question": "Did she not train?", "options": ["Elle n'est pas entraînée ?", "Elle s'est pas entraînée ?", "Ne s'est-elle pas entraînée ?", "S'est-elle entraîné ?"], "answer": "C"},
       {"question": "They (fem.) did not train.", "options": ["Elles n'ont pas entraîné.", "Elles ne sont pas entraîné.", "Elles s'est pas entraînées.", "Elles ne se sont pas entraînées."], "answer": "D"}
+    ],
+    "futur_simple": [
+      {"question": "Will I train?", "options": ["Je m'entraînerai ?", "M'entraînerai-je ?", "J'entraînerai ?", "Je m'ai entraîné ?"], "answer": "B"},
+      {"question": "Will you (tu) not train?", "options": ["Tu entraîneras ?", "Tu t'entraîneras ?", "Tu ne t'entraîneras pas ?", "Ne t'entraîneras-tu pas ?"], "answer": "D"},
+      {"question": "Will he train?", "options": ["Il s'est entraîné ?", "S'entraînera-t-il ?", "Il entraînera ?", "Il s'entraînera ?"], "answer": "B"},
+      {"question": "Will we not train?", "options": ["Nous entraînerons ?", "Nous nous entraînerons pas ?", "Ne nous entraînerons-nous pas ?", "Nous nous sommes entraînés ?"], "answer": "C"},
+      {"question": "Will she train?", "options": ["Elle s'est entraînée ?", "S'entraînera-t-elle ?", "Elle entraînera ?", "Elle s'entraînera ?"], "answer": "D"},
+      {"question": "You (vous) will train.", "options": ["Vous vous entraînerez.", "Vous entraînerez ?", "Vous vous êtes entraînés.", "Vous avez entraîné ?"], "answer": "A"},
+      {"question": "They (masc.) will not train.", "options": ["Ils s'entraîneront ?", "Ils ne s'entraîneront pas.", "Ne s'entraîneront-ils pas ?", "Ils n'entraîneront pas."], "answer": "B"},
+      {"question": "Will you (vous) train?", "options": ["Vous entraînerez ?", "Vous vous êtes entraîné ?", "Vous entraînerez-vous ?", "Vous vous entraînerez ?"], "answer": "C"},
+      {"question": "Will they (fem.) train?", "options": ["Elles s'entraîneront ?", "Elles entraîneront ?", "S'entraîneront-elles ?", "Elles se sont entraînées ?"], "answer": "A"},
+      {"question": "Will we not train?", "options": ["Nous entraînerons ?", "Ne nous entraînerons-nous pas ?", "Nous nous entraînerons ?", "Nous ne nous entraînerons pas ?"], "answer": "D"},
+      {"question": "I will not train.", "options": ["Je me suis entraîné.", "Je m'entraînerai ?", "Je ne m'entraînerai pas.", "J'entraînerai pas."], "answer": "C"},
+      {"question": "She will train.", "options": ["Elle s'entraînera.", "Elle entraînera ?", "Elle s'est entraînée.", "Elle s'entraînera pas."], "answer": "A"},
+      {"question": "We will train.", "options": ["Nous entraînerons-nous.", "Nous nous entraînerons.", "Nous ne nous entraînerons pas.", "Nous entraînerons ?"], "answer": "B"},
+      {"question": "Will you (tu) not train?", "options": ["Tu s'entraîneras ?", "Tu entraîneras pas ?", "Tu ne t'entraîneras pas ?", "Ne t'entraîneras-tu pas ?"], "answer": "C"},
+      {"question": "She will not train.", "options": ["Elle ne entraînera pas.", "Elle s'entraînera pas.", "Elle entraînera pas.", "Elle ne s'entraînera pas."], "answer": "D"},
+      {"question": "You (vous) will not train.", "options": ["Vous ne vous entraînerez pas.", "Vous avez entraîné ?", "Vous vous entraînerez ?", "Vous entraînerez pas."], "answer": "A"},
+      {"question": "He will not train.", "options": ["Il s'entraînera ?", "Il ne s'entraînera pas.", "Il entraînera pas.", "Il s'entraînera pas."], "answer": "B"},
+      {"question": "They (masc.) will train.", "options": ["Ils s'entraîneront.", "Ils entraîneront ?", "Ils ne s'entraîneront pas.", "Ils entraîneront pas ?"], "answer": "A"},
+      {"question": "Will she not train?", "options": ["Ne s'entraînera-t-elle pas ?", "Elle s'entraînera pas ?", "Elle ne entraînera pas ?", "S'est-elle entraînée ?"], "answer": "B"},
+      {"question": "They (fem.) will not train.", "options": ["Elles ne s'entraîneront pas.", "Elles s'entraîneront pas.", "Elles entraîneront pas.", "Elles s'entraîneront ?"], "answer": "C"}
     ]
   },
 
