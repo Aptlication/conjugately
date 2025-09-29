@@ -1,0 +1,140 @@
+passe compose - se debrouiller
+
+Replace the existing se debrouiller present tense content with the new questions from your attached file.
+
+“Test that it works end-to-end before confirming completion”
+
+[
+ {
+   "question": "Did I manage?",
+   "options": [
+     "[translate:Me suis-je débrouillé(e)?]",
+     "[translate:Suis-je débrouillé?]",
+     "[translate:J'ai débrouillé?]",
+     "[translate:Ai-je débrouillé(e)?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (singular) not manage?",
+   "options": [
+     "[translate:Tu t'es débrouillé(e)?]",
+     "[translate:Tu n'as pas débrouillé?]",
+     "[translate:Ne t'es-tu pas débrouillé(e)?]",
+     "[translate:T'es-tu débrouillé?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did he manage?",
+   "options": [
+     "[translate:S'est-il débrouillé?]",
+     "[translate:Il a débrouillé?]",
+     "[translate:A-t-il débrouillé?]",
+     "[translate:Il s'est débrouillé?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did we not manage?",
+   "options": [
+     "[translate:Nous n'avons pas débrouillé?]",
+     "[translate:Nous nous sommes pas débrouillés?]",
+     "[translate:Ne nous sommes-nous pas débrouillés?]",
+     "[translate:Nous sommes débrouillés?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did she manage?",
+   "options": [
+     "[translate:Elle s'est débrouillée?]",
+     "[translate:S'est-elle débrouillée?]",
+     "[translate:Elle a débrouillé?]",
+     "[translate:A-t-elle débrouillé(e)?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (plural) managed.",
+   "options": [
+     "[translate:Vous avez débrouillé?]",
+     "[translate:Vous vous êtes débrouillé(e)(s).]",
+     "[translate:Vous s'êtes débrouillés?]",
+     "[translate:Vous êtes débrouillé?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "They (masculine) did not manage.",
+   "options": [
+     "[translate:Ils n'ont pas débrouillé.]",
+     "[translate:Ils ne se sont pas débrouillés.]",
+     "[translate:Ils se sont pas débrouillés.]",
+     "[translate:Ils se ne sont pas débrouillé.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did you (formal) manage?",
+   "options": [
+     "[translate:Vous vous êtes débrouillé(e)?]",
+     "[translate:Vous êtes-vous débrouillé(e)?]",
+     "[translate:Vous avez débrouillé?]",
+     "[translate:Avez-vous débrouillé?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did they (feminine) manage?",
+   "options": [
+     "[translate:Elles ont débrouillé?]",
+     "[translate:Elles sont débrouillées?]",
+     "[translate:Elles se sont débrouillées?]",
+     "[translate:Se sont-elles débrouillées?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did we not manage?",
+   "options": [
+     "[translate:Nous ne nous sommes pas débrouillé(e)s?]",
+     "[translate:Nous ne sommes pas débrouillés?]",
+     "[translate:Ne nous sommes-nous pas débrouillés?]",
+     "[translate:Nous nous sommes débrouillés?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "I did not manage.",
+   "options": [
+     "[translate:Je ne me suis pas débrouillé(e).]",
+     "[translate:Je n'ai pas débrouillé.]",
+     "[translate:Je me suis pas débrouillé.]",
+     "[translate:Je suis débrouillé(e).]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She managed.",
+   "options": [
+     "[translate:Elle a débrouillé.]",
+     "[translate:Elle s'est débrouillée.]",
+     "[translate:Elle s'est pas débrouillée.]",
+     "[translate:Elle s'est débrouillé.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "We managed.",
+   "options": [
+     "[translate:Nous nous sommes débrouillé(e)s.]",
+     "[translate:Nous avons débrouillé.]",
+     "[translate:Nous sommes débrouillé.]",
+     "[translate:Nous s'est débrouillés.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (singular) not manage?",
+ 
