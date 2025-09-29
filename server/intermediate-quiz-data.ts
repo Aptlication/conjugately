@@ -1103,28 +1103,6 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Does she never manage in English? (Présent)", "options": ["Elle ne se débrouille jamais en anglais ?", "Ne se débrouille jamais en anglais ?", "Ne se débrouille-t-elle jamais en anglais ?", "Elle ne débrouille jamais en anglais ?"], "answer": "C"},
       {"question": "How well do we manage together? (Présent)", "options": ["Comment nous nous débrouillons ensemble ?", "Comment nous débrouillons ensemble ?", "Comment est-ce que nous nous débrouillons ensemble ?", "Comment nous débrouillons-nous ensemble ?"], "answer": "D"}
     ],
-    "passé_composé": [
-      {"question": "Did I manage? (Passé Composé)", "options": ["Me suis-je débrouillé(e) ?", "Suis-je débrouillé ?", "J'ai débrouillé ?", "Ai-je débrouillé(e) ?"], "answer": "A"},
-      {"question": "Did you (singular) not manage? (Passé Composé)", "options": ["Tu t'es débrouillé(e) ?", "Ne t'es-tu pas débrouillé(e) ?", "Tu n'as pas débrouillé ?", "T'es-tu débrouillé ?"], "answer": "B"},
-      {"question": "Did he manage? (Passé Composé)", "options": ["S'est-il débrouillé ?", "Il a débrouillé ?", "A-t-il débrouillé ?", "Il s'est débrouillé ?"], "answer": "C"},
-      {"question": "Did we not manage? (Passé Composé)", "options": ["Nous n'avons pas débrouillé ?", "Nous nous sommes pas débrouillés ?", "Ne nous sommes-nous pas débrouillés ?", "Nous sommes débrouillés ?"], "answer": "D"},
-      {"question": "Did she manage? (Passé Composé)", "options": ["Elle s'est débrouillée ?", "S'est-elle débrouillée ?", "Elle a débrouillé ?", "A-t-elle débrouillé(e) ?"], "answer": "A"},
-      {"question": "You (plural) managed. (Passé Composé)", "options": ["Vous avez débrouillé ?", "Vous vous êtes débrouillé(e)s.", "Vous s'êtes débrouillés ?", "Vous êtes débrouillé ?"], "answer": "B"},
-      {"question": "They (masculine) did not manage. (Passé Composé)", "options": ["Ils n'ont pas débrouillé.", "Ils ne se sont pas débrouillés.", "Ils se sont pas débrouillés.", "Ils se ne sont pas débrouillé."], "answer": "C"},
-      {"question": "Did you (formal) manage? (Passé Composé)", "options": ["Vous vous êtes débrouillé(e) ?", "Vous êtes-vous débrouillé(e) ?", "Vous avez débrouillé ?", "Avez-vous débrouillé ?"], "answer": "D"},
-      {"question": "Did they (feminine) manage? (Passé Composé)", "options": ["Elles ont débrouillé ?", "Elles sont débrouillées ?", "Elles se sont débrouillées ?", "Se sont-elles débrouillées ?"], "answer": "A"},
-      {"question": "Did we not manage well? (Passé Composé)", "options": ["Nous ne nous sommes pas débrouillé(e)s ?", "Nous ne sommes pas bien débrouillés ?", "Ne nous sommes-nous pas bien débrouillés ?", "Nous nous sommes débrouillés ?"], "answer": "B"},
-      {"question": "I did not manage. (Passé Composé)", "options": ["Je ne me suis pas débrouillé(e).", "Je n'ai pas débrouillé.", "Je me suis pas débrouillé.", "Je suis débrouillé(e)."], "answer": "C"},
-      {"question": "She managed. (Passé Composé)", "options": ["Elle a débrouillé.", "Elle s'est débrouillée.", "Elle s'est pas débrouillée.", "Elle s'est débrouillé."], "answer": "D"},
-      {"question": "We managed. (Passé Composé)", "options": ["Nous nous sommes débrouillé(e)s.", "Nous avons débrouillé.", "Nous sommes débrouillé.", "Nous s'est débrouillés."], "answer": "A"},
-      {"question": "Did you (singular) never manage? (Passé Composé)", "options": ["Tu t'es débrouillé(e) ?", "Ne t'es-tu jamais débrouillé(e) ?", "Tu n'as jamais débrouillé ?", "T'es-tu jamais débrouillé ?"], "answer": "B"},
-      {"question": "Did he not manage alone? (Passé Composé)", "options": ["S'est-il débrouillé seul ?", "Il n'a pas débrouillé seul ?", "Ne s'est-il pas débrouillé seul ?", "Il ne s'est pas débrouillé seul ?"], "answer": "C"},
-      {"question": "How did they manage? (Passé Composé)", "options": ["Comment ont-ils débrouillé ?", "Comment ils se sont débrouillés ?", "Comment se sont-ils débrouillés ?", "Comment se sont-ils débrouillés ?"], "answer": "D"},
-      {"question": "We did not manage yesterday. (Passé Composé)", "options": ["Nous ne nous sommes pas débrouillés hier.", "Nous n'avons pas débrouillé hier.", "Nous nous sommes pas débrouillés hier.", "Nous ne sommes pas débrouillés hier."], "answer": "A"},
-      {"question": "When did you manage to finish? (Passé Composé)", "options": ["Quand as-tu débrouillé pour finir ?", "Quand t'es-tu débrouillé(e) pour finir ?", "Quand tu t'es débrouillé(e) pour finir ?", "Quand es-tu débrouillé pour finir ?"], "answer": "B"},
-      {"question": "Where did she not manage? (Passé Composé)", "options": ["Où elle ne s'est pas débrouillée ?", "Où n'a-t-elle pas débrouillé ?", "Où ne s'est-elle pas débrouillée ?", "Où elle n'a pas débrouillé ?"], "answer": "C"},
-      {"question": "Why did we manage so well? (Passé Composé)", "options": ["Pourquoi nous nous sommes bien débrouillés ?", "Pourquoi avons-nous bien débrouillé ?", "Pourquoi nous sommes bien débrouillés ?", "Pourquoi nous sommes-nous si bien débrouillés ?"], "answer": "D"}
-    ],
     "futur_simple": [
       {"question": "I will manage to get by. (Futur Simple)", "options": ["Je me débrouillerai.", "Je me débrouilleras.", "Je débrouillerai.", "Je me débrouille."], "answer": "A"},
       {"question": "You (singular) will manage in France. (Futur Simple)", "options": ["Tu te débrouilleras en France.", "Tu te débrouillerai en France.", "Tu débrouilleras en France.", "Tu te débrouilles en France."], "answer": "A"},
