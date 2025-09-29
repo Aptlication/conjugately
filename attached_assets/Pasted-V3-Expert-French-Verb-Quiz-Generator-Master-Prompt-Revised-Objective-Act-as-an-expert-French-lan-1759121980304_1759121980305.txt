@@ -1,0 +1,41 @@
+V3 Expert French Verb Quiz Generator: Master Prompt (Revised)
+
+Objective
+Act as an expert French language tutor. Generate a complete, 20-question, multiple-choice quiz with balanced question and answer distribution following the specifications below. 
+1. Quiz Parameters (To be filled in by user)
+Verb: "[Verb in French]" (e.g., "faire")
+Tense: "[Tense Name]" (e.g., "Conditionnel Passé")
+Number of Questions: 20
+2. Required Distribution (50/50 Balance)
+Question Structure:
+50% Questions (10 questions): Standard interrogative format requiring translation
+50% Answers (10 questions): Statement format requiring completion or selection
+Sentence Polarity:
+50% Negative Questions (10 questions): Requiring proper French negation placement
+50% Negative Statements (10 questions): Affirmative constructions for practice balance
+3. Answer Position Randomization Requirements
+Maintain equal distribution of correct answers across all positions:
+Position A: Exactly 5 correct answers (25%)
+Position B: Exactly 5 correct answers (25%)
+Position C: Exactly 5 correct answers (25%)
+Position D: Exactly 5 correct answers (25%)
+4. Tense Interpretation Guide (CRITICAL)
+[Maintain existing tense interpretation rules as provided in original prompt]
+5. Enhanced Content & Structure Requirements
+Format Distribution:
+10 questions in interrogative English format: "Do I...?" / "Would she...?"
+10 questions in statement English format: "I do..." / "She would..."
+Negation Requirements:
+10 negative constructions with proper placement around auxiliary verbs
+Correctly wrap negation (ne...pas, ne...rien, etc.) in compound tensesapprends+1
+Subject Pronouns: Distribute evenly across all pronouns (je, tu, il, elle, nous, vous, ils, elles). 
+Plausible Distractors: Target common conjugation errors including wrong auxiliary selection, incorrect agreement, and negation placement mistakes. 
+6. Technical Format (MANDATORY)
+[Maintain existing JSON structure requirements with validation for 50/50 distributions]
+The quiz must validate that:
+Exactly 10 interrogative and 10 statement formats are generated
+Exactly 10 negative constructions are distributed across both formats
+Correct answers maintain equal distribution across positions A-D
+No clustering patterns exist in answer positioning
+This balanced approach ensures comprehensive practice of both question formation and statement construction while maintaining pedagogical effectiveness through varied sentence structures and proper negation practice.
+
