@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 
+// Type guard function to check if user has id
+const hasUserId = (user: any): user is { id: string } => {
+  return user && typeof user === 'object' && 'id' in user && typeof user.id === 'string';
+};
+
 function App() {
   // French Verb Master - No reminder version
   const { user, isLoading, isAuthenticated } = useAuth();
@@ -43,18 +48,18 @@ function App() {
 
   // Load completed courses and progress on app start
   useEffect(() => {
-    if (isAuthenticated && user?.id) {
+    if (isAuthenticated && hasUserId(user)) {
       loadUserData();
     }
-  }, [isAuthenticated, user?.id]);
+  }, [isAuthenticated, user]);
 
   const loadUserData = async () => {
-    if (!user?.id) return;
+    if (!hasUserId(user)) return;
     
     try {
       const [completedResponse, progressResponse] = await Promise.all([
-        fetch(`/api/completed-courses/${user.id}`),
-        fetch(`/api/course-progress/${user.id}`)
+        fetch(`/api/completed-courses/${(user as any).id}`),
+        fetch(`/api/course-progress/${(user as any).id}`)
       ]);
       
       if (completedResponse.ok) {
@@ -74,14 +79,14 @@ function App() {
   const handleResetCourse = async (courseType: string, timeFrame: string, event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent triggering the course button click
     
-    if (!user?.id) return;
+    if (!hasUserId(user)) return;
     
     if (!confirm(`Are you sure you want to reset the ${courseType} ${timeFrame} course? This will mark it as not passed and allow you to retake it.`)) {
       return;
     }
 
     try {
-      const response = await fetch(`/api/completed-courses/${user.id}/${courseType}/${timeFrame}`, {
+      const response = await fetch(`/api/completed-courses/${(user as any).id}/${courseType}/${timeFrame}`, {
         method: 'DELETE',
       });
 
@@ -727,13 +732,13 @@ function App() {
   };
 
   const resetCourse = async (courseType: string, timeFrame: string) => {
-    if (!user?.id) {
+    if (!hasUserId(user)) {
       console.error('User not authenticated, cannot reset course');
       return;
     }
     
     try {
-      await fetch(`/api/completed-courses/${user.id}/${courseType}/${timeFrame}`, {
+      await fetch(`/api/completed-courses/${(user as any).id}/${courseType}/${timeFrame}`, {
         method: 'DELETE'
       });
       await loadUserData(); // Refresh data
@@ -743,7 +748,7 @@ function App() {
   };
 
   const saveCourseProgress = async (courseInfo: any) => {
-    if (!user?.id) {
+    if (!hasUserId(user)) {
       console.error('User not authenticated, cannot save course progress');
       return;
     }
@@ -753,7 +758,7 @@ function App() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userId: user.id,
+          userId: (user as any).id,
           courseType: "beginner",
           timeFrame: courseInfo.timeFrame,
           tense: courseInfo.tense,
@@ -1572,7 +1577,7 @@ function App() {
       
       // Save completed course and update progress if passed - do this once when exam is complete
       // CRITICAL FIX: Check if user is authenticated before trying to save
-      if (examPassed && user?.id && !completedCourses.some(course => 
+      if (examPassed && hasUserId(user) && !completedCourses.some(course => 
         course.courseType === (courseInfo.courseLevel?.toLowerCase() || "beginner") && 
         course.timeFrame === courseInfo.timeFrame
       )) {
@@ -1638,7 +1643,7 @@ function App() {
           }
         };
         saveCompletedCourse();
-      } else if (examPassed && !user?.id) {
+      } else if (examPassed && !hasUserId(user)) {
         // If user passed but isn't authenticated, show login prompt
         return (
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
