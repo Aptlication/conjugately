@@ -1,0 +1,111 @@
+present - mettre
+
+"Test that it works end-to-end before confirming completion"
+ 
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Do they (feminine) put on their coats? (Negative)",
+   "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"],
+   "answer": "C"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ la table. (We set the table.)",
+   "options": ["mettons", "mettez", "mets", "mettent"],
+   "answer": "A"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Are you (formal) not putting your phones on the desk?",
+   "options": ["Est-ce que tu ne mets pas ton téléphone sur le bureau ?", "Est-ce que vous mets pas vos téléphones sur le bureau ?", "Est-ce que vous ne mettez pas vos téléphones sur le bureau ?", "Est-ce que nous ne mettons pas vos téléphones sur le bureau ?"],
+   "answer": "D"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Elles _______ le couvert tous les soirs. (They (f) set the table every evening.)",
+   "options": ["mettez", "mettent", "mettons", "mets"],
+   "answer": "B"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Do you (singular informal) not put sugar in your tea?",
+   "options": ["Est-ce que tu mets du sucre dans ton thé ?", "Est-ce que nous ne mettons pas de sucre dans ton thé ?", "Est-ce que vous mettez du sucre dans ton thé ?", "Est-ce que tu ne mets pas de sucre dans ton thé ?"],
+   "answer": "A"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ mes clés sur la table. (I put my keys on the table.)",
+   "options": ["mettez", "mettons", "mets", "mettent"],
+   "answer": "C"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Does he not put on his shoes?",
+   "options": ["Est-ce qu'il met pas ses chaussures ?", "Est-ce qu'il ne met pas ses chaussures ?", "Est-ce qu'il met ses chaussures ?", "Est-ce qu'ils ne mettent pas ses chaussures ?"],
+   "answer": "B"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ toujours des fleurs dans le vase. (You (pl.) always put flowers in the vase.)",
+   "options": ["mettent", "mets", "mettons", "mettez"],
+   "answer": "D"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Don't we put the food in the fridge?",
+   "options": ["Est-ce que nous mettons la nourriture dans le frigo ?", "Est-ce que nous n'avez pas la nourriture dans le frigo ?", "Est-ce que nous ne mettons pas la nourriture dans le frigo ?", "Est-ce que nous ne mettez pas la nourriture dans le frigo ?"],
+   "answer": "C"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Il ______ son manteau avant de sortir. (He puts on his coat before going out.)",
+   "options": ["met", "mets", "mettent", "mettons"],
+   "answer": "A"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Do I not put enough effort into my work?",
+   "options": ["Est-ce que je mets assez d'effort dans mon travail ?", "Est-ce que tu ne mets pas assez d'effort dans mon travail ?", "Est-ce que nous ne mettons pas assez d'effort dans mon travail ?", "Est-ce que je ne mets pas assez d'effort dans mon travail ?"],
+   "answer": "D"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Tu _______ toujours la lumière quand tu entres. (You (sing.) always turn on the light when you enter.)",
+   "options": ["mettez", "mets", "mettons", "mettent"],
+   "answer": "B"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Is she not putting the books on the shelf?",
+   "options": ["Est-ce qu'elle ne met pas les livres sur l'étagère ?", "Est-ce qu'il met pas les livres sur l'étagère ?", "Est-ce qu'elles ne mettent pas les livres sur l'étagère ?", "Est-ce que vous ne mettez pas les livres sur l'étagère ?"],
+   "answer": "A"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ rarement nos stylos sur la table. (We rarely put our pens on the table.)",
+   "options": ["mets", "mettent", "mettons", "mettez"],
+   "answer": "C"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Are they (masc.) not putting enough salt in the soup?",
+   "options": ["Est-ce que nous ne mettons pas assez de sel dans la soupe ?", "Est-ce qu'ils ne mettent pas assez de sel dans la soupe ?", "Est-ce qu'il ne mettez pas assez de sel dans la soupe ?", "Est-ce que vous mettez pas assez de sel dans la soupe ?"],
+   "answer":
+ 
