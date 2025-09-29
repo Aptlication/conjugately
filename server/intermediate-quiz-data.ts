@@ -1127,6 +1127,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) are training.", "options": ["Ils s'entraînent.", "Ils entraînent ?", "Ils ne s'entraînent pas.", "Ils entraînent pas ?"], "answer": "B"},
       {"question": "Is she not training?", "options": ["Ne s'entraîne-t-elle pas ?", "Elle s'entraîne pas ?", "Elle ne entraîne pas ?", "S'est-elle entraînée ?"], "answer": "C"},
       {"question": "They (fem.) are not training.", "options": ["Elles ne s'entraînent pas.", "Elles s'entraînent pas.", "Elles entraînent pas.", "Elles s'entraînent ?"], "answer": "D"}
+    ],
+    "passé_composé": [
+      {"question": "Did I train?", "options": ["J'ai entraîné ?", "Me suis-je entraîné(e) ?", "Je me suis entraîné ?", "Ai-je entraîné(e) ?"], "answer": "B"},
+      {"question": "Did you (tu) not train?", "options": ["Tu t'es entraîné(e) ?", "Tu n'as pas entraîné ?", "T'es-tu entraîné ?", "Ne t'es-tu pas entraîné(e) ?"], "answer": "D"},
+      {"question": "Did he train?", "options": ["Il a entraîné ?", "S'est-il entraîné ?", "A-t-il entraîné ?", "Il s'est entraîné ?"], "answer": "B"},
+      {"question": "Did we not train?", "options": ["Nous sommes entraînés ?", "Nous nous sommes pas entraînés ?", "Ne nous sommes-nous pas entraîné(e)s ?", "Nous n'avons pas entraîné ?"], "answer": "C"},
+      {"question": "Did she train?", "options": ["Elle a entraîné ?", "S'est-elle entraînée ?", "A-t-elle entraînée ?", "Elle s'est entraînée ?"], "answer": "D"},
+      {"question": "You (vous) trained.", "options": ["Vous vous êtes entraîné(e)(s).", "Vous avez entraîné ?", "Vous s'êtes entraînés ?", "Vous êtes entraîné ?"], "answer": "A"},
+      {"question": "They (masc.) did not train.", "options": ["Ils se ne sont pas entraîné.", "Ils ne se sont pas entraînés.", "Ils n'ont pas entraîné.", "Ils se sont pas entraînés."], "answer": "B"},
+      {"question": "Did you (vous) train?", "options": ["Vous avez entraîné ?", "Avez-vous entraîné ?", "Vous êtes-vous entraîné(e) ?", "Vous vous êtes entraîné(e) ?"], "answer": "C"},
+      {"question": "Did they (fem.) train?", "options": ["Elles se sont entraînées ?", "Elles sont entraînées ?", "Se sont-elles entraînées ?", "Elles ont entraîné ?"], "answer": "A"},
+      {"question": "Did we not train?", "options": ["Nous nous sommes entraînés ?", "Ne nous sommes-nous pas entraînés ?", "Nous ne sommes pas entraînés ?", "Nous ne nous sommes pas entraîné(e)s ?"], "answer": "D"},
+      {"question": "I did not train.", "options": ["Je suis entraîné(e).", "Je me suis pas entraîné.", "Je ne me suis pas entraîné(e).", "Je n'ai pas entraîné."], "answer": "C"},
+      {"question": "She trained.", "options": ["Elle s'est entraînée.", "Elle a entraîné.", "Elle s'est entraîné.", "Elle s'est pas entraînée."], "answer": "A"},
+      {"question": "We trained.", "options": ["Nous s'est entraînés.", "Nous nous sommes entraîné(e)s.", "Nous avons entraîné.", "Nous sommes entraîné."], "answer": "B"},
+      {"question": "Did you (tu) not train?", "options": ["Tu s'est entraîné(e) ?", "Tu n'a pas entraîné(e) ?", "Tu ne t'es pas entraîné(e) ?", "Tu n'es pas entraîné(e) ?"], "answer": "C"},
+      {"question": "She did not train.", "options": ["Elle ne se pas entraînée.", "Elle s'est pas entraînée.", "Elle n'a pas entraîné.", "Elle ne s'est pas entraînée."], "answer": "D"},
+      {"question": "You (vous) did not train.", "options": ["Vous ne vous êtes pas entraîné(e)(s).", "Vous n'êtes pas entraîné.", "Vous vous êtes entraîné(e)(s).", "Vous n'avez pas entraîné."], "answer": "A"},
+      {"question": "He did not train.", "options": ["Il s'est entraîné.", "Il ne s'est pas entraîné.", "Il n'a pas entraîné.", "Il s'est pas entraîné."], "answer": "B"},
+      {"question": "They (masc.) trained.", "options": ["Ils sont entraînés.", "Ils se sont entraînés.", "Ils s'est entraînés.", "Ils ont entraîné."], "answer": "B"},
+      {"question": "Did she not train?", "options": ["Elle n'est pas entraînée ?", "Elle s'est pas entraînée ?", "Ne s'est-elle pas entraînée ?", "S'est-elle entraîné ?"], "answer": "C"},
+      {"question": "They (fem.) did not train.", "options": ["Elles n'ont pas entraîné.", "Elles ne sont pas entraîné.", "Elles s'est pas entraînées.", "Elles ne se sont pas entraînées."], "answer": "D"}
     ]
   },
 
