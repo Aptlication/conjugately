@@ -1,0 +1,209 @@
+present - s'ennuyer
+
+Replace the existing se debrouiller present tense content with the new questions from your attached file.
+
+"Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "question": "Are you (singular) bored?",
+   "options": [
+     "[translate:Tu t'ennuies?]",
+     "[translate:Est-ce que tu t'ennuies?]",
+     "[translate:Tu ennuies?]",
+     "[translate:Tu s'ennuies?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Is he not bored?",
+   "options": [
+     "[translate:Il ne s'ennuie pas?]",
+     "[translate:S'ennuie-t-il?]",
+     "[translate:Il s'ennuie?]",
+     "[translate:Il ennuie?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Are we bored?",
+   "options": [
+     "[translate:Nous nous ennuyons?]",
+     "[translate:Est-ce que nous nous ennuyons?]",
+     "[translate:Nous ennuyons?]",
+     "[translate:Nous s'ennuyons?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Are you (plural) not bored?",
+   "options": [
+     "[translate:Vous ne vous ennuyez pas?]",
+     "[translate:Vous vous ennuyez?]",
+     "[translate:Est-ce que vous vous ennuyez?]",
+     "[translate:Vous ennuyez?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Are you (singular) bored?",
+   "options": [
+     "[translate:Tu t'ennuies?]",
+     "[translate:Tu ne t'ennuies pas?]",
+     "[translate:Tu t'ennuie?]",
+     "[translate:Tu ennuyes?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "She is bored.",
+   "options": [
+     "[translate:Elle s'ennuie.]",
+     "[translate:Elle ne s'ennuie pas.]",
+     "[translate:Elle ennuyée.]",
+     "[translate:Elle t'ennuie.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We are not bored.",
+   "options": [
+     "[translate:Nous ne nous ennuyons pas.]",
+     "[translate:Nous nous ennuyons.]",
+     "[translate:Nous ennuyons pas.]",
+     "[translate:Nous s'ennuions pas.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "He is bored.",
+   "options": [
+     "[translate:Il s'ennuie.]",
+     "[translate:Il ne s'ennuie pas.]",
+     "[translate:Il t'ennuie.]",
+     "[translate:Il ennui.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Are they (masculine) bored?",
+   "options": [
+     "[translate:Ils s'ennuient?]",
+     "[translate:Ils ne s'ennuient pas?]",
+     "[translate:Ils sont ennuyés?]",
+     "[translate:Ils ennuient?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Are you (plural) not bored?",
+   "options": [
+     "[translate:Vous ne vous ennuyez pas?]",
+     "[translate:Vous vous ennuyez?]",
+     "[translate:Vous ne ennuyiez pas?]",
+     "[translate:Vous ennuyez?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "I am not bored.",
+   "options": [
+     "[translate:Je ne m'ennuie pas.]",
+     "[translate:Je m'ennuie.]",
+     "[translate:Je ennuyé.]",
+     "[translate:Je suis ennuyé.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She is not bored.",
+   "options": [
+     "[translate:Elle ne s'ennuie pas.]",
+     "[translate:Elle s'ennuie.]",
+     "[translate:Elle n'est pas ennuyée.]",
+     "[translate:Elle est ennuyée.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "We are bored.",
+   "options": [
+     "[translate:Nous nous ennuyons.]",
+     "[translate:Nous s'ennuyons.]",
+     "[translate:Nous ennuyons.]",
+     "[translate:Nous ne nous ennuyons pas.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Are you (singular) not bored?",
+   "options": [
+     "[translate:Tu ne t'ennuies pas?]",
+     "[translate:Tu s'ennuies pas?]",
+     "[translate:Tu ennuyé?]",
+     "[translate:Tu ne ennuyé pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "He is not bored.",
+   "options": [
+     "[translate:Il ne s'ennuie pas.]",
+     "[translate:Il s'ennuie.]",
+     "[translate:Il ennuyé.]",
+     "[translate:Il ennui.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "You (plural) are bored.",
+   "options": [
+     "[translate:Vous vous ennuyez.]",
+     "[translate:Vous ne vous ennuyez pas.]",
+     "[translate:Vous ennuyez.]",
+     "[translate:Vous êtes ennuyés.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Are they (feminine) bored?",
+   "options": [
+     "[translate:Elles s'ennuient?]",
+     "[translate:Elles ne s'ennuient pas?]",
+     "[translate:Elles sont ennuyées?]",
+     "[translate:Elles ennuient?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Are I bored?",
+   "options": [
+     "[translate:Je m'ennuie?]",
+     "[translate:Je ne m'ennuie pas?]",
+     "[translate:Je ennuyé?]",
+     "[translate:Je ennuie?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "They (masculine) are not bored.",
+   "options": [
+     "[translate:Ils ne s'ennuient pas.]",
+     "[translate:Ils s'ennuient.]",
+     "[translate:Ils sont ennuyés.]",
+     "[translate:Ils ennuient.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (feminine) are bored.",
+   "options": [
+     "[translate:Elles s'ennuient.]",
+     "[translate:Elles ne s'ennuient pas.]",
+     "[translate:Elles sont ennuyées.]",
+     "[translate:Elles ennuient.]"
+   ],
+   "answer": "D"
+ }
+]
