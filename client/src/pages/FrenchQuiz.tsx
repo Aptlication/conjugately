@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 
 // Types
 interface QuizQuestion {
@@ -76,6 +77,7 @@ export default function FrenchQuiz() {
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
   const [showAdvancedyModal, setShowAdvancedyModal] = useState(false);
+  const [showAdvancedLockedModal, setShowAdvancedLockedModal] = useState(false);
   // Reflexive verb explanation modal states
   const [showReflexiveModal, setShowReflexiveModal] = useState(false);
   const [reflexiveModalDismissed, setReflexiveModalDismissed] = useState(() => {
@@ -104,6 +106,12 @@ export default function FrenchQuiz() {
 
   const handleDifficultyChange = (difficulty: keyof typeof DIFFICULTY_CONFIGS) => {
     if (!isDifficultyLocked) {
+      // Check if Advanced is being selected but not enabled
+      if (difficulty === "Advanced" && !isAdvancedDifficultyEnabled()) {
+        setShowAdvancedLockedModal(true);
+        return; // Don't change difficulty
+      }
+      
       setSelectedDifficulty(difficulty);
       // Persist selected difficulty to localStorage
       localStorage.setItem('selectedDifficulty', difficulty);
@@ -506,7 +514,16 @@ export default function FrenchQuiz() {
                       <option value="Novice" className="bg-slate-800 text-white">🔷 Novice - 3 verbs, Present/past/future tenses</option>
                       <option value="Elementary" className="bg-slate-800 text-white">🟢 Elementary - 7 verbs, Present/past/future tenses</option>
                       <option value="Intermediate" className="bg-slate-800 text-white">🟡 Intermediate - 18 verbs (7 reflexive + 11 non-reflexive), Present/past/future + Imparfait</option>
-                      <option value="Advanced" className="bg-slate-800 text-white">🔴 Advanced - 23 verbs (12 non-reflexive + 11 reflexive), All tenses and time frames</option>
+                      <option 
+                        value="Advanced" 
+                        className="bg-slate-800 text-white"
+                        disabled={!isAdvancedDifficultyEnabled()}
+                      >
+                        {isAdvancedDifficultyEnabled() 
+                          ? "🔴 Advanced - 23 verbs (12 non-reflexive + 11 reflexive), All tenses and time frames"
+                          : "🔒 Advanced - Coming Soon! (Available in next version)"
+                        }
+                      </option>
                     </select>
                   </div>
 
@@ -676,14 +693,24 @@ export default function FrenchQuiz() {
                     </button>
                     
                     <button
-                      onClick={() => handleAdvancedySelect("Advanced")}
-                      className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl hover:bg-red-500/30 transition-all duration-200 group"
+                      onClick={() => isAdvancedDifficultyEnabled() ? handleAdvancedySelect("Advanced") : setShowAdvancedLockedModal(true)}
+                      className={`w-full p-4 text-left rounded-xl transition-all duration-200 group ${
+                        isAdvancedDifficultyEnabled()
+                          ? "bg-red-500/20 border border-red-500/30 hover:bg-red-500/30"
+                          : "bg-gray-500/10 border border-gray-500/20 opacity-60 cursor-not-allowed"
+                      }`}
                     >
-                      <div className="text-red-300 font-semibold text-lg group-hover:text-red-200">
-                        🔴 Advanced
+                      <div className={`font-semibold text-lg flex items-center gap-2 ${
+                        isAdvancedDifficultyEnabled() ? "text-red-300 group-hover:text-red-200" : "text-gray-400"
+                      }`}>
+                        {isAdvancedDifficultyEnabled() ? "🔴" : "🔒"} Advanced
+                        {!isAdvancedDifficultyEnabled() && <span className="text-xs bg-purple-500/20 px-2 py-1 rounded">Coming Soon</span>}
                       </div>
-                      <div className="text-slate-300 text-sm mt-1">
-                        All 16 verbs including reflexive • All tenses and time frames
+                      <div className="text-slate-400 text-sm mt-1">
+                        {isAdvancedDifficultyEnabled() 
+                          ? "All 16 verbs including reflexive • All tenses and time frames"
+                          : "Available in future version • Full conjugation mastery"
+                        }
                       </div>
                     </button>
                   </div>
@@ -693,6 +720,43 @@ export default function FrenchQuiz() {
                     className="w-full mt-6 p-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
                   >
                     Cancel
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Advanced Level Locked Modal */}
+            {showAdvancedLockedModal && (
+              <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+                  <div className="text-center mb-6">
+                    <div className="text-6xl mb-4">🔒</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Advanced Level Locked</h3>
+                    <p className="text-purple-200 text-lg">Coming in Future Version!</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl p-6 mb-6">
+                    <h4 className="font-semibold text-purple-200 mb-3">🚀 What's Coming in Advanced:</h4>
+                    <ul className="text-slate-300 text-sm space-y-2">
+                      <li>• Complete mastery with 13 essential verbs</li>
+                      <li>• All French tenses and time frames</li>
+                      <li>• Advanced reflexive verb conjugations</li>
+                      <li>• Complex grammatical structures</li>
+                      <li>• Professional-level French fluency</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-white/5 rounded-lg p-4 mb-6">
+                    <p className="text-slate-300 text-sm text-center">
+                      <strong className="text-yellow-300">French Verb Master Version 1</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
+                    </p>
+                  </div>
+                  
+                  <button
+                    onClick={() => setShowAdvancedLockedModal(false)}
+                    className="w-full p-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold rounded-xl transition-colors"
+                  >
+                    Got It! 👍
                   </button>
                 </div>
               </div>

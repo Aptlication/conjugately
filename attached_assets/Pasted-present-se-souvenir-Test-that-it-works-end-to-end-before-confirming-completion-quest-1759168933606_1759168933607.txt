@@ -1,0 +1,207 @@
+present - se souvenir
+
+"Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "question": "Do I remember?",
+   "options": [
+     "[translate:Je souviens?]",
+     "[translate:M'est-ce que je souviens?]",
+     "[translate:Je me souviens?]",
+     "[translate:Je me souvenir?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do you (tu) not remember?",
+   "options": [
+     "[translate:Ne te souviens-tu pas?]",
+     "[translate:Tu te souviens?]",
+     "[translate:Tu souviens pas?]",
+     "[translate:Tu ne te souviens pas?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Does he remember?",
+   "options": [
+     "[translate:Il souvient?]",
+     "[translate:Il se souvient?]",
+     "[translate:Il se souvenir?]",
+     "[translate:Se souvient-il?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Do we not remember?",
+   "options": [
+     "[translate:Nous souvenons pas?]",
+     "[translate:Nous nous souvenons?]",
+     "[translate:Nous ne nous souvenons pas?]",
+     "[translate:Ne nous souvenons-nous pas?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Does she remember?",
+   "options": [
+     "[translate:Se souvient-elle?]",
+     "[translate:Elle souvient?]",
+     "[translate:Elle se souvenir?]",
+     "[translate:Elle se souvient?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) remember.",
+   "options": [
+     "[translate:Vous souvenez?]",
+     "[translate:Vous vous souvenez.]",
+     "[translate:Vous vous souvenir.]",
+     "[translate:Vous avez souvenu?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "They (masc.) do not remember.",
+   "options": [
+     "[translate:Ils se souviennent?]",
+     "[translate:Ne se souviennent-ils pas?]",
+     "[translate:Ils ne se souviennent pas.]",
+     "[translate:Ils ne souviennent pas.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do you (vous) remember?",
+   "options": [
+     "[translate:Vous souvenez?]",
+     "[translate:Vous vous êtes souvenu?]",
+     "[translate:Vous souvenez-vous?]",
+     "[translate:Vous vous souvenez?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Do they (fem.) remember?",
+   "options": [
+     "[translate:Elles se souviennent?]",
+     "[translate:Elles souviennent?]",
+     "[translate:Se souviennent-elles?]",
+     "[translate:Elles se sont souvenues?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Do we not remember?",
+   "options": [
+     "[translate:Nous souvenons?]",
+     "[translate:Ne nous souvenons-nous pas?]",
+     "[translate:Nous nous souvenons?]",
+     "[translate:Nous ne nous souvenons pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "I do not remember.",
+   "options": [
+     "[translate:Je me suis souvenu.]",
+     "[translate:Je souviens pas.]",
+     "[translate:Je ne me souviens pas.]",
+     "[translate:Je me souviens?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She remembers.",
+   "options": [
+     "[translate:Elle souvient?]",
+     "[translate:Elle se souviens pas.]",
+     "[translate:Elle s'est souvenue.]",
+     "[translate:Elle se souvient.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "We remember.",
+   "options": [
+     "[translate:Nous nous souvenons.]",
+     "[translate:Nous souvenons-nous.]",
+     "[translate:Nous ne nous souvenons pas.]",
+     "[translate:Nous souvenons?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Do you (tu) not remember?",
+   "options": [
+     "[translate:Tu se souviens?]",
+     "[translate:Tu ne te souviens pas?]",
+     "[translate:Tu souviens pas?]",
+     "[translate:Ne te souviens-tu pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "She does not remember.",
+   "options": [
+     "[translate:Elle ne souvient pas.]",
+     "[translate:Elle souvient pas.]", 
+     "[translate:Elle ne se souvient pas.]",
+     "[translate:Elle se souvient pas.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "You (vous) do not remember.",
+   "options": [
+     "[translate:Vous souvenez pas.]",
+     "[translate:Vous vous souvenez?]",
+     "[translate:Vous avez souvenu?]",
+     "[translate:Vous ne vous souvenez pas.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He does not remember.",
+   "options": [
+     "[translate:Il ne se souvient pas.]",
+     "[translate:Il se souvient?]",
+     "[translate:Il souvient pas.]",
+     "[translate:Il se souvient pas.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "They (masc.) remember.",
+   "options": [
+     "[translate:Ils souviennent?]",
+     "[translate:Ils se souviennent.]",
+     "[translate:Ils ne se souviennent pas.]",
+     "[translate:Ils souviennent pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Does she not remember?",
+   "options": [
+     "[translate:S'est-elle souvenue?]",
+     "[translate:Elle se souvient pas?]",
+     "[translate:Ne se souvient-elle pas?]",
+     "[translate:Elle ne souvient pas?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (fem.) do not remember.",
+   "options": [
+     "[translate:Elles se souviennent pas.]",
+     "[translate:Elles souviennent pas.]",
+     "[translate:Elles se souviennent?]",
+     "[translate:Elles ne se souviennent pas.]"
+   ],
+   "answer": "D"
+ }
+]
