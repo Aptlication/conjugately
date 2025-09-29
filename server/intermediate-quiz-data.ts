@@ -1453,6 +1453,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
 
   "mettre": {
+    "present": [
+      {"question": "Do they (feminine) put on their coats? (Negative)", "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"], "answer": "C"},
+      {"question": "We set the table.", "options": ["mettons", "mettez", "mets", "mettent"], "answer": "A"},
+      {"question": "Are you (formal) not putting your phones on the desk?", "options": ["Est-ce que tu ne mets pas ton téléphone sur le bureau ?", "Est-ce que vous mets pas vos téléphones sur le bureau ?", "Est-ce que vous ne mettez pas vos téléphones sur le bureau ?", "Est-ce que nous ne mettons pas vos téléphones sur le bureau ?"], "answer": "C"},
+      {"question": "They (f) set the table every evening.", "options": ["mettez", "mettent", "mettons", "mets"], "answer": "B"},
+      {"question": "Do you (singular informal) not put sugar in your tea?", "options": ["Est-ce que tu mets du sucre dans ton thé ?", "Est-ce que nous ne mettons pas de sucre dans ton thé ?", "Est-ce que vous mettez du sucre dans ton thé ?", "Est-ce que tu ne mets pas de sucre dans ton thé ?"], "answer": "D"},
+      {"question": "I put my keys on the table.", "options": ["mettez", "mettons", "mets", "mettent"], "answer": "C"},
+      {"question": "Does he not put on his shoes?", "options": ["Est-ce qu'il met pas ses chaussures ?", "Est-ce qu'il ne met pas ses chaussures ?", "Est-ce qu'il met ses chaussures ?", "Est-ce qu'ils ne mettent pas ses chaussures ?"], "answer": "B"},
+      {"question": "You (pl.) always put flowers in the vase.", "options": ["mettent", "mets", "mettons", "mettez"], "answer": "D"},
+      {"question": "Don't we put the food in the fridge?", "options": ["Est-ce que nous mettons la nourriture dans le frigo ?", "Est-ce que nous n'avez pas la nourriture dans le frigo ?", "Est-ce que nous ne mettons pas la nourriture dans le frigo ?", "Est-ce que nous ne mettez pas la nourriture dans le frigo ?"], "answer": "C"},
+      {"question": "He puts on his coat before going out.", "options": ["met", "mets", "mettent", "mettons"], "answer": "A"},
+      {"question": "Do I not put enough effort into my work?", "options": ["Est-ce que je mets assez d'effort dans mon travail ?", "Est-ce que tu ne mets pas assez d'effort dans mon travail ?", "Est-ce que nous ne mettons pas assez d'effort dans mon travail ?", "Est-ce que je ne mets pas assez d'effort dans mon travail ?"], "answer": "D"},
+      {"question": "You (sing.) always turn on the light when you enter.", "options": ["mettez", "mets", "mettons", "mettent"], "answer": "B"},
+      {"question": "Is she not putting the books on the shelf?", "options": ["Est-ce qu'elle ne met pas les livres sur l'étagère ?", "Est-ce qu'il met pas les livres sur l'étagère ?", "Est-ce qu'elles ne mettent pas les livres sur l'étagère ?", "Est-ce que vous ne mettez pas les livres sur l'étagère ?"], "answer": "A"},
+      {"question": "We rarely put our pens on the table.", "options": ["mets", "mettent", "mettons", "mettez"], "answer": "C"},
+      {"question": "Are they (masc.) not putting enough salt in the soup?", "options": ["Est-ce que nous ne mettons pas assez de sel dans la soupe ?", "Est-ce qu'ils ne mettent pas assez de sel dans la soupe ?", "Est-ce qu'il ne mettez pas assez de sel dans la soupe ?", "Est-ce que vous mettez pas assez de sel dans la soupe ?"], "answer": "B"},
+      {"question": "She puts makeup on every morning.", "options": ["met", "mets", "mettent", "mettons"], "answer": "A"},
+      {"question": "Do you (pl.) put music on during dinner?", "options": ["Est-ce que vous mettez de la musique pendant le dîner ?", "Est-ce que nous mettons de la musique pendant le dîner ?", "Est-ce qu'ils mettent de la musique pendant le dîner ?", "Est-ce que tu mets de la musique pendant le dîner ?"], "answer": "A"},
+      {"question": "They (masc.) put their clothes in the wardrobe.", "options": ["mettent", "mets", "mettons", "mettez"], "answer": "A"},
+      {"question": "Don't you (sing.) put salt in your cooking?", "options": ["Est-ce que tu ne mets pas de sel dans ta cuisine ?", "Est-ce que vous ne mettez pas de sel dans votre cuisine ?", "Est-ce que nous ne mettons pas de sel dans notre cuisine ?", "Est-ce qu'ils ne mettent pas de sel dans leur cuisine ?"], "answer": "A"},
+      {"question": "I always put my phone on silent.", "options": ["mets", "mettons", "mettez", "mettent"], "answer": "A"}
+    ],
     "passé_composé": [
       {"question": "Did they (feminine) not put on their hats?", "options": ["Ont-elles mis leurs chapeaux ?", "A-t-elle mis son chapeau ?", "N'ont-elles pas mis leurs chapeaux ?", "Elles n'ont mis pas leurs chapeaux ?"], "answer": "C"},
       {"question": "We set the table yesterday.", "options": ["avons mis", "a mis", "ont mis", "ai mis"], "answer": "A"},
