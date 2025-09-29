@@ -11,6 +11,7 @@ import { courseProgress, completedCourses } from "@shared/schema";
 import { eq, and } from "drizzle-orm";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
+import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -57,6 +58,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       console.log('📝 Raw request body:', JSON.stringify(req.body, null, 2));
       const { verb, timeFrame, tenseType, difficulty, isExam } = quizRequestSchema.parse(req.body);
+      
+      // Backend validation: Check if Advanced difficulty is allowed
+      if (difficulty === "Advanced" && !isAdvancedDifficultyEnabled()) {
+        console.log('🔒 Blocked Advanced difficulty request - feature disabled');
+        return res.status(403).json({
+          success: false,
+          error: "Advanced difficulty is not available in this version",
+          code: "ADVANCED_LOCKED"
+        });
+      }
       
       console.log(`Generating quiz for: ${verb} - ${tenseType}${difficulty ? ` (${difficulty})` : ''}`);
       
