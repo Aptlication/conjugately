@@ -1474,6 +1474,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (formal/pl.) set the alarm at six.", "options": ["avez mis", "avons mis", "ai mis", "ont mis"], "answer": "A"},
       {"question": "Didn't they (masc.) put the plates on the table?", "options": ["Ils n'ont pas mis les assiettes sur la table ?", "A-t-il mis les assiettes sur la table ?", "N'ont-ils pas mis les assiettes sur la table ?", "Ils ont mis les assiettes sur la table ?"], "answer": "C"},
       {"question": "I put in a lot of effort to succeed.", "options": ["avons mis", "ai mis", "as mis", "a mis"], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will they (feminine) not put away their coats?", "options": ["Mettez-elles leurs manteaux ?", "Est-ce qu'elles mettront leurs manteaux ?", "Est-ce qu'elles ne mettront pas leurs manteaux ?", "Est-ce qu'elles n'ont pas mis leurs manteaux ?"], "answer": "C"},
+      {"question": "We will set the table tomorrow.", "options": ["mettrons", "mettrez", "mettrai", "metts"], "answer": "A"},
+      {"question": "Will you (plural/formal) not put your bags in the car?", "options": ["Est-ce que tu ne mettras pas ton sac dans la voiture ?", "Est-ce que vous mettez vos sacs dans la voiture ?", "Est-ce que vous ne mettrez pas vos sacs dans la voiture ?", "Est-ce qu'ils mettront pas leurs sacs dans la voiture ?"], "answer": "C"},
+      {"question": "They (f.) will put their shirts in the closet.", "options": ["mettra", "mettrai", "metteront", "mettront"], "answer": "D"},
+      {"question": "Will you (sing. informal) not put sugar in your tea?", "options": ["Est-ce que tu ne mettras pas de sucre dans ton thé ?", "Est-ce que vous allez mettre du sucre dans votre thé ?", "Mettras-tu du sucre dans ton thé ?", "Vas-tu mis du sucre dans ton thé ?"], "answer": "A"},
+      {"question": "I will put on my coat when it's cold.", "options": ["ai mis", "mets", "mettrai", "mettrez"], "answer": "C"},
+      {"question": "Will he not put away his toys?", "options": ["Va-t-il mettre ses jouets ?", "Ne mettra-t-il pas ses jouets ?", "Mettait-il ses jouets ?", "Ne mettra-t-elle pas ses jouets ?"], "answer": "B"},
+      {"question": "You (pl.) will put on your hat for the trip.", "options": ["mets", "mettent", "mettons", "mettrez"], "answer": "D"},
+      {"question": "Will we not put the milk in the fridge?", "options": ["Mettrons-nous le lait dans le frigo ?", "Est-ce que nous allons mettre le lait dans le frigo ?", "Ne mettrons-nous pas le lait dans le frigo ?", "Nous n'allons pas mettre le lait dans le frigo ?"], "answer": "C"},
+      {"question": "He will put on his shoes before going out.", "options": ["mettra", "mets", "mettrai", "mettront"], "answer": "A"},
+      {"question": "Will I not put enough effort into my work?", "options": ["Mettrai-je assez d'effort dans mon travail ?", "Mettras-tu assez d'effort dans ton travail ?", "Ne mettrai-je pas assez d'effort dans mon travail ?", "Je ne mets pas assez d'effort dans mon travail ?"], "answer": "C"},
+      {"question": "You (sing.) will always put cream in your coffee.", "options": ["mettons", "mettras", "mettrai", "mets"], "answer": "B"},
+      {"question": "Will she not put her keys in her purse?", "options": ["Ne mettra-t-elle pas ses clés dans son sac ?", "Va-t-elle mettre ses clés dans son sac ?", "Mettra-t-elle ses clés dans son sac ?", "Mettait-elle ses clés dans son sac ?"], "answer": "A"},
+      {"question": "We will put our pens on the table.", "options": ["mets", "mettons", "mettrons", "mettra"], "answer": "C"},
+      {"question": "Will they (masc.) not put enough salt in the soup?", "options": ["Mettrons-nous assez de sel dans la soupe ?", "Ne mettront-ils pas assez de sel dans la soupe ?", "Mettez-vous assez de sel dans la soupe ?", "Ils ne mettent pas assez de sel dans la soupe ?"], "answer": "B"},
+      {"question": "They (f.) will put on their slippers every morning.", "options": ["mets", "mettent", "mettrons", "mettront"], "answer": "D"},
+      {"question": "Will we not put the children to bed early?", "options": ["Ne mettrons-nous pas les enfants au lit tôt ?", "Ne mettra-t-il pas les enfants au lit tôt ?", "Mettrons-nous les enfants au lit tôt ?", "Mettons-nous les enfants au lit tôt ?"], "answer": "A"},
+      {"question": "You (pl.) will put on the radio every morning.", "options": ["mettrez", "mettrai", "mets", "mettrons"], "answer": "A"},
+      {"question": "Will they (masc.) not put their toys in the box?", "options": ["Ils mettront leurs jouets dans la boîte ?", "Mettrons-nous leurs jouets dans la boîte ?", "Ne mettront-ils pas leurs jouets dans la boîte ?", "Ils ne mettra pas leurs jouets dans la boîte ?"], "answer": "C"},
+      {"question": "I will always put spices in this dish.", "options": ["mettront", "mettrai", "mets", "mettrez"], "answer": "B"}
     ]
   }
 };
