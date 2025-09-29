@@ -4,6 +4,7 @@ import path from "path";
 import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { generateInternalQuiz } from "./quiz-generator";
+import { getRandomIntermediateQuestions } from "./intermediate-quiz-data";
 import { ZodError } from "zod";
 import { db } from "./db";
 import { courseProgress, completedCourses } from "@shared/schema";
@@ -62,7 +63,50 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Generate quiz using our internal system (fast and reliable)
       try {
         console.log('⚡ Generating quiz with internal system...');
-        const generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty, isExam);
+        
+        let generatedQuiz;
+        
+        // Check if this is an intermediate level quiz with available data
+        if (difficulty === 'Intermediate') {
+          console.log('🔧 Checking intermediate quiz data...');
+          
+          // Normalize tense for intermediate data lookup
+          let normalizedTense = tenseType.toLowerCase().replace(/\s+/g, '_');
+          if (normalizedTense === 'présent') {
+            normalizedTense = 'présent';
+          } else if (normalizedTense === 'passé_composé') {
+            normalizedTense = 'passé_composé';  
+          } else if (normalizedTense === 'futur_simple') {
+            normalizedTense = 'futur_simple';
+          }
+          
+          console.log(`🔧 Looking for intermediate data: ${verb} - ${normalizedTense}`);
+          const intermediateQuestions = getRandomIntermediateQuestions(verb, normalizedTense, 20);
+          
+          if (intermediateQuestions.length > 0) {
+            console.log(`✅ Found ${intermediateQuestions.length} intermediate questions`);
+            
+            // Convert intermediate questions to the format expected by the frontend
+            const convertedQuestions = intermediateQuestions.map((q, index) => ({
+              id: `q${index + 1}`,
+              question: q.question,
+              answerOptions: q.options.map((option, optIndex) => ({
+                text: option,
+                rationale: `Option ${String.fromCharCode(65 + optIndex)}: ${option}`,
+                isCorrect: String.fromCharCode(65 + optIndex) === q.answer
+              }))
+            }));
+            
+            generatedQuiz = { questions: convertedQuestions };
+            console.log(`🎯 Using intermediate quiz data for ${verb} - ${normalizedTense}`);
+          } else {
+            console.log('⚠️ No intermediate data found, falling back to regular generation');
+            generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty, isExam);
+          }
+        } else {
+          // Use regular internal quiz generation for non-intermediate levels  
+          generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty, isExam);
+        }
         
         res.json({
           success: true,
