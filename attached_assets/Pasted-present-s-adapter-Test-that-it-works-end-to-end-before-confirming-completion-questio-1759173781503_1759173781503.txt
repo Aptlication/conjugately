@@ -1,0 +1,207 @@
+present - s'adapter
+
+"Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "question": "Do I adapt?",
+   "options": [
+     "[translate:Je m'adapte?]",
+     "[translate:M'adapte-je?]",
+     "[translate:Je m'adaptez?]",
+     "[translate:Je adapte?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do you (tu) not adapt?",
+   "options": [
+     "[translate:Ne t'adaptes-tu pas?]",
+     "[translate:Tu t'adaptes?]",
+     "[translate:Tu t'adaptes pas?]",
+     "[translate:Tu ne t'adaptes pas?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Does he adapt?",
+   "options": [
+     "[translate:S'adapte-t-il?]",
+     "[translate:Il s'adapte?]",
+     "[translate:Il s'adaptes?]",
+     "[translate:Il adapte?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Do we not adapt?",
+   "options": [
+     "[translate:Nous ne nous adaptons pas?]",
+     "[translate:Nous nous adaptons pas?]",
+     "[translate:Ne nous adaptons-nous pas?]",
+     "[translate:Nous nous adaptons?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Does she adapt?",
+   "options": [
+     "[translate:S'adapte-t-elle?]",
+     "[translate:Elle s'adapte?]",
+     "[translate:Elle adapte?]",
+     "[translate:Elle s'adaptez?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) adapt.",
+   "options": [
+     "[translate:Vous vous adaptez.]",
+     "[translate:Vous adaptez-vous?]",
+     "[translate:Vous adaptez?]",
+     "[translate:Vous avez adapté?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) do not adapt.",
+   "options": [
+     "[translate:Ils ne s'adaptent pas.]",
+     "[translate:Ils s'adaptent pas?]",
+     "[translate:Ils s'adaptent?]",
+     "[translate:Ne s'adaptent-ils pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Do you (vous) adapt?",
+   "options": [
+     "[translate:Adaptez-vous?]",
+     "[translate:Vous vous adaptez?]",
+     "[translate:Vous adaptez?]",
+     "[translate:Vous vous êtes adaptés?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Do they (fem.) adapt?",
+   "options": [
+     "[translate:Adaptent-elles?]",
+     "[translate:Elles s'adaptent?]",
+     "[translate:S'adaptent-elles?]",
+     "[translate:Elles s'adaptez?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Do we not adapt?",
+   "options": [
+     "[translate:Nous ne nous adaptons pas?]",
+     "[translate:Nous nous adaptons?]",
+     "[translate:Ne nous adaptons-nous pas?]",
+     "[translate:Nous adaptons-nous?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "I do not adapt.",
+   "options": [
+     "[translate:Je ne m'adapte pas.]",
+     "[translate:Je m'adapte pas.]",
+     "[translate:Je m'adapte?]",
+     "[translate:Je ne m'adaptes pas.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "She adapts.",
+   "options": [
+     "[translate:Elle s'adapte.]",
+     "[translate:Adapte-t-elle?]",
+     "[translate:Elle adapte?]",
+     "[translate:Elle ne s'adapte pas.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We adapt.",
+   "options": [
+     "[translate:Nous nous adaptons.]",
+     "[translate:Nous adaptons-nous?]",
+     "[translate:Nous adaptons?]",
+     "[translate:Nous ne nous adaptons pas.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Do you (tu) not adapt?",
+   "options": [
+     "[translate:Tu ne t'adaptes pas?]",
+     "[translate:Tu t'adaptes pas?]",
+     "[translate:Ne t'adaptes-tu pas?]",
+     "[translate:Tu s'adaptes?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She does not adapt.",
+   "options": [
+     "[translate:Elle ne s'adapte pas.]",
+     "[translate:Elle ne adapte pas.]", 
+     "[translate:Elle s'adapte pas.]", 
+     "[translate:Elle adapte pas.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "You (vous) do not adapt.",
+   "options": [
+     "[translate:Vous ne vous adaptez pas.]",
+     "[translate:Vous adaptez-vous pas?]",
+     "[translate:Vous adaptez?]",
+     "[translate:Vous avez adapté?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He does not adapt.",
+   "options": [
+     "[translate:Il ne s'adapte pas.]",
+     "[translate:Il adapte?]",
+     "[translate:Il s'adapte pas.]",
+     "[translate:Il adapte pas.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) adapt.",
+   "options": [
+     "[translate:Ils s'adaptent.]",
+     "[translate:Ils adaptent?]",
+     "[translate:Ils ne s'adaptent pas.]",
+     "[translate:Ils adaptent pas.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Does she not adapt?",
+   "options": [
+     "[translate:Ne s'adapte-t-elle pas?]",
+     "[translate:Elle s'adapte pas?]",
+     "[translate:S'est-elle adaptée?]",
+     "[translate:Elle ne adapte pas?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "They (fem.) do not adapt.",
+   "options": [
+     "[translate:Elles ne s'adaptent pas.]",
+     "[translate:Elles adaptent pas.]",
+     "[translate:Elles s'adaptent pas.]",
+     "[translate:Elles s'adaptent?]"
+   ],
+   "answer": "B"
+ }
+]

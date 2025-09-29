@@ -1310,6 +1310,31 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will she not remember?", "options": ["Ne se souviendra-t-elle pas?", "Elle se souviendra pas?", "Elle ne souviendra pas?", "S'est-elle souvenue?"], "answer": "A"},
       {"question": "They (fem.) will not remember.", "options": ["Elles ne se souviendront pas.", "Elles se souviendront pas.", "Elles souviendront pas.", "Elles se souviendront?"], "answer": "A"}
     ]
+  },
+
+  "s'adapter": {
+    "présent": [
+      {"question": "Do I adapt?", "options": ["Je m'adapte?", "M'adapte-je?", "Je m'adaptez?", "Je adapte?"], "answer": "C"},
+      {"question": "Do you (tu) not adapt?", "options": ["Ne t'adaptes-tu pas?", "Tu t'adaptes?", "Tu t'adaptes pas?", "Tu ne t'adaptes pas?"], "answer": "A"},
+      {"question": "Does he adapt?", "options": ["S'adapte-t-il?", "Il s'adapte?", "Il s'adaptes?", "Il adapte?"], "answer": "D"},
+      {"question": "Do we not adapt?", "options": ["Nous ne nous adaptons pas?", "Nous nous adaptons pas?", "Ne nous adaptons-nous pas?", "Nous nous adaptons?"], "answer": "B"},
+      {"question": "Does she adapt?", "options": ["S'adapte-t-elle?", "Elle s'adapte?", "Elle adapte?", "Elle s'adaptez?"], "answer": "A"},
+      {"question": "You (vous) adapt.", "options": ["Vous vous adaptez.", "Vous adaptez-vous?", "Vous adaptez?", "Vous avez adapté?"], "answer": "C"},
+      {"question": "They (masc.) do not adapt.", "options": ["Ils ne s'adaptent pas.", "Ils s'adaptent pas?", "Ils s'adaptent?", "Ne s'adaptent-ils pas?"], "answer": "B"},
+      {"question": "Do you (vous) adapt?", "options": ["Adaptez-vous?", "Vous vous adaptez?", "Vous adaptez?", "Vous vous êtes adaptés?"], "answer": "D"},
+      {"question": "Do they (fem.) adapt?", "options": ["Adaptent-elles?", "Elles s'adaptent?", "S'adaptent-elles?", "Elles s'adaptez?"], "answer": "C"},
+      {"question": "Do we not adapt?", "options": ["Nous ne nous adaptons pas?", "Nous nous adaptons?", "Ne nous adaptons-nous pas?", "Nous adaptons-nous?"], "answer": "A"},
+      {"question": "I do not adapt.", "options": ["Je ne m'adapte pas.", "Je m'adapte pas.", "Je m'adapte?", "Je ne m'adaptes pas."], "answer": "D"},
+      {"question": "She adapts.", "options": ["Elle s'adapte.", "Adapte-t-elle?", "Elle adapte?", "Elle ne s'adapte pas."], "answer": "B"},
+      {"question": "We adapt.", "options": ["Nous nous adaptons.", "Nous adaptons-nous?", "Nous adaptons?", "Nous ne nous adaptons pas."], "answer": "A"},
+      {"question": "Do you (tu) not adapt?", "options": ["Tu ne t'adaptes pas?", "Tu t'adaptes pas?", "Ne t'adaptes-tu pas?", "Tu s'adaptes?"], "answer": "C"},
+      {"question": "She does not adapt.", "options": ["Elle ne s'adapte pas.", "Elle ne adapte pas.", "Elle s'adapte pas.", "Elle adapte pas."], "answer": "B"},
+      {"question": "You (vous) do not adapt.", "options": ["Vous ne vous adaptez pas.", "Vous adaptez-vous pas?", "Vous adaptez?", "Vous avez adapté?"], "answer": "D"},
+      {"question": "He does not adapt.", "options": ["Il ne s'adapte pas.", "Il adapte?", "Il s'adapte pas.", "Il adapte pas."], "answer": "C"},
+      {"question": "They (masc.) adapt.", "options": ["Ils s'adaptent.", "Ils adaptent?", "Ils ne s'adaptent pas.", "Ils adaptent pas."], "answer": "A"},
+      {"question": "Does she not adapt?", "options": ["Ne s'adapte-t-elle pas?", "Elle s'adapte pas?", "S'est-elle adaptée?", "Elle ne adapte pas?"], "answer": "D"},
+      {"question": "They (fem.) do not adapt.", "options": ["Elles ne s'adaptent pas.", "Elles adaptent pas.", "Elles s'adaptent pas.", "Elles s'adaptent?"], "answer": "B"}
+    ]
   }
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
