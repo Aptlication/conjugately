@@ -1,0 +1,206 @@
+passe compose - se souvenir
+
+"Test that it works end-to-end before confirming completion"
+
+[
+  {
+    "question": "Did I remember?",
+    "options": [
+      "[translate:Je me suis souvenu?]",
+      "[translate:J'ai souvenu?]",
+      "[translate:Me suis-je souvenu(e)?]",
+      "[translate:Ai-je souvenu(e)?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Did you (tu) not remember?",
+    "options": [
+      "[translate:Ne t'es-tu pas souvenu(e)?]",
+      "[translate:Tu t'es souvenu(e)?]",
+      "[translate:Tu n'as pas souvenu?]",
+      "[translate:T'es-tu souvenu?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Did he remember?",
+    "options": [
+      "[translate:S'est-il souvenu?]",
+      "[translate:Il a souvenu?]",
+      "[translate:A-t-il souvenu?]",
+      "[translate:Il s'est souvenu?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Did we not remember?",
+    "options": [
+      "[translate:Ne nous sommes-nous pas souvenus?]",
+      "[translate:Nous nous sommes pas souvenus?]",
+      "[translate:Nous n'avons pas souvenu?]",
+      "[translate:Nous sommes souvenus?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Did she remember?",
+    "options": [
+      "[translate:Elle s'est souvenue?]",
+      "[translate:S'est-elle souvenue?]",
+      "[translate:Elle a souvenu?]",
+      "[translate:A-t-elle souvenue?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You (vous) remembered.",
+    "options": [
+      "[translate:Vous avez souvenu?]",
+      "[translate:Vous vous êtes souvenu(e)(s).]",
+      "[translate:Vous s'êtes souvenus?]",
+      "[translate:Vous êtes souvenu?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "They (masc.) did not remember.",
+    "options": [
+      "[translate:Ils n'ont pas souvenu.]",
+      "[translate:Ils se sont pas souvenus.]",
+      "[translate:Ils se ne sont pas souvenu.]",
+      "[translate:Ils ne se sont pas souvenus.]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Did you (vous) remember?",
+    "options": [
+      "[translate:Vous vous êtes souvenu(e)?]",
+      "[translate:Vous êtes-vous souvenu(e)?]",
+      "[translate:Vous avez souvenu?]",
+      "[translate:Avez-vous souvenu?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Did they (fem.) remember?",
+    "options": [
+      "[translate:Elles ont souvenu?]",
+      "[translate:Elles se sont souvenues?]",
+      "[translate:Elles sont souvenues?]",
+      "[translate:Se sont-elles souvenues?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Did we not remember?",
+    "options": [
+      "[translate:Ne nous sommes-nous pas souvenus?]",
+      "[translate:Nous ne sommes pas souvenus?]",
+      "[translate:Nous nous sommes souvenus?]",
+      "[translate:Nous n'avons pas souvenu?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "I did not remember.",
+    "options": [
+      "[translate:Je ne me suis pas souvenu(e).]",
+      "[translate:Je me suis pas souvenu.]",
+      "[translate:Je n'ai pas souvenu.]",
+      "[translate:Je suis souvenu(e).]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "She remembered.",
+    "options": [
+      "[translate:Elle a souvenu.]",
+      "[translate:Elle s'est souvenue.]",
+      "[translate:Elle s'est pas souvenue.]",
+      "[translate:Elle s'est souvenu.]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "We remembered.",
+    "options": [
+      "[translate:Nous nous sommes souvenus.]",
+      "[translate:Nous avons souvenu.]",
+      "[translate:Nous sommes souvenu.]",
+      "[translate:Nous s'est souvenus.]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Did you (tu) not remember?",
+    "options": [
+      "[translate:Tu n'es pas souvenu(e)?]",
+      "[translate:Tu ne t'es pas souvenu(e)?]",
+      "[translate:Tu n'a pas souvenu(e)?]",
+      "[translate:Tu s'est souvenu(e)?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "She did not remember.",
+    "options": [
+      "[translate:Elle ne s'est pas souvenue.]",
+      "[translate:Elle s'est pas souvenue.]",
+      "[translate:Elle n'a pas souvenu.]",
+      "[translate:Elle ne se pas souvenue.]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "You (vous) did not remember.",
+    "options": [
+      "[translate:Vous vous êtes souvenu(e)(s).]",
+      "[translate:Vous n'avez pas souvenu.]",
+      "[translate:Vous ne vous êtes pas souvenu(e)(s).]",
+      "[translate:Vous n'êtes pas souvenu.]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "He did not remember.",
+    "options": [
+      "[translate:Il s'est pas souvenu.]",
+      "[translate:Il ne s'est pas souvenu.]",
+      "[translate:Il n'a pas souvenu.]",
+      "[translate:Il s'est souvenu.]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "They (masc.) remembered.",
+    "options": [
+      "[translate:Ils se sont souvenus.]",
+      "[translate:Ils s'est souvenus.]",
+      "[translate:Ils sont souvenus.]",
+      "[translate:Ils ont souvenu.]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Did she not remember?",
+    "options": [
+      "[translate:Ne s'est-elle pas souvenue?]",
+      "[translate:Elle s'est pas souvenue?]",
+      "[translate:S'est-elle souvenu?]",
+      "[translate:Elle n'est pas souvenue?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "They (fem.) did not remember.",
+    "options": [
+      "[translate:Elles s'est pas souvenues.]",
+      "[translate:Elles ne sont pas souvenu.]",
+      "[translate:Elles ne se sont pas souvenues.]",
+      "[translate:Elles n'ont pas souvenu.]"
+    ],
+    "answer": "B"
+  }
+]
