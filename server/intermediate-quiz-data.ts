@@ -1078,9 +1078,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They are going to become interested in books. (Futur Proche)", "options": ["Ils vont s'intéresser aux livres.", "Ils vont s'intéresser à les livres.", "Ils se vont intéresser aux livres.", "Ils vont intéresser aux livres."], "answer": "A"},
       {"question": "She is going to become interested in this subject. (Futur Proche)", "options": ["Elle va s'intéresser à ce sujet.", "Elle va s'intéresser à cette sujet.", "Elle se va intéresser à ce sujet.", "Elle va intéresser à ce sujet."], "answer": "A"}
     ]
+  },
+
+  "se débrouiller": {
+    "présent": [
+      {"question": "I manage to get by. (Présent)", "options": ["Je me débrouille.", "Je débrouille.", "Je me débrouilles.", "Je se débrouille."], "answer": "A"},
+      {"question": "You manage well. (Présent)", "options": ["Tu te débrouilles bien.", "Tu me débrouilles bien.", "Tu te débrouille bien.", "Tu débrouilles bien."], "answer": "A"},
+      {"question": "He manages on his own. (Présent)", "options": ["Il se débrouille tout seul.", "Il me débrouille tout seul.", "Il te débrouille tout seul.", "Il débrouille tout seul."], "answer": "A"},
+      {"question": "She manages perfectly. (Présent)", "options": ["Elle se débrouille parfaitement.", "Elle me débrouille parfaitement.", "Elle te débrouille parfaitement.", "Elle débrouille parfaitement."], "answer": "A"},
+      {"question": "We manage together. (Présent)", "options": ["Nous nous débrouillons ensemble.", "Nous me débrouillons ensemble.", "Nous te débrouillons ensemble.", "Nous débrouillons ensemble."], "answer": "A"},
+      {"question": "You (plural) manage the situation. (Présent)", "options": ["Vous vous débrouillez dans cette situation.", "Vous me débrouillez dans cette situation.", "Vous te débrouillez dans cette situation.", "Vous débrouillez dans cette situation."], "answer": "A"},
+      {"question": "They (masculine) manage without help. (Présent)", "options": ["Ils se débrouillent sans aide.", "Ils me débrouillent sans aide.", "Ils te débrouillent sans aide.", "Ils débrouillent sans aide."], "answer": "A"},
+      {"question": "They (feminine) manage very well. (Présent)", "options": ["Elles se débrouillent très bien.", "Elles me débrouillent très bien.", "Elles te débrouillent très bien.", "Elles débrouillent très bien."], "answer": "A"},
+      {"question": "I don't manage well in this situation. (Présent)", "options": ["Je ne me débrouille pas bien dans cette situation.", "Je ne débrouille pas bien dans cette situation.", "Je me ne débrouille pas bien dans cette situation.", "Je ne me débrouilles pas bien dans cette situation."], "answer": "A"},
+      {"question": "You never manage alone. (Présent)", "options": ["Tu ne te débrouilles jamais seul(e).", "Tu ne débrouilles jamais seul(e).", "Tu te ne débrouilles jamais seul(e).", "Tu ne te débrouille jamais seul(e)."], "answer": "A"},
+      {"question": "He doesn't manage without assistance. (Présent)", "options": ["Il ne se débrouille pas sans assistance.", "Il ne débrouille pas sans assistance.", "Il se ne débrouille pas sans assistance.", "Il ne se débrouilles pas sans assistance."], "answer": "A"},
+      {"question": "She never manages with technology. (Présent)", "options": ["Elle ne se débrouille jamais avec la technologie.", "Elle ne débrouille jamais avec la technologie.", "Elle se ne débrouille jamais avec la technologie.", "Elle ne se débrouilles jamais avec la technologie."], "answer": "A"},
+      {"question": "We don't manage in difficult situations. (Présent)", "options": ["Nous ne nous débrouillons pas dans les situations difficiles.", "Nous ne débrouillons pas dans les situations difficiles.", "Nous nous ne débrouillons pas dans les situations difficiles.", "Nous ne nous débrouillent pas dans les situations difficiles."], "answer": "A"},
+      {"question": "You (plural) don't manage without guidance. (Présent)", "options": ["Vous ne vous débrouillez pas sans guidance.", "Vous ne débrouillez pas sans guidance.", "Vous vous ne débrouillez pas sans guidance.", "Vous ne vous débrouillent pas sans guidance."], "answer": "A"},
+      {"question": "They don't manage with the new system. (Présent)", "options": ["Ils ne se débrouillent pas avec le nouveau système.", "Ils ne débrouillent pas avec le nouveau système.", "Ils se ne débrouillent pas avec le nouveau système.", "Ils ne se débrouillant pas avec le nouveau système."], "answer": "A"},
+      {"question": "I manage fine with French. (Présent)", "options": ["Je me débrouille bien en français.", "Je débrouille bien en français.", "Je me débrouilles bien en français.", "Je se débrouille bien en français."], "answer": "A"},
+      {"question": "You manage with whatever you have. (Présent)", "options": ["Tu te débrouilles avec ce que tu as.", "Tu débrouilles avec ce que tu as.", "Tu te débrouille avec ce que tu as.", "Tu me débrouilles avec ce que tu as."], "answer": "A"},
+      {"question": "How do you manage? (Présent)", "options": ["Comment te débrouilles-tu ?", "Comment débrouilles-tu ?", "Comment te débrouille-tu ?", "Comment me débrouilles-tu ?"], "answer": "A"},
+      {"question": "We always manage somehow. (Présent)", "options": ["Nous nous débrouillons toujours d'une façon ou d'une autre.", "Nous débrouillons toujours d'une façon ou d'une autre.", "Nous nous débrouillent toujours d'une façon ou d'une autre.", "Nous me débrouillons toujours d'une façon ou d'une autre."], "answer": "A"},
+      {"question": "They manage to find solutions. (Présent)", "options": ["Ils se débrouillent pour trouver des solutions.", "Ils débrouillent pour trouver des solutions.", "Ils se débrouillant pour trouver des solutions.", "Ils me débrouillent pour trouver des solutions."], "answer": "A"}
+    ]
   }
 
-  // INTERMEDIATE LEVEL COMPLETE! All 12 verbs with multiple tenses = 980 questions total (including s'intéresser with présent, passé_composé, and futur_simple)
+  // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
 };
 
 // Function to get random Intermediate questions for a specific verb and tense
