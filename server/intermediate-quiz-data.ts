@@ -1448,9 +1448,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will she not rejoice?", "options": ["Ne se réjouira-t-elle pas?", "Elle se réjouira pas?", "Se réjouira-t-elle pas?", "Elle réjouira pas?"], "answer": "D"},
       {"question": "They (fem.) will not rejoice.", "options": ["Elles ne se réjouiront pas.", "Elles réjouiront pas.", "Elles se réjouiront pas.", "Elles réjouiront?"], "answer": "B"}
     ]
-  }
+  },
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
+
+  "mettre": {
+    "passé_composé": [
+      {"question": "Did they (feminine) not put on their hats?", "options": ["Ont-elles mis leurs chapeaux ?", "A-t-elle mis son chapeau ?", "N'ont-elles pas mis leurs chapeaux ?", "Elles n'ont mis pas leurs chapeaux ?"], "answer": "C"},
+      {"question": "We set the table yesterday.", "options": ["avons mis", "a mis", "ont mis", "ai mis"], "answer": "A"},
+      {"question": "Did you (formal/plural) not put their books away?", "options": ["N'as-tu pas mis leurs livres ?", "N'a-t-il pas mis leurs livres ?", "N'avez-vous pas mis leurs livres ?", "Vous n'avez mis pas leurs livres ?"], "answer": "C"},
+      {"question": "They (f) put their things in the bag.", "options": ["a mis", "ont mis", "ai mis", "avais mis"], "answer": "B"},
+      {"question": "Have you (singular informal) not put butter on your bread?", "options": ["N'as-tu pas mis du beurre sur ton pain ?", "N'avons-nous pas mis du beurre sur ton pain ?", "As-tu mis du beurre sur ton pain ?", "Vous avez mis du beurre sur ton pain ?"], "answer": "A"},
+      {"question": "I put my keys on the table this morning.", "options": ["mets", "avais mis", "ai mis", "as mis"], "answer": "C"},
+      {"question": "Didn't he put on his glasses?", "options": ["Il n'a mis pas ses lunettes ?", "N'a-t-il pas mis ses lunettes ?", "A-t-il mis ses lunettes ?", "Ils n'ont pas mis ses lunettes ?"], "answer": "B"},
+      {"question": "You (pl.) put a note on the desk.", "options": ["ont mis", "avez mis", "ai mis", "avais mis"], "answer": "B"},
+      {"question": "Did we not put the wine in the fridge?", "options": ["Avons-nous mis le vin dans le frigo ?", "Avons-nous n'avons pas mis le vin dans le frigo ?", "N'avons-nous pas mis le vin dans le frigo ?", "N'avez-vous pas mis le vin dans le frigo ?"], "answer": "C"},
+      {"question": "He put on a scarf to go out.", "options": ["a mis", "ont mis", "ai mis", "avons mis"], "answer": "A"},
+      {"question": "Did I not put enough sugar in my coffee?", "options": ["Ai-je mis assez de sucre dans mon café ?", "N'ai-je pas mis assez de sucre dans mon café ?", "A-t-il mis de sucre dans son café ?", "Je n'ai mis pas assez de sucre dans mon café ?"], "answer": "B"},
+      {"question": "You (sing.) turned on the light before leaving.", "options": ["ont mis", "as mis", "avons mis", "a mis"], "answer": "B"},
+      {"question": "Did she not put the flowers in the vase?", "options": ["A-t-elle mis les fleurs dans le vase ?", "A-t-elle mettre les fleurs dans le vase ?", "N'a-t-elle pas mis les fleurs dans le vase ?", "Elle n'a mis pas les fleurs dans le vase ?"], "answer": "C"},
+      {"question": "We put our coats in the hallway.", "options": ["ai mis", "avons mis", "ont mis", "as mis"], "answer": "B"},
+      {"question": "Did they (masc.) not put away their toys?", "options": ["Nous n'avons pas mis leurs jouets ?", "N'ont-ils pas mis leurs jouets ?", "Ils n'ont mis pas leurs jouets ?", "Vous avez mis leurs jouets ?"], "answer": "B"},
+      {"question": "They (f) put the car in the garage.", "options": ["ont mis", "mets", "met", "mettez"], "answer": "A"},
+      {"question": "Did we not put the letter in the mailbox?", "options": ["Vous n'avez pas mis la lettre dans la boîte ?", "N'ont-ils pas mis la lettre dans la boîte ?", "N'avons-nous pas mis la lettre dans la boîte ?", "Nous n'avons mis pas la lettre dans la boîte ?"], "answer": "C"},
+      {"question": "You (formal/pl.) set the alarm at six.", "options": ["avez mis", "avons mis", "ai mis", "ont mis"], "answer": "A"},
+      {"question": "Didn't they (masc.) put the plates on the table?", "options": ["Ils n'ont pas mis les assiettes sur la table ?", "A-t-il mis les assiettes sur la table ?", "N'ont-ils pas mis les assiettes sur la table ?", "Ils ont mis les assiettes sur la table ?"], "answer": "C"},
+      {"question": "I put in a lot of effort to succeed.", "options": ["avons mis", "ai mis", "as mis", "a mis"], "answer": "B"}
+    ]
+  }
 };
 
 // Function to get random Intermediate questions for a specific verb and tense

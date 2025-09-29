@@ -1,0 +1,248 @@
+passe compose - mettre
+
+“Test that it works end-to-end before confirming completion”
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Did they (feminine) not put on their hats?",
+   "options": [
+     "Ont-elles mis leurs chapeaux ?",
+     "A-t-elle mis son chapeau ?",
+     "N'ont-elles pas mis leurs chapeaux ?",
+     "Elles n'ont mis pas leurs chapeaux ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ la table hier. (We set the table yesterday.)",
+   "options": [
+     "avons mis",
+     "a mis",
+     "ont mis",
+     "ai mis"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Did you (formal/plural) not put their books away?",
+   "options": [
+     "N'as-tu pas mis leurs livres ?",
+     "N'a-t-il pas mis leurs livres ?",
+     "N'avez-vous pas mis leurs livres ?",
+     "Vous n'avez mis pas leurs livres ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Elles _______ leurs affaires dans le sac. (They (f) put their things in the bag.)",
+   "options": [
+     "a mis",
+     "ont mis",
+     "ai mis",
+     "avais mis"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Have you (singular informal) not put butter on your bread?",
+   "options": [
+     "N'as-tu pas mis du beurre sur ton pain ?",
+     "N'avons-nous pas mis du beurre sur ton pain ?",
+     "As-tu mis du beurre sur ton pain ?",
+     "Vous avez mis du beurre sur ton pain ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "J'______ mes clés sur la table ce matin. (I put my keys on the table this morning.)",
+   "options": [
+     "mets",
+     "avais mis",
+     "ai mis",
+     "as mis"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Didn't he put on his glasses?",
+   "options": [
+     "Il n'a mis pas ses lunettes ?",
+     "N'a-t-il pas mis ses lunettes ?",
+     "A-t-il mis ses lunettes ?",
+     "Ils n'ont pas mis ses lunettes ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ une note sur le bureau. (You (pl.) put a note on the desk.)",
+   "options": [
+     "ont mis",
+     "avez mis",
+     "ai mis",
+     "avais mis"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Did we not put the wine in the fridge?",
+   "options": [
+     "Avons-nous mis le vin dans le frigo ?",
+     "Avons-nous n'avons pas mis le vin dans le frigo ?",
+     "N'avons-nous pas mis le vin dans le frigo ?",
+     "N'avez-vous pas mis le vin dans le frigo ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Il ______ une écharpe pour sortir. (He put on a scarf to go out.)",
+   "options": [
+     "a mis",
+     "ont mis",
+     "ai mis",
+     "avons mis"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Did I not put enough sugar in my coffee?",
+   "options": [
+     "Ai-je mis assez de sucre dans mon café ?",
+     "N'ai-je pas mis assez de sucre dans mon café ?",
+     "A-t-il mis de sucre dans son café ?",
+     "Je n'ai mis pas assez de sucre dans mon café ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Tu _______ la lumière avant de partir. (You (sing.) turned on the light before leaving.)",
+   "options": [
+     "ont mis",
+     "as mis",
+     "avons mis",
+     "a mis"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Did she not put the flowers in the vase?",
+   "options": [
+     "A-t-elle mis les fleurs dans le vase ?",
+     "A-t-elle mettre les fleurs dans le vase ?",
+     "N'a-t-elle pas mis les fleurs dans le vase ?",
+     "Elle n'a mis pas les fleurs dans le vase ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ nos manteaux dans l'entrée. (We put our coats in the hallway.)",
+   "options": [
+     "ai mis",
+     "avons mis",
+     "ont mis",
+     "as mis"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Did they (masc.) not put away their toys?",
+   "options": [
+     "Nous n'avons pas mis leurs jouets ?",
+     "N'ont-ils pas mis leurs jouets ?",
+     "Ils n'ont mis pas leurs jouets ?",
+     "Vous avez mis leurs jouets ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Elles ______ la voiture dans le garage. (They (f) put the car in the garage.)",
+   "options": [
+     "ont mis",
+     "mets",
+     "met",
+     "mettez"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Did we not put the letter in the mailbox?",
+   "options": [
+     "Vous n'avez pas mis la lettre dans la boîte ?",
+     "N'ont-ils pas mis la lettre dans la boîte ?",
+     "N'avons-nous pas mis la lettre dans la boîte ?",
+     "Nous n'avons mis pas la lettre dans la boîte ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Vous ______ le réveil à six heures. (You (formal/pl.) set the alarm at six.)",
+   "options": [
+     "avez mis",
+     "avons mis",
+     "ai mis",
+     "ont mis"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Didn't they (masc.) put the plates on the table?",
+   "options": [
+     "Ils n'ont pas mis les assiettes sur la table ?",
+     "A-t-il mis les assiettes sur la table ?",
+     "N'ont-ils pas mis les assiettes sur la table ?",
+     "Ils ont mis les assiettes sur la table ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Je ______ beaucoup d'efforts pour réussir. (I put in a lot of effort to succeed.)",
+   "options": [
+     "avons mis",
+     "ai mis",
+     "as mis",
+     "a mis"
+   ],
+   "answer": "B"
+ }
+]
