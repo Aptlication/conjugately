@@ -1,0 +1,208 @@
+futur simple - s'ennuyer
+
+Replace the existing se debrouiller present tense content with the new questions from your attached file.
+
+“Test that it works end-to-end before confirming completion”
+
+[
+ {
+   "question": "Will I get bored?",
+   "options": [
+     "[translate:M'ennuierai-je?]",
+     "[translate:Je m'ennuierai?]",
+     "[translate:Je ennuierai?]",
+     "[translate:Je m'ai ennuyé?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will you (tu) not get bored?",
+   "options": [
+     "[translate:Tu t'ennuieras?]",
+     "[translate:Ne t'ennuieras-tu pas?]",
+     "[translate:Tu ne t'ennuieras pas?]",
+     "[translate:Tu ennuieras?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will he get bored?",
+   "options": [
+     "[translate:S'ennuiera-t-il?]",
+     "[translate:Il s'ennuiera?]",
+     "[translate:Il ennuiera?]",
+     "[translate:Il s'est ennuyé?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Will we not get bored?",
+   "options": [
+     "[translate:Ne nous ennuierons-nous pas?]",
+     "[translate:Nous nous ennuierons pas?]",
+     "[translate:Nous ennuierons?]",
+     "[translate:Nous nous sommes ennuyés?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Will she get bored?",
+   "options": [
+     "[translate:Elle s'ennuiera?]",
+     "[translate:S'ennuiera-t-elle?]",
+     "[translate:Elle ennuiera?]",
+     "[translate:Elle s'est ennuyée?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) will get bored.",
+   "options": [
+     "[translate:Vous vous ennuierez.]",
+     "[translate:Vous ennuirez?]",
+     "[translate:Vous vous êtes ennuyés.]",
+     "[translate:Vous avez ennuyé?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "They (masc.) will not get bored.",
+   "options": [
+     "[translate:Ils ne s'ennuieront pas.]",
+     "[translate:Ils n'ennuieront pas.]",
+     "[translate:Ne s'ennuieront-ils pas?]",
+     "[translate:Ils s'ennuieront?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Will you (vous) get bored?",
+   "options": [
+     "[translate:Vous vous ennuierez?]",
+     "[translate:Vous ennuierez-vous?]",
+     "[translate:Vous vous êtes ennuyé?]",
+     "[translate:Vous ennuierez?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Will they (fem.) get bored?",
+   "options": [
+     "[translate:Elles s'ennuieront?]",
+     "[translate:Elles ennuieront?]",
+     "[translate:Se ennuieront-elles?]",
+     "[translate:Elles se sont ennuyées?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will we not get bored?",
+   "options": [
+     "[translate:Nous ne nous ennuierons pas?]",
+     "[translate:Ne nous ennuierons-nous pas?]",
+     "[translate:Nous nous ennuierons?]",
+     "[translate:Nous ennuierons?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "I will not get bored.",
+   "options": [
+     "[translate:Je ne m'ennuierai pas.]",
+     "[translate:Je m'ennuierai?]",
+     "[translate:Je ennuierai pas.]",
+     "[translate:Je me suis ennuyé.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She will get bored.",
+   "options": [
+     "[translate:Elle s'ennuiera.]",
+     "[translate:Elle ennuiera?]",
+     "[translate:Elle se ennuiera pas.]",
+     "[translate:Elle s'est ennuyée.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "We will get bored.",
+   "options": [
+     "[translate:Nous nous ennuierons.]",
+     "[translate:Nous ennuierons-nous.]",
+     "[translate:Nous ennuierons?]",
+     "[translate:Nous ne nous ennuierons pas.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will you (tu) not get bored?",
+   "options": [
+     "[translate:Ne t'ennuieras-tu pas?]",
+     "[translate:Tu ne t'ennuieras pas?]",
+     "[translate:Tu ennuieras pas?]",
+     "[translate:Tu s'ennuieras?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "She will not get bored.",
+   "options": [
+     "[translate:Elle ne s'ennuiera pas.]", 
+     "[translate:Elle ennuiera pas.]", 
+     "[translate:Elle s'ennuiera pas.]", 
+     "[translate:Elle ne ennuiera pas.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "You (vous) will not get bored.",
+   "options": [
+     "[translate:Vous ne vous ennuierez pas.]",
+     "[translate:Vous ennuierez pas.]",
+     "[translate:Vous vous ennuierez?]",
+     "[translate:Vous avez ennuyé?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He will not get bored.",
+   "options": [
+     "[translate:Il ne s'ennuiera pas.]",
+     "[translate:Il s'ennuiera pas.]",
+     "[translate:Il ennuiera pas.]",
+     "[translate:Il s'ennuiera?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "They (masc.) will get bored.",
+   "options": [
+     "[translate:Ils s'ennuieront.]",
+     "[translate:Ils ennuieront?]",
+     "[translate:Ils ne s'ennuieront pas.]",
+     "[translate:Ils ennuieront pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will she not get bored?",
+   "options": [
+     "[translate:Ne s'ennuiera-t-elle pas?]",
+     "[translate:Elle s'ennuiera pas?]",
+     "[translate:Elle ne ennuiera pas?]",
+     "[translate:S'est-elle ennuyée?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (fem.) will not get bored.",
+   "options": [
+     "[translate:Elles ne s'ennuieront pas.]",
+     "[translate:Elles s'ennuieront pas.]",
+     "[translate:Elles ennuieront pas.]",
+     "[translate:Elles s'ennuieront?]"
+   ],
+   "answer": "D"
+ }
+]
