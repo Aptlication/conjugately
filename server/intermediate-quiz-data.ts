@@ -1425,6 +1425,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) rejoiced.", "options": ["Ils se sont réjouis.", "Ils ont réjoui.", "Ils s'est réjouis.", "Ils sont réjouis."], "answer": "A"},
       {"question": "Did she not rejoice?", "options": ["Ne s'est-elle pas réjouie?", "Elle s'est pas réjouie?", "S'est-elle réjoui?", "Elle n'est pas réjouie?"], "answer": "D"},
       {"question": "They (fem.) did not rejoice.", "options": ["Elles se sont pas réjouies.", "Elles ne sont pas réjoui.", "Elles ne se sont pas réjouies.", "Elles n'ont pas réjoui."], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will I rejoice?", "options": ["Je me réjouirai?", "Me réjouirai-je?", "J'ai réjouirai?", "Je me réjouir?"], "answer": "C"},
+      {"question": "Will you (tu) not rejoice?", "options": ["Ne te réjouiras-tu pas?", "Tu te réjouiras?", "Tu ne te réjouiras pas?", "Tu réjouiras?"], "answer": "A"},
+      {"question": "Will he rejoice?", "options": ["Se réjouira-t-il?", "Il se réjouira?", "Il réjouira?", "Il se réjouirait?"], "answer": "D"},
+      {"question": "Will we not rejoice?", "options": ["Nous ne nous réjouirons pas?", "Nous nous réjouirons pas?", "Nous nous réjouirons?", "Ne nous réjouirons-nous pas?"], "answer": "B"},
+      {"question": "Will she rejoice?", "options": ["Se réjouira-t-elle?", "Elle se réjouira?", "Elle réjouira?", "Elle se réjouirait?"], "answer": "A"},
+      {"question": "You (vous) will rejoice.", "options": ["Vous vous réjouirez.", "Réjouirez-vous?", "Vous réjouirez?", "Vous avez réjoui?"], "answer": "C"},
+      {"question": "They (masc.) will not rejoice.", "options": ["Ils ne se réjouiront pas.", "Ils se réjouiront?", "Ne se réjouiront-ils pas?", "Ils se réjouiront pas?"], "answer": "B"},
+      {"question": "Will you (vous) rejoice?", "options": ["Réjouirez-vous?", "Vous vous réjouirez?", "Vous réjouirez?", "Vous vous réjouirez-vous?"], "answer": "D"},
+      {"question": "Will they (fem.) rejoice?", "options": ["Réjouiront-elles?", "Elles se réjouiront?", "Se réjouiront-elles?", "Elles réjouiront?"], "answer": "C"},
+      {"question": "Will we not rejoice?", "options": ["Nous nous réjouirons?", "Ne nous réjouirons-nous pas?", "Réjouirons-nous?", "Nous ne nous réjouirons pas?"], "answer": "A"},
+      {"question": "I will not rejoice.", "options": ["Je ne me réjouirai pas.", "Je me réjouirai pas.", "Je me réjouirai?", "Je n'ai pas réjoui."], "answer": "D"},
+      {"question": "She will rejoice.", "options": ["Elle se réjouira.", "Réjouira-t-elle?", "Elle réjouirait?", "Elle ne se réjouira pas."], "answer": "B"},
+      {"question": "We will rejoice.", "options": ["Nous nous réjouirons.", "Réjouirons-nous?", "Nous ne nous réjouirons pas.", "Nous réjouirons?"], "answer": "A"},
+      {"question": "Will you (tu) not rejoice?", "options": ["Tu ne te réjouiras pas?", "Te réjouiras-tu?", "Tu te réjouiras pas?", "Te réjouiras-tu pas?"], "answer": "C"},
+      {"question": "She will not rejoice.", "options": ["Elle ne se réjouira pas.", "Elle se réjouira pas.", "Elle réjouirait pas.", "Réjouira-t-elle?"], "answer": "B"},
+      {"question": "You (vous) will not rejoice.", "options": ["Vous ne vous réjouirez pas.", "Vous réjouirez pas?", "Vous vous réjouirez pas.", "Vous avez réjoui?"], "answer": "D"},
+      {"question": "He will not rejoice.", "options": ["Il ne se réjouira pas.", "Il se réjouira pas.", "Il réjouirait pas.", "Il se réjouirait?"], "answer": "C"},
+      {"question": "They (masc.) will rejoice.", "options": ["Ils se réjouiront.", "Ils réjouiront?", "Ils ne se réjouiront pas.", "Réjouiront-ils?"], "answer": "A"},
+      {"question": "Will she not rejoice?", "options": ["Ne se réjouira-t-elle pas?", "Elle se réjouira pas?", "Se réjouira-t-elle pas?", "Elle réjouira pas?"], "answer": "D"},
+      {"question": "They (fem.) will not rejoice.", "options": ["Elles ne se réjouiront pas.", "Elles réjouiront pas.", "Elles se réjouiront pas.", "Elles réjouiront?"], "answer": "B"}
     ]
   }
 

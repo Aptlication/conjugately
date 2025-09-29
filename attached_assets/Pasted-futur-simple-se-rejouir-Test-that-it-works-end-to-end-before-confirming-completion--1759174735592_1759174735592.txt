@@ -1,0 +1,206 @@
+futur simple - se rejouir
+
+"Test that it works end-to-end before confirming completion"
+
+[
+  {
+    "question": "Will I rejoice?",
+    "options": [
+      "[translate:Je me réjouirai?]",
+      "[translate:Me réjouirai-je?]",
+      "[translate:J'ai réjouirai?]",
+      "[translate:Je me réjouir?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Will you (tu) not rejoice?",
+    "options": [
+      "[translate:Ne te réjouiras-tu pas?]",
+      "[translate:Tu te réjouiras?]",
+      "[translate:Tu ne te réjouiras pas?]",
+      "[translate:Tu réjouiras?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Will he rejoice?",
+    "options": [
+      "[translate:Se réjouira-t-il?]",
+      "[translate:Il se réjouira?]",
+      "[translate:Il réjouira?]",
+      "[translate:Il se réjouirait?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Will we not rejoice?",
+    "options": [
+      "[translate:Nous ne nous réjouirons pas?]",
+      "[translate:Nous nous réjouirons pas?]",
+      "[translate:Nous nous réjouirons?]",
+      "[translate:Ne nous réjouirons-nous pas?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Will she rejoice?",
+    "options": [
+      "[translate:Se réjouira-t-elle?]",
+      "[translate:Elle se réjouira?]",
+      "[translate:Elle réjouira?]",
+      "[translate:Elle se réjouirait?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "You (vous) will rejoice.",
+    "options": [
+      "[translate:Vous vous réjouirez.]",
+      "[translate:Réjouirez-vous?]",
+      "[translate:Vous réjouirez?]",
+      "[translate:Vous avez réjoui?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "They (masc.) will not rejoice.",
+    "options": [
+      "[translate:Ils ne se réjouiront pas.]",
+      "[translate:Ils se réjouiront?]",
+      "[translate:Ne se réjouiront-ils pas?]",
+      "[translate:Ils se réjouiront pas?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Will you (vous) rejoice?",
+    "options": [
+      "[translate:Réjouirez-vous?]",
+      "[translate:Vous vous réjouirez?]",
+      "[translate:Vous réjouirez?]",
+      "[translate:Vous vous réjouirez-vous?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "Will they (fem.) rejoice?",
+    "options": [
+      "[translate:Réjouiront-elles?]",
+      "[translate:Elles se réjouiront?]",
+      "[translate:Se réjouiront-elles?]",
+      "[translate:Elles réjouiront?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Will we not rejoice?",
+    "options": [
+      "[translate:Nous nous réjouirons?]",
+      "[translate:Ne nous réjouirons-nous pas?]",
+      "[translate:Réjouirons-nous?]",
+      "[translate:Nous ne nous réjouirons pas?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "I will not rejoice.",
+    "options": [
+      "[translate:Je ne me réjouirai pas.]",
+      "[translate:Je me réjouirai pas.]",
+      "[translate:Je me réjouirai?]",
+      "[translate:Je n'ai pas réjoui.]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "She will rejoice.",
+    "options": [
+      "[translate:Elle se réjouira.]",
+      "[translate:Réjouira-t-elle?]",
+      "[translate:Elle réjouirait?]",
+      "[translate:Elle ne se réjouira pas.]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "We will rejoice.",
+    "options": [
+      "[translate:Nous nous réjouirons.]",
+      "[translate:Réjouirons-nous?]",
+      "[translate:Nous ne nous réjouirons pas.]",
+      "[translate:Nous réjouirons?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Will you (tu) not rejoice?",
+    "options": [
+      "[translate:Tu ne te réjouiras pas?]",
+      "[translate:Te réjouiras-tu?]",
+      "[translate:Tu te réjouiras pas?]",
+      "[translate:Te réjouiras-tu pas?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "She will not rejoice.",
+    "options": [
+      "[translate:Elle ne se réjouira pas.]",
+      "[translate:Elle se réjouira pas.]",
+      "[translate:Elle réjouirait pas.]",
+      "[translate:Réjouira-t-elle?]"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "You (vous) will not rejoice.",
+    "options": [
+      "[translate:Vous ne vous réjouirez pas.]",
+      "[translate:Vous réjouirez pas?]",
+      "[translate:Vous vous réjouirez pas.]",
+      "[translate:Vous avez réjoui?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "He will not rejoice.",
+    "options": [
+      "[translate:Il ne se réjouira pas.]",
+      "[translate:Il se réjouira pas.]",
+      "[translate:Il réjouirait pas.]",
+      "[translate:Il se réjouirait?]"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "They (masc.) will rejoice.",
+    "options": [
+      "[translate:Ils se réjouiront.]",
+      "[translate:Ils réjouiront?]",
+      "[translate:Ils ne se réjouiront pas.]",
+      "[translate:Réjouiront-ils?]"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Will she not rejoice?",
+    "options": [
+      "[translate:Ne se réjouira-t-elle pas?]",
+      "[translate:Elle se réjouira pas?]",
+      "[translate:Se réjouira-t-elle pas?]",
+      "[translate:Elle réjouira pas?]"
+    ],
+    "answer": "D"
+  },
+  {
+    "question": "They (fem.) will not rejoice.",
+    "options": [
+      "[translate:Elles ne se réjouiront pas.]",
+      "[translate:Elles réjouiront pas.]",
+      "[translate:Elles se réjouiront pas.]",
+      "[translate:Elles réjouiront?]"
+    ],
+    "answer": "B"
+  }
+]
