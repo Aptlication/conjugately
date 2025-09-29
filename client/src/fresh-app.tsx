@@ -691,7 +691,7 @@ function FreshAppCore({ user }: { user: any }) {
                   onClick={() => handleReflexiveModalDismiss(false)}
                   style={{ width: '100%', padding: '12px', background: '#7c3aed', color: 'white', fontWeight: '600', borderRadius: '12px', border: 'none', cursor: 'pointer' }}
                 >
-                  Start Quiz
+                  Select Time Frame
                 </button>
               </div>
             </div>
