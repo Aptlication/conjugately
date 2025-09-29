@@ -1080,7 +1080,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     ]
   },
 
-  "s'ennuyer": {
+  "se débrouiller": {
     "présent": [
       {"question": "Are you (singular) bored? (Présent)", "options": ["Tu t'ennuies ?", "Est-ce que tu t'ennuies ?", "Tu ennuies ?", "Tu s'ennuies ?"], "answer": "A"},
       {"question": "Is he not bored? (Présent)", "options": ["Il ne s'ennuie pas ?", "Ne s'ennuie-t-il pas ?", "Il s'ennuie ?", "Il ennuie ?"], "answer": "B"},
