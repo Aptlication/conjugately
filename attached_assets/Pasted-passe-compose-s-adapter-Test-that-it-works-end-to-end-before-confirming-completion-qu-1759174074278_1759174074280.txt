@@ -1,0 +1,209 @@
+passe compose - s'adapter
+
+"Test that it works end-to-end before confirming completion"
+
+[
+ {
+   "question": "Did I adapt?",
+   "options": [
+     "[translate:Je me suis adapté(e)?]",
+     "[translate:J'ai adapté?]",
+     "[translate:Me suis-je adapté(e)?]",
+     "[translate:Ai-je adapté(e)?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did you (tu) not adapt?",
+   "options": [
+     "[translate:Ne t'es-tu pas adapté(e)?]",
+     "[translate:Tu t'es adapté(e)?]",
+     "[translate:Tu n'as pas adapté?]",
+     "[translate:T'es-tu adapté?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did he adapt?",
+   "options": [
+     "[translate:S'est-il adapté?]",
+     "[translate:Il a adapté?]",
+     "[translate:A-t-il adapté?]",
+     "[translate:Il s'est adapté?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did we not adapt?",
+   "options": [
+     "[translate:Ne nous sommes-nous pas adapté(e)s?]",
+     "[translate:Nous nous sommes pas adaptés?]",
+     "[translate:Nous n'avons pas adapté?]",
+     "[translate:Nous sommes adaptés?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did she adapt?",
+   "options": [
+     "[translate:Elle s'est adaptée?]",
+     "[translate:S'est-elle adaptée?]",
+     "[translate:Elle a adapté?]",
+     "[translate:A-t-elle adaptée?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) adapted.",
+   "options": [
+     "[translate:Vous avez adapté?]",
+     "[translate:Vous vous êtes adapté(e)(s).]",
+     "[translate:Vous s'êtes adaptés?]",
+     "[translate:Vous êtes adapté?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) did not adapt.",
+   "options": [
+     "[translate:Ils ne se sont pas adaptés.]",
+     "[translate:Ils ont adapté.]",
+     "[translate:Ils se sont pas adaptés.]",
+     "[translate:Ils se ne sont pas adapté.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Did you (vous) adapt?",
+   "options": [
+     "[translate:Vous vous êtes adapté(e)?]",
+     "[translate:Vous êtes-vous adapté(e)?]",
+     "[translate:Vous avez adapté?]",
+     "[translate:Avez-vous adapté?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Did they (fem.) adapt?",
+   "options": [
+     "[translate:Elles ont adapté?]",
+     "[translate:Elles se sont adaptées?]",
+     "[translate:Elles sont adaptées?]",
+     "[translate:Se sont-elles adaptées?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Did we not adapt?",
+   "options": [
+     "[translate:Nous ne nous sommes pas adapté(e)s?]",
+     "[translate:Nous ne sommes pas adaptés?]",
+     "[translate:Ne nous sommes-nous pas adaptés?]",
+     "[translate:Nous nous sommes adaptés?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "I did not adapt.",
+   "options": [
+     "[translate:Je ne me suis pas adapté(e).]",
+     "[translate:Je n'ai pas adapté.]",
+     "[translate:Je me suis pas adapté.]",
+     "[translate:Je suis adapté(e).]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "She adapted.",
+   "options": [
+     "[translate:Elle a adapté.]",
+     "[translate:Elle s'est adaptée.]",
+     "[translate:Elle s'est pas adaptée.]",
+     "[translate:Elle s'est adapté.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "We adapted.",
+   "options": [
+     "[translate:Nous nous sommes adapté(e)s.]",
+     "[translate:Nous avons adapté.]",
+     "[translate:Nous sommes adapté.]",
+     "[translate:Nous s'est adaptés.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did you (tu) not adapt?",
+   "options": [
+     "[translate:Tu n'es pas adapté(e)?]",
+     "[translate:Tu ne t'es pas adapté(e)?]",
+     "[translate:Tu n'a pas adapté(e)?]",
+     "[translate:Tu s'est adapté(e)?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "She did not adapt.",
+   "options": [
+     "[translate:Elle ne s'est pas adaptée.]",
+     "[translate:Elle s'est pas adaptée.]",
+     "[translate:Elle n'a pas adapté.]",
+     "[translate:Elle ne se pas adaptée.]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "You (vous) did not adapt.",
+   "options": [
+     "[translate:Vous vous êtes adapté(e)(s).]",
+     "[translate:Vous n'avez pas adapté.]",
+     "[translate:Vous ne vous êtes pas adapté(e)(s).]",
+     "[translate:Vous n'êtes pas adapté.]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "He did not adapt.",
+   "options": [
+     "[translate:Il ne s'est pas adapté.]",
+     "[translate:Il s'est pas adapté.]",
+     "[translate:Il n'a pas adapté.]",
+     "[translate:Il s'est adapté.]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) adapted.",
+   "options": [
+     "[translate:Ils se sont adaptés.]",
+     "[translate:Ils ont adapté.]",
+     "[translate:Ils s'est adaptés.]",
+     "[translate:Ils sont adaptés.]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Did she not adapt?",
+   "options": [
+     "[translate:Ne s'est-elle pas adaptée?]",
+     "[translate:Elle s'est pas adaptée?]",
+     "[translate:S'est-elle adapté?]",
+     "[translate:Elle n'est pas adaptée?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "They (fem.) did not adapt.",
+   "options": [
+     "[translate:Elles ne se sont pas adaptées.]",
+     "[translate:Elles ne sont pas adapté.]",
+     "[translate:Elles s'est pas adaptées.]",
+     "[translate:Elles n'ont pas adapté.]"
+   ],
+   "answer": "B"
+ }
+]
+
+
+

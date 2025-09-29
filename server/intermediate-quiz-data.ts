@@ -1334,6 +1334,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) adapt.", "options": ["Ils s'adaptent.", "Ils adaptent?", "Ils ne s'adaptent pas.", "Ils adaptent pas."], "answer": "A"},
       {"question": "Does she not adapt?", "options": ["Ne s'adapte-t-elle pas?", "Elle s'adapte pas?", "S'est-elle adaptée?", "Elle ne adapte pas?"], "answer": "D"},
       {"question": "They (fem.) do not adapt.", "options": ["Elles ne s'adaptent pas.", "Elles adaptent pas.", "Elles s'adaptent pas.", "Elles s'adaptent?"], "answer": "B"}
+    ],
+    "passé_composé": [
+      {"question": "Did I adapt?", "options": ["Je me suis adapté(e)?", "J'ai adapté?", "Me suis-je adapté(e)?", "Ai-je adapté(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not adapt?", "options": ["Ne t'es-tu pas adapté(e)?", "Tu t'es adapté(e)?", "Tu n'as pas adapté?", "T'es-tu adapté?"], "answer": "A"},
+      {"question": "Did he adapt?", "options": ["S'est-il adapté?", "Il a adapté?", "A-t-il adapté?", "Il s'est adapté?"], "answer": "D"},
+      {"question": "Did we not adapt?", "options": ["Ne nous sommes-nous pas adapté(e)s?", "Nous nous sommes pas adaptés?", "Nous n'avons pas adapté?", "Nous sommes adaptés?"], "answer": "B"},
+      {"question": "Did she adapt?", "options": ["Elle s'est adaptée?", "S'est-elle adaptée?", "Elle a adapté?", "A-t-elle adaptée?"], "answer": "A"},
+      {"question": "You (vous) adapted.", "options": ["Vous avez adapté?", "Vous vous êtes adapté(e)(s).", "Vous s'êtes adaptés?", "Vous êtes adapté?"], "answer": "C"},
+      {"question": "They (masc.) did not adapt.", "options": ["Ils ne se sont pas adaptés.", "Ils ont adapté.", "Ils se sont pas adaptés.", "Ils se ne sont pas adapté."], "answer": "B"},
+      {"question": "Did you (vous) adapt?", "options": ["Vous vous êtes adapté(e)?", "Vous êtes-vous adapté(e)?", "Vous avez adapté?", "Avez-vous adapté?"], "answer": "D"},
+      {"question": "Did they (fem.) adapt?", "options": ["Elles ont adapté?", "Elles se sont adaptées?", "Elles sont adaptées?", "Se sont-elles adaptées?"], "answer": "C"},
+      {"question": "Did we not adapt?", "options": ["Nous ne nous sommes pas adapté(e)s?", "Nous ne sommes pas adaptés?", "Ne nous sommes-nous pas adaptés?", "Nous nous sommes adaptés?"], "answer": "A"},
+      {"question": "I did not adapt.", "options": ["Je ne me suis pas adapté(e).", "Je n'ai pas adapté.", "Je me suis pas adapté.", "Je suis adapté(e)."], "answer": "D"},
+      {"question": "She adapted.", "options": ["Elle a adapté.", "Elle s'est adaptée.", "Elle s'est pas adaptée.", "Elle s'est adapté."], "answer": "B"},
+      {"question": "We adapted.", "options": ["Nous nous sommes adapté(e)s.", "Nous avons adapté.", "Nous sommes adapté.", "Nous s'est adaptés."], "answer": "A"},
+      {"question": "Did you (tu) not adapt?", "options": ["Tu n'es pas adapté(e)?", "Tu ne t'es pas adapté(e)?", "Tu n'a pas adapté(e)?", "Tu s'est adapté(e)?"], "answer": "C"},
+      {"question": "She did not adapt.", "options": ["Elle ne s'est pas adaptée.", "Elle s'est pas adaptée.", "Elle n'a pas adapté.", "Elle ne se pas adaptée."], "answer": "B"},
+      {"question": "You (vous) did not adapt.", "options": ["Vous vous êtes adapté(e)(s).", "Vous n'avez pas adapté.", "Vous ne vous êtes pas adapté(e)(s).", "Vous n'êtes pas adapté."], "answer": "D"},
+      {"question": "He did not adapt.", "options": ["Il ne s'est pas adapté.", "Il s'est pas adapté.", "Il n'a pas adapté.", "Il s'est adapté."], "answer": "C"},
+      {"question": "They (masc.) adapted.", "options": ["Ils se sont adaptés.", "Ils ont adapté.", "Ils s'est adaptés.", "Ils sont adaptés."], "answer": "A"},
+      {"question": "Did she not adapt?", "options": ["Ne s'est-elle pas adaptée?", "Elle s'est pas adaptée?", "S'est-elle adapté?", "Elle n'est pas adaptée?"], "answer": "D"},
+      {"question": "They (fem.) did not adapt.", "options": ["Elles ne se sont pas adaptées.", "Elles ne sont pas adapté.", "Elles s'est pas adaptées.", "Elles n'ont pas adapté."], "answer": "B"}
     ]
   }
 
