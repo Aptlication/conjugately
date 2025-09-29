@@ -1,0 +1,59 @@
+Objective
+Act as an expert French language tutor. Generate a complete, 20-question, multiple-choice quiz with balanced question and answer distribution following the specifications below.
+Quiz Parameters (To be filled in by user)
+Verb: "[se souvenir]" (e.g., "faire")
+Tense: "[Futur simple]" (e.g., "Conditionnel Passé")
+Number of Questions: 20
+Required Distribution (50/50 Balance)
+Question Structure:
+50% Questions (10 questions): Standard interrogative format requiring translation
+50% Answers (10 questions): Statement format requiring completion or selection
+Sentence Polarity:
+50% Negative Questions (10 questions): Requiring proper French negation placement
+50% Negative Statements (10 questions): Affirmative constructions for practice balance
+Answer Position Randomization Requirements
+Maintain equal distribution of correct answers across all positions (answers cannot be ‘randomised’ in the sequence a-b-c-d):
+Position A: Exactly 5 correct answers (25%)
+Position B: Exactly 5 correct answers (25%)
+Position C: Exactly 5 correct answers (25%)
+Position D: Exactly 5 correct answers (25%)
+Tense Interpretation Guide (CRITICAL)
+[Maintain existing tense interpretation rules as provided in original prompt]
+Enhanced Content & Structure Requirements
+Format Distribution:
+10 questions in interrogative English format: "Do I...?" / "Would she...?"
+10 questions in statement English format: "I do..." / "She would..."
+Negation Requirements:
+10 negative constructions with proper placement around auxiliary verbs
+Correctly wrap negation (ne...pas, ne...rien, etc.) in compound tenses
+Subject Pronouns: Distribute evenly across all pronouns (je, tu, il, elle, nous, vous, ils, elles).
+Plausible Distractors: Target common conjugation errors including wrong auxiliary selection, incorrect agreement, and negation placement mistakes.
+Technical Format (MANDATORY)
+[Maintain existing JSON structure requirements with validation for 50/50 distributions]
+The quiz must validate that:
+Exactly 10 interrogative and 10 statement formats are generated
+Exactly 10 negative constructions are distributed across both formats
+Correct answers maintain equal distribution across positions A-D
+No clustering patterns exist in answer positioning
+This balanced approach ensures comprehensive practice of both question formation and statement construction while maintaining pedagogical effectiveness through varied sentence structures and proper negation practice.
+MANDATORY ANSWER POSITION VALIDATION
+Before submitting the quiz, verify:
+✓ Questions 1-5: Correct answers distributed across A, B, C, D, A (one per position cycle)
+✓ Questions 6-10: Correct answers distributed across B, C, D, A, B (continuing cycle)
+✓ Questions 11-15: Correct answers distributed across C, D, A, B, C (continuing cycle)
+✓ Questions 16-20: Correct answers distributed across D, A, B, C, D (completing cycle)
+CRITICAL: If any position (A, B, C, or D) contains more than 5 correct answers, regenerate the entire quiz. No exceptions.
+Example validation pattern:
+Q1→A, Q2→B, Q3→C, Q4→D, Q5→A, Q6→B, Q7→C, Q8→D, Q9→A, Q10→B,
+Q11→C, Q12→D, Q13→A, Q14→B, Q15→C, Q16→D, Q17→A, Q18→B, Q19→C, Q20→D
+BEFORE STARTING: Prepare answer position sequence A-B-C-D-A-B-C-D... and assign each question its predetermined correct position.
+Selected Pattern: C-A-D-B-A-C-B-D-C-A-D-B-A-C-B-D-C-A-D-B
+Q1→C, Q2→A, Q3→D, Q4→B, Q5→A, Q6→C, Q7→B, Q8→D, Q9→C, Q10→A
+Q11→D, Q12→B, Q13→A, Q14→C, Q15→B, Q16→D, Q17→C, Q18→A, Q19→D, Q20→B
+ 
+FINAL VERIFICATION REQUIRED:
+□ Count Position A answers: Must equal exactly 5
+□ Count Position B answers: Must equal exactly 5
+□ Count Position C answers: Must equal exactly 5
+□ Count Position D answers: Must equal exactly 5
+□ Total verification: 5+5+5+5=20 ✓
