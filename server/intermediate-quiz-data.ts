@@ -1241,6 +1241,53 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will she not get bored?", "options": ["Ne s'ennuiera-t-elle pas ?", "Elle s'ennuiera pas ?", "Elle ne ennuiera pas ?", "S'est-elle ennuyée ?"], "answer": "C"},
       {"question": "They (fem.) will not get bored.", "options": ["Elles ne s'ennuieront pas.", "Elles s'ennuieront pas.", "Elles ennuieront pas.", "Elles s'ennuieront ?"], "answer": "D"}
     ]
+  },
+
+  "se souvenir": {
+    "présent": [
+      {"question": "Do I remember?", "options": ["Je souviens?", "M'est-ce que je souviens?", "Je me souviens?", "Je me souvenir?"], "answer": "C"},
+      {"question": "Do you (tu) not remember?", "options": ["Ne te souviens-tu pas?", "Tu te souviens?", "Tu souviens pas?", "Tu ne te souviens pas?"], "answer": "A"},
+      {"question": "Does he remember?", "options": ["Il souvient?", "Il se souvient?", "Il se souvenir?", "Se souvient-il?"], "answer": "B"},
+      {"question": "Do we not remember?", "options": ["Nous souvenons pas?", "Nous nous souvenons?", "Nous ne nous souvenons pas?", "Ne nous souvenons-nous pas?"], "answer": "D"},
+      {"question": "Does she remember?", "options": ["Se souvient-elle?", "Elle souvient?", "Elle se souvenir?", "Elle se souvient?"], "answer": "A"},
+      {"question": "You (vous) remember.", "options": ["Vous souvenez?", "Vous vous souvenez.", "Vous vous souvenir.", "Vous avez souvenu?"], "answer": "B"},
+      {"question": "They (masc.) do not remember.", "options": ["Ils se souviennent?", "Ne se souviennent-ils pas?", "Ils ne se souviennent pas.", "Ils ne souviennent pas."], "answer": "C"},
+      {"question": "Do you (vous) remember?", "options": ["Vous souvenez?", "Vous vous êtes souvenu?", "Vous souvenez-vous?", "Vous vous souvenez?"], "answer": "D"},
+      {"question": "Do they (fem.) remember?", "options": ["Elles se souviennent?", "Elles souviennent?", "Se souviennent-elles?", "Elles se sont souvenues?"], "answer": "A"},
+      {"question": "Do we not remember?", "options": ["Nous souvenons?", "Ne nous souvenons-nous pas?", "Nous nous souvenons?", "Nous ne nous souvenons pas?"], "answer": "B"},
+      {"question": "I do not remember.", "options": ["Je me suis souvenu.", "Je souviens pas.", "Je ne me souviens pas.", "Je me souviens?"], "answer": "C"},
+      {"question": "She remembers.", "options": ["Elle souvient?", "Elle se souviens pas.", "Elle s'est souvenue.", "Elle se souvient."], "answer": "D"},
+      {"question": "We remember.", "options": ["Nous nous souvenons.", "Nous souvenons-nous.", "Nous ne nous souvenons pas.", "Nous souvenons?"], "answer": "A"},
+      {"question": "Do you (tu) not remember?", "options": ["Tu se souviens?", "Tu ne te souviens pas?", "Tu souviens pas?", "Ne te souviens-tu pas?"], "answer": "B"},
+      {"question": "She does not remember.", "options": ["Elle ne souvient pas.", "Elle souvient pas.", "Elle ne se souvient pas.", "Elle se souvient pas."], "answer": "C"},
+      {"question": "You (vous) do not remember.", "options": ["Vous souvenez pas.", "Vous vous souvenez?", "Vous avez souvenu?", "Vous ne vous souvenez pas."], "answer": "D"},
+      {"question": "He does not remember.", "options": ["Il ne se souvient pas.", "Il se souvient?", "Il souvient pas.", "Il se souvient pas."], "answer": "A"},
+      {"question": "They (masc.) remember.", "options": ["Ils souviennent?", "Ils se souviennent.", "Ils ne se souviennent pas.", "Ils souviennent pas?"], "answer": "B"},
+      {"question": "Does she not remember?", "options": ["S'est-elle souvenue?", "Elle se souvient pas?", "Ne se souvient-elle pas?", "Elle ne souvient pas?"], "answer": "C"},
+      {"question": "They (fem.) do not remember.", "options": ["Elles se souviennent pas.", "Elles souviennent pas.", "Elles se souviennent?", "Elles ne se souviennent pas."], "answer": "D"}
+    ],
+    "passé_composé": [
+      {"question": "Did I remember?", "options": ["Je me suis souvenu?", "J'ai souvenu?", "Me suis-je souvenu(e)?", "Ai-je souvenu(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not remember?", "options": ["Ne t'es-tu pas souvenu(e)?", "Tu t'es souvenu(e)?", "Tu n'as pas souvenu?", "T'es-tu souvenu?"], "answer": "A"},
+      {"question": "Did he remember?", "options": ["S'est-il souvenu?", "Il a souvenu?", "A-t-il souvenu?", "Il s'est souvenu?"], "answer": "D"},
+      {"question": "Did we not remember?", "options": ["Ne nous sommes-nous pas souvenus?", "Nous nous sommes pas souvenus?", "Nous n'avons pas souvenu?", "Nous sommes souvenus?"], "answer": "B"},
+      {"question": "Did she remember?", "options": ["Elle s'est souvenue?", "S'est-elle souvenue?", "Elle a souvenu?", "A-t-elle souvenue?"], "answer": "A"},
+      {"question": "You (vous) remembered.", "options": ["Vous avez souvenu?", "Vous vous êtes souvenu(e)(s).", "Vous s'êtes souvenus?", "Vous êtes souvenu?"], "answer": "C"},
+      {"question": "They (masc.) did not remember.", "options": ["Ils n'ont pas souvenu.", "Ils se sont pas souvenus.", "Ils se ne sont pas souvenu.", "Ils ne se sont pas souvenus."], "answer": "B"},
+      {"question": "Did you (vous) remember?", "options": ["Vous vous êtes souvenu(e)?", "Vous êtes-vous souvenu(e)?", "Vous avez souvenu?", "Avez-vous souvenu?"], "answer": "D"},
+      {"question": "Did they (fem.) remember?", "options": ["Elles ont souvenu?", "Elles se sont souvenues?", "Elles sont souvenues?", "Se sont-elles souvenues?"], "answer": "C"},
+      {"question": "Did we not remember?", "options": ["Ne nous sommes-nous pas souvenus?", "Nous ne sommes pas souvenus?", "Nous nous sommes souvenus?", "Nous n'avons pas souvenu?"], "answer": "A"},
+      {"question": "I did not remember.", "options": ["Je ne me suis pas souvenu(e).", "Je me suis pas souvenu.", "Je n'ai pas souvenu.", "Je suis souvenu(e)."], "answer": "D"},
+      {"question": "She remembered.", "options": ["Elle a souvenu.", "Elle s'est souvenue.", "Elle s'est pas souvenue.", "Elle s'est souvenu."], "answer": "B"},
+      {"question": "We remembered.", "options": ["Nous nous sommes souvenus.", "Nous avons souvenu.", "Nous sommes souvenu.", "Nous s'est souvenus."], "answer": "A"},
+      {"question": "Did you (tu) not remember?", "options": ["Tu n'es pas souvenu(e)?", "Tu ne t'es pas souvenu(e)?", "Tu n'a pas souvenu(e)?", "Tu s'est souvenu(e)?"], "answer": "C"},
+      {"question": "She did not remember.", "options": ["Elle ne s'est pas souvenue.", "Elle s'est pas souvenue.", "Elle n'a pas souvenu.", "Elle ne se pas souvenue."], "answer": "B"},
+      {"question": "You (vous) did not remember.", "options": ["Vous vous êtes souvenu(e)(s).", "Vous n'avez pas souvenu.", "Vous ne vous êtes pas souvenu(e)(s).", "Vous n'êtes pas souvenu."], "answer": "D"},
+      {"question": "He did not remember.", "options": ["Il s'est pas souvenu.", "Il ne s'est pas souvenu.", "Il n'a pas souvenu.", "Il s'est souvenu."], "answer": "C"},
+      {"question": "They (masc.) remembered.", "options": ["Ils se sont souvenus.", "Ils s'est souvenus.", "Ils sont souvenus.", "Ils ont souvenu."], "answer": "A"},
+      {"question": "Did she not remember?", "options": ["Ne s'est-elle pas souvenue?", "Elle s'est pas souvenue?", "S'est-elle souvenu?", "Elle n'est pas souvenue?"], "answer": "D"},
+      {"question": "They (fem.) did not remember.", "options": ["Elles s'est pas souvenues.", "Elles ne sont pas souvenu.", "Elles ne se sont pas souvenues.", "Elles n'ont pas souvenu."], "answer": "B"}
+    ]
   }
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
