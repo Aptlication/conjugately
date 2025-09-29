@@ -1147,6 +1147,75 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will she not get bored?", "options": ["Ne s'ennuiera-t-elle pas ?", "Elle s'ennuiera pas ?", "Elle ne ennuiera pas ?", "S'est-elle ennuyée ?"], "answer": "C"},
       {"question": "They (fem.) will not get bored.", "options": ["Elles ne s'ennuieront pas.", "Elles s'ennuieront pas.", "Elles ennuieront pas.", "Elles s'ennuieront ?"], "answer": "D"}
     ]
+  },
+
+  "s'ennuyer": {
+    "présent": [
+      {"question": "Are you (singular) bored?", "options": ["Tu t'ennuies ?", "Est-ce que tu t'ennuies ?", "Tu ennuies ?", "Tu s'ennuies ?"], "answer": "A"},
+      {"question": "Is he not bored?", "options": ["Il ne s'ennuie pas ?", "Ne s'ennuie-t-il pas ?", "Il s'ennuie ?", "Il ennuie ?"], "answer": "B"},
+      {"question": "Are we bored?", "options": ["Nous nous ennuyons ?", "Est-ce que nous nous ennuyons ?", "Nous ennuyons ?", "Nous s'ennuyons ?"], "answer": "C"},
+      {"question": "Are you (plural) not bored?", "options": ["Vous ne vous ennuyez pas ?", "Vous vous ennuyez ?", "Est-ce que vous vous ennuyez ?", "Ne vous ennuyez-vous pas ?"], "answer": "D"},
+      {"question": "Are you (singular) bored?", "options": ["Tu t'ennuies ?", "Tu ne t'ennuies pas ?", "Tu t'ennuie ?", "Tu ennuyes ?"], "answer": "A"},
+      {"question": "She is bored.", "options": ["Elle ne s'ennuie pas.", "Elle s'ennuie.", "Elle ennuyée.", "Elle t'ennuie."], "answer": "B"},
+      {"question": "We are not bored.", "options": ["Nous ne nous ennuyons pas.", "Nous nous ennuyons.", "Nous ennuyons pas.", "Nous s'ennuions pas."], "answer": "C"},
+      {"question": "He is bored.", "options": ["Il ne s'ennuie pas.", "Il t'ennuie.", "Il ennui.", "Il s'ennuie."], "answer": "D"},
+      {"question": "Are they (masculine) bored?", "options": ["Ils s'ennuient ?", "Ils ne s'ennuient pas ?", "Ils sont ennuyés ?", "Ils ennuient ?"], "answer": "A"},
+      {"question": "Are you (plural) not bored?", "options": ["Vous ne vous ennuyez pas ?", "Vous vous ennuyez ?", "Vous ne ennuyiez pas ?", "Vous ennuyez ?"], "answer": "B"},
+      {"question": "I am not bored.", "options": ["Je ne m'ennuie pas.", "Je m'ennuie.", "Je ennuyé.", "Je suis ennuyé."], "answer": "C"},
+      {"question": "She is not bored.", "options": ["Elle ne s'ennuie pas.", "Elle s'ennuie.", "Elle n'est pas ennuyée.", "Elle est ennuyée."], "answer": "D"},
+      {"question": "We are bored.", "options": ["Nous nous ennuyons.", "Nous s'ennuyons.", "Nous ennuyons.", "Nous ne nous ennuyons pas."], "answer": "A"},
+      {"question": "Are you (singular) not bored?", "options": ["Tu ne t'ennuies pas ?", "Ne t'ennuies-tu pas ?", "Tu ennuyé ?", "Tu ne ennuyé pas ?"], "answer": "B"},
+      {"question": "He is not bored.", "options": ["Il ne s'ennuie pas.", "Il s'ennuie.", "Il ennuyé.", "Il ennui."], "answer": "C"},
+      {"question": "You (plural) are bored.", "options": ["Vous ne vous ennuyez pas.", "Vous ennuyez.", "Vous êtes ennuyés.", "Vous vous ennuyez."], "answer": "D"},
+      {"question": "Are they (feminine) bored?", "options": ["Elles s'ennuient ?", "Elles ne s'ennuient pas ?", "Elles sont ennuyées ?", "Elles ennuient ?"], "answer": "A"},
+      {"question": "Am I bored?", "options": ["Je m'ennuie ?", "Est-ce que je m'ennuie ?", "Je ennuyé ?", "Je ennuie ?"], "answer": "B"},
+      {"question": "They (masculine) are not bored.", "options": ["Ils ne s'ennuient pas.", "Ils s'ennuient.", "Ils sont ennuyés.", "Ils ennuient."], "answer": "C"},
+      {"question": "They (feminine) are bored.", "options": ["Elles ne s'ennuient pas.", "Elles sont ennuyées.", "Elles ennuient.", "Elles s'ennuient."], "answer": "D"}
+    ],
+    "passé_composé": [
+      {"question": "Did I get bored?", "options": ["Me suis-je ennuyé(e) ?", "J'ai ennuyé ?", "Je me suis ennuyé ?", "Ai-je ennuyé(e) ?"], "answer": "A"},
+      {"question": "Did you (tu) not get bored?", "options": ["Tu t'es ennuyé(e) ?", "Ne t'es-tu pas ennuyé(e) ?", "Tu n'as pas ennuyé ?", "T'es-tu ennuyé ?"], "answer": "B"},
+      {"question": "Did he get bored?", "options": ["S'est-il ennuyé ?", "Il a ennuyé ?", "A-t-il ennuyé ?", "Il s'est ennuyé ?"], "answer": "C"},
+      {"question": "Did we not get bored?", "options": ["Ne nous sommes-nous pas ennuyé(e)s ?", "Nous nous sommes pas ennuyés ?", "Nous n'avons pas ennuyé ?", "Nous sommes ennuyés ?"], "answer": "D"},
+      {"question": "Did she get bored?", "options": ["Elle s'est ennuyée ?", "S'est-elle ennuyée ?", "Elle a ennuyé ?", "A-t-elle ennuyée ?"], "answer": "A"},
+      {"question": "You (plural) got bored.", "options": ["Vous avez ennuyé ?", "Vous vous êtes ennuyé(e)(s).", "Vous s'êtes ennuyés ?", "Vous êtes ennuyé ?"], "answer": "B"},
+      {"question": "They (masc.) did not get bored.", "options": ["Ils n'ont pas ennuyé.", "Ils ne se sont pas ennuyés.", "Ils se sont pas ennuyés.", "Ils se ne sont pas ennuyé."], "answer": "C"},
+      {"question": "Did you (formal) get bored?", "options": ["Vous vous êtes ennuyé(e) ?", "Vous êtes-vous ennuyé(e) ?", "Vous avez ennuyé ?", "Avez-vous ennuyé ?"], "answer": "D"},
+      {"question": "Did they (fem.) get bored?", "options": ["Elles ont ennuyé ?", "Elles sont ennuyées ?", "Elles se sont ennuyées ?", "Se sont-elles ennuyées ?"], "answer": "A"},
+      {"question": "Did we not get bored?", "options": ["Nous ne nous sommes pas ennuyé(e)s ?", "Nous ne sommes pas ennuyés ?", "Ne nous sommes-nous pas ennuyés ?", "Nous nous sommes ennuyés ?"], "answer": "B"},
+      {"question": "I did not get bored.", "options": ["Je ne me suis pas ennuyé(e).", "Je n'ai pas ennuyé.", "Je me suis pas ennuyé.", "Je suis ennuyé(e)."], "answer": "C"},
+      {"question": "She got bored.", "options": ["Elle a ennuyé.", "Elle s'est ennuyée.", "Elle s'est pas ennuyée.", "Elle s'est ennuyé."], "answer": "D"},
+      {"question": "We got bored.", "options": ["Nous nous sommes ennuyé(e)s.", "Nous avons ennuyé.", "Nous sommes ennuyé.", "Nous s'est ennuyés."], "answer": "A"},
+      {"question": "Did you (tu) not get bored?", "options": ["Tu n'es pas ennuyé(e) ?", "Tu ne t'es pas ennuyé(e) ?", "Tu n'a pas ennuyé(e) ?", "Tu s'est ennuyé(e) ?"], "answer": "B"},
+      {"question": "She did not get bored.", "options": ["Elle ne s'est pas ennuyée.", "Elle s'est pas ennuyée.", "Elle n'a pas ennuyé.", "Elle ne se pas ennuyée."], "answer": "C"},
+      {"question": "You (plural) did not get bored.", "options": ["Vous vous êtes ennuyé(e)(s).", "Vous n'avez pas ennuyé.", "Vous ne vous êtes pas ennuyé(e)(s).", "Vous n'êtes pas ennuyé."], "answer": "D"},
+      {"question": "He did not get bored.", "options": ["Il ne s'est pas ennuyé.", "Il s'est pas ennuyé.", "Il n'a pas ennuyé.", "Il s'est ennuyé."], "answer": "A"},
+      {"question": "They (masc.) got bored.", "options": ["Ils se sont ennuyés.", "Ils ont ennuyé.", "Ils s'est ennuyés.", "Ils sont ennuyés."], "answer": "B"},
+      {"question": "Did she not get bored?", "options": ["Ne s'est-elle pas ennuyée ?", "Elle s'est pas ennuyée ?", "S'est-elle ennuyé ?", "Elle n'est pas ennuyée ?"], "answer": "C"},
+      {"question": "They (fem.) did not get bored.", "options": ["Elles ne se sont pas ennuyées.", "Elles ne sont pas ennuyé.", "Elles s'est pas ennuyées.", "Elles n'ont pas ennuyé."], "answer": "D"}
+    ],
+    "futur_simple": [
+      {"question": "Will I get bored?", "options": ["M'ennuierai-je ?", "Je m'ennuierai ?", "Je ennuierai ?", "Je m'ai ennuyé ?"], "answer": "A"},
+      {"question": "Will you (tu) not get bored?", "options": ["Tu t'ennuieras ?", "Ne t'ennuieras-tu pas ?", "Tu ne t'ennuieras pas ?", "Tu ennuieras ?"], "answer": "B"},
+      {"question": "Will he get bored?", "options": ["S'ennuiera-t-il ?", "Il s'ennuiera ?", "Il ennuiera ?", "Il s'est ennuyé ?"], "answer": "C"},
+      {"question": "Will we not get bored?", "options": ["Ne nous ennuierons-nous pas ?", "Nous nous ennuierons pas ?", "Nous ennuierons ?", "Nous nous sommes ennuyés ?"], "answer": "D"},
+      {"question": "Will she get bored?", "options": ["Elle s'ennuiera ?", "S'ennuiera-t-elle ?", "Elle ennuiera ?", "Elle s'est ennuyée ?"], "answer": "A"},
+      {"question": "You (vous) will get bored.", "options": ["Vous vous ennuierez.", "Vous ennuirez ?", "Vous vous êtes ennuyés.", "Vous avez ennuyé ?"], "answer": "B"},
+      {"question": "They (masc.) will not get bored.", "options": ["Ils ne s'ennuieront pas.", "Ils n'ennuieront pas.", "Ne s'ennuieront-ils pas ?", "Ils s'ennuieront ?"], "answer": "C"},
+      {"question": "Will you (vous) get bored?", "options": ["Vous vous ennuierez ?", "Vous ennuierez-vous ?", "Vous vous êtes ennuyé ?", "Vous ennuierez ?"], "answer": "D"},
+      {"question": "Will they (fem.) get bored?", "options": ["Elles s'ennuieront ?", "Elles ennuieront ?", "Se ennuieront-elles ?", "Elles se sont ennuyées ?"], "answer": "A"},
+      {"question": "Will we not get bored?", "options": ["Nous ne nous ennuierons pas ?", "Ne nous ennuierons-nous pas ?", "Nous nous ennuierons ?", "Nous ennuierons ?"], "answer": "B"},
+      {"question": "I will not get bored.", "options": ["Je ne m'ennuierai pas.", "Je m'ennuierai ?", "Je ennuierai pas.", "Je me suis ennuyé."], "answer": "C"},
+      {"question": "She will get bored.", "options": ["Elle s'ennuiera.", "Elle ennuiera ?", "Elle se ennuiera pas.", "Elle s'est ennuyée."], "answer": "D"},
+      {"question": "We will get bored.", "options": ["Nous nous ennuierons.", "Nous ennuierons-nous.", "Nous ennuierons ?", "Nous ne nous ennuierons pas."], "answer": "A"},
+      {"question": "Will you (tu) not get bored?", "options": ["Ne t'ennuieras-tu pas ?", "Tu ne t'ennuieras pas ?", "Tu ennuieras pas ?", "Tu s'ennuieras ?"], "answer": "B"},
+      {"question": "She will not get bored.", "options": ["Elle ne s'ennuiera pas.", "Elle ennuiera pas.", "Elle s'ennuiera pas.", "Elle ne ennuiera pas."], "answer": "C"},
+      {"question": "You (vous) will not get bored.", "options": ["Vous ne vous ennuierez pas.", "Vous ennuierez pas.", "Vous vous ennuierez ?", "Vous avez ennuyé ?"], "answer": "D"},
+      {"question": "He will not get bored.", "options": ["Il ne s'ennuiera pas.", "Il s'ennuiera pas.", "Il ennuiera pas.", "Il s'ennuiera ?"], "answer": "A"},
+      {"question": "They (masc.) will get bored.", "options": ["Ils s'ennuieront.", "Ils ennuieront ?", "Ils ne s'ennuieront pas.", "Ils ennuieront pas ?"], "answer": "B"},
+      {"question": "Will she not get bored?", "options": ["Ne s'ennuiera-t-elle pas ?", "Elle s'ennuiera pas ?", "Elle ne ennuiera pas ?", "S'est-elle ennuyée ?"], "answer": "C"},
+      {"question": "They (fem.) will not get bored.", "options": ["Elles ne s'ennuieront pas.", "Elles s'ennuieront pas.", "Elles ennuieront pas.", "Elles s'ennuieront ?"], "answer": "D"}
+    ]
   }
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
