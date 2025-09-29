@@ -1,0 +1,532 @@
+FUTURE SIMPLE - ‘S’INTERESSER':
+
+Insert content into: 1. Intermediate; 2. (Relevant verb); 3. (Relevant Time Frame) > Test that it works end-to-end before confirming completion
+
+<immersive type="learning">
+```quiz
+{
+  "questions": [
+    {
+      "question": "I am going to become interested in history.",
+      "hint": "Use 'aller' conjugated + reflexive pronoun + infinitive 's'intéresser'.",
+      "answerOptions": [
+        {
+          "text": "Je vais m'intéresser à l'histoire.",
+          "rationale": "This correctly uses 'aller' in present tense with reflexive pronoun 'me' before the infinitive 's'intéresser'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je vais intéresser à l'histoire.",
+          "rationale": "This omits the required reflexive pronoun 'me' before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me vais intéresser à l'histoire.",
+          "rationale": "This places the reflexive pronoun before 'aller' instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je vais m'intéresse à l'histoire.",
+          "rationale": "This uses the present tense form 'intéresse' instead of the infinitive 'intéresser'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You are going to become interested in music.",
+      "hint": "Second person singular 'vas' with reflexive pronoun 'te'.",
+      "answerOptions": [
+        {
+          "text": "Tu vas t'intéresser à la musique.",
+          "rationale": "This correctly uses 'vas' with reflexive pronoun 'te' contracted to 't'' before the infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu vas te intéresser à la musique.",
+          "rationale": "This fails to contract 'te' to 't'' before the vowel in the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te vas intéresser à la musique.",
+          "rationale": "This places the reflexive pronoun before the auxiliary 'aller' instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu vas m'intéresser à la musique.",
+          "rationale": "This uses the wrong reflexive pronoun 'me' instead of 'te' for second person.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He is going to become interested in sports.",
+      "hint": "Third person singular 'va' with reflexive pronoun 'se'.",
+      "answerOptions": [
+        {
+          "text": "Il va s'intéresser aux sports.",
+          "rationale": "This correctly uses 'va' with reflexive pronoun 'se' contracted to 's'' and proper preposition 'aux'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il va se intéresser aux sports.",
+          "rationale": "This fails to contract 'se' to 's'' before the vowel in the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il se va intéresser aux sports.",
+          "rationale": "This places the reflexive pronoun before 'aller' instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il va s'intéresse aux sports.",
+          "rationale": "This uses the present tense form instead of the infinitive after 'aller'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She is going to become interested in art.",
+      "hint": "Feminine subject still uses same structure with 'va'.",
+      "answerOptions": [
+        {
+          "text": "Elle va s'intéresser à l'art.",
+          "rationale": "This correctly uses the futur proche structure with feminine subject and proper reflexive placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle va s'intéresse à l'art.",
+          "rationale": "This uses present tense conjugation instead of infinitive after 'aller'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle se va intéresser à l'art.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle va intéresser à l'art.",
+          "rationale": "This omits the required reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are going to become interested in science.",
+      "hint": "First person plural 'allons' with reflexive pronoun 'nous'.",
+      "answerOptions": [
+        {
+          "text": "Nous allons nous intéresser à la science.",
+          "rationale": "This correctly uses 'allons' with double 'nous' - subject and reflexive pronoun before infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous nous allons intéresser à la science.",
+          "rationale": "This places the reflexive pronoun before the auxiliary 'aller' instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous allons intéresser à la science.",
+          "rationale": "This omits the required reflexive pronoun 'nous' before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous allons nous intéressons à la science.",
+          "rationale": "This uses present tense conjugation instead of infinitive after 'aller'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) are going to become interested in literature.",
+      "hint": "Second person plural 'allez' with reflexive pronoun 'vous'.",
+      "answerOptions": [
+        {
+          "text": "Vous allez vous intéresser à la littérature.",
+          "rationale": "This correctly uses 'allez' with double 'vous' - subject and reflexive pronoun before infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous allez intéresser à la littérature.",
+          "rationale": "This places the reflexive pronoun before the auxiliary instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous allez intéresser à la littérature.",
+          "rationale": "This omits the necessary reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous allez vous intéressez à la littérature.",
+          "rationale": "This uses present tense conjugation instead of infinitive after 'aller'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masculine) are going to become interested in technology.",
+      "hint": "Third person plural 'vont' with reflexive pronoun 'se'.",
+      "answerOptions": [
+        {
+          "text": "Ils vont s'intéresser à la technologie.",
+          "rationale": "This correctly uses 'vont' with reflexive pronoun 'se' contracted before the infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils se vont intéresser à la technologie.",
+          "rationale": "This places the reflexive pronoun before the auxiliary instead of before the infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils vont intéresser à la technologie.",
+          "rationale": "This omits the required reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils vont s'intéressent à la technologie.",
+          "rationale": "This uses present tense conjugation instead of infinitive after 'aller'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (feminine) are going to become interested in cooking.",
+      "hint": "Feminine plural subject still uses same auxiliary 'vont'.",
+      "answerOptions": [
+        {
+          "text": "Elles vont s'intéresser à la cuisine.",
+          "rationale": "This correctly uses the futur proche structure with feminine plural subject and proper reflexive placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles se vont intéresser à la cuisine.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles vont intéresser à la cuisine.",
+          "rationale": "This omits the necessary reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles vont s'intéressent à la cuisine.",
+          "rationale": "This uses present tense conjugation instead of infinitive after 'aller'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I am not going to become interested in politics.",
+      "hint": "Negation 'ne...pas' wraps around the auxiliary 'aller'.",
+      "answerOptions": [
+        {
+          "text": "Je ne vais pas m'intéresser à la politique.",
+          "rationale": "This correctly places 'ne...pas' around the auxiliary 'aller' with reflexive pronoun before infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ne me vais pas intéresser à la politique.",
+          "rationale": "This places the reflexive pronoun between 'ne' and the auxiliary.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je vais ne pas m'intéresser à la politique.",
+          "rationale": "This places the negation after the auxiliary instead of around it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je ne vais m'intéresser pas à la politique.",
+          "rationale": "This places 'pas' after the infinitive instead of after the auxiliary.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You are never going to become interested in gossip.",
+      "hint": "Use 'ne...jamais' around auxiliary 'aller'.",
+      "answerOptions": [
+        {
+          "text": "Tu ne vas jamais t'intéresser aux ragots.",
+          "rationale": "This correctly uses 'ne...jamais' negation around auxiliary with reflexive pronoun before infinitive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu ne te vas jamais intéresser aux ragots.",
+          "rationale": "This places reflexive pronoun between 'ne' and auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu vas ne jamais t'intéresser aux ragots.",
+          "rationale": "This places the negation after auxiliary instead of around it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu jamais ne vas t'intéresser aux ragots.",
+          "rationale": "This places 'jamais' before 'ne', disrupting the negation structure.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He is not going to become interested in fashion.",
+      "hint": "Third person singular negation in futur proche.",
+      "answerOptions": [
+        {
+          "text": "Il ne va pas s'intéresser à la mode.",
+          "rationale": "This correctly wraps 'ne...pas' around the auxiliary 'va' with proper reflexive placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il ne se va pas intéresser à la mode.",
+          "rationale": "This places reflexive pronoun between 'ne' and auxiliary.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il va ne pas s'intéresser à la mode.",
+          "rationale": "This places negation after auxiliary instead of around it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il ne va s'intéresser pas à la mode.",
+          "rationale": "This places 'pas' after infinitive instead of after auxiliary.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She is never going to become interested in television.",
+      "hint": "Feminine subject with 'ne...jamais' negation.",
+      "answerOptions": [
+        {
+          "text": "Elle ne va jamais s'intéresser à la télévision.",
+          "rationale": "This correctly uses 'ne...jamais' around auxiliary with proper reflexive placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle jamais ne va s'intéresser à la télévision.",
+          "rationale": "This places 'jamais' before 'ne', breaking the negation pattern.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne se va jamais intéresser à la télévision.",
+          "rationale": "This places reflexive pronoun between 'ne' and auxiliary.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle va ne jamais s'intéresser à la télévision.",
+          "rationale": "This places negation after auxiliary instead of around it.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are not going to become interested in mathematics.",
+      "hint": "First person plural negation in futur proche.",
+      "answerOptions": [
+        {
+          "text": "Nous n'allons pas nous intéresser aux mathématiques.",
+          "rationale": "This correctly places negation around auxiliary with double 'nous' structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous ne nous allons pas intéresser aux mathématiques.",
+          "rationale": "This places first reflexive pronoun between 'ne' and auxiliary.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous allons ne pas nous intéresser aux mathématiques.",
+          "rationale": "This places negation after auxiliary instead of around it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous n'allons nous intéresser pas aux mathématiques.",
+          "rationale": "This places 'pas' after infinitive instead of after auxiliary.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They are going to become interested in nothing.",
+      "hint": "Use 'ne...rien' with 'rien' replacing object after preposition.",
+      "answerOptions": [
+        {
+          "text": "Ils ne vont s'intéresser à rien.",
+          "rationale": "This correctly uses 'ne' before auxiliary and 'rien' after preposition 'à' replacing the object.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils ne vont pas s'intéresser à rien.",
+          "rationale": "This combines 'pas' with 'rien', creating an improper double negative.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils vont ne s'intéresser à rien.",
+          "rationale": "This places only 'ne' after auxiliary instead of before it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ne rien vont s'intéresser à.",
+          "rationale": "This places 'rien' before auxiliary and leaves preposition hanging.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I am going to become interested in travel.",
+      "hint": "First person singular with masculine noun 'voyage'.",
+      "answerOptions": [
+        {
+          "text": "Je vais m'intéresser au voyage.",
+          "rationale": "This correctly uses contracted form 'au' (à + le) with masculine noun 'voyage'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je vais m'intéresser à la voyage.",
+          "rationale": "This uses wrong feminine article 'la' with masculine noun 'voyage'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je vais m'intéresser à le voyage.",
+          "rationale": "This fails to contract 'à + le' to 'au' as required.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je me vais intéresser au voyage.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You are going to become interested in movies.",
+      "hint": "Second person singular with plural masculine noun.",
+      "answerOptions": [
+        {
+          "text": "Tu vas t'intéresser aux films.",
+          "rationale": "This correctly uses contracted form 'aux' (à + les) with plural masculine noun 'films'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu vas t'intéresser à les films.",
+          "rationale": "This fails to contract 'à + les' to 'aux' as required.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu vas t'intéresser au films.",
+          "rationale": "This uses singular contraction 'au' with plural noun 'films'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu te vas intéresser aux films.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We are going to become interested in languages.",
+      "hint": "First person plural with feminine plural noun.",
+      "answerOptions": [
+        {
+          "text": "Nous allons nous intéresser aux langues.",
+          "rationale": "This correctly uses 'aux' with feminine plural noun 'langues' and proper double 'nous' structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous allons nous intéresser à les langues.",
+          "rationale": "This fails to contract 'à + les' to 'aux' as required.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous allons intéresser aux langues.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous allons intéresser aux langues.",
+          "rationale": "This omits the required reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) are going to become interested in photography.",
+      "hint": "Second person plural with feminine singular noun.",
+      "answerOptions": [
+        {
+          "text": "Vous allez vous intéresser à la photographie.",
+          "rationale": "This correctly uses 'à la' with feminine singular noun and proper double 'vous' structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous allez vous intéresser au photographie.",
+          "rationale": "This uses masculine article 'au' with feminine noun 'photographie'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous vous allez intéresser à la photographie.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous allez intéresser à la photographie.",
+          "rationale": "This omits the necessary reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They are going to become interested in books.",
+      "hint": "Third person plural with masculine plural noun.",
+      "answerOptions": [
+        {
+          "text": "Ils vont s'intéresser aux livres.",
+          "rationale": "This correctly uses 'aux' with masculine plural noun 'livres' and proper reflexive structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils vont s'intéresser à les livres.",
+          "rationale": "This fails to contract 'à + les' to 'aux' as required.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils se vont intéresser aux livres.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils vont intéresser aux livres.",
+          "rationale": "This omits the required reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She is going to become interested in this subject.",
+      "hint": "Third person feminine singular with masculine demonstrative.",
+      "answerOptions": [
+        {
+          "text": "Elle va s'intéresser à ce sujet.",
+          "rationale": "This correctly uses masculine demonstrative 'ce' with masculine noun 'sujet' and proper reflexive structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle va s'intéresser à cette sujet.",
+          "rationale": "This uses feminine demonstrative 'cette' with masculine noun 'sujet'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle se va intéresser à ce sujet.",
+          "rationale": "This places reflexive pronoun before auxiliary instead of before infinitive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle va intéresser à ce sujet.",
+          "rationale": "This omits the necessary reflexive pronoun for the reflexive verb.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
+```
+</immersive>
