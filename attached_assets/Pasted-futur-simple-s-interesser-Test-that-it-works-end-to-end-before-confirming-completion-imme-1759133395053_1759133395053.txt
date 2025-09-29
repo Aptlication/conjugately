@@ -1,0 +1,480 @@
+futur simple - s'interesser
+
+"Test that it works end-to-end before confirming completion"
+
+<immersive type="learning">
+```quiz
+{
+  "questions": [
+    {
+      "question": "Will I take an interest in music?",
+      "hint": "First person singular, futur simple: reflexive pronoun before the verb.",
+      "answerOptions": [
+        {
+          "text": "M'intéresserai-je à la musique ?",
+          "rationale": "Inversion for question, reflexive pronoun before verb, correct futur simple conjugation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je vais m'intéresser à la musique ?",
+          "rationale": "This is futur proche, not futur simple.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresserai à la musique ?",
+          "rationale": "Oral/informal question format (no inversion), correct but less formal.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresseras à la musique ?",
+          "rationale": "Uses second person singular ending '-as' instead of '-ai'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will you (singular) take an interest in history?",
+      "hint": "Second person singular, inversion, correct reflexive pronoun.",
+      "answerOptions": [
+        {
+          "text": "T'intéresseras-tu à l'histoire ?",
+          "rationale": "Correct inversion, reflexive pronoun, futur simple ending for tu.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu vas t'intéresser à l'histoire ?",
+          "rationale": "Futur proche, not futur simple.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresseras à l'histoire ?",
+          "rationale": "Oral format without inversion, correct but less formal.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu t'intéresserai à l'histoire ?",
+          "rationale": "Uses first person ending '-ai', not second person '-as'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will he take an interest in politics?",
+      "hint": "Third person singular, masculine subject, proper reflexive and ending '-a'.",
+      "answerOptions": [
+        {
+          "text": "S'intéressera-t-il à la politique ?",
+          "rationale": "Correct inversion, reflexive position, ending '-a' for il.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il va s'intéresser à la politique ?",
+          "rationale": "Futur proche, not futur simple.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il s'intéressera à la politique ?",
+          "rationale": "Oral/informal (no inversion), correct but less formal.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il s'intéresseras à la politique ?",
+          "rationale": "Uses second person ending instead of third.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will she not take an interest in science?",
+      "hint": "Negative inversion for third person feminine.",
+      "answerOptions": [
+        {
+          "text": "Ne s'intéressera-t-elle pas à la science ?",
+          "rationale": "Correct negative, inversion, and feminine pronoun.",
+          "isCorrect": true
+        },
+        {
+          "text": "S'intéressera-t-elle à la science ?",
+          "rationale": "Affirmative form.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne s'intéressera pas à la science ?",
+          "rationale": "Oral format, no inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle s'intéressera pas à la science ?",
+          "rationale": "Negation is incomplete, missing 'ne'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will we take an interest in technology?",
+      "hint": "First person plural, inversion, double 'nous'.",
+      "answerOptions": [
+        {
+          "text": "Nous intéresserons-nous à la technologie ?",
+          "rationale": "Correct inversion form for plural with reflexive structure.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous allons nous intéresser à la technologie ?",
+          "rationale": "Futur proche.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéresserons à la technologie ?",
+          "rationale": "Oral question, not formal inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéressera à la technologie ?",
+          "rationale": "Wrong ending for first person plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will you (plural) not take an interest in art?",
+      "hint": "Second person plural, negative, inversion required.",
+      "answerOptions": [
+        {
+          "text": "Ne vous intéresserez-vous pas à l'art ?",
+          "rationale": "Negative inversion, correct plural ending.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous n'allez pas vous intéresser à l'art ?",
+          "rationale": "Futur proche form.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne vous intéresserez pas à l'art ?",
+          "rationale": "Oral negative, not inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne vous intéresseront pas à l'art ?",
+          "rationale": "Incorrect ending for 'vous', should be '-ez'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will they (masc.) take an interest in literature?",
+      "hint": "Third person plural, inversion, masculine subject.",
+      "answerOptions": [
+        {
+          "text": "S'intéresseront-ils à la littérature ?",
+          "rationale": "Inversion for question, correct pronoun and verb ending.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils s'intéresseront à la littérature ?",
+          "rationale": "Oral question, not inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils vont s'intéresser à la littérature ?",
+          "rationale": "Futur proche.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéresserons à la littérature ?",
+          "rationale": "Wrong ending for third person plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will they (fem.) not take an interest in these problems?",
+      "hint": "Third person feminine plural, negative question.",
+      "answerOptions": [
+        {
+          "text": "Ne s'intéresseront-elles pas à ces problèmes ?",
+          "rationale": "Negative inversion, correct agreement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles ne s'intéresseront pas à ces problèmes ?",
+          "rationale": "Oral negative, not inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ne vont pas s'intéresser à ces problèmes ?",
+          "rationale": "Futur proche.",
+          "isCorrect": false
+        },
+        {
+          "text": "S'intéresseront-elles à ces problèmes ?",
+          "rationale": "Affirmative inversion.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will you (singular) take an interest in anything?",
+      "hint": "Use 'ne...rien' for 'anything', inversion required.",
+      "answerOptions": [
+        {
+          "text": "Ne t'intéresseras-tu à rien ?",
+          "rationale": "Proper negative structure, inversion for question format.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu ne t'intéresseras à rien ?",
+          "rationale": "Oral question (not inversion).",
+          "isCorrect": false
+        },
+        {
+          "text": "T'intéresseras-tu rien ?",
+          "rationale": "Omitting necessary preposition after verb.",
+          "isCorrect": false
+        },
+        {
+          "text": "T'intéresseras-tu à rien ?",
+          "rationale": "Missing negative structure (should be 'ne...à rien').",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Will I never take an interest in films?",
+      "hint": "First person singular, negative using 'ne...jamais', inversion.",
+      "answerOptions": [
+        {
+          "text": "Ne m'intéresserai-je jamais aux films ?",
+          "rationale": "Correct negative inversion, 'ne...jamais', preposition and agreement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ne m'intéresserai jamais aux films ?",
+          "rationale": "Oral question, not inversion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je n'intéresserai jamais aux films ?",
+          "rationale": "Missing reflexive pronoun.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ne m'intéresserai-je pas aux films ?",
+          "rationale": "Uses 'pas' instead of 'jamais'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "I will take an interest in sports.",
+      "hint": "First person singular, statement form.",
+      "answerOptions": [
+        {
+          "text": "Je m'intéresserai aux sports.",
+          "rationale": "Correct statement, reflexive pronoun and future ending.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ne m'intéresserai pas aux sports.",
+          "rationale": "Negative statement.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresserai à les sports.",
+          "rationale": "No contraction: should be 'aux'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je m'intéresseras aux sports.",
+          "rationale": "Incorrect verb ending.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You will not take an interest in politics.",
+      "hint": "Second person singular, negative statement.",
+      "answerOptions": [
+        {
+          "text": "Tu ne t'intéresseras pas à la politique.",
+          "rationale": "Correct negative structure for futur simple.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu t'intéresseras à la politique.",
+          "rationale": "Affirmative statement.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne t'intéresse pas à la politique.",
+          "rationale": "Present tense, not future.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne t'intéresseras pas la politique.",
+          "rationale": "Missing preposition 'à'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "He will take an interest in cinema.",
+      "hint": "Third person singular, affirmative statement.",
+      "answerOptions": [
+        {
+          "text": "Il s'intéressera au cinéma.",
+          "rationale": "Correct structure, contraction 'au' for masculine singular.",
+          "isCorrect": true
+        },
+        {
+          "text": "Il s'intéressera à le cinéma.",
+          "rationale": "No contraction (should be 'au').",
+          "isCorrect": false
+        },
+        {
+          "text": "Il ne s'intéressera pas au cinéma.",
+          "rationale": "Negative statement.",
+          "isCorrect": false
+        },
+        {
+          "text": "Il s'intéresseras au cinéma.",
+          "rationale": "Wrong verb ending.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "She will not take an interest in painting.",
+      "hint": "Negative statement, proper gender agreement.",
+      "answerOptions": [
+        {
+          "text": "Elle ne s'intéressera pas à la peinture.",
+          "rationale": "Correct negative pronoun and future ending.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elle s'intéressera à la peinture.",
+          "rationale": "Affirmative, not negative.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne s'intéresse pas à la peinture.",
+          "rationale": "Present tense, not future.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elle ne s'intéressera pas la peinture.",
+          "rationale": "No preposition 'à'.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "We will take an interest in this exhibition.",
+      "hint": "First person plural statement, demonstrative noun.",
+      "answerOptions": [
+        {
+          "text": "Nous nous intéresserons à cette exposition.",
+          "rationale": "Reflexive pronouns, future ending, demonstrative for feminine noun.",
+          "isCorrect": true
+        },
+        {
+          "text": "Nous allons nous intéresser à cette exposition.",
+          "rationale": "Futur proche.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéresserons à ce exposition.",
+          "rationale": "'Exposition' is feminine, should be 'cette'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Nous nous intéresserons à ces exposition.",
+          "rationale": "'Ces' is for plural; here it's singular.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You (plural) will never take an interest in those topics.",
+      "hint": "Second person plural, negative with 'ne...jamais', plural noun.",
+      "answerOptions": [
+        {
+          "text": "Vous ne vous intéresserez jamais à ces sujets.",
+          "rationale": "Correct negative structure, plural subject/noun.",
+          "isCorrect": true
+        },
+        {
+          "text": "Vous vous intéresserez jamais à ces sujets.",
+          "rationale": "Missing 'ne' for negative structure.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne vous intéresserez plus à ces sujets.",
+          "rationale": "'Plus' means 'no more', not 'never'.",
+          "isCorrect": false
+        },
+        {
+          "text": "Vous ne vous intéresserez jamais à cette sujet.",
+          "rationale": "Should be 'ce' or 'ces' for plural.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (masc.) will take an interest in my research.",
+      "hint": "Third person masculine plural, possessive.",
+      "answerOptions": [
+        {
+          "text": "Ils s'intéresseront à mes recherches.",
+          "rationale": "Correct third person plural ending, plural noun and reflexive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ils vont s'intéresser à mes recherches.",
+          "rationale": "Futur proche.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils s'intéresseront à ma recherche.",
+          "rationale": "Singular form, prompt asks for plural ('research').",
+          "isCorrect": false
+        },
+        {
+          "text": "Ils ne s'intéresseront pas à mes recherches.",
+          "rationale": "Negative statement, not affirmative.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "They (fem.) will not take an interest in your idea.",
+      "hint": "Third person feminine plural, negative statement.",
+      "answerOptions": [
+        {
+          "text": "Elles ne s'intéresseront pas à ton idée.",
+          "rationale": "Negative structure, correct agreement and possessive.",
+          "isCorrect": true
+        },
+        {
+          "text": "Elles s'intéresseront à ton idée.",
+          "rationale": "Affirmative, prompt is negative.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ne s'intéressent pas à ton idée.",
+          "rationale": "Present tense, not future.",
+          "isCorrect": false
+        },
+        {
+          "text": "Elles ne s'intéresseront pas à ta idée.",
+          "rationale": "Should be 'ton idée' (for vowel-starting feminine noun).",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
+```
+</immersive>
