@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
+import { isAdvancedDifficultyEnabled } from "@shared/config";
 
 // Type guard function to check if user has id
 const hasUserId = (user: any): user is { id: string } => {
@@ -28,6 +29,7 @@ function App() {
   const [showElementaryCourseModal, setShowElementaryCourseModal] = useState(false);
   const [showIntermediateCourseModal, setShowIntermediateCourseModal] = useState(false);
   const [showAdvancedCourseModal, setShowAdvancedCourseModal] = useState(false);
+  const [showAdvancedLockedModal, setShowAdvancedLockedModal] = useState(false);
   const [showBeginnerPronounGuide, setShowBeginnerPronounGuide] = useState(false);
   const [beginnerGuideShown, setBeginnerGuideShown] = useState(() => {
     return localStorage.getItem('beginnerPronounGuideShown') === 'true';
@@ -2337,12 +2339,24 @@ function App() {
                 </button>
                 
                 <button
-                  onClick={() => handleDifficultySelect("Advanced")}
-                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
+                  onClick={() => isAdvancedDifficultyEnabled() ? handleDifficultySelect("Advanced") : setShowAdvancedLockedModal(true)}
+                  className={`w-full p-4 text-left rounded-xl text-white ${
+                    isAdvancedDifficultyEnabled()
+                      ? "bg-red-500/20 border border-red-500/30 hover:bg-red-500/30"
+                      : "bg-gray-500/10 border border-gray-500/20 opacity-60 cursor-not-allowed"
+                  }`}
                 >
-                  <div className="text-red-200 font-semibold text-lg">🔴 Advanced</div>
-                  <div className="text-slate-300 text-sm mt-1">
-                    13 verbs (10 regular + 3 reflexive) • All tenses and time frames
+                  <div className={`font-semibold text-lg flex items-center gap-2 ${
+                    isAdvancedDifficultyEnabled() ? "text-red-200" : "text-gray-400"
+                  }`}>
+                    {isAdvancedDifficultyEnabled() ? "🔴" : "🔒"} Advanced
+                    {!isAdvancedDifficultyEnabled() && <span className="text-xs bg-purple-500/20 px-2 py-1 rounded">Coming Soon</span>}
+                  </div>
+                  <div className="text-slate-400 text-sm mt-1">
+                    {isAdvancedDifficultyEnabled() 
+                      ? "13 verbs (10 regular + 3 reflexive) • All tenses and time frames"
+                      : "Available in future version • Full conjugation mastery"
+                    }
                   </div>
                 </button>
               </div>
@@ -2401,12 +2415,24 @@ function App() {
                   </div>
                 </button>
                 <button
-                  onClick={() => handleMiniCourseSelect("Advanced")}
-                  className="w-full p-4 text-left bg-red-500/20 border border-red-500/30 rounded-xl text-white hover:bg-red-500/30"
+                  onClick={() => isAdvancedDifficultyEnabled() ? handleMiniCourseSelect("Advanced") : setShowAdvancedLockedModal(true)}
+                  className={`w-full p-4 text-left rounded-xl text-white ${
+                    isAdvancedDifficultyEnabled()
+                      ? "bg-red-500/20 border border-red-500/30 hover:bg-red-500/30"
+                      : "bg-gray-500/10 border border-gray-500/20 opacity-60 cursor-not-allowed"
+                  }`}
                 >
-                  <div className="text-red-200 font-semibold text-lg">🔴 Advanced Course</div>
-                  <div className="text-slate-300 text-sm mt-1">
-                    13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
+                  <div className={`font-semibold text-lg flex items-center gap-2 ${
+                    isAdvancedDifficultyEnabled() ? "text-red-200" : "text-gray-400"
+                  }`}>
+                    {isAdvancedDifficultyEnabled() ? "🔴" : "🔒"} Advanced Course
+                    {!isAdvancedDifficultyEnabled() && <span className="text-xs bg-purple-500/20 px-2 py-1 rounded">Coming Soon</span>}
+                  </div>
+                  <div className="text-slate-400 text-sm mt-1">
+                    {isAdvancedDifficultyEnabled()
+                      ? "13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)"
+                      : "Advanced course with comprehensive verb mastery • Available in next version"
+                    }
                   </div>
                 </button>
               </div>
@@ -3604,6 +3630,43 @@ function App() {
                 className="w-full p-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
               >
                 Back to Mini-Courses
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Advanced Level Locked Modal */}
+        {showAdvancedLockedModal && (
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-md w-full mx-4">
+              <div className="text-center mb-6">
+                <div className="text-6xl mb-4">🔒</div>
+                <h3 className="text-2xl font-bold text-white mb-2">Advanced Level Locked</h3>
+                <p className="text-purple-200 text-lg">Coming in Future Version!</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl p-6 mb-6">
+                <h4 className="font-semibold text-purple-200 mb-3">🚀 What's Coming in Advanced:</h4>
+                <ul className="text-slate-300 text-sm space-y-2">
+                  <li>• Complete mastery with 13 essential verbs</li>
+                  <li>• All French tenses and time frames</li>
+                  <li>• Advanced reflexive verb conjugations</li>
+                  <li>• Complex grammatical structures</li>
+                  <li>• Professional-level French fluency</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/5 rounded-lg p-4 mb-6">
+                <p className="text-slate-300 text-sm text-center">
+                  <strong className="text-yellow-300">French Verb Master Version 1</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
+                </p>
+              </div>
+              
+              <button
+                onClick={() => setShowAdvancedLockedModal(false)}
+                className="w-full p-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold rounded-xl transition-colors"
+              >
+                Got It! 👍
               </button>
             </div>
           </div>
