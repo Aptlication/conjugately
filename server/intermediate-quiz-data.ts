@@ -1056,7 +1056,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They became interested in books. (Passé Composé)", "options": ["Ils se sont intéressés aux livres.", "Ils se sont intéressées aux livres.", "Ils ont intéressé aux livres.", "Ils se sont intéressés à les livres."], "answer": "A"},
       {"question": "She became interested in this subject. (Passé Composé)", "options": ["Elle s'est intéressée à ce sujet.", "Elle s'est intéressé à ce sujet.", "Elle a intéressé à ce sujet.", "Elle s'est intéressée à cette sujet."], "answer": "A"}
     ],
-    "futur_simple": [
+    "futur_proche": [
       {"question": "I am going to become interested in history. (Futur Proche)", "options": ["Je vais m'intéresser à l'histoire.", "Je vais intéresser à l'histoire.", "Je me vais intéresser à l'histoire.", "Je vais m'intéresse à l'histoire."], "answer": "A"},
       {"question": "You are going to become interested in music. (Futur Proche)", "options": ["Tu vas t'intéresser à la musique.", "Tu vas te intéresser à la musique.", "Tu te vas intéresser à la musique.", "Tu vas m'intéresser à la musique."], "answer": "A"},
       {"question": "He is going to become interested in sports. (Futur Proche)", "options": ["Il va s'intéresser aux sports.", "Il va se intéresser aux sports.", "Il se va intéresser aux sports.", "Il va s'intéresse aux sports."], "answer": "A"},
