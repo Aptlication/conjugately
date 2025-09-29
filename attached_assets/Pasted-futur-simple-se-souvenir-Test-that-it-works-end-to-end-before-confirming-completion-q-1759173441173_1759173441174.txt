@@ -1,0 +1,86 @@
+futur simple - se souvenir
+
+"Test that it works end-to-end before confirming completion"
+
+[
+ {
+   "question": "Will I remember?",
+   "options": [
+     "[translate:Je me souviendrai?]",
+     "[translate:J'ai souvenirai?]",
+     "[translate:Me souviendrai-je?]",
+     "[translate:Je me souvenirai?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "Will you (tu) not remember?",
+   "options": [
+     "[translate:Te souviendras-tu?]",
+     "[translate:Ne te souviendras-tu pas?]",
+     "[translate:Tu te souviendras?]",
+     "[translate:Tu ne te souviendras pas?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "Will he remember?",
+   "options": [
+     "[translate:Il se souviendra-t-il?]",
+     "[translate:Il se souvenirait?]",
+     "[translate:Il se souviendra?]",
+     "[translate:Souviendra-t-il?]"
+   ],
+   "answer": "D"
+ },
+ {
+   "question": "Will we not remember?",
+   "options": [
+     "[translate:Nous ne nous souviendrons pas?]",
+     "[translate:Nous nous souviendrons pas?]",
+     "[translate:Nous nous souviendrons?]",
+     "[translate:Ne nous souviendrons-nous pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will she remember?",
+   "options": [
+     "[translate:Se souviendra-t-elle?]",
+     "[translate:Elle se souviendra?]",
+     "[translate:Elle se souvenirai?]",
+     "[translate:Souviendra-t-elle?]"
+   ],
+   "answer": "A"
+ },
+ {
+   "question": "You (vous) will remember.",
+   "options": [
+     "[translate:Vous vous souviendrez.]",
+     "[translate:Vous souviendrez-vous?]",
+     "[translate:Vous vous souviendrez?]",
+     "[translate:Vous avez souvenu?]"
+   ],
+   "answer": "C"
+ },
+ {
+   "question": "They (masc.) will not remember.",
+   "options": [
+     "[translate:Ils ne se souviendront pas.]",
+     "[translate:Ils se souviendront?]",
+     "[translate:Ne se souviendront-ils pas?]",
+     "[translate:Ils se souviendront pas?]"
+   ],
+   "answer": "B"
+ },
+ {
+   "question": "Will you (vous) remember?",
+   "options": [
+     "[translate:Vous souviendrez-vous?]",
+     "[translate:Vous vous souviendrez?]",
+     "[translate:Vous vous souvenez?]",
+
+ 
+
+
+

@@ -1287,6 +1287,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (masc.) remembered.", "options": ["Ils se sont souvenus.", "Ils s'est souvenus.", "Ils sont souvenus.", "Ils ont souvenu."], "answer": "A"},
       {"question": "Did she not remember?", "options": ["Ne s'est-elle pas souvenue?", "Elle s'est pas souvenue?", "S'est-elle souvenu?", "Elle n'est pas souvenue?"], "answer": "D"},
       {"question": "They (fem.) did not remember.", "options": ["Elles s'est pas souvenues.", "Elles ne sont pas souvenu.", "Elles ne se sont pas souvenues.", "Elles n'ont pas souvenu."], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will I remember?", "options": ["Je me souviendrai?", "J'ai souvenirai?", "Me souviendrai-je?", "Je me souvenirai?"], "answer": "C"},
+      {"question": "Will you (tu) not remember?", "options": ["Te souviendras-tu?", "Ne te souviendras-tu pas?", "Tu te souviendras?", "Tu ne te souviendras pas?"], "answer": "A"},
+      {"question": "Will he remember?", "options": ["Il se souviendra-t-il?", "Il se souvenirait?", "Il se souviendra?", "Souviendra-t-il?"], "answer": "D"},
+      {"question": "Will we not remember?", "options": ["Nous ne nous souviendrons pas?", "Nous nous souviendrons pas?", "Nous nous souviendrons?", "Ne nous souviendrons-nous pas?"], "answer": "B"},
+      {"question": "Will she remember?", "options": ["Se souviendra-t-elle?", "Elle se souviendra?", "Elle se souvenirai?", "Souviendra-t-elle?"], "answer": "A"},
+      {"question": "You (vous) will remember.", "options": ["Vous vous souviendrez.", "Vous souviendrez-vous?", "Vous vous souviendrez?", "Vous avez souvenu?"], "answer": "C"},
+      {"question": "They (masc.) will not remember.", "options": ["Ils ne se souviendront pas.", "Ils se souviendront?", "Ne se souviendront-ils pas?", "Ils se souviendront pas?"], "answer": "B"},
+      {"question": "Will you (vous) remember?", "options": ["Vous souviendrez-vous?", "Vous vous souviendrez?", "Vous vous souvenez?", "Vous vous êtes souvenu?"], "answer": "A"},
+      {"question": "Will they (fem.) remember?", "options": ["Elles se souviendront?", "Se souviendront-elles?", "Elles souviendront?", "Elles se sont souvenues?"], "answer": "B"},
+      {"question": "Will we not remember?", "options": ["Ne nous souviendrons-nous pas?", "Nous ne nous souviendrons pas?", "Nous nous souviendrons?", "Nous souviendrons?"], "answer": "A"},
+      {"question": "I will not remember.", "options": ["Je ne me souviendrai pas.", "Je me souviendrai?", "Je souviendrai pas.", "Je me suis souvenu."], "answer": "A"},
+      {"question": "She will remember.", "options": ["Elle souviendra?", "Elle se souviendra.", "Elle se souviendra pas.", "Elle s'est souvenue."], "answer": "B"},
+      {"question": "We will remember.", "options": ["Nous nous souviendrons.", "Nous souviendrons-nous.", "Nous souviendrons?", "Nous ne nous souviendrons pas."], "answer": "A"},
+      {"question": "Will you (tu) not remember?", "options": ["Ne te souviendras-tu pas?", "Tu ne te souviendras pas?", "Tu souviendras pas?", "Tu te souviendras?"], "answer": "A"},
+      {"question": "She will not remember.", "options": ["Elle ne se souviendra pas.", "Elle souviendra pas.", "Elle se souviendra pas.", "Elle ne souviendra pas."], "answer": "A"},
+      {"question": "You (vous) will not remember.", "options": ["Vous ne vous souviendrez pas.", "Vous souviendrez pas.", "Vous vous souviendrez?", "Vous avez souvenu?"], "answer": "A"},
+      {"question": "He will not remember.", "options": ["Il ne se souviendra pas.", "Il se souviendra pas.", "Il souviendra pas.", "Il se souviendra?"], "answer": "A"},
+      {"question": "They (masc.) will remember.", "options": ["Ils se souviendront.", "Ils souviendront?", "Ils ne se souviendront pas.", "Ils souviendront pas?"], "answer": "A"},
+      {"question": "Will she not remember?", "options": ["Ne se souviendra-t-elle pas?", "Elle se souviendra pas?", "Elle ne souviendra pas?", "S'est-elle souvenue?"], "answer": "A"},
+      {"question": "They (fem.) will not remember.", "options": ["Elles ne se souviendront pas.", "Elles se souviendront pas.", "Elles souviendront pas.", "Elles se souviendront?"], "answer": "A"}
     ]
   }
 
