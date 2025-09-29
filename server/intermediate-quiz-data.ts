@@ -1124,6 +1124,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "When did you manage to finish? (Passé Composé)", "options": ["Quand as-tu débrouillé pour finir ?", "Quand tu t'es débrouillé(e) pour finir ?", "Quand es-tu débrouillé pour finir ?", "Quand t'es-tu débrouillé(e) pour finir ?"], "answer": "D"},
       {"question": "Where did she not manage? (Passé Composé)", "options": ["Où elle ne s'est pas débrouillée ?", "Où ne s'est-elle pas débrouillée ?", "Où n'a-t-elle pas débrouillé ?", "Où elle n'a pas débrouillé ?"], "answer": "B"},
       {"question": "Why did we manage so well? (Passé Composé)", "options": ["Pourquoi nous nous sommes bien débrouillés ?", "Pourquoi avons-nous bien débrouillé ?", "Pourquoi nous sommes-nous si bien débrouillés ?", "Pourquoi nous sommes bien débrouillés ?"], "answer": "C"}
+    ],
+    "futur_simple": [
+      {"question": "Will I manage? (Futur Simple)", "options": ["Je me débrouillerai ?", "Me débrouillerai-je ?", "Je débrouillerai ?", "Je me suis débrouillé ?"], "answer": "B"},
+      {"question": "Will you (tu) not manage? (Futur Simple)", "options": ["Tu débrouilleras ?", "Ne te débrouilleras-tu pas ?", "Tu ne te débrouilleras pas ?", "Tu te débrouilleras ?"], "answer": "D"},
+      {"question": "Will he manage? (Futur Simple)", "options": ["Il débrouillera ?", "Il se débrouillera ?", "Se débrouillera-t-il ?", "Il s'est débrouillé ?"], "answer": "C"},
+      {"question": "Will we not manage? (Futur Simple)", "options": ["Nous nous sommes débrouillés ?", "Nous débrouillerons ?", "Ne nous débrouillerons-nous pas ?", "Nous ne nous débrouillerons pas ?"], "answer": "C"},
+      {"question": "Will she manage? (Futur Simple)", "options": ["Se débrouillera-t-elle ?", "Elle se débrouillera ?", "Elle débrouillera ?", "Elle s'est débrouillée ?"], "answer": "A"},
+      {"question": "You (vous) will manage. (Futur Simple)", "options": ["Vous avez débrouillé ?", "Vous vous débrouillerez.", "Vous vous êtes débrouillés.", "Vous débrouillerez ?"], "answer": "B"},
+      {"question": "They (masc.) will not manage. (Futur Simple)", "options": ["Ils se débrouilleront ?", "Ne se débrouilleront-ils pas ?", "Ils se sont débrouillés.", "Ils ne se débrouilleront pas."], "answer": "D"},
+      {"question": "Will you (vous) manage? (Futur Simple)", "options": ["Vous vous êtes débrouillé ?", "Vous vous débrouillerez ?", "Vous débrouillerez ?", "Vous débrouillerez-vous ?"], "answer": "D"},
+      {"question": "Will they (fem.) manage? (Futur Simple)", "options": ["Elles se débrouilleront ?", "Elles se sont débrouillées ?", "Se débrouilleront-elles ?", "Elles débrouilleront ?"], "answer": "A"},
+      {"question": "Will we not manage? (Futur Simple)", "options": ["Nous débrouillerons ?", "Ne nous débrouillerons-nous pas ?", "Nous ne nous débrouillerons pas ?", "Nous nous débrouillerons ?"], "answer": "B"},
+      {"question": "I will not manage. (Futur Simple)", "options": ["Je me débrouillerai ?", "Je débrouillerai pas.", "Je ne me débrouillerai pas.", "Je me suis débrouillé."], "answer": "C"},
+      {"question": "She will manage. (Futur Simple)", "options": ["Elle se débrouillera.", "Elle s'est débrouillé.", "Elle débrouillera ?", "Elle se débrouillera pas."], "answer": "A"},
+      {"question": "We will manage. (Futur Simple)", "options": ["Nous ne nous débrouillerons pas.", "Nous nous débrouillerons.", "Nous débrouillerons ?", "Nous ennuyerons-nous."], "answer": "B"},
+      {"question": "Will you (tu) not manage? (Futur Simple)", "options": ["Ne te débrouilleras-tu pas ?", "Tu ne te débrouilleras pas ?", "Tu me débrouilleras ?", "Tu débrouilleras pas ?"], "answer": "A"},
+      {"question": "She will not manage. (Futur Simple)", "options": ["Elle ne se débrouillera pas.", "Elle débrouillera pas.", "Elle se débrouillera pas.", "Elle ne débrouillera pas."], "answer": "A"},
+      {"question": "You (vous) will not manage. (Futur Simple)", "options": ["Vous ne vous débrouillerez pas.", "Vous débrouillerez pas.", "Vous vous débrouillerez ?", "Vous avez débrouillé ?"], "answer": "A"},
+      {"question": "He will not manage. (Futur Simple)", "options": ["Il débrouillera pas.", "Il se débrouillera ?", "Il se débrouillera pas.", "Il ne se débrouillera pas."], "answer": "D"},
+      {"question": "They (masc.) will manage. (Futur Simple)", "options": ["Ils se débrouilleront pas.", "Ils se débrouilleront.", "Ils se débrouilleront pas.", "Ils ne se débrouilleront pas."], "answer": "B"},
+      {"question": "Will she not manage? (Futur Simple)", "options": ["Ne se débrouillera-t-elle pas ?", "Elle se débrouillera pas ?", "Elle ne débrouillera pas ?", "S'est-elle débrouillée ?"], "answer": "A"},
+      {"question": "They (fem.) will not manage. (Futur Simple)", "options": ["Elles débrouilleront pas.", "Elles se débrouilleront pas.", "Elles ne se débrouilleront pas.", "Elles se débrouilleront ?"], "answer": "C"}
     ]
   }
 
