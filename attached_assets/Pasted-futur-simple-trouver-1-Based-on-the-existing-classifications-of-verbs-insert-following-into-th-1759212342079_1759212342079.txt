@@ -1,0 +1,252 @@
+futur simple - trouver
+
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Will they (masc.) not find the hotel?",
+   "options": [
+     "Trouveront-ils l'hôtel ?",
+     "Ils trouveront l'hôtel ?",
+     "Est-ce qu'ils ne trouveront pas l'hôtel ?",
+     "Trouveront-ils pas l'hôtel ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ cette rue facilement. (We will find this street easily.)",
+   "options": [
+     "trouverons",
+     "trouve",
+     "trouvons",
+     "trouveront"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Will she not find her keys?",
+   "options": [
+     "Trouvera-t-elle ses clés ?",
+     "Elle trouvera ses clés ?",
+     "Trouvera-t-elle pas ses clés ?",
+     "Est-ce qu'elle ne trouvera pas ses clés ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ un nouvel emploi bientôt. (You (sing.) will find a new job soon.)",
+   "options": [
+     "trouves",
+     "trouveras",
+     "trouvera",
+     "trouvons"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Will you (plural) not find the museum closed?",
+   "options": [
+     "Est-ce que vous ne trouverez pas le musée fermé ?",
+     "Est-ce que tu trouveras le musée fermé ?",
+     "Trouverez-vous le musée fermé ?",
+     "Vous ne trouverez pas le musée fermé ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ la réponse demain matin. (I will find the answer tomorrow morning.)",
+   "options": [
+     "trouve",
+     "trouverai",
+     "trouvais",
+     "trouveras"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Will we not find a solution?",
+   "options": [
+     "Trouverons-nous une solution ?",
+     "Ne trouverons-nous pas une solution ?",
+     "Nous trouverons une solution ?",
+     "Ne trouverez-vous pas une solution ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ la bonne route à gauche. (You (pl.) will find the right road on the left.)",
+   "options": [
+     "trouvez",
+     "trouverez",
+     "trouvera",
+     "trouvons"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Will I not find my passport?",
+   "options": [
+     "Je trouverai mon passeport ?",
+     "Trouverai-je mon passeport ?",
+     "Est-ce que je ne trouverai pas mon passeport ?",
+     "Trouverai-je pas mon passeport ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ un taxi demain matin. (She will find a taxi tomorrow morning.)",
+   "options": [
+     "trouvera",
+     "trouverai",
+     "trouvons",
+     "trouvez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Will they (fem.) not find their tickets?",
+   "options": [
+     "Trouveront-elles leurs billets ?",
+     "Est-ce qu'elles ne trouveront pas leurs billets ?",
+     "Elles trouveront leurs billets ?",
+     "Trouveront-elles pas leurs billets ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les élèves ______ la bonne réponse à l'examen. (The students will find the correct answer in the exam.)",
+   "options": [
+     "trouve",
+     "trouveront",
+     "trouverai",
+     "trouverez"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Will you (informal) not find your notebook?",
+   "options": [
+     "Ne trouveras-tu pas ton cahier ?",
+     "Trouves-tu ton cahier ?",
+     "Trouveras-tu ton cahier ?",
+     "Trouveras-tu pas ton cahier ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ le problème rapidement. (We will find the problem quickly.)",
+   "options": [
+     "trouvez",
+     "trouverons",
+     "trouvons",
+     "trouvera"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Will you (formal) not find this idea useful?",
+   "options": [
+     "Trouverez-vous cette idée utile ?",
+     "Est-ce que vous ne trouverez pas cette idée utile ?",
+     "Vous trouvez cette idée utile ?",
+     "Trouverez-vous pas cette idée utile ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ une solution à tous leurs problèmes. (They (masc.) will find a solution to all their problems.)",
+   "options": [
+     "trouvez",
+     "trouveront",
+     "trouve",
+     "trouverons"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Will we not find the place closed?",
+   "options": [
+     "Nous trouverons le lieu fermé ?",
+     "Trouverons-nous le lieu fermé ?",
+     "Est-ce que nous ne trouverons pas le lieu fermé ?",
+     "Ne trouverons-nous pas le lieu fermé ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ toujours du courage dans l'adversité. (I will always find courage in adversity.)",
+   "options": [
+     "trouverai",
+     "trouvons",
+     "trouvez",
+     "trouveront"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Will he not find this answer correct?",
+   "options": [
+     "Trouvera-t-il cette réponse correcte ?",
+     "Trouverez-vous cette réponse correcte ?",
+     "Il trouvera cette réponse correcte ?",
+     "Est-ce qu'il ne trouvera pas cette réponse correcte ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ souvent des objets perdus. (They (fem.) will often find lost items.)",
+   "options": [
+     "trouvez",
+     "trouveront",
+     "trouvons",
+     "trouve"
+   ],
+   "answer": "B"
+ }
+]
+ 

@@ -1474,6 +1474,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I find it easy to speak French.", "options": ["trouve", "trouvons", "trouvent", "trouvez"], "answer": "A"},
       {"question": "Does he not find the school near here?", "options": ["Il ne trouve pas l'école près d'ici ?", "Est-ce qu'il a trouvé l'école près d'ici ?", "Est-ce qu'il ne trouve pas l'école près d'ici ?", "Est-ce qu'elle ne trouve pas l'école près d'ici ?"], "answer": "C"},
       {"question": "They (f.) sometimes find lost items.", "options": ["trouvons", "trouvent", "trouves", "trouve"], "answer": "B"}
+    ],
+    "passé_composé": [
+      {"question": "Did they (masc.) not find the solution?", "options": ["Ont-ils trouvé la solution ?", "Ils n'ont pas trouvé la solution ?", "Est-ce qu'ils n'ont pas trouvé la solution ?", "Ont-ils pas trouvé la solution ?"], "answer": "C"},
+      {"question": "We found an original idea.", "options": ["avons trouvé", "ai trouvé", "ont trouvé", "a trouvé"], "answer": "A"},
+      {"question": "Did she not find her ticket?", "options": ["A-t-elle trouvé son billet ?", "Elle a trouvé son billet ?", "Est-ce qu'elle n'a pas trouvé son billet ?", "A-t-elle pas trouvé son billet ?"], "answer": "C"},
+      {"question": "You (sing.) found the door open.", "options": ["ont trouvé", "as trouvé", "avais trouvé", "a trouvé"], "answer": "B"},
+      {"question": "Did you (pl.) not find the correct answer?", "options": ["Est-ce que vous n'avez pas trouvé la bonne réponse ?", "Est-ce que tu as trouvé la bonne réponse ?", "Vous avez trouvé la bonne réponse ?", "Vous n'avez trouvé pas la bonne réponse ?"], "answer": "A"},
+      {"question": "I found an excellent restaurant last night.", "options": ["ai trouvé", "avais trouvé", "ai trouvée", "a trouvé"], "answer": "A"},
+      {"question": "Didn't we find the museum closed?", "options": ["Nous avons trouvé le musée fermé ?", "N'avons-nous pas trouvé le musée fermé ?", "Nous trouvons le musée fermé ?", "Nous a trouvé le musée fermé ?"], "answer": "B"},
+      {"question": "You (pl.) found many ideas during the meeting.", "options": ["ai trouvé", "avez trouvé", "avons trouvé", "ont trouvé"], "answer": "B"},
+      {"question": "Did I not find my wallet?", "options": ["Ai-je trouvé mon portefeuille ?", "Je n'ai pas trouvé mon portefeuille ?", "Est-ce que je n'ai pas trouvé mon portefeuille ?", "Ai-je pas trouvé mon portefeuille ?"], "answer": "C"},
+      {"question": "She found a solution quickly.", "options": ["a trouvé", "as trouvé", "ai trouvé", "ont trouvé"], "answer": "A"},
+      {"question": "Did they (fem.) not find the tickets?", "options": ["Les filles ont trouvé les billets ?", "Est-ce qu'elles n'ont pas trouvé les billets ?", "Elles a trouvé les billets ?", "Ont-elles pas trouvé les billets ?"], "answer": "B"},
+      {"question": "The students found the answer after the exam.", "options": ["a trouvé", "ont trouvé", "ai trouvé", "avons trouvé"], "answer": "B"},
+      {"question": "Did you (informal) not find your notebook?", "options": ["N'as-tu pas trouvé ton cahier ?", "As-tu trouvé ton cahier ?", "Tu as trouvé ton cahier ?", "As-tu pas trouvé ton cahier ?"], "answer": "A"},
+      {"question": "We found the solution to the problem easily.", "options": ["avons trouvé", "ont trouvé", "ai trouvé", "a trouvé"], "answer": "A"},
+      {"question": "Didn't you (formal) find the place strange?", "options": ["Est-ce que vous n'avez pas trouvé l'endroit étrange ?", "Vous avez trouvé l'endroit étrange ?", "Avez-vous trouvé l'endroit étrange ?", "Vous n'avez trouvé pas l'endroit étrange ?"], "answer": "A"},
+      {"question": "They (masc.) found excuses for every mistake.", "options": ["a trouvé", "ont trouvé", "ai trouvé", "avons trouvé"], "answer": "B"},
+      {"question": "Didn't we find the museum closed?", "options": ["Nous avons trouvé le musée fermé ?", "Nous trouverons le musée fermé ?", "Est-ce que nous ne trouvons pas le musée fermé ?", "N'avons-nous pas trouvé le musée fermé ?"], "answer": "D"},
+      {"question": "You (plural) found the key under the door.", "options": ["avez trouvé", "avons trouvé", "ont trouvé", "ai trouvé"], "answer": "A"},
+      {"question": "Did he not find the school near here?", "options": ["Est-ce qu'il n'a pas trouvé l'école près d'ici ?", "Il a trouvé l'école près d'ici ?", "A-t-il trouvé l'école près d'ici ?", "A-t-il pas trouvé l'école près d'ici ?"], "answer": "A"},
+      {"question": "They (fem.) found several lost items.", "options": ["ai trouvé", "ont trouvé", "avons trouvé", "as trouvé"], "answer": "B"}
     ]
   },
 

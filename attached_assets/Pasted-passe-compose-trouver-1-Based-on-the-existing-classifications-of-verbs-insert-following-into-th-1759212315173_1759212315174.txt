@@ -1,0 +1,251 @@
+passe compose - trouver
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Did they (masc.) not find the solution?",
+   "options": [
+     "Ont-ils trouvé la solution ?",
+     "Ils n'ont pas trouvé la solution ?",
+     "Est-ce qu'ils n'ont pas trouvé la solution ?",
+     "Ont-ils pas trouvé la solution ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ une idée originale. (We found an original idea.)",
+   "options": [
+     "avons trouvé",
+     "ai trouvé",
+     "ont trouvé",
+     "a trouvé"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Did she not find her ticket?",
+   "options": [
+     "A-t-elle trouvé son billet ?",
+     "Elle a trouvé son billet ?",
+     "Est-ce qu'elle n'a pas trouvé son billet ?",
+     "A-t-elle pas trouvé son billet ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ la porte ouverte. (You (sing.) found the door open.)",
+   "options": [
+     "ont trouvé",
+     "as trouvé",
+     "avais trouvé",
+     "a trouvé"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Did you (pl.) not find the correct answer?",
+   "options": [
+     "Est-ce que vous n'avez pas trouvé la bonne réponse ?",
+     "Est-ce que tu as trouvé la bonne réponse ?",
+     "Vous avez trouvé la bonne réponse ?",
+     "Vous n'avez trouvé pas la bonne réponse ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "J'______ un restaurant excellent hier soir. (I found an excellent restaurant last night.)",
+   "options": [
+     "ai trouvé",
+     "avais trouvé",
+     "ai trouvée",
+     "a trouvé"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Didn't we find the museum closed?",
+   "options": [
+     "Nous avons trouvé le musée fermé ?",
+     "N'avons-nous pas trouvé le musée fermé ?",
+     "Nous trouvons le musée fermé ?",
+     "Nous a trouvé le musée fermé ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ beaucoup d'idées pendant la réunion. (You (pl.) found many ideas during the meeting.)",
+   "options": [
+     "ai trouvé",
+     "avez trouvé",
+     "avons trouvé",
+     "ont trouvé"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Did I not find my wallet?",
+   "options": [
+     "Ai-je trouvé mon portefeuille ?",
+     "Je n'ai pas trouvé mon portefeuille ?",
+     "Est-ce que je n'ai pas trouvé mon portefeuille ?",
+     "Ai-je pas trouvé mon portefeuille ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ une solution rapidement. (She found a solution quickly.)",
+   "options": [
+     "a trouvé",
+     "as trouvé",
+     "ai trouvé",
+     "ont trouvé"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Did they (fem.) not find the tickets?",
+   "options": [
+     "Les filles ont trouvé les billets ?",
+     "Est-ce qu'elles n'ont pas trouvé les billets ?",
+     "Elles a trouvé les billets ?",
+     "Ont-elles pas trouvé les billets ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les élèves ______ la réponse après l'examen. (The students found the answer after the exam.)",
+   "options": [
+     "a trouvé",
+     "ont trouvé",
+     "ai trouvé",
+     "avons trouvé"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Did you (informal) not find your notebook?",
+   "options": [
+     "N'as-tu pas trouvé ton cahier ?",
+     "As-tu trouvé ton cahier ?",
+     "Tu as trouvé ton cahier ?",
+     "As-tu pas trouvé ton cahier ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ facilement la solution au problème. (We found the solution to the problem easily.)",
+   "options": [
+     "avons trouvé",
+     "ont trouvé",
+     "ai trouvé",
+     "a trouvé"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Didn't you (formal) find the place strange?",
+   "options": [
+     "Est-ce que vous n'avez pas trouvé l'endroit étrange ?",
+     "Vous avez trouvé l'endroit étrange ?",
+     "Avez-vous trouvé l'endroit étrange ?",
+     "Vous n'avez trouvé pas l'endroit étrange ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ des excuses pour chaque erreur. (They (masc.) found excuses for every mistake.)",
+   "options": [
+     "a trouvé",
+     "ont trouvé",
+     "ai trouvé",
+     "avons trouvé"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Didn't we find the museum closed?",
+   "options": [
+     "Nous avons trouvé le musée fermé ?",
+     "Nous trouverons le musée fermé ?",
+     "Est-ce que nous ne trouvons pas le musée fermé ?",
+     "N'avons-nous pas trouvé le musée fermé ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Vous ______ la clé sous la porte. (You (plural) found the key under the door.)",
+   "options": [
+     "avez trouvé",
+     "avons trouvé",
+     "ont trouvé",
+     "ai trouvé"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Did he not find the school near here?",
+   "options": [
+     "Est-ce qu'il n'a pas trouvé l'école près d'ici ?",
+     "Il a trouvé l'école près d'ici ?",
+     "A-t-il trouvé l'école près d'ici ?",
+     "A-t-il pas trouvé l'école près d'ici ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ plusieurs objets perdus. (They (fem.) found several lost items.)",
+   "options": [
+     "ai trouvé",
+     "ont trouvé",
+     "avons trouvé",
+     "as trouvé"
+   ],
+   "answer": "B"
+ }
+]
+ 
