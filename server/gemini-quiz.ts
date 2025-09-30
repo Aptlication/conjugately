@@ -38,7 +38,13 @@ You must interpret the Tense parameter according to the following rules:
 
 3. Content & Structure Requirements
 - Question Format: Each question must be an English sentence to be translated.
+  - CRITICAL: The English question must NEVER contain tense references (e.g., do NOT include "(Présent)", "(Passé Composé)", "(Imparfait)", etc.).
+  - CRITICAL: The English question must NEVER contain any French words or phrases - it must be pure English only.
+  - The question should be natural conversational English without any grammatical annotations.
 - Answer Format: Provide four complete French sentences as answerOptions.
+  - CRITICAL: All answer options (A, B, C, D) must ALWAYS be FULL, COMPLETE French sentences.
+  - NEVER provide single-word answers or just conjugated verbs - always include the subject pronoun and complete sentence structure.
+  - Example CORRECT: "Je fais mes devoirs." Example INCORRECT: "fais" or "fait"
 - Subject Pronouns: Distribute questions across all subject pronouns (je, tu, il, elle, nous, vous, ils, elles).
 - Negation: Include approximately 4-5 negative sentences, correctly wrapping the negation (ne...pas, ne...rien, etc.) around the conjugated auxiliary verb in compound tenses. CRITICAL: Never duplicate "pas" - if the context already contains "pas", do not add another "pas" (avoid "pas pas" errors).
 - Plausible Distractors: Incorrect options must target common errors, such as using the wrong tense, incorrect auxiliary verb, wrong subject-verb agreement, or incorrect negation placement.
