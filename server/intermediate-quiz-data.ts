@@ -1522,6 +1522,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "croire": {
+    "present": [
+      {"question": "Do they (masc.) not believe the story?", "options": ["Ils croient l'histoire ?", "Est-ce qu'ils ne croient pas l'histoire ?", "Trouvent-ils cette histoire ?", "Est-ce que nous croyons l'histoire ?"], "answer": "B"},
+      {"question": "We have believed in this project for a long time.", "options": ["crois", "croyons", "croyez", "croient"], "answer": "B"},
+      {"question": "Does she not believe in ghosts?", "options": ["Ne croit-elle pas aux fantômes ?", "Croyons-nous aux fantômes ?", "Elle croie aux fantômes ?", "Est-ce qu'elle croit aux fantômes ?"], "answer": "A"},
+      {"question": "Do you (sing.) believe it will snow tomorrow?", "options": ["croyez", "crois", "croit", "croyons"], "answer": "B"},
+      {"question": "Don't you (plural) believe his excuses?", "options": ["Est-ce que vous croyez ses excuses ?", "Ne croyez-vous pas ses excuses ?", "Croyez-ils ses excuses ?", "Est-ce qu'elles croient ses excuses ?"], "answer": "B"},
+      {"question": "I believe everything you say.", "options": ["crois", "croyons", "croit", "croient"], "answer": "A"},
+      {"question": "Don't we believe in our success?", "options": ["Nous croyons en notre succès ?", "Ne croyons-nous pas en notre succès ?", "Nous ne croit pas en notre succès ?", "Est-ce que vous croyez en notre succès ?"], "answer": "B"},
+      {"question": "You (pl.) often believe the children.", "options": ["croyez", "croient", "crois", "croyons"], "answer": "A"},
+      {"question": "Do I not believe you?", "options": ["Est-ce que vous ne croyez pas moi ?", "Est-ce que je ne crois pas toi ?", "Est-ce que je ne crois pas ?", "Je crois en toi ?"], "answer": "B"},
+      {"question": "She believes in luck.", "options": ["crois", "croit", "croient", "croyons"], "answer": "B"},
+      {"question": "Do they (fem.) not believe their parents?", "options": ["Est-ce qu'elles ne croient pas leurs parents ?", "Elles croient leurs parents ?", "Ne croyez-vous pas leurs parents ?", "Est-ce qu'ils croient leurs parents ?"], "answer": "A"},
+      {"question": "The children always believe fairy tales.", "options": ["croyons", "croyez", "croient", "crois"], "answer": "C"},
+      {"question": "Do you (sing.) not believe this story?", "options": ["Est-ce que tu ne crois pas cette histoire ?", "Ne croyez-vous pas cette histoire ?", "Crois-tu cette histoire ?", "Elle ne croit pas cette histoire ?"], "answer": "A"},
+      {"question": "We believe in the future.", "options": ["croyez", "croyons", "croient", "croit"], "answer": "B"},
+      {"question": "Don't you (formal) believe your teacher?", "options": ["Tu ne crois pas votre professeur ?", "Ne croyez-vous pas votre professeur ?", "Vous croit pas votre professeur ?", "Je ne crois pas votre professeur ?"], "answer": "B"},
+      {"question": "They (masc.) rarely believe rumors.", "options": ["croient", "croyons", "croisez", "croit"], "answer": "A"},
+      {"question": "Don't we believe her?", "options": ["Nous croyons elle ?", "Nous ne croit pas elle ?", "Ne croyons-nous pas elle ?", "Croyons-nous elle ?"], "answer": "C"},
+      {"question": "I believe in my friends.", "options": ["crois", "croyons", "croit", "croient"], "answer": "A"},
+      {"question": "Don't you (informal) believe her?", "options": ["Tu ne crois pas elle ?", "Est-ce que tu ne crois pas elle ?", "Est-ce que vous ne croyez pas elle ?", "Croit-il elle ?"], "answer": "B"},
+      {"question": "They (fem.) often believe in miracles.", "options": ["crois", "croient", "croyons", "croisiez"], "answer": "B"}
+    ],
     "passé_composé": [
       {"question": "Did they (masc.) not believe your story?", "options": ["Ont-ils cru ton histoire ?", "Ils n'ont pas cru ton histoire ?", "Est-ce qu'ils n'ont pas cru ton histoire ?", "A-t-ils pas cru ton histoire ?"], "answer": "C"},
       {"question": "We believed in this project.", "options": ["avons cru", "avons croyu", "avais cru", "sont cru"], "answer": "A"},
