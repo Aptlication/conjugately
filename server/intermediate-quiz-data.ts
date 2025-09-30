@@ -1521,6 +1521,31 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     ]
   },
 
+  "croire": {
+    "passé_composé": [
+      {"question": "Did they (masc.) not believe your story?", "options": ["Ont-ils cru ton histoire ?", "Ils n'ont pas cru ton histoire ?", "Est-ce qu'ils n'ont pas cru ton histoire ?", "A-t-ils pas cru ton histoire ?"], "answer": "C"},
+      {"question": "We believed in this project.", "options": ["avons cru", "avons croyu", "avais cru", "sont cru"], "answer": "A"},
+      {"question": "Did she not believe in ghosts?", "options": ["N'a-t-elle pas cru aux fantômes ?", "Est-ce qu'elle croit aux fantômes ?", "Elle a cru aux fantômes ?", "A-t-elle cru aux fantômes ?"], "answer": "A"},
+      {"question": "You (sing.) believed his/her words.", "options": ["as cru", "ai cru", "a cru", "avons cru"], "answer": "A"},
+      {"question": "Did you (plural) not believe her excuses?", "options": ["Est-ce que vous n'avez pas cru ses excuses ?", "Avez-vous cru ses excuses ?", "Vous avez croyu ses excuses ?", "Vous n'avez cru pas ses excuses ?"], "answer": "A"},
+      {"question": "I always believed your advice.", "options": ["ai cru", "avais cru", "ai croyé", "a cru"], "answer": "A"},
+      {"question": "Didn't we believe in our team?", "options": ["Nous avons cru en notre équipe ?", "N'avons-nous pas cru en notre équipe ?", "Nous n'avons pas cru en notre équipe ?", "Avez-nous cru en notre équipe ?"], "answer": "B"},
+      {"question": "You (pl.) believed the teacher's explanation.", "options": ["avez cru", "aviez cru", "as cru", "a cru"], "answer": "A"},
+      {"question": "Did I not believe him?", "options": ["Je n'ai pas cru lui ?", "Est-ce que je n'ai pas cru lui ?", "Ai-je cru lui ?", "J'ai cru à lui ?"], "answer": "B"},
+      {"question": "She easily believed the news.", "options": ["a cru", "a croyé", "avais cru", "avez cru"], "answer": "A"},
+      {"question": "Did they (fem.) not believe their parents?", "options": ["Ont-elles cru leurs parents ?", "Est-ce qu'elles n'ont pas cru leurs parents ?", "Elles ont croyus leurs parents ?", "A-t-elles cru leurs parents ?"], "answer": "B"},
+      {"question": "The children believed in Santa Claus until last year.", "options": ["ont cru", "avaient cru", "avaient croyé", "ont croyé"], "answer": "A"},
+      {"question": "Did you (sing.) not believe the rumor?", "options": ["N'as-tu pas cru la rumeur ?", "As-tu cru la rumeur ?", "Tu as cru la rumeur ?", "As-tu pas cru la rumeur ?"], "answer": "A"},
+      {"question": "We have always believed in science.", "options": ["avons croyé", "avons cru", "avons crû", "aviez cru"], "answer": "B"},
+      {"question": "Did you (formal) not believe the story?", "options": ["Vous n'avez pas cru l'histoire ?", "Est-ce que vous n'avez pas cru l'histoire ?", "Avez-vous cru l'histoire ?", "A-t-elle cru l'histoire ?"], "answer": "B"},
+      {"question": "They (masc.) quickly believed the lie.", "options": ["ont cru", "ont croyé", "avaient cru", "a cru"], "answer": "A"},
+      {"question": "Didn't we believe her?", "options": ["Nous avons cru elle ?", "Nous croyons elle ?", "N'avons-nous pas cru elle ?", "Avez-nous cru elle ?"], "answer": "C"},
+      {"question": "I believed in my friends that time.", "options": ["ai cru", "ai croyé", "avais cru", "a cru"], "answer": "A"},
+      {"question": "Didn't you (informal) believe this idea?", "options": ["Tu n'as pas cru cette idée ?", "Est-ce que tu n'as pas cru cette idée ?", "As-tu cru cette idée ?", "As-tu pas cru cette idée ?"], "answer": "B"},
+      {"question": "They (fem.) believed in miracles until recently.", "options": ["avaient croyé", "ont cru", "ont croyu", "avaient cru"], "answer": "B"}
+    ]
+  },
+
   "mettre": {
     "present": [
       {"question": "Do they (feminine) put on their coats? (Negative)", "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"], "answer": "C"},
