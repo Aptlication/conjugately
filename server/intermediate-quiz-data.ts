@@ -742,28 +742,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "present": [],
     "passé_composé": [],
     "futur_simple": [],
-    "imparfait": [
-      {"question": "I was taking the bus. (Imparfait)", "options": ["Je prenais le bus.", "Tu prenais le bus.", "Il prenait le bus.", "Nous prenions le bus."], "answer": "A"},
-      {"question": "You were taking a taxi. (informal) (Imparfait)", "options": ["Tu prenais un taxi.", "Je prenais un taxi.", "Il prenait un taxi.", "Vous preniez un taxi."], "answer": "A"},
-      {"question": "He was taking his umbrella. (Imparfait)", "options": ["Il prenait son parapluie.", "Elle prenait son parapluie.", "Tu prenais son parapluie.", "Ils prenaient leur parapluie."], "answer": "A"},
-      {"question": "She was taking her bag. (Imparfait)", "options": ["Elle prenait son sac.", "Il prenait son sac.", "Elles prenaient leur sac.", "Tu prenais ton sac."], "answer": "A"},
-      {"question": "We were taking our coats. (Imparfait)", "options": ["Nous prenions nos manteaux.", "Vous preniez vos manteaux.", "Ils prenaient leurs manteaux.", "Je prenais mon manteau."], "answer": "A"},
-      {"question": "You were taking notes. (formal/plural) (Imparfait)", "options": ["Vous preniez des notes.", "Tu prenais des notes.", "Nous prenions des notes.", "Ils prenaient des notes."], "answer": "A"},
-      {"question": "They were taking a photo. (male/mixed) (Imparfait)", "options": ["Ils prenaient une photo.", "Elles prenaient une photo.", "Ils prendraient une photo.", "Ils prendront une photo."], "answer": "A"},
-      {"question": "They were taking a photo. (female) (Imparfait)", "options": ["Elles prenaient une photo.", "Ils prenaient une photo.", "Elles prendraient une photo.", "Elles prendront une photo."], "answer": "A"},
-      {"question": "Was I taking the train? (Imparfait)", "options": ["Prenais-je le train ?", "Prenais-tu le train ?", "Prenait-il le train ?", "Prenions-nous le train ?"], "answer": "A"},
-      {"question": "Were you taking sugar? (informal) (Imparfait)", "options": ["Prenais-tu du sucre ?", "Prenais-je du sucre ?", "Prenait-il du sucre ?", "Preniez-vous du sucre ?"], "answer": "A"},
-      {"question": "Was he taking milk? (Imparfait)", "options": ["Prenait-il du lait ?", "Prenait-elle du lait ?", "Prenais-je du lait ?", "Prenais-tu du lait ?"], "answer": "A"},
-      {"question": "Was she taking the metro? (Imparfait)", "options": ["Prenait-elle le métro ?", "Prenait-il le métro ?", "Prenais-tu le métro ?", "Preniez-vous le métro ?"], "answer": "A"},
-      {"question": "Were we taking the tickets? (Imparfait)", "options": ["Prenions-nous les billets ?", "Prenais-je les billets ?", "Preniez-vous les billets ?", "Prendaient-ils les billets ?"], "answer": "A"},
-      {"question": "Were you taking a lot of photos? (formal/plural) (Imparfait)", "options": ["Preniez-vous beaucoup de photos ?", "Prenais-tu beaucoup de photos ?", "Prenions-nous beaucoup de photos ?", "Prendaient-ils beaucoup de photos ?"], "answer": "A"},
-      {"question": "Were they taking the bus? (male/mixed) (Imparfait)", "options": ["Prendaient-ils le bus ?", "Prendaient-elles le bus ?", "Preniez-vous le bus ?", "Prenais-tu le bus ?"], "answer": "A"},
-      {"question": "Were they taking the bus? (female) (Imparfait)", "options": ["Prendaient-elles le bus ?", "Prendaient-ils le bus ?", "Preniez-vous le bus ?", "Prenais-tu le bus ?"], "answer": "A"},
-      {"question": "I was not taking sugar. (Imparfait)", "options": ["Je ne prenais pas de sucre.", "Tu ne prenais pas de sucre.", "Il ne prenait pas de sucre.", "Nous ne prenions pas de sucre."], "answer": "A"},
-      {"question": "He was not taking milk. (Imparfait)", "options": ["Il ne prenait pas de lait.", "Je ne prenais pas de lait.", "Tu ne prenais pas de lait.", "Ils ne prenaient pas de lait."], "answer": "A"},
-      {"question": "Weren't we taking the bus? (Imparfait)", "options": ["Ne prenions-nous pas le bus ?", "Ne preniez-vous pas le bus ?", "Ne prenaient-ils pas le bus ?", "Ne prenais-je pas le bus ?"], "answer": "A"},
-      {"question": "Weren't they taking notes? (female) (Imparfait)", "options": ["Ne prenaient-elles pas des notes ?", "Ne prenaient-ils pas des notes ?", "Ne preniez-vous pas des notes ?", "Ne prenions-nous pas des notes ?"], "answer": "A"}
-    ]
+    "imparfait": []
   },
 
   "venir": {
@@ -1529,7 +1508,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "mettre": {
     "present": [
-      {"question": "Do they (feminine) put on their coats? (Negative)", "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"], "answer": "C"},
+      {"question": "Do they (feminine) put on their coats?", "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"], "answer": "C"},
       {"question": "We set the table.", "options": ["mettons", "mettez", "mets", "mettent"], "answer": "A"},
       {"question": "Are you (formal) not putting your phones on the desk?", "options": ["Est-ce que tu ne mets pas ton téléphone sur le bureau ?", "Est-ce que vous mets pas vos téléphones sur le bureau ?", "Est-ce que vous ne mettez pas vos téléphones sur le bureau ?", "Est-ce que nous ne mettons pas vos téléphones sur le bureau ?"], "answer": "C"},
       {"question": "They (f) set the table every evening.", "options": ["mettez", "mettent", "mettons", "mets"], "answer": "B"},
