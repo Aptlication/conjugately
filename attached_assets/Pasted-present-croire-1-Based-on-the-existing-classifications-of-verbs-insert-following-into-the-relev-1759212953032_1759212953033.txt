@@ -1,0 +1,219 @@
+present - croire
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Do they (masc.) not believe the story?",
+   "options": [
+     "Ils croient l'histoire ?",
+     "Est-ce qu'ils ne croient pas l'histoire ?",
+     "Trouvent-ils cette histoire ?",
+     "Est-ce que nous croyons l'histoire ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ à ce projet depuis longtemps. (We have believed in this project for a long time.)",
+   "options": [
+     "crois",
+     "croyons",
+     "croyez",
+     "croient"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Does she not believe in ghosts?",
+   "options": [
+     "Ne croit-elle pas aux fantômes ?",
+     "Croyons-nous aux fantômes ?",
+     "Elle croie aux fantômes ?",
+     "Est-ce qu'elle croit aux fantômes ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ qu'il va neiger demain ? (Do you (sing.) believe it will snow tomorrow?)",
+   "options": [
+     "croyez",
+     "crois",
+     "croit",
+     "croyons"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Don't you (plural) believe his excuses?",
+   "options": [
+     "Est-ce que vous croyez ses excuses ?",
+     "Ne croyez-vous pas ses excuses ?",
+     "Croyez-ils ses excuses ?",
+     "Est-ce qu'elles croient ses excuses ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ tout ce que tu dis. (I believe everything you say.)",
+   "options": [
+     "crois",
+     "croyons",
+     "croit",
+     "croient"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Don’t we believe in our success?",
+   "options": [
+     "Nous croyons en notre succès ?",
+     "Ne croyons-nous pas en notre succès ?",
+     "Nous ne croit pas en notre succès ?",
+     "Est-ce que vous croyez en notre succès ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ souvent les enfants. (You (pl.) often believe the children.)",
+   "options": [
+     "croyez",
+     "croient",
+     "crois",
+     "croyons"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Do I not believe you?",
+   "options": [
+     "Est-ce que vous ne croyez pas moi ?",
+     "Est-ce que je ne crois pas toi ?",
+     "Est-ce que je ne crois pas ?",
+     "Je crois en toi ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ à la chance. (She believes in luck.)",
+   "options": [
+     "crois",
+     "croit",
+     "croient",
+     "croyons"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Do they (fem.) not believe their parents?",
+   "options": [
+     "Est-ce qu'elles ne croient pas leurs parents ?",
+     "Elles croient leurs parents ?",
+     "Ne croyez-vous pas leurs parents ?",
+     "Est-ce qu'ils croient leurs parents ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les enfants ______ toujours les contes de fées. (The children always believe fairy tales.)",
+   "options": [
+     "croyons",
+     "croyez",
+     "croient",
+     "crois"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Do you (sing.) not believe this story?",
+   "options": [
+     "Est-ce que tu ne crois pas cette histoire ?",
+     "Ne croyez-vous pas cette histoire ?",
+     "Crois-tu cette histoire ?",
+     "Elle ne croit pas cette histoire ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ en l'avenir. (We believe in the future.)",
+   "options": [
+     "croyez",
+     "croyons",
+     "croient",
+     "croit"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Don't you (formal) believe your teacher?",
+   "options": [
+     "Tu ne crois pas votre professeur ?",
+     "Ne croyez-vous pas votre professeur ?",
+     "Vous croit pas votre professeur ?",
+     "Je ne crois pas votre professeur ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ rarement aux rumeurs. (They (masc.) rarely believe rumors.)",
+   "options": [
+     "croient",
+     "croyons",
+     "croisez",
+     "croit"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Don't we believe her?",
+   "options": [
+     "Nous croyons elle ?",
+     "Nous ne croit pas elle ?",
+     "Ne croyons-nous pas elle ?",
+     "Croyons-nous elle ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ en mes amis. (I believe in my friends.)",
+   "options
+ 

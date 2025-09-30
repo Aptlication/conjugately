@@ -1496,6 +1496,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (plural) found the key under the door.", "options": ["avez trouvé", "avons trouvé", "ont trouvé", "ai trouvé"], "answer": "A"},
       {"question": "Did he not find the school near here?", "options": ["Est-ce qu'il n'a pas trouvé l'école près d'ici ?", "Il a trouvé l'école près d'ici ?", "A-t-il trouvé l'école près d'ici ?", "A-t-il pas trouvé l'école près d'ici ?"], "answer": "A"},
       {"question": "They (fem.) found several lost items.", "options": ["ai trouvé", "ont trouvé", "avons trouvé", "as trouvé"], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will they (masc.) not find the hotel?", "options": ["Trouveront-ils l'hôtel ?", "Ils trouveront l'hôtel ?", "Est-ce qu'ils ne trouveront pas l'hôtel ?", "Trouveront-ils pas l'hôtel ?"], "answer": "C"},
+      {"question": "We will find this street easily.", "options": ["trouverons", "trouve", "trouvons", "trouveront"], "answer": "A"},
+      {"question": "Will she not find her keys?", "options": ["Trouvera-t-elle ses clés ?", "Elle trouvera ses clés ?", "Trouvera-t-elle pas ses clés ?", "Est-ce qu'elle ne trouvera pas ses clés ?"], "answer": "D"},
+      {"question": "You (sing.) will find a new job soon.", "options": ["trouves", "trouveras", "trouvera", "trouvons"], "answer": "B"},
+      {"question": "Will you (plural) not find the museum closed?", "options": ["Est-ce que vous ne trouverez pas le musée fermé ?", "Est-ce que tu trouveras le musée fermé ?", "Trouverez-vous le musée fermé ?", "Vous ne trouverez pas le musée fermé ?"], "answer": "A"},
+      {"question": "I will find the answer tomorrow morning.", "options": ["trouve", "trouverai", "trouvais", "trouveras"], "answer": "B"},
+      {"question": "Will we not find a solution?", "options": ["Trouverons-nous une solution ?", "Ne trouverons-nous pas une solution ?", "Nous trouverons une solution ?", "Ne trouverez-vous pas une solution ?"], "answer": "B"},
+      {"question": "You (pl.) will find the right road on the left.", "options": ["trouvez", "trouverez", "trouvera", "trouvons"], "answer": "B"},
+      {"question": "Will I not find my passport?", "options": ["Je trouverai mon passeport ?", "Trouverai-je mon passeport ?", "Est-ce que je ne trouverai pas mon passeport ?", "Trouverai-je pas mon passeport ?"], "answer": "C"},
+      {"question": "She will find a taxi tomorrow morning.", "options": ["trouvera", "trouverai", "trouvons", "trouvez"], "answer": "A"},
+      {"question": "Will they (fem.) not find their tickets?", "options": ["Trouveront-elles leurs billets ?", "Est-ce qu'elles ne trouveront pas leurs billets ?", "Elles trouveront leurs billets ?", "Trouveront-elles pas leurs billets ?"], "answer": "B"},
+      {"question": "The students will find the correct answer in the exam.", "options": ["trouve", "trouveront", "trouverai", "trouverez"], "answer": "B"},
+      {"question": "Will you (informal) not find your notebook?", "options": ["Ne trouveras-tu pas ton cahier ?", "Trouves-tu ton cahier ?", "Trouveras-tu ton cahier ?", "Trouveras-tu pas ton cahier ?"], "answer": "A"},
+      {"question": "We will find the problem quickly.", "options": ["trouvez", "trouverons", "trouvons", "trouvera"], "answer": "B"},
+      {"question": "Will you (formal) not find this idea useful?", "options": ["Trouverez-vous cette idée utile ?", "Est-ce que vous ne trouverez pas cette idée utile ?", "Vous trouvez cette idée utile ?", "Trouverez-vous pas cette idée utile ?"], "answer": "B"},
+      {"question": "They (masc.) will find a solution to all their problems.", "options": ["trouvez", "trouveront", "trouve", "trouverons"], "answer": "B"},
+      {"question": "Will we not find the place closed?", "options": ["Nous trouverons le lieu fermé ?", "Trouverons-nous le lieu fermé ?", "Est-ce que nous ne trouverons pas le lieu fermé ?", "Ne trouverons-nous pas le lieu fermé ?"], "answer": "C"},
+      {"question": "I will always find courage in adversity.", "options": ["trouverai", "trouvons", "trouvez", "trouveront"], "answer": "A"},
+      {"question": "Will he not find this answer correct?", "options": ["Trouvera-t-il cette réponse correcte ?", "Trouverez-vous cette réponse correcte ?", "Il trouvera cette réponse correcte ?", "Est-ce qu'il ne trouvera pas cette réponse correcte ?"], "answer": "D"},
+      {"question": "They (fem.) will often find lost items.", "options": ["trouvez", "trouveront", "trouvons", "trouve"], "answer": "B"}
     ]
   },
 
