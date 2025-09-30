@@ -1,0 +1,230 @@
+present - prendre 
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "Do they (Masculine) take the bus every day?",
+   "options": {
+     "A": "Ils prend le bus tous les jours.",
+     "B": "Ils prennent le bus tous les jours.",
+     "C": "Ils prenons le bus tous les jours.",
+     "D": "Ils prennez le bus tous les jours."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "I do not take any risk.",
+   "options": {
+     "A": "Je ne prends aucun risque.",
+     "B": "Je prends ne aucun risque.",
+     "C": "Je ne prend aucun risque.",
+     "D": "Je prends aucun risque ne."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Does she take her medicine in the morning?",
+   "options": {
+     "A": "Elle prends ses médicaments le matin.",
+     "B": "Elle prend ses médicaments le matin.",
+     "C": "Elle prenons ses médicaments le matin.",
+     "D": "Elle prenez ses médicaments le matin."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "We take the stairs.",
+   "options": {
+     "A": "Nous prenons les escaliers.",
+     "B": "Nous prend les escaliers.",
+     "C": "Nous prenez les escaliers.",
+     "D": "Nous prennent les escaliers."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "Do you (Plural or Formal) not take notes during class?",
+   "options": {
+     "A": "Vous prenez ne pas des notes en cours.",
+     "B": "Vous ne prenez pas des notes en cours.",
+     "C": "Vous ne prenons pas des notes en cours.",
+     "D": "Vous prenez pas des notes en cours."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "They (Feminine) do not take the subway.",
+   "options": {
+     "A": "Elles ne prend pas le métro.",
+     "B": "Elles prennent ne pas le métro.",
+     "C": "Elles prenez pas le métro.",
+     "D": "Elles ne prennent pas le métro."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I take my umbrella?",
+   "options": {
+     "A": "Je prends mon parapluie?",
+     "B": "Je prend mon parapluie?",
+     "C": "Je prenons mon parapluie?",
+     "D": "Je prenez mon parapluie?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "He takes his time.",
+   "options": {
+     "A": "Il prends son temps.",
+     "B": "Il prenons son temps.",
+     "C": "Il prend son temps.",
+     "D": "Il prenez son temps."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "Do we not take a break now?",
+   "options": {
+     "A": "Nous prenons ne pas une pause maintenant?",
+     "B": "Nous ne prenons pas une pause maintenant?",
+     "C": "Nous ne prend pas une pause maintenant?",
+     "D": "Nous prenons pas une pause maintenant?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "You (Plural or Formal) take the train to work.",
+   "options": {
+     "A": "Vous prend le train pour aller au travail.",
+     "B": "Vous prenons le train pour aller au travail.",
+     "C": "Vous prenez le train pour aller au travail.",
+     "D": "Vous prennent le train pour aller au travail."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "Does he not take responsibility?",
+   "options": {
+     "A": "Il prend ne pas ses responsabilités?",
+     "B": "Il ne prends pas ses responsabilités?",
+     "C": "Il ne prend pas ses responsabilités?",
+     "D": "Il prenez pas ses responsabilités?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "I take a shower every morning.",
+   "options": {
+     "A": "Je prend une douche tous les matins.",
+     "B": "Je prenons une douche tous les matins.",
+     "C": "Je prenez une douche tous les matins.",
+     "D": "Je prends une douche tous les matins."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "They (Feminine) do not take sugar in their coffee.",
+   "options": {
+     "A": "Elles prennent ne pas de sucre dans leur café.",
+     "B": "Elles ne prennent pas de sucre dans leur café.",
+     "C": "Elles ne prend pas de sucre dans leur café.",
+     "D": "Elles prenez pas de sucre dans leur café."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "Do you (Informal) take vitamins?",
+   "options": {
+     "A": "Tu prend des vitamines?",
+     "B": "Tu prenons des vitamines?",
+     "C": "Tu prends des vitamines?",
+     "D": "Tu prenez des vitamines?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "She does not take any vacation this year.",
+   "options": {
+     "A": "Elle prend ne pas de vacances cette année.",
+     "B": "Elle ne prends pas de vacances cette année.",
+     "C": "Elle ne prend pas de vacances cette année.",
+     "D": "Elle prend pas de vacances cette année."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "We do not take the car today.",
+   "options": {
+     "A": "Nous prenons ne pas la voiture aujourd'hui.",
+     "B": "Nous prend pas la voiture aujourd'hui.",
+     "C": "Nous prenez pas la voiture aujourd'hui.",
+     "D": "Nous ne prenons pas la voiture aujourd'hui."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "Does she take French lessons?",
+   "options": {
+     "A": "Elle prenons des cours de français?",
+     "B": "Elle prends des cours de français?",
+     "C": "Elle prend des cours de français?",
+     "D": "Elle prenez des cours de français?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "They (Masculine) do not take this route.",
+   "options": {
+     "A": "Ils ne prennent pas ce chemin.",
+     "B": "Ils prennent ne pas ce chemin.",
+     "C": "Ils ne prend pas ce chemin.",
+     "D": "Ils prenez pas ce chemin."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Do you (Plural or Formal) take reservations?",
+   "options": {
+     "A": "Vous prend des réservations?",
+     "B": "Vous prenons des réservations?",
+     "C": "Vous prenez des réservations?",
+     "D": "Vous prennent des réservations?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "He does not take the advice seriously.",
+   "options": {
+     "A": "Il prend ne pas les conseils au sérieux.",
+     "B": "Il ne prends pas les conseils au sérieux.",
+     "C": "Il prenez pas les conseils au sérieux.",
+     "D": "Il ne prend pas les conseils au sérieux."
+   },
+   "correct_answer": "D"
+ }
+]
