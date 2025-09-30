@@ -739,28 +739,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "prendre": {
-    "present": [
-      {"question": "Don't they (masc.) take the bus?", "options": ["Ils prennent le bus ?", "Est-ce qu'ils ne prennent pas le bus ?", "Ils ne prennent pas le bus ?", "Prennent-ils le bus ?"], "answer": "B"},
-      {"question": "Nous ______ souvent le train. (We often take the train.)", "options": ["prenons", "prenez", "prends", "prennent"], "answer": "D"},
-      {"question": "Does she not take her medicine?", "options": ["Ne prend-elle pas son médicament ?", "Elle prend son médicament ?", "Elle ne prend pas son médicament ?", "Prend-elle son médicament ?"], "answer": "A"},
-      {"question": "Tu ______ ton parapluie quand il pleut. (You take your umbrella when it rains.)", "options": ["prends", "prend", "prenez", "prenons"], "answer": "C"},
-      {"question": "Don't you (plural) take part in the meeting?", "options": ["Vous prenez part à la réunion ?", "Vous ne prenez pas part à la réunion ?", "Prenez-vous part à la réunion ?", "Est-ce que vous ne prenez pas part à la réunion ?"], "answer": "C"},
-      {"question": "Je ______ toujours mon temps pour étudier. (I always take my time to study.)", "options": ["prends", "prenons", "prenez", "prend"], "answer": "B"},
-      {"question": "Don't we take care of the plants?", "options": ["Nous prenons soin des plantes ?", "Nous ne prenons pas soin des plantes ?", "Prenons-nous soin des plantes ?", "Ne prenons-nous pas soin des plantes ?"], "answer": "D"},
-      {"question": "Vous ______ votre petit-déjeuner à huit heures. (You (pl.) take your breakfast at 8.)", "options": ["prenez", "prenons", "prend", "prends"], "answer": "A"},
-      {"question": "Don't I take enough notes?", "options": ["Je prends assez de notes ?", "Est-ce que je ne prends pas assez de notes ?", "Je ne prends pas assez de notes ?", "Prends-je assez de notes ?"], "answer": "B"},
-      {"question": "Elle ______ le petit-déjeuner chez elle. (She takes breakfast at home.)", "options": ["prends", "prend", "prenons", "prenez"], "answer": "D"},
-      {"question": "Don't they (fem.) take the elevator?", "options": ["Est-ce qu'elles ne prennent pas l'ascenseur ?", "Elles prennent l'ascenseur ?", "Prennent-elles l'ascenseur ?", "Elles ne prennent pas l'ascenseur ?"], "answer": "A"},
-      {"question": "Les élèves ______ leur goûter dehors. (The students take their snack outside.)", "options": ["prennent", "prenez", "prenons", "prends"], "answer": "C"},
-      {"question": "Don't you (sing.) take your keys?", "options": ["Tu prends tes clés ?", "Prends-tu tes clés ?", "Ne prends-tu pas tes clés ?", "Est-ce que tu ne prends pas tes clés ?"], "answer": "D"},
-      {"question": "Nous ______ le bus ensemble chaque jour. (We take the bus together every day.)", "options": ["prenons", "prenez", "prends", "prend"], "answer": "B"},
-      {"question": "Don't you (formal) take your responsibilities seriously?", "options": ["Ne prenez-vous pas vos responsabilités au sérieux ?", "Vous prenez vos responsabilités au sérieux ?", "Prenez-vous vos responsabilités au sérieux ?", "Vous ne prenez pas vos responsabilités au sérieux ?"], "answer": "C"},
-      {"question": "Ils ______ le train tous les matins. (They (masc.) take the train every morning.)", "options": ["prennent", "prend", "prenons", "prenez"], "answer": "A"},
-      {"question": "Don't we take care of the children?", "options": ["Nous prenons soin des enfants ?", "Nous ne prenons pas soin des enfants ?", "Ne prenons-nous pas soin des enfants ?", "Prenons-nous soin des enfants ?"], "answer": "C"},
-      {"question": "Je ______ mon manteau quand il fait froid. (I take my coat when it's cold.)", "options": ["prends", "prenons", "prenez", "prend"], "answer": "A"},
-      {"question": "Don't you (informal) take your breakfast every morning?", "options": ["Est-ce que tu ne prends pas ton petit-déjeuner chaque matin ?", "Tu prends ton petit-déjeuner chaque matin ?", "Prends-tu ton petit-déjeuner chaque matin ?", "Tu ne prends pas ton petit-déjeuner chaque matin ?"], "answer": "B"},
-      {"question": "Elles ______ leur repas ensemble le soir. (They (fem.) take their meal together in the evening.)", "options": ["prends", "prenez", "prennent", "prend"], "answer": "D"}
-    ],
+    "present": [],
     "passé_composé": [
       {"question": "I took the bus. (Passé Composé)", "options": ["J'ai pris le bus.", "Tu as pris le bus.", "Il a pris le bus.", "Nous avons pris le bus."], "answer": "A"},
       {"question": "You took a taxi. (informal) (Passé Composé)", "options": ["Tu as pris un taxi.", "J'ai pris un taxi.", "Il a pris un taxi.", "Vous avez pris un taxi."], "answer": "A"},
