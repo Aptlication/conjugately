@@ -1,0 +1,256 @@
+present - prendre 
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Don't they (masc.) take the bus?",
+   "options": [
+     "Ils prennent le bus ?",
+     "Est-ce qu'ils ne prennent pas le bus ?",
+     "Ils ne prennent pas le bus ?",
+     "Prennent-ils le bus ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ souvent le train. (We often take the train.)",
+   "options": [
+     "prenons",
+     "prenez",
+     "prends",
+     "prennent"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Does she not take her medicine?",
+   "options": [
+     "Ne prend-elle pas son médicament ?",
+     "Elle prend son médicament ?",
+     "Elle ne prend pas son médicament ?",
+     "Prend-elle son médicament ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ ton parapluie quand il pleut. (You take your umbrella when it rains.)",
+   "options": [
+     "prends",
+     "prend",
+     "prenez",
+     "prenons"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Don't you (plural) take part in the meeting?",
+   "options": [
+     "Vous prenez part à la réunion ?",
+     "Vous ne prenez pas part à la réunion ?",
+     "Prenez-vous part à la réunion ?",
+     "Est-ce que vous ne prenez pas part à la réunion ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ toujours mon temps pour étudier. (I always take my time to study.)",
+   "options": [
+     "prends",
+     "prenons",
+     "prenez",
+     "prend"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Don't we take care of the plants?",
+   "options": [
+     "Nous prenons soin des plantes ?",
+     "Nous ne prenons pas soin des plantes ?",
+     "Prenons-nous soin des plantes ?",
+     "Ne prenons-nous pas soin des plantes ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ votre petit-déjeuner à huit heures. (You (pl.) take your breakfast at 8.)",
+   "options": [
+     "prenez",
+     "prenons",
+     "prend",
+     "prends"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Don't I take enough notes?",
+   "options": [
+     "Je prends assez de notes ?",
+     "Est-ce que je ne prends pas assez de notes ?",
+     "Je ne prends pas assez de notes ?",
+     "Prends-je assez de notes ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ le petit-déjeuner chez elle. (She takes breakfast at home.)",
+   "options": [
+     "prends",
+     "prend",
+     "prenons",
+     "prenez"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Don't they (fem.) take the elevator?",
+   "options": [
+     "Est-ce qu'elles ne prennent pas l'ascenseur ?",
+     "Elles prennent l'ascenseur ?",
+     "Prennent-elles l'ascenseur ?",
+     "Elles ne prennent pas l'ascenseur ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les élèves ______ leur goûter dehors. (The students take their snack outside.)",
+   "options": [
+     "prennent",
+     "prenez",
+     "prenons",
+     "prends"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Don't you (sing.) take your keys?",
+   "options": [
+     "Tu prends tes clés ?",
+     "Prends-tu tes clés ?",
+     "Ne prends-tu pas tes clés ?",
+     "Est-ce que tu ne prends pas tes clés ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ le bus ensemble chaque jour. (We take the bus together every day.)",
+   "options": [
+     "prenons",
+     "prenez",
+     "prends",
+     "prend"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Don't you (formal) take your responsibilities seriously?",
+   "options": [
+     "Ne prenez-vous pas vos responsabilités au sérieux ?",
+     "Vous prenez vos responsabilités au sérieux ?",
+     "Prenez-vous vos responsabilités au sérieux ?",
+     "Vous ne prenez pas vos responsabilités au sérieux ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ le train tous les matins. (They (masc.) take the train every morning.)",
+   "options": [
+     "prennent",
+     "prend",
+     "prenons",
+     "prenez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Don't we take care of the children?",
+   "options": [
+     "Nous prenons soin des enfants ?",
+     "Nous ne prenons pas soin des enfants ?",
+     "Ne prenons-nous pas soin des enfants ?",
+     "Prenons-nous soin des enfants ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ mon manteau quand il fait froid. (I take my coat when it's cold.)",
+   "options": [
+     "prends",
+     "prenons",
+     "prenez",
+     "prend"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Don't you (informal) take your breakfast every morning?",
+   "options": [
+     "Est-ce que tu ne prends pas ton petit-déjeuner chaque matin ?",
+     "Tu prends ton petit-déjeuner chaque matin ?",
+     "Prends-tu ton petit-déjeuner chaque matin ?",
+     "Tu ne prends pas ton petit-déjeuner chaque matin ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ leur repas ensemble le soir. (They (fem.) take their meal together in the evening.)",
+   "options": [
+     "prends",
+     "prenez",
+     "prennent",
+     "prend"
+   ],
+   "answer": "D"
+ }
+]
+ 
+
+
+
+
+
