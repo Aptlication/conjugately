@@ -1452,6 +1452,31 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   // INTERMEDIATE LEVEL COMPLETE! All 13 verbs with multiple tenses = 1000 questions total (including s'intéresser and se débrouiller)
 
+  "trouver": {
+    "present": [
+      {"question": "Do they (masc.) not find the answers?", "options": ["Trouvent-ils les réponses ?", "Est-ce qu'ils trouvaient les réponses ?", "Est-ce qu'ils ne trouvent pas les réponses ?", "Ils ne trouvent pas les réponses ?"], "answer": "C"},
+      {"question": "We often find solutions.", "options": ["trouvons", "trouvez", "trouve", "trouvent"], "answer": "A"},
+      {"question": "Does she not find her keys?", "options": ["Est-ce qu'elle trouves ses clés ?", "Elle ne trouves pas ses clés ?", "Est-ce qu'elle ne trouve pas ses clés ?", "Est-ce que vous ne trouvez pas ses clés ?"], "answer": "C"},
+      {"question": "You (sing.) find this movie interesting.", "options": ["trouve", "trouvent", "trouvons", "trouves"], "answer": "D"},
+      {"question": "Do you (pl.) not find these exercises easy?", "options": ["Est-ce que vous ne trouvez pas ces exercices faciles ?", "Est-ce que tu as trouvé ces exercices faciles ?", "Est-ce qu'ils ne trouvent pas ces exercices faciles ?", "Est-ce que nous ne trouvons pas ces exercices faciles ?"], "answer": "A"},
+      {"question": "I rarely find money on the ground.", "options": ["trouve", "trouvent", "trouvez", "trouvons"], "answer": "A"},
+      {"question": "Don't we find this lesson difficult?", "options": ["Nous trouve pas cette leçon difficile ?", "Ne trouvons-nous pas cette leçon difficile ?", "Est-ce que vous trouvez cette leçon difficile ?", "Trouvonz-nous cette leçon difficile ?"], "answer": "B"},
+      {"question": "You (pl.) find the right answer every time.", "options": ["trouvent", "trouvez", "trouve", "trouvons"], "answer": "B"},
+      {"question": "Do I not find good restaurants easily?", "options": ["Je ne trouve pas de bons restaurants facilement ?", "Est-ce que je trouve de bons restaurants facilement ?", "Est-ce que je ne trouve pas de bons restaurants facilement ?", "Est-ce qu'il trouve de bons restaurants facilement ?"], "answer": "C"},
+      {"question": "She always finds the way.", "options": ["trouve", "trouves", "trouvent", "trouvons"], "answer": "A"},
+      {"question": "Do they (fem.) not find their tickets?", "options": ["Est-ce que tu ne trouves pas leurs billets ?", "Trouvent-elles leurs billets ?", "Elles n'ont pas trouvé leurs billets ?", "Est-ce qu'elles ne trouvent pas leurs billets ?"], "answer": "D"},
+      {"question": "The students find the question difficult.", "options": ["trouve", "trouvent", "trouvons", "trouvez"], "answer": "B"},
+      {"question": "Do you (informal) not find your notebook?", "options": ["Ne trouves-tu pas ton cahier ?", "Est-ce qu'il trouve son cahier ?", "Trouves-tu ton cahier ?", "Est-ce qu'on trouves ton cahier ?"], "answer": "A"},
+      {"question": "We rarely find the solution immediately.", "options": ["trouvent", "trouvons", "trouvez", "trouve"], "answer": "B"},
+      {"question": "Don't you (formal) find this idea strange?", "options": ["Tu ne trouves pas cette idée étrange ?", "Est-ce que vous ne trouvez pas cette idée étrange ?", "Vous ne trouves pas cette idée étrange ?", "Est-ce qu'il ne trouve pas cette idée étrange ?"], "answer": "B"},
+      {"question": "They (m.) always find an excuse.", "options": ["trouvez", "trouve", "trouvons", "trouvent"], "answer": "D"},
+      {"question": "Do we not find the museum closed?", "options": ["Nous trouves pas le musée fermé ?", "Est-ce que vous ne trouvez pas le musée fermé ?", "Ne trouvons-nous pas le musée fermé ?", "Nous ne trouvez pas le musée fermé ?"], "answer": "C"},
+      {"question": "I find it easy to speak French.", "options": ["trouve", "trouvons", "trouvent", "trouvez"], "answer": "A"},
+      {"question": "Does he not find the school near here?", "options": ["Il ne trouve pas l'école près d'ici ?", "Est-ce qu'il a trouvé l'école près d'ici ?", "Est-ce qu'il ne trouve pas l'école près d'ici ?", "Est-ce qu'elle ne trouve pas l'école près d'ici ?"], "answer": "C"},
+      {"question": "They (f.) sometimes find lost items.", "options": ["trouvons", "trouvent", "trouves", "trouve"], "answer": "B"}
+    ]
+  },
+
   "mettre": {
     "present": [
       {"question": "Do they (feminine) put on their coats? (Negative)", "options": ["Est-ce qu'elles mettent leurs manteaux ?", "Est-ce qu'elles n'ont pas leurs manteaux ?", "Est-ce qu'elles ne mettent pas leurs manteaux ?", "Est-ce qu'elles ne mettez pas leurs manteaux ?"], "answer": "C"},

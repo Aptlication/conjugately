@@ -1,0 +1,249 @@
+present - trouver
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Do they (masc.) not find the answers?",
+   "options": [
+     "Trouvent-ils les réponses ?",
+     "Est-ce qu'ils trouvaient les réponses ?",
+     "Est-ce qu'ils ne trouvent pas les réponses ?",
+     "Ils ne trouvent pas les réponses ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ souvent des solutions. (We often find solutions.)",
+   "options": [
+     "trouvons",
+     "trouvez",
+     "trouve",
+     "trouvent"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Does she not find her keys?",
+   "options": [
+     "Est-ce qu'elle trouves ses clés ?",
+     "Elle ne trouves pas ses clés ?",
+     "Est-ce qu'elle ne trouve pas ses clés ?",
+     "Est-ce que vous ne trouvez pas ses clés ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ ce film intéressant. (You (sing.) find this movie interesting.)",
+   "options": [
+     "trouve",
+     "trouvent",
+     "trouvons",
+     "trouves"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Do you (pl.) not find these exercises easy?",
+   "options": [
+     "Est-ce que vous ne trouvez pas ces exercices faciles ?",
+     "Est-ce que tu as trouvé ces exercices faciles ?",
+     "Est-ce qu'ils ne trouvent pas ces exercices faciles ?",
+     "Est-ce que nous ne trouvons pas ces exercices faciles ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ rarement de l'argent par terre. (I rarely find money on the ground.)",
+   "options": [
+     "trouve",
+     "trouvent",
+     "trouvez",
+     "trouvons"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Don't we find this lesson difficult?",
+   "options": [
+     "Nous trouve pas cette leçon difficile ?",
+     "Ne trouvons-nous pas cette leçon difficile ?",
+     "Est-ce que vous trouvez cette leçon difficile ?",
+     "Trouvonz-nous cette leçon difficile ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ la bonne réponse chaque fois. (You (pl.) find the right answer every time.)",
+   "options": [
+     "trouvent",
+     "trouvez",
+     "trouve",
+     "trouvons"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Do I not find good restaurants easily?",
+   "options": [
+     "Je ne trouve pas de bons restaurants facilement ?",
+     "Est-ce que je trouve de bons restaurants facilement ?",
+     "Est-ce que je ne trouve pas de bons restaurants facilement ?",
+     "Est-ce qu'il trouve de bons restaurants facilement ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ toujours le chemin. (She always finds the way.)",
+   "options": [
+     "trouve",
+     "trouves",
+     "trouvent",
+     "trouvons"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Do they (fem.) not find their tickets?",
+   "options": [
+     "Est-ce que tu ne trouves pas leurs billets ?",
+     "Trouvent-elles leurs billets ?",
+     "Elles n'ont pas trouvé leurs billets ?",
+     "Est-ce qu'elles ne trouvent pas leurs billets ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les élèves ______ la question difficile. (The students find the question difficult.)",
+   "options": [
+     "trouve",
+     "trouvent",
+     "trouvons",
+     "trouvez"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Do you (informal) not find your notebook?",
+   "options": [
+     "Ne trouves-tu pas ton cahier ?",
+     "Est-ce qu'il trouve son cahier ?",
+     "Trouves-tu ton cahier ?",
+     "Est-ce qu'on trouves ton cahier ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ rarement la solution immédiatement. (We rarely find the solution immediately.)",
+   "options": [
+     "trouvent",
+     "trouvons",
+     "trouvez",
+     "trouve"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Don't you (formal) find this idea strange?",
+   "options": [
+     "Tu ne trouves pas cette idée étrange ?",
+     "Est-ce que vous ne trouvez pas cette idée étrange ?",
+     "Vous ne trouves pas cette idée étrange ?",
+     "Est-ce qu'il ne trouve pas cette idée étrange ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ toujours une excuse. (They (m.) always find an excuse.)",
+   "options": [
+     "trouvez",
+     "trouve",
+     "trouvons",
+     "trouvent"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Do we not find the museum closed?",
+   "options": [
+     "Nous trouves pas le musée fermé ?",
+     "Est-ce que vous ne trouvez pas le musée fermé ?",
+     "Ne trouvons-nous pas le musée fermé ?",
+     "Nous ne trouvez pas le musée fermé ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ facile de parler français. (I find it easy to speak French.)",
+   "options": [
+     "trouve",
+     "trouvons",
+     "trouvent",
+     "trouvez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Does he not find the school near here?",
+   "options": [
+     "Il ne trouve pas l'école près d'ici ?",
+     "Est-ce qu'il a trouvé l'école près d'ici ?",
+     "Est-ce qu'il ne trouve pas l'école près d'ici ?",
+     "Est-ce qu'elle ne trouve pas l'école près d'ici ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ parfois des objets perdus. (They (f.) sometimes find lost items.)",
+   "options": [
+     "trouvons",
+     "trouvent",
+     "trouves",
+     "trouve"
+   ],
+   "answer": "B"
+ }
+]
