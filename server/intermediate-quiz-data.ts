@@ -1543,6 +1543,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I believed in my friends that time.", "options": ["ai cru", "ai croyé", "avais cru", "a cru"], "answer": "A"},
       {"question": "Didn't you (informal) believe this idea?", "options": ["Tu n'as pas cru cette idée ?", "Est-ce que tu n'as pas cru cette idée ?", "As-tu cru cette idée ?", "As-tu pas cru cette idée ?"], "answer": "B"},
       {"question": "They (fem.) believed in miracles until recently.", "options": ["avaient croyé", "ont cru", "ont croyu", "avaient cru"], "answer": "B"}
+    ],
+    "futur_simple": [
+      {"question": "Will they (masc.) not believe your story?", "options": ["Croiront-ils ton histoire ?", "Est-ce qu'ils ne croiront pas ton histoire ?", "Ils croiront ton histoire ?", "Croiront-ils pas ton histoire ?"], "answer": "B"},
+      {"question": "We will believe in this project next year.", "options": ["croirons", "croirai", "crois", "croirez"], "answer": "A"},
+      {"question": "Will she not believe in ghosts?", "options": ["Ne croira-t-elle pas aux fantômes ?", "Est-ce qu'elle croira aux fantômes ?", "Elle croira aux fantômes ?", "Croira-t-elle pas aux fantômes ?"], "answer": "A"},
+      {"question": "You (sing.) will believe everything he says.", "options": ["croirai", "croit", "croiras", "croirez"], "answer": "C"},
+      {"question": "Will you (plural) not believe his excuses?", "options": ["Croirez-vous ses excuses ?", "Vous croirez ses excuses ?", "Est-ce que vous ne croirez pas ses excuses ?", "Vous croira pas ses excuses ?"], "answer": "C"},
+      {"question": "I will believe everything you say.", "options": ["croirai", "croiras", "croirons", "croirez"], "answer": "A"},
+      {"question": "Will we not believe in our success?", "options": ["Nous croirons en notre succès ?", "Nous croirons pas en notre succès ?", "Croirons-nous en notre succès ?", "Ne croirons-nous pas en notre succès ?"], "answer": "D"},
+      {"question": "You (pl.) will always believe the children.", "options": ["croirez", "crois", "croirons", "croyez"], "answer": "A"},
+      {"question": "Will I not believe you?", "options": ["Je croirai toi ?", "Est-ce que je ne croirai pas toi ?", "Je croirai en toi ?", "Je ne croira pas toi ?"], "answer": "B"},
+      {"question": "She will believe in luck tomorrow.", "options": ["croirai", "crois", "croirait", "croira"], "answer": "D"},
+      {"question": "Will they (fem.) not believe their parents?", "options": ["Croiront-elles leurs parents ?", "Est-ce qu'elles croiront pas leurs parents ?", "Est-ce qu'elles ne croiront pas leurs parents ?", "Croira-t-elle leurs parents ?"], "answer": "C"},
+      {"question": "The children will believe all fairy tales.", "options": ["croira", "croiront", "croirai", "croirais"], "answer": "B"},
+      {"question": "Will you (sing.) not believe this story?", "options": ["Est-ce que tu ne croiras pas cette histoire ?", "Ne croiras-tu pas cette histoire ?", "Tu croiras cette histoire ?", "Croiront-elles cette histoire ?"], "answer": "A"},
+      {"question": "We will believe in the future.", "options": ["croyez", "croirons", "croiront", "croira"], "answer": "B"},
+      {"question": "Won't you (formal) believe your teacher?", "options": ["Ne croirez-vous pas votre professeur ?", "Vous croirez votre professeur ?", "Est-ce que vous croirons votre professeur ?", "Je croirai votre professeur ?"], "answer": "A"},
+      {"question": "They (masc.) will rarely believe rumors.", "options": ["croiront", "croira", "croiraient", "croirez"], "answer": "A"},
+      {"question": "Won't we believe her?", "options": ["Nous croirons elle ?", "Nous croirons pas elle ?", "Ne croirons-nous pas elle ?", "Croirons-nous elle ?"], "answer": "C"},
+      {"question": "I will believe in my friends tomorrow.", "options": ["croirai", "croirons", "croirez", "croiront"], "answer": "A"},
+      {"question": "Won't you (informal) believe her?", "options": ["Tu ne croiras pas elle ?", "Est-ce que tu ne croiras pas elle ?", "Est-ce que vous ne croirez pas elle ?", "Croira-t-il elle ?"], "answer": "B"},
+      {"question": "They (fem.) will often believe in miracles.", "options": ["croirai", "croiront", "croirons", "croirais"], "answer": "B"}
     ]
   },
 

@@ -1,0 +1,248 @@
+futur simple - croire
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Will they (masc.) not believe your story?",
+   "options": [
+     "Croiront-ils ton histoire ?",
+     "Est-ce qu'ils ne croiront pas ton histoire ?",
+     "Ils croiront ton histoire ?",
+     "Croiront-ils pas ton histoire ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ à ce projet l'année prochaine. (We will believe in this project next year.)",
+   "options": [
+     "croirons",
+     "croirai",
+     "crois",
+     "croirez"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Will she not believe in ghosts?",
+   "options": [
+     "Ne croira-t-elle pas aux fantômes ?",
+     "Est-ce qu'elle croira aux fantômes ?",
+     "Elle croira aux fantômes ?",
+     "Croira-t-elle pas aux fantômes ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ tout ce qu'il dira. (You (sing.) will believe everything he says.)",
+   "options": [
+     "croirai",
+     "croit",
+     "croiras",
+     "croirez"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Will you (plural) not believe his excuses?",
+   "options": [
+     "Croirez-vous ses excuses ?",
+     "Vous croirez ses excuses ?",
+     "Est-ce que vous ne croirez pas ses excuses ?",
+     "Vous croira pas ses excuses ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ tout ce que tu diras. (I will believe everything you say.)",
+   "options": [
+     "croirai",
+     "croiras",
+     "croirons",
+     "croirez"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Will we not believe in our success?",
+   "options": [
+     "Nous croirons en notre succès ?",
+     "Nous croirons pas en notre succès ?",
+     "Croirons-nous en notre succès ?",
+     "Ne croirons-nous pas en notre succès ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ toujours les enfants. (You (pl.) will always believe the children.)",
+   "options": [
+     "croirez",
+     "crois",
+     "croirons",
+     "croyez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Will I not believe you?",
+   "options": [
+     "Je croirai toi ?",
+     "Est-ce que je ne croirai pas toi ?",
+     "Je croirai en toi ?",
+     "Je ne croira pas toi ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ à la chance demain. (She will believe in luck tomorrow.)",
+   "options": [
+     "croirai",
+     "crois",
+     "croirait",
+     "croira"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Will they (fem.) not believe their parents?",
+   "options": [
+     "Croiront-elles leurs parents ?",
+     "Est-ce qu'elles croiront pas leurs parents ?",
+     "Est-ce qu'elles ne croiront pas leurs parents ?",
+     "Croira-t-elle leurs parents ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les enfants ______ tous les contes de fées. (The children will believe all fairy tales.)",
+   "options": [
+     "croira",
+     "croiront",
+     "croirai",
+     "croirais"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Will you (sing.) not believe this story?",
+   "options": [
+     "Est-ce que tu ne croiras pas cette histoire ?",
+     "Ne croiras-tu pas cette histoire ?",
+     "Tu croiras cette histoire ?",
+     "Croiront-elles cette histoire ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ en l'avenir. (We will believe in the future.)",
+   "options": [
+     "croyez",
+     "croirons",
+     "croiront",
+     "croira"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Won't you (formal) believe your teacher?",
+   "options": [
+     "Ne croirez-vous pas votre professeur ?",
+     "Vous croirez votre professeur ?",
+     "Est-ce que vous croirons votre professeur ?",
+     "Je croirai votre professeur ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ rarement aux rumeurs. (They (masc.) will rarely believe rumors.)",
+   "options": [
+     "croiront",
+     "croira",
+     "croiraient",
+     "croirez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Won't we believe her?",
+   "options": [
+     "Nous croirons elle ?",
+     "Nous croirons pas elle ?",
+     "Ne croirons-nous pas elle ?",
+     "Croirons-nous elle ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ en mes amis demain. (I will believe in my friends tomorrow.)",
+   "options": [
+     "croirai",
+     "croirons",
+     "croirez",
+     "croiront"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Won't you (informal) believe her?",
+   "options": [
+     "Tu ne croiras pas elle ?",
+     "Est-ce que tu ne croiras pas elle ?",
+     "Est-ce que vous ne croirez pas elle ?",
+     "Croira-t-il elle ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ souvent aux miracles. (They (fem.) will often believe in miracles.)",
+   "options": [
+     "croirai",
+     "croiront",
+     "croirons",
+     "croirais"
+   ],
+   "answer": "D"
+ }
+]
