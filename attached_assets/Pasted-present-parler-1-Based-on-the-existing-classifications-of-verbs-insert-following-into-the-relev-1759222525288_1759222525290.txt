@@ -1,0 +1,251 @@
+present - parler
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Don’t they (masc.) speak French?",
+   "options": [
+     "Ils parlent français ?",
+     "Est-ce qu'ils ne parlent pas français ?",
+     "Ils ne parlent pas français ?",
+     "Parlent-ils français ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ souvent en classe. (We often speak in class.)",
+   "options": [
+     "parlons",
+     "parlez",
+     "parle",
+     "parlent"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Does she not speak loudly?",
+   "options": [
+     "Ne parle-t-elle pas fort ?",
+     "Elle parle fort ?",
+     "Elle ne parle pas fort ?",
+     "Est-ce qu'elle parle fort ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ italien chez toi. (You speak Italian at home.)",
+   "options": [
+     "parlais",
+     "parlons",
+     "parles",
+     "parle"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Don’t you (plural) speak to your neighbors?",
+   "options": [
+     "Vous parlez à vos voisins ?",
+     "Vous ne parlez pas à vos voisins ?",
+     "Parlent-ils à leurs voisins ?",
+     "Est-ce que vous ne parlez pas à vos voisins ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ souvent avec ma sœur. (I often speak with my sister.)",
+   "options": [
+     "parle",
+     "parlais",
+     "parlons",
+     "parlez"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Don’t we speak Spanish well?",
+   "options": [
+     "Nous parlons espagnol bien ?",
+     "Nous ne parlons pas espagnol ?",
+     "Ne parlons-nous pas bien espagnol ?",
+     "Nous parlons bien espagnol ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ français avec vos parents. (You (pl.) speak French with your parents.)",
+   "options": [
+     "parlez",
+     "parlons",
+     "parle",
+     "parlait"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Don’t I speak too much?",
+   "options": [
+     "Je parle trop ?",
+     "Est-ce que je ne parle pas trop ?",
+     "Je ne parle pas trop ?",
+     "Je parle trop pas ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ la vérité à ses amis. (She speaks the truth to her friends.)",
+   "options": [
+     "parle",
+     "parlais",
+     "parlons",
+     "parlait"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Don’t they (fem.) speak English?",
+   "options": [
+     "Est-ce qu'elles ne parlent pas anglais ?",
+     "Elles parlent anglais ?",
+     "Elles ne parlent pas anglais ?",
+     "Parlent-elles anglais ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les étudiants ______ souvent en groupe. (The students often speak in group.)",
+   "options": [
+     "parlent",
+     "parlez",
+     "parlons",
+     "parle"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Don’t you (sing.) speak to your grandfather?",
+   "options": [
+     "Tu ne parles pas à ton grand-père ?",
+     "Tu parles à ton grand-père ?",
+     "Ne parles-tu pas à ton grand-père ?",
+     "Parles-tu à ton grand-père ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ rarement pendant le film. (We rarely speak during the movie.)",
+   "options": [
+     "parlez",
+     "parlons",
+     "parle",
+     "parlent"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Don’t you (formal) speak about politics?",
+   "options": [
+     "Tu ne parle pas de politique ?",
+     "Ne parlez-vous pas de politique ?",
+     "Est-ce que vous ne parlez pas de politique ?",
+     "Vous parlez de politique ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ ensemble chaque jour. (They (masc.) speak together every day.)",
+   "options": [
+     "parlent",
+     "parlons",
+     "parlez",
+     "parle"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Don’t we speak to the teacher?",
+   "options": [
+     "Nous parle pas au professeur ?",
+     "Nous ne parlons pas au professeur ?",
+     "Ne parlons-nous pas au professeur ?",
+     "Nous parlons au professeur ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ sérieusement pendant les réunions. (I speak seriously during meetings.)",
+   "options": [
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Don’t you (informal) speak with your friends?",
+   "options": [
+     "Est-ce que tu ne parles pas avec tes amis ?",
+     "Tu parles avec tes amis ?",
+     "Ne parlez-vous pas avec tes amis ?",
+     "Tu parle avec tes amis ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ souvent de leurs projets. (They (fem.) often speak about their projects.)",
+   "options": [
+     "parle",
+     "parlons",
+     "parlez",
+     "parlent"
+   ],
+   "answer": "D"
+ }
+]
+ 

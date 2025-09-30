@@ -84,7 +84,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           // Normalize tense for intermediate data lookup
           let normalizedTense = tenseType.toLowerCase().replace(/\s+/g, '_');
           if (normalizedTense === 'présent') {
-            normalizedTense = 'présent';
+            normalizedTense = 'present';
           } else if (normalizedTense === 'passé_composé') {
             normalizedTense = 'passé_composé';  
           } else if (normalizedTense === 'futur_simple') {
