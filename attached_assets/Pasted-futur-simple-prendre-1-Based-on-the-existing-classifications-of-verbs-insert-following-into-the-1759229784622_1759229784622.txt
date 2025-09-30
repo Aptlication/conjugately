@@ -1,0 +1,230 @@
+futur simple - prendre
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (Feminine) will not take the train tomorrow.",
+   "options": {
+     "A": "Elles prendront ne pas le train demain.",
+     "B": "Elles ne prendront pas le train demain.",
+     "C": "Elles ne prendras pas le train demain.",
+     "D": "Elles prendront pas le train demain."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Will he not take his vacation next month?",
+   "options": {
+     "A": "Il ne prendra pas ses vacances le mois prochain?",
+     "B": "Il prendra ne pas ses vacances le mois prochain?",
+     "C": "Il ne prendras pas ses vacances le mois prochain?",
+     "D": "Il ne prendrai pas ses vacances le mois prochain?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Will I take the bus to work?",
+   "options": {
+     "A": "Je prendras le bus pour aller au travail?",
+     "B": "Je prendrai le bus pour aller au travail?",
+     "C": "Je prendra le bus pour aller au travail?",
+     "D": "Je prendrons le bus pour aller au travail?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Will she not take any risks?",
+   "options": {
+     "A": "Elle ne prendra pas de risques?",
+     "B": "Elle prendra ne pas de risques?",
+     "C": "Elle ne prendras pas de risques?",
+     "D": "Elle ne prendrai pas de risques?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (Informal) will not take the metro today.",
+   "options": {
+     "A": "Tu ne prendra pas le métro aujourd'hui.",
+     "B": "Tu ne prendras pas le métro aujourd'hui.",
+     "C": "Tu prendras ne pas le métro aujourd'hui.",
+     "D": "Tu ne prendrai pas le métro aujourd'hui."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He will take his medication every morning.",
+   "options": {
+     "A": "Il prendras ses médicaments tous les matins.",
+     "B": "Il prendrai ses médicaments tous les matins.",
+     "C": "Il prendrons ses médicaments tous les matins.",
+     "D": "Il prendra ses médicaments tous les matins."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Will I take the stairs or the elevator?",
+   "options": {
+     "A": "Je prendrai les escaliers ou l'ascenseur?",
+     "B": "Je prendras les escaliers ou l'ascenseur?",
+     "C": "Je prendra les escaliers ou l'ascenseur?",
+     "D": "Je prendrons les escaliers ou l'ascenseur?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Will you (Plural or Formal) not take notes during the conference?",
+   "options": {
+     "A": "Vous prendrez ne pas de notes pendant la conférence?",
+     "B": "Vous ne prendras pas de notes pendant la conférence?",
+     "C": "Vous ne prendrez pas de notes pendant la conférence?",
+     "D": "Vous ne prendrai pas de notes pendant la conférence?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We will take a long break after lunch.",
+   "options": {
+     "A": "Nous prendras une longue pause après le déjeuner.",
+     "B": "Nous prendrons une longue pause après le déjeuner.",
+     "C": "Nous prendra une longue pause après le déjeuner.",
+     "D": "Nous prendrai une longue pause après le déjeuner."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Will they (Masculine) take French lessons next year?",
+   "options": {
+     "A": "Ils prendras des cours de français l'année prochaine?",
+     "B": "Ils prendra des cours de français l'année prochaine?",
+     "C": "Ils prendrez des cours de français l'année prochaine?",
+     "D": "Ils prendront des cours de français l'année prochaine?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (Plural or Formal) will take the car to the airport.",
+   "options": {
+     "A": "Vous prendras la voiture pour aller à l'aéroport.",
+     "B": "Vous prendra la voiture pour aller à l'aéroport.",
+     "C": "Vous prendrez la voiture pour aller à l'aéroport.",
+     "D": "Vous prendrons la voiture pour aller à l'aéroport."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Will they (Masculine) not take their umbrellas?",
+   "options": {
+     "A": "Ils ne prendront pas leurs parapluies?",
+     "B": "Ils prendront ne pas leurs parapluies?",
+     "C": "Ils ne prendras pas leurs parapluies?",
+     "D": "Ils ne prendrez pas leurs parapluies?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Will they (Feminine) not take the highway?",
+   "options": {
+     "A": "Elles prendront ne pas l'autoroute?",
+     "B": "Elles ne prendront pas l'autoroute?",
+     "C": "Elles ne prendras pas l'autoroute?",
+     "D": "Elles ne prendrez pas l'autoroute?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We will take a vacation in August.",
+   "options": {
+     "A": "Nous prendra des vacances en août.",
+     "B": "Nous prendrez des vacances en août.",
+     "C": "Nous prendrons des vacances en août.",
+     "D": "Nous prendras des vacances en août."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (Masculine) will take the subway to the city center.",
+   "options": {
+     "A": "Ils prendras le métro pour aller au centre-ville.",
+     "B": "Ils prendra le métro pour aller au centre-ville.",
+     "C": "Ils prendrez le métro pour aller au centre-ville.",
+     "D": "Ils prendront le métro pour aller au centre-ville."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (Plural or Formal) will not take any shortcuts.",
+   "options": {
+     "A": "Vous prendrez ne pas de raccourcis.",
+     "B": "Vous ne prendras pas de raccourcis.",
+     "C": "Vous ne prendra pas de raccourcis.",
+     "D": "Vous ne prendrez pas de raccourcis."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (Feminine) will not take the advice seriously.",
+   "options": {
+     "A": "Elles prendront ne pas les conseils au sérieux.",
+     "B": "Elles ne prendras pas les conseils au sérieux.",
+     "C": "Elles ne prendront pas les conseils au sérieux.",
+     "D": "Elles ne prendrez pas les conseils au sérieux."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I will not take any sugar in my coffee.",
+   "options": {
+     "A": "Je ne prendrai pas de sucre dans mon café.",
+     "B": "Je prendrai ne pas de sucre dans mon café.",
+     "C": "Je ne prendras pas de sucre dans mon café.",
+     "D": "Je ne prendra pas de sucre dans mon café."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Will she take her bag with her?",
+   "options": {
+     "A": "Elle prendras son sac avec elle?",
+     "B": "Elle prendrons son sac avec elle?",
+     "C": "Elle prendra son sac avec elle?",
+     "D": "Elle prendrez son sac avec elle?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Will we take the correct route?",
+   "options": {
+     "A": "Nous prendra le bon chemin?",
+     "B": "Nous prendras le bon chemin?",
+     "C": "Nous prendrez le bon chemin?",
+     "D": "Nous prendrons le bon chemin?"
+   },
+   "correct_answer": "D"
+ }
+]
