@@ -1,0 +1,250 @@
+futur simple - parler
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "type": "question",
+   "prompt": "Will they (masc.) not speak to the director?",
+   "options": [
+     "Parleront-ils au directeur ?",
+     "Est-ce qu'ils ne parleront pas au directeur ?",
+     "Ils parleront au directeur ?",
+     "Parleront-ils pas au directeur ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 2,
+   "type": "statement",
+   "prompt": "Nous ______ français à la réunion demain. (We will speak French at the meeting tomorrow.)",
+   "options": [
+     "parlons",
+     "parlerons",
+     "parlera",
+     "parlez"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 3,
+   "type": "question",
+   "prompt": "Will she not speak with her parents?",
+   "options": [
+     "Ne parlera-t-elle pas avec ses parents ?",
+     "Elle parlera avec ses parents ?",
+     "Parlera-t-elle avec ses parents ?",
+     "Parlera-t-elle pas avec ses parents ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 4,
+   "type": "statement",
+   "prompt": "Tu ______ anglais en classe la semaine prochaine. (You will speak English in class next week.)",
+   "options": [
+     "parleras",
+     "parle",
+     "parlait",
+     "parlons"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 5,
+   "type": "question",
+   "prompt": "Will you (plural) not speak at the conference?",
+   "options": [
+     "Vous parlez à la conférence ?",
+     "Vous ne parlerez pas à la conférence ?",
+     "Est-ce que vous ne parlerez pas à la conférence ?",
+     "Parlez-vous à la conférence ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 6,
+   "type": "statement",
+   "prompt": "Je ______ toujours avec mon ami. (I will always speak with my friend.)",
+   "options": [
+     "parlerai",
+     "parleras",
+     "parlera",
+     "parlons"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 7,
+   "type": "question",
+   "prompt": "Won't we speak to the teacher?",
+   "options": [
+     "Nous parlerons au professeur ?",
+     "Nous ne parlerons pas au professeur ?",
+     "Est-ce que nous parlerons au professeur ?",
+     "Ne parlerons-nous pas au professeur ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 8,
+   "type": "statement",
+   "prompt": "Vous ______ de vos vacances à tout le monde. (You (pl.) will tell everyone about your holidays.)",
+   "options": [
+     "parlerez",
+     "parlera",
+     "parlais",
+     "parlait"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 9,
+   "type": "question",
+   "prompt": "Will I not speak too fast?",
+   "options": [
+     "Je parlerai trop vite ?",
+     "Est-ce que je ne parlerai pas trop vite ?",
+     "Parlerai-je trop vite ?",
+     "Je ne parlerai pas vite ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 10,
+   "type": "statement",
+   "prompt": "Elle ______ aux invités après le repas. (She will talk to the guests after the meal.)",
+   "options": [
+     "parlerai",
+     "parlais",
+     "parlera",
+     "parlez"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 11,
+   "type": "question",
+   "prompt": "Will they (fem.) not speak with the new student?",
+   "options": [
+     "Parleront-elles avec la nouvelle élève ?",
+     "Est-ce qu'elles parleront pas avec la nouvelle élève ?",
+     "Est-ce qu'elles ne parleront pas avec la nouvelle élève ?",
+     "Parleront-elles pas avec la nouvelle élève ?"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 12,
+   "type": "statement",
+   "prompt": "Les élèves ______ devant la classe. (The students will speak in front of the class.)",
+   "options": [
+     "parlerons",
+     "parlerai",
+     "parleront",
+     "parlera"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 13,
+   "type": "question",
+   "prompt": "Will you (singular) not speak during the meeting?",
+   "options": [
+     "Parleras-tu pendant la réunion ?",
+     "Parles-tu pendant la réunion ?",
+     "Est-ce que tu ne parleras pas pendant la réunion ?",
+     "Ne parleras-tu pas pendant la réunion ?"
+   ],
+   "answer": "D"
+ },
+ {
+   "id": 14,
+   "type": "statement",
+   "prompt": "Nous ______ rarement après minuit. (We will rarely speak after midnight.)",
+   "options": [
+     "parlez",
+     "parlerons",
+     "parlera",
+     "parlons"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 15,
+   "type": "question",
+   "prompt": "Won't you (formal) speak about your plans?",
+   "options": [
+     "Ne parlerez-vous pas de vos projets ?",
+     "Vous parlez de vos projets ?",
+     "Parlez-vous de vos projets ?",
+     "Vous parlerez de vos projets ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 16,
+   "type": "statement",
+   "prompt": "Ils ______ avec leurs collègues. (They (masc.) will speak with their colleagues.)",
+   "options": [
+     "parleront",
+     "parleras",
+     "parlera",
+     "parlerez"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 17,
+   "type": "question",
+   "prompt": "Will we not speak at the ceremony?",
+   "options": [
+     "Nous ne parlerons pas à la cérémonie ?",
+     "Nous parlerons à la cérémonie ?",
+     "Est-ce que nous ne parlerons pas à la cérémonie ?",
+     "Nous parlerons pas à la cérémonie ?"
+   ],
+   "answer": "C"
+ },
+ {
+   "id": 18,
+   "type": "statement",
+   "prompt": "Je ______ avec mes voisins demain. (I will speak with my neighbors tomorrow.)",
+   "options": [
+     "parlerai",
+     "parleras",
+     "parlera",
+     "parlons"
+   ],
+   "answer": "A"
+ },
+ {
+   "id": 19,
+   "type": "question",
+   "prompt": "Won't you (informal) speak with the teacher?",
+   "options": [
+     "Tu ne parleras pas avec le professeur ?",
+     "Est-ce que tu ne parleras pas avec le professeur ?",
+     "Parleras-tu avec le professeur ?",
+     "Parles-tu avec le professeur ?"
+   ],
+   "answer": "B"
+ },
+ {
+   "id": 20,
+   "type": "statement",
+   "prompt": "Elles ______ souvent de leurs voyages. (They (fem.) will often speak about their travels.)",
+   "options": [
+     "parle",
+     "parlons",
+     "parlez",
+     "parleront"
+   ],
+   "answer": "D"
+ }
+]

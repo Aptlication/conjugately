@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "type": "question",
+    "prompt": "Did they (masc.) not speak about the trip?",
+    "options": [
+      "Ont-ils parlé du voyage ?",
+      "Est-ce qu'ils n'ont pas parlé du voyage ?",
+      "Ont-ils pas parlé du voyage ?",
+      "Ils ont parlé du voyage ?"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 2,
+    "type": "statement",
+    "prompt": "Nous ______ avec le directeur hier. (We spoke with the director yesterday.)",
+    "options": [
+      "avons parlé",
+      "avons parlés",
+      "avions parlé",
+      "avez parlé"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 3,
+    "type": "question",
+    "prompt": "Did she not speak to her teacher?",
+    "options": [
+      "N'a-t-elle pas parlé à son professeur ?",
+      "Elle parlé avec son professeur ?",
+      "Elle n'a parlé pas à son professeur ?",
+      "A-t-elle parlé à son professeur ?"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 4,
+    "type": "statement",
+    "prompt": "Tu ______ de ce problème. (You (sing.) spoke about this problem.)",
+    "options": [
+      "as parlé",
+      "a parlé",
+      "avais parlé",
+      "parles"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 5,
+    "type": "question",
+    "prompt": "Didn't you (pl.) speak to your neighbors?",
+    "options": [
+      "Vous avez parlé à vos voisins ?",
+      "Avez-vous parlé à vos voisins ?",
+      "Est-ce que vous n'avez pas parlé à vos voisins ?",
+      "Vous parliez à vos voisins ?"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 6,
+    "type": "statement",
+    "prompt": "Je ______ avec ma sœur ce matin. (I spoke with my sister this morning.)",
+    "options": [
+      "ai parlé",
+      "avais parlé",
+      "as parlé",
+      "avais parlée"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 7,
+    "type": "question",
+    "prompt": "Didn’t we speak in English?",
+    "options": [
+      "Nous avons parlé en anglais ?",
+      "Avons-nous parlé anglais ?",
+      "Nous avons anglais parlé ?",
+      "N'avons-nous pas parlé anglais ?"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 8,
+    "type": "statement",
+    "prompt": "Vous ______ de votre voyage. (You (pl.) spoke about your trip.)",
+    "options": [
+      "avez parlé",
+      "avons parlé",
+      "avait parlé",
+      "avais parlé"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 9,
+    "type": "question",
+    "prompt": "Didn't I speak too fast?",
+    "options": [
+      "Ai-je parlé trop vite ?",
+      "Est-ce que je n'ai pas parlé trop vite ?",
+      "Je n'ai pas parlé vite ?",
+      "Tu as parlé trop vite ?"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 10,
+    "type": "statement",
+    "prompt": "Elle ______ au téléphone toute la soirée. (She spoke on the phone all evening.)",
+    "options": [
+      "avais parlé",
+      "ai parlé",
+      "avait parlé",
+      "a parlé"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 11,
+    "type": "question",
+    "prompt": "Did they (fem.) not speak with the principal?",
+    "options": [
+      "Est-ce qu'elles n'ont pas parlé avec le principal ?",
+      "Elles ont parlé avec le principal ?",
+      "A-t-elles parlé avec le principal ?",
+      "Elles avaient parlé avec le principal ?"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 12,
+    "type": "statement",
+    "prompt": "Les élèves ______ en classe lundi. (The students spoke in class on Monday.)",
+    "options": [
+      "parlé",
+      "ont parlé",
+      "avaient parlé",
+      "aient parlé"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 13,
+    "type": "question",
+    "prompt": "Didn’t you (sing.) speak to your grandmother?",
+    "options": [
+      "As-tu parlé à ta grand-mère ?",
+      "Tu as parlé à ta grand-mère ?",
+      "N'as-tu pas parlé à ta grand-mère ?",
+      "Parles-tu à ta grand-mère ?"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 14,
+    "type": "statement",
+    "prompt": "Nous ______ rarement au cinéma. (We rarely spoke at the movie theater.)",
+    "options": [
+      "avez parlé",
+      "avons parlé",
+      "avaient parlé",
+      "aviez parlé"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 15,
+    "type": "question",
+    "prompt": "Didn’t you (formal) speak during the meeting?",
+    "options": [
+      "N'avez-vous pas parlé pendant la réunion ?",
+      "Vous avez parlé pendant la réunion ?",
+      "Avez-vous parlé pendant la réunion ?",
+      "Aviez-vous parlé pendant la réunion ?"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 16,
+    "type": "statement",
+    "prompt": "Ils ______ ensemble après l'école. (They (masc.) spoke together after school.)",
+    "options": [
+      "ont parlé",
+      "avez parlé",
+      "avaient parlé",
+      "parlaient"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 17,
+    "type": "question",
+    "prompt": "Didn't we speak to the teacher?",
+    "options": [
+      "Est-ce que nous n'avons pas parlé au professeur ?",
+      "Nous avons parlé au professeur ?",
+      "N'avons-nous pas parlé au professeur ?",
+      "Nous n'avons pas parlé au professeur ?"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 18,
+    "type": "statement",
+    "prompt": "J'______ clairement pendant la discussion. (I spoke clearly during the discussion.)",
+    "options": [
+      "ai parlé",
+      "avais parlé",
+      "avait parlé",
+      "avais parlée"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 19,
+    "type": "question",
+    "prompt": "Didn’t you (informal) speak with your friends?",
+    "options": [
+      "Est-ce que tu n'as pas parlé avec tes amis ?",
+      "Tu as parlé avec tes amis ?",
+      "As-tu parlé avec tes amis ?",
+      "N'as-tu pas parlé avec tes amis ?"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 20,
+    "type": "statement",
+    "prompt": "Elles ______ souvent de leurs rêves. (They (fem.) often spoke about their dreams.)",
+    "options": [
+      "avais parlé",
+      "avaient parlé",
+      "ont parlé",
+      "ai parlé"
+    ],
+    "answer": "D"
+  }
+]
