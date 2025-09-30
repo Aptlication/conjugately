@@ -1660,6 +1660,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "parler": {
+    "present": [
+      {"question": "Don't they (masc.) speak French?", "options": ["Ils parlent français ?", "Est-ce qu'ils ne parlent pas français ?", "Ils ne parlent pas français ?", "Parlent-ils français ?"], "answer": "B"},
+      {"question": "We often speak in class.", "options": ["parlons", "parlez", "parle", "parlent"], "answer": "D"},
+      {"question": "Does she not speak loudly?", "options": ["Ne parle-t-elle pas fort ?", "Elle parle fort ?", "Elle ne parle pas fort ?", "Est-ce qu'elle parle fort ?"], "answer": "A"},
+      {"question": "You speak Italian at home.", "options": ["parlais", "parlons", "parles", "parle"], "answer": "C"},
+      {"question": "Don't you (plural) speak to your neighbors?", "options": ["Vous parlez à vos voisins ?", "Vous ne parlez pas à vos voisins ?", "Parlent-ils à leurs voisins ?", "Est-ce que vous ne parlez pas à vos voisins ?"], "answer": "C"},
+      {"question": "I often speak with my sister.", "options": ["parle", "parlais", "parlons", "parlez"], "answer": "B"},
+      {"question": "Don't we speak Spanish well?", "options": ["Nous parlons espagnol bien ?", "Nous ne parlons pas espagnol ?", "Ne parlons-nous pas bien espagnol ?", "Nous parlons bien espagnol ?"], "answer": "D"},
+      {"question": "You (pl.) speak French with your parents.", "options": ["parlez", "parlons", "parle", "parlait"], "answer": "A"},
+      {"question": "Don't I speak too much?", "options": ["Je parle trop ?", "Est-ce que je ne parle pas trop ?", "Je ne parle pas trop ?", "Je parle trop pas ?"], "answer": "B"},
+      {"question": "She speaks the truth to her friends.", "options": ["parle", "parlais", "parlons", "parlait"], "answer": "D"},
+      {"question": "Don't they (fem.) speak English?", "options": ["Est-ce qu'elles ne parlent pas anglais ?", "Elles parlent anglais ?", "Elles ne parlent pas anglais ?", "Parlent-elles anglais ?"], "answer": "A"},
+      {"question": "The students often speak in group.", "options": ["parlent", "parlez", "parlons", "parle"], "answer": "C"},
+      {"question": "Don't you (sing.) speak to your grandfather?", "options": ["Tu ne parles pas à ton grand-père ?", "Tu parles à ton grand-père ?", "Ne parles-tu pas à ton grand-père ?", "Parles-tu à ton grand-père ?"], "answer": "D"},
+      {"question": "We rarely speak during the movie.", "options": ["parlez", "parlons", "parle", "parlent"], "answer": "B"},
+      {"question": "Don't you (formal) speak about politics?", "options": ["Tu ne parle pas de politique ?", "Ne parlez-vous pas de politique ?", "Est-ce que vous ne parlez pas de politique ?", "Vous parlez de politique ?"], "answer": "C"},
+      {"question": "They (masc.) speak together every day.", "options": ["parlent", "parlons", "parlez", "parle"], "answer": "A"},
+      {"question": "Don't we speak to the teacher?", "options": ["Nous parle pas au professeur ?", "Nous ne parlons pas au professeur ?", "Ne parlons-nous pas au professeur ?", "Nous parlons au professeur ?"], "answer": "C"},
+      {"question": "I speak seriously during meetings.", "options": ["parle", "parlons", "parlez", "parlent"], "answer": "A"},
+      {"question": "Don't you (informal) speak with your friends?", "options": ["Est-ce que tu ne parles pas avec tes amis ?", "Tu parles avec tes amis ?", "Ne parlez-vous pas avec tes amis ?", "Tu parle avec tes amis ?"], "answer": "B"},
+      {"question": "They (fem.) often speak about their projects.", "options": ["parle", "parlons", "parlez", "parlent"], "answer": "D"}
+    ],
     "passé_composé": [
       {"question": "Did they (masc.) not speak about the trip?", "options": ["Ont-ils parlé du voyage ?", "Est-ce qu'ils n'ont pas parlé du voyage ?", "Ont-ils pas parlé du voyage ?", "Ils ont parlé du voyage ?"], "answer": "B"},
       {"question": "We spoke with the director yesterday.", "options": ["avons parlé", "avons parlés", "avions parlé", "avez parlé"], "answer": "D"},
