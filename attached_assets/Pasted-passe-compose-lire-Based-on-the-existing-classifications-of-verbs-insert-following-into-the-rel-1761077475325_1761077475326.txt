@@ -1,0 +1,231 @@
+passe compose - lire 
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not read the article.",
+   "options": {
+     "A": "Elles ont ne pas lu l'article.",
+     "B": "Elles n'ont pas lu l'article.",
+     "C": "Elles n'ont lu pas l'article.",
+     "D": "Elles n'avez pas lu l'article."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not read the book?",
+   "options": {
+     "A": "Il n'a pas lu le livre?",
+     "B": "Il a ne pas lu le livre?",
+     "C": "Il n'as pas lu le livre?",
+     "D": "Il n'a lu pas le livre?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I read the instructions correctly?",
+   "options": {
+     "A": "J'a lu les instructions correctement?",
+     "B": "J'ai lu les instructions correctement?",
+     "C": "Je suis lu les instructions correctement?",
+     "D": "J'as lu les instructions correctement?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not read the email?",
+   "options": {
+     "A": "Elle n'a pas lu le courriel?",
+     "B": "Elle a ne pas lu le courriel?",
+     "C": "Elle n'as pas lu le courriel?",
+     "D": "Elle n'a lu pas le courriel?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not read the message.",
+   "options": {
+     "A": "Tu a ne pas lu le message.",
+     "B": "Tu n'as pas lu le message.",
+     "C": "Tu n'a pas lu le message.",
+     "D": "Tu as ne pas lu le message."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He read the newspaper this morning.",
+   "options": {
+     "A": "Il a lis le journal ce matin.",
+     "B": "Il est lu le journal ce matin.",
+     "C": "Il as lu le journal ce matin.",
+     "D": "Il a lu le journal ce matin."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I read that novel last year?",
+   "options": {
+     "A": "J'ai lu ce roman l'année dernière?",
+     "B": "Je suis lu ce roman l'année dernière?",
+     "C": "J'as lu ce roman l'année dernière?",
+     "D": "J'a lu ce roman l'année dernière?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not read the report?",
+   "options": {
+     "A": "Vous avez ne pas lu le rapport?",
+     "B": "Vous n'avons pas lu le rapport?",
+     "C": "Vous n'avez pas lu le rapport?",
+     "D": "Vous n'avez lu pas le rapport?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We read the menu carefully.",
+   "options": {
+     "A": "Nous avez lu le menu attentivement.",
+     "B": "Nous avons lu le menu attentivement.",
+     "C": "Nous sommes lu le menu attentivement.",
+     "D": "Nous a lu le menu attentivement."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) read the contract?",
+   "options": {
+     "A": "Ils a lu le contrat?",
+     "B": "Ils sont lu le contrat?",
+     "C": "Ils avez lu le contrat?",
+     "D": "Ils ont lu le contrat?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) read all the chapters.",
+   "options": {
+     "A": "Vous avons lu tous les chapitres.",
+     "B": "Vous ont lu tous les chapitres.",
+     "C": "Vous avez lu tous les chapitres.",
+     "D": "Vous êtes lu tous les chapitres."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not read the signs?",
+   "options": {
+     "A": "Ils n'ont pas lu les panneaux?",
+     "B": "Ils ont ne pas lu les panneaux?",
+     "C": "Ils n'avez pas lu les panneaux?",
+     "D": "Ils n'ont lu pas les panneaux?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not read the labels?",
+   "options": {
+     "A": "Elles ont ne pas lu les étiquettes?",
+     "B": "Elles n'ont pas lu les étiquettes?",
+     "C": "Elles n'avez pas lu les étiquettes?",
+     "D": "Elles n'ont lu pas les étiquettes?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We read the same article yesterday.",
+   "options": {
+     "A": "Nous ont lu le même article hier.",
+     "B": "Nous sommes lu le même article hier.",
+     "C": "Nous avons lu le même article hier.",
+     "D": "Nous avez lu le même article hier."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) read the entire book in one day.",
+   "options": {
+     "A": "Ils avez lu le livre entier en un jour.",
+     "B": "Ils sont lu le livre entier en un jour.",
+     "C": "Ils a lu le livre entier en un jour.",
+     "D": "Ils ont lu le livre entier en un jour."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not read the announcement.",
+   "options": {
+     "A": "Vous avez ne pas lu l'annonce.",
+     "B": "Vous n'avons pas lu l'annonce.",
+     "C": "Vous avez pas lu l'annonce.",
+     "D": "Vous n'avez pas lu l'annonce."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not read the reviews.",
+   "options": {
+     "A": "Elles ont ne pas lu les critiques.",
+     "B": "Elles n'avez pas lu les critiques.",
+     "C": "Elles n'ont pas lu les critiques.",
+     "D": "Elles n'ont lu pas les critiques."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not read the biography.",
+   "options": {
+     "A": "Je n'ai pas lu la biographie.",
+     "B": "J'ai ne pas lu la biographie.",
+     "C": "Je n'as pas lu la biographie.",
+     "D": "J'a pas lu la biographie."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she read the magazine?",
+   "options": {
+     "A": "Elle as lu le magazine?",
+     "B": "Elle est lu le magazine?",
+     "C": "Elle a lu le magazine?",
+     "D": "Elle avons lu le magazine?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we read the right page?",
+   "options": {
+     "A": "Nous a lu la bonne page?",
+     "B": "Nous sommes lu la bonne page?",
+     "C": "Nous avez lu la bonne page?",
+     "D": "Nous avons lu la bonne page?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 11 verbs × 4 tenses × 20 questions = 880 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, savoir, venir
+// 12 verbs × 4 tenses × 20 questions = 960 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -988,6 +988,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Didn't we know the news? (Imparfait)", "options": ["Ne savions-nous pas la nouvelle ?", "Ne saviez-vous pas la nouvelle ?", "Ne savaient-ils pas la nouvelle ?", "Ne savais-je pas la nouvelle ?"], "answer": "A"},
       {"question": "Didn't they know the rules? (female) (Imparfait)", "options": ["Ne savaient-elles pas les règles ?", "Ne savaient-ils pas les règles ?", "Ne saviez-vous pas les règles ?", "Ne savions-nous pas les règles ?"], "answer": "A"}
     ]
+  },
+
+  "lire": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not read the newspaper tomorrow.", "options": ["Elles liront ne pas le journal demain.", "Elles ne liront pas le journal demain.", "Elles ne liras pas le journal demain.", "Elles liront pas le journal demain."], "answer": "B"},
+      {"question": "Will he not read the contract?", "options": ["Il ne lira pas le contrat?", "Il lira ne pas le contrat?", "Il ne liras pas le contrat?", "Il ne lirai pas le contrat?"], "answer": "A"},
+      {"question": "Will I read that book next month?", "options": ["Je liras ce livre le mois prochain?", "Je lirai ce livre le mois prochain?", "Je lira ce livre le mois prochain?", "Je lirons ce livre le mois prochain?"], "answer": "B"},
+      {"question": "Will she not read the instructions?", "options": ["Elle ne lira pas les instructions?", "Elle lira ne pas les instructions?", "Elle ne liras pas les instructions?", "Elle ne lirai pas les instructions?"], "answer": "A"},
+      {"question": "You (inf.) will not read the email today.", "options": ["Tu ne lira pas le courriel aujourd'hui.", "Tu ne liras pas le courriel aujourd'hui.", "Tu liras ne pas le courriel aujourd'hui.", "Tu ne lirai pas le courriel aujourd'hui."], "answer": "B"},
+      {"question": "He will read the report this afternoon.", "options": ["Il liras le rapport cet après-midi.", "Il lirai le rapport cet après-midi.", "Il lirons le rapport cet après-midi.", "Il lira le rapport cet après-midi."], "answer": "D"},
+      {"question": "Will I read the entire novel?", "options": ["Je lirai le roman entier?", "Je liras le roman entier?", "Je lira le roman entier?", "Je lirons le roman entier?"], "answer": "A"},
+      {"question": "Will you (pl.) not read the labels?", "options": ["Vous lirez ne pas les étiquettes?", "Vous ne liras pas les étiquettes?", "Vous ne lirez pas les étiquettes?", "Vous ne lirai pas les étiquettes?"], "answer": "C"},
+      {"question": "We will read the menu carefully.", "options": ["Nous liras le menu attentivement.", "Nous lirons le menu attentivement.", "Nous lira le menu attentivement.", "Nous lirai le menu attentivement."], "answer": "B"},
+      {"question": "Will they (m.) read the article?", "options": ["Ils liras l'article?", "Ils lira l'article?", "Ils lirez l'article?", "Ils liront l'article?"], "answer": "D"},
+      {"question": "You (form.) will read all the chapters.", "options": ["Vous liras tous les chapitres.", "Vous lira tous les chapitres.", "Vous lirez tous les chapitres.", "Vous lirons tous les chapitres."], "answer": "C"},
+      {"question": "Will they (m.) not read the signs?", "options": ["Ils ne liront pas les panneaux?", "Ils liront ne pas les panneaux?", "Ils ne liras pas les panneaux?", "Ils ne lirez pas les panneaux?"], "answer": "A"},
+      {"question": "Will they (f.) not read the reviews?", "options": ["Elles liront ne pas les critiques?", "Elles ne liront pas les critiques?", "Elles ne liras pas les critiques?", "Elles ne lirez pas les critiques?"], "answer": "B"},
+      {"question": "We will read the same magazine.", "options": ["Nous lira le même magazine.", "Nous lirez le même magazine.", "Nous lirons le même magazine.", "Nous liras le même magazine."], "answer": "C"},
+      {"question": "They (m.) will read poetry in class.", "options": ["Ils liras de la poésie en classe.", "Ils lira de la poésie en classe.", "Ils lirez de la poésie en classe.", "Ils liront de la poésie en classe."], "answer": "D"},
+      {"question": "You (pl.) will not read the announcement.", "options": ["Vous lirez ne pas l'annonce.", "Vous ne liras pas l'annonce.", "Vous ne lira pas l'annonce.", "Vous ne lirez pas l'annonce."], "answer": "D"},
+      {"question": "They (f.) will not read comic books.", "options": ["Elles liront ne pas de bandes dessinées.", "Elles ne liras pas de bandes dessinées.", "Elles ne liront pas de bandes dessinées.", "Elles ne lirez pas de bandes dessinées."], "answer": "C"},
+      {"question": "I will not read horror novels.", "options": ["Je ne lirai pas de romans d'horreur.", "Je lirai ne pas de romans d'horreur.", "Je ne liras pas de romans d'horreur.", "Je ne lira pas de romans d'horreur."], "answer": "A"},
+      {"question": "Will she read the biography?", "options": ["Elle liras la biographie?", "Elle lirons la biographie?", "Elle lira la biographie?", "Elle lirez la biographie?"], "answer": "C"},
+      {"question": "Will we read the news tonight?", "options": ["Nous lira les nouvelles ce soir?", "Nous liras les nouvelles ce soir?", "Nous lirez les nouvelles ce soir?", "Nous lirons les nouvelles ce soir?"], "answer": "D"}
+    ],
+    "imparfait": []
   },
   
   "s'intéresser": {
