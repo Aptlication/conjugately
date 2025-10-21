@@ -1271,7 +1271,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "perdre": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not lose their keys.", "options": ["Elles perd ne pas leurs clés.", "Elles ne perdent pas leurs clés.", "Elles ne perd pas leurs clés.", "Elles perdent ne pas leurs clés."], "answer": "B"},
+      {"question": "Does he not lose his wallet?", "options": ["Il ne perd pas son portefeuille?", "Il perd ne pas son portefeuille?", "Il ne perds pas son portefeuille?", "Il perd pas son portefeuille?"], "answer": "A"},
+      {"question": "Do I lose my glasses often?", "options": ["Je perd mes lunettes souvent?", "Je perds mes lunettes souvent?", "Je perdons mes lunettes souvent?", "Je perdez mes lunettes souvent?"], "answer": "B"},
+      {"question": "Does she not lose hope?", "options": ["Elle ne perd pas espoir?", "Elle perd ne pas espoir?", "Elle ne perds pas espoir?", "Elle perd pas espoir?"], "answer": "A"},
+      {"question": "You (inf.) do not lose patience easily.", "options": ["Tu perd ne pas patience facilement.", "Tu ne perds pas patience facilement.", "Tu ne perd pas patience facilement.", "Tu perds ne pas patience facilement."], "answer": "B"},
+      {"question": "He loses his pen every day.", "options": ["Il perds son stylo tous les jours.", "Il perdons son stylo tous les jours.", "Il perdez son stylo tous les jours.", "Il perd son stylo tous les jours."], "answer": "D"},
+      {"question": "Do I lose my way sometimes?", "options": ["Je perds mon chemin parfois?", "Je perd mon chemin parfois?", "Je perdons mon chemin parfois?", "Je perdez mon chemin parfois?"], "answer": "A"},
+      {"question": "Do you (pl.) not lose your tickets?", "options": ["Vous perdez ne pas vos billets?", "Vous ne perd pas vos billets?", "Vous ne perdez pas vos billets?", "Vous perdez pas vos billets?"], "answer": "C"},
+      {"question": "We lose motivation in winter.", "options": ["Nous perd motivation en hiver.", "Nous perdez motivation en hiver.", "Nous perdons motivation en hiver.", "Nous perdent motivation en hiver."], "answer": "D"},
+      {"question": "Do they (m.) lose money sometimes?", "options": ["Ils perd argent parfois?", "Ils perdez argent parfois?", "Ils perdons argent parfois?", "Ils perdent argent parfois?"], "answer": "D"},
+      {"question": "You (form.) lose your password often.", "options": ["Vous perd votre mot de passe souvent.", "Vous perdons votre mot de passe souvent.", "Vous perdez votre mot de passe souvent.", "Vous perdent votre mot de passe souvent."], "answer": "C"},
+      {"question": "Do they (m.) not lose their friends?", "options": ["Ils ne perdent pas leurs amis?", "Ils perdent ne pas leurs amis?", "Ils ne perd pas leurs amis?", "Ils perdez pas leurs amis?"], "answer": "A"},
+      {"question": "Do they (f.) not lose time in traffic?", "options": ["Elles perdent ne pas de temps dans les embouteillages?", "Elles ne perdent pas de temps dans les embouteillages?", "Elles ne perd pas de temps dans les embouteillages?", "Elles perdez pas de temps dans les embouteillages?"], "answer": "B"},
+      {"question": "We lose interest quickly.", "options": ["Nous perd intérêt vite.", "Nous perdez intérêt vite.", "Nous perdons intérêt vite.", "Nous perdent intérêt vite."], "answer": "C"},
+      {"question": "They (m.) lose their way after dark.", "options": ["Ils perdent leur chemin après la nuit.", "Ils perdez leur chemin après la nuit.", "Ils perdons leur chemin après la nuit.", "Ils perdent leur chemin après la nuit."], "answer": "D"},
+      {"question": "You (pl.) do not lose money.", "options": ["Vous perdez ne pas d'argent.", "Vous ne perd pas d'argent.", "Vous ne perdons pas d'argent.", "Vous ne perdez pas d'argent."], "answer": "D"},
+      {"question": "They (f.) do not lose faith.", "options": ["Elles perdent ne pas la foi.", "Elles ne perd pas la foi.", "Elles ne perdent pas la foi.", "Elles perdez pas la foi."], "answer": "C"},
+      {"question": "I do not lose hope.", "options": ["Je ne perds pas espoir.", "Je perds ne pas espoir.", "Je ne perd pas espoir.", "Je perds pas espoir."], "answer": "A"},
+      {"question": "Does she lose her umbrella often?", "options": ["Elle perds son parapluie souvent?", "Elle perdons son parapluie souvent?", "Elle perd son parapluie souvent?", "Elle perdez son parapluie souvent?"], "answer": "C"},
+      {"question": "Do we lose the key every year?", "options": ["Nous perd la clé chaque année?", "Nous perdons la clé chaque année?", "Nous perdez la clé chaque année?", "Nous perdent la clé chaque année?"], "answer": "B"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not lose their keys.", "options": ["Elles a perdu ne pas leurs clés.", "Elles n'ont pas perdu leurs clés.", "Elles n'a perdu pas leurs clés.", "Elles ont perdu pas leurs clés."], "answer": "B"},
       {"question": "Did he not lose his wallet?", "options": ["Il n'a pas perdu son portefeuille?", "Il a ne pas perdu son portefeuille?", "Il n'as pas perdu son portefeuille?", "Il a perdu pas son portefeuille?"], "answer": "A"},

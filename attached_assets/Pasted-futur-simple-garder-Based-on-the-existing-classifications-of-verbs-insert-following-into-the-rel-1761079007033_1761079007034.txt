@@ -1,0 +1,231 @@
+futur simple - garder
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) will not keep quiet during the meeting.",
+   "options": {
+     "A": "Elles gardera ne pas le silence pendant la réunion.",
+     "B": "Elles ne garderont pas le silence pendant la réunion.",
+     "C": "Elles ne gardera pas le silence pendant la réunion.",
+     "D": "Elles garderont pas le silence pendant la réunion."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Will he not keep his promises?",
+   "options": {
+     "A": "Il ne gardera pas ses promesses?",
+     "B": "Il gardera ne pas ses promesses?",
+     "C": "Il ne garderas pas ses promesses?",
+     "D": "Il gardera pas ses promesses?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Will I keep all my notes?",
+   "options": {
+     "A": "Je gardera toutes mes notes?",
+     "B": "Je garderai toutes mes notes?",
+     "C": "Je garderons toutes mes notes?",
+     "D": "Je garderez toutes mes notes?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Will she not keep in touch with her friends?",
+   "options": {
+     "A": "Elle ne gardera pas le contact avec ses amis?",
+     "B": "Elle gardera ne pas le contact avec ses amis?",
+     "C": "Elle ne garderas pas le contact avec ses amis?",
+     "D": "Elle gardera pas le contact avec ses amis?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) will not keep the secret.",
+   "options": {
+     "A": "Tu garderas ne pas le secret.",
+     "B": "Tu ne garderas pas le secret.",
+     "C": "Tu ne gardera pas le secret.",
+     "D": "Tu gardera pas le secret."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He will keep his documents organized.",
+   "options": {
+     "A": "Il garderas ses documents organisés.",
+     "B": "Il garderont ses documents organisés.",
+     "C": "Il garderai ses documents organisés.",
+     "D": "Il gardera ses documents organisés."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Will I keep my door open?",
+   "options": {
+     "A": "Je garderai ma porte ouverte?",
+     "B": "Je garderas ma porte ouverte?",
+     "C": "Je garderons ma porte ouverte?",
+     "D": "Je garderez ma porte ouverte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Will you (pl.) not keep old files?",
+   "options": {
+     "A": "Vous garderez ne pas de vieux fichiers?",
+     "B": "Vous ne garderas pas de vieux fichiers?",
+     "C": "Vous ne garderez pas de vieux fichiers?",
+     "D": "Vous ne gardera pas de vieux fichiers?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We will keep our workspace clean.",
+   "options": {
+     "A": "Nous gardera notre espace de travail propre.",
+     "B": "Nous garderons notre espace de travail propre.",
+     "C": "Nous garderez notre espace de travail propre.",
+     "D": "Nous garderas notre espace de travail propre."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Will they (m.) keep their shoes by the door?",
+   "options": {
+     "A": "Ils garderas leurs chaussures près de la porte?",
+     "B": "Ils gardera leurs chaussures près de la porte?",
+     "C": "Ils garderez leurs chaussures près de la porte?",
+     "D": "Ils garderont leurs chaussures près de la porte?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) will keep all receipts.",
+   "options": {
+     "A": "Vous garderas tous les reçus.",
+     "B": "Vous gardera tous les reçus.",
+     "C": "Vous garderez tous les reçus.",
+     "D": "Vous garderont tous les reçus."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Will they (m.) not keep any pets?",
+   "options": {
+     "A": "Ils ne garderont pas d'animaux?",
+     "B": "Ils garderont ne pas d'animaux?",
+     "C": "Ils ne garderas pas d'animaux?",
+     "D": "Ils ne garderez pas d'animaux?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Will they (f.) not keep their old clothes?",
+   "options": {
+     "A": "Elles garderont ne pas leurs vieux vêtements?",
+     "B": "Elles ne garderont pas leurs vieux vêtements?",
+     "C": "Elles ne garderas pas leurs vieux vêtements?",
+     "D": "Elles ne garderez pas leurs vieux vêtements?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We will keep the same habits next year.",
+   "options": {
+     "A": "Nous gardera les mêmes habitudes l'année prochaine.",
+     "B": "Nous garderez les mêmes habitudes l'année prochaine.",
+     "C": "Nous garderons les mêmes habitudes l'année prochaine.",
+     "D": "Nous garderas les mêmes habitudes l'année prochaine."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) will keep their word.",
+   "options": {
+     "A": "Ils garderas leur parole.",
+     "B": "Ils garderaient leur parole.",
+     "C": "Ils gardera leur parole.",
+     "D": "Ils garderont leur parole."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) will not keep the light on.",
+   "options": {
+     "A": "Vous garderez ne pas la lumière allumée.",
+     "B": "Vous ne garderas pas la lumière allumée.",
+     "C": "Vous ne gardera pas la lumière allumée.",
+     "D": "Vous ne garderez pas la lumière allumée."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) will not keep food in their rooms.",
+   "options": {
+     "A": "Elles garderont ne pas de nourriture dans leurs chambres.",
+     "B": "Elles ne garderas pas de nourriture dans leurs chambres.",
+     "C": "Elles ne garderont pas de nourriture dans leurs chambres.",
+     "D": "Elles ne garderez pas de nourriture dans leurs chambres."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I will not keep any receipts.",
+   "options": {
+     "A": "Je ne garderai aucun reçu.",
+     "B": "Je garderai ne pas aucun reçu.",
+     "C": "Je ne garderas aucun reçu.",
+     "D": "Je ne gardera aucun reçu."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Will she keep her tickets?",
+   "options": {
+     "A": "Elle garderas ses billets?",
+     "B": "Elle garderons ses billets?",
+     "C": "Elle gardera ses billets?",
+     "D": "Elle garderez ses billets?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Will we keep our promises?",
+   "options": {
+     "A": "Nous gardera nos promesses?",
+     "B": "Nous garderas nos promesses?",
+     "C": "Nous garderez nos promesses?",
+     "D": "Nous garderons nos promesses?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
