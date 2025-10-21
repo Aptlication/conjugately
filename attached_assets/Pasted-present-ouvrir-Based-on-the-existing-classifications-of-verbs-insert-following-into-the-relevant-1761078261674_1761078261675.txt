@@ -1,0 +1,231 @@
+present - ouvrir
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) do not open the doors.",
+   "options": {
+     "A": "Elles ouvre ne pas les portes.",
+     "B": "Elles n'ouvrent pas les portes.",
+     "C": "Elles n'ouvre pas les portes.",
+     "D": "Elles ouvrent ne pas les portes."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Does he not open the window?",
+   "options": {
+     "A": "Il n'ouvre pas la fenêtre?",
+     "B": "Il ouvre ne pas la fenêtre?",
+     "C": "Il n'ouvres pas la fenêtre?",
+     "D": "Il ouvre pas la fenêtre?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Do I open the door every morning?",
+   "options": {
+     "A": "Je ouvre la porte chaque matin?",
+     "B": "J'ouvre la porte chaque matin?",
+     "C": "Je ouvrons la porte chaque matin?",
+     "D": "Je ouvrez la porte chaque matin?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Does she not open the book?",
+   "options": {
+     "A": "Elle n'ouvre pas le livre?",
+     "B": "Elle ouvre ne pas le livre?",
+     "C": "Elle n'ouvres pas le livre?",
+     "D": "Elle ouvre pas le livre?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) do not open your bag.",
+   "options": {
+     "A": "Tu ouvre ne pas ton sac.",
+     "B": "Tu n'ouvres pas ton sac.",
+     "C": "Tu n'ouvre pas ton sac.",
+     "D": "Tu ouvres ne pas ton sac."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He opens the box quickly.",
+   "options": {
+     "A": "Il ouvres la boîte rapidement.",
+     "B": "Il ouvrons la boîte rapidement.",
+     "C": "Il ouvrez la boîte rapidement.",
+     "D": "Il ouvre la boîte rapidement."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I open the gifts on my birthday?",
+   "options": {
+     "A": "J'ouvre les cadeaux le jour de mon anniversaire?",
+     "B": "Je ouvre les cadeaux le jour de mon anniversaire?",
+     "C": "Je ouvrons les cadeaux le jour de mon anniversaire?",
+     "D": "Je ouvrez les cadeaux le jour de mon anniversaire?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Do you (pl.) not open the windows in summer?",
+   "options": {
+     "A": "Vous ouvrez ne pas les fenêtres en été?",
+     "B": "Vous ne ouvrez pas les fenêtres en été?",
+     "C": "Vous n'ouvrez pas les fenêtres en été?",
+     "D": "Vous ouvrez pas les fenêtres en été?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We open the store at 9 a.m.",
+   "options": {
+     "A": "Nous ouvre le magasin à neuf heures.",
+     "B": "Nous ouvrons le magasin à neuf heures.",
+     "C": "Nous ouvrez le magasin à neuf heures.",
+     "D": "Nous ouvrent le magasin à neuf heures."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Do they (m.) open the gift?",
+   "options": {
+     "A": "Ils ouvre le cadeau?",
+     "B": "Ils ouvrez le cadeau?",
+     "C": "Ils ouvrons le cadeau?",
+     "D": "Ils ouvrent le cadeau?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) open the files every morning.",
+   "options": {
+     "A": "Vous ouvre les dossiers chaque matin.",
+     "B": "Vous ouvrons les dossiers chaque matin.",
+     "C": "Vous ouvrez les dossiers chaque matin.",
+     "D": "Vous ouvrent les dossiers chaque matin."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Do they (m.) not open the door?",
+   "options": {
+     "A": "Ils n'ouvrent pas la porte?",
+     "B": "Ils ouvrent ne pas la porte?",
+     "C": "Ils n'ouvre pas la porte?",
+     "D": "Ils ouvre pas la porte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Do they (f.) not open the envelope?",
+   "options": {
+     "A": "Elles ouvrent ne pas l'enveloppe?",
+     "B": "Elles n'ouvrent pas l'enveloppe?",
+     "C": "Elles n'ouvre pas l'enveloppe?",
+     "D": "Elles ouvrez pas l'enveloppe?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We open the same book.",
+   "options": {
+     "A": "Nous ouvre le même livre.",
+     "B": "Nous ouvrez le même livre.",
+     "C": "Nous ouvrons le même livre.",
+     "D": "Nous ouvrent le même livre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) open the boxes during class.",
+   "options": {
+     "A": "Ils ouvre les boîtes pendant la classe.",
+     "B": "Ils ouvrez les boîtes pendant la classe.",
+     "C": "Ils ouvrons les boîtes pendant la classe.",
+     "D": "Ils ouvrent les boîtes pendant la classe."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) do not open the door in winter.",
+   "options": {
+     "A": "Vous ouvrez ne pas la porte en hiver.",
+     "B": "Vous ne ouvrez pas la porte en hiver.",
+     "C": "Vous ne ouvrons pas la porte en hiver.",
+     "D": "Vous n'ouvrez pas la porte en hiver."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) do not open the gifts.",
+   "options": {
+     "A": "Elles ouvrent ne pas les cadeaux.",
+     "B": "Elles n'ouvre pas les cadeaux.",
+     "C": "Elles n'ouvrent pas les cadeaux.",
+     "D": "Elles n'ouvrez pas les cadeaux."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I do not open the windows at night.",
+   "options": {
+     "A": "Je n'ouvre pas les fenêtres la nuit.",
+     "B": "J'ouvre ne pas les fenêtres la nuit.",
+     "C": "Je n'ouvres pas les fenêtres la nuit.",
+     "D": "J'ouvre pas les fenêtres la nuit."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Does she open the gifts quickly?",
+   "options": {
+     "A": "Elle ouvre les cadeaux rapidement?",
+     "B": "Elle ouvre les cadeaux vite?",
+     "C": "Elle ouvre les cadeaux tout de suite?",
+     "D": "Elle ouvre les cadeaux lentement?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Do we open the window after lunch?",
+   "options": {
+     "A": "Nous ouvre la fenêtre après le déjeuner?",
+     "B": "Nous ouvrons la fenêtre après le déjeuner?",
+     "C": "Nous ouvrez la fenêtre après le déjeuner?",
+     "D": "Nous ouvrent la fenêtre après le déjeuner?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

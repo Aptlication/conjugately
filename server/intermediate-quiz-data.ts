@@ -1132,7 +1132,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "ouvrir": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not open the doors.", "options": ["Elles a ouvert ne pas les portes.", "Elles n'ont pas ouvert les portes.", "Elles n'a ouvert pas les portes.", "Elles ont ouvert pas les portes."], "answer": "B"},
+      {"question": "Did he not open the window?", "options": ["Il n'a pas ouvert la fenêtre?", "Il a ne pas ouvert la fenêtre?", "Il n'as pas ouvert la fenêtre?", "Il a ouvert pas la fenêtre?"], "answer": "A"},
+      {"question": "Did I open the door in the morning?", "options": ["Je a ouvert la porte le matin?", "J'ai ouvert la porte le matin?", "Je suis ouvert la porte le matin?", "J'as ouvert la porte le matin?"], "answer": "B"},
+      {"question": "Did she not open the book?", "options": ["Elle n'a pas ouvert le livre?", "Elle a ne pas ouvert le livre?", "Elle n'as pas ouvert le livre?", "Elle a ouvert pas le livre?"], "answer": "A"},
+      {"question": "You (inf.) did not open your bag.", "options": ["Tu a ouvert ne pas ton sac.", "Tu n'as pas ouvert ton sac.", "Tu n'a ouvert pas ton sac.", "Tu as ouvert pas ton sac."], "answer": "B"},
+      {"question": "He opened the box quickly.", "options": ["Il a ouvert la boîte rapidement.", "Il a ouvris la boîte rapidement.", "Il a ouvrez la boîte rapidement.", "Il a ouvert la boîte rapidement."], "answer": "D"},
+      {"question": "Did I open the gifts on my birthday?", "options": ["J'ai ouvert les cadeaux le jour de mon anniversaire?", "Je a ouvert les cadeaux le jour de mon anniversaire?", "Je suis ouvert les cadeaux le jour de mon anniversaire?", "J'as ouvert les cadeaux le jour de mon anniversaire?"], "answer": "A"},
+      {"question": "Did you (pl.) not open the windows in summer?", "options": ["Vous avez ouvert ne pas les fenêtres en été?", "Vous n'avons pas ouvert les fenêtres en été?", "Vous n'avez pas ouvert les fenêtres en été?", "Vous avez ouvert pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We opened the store at 9 a.m.", "options": ["Nous a ouvert le magasin à neuf heures.", "Nous avons ouvert le magasin à neuf heures.", "Nous sommes ouvert le magasin à neuf heures.", "Nous avez ouvert le magasin à neuf heures."], "answer": "B"},
+      {"question": "Did they (m.) open the gift?", "options": ["Ils a ouvert le cadeau?", "Ils sont ouvert le cadeau?", "Ils avez ouvert le cadeau?", "Ils ont ouvert le cadeau?"], "answer": "D"},
+      {"question": "You (form.) opened the files every morning.", "options": ["Vous avons ouvert les dossiers chaque matin.", "Vous ont ouvert les dossiers chaque matin.", "Vous avez ouvert les dossiers chaque matin.", "Vous êtes ouvert les dossiers chaque matin."], "answer": "C"},
+      {"question": "Did they (m.) not open the door?", "options": ["Ils n'ont pas ouvert la porte?", "Ils ont ne pas ouvert la porte?", "Ils n'avez pas ouvert la porte?", "Ils ont ouvert pas la porte?"], "answer": "A"},
+      {"question": "Did they (f.) not open the envelope?", "options": ["Elles ont ouvert ne pas l'enveloppe?", "Elles n'ont pas ouvert l'enveloppe.", "Elles n'avez pas ouvert l'enveloppe?", "Elles ont ouvert pas l'enveloppe."], "answer": "B"},
+      {"question": "We opened the same book.", "options": ["Nous a ouvert le même livre.", "Nous avons ouvert le même livre.", "Nous sommes ouvert le même livre.", "Nous avez ouvert le même livre."], "answer": "C"},
+      {"question": "They (m.) opened the boxes during class.", "options": ["Ils avez ouvert les boîtes pendant la classe.", "Ils sont ouvert les boîtes pendant la classe.", "Ils a ouvert les boîtes pendant la classe.", "Ils ont ouvert les boîtes pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) did not open the door in winter.", "options": ["Vous avez ouvert ne pas la porte en hiver.", "Vous n'avons pas ouvert la porte en hiver.", "Vous avez pas ouvert la porte en hiver.", "Vous n'avez pas ouvert la porte en hiver."], "answer": "D"},
+      {"question": "They (f.) did not open the gifts.", "options": ["Elles ont ouvert ne pas les cadeaux.", "Elles n'a ouvert pas les cadeaux.", "Elles n'ont pas ouvert les cadeaux.", "Elles ont ouvert pas les cadeaux."], "answer": "C"},
+      {"question": "I did not open the windows at night.", "options": ["Je n'ai pas ouvert les fenêtres la nuit.", "J'ai ouvert ne pas les fenêtres la nuit.", "Je n'as pas ouvert les fenêtres la nuit.", "J'ai ouvert pas les fenêtres la nuit."], "answer": "A"},
+      {"question": "Did she open the gifts quickly?", "options": ["Elle a ouvert les cadeaux rapidement?", "Elle a ouvert les cadeaux vite?", "Elle a ouvert les cadeaux tout de suite?", "Elle a ouvert les cadeaux lentement?"], "answer": "C"},
+      {"question": "Did we open the window after lunch?", "options": ["Nous a ouvert la fenêtre après le déjeuner?", "Nous avons ouvert la fenêtre après le déjeuner?", "Nous sommes ouvert la fenêtre après le déjeuner?", "Nous avez ouvert la fenêtre après le déjeuner."], "answer": "D"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not open the doors.", "options": ["Elles ouvrira ne pas les portes.", "Elles n'ouvriront pas les portes.", "Elles n'ouvrira pas les portes.", "Elles ouvriront pas les portes."], "answer": "B"},
       {"question": "Will he not open the window?", "options": ["Il n'ouvrira pas la fenêtre?", "Il ouvrira ne pas la fenêtre?", "Il n'ouvriras pas la fenêtre?", "Il ouvrira pas la fenêtre?"], "answer": "A"},
