@@ -991,7 +991,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "lire": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not read the newspaper.", "options": ["Elles lit ne pas le journal.", "Elles ne lisent pas le journal.", "Elles ne lit pas le journal.", "Elles lisent ne pas le journal."], "answer": "B"},
+      {"question": "Does he not read books?", "options": ["Il ne lit pas de livres?", "Il lit ne pas de livres?", "Il ne lis pas de livres?", "Il lit pas de livres?"], "answer": "A"},
+      {"question": "Do I read the newspaper every morning?", "options": ["Je lit le journal tous les matins?", "Je lis le journal tous les matins?", "Je lisons le journal tous les matins?", "Je lisez le journal tous les matins?"], "answer": "B"},
+      {"question": "Does she not read magazines?", "options": ["Elle ne lit pas de magazines?", "Elle lit ne pas de magazines?", "Elle ne lis pas de magazines?", "Elle lit pas de magazines?"], "answer": "A"},
+      {"question": "You (inf.) do not read the instructions.", "options": ["Tu ne lit pas les instructions.", "Tu ne lis pas les instructions.", "Tu lis ne pas les instructions.", "Tu lis pas les instructions."], "answer": "B"},
+      {"question": "He reads novels in French.", "options": ["Il lis des romans en français.", "Il lisons des romans en français.", "Il lisez des romans en français.", "Il lit des romans en français."], "answer": "D"},
+      {"question": "Do I read too fast?", "options": ["Je lis trop vite?", "Je lit trop vite?", "Je lisons trop vite?", "Je lisez trop vite?"], "answer": "A"},
+      {"question": "Do you (pl.) not read the signs?", "options": ["Vous lisez ne pas les panneaux?", "Vous ne lis pas les panneaux?", "Vous ne lisez pas les panneaux?", "Vous lisez pas les panneaux?"], "answer": "C"},
+      {"question": "We read articles online.", "options": ["Nous lit des articles en ligne.", "Nous lisons des articles en ligne.", "Nous lisez des articles en ligne.", "Nous lisent des articles en ligne."], "answer": "B"},
+      {"question": "Do they (m.) read comic books?", "options": ["Ils lit des bandes dessinées?", "Ils lisez des bandes dessinées?", "Ils lisons des bandes dessinées?", "Ils lisent des bandes dessinées?"], "answer": "D"},
+      {"question": "You (form.) read the news every day.", "options": ["Vous lit les nouvelles tous les jours.", "Vous lisons les nouvelles tous les jours.", "Vous lisez les nouvelles tous les jours.", "Vous lisent les nouvelles tous les jours."], "answer": "C"},
+      {"question": "Do they (m.) not read poetry?", "options": ["Ils ne lisent pas de poésie?", "Ils lisent ne pas de poésie?", "Ils ne lit pas de poésie?", "Ils ne lisez pas de poésie?"], "answer": "A"},
+      {"question": "Do they (f.) not read before bed?", "options": ["Elles lisent ne pas avant de se coucher?", "Elles ne lisent pas avant de se coucher?", "Elles ne lit pas avant de se coucher?", "Elles ne lisez pas avant de se coucher?"], "answer": "B"},
+      {"question": "We read the same book.", "options": ["Nous lit le même livre.", "Nous lisez le même livre.", "Nous lisons le même livre.", "Nous lisent le même livre."], "answer": "C"},
+      {"question": "They (m.) read detective stories.", "options": ["Ils lit des histoires policières.", "Ils lisez des histoires policières.", "Ils lisons des histoires policières.", "Ils lisent des histoires policières."], "answer": "D"},
+      {"question": "You (pl.) do not read the emails.", "options": ["Vous lisez ne pas les courriels.", "Vous ne lis pas les courriels.", "Vous ne lisons pas les courriels.", "Vous ne lisez pas les courriels."], "answer": "D"},
+      {"question": "They (f.) do not read the labels.", "options": ["Elles lisent ne pas les étiquettes.", "Elles ne lit pas les étiquettes.", "Elles ne lisent pas les étiquettes.", "Elles ne lisez pas les étiquettes."], "answer": "C"},
+      {"question": "I do not read horror novels.", "options": ["Je ne lis pas de romans d'horreur.", "Je lis ne pas de romans d'horreur.", "Je ne lit pas de romans d'horreur.", "Je lis pas de romans d'horreur."], "answer": "A"},
+      {"question": "Does she read biographies?", "options": ["Elle lis des biographies?", "Elle lisons des biographies?", "Elle lit des biographies?", "Elle lisez des biographies?"], "answer": "C"},
+      {"question": "Do we read the menu?", "options": ["Nous lit le menu?", "Nous lisez le menu?", "Nous lisent le menu?", "Nous lisons le menu?"], "answer": "D"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not read the article.", "options": ["Elles ont ne pas lu l'article.", "Elles n'ont pas lu l'article.", "Elles n'ont lu pas l'article.", "Elles n'avez pas lu l'article."], "answer": "B"},
       {"question": "Did he not read the book?", "options": ["Il n'a pas lu le livre?", "Il a ne pas lu le livre?", "Il n'as pas lu le livre?", "Il n'a lu pas le livre?"], "answer": "A"},
