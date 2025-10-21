@@ -1341,7 +1341,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "garder": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not keep quiet during meetings.", "options": ["Elles garde ne pas le silence pendant les réunions.", "Elles ne gardent pas le silence pendant les réunions.", "Elles ne garde pas le silence pendant les réunions.", "Elles gardent ne pas le silence pendant les réunions."], "answer": "B"},
+      {"question": "Does he not keep his promises?", "options": ["Il ne garde pas ses promesses?", "Il garde ne pas ses promesses?", "Il ne gardes pas ses promesses?", "Il garde pas ses promesses?"], "answer": "A"},
+      {"question": "Do I keep all my notes?", "options": ["Je garde tous mes notes?", "Je garde toutes mes notes?", "Je gardons toutes mes notes?", "Je gardez toutes mes notes?"], "answer": "B"},
+      {"question": "Does she not keep in touch with friends?", "options": ["Elle ne garde pas contact avec ses amis?", "Elle garde ne pas contact avec ses amis?", "Elle ne gardes pas contact avec ses amis?", "Elle garde pas contact avec ses amis?"], "answer": "A"},
+      {"question": "You (inf.) do not keep secrets.", "options": ["Tu garde ne pas des secrets.", "Tu ne gardes pas de secrets.", "Tu ne garde pas des secrets.", "Tu gardes ne pas des secrets."], "answer": "B"},
+      {"question": "He keeps his documents organized.", "options": ["Il gardes ses documents organisés.", "Il gardons ses documents organisés.", "Il gardez ses documents organisés.", "Il garde ses documents organisés."], "answer": "D"},
+      {"question": "Do I keep my door open?", "options": ["Je garde ma porte ouverte?", "Je gardes ma porte ouverte?", "Je gardons ma porte ouverte?", "Je gardez ma porte ouverte?"], "answer": "A"},
+      {"question": "Do you (pl.) not keep old files?", "options": ["Vous gardez ne pas de vieux fichiers?", "Vous ne gardez pas de vieux fichiers?", "Vous ne gardez pas de vieux fichiers?", "Vous gardez pas de vieux fichiers?"], "answer": "C"},
+      {"question": "We keep our workspace clean.", "options": ["Nous garde notre espace de travail propre.", "Nous gardez notre espace de travail propre.", "Nous gardent notre espace de travail propre.", "Nous gardons notre espace de travail propre."], "answer": "D"},
+      {"question": "Do they (m.) keep their shoes by the door?", "options": ["Ils garde leurs chaussures près de la porte?", "Ils gardez leurs chaussures près de la porte?", "Ils gardons leurs chaussures près de la porte?", "Ils gardent leurs chaussures près de la porte?"], "answer": "D"},
+      {"question": "You (form.) keep all receipts.", "options": ["Vous garde tous les reçus.", "Vous gardons tous les reçus.", "Vous gardez tous les reçus.", "Vous gardent tous les reçus."], "answer": "C"},
+      {"question": "Do they (m.) not keep pets?", "options": ["Ils ne gardent pas d'animaux?", "Ils gardent ne pas d'animaux?", "Ils ne garde pas d'animaux?", "Ils gardent pas d'animaux?"], "answer": "A"},
+      {"question": "Do they (f.) not keep their old clothes?", "options": ["Elles gardent ne pas leurs vieux vêtements?", "Elles ne gardent pas leurs vieux vêtements?", "Elles ne garde pas leurs vieux vêtements?", "Elles gardez pas leurs vieux vêtements?"], "answer": "B"},
+      {"question": "We keep the same habits every year.", "options": ["Nous garde les mêmes habitudes chaque année.", "Nous gardez les mêmes habitudes chaque année.", "Nous gardons les mêmes habitudes chaque année.", "Nous gardent les mêmes habitudes chaque année."], "answer": "C"},
+      {"question": "They (m.) keep their word.", "options": ["Ils garde leur parole.", "Ils gardez leur parole.", "Ils gardons leur parole.", "Ils gardent leur parole."], "answer": "D"},
+      {"question": "You (pl.) do not keep the light on.", "options": ["Vous gardez ne pas la lumière allumée.", "Vous ne gardez pas la lumière allumée.", "Vous ne garde pas la lumière allumée.", "Vous ne gardez pas la lumière allumée."], "answer": "D"},
+      {"question": "They (f.) do not keep food in their rooms.", "options": ["Elles gardent ne pas de nourriture dans leurs chambres.", "Elles ne garde pas de nourriture dans leurs chambres.", "Elles ne gardent pas de nourriture dans leurs chambres.", "Elles gardez pas de nourriture dans leurs chambres."], "answer": "C"},
+      {"question": "I do not keep any receipts.", "options": ["Je ne garde aucun reçu.", "Je garde ne pas aucun reçu.", "Je ne gardes aucun reçu.", "Je garde pas aucun reçu."], "answer": "A"},
+      {"question": "Does she keep her tickets?", "options": ["Elle gardes ses billets?", "Elle gardons ses billets?", "Elle garde ses billets?", "Elle gardez ses billets?"], "answer": "C"},
+      {"question": "Do we keep our promises?", "options": ["Nous garde nos promesses?", "Nous gardons nos promesses?", "Nous gardez nos promesses?", "Nous gardent nos promesses?"], "answer": "B"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not keep quiet during the meeting.", "options": ["Elles a gardé ne pas le silence pendant la réunion.", "Elles n'ont pas gardé le silence pendant la réunion.", "Elles n'a gardé pas le silence pendant la réunion.", "Elles ont gardé pas le silence pendant la réunion."], "answer": "B"},
       {"question": "Did he not keep his promises?", "options": ["Il n'a pas gardé ses promesses?", "Il a ne pas gardé ses promesses?", "Il n'as pas gardé ses promesses?", "Il a gardé pas ses promesses?"], "answer": "A"},
