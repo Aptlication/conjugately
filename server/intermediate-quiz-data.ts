@@ -1272,7 +1272,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "perdre": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not lose their keys.", "options": ["Elles a perdu ne pas leurs clés.", "Elles n'ont pas perdu leurs clés.", "Elles n'a perdu pas leurs clés.", "Elles ont perdu pas leurs clés."], "answer": "B"},
+      {"question": "Did he not lose his wallet?", "options": ["Il n'a pas perdu son portefeuille?", "Il a ne pas perdu son portefeuille?", "Il n'as pas perdu son portefeuille?", "Il a perdu pas son portefeuille?"], "answer": "A"},
+      {"question": "Did I lose my glasses yesterday?", "options": ["Je a perdu mes lunettes hier?", "J'ai perdu mes lunettes hier?", "Je suis perdu mes lunettes hier?", "J'as perdu mes lunettes hier?"], "answer": "B"},
+      {"question": "Did she not lose hope?", "options": ["Elle n'a pas perdu espoir?", "Elle a ne pas perdu espoir?", "Elle n'as pas perdu espoir?", "Elle a perdu pas espoir?"], "answer": "A"},
+      {"question": "You (inf.) did not lose patience.", "options": ["Tu a perdu ne pas patience.", "Tu n'as pas perdu patience.", "Tu n'a perdu pas patience.", "Tu as perdu pas patience."], "answer": "B"},
+      {"question": "He lost his pen last week.", "options": ["Il a perde son stylo la semaine dernière.", "Il a perdus son stylo la semaine dernière.", "Il a perdit son stylo la semaine dernière.", "Il a perdu son stylo la semaine dernière."], "answer": "D"},
+      {"question": "Did I lose my way last night?", "options": ["J'ai perdu mon chemin hier soir?", "Je a perdu mon chemin hier soir?", "Je suis perdu mon chemin hier soir?", "J'as perdu mon chemin hier soir?"], "answer": "A"},
+      {"question": "Did you (pl.) not lose your tickets?", "options": ["Vous avez perdu ne pas vos billets?", "Vous n'avons pas perdu vos billets?", "Vous n'avez pas perdu vos billets?", "Vous avez perdu pas vos billets?"], "answer": "C"},
+      {"question": "We lost motivation in winter.", "options": ["Nous a perdu motivation en hiver.", "Nous sommes perdu motivation en hiver.", "Nous avons perdu motivation en hiver.", "Nous avez perdu motivation en hiver."], "answer": "C"},
+      {"question": "Did they (m.) lose money last year?", "options": ["Ils a perdu de l'argent l'année dernière?", "Ils sont perdu de l'argent l'année dernière?", "Ils avez perdu de l'argent l'année dernière?", "Ils ont perdu de l'argent l'année dernière?"], "answer": "D"},
+      {"question": "You (form.) lost your password again.", "options": ["Vous avons perdu votre mot de passe encore.", "Vous ont perdu votre mot de passe encore.", "Vous avez perdu votre mot de passe encore.", "Vous êtes perdu votre mot de passe encore."], "answer": "C"},
+      {"question": "Did they (m.) not lose their friends?", "options": ["Ils n'ont pas perdu leurs amis?", "Ils ont ne pas perdu leurs amis?", "Ils n'avez pas perdu leurs amis?", "Ils ont perdu pas leurs amis?"], "answer": "A"},
+      {"question": "Did they (f.) not lose time in traffic?", "options": ["Elles ont perdu ne pas de temps dans les embouteillages?", "Elles n'avez pas perdu de temps dans les embouteillages?", "Elles ont perdu pas de temps dans les embouteillages?", "Elles n'ont pas perdu de temps dans les embouteillages?"], "answer": "D"},
+      {"question": "We lost interest quickly.", "options": ["Nous a perdu intérêt vite.", "Nous avons perdu intérêt vite.", "Nous sommes perdu intérêt vite.", "Nous avez perdu intérêt vite."], "answer": "B"},
+      {"question": "They (m.) lost their way after dark.", "options": ["Ils avez perdu leur chemin après la nuit.", "Ils sont perdu leur chemin après la nuit.", "Ils a perdu leur chemin après la nuit.", "Ils ont perdu leur chemin après la nuit."], "answer": "D"},
+      {"question": "You (pl.) did not lose money.", "options": ["Vous avez perdu ne pas d'argent.", "Vous n'avons pas perdu d'argent.", "Vous avez pas perdu d'argent.", "Vous n'avez pas perdu d'argent."], "answer": "D"},
+      {"question": "They (f.) did not lose faith.", "options": ["Elles ont perdu ne pas la foi.", "Elles n'a perdu pas la foi.", "Elles n'ont pas perdu la foi.", "Elles ont perdu pas la foi."], "answer": "C"},
+      {"question": "I did not lose hope.", "options": ["Je n'ai pas perdu espoir.", "J'ai perdu ne pas espoir.", "Je n'a pas perdu espoir.", "J'ai perdu pas espoir."], "answer": "A"},
+      {"question": "Did she lose her umbrella yesterday?", "options": ["Elle as perdu son parapluie hier?", "Elle est perdu son parapluie hier?", "Elle a perdu son parapluie hier?", "Elle avons perdu son parapluie hier?"], "answer": "C"},
+      {"question": "Did we lose the key last year?", "options": ["Nous a perdu la clé l'année dernière?", "Nous avons perdu la clé l'année dernière.", "Nous sommes perdu la clé l'année dernière?", "Nous avez perdu la clé l'année dernière."], "answer": "B"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not lose their keys.", "options": ["Elles perdra ne pas leurs clés.", "Elles ne perdront pas leurs clés.", "Elles ne perdra pas leurs clés.", "Elles perdront pas leurs clés."], "answer": "B"},
       {"question": "Will he not lose his wallet?", "options": ["Il ne perdra pas son portefeuille?", "Il perdra ne pas son portefeuille?", "Il ne perdras pas son portefeuille?", "Il perdra pas son portefeuille?"], "answer": "A"},
