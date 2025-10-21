@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 12 verbs × 4 tenses × 20 questions = 960 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire
+// 13 verbs × 4 tenses × 20 questions = 1040 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -1056,6 +1056,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I will not read horror novels.", "options": ["Je ne lirai pas de romans d'horreur.", "Je lirai ne pas de romans d'horreur.", "Je ne liras pas de romans d'horreur.", "Je ne lira pas de romans d'horreur."], "answer": "A"},
       {"question": "Will she read the biography?", "options": ["Elle liras la biographie?", "Elle lirons la biographie?", "Elle lira la biographie?", "Elle lirez la biographie?"], "answer": "C"},
       {"question": "Will we read the news tonight?", "options": ["Nous lira les nouvelles ce soir?", "Nous liras les nouvelles ce soir?", "Nous lirez les nouvelles ce soir?", "Nous lirons les nouvelles ce soir?"], "answer": "D"}
+    ],
+    "imparfait": []
+  },
+
+  "écrire": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not write the letters.", "options": ["Elles écriront ne pas les lettres.", "Elles n'écriront pas les lettres.", "Elles n'écrira pas les lettres.", "Elles écriront pas les lettres."], "answer": "B"},
+      {"question": "Will he not write the message?", "options": ["Il n'écrira pas le message?", "Il écrira ne pas le message?", "Il n'écriras pas le message?", "Il écrira pas le message?"], "answer": "A"},
+      {"question": "Will I write my name on the form?", "options": ["Je écriras mon nom sur le formulaire?", "J'écrirai mon nom sur le formulaire?", "Je écrira mon nom sur le formulaire?", "Je écrirons mon nom sur le formulaire?"], "answer": "B"},
+      {"question": "Will she not write the list?", "options": ["Elle n'écrira pas la liste?", "Elle écrira ne pas la liste?", "Elle n'écriras pas la liste?", "Elle écrira pas la liste?"], "answer": "A"},
+      {"question": "You (inf.) will not write the answer.", "options": ["Tu écrira ne pas la réponse.", "Tu n'écriras pas la réponse.", "Tu n'écrira pas la réponse.", "Tu écriras pas la réponse."], "answer": "B"},
+      {"question": "He will write a story next week.", "options": ["Il écrirai une histoire la semaine prochaine.", "Il écriront une histoire la semaine prochaine.", "Il écriras une histoire la semaine prochaine.", "Il écrira une histoire la semaine prochaine."], "answer": "D"},
+      {"question": "Will I write fast?", "options": ["J'écrirai vite?", "Je écriras vite?", "Je écrira vite?", "Je écrirons vite?"], "answer": "A"},
+      {"question": "Will you (pl.) not write in French?", "options": ["Vous écrirez ne pas en français?", "Vous ne écriras pas en français?", "Vous n'écrirez pas en français?", "Vous ne écrira pas en français?"], "answer": "C"},
+      {"question": "We will write essays for class.", "options": ["Nous écrira des dissertations pour la classe.", "Nous écrirons des dissertations pour la classe.", "Nous écrirez des dissertations pour la classe.", "Nous écriras des dissertations pour la classe."], "answer": "B"},
+      {"question": "Will they (m.) write a poem?", "options": ["Ils écriras un poème?", "Ils écrira un poème?", "Ils écrirez un poème?", "Ils écriront un poème?"], "answer": "D"},
+      {"question": "You (form.) will write the report next Monday.", "options": ["Vous écriras le rapport lundi prochain.", "Vous écrira le rapport lundi prochain.", "Vous écrirez le rapport lundi prochain.", "Vous écriront le rapport lundi prochain."], "answer": "C"},
+      {"question": "Will they (m.) not write the menu?", "options": ["Ils n'écriront pas le menu?", "Ils écriront ne pas le menu?", "Ils ne écriras pas le menu?", "Ils n'écrirez pas le menu?"], "answer": "A"},
+      {"question": "Will they (f.) not write the notes?", "options": ["Elles écriront ne pas les notes?", "Elles n'écriront pas les notes.", "Elles ne écriras pas les notes.", "Elles n'écrirez pas les notes."], "answer": "B"},
+      {"question": "We will write the same answer.", "options": ["Nous écrira la même réponse.", "Nous écrirez la même réponse.", "Nous écrirons la même réponse.", "Nous écriras la même réponse."], "answer": "C"},
+      {"question": "They (m.) will write texts during class.", "options": ["Ils écrivez des textos pendant la classe.", "Ils écriraient des textos pendant la classe.", "Ils écrira des textos pendant la classe.", "Ils écriront des textos pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) will not write on the blackboard.", "options": ["Vous écrirez ne pas au tableau.", "Vous ne écriras pas au tableau.", "Vous ne écrira pas au tableau.", "Vous n'écrirez pas au tableau."], "answer": "D"},
+      {"question": "They (f.) will not write the lyrics.", "options": ["Elles écriront ne pas les paroles.", "Elles ne écriras pas les paroles.", "Elles n'écriront pas les paroles.", "Elles n'écrirez pas les paroles."], "answer": "C"},
+      {"question": "I will not write anything before breakfast.", "options": ["Je n'écrirai rien avant le petit déjeuner.", "Je écrirai ne pas avant le petit déjeuner.", "Je n'écriras rien avant le petit déjeuner.", "Je n'écrira rien avant le petit déjeuner."], "answer": "A"},
+      {"question": "Will she write quickly?", "options": ["Elle écriras rapidement?", "Elle écrirons rapidement?", "Elle écrira rapidement?", "Elle écrirez rapidement?"], "answer": "C"},
+      {"question": "Will we write in French?", "options": ["Nous écrira en français?", "Nous écriras en français?", "Nous écrirez en français?", "Nous écrirons en français?"], "answer": "D"}
     ],
     "imparfait": []
   },
