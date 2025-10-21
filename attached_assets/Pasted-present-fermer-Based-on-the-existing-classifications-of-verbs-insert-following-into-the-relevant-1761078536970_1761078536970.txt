@@ -1,0 +1,234 @@
+present - fermer
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) do not close the windows at night.",
+   "options": {
+     "A": "Elles ferme ne pas les fenêtres la nuit.",
+     "B": "Elles ne ferment pas les fenêtres la nuit.",
+     "C": "Elles ne ferme pas les fenêtres la nuit.",
+     "D": "Elles ferment ne pas les fenêtres la nuit."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Does he not close the door?",
+   "options": {
+     "A": "Il ne ferme pas la porte?",
+     "B": "Il ferme ne pas la porte?",
+     "C": "Il ne fermes pas la porte?",
+     "D": "Il ferme pas la porte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Do I close my book every evening?",
+   "options": {
+     "A": "Je ferme mon livre chaque soir?",
+     "B": "Je fermes mon livre chaque soir?",
+     "C": "Je fermons mon livre chaque soir?",
+     "D": "Je fermez mon livre chaque soir?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Does she not close the shop at 8 pm?",
+   "options": {
+     "A": "Elle ne ferme pas le magasin à 20 heures?",
+     "B": "Elle ferme ne pas le magasin à 20 heures?",
+     "C": "Elle ne fermes pas le magasin à 20 heures?",
+     "D": "Elle ferme pas le magasin à 20 heures?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) do not close your bag.",
+   "options": {
+     "A": "Tu ferme ne pas ton sac.",
+     "B": "Tu ne fermes pas ton sac.",
+     "C": "Tu ne ferme pas ton sac.",
+     "D": "Tu fermes ne pas ton sac."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He closes the gate every morning.",
+   "options": {
+     "A": "Il fermes le portail chaque matin.",
+     "B": "Il fermons le portail chaque matin.",
+     "C": "Il fermez le portail chaque matin.",
+     "D": "Il ferme le portail chaque matin."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I close the door after leaving?",
+   "options": {
+     "A": "Je ferme la porte après être parti?",
+     "B": "Je fermes la porte après être parti?",
+     "C": "Je fermons la porte après être parti?",
+     "D": "Je fermez la porte après être parti?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Do you (pl.) not close the windows in summer?",
+   "options": {
+     "A": "Vous fermez ne pas les fenêtres en été?",
+     "B": "Vous ne fermez pas les fenêtres en été?",
+     "C": "Vous ne fermez pas les fenêtres en été?",
+     "D": "Vous fermez pas les fenêtres en été?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We close the store at 9 p.m.",
+   "options": {
+     "A": "Nous ferme le magasin à 21 heures.",
+     "B": "Nous fermons le magasin à 21 heures.",
+     "C": "Nous fermez le magasin à 21 heures.",
+     "D": "Nous ferment le magasin à 21 heures."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Do they (m.) close the gate?",
+   "options": {
+     "A": "Ils ferme le portail?",
+     "B": "Ils fermez le portail?",
+     "C": "Ils fermons le portail?",
+     "D": "Ils ferment le portail?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) close the door every evening.",
+   "options": {
+     "A": "Vous ferme la porte chaque soir.",
+     "B": "Vous fermons la porte chaque soir.",
+     "C": "Vous fermez la porte chaque soir.",
+     "D": "Vous ferment la porte chaque soir."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Do they (m.) not close the shop during lunch?",
+   "options": {
+     "A": "Ils ne ferment pas le magasin pendant le déjeuner?",
+     "B": "Ils ferment ne pas le magasin pendant le déjeuner?",
+     "C": "Ils ne ferme pas le magasin pendant le déjeuner?",
+     "D": "Ils ferment pas le magasin pendant le déjeuner?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Do they (f.) not close the bags?",
+   "options": {
+     "A": "Elles ferment ne pas les sacs?",
+     "B": "Elles ne ferment pas les sacs?",
+     "C": "Elles ne ferme pas les sacs?",
+     "D": "Elles fermez pas les sacs?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We close the same window.",
+   "options": {
+     "A": "Nous ferme la même fenêtre.",
+     "B": "Nous fermez la même fenêtre.",
+     "C": "Nous fermons la même fenêtre.",
+     "D": "Nous ferment la même fenêtre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) close the books after the exam.",
+   "options": {
+     "A": "Ils ferme les livres après l'examen.",
+     "B": "Ils fermez les livres après l'examen.",
+     "C": "Ils fermons les livres après l'examen.",
+     "D": "Ils ferment les livres après l'examen."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) do not close the box during class.",
+   "options": {
+     "A": "Vous fermez ne pas la boîte pendant le cours.",
+     "B": "Vous ne fermez pas la boîte pendant le cours.",
+     "C": "Vous ne ferme pas la boîte pendant le cours.",
+     "D": "Vous ne fermez pas la boîte pendant le cours."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) do not close the cabinet.",
+   "options": {
+     "A": "Elles ferment ne pas l'armoire.",
+     "B": "Elles ne ferme pas l'armoire.",
+     "C": "Elles ne ferment pas l'armoire.",
+     "D": "Elles fermez pas l'armoire."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I do not close the file before saving.",
+   "options": {
+     "A": "Je ne ferme pas le dossier avant de sauvegarder.",
+     "B": "Je ferme ne pas le dossier avant de sauvegarder.",
+     "C": "Je ne fermes pas le dossier avant de sauvegarder.",
+     "D": "Je ferme pas le dossier avant de sauvegarder."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Does she close the envelopes quickly?",
+   "options": {
+     "A": "Elle ferme les enveloppes rapidement?",
+     "B": "Elle fermes les enveloppes rapidement?",
+     "C": "Elle ferme les enveloppes tout de suite?",
+     "D": "Elle ferme les enveloppes lentement?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Do we close the door before leaving?",
+   "options": {
+     "A": "Nous ferme la porte avant de partir?",
+     "B": "Nous fermons la porte avant de partir?",
+     "C": "Nous fermez la porte avant de partir?",
+     "D": "Nous ferment la porte avant de partir?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
+
+
+

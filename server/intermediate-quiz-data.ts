@@ -1202,7 +1202,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "fermer": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not close the windows at night.", "options": ["Elles a fermé ne pas les fenêtres la nuit.", "Elles n'ont pas fermé les fenêtres la nuit.", "Elles n'a fermé pas les fenêtres la nuit.", "Elles ont fermé pas les fenêtres la nuit."], "answer": "B"},
+      {"question": "Did he not close the door?", "options": ["Il n'a pas fermé la porte?", "Il a ne pas fermé la porte?", "Il n'as pas fermé la porte?", "Il a fermé pas la porte?"], "answer": "A"},
+      {"question": "Did I close my book last night?", "options": ["Je a fermé mon livre hier soir?", "J'ai fermé mon livre hier soir?", "Je suis fermé mon livre hier soir?", "J'as fermé mon livre hier soir?"], "answer": "B"},
+      {"question": "Did she not close the shop at 8 pm?", "options": ["Elle n'a pas fermé le magasin à 20 heures?", "Elle a ne pas fermé le magasin à 20 heures?", "Elle n'as pas fermé le magasin à 20 heures?", "Elle a fermé pas le magasin à 20 heures?"], "answer": "A"},
+      {"question": "You (inf.) did not close your bag.", "options": ["Tu a fermé ne pas ton sac.", "Tu n'as pas fermé ton sac.", "Tu n'a fermé pas ton sac.", "Tu as fermé pas ton sac."], "answer": "B"},
+      {"question": "He closed the gate this morning.", "options": ["Il a fermé le portail ce matin.", "Il a fermés le portail ce matin.", "Il a fermez le portail ce matin.", "Il a fermé le portail ce matin."], "answer": "D"},
+      {"question": "Did I close the door after leaving?", "options": ["J'ai fermé la porte après être parti?", "Je a fermé la porte après être parti?", "Je suis fermé la porte après être parti?", "J'as fermé la porte après être parti?"], "answer": "A"},
+      {"question": "Did you (pl.) not close the windows in summer?", "options": ["Vous avez fermé ne pas les fenêtres en été?", "Vous n'avons pas fermé les fenêtres en été?", "Vous n'avez pas fermé les fenêtres en été?", "Vous avez fermé pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We closed the store at 9 p.m.", "options": ["Nous a fermé le magasin à 21 heures.", "Nous avons fermé le magasin à 21 heures.", "Nous sommes fermé le magasin à 21 heures.", "Nous avez fermé le magasin à 21 heures."], "answer": "B"},
+      {"question": "Did they (m.) close the gate?", "options": ["Ils a fermé le portail?", "Ils sont fermé le portail?", "Ils avez fermé le portail?", "Ils ont fermé le portail?"], "answer": "D"},
+      {"question": "You (form.) closed the door last night.", "options": ["Vous avons fermé la porte hier soir.", "Vous ont fermé la porte hier soir.", "Vous avez fermé la porte hier soir.", "Vous êtes fermé la porte hier soir."], "answer": "C"},
+      {"question": "Did they (m.) not close the shop during lunch?", "options": ["Ils n'ont pas fermé le magasin pendant le déjeuner?", "Ils ont ne pas fermé le magasin pendant le déjeuner?", "Ils n'avez pas fermé le magasin pendant le déjeuner?", "Ils ont fermé pas le magasin pendant le déjeuner?"], "answer": "A"},
+      {"question": "Did they (f.) not close the bags?", "options": ["Elles ont fermé ne pas les sacs?", "Elles n'ont pas fermé les sacs?", "Elles n'avez pas fermé les sacs?", "Elles ont fermé pas les sacs?"], "answer": "B"},
+      {"question": "We closed the same window.", "options": ["Nous a fermé la même fenêtre.", "Nous avons fermé la même fenêtre.", "Nous sommes fermé la même fenêtre.", "Nous avez fermé la même fenêtre."], "answer": "C"},
+      {"question": "They (m.) closed the books after the exam.", "options": ["Ils avez fermé les livres après l'examen.", "Ils sont fermé les livres après l'examen.", "Ils a fermé les livres après l'examen.", "Ils ont fermé les livres après l'examen."], "answer": "D"},
+      {"question": "You (pl.) did not close the box during class.", "options": ["Vous avez fermé ne pas la boîte pendant le cours.", "Vous n'avons pas fermé la boîte pendant le cours.", "Vous avez pas fermé la boîte pendant le cours.", "Vous n'avez pas fermé la boîte pendant le cours."], "answer": "D"},
+      {"question": "They (f.) did not close the cabinet.", "options": ["Elles ont fermé ne pas l'armoire.", "Elles n'a fermé pas l'armoire.", "Elles n'ont pas fermé l'armoire.", "Elles ont fermé pas l'armoire."], "answer": "C"},
+      {"question": "I did not close the file before saving.", "options": ["Je n'ai pas fermé le dossier avant de sauvegarder.", "J'ai fermé ne pas le dossier avant de sauvegarder.", "Je n'a pas fermé le dossier avant de sauvegarder.", "J'ai fermé pas le dossier avant de sauvegarder."], "answer": "A"},
+      {"question": "Did she close the envelopes quickly?", "options": ["Elle a fermé les enveloppes rapidement?", "Elle a fermé les enveloppes tout de suite?", "Elle a fermé les enveloppes très lentement?", "Elle a fermé les enveloppes hier?"], "answer": "C"},
+      {"question": "Did we close the door before leaving?", "options": ["Nous a fermé la porte avant de partir?", "Nous avons fermé la porte avant de partir.", "Nous sommes fermé la porte avant de partir.", "Nous avez fermé la porte avant de partir."], "answer": "D"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not close the windows at night.", "options": ["Elles fermera ne pas les fenêtres la nuit.", "Elles ne fermeront pas les fenêtres la nuit.", "Elles ne fermera pas les fenêtres la nuit.", "Elles fermeront pas les fenêtres la nuit."], "answer": "B"},
       {"question": "Will he not close the door?", "options": ["Il ne fermera pas la porte?", "Il fermera ne pas la porte?", "Il ne fermeras pas la porte?", "Il fermera pas la porte?"], "answer": "A"},
