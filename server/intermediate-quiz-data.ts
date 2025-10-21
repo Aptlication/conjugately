@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 14 verbs × 4 tenses × 20 questions = 1120 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir
+// 15 verbs × 4 tenses × 20 questions = 1200 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -1196,6 +1196,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I will not open the windows at night.", "options": ["Je n'ouvrirai pas les fenêtres la nuit.", "Je ouvrirai ne pas les fenêtres la nuit.", "Je n'ouvriras pas les fenêtres la nuit.", "Je n'ouvrira pas les fenêtres la nuit."], "answer": "A"},
       {"question": "Will she open the gifts quickly?", "options": ["Elle ouvriras les cadeaux rapidement?", "Elle ouvrirons les cadeaux rapidement?", "Elle ouvrira les cadeaux rapidement?", "Elle ouvrirez les cadeaux rapidement?"], "answer": "C"},
       {"question": "Will we open the window after lunch?", "options": ["Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirez la fenêtre après le déjeuner?", "Nous ouvrirons la fenêtre après le déjeuner?"], "answer": "D"}
+    ],
+    "imparfait": []
+  },
+
+  "fermer": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not close the windows at night.", "options": ["Elles fermera ne pas les fenêtres la nuit.", "Elles ne fermeront pas les fenêtres la nuit.", "Elles ne fermera pas les fenêtres la nuit.", "Elles fermeront pas les fenêtres la nuit."], "answer": "B"},
+      {"question": "Will he not close the door?", "options": ["Il ne fermera pas la porte?", "Il fermera ne pas la porte?", "Il ne fermeras pas la porte?", "Il fermera pas la porte?"], "answer": "A"},
+      {"question": "Will I close my book before dinner?", "options": ["Je fermerai mon livre avant le dîner?", "Je fermerai mon livre avant le dîner?", "Je fermerons mon livre avant le dîner?", "Je fermerez mon livre avant le dîner?"], "answer": "B"},
+      {"question": "Will she not close the shop at 8 pm?", "options": ["Elle ne fermera pas le magasin à 20 heures?", "Elle fermera ne pas le magasin à 20 heures?", "Elle ne fermeras pas le magasin à 20 heures?", "Elle fermera pas le magasin à 20 heures?"], "answer": "A"},
+      {"question": "You (inf.) will not close your bag.", "options": ["Tu fermeras ne pas ton sac.", "Tu ne fermeras pas ton sac.", "Tu ne fermera pas ton sac.", "Tu fermera pas ton sac."], "answer": "B"},
+      {"question": "He will close the gate tomorrow.", "options": ["Il fermera le portail demain.", "Il fermeras le portail demain.", "Il fermeront le portail demain.", "Il fermera le portail demain."], "answer": "D"},
+      {"question": "Will I close the door after leaving?", "options": ["Je fermerai la porte après être parti?", "Je fermeras la porte après être parti?", "Je fermerons la porte après être parti?", "Je fermerez la porte après être parti?"], "answer": "A"},
+      {"question": "Will you (pl.) not close the windows in summer?", "options": ["Vous fermerez ne pas les fenêtres en été?", "Vous ne fermeras pas les fenêtres en été?", "Vous ne fermerez pas les fenêtres en été?", "Vous ne fermera pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We will close the store at 9 p.m.", "options": ["Nous fermerai le magasin à 21 heures.", "Nous fermerons le magasin à 21 heures.", "Nous fermerez le magasin à 21 heures.", "Nous fermeras le magasin à 21 heures."], "answer": "B"},
+      {"question": "Will they (m.) close the gate?", "options": ["Ils fermerai le portail?", "Ils fermera le portail?", "Ils fermerez le portail?", "Ils fermeront le portail?"], "answer": "D"},
+      {"question": "You (form.) will close the door each night.", "options": ["Vous fermeras la porte chaque nuit.", "Vous fermera la porte chaque nuit.", "Vous fermerez la porte chaque nuit.", "Vous fermeront la porte chaque nuit."], "answer": "C"},
+      {"question": "Will they (m.) not close the shop during lunch?", "options": ["Ils ne fermeront pas le magasin pendant le déjeuner?", "Ils fermeront ne pas le magasin pendant le déjeuner?", "Ils ne fermeras pas le magasin pendant le déjeuner?", "Ils ne fermerez pas le magasin pendant le déjeuner?"], "answer": "A"},
+      {"question": "Will they (f.) not close the bags?", "options": ["Elles fermeront ne pas les sacs?", "Elles ne fermeront pas les sacs?", "Elles ne fermeras pas les sacs?", "Elles ne fermerez pas les sacs?"], "answer": "B"},
+      {"question": "We will close the same window.", "options": ["Nous fermera la même fenêtre.", "Nous fermerez la même fenêtre.", "Nous fermerons la même fenêtre.", "Nous fermeras la même fenêtre."], "answer": "C"},
+      {"question": "They (m.) will close the books after the exam.", "options": ["Ils fermez les livres après l'examen.", "Ils fermaient les livres après l'examen.", "Ils fermera les livres après l'examen.", "Ils fermeront les livres après l'examen."], "answer": "D"},
+      {"question": "You (pl.) will not close the box during class.", "options": ["Vous fermerez ne pas la boîte pendant le cours.", "Vous ne fermeras pas la boîte pendant le cours.", "Vous ne fermera pas la boîte pendant le cours.", "Vous ne fermerez pas la boîte pendant le cours."], "answer": "D"},
+      {"question": "They (f.) will not close the cabinet.", "options": ["Elles fermeront ne pas l'armoire.", "Elles ne fermeras pas l'armoire.", "Elles ne fermeront pas l'armoire.", "Elles ne fermerez pas l'armoire."], "answer": "C"},
+      {"question": "I will not close the file before saving.", "options": ["Je ne fermerai pas le dossier avant de sauvegarder.", "Je fermerai ne pas le dossier avant de sauvegarder.", "Je ne fermeras pas le dossier avant de sauvegarder.", "Je ne fermera pas le dossier avant de sauvegarder."], "answer": "A"},
+      {"question": "Will she close the envelopes quickly?", "options": ["Elle fermeras les enveloppes rapidement?", "Elle fermerons les enveloppes rapidement?", "Elle fermera les enveloppes rapidement?", "Elle fermerez les enveloppes rapidement?"], "answer": "C"},
+      {"question": "Will we close the door before leaving?", "options": ["Nous fermera la porte avant de partir?", "Nous fermeras la porte avant de partir?", "Nous fermerez la porte avant de partir?", "Nous fermerons la porte avant de partir?"], "answer": "D"}
     ],
     "imparfait": []
   },

@@ -1,0 +1,231 @@
+passe compose - fermer
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not close the windows at night.",
+   "options": {
+     "A": "Elles a fermé ne pas les fenêtres la nuit.",
+     "B": "Elles n'ont pas fermé les fenêtres la nuit.",
+     "C": "Elles n'a fermé pas les fenêtres la nuit.",
+     "D": "Elles ont fermé pas les fenêtres la nuit."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not close the door?",
+   "options": {
+     "A": "Il n'a pas fermé la porte?",
+     "B": "Il a ne pas fermé la porte?",
+     "C": "Il n'as pas fermé la porte?",
+     "D": "Il a fermé pas la porte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I close my book last night?",
+   "options": {
+     "A": "Je a fermé mon livre hier soir?",
+     "B": "J'ai fermé mon livre hier soir?",
+     "C": "Je suis fermé mon livre hier soir?",
+     "D": "J'as fermé mon livre hier soir?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not close the shop at 8 pm?",
+   "options": {
+     "A": "Elle n'a pas fermé le magasin à 20 heures?",
+     "B": "Elle a ne pas fermé le magasin à 20 heures?",
+     "C": "Elle n'as pas fermé le magasin à 20 heures?",
+     "D": "Elle a fermé pas le magasin à 20 heures?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not close your bag.",
+   "options": {
+     "A": "Tu a fermé ne pas ton sac.",
+     "B": "Tu n'as pas fermé ton sac.",
+     "C": "Tu n'a fermé pas ton sac.",
+     "D": "Tu as fermé pas ton sac."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He closed the gate this morning.",
+   "options": {
+     "A": "Il a fermé le portail ce matin.",
+     "B": "Il a fermés le portail ce matin.",
+     "C": "Il a fermez le portail ce matin.",
+     "D": "Il a fermé le portail ce matin."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I close the door after leaving?",
+   "options": {
+     "A": "J'ai fermé la porte après être parti?",
+     "B": "Je a fermé la porte après être parti?",
+     "C": "Je suis fermé la porte après être parti?",
+     "D": "J'as fermé la porte après être parti?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not close the windows in summer?",
+   "options": {
+     "A": "Vous avez fermé ne pas les fenêtres en été?",
+     "B": "Vous n'avons pas fermé les fenêtres en été?",
+     "C": "Vous n'avez pas fermé les fenêtres en été?",
+     "D": "Vous avez fermé pas les fenêtres en été?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We closed the store at 9 p.m.",
+   "options": {
+     "A": "Nous a fermé le magasin à 21 heures.",
+     "B": "Nous avons fermé le magasin à 21 heures.",
+     "C": "Nous sommes fermé le magasin à 21 heures.",
+     "D": "Nous avez fermé le magasin à 21 heures."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) close the gate?",
+   "options": {
+     "A": "Ils a fermé le portail?",
+     "B": "Ils sont fermé le portail?",
+     "C": "Ils avez fermé le portail?",
+     "D": "Ils ont fermé le portail?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) closed the door last night.",
+   "options": {
+     "A": "Vous avons fermé la porte hier soir.",
+     "B": "Vous ont fermé la porte hier soir.",
+     "C": "Vous avez fermé la porte hier soir.",
+     "D": "Vous êtes fermé la porte hier soir."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not close the shop during lunch?",
+   "options": {
+     "A": "Ils n'ont pas fermé le magasin pendant le déjeuner?",
+     "B": "Ils ont ne pas fermé le magasin pendant le déjeuner?",
+     "C": "Ils n'avez pas fermé le magasin pendant le déjeuner?",
+     "D": "Ils ont fermé pas le magasin pendant le déjeuner?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not close the bags?",
+   "options": {
+     "A": "Elles ont fermé ne pas les sacs?",
+     "B": "Elles n'ont pas fermé les sacs?",
+     "C": "Elles n'avez pas fermé les sacs?",
+     "D": "Elles ont fermé pas les sacs?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We closed the same window.",
+   "options": {
+     "A": "Nous a fermé la même fenêtre.",
+     "B": "Nous avons fermé la même fenêtre.",
+     "C": "Nous sommes fermé la même fenêtre.",
+     "D": "Nous avez fermé la même fenêtre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) closed the books after the exam.",
+   "options": {
+     "A": "Ils avez fermé les livres après l'examen.",
+     "B": "Ils sont fermé les livres après l'examen.",
+     "C": "Ils a fermé les livres après l'examen.",
+     "D": "Ils ont fermé les livres après l'examen."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not close the box during class.",
+   "options": {
+     "A": "Vous avez fermé ne pas la boîte pendant le cours.",
+     "B": "Vous n'avons pas fermé la boîte pendant le cours.",
+     "C": "Vous avez pas fermé la boîte pendant le cours.",
+     "D": "Vous n'avez pas fermé la boîte pendant le cours."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not close the cabinet.",
+   "options": {
+     "A": "Elles ont fermé ne pas l'armoire.",
+     "B": "Elles n'a fermé pas l'armoire.",
+     "C": "Elles n'ont pas fermé l'armoire.",
+     "D": "Elles ont fermé pas l'armoire."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not close the file before saving.",
+   "options": {
+     "A": "Je n'ai pas fermé le dossier avant de sauvegarder.",
+     "B": "J'ai fermé ne pas le dossier avant de sauvegarder.",
+     "C": "Je n'a pas fermé le dossier avant de sauvegarder.",
+     "D": "J'ai fermé pas le dossier avant de sauvegarder."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she close the envelopes quickly?",
+   "options": {
+     "A": "Elle a fermé les enveloppes rapidement?",
+     "B": "Elle a fermé les enveloppes tout de suite?",
+     "C": "Elle a fermé les enveloppes très lentement?",
+     "D": "Elle a fermé les enveloppes hier?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we close the door before leaving?",
+   "options": {
+     "A": "Nous a fermé la porte avant de partir?",
+     "B": "Nous avons fermé la porte avant de partir.",
+     "C": "Nous sommes fermé la porte avant de partir.",
+     "D": "Nous avez fermé la porte avant de partir."
+   },
+   "correct_answer": "D"
+ }
+]
+ 
