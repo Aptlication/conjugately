@@ -1062,7 +1062,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "écrire": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not write the letters.", "options": ["Elles a écrit ne pas les lettres.", "Elles n'ont pas écrit les lettres.", "Elles n'a écrit pas les lettres.", "Elles ont écrit ne pas les lettres."], "answer": "B"},
+      {"question": "Did he not write the message?", "options": ["Il n'a pas écrit le message?", "Il a ne pas écrit le message?", "Il n'as pas écrit le message?", "Il a écrit pas le message?"], "answer": "A"},
+      {"question": "Did I write my name on the form?", "options": ["Je a écrit mon nom sur le formulaire?", "J'ai écrit mon nom sur le formulaire?", "Je suis écrit mon nom sur le formulaire?", "J'as écrit mon nom sur le formulaire?"], "answer": "B"},
+      {"question": "Did she not write the list?", "options": ["Elle n'a pas écrit la liste?", "Elle a ne pas écrit la liste?", "Elle n'as pas écrit la liste?", "Elle a écrit pas la liste?"], "answer": "A"},
+      {"question": "You (inf.) did not write the answer.", "options": ["Tu a écrit ne pas la réponse.", "Tu n'as pas écrit la réponse.", "Tu n'a pas écrit la réponse.", "Tu as écrit pas la réponse."], "answer": "B"},
+      {"question": "He wrote a story last week.", "options": ["Il a écrit une histoire la semaine dernière.", "Il a écris une histoire la semaine dernière.", "Il a écrivent une histoire la semaine dernière.", "Il a écrit une histoire la semaine dernière."], "answer": "D"},
+      {"question": "Did I write fast?", "options": ["J'ai écrit vite?", "Je a écrit vite?", "Je suis écrit vite?", "J'as écrit vite?"], "answer": "A"},
+      {"question": "Did you (pl.) not write in French?", "options": ["Vous avez écrit ne pas en français?", "Vous n'avons pas écrit en français?", "Vous n'avez pas écrit en français?", "Vous avez écrit pas en français?"], "answer": "C"},
+      {"question": "We wrote essays for class.", "options": ["Nous a écrit des dissertations pour la classe.", "Nous avons écrit des dissertations pour la classe.", "Nous sommes écrit des dissertations pour la classe.", "Nous avez écrit des dissertations pour la classe."], "answer": "B"},
+      {"question": "Did they (m.) write a poem?", "options": ["Ils a écrit un poème?", "Ils sont écrit un poème?", "Ils avez écrit un poème?", "Ils ont écrit un poème?"], "answer": "D"},
+      {"question": "You (form.) wrote the report yesterday.", "options": ["Vous avons écrit le rapport hier.", "Vous ont écrit le rapport hier.", "Vous avez écrit le rapport hier.", "Vous êtes écrit le rapport hier."], "answer": "C"},
+      {"question": "Did they (m.) not write the menu?", "options": ["Ils n'ont pas écrit le menu?", "Ils ont ne pas écrit le menu?", "Ils n'avez pas écrit le menu?", "Ils ont écrit pas le menu?"], "answer": "A"},
+      {"question": "Did they (f.) not write the notes?", "options": ["Elles ont écrit ne pas les notes?", "Elles n'avez pas écrit les notes?", "Elles n'ont pas écrit les notes?", "Elles ont écrit pas les notes?"], "answer": "C"},
+      {"question": "We wrote the same answer.", "options": ["Nous ont écrit la même réponse.", "Nous avons écrit la même réponse.", "Nous sommes écrit la même réponse.", "Nous avez écrit la même réponse."], "answer": "B"},
+      {"question": "They (m.) wrote texts during class.", "options": ["Ils avez écrit des textos pendant la classe.", "Ils sont écrit des textos pendant la classe.", "Ils a écrit des textos pendant la classe.", "Ils ont écrit des textos pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) did not write on the blackboard.", "options": ["Vous avez écrit ne pas au tableau.", "Vous n'avons pas écrit au tableau.", "Vous avez pas écrit au tableau.", "Vous n'avez pas écrit au tableau."], "answer": "D"},
+      {"question": "They (f.) did not write the lyrics.", "options": ["Elles ont écrit ne pas les paroles.", "Elles n'a écrit pas les paroles.", "Elles n'ont pas écrit les paroles.", "Elles ont écrit pas les paroles."], "answer": "C"},
+      {"question": "I did not write anything before breakfast.", "options": ["Je n'ai rien écrit avant le petit déjeuner.", "J'ai écrit ne pas avant le petit déjeuner.", "Je n'a rien écrit avant le petit déjeuner.", "J'ai écrit pas avant le petit déjeuner."], "answer": "A"},
+      {"question": "Did she write quickly?", "options": ["Elle as écrit rapidement?", "Elle est écrit rapidement?", "Elle a écrit rapidement?", "Elle avons écrit rapidement?"], "answer": "C"},
+      {"question": "Did we write in French?", "options": ["Nous a écrit en français?", "Nous sommes écrit en français?", "Nous avez écrit en français?", "Nous avons écrit en français?"], "answer": "D"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not write the letters.", "options": ["Elles écriront ne pas les lettres.", "Elles n'écriront pas les lettres.", "Elles n'écrira pas les lettres.", "Elles écriront pas les lettres."], "answer": "B"},
       {"question": "Will he not write the message?", "options": ["Il n'écrira pas le message?", "Il écrira ne pas le message?", "Il n'écriras pas le message?", "Il écrira pas le message?"], "answer": "A"},

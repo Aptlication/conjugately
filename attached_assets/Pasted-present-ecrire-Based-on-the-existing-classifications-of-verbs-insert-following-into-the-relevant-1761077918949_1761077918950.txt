@@ -1,0 +1,231 @@
+present - ecrire
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) do not write stories.",
+   "options": {
+     "A": "Elles écrit ne pas des histoires.",
+     "B": "Elles n'écrivent pas des histoires.",
+     "C": "Elles n'écrit pas des histoires.",
+     "D": "Elles écrivent ne pas des histoires."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Does he not write with a pen?",
+   "options": {
+     "A": "Il n'écrit pas avec un stylo?",
+     "B": "Il écrit ne pas avec un stylo?",
+     "C": "Il n'écris pas avec un stylo?",
+     "D": "Il écrit pas avec un stylo?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Do I write my name clearly?",
+   "options": {
+     "A": "Je écrit mon nom clairement?",
+     "B": "J'écris mon nom clairement?",
+     "C": "Je écrivons mon nom clairement?",
+     "D": "Je écrivez mon nom clairement?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Does she not write long emails?",
+   "options": {
+     "A": "Elle n'écrit pas de longs courriels?",
+     "B": "Elle écrit ne pas de longs courriels?",
+     "C": "Elle n'écris pas de longs courriels?",
+     "D": "Elle écrit pas de longs courriels?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) do not write letters.",
+   "options": {
+     "A": "Tu écrit ne pas des lettres.",
+     "B": "Tu n'écris pas des lettres.",
+     "C": "Tu n'écrit pas des lettres.",
+     "D": "Tu écris ne pas des lettres."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He writes stories every week.",
+   "options": {
+     "A": "Il écris des histoires chaque semaine.",
+     "B": "Il écrivons des histoires chaque semaine.",
+     "C": "Il écrivez des histoires chaque semaine.",
+     "D": "Il écrit des histoires chaque semaine."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I write fast?",
+   "options": {
+     "A": "J'écris vite?",
+     "B": "Je écrit vite?",
+     "C": "Je écrivons vite?",
+     "D": "Je écrivez vite?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Do you (pl.) not write in French?",
+   "options": {
+     "A": "Vous écrivez ne pas en français?",
+     "B": "Vous ne écrit pas en français?",
+     "C": "Vous n'écrivez pas en français?",
+     "D": "Vous écrivez pas en français?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We write essays for class.",
+   "options": {
+     "A": "Nous écrit des dissertations pour la classe.",
+     "B": "Nous écrivons des dissertations pour la classe.",
+     "C": "Nous écrivez des dissertations pour la classe.",
+     "D": "Nous écrivent des dissertations pour la classe."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Do they (m.) write poems?",
+   "options": {
+     "A": "Ils écrit des poèmes?",
+     "B": "Ils écrivez des poèmes?",
+     "C": "Ils écrivons des poèmes?",
+     "D": "Ils écrivent des poèmes?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) write the report every Monday.",
+   "options": {
+     "A": "Vous écrit le rapport chaque lundi.",
+     "B": "Vous écrivons le rapport chaque lundi.",
+     "C": "Vous écrivez le rapport chaque lundi.",
+     "D": "Vous écrivent le rapport chaque lundi."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Do they (m.) not write fiction?",
+   "options": {
+     "A": "Ils n'écrivent pas de fiction?",
+     "B": "Ils écrivent ne pas de fiction?",
+     "C": "Ils n'écrit pas de fiction?",
+     "D": "Ils n'écrivez pas de fiction?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Do they (f.) not write reviews?",
+   "options": {
+     "A": "Elles écrivent ne pas des critiques?",
+     "B": "Elles n'écrivent pas des critiques?",
+     "C": "Elles n'écrit pas des critiques?",
+     "D": "Elles n'écrivez pas des critiques?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We write the same answer.",
+   "options": {
+     "A": "Nous écrit la même réponse.",
+     "B": "Nous écrivez la même réponse.",
+     "C": "Nous écrivons la même réponse.",
+     "D": "Nous écrivent la même réponse."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) write texts during class.",
+   "options": {
+     "A": "Ils écrit des textos pendant la classe.",
+     "B": "Ils écrivez des textos pendant la classe.",
+     "C": "Ils écrivons des textos pendant la classe.",
+     "D": "Ils écrivent des textos pendant la classe."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) do not write on the blackboard.",
+   "options": {
+     "A": "Vous écrivez ne pas au tableau.",
+     "B": "Vous ne écrit pas au tableau.",
+     "C": "Vous ne écrivons pas au tableau.",
+     "D": "Vous n'écrivez pas au tableau."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) do not write the lyrics.",
+   "options": {
+     "A": "Elles écrivent ne pas les paroles.",
+     "B": "Elles n'écrit pas les paroles.",
+     "C": "Elles n'écrivent pas les paroles.",
+     "D": "Elles n'écrivez pas les paroles."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I do not write anything before breakfast.",
+   "options": {
+     "A": "Je n'écris rien avant le petit déjeuner.",
+     "B": "Je écris ne pas avant le petit déjeuner.",
+     "C": "Je n'écrit rien avant le petit déjeuner.",
+     "D": "Je écris pas avant le petit déjeuner."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Does she write quickly?",
+   "options": {
+     "A": "Elle écris rapidement?",
+     "B": "Elle écrivons rapidement?",
+     "C": "Elle écrit rapidement?",
+     "D": "Elle écrivez rapidement?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Do we write in French?",
+   "options": {
+     "A": "Nous écrit en français?",
+     "B": "Nous écrivons en français?",
+     "C": "Nous écrivez en français?",
+     "D": "Nous écrivent en français?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
