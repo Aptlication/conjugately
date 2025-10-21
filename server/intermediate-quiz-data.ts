@@ -1061,7 +1061,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "écrire": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not write stories.", "options": ["Elles écrit ne pas des histoires.", "Elles n'écrivent pas des histoires.", "Elles n'écrit pas des histoires.", "Elles écrivent ne pas des histoires."], "answer": "B"},
+      {"question": "Does he not write with a pen?", "options": ["Il n'écrit pas avec un stylo?", "Il écrit ne pas avec un stylo?", "Il n'écris pas avec un stylo?", "Il écrit pas avec un stylo?"], "answer": "A"},
+      {"question": "Do I write my name clearly?", "options": ["Je écrit mon nom clairement?", "J'écris mon nom clairement?", "Je écrivons mon nom clairement?", "Je écrivez mon nom clairement?"], "answer": "B"},
+      {"question": "Does she not write long emails?", "options": ["Elle n'écrit pas de longs courriels?", "Elle écrit ne pas de longs courriels?", "Elle n'écris pas de longs courriels?", "Elle écrit pas de longs courriels?"], "answer": "A"},
+      {"question": "You (inf.) do not write letters.", "options": ["Tu écrit ne pas des lettres.", "Tu n'écris pas des lettres.", "Tu n'écrit pas des lettres.", "Tu écris ne pas des lettres."], "answer": "B"},
+      {"question": "He writes stories every week.", "options": ["Il écris des histoires chaque semaine.", "Il écrivons des histoires chaque semaine.", "Il écrivez des histoires chaque semaine.", "Il écrit des histoires chaque semaine."], "answer": "D"},
+      {"question": "Do I write fast?", "options": ["J'écris vite?", "Je écrit vite?", "Je écrivons vite?", "Je écrivez vite?"], "answer": "A"},
+      {"question": "Do you (pl.) not write in French?", "options": ["Vous écrivez ne pas en français?", "Vous ne écrit pas en français?", "Vous n'écrivez pas en français?", "Vous écrivez pas en français?"], "answer": "C"},
+      {"question": "We write essays for class.", "options": ["Nous écrit des dissertations pour la classe.", "Nous écrivons des dissertations pour la classe.", "Nous écrivez des dissertations pour la classe.", "Nous écrivent des dissertations pour la classe."], "answer": "B"},
+      {"question": "Do they (m.) write poems?", "options": ["Ils écrit des poèmes?", "Ils écrivez des poèmes?", "Ils écrivons des poèmes?", "Ils écrivent des poèmes?"], "answer": "D"},
+      {"question": "You (form.) write the report every Monday.", "options": ["Vous écrit le rapport chaque lundi.", "Vous écrivons le rapport chaque lundi.", "Vous écrivez le rapport chaque lundi.", "Vous écrivent le rapport chaque lundi."], "answer": "C"},
+      {"question": "Do they (m.) not write fiction?", "options": ["Ils n'écrivent pas de fiction?", "Ils écrivent ne pas de fiction?", "Ils n'écrit pas de fiction?", "Ils n'écrivez pas de fiction?"], "answer": "A"},
+      {"question": "Do they (f.) not write reviews?", "options": ["Elles écrivent ne pas des critiques?", "Elles n'écrivent pas des critiques?", "Elles n'écrit pas des critiques?", "Elles n'écrivez pas des critiques?"], "answer": "B"},
+      {"question": "We write the same answer.", "options": ["Nous écrit la même réponse.", "Nous écrivez la même réponse.", "Nous écrivons la même réponse.", "Nous écrivent la même réponse."], "answer": "C"},
+      {"question": "They (m.) write texts during class.", "options": ["Ils écrit des textos pendant la classe.", "Ils écrivez des textos pendant la classe.", "Ils écrivons des textos pendant la classe.", "Ils écrivent des textos pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) do not write on the blackboard.", "options": ["Vous écrivez ne pas au tableau.", "Vous ne écrit pas au tableau.", "Vous ne écrivons pas au tableau.", "Vous n'écrivez pas au tableau."], "answer": "D"},
+      {"question": "They (f.) do not write the lyrics.", "options": ["Elles écrivent ne pas les paroles.", "Elles n'écrit pas les paroles.", "Elles n'écrivent pas les paroles.", "Elles n'écrivez pas les paroles."], "answer": "C"},
+      {"question": "I do not write anything before breakfast.", "options": ["Je n'écris rien avant le petit déjeuner.", "Je écris ne pas avant le petit déjeuner.", "Je n'écrit rien avant le petit déjeuner.", "Je écris pas avant le petit déjeuner."], "answer": "A"},
+      {"question": "Does she write quickly?", "options": ["Elle écris rapidement?", "Elle écrivons rapidement?", "Elle écrit rapidement?", "Elle écrivez rapidement?"], "answer": "C"},
+      {"question": "Do we write in French?", "options": ["Nous écrit en français?", "Nous écrivons en français?", "Nous écrivez en français?", "Nous écrivent en français?"], "answer": "D"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not write the letters.", "options": ["Elles a écrit ne pas les lettres.", "Elles n'ont pas écrit les lettres.", "Elles n'a écrit pas les lettres.", "Elles ont écrit ne pas les lettres."], "answer": "B"},
       {"question": "Did he not write the message?", "options": ["Il n'a pas écrit le message?", "Il a ne pas écrit le message?", "Il n'as pas écrit le message?", "Il a écrit pas le message?"], "answer": "A"},
