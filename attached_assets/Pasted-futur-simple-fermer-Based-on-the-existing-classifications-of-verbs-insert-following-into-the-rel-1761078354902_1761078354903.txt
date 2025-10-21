@@ -1,0 +1,231 @@
+futur simple - fermer
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) will not close the windows at night.",
+   "options": {
+     "A": "Elles fermera ne pas les fenêtres la nuit.",
+     "B": "Elles ne fermeront pas les fenêtres la nuit.",
+     "C": "Elles ne fermera pas les fenêtres la nuit.",
+     "D": "Elles fermeront pas les fenêtres la nuit."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Will he not close the door?",
+   "options": {
+     "A": "Il ne fermera pas la porte?",
+     "B": "Il fermera ne pas la porte?",
+     "C": "Il ne fermeras pas la porte?",
+     "D": "Il fermera pas la porte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Will I close my book before dinner?",
+   "options": {
+     "A": "Je fermerai mon livre avant le dîner?",
+     "B": "Je fermerai mon livre avant le dîner?",
+     "C": "Je fermerons mon livre avant le dîner?",
+     "D": "Je fermerez mon livre avant le dîner?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Will she not close the shop at 8 pm?",
+   "options": {
+     "A": "Elle ne fermera pas le magasin à 20 heures?",
+     "B": "Elle fermera ne pas le magasin à 20 heures?",
+     "C": "Elle ne fermeras pas le magasin à 20 heures?",
+     "D": "Elle fermera pas le magasin à 20 heures?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) will not close your bag.",
+   "options": {
+     "A": "Tu fermeras ne pas ton sac.",
+     "B": "Tu ne fermeras pas ton sac.",
+     "C": "Tu ne fermera pas ton sac.",
+     "D": "Tu fermera pas ton sac."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He will close the gate tomorrow.",
+   "options": {
+     "A": "Il fermera le portail demain.",
+     "B": "Il fermeras le portail demain.",
+     "C": "Il fermeront le portail demain.",
+     "D": "Il fermera le portail demain."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Will I close the door after leaving?",
+   "options": {
+     "A": "Je fermerai la porte après être parti?",
+     "B": "Je fermeras la porte après être parti?",
+     "C": "Je fermerons la porte après être parti?",
+     "D": "Je fermerez la porte après être parti?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Will you (pl.) not close the windows in summer?",
+   "options": {
+     "A": "Vous fermerez ne pas les fenêtres en été?",
+     "B": "Vous ne fermeras pas les fenêtres en été?",
+     "C": "Vous ne fermerez pas les fenêtres en été?",
+     "D": "Vous ne fermera pas les fenêtres en été?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We will close the store at 9 p.m.",
+   "options": {
+     "A": "Nous fermerai le magasin à 21 heures.",
+     "B": "Nous fermerons le magasin à 21 heures.",
+     "C": "Nous fermerez le magasin à 21 heures.",
+     "D": "Nous fermeras le magasin à 21 heures."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Will they (m.) close the gate?",
+   "options": {
+     "A": "Ils fermerai le portail?",
+     "B": "Ils fermera le portail?",
+     "C": "Ils fermerez le portail?",
+     "D": "Ils fermeront le portail?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) will close the door each night.",
+   "options": {
+     "A": "Vous fermeras la porte chaque nuit.",
+     "B": "Vous fermera la porte chaque nuit.",
+     "C": "Vous fermerez la porte chaque nuit.",
+     "D": "Vous fermeront la porte chaque nuit."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Will they (m.) not close the shop during lunch?",
+   "options": {
+     "A": "Ils ne fermeront pas le magasin pendant le déjeuner?",
+     "B": "Ils fermeront ne pas le magasin pendant le déjeuner?",
+     "C": "Ils ne fermeras pas le magasin pendant le déjeuner?",
+     "D": "Ils ne fermerez pas le magasin pendant le déjeuner?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Will they (f.) not close the bags?",
+   "options": {
+     "A": "Elles fermeront ne pas les sacs?",
+     "B": "Elles ne fermeront pas les sacs?",
+     "C": "Elles ne fermeras pas les sacs?",
+     "D": "Elles ne fermerez pas les sacs?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We will close the same window.",
+   "options": {
+     "A": "Nous fermera la même fenêtre.",
+     "B": "Nous fermerez la même fenêtre.",
+     "C": "Nous fermerons la même fenêtre.",
+     "D": "Nous fermeras la même fenêtre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) will close the books after the exam.",
+   "options": {
+     "A": "Ils fermez les livres après l'examen.",
+     "B": "Ils fermaient les livres après l'examen.",
+     "C": "Ils fermera les livres après l'examen.",
+     "D": "Ils fermeront les livres après l'examen."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) will not close the box during class.",
+   "options": {
+     "A": "Vous fermerez ne pas la boîte pendant le cours.",
+     "B": "Vous ne fermeras pas la boîte pendant le cours.",
+     "C": "Vous ne fermera pas la boîte pendant le cours.",
+     "D": "Vous ne fermerez pas la boîte pendant le cours."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) will not close the cabinet.",
+   "options": {
+     "A": "Elles fermeront ne pas l'armoire.",
+     "B": "Elles ne fermeras pas l'armoire.",
+     "C": "Elles ne fermeront pas l'armoire.",
+     "D": "Elles ne fermerez pas l'armoire."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I will not close the file before saving.",
+   "options": {
+     "A": "Je ne fermerai pas le dossier avant de sauvegarder.",
+     "B": "Je fermerai ne pas le dossier avant de sauvegarder.",
+     "C": "Je ne fermeras pas le dossier avant de sauvegarder.",
+     "D": "Je ne fermera pas le dossier avant de sauvegarder."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Will she close the envelopes quickly?",
+   "options": {
+     "A": "Elle fermeras les enveloppes rapidement?",
+     "B": "Elle fermerons les enveloppes rapidement?",
+     "C": "Elle fermera les enveloppes rapidement?",
+     "D": "Elle fermerez les enveloppes rapidement?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Will we close the door before leaving?",
+   "options": {
+     "A": "Nous fermera la porte avant de partir?",
+     "B": "Nous fermeras la porte avant de partir?",
+     "C": "Nous fermerez la porte avant de partir?",
+     "D": "Nous fermerons la porte avant de partir?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

@@ -1131,7 +1131,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "ouvrir": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not open the doors.", "options": ["Elles ouvre ne pas les portes.", "Elles n'ouvrent pas les portes.", "Elles n'ouvre pas les portes.", "Elles ouvrent ne pas les portes."], "answer": "B"},
+      {"question": "Does he not open the window?", "options": ["Il n'ouvre pas la fenêtre?", "Il ouvre ne pas la fenêtre?", "Il n'ouvres pas la fenêtre?", "Il ouvre pas la fenêtre?"], "answer": "A"},
+      {"question": "Do I open the door every morning?", "options": ["Je ouvre la porte chaque matin?", "J'ouvre la porte chaque matin?", "Je ouvrons la porte chaque matin?", "Je ouvrez la porte chaque matin?"], "answer": "B"},
+      {"question": "Does she not open the book?", "options": ["Elle n'ouvre pas le livre?", "Elle ouvre ne pas le livre?", "Elle n'ouvres pas le livre?", "Elle ouvre pas le livre?"], "answer": "A"},
+      {"question": "You (inf.) do not open your bag.", "options": ["Tu ouvre ne pas ton sac.", "Tu n'ouvres pas ton sac.", "Tu n'ouvre pas ton sac.", "Tu ouvres ne pas ton sac."], "answer": "B"},
+      {"question": "He opens the box quickly.", "options": ["Il ouvres la boîte rapidement.", "Il ouvrons la boîte rapidement.", "Il ouvrez la boîte rapidement.", "Il ouvre la boîte rapidement."], "answer": "D"},
+      {"question": "Do I open the gifts on my birthday?", "options": ["J'ouvre les cadeaux le jour de mon anniversaire?", "Je ouvre les cadeaux le jour de mon anniversaire?", "Je ouvrons les cadeaux le jour de mon anniversaire?", "Je ouvrez les cadeaux le jour de mon anniversaire?"], "answer": "A"},
+      {"question": "Do you (pl.) not open the windows in summer?", "options": ["Vous ouvrez ne pas les fenêtres en été?", "Vous ne ouvrez pas les fenêtres en été?", "Vous n'ouvrez pas les fenêtres en été?", "Vous ouvrez pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We open the store at 9 a.m.", "options": ["Nous ouvre le magasin à neuf heures.", "Nous ouvrons le magasin à neuf heures.", "Nous ouvrez le magasin à neuf heures.", "Nous ouvrent le magasin à neuf heures."], "answer": "B"},
+      {"question": "Do they (m.) open the gift?", "options": ["Ils ouvre le cadeau?", "Ils ouvrez le cadeau?", "Ils ouvrons le cadeau?", "Ils ouvrent le cadeau?"], "answer": "D"},
+      {"question": "You (form.) open the files every morning.", "options": ["Vous ouvre les dossiers chaque matin.", "Vous ouvrons les dossiers chaque matin.", "Vous ouvrez les dossiers chaque matin.", "Vous ouvrent les dossiers chaque matin."], "answer": "C"},
+      {"question": "Do they (m.) not open the door?", "options": ["Ils n'ouvrent pas la porte?", "Ils ouvrent ne pas la porte?", "Ils n'ouvre pas la porte?", "Ils ouvre pas la porte?"], "answer": "A"},
+      {"question": "Do they (f.) not open the envelope?", "options": ["Elles ouvrent ne pas l'enveloppe?", "Elles n'ouvrent pas l'enveloppe?", "Elles n'ouvre pas l'enveloppe?", "Elles ouvrez pas l'enveloppe?"], "answer": "B"},
+      {"question": "We open the same book.", "options": ["Nous ouvre le même livre.", "Nous ouvrez le même livre.", "Nous ouvrons le même livre.", "Nous ouvrent le même livre."], "answer": "C"},
+      {"question": "They (m.) open the boxes during class.", "options": ["Ils ouvre les boîtes pendant la classe.", "Ils ouvrez les boîtes pendant la classe.", "Ils ouvrons les boîtes pendant la classe.", "Ils ouvrent les boîtes pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) do not open the door in winter.", "options": ["Vous ouvrez ne pas la porte en hiver.", "Vous ne ouvrez pas la porte en hiver.", "Vous ne ouvrons pas la porte en hiver.", "Vous n'ouvrez pas la porte en hiver."], "answer": "D"},
+      {"question": "They (f.) do not open the gifts.", "options": ["Elles ouvrent ne pas les cadeaux.", "Elles n'ouvre pas les cadeaux.", "Elles n'ouvrent pas les cadeaux.", "Elles n'ouvrez pas les cadeaux."], "answer": "C"},
+      {"question": "I do not open the windows at night.", "options": ["Je n'ouvre pas les fenêtres la nuit.", "J'ouvre ne pas les fenêtres la nuit.", "Je n'ouvres pas les fenêtres la nuit.", "J'ouvre pas les fenêtres la nuit."], "answer": "A"},
+      {"question": "Does she open the gifts quickly?", "options": ["Elle ouvre les cadeaux rapidement?", "Elle ouvre les cadeaux vite?", "Elle ouvre les cadeaux tout de suite?", "Elle ouvre les cadeaux lentement?"], "answer": "C"},
+      {"question": "Do we open the window after lunch?", "options": ["Nous ouvre la fenêtre après le déjeuner?", "Nous ouvrons la fenêtre après le déjeuner?", "Nous ouvrez la fenêtre après le déjeuner?", "Nous ouvrent la fenêtre après le déjeuner?"], "answer": "D"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not open the doors.", "options": ["Elles a ouvert ne pas les portes.", "Elles n'ont pas ouvert les portes.", "Elles n'a ouvert pas les portes.", "Elles ont ouvert pas les portes."], "answer": "B"},
       {"question": "Did he not open the window?", "options": ["Il n'a pas ouvert la fenêtre?", "Il a ne pas ouvert la fenêtre?", "Il n'as pas ouvert la fenêtre?", "Il a ouvert pas la fenêtre?"], "answer": "A"},
