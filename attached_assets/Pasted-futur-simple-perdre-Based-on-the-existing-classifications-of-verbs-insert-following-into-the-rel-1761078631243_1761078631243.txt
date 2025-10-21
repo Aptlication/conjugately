@@ -1,0 +1,231 @@
+futur simple - perdre
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) will not lose their keys.",
+   "options": {
+     "A": "Elles perdra ne pas leurs clés.",
+     "B": "Elles ne perdront pas leurs clés.",
+     "C": "Elles ne perdra pas leurs clés.",
+     "D": "Elles perdront pas leurs clés."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Will he not lose his wallet?",
+   "options": {
+     "A": "Il ne perdra pas son portefeuille?",
+     "B": "Il perdra ne pas son portefeuille?",
+     "C": "Il ne perdras pas son portefeuille?",
+     "D": "Il perdra pas son portefeuille?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Will I lose my glasses tomorrow?",
+   "options": {
+     "A": "Je perdrai mes lunettes demain?",
+     "B": "Je perdrai mes lunettes demain?",
+     "C": "Je perdrons mes lunettes demain?",
+     "D": "Je perdrez mes lunettes demain?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Will she not lose hope?",
+   "options": {
+     "A": "Elle ne perdra pas espoir?",
+     "B": "Elle perdra ne pas espoir?",
+     "C": "Elle ne perdras pas espoir?",
+     "D": "Elle perdra pas espoir?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) will not lose patience.",
+   "options": {
+     "A": "Tu perdras ne pas patience.",
+     "B": "Tu ne perdras pas patience.",
+     "C": "Tu ne perdra pas patience.",
+     "D": "Tu perdra pas patience."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He will lose his pen soon.",
+   "options": {
+     "A": "Il perdras son stylo bientôt.",
+     "B": "Il perdront son stylo bientôt.",
+     "C": "Il perdrai son stylo bientôt.",
+     "D": "Il perdra son stylo bientôt."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Will I lose my way?",
+   "options": {
+     "A": "Je perdrai mon chemin?",
+     "B": "Je perdras mon chemin?",
+     "C": "Je perdrons mon chemin?",
+     "D": "Je perdrez mon chemin?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Will you (pl.) not lose your tickets?",
+   "options": {
+     "A": "Vous perdrez ne pas vos billets?",
+     "B": "Vous ne perdras pas vos billets?",
+     "C": "Vous ne perdrez pas vos billets?",
+     "D": "Vous ne perdra pas vos billets?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We will lose motivation in winter.",
+   "options": {
+     "A": "Nous perdra motivation en hiver.",
+     "B": "Nous perdrons motivation en hiver.",
+     "C": "Nous perdrez motivation en hiver.",
+     "D": "Nous perdras motivation en hiver."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Will they (m.) lose money again?",
+   "options": {
+     "A": "Ils perdras de l'argent encore?",
+     "B": "Ils perdra de l'argent encore?",
+     "C": "Ils perdrez de l'argent encore?",
+     "D": "Ils perdront de l'argent encore?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) will lose your password if not careful.",
+   "options": {
+     "A": "Vous perds votre mot de passe si vous n'êtes pas prudent.",
+     "B": "Vous perdrons votre mot de passe si vous n'êtes pas prudent.",
+     "C": "Vous perdrez votre mot de passe si vous n'êtes pas prudent.",
+     "D": "Vous perdront votre mot de passe si vous n'êtes pas prudent."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Will they (m.) not lose their friends?",
+   "options": {
+     "A": "Ils ne perdront pas leurs amis?",
+     "B": "Ils perdront ne pas leurs amis?",
+     "C": "Ils ne perdras pas leurs amis?",
+     "D": "Ils ne perdrez pas leurs amis?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Will they (f.) not lose time in traffic?",
+   "options": {
+     "A": "Elles perdront ne pas de temps dans les embouteillages?",
+     "B": "Elles ne perdront pas de temps dans les embouteillages?",
+     "C": "Elles ne perdras pas de temps dans les embouteillages?",
+     "D": "Elles ne perdrez pas de temps dans les embouteillages?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We will lose interest quickly.",
+   "options": {
+     "A": "Nous perdra intérêt vite.",
+     "B": "Nous perdrons intérêt vite.",
+     "C": "Nous perdrez intérêt vite.",
+     "D": "Nous perdras intérêt vite."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) will lose their way at night.",
+   "options": {
+     "A": "Ils perdras leur chemin la nuit.",
+     "B": "Ils perdrait leur chemin la nuit.",
+     "C": "Ils perdra leur chemin la nuit.",
+     "D": "Ils perdront leur chemin la nuit."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) will not lose money.",
+   "options": {
+     "A": "Vous perdrez ne pas d'argent.",
+     "B": "Vous ne perdras pas d'argent.",
+     "C": "Vous ne perdra pas d'argent.",
+     "D": "Vous ne perdrez pas d'argent."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) will not lose faith.",
+   "options": {
+     "A": "Elles perdront ne pas la foi.",
+     "B": "Elles ne perdras pas la foi.",
+     "C": "Elles ne perdront pas la foi.",
+     "D": "Elles ne perdrez pas la foi."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I will not lose hope.",
+   "options": {
+     "A": "Je ne perdrai pas espoir.",
+     "B": "Je perdrai ne pas espoir.",
+     "C": "Je ne perdras pas espoir.",
+     "D": "Je ne perdra pas espoir."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Will she lose her umbrella tomorrow?",
+   "options": {
+     "A": "Elle perdras son parapluie demain?",
+     "B": "Elle perdrons son parapluie demain?",
+     "C": "Elle perdra son parapluie demain?",
+     "D": "Elle perdrez son parapluie demain?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Will we lose the key by accident?",
+   "options": {
+     "A": "Nous perdra la clé par accident?",
+     "B": "Nous perdras la clé par accident?",
+     "C": "Nous perdrez la clé par accident?",
+     "D": "Nous perdrons la clé par accident?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

@@ -1201,7 +1201,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "fermer": {
-    "present": [],
+    "present": [
+      {"question": "They (f.) do not close the windows at night.", "options": ["Elles ferme ne pas les fenêtres la nuit.", "Elles ne ferment pas les fenêtres la nuit.", "Elles ne ferme pas les fenêtres la nuit.", "Elles ferment ne pas les fenêtres la nuit."], "answer": "B"},
+      {"question": "Does he not close the door?", "options": ["Il ne ferme pas la porte?", "Il ferme ne pas la porte?", "Il ne fermes pas la porte?", "Il ferme pas la porte?"], "answer": "A"},
+      {"question": "Do I close my book every evening?", "options": ["Je ferme mon livre chaque soir?", "Je fermes mon livre chaque soir?", "Je fermons mon livre chaque soir?", "Je fermez mon livre chaque soir?"], "answer": "A"},
+      {"question": "Does she not close the shop at 8 pm?", "options": ["Elle ne ferme pas le magasin à 20 heures?", "Elle ferme ne pas le magasin à 20 heures?", "Elle ne fermes pas le magasin à 20 heures?", "Elle ferme pas le magasin à 20 heures?"], "answer": "A"},
+      {"question": "You (inf.) do not close your bag.", "options": ["Tu ferme ne pas ton sac.", "Tu ne fermes pas ton sac.", "Tu ne ferme pas ton sac.", "Tu fermes ne pas ton sac."], "answer": "B"},
+      {"question": "He closes the gate every morning.", "options": ["Il fermes le portail chaque matin.", "Il fermons le portail chaque matin.", "Il fermez le portail chaque matin.", "Il ferme le portail chaque matin."], "answer": "D"},
+      {"question": "Do I close the door after leaving?", "options": ["Je fermes la porte après être parti?", "Je ferme la porte après être parti?", "Je fermons la porte après être parti?", "Je fermez la porte après être parti?"], "answer": "B"},
+      {"question": "Do you (pl.) not close the windows in summer?", "options": ["Vous fermez ne pas les fenêtres en été?", "Vous ne fermez pas les fenêtres en été?", "Vous ne fermez pas les fenêtres en été?", "Vous fermez pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We close the store at 9 p.m.", "options": ["Nous ferme le magasin à 21 heures.", "Nous fermons le magasin à 21 heures.", "Nous fermez le magasin à 21 heures.", "Nous ferment le magasin à 21 heures."], "answer": "B"},
+      {"question": "Do they (m.) close the gate?", "options": ["Ils ferme le portail?", "Ils fermez le portail?", "Ils fermons le portail?", "Ils ferment le portail?"], "answer": "D"},
+      {"question": "You (form.) close the door every evening.", "options": ["Vous ferme la porte chaque soir.", "Vous fermons la porte chaque soir.", "Vous fermez la porte chaque soir.", "Vous ferment la porte chaque soir."], "answer": "C"},
+      {"question": "Do they (m.) not close the shop during lunch?", "options": ["Ils ne ferment pas le magasin pendant le déjeuner?", "Ils ferment ne pas le magasin pendant le déjeuner?", "Ils ne ferme pas le magasin pendant le déjeuner?", "Ils ferment pas le magasin pendant le déjeuner?"], "answer": "A"},
+      {"question": "Do they (f.) not close the bags?", "options": ["Elles ferment ne pas les sacs?", "Elles ne ferment pas les sacs?", "Elles ne ferme pas les sacs?", "Elles fermez pas les sacs?"], "answer": "B"},
+      {"question": "We close the same window.", "options": ["Nous ferme la même fenêtre.", "Nous fermez la même fenêtre.", "Nous fermons la même fenêtre.", "Nous ferment la même fenêtre."], "answer": "C"},
+      {"question": "They (m.) close the books after the exam.", "options": ["Ils ferme les livres après l'examen.", "Ils fermez les livres après l'examen.", "Ils fermons les livres après l'examen.", "Ils ferment les livres après l'examen."], "answer": "D"},
+      {"question": "You (pl.) do not close the box during class.", "options": ["Vous fermez ne pas la boîte pendant le cours.", "Vous ne fermez pas la boîte pendant le cours.", "Vous ne ferme pas la boîte pendant le cours.", "Vous ne fermez pas la boîte pendant le cours."], "answer": "D"},
+      {"question": "They (f.) do not close the cabinet.", "options": ["Elles ferment ne pas l'armoire.", "Elles ne ferme pas l'armoire.", "Elles ne ferment pas l'armoire.", "Elles fermez pas l'armoire."], "answer": "C"},
+      {"question": "I do not close the file before saving.", "options": ["Je ne ferme pas le dossier avant de sauvegarder.", "Je ferme ne pas le dossier avant de sauvegarder.", "Je ne fermes pas le dossier avant de sauvegarder.", "Je ferme pas le dossier avant de sauvegarder."], "answer": "A"},
+      {"question": "Does she close the envelopes quickly?", "options": ["Elle ferme les enveloppes rapidement?", "Elle fermes les enveloppes rapidement?", "Elle ferme les enveloppes tout de suite?", "Elle ferme les enveloppes lentement?"], "answer": "C"},
+      {"question": "Do we close the door before leaving?", "options": ["Nous ferme la porte avant de partir?", "Nous fermons la porte avant de partir?", "Nous fermez la porte avant de partir?", "Nous ferment la porte avant de partir?"], "answer": "D"}
+    ],
     "passé_composé": [
       {"question": "They (f.) did not close the windows at night.", "options": ["Elles a fermé ne pas les fenêtres la nuit.", "Elles n'ont pas fermé les fenêtres la nuit.", "Elles n'a fermé pas les fenêtres la nuit.", "Elles ont fermé pas les fenêtres la nuit."], "answer": "B"},
       {"question": "Did he not close the door?", "options": ["Il n'a pas fermé la porte?", "Il a ne pas fermé la porte?", "Il n'as pas fermé la porte?", "Il a fermé pas la porte?"], "answer": "A"},
