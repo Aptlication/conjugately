@@ -1,0 +1,231 @@
+futur simple - lire
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) will not read the newspaper tomorrow.",
+   "options": {
+     "A": "Elles liront ne pas le journal demain.",
+     "B": "Elles ne liront pas le journal demain.",
+     "C": "Elles ne liras pas le journal demain.",
+     "D": "Elles liront pas le journal demain."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Will he not read the contract?",
+   "options": {
+     "A": "Il ne lira pas le contrat?",
+     "B": "Il lira ne pas le contrat?",
+     "C": "Il ne liras pas le contrat?",
+     "D": "Il ne lirai pas le contrat?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Will I read that book next month?",
+   "options": {
+     "A": "Je liras ce livre le mois prochain?",
+     "B": "Je lirai ce livre le mois prochain?",
+     "C": "Je lira ce livre le mois prochain?",
+     "D": "Je lirons ce livre le mois prochain?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Will she not read the instructions?",
+   "options": {
+     "A": "Elle ne lira pas les instructions?",
+     "B": "Elle lira ne pas les instructions?",
+     "C": "Elle ne liras pas les instructions?",
+     "D": "Elle ne lirai pas les instructions?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) will not read the email today.",
+   "options": {
+     "A": "Tu ne lira pas le courriel aujourd'hui.",
+     "B": "Tu ne liras pas le courriel aujourd'hui.",
+     "C": "Tu liras ne pas le courriel aujourd'hui.",
+     "D": "Tu ne lirai pas le courriel aujourd'hui."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He will read the report this afternoon.",
+   "options": {
+     "A": "Il liras le rapport cet après-midi.",
+     "B": "Il lirai le rapport cet après-midi.",
+     "C": "Il lirons le rapport cet après-midi.",
+     "D": "Il lira le rapport cet après-midi."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Will I read the entire novel?",
+   "options": {
+     "A": "Je lirai le roman entier?",
+     "B": "Je liras le roman entier?",
+     "C": "Je lira le roman entier?",
+     "D": "Je lirons le roman entier?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Will you (pl.) not read the labels?",
+   "options": {
+     "A": "Vous lirez ne pas les étiquettes?",
+     "B": "Vous ne liras pas les étiquettes?",
+     "C": "Vous ne lirez pas les étiquettes?",
+     "D": "Vous ne lirai pas les étiquettes?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We will read the menu carefully.",
+   "options": {
+     "A": "Nous liras le menu attentivement.",
+     "B": "Nous lirons le menu attentivement.",
+     "C": "Nous lira le menu attentivement.",
+     "D": "Nous lirai le menu attentivement."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Will they (m.) read the article?",
+   "options": {
+     "A": "Ils liras l'article?",
+     "B": "Ils lira l'article?",
+     "C": "Ils lirez l'article?",
+     "D": "Ils liront l'article?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) will read all the chapters.",
+   "options": {
+     "A": "Vous liras tous les chapitres.",
+     "B": "Vous lira tous les chapitres.",
+     "C": "Vous lirez tous les chapitres.",
+     "D": "Vous lirons tous les chapitres."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Will they (m.) not read the signs?",
+   "options": {
+     "A": "Ils ne liront pas les panneaux?",
+     "B": "Ils liront ne pas les panneaux?",
+     "C": "Ils ne liras pas les panneaux?",
+     "D": "Ils ne lirez pas les panneaux?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Will they (f.) not read the reviews?",
+   "options": {
+     "A": "Elles liront ne pas les critiques?",
+     "B": "Elles ne liront pas les critiques?",
+     "C": "Elles ne liras pas les critiques?",
+     "D": "Elles ne lirez pas les critiques?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We will read the same magazine.",
+   "options": {
+     "A": "Nous lira le même magazine.",
+     "B": "Nous lirez le même magazine.",
+     "C": "Nous lirons le même magazine.",
+     "D": "Nous liras le même magazine."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) will read poetry in class.",
+   "options": {
+     "A": "Ils liras de la poésie en classe.",
+     "B": "Ils lira de la poésie en classe.",
+     "C": "Ils lirez de la poésie en classe.",
+     "D": "Ils liront de la poésie en classe."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) will not read the announcement.",
+   "options": {
+     "A": "Vous lirez ne pas l'annonce.",
+     "B": "Vous ne liras pas l'annonce.",
+     "C": "Vous ne lira pas l'annonce.",
+     "D": "Vous ne lirez pas l'annonce."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) will not read comic books.",
+   "options": {
+     "A": "Elles liront ne pas de bandes dessinées.",
+     "B": "Elles ne liras pas de bandes dessinées.",
+     "C": "Elles ne liront pas de bandes dessinées.",
+     "D": "Elles ne lirez pas de bandes dessinées."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I will not read horror novels.",
+   "options": {
+     "A": "Je ne lirai pas de romans d'horreur.",
+     "B": "Je lirai ne pas de romans d'horreur.",
+     "C": "Je ne liras pas de romans d'horreur.",
+     "D": "Je ne lira pas de romans d'horreur."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Will she read the biography?",
+   "options": {
+     "A": "Elle liras la biographie?",
+     "B": "Elle lirons la biographie?",
+     "C": "Elle lira la biographie?",
+     "D": "Elle lirez la biographie?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Will we read the news tonight?",
+   "options": {
+     "A": "Nous lira les nouvelles ce soir?",
+     "B": "Nous liras les nouvelles ce soir?",
+     "C": "Nous lirez les nouvelles ce soir?",
+     "D": "Nous lirons les nouvelles ce soir?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
