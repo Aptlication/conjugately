@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 13 verbs × 4 tenses × 20 questions = 1040 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire
+// 14 verbs × 4 tenses × 20 questions = 1120 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -1126,6 +1126,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I will not write anything before breakfast.", "options": ["Je n'écrirai rien avant le petit déjeuner.", "Je écrirai ne pas avant le petit déjeuner.", "Je n'écriras rien avant le petit déjeuner.", "Je n'écrira rien avant le petit déjeuner."], "answer": "A"},
       {"question": "Will she write quickly?", "options": ["Elle écriras rapidement?", "Elle écrirons rapidement?", "Elle écrira rapidement?", "Elle écrirez rapidement?"], "answer": "C"},
       {"question": "Will we write in French?", "options": ["Nous écrira en français?", "Nous écriras en français?", "Nous écrirez en français?", "Nous écrirons en français?"], "answer": "D"}
+    ],
+    "imparfait": []
+  },
+
+  "ouvrir": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not open the doors.", "options": ["Elles ouvrira ne pas les portes.", "Elles n'ouvriront pas les portes.", "Elles n'ouvrira pas les portes.", "Elles ouvriront pas les portes."], "answer": "B"},
+      {"question": "Will he not open the window?", "options": ["Il n'ouvrira pas la fenêtre?", "Il ouvrira ne pas la fenêtre?", "Il n'ouvriras pas la fenêtre?", "Il ouvrira pas la fenêtre?"], "answer": "A"},
+      {"question": "Will I open the door in the morning?", "options": ["Je ouvrirai la porte le matin?", "J'ouvrirai la porte le matin?", "Je ouvrirons la porte le matin?", "Je ouvrirez la porte le matin?"], "answer": "B"},
+      {"question": "Will she not open the book?", "options": ["Elle n'ouvrira pas le livre?", "Elle ouvrira ne pas le livre?", "Elle n'ouvriras pas le livre?", "Elle ouvrira pas le livre?"], "answer": "A"},
+      {"question": "You (inf.) will not open your bag.", "options": ["Tu ouvriras ne pas ton sac.", "Tu n'ouvriras pas ton sac.", "Tu n'ouvrira pas ton sac.", "Tu ouvrira pas ton sac."], "answer": "B"},
+      {"question": "He will open the box quickly.", "options": ["Il ouvriras la boîte rapidement.", "Il ouvriront la boîte rapidement.", "Il ouvrirai la boîte rapidement.", "Il ouvrira la boîte rapidement."], "answer": "D"},
+      {"question": "Will I open the gifts on my birthday?", "options": ["J'ouvrirai les cadeaux le jour de mon anniversaire?", "Je ouvrirai les cadeaux le jour de mon anniversaire?", "Je ouvrirons les cadeaux le jour de mon anniversaire?", "Je ouvrirez les cadeaux le jour de mon anniversaire?"], "answer": "A"},
+      {"question": "Will you (pl.) not open the windows in summer?", "options": ["Vous ouvrirez ne pas les fenêtres en été?", "Vous ne ouvriras pas les fenêtres en été?", "Vous n'ouvrirez pas les fenêtres en été?", "Vous ne ouvrira pas les fenêtres en été?"], "answer": "C"},
+      {"question": "We will open the store at 9 a.m.", "options": ["Nous ouvrirai le magasin à neuf heures.", "Nous ouvrirons le magasin à neuf heures.", "Nous ouvrirez le magasin à neuf heures.", "Nous ouvriras le magasin à neuf heures."], "answer": "B"},
+      {"question": "Will they (m.) open the gift?", "options": ["Ils ouvrirai le cadeau?", "Ils ouvrira le cadeau?", "Ils ouvrirez le cadeau?", "Ils ouvriront le cadeau?"], "answer": "D"},
+      {"question": "You (form.) will open the files every morning.", "options": ["Vous ouvriras les dossiers chaque matin.", "Vous ouvrira les dossiers chaque matin.", "Vous ouvrirez les dossiers chaque matin.", "Vous ouvriront les dossiers chaque matin."], "answer": "C"},
+      {"question": "Will they (m.) not open the door?", "options": ["Ils n'ouvriront pas la porte?", "Ils ouvriront ne pas la porte?", "Ils ne ouvriras pas la porte?", "Ils ne ouvrirez pas la porte?"], "answer": "A"},
+      {"question": "Will they (f.) not open the envelope?", "options": ["Elles ouvriront ne pas l'enveloppe?", "Elles n'ouvriront pas l'enveloppe.", "Elles ne ouvriras pas l'enveloppe.", "Elles ne ouvrirez pas l'enveloppe."], "answer": "B"},
+      {"question": "We will open the same book.", "options": ["Nous ouvrirai le même livre.", "Nous ouvrirez le même livre.", "Nous ouvrirons le même livre.", "Nous ouvriras le même livre."], "answer": "C"},
+      {"question": "They (m.) will open the boxes during class.", "options": ["Ils ouvriras les boîtes pendant la classe.", "Ils ouvririez les boîtes pendant la classe.", "Ils ouvrira les boîtes pendant la classe.", "Ils ouvriront les boîtes pendant la classe."], "answer": "D"},
+      {"question": "You (pl.) will not open the door in winter.", "options": ["Vous ouvrirez ne pas la porte en hiver.", "Vous ne ouvriras pas la porte en hiver.", "Vous ne ouvrira pas la porte en hiver.", "Vous n'ouvrirez pas la porte en hiver."], "answer": "D"},
+      {"question": "They (f.) will not open the gifts.", "options": ["Elles ouvriront ne pas les cadeaux.", "Elles ne ouvriras pas les cadeaux.", "Elles n'ouvriront pas les cadeaux.", "Elles ne ouvrirez pas les cadeaux."], "answer": "C"},
+      {"question": "I will not open the windows at night.", "options": ["Je n'ouvrirai pas les fenêtres la nuit.", "Je ouvrirai ne pas les fenêtres la nuit.", "Je n'ouvriras pas les fenêtres la nuit.", "Je n'ouvrira pas les fenêtres la nuit."], "answer": "A"},
+      {"question": "Will she open the gifts quickly?", "options": ["Elle ouvriras les cadeaux rapidement?", "Elle ouvrirons les cadeaux rapidement?", "Elle ouvrira les cadeaux rapidement?", "Elle ouvrirez les cadeaux rapidement?"], "answer": "C"},
+      {"question": "Will we open the window after lunch?", "options": ["Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirez la fenêtre après le déjeuner?", "Nous ouvrirons la fenêtre après le déjeuner?"], "answer": "D"}
     ],
     "imparfait": []
   },

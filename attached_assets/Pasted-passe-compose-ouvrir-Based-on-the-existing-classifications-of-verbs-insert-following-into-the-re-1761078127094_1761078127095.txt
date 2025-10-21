@@ -1,0 +1,231 @@
+passe compose - ouvrir
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not open the doors.",
+   "options": {
+     "A": "Elles a ouvert ne pas les portes.",
+     "B": "Elles n'ont pas ouvert les portes.",
+     "C": "Elles n'a ouvert pas les portes.",
+     "D": "Elles ont ouvert pas les portes."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not open the window?",
+   "options": {
+     "A": "Il n'a pas ouvert la fenêtre?",
+     "B": "Il a ne pas ouvert la fenêtre?",
+     "C": "Il n'as pas ouvert la fenêtre?",
+     "D": "Il a ouvert pas la fenêtre?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I open the door in the morning?",
+   "options": {
+     "A": "Je a ouvert la porte le matin?",
+     "B": "J'ai ouvert la porte le matin?",
+     "C": "Je suis ouvert la porte le matin?",
+     "D": "J'as ouvert la porte le matin?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not open the book?",
+   "options": {
+     "A": "Elle n'a pas ouvert le livre?",
+     "B": "Elle a ne pas ouvert le livre?",
+     "C": "Elle n'as pas ouvert le livre?",
+     "D": "Elle a ouvert pas le livre?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not open your bag.",
+   "options": {
+     "A": "Tu a ouvert ne pas ton sac.",
+     "B": "Tu n'as pas ouvert ton sac.",
+     "C": "Tu n'a ouvert pas ton sac.",
+     "D": "Tu as ouvert pas ton sac."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He opened the box quickly.",
+   "options": {
+     "A": "Il a ouvert la boîte rapidement.",
+     "B": "Il a ouvris la boîte rapidement.",
+     "C": "Il a ouvrez la boîte rapidement.",
+     "D": "Il a ouvert la boîte rapidement."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I open the gifts on my birthday?",
+   "options": {
+     "A": "J'ai ouvert les cadeaux le jour de mon anniversaire?",
+     "B": "Je a ouvert les cadeaux le jour de mon anniversaire?",
+     "C": "Je suis ouvert les cadeaux le jour de mon anniversaire?",
+     "D": "J'as ouvert les cadeaux le jour de mon anniversaire?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not open the windows in summer?",
+   "options": {
+     "A": "Vous avez ouvert ne pas les fenêtres en été?",
+     "B": "Vous n'avons pas ouvert les fenêtres en été?",
+     "C": "Vous n'avez pas ouvert les fenêtres en été?",
+     "D": "Vous avez ouvert pas les fenêtres en été?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We opened the store at 9 a.m.",
+   "options": {
+     "A": "Nous a ouvert le magasin à neuf heures.",
+     "B": "Nous avons ouvert le magasin à neuf heures.",
+     "C": "Nous sommes ouvert le magasin à neuf heures.",
+     "D": "Nous avez ouvert le magasin à neuf heures."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) open the gift?",
+   "options": {
+     "A": "Ils a ouvert le cadeau?",
+     "B": "Ils sont ouvert le cadeau?",
+     "C": "Ils avez ouvert le cadeau?",
+     "D": "Ils ont ouvert le cadeau?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) opened the files every morning.",
+   "options": {
+     "A": "Vous avons ouvert les dossiers chaque matin.",
+     "B": "Vous ont ouvert les dossiers chaque matin.",
+     "C": "Vous avez ouvert les dossiers chaque matin.",
+     "D": "Vous êtes ouvert les dossiers chaque matin."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not open the door?",
+   "options": {
+     "A": "Ils n'ont pas ouvert la porte?",
+     "B": "Ils ont ne pas ouvert la porte?",
+     "C": "Ils n'avez pas ouvert la porte?",
+     "D": "Ils ont ouvert pas la porte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not open the envelope?",
+   "options": {
+     "A": "Elles ont ouvert ne pas l'enveloppe?",
+     "B": "Elles n'ont pas ouvert l'enveloppe.",
+     "C": "Elles n'avez pas ouvert l'enveloppe?",
+     "D": "Elles ont ouvert pas l'enveloppe."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We opened the same book.",
+   "options": {
+     "A": "Nous a ouvert le même livre.",
+     "B": "Nous avons ouvert le même livre.",
+     "C": "Nous sommes ouvert le même livre.",
+     "D": "Nous avez ouvert le même livre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) opened the boxes during class.",
+   "options": {
+     "A": "Ils avez ouvert les boîtes pendant la classe.",
+     "B": "Ils sont ouvert les boîtes pendant la classe.",
+     "C": "Ils a ouvert les boîtes pendant la classe.",
+     "D": "Ils ont ouvert les boîtes pendant la classe."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not open the door in winter.",
+   "options": {
+     "A": "Vous avez ouvert ne pas la porte en hiver.",
+     "B": "Vous n'avons pas ouvert la porte en hiver.",
+     "C": "Vous avez pas ouvert la porte en hiver.",
+     "D": "Vous n'avez pas ouvert la porte en hiver."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not open the gifts.",
+   "options": {
+     "A": "Elles ont ouvert ne pas les cadeaux.",
+     "B": "Elles n'a ouvert pas les cadeaux.",
+     "C": "Elles n'ont pas ouvert les cadeaux.",
+     "D": "Elles ont ouvert pas les cadeaux."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not open the windows at night.",
+   "options": {
+     "A": "Je n'ai pas ouvert les fenêtres la nuit.",
+     "B": "J'ai ouvert ne pas les fenêtres la nuit.",
+     "C": "Je n'as pas ouvert les fenêtres la nuit.",
+     "D": "J'ai ouvert pas les fenêtres la nuit."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she open the gifts quickly?",
+   "options": {
+     "A": "Elle a ouvert les cadeaux rapidement?",
+     "B": "Elle a ouvert les cadeaux vite?",
+     "C": "Elle a ouvert les cadeaux tout de suite?",
+     "D": "Elle a ouvert les cadeaux lentement?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we open the window after lunch?",
+   "options": {
+     "A": "Nous a ouvert la fenêtre après le déjeuner?",
+     "B": "Nous avons ouvert la fenêtre après le déjeuner?",
+     "C": "Nous sommes ouvert la fenêtre après le déjeuner?",
+     "D": "Nous avez ouvert la fenêtre après le déjeuner."
+   },
+   "correct_answer": "D"
+ }
+]
+ 
