@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 16 verbs × 4 tenses × 20 questions = 1280 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre
+// 17 verbs × 4 tenses × 20 questions = 1360 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre, garder
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -1336,6 +1336,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I will not lose hope.", "options": ["Je ne perdrai pas espoir.", "Je perdrai ne pas espoir.", "Je ne perdras pas espoir.", "Je ne perdra pas espoir."], "answer": "A"},
       {"question": "Will she lose her umbrella tomorrow?", "options": ["Elle perdras son parapluie demain?", "Elle perdrons son parapluie demain?", "Elle perdra son parapluie demain?", "Elle perdrez son parapluie demain?"], "answer": "C"},
       {"question": "Will we lose the key by accident?", "options": ["Nous perdra la clé par accident?", "Nous perdras la clé par accident?", "Nous perdrez la clé par accident?", "Nous perdrons la clé par accident?"], "answer": "D"}
+    ],
+    "imparfait": []
+  },
+
+  "garder": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not keep quiet during the meeting.", "options": ["Elles gardera ne pas le silence pendant la réunion.", "Elles ne garderont pas le silence pendant la réunion.", "Elles ne gardera pas le silence pendant la réunion.", "Elles garderont pas le silence pendant la réunion."], "answer": "B"},
+      {"question": "Will he not keep his promises?", "options": ["Il ne gardera pas ses promesses?", "Il gardera ne pas ses promesses?", "Il ne garderas pas ses promesses?", "Il gardera pas ses promesses?"], "answer": "A"},
+      {"question": "Will I keep all my notes?", "options": ["Je gardera toutes mes notes?", "Je garderai toutes mes notes?", "Je garderons toutes mes notes?", "Je garderez toutes mes notes?"], "answer": "B"},
+      {"question": "Will she not keep in touch with her friends?", "options": ["Elle ne gardera pas le contact avec ses amis?", "Elle gardera ne pas le contact avec ses amis?", "Elle ne garderas pas le contact avec ses amis?", "Elle gardera pas le contact avec ses amis?"], "answer": "A"},
+      {"question": "You (inf.) will not keep the secret.", "options": ["Tu garderas ne pas le secret.", "Tu ne garderas pas le secret.", "Tu ne gardera pas le secret.", "Tu gardera pas le secret."], "answer": "B"},
+      {"question": "He will keep his documents organized.", "options": ["Il garderas ses documents organisés.", "Il garderont ses documents organisés.", "Il garderai ses documents organisés.", "Il gardera ses documents organisés."], "answer": "D"},
+      {"question": "Will I keep my door open?", "options": ["Je garderai ma porte ouverte?", "Je garderas ma porte ouverte?", "Je garderons ma porte ouverte?", "Je garderez ma porte ouverte?"], "answer": "A"},
+      {"question": "Will you (pl.) not keep old files?", "options": ["Vous garderez ne pas de vieux fichiers?", "Vous ne garderas pas de vieux fichiers?", "Vous ne garderez pas de vieux fichiers?", "Vous ne gardera pas de vieux fichiers?"], "answer": "C"},
+      {"question": "We will keep our workspace clean.", "options": ["Nous gardera notre espace de travail propre.", "Nous garderons notre espace de travail propre.", "Nous garderez notre espace de travail propre.", "Nous garderas notre espace de travail propre."], "answer": "B"},
+      {"question": "Will they (m.) keep their shoes by the door?", "options": ["Ils garderas leurs chaussures près de la porte?", "Ils gardera leurs chaussures près de la porte?", "Ils garderez leurs chaussures près de la porte?", "Ils garderont leurs chaussures près de la porte?"], "answer": "D"},
+      {"question": "You (form.) will keep all receipts.", "options": ["Vous garderas tous les reçus.", "Vous gardera tous les reçus.", "Vous garderez tous les reçus.", "Vous garderont tous les reçus."], "answer": "C"},
+      {"question": "Will they (m.) not keep any pets?", "options": ["Ils ne garderont pas d'animaux?", "Ils garderont ne pas d'animaux?", "Ils ne garderas pas d'animaux?", "Ils ne garderez pas d'animaux?"], "answer": "A"},
+      {"question": "Will they (f.) not keep their old clothes?", "options": ["Elles garderont ne pas leurs vieux vêtements?", "Elles ne garderont pas leurs vieux vêtements?", "Elles ne garderas pas leurs vieux vêtements?", "Elles ne garderez pas leurs vieux vêtements?"], "answer": "B"},
+      {"question": "We will keep the same habits next year.", "options": ["Nous gardera les mêmes habitudes l'année prochaine.", "Nous garderez les mêmes habitudes l'année prochaine.", "Nous garderons les mêmes habitudes l'année prochaine.", "Nous garderas les mêmes habitudes l'année prochaine."], "answer": "C"},
+      {"question": "They (m.) will keep their word.", "options": ["Ils garderas leur parole.", "Ils garderaient leur parole.", "Ils gardera leur parole.", "Ils garderont leur parole."], "answer": "D"},
+      {"question": "You (pl.) will not keep the light on.", "options": ["Vous garderez ne pas la lumière allumée.", "Vous ne garderas pas la lumière allumée.", "Vous ne gardera pas la lumière allumée.", "Vous ne garderez pas la lumière allumée."], "answer": "D"},
+      {"question": "They (f.) will not keep food in their rooms.", "options": ["Elles garderont ne pas de nourriture dans leurs chambres.", "Elles ne garderas pas de nourriture dans leurs chambres.", "Elles ne garderont pas de nourriture dans leurs chambres.", "Elles ne garderez pas de nourriture dans leurs chambres."], "answer": "C"},
+      {"question": "I will not keep any receipts.", "options": ["Je ne garderai aucun reçu.", "Je garderai ne pas aucun reçu.", "Je ne garderas aucun reçu.", "Je ne gardera aucun reçu."], "answer": "A"},
+      {"question": "Will she keep her tickets?", "options": ["Elle garderas ses billets?", "Elle garderons ses billets?", "Elle gardera ses billets?", "Elle garderez ses billets?"], "answer": "C"},
+      {"question": "Will we keep our promises?", "options": ["Nous gardera nos promesses?", "Nous garderas nos promesses?", "Nous garderez nos promesses?", "Nous garderons nos promesses?"], "answer": "D"}
     ],
     "imparfait": []
   },
