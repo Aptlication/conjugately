@@ -1,0 +1,232 @@
+present - lire 
+
+Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) do not read the newspaper.",
+   "options": {
+     "A": "Elles lit ne pas le journal.",
+     "B": "Elles ne lisent pas le journal.",
+     "C": "Elles ne lit pas le journal.",
+     "D": "Elles lisent ne pas le journal."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Does he not read books?",
+   "options": {
+     "A": "Il ne lit pas de livres?",
+     "B": "Il lit ne pas de livres?",
+     "C": "Il ne lis pas de livres?",
+     "D": "Il lit pas de livres?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Do I read the newspaper every morning?",
+   "options": {
+     "A": "Je lit le journal tous les matins?",
+     "B": "Je lis le journal tous les matins?",
+     "C": "Je lisons le journal tous les matins?",
+     "D": "Je lisez le journal tous les matins?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Does she not read magazines?",
+   "options": {
+     "A": "Elle ne lit pas de magazines?",
+     "B": "Elle lit ne pas de magazines?",
+     "C": "Elle ne lis pas de magazines?",
+     "D": "Elle lit pas de magazines?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) do not read the instructions.",
+   "options": {
+     "A": "Tu ne lit pas les instructions.",
+     "B": "Tu ne lis pas les instructions.",
+     "C": "Tu lis ne pas les instructions.",
+     "D": "Tu lis pas les instructions."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He reads novels in French.",
+   "options": {
+     "A": "Il lis des romans en français.",
+     "B": "Il lisons des romans en français.",
+     "C": "Il lisez des romans en français.",
+     "D": "Il lit des romans en français."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I read too fast?",
+   "options": {
+     "A": "Je lis trop vite?",
+     "B": "Je lit trop vite?",
+     "C": "Je lisons trop vite?",
+     "D": "Je lisez trop vite?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Do you (pl.) not read the signs?",
+   "options": {
+     "A": "Vous lisez ne pas les panneaux?",
+     "B": "Vous ne lis pas les panneaux?",
+     "C": "Vous ne lisez pas les panneaux?",
+     "D": "Vous lisez pas les panneaux?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We read articles online.",
+   "options": {
+     "A": "Nous lit des articles en ligne.",
+     "B": "Nous lisons des articles en ligne.",
+     "C": "Nous lisez des articles en ligne.",
+     "D": "Nous lisent des articles en ligne."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Do they (m.) read comic books?",
+   "options": {
+     "A": "Ils lit des bandes dessinées?",
+     "B": "Ils lisez des bandes dessinées?",
+     "C": "Ils lisons des bandes dessinées?",
+     "D": "Ils lisent des bandes dessinées?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) read the news every day.",
+   "options": {
+     "A": "Vous lit les nouvelles tous les jours.",
+     "B": "Vous lisons les nouvelles tous les jours.",
+     "C": "Vous lisez les nouvelles tous les jours.",
+     "D": "Vous lisent les nouvelles tous les jours."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Do they (m.) not read poetry?",
+   "options": {
+     "A": "Ils ne lisent pas de poésie?",
+     "B": "Ils lisent ne pas de poésie?",
+     "C": "Ils ne lit pas de poésie?",
+     "D": "Ils ne lisez pas de poésie?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Do they (f.) not read before bed?",
+   "options": {
+     "A": "Elles lisent ne pas avant de se coucher?",
+     "B": "Elles ne lisent pas avant de se coucher?",
+     "C": "Elles ne lit pas avant de se coucher?",
+     "D": "Elles ne lisez pas avant de se coucher?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We read the same book.",
+   "options": {
+     "A": "Nous lit le même livre.",
+     "B": "Nous lisez le même livre.",
+     "C": "Nous lisons le même livre.",
+     "D": "Nous lisent le même livre."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) read detective stories.",
+   "options": {
+     "A": "Ils lit des histoires policières.",
+     "B": "Ils lisez des histoires policières.",
+     "C": "Ils lisons des histoires policières.",
+     "D": "Ils lisent des histoires policières."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) do not read the emails.",
+   "options": {
+     "A": "Vous lisez ne pas les courriels.",
+     "B": "Vous ne lis pas les courriels.",
+     "C": "Vous ne lisons pas les courriels.",
+     "D": "Vous ne lisez pas les courriels."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) do not read the labels.",
+   "options": {
+     "A": "Elles lisent ne pas les étiquettes.",
+     "B": "Elles ne lit pas les étiquettes.",
+     "C": "Elles ne lisent pas les étiquettes.",
+     "D": "Elles ne lisez pas les étiquettes."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I do not read horror novels.",
+   "options": {
+     "A": "Je ne lis pas de romans d'horreur.",
+     "B": "Je lis ne pas de romans d'horreur.",
+     "C": "Je ne lit pas de romans d'horreur.",
+     "D": "Je lis pas de romans d'horreur."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Does she read biographies?",
+   "options": {
+     "A": "Elle lis des biographies?",
+     "B": "Elle lisons des biographies?",
+     "C": "Elle lit des biographies?",
+     "D": "Elle lisez des biographies?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Do we read the menu?",
+   "options": {
+     "A": "Nous lit le menu?",
+     "B": "Nous lisez le menu?",
+     "C": "Nous lisent le menu?",
+     "D": "Nous lisons le menu?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
+

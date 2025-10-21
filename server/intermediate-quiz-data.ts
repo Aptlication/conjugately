@@ -992,7 +992,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "lire": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not read the article.", "options": ["Elles ont ne pas lu l'article.", "Elles n'ont pas lu l'article.", "Elles n'ont lu pas l'article.", "Elles n'avez pas lu l'article."], "answer": "B"},
+      {"question": "Did he not read the book?", "options": ["Il n'a pas lu le livre?", "Il a ne pas lu le livre?", "Il n'as pas lu le livre?", "Il n'a lu pas le livre?"], "answer": "A"},
+      {"question": "Did I read the instructions correctly?", "options": ["J'a lu les instructions correctement?", "J'ai lu les instructions correctement?", "Je suis lu les instructions correctement?", "J'as lu les instructions correctement?"], "answer": "B"},
+      {"question": "Did she not read the email?", "options": ["Elle n'a pas lu le courriel?", "Elle a ne pas lu le courriel?", "Elle n'as pas lu le courriel?", "Elle n'a lu pas le courriel?"], "answer": "A"},
+      {"question": "You (inf.) did not read the message.", "options": ["Tu a ne pas lu le message.", "Tu n'as pas lu le message.", "Tu n'a pas lu le message.", "Tu as ne pas lu le message."], "answer": "B"},
+      {"question": "He read the newspaper this morning.", "options": ["Il a lis le journal ce matin.", "Il est lu le journal ce matin.", "Il as lu le journal ce matin.", "Il a lu le journal ce matin."], "answer": "D"},
+      {"question": "Did I read that novel last year?", "options": ["J'ai lu ce roman l'année dernière?", "Je suis lu ce roman l'année dernière?", "J'as lu ce roman l'année dernière?", "J'a lu ce roman l'année dernière?"], "answer": "A"},
+      {"question": "Did you (pl.) not read the report?", "options": ["Vous avez ne pas lu le rapport?", "Vous n'avons pas lu le rapport?", "Vous n'avez pas lu le rapport?", "Vous n'avez lu pas le rapport?"], "answer": "C"},
+      {"question": "We read the menu carefully.", "options": ["Nous avez lu le menu attentivement.", "Nous avons lu le menu attentivement.", "Nous sommes lu le menu attentivement.", "Nous a lu le menu attentivement."], "answer": "B"},
+      {"question": "Did they (m.) read the contract?", "options": ["Ils a lu le contrat?", "Ils sont lu le contrat?", "Ils avez lu le contrat?", "Ils ont lu le contrat?"], "answer": "D"},
+      {"question": "You (form.) read all the chapters.", "options": ["Vous avons lu tous les chapitres.", "Vous ont lu tous les chapitres.", "Vous avez lu tous les chapitres.", "Vous êtes lu tous les chapitres."], "answer": "C"},
+      {"question": "Did they (m.) not read the signs?", "options": ["Ils n'ont pas lu les panneaux?", "Ils ont ne pas lu les panneaux?", "Ils n'avez pas lu les panneaux?", "Ils n'ont lu pas les panneaux?"], "answer": "A"},
+      {"question": "Did they (f.) not read the labels?", "options": ["Elles ont ne pas lu les étiquettes?", "Elles n'ont pas lu les étiquettes?", "Elles n'avez pas lu les étiquettes?", "Elles n'ont lu pas les étiquettes?"], "answer": "B"},
+      {"question": "We read the same article yesterday.", "options": ["Nous ont lu le même article hier.", "Nous sommes lu le même article hier.", "Nous avons lu le même article hier.", "Nous avez lu le même article hier."], "answer": "C"},
+      {"question": "They (m.) read the entire book in one day.", "options": ["Ils avez lu le livre entier en un jour.", "Ils sont lu le livre entier en un jour.", "Ils a lu le livre entier en un jour.", "Ils ont lu le livre entier en un jour."], "answer": "D"},
+      {"question": "You (pl.) did not read the announcement.", "options": ["Vous avez ne pas lu l'annonce.", "Vous n'avons pas lu l'annonce.", "Vous avez pas lu l'annonce.", "Vous n'avez pas lu l'annonce."], "answer": "D"},
+      {"question": "They (f.) did not read the reviews.", "options": ["Elles ont ne pas lu les critiques.", "Elles n'avez pas lu les critiques.", "Elles n'ont pas lu les critiques.", "Elles n'ont lu pas les critiques."], "answer": "C"},
+      {"question": "I did not read the biography.", "options": ["Je n'ai pas lu la biographie.", "J'ai ne pas lu la biographie.", "Je n'as pas lu la biographie.", "J'a pas lu la biographie."], "answer": "A"},
+      {"question": "Did she read the magazine?", "options": ["Elle as lu le magazine?", "Elle est lu le magazine?", "Elle a lu le magazine?", "Elle avons lu le magazine?"], "answer": "C"},
+      {"question": "Did we read the right page?", "options": ["Nous a lu la bonne page?", "Nous sommes lu la bonne page?", "Nous avez lu la bonne page?", "Nous avons lu la bonne page?"], "answer": "D"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not read the newspaper tomorrow.", "options": ["Elles liront ne pas le journal demain.", "Elles ne liront pas le journal demain.", "Elles ne liras pas le journal demain.", "Elles liront pas le journal demain."], "answer": "B"},
       {"question": "Will he not read the contract?", "options": ["Il ne lira pas le contrat?", "Il lira ne pas le contrat?", "Il ne liras pas le contrat?", "Il ne lirai pas le contrat?"], "answer": "A"},
