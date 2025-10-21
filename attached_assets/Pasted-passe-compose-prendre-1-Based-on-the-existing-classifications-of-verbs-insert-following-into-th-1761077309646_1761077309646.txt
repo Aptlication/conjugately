@@ -1,0 +1,232 @@
+passe compose - prendre
+
+1. Based on the existing classifications of verbs, insert following into the relevant: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not take the bus this morning.",
+   "options": {
+     "A": "Elles ont ne pas pris le bus ce matin.",
+     "B": "Elles n'ont pas pris le bus ce matin.",
+     "C": "Elles n'ont pris pas le bus ce matin.",
+     "D": "Elles n'avez pas pris le bus ce matin."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not take his medication?",
+   "options": {
+     "A": "Il n'a pas pris ses médicaments?",
+     "B": "Il a ne pas pris ses médicaments?",
+     "C": "Il n'as pas pris ses médicaments?",
+     "D": "Il n'a pris pas ses médicaments?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I take the right train?",
+   "options": {
+     "A": "J'a pris le bon train?",
+     "B": "J'ai pris le bon train?",
+     "C": "Je suis pris le bon train?",
+     "D": "J'as pris le bon train?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not take any notes during the lecture?",
+   "options": {
+     "A": "Elle n'a pas pris de notes pendant le cours?",
+     "B": "Elle a ne pas pris de notes pendant le cours?",
+     "C": "Elle n'as pas pris de notes pendant le cours?",
+     "D": "Elle n'a pris pas de notes pendant le cours?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not take your umbrella.",
+   "options": {
+     "A": "Tu a ne pas pris ton parapluie.",
+     "B": "Tu n'as pas pris ton parapluie.",
+     "C": "Tu n'a pas pris ton parapluie.",
+     "D": "Tu as ne pas pris ton parapluie."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He took a vacation in August.",
+   "options": {
+     "A": "Il a prit des vacances en août.",
+     "B": "Il est pris des vacances en août.",
+     "C": "Il as pris des vacances en août.",
+     "D": "Il a pris des vacances en août."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I take the subway to work?",
+   "options": {
+     "A": "J'ai pris le métro pour aller au travail?",
+     "B": "Je suis pris le métro pour aller au travail?",
+     "C": "J'as pris le métro pour aller au travail?",
+     "D": "J'a pris le métro pour aller au travail?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not take any risks?",
+   "options": {
+     "A": "Vous avez ne pas pris de risques?",
+     "B": "Vous n'avons pas pris de risques?",
+     "C": "Vous n'avez pas pris de risques?",
+     "D": "Vous n'avez pris pas de risques?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We took French lessons last year.",
+   "options": {
+     "A": "Nous avez pris des cours de français l'année dernière.",
+     "B": "Nous avons pris des cours de français l'année dernière.",
+     "C": "Nous sommes pris des cours de français l'année dernière.",
+     "D": "Nous a pris des cours de français l'année dernière."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) take the highway?",
+   "options": {
+     "A": "Ils a pris l'autoroute?",
+     "B": "Ils sont pris l'autoroute?",
+     "C": "Ils avez pris l'autoroute?",
+     "D": "Ils ont pris l'autoroute?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) took the stairs instead of the elevator.",
+   "options": {
+     "A": "Vous avons pris les escaliers au lieu de l'ascenseur.",
+     "B": "Vous ont pris les escaliers au lieu de l'ascenseur.",
+     "C": "Vous avez pris les escaliers au lieu de l'ascenseur.",
+     "D": "Vous êtes pris les escaliers au lieu de l'ascenseur."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not take their keys?",
+   "options": {
+     "A": "Ils n'ont pas pris leurs clés?",
+     "B": "Ils ont ne pas pris leurs clés?",
+     "C": "Ils n'avez pas pris leurs clés?",
+     "D": "Ils n'ont pris pas leurs clés?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not take the advice?",
+   "options": {
+     "A": "Elles ont ne pas pris les conseils?",
+     "B": "Elles n'ont pas pris les conseils?",
+     "C": "Elles n'avez pas pris les conseils?",
+     "D": "Elles n'ont pris pas les conseils?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We took a long break yesterday.",
+   "options": {
+     "A": "Nous ont pris une longue pause hier.",
+     "B": "Nous sommes pris une longue pause hier.",
+     "C": "Nous avons pris une longue pause hier.",
+     "D": "Nous avez pris une longue pause hier."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) took photos at the museum.",
+   "options": {
+     "A": "Ils avez pris des photos au musée.",
+     "B": "Ils sont pris des photos au musée.",
+     "C": "Ils a pris des photos au musée.",
+     "D": "Ils ont pris des photos au musée."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not take any shortcuts.",
+   "options": {
+     "A": "Vous avez ne pas pris de raccourcis.",
+     "B": "Vous n'avons pas pris de raccourcis.",
+     "C": "Vous avez pas pris de raccourcis.",
+     "D": "Vous n'avez pas pris de raccourcis."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not take the car today.",
+   "options": {
+     "A": "Elles ont ne pas pris la voiture aujourd'hui.",
+     "B": "Elles n'avez pas pris la voiture aujourd'hui.",
+     "C": "Elles n'ont pas pris la voiture aujourd'hui.",
+     "D": "Elles n'ont pris pas la voiture aujourd'hui."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not take any sugar in my tea.",
+   "options": {
+     "A": "Je n'ai pas pris de sucre dans mon thé.",
+     "B": "J'ai ne pas pris de sucre dans mon thé.",
+     "C": "Je n'as pas pris de sucre dans mon thé.",
+     "D": "J'a pas pris de sucre dans mon thé."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she take her bag with her?",
+   "options": {
+     "A": "Elle as pris son sac avec elle?",
+     "B": "Elle est pris son sac avec elle?",
+     "C": "Elle a pris son sac avec elle?",
+     "D": "Elle avons pris son sac avec elle?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we take the correct route?",
+   "options": {
+     "A": "Nous a pris le bon chemin?",
+     "B": "Nous sommes pris le bon chemin?",
+     "C": "Nous avez pris le bon chemin?",
+     "D": "Nous avons pris le bon chemin?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 
+
