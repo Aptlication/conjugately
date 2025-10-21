@@ -1,6 +1,6 @@
 // Intermediate Level Quiz Data - Perplexity Validated
-// 15 verbs × 4 tenses × 20 questions = 1200 total MCQs
-// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer
+// 16 verbs × 4 tenses × 20 questions = 1280 total MCQs
+// Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre
 // Tenses: Présent, Passé Composé, Futur Simple, Imparfait
 
 export interface IntermediateQuizQuestion {
@@ -1266,6 +1266,34 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "I will not close the file before saving.", "options": ["Je ne fermerai pas le dossier avant de sauvegarder.", "Je fermerai ne pas le dossier avant de sauvegarder.", "Je ne fermeras pas le dossier avant de sauvegarder.", "Je ne fermera pas le dossier avant de sauvegarder."], "answer": "A"},
       {"question": "Will she close the envelopes quickly?", "options": ["Elle fermeras les enveloppes rapidement?", "Elle fermerons les enveloppes rapidement?", "Elle fermera les enveloppes rapidement?", "Elle fermerez les enveloppes rapidement?"], "answer": "C"},
       {"question": "Will we close the door before leaving?", "options": ["Nous fermera la porte avant de partir?", "Nous fermeras la porte avant de partir?", "Nous fermerez la porte avant de partir?", "Nous fermerons la porte avant de partir?"], "answer": "D"}
+    ],
+    "imparfait": []
+  },
+
+  "perdre": {
+    "present": [],
+    "passé_composé": [],
+    "futur_simple": [
+      {"question": "They (f.) will not lose their keys.", "options": ["Elles perdra ne pas leurs clés.", "Elles ne perdront pas leurs clés.", "Elles ne perdra pas leurs clés.", "Elles perdront pas leurs clés."], "answer": "B"},
+      {"question": "Will he not lose his wallet?", "options": ["Il ne perdra pas son portefeuille?", "Il perdra ne pas son portefeuille?", "Il ne perdras pas son portefeuille?", "Il perdra pas son portefeuille?"], "answer": "A"},
+      {"question": "Will I lose my glasses tomorrow?", "options": ["Je perdrai mes lunettes demain?", "Je perdrai mes lunettes demain?", "Je perdrons mes lunettes demain?", "Je perdrez mes lunettes demain?"], "answer": "B"},
+      {"question": "Will she not lose hope?", "options": ["Elle ne perdra pas espoir?", "Elle perdra ne pas espoir?", "Elle ne perdras pas espoir?", "Elle perdra pas espoir?"], "answer": "A"},
+      {"question": "You (inf.) will not lose patience.", "options": ["Tu perdras ne pas patience.", "Tu ne perdras pas patience.", "Tu ne perdra pas patience.", "Tu perdra pas patience."], "answer": "B"},
+      {"question": "He will lose his pen soon.", "options": ["Il perdras son stylo bientôt.", "Il perdront son stylo bientôt.", "Il perdrai son stylo bientôt.", "Il perdra son stylo bientôt."], "answer": "D"},
+      {"question": "Will I lose my way?", "options": ["Je perdrai mon chemin?", "Je perdras mon chemin?", "Je perdrons mon chemin?", "Je perdrez mon chemin?"], "answer": "A"},
+      {"question": "Will you (pl.) not lose your tickets?", "options": ["Vous perdrez ne pas vos billets?", "Vous ne perdras pas vos billets?", "Vous ne perdrez pas vos billets?", "Vous ne perdra pas vos billets?"], "answer": "C"},
+      {"question": "We will lose motivation in winter.", "options": ["Nous perdra motivation en hiver.", "Nous perdras motivation en hiver.", "Nous perdrons motivation en hiver.", "Nous perdrez motivation en hiver."], "answer": "C"},
+      {"question": "Will they (m.) lose money again?", "options": ["Ils perdras de l'argent encore?", "Ils perdra de l'argent encore?", "Ils perdrez de l'argent encore?", "Ils perdront de l'argent encore?"], "answer": "D"},
+      {"question": "You (form.) will lose your password if not careful.", "options": ["Vous perds votre mot de passe si vous n'êtes pas prudent.", "Vous perdrons votre mot de passe si vous n'êtes pas prudent.", "Vous perdrez votre mot de passe si vous n'êtes pas prudent.", "Vous perdront votre mot de passe si vous n'êtes pas prudent."], "answer": "C"},
+      {"question": "Will they (m.) not lose their friends?", "options": ["Ils ne perdront pas leurs amis?", "Ils perdront ne pas leurs amis?", "Ils ne perdras pas leurs amis?", "Ils ne perdrez pas leurs amis?"], "answer": "A"},
+      {"question": "Will they (f.) not lose time in traffic?", "options": ["Elles perdront ne pas de temps dans les embouteillages?", "Elles ne perdront pas de temps dans les embouteillages?", "Elles ne perdras pas de temps dans les embouteillages?", "Elles ne perdrez pas de temps dans les embouteillages?"], "answer": "B"},
+      {"question": "We will lose interest quickly.", "options": ["Nous perdra intérêt vite.", "Nous perdrons intérêt vite.", "Nous perdrez intérêt vite.", "Nous perdras intérêt vite."], "answer": "B"},
+      {"question": "They (m.) will lose their way at night.", "options": ["Ils perdras leur chemin la nuit.", "Ils perdrait leur chemin la nuit.", "Ils perdra leur chemin la nuit.", "Ils perdront leur chemin la nuit."], "answer": "D"},
+      {"question": "You (pl.) will not lose money.", "options": ["Vous perdrez ne pas d'argent.", "Vous ne perdras pas d'argent.", "Vous ne perdra pas d'argent.", "Vous ne perdrez pas d'argent."], "answer": "D"},
+      {"question": "They (f.) will not lose faith.", "options": ["Elles perdront ne pas la foi.", "Elles ne perdras pas la foi.", "Elles ne perdront pas la foi.", "Elles ne perdrez pas la foi."], "answer": "C"},
+      {"question": "I will not lose hope.", "options": ["Je ne perdrai pas espoir.", "Je perdrai ne pas espoir.", "Je ne perdras pas espoir.", "Je ne perdra pas espoir."], "answer": "A"},
+      {"question": "Will she lose her umbrella tomorrow?", "options": ["Elle perdras son parapluie demain?", "Elle perdrons son parapluie demain?", "Elle perdra son parapluie demain?", "Elle perdrez son parapluie demain?"], "answer": "C"},
+      {"question": "Will we lose the key by accident?", "options": ["Nous perdra la clé par accident?", "Nous perdras la clé par accident?", "Nous perdrez la clé par accident?", "Nous perdrons la clé par accident?"], "answer": "D"}
     ],
     "imparfait": []
   },

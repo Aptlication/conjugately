@@ -1,0 +1,231 @@
+passe compose - perdre
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not lose their keys.",
+   "options": {
+     "A": "Elles a perdu ne pas leurs clés.",
+     "B": "Elles n'ont pas perdu leurs clés.",
+     "C": "Elles n'a perdu pas leurs clés.",
+     "D": "Elles ont perdu pas leurs clés."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not lose his wallet?",
+   "options": {
+     "A": "Il n'a pas perdu son portefeuille?",
+     "B": "Il a ne pas perdu son portefeuille?",
+     "C": "Il n'as pas perdu son portefeuille?",
+     "D": "Il a perdu pas son portefeuille?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I lose my glasses yesterday?",
+   "options": {
+     "A": "Je a perdu mes lunettes hier?",
+     "B": "J'ai perdu mes lunettes hier?",
+     "C": "Je suis perdu mes lunettes hier?",
+     "D": "J'as perdu mes lunettes hier?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not lose hope?",
+   "options": {
+     "A": "Elle n'a pas perdu espoir?",
+     "B": "Elle a ne pas perdu espoir?",
+     "C": "Elle n'as pas perdu espoir?",
+     "D": "Elle a perdu pas espoir?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not lose patience.",
+   "options": {
+     "A": "Tu a perdu ne pas patience.",
+     "B": "Tu n'as pas perdu patience.",
+     "C": "Tu n'a perdu pas patience.",
+     "D": "Tu as perdu pas patience."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He lost his pen last week.",
+   "options": {
+     "A": "Il a perde son stylo la semaine dernière.",
+     "B": "Il a perdus son stylo la semaine dernière.",
+     "C": "Il a perdit son stylo la semaine dernière.",
+     "D": "Il a perdu son stylo la semaine dernière."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I lose my way last night?",
+   "options": {
+     "A": "J'ai perdu mon chemin hier soir?",
+     "B": "Je a perdu mon chemin hier soir?",
+     "C": "Je suis perdu mon chemin hier soir?",
+     "D": "J'as perdu mon chemin hier soir?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not lose your tickets?",
+   "options": {
+     "A": "Vous avez perdu ne pas vos billets?",
+     "B": "Vous n'avons pas perdu vos billets?",
+     "C": "Vous n'avez pas perdu vos billets?",
+     "D": "Vous avez perdu pas vos billets?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We lost motivation in winter.",
+   "options": {
+     "A": "Nous a perdu motivation en hiver.",
+     "B": "Nous avons perdu motivation en hiver.",
+     "C": "Nous sommes perdu motivation en hiver.",
+     "D": "Nous avez perdu motivation en hiver."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) lose money last year?",
+   "options": {
+     "A": "Ils a perdu de l'argent l'année dernière?",
+     "B": "Ils sont perdu de l'argent l'année dernière?",
+     "C": "Ils avez perdu de l'argent l'année dernière?",
+     "D": "Ils ont perdu de l'argent l'année dernière?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) lost your password again.",
+   "options": {
+     "A": "Vous avons perdu votre mot de passe encore.",
+     "B": "Vous ont perdu votre mot de passe encore.",
+     "C": "Vous avez perdu votre mot de passe encore.",
+     "D": "Vous êtes perdu votre mot de passe encore."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not lose their friends?",
+   "options": {
+     "A": "Ils n'ont pas perdu leurs amis?",
+     "B": "Ils ont ne pas perdu leurs amis?",
+     "C": "Ils n'avez pas perdu leurs amis?",
+     "D": "Ils ont perdu pas leurs amis?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not lose time in traffic?",
+   "options": {
+     "A": "Elles ont perdu ne pas de temps dans les embouteillages?",
+     "B": "Elles n'ont pas perdu de temps dans les embouteillages?",
+     "C": "Elles n'avez pas perdu de temps dans les embouteillages?",
+     "D": "Elles ont perdu pas de temps dans les embouteillages?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We lost interest quickly.",
+   "options": {
+     "A": "Nous a perdu intérêt vite.",
+     "B": "Nous avons perdu intérêt vite.",
+     "C": "Nous sommes perdu intérêt vite.",
+     "D": "Nous avez perdu intérêt vite."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) lost their way after dark.",
+   "options": {
+     "A": "Ils avez perdu leur chemin après la nuit.",
+     "B": "Ils sont perdu leur chemin après la nuit.",
+     "C": "Ils a perdu leur chemin après la nuit.",
+     "D": "Ils ont perdu leur chemin après la nuit."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not lose money.",
+   "options": {
+     "A": "Vous avez perdu ne pas d'argent.",
+     "B": "Vous n'avons pas perdu d'argent.",
+     "C": "Vous avez pas perdu d'argent.",
+     "D": "Vous n'avez pas perdu d'argent."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not lose faith.",
+   "options": {
+     "A": "Elles ont perdu ne pas la foi.",
+     "B": "Elles n'a perdu pas la foi.",
+     "C": "Elles n'ont pas perdu la foi.",
+     "D": "Elles ont perdu pas la foi."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not lose hope.",
+   "options": {
+     "A": "Je n'ai pas perdu espoir.",
+     "B": "J'ai perdu ne pas espoir.",
+     "C": "Je n'a pas perdu espoir.",
+     "D": "J'ai perdu pas espoir."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she lose her umbrella yesterday?",
+   "options": {
+     "A": "Elle as perdu son parapluie hier?",
+     "B": "Elle est perdu son parapluie hier?",
+     "C": "Elle a perdu son parapluie hier?",
+     "D": "Elle avons perdu son parapluie hier?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we lose the key last year?",
+   "options": {
+     "A": "Nous a perdu la clé l'année dernière?",
+     "B": "Nous avons perdu la clé l'année dernière.",
+     "C": "Nous sommes perdu la clé l'année dernière?",
+     "D": "Nous avez perdu la clé l'année dernière."
+   },
+   "correct_answer": "D"
+ }
+]
+ 
