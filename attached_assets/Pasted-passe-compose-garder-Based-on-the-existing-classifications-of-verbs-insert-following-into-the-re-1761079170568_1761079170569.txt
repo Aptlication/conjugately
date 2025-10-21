@@ -1,0 +1,231 @@
+passe compose - garder
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) did not keep quiet during the meeting.",
+   "options": {
+     "A": "Elles a gardé ne pas le silence pendant la réunion.",
+     "B": "Elles n'ont pas gardé le silence pendant la réunion.",
+     "C": "Elles n'a gardé pas le silence pendant la réunion.",
+     "D": "Elles ont gardé pas le silence pendant la réunion."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Did he not keep his promises?",
+   "options": {
+     "A": "Il n'a pas gardé ses promesses?",
+     "B": "Il a ne pas gardé ses promesses?",
+     "C": "Il n'as pas gardé ses promesses?",
+     "D": "Il a gardé pas ses promesses?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Did I keep all my notes?",
+   "options": {
+     "A": "Je a gardé toutes mes notes?",
+     "B": "J'ai gardé toutes mes notes?",
+     "C": "Je suis gardé toutes mes notes?",
+     "D": "J'as gardé toutes mes notes?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Did she not keep in touch with her friends?",
+   "options": {
+     "A": "Elle n'a pas gardé le contact avec ses amis?",
+     "B": "Elle a ne pas gardé le contact avec ses amis?",
+     "C": "Elle n'as pas gardé le contact avec ses amis?",
+     "D": "Elle a gardé pas le contact avec ses amis?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) did not keep the secret.",
+   "options": {
+     "A": "Tu a gardé ne pas le secret.",
+     "B": "Tu n'as pas gardé le secret.",
+     "C": "Tu n'a gardé pas le secret.",
+     "D": "Tu as gardé pas le secret."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He kept his documents organized.",
+   "options": {
+     "A": "Il a gardé ses documents organisées.",
+     "B": "Il a gardée ses documents organisés.",
+     "C": "Il a gardées ses documents organisés.",
+     "D": "Il a gardé ses documents organisés."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Did I keep my door open?",
+   "options": {
+     "A": "J'ai gardé ma porte ouverte?",
+     "B": "Je a gardé ma porte ouverte?",
+     "C": "Je suis gardé ma porte ouverte?",
+     "D": "J'as gardé ma porte ouverte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Did you (pl.) not keep old files?",
+   "options": {
+     "A": "Vous avez gardé ne pas de vieux fichiers?",
+     "B": "Vous n'avons pas gardé de vieux fichiers?",
+     "C": "Vous n'avez pas gardé de vieux fichiers?",
+     "D": "Vous avez gardé pas de vieux fichiers?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We kept our workspace clean.",
+   "options": {
+     "A": "Nous a gardé notre espace de travail propre.",
+     "B": "Nous avons gardé notre espace de travail propre.",
+     "C": "Nous sommes gardé notre espace de travail propre.",
+     "D": "Nous avez gardé notre espace de travail propre."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Did they (m.) keep their shoes by the door?",
+   "options": {
+     "A": "Ils a gardé leurs chaussures près de la porte?",
+     "B": "Ils sont gardé leurs chaussures près de la porte?",
+     "C": "Ils avez gardé leurs chaussures près de la porte?",
+     "D": "Ils ont gardé leurs chaussures près de la porte?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) kept all receipts.",
+   "options": {
+     "A": "Vous avons gardé tous les reçus.",
+     "B": "Vous ont gardé tous les reçus.",
+     "C": "Vous avez gardé tous les reçus.",
+     "D": "Vous êtes gardé tous les reçus."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Did they (m.) not keep any pets?",
+   "options": {
+     "A": "Ils n'ont pas gardé d'animaux?",
+     "B": "Ils ont gardé ne pas d'animaux?",
+     "C": "Ils n'avez pas gardé d'animaux?",
+     "D": "Ils ont gardé pas d'animaux?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Did they (f.) not keep their old clothes?",
+   "options": {
+     "A": "Elles ont gardé ne pas leurs vieux vêtements?",
+     "B": "Elles n'ont pas gardé leurs vieux vêtements?",
+     "C": "Elles n'avez pas gardé leurs vieux vêtements?",
+     "D": "Elles ont gardé pas leurs vieux vêtements?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We kept the same habits last year.",
+   "options": {
+     "A": "Nous a gardé les mêmes habitudes l'année dernière.",
+     "B": "Nous avons gardé les mêmes habitudes l'année dernière.",
+     "C": "Nous sommes gardé les mêmes habitudes l'année dernière.",
+     "D": "Nous avez gardé les mêmes habitudes l'année dernière."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) kept their word.",
+   "options": {
+     "A": "Ils avez gardé leur parole.",
+     "B": "Ils sont gardé leur parole.",
+     "C": "Ils a gardé leur parole.",
+     "D": "Ils ont gardé leur parole."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) did not keep the light on.",
+   "options": {
+     "A": "Vous avez gardé ne pas la lumière allumée.",
+     "B": "Vous n'avons pas gardé la lumière allumée.",
+     "C": "Vous avez pas gardé la lumière allumée.",
+     "D": "Vous n'avez pas gardé la lumière allumée."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) did not keep food in their rooms.",
+   "options": {
+     "A": "Elles ont gardé ne pas de nourriture dans leurs chambres.",
+     "B": "Elles n'a gardé pas de nourriture dans leurs chambres.",
+     "C": "Elles n'ont pas gardé de nourriture dans leurs chambres.",
+     "D": "Elles ont gardé pas de nourriture dans leurs chambres."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I did not keep any receipts.",
+   "options": {
+     "A": "Je n'ai gardé aucun reçu.",
+     "B": "J'ai gardé ne pas aucun reçu.",
+     "C": "Je n'a gardé aucun reçu.",
+     "D": "J'ai gardé pas aucun reçu."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Did she keep her tickets?",
+   "options": {
+     "A": "Elle as gardé ses billets?",
+     "B": "Elle est gardé ses billets?",
+     "C": "Elle a gardé ses billets?",
+     "D": "Elle avons gardé ses billets?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Did we keep our promises?",
+   "options": {
+     "A": "Nous a gardé nos promesses?",
+     "B": "Nous avons gardé nos promesses?",
+     "C": "Nous sommes gardé nos promesses?",
+     "D": "Nous avez gardé nos promesses?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

@@ -1,0 +1,231 @@
+present - garder
+
+Based on the existing classifications of verbs, insert following into the relevant one under: '1. Choose Difficulty; 2. Verb; 3. Time Frame'
+
+2. "Test that it works end-to-end before confirming completion"
+
+
+
+[
+ {
+   "id": 1,
+   "question": "They (f.) do not keep quiet during meetings.",
+   "options": {
+     "A": "Elles garde ne pas le silence pendant les réunions.",
+     "B": "Elles ne gardent pas le silence pendant les réunions.",
+     "C": "Elles ne garde pas le silence pendant les réunions.",
+     "D": "Elles gardent ne pas le silence pendant les réunions."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 2,
+   "question": "Does he not keep his promises?",
+   "options": {
+     "A": "Il ne garde pas ses promesses?",
+     "B": "Il garde ne pas ses promesses?",
+     "C": "Il ne gardes pas ses promesses?",
+     "D": "Il garde pas ses promesses?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 3,
+   "question": "Do I keep all my notes?",
+   "options": {
+     "A": "Je garde tous mes notes?",
+     "B": "Je garde toutes mes notes?",
+     "C": "Je gardons toutes mes notes?",
+     "D": "Je gardez toutes mes notes?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 4,
+   "question": "Does she not keep in touch with friends?",
+   "options": {
+     "A": "Elle ne garde pas contact avec ses amis?",
+     "B": "Elle garde ne pas contact avec ses amis?",
+     "C": "Elle ne gardes pas contact avec ses amis?",
+     "D": "Elle garde pas contact avec ses amis?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 5,
+   "question": "You (inf.) do not keep secrets.",
+   "options": {
+     "A": "Tu garde ne pas des secrets.",
+     "B": "Tu ne gardes pas de secrets.",
+     "C": "Tu ne garde pas des secrets.",
+     "D": "Tu gardes ne pas des secrets."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 6,
+   "question": "He keeps his documents organized.",
+   "options": {
+     "A": "Il gardes ses documents organisés.",
+     "B": "Il gardons ses documents organisés.",
+     "C": "Il gardez ses documents organisés.",
+     "D": "Il garde ses documents organisés."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 7,
+   "question": "Do I keep my door open?",
+   "options": {
+     "A": "Je garde ma porte ouverte?",
+     "B": "Je gardes ma porte ouverte?",
+     "C": "Je gardons ma porte ouverte?",
+     "D": "Je gardez ma porte ouverte?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 8,
+   "question": "Do you (pl.) not keep old files?",
+   "options": {
+     "A": "Vous gardez ne pas de vieux fichiers?",
+     "B": "Vous ne gardez pas de vieux fichiers?",
+     "C": "Vous ne gardez pas de vieux fichiers?",
+     "D": "Vous gardez pas de vieux fichiers?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 9,
+   "question": "We keep our workspace clean.",
+   "options": {
+     "A": "Nous garde notre espace de travail propre.",
+     "B": "Nous gardons notre espace de travail propre.",
+     "C": "Nous gardez notre espace de travail propre.",
+     "D": "Nous gardent notre espace de travail propre."
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 10,
+   "question": "Do they (m.) keep their shoes by the door?",
+   "options": {
+     "A": "Ils garde leurs chaussures près de la porte?",
+     "B": "Ils gardez leurs chaussures près de la porte?",
+     "C": "Ils gardons leurs chaussures près de la porte?",
+     "D": "Ils gardent leurs chaussures près de la porte?"
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 11,
+   "question": "You (form.) keep all receipts.",
+   "options": {
+     "A": "Vous garde tous les reçus.",
+     "B": "Vous gardons tous les reçus.",
+     "C": "Vous gardez tous les reçus.",
+     "D": "Vous gardent tous les reçus."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 12,
+   "question": "Do they (m.) not keep pets?",
+   "options": {
+     "A": "Ils ne gardent pas d'animaux?",
+     "B": "Ils gardent ne pas d'animaux?",
+     "C": "Ils ne garde pas d'animaux?",
+     "D": "Ils gardent pas d'animaux?"
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 13,
+   "question": "Do they (f.) not keep their old clothes?",
+   "options": {
+     "A": "Elles gardent ne pas leurs vieux vêtements?",
+     "B": "Elles ne gardent pas leurs vieux vêtements?",
+     "C": "Elles ne garde pas leurs vieux vêtements?",
+     "D": "Elles gardez pas leurs vieux vêtements?"
+   },
+   "correct_answer": "B"
+ },
+ {
+   "id": 14,
+   "question": "We keep the same habits every year.",
+   "options": {
+     "A": "Nous garde les mêmes habitudes chaque année.",
+     "B": "Nous gardez les mêmes habitudes chaque année.",
+     "C": "Nous gardons les mêmes habitudes chaque année.",
+     "D": "Nous gardent les mêmes habitudes chaque année."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 15,
+   "question": "They (m.) keep their word.",
+   "options": {
+     "A": "Ils garde leur parole.",
+     "B": "Ils gardez leur parole.",
+     "C": "Ils gardons leur parole.",
+     "D": "Ils gardent leur parole."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 16,
+   "question": "You (pl.) do not keep the light on.",
+   "options": {
+     "A": "Vous gardez ne pas la lumière allumée.",
+     "B": "Vous ne gardez pas la lumière allumée.",
+     "C": "Vous ne garde pas la lumière allumée.",
+     "D": "Vous ne gardez pas la lumière allumée."
+   },
+   "correct_answer": "D"
+ },
+ {
+   "id": 17,
+   "question": "They (f.) do not keep food in their rooms.",
+   "options": {
+     "A": "Elles gardent ne pas de nourriture dans leurs chambres.",
+     "B": "Elles ne garde pas de nourriture dans leurs chambres.",
+     "C": "Elles ne gardent pas de nourriture dans leurs chambres.",
+     "D": "Elles gardez pas de nourriture dans leurs chambres."
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 18,
+   "question": "I do not keep any receipts.",
+   "options": {
+     "A": "Je ne garde aucun reçu.",
+     "B": "Je garde ne pas aucun reçu.",
+     "C": "Je ne gardes aucun reçu.",
+     "D": "Je garde pas aucun reçu."
+   },
+   "correct_answer": "A"
+ },
+ {
+   "id": 19,
+   "question": "Does she keep her tickets?",
+   "options": {
+     "A": "Elle gardes ses billets?",
+     "B": "Elle gardons ses billets?",
+     "C": "Elle garde ses billets?",
+     "D": "Elle gardez ses billets?"
+   },
+   "correct_answer": "C"
+ },
+ {
+   "id": 20,
+   "question": "Do we keep our promises?",
+   "options": {
+     "A": "Nous garde nos promesses?",
+     "B": "Nous gardons nos promesses?",
+     "C": "Nous gardez nos promesses?",
+     "D": "Nous gardent nos promesses?"
+   },
+   "correct_answer": "D"
+ }
+]
+ 

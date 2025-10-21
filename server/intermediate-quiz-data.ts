@@ -1342,7 +1342,28 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 
   "garder": {
     "present": [],
-    "passé_composé": [],
+    "passé_composé": [
+      {"question": "They (f.) did not keep quiet during the meeting.", "options": ["Elles a gardé ne pas le silence pendant la réunion.", "Elles n'ont pas gardé le silence pendant la réunion.", "Elles n'a gardé pas le silence pendant la réunion.", "Elles ont gardé pas le silence pendant la réunion."], "answer": "B"},
+      {"question": "Did he not keep his promises?", "options": ["Il n'a pas gardé ses promesses?", "Il a ne pas gardé ses promesses?", "Il n'as pas gardé ses promesses?", "Il a gardé pas ses promesses?"], "answer": "A"},
+      {"question": "Did I keep all my notes?", "options": ["Je a gardé toutes mes notes?", "J'ai gardé toutes mes notes?", "J'ai gardé toutes mes notes?", "J'as gardé toutes mes notes?"], "answer": "C"},
+      {"question": "Did she not keep in touch with her friends?", "options": ["Elle n'a pas gardé le contact avec ses amis?", "Elle a ne pas gardé le contact avec ses amis?", "Elle n'as pas gardé le contact avec ses amis?", "Elle a gardé pas le contact avec ses amis?"], "answer": "A"},
+      {"question": "You (inf.) did not keep the secret.", "options": ["Tu a gardé ne pas le secret.", "Tu n'as pas gardé le secret.", "Tu n'a gardé pas le secret.", "Tu n'as pas gardé le secret."], "answer": "D"},
+      {"question": "He kept his documents organized.", "options": ["Il a gardé ses documents organisées.", "Il a gardée ses documents organisés.", "Il a gardées ses documents organisés.", "Il a gardé ses documents organisés."], "answer": "D"},
+      {"question": "Did I keep my door open?", "options": ["J'ai gardé ma porte ouverte?", "Je a gardé ma porte ouverte?", "Je suis gardé ma porte ouverte?", "J'as gardé ma porte ouverte?"], "answer": "A"},
+      {"question": "Did you (pl.) not keep old files?", "options": ["Vous avez gardé ne pas de vieux fichiers?", "Vous n'avons pas gardé de vieux fichiers?", "Vous n'avez pas gardé de vieux fichiers?", "Vous avez gardé pas de vieux fichiers?"], "answer": "C"},
+      {"question": "We kept our workspace clean.", "options": ["Nous a gardé notre espace de travail propre.", "Nous avons gardé notre espace de travail propre.", "Nous sommes gardé notre espace de travail propre.", "Nous avez gardé notre espace de travail propre."], "answer": "B"},
+      {"question": "Did they (m.) keep their shoes by the door?", "options": ["Ils a gardé leurs chaussures près de la porte?", "Ils sont gardé leurs chaussures près de la porte?", "Ils avez gardé leurs chaussures près de la porte?", "Ils ont gardé leurs chaussures près de la porte?"], "answer": "D"},
+      {"question": "You (form.) kept all receipts.", "options": ["Vous avons gardé tous les reçus.", "Vous ont gardé tous les reçus.", "Vous avez gardé tous les reçus.", "Vous êtes gardé tous les reçus."], "answer": "C"},
+      {"question": "Did they (m.) not keep any pets?", "options": ["Ils n'ont pas gardé d'animaux?", "Ils ont gardé ne pas d'animaux?", "Ils n'avez pas gardé d'animaux?", "Ils ont gardé pas d'animaux?"], "answer": "A"},
+      {"question": "Did they (f.) not keep their old clothes?", "options": ["Elles ont gardé ne pas leurs vieux vêtements?", "Elles n'ont pas gardé leurs vieux vêtements?", "Elles n'avez pas gardé leurs vieux vêtements?", "Elles ont gardé pas leurs vieux vêtements?"], "answer": "B"},
+      {"question": "We kept the same habits last year.", "options": ["Nous a gardé les mêmes habitudes l'année dernière.", "Nous avons gardé les mêmes habitudes l'année dernière.", "Nous sommes gardé les mêmes habitudes l'année dernière.", "Nous avez gardé les mêmes habitudes l'année dernière."], "answer": "B"},
+      {"question": "They (m.) kept their word.", "options": ["Ils avez gardé leur parole.", "Ils sont gardé leur parole.", "Ils a gardé leur parole.", "Ils ont gardé leur parole."], "answer": "D"},
+      {"question": "You (pl.) did not keep the light on.", "options": ["Vous avez gardé ne pas la lumière allumée.", "Vous n'avons pas gardé la lumière allumée.", "Vous avez pas gardé la lumière allumée.", "Vous n'avez pas gardé la lumière allumée."], "answer": "D"},
+      {"question": "They (f.) did not keep food in their rooms.", "options": ["Elles ont gardé ne pas de nourriture dans leurs chambres.", "Elles n'a gardé pas de nourriture dans leurs chambres.", "Elles n'ont pas gardé de nourriture dans leurs chambres.", "Elles ont gardé pas de nourriture dans leurs chambres."], "answer": "C"},
+      {"question": "I did not keep any receipts.", "options": ["Je n'ai gardé aucun reçu.", "J'ai gardé ne pas aucun reçu.", "Je n'a gardé aucun reçu.", "J'ai gardé pas aucun reçu."], "answer": "A"},
+      {"question": "Did she keep her tickets?", "options": ["Elle as gardé ses billets?", "Elle est gardé ses billets?", "Elle a gardé ses billets?", "Elle avons gardé ses billets?"], "answer": "C"},
+      {"question": "Did we keep our promises?", "options": ["Nous a gardé nos promesses?", "Nous avons gardé nos promesses?", "Nous sommes gardé nos promesses?", "Nous avez gardé nos promesses?"], "answer": "B"}
+    ],
     "futur_simple": [
       {"question": "They (f.) will not keep quiet during the meeting.", "options": ["Elles gardera ne pas le silence pendant la réunion.", "Elles ne garderont pas le silence pendant la réunion.", "Elles ne gardera pas le silence pendant la réunion.", "Elles garderont pas le silence pendant la réunion."], "answer": "B"},
       {"question": "Will he not keep his promises?", "options": ["Il ne gardera pas ses promesses?", "Il gardera ne pas ses promesses?", "Il ne garderas pas ses promesses?", "Il gardera pas ses promesses?"], "answer": "A"},
