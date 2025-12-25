@@ -1382,6 +1382,9 @@ function App() {
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        {/* Hidden audio element for cloud TTS playback */}
+        <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
+        
         <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
