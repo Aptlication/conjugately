@@ -53,42 +53,6 @@ function App() {
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
 
-  // TTS: Speak English question when displayed
-  useEffect(() => {
-    if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
-      const currentQuestion = quizData[currentQuestionIndex];
-      if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
-        lastSpokenQuestionRef.current = currentQuestionIndex;
-        setTimeout(() => {
-          tts.speakQuestion(currentQuestion.question);
-        }, 300);
-      }
-    }
-  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
-
-  // TTS: Speak correct French answer when confirmed
-  useEffect(() => {
-    if (selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
-      const currentQuestion = quizData[currentQuestionIndex];
-      if (currentQuestion) {
-        const correctOption = currentQuestion.answerOptions?.find((opt: any) => opt.isCorrect);
-        if (correctOption) {
-          setTimeout(() => {
-            tts.speakAnswer(correctOption.text);
-          }, 1500);
-        }
-      }
-    }
-  }, [selectedAnswerIndex, currentQuestionIndex, quizData, tts.isEnabled]);
-
-  // TTS: Stop speech when leaving quiz
-  useEffect(() => {
-    if (quizState !== 'active') {
-      tts.stop();
-      lastSpokenQuestionRef.current = -1;
-    }
-  }, [quizState]);
-
   // Load completed courses and progress on app start
   useEffect(() => {
     if (isAuthenticated && hasUserId(user)) {
@@ -869,6 +833,43 @@ function App() {
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
+
+  // TTS: Speak English question when displayed
+  useEffect(() => {
+    if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
+        lastSpokenQuestionRef.current = currentQuestionIndex;
+        setTimeout(() => {
+          tts.speakQuestion(currentQuestion.question);
+        }, 300);
+      }
+    }
+  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // TTS: Speak correct French answer when confirmed
+  useEffect(() => {
+    if (isAnswerConfirmed && selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion) {
+        const correctOption = currentQuestion.answerOptions?.find((opt: any) => opt.isCorrect);
+        if (correctOption) {
+          setTimeout(() => {
+            tts.speakAnswer(correctOption.text);
+          }, 1500);
+        }
+      }
+    }
+  }, [isAnswerConfirmed, selectedAnswerIndex, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // TTS: Stop speech when leaving quiz
+  useEffect(() => {
+    if (quizState !== 'active') {
+      tts.stop();
+      lastSpokenQuestionRef.current = -1;
+    }
+  }, [quizState]);
+
   const [currentCourseConfig, setCurrentCourseConfig] = useState<any>(null);
   const [showPartSelectionModal, setShowPartSelectionModal] = useState(false);
   const [showCourseOverviewModal, setShowCourseOverviewModal] = useState(false);
