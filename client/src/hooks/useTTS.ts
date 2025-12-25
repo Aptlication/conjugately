@@ -131,9 +131,13 @@ export function useTTS() {
     if (lang === 'fr' && state.frenchVoice) {
       utterance.voice = state.frenchVoice;
       utterance.lang = 'fr-FR';
+      console.log('🇫🇷 TTS using French voice:', state.frenchVoice.name, state.frenchVoice.lang);
     } else if (lang === 'en' && state.englishVoice) {
       utterance.voice = state.englishVoice;
       utterance.lang = 'en-US';
+      console.log('🇺🇸 TTS using English voice:', state.englishVoice.name);
+    } else {
+      console.warn('⚠️ TTS: No matching voice found for', lang, '- using default');
     }
     
     utterance.rate = options.rate || 0.9;
