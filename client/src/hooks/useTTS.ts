@@ -95,8 +95,15 @@ export function useTTS() {
 
   // Speak text in specified language
   const speak = useCallback((text: string, options: TTSOptions = {}) => {
-    if (!state.isSupported || !state.isEnabled) return;
-    if (!window.speechSynthesis) return;
+    console.log('🔊 TTS speak called:', { text: text.substring(0, 50), isSupported: state.isSupported, isEnabled: state.isEnabled });
+    if (!state.isSupported || !state.isEnabled) {
+      console.log('🔇 TTS blocked: supported=', state.isSupported, 'enabled=', state.isEnabled);
+      return;
+    }
+    if (!window.speechSynthesis) {
+      console.log('🔇 TTS: No speechSynthesis API');
+      return;
+    }
 
     const synth = window.speechSynthesis;
     
@@ -131,6 +138,7 @@ export function useTTS() {
       setState(prev => ({ ...prev, isSpeaking: false }));
     };
     
+    console.log('🔊 TTS speaking:', text.substring(0, 50));
     synth.speak(utterance);
   }, [state.isSupported, state.isEnabled, state.englishVoice, state.frenchVoice]);
 
