@@ -847,15 +847,15 @@ function App() {
     }
   }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
 
-  // TTS: Speak correct French answer when confirmed
+  // TTS: Speak the SELECTED French answer when confirmed (whether correct or wrong)
   useEffect(() => {
     if (isAnswerConfirmed && selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
       const currentQuestion = quizData[currentQuestionIndex];
-      if (currentQuestion) {
-        const correctOption = currentQuestion.answerOptions?.find((opt: any) => opt.isCorrect);
-        if (correctOption) {
+      if (currentQuestion && currentQuestion.answerOptions) {
+        const selectedOption = currentQuestion.answerOptions[selectedAnswerIndex];
+        if (selectedOption) {
           setTimeout(() => {
-            tts.speakAnswer(correctOption.text);
+            tts.speakAnswer(selectedOption.text);
           }, 1500);
         }
       }
