@@ -1,6 +1,15 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { isCloudTTSEnabled } from '@shared/config';
 
+interface TTSManifest {
+  version: string;
+  voiceId: string;
+  generatedAt: string;
+  phrases: Record<string, string>;
+}
+
+let manifestCache: TTSManifest | null = null;
+
 interface TTSOptions {
   lang?: 'en' | 'fr';
   rate?: number;
@@ -26,14 +35,9 @@ export function useTTS() {
   
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   
-  // Cloud TTS audio element ref
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
-  // Track blob URLs for cleanup
-  const blobUrlRef = useRef<string | null>(null);
 
-  // Initialize TTS and load voices
   useEffect(() => {
-    // Runtime diagnostic for debugging
     console.log('🔊 TTS Diagnostic:', {
       speechSynthesis: typeof window.speechSynthesis,
       available: !!window.speechSynthesis,
@@ -50,12 +54,10 @@ export function useTTS() {
       const voices = synth.getVoices();
       console.log('🔊 TTS Voices loaded:', voices.length, 'voices available');
       
-      // Find best English voice (prefer US/UK)
       const englishVoice = voices.find(v => 
         v.lang.startsWith('en-US') || v.lang.startsWith('en-GB')
       ) || voices.find(v => v.lang.startsWith('en')) || null;
       
-      // Find best French voice (prefer France)
       const frenchVoice = voices.find(v => 
         v.lang === 'fr-FR'
       ) || voices.find(v => v.lang.startsWith('fr')) || null;
@@ -65,7 +67,6 @@ export function useTTS() {
         french: frenchVoice?.name || 'none' 
       });
       
-      // Load enabled state from localStorage - default to ON if not set
       const savedEnabled = localStorage.getItem('ttsEnabled');
       const isEnabled = savedEnabled === null ? true : savedEnabled === 'true';
       
@@ -78,7 +79,6 @@ export function useTTS() {
       });
     };
 
-    // Voices might load asynchronously
     if (synth.getVoices().length > 0) {
       loadVoices();
     }
@@ -89,13 +89,11 @@ export function useTTS() {
     };
   }, []);
 
-  // Toggle TTS enabled/disabled
   const toggleEnabled = useCallback(() => {
     setState(prev => {
       const newEnabled = !prev.isEnabled;
       localStorage.setItem('ttsEnabled', String(newEnabled));
       
-      // Cancel any ongoing speech when disabling
       if (!newEnabled && window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
@@ -104,7 +102,6 @@ export function useTTS() {
     });
   }, []);
 
-  // Stop current speech
   const stop = useCallback(() => {
     if (window.speechSynthesis) {
       window.speechSynthesis.cancel();
@@ -112,7 +109,6 @@ export function useTTS() {
     }
   }, []);
 
-  // Speak text in specified language
   const speak = useCallback((text: string, options: TTSOptions = {}) => {
     console.log('🔊 TTS speak called:', { text: text.substring(0, 50), isSupported: state.isSupported, isEnabled: state.isEnabled });
     if (!state.isSupported || !state.isEnabled) {
@@ -126,13 +122,11 @@ export function useTTS() {
 
     const synth = window.speechSynthesis;
     
-    // Cancel any ongoing speech
     synth.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
     utteranceRef.current = utterance;
     
-    // Set voice based on language
     const lang = options.lang || 'en';
     if (lang === 'fr' && state.frenchVoice) {
       utterance.voice = state.frenchVoice;
@@ -165,57 +159,50 @@ export function useTTS() {
     synth.speak(utterance);
   }, [state.isSupported, state.isEnabled, state.englishVoice, state.frenchVoice]);
 
-  // Speak English question
   const speakQuestion = useCallback((text: string) => {
     speak(text, { lang: 'en', rate: 0.9 });
   }, [speak]);
 
-  // Cleanup blob URL to prevent memory leaks
-  const cleanupBlobUrl = useCallback(() => {
-    if (blobUrlRef.current) {
-      URL.revokeObjectURL(blobUrlRef.current);
-      blobUrlRef.current = null;
-    }
-  }, []);
-
-  // Speak French using cloud TTS (ElevenLabs) with browser fallback
-  const speakCloudFrench = useCallback(async (text: string): Promise<boolean> => {
+  const speakStaticFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
     
-    // Check feature flag - skip cloud TTS if disabled
     if (!isCloudTTSEnabled()) {
-      console.log('🔇 TTS: Cloud TTS disabled by feature flag');
+      console.log('🔇 TTS: Static TTS disabled by feature flag');
       return false;
     }
     
-    // Require shared audio element for iOS Safari compatibility (playsInline)
     if (!audioElementRef.current) {
-      console.warn('⚠️ TTS: No audio element available, cannot use cloud TTS');
+      console.warn('⚠️ TTS: No audio element available');
+      return false;
+    }
+
+    if (!manifestCache) {
+      try {
+        const response = await fetch('/attached_assets/tts-manifest.json');
+        if (response.ok) {
+          manifestCache = await response.json();
+        }
+      } catch (e) {
+        console.warn('⚠️ TTS: Could not load manifest');
+        return false;
+      }
+    }
+    
+    if (!manifestCache) return false;
+    
+    const audioFile = manifestCache.phrases[text];
+    
+    if (!audioFile) {
+      console.log('📂 TTS: No static audio for:', text.substring(0, 40));
       return false;
     }
     
     const audio = audioElementRef.current;
     
     try {
-      console.log('☁️ TTS: Fetching cloud audio for:', text.substring(0, 50));
+      console.log('📂 TTS: Loading static audio:', audioFile);
       
-      const response = await fetch('/api/tts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text }),
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Cloud TTS failed: ${response.status}`);
-      }
-      
-      const audioBlob = await response.blob();
-      cleanupBlobUrl(); // Clean up previous blob URL
-      
-      const audioUrl = URL.createObjectURL(audioBlob);
-      blobUrlRef.current = audioUrl;
-      
-      audio.src = audioUrl;
+      audio.src = `/attached_assets/audio/${audioFile}`;
       
       setState(prev => ({ ...prev, isSpeaking: true }));
       
@@ -226,47 +213,39 @@ export function useTTS() {
         };
         audio.onerror = () => {
           setState(prev => ({ ...prev, isSpeaking: false }));
-          cleanupBlobUrl(); // Clean up blob URL on error
           reject(new Error('Audio playback failed'));
         };
         audio.play().catch((err) => {
-          cleanupBlobUrl(); // Clean up blob URL on play failure
+          setState(prev => ({ ...prev, isSpeaking: false }));
           reject(err);
         });
       });
       
-      console.log('✅ TTS: Cloud audio played successfully');
+      console.log('✅ TTS: Static audio played successfully');
       return true;
     } catch (error) {
-      console.warn('⚠️ TTS: Cloud failed, falling back to browser:', error);
-      cleanupBlobUrl(); // Ensure cleanup on any error
+      console.warn('⚠️ TTS: Static audio failed, falling back to browser:', error);
       return false;
     }
-  }, [state.isEnabled, cleanupBlobUrl]);
+  }, [state.isEnabled]);
 
-  // Speak French answer - tries cloud first, falls back to browser TTS
   const speakAnswer = useCallback(async (text: string) => {
-    // Try cloud TTS first
-    const cloudSuccess = await speakCloudFrench(text);
+    const staticSuccess = await speakStaticFrench(text);
     
-    // Fall back to browser TTS if cloud fails
-    if (!cloudSuccess) {
+    if (!staticSuccess) {
       speak(text, { lang: 'fr', rate: 0.85 });
     }
-  }, [speakCloudFrench, speak]);
+  }, [speakStaticFrench, speak]);
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      cleanupBlobUrl();
       if (audioElementRef.current) {
         audioElementRef.current.pause();
         audioElementRef.current.src = '';
       }
     };
-  }, [cleanupBlobUrl]);
+  }, []);
 
-  // Setter for external audio element ref (used by App.tsx)
   const setAudioElement = useCallback((element: HTMLAudioElement | null) => {
     audioElementRef.current = element;
   }, []);

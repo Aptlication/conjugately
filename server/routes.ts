@@ -1,4 +1,5 @@
 import type { Express } from "express";
+import express from "express";
 import { createServer, type Server } from "http";
 import path from "path";
 import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
@@ -21,6 +22,10 @@ const ttsRequestSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static audio assets
+  const assetsPath = path.resolve(import.meta.dirname, '..', 'attached_assets');
+  app.use('/attached_assets', express.static(assetsPath));
+  
   // Auth middleware
   await setupAuth(app);
 
