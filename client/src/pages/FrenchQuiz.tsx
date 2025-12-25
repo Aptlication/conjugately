@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
+import { useTTS } from "@/hooks/useTTS";
 
 // Types
 interface QuizQuestion {
@@ -94,6 +95,10 @@ export default function FrenchQuiz() {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
   const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
+  
+  // Text-to-speech
+  const tts = useTTS();
+  const lastSpokenQuestionRef = useRef<number>(-1);
 
 
 
@@ -245,6 +250,45 @@ export default function FrenchQuiz() {
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
 
+  // TTS: Speak question when new question is displayed
+  useEffect(() => {
+    if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
+        lastSpokenQuestionRef.current = currentQuestionIndex;
+        // Small delay to ensure UI has updated
+        setTimeout(() => {
+          tts.speakQuestion(currentQuestion.question);
+        }, 300);
+      }
+    }
+  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // TTS: Speak correct French answer when answer is confirmed
+  useEffect(() => {
+    if (isAnswerConfirmed && selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion) {
+        // Find the correct answer
+        const correctOption = currentQuestion.answerOptions.find(opt => opt.isCorrect);
+        if (correctOption) {
+          // Delay to let the English question finish
+          setTimeout(() => {
+            tts.speakAnswer(correctOption.text);
+          }, 1500);
+        }
+      }
+    }
+  }, [isAnswerConfirmed, selectedAnswerIndex, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // Stop speech when leaving quiz or starting over
+  useEffect(() => {
+    if (quizState !== 'active') {
+      tts.stop();
+      lastSpokenQuestionRef.current = -1;
+    }
+  }, [quizState]);
+
   const handleAnswerSelect = (answerIndex: number) => {
     if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
       // Second click - advance to next question
@@ -319,12 +363,53 @@ export default function FrenchQuiz() {
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-white text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
-                  <button 
-                    onClick={() => setShowHint(!showHint)}
-                    className="text-purple-300 hover:text-purple-200 text-sm"
-                  >
-                    {showHint ? 'Hide Hint' : 'Show Hint'}
-                  </button>
+                  <div className="flex items-center gap-4">
+                    {/* Audio Controls */}
+                    {tts.isSupported && (
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={tts.toggleEnabled}
+                          className={`flex items-center gap-1 px-2 py-1 rounded-lg text-sm transition-all ${
+                            tts.isEnabled 
+                              ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30' 
+                              : 'bg-slate-500/20 text-slate-400 hover:bg-slate-500/30'
+                          }`}
+                          title={tts.isEnabled ? "Audio ON - Click to mute" : "Audio OFF - Click to enable voice"}
+                          data-testid="button-tts-toggle"
+                        >
+                          {tts.isEnabled ? (
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 9H4a1 1 0 00-1 1v4a1 1 0 001 1h2.5l4.5 4V5l-4.5 4z" />
+                            </svg>
+                          ) : (
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707A1 1 0 0112 5v14a1 1 0 01-1.707.707L5.586 15z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                            </svg>
+                          )}
+                          <span className="hidden sm:inline">{tts.isEnabled ? 'Audio' : 'Muted'}</span>
+                        </button>
+                        {tts.isEnabled && (
+                          <button
+                            onClick={() => tts.speakQuestion(currentQuestion.question)}
+                            className="p-1 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-all"
+                            title="Replay question"
+                            data-testid="button-replay-question"
+                          >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                          </button>
+                        )}
+                      </div>
+                    )}
+                    <button 
+                      onClick={() => setShowHint(!showHint)}
+                      className="text-purple-300 hover:text-purple-200 text-sm"
+                    >
+                      {showHint ? 'Hide Hint' : 'Show Hint'}
+                    </button>
+                  </div>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div 
@@ -376,7 +461,24 @@ export default function FrenchQuiz() {
                     ? 'bg-green-500/20 border-green-500/30 text-green-200'
                     : 'bg-red-500/20 border-red-500/30 text-red-200'
                 }`}>
-                  <p>📝 {currentQuestion.answerOptions[selectedAnswerIndex].rationale}</p>
+                  <div className="flex items-start justify-between gap-2">
+                    <p>📝 {currentQuestion.answerOptions[selectedAnswerIndex].rationale}</p>
+                    {tts.isSupported && tts.isEnabled && (
+                      <button
+                        onClick={() => {
+                          const correctOption = currentQuestion.answerOptions.find(opt => opt.isCorrect);
+                          if (correctOption) tts.speakAnswer(correctOption.text);
+                        }}
+                        className="flex-shrink-0 p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all"
+                        title="Listen to correct French answer"
+                        data-testid="button-replay-answer"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 9H4a1 1 0 00-1 1v4a1 1 0 001 1h2.5l4.5 4V5l-4.5 4z" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
                 </div>
               )}
 
