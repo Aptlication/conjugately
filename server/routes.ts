@@ -11,7 +11,7 @@ import { courseProgress, completedCourses } from "@shared/schema";
 import { eq, and } from "drizzle-orm";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
-import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
+import { isAdvancedDifficultyEnabled, isDifficultyAllowed, isCloudTTSEnabled } from "@shared/config";
 import { synthesizeSpeech } from "./services/elevenlabs";
 
 // TTS request validation schema
@@ -311,6 +311,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Text-to-Speech endpoint using ElevenLabs
   app.post("/api/tts", async (req, res) => {
     try {
+      // Check feature flag
+      if (!isCloudTTSEnabled()) {
+        return res.status(503).json({
+          success: false,
+          error: "Cloud TTS is disabled"
+        });
+      }
+      
       const { text, voiceId } = ttsRequestSchema.parse(req.body);
       
       console.log(`🔊 TTS request: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`);

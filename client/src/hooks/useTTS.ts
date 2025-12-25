@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { isCloudTTSEnabled } from '@shared/config';
 
 interface TTSOptions {
   lang?: 'en' | 'fr';
@@ -180,6 +181,12 @@ export function useTTS() {
   // Speak French using cloud TTS (ElevenLabs) with browser fallback
   const speakCloudFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
+    
+    // Check feature flag - skip cloud TTS if disabled
+    if (!isCloudTTSEnabled()) {
+      console.log('🔇 TTS: Cloud TTS disabled by feature flag');
+      return false;
+    }
     
     // Require shared audio element for iOS Safari compatibility (playsInline)
     if (!audioElementRef.current) {

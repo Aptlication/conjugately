@@ -5,6 +5,7 @@ export interface AppConfig {
   // Feature flags
   features: {
     advancedDifficultyEnabled: boolean;
+    cloudTTSEnabled: boolean;
   };
   
   // Version information
@@ -20,6 +21,9 @@ export const APP_CONFIG: AppConfig = {
     // Advanced difficulty is locked for Version 1
     // Set to true in future versions to unlock Advanced level
     advancedDifficultyEnabled: false,
+    // Cloud TTS (ElevenLabs) enabled for high-quality French pronunciation
+    // Set to false to disable and use browser TTS only
+    cloudTTSEnabled: true,
   },
   
   version: {
@@ -47,4 +51,9 @@ export const getAvailableDifficulties = () => {
 // Check if a difficulty level is allowed
 export const isDifficultyAllowed = (difficulty: string): boolean => {
   return getAvailableDifficulties().includes(difficulty);
+};
+
+// Check if cloud TTS (ElevenLabs) is enabled
+export const isCloudTTSEnabled = (): boolean => {
+  return APP_CONFIG.features.cloudTTSEnabled;
 };
