@@ -237,8 +237,8 @@ export default function FrenchQuiz() {
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
-        // Show pronounce modal if TTS is supported and not shown this session
-        if (tts.isSupported && !pronounceModalShownThisSession) {
+        // Always show pronounce modal on first quiz of session
+        if (!pronounceModalShownThisSession) {
           setShowPronounceModal(true);
           setPronounceModalShownThisSession(true);
         } else {
@@ -377,19 +377,25 @@ export default function FrenchQuiz() {
                   Enable voice-over to hear questions read in English and correct answers pronounced in French.
                 </p>
                 <div className="flex flex-col gap-3">
-                  <button
-                    onClick={handleEnablePronounce}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-200 font-semibold"
-                    data-testid="button-enable-pronounce"
-                  >
-                    Yes, Enable Voice
-                  </button>
+                  {tts.isSupported ? (
+                    <button
+                      onClick={handleEnablePronounce}
+                      className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-200 font-semibold"
+                      data-testid="button-enable-pronounce"
+                    >
+                      Yes, Enable Voice
+                    </button>
+                  ) : (
+                    <div className="w-full px-6 py-3 bg-slate-700/50 text-slate-400 rounded-xl text-sm">
+                      Voice not available in this browser
+                    </div>
+                  )}
                   <button
                     onClick={handleSkipPronounce}
                     className="w-full px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
                     data-testid="button-skip-pronounce"
                   >
-                    No Thanks, Start Quiz
+                    {tts.isSupported ? "No Thanks, Start Quiz" : "Continue to Quiz"}
                   </button>
                 </div>
               </div>
