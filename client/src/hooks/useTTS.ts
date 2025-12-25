@@ -24,6 +24,11 @@ export function useTTS() {
   });
   
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  
+  // Cloud TTS audio element ref
+  const audioElementRef = useRef<HTMLAudioElement | null>(null);
+  // Track blob URLs for cleanup
+  const blobUrlRef = useRef<string | null>(null);
 
   // Initialize TTS and load voices
   useEffect(() => {
@@ -164,10 +169,89 @@ export function useTTS() {
     speak(text, { lang: 'en', rate: 0.9 });
   }, [speak]);
 
-  // Speak French answer
-  const speakAnswer = useCallback((text: string) => {
-    speak(text, { lang: 'fr', rate: 0.85 });
-  }, [speak]);
+  // Cleanup blob URL to prevent memory leaks
+  const cleanupBlobUrl = useCallback(() => {
+    if (blobUrlRef.current) {
+      URL.revokeObjectURL(blobUrlRef.current);
+      blobUrlRef.current = null;
+    }
+  }, []);
+
+  // Speak French using cloud TTS (ElevenLabs) with browser fallback
+  const speakCloudFrench = useCallback(async (text: string): Promise<boolean> => {
+    if (!state.isEnabled) return false;
+    
+    try {
+      console.log('☁️ TTS: Fetching cloud audio for:', text.substring(0, 50));
+      
+      const response = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Cloud TTS failed: ${response.status}`);
+      }
+      
+      const audioBlob = await response.blob();
+      cleanupBlobUrl(); // Clean up previous blob URL
+      
+      const audioUrl = URL.createObjectURL(audioBlob);
+      blobUrlRef.current = audioUrl;
+      
+      // Use the audio element if available
+      const audio = audioElementRef.current || new Audio();
+      audio.src = audioUrl;
+      
+      setState(prev => ({ ...prev, isSpeaking: true }));
+      
+      await new Promise<void>((resolve, reject) => {
+        audio.onended = () => {
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          resolve();
+        };
+        audio.onerror = () => {
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          reject(new Error('Audio playback failed'));
+        };
+        audio.play().catch(reject);
+      });
+      
+      console.log('✅ TTS: Cloud audio played successfully');
+      return true;
+    } catch (error) {
+      console.warn('⚠️ TTS: Cloud failed, falling back to browser:', error);
+      return false;
+    }
+  }, [state.isEnabled, cleanupBlobUrl]);
+
+  // Speak French answer - tries cloud first, falls back to browser TTS
+  const speakAnswer = useCallback(async (text: string) => {
+    // Try cloud TTS first
+    const cloudSuccess = await speakCloudFrench(text);
+    
+    // Fall back to browser TTS if cloud fails
+    if (!cloudSuccess) {
+      speak(text, { lang: 'fr', rate: 0.85 });
+    }
+  }, [speakCloudFrench, speak]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      cleanupBlobUrl();
+      if (audioElementRef.current) {
+        audioElementRef.current.pause();
+        audioElementRef.current.src = '';
+      }
+    };
+  }, [cleanupBlobUrl]);
+
+  // Setter for external audio element ref (used by App.tsx)
+  const setAudioElement = useCallback((element: HTMLAudioElement | null) => {
+    audioElementRef.current = element;
+  }, []);
 
   return {
     isSupported: state.isSupported,
@@ -179,5 +263,6 @@ export function useTTS() {
     speakQuestion,
     speakAnswer,
     stop,
+    setAudioElement,
   };
 }
