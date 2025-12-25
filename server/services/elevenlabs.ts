@@ -1,4 +1,6 @@
 import { createHash } from 'crypto';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 const memoizee = require('memoizee');
 
 // ============================================================
@@ -113,4 +115,13 @@ export async function getFrenchAudio(
     console.error('[elevenlabs] TTS error:', error);
     throw error;
   }
+}
+
+// Simple export for routes - returns just the buffer
+export async function synthesizeSpeech(
+  text: string,
+  voiceId?: string
+): Promise<Buffer> {
+  const result = await getFrenchAudio(text, { voiceId });
+  return result.buffer;
 }

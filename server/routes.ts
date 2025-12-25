@@ -5,13 +5,20 @@ import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSch
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { generateInternalQuiz } from "./quiz-generator";
 import { getRandomIntermediateQuestions } from "./intermediate-quiz-data";
-import { ZodError } from "zod";
+import { ZodError, z } from "zod";
 import { db } from "./db";
 import { courseProgress, completedCourses } from "@shared/schema";
 import { eq, and } from "drizzle-orm";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
+import { synthesizeSpeech } from "./services/elevenlabs";
+
+// TTS request validation schema
+const ttsRequestSchema = z.object({
+  text: z.string().min(1).max(500),
+  voiceId: z.string().optional()
+});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -299,6 +306,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
       message: "French Verb Master API is running",
       timestamp: new Date().toISOString()
     });
+  });
+
+  // Text-to-Speech endpoint using ElevenLabs
+  app.post("/api/tts", async (req, res) => {
+    try {
+      const { text, voiceId } = ttsRequestSchema.parse(req.body);
+      
+      console.log(`🔊 TTS request: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`);
+      
+      const audioBuffer = await synthesizeSpeech(text, voiceId);
+      
+      if (!audioBuffer || audioBuffer.length === 0) {
+        console.error('❌ TTS: Empty audio buffer returned');
+        return res.status(500).json({
+          success: false,
+          error: "Failed to generate speech audio"
+        });
+      }
+      
+      // Return audio as binary with proper headers
+      res.set({
+        'Content-Type': 'audio/mpeg',
+        'Content-Length': audioBuffer.length,
+        'Cache-Control': 'public, max-age=86400' // Cache for 24 hours
+      });
+      
+      res.send(audioBuffer);
+      console.log(`✅ TTS: Sent ${audioBuffer.length} bytes of audio`);
+    } catch (error) {
+      if (error instanceof ZodError) {
+        return res.status(400).json({
+          success: false,
+          error: "Invalid TTS request",
+          details: error.errors
+        });
+      }
+      
+      console.error("TTS error:", error);
+      res.status(500).json({
+        success: false,
+        error: (error as Error).message || "Failed to generate speech"
+      });
+    }
   });
 
   const httpServer = createServer(app);
