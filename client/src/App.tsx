@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
+import { useTTS } from "@/hooks/useTTS";
 import { isAdvancedDifficultyEnabled } from "@shared/config";
 
 // Type guard function to check if user has id
@@ -47,6 +48,9 @@ function App() {
   const [courseProgressData, setCourseProgressData] = useState<any[]>([]);
   const [showProgressModal, setShowProgressModal] = useState(false);
   const [progressModalData, setProgressModalData] = useState<{timeFrame: string, tense: string, courseLevel: string, existingProgress: any} | null>(null);
+
+  // Text-to-speech for pronunciation
+  const tts = useTTS();
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -1429,12 +1433,28 @@ function App() {
             </div>
           )}
 
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center gap-4">
             <button
               onClick={handleStartOver}
               className="px-6 py-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
             >
               Start Over
+            </button>
+            <button
+              onClick={tts.isSupported ? tts.toggleEnabled : undefined}
+              disabled={!tts.isSupported}
+              className={`px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-2 ${
+                !tts.isSupported
+                  ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed border border-slate-700'
+                  : tts.isEnabled 
+                    ? 'bg-green-600/20 text-green-400 border border-green-500/50 hover:bg-green-600/30' 
+                    : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
+              }`}
+              data-testid="button-tts-toggle"
+              title={!tts.isSupported ? 'Voice not available' : tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
+            >
+              {tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}
+              <span className="text-sm">{tts.isEnabled && tts.isSupported ? 'ON' : 'OFF'}</span>
             </button>
           </div>
         </div>
