@@ -13,7 +13,7 @@ interface QuizQuestion {
   }[];
 }
 
-type QuizState = 'config' | 'loading' | 'active' | 'results';
+type QuizState = 'config' | 'loading' | 'pronounce_prompt' | 'active' | 'results';
 
 // Complete French verbs including reflexive verbs for full coverage
 const FRENCH_VERBS = [
@@ -237,10 +237,10 @@ export default function FrenchQuiz() {
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
-        // Always show pronounce modal on first quiz of session
+        // Always show pronounce prompt on first quiz of session
         if (!pronounceModalShownThisSession) {
-          setShowPronounceModal(true);
           setPronounceModalShownThisSession(true);
+          setQuizState('pronounce_prompt');
         } else {
           setQuizState('active');
         }
@@ -302,7 +302,6 @@ export default function FrenchQuiz() {
     if (!tts.isEnabled) {
       tts.toggleEnabled();
     }
-    setShowPronounceModal(false);
     setQuizState('active');
   };
 
@@ -310,7 +309,6 @@ export default function FrenchQuiz() {
     if (tts.isEnabled) {
       tts.toggleEnabled();
     }
-    setShowPronounceModal(false);
     setQuizState('active');
   };
 
@@ -366,42 +364,6 @@ export default function FrenchQuiz() {
   const renderContent = () => {
     switch (quizState) {
       case 'loading':
-        // Show pronounce modal if it should be displayed
-        if (showPronounceModal) {
-          return (
-            <div className="flex items-center justify-center min-h-[400px]">
-              <div className="max-w-md mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-2xl text-center">
-                <div className="text-5xl mb-4">🔊</div>
-                <h2 className="text-2xl font-bold text-white mb-4">Turn On Pronunciation?</h2>
-                <p className="text-slate-300 mb-6">
-                  Enable voice-over to hear questions read in English and correct answers pronounced in French.
-                </p>
-                <div className="flex flex-col gap-3">
-                  {tts.isSupported ? (
-                    <button
-                      onClick={handleEnablePronounce}
-                      className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-200 font-semibold"
-                      data-testid="button-enable-pronounce"
-                    >
-                      Yes, Enable Voice
-                    </button>
-                  ) : (
-                    <div className="w-full px-6 py-3 bg-slate-700/50 text-slate-400 rounded-xl text-sm">
-                      Voice not available in this browser
-                    </div>
-                  )}
-                  <button
-                    onClick={handleSkipPronounce}
-                    className="w-full px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
-                    data-testid="button-skip-pronounce"
-                  >
-                    {tts.isSupported ? "No Thanks, Start Quiz" : "Continue to Quiz"}
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
-        }
         return (
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center max-w-md mx-auto">
@@ -410,6 +372,41 @@ export default function FrenchQuiz() {
               <p className="text-purple-300 text-sm mb-4">
                 Creating 20 personalized questions for <strong>{selectedVerb}</strong> in <strong>{selectedTenseType}</strong>
               </p>
+            </div>
+          </div>
+        );
+
+      case 'pronounce_prompt':
+        return (
+          <div className="flex items-center justify-center min-h-[400px]">
+            <div className="max-w-md mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-2xl text-center">
+              <div className="text-5xl mb-4">🔊</div>
+              <h2 className="text-2xl font-bold text-white mb-4">Turn On Pronunciation?</h2>
+              <p className="text-slate-300 mb-6">
+                Enable voice-over to hear questions read in English and correct answers pronounced in French.
+              </p>
+              <div className="flex flex-col gap-3">
+                {tts.isSupported ? (
+                  <button
+                    onClick={handleEnablePronounce}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-200 font-semibold"
+                    data-testid="button-enable-pronounce"
+                  >
+                    Yes, Enable Voice
+                  </button>
+                ) : (
+                  <div className="w-full px-6 py-3 bg-slate-700/50 text-slate-400 rounded-xl text-sm">
+                    Voice not available in this browser
+                  </div>
+                )}
+                <button
+                  onClick={handleSkipPronounce}
+                  className="w-full px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
+                  data-testid="button-skip-pronounce"
+                >
+                  {tts.isSupported ? "No Thanks, Start Quiz" : "Continue to Quiz"}
+                </button>
+              </div>
             </div>
           </div>
         );
