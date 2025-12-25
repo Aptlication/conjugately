@@ -364,45 +364,46 @@ export default function FrenchQuiz() {
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-white text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
                   <div className="flex items-center gap-4">
-                    {/* Audio Controls */}
-                    {tts.isSupported && (
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={tts.toggleEnabled}
-                          className={`flex items-center gap-1 px-2 py-1 rounded-lg text-sm transition-all ${
-                            tts.isEnabled 
+                    {/* Audio Controls - Always visible */}
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={tts.toggleEnabled}
+                        disabled={!tts.isSupported}
+                        className={`flex items-center gap-1 px-2 py-1 rounded-lg text-sm transition-all ${
+                          !tts.isSupported
+                            ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed'
+                            : tts.isEnabled 
                               ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30' 
                               : 'bg-slate-500/20 text-slate-400 hover:bg-slate-500/30'
-                          }`}
-                          title={tts.isEnabled ? "Audio ON - Click to mute" : "Audio OFF - Click to enable voice"}
-                          data-testid="button-tts-toggle"
-                        >
-                          {tts.isEnabled ? (
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 9H4a1 1 0 00-1 1v4a1 1 0 001 1h2.5l4.5 4V5l-4.5 4z" />
-                            </svg>
-                          ) : (
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707A1 1 0 0112 5v14a1 1 0 01-1.707.707L5.586 15z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                            </svg>
-                          )}
-                          <span className="hidden sm:inline">{tts.isEnabled ? 'Audio' : 'Muted'}</span>
-                        </button>
-                        {tts.isEnabled && (
-                          <button
-                            onClick={() => tts.speakQuestion(currentQuestion.question)}
-                            className="p-1 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-all"
-                            title="Replay question"
-                            data-testid="button-replay-question"
-                          >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                            </svg>
-                          </button>
+                        }`}
+                        title={!tts.isSupported ? "Voice not available in this browser" : tts.isEnabled ? "Audio ON - Click to mute" : "Audio OFF - Click to enable voice"}
+                        data-testid="button-tts-toggle"
+                      >
+                        {tts.isEnabled && tts.isSupported ? (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 9H4a1 1 0 00-1 1v4a1 1 0 001 1h2.5l4.5 4V5l-4.5 4z" />
+                          </svg>
+                        ) : (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707A1 1 0 0112 5v14a1 1 0 01-1.707.707L5.586 15z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                          </svg>
                         )}
-                      </div>
-                    )}
+                        <span className="hidden sm:inline">{tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}</span>
+                      </button>
+                      {tts.isEnabled && tts.isSupported && (
+                        <button
+                          onClick={() => tts.speakQuestion(currentQuestion.question)}
+                          className="p-1 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-all"
+                          title="Replay question"
+                          data-testid="button-replay-question"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
                     <button 
                       onClick={() => setShowHint(!showHint)}
                       className="text-purple-300 hover:text-purple-200 text-sm"
