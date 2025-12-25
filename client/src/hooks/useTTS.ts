@@ -27,7 +27,14 @@ export function useTTS() {
 
   // Initialize TTS and load voices
   useEffect(() => {
+    // Runtime diagnostic for debugging
+    console.log('🔊 TTS Diagnostic:', {
+      speechSynthesis: typeof window.speechSynthesis,
+      available: !!window.speechSynthesis,
+    });
+    
     if (typeof window === 'undefined' || !window.speechSynthesis) {
+      console.warn('🔇 TTS: speechSynthesis not available');
       return;
     }
 
@@ -35,6 +42,7 @@ export function useTTS() {
     
     const loadVoices = () => {
       const voices = synth.getVoices();
+      console.log('🔊 TTS Voices loaded:', voices.length, 'voices available');
       
       // Find best English voice (prefer US/UK)
       const englishVoice = voices.find(v => 
@@ -45,6 +53,11 @@ export function useTTS() {
       const frenchVoice = voices.find(v => 
         v.lang === 'fr-FR'
       ) || voices.find(v => v.lang.startsWith('fr')) || null;
+      
+      console.log('🔊 TTS Selected voices:', { 
+        english: englishVoice?.name || 'none', 
+        french: frenchVoice?.name || 'none' 
+      });
       
       // Load enabled state from localStorage - default to ON if not set
       const savedEnabled = localStorage.getItem('ttsEnabled');

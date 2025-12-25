@@ -1,0 +1,30 @@
+Comet’s TTS and voice features are compatible with your app’s Web Speech–based TTS in principle, but they are separate layers: your in‑page `speechSynthesis` calls still depend on the browser’s Web Speech API, while Comet provides its own voice mode and voice control for the assistant and browser UI.[1][2][3]
+
+## What Comet Provides For Voice
+
+- Comet has **“industry‑leading voice technology”** for interacting with the Comet Assistant and browsing via voice, including on mobile.[4][1]
+- Recent Comet updates add **voice control of the browser** and cross‑tab voice interactions with the assistant, but these do not replace `window.speechSynthesis` inside arbitrary sites.[2][3]
+
+## How This Interacts With Your TTS
+
+- Your quiz’s TTS (`tts.speakQuestion()`, `tts.speakAnswer()`, `tts.stop()`) uses the browser’s Web Speech API, so compatibility hinges on whether the Comet browser exposes `speechSynthesis` to page scripts and allows audio autoplay after user interaction.[5]
+- The diagnostic note about Replit’s embedded iframe having limited audio permissions remains relevant: Comet can improve general browsing and add its own voice features, but it does not automatically bypass iframe autoplay/permission constraints in the underlying engine.[5][2]
+
+## Practical Implications For Testing
+
+- You can test on Comet using your Replit preview or `frenchverbmaster.com`; if `speechSynthesis` is available and audio isn’t blocked, your existing `tts.speak*` calls should work the same as in a standard Chromium‑based browser.[1][5]
+- Use the console logging you added (`"🔊 TTS speak called"` vs `"🔇 TTS blocked"`) in Comet’s devtools to distinguish between “code is firing” and “engine/permissions are preventing audio,” just as you planned.[5]
+
+If you want, the next step can be to add a one‑time runtime check in your code that logs the result of `typeof window.speechSynthesis` and `speechSynthesis.getVoices()` so you can see exactly what Comet is exposing.
+
+[1](https://www.perplexity.ai/hub/blog/comet-is-now-available-to-everyone-worldwide)
+[2](https://www.perplexity.ai/changelog/what-we-shipped-september-5th)
+[3](https://www.perplexity.ai/changelog/what-we-shipped-november-22nd)
+[4](https://www.perplexity.ai/hub/blog/comet-for-android-is-here)
+[5](https://replit.com/@JonathanGdeC/V4-French-Verb-Master)
+[6](https://www.perplexity.ai/hub/getting-started)
+[7](https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you)
+[8](https://www.perplexity.ai/changelog/)
+[9](https://www.perplexity.ai/help-center/en/articles/11985060-generating-videos-with-perplexity)
+[10](https://www.perplexity.ai/help-center/en/articles/10352995-api-settings)
+[11](https://www.perplexity.ai/help-center/en/articles/11521526-perplexity-tasks)
