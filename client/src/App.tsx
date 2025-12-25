@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { useTTS } from "@/hooks/useTTS";
@@ -51,6 +51,43 @@ function App() {
 
   // Text-to-speech for pronunciation
   const tts = useTTS();
+  const lastSpokenQuestionRef = useRef<number>(-1);
+
+  // TTS: Speak English question when displayed
+  useEffect(() => {
+    if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
+        lastSpokenQuestionRef.current = currentQuestionIndex;
+        setTimeout(() => {
+          tts.speakQuestion(currentQuestion.question);
+        }, 300);
+      }
+    }
+  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // TTS: Speak correct French answer when confirmed
+  useEffect(() => {
+    if (selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
+      const currentQuestion = quizData[currentQuestionIndex];
+      if (currentQuestion) {
+        const correctOption = currentQuestion.answerOptions?.find((opt: any) => opt.isCorrect);
+        if (correctOption) {
+          setTimeout(() => {
+            tts.speakAnswer(correctOption.text);
+          }, 1500);
+        }
+      }
+    }
+  }, [selectedAnswerIndex, currentQuestionIndex, quizData, tts.isEnabled]);
+
+  // TTS: Stop speech when leaving quiz
+  useEffect(() => {
+    if (quizState !== 'active') {
+      tts.stop();
+      lastSpokenQuestionRef.current = -1;
+    }
+  }, [quizState]);
 
   // Load completed courses and progress on app start
   useEffect(() => {
