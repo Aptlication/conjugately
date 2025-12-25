@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { useTTS } from "@/hooks/useTTS";
@@ -53,10 +53,15 @@ function App() {
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
   
-  // Audio element ref callback - ensures setAudioElement is called when element mounts
-  const audioRefCallback = (element: HTMLAudioElement | null) => {
+  // Audio element ref - persists across renders for cloud TTS
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  
+  // Audio element ref callback - memoized to prevent unnecessary re-renders
+  const audioRefCallback = useCallback((element: HTMLAudioElement | null) => {
+    audioRef.current = element;
     tts.setAudioElement(element);
-  };
+    console.log('🔊 Audio element ref:', element ? 'connected' : 'disconnected');
+  }, [tts.setAudioElement]);
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -1349,6 +1354,8 @@ function App() {
   if (quizState === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center text-white">
+        {/* Hidden audio element for cloud TTS playback */}
+        <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-xl mb-2">Generating your quiz...</p>
@@ -1519,6 +1526,8 @@ function App() {
       
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+          {/* Hidden audio element for cloud TTS playback */}
+          <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
               <h2 className="text-4xl font-bold mb-4">✅ Unit {courseInfo.currentVerbIndex}: '{currentVerb}' Complete!</h2>
@@ -1715,6 +1724,8 @@ function App() {
         // If user passed but isn't authenticated, show login prompt
         return (
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+            {/* Hidden audio element for cloud TTS playback */}
+            <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4">🏆 Exam Passed!</h2>
@@ -1744,6 +1755,8 @@ function App() {
       
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+          {/* Hidden audio element for cloud TTS playback */}
+          <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
               <h2 className="text-4xl font-bold mb-4">
@@ -1843,6 +1856,8 @@ function App() {
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        {/* Hidden audio element for cloud TTS playback */}
+        <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
         <div className="max-w-5xl mx-auto">
           {/* Summary Section */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1936,6 +1951,8 @@ function App() {
   if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        {/* Hidden audio element for cloud TTS playback */}
+        <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
             <div className="text-center mb-6">
@@ -2050,6 +2067,8 @@ function App() {
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        {/* Hidden audio element for cloud TTS playback */}
+        <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
             <div className="text-center mb-8">
