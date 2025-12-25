@@ -451,20 +451,21 @@ export default function FrenchQuiz() {
                 >
                   Start Over
                 </button>
-                {tts.isSupported && (
-                  <button
-                    onClick={tts.toggleEnabled}
-                    className={`px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-2 ${
-                      tts.isEnabled 
+                <button
+                  onClick={tts.isSupported ? tts.toggleEnabled : undefined}
+                  disabled={!tts.isSupported}
+                  className={`px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-2 ${
+                    !tts.isSupported
+                      ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed border border-slate-700'
+                      : tts.isEnabled 
                         ? 'bg-green-600/20 text-green-400 border border-green-500/50 hover:bg-green-600/30' 
                         : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
-                    }`}
-                    data-testid="button-tts-toggle"
-                    title={tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
-                  >
-                    {tts.isEnabled ? '🔊' : '🔇'}
-                  </button>
-                )}
+                  }`}
+                  data-testid="button-tts-toggle"
+                  title={!tts.isSupported ? 'Voice not available' : tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
+                >
+                  {tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}
+                </button>
               </div>
             </div>
           </div>
