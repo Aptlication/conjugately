@@ -46,12 +46,13 @@ export function useTTS() {
         v.lang === 'fr-FR'
       ) || voices.find(v => v.lang.startsWith('fr')) || null;
       
-      // Load enabled state from localStorage
-      const savedEnabled = localStorage.getItem('ttsEnabled') === 'true';
+      // Load enabled state from localStorage - default to ON if not set
+      const savedEnabled = localStorage.getItem('ttsEnabled');
+      const isEnabled = savedEnabled === null ? true : savedEnabled === 'true';
       
       setState({
         isSupported: true,
-        isEnabled: savedEnabled,
+        isEnabled: isEnabled,
         isSpeaking: false,
         englishVoice,
         frenchVoice,

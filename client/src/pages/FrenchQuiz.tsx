@@ -13,7 +13,7 @@ interface QuizQuestion {
   }[];
 }
 
-type QuizState = 'config' | 'loading' | 'pronounce_prompt' | 'active' | 'results';
+type QuizState = 'config' | 'loading' | 'active' | 'results';
 
 // Complete French verbs including reflexive verbs for full coverage
 const FRENCH_VERBS = [
@@ -99,8 +99,6 @@ export default function FrenchQuiz() {
   // Text-to-speech
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
-  const [showPronounceModal, setShowPronounceModal] = useState(false);
-  const [pronounceModalShownThisSession, setPronounceModalShownThisSession] = useState(false);
 
 
 
@@ -237,13 +235,7 @@ export default function FrenchQuiz() {
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
-        // Always show pronounce prompt on first quiz of session
-        if (!pronounceModalShownThisSession) {
-          setPronounceModalShownThisSession(true);
-          setQuizState('pronounce_prompt');
-        } else {
-          setQuizState('active');
-        }
+        setQuizState('active');
       } else {
         console.error('Quiz loading failed:', data.error);
         alert(`Quiz not available: ${data.error}`);
@@ -296,21 +288,6 @@ export default function FrenchQuiz() {
       lastSpokenQuestionRef.current = -1;
     }
   }, [quizState]);
-
-  // Handle pronounce modal responses
-  const handleEnablePronounce = () => {
-    if (!tts.isEnabled) {
-      tts.toggleEnabled();
-    }
-    setQuizState('active');
-  };
-
-  const handleSkipPronounce = () => {
-    if (tts.isEnabled) {
-      tts.toggleEnabled();
-    }
-    setQuizState('active');
-  };
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
@@ -376,41 +353,6 @@ export default function FrenchQuiz() {
           </div>
         );
 
-      case 'pronounce_prompt':
-        return (
-          <div className="flex items-center justify-center min-h-[400px]">
-            <div className="max-w-md mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-2xl text-center">
-              <div className="text-5xl mb-4">🔊</div>
-              <h2 className="text-2xl font-bold text-white mb-4">Turn On Pronunciation?</h2>
-              <p className="text-slate-300 mb-6">
-                Enable voice-over to hear questions read in English and correct answers pronounced in French.
-              </p>
-              <div className="flex flex-col gap-3">
-                {tts.isSupported ? (
-                  <button
-                    onClick={handleEnablePronounce}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-200 font-semibold"
-                    data-testid="button-enable-pronounce"
-                  >
-                    Yes, Enable Voice
-                  </button>
-                ) : (
-                  <div className="w-full px-6 py-3 bg-slate-700/50 text-slate-400 rounded-xl text-sm">
-                    Voice not available in this browser
-                  </div>
-                )}
-                <button
-                  onClick={handleSkipPronounce}
-                  className="w-full px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
-                  data-testid="button-skip-pronounce"
-                >
-                  {tts.isSupported ? "No Thanks, Start Quiz" : "Continue to Quiz"}
-                </button>
-              </div>
-            </div>
-          </div>
-        );
-      
       case 'active':
         if (!quizData.length) return null;
         const currentQuestion = quizData[currentQuestionIndex];
@@ -421,54 +363,13 @@ export default function FrenchQuiz() {
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-white text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
-                  <div className="flex items-center gap-4">
-                    {/* Audio Controls - Always visible */}
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={tts.toggleEnabled}
-                        disabled={!tts.isSupported}
-                        className={`flex items-center gap-1 px-2 py-1 rounded-lg text-sm transition-all ${
-                          !tts.isSupported
-                            ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed'
-                            : tts.isEnabled 
-                              ? 'bg-green-500/20 text-green-300 hover:bg-green-500/30' 
-                              : 'bg-slate-500/20 text-slate-400 hover:bg-slate-500/30'
-                        }`}
-                        title={!tts.isSupported ? "Voice not available in this browser" : tts.isEnabled ? "Audio ON - Click to mute" : "Audio OFF - Click to enable voice"}
-                        data-testid="button-tts-toggle"
-                      >
-                        {tts.isEnabled && tts.isSupported ? (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 9H4a1 1 0 00-1 1v4a1 1 0 001 1h2.5l4.5 4V5l-4.5 4z" />
-                          </svg>
-                        ) : (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707A1 1 0 0112 5v14a1 1 0 01-1.707.707L5.586 15z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                          </svg>
-                        )}
-                        <span className="hidden sm:inline">{tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}</span>
-                      </button>
-                      {tts.isEnabled && tts.isSupported && (
-                        <button
-                          onClick={() => tts.speakQuestion(currentQuestion.question)}
-                          className="p-1 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-all"
-                          title="Replay question"
-                          data-testid="button-replay-question"
-                        >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                          </svg>
-                        </button>
-                      )}
-                    </div>
-                    <button 
-                      onClick={() => setShowHint(!showHint)}
-                      className="text-purple-300 hover:text-purple-200 text-sm"
-                    >
-                      {showHint ? 'Hide Hint' : 'Show Hint'}
-                    </button>
-                  </div>
+                  <button 
+                    onClick={() => setShowHint(!showHint)}
+                    className="text-purple-300 hover:text-purple-200 text-sm"
+                    data-testid="button-toggle-hint"
+                  >
+                    {showHint ? 'Hide Hint' : 'Show Hint'}
+                  </button>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div 
@@ -541,14 +442,29 @@ export default function FrenchQuiz() {
                 </div>
               )}
 
-              {/* Start Over Button - Next button removed for double-click functionality */}
-              <div className="flex justify-center">
+              {/* Bottom controls: Start Over and Pronunciation Toggle */}
+              <div className="flex justify-center items-center gap-4">
                 <button
                   onClick={handleStartOver}
                   className="px-6 py-3 text-slate-400 hover:text-white transition-all duration-200 border border-slate-600 rounded-xl hover:border-slate-400"
+                  data-testid="button-start-over"
                 >
                   Start Over
                 </button>
+                {tts.isSupported && (
+                  <button
+                    onClick={tts.toggleEnabled}
+                    className={`px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-2 ${
+                      tts.isEnabled 
+                        ? 'bg-green-600/20 text-green-400 border border-green-500/50 hover:bg-green-600/30' 
+                        : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
+                    }`}
+                    data-testid="button-tts-toggle"
+                    title={tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
+                  >
+                    {tts.isEnabled ? '🔊' : '🔇'}
+                  </button>
+                )}
               </div>
             </div>
           </div>
