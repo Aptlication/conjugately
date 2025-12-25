@@ -465,6 +465,7 @@ export default function FrenchQuiz() {
                   title={!tts.isSupported ? 'Voice not available' : tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
                 >
                   {tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}
+                  <span className="text-sm">{tts.isEnabled && tts.isSupported ? 'ON' : 'OFF'}</span>
                 </button>
               </div>
             </div>
