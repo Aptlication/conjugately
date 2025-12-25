@@ -1411,7 +1411,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
   
   "s'intéresser": {
-    "présent": [
+    "present": [
       {"question": "Do I take an interest in politics? (Présent)", "options": ["Est-ce que je m'intéresse à la politique ?", "Je m'intéresse à la politique ?", "Je intéresse à la politique ?", "Je suis intéressé à la politique ?"], "answer": "A"},
       {"question": "Do you (singular) take an interest in music? (Présent)", "options": ["Tu intéresse à la musique ?", "Tu t'intéresses à la musique ?", "Est-ce que tu t'intéresses à la musique ?", "Tu es intéressé à la musique ?"], "answer": "B"},
       {"question": "Does he take an interest in art? (Présent)", "options": ["Il s'intéresse à l'art ?", "Il intéresse à l'art ?", "Est-ce qu'il s'intéresse à l'art ?", "Il est intéressé à l'art ?"], "answer": "C"},
@@ -1480,7 +1480,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "se débrouiller": {
-    "présent": [
+    "present": [
       {"question": "Do I manage on my own?", "options": ["Est-ce que je me débrouille tout seul ?", "Je me débrouilles tout seul ?", "Est-ce que je débrouille tout seul ?", "Est-ce que je me débrouille tout seule ?"], "answer": "A"},
       {"question": "Are you (singular) managing well?", "options": ["Est-ce que tu te débrouilles bien ?", "Est-ce que tu débrouilles bien ?", "Est-ce que tu te débrouille bien ?", "Est-ce que tu me débrouilles bien ?"], "answer": "B"},
       {"question": "Is he not managing at all?", "options": ["Est-ce qu'il ne se débrouille pas du tout ?", "Est-ce qu'il se débrouille pas du tout ?", "Est-ce qu'il ne débrouille pas du tout ?", "Est-ce qu'il se ne débrouille pas du tout ?"], "answer": "C"},
@@ -1505,7 +1505,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "s'entraîner": {
-    "présent": [
+    "present": [
       {"question": "Do I train?", "options": ["Je m'entraîne ?", "M'entraîne-je ?", "J'entraîne ?", "Je m'entraînez ?"], "answer": "A"},
       {"question": "Are you (tu) not training?", "options": ["Tu t'entraînes ?", "Ne t'entraînes-tu pas ?", "Tu ne t'entraînes pas ?", "Tu entraînes ?"], "answer": "B"},
       {"question": "Is he training?", "options": ["S'entraîne-t-il ?", "Il s'entraîne ?", "Il entraîne ?", "Il s'entraînes ?"], "answer": "C"},
@@ -1574,7 +1574,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "s'ennuyer": {
-    "présent": [
+    "present": [
       {"question": "Are you (singular) bored?", "options": ["Tu t'ennuies ?", "Est-ce que tu t'ennuies ?", "Tu ennuies ?", "Tu s'ennuies ?"], "answer": "A"},
       {"question": "Is he not bored?", "options": ["Il ne s'ennuie pas ?", "Ne s'ennuie-t-il pas ?", "Il s'ennuie ?", "Il ennuie ?"], "answer": "B"},
       {"question": "Are we bored?", "options": ["Nous nous ennuyons ?", "Est-ce que nous nous ennuyons ?", "Nous ennuyons ?", "Nous s'ennuyons ?"], "answer": "C"},
@@ -1643,7 +1643,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "se souvenir": {
-    "présent": [
+    "present": [
       {"question": "Do I remember?", "options": ["Je souviens?", "M'est-ce que je souviens?", "Je me souviens?", "Je me souvenir?"], "answer": "C"},
       {"question": "Do you (tu) not remember?", "options": ["Ne te souviens-tu pas?", "Tu te souviens?", "Tu souviens pas?", "Tu ne te souviens pas?"], "answer": "A"},
       {"question": "Does he remember?", "options": ["Il souvient?", "Il se souvient?", "Il se souvenir?", "Se souvient-il?"], "answer": "B"},
@@ -1712,7 +1712,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "s'adapter": {
-    "présent": [
+    "present": [
       {"question": "Do I adapt?", "options": ["Je m'adapte?", "M'adapte-je?", "Je m'adaptez?", "Je adapte?"], "answer": "C"},
       {"question": "Do you (tu) not adapt?", "options": ["Ne t'adaptes-tu pas?", "Tu t'adaptes?", "Tu t'adaptes pas?", "Tu ne t'adaptes pas?"], "answer": "A"},
       {"question": "Does he adapt?", "options": ["S'adapte-t-il?", "Il s'adapte?", "Il s'adaptes?", "Il adapte?"], "answer": "D"},
@@ -1781,7 +1781,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
   },
 
   "se réjouir": {
-    "présent": [
+    "present": [
       {"question": "Do I rejoice?", "options": ["Je me réjouis?", "Me réjouis-je?", "Je me réjouissez?", "Je réjouis?"], "answer": "C"},
       {"question": "Do you (tu) not rejoice?", "options": ["Ne te réjouis-tu pas?", "Tu te réjouis?", "Tu ne te réjouis pas?", "Tu réjouis?"], "answer": "A"},
       {"question": "Does he rejoice?", "options": ["Il se réjouit?", "Se réjouit-il?", "Il réjouit?", "Il se réjouis?"], "answer": "D"},
