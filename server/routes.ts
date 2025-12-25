@@ -12,7 +12,6 @@ import { eq, and } from "drizzle-orm";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
-import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -300,67 +299,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       message: "French Verb Master API is running",
       timestamp: new Date().toISOString()
     });
-  });
-
-  // ElevenLabs TTS endpoint for high-quality French pronunciation
-  app.post("/api/tts/french", async (req, res) => {
-    try {
-      const { text } = req.body;
-      
-      if (!text || typeof text !== 'string') {
-        return res.status(400).json({ error: "Text is required" });
-      }
-      
-      if (!process.env.ELEVENLABS_API_KEY) {
-        return res.status(500).json({ error: "ElevenLabs API key not configured" });
-      }
-      
-      const elevenlabs = new ElevenLabsClient({
-        apiKey: process.env.ELEVENLABS_API_KEY,
-      });
-      
-      // Use multilingual model for authentic French pronunciation
-      // Voice ID: "pNInz6obpgDQGcFmaJgB" is a high-quality multilingual voice
-      const audioStream = await elevenlabs.textToSpeech.convert(
-        "pNInz6obpgDQGcFmaJgB",
-        {
-          text: text,
-          modelId: "eleven_multilingual_v2",
-          voiceSettings: {
-            stability: 0.6,
-            similarityBoost: 0.8,
-            style: 0.4,
-            useSpeakerBoost: true
-          }
-        }
-      );
-      
-      // Collect audio chunks and send as response
-      const chunks: Buffer[] = [];
-      const reader = audioStream.getReader();
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        chunks.push(Buffer.from(value));
-      }
-      
-      const audioBuffer = Buffer.concat(chunks);
-      
-      res.set({
-        'Content-Type': 'audio/mpeg',
-        'Content-Length': audioBuffer.length.toString(),
-        'Cache-Control': 'public, max-age=86400' // Cache for 24 hours
-      });
-      
-      res.send(audioBuffer);
-      
-    } catch (error: any) {
-      console.error("ElevenLabs TTS error:", error);
-      res.status(500).json({ 
-        error: "Failed to generate speech",
-        details: error.message 
-      });
-    }
   });
 
   const httpServer = createServer(app);
