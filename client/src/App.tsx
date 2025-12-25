@@ -52,14 +52,11 @@ function App() {
   // Text-to-speech for pronunciation
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
-  const audioRef = useRef<HTMLAudioElement>(null);
   
-  // Connect audio element to TTS hook for cloud speech
-  useEffect(() => {
-    if (audioRef.current) {
-      tts.setAudioElement(audioRef.current);
-    }
-  }, [tts.setAudioElement]);
+  // Audio element ref callback - ensures setAudioElement is called when element mounts
+  const audioRefCallback = (element: HTMLAudioElement | null) => {
+    tts.setAudioElement(element);
+  };
 
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -2128,8 +2125,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
-      {/* Hidden audio element for cloud TTS playback */}
-      <audio ref={audioRef} style={{ display: 'none' }} playsInline />
+      {/* Hidden audio element for cloud TTS playback - uses ref callback for reliable mounting */}
+      <audio ref={audioRefCallback} style={{ display: 'none' }} playsInline />
       
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">

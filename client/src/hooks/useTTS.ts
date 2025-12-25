@@ -181,6 +181,14 @@ export function useTTS() {
   const speakCloudFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
     
+    // Require shared audio element for iOS Safari compatibility (playsInline)
+    if (!audioElementRef.current) {
+      console.warn('⚠️ TTS: No audio element available, cannot use cloud TTS');
+      return false;
+    }
+    
+    const audio = audioElementRef.current;
+    
     try {
       console.log('☁️ TTS: Fetching cloud audio for:', text.substring(0, 50));
       
@@ -200,8 +208,6 @@ export function useTTS() {
       const audioUrl = URL.createObjectURL(audioBlob);
       blobUrlRef.current = audioUrl;
       
-      // Use the audio element if available
-      const audio = audioElementRef.current || new Audio();
       audio.src = audioUrl;
       
       setState(prev => ({ ...prev, isSpeaking: true }));
@@ -213,15 +219,20 @@ export function useTTS() {
         };
         audio.onerror = () => {
           setState(prev => ({ ...prev, isSpeaking: false }));
+          cleanupBlobUrl(); // Clean up blob URL on error
           reject(new Error('Audio playback failed'));
         };
-        audio.play().catch(reject);
+        audio.play().catch((err) => {
+          cleanupBlobUrl(); // Clean up blob URL on play failure
+          reject(err);
+        });
       });
       
       console.log('✅ TTS: Cloud audio played successfully');
       return true;
     } catch (error) {
       console.warn('⚠️ TTS: Cloud failed, falling back to browser:', error);
+      cleanupBlobUrl(); // Ensure cleanup on any error
       return false;
     }
   }, [state.isEnabled, cleanupBlobUrl]);
