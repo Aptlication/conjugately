@@ -44,15 +44,34 @@ export function useTTS() {
       const voices = synth.getVoices();
       console.log('🔊 TTS Voices loaded:', voices.length, 'voices available');
       
-      // Find best English voice (prefer US/UK)
-      const englishVoice = voices.find(v => 
-        v.lang.startsWith('en-US') || v.lang.startsWith('en-GB')
-      ) || voices.find(v => v.lang.startsWith('en')) || null;
+      // Log all available French voices for debugging
+      const allFrenchVoices = voices.filter(v => v.lang.startsWith('fr'));
+      console.log('🇫🇷 Available French voices:', allFrenchVoices.map(v => `${v.name} (${v.lang})`));
       
-      // Find best French voice (prefer France)
-      const frenchVoice = voices.find(v => 
-        v.lang === 'fr-FR'
-      ) || voices.find(v => v.lang.startsWith('fr')) || null;
+      // Find best English voice (prefer US/UK, prioritize neural/natural voices)
+      const englishVoices = voices.filter(v => v.lang.startsWith('en-US') || v.lang.startsWith('en-GB') || v.lang.startsWith('en'));
+      const englishVoice = 
+        englishVoices.find(v => v.name.includes('Natural') || v.name.includes('Neural')) ||
+        englishVoices.find(v => v.lang.startsWith('en-US')) ||
+        englishVoices.find(v => v.lang.startsWith('en-GB')) ||
+        englishVoices[0] || null;
+      
+      // Find best French voice - PRIORITIZE modern neural/natural voices
+      const frenchVoices = voices.filter(v => v.lang === 'fr-FR' || v.lang.startsWith('fr'));
+      
+      // Priority order for French voices:
+      // 1. Neural/Natural voices (Edge, modern browsers)
+      // 2. Premium voices (Amélie, Thomas, etc.)
+      // 3. Microsoft voices (better than Google basic)
+      // 4. Any fr-FR voice
+      // 5. Any fr voice
+      const frenchVoice = 
+        frenchVoices.find(v => v.name.includes('Natural') || v.name.includes('Neural')) ||
+        frenchVoices.find(v => v.name.includes('Amélie') || v.name.includes('Thomas') || v.name.includes('Audrey')) ||
+        frenchVoices.find(v => v.name.includes('Microsoft') && !v.name.includes('Hortense')) ||
+        frenchVoices.find(v => v.lang === 'fr-FR' && !v.name.includes('Google')) ||
+        frenchVoices.find(v => v.lang === 'fr-FR') ||
+        frenchVoices[0] || null;
       
       console.log('🔊 TTS Selected voices:', { 
         english: englishVoice?.name || 'none', 
