@@ -9,6 +9,7 @@ interface TTSManifest {
 }
 
 let manifestCache: TTSManifest | null = null;
+let manifestLoading: Promise<TTSManifest | null> | null = null;
 let sharedAudioElement: HTMLAudioElement | null = null;
 
 // Normalize text for manifest lookup - handles apostrophe variants, quotes, whitespace
@@ -18,6 +19,27 @@ function normalizeText(text: string): string {
     .replace(/[\u2018\u2019\u0060\u00B4]/g, "'")  // Smart quotes to straight apostrophe
     .replace(/[\u201C\u201D]/g, '"')              // Smart double quotes
     .replace(/\s+/g, ' ');                         // Collapse whitespace
+}
+
+// Preload manifest immediately
+function preloadManifest(): Promise<TTSManifest | null> {
+  if (manifestCache) return Promise.resolve(manifestCache);
+  if (manifestLoading) return manifestLoading;
+  
+  manifestLoading = fetch('/attached_assets/tts-manifest.json')
+    .then(res => res.ok ? res.json() : null)
+    .then(data => {
+      manifestCache = data;
+      return data;
+    })
+    .catch(() => null);
+  
+  return manifestLoading;
+}
+
+// Start preloading on module load
+if (typeof window !== 'undefined') {
+  preloadManifest();
 }
 
 interface TTSOptions {
@@ -191,74 +213,66 @@ export function useTTS() {
   const speakStaticFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
     
-    if (!isCloudTTSEnabled()) {
-      console.log('🔇 TTS: Static TTS disabled by feature flag');
-      return false;
-    }
+    if (!isCloudTTSEnabled()) return false;
     
     const audio = getOrCreateAudioElement();
 
-    if (!manifestCache) {
-      try {
-        console.log('📂 TTS: Loading manifest...');
-        const response = await fetch('/attached_assets/tts-manifest.json');
-        if (response.ok) {
-          manifestCache = await response.json();
-          console.log('📂 TTS: Manifest loaded with', Object.keys(manifestCache!.phrases).length, 'phrases');
-        }
-      } catch (e) {
-        console.warn('⚠️ TTS: Could not load manifest');
-        return false;
-      }
-    }
-    
-    if (!manifestCache) return false;
+    // Use preloaded manifest
+    const manifest = await preloadManifest();
+    if (!manifest) return false;
     
     // Try exact match first, then normalized match
     const normalizedText = normalizeText(text);
-    let audioFile = manifestCache.phrases[text] || manifestCache.phrases[normalizedText];
+    let audioFile = manifest.phrases[text] || manifest.phrases[normalizedText];
     
     // If still no match, try to find a close match by normalizing manifest keys
     if (!audioFile) {
-      const manifestKeys = Object.keys(manifestCache.phrases);
+      const manifestKeys = Object.keys(manifest.phrases);
       const matchingKey = manifestKeys.find(key => normalizeText(key) === normalizedText);
       if (matchingKey) {
-        audioFile = manifestCache.phrases[matchingKey];
-        console.log('📂 TTS: Found match via normalization:', matchingKey);
+        audioFile = manifest.phrases[matchingKey];
       }
     }
     
-    if (!audioFile) {
-      console.log('📂 TTS: No static audio for:', text.substring(0, 50));
-      return false;
-    }
+    if (!audioFile) return false;
     
     try {
-      console.log('🎵 TTS: PLAYING STATIC AUDIO:', audioFile, 'for:', text.substring(0, 40));
-      
       audio.src = `/attached_assets/audio/${audioFile}`;
       
       setState(prev => ({ ...prev, isSpeaking: true }));
       
       await new Promise<void>((resolve, reject) => {
+        const cleanup = () => {
+          audio.oncanplaythrough = null;
+          audio.onended = null;
+          audio.onerror = null;
+        };
+        
         audio.onended = () => {
+          cleanup();
           setState(prev => ({ ...prev, isSpeaking: false }));
           resolve();
         };
+        
         audio.onerror = () => {
+          cleanup();
           setState(prev => ({ ...prev, isSpeaking: false }));
           reject(new Error('Audio playback failed'));
         };
-        audio.play().catch((err) => {
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          reject(err);
-        });
+        
+        // Play as soon as enough data is buffered
+        audio.oncanplaythrough = () => {
+          audio.play().catch(reject);
+        };
+        
+        // If already ready, play immediately
+        if (audio.readyState >= 3) {
+          audio.play().catch(reject);
+        }
       });
       
-      console.log('✅ TTS: Static audio played successfully');
       return true;
     } catch (error) {
-      console.warn('⚠️ TTS: Static audio failed, falling back to browser:', error);
       return false;
     }
   }, [state.isEnabled]);
