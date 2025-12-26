@@ -11,6 +11,15 @@ interface TTSManifest {
 let manifestCache: TTSManifest | null = null;
 let sharedAudioElement: HTMLAudioElement | null = null;
 
+// Normalize text for manifest lookup - handles apostrophe variants, quotes, whitespace
+function normalizeText(text: string): string {
+  return text
+    .trim()
+    .replace(/[\u2018\u2019\u0060\u00B4]/g, "'")  // Smart quotes to straight apostrophe
+    .replace(/[\u201C\u201D]/g, '"')              // Smart double quotes
+    .replace(/\s+/g, ' ');                         // Collapse whitespace
+}
+
 interface TTSOptions {
   lang?: 'en' | 'fr';
   rate?: number;
@@ -205,15 +214,27 @@ export function useTTS() {
     
     if (!manifestCache) return false;
     
-    const audioFile = manifestCache.phrases[text];
+    // Try exact match first, then normalized match
+    const normalizedText = normalizeText(text);
+    let audioFile = manifestCache.phrases[text] || manifestCache.phrases[normalizedText];
+    
+    // If still no match, try to find a close match by normalizing manifest keys
+    if (!audioFile) {
+      const manifestKeys = Object.keys(manifestCache.phrases);
+      const matchingKey = manifestKeys.find(key => normalizeText(key) === normalizedText);
+      if (matchingKey) {
+        audioFile = manifestCache.phrases[matchingKey];
+        console.log('📂 TTS: Found match via normalization:', matchingKey);
+      }
+    }
     
     if (!audioFile) {
-      console.log('📂 TTS: No static audio for:', text.substring(0, 40));
+      console.log('📂 TTS: No static audio for:', text.substring(0, 50));
       return false;
     }
     
     try {
-      console.log('📂 TTS: Playing static audio:', audioFile);
+      console.log('🎵 TTS: PLAYING STATIC AUDIO:', audioFile, 'for:', text.substring(0, 40));
       
       audio.src = `/attached_assets/audio/${audioFile}`;
       
