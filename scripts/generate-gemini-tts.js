@@ -39,40 +39,57 @@ function writeWavFile(filename, pcmData) {
   fs.writeFileSync(filename, wavBuffer);
 }
 
-async function generateAudio(text, outputPath) {
-  try {
-    const response = await ai.models.generateContent({
-      model: MODEL,
-      contents: [{ parts: [{ text: `Say in French with clear pronunciation: ${text}` }] }],
-      config: {
-        responseModalities: ['AUDIO'],
-        speechConfig: {
-          voiceConfig: {
-            prebuiltVoiceConfig: { voiceName: VOICE_NAME },
+async function generateAudio(text, outputPath, retries = 3) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const prompt = text.length < 10 
+        ? `Pronounce this French phrase slowly and clearly: "${text}"`
+        : `Say in French with clear pronunciation: ${text}`;
+      
+      const response = await ai.models.generateContent({
+        model: MODEL,
+        contents: [{ parts: [{ text: prompt }] }],
+        config: {
+          responseModalities: ['AUDIO'],
+          speechConfig: {
+            voiceConfig: {
+              prebuiltVoiceConfig: { voiceName: VOICE_NAME },
+            },
           },
         },
-      },
-    });
+      });
 
-    const data = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
-    if (!data) {
-      throw new Error('No audio data in response');
-    }
+      const data = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+      if (!data) {
+        if (attempt < retries) {
+          console.log(`⚠️ Retry ${attempt}/${retries}: ${text}`);
+          await new Promise(r => setTimeout(r, 1000 * attempt));
+          continue;
+        }
+        throw new Error('No audio data in response after retries');
+      }
 
-    const audioBuffer = Buffer.from(data, 'base64');
-    
-    const dir = path.dirname(outputPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+      const audioBuffer = Buffer.from(data, 'base64');
+      
+      const dir = path.dirname(outputPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      
+      writeWavFile(outputPath, audioBuffer);
+      console.log(`✅ Generated: ${outputPath}`);
+      return true;
+    } catch (error) {
+      if (attempt < retries) {
+        console.log(`⚠️ Error retry ${attempt}/${retries}: ${error.message}`);
+        await new Promise(r => setTimeout(r, 1000 * attempt));
+        continue;
+      }
+      console.error(`❌ Failed: ${outputPath} - ${error.message}`);
+      return false;
     }
-    
-    writeWavFile(outputPath, audioBuffer);
-    console.log(`✅ Generated: ${outputPath}`);
-    return true;
-  } catch (error) {
-    console.error(`❌ Failed: ${outputPath} - ${error.message}`);
-    return false;
   }
+  return false;
 }
 
 async function processBeginnerLevel(testMode = false) {
