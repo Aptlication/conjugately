@@ -53,33 +53,6 @@ function App() {
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
   
-  // Audio element ref - persists across renders for cloud TTS
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  
-  // Create audio element once on mount and persist it
-  useEffect(() => {
-    if (!audioRef.current) {
-      const audio = document.createElement('audio');
-      audio.style.display = 'none';
-      audio.setAttribute('playsInline', '');
-      document.body.appendChild(audio);
-      audioRef.current = audio;
-      tts.setAudioElement(audio);
-      console.log('🔊 Persistent audio element created and connected');
-    }
-    
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.src = '';
-        if (audioRef.current.parentNode) {
-          audioRef.current.parentNode.removeChild(audioRef.current);
-        }
-        audioRef.current = null;
-      }
-    };
-  }, []);
-
   // Load completed courses and progress on app start
   useEffect(() => {
     if (isAuthenticated && hasUserId(user)) {

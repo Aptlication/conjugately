@@ -9,6 +9,7 @@ interface TTSManifest {
 }
 
 let manifestCache: TTSManifest | null = null;
+let sharedAudioElement: HTMLAudioElement | null = null;
 
 interface TTSOptions {
   lang?: 'en' | 'fr';
@@ -24,6 +25,18 @@ interface TTSState {
   frenchVoice: SpeechSynthesisVoice | null;
 }
 
+function getOrCreateAudioElement(): HTMLAudioElement {
+  if (!sharedAudioElement) {
+    sharedAudioElement = document.createElement('audio');
+    sharedAudioElement.style.display = 'none';
+    sharedAudioElement.setAttribute('playsInline', '');
+    sharedAudioElement.preload = 'auto';
+    document.body.appendChild(sharedAudioElement);
+    console.log('🔊 Static TTS: Audio element created');
+  }
+  return sharedAudioElement;
+}
+
 export function useTTS() {
   const [state, setState] = useState<TTSState>({
     isSupported: false,
@@ -34,8 +47,6 @@ export function useTTS() {
   });
   
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
-  
-  const audioElementRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     console.log('🔊 TTS Diagnostic:', {
@@ -46,6 +57,11 @@ export function useTTS() {
     if (typeof window === 'undefined' || !window.speechSynthesis) {
       console.warn('🔇 TTS: speechSynthesis not available');
       return;
+    }
+
+    // Ensure audio element exists for static TTS
+    if (isCloudTTSEnabled()) {
+      getOrCreateAudioElement();
     }
 
     const synth = window.speechSynthesis;
@@ -171,16 +187,15 @@ export function useTTS() {
       return false;
     }
     
-    if (!audioElementRef.current) {
-      console.warn('⚠️ TTS: No audio element available');
-      return false;
-    }
+    const audio = getOrCreateAudioElement();
 
     if (!manifestCache) {
       try {
+        console.log('📂 TTS: Loading manifest...');
         const response = await fetch('/attached_assets/tts-manifest.json');
         if (response.ok) {
           manifestCache = await response.json();
+          console.log('📂 TTS: Manifest loaded with', Object.keys(manifestCache!.phrases).length, 'phrases');
         }
       } catch (e) {
         console.warn('⚠️ TTS: Could not load manifest');
@@ -197,10 +212,8 @@ export function useTTS() {
       return false;
     }
     
-    const audio = audioElementRef.current;
-    
     try {
-      console.log('📂 TTS: Loading static audio:', audioFile);
+      console.log('📂 TTS: Playing static audio:', audioFile);
       
       audio.src = `/attached_assets/audio/${audioFile}`;
       
@@ -237,19 +250,6 @@ export function useTTS() {
     }
   }, [speakStaticFrench, speak]);
 
-  useEffect(() => {
-    return () => {
-      if (audioElementRef.current) {
-        audioElementRef.current.pause();
-        audioElementRef.current.src = '';
-      }
-    };
-  }, []);
-
-  const setAudioElement = useCallback((element: HTMLAudioElement | null) => {
-    audioElementRef.current = element;
-  }, []);
-
   return {
     isSupported: state.isSupported,
     isEnabled: state.isEnabled,
@@ -260,6 +260,5 @@ export function useTTS() {
     speakQuestion,
     speakAnswer,
     stop,
-    setAudioElement,
   };
 }
