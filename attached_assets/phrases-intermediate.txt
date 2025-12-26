@@ -15,7 +15,6 @@ Ai-je réjoui(e)?
 Ai-je su la vérité ?
 Ai-je tes clés ?
 Ai-je trouvé mon portefeuille ?
-Ai-je un problème ?
 Allaient-elles régulièrement ?
 Allaient-ils régulièrement ?
 Allais-je à Paris ?
@@ -30,7 +29,6 @@ Allez-vous à Londres ?
 Allez-vous régulièrement ?
 Alliez-vous à Londres ?
 Alliez-vous régulièrement ?
-Allons-nous à l'école ?
 À quoi as-tu intéressé ?
 À quoi est-ce que je m'intéresse ?
 À quoi est-ce que tu t'es intéressé(e) ?
@@ -45,7 +43,6 @@ As-tu cru cette idée ?
 As-tu dit la vérité ?
 As-tu été à Paris ?
 As-tu été en retard ?
-As-tu été fatigué ?
 As-tu été heureuse ?
 As-tu été heureux ?
 As-tu été prêt ?
@@ -59,7 +56,6 @@ As-tu pas cru cette idée ?
 As-tu pas trouvé ton cahier ?
 As-tu su les règles ?
 As-tu trouvé ton cahier ?
-As-tu un problème ?
 A-t-elle adaptée?
 A-t-elle cru aux fantômes ?
 A-t-elle dit la vérité ?
@@ -67,7 +63,6 @@ A-t-elle ennuyée ?
 A-t-elle entraînée ?
 A-t-elle été à Paris ?
 A-t-elle été en retard ?
-A-t-elle été fatiguée ?
 A-t-elle intéressé à la science ?
 A-t-elle parlé à son professeur ?
 A-t-elle pas trouvé son billet ?
@@ -80,7 +75,6 @@ A-t-il ennuyé ?
 A-t-il entraîné ?
 A-t-il été à Paris ?
 A-t-il été en retard ?
-A-t-il été fatigué ?
 A-t-il été heureux ?
 A-t-il été prêt ?
 A-t-il eu un problème ?
@@ -90,7 +84,6 @@ A-t-il pas trouvé l'école près d'ici ?
 A-t-il réjoui?
 A-t-il tes clés ?
 A-t-il trouvé l'école près d'ici ?
-A-t-il un problème ?
 Aurai-je tes clés ?
 Auras-tu mes clés ?
 Aura-t-il tes clés ?
@@ -116,11 +109,9 @@ Avez-vous réjoui?
 Avez-vous su la vérité ?
 Avez-vous su les règles ?
 Avez-vous trouvé l'endroit étrange ?
-Avez-vous un problème ?
 Aviez-vous parlé pendant la réunion ?
 Avions-nous tes clés ?
 Avons-nous été fatigués ?
-Avons-nous été heureux ?
 Avons-nous été prêts ?
 Avons-nous eu le dîner ?
 Avons-nous parlé anglais ?
@@ -268,7 +259,6 @@ Elle est grande.
 Elle est heureuse.
 Elle est intéressée à la science ?
 Elle est lu le magazine?
-Elle est ne pas ici.
 Elle est perdu son parapluie hier?
 Elle est prête.
 Elle est pris son sac avec elle?
@@ -329,8 +319,6 @@ Elle n'a pas adapté.
 Elle n'a pas écrit la liste?
 Elle n'a pas ennuyé.
 Elle n'a pas entraîné.
-Elle n'a pas fait les courses.
-Elle n'a pas fait son projet.
 Elle n'a pas fermé le magasin à 20 heures?
 Elle n'a pas gardé le contact avec ses amis?
 Elle n'a pas lu le courriel?
@@ -348,8 +336,6 @@ Elle n'as pas lu le courriel?
 Elle n'as pas ouvert le livre?
 Elle n'as pas perdu espoir?
 Elle n'as pas pris ses médicaments ce matin?
-Elle n'aura pas d'argent.
-Elle n'aura pas de sac.
 Elle ne adapte pas.
 Elle ne adapte pas?
 Elle n'écrira pas la liste?
@@ -380,7 +366,6 @@ Elle ne liras pas les instructions?
 Elle ne lis pas de magazines?
 Elle ne lit pas de magazines?
 Elle ne parle pas fort ?
-Elle ne pas est ici.
 Elle ne pas s'intéresse à la photographie ?
 Elle ne perd pas espoir?
 Elle ne perdra pas espoir?
@@ -427,14 +412,10 @@ Elle n'est pas adaptée?
 Elle n'est pas ennuyée ?
 Elle n'est pas ennuyée.
 Elle n'est pas entraînée ?
-Elle n'est pas ici.
 Elle n'est pas intéressée à la photographie ?
 Elle n'est pas réjouie?
 Elle n'est pas souvenue?
-Elle n'était pas ici.
 Elle ne trouves pas ses clés ?
-Elle n'ira pas à l'école demain.
-Elle n'ira pas au travail.
 Elle n'ouvre pas le livre?
 Elle n'ouvres pas le livre?
 Elle n'ouvrira pas le livre?
@@ -677,7 +658,6 @@ Elle s'intéresse-t-elle à la science ?
 Elles iraient à la bibliothèque.
 Elles iront à la bibliothèque.
 Elles iront à la plage.
-Elles iront au cinéma sûrement.
 Elles iront au supermarché.
 Elles liront ne pas de bandes dessinées.
 Elles liront ne pas le journal demain.
@@ -697,7 +677,6 @@ Elles n'a ouvert pas les cadeaux.
 Elles n'a ouvert pas les portes.
 Elles n'a perdu pas la foi.
 Elles n'a perdu pas leurs clés.
-Elles n'auront pas de chance.
 Elles n'avez pas écrit les notes?
 Elles n'avez pas fermé les sacs?
 Elles n'avez pas gardé leurs vieux vêtements?
@@ -836,7 +815,6 @@ Elles n'ont pas écrit les notes?
 Elles n'ont pas écrit les paroles.
 Elles n'ont pas ennuyé.
 Elles n'ont pas entraîné.
-Elles n'ont pas fait leur devoir.
 Elles n'ont pas fermé l'armoire.
 Elles n'ont pas fermé les fenêtres la nuit.
 Elles n'ont pas fermé les sacs?
@@ -1217,25 +1195,18 @@ Est-ce qu'ils se sont intéressés aux sports ?
 Est-ce qu'ils trouvaient les réponses ?
 Est-elle allée à Londres ?
 Est-elle allée à Paris ?
-Est-elle allée au marché ?
 Est-elle à Paris ?
 Est-elle fatiguée ?
-Est-il allé à l'école ?
 Est-il allé à Londres ?
 Est-il allé à Paris ?
-Est-il allé au marché ?
-Est-il allé au parc ?
 Est-il allé parfois ?
 Est-il allé souvent ?
 Est-il à Paris ?
 Est-il fatigué ?
 Est-il prêt ?
 Es-tu à la maison ?
-Es-tu allé à l'école ?
 Es-tu allé à Londres ?
 Es-tu allé à Paris ?
-Es-tu allé au marché ?
-Es-tu allé au parc ?
 Es-tu allé en train ?
 Es-tu allée régulièrement ?
 Es-tu allé parfois ?
@@ -1258,7 +1229,6 @@ Es-tu venu pour le dîner ?
 Êtes-vous à la maison ?
 Êtes-vous allées régulièrement ?
 Êtes-vous allés à Londres ?
-Êtes-vous allés au parc ?
 Êtes-vous allés en train ?
 Êtes-vous allés en voiture ?
 Êtes-vous allés parfois ?
@@ -1293,13 +1263,10 @@ Il a eu de la chance.
 Il a eu des problèmes.
 Il a eu du café.
 Il a eu une bonne journée.
-Il a fait de l'exercice ce matin.
 Il a fait la cuisine.
 Il a fait la vaisselle.
 Il a fait les courses.
 Il a fait ses devoirs.
-Il a fait un excellent travail.
-Il a fait un excellent travail hier.
 Il a fermé le portail ce matin.
 Il a fermé pas la porte?
 Il a fermés le portail ce matin.
@@ -1351,9 +1318,6 @@ Il a un chien.
 Il a une maison.
 Il a une voiture.
 Il a un sac.
-Il aura beaucoup de livres.
-Il aura de bonnes idées.
-Il aura un bon travail.
 Il aura un chien.
 Il aura une maison.
 Il aura une voiture.
@@ -1400,12 +1364,10 @@ Il entraîne ?
 Il entraîne pas.
 Il entraînera ?
 Il entraînera pas.
-Il es étudiant.
 Il est allé à la plage.
 Il est allé à l'école.
 Il est allé au cinéma.
 Il est allé au parc.
-Il est étudiant.
 Il est grand.
 Il est heureux.
 Il est intéressé à l'art ?
@@ -1416,7 +1378,6 @@ Il est venu de France.
 Il est venu de Londres.
 Il est venu de Paris.
 Il est venu d'Espagne.
-Il était étudiant.
 Il était fatigué.
 Il était heureux.
 Il était prêt.
@@ -1459,10 +1420,7 @@ Il intéresse à l'art ?
 Il ira à la plage.
 Il ira à l'école.
 Il ira au cinéma.
-Il ira au marché la semaine prochaine.
-Il ira au musée.
 Il ira au parc.
-Il ira au restaurant vendredi prochain.
 Il lirai le rapport cet après-midi.
 Il lira le rapport cet après-midi.
 Il lira ne pas le contrat?
@@ -1489,14 +1447,8 @@ Il n'a pas été en retard.
 Il n'a pas été heureux.
 Il n'a pas eu d'aide.
 Il n'a pas eu de problèmes.
-Il n'a pas fait d'erreurs.
 Il n'a pas fait la cuisine.
-Il n'a pas fait la lessive.
-Il n'a pas fait la vaisselle.
-Il n'a pas fait le ménage.
-Il n'a pas fait les courses.
 Il n'a pas fait mes devoirs.
-Il n'a pas fait son projet.
 Il n'a pas fermé la porte?
 Il n'a pas gardé ses promesses?
 Il n'a pas lu le livre?
@@ -1521,14 +1473,8 @@ Il n'as pas lu le livre?
 Il n'as pas ouvert la fenêtre?
 Il n'as pas perdu son portefeuille?
 Il n'as pas pris ses clés?
-Il n'aura pas d'argent.
-Il n'aura pas de chien.
 Il n'aura pas de maison.
-Il n'aura pas de patience.
-Il n'aura pas de problèmes.
-Il n'aura pas de sac.
 Il n'aura pas de voiture.
-Il n'aura pas ses clés.
 Il n'avait pas de maison.
 Il n'avait pas de voiture.
 Il n'écrira pas le message?
@@ -1637,14 +1583,8 @@ Il ne voulait pas de café.
 Il ne voulait pas partir.
 Il ne voyait pas la voiture.
 Il ne voyait pas le chien.
-Il n'ira pas à la fête.
 Il n'ira pas à l'école.
-Il n'ira pas à l'école demain.
 Il n'ira pas au cinéma.
-Il n'ira pas au cinéma le week-end prochain.
-Il n'ira pas au gymnase demain.
-Il n'ira pas au travail.
-Il n'ira pas en ville demain.
 Il n'ouvre pas la fenêtre?
 Il n'ouvres pas la fenêtre?
 Il n'ouvrira pas la fenêtre?
@@ -1724,7 +1664,6 @@ Il sait la vérité.
 Il sait les règles.
 Ils allaient à la bibliothèque.
 Ils allaient au cinéma.
-Ils allaient au cinéma sûrement.
 Ils allaient au supermarché.
 Ils allaient au travail.
 Ils allaient en France.
@@ -1745,9 +1684,7 @@ Ils auront beaucoup d'amis.
 Ils auront des chats.
 Ils auront des vélos.
 Ils auront du temps.
-Ils auront du temps demain.
 Ils auront les documents.
-Ils auront une belle maison.
 Ils auront une maison.
 Ils avaient beaucoup d'amis.
 Ils avaient des chats.
@@ -1927,17 +1864,12 @@ Il s'intéressera à le cinéma.
 Il s'intéressera au cinéma.
 Il s'intéresseras à la politique ?
 Il s'intéresseras au cinéma.
-Ils iraient au cinéma sûrement.
 Ils iraient au supermarché.
 Ils iront à la bibliothèque.
-Ils iront à l'école demain.
 Ils iront au cinéma.
-Ils iront au cinéma sûrement.
-Ils iront au concert demain soir.
 Ils iront au supermarché.
 Ils iront au travail.
 Ils iront en France.
-Ils iront en voiture le mois prochain.
 Ils lira de la poésie en classe.
 Ils lira l'article?
 Ils liras de la poésie en classe.
@@ -1958,9 +1890,7 @@ Ils lit des bandes dessinées?
 Ils lit des histoires policières.
 Ils mettront leurs jouets dans la boîte ?
 Ils n'allaient pas au cinéma.
-Ils n'auront pas de chance.
 Ils n'auront pas de maison.
-Ils n'auront pas de patience.
 Ils n'avaient pas de maison.
 Ils n'avez pas écrit le menu?
 Ils n'avez pas fermé le magasin pendant le déjeuner?
@@ -2064,7 +1994,6 @@ Ils ne voudront pas partir.
 Ils ne voulaient pas partir.
 Ils ne voyaient pas le chien.
 Ils n'iront pas au cinéma.
-Ils n'iront pas au gymnase demain.
 Ils n'ont lu pas les panneaux?
 Ils n'ont mis pas leurs jouets ?
 Ils n'ont pas cru ton histoire ?
@@ -2075,8 +2004,6 @@ Ils n'ont pas entraîné.
 Ils n'ont pas été en retard.
 Ils n'ont pas eu d'aide.
 Ils n'ont pas fait la cuisine.
-Ils n'ont pas fait la lessive.
-Ils n'ont pas fait leur devoir.
 Ils n'ont pas fermé le magasin pendant le déjeuner?
 Ils n'ont pas gardé d'animaux?
 Ils n'ont pas lu les panneaux?
@@ -2119,9 +2046,7 @@ Ils ont eu de la pluie.
 Ils ont eu des problèmes.
 Ils ont eu les cadeaux.
 Ils ont eu les documents.
-Ils ont fait de leur mieux.
 Ils ont fait du sport.
-Ils ont fait du sport hier.
 Ils ont fait la cuisine.
 Ils ont fait le ménage.
 Ils ont fait leurs devoirs.
@@ -2370,7 +2295,6 @@ Ils souviendront pas?
 Ils souviennent?
 Ils souviennent pas?
 Ils trouveront l'hôtel ?
-Il suis étudiant.
 Ils venaient à la réunion.
 Ils venaient de Londres.
 Ils venaient nous voir.
@@ -2466,29 +2390,17 @@ Il voyait la maison.
 Il voyait la voiture.
 Il voyait le chien.
 Il voyait les enfants.
-Irai-je à la fête ?
 Irai-je à Paris ?
-Irai-je au marché ?
-Iras-tu à la bibliothèque la semaine prochaine ?
-Iras-tu à la fête ?
 Iras-tu à Londres ?
 Iras-tu à Paris ?
-Iras-tu au marché ?
 Iras-tu régulièrement ?
 Ira-t-elle à Londres ?
 Ira-t-elle à Paris ?
-Ira-t-il à la fête ?
 Ira-t-il à Londres ?
 Ira-t-il à Paris ?
-Ira-t-il au marché ?
-Irez-vous à la bibliothèque la semaine prochaine ?
-Irez-vous à la fête ?
 Irez-vous à Londres ?
 Irez-vous régulièrement ?
-Irons-nous au marché ?
-Iront-elles à la bibliothèque la semaine prochaine ?
 Iront-elles régulièrement ?
-Iront-ils à la bibliothèque la semaine prochaine ?
 Iront-ils régulièrement ?
 J'adapterai?
 J'ai adapté?
@@ -2509,14 +2421,9 @@ J'ai été heureux.
 J'ai eu de la pluie.
 J'ai eu du café.
 J'ai eu une bonne journée.
-J'ai fait de l'exercice ce matin.
-J'ai fait de mon mieux.
 J'ai fait du sport.
-J'ai fait du sport hier.
 J'ai fait la vaisselle.
 J'ai fait mes devoirs.
-J'ai fait un excellent travail.
-J'ai fait un excellent travail hier.
 J'ai fermé la porte après être parti?
 J'ai fermé mon livre hier soir?
 J'ai fermé ne pas le dossier avant de sauvegarder.
@@ -2580,13 +2487,8 @@ J'as perdu mes lunettes hier?
 J'as perdu mon chemin hier soir?
 J'as pris le bon bus?
 J'as pris le train à l'heure?
-J'aurai beaucoup de livres.
-J'aurai de bonnes idées.
 J'aurai du temps.
-J'aurai du temps demain.
-J'aurai un bon travail.
 J'aurai un chien.
-J'aurai une belle maison.
 J'aurai une voiture.
 J'avais du temps.
 J'avais un chien.
@@ -2639,8 +2541,6 @@ Je ennuierai ?
 Je ennuierai pas.
 Je ennuyé ?
 Je ennuyé.
-Je es heureux.
-Je est heureux.
 Je étais heureuse.
 Je faisais du sport.
 Je faisais la vaisselle.
@@ -2689,11 +2589,6 @@ Je gardez toutes mes notes?
 Je gardons ma porte ouverte?
 Je gardons toutes mes notes?
 Je intéresse à la politique ?
-Je irai à l'école demain.
-Je irai au concert demain soir.
-Je irai au musée.
-Je irai au restaurant vendredi prochain.
-Je irai en voiture le mois prochain.
 Je lira ce livre le mois prochain?
 Je lirai ce livre le mois prochain?
 Je lirai le roman entier?
@@ -2772,11 +2667,7 @@ Je n'ai pas été en retard.
 Je n'ai pas été heureux.
 Je n'ai pas eu d'aide.
 Je n'ai pas eu de problèmes.
-Je n'ai pas fait d'erreurs.
 Je n'ai pas fait la cuisine.
-Je n'ai pas fait la lessive.
-Je n'ai pas fait la vaisselle.
-Je n'ai pas fait le ménage.
 Je n'ai pas fait mes devoirs.
 Je n'ai pas fermé le dossier avant de sauvegarder.
 Je n'ai pas lu la biographie.
@@ -2805,12 +2696,8 @@ Je n'a rien écrit avant le petit déjeuner.
 Je n'as pas lu la biographie.
 Je n'as pas ouvert les fenêtres la nuit.
 Je n'as pas pris de sucre dans mon café.
-Je n'aurai pas de chien.
 Je n'aurai pas de maison.
-Je n'aurai pas de patience.
-Je n'aurai pas de problèmes.
 Je n'aurai pas de voiture.
-Je n'aurai pas tes clés.
 Je n'avais pas de maison.
 Je n'avais pas de voiture.
 Je n'écrirai rien avant le petit déjeuner.
@@ -2928,12 +2815,8 @@ Je ne voulais pas partir.
 Je ne voyais pas la voiture.
 Je ne voyais pas le chien.
 Je n'intéresserai jamais aux films ?
-Je n'irai pas à la fête.
 Je n'irai pas à l'école.
 Je n'irai pas au cinéma.
-Je n'irai pas au cinéma le week-end prochain.
-Je n'irai pas au gymnase demain.
-Je n'irai pas en ville demain.
 Je n'ouvre pas les fenêtres la nuit.
 Je n'ouvres pas les fenêtres la nuit.
 Je n'ouvrirai pas les fenêtres la nuit.
@@ -3026,7 +2909,6 @@ Je suis adapté(e).
 Je suis allé à l'école.
 Je suis allé au parc.
 Je suis allé en France.
-Je suis contentes.
 Je suis écrit mon nom sur le formulaire?
 Je suis écrit vite?
 Je suis ennuyé.
@@ -3042,13 +2924,10 @@ Je suis intéressé à la politique ?
 Je suis lu ce roman l'année dernière?
 Je suis lu les instructions correctement?
 Je suis m'intéressé à la musique ?
-Je suis occupée.
 Je suis ouvert la porte le matin?
 Je suis ouvert les cadeaux le jour de mon anniversaire?
 Je suis perdu mes lunettes hier?
 Je suis perdu mon chemin hier soir?
-Je suis prêt.
-Je suis prête.
 Je suis pris le bon bus?
 Je suis pris le train à l'heure?
 Je suis réjoui(e).
@@ -3090,9 +2969,7 @@ Je voulais vous aider.
 Je voyais la maison.
 Je voyais la voiture.
 Je voyais le parc.
-J'irai à la plage.
 J'irai à l'école.
-J'irai au marché la semaine prochaine.
 J'irai au parc.
 J'irai en France.
 J'ouvre la porte chaque matin?
@@ -3118,12 +2995,7 @@ Mettra-t-elle ses clés dans son sac ?
 Mettrons-nous les enfants au lit tôt ?
 Mettrons-nous leurs jouets dans la boîte ?
 M'intéresserai-je à la musique ?
-N'ai-je pas de problème ?
-N'ai-je pas été en retard ?
-N'ai-je pas été gentil ?
-N'ai-je pas été heureux ?
 N'ai-je pas été prêt ?
-N'ai-je pas eu de problème ?
 N'ai-je pas intéressé à l'art ?
 N'ai-je pas mis assez de sucre dans mon café ?
 N'allaient-elles pas à la plage ?
@@ -3132,25 +3004,13 @@ N'allez-vous pas à la plage ?
 N'alliez-vous pas à la plage ?
 N'allions-nous pas à la plage ?
 N'allons-nous pas à la plage ?
-N'allons-nous pas à l'école ?
-N'as-tu pas de problème ?
-N'as-tu pas été en retard ?
-N'as-tu pas été gentil ?
-N'as-tu pas été heureux ?
-N'as-tu pas eu de problème ?
 N'as-tu pas intéressé aux films ?
 N'as-tu pas parlé à ta grand-mère ?
 N'as-tu pas parlé avec tes amis ?
 N'as-tu pas trouvé ton cahier ?
 N'a-t-elle pas cru aux fantômes ?
-N'a-t-elle pas été gentille ?
 N'a-t-elle pas intéressé à la photographie ?
 N'a-t-elle pas parlé à son professeur ?
-N'a-t-il pas de problème ?
-N'a-t-il pas été en retard ?
-N'a-t-il pas été gentil ?
-N'a-t-il pas été heureux ?
-N'a-t-il pas eu de problème ?
 N'a-t-il pas intéressé à la mode ?
 N'aurez-vous pas de vélos ?
 N'aurons-nous pas de vélos ?
@@ -3158,12 +3018,9 @@ N'auront-elles pas de vélos ?
 N'auront-ils pas de vélos ?
 N'avaient-elles pas de vélos ?
 N'avaient-ils pas de vélos ?
-N'avez-vous pas de problème ?
 N'avez-vous pas de vélos ?
-N'avez-vous pas été en retard ?
 N'avez-vous pas été prêtes ?
 N'avez-vous pas été prêts ?
-N'avez-vous pas eu de problème ?
 N'avez-vous pas intéressé au voyage ?
 N'avez-vous pas parlé pendant la réunion ?
 N'avez-vous pas su la vérité ?
@@ -3171,7 +3028,6 @@ N'aviez-vous pas de vélos ?
 N'avions-nous pas de vélos ?
 N'avons-nous pas cru en notre équipe ?
 N'avons-nous pas de vélos ?
-N'avons-nous pas été heureux ?
 N'avons-nous pas été prêts ?
 N'avons-nous pas intéressé aux langues ?
 N'avons-nous pas mis la lettre dans la boîte ?
@@ -3251,7 +3107,6 @@ Ne s'intéressera-t-elle pas à la science ?
 Ne s'intéresseront-elles pas à ces problèmes ?
 Ne s'intéresse-t-il pas à la mode ?
 Ne sommes-nous pas allées à la plage ?
-Ne sommes-nous pas allés à l'école ?
 Ne sommes-nous pas allés au parc ?
 Ne sommes-nous pas prêts ?
 Ne sont-elles pas allées à la plage ?
@@ -3259,15 +3114,6 @@ Ne sont-elles pas prêtes ?
 Ne sont-ils pas allés à la plage ?
 Ne sont-ils pas allés au parc ?
 Ne sont-ils pas prêts ?
-N'est-elle pas allée au marché ?
-N'est-il pas allé à l'école ?
-N'est-il pas allé au marché ?
-N'est-il pas allé au parc ?
-N'es-tu pas allé à l'école ?
-N'es-tu pas allé au marché ?
-N'es-tu pas allé au parc ?
-Ne suis-je pas allé à l'école ?
-Ne suis-je pas allé au marché ?
 Ne suis-je pas allé au parc ?
 N'étaient-elles pas heureuses ?
 N'étaient-ils pas heureux ?
@@ -3301,13 +3147,6 @@ N'étions-nous pas prêts ?
 Ne trouverons-nous pas le lieu fermé ?
 Ne trouvons-nous pas cette leçon difficile ?
 Ne trouvons-nous pas le musée fermé ?
-Ne vais-je pas à l'école ?
-Ne vais-je pas au marché ?
-Ne vas-tu pas à l'école ?
-Ne vas-tu pas au marché ?
-Ne va-t-elle pas au marché ?
-Ne va-t-il pas à l'école ?
-Ne va-t-il pas au marché ?
 Ne viendrez-vous pas bientôt ?
 Ne viendrons-nous pas bientôt ?
 Ne viendront-elles pas bientôt ?
@@ -3360,9 +3199,6 @@ Nous a pris une longue pause hier.
 Nous a trouvé le musée fermé ?
 Nous aurons beaucoup d'amis.
 Nous aurons du temps.
-Nous aurons du temps demain.
-Nous aurons un bon travail.
-Nous aurons une belle maison.
 Nous aurons une voiture.
 Nous avez écrit des dissertations pour la classe.
 Nous avez écrit en français?
@@ -3389,7 +3225,6 @@ Nous avions beaucoup d'amis.
 Nous avions du temps.
 Nous avions une voiture.
 Nous avons adapté.
-Nous avons amis.
 Nous avons anglais parlé ?
 Nous avons beaucoup d'amis.
 Nous avons cru elle ?
@@ -3409,10 +3244,7 @@ Nous avons été heureux.
 Nous avons eu beaucoup d'amis.
 Nous avons eu de la pluie.
 Nous avons eu une bonne journée.
-Nous avons fait de l'exercice ce matin.
-Nous avons fait de notre mieux.
 Nous avons fait du sport.
-Nous avons fait du sport hier.
 Nous avons fait nos devoirs.
 Nous avons fait notre travail.
 Nous avons fermé la même fenêtre.
@@ -3501,7 +3333,6 @@ Nous entraînerons ?
 Nous entraînerons-nous.
 Nous entraînons ?
 Nous entraînons-nous.
-Nous êtes amis.
 Nous étions à la maison.
 Nous étions au bureau.
 Nous étions heureux.
@@ -3564,14 +3395,9 @@ Nous gardons nos promesses?
 Nous gardons notre espace de travail propre.
 Nous intéresserons-nous à la technologie ?
 Nous intéressons à la littérature ?
-Nous irons à la plage.
 Nous irons à l'école.
-Nous irons à l'école demain.
-Nous irons au concert demain soir.
-Nous irons au marché la semaine prochaine.
 Nous irons au travail.
 Nous irons en France.
-Nous irons en voiture le mois prochain.
 Nous lirai le menu attentivement.
 Nous lira le même magazine.
 Nous lira le menu attentivement.
@@ -3599,13 +3425,7 @@ Nous lit le menu?
 Nous n'allions pas à l'école.
 Nous n'allons pas à l'école.
 Nous n'allons pas mettre le lait dans le frigo ?
-Nous n'aurons pas d'argent.
-Nous n'aurons pas de chance.
-Nous n'aurons pas de chien.
-Nous n'aurons pas de problèmes.
-Nous n'aurons pas de sac.
 Nous n'aurons pas de voiture.
-Nous n'aurons pas leurs clés.
 Nous n'avions pas de voiture.
 Nous n'avons mis pas la lettre dans la boîte ?
 Nous n'avons pas adapté?
@@ -3616,13 +3436,7 @@ Nous n'avons pas ennuyé ?
 Nous n'avons pas entraîné ?
 Nous n'avons pas été heureux.
 Nous n'avons pas eu de problèmes.
-Nous n'avons pas fait d'erreurs.
-Nous n'avons pas fait la vaisselle.
-Nous n'avons pas fait le ménage.
-Nous n'avons pas fait les courses.
 Nous n'avons pas fait mes devoirs.
-Nous n'avons pas fait notre devoir.
-Nous n'avons pas fait notre projet.
 Nous n'avons pas mis leurs jouets ?
 Nous n'avons pas parlé au professeur ?
 Nous n'avons pas pu nager.
@@ -3700,12 +3514,7 @@ Nous ne voulions pas de café.
 Nous ne voulons pas de café.
 Nous ne voyions pas la voiture.
 Nous ne voyons pas la voiture.
-Nous n'irons pas à la fête.
 Nous n'irons pas à l'école.
-Nous n'irons pas à l'école demain.
-Nous n'irons pas au cinéma le week-end prochain.
-Nous n'irons pas au travail.
-Nous n'irons pas en ville demain.
 Nous nous adapterons.
 Nous nous adapterons?
 Nous nous adapterons pas?
@@ -3876,7 +3685,6 @@ Nous sommes adaptés?
 Nous sommes allés à l'école.
 Nous sommes allés au travail.
 Nous sommes allés en France.
-Nous sommes amis.
 Nous sommes écrit des dissertations pour la classe.
 Nous sommes écrit en français?
 Nous sommes écrit la même réponse.
@@ -3914,7 +3722,6 @@ Nous sommes souvenus?
 Nous sommes venus de France.
 Nous sommes venus vous aider.
 Nous sommes venus vous voir.
-Nous sont amis.
 Nous souvenons?
 Nous souvenons-nous.
 Nous souvenons pas?
@@ -4046,15 +3853,12 @@ S'entraîneront-elles ?
 S'entraîne-t-elle ?
 S'entraîne-t-il ?
 Serai-je à l'heure ?
-Serai-je fatigué ?
 Serai-je prêt ?
 Seras-tu à la maison ?
 Seras-tu fatigué ?
 Seras-tu prêt ?
 Sera-t-elle à la maison ?
-Sera-t-elle fatiguée ?
 Sera-t-il à la maison ?
-Sera-t-il fatigué ?
 Sera-t-il prêt ?
 Se réjouira-t-elle?
 Se réjouira-t-elle pas?
@@ -4101,7 +3905,6 @@ S'intéressera-t-il à la politique ?
 S'intéresseront-elles à ces problèmes ?
 S'intéresseront-ils à la littérature ?
 Sommes-nous à la maison ?
-Sommes-nous allés à l'école ?
 Sommes-nous allés en train ?
 Sommes-nous allés en voiture ?
 Sommes-nous allés souvent ?
@@ -4114,10 +3917,7 @@ Sont-ils allés en voiture ?
 Sont-ils allés régulièrement ?
 Sont-ils prêts ?
 Sont-ils venus pour le dîner ?
-Suis-je allé à l'école ?
 Suis-je allé à Paris ?
-Suis-je allé au marché ?
-Suis-je allé au parc ?
 Suis-je allé en voiture ?
 Suis-je allé parfois ?
 Suis-je allé souvent ?
@@ -4130,14 +3930,6 @@ T'es-tu adapté?
 T'es-tu ennuyé ?
 T'es-tu entraîné ?
 T'es-tu réjoui?
-The conjugation 'êtes' is for vous, not nous.
-The conjugation 'êtes' is for vous, not tu.
-This is the correct present tense conjugation of être for il.
-This is the correct present tense conjugation of être for nous.
-This is the correct present tense conjugation of être for tu.
-This is the correct present tense conjugation of être for vous.
-This uses the correct present tense conjugation of être for je.
-This uses the wrong verb 'avoir' instead of être.
 T'intéresseras-tu à l'histoire ?
 T'intéresseras-tu à rien ?
 T'intéresseras-tu rien ?
@@ -4182,14 +3974,11 @@ Tu as eu de la chance.
 Tu as eu des problèmes.
 Tu as eu du café.
 Tu as eu une bonne journée.
-Tu as fait de l'exercice ce matin.
 Tu as fait la cuisine.
 Tu as fait la vaisselle.
 Tu as fait les courses.
 Tu as fait tes devoirs.
 Tu as fait ton travail.
-Tu as fait un excellent travail.
-Tu as fait un excellent travail hier.
 Tu as fermé pas ton sac.
 Tu as ne pas lu le message.
 Tu as ne pas pris de photos.
@@ -4224,9 +4013,6 @@ Tu as vu le chien.
 Tu as vu les enfants.
 Tu as vu les montagnes.
 Tu auras beaucoup d'amis.
-Tu auras beaucoup de livres.
-Tu auras de bonnes idées.
-Tu auras un bon travail.
 Tu auras un chien.
 Tu auras une maison.
 Tu auras une voiture.
@@ -4267,7 +4053,6 @@ Tu es allé à l'école.
 Tu es allé au cinéma.
 Tu es allé au parc.
 Tu es allé au travail.
-Tu es fatigué.
 Tu es grand.
 Tu es heureuse.
 Tu es heureux.
@@ -4283,7 +4068,6 @@ Tu étais fatigué.
 Tu étais heureuse.
 Tu étais heureux.
 Tu étais prêt.
-Tu êtes fatigué.
 Tu faisais la cuisine.
 Tu faisais la vaisselle.
 Tu faisais les courses.
@@ -4311,10 +4095,7 @@ Tu intéresse à la musique ?
 Tu iras à la plage.
 Tu iras à l'école.
 Tu iras au cinéma.
-Tu iras au marché la semaine prochaine.
-Tu iras au musée.
 Tu iras au parc.
-Tu iras au restaurant vendredi prochain.
 Tu iras au travail.
 Tu liras ne pas le courriel aujourd'hui.
 Tu lis ne pas les instructions.
@@ -4345,14 +4126,8 @@ Tu n'as pas été en retard.
 Tu n'as pas été heureux.
 Tu n'as pas eu d'aide.
 Tu n'as pas eu de problèmes.
-Tu n'as pas fait d'erreurs.
 Tu n'as pas fait la cuisine.
-Tu n'as pas fait la lessive.
-Tu n'as pas fait la vaisselle.
-Tu n'as pas fait le ménage.
-Tu n'as pas fait les courses.
 Tu n'as pas fait mes devoirs.
-Tu n'as pas fait ton projet.
 Tu n'as pas fermé ton sac.
 Tu n'as pas gardé le secret.
 Tu n'as pas lu le message.
@@ -4370,14 +4145,8 @@ Tu n'as pas voulu partir.
 Tu n'as pas vu la voiture.
 Tu n'as pas vu le chien.
 Tu n'as rien dit.
-Tu n'auras pas d'argent.
-Tu n'auras pas de chien.
 Tu n'auras pas de maison.
-Tu n'auras pas de patience.
-Tu n'auras pas de problèmes.
-Tu n'auras pas de sac.
 Tu n'auras pas de voiture.
-Tu n'auras pas mes clés.
 Tu n'avais pas de maison.
 Tu n'avais pas de voiture.
 Tu n'écrira pas la réponse.
@@ -4495,14 +4264,8 @@ Tu ne voulais pas de café.
 Tu ne voulais pas partir.
 Tu ne voyais pas la voiture.
 Tu ne voyais pas le chien.
-Tu n'iras pas à la fête.
 Tu n'iras pas à l'école.
-Tu n'iras pas à l'école demain.
 Tu n'iras pas au cinéma.
-Tu n'iras pas au cinéma le week-end prochain.
-Tu n'iras pas au gymnase demain.
-Tu n'iras pas au travail.
-Tu n'iras pas en ville demain.
 Tu n'ouvre pas ton sac.
 Tu n'ouvres pas ton sac.
 Tu n'ouvrira pas ton sac.
@@ -4560,7 +4323,6 @@ Tu s'ennuieras ?
 Tu s'ennuies ?
 Tu s'entraîneras ?
 Tu s'entraînes ?
-Tu sera fatigué.
 Tu seras à Paris.
 Tu seras en retard.
 Tu seras fatiguée.
@@ -4574,7 +4336,6 @@ Tu s'est réjoui(e)?
 Tu s'est souvenu(e)?
 Tu souviendras pas?
 Tu souviens pas?
-Tu suis fatigué.
 Tu t'adapteras?
 Tu t'adapteras pas?
 Tu t'adaptes?
@@ -4652,23 +4413,16 @@ Tu voyais la voiture.
 Tu voyais le chien.
 Tu voyais les enfants.
 Tu voyais les montagnes.
-Vais-je à l'école ?
 Vais-je à Paris ?
-Vais-je au marché ?
-Vas-tu à l'école ?
 Vas-tu à Londres ?
 Vas-tu à Paris ?
-Vas-tu au marché ?
 Vas-tu mis du sucre dans ton thé ?
 Vas-tu régulièrement ?
 Va-t-elle à Londres ?
 Va-t-elle à Paris ?
-Va-t-elle au marché ?
 Va-t-elle mettre ses clés dans son sac ?
-Va-t-il à l'école ?
 Va-t-il à Londres ?
 Va-t-il à Paris ?
-Va-t-il au marché ?
 Venaient-elles pour le dîner ?
 Venaient-ils pour le dîner ?
 Venais-tu pour le dîner ?
@@ -4702,12 +4456,8 @@ Vous alliez au parc.
 Vous alliez au travail.
 Vous alliez en France.
 Vous aurez beaucoup d'amis.
-Vous aurez beaucoup de livres.
-Vous aurez de bonnes idées.
 Vous aurez du temps.
-Vous aurez du temps demain.
 Vous aurez un chien.
-Vous aurez une belle maison.
 Vous avez adapté?
 Vous avez beaucoup d'amis.
 Vous avez croyu ses excuses ?
@@ -4727,12 +4477,8 @@ Vous avez été fatigués.
 Vous avez eu beaucoup d'amis.
 Vous avez eu de la pluie.
 Vous avez eu du café.
-Vous avez fait de votre mieux.
 Vous avez fait du sport.
-Vous avez fait du sport hier.
 Vous avez fait la vaisselle.
-Vous avez fait un excellent travail.
-Vous avez fait un excellent travail hier.
 Vous avez fait votre travail.
 Vous avez fermé la porte hier soir.
 Vous avez fermé ne pas la boîte pendant le cours.
@@ -4836,7 +4582,6 @@ Vous entraînerez-vous ?
 Vous entraînez ?
 Vous entraînez pas.
 Vous entraînez-vous ?
-Vous es prêts.
 Vous êtes adapté?
 Vous êtes allé au parc.
 Vous êtes allés au travail.
@@ -4906,14 +4651,9 @@ Vous gardez tous les reçus.
 Vous gardons tous les reçus.
 Vous intéressez à la technologie ?
 Vous intéressez-vous à la technologie ?
-Vous irez à l'école demain.
-Vous irez au concert demain soir.
-Vous irez au musée.
 Vous irez au parc.
-Vous irez au restaurant vendredi prochain.
 Vous irez au travail.
 Vous irez en France.
-Vous irez en voiture le mois prochain.
 Vous liras tous les chapitres.
 Vous lira tous les chapitres.
 Vous lirez ne pas l'annonce.
@@ -4928,7 +4668,6 @@ Vous lisez pas les panneaux?
 Vous lisons les nouvelles tous les jours.
 Vous lit les nouvelles tous les jours.
 Vous n'allez pas vous intéresser à l'art ?
-Vous n'aurez pas de chance.
 Vous n'avez cru pas ses excuses ?
 Vous n'avez lu pas le rapport?
 Vous n'avez mis pas leurs livres ?
@@ -4938,7 +4677,6 @@ Vous n'avez pas écrit au tableau.
 Vous n'avez pas écrit en français?
 Vous n'avez pas ennuyé.
 Vous n'avez pas entraîné.
-Vous n'avez pas fait votre devoir.
 Vous n'avez pas fermé la boîte pendant le cours.
 Vous n'avez pas fermé les fenêtres en été?
 Vous n'avez pas gardé de vieux fichiers?
@@ -5160,13 +4898,11 @@ Vous se débrouillez très bien.
 Vous serez à l'heure.
 Vous serez en retard.
 Vous serez fatiguées.
-Vous serez prêts.
 Vous s'êtes adaptés?
 Vous s'êtes ennuyés ?
 Vous s'êtes entraînés ?
 Vous s'êtes réjouis?
 Vous s'êtes souvenus?
-Vous sommes prêts.
 Vous souvenez?
 Vous souvenez pas.
 Vous souvenez-vous?

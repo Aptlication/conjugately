@@ -1,0 +1,277 @@
+Ai-je été fatigué ?
+Ai-je été heureux ?
+Ai-je été prêt ?
+Ai-je eu un problème ?
+Ai-je un problème ?
+Allons-nous à l'école ?
+As-tu été fatigué ?
+As-tu été heureux ?
+As-tu été prêt ?
+As-tu eu un problème ?
+As-tu un problème ?
+A-t-elle été fatiguée ?
+A-t-il été fatigué ?
+A-t-il été heureux ?
+A-t-il été prêt ?
+A-t-il eu un problème ?
+A-t-il un problème ?
+Avez-vous été prêts ?
+Avez-vous eu un problème ?
+Avez-vous un problème ?
+Avons-nous été heureux ?
+Elle n'a pas fait les courses.
+Elle n'a pas fait son projet.
+Elle n'aura pas d'argent.
+Elle n'aura pas de sac.
+Elle n'ira pas à l'école demain.
+Elle n'ira pas au travail.
+Elles auront des vélos.
+Elles iront au cinéma sûrement.
+Elles n'auront pas de chance.
+Elles n'ont pas fait leur devoir.
+Elles ont fait leurs devoirs.
+Est-elle allée au marché ?
+Est-elle fatiguée ?
+Est-il allé à l'école ?
+Est-il allé au marché ?
+Est-il allé au parc ?
+Est-il fatigué ?
+Est-il prêt ?
+Es-tu allé à l'école ?
+Es-tu allé au marché ?
+Es-tu allé au parc ?
+Es-tu fatigué ?
+Es-tu prêt ?
+Êtes-vous allés au parc ?
+Êtes-vous prêts ?
+Il a fait de l'exercice ce matin.
+Il a fait ses devoirs.
+Il a fait un excellent travail.
+Il a fait un excellent travail hier.
+Il aura beaucoup de livres.
+Il aura de bonnes idées.
+Il aura un bon travail.
+Il aura une voiture.
+Il ira à la plage.
+Il ira au marché la semaine prochaine.
+Il ira au musée.
+Il ira au restaurant vendredi prochain.
+Il n'a pas fait d'erreurs.
+Il n'a pas fait la lessive.
+Il n'a pas fait la vaisselle.
+Il n'a pas fait le ménage.
+Il n'a pas fait les courses.
+Il n'a pas fait son projet.
+Il n'aura pas d'argent.
+Il n'aura pas de chien.
+Il n'aura pas de patience.
+Il n'aura pas de problèmes.
+Il n'aura pas de sac.
+Il n'aura pas ses clés.
+Il n'ira pas à la fête.
+Il n'ira pas à l'école demain.
+Il n'ira pas au cinéma le week-end prochain.
+Il n'ira pas au gymnase demain.
+Il n'ira pas au travail.
+Il n'ira pas en ville demain.
+Ils allaient au cinéma sûrement.
+Ils auraient des vélos.
+Ils auront des vélos.
+Ils auront du temps demain.
+Ils auront une belle maison.
+Ils avaient des vélos.
+Ils avaient fait leurs devoirs.
+Ils feront leurs devoirs.
+Ils iraient au cinéma sûrement.
+Ils iront à l'école demain.
+Ils iront au cinéma sûrement.
+Ils iront au concert demain soir.
+Ils iront en voiture le mois prochain.
+Ils n'auront pas de chance.
+Ils n'auront pas de patience.
+Ils n'iront pas au gymnase demain.
+Ils n'ont pas fait la lessive.
+Ils n'ont pas fait leur devoir.
+Ils ont fait de leur mieux.
+Ils ont fait du sport hier.
+Ils ont fait leurs devoirs.
+Irai-je à la fête ?
+Irai-je au marché ?
+Iras-tu à la bibliothèque la semaine prochaine ?
+Iras-tu à la fête ?
+Iras-tu au marché ?
+Ira-t-il à la fête ?
+Ira-t-il au marché ?
+Irez-vous à la bibliothèque la semaine prochaine ?
+Irez-vous à la fête ?
+Irons-nous au marché ?
+Iront-elles à la bibliothèque la semaine prochaine ?
+Iront-ils à la bibliothèque la semaine prochaine ?
+J'ai fait de l'exercice ce matin.
+J'ai fait de mon mieux.
+J'ai fait du sport hier.
+J'ai fait mes devoirs.
+J'ai fait un excellent travail.
+J'ai fait un excellent travail hier.
+J'aurai beaucoup de livres.
+J'aurai de bonnes idées.
+J'aurai du temps demain.
+J'aurai un bon travail.
+J'aurai une belle maison.
+J'aurai une voiture.
+Je irai à l'école demain.
+Je irai au concert demain soir.
+Je irai au musée.
+Je irai au restaurant vendredi prochain.
+Je irai en voiture le mois prochain.
+Je n'ai pas fait d'erreurs.
+Je n'ai pas fait la lessive.
+Je n'ai pas fait la vaisselle.
+Je n'ai pas fait le ménage.
+Je n'aurai pas de chien.
+Je n'aurai pas de patience.
+Je n'aurai pas de problèmes.
+Je n'aurai pas tes clés.
+Je n'irai pas à la fête.
+Je n'irai pas au cinéma le week-end prochain.
+Je n'irai pas au gymnase demain.
+Je n'irai pas en ville demain.
+J'irai à la plage.
+J'irai au marché la semaine prochaine.
+N'ai-je pas de problème ?
+N'ai-je pas été en retard ?
+N'ai-je pas été gentil ?
+N'ai-je pas été heureux ?
+N'ai-je pas eu de problème ?
+N'allons-nous pas à l'école ?
+N'as-tu pas de problème ?
+N'as-tu pas été en retard ?
+N'as-tu pas été gentil ?
+N'as-tu pas été heureux ?
+N'as-tu pas eu de problème ?
+N'a-t-elle pas été gentille ?
+N'a-t-il pas de problème ?
+N'a-t-il pas été en retard ?
+N'a-t-il pas été gentil ?
+N'a-t-il pas été heureux ?
+N'a-t-il pas eu de problème ?
+N'avez-vous pas de problème ?
+N'avez-vous pas été en retard ?
+N'avez-vous pas eu de problème ?
+N'avons-nous pas été heureux ?
+Ne sommes-nous pas allés à l'école ?
+N'est-elle pas allée au marché ?
+N'est-il pas allé à l'école ?
+N'est-il pas allé au marché ?
+N'est-il pas allé au parc ?
+N'es-tu pas allé à l'école ?
+N'es-tu pas allé au marché ?
+N'es-tu pas allé au parc ?
+Ne suis-je pas allé à l'école ?
+Ne suis-je pas allé au marché ?
+Ne suis-je pas allé au parc ?
+N'êtes-vous pas allés au parc ?
+N'êtes-vous pas en retard ?
+Ne vais-je pas à l'école ?
+Ne vais-je pas au marché ?
+Ne vas-tu pas à l'école ?
+Ne vas-tu pas au marché ?
+Ne va-t-elle pas au marché ?
+Ne va-t-il pas à l'école ?
+Ne va-t-il pas au marché ?
+Nous aurons du temps demain.
+Nous aurons un bon travail.
+Nous aurons une belle maison.
+Nous aurons une voiture.
+Nous avons fait de l'exercice ce matin.
+Nous avons fait de notre mieux.
+Nous avons fait du sport hier.
+Nous avons fait nos devoirs.
+Nous irons à la plage.
+Nous irons à l'école demain.
+Nous irons au concert demain soir.
+Nous irons au marché la semaine prochaine.
+Nous irons en voiture le mois prochain.
+Nous n'aurons pas d'argent.
+Nous n'aurons pas de chance.
+Nous n'aurons pas de chien.
+Nous n'aurons pas de problèmes.
+Nous n'aurons pas de sac.
+Nous n'aurons pas leurs clés.
+Nous n'avons pas fait d'erreurs.
+Nous n'avons pas fait la vaisselle.
+Nous n'avons pas fait le ménage.
+Nous n'avons pas fait les courses.
+Nous n'avons pas fait notre devoir.
+Nous n'avons pas fait notre projet.
+Nous n'irons pas à la fête.
+Nous n'irons pas à l'école demain.
+Nous n'irons pas au cinéma le week-end prochain.
+Nous n'irons pas au travail.
+Nous n'irons pas en ville demain.
+Serai-je fatigué ?
+Serai-je prêt ?
+Seras-tu fatigué ?
+Seras-tu prêt ?
+Sera-t-elle fatiguée ?
+Sera-t-il fatigué ?
+Sera-t-il prêt ?
+Serez-vous prêts ?
+Sommes-nous allés à l'école ?
+Suis-je allé à l'école ?
+Suis-je allé au marché ?
+Suis-je allé au parc ?
+Suis-je fatigué ?
+Suis-je prêt ?
+Tu as fait de l'exercice ce matin.
+Tu as fait tes devoirs.
+Tu as fait un excellent travail.
+Tu as fait un excellent travail hier.
+Tu auras beaucoup de livres.
+Tu auras de bonnes idées.
+Tu auras un bon travail.
+Tu auras une voiture.
+Tu iras à la plage.
+Tu iras au marché la semaine prochaine.
+Tu iras au musée.
+Tu iras au restaurant vendredi prochain.
+Tu n'as pas fait d'erreurs.
+Tu n'as pas fait la lessive.
+Tu n'as pas fait la vaisselle.
+Tu n'as pas fait le ménage.
+Tu n'as pas fait les courses.
+Tu n'as pas fait ton projet.
+Tu n'auras pas d'argent.
+Tu n'auras pas de chien.
+Tu n'auras pas de patience.
+Tu n'auras pas de problèmes.
+Tu n'auras pas de sac.
+Tu n'auras pas mes clés.
+Tu n'iras pas à la fête.
+Tu n'iras pas à l'école demain.
+Tu n'iras pas au cinéma le week-end prochain.
+Tu n'iras pas au gymnase demain.
+Tu n'iras pas au travail.
+Tu n'iras pas en ville demain.
+Vais-je à l'école ?
+Vais-je au marché ?
+Vas-tu à l'école ?
+Vas-tu au marché ?
+Va-t-elle au marché ?
+Va-t-il à l'école ?
+Va-t-il au marché ?
+Vous aurez beaucoup de livres.
+Vous aurez de bonnes idées.
+Vous aurez du temps demain.
+Vous aurez une belle maison.
+Vous avez fait de votre mieux.
+Vous avez fait du sport hier.
+Vous avez fait un excellent travail.
+Vous avez fait un excellent travail hier.
+Vous irez à l'école demain.
+Vous irez au concert demain soir.
+Vous irez au musée.
+Vous irez au restaurant vendredi prochain.
+Vous irez en voiture le mois prochain.
+Vous n'aurez pas de chance.
+Vous n'avez pas fait votre devoir.

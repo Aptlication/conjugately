@@ -1,0 +1,1406 @@
+Ai-je besoin d'un problème ?
+Ai-je eu besoin d'un problème ?
+As-tu besoin d'un problème ?
+As-tu eu besoin d'un problème ?
+As-tu pus trouver tes clés ?
+As-tu pu trouver tes clés ?
+As-tu su l'heure de la réunion ?
+As-tu sus l'heure de la réunion ?
+A-t-elle sue que nous étions là ?
+A-t-elle su que nous étions là ?
+A-t-il besoin d'un problème ?
+A-t-il eu besoin d'un problème ?
+Aurai-je besoin d'un problème ?
+Auras-tu besoin d'un problème ?
+Aura-t-il besoin d'un problème ?
+Aurez-vous besoin d'un problème ?
+Avez-vous besoin d'un problème ?
+Avez-vous eu besoin d'un problème ?
+Correct! 'Ai-je eu besoin d'un livre ?' means 'Did I need a book?' in passé composé.
+Correct! 'As-tu besoin d'un problème ?' means 'Do you need a problem?' (informal).
+Correct! 'As-tu eu besoin d'un problème ?' means 'Did you need a problem?' (informal).
+Correct! 'Auras-tu besoin d'un problème ?' means 'Will you need a problem?' (informal).
+Correct! 'Elle a besoin de repos' means 'she needs a rest'.
+Correct! 'Elle a eu besoin de repos' means 'she needed rest'.
+Correct! 'Elle aura besoin de repos' means 'she will need rest'.
+Correct! 'Elle a voulu partir' uses passé composé properly with avoir + voulu + infinitive.
+Correct! 'Elle n'a pas besoin de repos' means 'she does not need rest'.
+Correct! 'Elle n'a pas eu besoin de repos' means 'she did not need rest'.
+Correct! 'Elle n'aura pas besoin de repos' means 'she will not need rest'.
+Correct! 'Elles auront besoin de dormir' means 'they will need to sleep' (feminine).
+Correct! 'Elles ont besoin de dormir' means 'they need to sleep' (feminine).
+Correct! 'Elles ont eu besoin de dormir' means 'they needed to sleep' (feminine).
+Correct! 'Elles ont voulu rester' properly uses passé composé with avoir auxiliary + voulu.
+Correct! 'Il a besoin d'aide' means 'he needs help'.
+Correct! 'Il a eu besoin d'aide' means 'he needed help'.
+Correct! 'Il aura besoin d'aide' means 'he will need help'.
+Correct! 'Il n'a pas besoin d'aide' means 'he does not need help'.
+Correct! 'Il n'a pas eu besoin d'aide' means 'he did not need help'.
+Correct! 'Il n'aura pas besoin d'aide' means 'he will not need help'.
+Correct! 'Ils auront besoin d'aller' means 'they will need to go' (masculine/mixed).
+Correct! 'Ils ont besoin d'aller' means 'they need to go' (masculine/mixed).
+Correct! 'Ils ont eu besoin d'aller' means 'they needed to go' (masculine/mixed).
+Correct! 'Ils ont voulu changer' uses passé composé correctly: ils ont + voulu + infinitive.
+Correct! 'J'ai besoin d'un livre' means 'I need a book' in present tense.
+Correct! 'J'ai eu besoin d'un livre' means 'I needed a book' in passé composé.
+Correct! 'J'ai voulu t'appeler' uses passé composé correctly with j'ai + voulu + infinitive.
+Correct! 'J'aurai besoin d'un livre' means 'I will need a book' in future simple.
+Correct! 'Je n'ai pas besoin d'un livre' means 'I do not need a book'.
+Correct! 'Je n'ai pas eu besoin d'un livre' means 'I did not need a book'.
+Correct! 'Je n'aurai pas besoin d'un livre' means 'I will not need a book'.
+Correct! 'N'as-tu pas besoin d'un problème ?' means 'Don't you need a problem?' (informal).
+Correct! 'N'as-tu pas eu besoin d'un problème ?' means 'Didn't you need a problem?' (informal).
+Correct! 'N'auras-tu pas besoin d'un problème ?' means 'Won't you need a problem?' (informal).
+Correct! 'Nous aurons besoin d'eau' means 'we will need water'.
+Correct! 'Nous avons besoin d'eau' means 'we need water'.
+Correct! 'Nous avons eu besoin d'eau' means 'we needed water'.
+Correct! 'Nous avons voulu acheter une maison' properly uses passé composé structure with avoir.
+Correct! 'Nous n'aurons pas besoin d'eau' means 'we will not need water'.
+Correct! 'Nous n'avons pas besoin d'eau' means 'we do not need water'.
+Correct! 'Nous n'avons pas eu besoin d'eau' means 'we did not need water'.
+Correct! This uses passé composé interrogative form: auxiliary + subject pronoun + past participle + infinitive.
+Correct! This uses passé composé negative structure: ne + auxiliary + pas + past participle + infinitive.
+Correct! 'Tu as besoin d'un problème' means 'you need a problem' (informal).
+Correct! 'Tu as eu besoin d'un problème' means 'you needed a problem' (informal).
+Correct! 'Tu as toujours voulu ça' uses passé composé with auxiliary avoir + past participle voulu to express 'you have always wanted this'.
+Correct! 'Tu as voulu un chien' uses passé composé correctly with avoir auxiliary + voulu.
+Correct! 'Tu auras besoin d'un problème' means 'you will need a problem' (informal).
+Correct! 'Tu n'as pas besoin d'un problème' means 'you don't need a problem' (informal).
+Correct! 'Tu n'as pas eu besoin d'un problème' means 'you didn't need a problem' (informal).
+Correct! 'Tu n'auras pas besoin d'un problème' means 'you won't need a problem' (informal).
+Correct! Uses passé composé interrogative: auxiliary + subject pronoun + past participle + infinitive.
+Correct! Uses passé composé interrogative negative with liaison 't' between auxiliary and pronoun.
+Correct! Uses passé composé interrogative with contraction qu' + auxiliary + subject + past participle.
+Correct! Uses passé composé negative: ne + auxiliary + pas + past participle + infinitive.
+Correct! Uses passé composé negative structure: ne + auxiliary + pas + past participle.
+Correct! Uses passé composé negative structure: ne + auxiliary + pas + past participle + infinitive.
+Correct! Uses passé composé negative with jamais: ne + auxiliary + jamais + past participle + infinitive.
+Correct! Uses passé composé negative with rien: ne + auxiliary + rien + past participle + infinitive.
+Correct! Uses passé composé properly: nous avons + voulu + infinitive + object pronoun.
+Correct! Uses passé composé structure correctly: il a + voulu + infinitive.
+Correct! 'Vous aurez besoin de manger' means 'you will need to eat' (formal/plural).
+Correct! 'Vous avez besoin de manger' means 'you need to eat' (formal/plural).
+Correct! 'Vous avez eu besoin de manger' means 'you needed to eat' (formal/plural).
+Correct! 'Vous avez voulu parler' properly uses passé composé with avoir auxiliary + voulu + infinitive.
+Correct! 'Vous n'aurez pas besoin de manger' means 'you will not need to eat' (formal/plural).
+Correct! 'Vous n'avez pas besoin de manger' means 'you do not need to eat' (formal/plural).
+Correct! 'Vous n'avez pas eu besoin de manger' means 'you did not need to eat' (formal/plural).
+Disent-ils la vérité ?
+Disons-nous la vérité ?
+Dites-vous la vérité ?
+Dit-on la vérité ?
+Elle a déjà vu cette pièce.
+Elle a déjà vus cette pièce.
+Elle a dit non.
+Elle a dit que c'était important.
+Elle a pue finir son travail.
+Elle a pu finir son travail.
+Elle a revenue de son voyage.
+Elle as dit non.
+Elle as dit que c'était important.
+Elle a su dessiner.
+Elle a sue la vérité.
+Elle a sue nager depuis l'année dernière.
+Elle a su la vérité.
+Elle a su nager depuis l'année dernière.
+Elle a venue voir la nouvelle maison.
+Elle avons dit non.
+Elle avons dit que c'était important.
+Elle a voulue partir.
+Elle a voulu partir.
+Elle a vue ses amis hier.
+Elle a vu ses amis hier.
+Elle disent non.
+Elle disent que c'est faux.
+Elle disent qu'elle est fatiguée.
+Elle disent tout maintenant.
+Elle dis non.
+Elle disons non.
+Elle disons que c'est faux.
+Elle dis que c'est faux.
+Elle dis qu'elle est fatiguée.
+Elle dis tout maintenant.
+Elle dites qu'elle est fatiguée.
+Elle dites tout maintenant.
+Elle dit non.
+Elle dit que c'est faux.
+Elle dit qu'elle est fatiguée.
+Elle dit tout maintenant.
+Elle est déjà vue cette pièce.
+Elle est pue finir son travail.
+Elle est revenu de son voyage.
+Elle est revenue de son voyage.
+Elle est sue la vérité.
+Elle est sue nager depuis l'année dernière.
+Elle est veni voir la nouvelle maison.
+Elle est venue voir la nouvelle maison.
+Elle est voulue partir.
+Elle est vue ses amis hier.
+Elle n'a jamais voulue se marier.
+Elle n'a jamais voulu se marier.
+Elle n'a pas pu rien dire.
+Elle n'a pas venue hier.
+Elle n'a pas vue le message.
+Elle n'a pas vu le message.
+Elle n'a rien pu dire.
+Elle n'a rien pue dire.
+Elle ne dirai rien.
+Elle ne dira rien.
+Elle ne diras rien.
+Elle ne diront rien.
+Elle ne pouvait rien dire.
+Elle ne saura pas mon adresse.
+Elle ne sauras pas mon adresse.
+Elle ne saurez pas mon adresse.
+Elle ne saurons pas mon adresse.
+Elle n'est jamais voulue se marier.
+Elle n'est pas venue hier.
+Elle n'est pas venu hier.
+Elle n'est pas vue le message.
+Elle ne venait pas hier.
+Elle ne verra pas ses amis.
+Elle ne verras pas ses amis.
+Elle ne verrez pas ses amis.
+Elle ne verront pas ses amis.
+Elle ne veulent pas répondre.
+Elle ne veut pas répondre.
+Elle ne veux pas répondre.
+Elle ne viendrai pas.
+Elle ne viendra pas.
+Elle ne viendras pas.
+Elle ne viendrez pas.
+Elle ne voudra pas partager.
+Elle ne voudras pas partager.
+Elle ne voudrez pas partager.
+Elle ne voudrons pas partager.
+Elle ne voulait jamais se marier.
+Elle ne voulons pas répondre.
+Elle ne voyait pas le message.
+Elle ont dit non.
+Elle ont dit que c'était important.
+Elle peut conduire.
+Elle peuvent conduire.
+Elle peux conduire.
+Elle pourras venir.
+Elle pourra venir.
+Elle pourrez venir.
+Elle pourront venir.
+Elle pouvait finir son travail.
+Elle pouvons conduire.
+Elles a dit merci.
+Elle sais dessiner.
+Elle sais la vérité.
+Elle sait dessiner.
+Elle sait la vérité.
+Elles as dit merci.
+Elle saura dessiner.
+Elle saura les résultats demain.
+Elle sauras les résultats demain.
+Elle saurez les résultats demain.
+Elle sauront les résultats demain.
+Elle savaient la vérité.
+Elle savais dessiner.
+Elle savait dessiner.
+Elle savait la vérité.
+Elle savait nager depuis l'année dernière.
+Elles avons dit merci.
+Elle savons la vérité.
+Elles dirai quelque chose.
+Elles dirai tout.
+Elles dira quelque chose.
+Elles diras quelque chose.
+Elles diras tout.
+Elles dira tout.
+Elles diront quelque chose.
+Elles diront tout.
+Elles disent merci.
+Elles disent toujours bonjour.
+Elles disons merci.
+Elles disons toujours bonjour.
+Elles dis toujours bonjour.
+Elles dites merci.
+Elles dit merci.
+Elles dit toujours bonjour.
+Elles n'a rien dit.
+Elles n'as rien dit.
+Elles n'avons rien dit.
+Elles ne disent pas leurs noms.
+Elles ne disent rien.
+Elles ne disons pas leurs noms.
+Elles ne disons rien.
+Elles ne dis pas leurs noms.
+Elles ne dis rien.
+Elles ne dites rien.
+Elles ne dit pas leurs noms.
+Elles ne peut pas entendre.
+Elles ne peuvent pas entendre.
+Elles ne peux pas entendre.
+Elles ne pourra pas rester.
+Elles ne pourrez pas rester.
+Elles ne pourrons pas rester.
+Elles ne pourront pas rester.
+Elles ne pouvaient pas venir.
+Elles ne pouvons pas entendre.
+Elles ne saura pas le secret.
+Elles ne saurez pas le secret.
+Elles ne saurons pas le secret.
+Elles ne sauront pas le secret.
+Elles ne sont pas pues venir.
+Elles ne sont pas venu au cinéma.
+Elles ne sont pas venues au cinéma.
+Elles ne sont pas voulues écouter.
+Elles ne sont pas vues le spectacle.
+Elles ne venaient pas au cinéma.
+Elles ne venez pas aujourd'hui.
+Elles ne venons pas aujourd'hui.
+Elles ne veulent pas manger.
+Elles ne veut pas manger.
+Elles ne veux pas manger.
+Elles ne viendra pas demain.
+Elles ne viendrez pas demain.
+Elles ne viendrons pas demain.
+Elles ne viendront pas demain.
+Elles ne viennent pas aujourd'hui.
+Elles ne vient pas aujourd'hui.
+Elles ne voient pas l'intérêt.
+Elles ne vois pas l'intérêt.
+Elles ne voit pas l'intérêt.
+Elles ne voudra pas rester.
+Elles ne voudrez pas rester.
+Elles ne voudrons pas rester.
+Elles ne voudront pas rester.
+Elles ne voulaient pas écouter.
+Elles ne voulons pas manger.
+Elles ne voyaient pas le spectacle.
+Elles ne voyons pas l'intérêt.
+Elles n'ont pas pues venir.
+Elles n'ont pas pu venir.
+Elles n'ont pas venues au cinéma.
+Elles n'ont pas voulu écouter.
+Elles n'ont pas voulues écouter.
+Elles n'ont pas vues le spectacle.
+Elles n'ont pas vu le spectacle.
+Elles n'ont rien dit.
+Elles ont dit merci.
+Elles ont pues résoudre le problème.
+Elles ont pu résoudre le problème.
+Elles ont sues les risques.
+Elles ont su les risques.
+Elles ont su nager.
+Elles ont venues à la fête.
+Elles ont voulues rester.
+Elles ont voulu rester.
+Elles ont vues tout.
+Elles ont vu tout.
+Elles peut gagner.
+Elles peuvent gagner.
+Elles peux gagner.
+Elles pourra participer.
+Elles pourrez participer.
+Elles pourrons participer.
+Elles pourront participer.
+Elles pouvaient résoudre le problème.
+Elles pouvons gagner.
+Elles sait nager.
+Elles saura l'histoire.
+Elles saurez l'histoire.
+Elles saurons l'histoire.
+Elles sauront l'histoire.
+Elles savaient les risques.
+Elles savaient nager.
+Elles savent les nouvelles ?
+Elles savent nager.
+Elles savons nager.
+Elles sont pues résoudre le problème.
+Elles sont sues les risques.
+Elles sont venu à la fête.
+Elles sont venues à la fête.
+Elles sont voulues rester.
+Elles sont vues tout.
+Elles venaient à la fête.
+Elles venez pour le dîner.
+Elles venons pour le dîner.
+Elles verra la nouvelle exposition.
+Elles verrez la nouvelle exposition.
+Elles verrons la nouvelle exposition.
+Elles verront la nouvelle exposition.
+Elles veulent danser.
+Elles veut danser.
+Elles veux danser.
+Elles viendra nous visiter.
+Elles viendrez nous visiter.
+Elles viendrons nous visiter.
+Elles viendront nous visiter.
+Elles viennent pour le dîner.
+Elles vient pour le dîner.
+Elles voient le beau paysage.
+Elles vois le beau paysage.
+Elles voit le beau paysage.
+Elles voudra voir le spectacle.
+Elles voudrez voir le spectacle.
+Elles voudrons voir le spectacle.
+Elles voudront voir le spectacle.
+Elles voulaient rester.
+Elles voulons danser.
+Elles voyaient tout.
+Elles voyons le beau paysage.
+Elle venait de son voyage.
+Elle venait voir la nouvelle maison.
+Elle venons à la fête.
+Elle verra le médecin.
+Elle verras le médecin.
+Elle verrez le médecin.
+Elle verrons le médecin.
+Elle veulent une nouvelle voiture.
+Elle veut une nouvelle voiture.
+Elle veux une nouvelle voiture.
+Elle viendra à la réunion.
+Elle viendras à la réunion.
+Elle viendrez à la réunion.
+Elle viendront à la réunion.
+Elle viennent à la fête.
+Elle viens à la fête.
+Elle vient à la fête.
+Elle voient un film ce soir.
+Elle vois un film ce soir.
+Elle voit un film ce soir.
+Elle voudras une nouvelle robe.
+Elle voudra une nouvelle robe.
+Elle voudrez une nouvelle robe.
+Elle voudront une nouvelle robe.
+Elle voulait partir.
+Elle voulons une nouvelle voiture.
+Elle voyait déjà cette pièce.
+Elle voyait ses amis hier.
+Elle voyons un film ce soir.
+Est-ce qu'elle disent la réponse ?
+Est-ce qu'elle dis la réponse ?
+Est-ce qu'elle dites la réponse ?
+Est-ce qu'elle dit la réponse ?
+Est-ce que nous voient la même chose ?
+Est-ce que nous vois la même chose ?
+Est-ce que nous voit la même chose ?
+Est-ce que nous voyons la même chose ?
+Est-ce que tu voient cette étoile ?
+Est-ce que tu vois cette étoile ?
+Est-ce que tu voit cette étoile ?
+Est-ce que tu voyons cette étoile ?
+Est-elle sue que nous étions là ?
+Es-tu pu trouver tes clés ?
+Es-tu su l'heure de la réunion ?
+Il a dit la vérité.
+Il a enfin pu le faire.
+Il a enfin pus le faire.
+Il a pu ouvrir la porte.
+Il a pus ouvrir la porte.
+Il as dit la vérité.
+Il a su comment le réparer.
+Il a su conduire.
+Il a sus comment le réparer.
+Il a venu seul.
+Il avons dit la vérité.
+Il a voulus voyager.
+Il a voulu voyager.
+Il a vus un fantôme.
+Il a vu un fantôme.
+Il dirai quelque chose d'important.
+Il dira quelque chose d'important.
+Il diras quelque chose d'important.
+Il diront quelque chose d'important.
+Il disent la réponse.
+Il dit la réponse.
+Il est enfin pu le faire.
+Il est pu ouvrir la porte.
+Il est su comment le réparer.
+Il est venu seul.
+Il est venus seul.
+Il est voulu voyager.
+Il est vu un fantôme.
+Il n'a pas su l'histoire.
+Il n'a pas su quoi faire.
+Il n'a pas sus quoi faire.
+Il n'a pas venu avec ses amis.
+Il n'a pas voulu rien dire.
+Il n'a pas vu ses clés.
+Il n'a pas vus ses clés.
+Il n'a rien voulu dire.
+Il ne disent pas grand-chose.
+Il ne disent pas un mot.
+Il ne disent rien.
+Il ne disons pas un mot.
+Il ne dis pas grand-chose.
+Il ne dis pas un mot.
+Il ne dis rien.
+Il ne dit pas grand-chose.
+Il ne dit pas un mot.
+Il ne dit rien.
+Il ne peut pas dormir.
+Il ne peuvent pas dormir.
+Il ne peux pas dormir.
+Il ne pourra pas venir.
+Il ne pourras pas venir.
+Il ne pourrons pas venir.
+Il ne pourront pas venir.
+Il ne pouvons pas dormir.
+Il ne sais pas l'histoire.
+Il ne sait pas l'histoire.
+Il ne saura pas la réponse.
+Il ne sauras pas la réponse.
+Il ne saurez pas la réponse.
+Il ne saurons pas la réponse.
+Il ne savait pas l'histoire.
+Il ne savait pas quoi faire.
+Il n'est pas su quoi faire.
+Il n'est pas venu avec ses amis.
+Il n'est pas venus avec ses amis.
+Il n'est pas vu ses clés.
+Il n'est rien voulu dire.
+Il ne venait pas avec ses amis.
+Il ne venons pas d'Espagne.
+Il ne verra pas le problème.
+Il ne verras pas le problème.
+Il ne verrez pas le problème.
+Il ne verrons pas le problème.
+Il ne veulent pas travailler.
+Il ne veut pas travailler.
+Il ne veux pas travailler.
+Il ne viendra pas avec elle.
+Il ne viendras pas avec elle.
+Il ne viendrez pas avec elle.
+Il ne viendront pas avec elle.
+Il ne viennent pas d'Espagne.
+Il ne viens pas d'Espagne.
+Il ne vient pas d'Espagne.
+Il ne voient pas nous.
+Il ne vois pas nous.
+Il ne voit pas nous.
+Il ne voudra pas venir.
+Il ne voudras pas venir.
+Il ne voudrez pas venir.
+Il ne voudrons pas venir.
+Il ne voulait rien dire.
+Il ne voulons pas travailler.
+Il ne voyait pas ses clés.
+Il ne voyez pas nous.
+Il ont dit la vérité.
+Il pourra expliquer.
+Il pourras expliquer.
+Il pourrons expliquer.
+Il pourront expliquer.
+Il pouvait enfin le faire.
+Il pouvait ouvrir la porte.
+Il sais conduire.
+Il sait conduire.
+Il saura conduire.
+Il savais conduire.
+Il savait comment le réparer.
+Il savait conduire.
+Ils dis au revoir.
+Ils dis bonsoir.
+Ils disent au revoir.
+Ils disent bonsoir.
+Ils disent la réponse.
+Ils disent la vérité.
+Ils disent qu'ils sont prêts.
+Ils disons au revoir.
+Ils disons bonsoir.
+Ils disons la vérité.
+Ils disons qu'ils sont prêts.
+Ils dis qu'ils sont prêts.
+Ils dit au revoir.
+Ils dit bonsoir.
+Ils dites la vérité.
+Ils dit la réponse.
+Ils dit la vérité.
+Ils dit qu'ils sont prêts.
+Ils l'a dit.
+Ils l'as dit.
+Ils l'avons dit.
+Ils l'ont dit.
+Ils ne dirai pas la vérité.
+Ils ne dirai rien.
+Ils ne dira pas la vérité.
+Ils ne dira rien.
+Ils ne diras pas la vérité.
+Ils ne diras rien.
+Ils ne diront pas la vérité.
+Ils ne diront rien.
+Ils ne disent pas grand-chose.
+Ils ne disent rien.
+Ils ne disons rien.
+Ils ne dis rien.
+Ils ne dites rien.
+Ils ne nous verras pas.
+Ils ne nous verrez pas.
+Ils ne nous verrons pas.
+Ils ne nous verront pas.
+Ils ne peut pas décider.
+Ils ne peuvent pas décider.
+Ils ne pourra pas gagner.
+Ils ne pourrez pas gagner.
+Ils ne pourrons pas gagner.
+Ils ne pourront pas gagner.
+Ils ne pouvaient pas trouver les clés.
+Ils ne pouvez pas décider.
+Ils ne pouvons pas décider.
+Ils ne savaient pas la réponse.
+Ils ne sont pas pu trouver les clés.
+Ils ne sont pas su la réponse.
+Ils ne sont pas venu.
+Ils ne sont pas venus.
+Ils ne sont pas vus le film.
+Ils ne venaient pas.
+Ils ne venez pas d'ici.
+Ils ne venons pas d'ici.
+Ils ne viennent pas d'ici.
+Ils ne vient pas d'ici.
+Ils ne voudra pas venir.
+Ils ne voudrez pas venir.
+Ils ne voudrons pas venir.
+Ils ne voudront pas venir.
+Ils ne voyaient pas le film.
+Ils n'ont pas pus trouver les clés.
+Ils n'ont pas pu trouver les clés.
+Ils n'ont pas su la réponse.
+Ils n'ont pas sus la réponse.
+Ils n'ont pas venus.
+Ils n'ont pas vu le film.
+Ils n'ont pas vus le film.
+Ils ont su les règles.
+Ils ont su soudainement où aller.
+Ils ont sus soudainement où aller.
+Ils ont su tout.
+Ils ont venus pour aider.
+Ils ont voulu changer.
+Ils ont voulus changer.
+Ils ont vu le match.
+Ils ont vus le match.
+Ils peut attendre.
+Ils peuvent attendre.
+Ils peux attendre.
+Ils pourra nous aider.
+Ils pourrez nous aider.
+Ils pourrons nous aider.
+Ils pourront nous aider.
+Ils pouvons attendre.
+Ils sait les règles.
+Ils sait tout.
+Ils saura conduire.
+Ils saura la réponse bientôt.
+Ils saurez conduire.
+Ils saurez la réponse bientôt.
+Ils saurons conduire.
+Ils saurons la réponse bientôt.
+Ils sauront conduire.
+Ils sauront la réponse bientôt.
+Ils sauront tout.
+Ils savaient les règles.
+Ils savaient soudainement où aller.
+Ils savent les règles.
+Ils savent tout.
+Ils savions tout.
+Ils savons les règles.
+Ils sont su soudainement où aller.
+Ils sont venu pour aider.
+Ils sont venus pour aider.
+Ils sont voulus changer.
+Ils sont vus le match.
+Ils venaient pour aider.
+Ils venons de la même ville.
+Ils verra les conséquences.
+Ils verrez les conséquences.
+Ils verrons les conséquences.
+Ils verront les conséquences.
+Ils veulent partir.
+Ils veut partir.
+Ils viendra en train.
+Ils viendrez en train.
+Ils viendrons en train.
+Ils viendront en train.
+Ils viennent de la même ville.
+Ils viens de la même ville.
+Ils vient de la même ville.
+Ils voient leur famille souvent.
+Ils voient un avenir meilleur.
+Ils vois leur famille souvent.
+Ils vois un avenir meilleur.
+Ils voit leur famille souvent.
+Ils voit un avenir meilleur.
+Ils voudra savoir la vérité.
+Ils voudrez savoir la vérité.
+Ils voudrons savoir la vérité.
+Ils voudront savoir la vérité.
+Ils voulaient changer.
+Ils voulez partir.
+Ils voulons partir.
+Ils voyaient le match.
+Ils voyez un avenir meilleur.
+Ils voyons leur famille souvent.
+Il te verra demain.
+Il te verras demain.
+Il te verrez demain.
+Il te verrons demain.
+Il venait seul.
+Il venons rendre visite.
+Il veulent voyager.
+Il veut voyager.
+Il veux voyager.
+Il viendra à la fête.
+Il viendras à la fête.
+Il viendrez à la fête.
+Il viendront à la fête.
+Il viennent rendre visite.
+Il viens rendre visite.
+Il vient rendre visite.
+Il voient son reflet dans le miroir.
+Il vois son reflet dans le miroir.
+Il voit son reflet dans le miroir.
+Il voudra dormir.
+Il voudras dormir.
+Il voudrez dormir.
+Il voudront dormir.
+Il voulait voyager.
+Il voulons voyager.
+Il voyait un fantôme.
+Il voyons son reflet dans le miroir.
+Incorrect auxiliary - vouloir uses avoir, not être in passé composé. Should be 'tu as toujours voulu'.
+Incorrect tense - this is imperfect (imparfait). The question asks for passé composé: 'tu n'as pas voulu'.
+Incorrect - this is imperfect tense (imparfait), not passé composé. Use 'tu as toujours voulu' for completed past action.
+J'a dit oui.
+J'ai dit oui.
+J'ai pu me reposer.
+J'ai pus me reposer.
+J'ai su ce qu'il pense.
+J'ai su la réponse.
+J'ai su qu'il avait raison.
+J'ai sus la réponse.
+J'ai sus qu'il avait raison.
+J'ai venu avec ma famille.
+J'ai voulus t'appeler.
+J'ai voulu t'appeler.
+J'ai vu ce film.
+J'ai vus ce film.
+J'as dit oui.
+Je dirai la vérité.
+Je dira la vérité.
+Je diras la vérité.
+Je diront la vérité.
+Je disent la vérité maintenant.
+Je dis la vérité maintenant.
+Je disons la vérité maintenant.
+Je disons oui !
+Je disons que c'est possible.
+Je dis oui !
+Je dis que c'est possible.
+Je dites la vérité maintenant.
+Je dites oui !
+Je dites que c'est possible.
+Je dit oui !
+Je dit que c'est possible.
+Je le dira avant.
+Je le dirai avant.
+Je le diras avant.
+Je le diront avant.
+Je n'ai pas dit ça.
+Je n'ai pas pu dormir de la nuit.
+Je n'ai pas pus dormir de la nuit.
+Je n'ai pas pus venir hier.
+Je n'ai pas pu venir hier.
+Je n'ai pas su.
+Je n'ai pas su quoi dire.
+Je n'ai pas sus quoi dire.
+Je n'ai pas venu te déranger.
+Je n'ai pas voulu cela.
+Je n'ai pas voulus cela.
+Je n'ai pas vu mes lunettes.
+Je n'ai pas vu rien.
+Je n'ai pas vus mes lunettes.
+Je n'ai pas vus rien.
+Je n'ai rien vu.
+Je n'a pas dit ça.
+Je n'as pas dit ça.
+Je ne dirai pas ça.
+Je ne dira pas ça.
+Je ne diras pas ça.
+Je ne diront pas ça.
+Je ne disent rien.
+Je ne dis jamais ça.
+Je ne disons jamais ça.
+Je ne disons rien.
+Je ne dis rien.
+Je ne dites jamais ça.
+Je ne dites rien.
+Je ne dit jamais ça.
+Je ne le verrai pas aujourd'hui.
+Je ne le verra pas aujourd'hui.
+Je ne le verras pas aujourd'hui.
+Je ne le verrons pas aujourd'hui.
+Je ne pourrai pas finir.
+Je ne pourra pas finir.
+Je ne pourras pas finir.
+Je ne pourront pas finir.
+Je ne pouvais pas dormir de la nuit.
+Je ne pouvais pas venir hier.
+Je ne sais.
+Je ne sais pas.
+Je ne saurai pas quoi faire.
+Je ne saura pas quoi faire.
+Je ne sauras pas quoi faire.
+Je ne saurons pas quoi faire.
+Je ne savais pas.
+Je ne savais pas quoi dire.
+Je ne suis pas pu dormir de la nuit.
+Je ne suis pas pu venir hier.
+Je ne suis pas su quoi dire.
+Je ne suis pas venus te déranger.
+Je ne suis pas venu te déranger.
+Je ne suis pas voulu cela.
+Je ne suis pas vu mes lunettes.
+Je ne venais pas te déranger.
+Je ne venons pas de Paris.
+Je ne veulent pas ça.
+Je ne veut pas ça.
+Je ne veut pas déranger.
+Je ne veux pas ça.
+Je ne veux pas déranger.
+Je ne viendrai pas seul.
+Je ne viendra pas seul.
+Je ne viendras pas seul.
+Je ne viendrez pas seul.
+Je ne viennent pas de Paris.
+Je ne viens pas de Paris.
+Je ne vient pas de Paris.
+Je ne voient pas mes clés.
+Je ne vois pas mes clés.
+Je ne voit pas mes clés.
+Je ne voudrai pas faire ça.
+Je ne voudra pas faire ça.
+Je ne voudras pas faire ça.
+Je ne voudrons pas faire ça.
+Je ne voulais pas cela.
+Je ne voulez pas déranger.
+Je ne voulons pas ça.
+Je ne voulons pas déranger.
+Je ne voyais pas mes lunettes.
+Je ne voyais rien.
+Je ne voyez pas mes clés.
+Je n'ont pas dit ça.
+Je peut aider.
+Je peut faire mieux.
+Je peuvent aider.
+Je peuvent faire mieux.
+Je peux aider.
+Je peux faire mieux.
+Je pourrai réussir.
+Je pourrai t'appeler.
+Je pourra réussir.
+Je pourras réussir.
+Je pourras t'appeler.
+Je pourra t'appeler.
+Je pourront réussir.
+Je pourront t'appeler.
+Je pouvais me reposer.
+Je pouvons aider.
+Je pouvons faire mieux.
+Je sais ce qu'il pense.
+Je sais la réponse.
+Je saurai ce qu'il pense.
+Je saurai la réponse.
+Je saurai la vérité.
+Je saurai le faire.
+Je saura la vérité.
+Je saura le faire.
+Je sauras la vérité.
+Je sauras le faire.
+Je saurez la vérité.
+Je saurons le faire.
+Je savais ce qu'il pense.
+Je savais la réponse.
+Je savais qu'il avait raison.
+Je suis pu me reposer.
+Je suis su la réponse.
+Je suis su qu'il avait raison.
+Je suis venu avec ma famille.
+Je suis venue avec ma famille.
+Je suis voulu t'appeler.
+Je suis vu ce film.
+Je venais avec ma famille.
+Je venons du bureau.
+Je verra ce que je peux faire.
+Je verrai ce que je peux faire.
+Je verrai ma famille la semaine prochaine.
+Je verra ma famille la semaine prochaine.
+Je verras ce que je peux faire.
+Je verras ma famille la semaine prochaine.
+Je verrons ce que je peux faire.
+Je verrons ma famille la semaine prochaine.
+Je veut un café.
+Je veux un café.
+Je viendrai te voir.
+Je viendras te voir.
+Je viendra te voir.
+Je viendrez te voir.
+Je viennent du bureau.
+Je viens du bureau.
+Je vient du bureau.
+Je voient les oiseaux dans le ciel.
+Je voient mon chat.
+Je vois les oiseaux dans le ciel.
+Je vois mon chat.
+Je voit les oiseaux dans le ciel.
+Je voit mon chat.
+Je voudrai partir tôt.
+Je voudrai une meilleure explication.
+Je voudra partir tôt.
+Je voudras partir tôt.
+Je voudras une meilleure explication.
+Je voudra une meilleure explication.
+Je voudrons partir tôt.
+Je voudrons une meilleure explication.
+Je voulais t'appeler.
+Je voulez un café.
+Je voulons un café.
+Je vous disez quelque chose.
+Je vous disons quelque chose.
+Je vous dis quelque chose.
+Je vous dit quelque chose.
+Je voyais ce film.
+Je voyez mon chat.
+Je voyons les oiseaux dans le ciel.
+J'ont dit oui.
+N'ai-je pas besoin d'un problème ?
+N'ai-je pas eu besoin d'un problème ?
+N'as-tu pas besoin d'un problème ?
+N'as-tu pas eu besoin d'un problème ?
+N'a-t-il pas besoin d'un problème ?
+N'a-t-il pas eu besoin d'un problème ?
+N'aurai-je pas besoin d'un problème ?
+N'auras-tu pas besoin d'un problème ?
+N'aura-t-il pas besoin d'un problème ?
+N'aurez-vous pas besoin d'un problème ?
+N'avez-vous pas besoin d'un problème ?
+N'avez-vous pas eu besoin d'un problème ?
+Nous a dit bonjour.
+Nous a dit la même chose.
+Nous as dit bonjour.
+Nous as dit la même chose.
+Nous avons dit bonjour.
+Nous avons dit la même chose.
+Nous avons pu partir plus tôt.
+Nous avons pus partir plus tôt.
+Nous avons su jouer de la guitare.
+Nous avons su l'adresse.
+Nous avons su le secret.
+Nous avons su que c'est important.
+Nous avons sus le secret.
+Nous avons venus à pied.
+Nous avons voulu acheter une maison.
+Nous avons voulus acheter une maison.
+Nous avons voulus te voir.
+Nous avons voulu te voir.
+Nous avons vu l'exposition.
+Nous avons vus l'exposition.
+Nous dirai oui.
+Nous dira oui.
+Nous diras bonjour.
+Nous diras oui.
+Nous direz bonjour.
+Nous dirons bonjour.
+Nous dirons oui.
+Nous diront bonjour.
+Nous dis au revoir à nos amis.
+Nous dis au revoir maintenant.
+Nous dis ce que nous pensons.
+Nous disent au revoir à nos amis.
+Nous disent au revoir maintenant.
+Nous disent ce que nous pensons.
+Nous disent la vérité.
+Nous dis la vérité.
+Nous disons au revoir à nos amis.
+Nous disons au revoir maintenant.
+Nous disons ce que nous pensons.
+Nous disons la vérité.
+Nous dit au revoir à nos amis.
+Nous dit ce que nous pensons.
+Nous dites au revoir maintenant.
+Nous dites la vérité.
+Nous n'a pas dit un mot.
+Nous n'as pas dit un mot.
+Nous n'avons jamais su son nom.
+Nous n'avons jamais sus son nom.
+Nous n'avons jamais vus une telle chose.
+Nous n'avons jamais vu une telle chose.
+Nous n'avons pas cru le croire.
+Nous n'avons pas dit un mot.
+Nous n'avons pas pu aider.
+Nous n'avons pas pu le croire.
+Nous n'avons pas pus aider.
+Nous n'avons pas pus le croire.
+Nous n'avons pas su la réponse.
+Nous n'avons pas su le résultat.
+Nous n'avons pas sus le résultat.
+Nous n'avons pas venus pour déranger.
+Nous n'avons pas venus pour rien.
+Nous n'avons pas voulus vous déranger.
+Nous n'avons pas voulu vous déranger.
+Nous ne dira pas un mot.
+Nous ne diras pas un mot.
+Nous ne dirons pas un mot.
+Nous ne diront pas un mot.
+Nous ne disent jamais ça.
+Nous ne disent pas ça souvent.
+Nous ne dis jamais ça.
+Nous ne disons jamais ça.
+Nous ne disons pas ça souvent.
+Nous ne dis pas ça souvent.
+Nous ne dites jamais ça.
+Nous ne dites pas ça souvent.
+Nous ne les avons pas vu.
+Nous ne les avons pas vus.
+Nous ne les sommes pas vus.
+Nous ne les voyions pas.
+Nous n'en verra pas la fin.
+Nous n'en verrez pas la fin.
+Nous n'en verrons pas la fin.
+Nous n'en verront pas la fin.
+Nous ne peut pas venir.
+Nous ne peuvent pas venir.
+Nous ne peuvent rien voir.
+Nous ne pourrai pas revenir.
+Nous ne pourrez pas revenir.
+Nous ne pourrons pas revenir.
+Nous ne pourront pas revenir.
+Nous ne pouvez pas venir.
+Nous ne pouvez rien voir.
+Nous ne pouvions pas aider.
+Nous ne pouvions pas le croire.
+Nous ne pouvons pas venir.
+Nous ne pouvons rien voir.
+Nous ne saura pas l'heure.
+Nous ne saurez pas l'heure.
+Nous ne saurons pas l'heure.
+Nous ne sauront pas l'heure.
+Nous ne savent pas la réponse.
+Nous ne savions jamais son nom.
+Nous ne savions pas la réponse.
+Nous ne savions pas le résultat.
+Nous ne savons pas la réponse.
+Nous ne sommes jamais su son nom.
+Nous ne sommes jamais vus une telle chose.
+Nous ne sommes pas pu aider.
+Nous ne sommes pas su le résultat.
+Nous ne sommes pas venu pour déranger.
+Nous ne sommes pas venu pour rien.
+Nous ne sommes pas venus pour déranger.
+Nous ne sommes pas venus pour rien.
+Nous ne sommes pas voulus vous déranger.
+Nous ne venez pas à la réunion.
+Nous ne venions pas pour déranger.
+Nous ne venions pas pour rien.
+Nous ne venons pas à la réunion.
+Nous ne veulent pas être en retard.
+Nous ne veut pas être en retard.
+Nous ne viendra pas en retard.
+Nous ne viendrez pas en retard.
+Nous ne viendrons pas en retard.
+Nous ne viendront pas en retard.
+Nous ne viennent pas à la réunion.
+Nous ne vient pas à la réunion.
+Nous ne voient rien.
+Nous ne vois rien.
+Nous ne voit rien.
+Nous ne voudra pas manquer ça.
+Nous ne voudra pas participer.
+Nous ne voudrez pas manquer ça.
+Nous ne voudrez pas participer.
+Nous ne voudrons pas manquer ça.
+Nous ne voudrons pas participer.
+Nous ne voudront pas manquer ça.
+Nous ne voudront pas participer.
+Nous ne voulez pas être en retard.
+Nous ne voulions pas vous déranger.
+Nous ne voulons pas être en retard.
+Nous ne voyions jamais une telle chose.
+Nous ne voyons rien.
+Nous n'ont pas dit un mot.
+Nous ont dit bonjour.
+Nous ont dit la même chose.
+Nous peut commencer.
+Nous peuvent commencer.
+Nous peux commencer.
+Nous pourra le voir.
+Nous pourrez le voir.
+Nous pourrons le voir.
+Nous pourront le voir.
+Nous pouvions partir plus tôt.
+Nous pouvons commencer.
+Nous saura comment répondre.
+Nous saurez comment répondre.
+Nous saurons comment répondre.
+Nous saurons jouer de la guitare.
+Nous saurons que c'est important.
+Nous sauront comment répondre.
+Nous savent jouer de la guitare.
+Nous savent l'adresse.
+Nous savent que c'est important.
+Nous savions jouer de la guitare.
+Nous savions l'adresse.
+Nous savions le secret.
+Nous savions que c'est important.
+Nous savons jouer de la guitare.
+Nous savons l'adresse.
+Nous savons que c'est important.
+Nous sommes pu partir plus tôt.
+Nous sommes su le secret.
+Nous sommes venu à pied.
+Nous sommes venus à pied.
+Nous sommes voulus acheter une maison.
+Nous sommes voulus te voir.
+Nous sommes vus l'exposition.
+Nous venez vous voir.
+Nous venions à pied.
+Nous venons vous voir.
+Nous verra-elles ?
+Nous verra une pièce de théâtre.
+Nous verrez-elles ?
+Nous verrez une pièce de théâtre.
+Nous verrons-elles ?
+Nous verrons une pièce de théâtre.
+Nous verront-elles ?
+Nous verront une pièce de théâtre.
+Nous veulent un chien.
+Nous veulent voir le directeur.
+Nous veut un chien.
+Nous veut voir le directeur.
+Nous viendra pour le dîner.
+Nous viendrez pour le dîner.
+Nous viendrons pour le dîner.
+Nous viendront pour le dîner.
+Nous viennent vous voir.
+Nous viens vous voir.
+Nous voient ce que tu veux dire.
+Nous voient nos parents ce week-end.
+Nous vois ce que tu veux dire.
+Nous vois nos parents ce week-end.
+Nous voit ce que tu veux dire.
+Nous voit nos parents ce week-end.
+Nous voudra essayer.
+Nous voudrez essayer.
+Nous voudrons essayer.
+Nous voudront essayer.
+Nous voulez un chien.
+Nous voulez voir le directeur.
+Nous voulions acheter une maison.
+Nous voulions te voir.
+Nous voulons un chien.
+Nous voulons voir le directeur.
+Nous voyions l'exposition.
+Nous voyons ce que tu veux dire.
+Nous voyons nos parents ce week-end.
+On veulent être heureux.
+On veut être heureux.
+On veux être heureux.
+On voulons être heureux.
+Peut-vous répéter ?
+Peux-tu répéter ?
+Pourquoi vous voient un médecin ?
+Pourquoi vous vois un médecin ?
+Pourquoi vous voyez un médecin ?
+Pourquoi vous voyons un médecin ?
+Pouvais-tu trouver tes clés ?
+Pouvez-vous répéter ?
+Pouvons-vous répéter ?
+Quand pourras-t-elle répondre ?
+Quand pourra-t-elle répondre ?
+Quand pourrons-nous répondre ?
+Quand pourront-elles répondre ?
+Sauras-il que je suis là ?
+Saura-t-il que je suis là ?
+Saurez-il que je suis là ?
+Saurons-il que je suis là ?
+Savais-tu l'heure de la réunion ?
+Savait-elle que nous étions là ?
+Tu a dit tout.
+Tu as dit tout.
+Tu as pu réussir.
+Tu as pus réussir.
+Tu as su cuisiner.
+Tu as toujours voulu ça.
+Tu as toujours voulus ça.
+Tu as venu chez moi.
+Tu as voulus un chien.
+Tu as voulu un chien.
+Tu avons dit tout.
+Tu dirai ça bientôt.
+Tu dirai un mensonge.
+Tu diras ça bientôt.
+Tu diras un mensonge.
+Tu dira un mensonge.
+Tu direz ça bientôt.
+Tu diront ça bientôt.
+Tu diront un mensonge.
+Tu dis ça tous les jours.
+Tu dis des choses importantes.
+Tu disons ça tous les jours.
+Tu disons quelque chose d'intéressant.
+Tu dis quelque chose d'intéressant.
+Tu dites ça tous les jours.
+Tu dites quelque chose d'intéressant.
+Tu dit quelque chose d'intéressant.
+Tu es pu réussir.
+Tu es toujours voulu ça.
+Tu es venu chez moi.
+Tu es venus chez moi.
+Tu es voulu un chien.
+Tu n'a pas dit pourquoi.
+Tu n'as pas dit pourquoi.
+Tu n'as pas pus voir le spectacle.
+Tu n'as pas pu voir le spectacle.
+Tu n'as pas voulu me croire.
+Tu n'as pas voulus me croire.
+Tu n'as pas vu le panneau stop.
+Tu n'as pas vus le panneau stop.
+Tu n'avons pas dit pourquoi.
+Tu ne dirai pas s'il te plaît.
+Tu ne dira pas s'il te plaît.
+Tu ne diras pas s'il te plaît.
+Tu ne diront pas s'il te plaît.
+Tu ne disons pas ça.
+Tu ne disons pas la vérité.
+Tu ne dis pas ça.
+Tu ne dis pas la vérité.
+Tu ne dis pas s'il te plaît.
+Tu ne dites pas ça.
+Tu ne dites pas la vérité.
+Tu ne dites pas s'il te plaît.
+Tu ne dit pas ça.
+Tu ne dit pas la vérité.
+Tu ne m'as pas voulu croire.
+Tu ne peut pas faire ça.
+Tu ne peuvent pas faire ça.
+Tu ne peux pas faire ça.
+Tu ne pourrai pas faire ça.
+Tu ne pourra pas faire ça.
+Tu ne pourras pas faire ça.
+Tu ne pourrez pas faire ça.
+Tu ne pouvais pas voir le spectacle.
+Tu ne pouvons pas faire ça.
+Tu n'es pas pu voir le spectacle.
+Tu n'es pas vu le panneau stop.
+Tu ne venons pas de la bonne direction.
+Tu ne viendrai pas de là.
+Tu ne viendra pas de là.
+Tu ne viendras pas de là.
+Tu ne viendrez pas de là.
+Tu ne viennent pas de la bonne direction.
+Tu ne viens pas de la bonne direction.
+Tu ne vient pas de la bonne direction.
+Tu ne voudrai pas attendre.
+Tu ne voudra pas attendre.
+Tu ne voudras pas attendre.
+Tu ne voudrez pas attendre.
+Tu ne voulais pas me croire.
+Tu ne voyais pas le panneau stop.
+Tu n'ont pas dit pourquoi.
+Tu ont dit tout.
+Tu peut choisir.
+Tu peuvent choisir.
+Tu peux choisir.
+Tu pourrai le faire.
+Tu pourra le faire.
+Tu pourras le faire.
+Tu pourrez le faire.
+Tu pouvais réussir.
+Tu pouvons choisir.
+Tu sais cuisiner.
+Tu sais le mot de passe ?
+Tu sait cuisiner.
+Tu sait le mot de passe ?
+Tu saurai nager.
+Tu saura nager.
+Tu sauras cuisiner.
+Tu sauras le mot de passe ?
+Tu sauras nager.
+Tu saurez nager.
+Tu savais cuisiner.
+Tu savais le mot de passe ?
+Tu venais chez moi.
+Tu venons avec moi.
+Tu verrai par toi-même.
+Tu verra par toi-même.
+Tu verra que c'est facile.
+Tu verras par toi-même.
+Tu verras que c'est facile.
+Tu verrez par toi-même.
+Tu verrez que c'est facile.
+Tu verrons que c'est facile.
+Tu veut sortir.
+Tu veux sortir.
+Tu viendra avec nous.
+Tu viendrai avec nous.
+Tu viendras avec nous.
+Tu viendrez avec nous.
+Tu viennent avec moi.
+Tu viens avec moi.
+Tu vient avec moi.
+Tu voient la voiture rouge.
+Tu vois la voiture rouge.
+Tu voit la voiture rouge.
+Tu voudrai un autre morceau.
+Tu voudras un autre morceau.
+Tu voudra un autre morceau.
+Tu voudrez un autre morceau.
+Tu voulais toujours ça.
+Tu voulais un chien.
+Tu voulez sortir.
+Tu voulons sortir.
+Tu voyons la voiture rouge.
+Verras-vous la différence ?
+Verra-vous la différence ?
+Verrez-vous la différence ?
+Verrons-vous la différence ?
+Veut-il un morceau de gâteau ?
+Veux-tu un morceau de gâteau ?
+Voulez-vous un morceau de gâteau ?
+Voulons-nous un morceau de gâteau ?
+Vous a dit au revoir.
+Vous as dit au revoir.
+Vous avez dit au revoir.
+Vous avez pu les convaincre.
+Vous avez pus les convaincre.
+Vous avez su la nouvelle hier.
+Vous avez su la réponse.
+Vous avez sus la nouvelle hier.
+Vous avez venu au bon moment.
+Vous avez voulu parler.
+Vous avez voulus parler.
+Vous avez vu les résultats.
+Vous avez vus les résultats.
+Vous dirai la même chose.
+Vous diras la même chose.
+Vous direz la même chose.
+Vous diront la même chose.
+Vous dis des choses importantes.
+Vous disent que c'est important.
+Vous disons des choses importantes.
+Vous dis que c'est important.
+Vous dites ça tous les jours.
+Vous dites des choses importantes.
+Vous dites que c'est important.
+Vous dit que c'est important.
+Vous êtes pu les convaincre.
+Vous êtes su la nouvelle hier.
+Vous êtes venu au bon moment.
+Vous êtes venus au bon moment.
+Vous êtes voulu parler.
+Vous êtes vu les résultats.
+Vous n'a rien dit.
+Vous n'as rien dit.
+Vous n'avez rien dit.
+Vous n'avez rien su.
+Vous ne dirai pas ça.
+Vous ne diras pas ça.
+Vous ne direz pas ça.
+Vous ne diront pas ça.
+Vous ne disent rien.
+Vous ne dis pas s'il te plaît.
+Vous ne dis rien.
+Vous ne dites pas s'il te plaît.
+Vous ne dites rien.
+Vous ne dit rien.
+Vous ne l'a jamais dit.
+Vous ne l'as jamais dit.
+Vous ne l'avez jamais dit.
+Vous ne l'ont jamais dit.
+Vous ne peut pas partir.
+Vous ne peuvent pas partir.
+Vous ne pourras pas le voir.
+Vous ne pourrez pas le voir.
+Vous ne pourrons pas le voir.
+Vous ne pourront pas le voir.
+Vous ne pouvez pas partir.
+Vous ne pouvons pas partir.
+Vous ne sauras pas les détails.
+Vous ne saurez pas les détails.
+Vous ne saurons pas les détails.
+Vous ne sauront pas les détails.
+Vous ne savez.
+Vous ne savez rien.
+Vous ne saviez rien.
+Vous ne verras rien.
+Vous ne verrez rien.
+Vous ne verrons rien.
+Vous ne verront rien.
+Vous ne veulent pas écouter.
+Vous ne veut pas écouter.
+Vous ne viendras pas à la fête.
+Vous ne viendrez pas à la fête.
+Vous ne viendrons pas à la fête.
+Vous ne viendront pas à la fête.
+Vous ne voient pas le problème.
+Vous ne vois pas le problème.
+Vous ne voudra pas perdre.
+Vous ne voudrez pas perdre.
+Vous ne voudrons pas perdre.
+Vous ne voudront pas perdre.
+Vous ne voulez pas écouter.
+Vous ne voulons pas écouter.
+Vous ne voyez pas le problème.
+Vous ne voyons pas le problème.
+Vous n'ont rien dit.
+Vous ont dit au revoir.
+Vous peuvent le voir.
+Vous peux le voir.
+Vous pouvez le voir.
+Vous pouviez les convaincre.
+Vous pouvons le voir.
+Vous sauras tout.
+Vous saurez la réponse.
+Vous saurez l'heure ?
+Vous saurez tout.
+Vous saurons tout.
+Vous sauront tout.
+Vous savent la réponse.
+Vous savez la réponse.
+Vous savez l'heure ?
+Vous saviez la nouvelle hier.
+Vous saviez la réponse.
+Vous saviez l'heure ?
+Vous venez avec nous.
+Vous veniez au bon moment.
+Vous venons avec nous.
+Vous verras un grand changement.
+Vous verrez un grand changement.
+Vous verrons un grand changement.
+Vous verront un grand changement.
+Vous viendras plus tard.
+Vous viendrez plus tard.
+Vous viendrons plus tard.
+Vous viendront plus tard.
+Vous viennent avec nous.
+Vous viens avec nous.
+Vous voudras vous reposer.
+Vous voudrez vous reposer.
+Vous voudrons vous reposer.
+Vous voudront vous reposer.
+Vous vouliez parler.
+Vous voyiez les résultats.
+Wrong auxiliary - vouloir uses avoir, not être in passé composé.
+Wrong auxiliary - vouloir uses avoir, not être in passé composé. Should be 'nous avons voulu'.
+Wrong auxiliary - vouloir uses avoir, not être in passé composé. Should be 'vous avez voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'elle n'a jamais voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'elles n'ont pas voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'elles ont voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'il n'a rien voulu dire'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'ont-ils voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'pourquoi n'a-t-elle pas voulu'.
+Wrong auxiliary - vouloir uses avoir, not être. Should be 'qu'as-tu voulu'.
+Wrong tense - this is future, not passé composé.
+Wrong tense - this is imperfect (imparfait) interrogative. Question asks for passé composé.
+Wrong tense - this is imperfect (imparfait). Question asks for passé composé.
+Wrong tense - this is imperfect (imparfait). Question asks for passé composé: 'nous avons voulu'.
+Wrong tense - this is imperfect (imparfait). Question asks for passé composé with jamais.
+Wrong tense - this is imperfect (imparfait). Question asks for passé composé with rien.
+Wrong tense - this is imperfect (imparfait). The question asks for passé composé: 'vous avez voulu'.
+Wrong tense - this is imperfect past, not passé composé.
+Wrong tense - this is passé composé, not future simple.

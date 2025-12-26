@@ -1,0 +1,153 @@
+Ai-je été ?
+As-tu été ?
+A-t-elle été ?
+A-t-il été ?
+Avez-vous été ?
+Avons-nous été ?
+Correct! 'Ai-je été ?' is 'Have I been?' in French interrogative form with inversion.
+Correct! 'As-tu été ?' is 'Have you been?' (informal) in French interrogative form.
+Correct! 'A-t-il été ?' is 'Has he been?' in French interrogative form with liaison 't'.
+Correct! 'Elle a été' is 'she has been' in French passé composé.
+Correct! 'Elle a eu' is 'she has had' in French passé composé.
+Correct! 'Elle a fait' is 'she has made' in French passé composé.
+Correct! 'Elle a' is 'she has' in French present tense.
+Correct! 'Elle aura' is 'she will have' in French future tense.
+Correct! 'Elle est' is 'she is' in French present tense.
+Correct! 'Elle fait' is 'she does / she makes' in French present tense.
+Correct! 'Elle fera' is 'she will do / she will make' in French future tense.
+Correct! 'Elle n'a pas été' is 'she has not been' using French negation ne...pas.
+Correct! 'Elle n'a pas eu' is 'she has not had' using French negation ne...pas.
+Correct! 'Elle n'a pas fait' is 'she has not made' using French negation ne...pas.
+Correct! 'Elle n'a pas' is 'she does not have' using French negation ne...pas.
+Correct! 'Elle n'aura pas' is 'she will not have' using French negation ne...pas.
+Correct! 'Elle ne fait pas' is 'she does not do / she does not make' using French negation ne...pas.
+Correct! 'Elle ne fera pas' is 'she will not do / she will not make' using French negation ne...pas.
+Correct! 'Elle ne sera pas' is 'she will not be' using French negation ne...pas.
+Correct! 'Elle n'est pas' is 'she is not' using French negation ne...pas.
+Correct! 'Elles auront' is 'they will have' (feminine) in French future tense.
+Correct! 'Elle sera' is 'she will be' in French futur simple.
+Correct! 'Elles feront' is 'they will do / they will make' (feminine) in French future tense.
+Correct! 'Elles font' is 'they do / they make' (feminine) in French present tense.
+Correct! 'Elles ont été' is 'they have been' (feminine) in French passé composé.
+Correct! 'Elles ont eu' is 'they have had' (feminine) in French passé composé.
+Correct! 'Elles ont fait' is 'they have made' (feminine) in French passé composé.
+Correct! 'Elles ont' is 'they have' (feminine) in French present tense.
+Correct! 'Elles seront' is 'they will be' (feminine) in French futur simple.
+Correct! 'Elles sont' is 'they are' (feminine) in French present tense.
+Correct! 'Il a été' is 'he has been' in French passé composé.
+Correct! 'Il a eu' is 'he has had' in French passé composé.
+Correct! 'Il a fait' is 'he has made' in French passé composé.
+Correct! 'Il a' is 'he has' in French present tense.
+Correct! 'Il aura' is 'he will have' in French future tense.
+Correct! 'Il est' is 'he is' in French present tense.
+Correct! 'Il fait' is 'he does / he makes' in French present tense.
+Correct! 'Il fera' is 'he will do / he will make' in French future tense.
+Correct! 'Il n'a pas été' is 'he has not been' using French negation ne...pas.
+Correct! 'Il n'a pas eu' is 'he has not had' using French negation ne...pas.
+Correct! 'Il n'a pas fait' is 'he has not made' using French negation ne...pas.
+Correct! 'Il n'a pas' is 'he does not have' using French negation ne...pas.
+Correct! 'Il n'aura pas' is 'he will not have' using French negation ne...pas.
+Correct! 'Il ne fait pas' is 'he does not do / he does not make' using French negation ne...pas.
+Correct! 'Il ne fera pas' is 'he will not do / he will not make' using French negation ne...pas.
+Correct! 'Il ne sera pas' is 'he will not be' using French negation ne...pas.
+Correct! 'Il n'est pas' is 'he is not' using French negation ne...pas.
+Correct! 'Ils auront' is 'they will have' (masculine/mixed) in French future tense.
+Correct! 'Il sera' is 'he will be' in French futur simple.
+Correct! 'Ils feront' is 'they will do / they will make' (masculine/mixed) in French future tense.
+Correct! 'Ils font' is 'they do / they make' (masculine/mixed) in French present tense.
+Correct! 'Ils ont été' is 'they have been' (masculine/mixed) in French passé composé.
+Correct! 'Ils ont eu' is 'they have had' (masculine/mixed) in French passé composé.
+Correct! 'Ils ont fait' is 'they have made' (masculine/mixed) in French passé composé.
+Correct! 'Ils ont' is 'they have' (masculine/mixed) in French present tense.
+Correct! 'Ils seront' is 'they will be' (masculine/mixed) in French futur simple.
+Correct! 'Ils sont' is 'they are' (masculine/mixed) in French present tense.
+Correct! 'J'ai été' is 'I have been' in French passé composé.
+Correct! 'J'ai eu' is 'I have had' in French passé composé.
+Correct! 'J'ai fait' is 'I have made' in French passé composé.
+Correct! 'J'ai' is 'I have' in French present tense.
+Correct! 'J'aurai' is 'I will have' in French future tense.
+Correct! 'Je fais' is 'I do / I make' in French present tense.
+Correct! 'Je ferai' is 'I will do / I will make' in French future tense.
+Correct! 'Je n'ai pas été' is 'I have not been' using French negation ne...pas.
+Correct! 'Je n'ai pas eu' is 'I have not had' using French negation ne...pas.
+Correct! 'Je n'ai pas fait' is 'I have not made' using French negation ne...pas.
+Correct! 'Je n'ai pas' is 'I do not have' using French negation ne...pas.
+Correct! 'Je n'aurai pas' is 'I will not have' using French negation ne...pas.
+Correct! 'Je ne fais pas' is 'I do not do / I do not make' using French negation ne...pas.
+Correct! 'Je ne ferai pas' is 'I will not do / I will not make' using French negation ne...pas.
+Correct! 'Je ne serai pas' is 'I will not be' using French negation ne...pas.
+Correct! 'Je ne suis pas' is 'I am not' using French negation ne...pas.
+Correct! 'Je serai' is 'I will be' in French futur simple.
+Correct! 'Je suis' is 'I am' in French present tense.
+Correct! 'N'ai-je pas été ?' is 'Haven't I been?' in French negative interrogative form.
+Correct! 'N'as-tu pas été ?' is 'Haven't you been?' (informal) in French negative interrogative.
+Correct! 'N'a-t-il pas été ?' is 'Hasn't he been?' in French negative interrogative with liaison 't'.
+Correct! 'Nous aurons' is 'we will have' in French future tense.
+Correct! 'Nous avons été' is 'we have been' in French passé composé.
+Correct! 'Nous avons eu' is 'we have had' in French passé composé.
+Correct! 'Nous avons fait' is 'we have made' in French passé composé.
+Correct! 'Nous avons' is 'we have' in French present tense.
+Correct! 'Nous faisons' is 'we do / we make' in French present tense.
+Correct! 'Nous ferons' is 'we will do / we will make' in French future tense.
+Correct! 'Nous n'aurons pas' is 'we will not have' using French negation ne...pas.
+Correct! 'Nous n'avons pas été' is 'we have not been' using French negation ne...pas.
+Correct! 'Nous n'avons pas eu' is 'we have not had' using French negation ne...pas.
+Correct! 'Nous n'avons pas fait' is 'we have not made' using French negation ne...pas.
+Correct! 'Nous n'avons pas' is 'we do not have' using French negation ne...pas.
+Correct! 'Nous ne faisons pas' is 'we do not do / we do not make' using French negation ne...pas.
+Correct! 'Nous ne ferons pas' is 'we will not do / we will not make' using French negation ne...pas.
+Correct! 'Nous ne serons pas' is 'we will not be' using French negation ne...pas.
+Correct! 'Nous ne sommes pas' is 'we are not' using French negation ne...pas.
+Correct! 'Nous serons' is 'we will be' in French futur simple.
+Correct! 'Nous sommes' is 'we are' in French present tense.
+Correct! 'Tu as été' is 'you have been' (informal) in French passé composé.
+Correct! 'Tu as eu' is 'you have had' (informal) in French passé composé.
+Correct! 'Tu as fait' is 'you have made' (informal) in French passé composé.
+Correct! 'Tu as' is 'you have' (informal) in French present tense.
+Correct! 'Tu auras' is 'you will have' (informal) in French future tense.
+Correct! 'Tu es' is 'you are' (informal) in French present tense.
+Correct! 'Tu fais' is 'you do / you make' (informal) in French present tense.
+Correct! 'Tu feras' is 'you will do / you will make' (informal) in French future tense.
+Correct! 'Tu n'as pas été' is 'you have not been' (informal) using French negation.
+Correct! 'Tu n'as pas eu' is 'you have not had' (informal) using French negation.
+Correct! 'Tu n'as pas fait' is 'you have not made' (informal) using French negation.
+Correct! 'Tu n'as pas' is 'you do not have' (informal) using French negation.
+Correct! 'Tu n'auras pas' is 'you will not have' (informal) using French negation.
+Correct! 'Tu ne fais pas' is 'you do not do / you do not make' (informal) using French negation.
+Correct! 'Tu ne feras pas' is 'you will not do / you will not make' (informal) using French negation.
+Correct! 'Tu ne seras pas' is 'you will not be' (informal) using French negation.
+Correct! 'Tu n'es pas' is 'you are not' (informal) using French negation.
+Correct! 'Tu seras' is 'you will be' (informal) in French futur simple.
+Correct! 'Vous aurez' is 'you will have' (formal/plural) in French future tense.
+Correct! 'Vous avez été' is 'you have been' (formal/plural) in French passé composé.
+Correct! 'Vous avez eu' is 'you have had' (formal/plural) in French passé composé.
+Correct! 'Vous avez fait' is 'you have made' (formal/plural) in French passé composé.
+Correct! 'Vous avez' is 'you have' (formal/plural) in French present tense.
+Correct! 'Vous êtes' is 'you are' (formal/plural) in French present tense.
+Correct! 'Vous faites' is 'you do / you make' (formal/plural) in French present tense.
+Correct! 'Vous ferez' is 'you will do / you will make' (formal/plural) in French future tense.
+Correct! 'Vous n'aurez pas' is 'you will not have' (formal/plural) using French negation.
+Correct! 'Vous n'avez pas été' is 'you have not been' (formal/plural) using French negation.
+Correct! 'Vous n'avez pas eu' is 'you have not had' (formal/plural) using French negation.
+Correct! 'Vous n'avez pas fait' is 'you have not made' (formal/plural) using French negation.
+Correct! 'Vous n'avez pas' is 'you do not have' (formal/plural) using French negation.
+Correct! 'Vous ne faites pas' is 'you do not do / you do not make' (formal/plural) using French negation.
+Correct! 'Vous ne ferez pas' is 'you will not do / you will not make' (formal/plural) using French negation.
+Correct! 'Vous ne serez pas' is 'you will not be' (formal/plural) using French negation.
+Correct! 'Vous n'êtes pas' is 'you are not' (formal/plural) using French negation.
+Correct! 'Vous serez' is 'you will be' (formal/plural) in French futur simple.
+N'ai-je pas été ?
+N'as-tu pas été ?
+N'a-t-elle pas été ?
+N'a-t-il pas été ?
+N'avez-vous pas été ?
+N'avons-nous pas été ?
+N'êtes-vous pas ?
+This is future tense, not passé composé.
+This is imperfect past tense, not passé composé.
+This is passé composé (past), not future.
+This is passé composé (past), not present tense.
+This is passé composé past tense, not future tense.
+This means 'they have been' (être), not 'they have' (avoir).
+This means 'they have been' (être), not 'they have had' (avoir).
+This means 'they have been' (être), not 'they have made' (faire).
