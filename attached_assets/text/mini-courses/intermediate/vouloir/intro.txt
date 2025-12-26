@@ -1,0 +1,6 @@
+UNIT: Unit 8: vouloir (to want)
+VERB: vouloir
+MEANING: to want
+DESCRIPTION: Express desires across all tenses.
+EXAMPLE: Je voulais partir. (I wanted to leave.)
+IMPORTANCE: Desires and polite requests

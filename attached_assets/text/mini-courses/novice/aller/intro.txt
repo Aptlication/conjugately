@@ -1,0 +1,6 @@
+UNIT: Unit 4: aller (to go)
+VERB: aller
+MEANING: to go
+DESCRIPTION: Essential for movement and forming the near future tense.
+EXAMPLE: Je vais à l'école. (I go to school.)
+IMPORTANCE: Forms immediate future and expresses movement

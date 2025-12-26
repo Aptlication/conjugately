@@ -1,0 +1,6 @@
+UNIT: Unit 2: avoir (to have)
+VERB: avoir
+MEANING: to have
+DESCRIPTION: Essential for possession and as auxiliary verb.
+EXAMPLE: J'ai faim. (I am hungry. - literally: I have hunger)
+IMPORTANCE: Most common auxiliary verb

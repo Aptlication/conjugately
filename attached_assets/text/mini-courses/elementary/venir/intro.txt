@@ -1,0 +1,6 @@
+UNIT: Unit 5: venir (to come)
+VERB: venir
+MEANING: to come
+DESCRIPTION: Express movement toward and recent past.
+EXAMPLE: Je viens de Paris. (I come from Paris.)
+IMPORTANCE: Direction and immediate past

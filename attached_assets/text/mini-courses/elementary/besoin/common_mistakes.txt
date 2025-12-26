@@ -1,0 +1,3 @@
+✗ Forgetting avoir: Je besoin (wrong)
+✗ Forgetting de: J'ai besoin aide (wrong)
+✗ Using with noun without article

@@ -1,0 +1,6 @@
+UNIT: Unit 7: avoir besoin (to need)
+VERB: besoin
+MEANING: to need
+DESCRIPTION: Express necessity using avoir besoin de.
+EXAMPLE: J'ai besoin d'aide. (I need help.)
+IMPORTANCE: Essential for expressing needs

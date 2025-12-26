@@ -1,0 +1,3 @@
+✗ Wrong imparfait endings
+✗ Confusing tense usage
+✗ Forgetting expressions with avoir

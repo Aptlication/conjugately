@@ -1,0 +1,6 @@
+UNIT: Unit 3: faire (to do/make)
+VERB: faire
+MEANING: to do/make
+DESCRIPTION: Master faire across all four tenses.
+EXAMPLE: Je faisais du sport. (I used to do sports.)
+IMPORTANCE: Versatile verb for many expressions

@@ -1,0 +1,3 @@
+✗ Wrong past participle: pris
+✗ Forgetting stem changes
+✗ Confusing with porter/amener

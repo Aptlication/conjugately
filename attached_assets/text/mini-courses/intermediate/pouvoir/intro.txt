@@ -1,0 +1,6 @@
+UNIT: Unit 7: pouvoir (can/to be able)
+VERB: pouvoir
+MEANING: can/be able
+DESCRIPTION: Modal verb for ability and possibility.
+EXAMPLE: Je pouvais le faire. (I could do it.)
+IMPORTANCE: Express past abilities

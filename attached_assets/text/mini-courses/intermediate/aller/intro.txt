@@ -1,0 +1,6 @@
+UNIT: Unit 4: aller (to go)
+VERB: aller
+MEANING: to go
+DESCRIPTION: Complete mastery of aller.
+EXAMPLE: J'allais à l'école. (I used to go to school.)
+IMPORTANCE: Movement and immediate future

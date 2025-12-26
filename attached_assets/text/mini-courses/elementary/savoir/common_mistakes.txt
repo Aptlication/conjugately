@@ -1,0 +1,3 @@
+✗ Confusing savoir with connaître
+✗ Wrong usage: savoir une personne (use connaître)
+✗ Forgetting que: Je sais que tu es là

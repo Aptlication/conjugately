@@ -1,0 +1,3 @@
+✗ Using avoir instead of être in passé composé
+✗ Forgetting gender agreement: elle est venue
+✗ Confusing with aller for direction

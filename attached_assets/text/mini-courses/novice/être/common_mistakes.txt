@@ -1,0 +1,3 @@
+✗ Wrong auxiliary in passé composé with movement verbs
+✗ Forgetting gender agreement with past participle
+✗ Confusing with avoir for age expressions

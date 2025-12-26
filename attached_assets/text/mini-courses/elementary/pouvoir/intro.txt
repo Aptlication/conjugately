@@ -1,0 +1,6 @@
+UNIT: Unit 6: pouvoir (can/to be able)
+VERB: pouvoir
+MEANING: can/to be able
+DESCRIPTION: Express ability and permission.
+EXAMPLE: Je peux t'aider. (I can help you.)
+IMPORTANCE: Essential modal verb for ability

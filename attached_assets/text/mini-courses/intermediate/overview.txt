@@ -1,0 +1,5 @@
+TITLE: Intermediate Course
+SUBTITLE: Master 11 essential verbs for fluent communication
+DESCRIPTION: Achieve conversational fluency with a comprehensive set of commonly used verbs.
+VERBS: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir
+TENSES: Présent, Passé Composé, Futur Simple, Imparfait

@@ -1,0 +1,6 @@
+UNIT: Unit 1: être (to be)
+VERB: être
+MEANING: to be
+DESCRIPTION: Review and master all forms of the essential être verb.
+EXAMPLE: J'étais fatigué. (I was tired.)
+IMPORTANCE: Foundation verb - now with imparfait

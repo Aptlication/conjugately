@@ -1,0 +1,6 @@
+UNIT: Unit 3: faire (to do/make)
+VERB: faire
+MEANING: to do/make
+DESCRIPTION: Versatile verb for activities, weather, and expressions.
+EXAMPLE: Qu'est-ce que tu fais? (What are you doing?)
+IMPORTANCE: Used in countless everyday expressions

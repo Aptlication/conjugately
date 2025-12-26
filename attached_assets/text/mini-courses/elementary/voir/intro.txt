@@ -1,0 +1,6 @@
+UNIT: Unit 2: voir (to see)
+VERB: voir
+MEANING: to see
+DESCRIPTION: Used for visual perception and understanding.
+EXAMPLE: Je vois le problème. (I see the problem.)
+IMPORTANCE: Essential for describing what you observe

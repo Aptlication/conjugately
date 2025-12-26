@@ -1,0 +1,6 @@
+UNIT: Unit 10: venir (to come)
+VERB: venir
+MEANING: to come
+DESCRIPTION: Movement toward and recent past.
+EXAMPLE: Je venais juste d'arriver. (I had just arrived.)
+IMPORTANCE: Direction and immediate past

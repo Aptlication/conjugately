@@ -1,0 +1,3 @@
+✗ Wrong imparfait stem: fais-
+✗ Confusing with jouer
+✗ Future stem: fer-

@@ -1,0 +1,6 @@
+UNIT: Unit 1: dire (to say/tell)
+VERB: dire
+MEANING: to say/tell
+DESCRIPTION: Essential for communication and reporting speech.
+EXAMPLE: Je dis la vérité. (I tell the truth.)
+IMPORTANCE: Key verb for all forms of communication

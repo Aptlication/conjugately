@@ -1,0 +1,5 @@
+TITLE: Beginner Course
+SUBTITLE: Master the 3 most essential French verbs
+DESCRIPTION: Start your French journey with the fundamental verbs that form the foundation of the language.
+VERBS: être, avoir, faire
+TENSES: Présent, Passé Composé, Futur Simple

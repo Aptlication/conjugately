@@ -1,0 +1,6 @@
+UNIT: Unit 3: faire (to do/make)
+VERB: faire
+MEANING: to do/make
+DESCRIPTION: One of the most versatile verbs, used in countless French expressions and activities.
+EXAMPLE: Je fais mes devoirs. (I do my homework.)
+IMPORTANCE: Appears in hundreds of idiomatic expressions

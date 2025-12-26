@@ -1,0 +1,3 @@
+✗ Confusing être with avoir in compound tenses
+✗ Forgetting liaison: vous êtes → vous_êtes
+✗ Using wrong form for gender agreement

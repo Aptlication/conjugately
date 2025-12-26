@@ -1,0 +1,6 @@
+UNIT: Unit 2: avoir (to have)
+VERB: avoir
+MEANING: to have
+DESCRIPTION: Essential for expressing possession and forming compound tenses in French.
+EXAMPLE: J'ai un livre. (I have a book.)
+IMPORTANCE: Critical for possession and most compound tenses

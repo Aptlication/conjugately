@@ -1,0 +1,5 @@
+TITLE: Elementary Course
+SUBTITLE: Expand your verb vocabulary with 7 essential verbs
+DESCRIPTION: Master additional high-frequency verbs to express more complex ideas.
+VERBS: dire, voir, savoir, vouloir, venir, pouvoir, besoin
+TENSES: Présent, Passé Composé, Futur Simple

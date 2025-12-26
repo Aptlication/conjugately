@@ -1,0 +1,3 @@
+✗ Confusing je peux with je puis (formal)
+✗ Wrong form in questions: puis-je (not peux-je)
+✗ Using pouvoir when savoir is needed for abilities

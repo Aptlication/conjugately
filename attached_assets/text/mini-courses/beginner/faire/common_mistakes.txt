@@ -1,0 +1,3 @@
+✗ Using do/make literally instead of idiomatic expressions
+✗ Forgetting irregular forms in present tense
+✗ Mixing up faire vs. jouer for sports

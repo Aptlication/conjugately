@@ -1,0 +1,6 @@
+UNIT: Unit 6: dire (to say)
+VERB: dire
+MEANING: to say/tell
+DESCRIPTION: Communication verb in all tenses.
+EXAMPLE: Il disait toujours la vérité. (He always told the truth.)
+IMPORTANCE: Essential for reporting

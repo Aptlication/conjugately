@@ -1,0 +1,6 @@
+UNIT: Unit 11: savoir (to know)
+VERB: savoir
+MEANING: to know
+DESCRIPTION: Express knowledge and abilities.
+EXAMPLE: Je savais la réponse. (I knew the answer.)
+IMPORTANCE: Facts and abilities

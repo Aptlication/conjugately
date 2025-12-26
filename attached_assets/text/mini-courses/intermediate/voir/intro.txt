@@ -1,0 +1,6 @@
+UNIT: Unit 5: voir (to see)
+VERB: voir
+MEANING: to see
+DESCRIPTION: Master voir in all forms.
+EXAMPLE: Je voyais souvent mes amis. (I often saw my friends.)
+IMPORTANCE: Visual perception across tenses

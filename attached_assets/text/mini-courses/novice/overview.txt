@@ -1,0 +1,5 @@
+TITLE: Novice Course
+SUBTITLE: Master the 4 most essential French verbs
+DESCRIPTION: Build on your foundation with the four most essential verbs in the French language.
+VERBS: être, avoir, faire, aller
+TENSES: Présent, Passé Composé, Futur Simple

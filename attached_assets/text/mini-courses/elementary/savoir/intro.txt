@@ -1,0 +1,6 @@
+UNIT: Unit 3: savoir (to know)
+VERB: savoir
+MEANING: to know (facts/how to)
+DESCRIPTION: Used for knowing facts and abilities.
+EXAMPLE: Je sais nager. (I know how to swim.)
+IMPORTANCE: Expresses knowledge and abilities

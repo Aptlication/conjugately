@@ -1,0 +1,6 @@
+UNIT: Unit 4: vouloir (to want)
+VERB: vouloir
+MEANING: to want
+DESCRIPTION: Express desires, wishes, and polite requests.
+EXAMPLE: Je voudrais un café. (I would like a coffee.)
+IMPORTANCE: Essential for expressing desires politely

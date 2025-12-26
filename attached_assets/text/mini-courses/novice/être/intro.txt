@@ -1,0 +1,6 @@
+UNIT: Unit 1: être (to be)
+VERB: être
+MEANING: to be
+DESCRIPTION: The most fundamental French verb for describing states of being.
+EXAMPLE: Je suis content. (I am happy.)
+IMPORTANCE: Foundation of French expression

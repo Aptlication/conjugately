@@ -1,0 +1,6 @@
+UNIT: Unit 9: prendre (to take)
+VERB: prendre
+MEANING: to take
+DESCRIPTION: Versatile verb for taking, having, and more.
+EXAMPLE: Je prenais le bus. (I used to take the bus.)
+IMPORTANCE: Daily activities and decisions

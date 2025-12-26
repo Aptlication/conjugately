@@ -1,0 +1,6 @@
+UNIT: Unit 2: avoir (to have)
+VERB: avoir
+MEANING: to have
+DESCRIPTION: Master avoir in all four tenses.
+EXAMPLE: J'avais faim. (I was hungry.)
+IMPORTANCE: Essential auxiliary and expression verb

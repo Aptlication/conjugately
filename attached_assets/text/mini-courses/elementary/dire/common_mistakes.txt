@@ -1,0 +1,3 @@
+✗ Wrong form: vous dites (not vous disez)
+✗ Confusing dire with parler (speak) or raconter (tell a story)
+✗ Forgetting de before infinitive: Il m'a dit de venir

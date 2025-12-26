@@ -1,0 +1,6 @@
+UNIT: Unit 1: être (to be)
+VERB: être
+MEANING: to be
+DESCRIPTION: The most fundamental French verb, used to describe states of being, identity, and location.
+EXAMPLE: Je suis étudiant. (I am a student.)
+IMPORTANCE: Essential for basic communication and identity
