@@ -100,9 +100,28 @@ async function processBeginnerLevel(testMode = false) {
   let totalGenerated = 0;
   let totalFailed = 0;
   let processed = 0;
+  let skipped = 0;
   const maxTest = 10;
+  const maxBatch = parseInt(process.env.BATCH_SIZE || '0') || Infinity;
   
-  console.log(`\n🎯 Processing beginner level (${testMode ? 'TEST MODE - first 10 files' : 'FULL MODE'})\n`);
+  let totalFiles = 0;
+  for (const verb of verbs) {
+    const verbPath = path.join(textBase, verb);
+    if (!fs.statSync(verbPath).isDirectory()) continue;
+    const tenses = fs.readdirSync(verbPath);
+    for (const tense of tenses) {
+      const tensePath = path.join(verbPath, tense);
+      if (!fs.statSync(tensePath).isDirectory()) continue;
+      const answersPath = path.join(tensePath, 'answers');
+      if (fs.existsSync(answersPath)) {
+        totalFiles += fs.readdirSync(answersPath).filter(f => f.endsWith('.txt')).length;
+      }
+    }
+  }
+  
+  console.log(`\n🎯 Processing beginner level (${testMode ? 'TEST MODE - first 10 files' : 'FULL MODE'})`);
+  console.log(`📊 Total files to process: ${totalFiles}`);
+  console.log(`⏱️ Estimated time: ${Math.ceil(totalFiles * 6.5 / 60)} minutes (with rate limiting)\n`);
   
   for (const verb of verbs) {
     const verbPath = path.join(textBase, verb);
@@ -125,6 +144,12 @@ async function processBeginnerLevel(testMode = false) {
           return;
         }
         
+        if (totalGenerated >= maxBatch) {
+          console.log(`\n📊 Batch limit reached: ${totalGenerated} generated, ${totalFailed} failed, ${skipped} skipped`);
+          console.log(`💡 Run again to continue (existing files will be skipped)`);
+          return;
+        }
+        
         const textFilePath = path.join(answersPath, file);
         const text = fs.readFileSync(textFilePath, 'utf-8').trim();
         
@@ -132,7 +157,7 @@ async function processBeginnerLevel(testMode = false) {
         const audioFilePath = path.join(audioBase, verb, tense, 'answers', audioFileName);
         
         if (fs.existsSync(audioFilePath)) {
-          console.log(`⏭️ Skipping (exists): ${audioFilePath}`);
+          skipped++;
           continue;
         }
         
@@ -144,7 +169,13 @@ async function processBeginnerLevel(testMode = false) {
         }
         processed++;
         
-        await new Promise(r => setTimeout(r, 200));
+        if (processed % 10 === 0) {
+          const remaining = totalFiles - processed;
+          const eta = Math.ceil(remaining * 6.5 / 60);
+          console.log(`\n📈 Progress: ${processed}/${totalFiles} (${Math.round(processed/totalFiles*100)}%) - ETA: ${eta} min\n`);
+        }
+        
+        await new Promise(r => setTimeout(r, 6500));
       }
     }
   }
