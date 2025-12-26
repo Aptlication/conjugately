@@ -1,0 +1,5252 @@
+Ai-je adapté(e)?
+Ai-je dit la vérité ?
+Ai-je ennuyé(e) ?
+Ai-je entraîné(e) ?
+Ai-je été en retard ?
+Ai-je été fatigué ?
+Ai-je été heureux ?
+Ai-je été prêt ?
+Ai-je eu un problème ?
+Ai-je intéressé à la musique ?
+Ai-je mis assez de sucre dans mon café ?
+Ai-je parlé trop vite ?
+Ai-je pas trouvé mon portefeuille ?
+Ai-je réjoui(e)?
+Ai-je su la vérité ?
+Ai-je tes clés ?
+Ai-je trouvé mon portefeuille ?
+Ai-je un problème ?
+Allaient-elles régulièrement ?
+Allaient-ils régulièrement ?
+Allais-je à Paris ?
+Allais-tu à Londres ?
+Allais-tu à Paris ?
+Allais-tu régulièrement ?
+Allait-elle à Londres ?
+Allait-elle à Paris ?
+Allait-il à Londres ?
+Allait-il à Paris ?
+Allez-vous à Londres ?
+Allez-vous régulièrement ?
+Alliez-vous à Londres ?
+Alliez-vous régulièrement ?
+Allons-nous à l'école ?
+À quoi as-tu intéressé ?
+À quoi est-ce que je m'intéresse ?
+À quoi est-ce que tu t'es intéressé(e) ?
+À quoi il s'intéresse ?
+À quoi je m'intéresse ?
+À quoi s'intéresse-t-il ?
+À quoi t'es-tu intéressé(e) ?
+À quoi t'intéresses-tu ?
+À quoi tu t'es intéressé(e) ?
+À quoi tu t'intéresses ?
+As-tu cru cette idée ?
+As-tu dit la vérité ?
+As-tu été à Paris ?
+As-tu été en retard ?
+As-tu été fatigué ?
+As-tu été heureuse ?
+As-tu été heureux ?
+As-tu été prêt ?
+As-tu eu des problèmes ?
+As-tu eu le dîner ?
+As-tu eu un problème ?
+As-tu mes clés ?
+As-tu parlé à ta grand-mère ?
+As-tu parlé avec tes amis ?
+As-tu pas cru cette idée ?
+As-tu pas trouvé ton cahier ?
+As-tu su les règles ?
+As-tu trouvé ton cahier ?
+As-tu un problème ?
+A-t-elle adaptée?
+A-t-elle cru aux fantômes ?
+A-t-elle dit la vérité ?
+A-t-elle ennuyée ?
+A-t-elle entraînée ?
+A-t-elle été à Paris ?
+A-t-elle été en retard ?
+A-t-elle été fatiguée ?
+A-t-elle intéressé à la science ?
+A-t-elle parlé à son professeur ?
+A-t-elle pas trouvé son billet ?
+A-t-elle réjoui?
+A-t-elles parlé avec le principal ?
+A-t-elle trouvé son billet ?
+A-t-il adapté?
+A-t-il dit la vérité ?
+A-t-il ennuyé ?
+A-t-il entraîné ?
+A-t-il été à Paris ?
+A-t-il été en retard ?
+A-t-il été fatigué ?
+A-t-il été heureux ?
+A-t-il été prêt ?
+A-t-il eu un problème ?
+A-t-il intéressé à la politique ?
+A-t-il mis de sucre dans son café ?
+A-t-il pas trouvé l'école près d'ici ?
+A-t-il réjoui?
+A-t-il tes clés ?
+A-t-il trouvé l'école près d'ici ?
+A-t-il un problème ?
+Aurai-je tes clés ?
+Auras-tu mes clés ?
+Aura-t-il tes clés ?
+aurons-nous tes clés ?
+Avais-je tes clés ?
+Avais-tu mes clés ?
+Avait-il tes clés ?
+Avez-nous cru en notre équipe ?
+Avez-vous adapté?
+Avez-vous ennuyé ?
+Avez-vous entraîné ?
+Avez-vous été à Paris ?
+Avez-vous été fatigués ?
+Avez-vous été heureuses ?
+Avez-vous été heureux ?
+Avez-vous été prêts ?
+Avez-vous eu des problèmes ?
+Avez-vous eu le dîner ?
+Avez-vous eu un problème ?
+Avez-vous parlé à vos voisins ?
+Avez-vous parlé pendant la réunion ?
+Avez-vous réjoui?
+Avez-vous su la vérité ?
+Avez-vous su les règles ?
+Avez-vous trouvé l'endroit étrange ?
+Avez-vous un problème ?
+Aviez-vous parlé pendant la réunion ?
+Avions-nous tes clés ?
+Avons-nous été fatigués ?
+Avons-nous été heureux ?
+Avons-nous été prêts ?
+Avons-nous eu le dîner ?
+Avons-nous parlé anglais ?
+Avons-nous su la vérité ?
+Avons-nous su les règles ?
+Avons-nous tes clés ?
+Comment est-ce que je débrouille avec ça ?
+Comment est-ce que je me débrouille avec ça ?
+Comment est-ce qu'ils se sont intéressés à tout ?
+Comment est-ce qu'ils s'intéresseront à tout ?
+Comment ils intéressent à tout ?
+Comment ils se sont intéressés à tout ?
+Comment ils s'intéressent à tout ?
+Comment ils s'intéresseront à tout ?
+Comment je débrouille avec ça ?
+Comment je me débrouille avec ça ?
+Comment ont-ils intéressé à tout ?
+Comment se s'intéresseront-ils à tout ?
+Comment se sont-ils intéressés à tout ?
+Comment s'intéressent-ils à tout ?
+Comment s'intéresseront-ils à tout ?
+Comment sont-ils intéressés à tout ?
+Croira-t-elle pas aux fantômes ?
+Croirons-nous en notre succès ?
+Croyons-nous aux fantômes ?
+Débrouille-t-elle toute seule ?
+Dirai-je la vérité ?
+Diras-tu la vérité ?
+Dira-t-elle la vérité ?
+Dira-t-il la vérité ?
+Disais-je la vérité ?
+Disais-tu la vérité ?
+Disait-elle la vérité ?
+Disait-il la vérité ?
+Dis-je la vérité ?
+Dis-tu la vérité ?
+Dit-elle la vérité ?
+Dit-il la vérité ?
+Elle a adapté.
+Elle a adapté?
+Elle a cru aux fantômes ?
+Elle adapte?
+Elle adapte pas.
+Elle adaptera?
+Elle adapterait?
+Elle adapterait pas.
+Elle a dit quelques mots.
+Elle a écrit pas la liste?
+Elle a écrit rapidement?
+Elle a ennuyé ?
+Elle a ennuyé.
+Elle a entraîné ?
+Elle a entraîné.
+Elle a été fatiguée.
+Elle a été prête.
+Elle a eu de la chance.
+Elle a eu des problèmes.
+Elle a fait la cuisine.
+Elle a fait les courses.
+Elle a fermé les enveloppes hier?
+Elle a fermé les enveloppes rapidement?
+Elle a fermé les enveloppes tout de suite?
+Elle a fermé les enveloppes très lentement?
+Elle a fermé pas le magasin à 20 heures?
+Elle a gardé pas le contact avec ses amis?
+Elle a gardé ses billets?
+Elle allait à la plage.
+Elle allait au cinéma.
+Elle a lu le magazine?
+Elle a ne pas écrit la liste?
+Elle a ne pas fermé le magasin à 20 heures?
+Elle a ne pas gardé le contact avec ses amis?
+Elle a ne pas lu le courriel?
+Elle a ne pas ouvert le livre?
+Elle a ne pas perdu espoir?
+Elle a ne pas pris ses médicaments ce matin?
+Elle a ouvert les cadeaux lentement?
+Elle a ouvert les cadeaux rapidement?
+Elle a ouvert les cadeaux tout de suite?
+Elle a ouvert les cadeaux vite?
+Elle a ouvert pas le livre?
+Elle a perdu pas espoir?
+Elle a perdu son parapluie hier?
+Elle a pris son sac avec elle?
+Elle a pu parler français.
+Elle a pu venir hier.
+Elle a réjoui.
+Elle a réjoui?
+Elle as écrit rapidement?
+Elle as gardé ses billets?
+Elle as lu le magazine?
+Elle a souvenu.
+Elle a souvenu?
+Elle as perdu son parapluie hier?
+Elle as pris son sac avec elle?
+Elle a su la nouvelle.
+Elle a su la vérité.
+Elle a trouvé son billet ?
+Elle a une maison.
+Elle a un sac.
+Elle aura une maison.
+Elle aura un sac.
+Elle avait une maison.
+Elle avait un sac.
+Elle avons écrit rapidement?
+Elle avons gardé ses billets?
+Elle avons lu le magazine?
+Elle avons perdu son parapluie hier?
+Elle avons pris son sac avec elle?
+Elle a voulu une maison à Paris.
+Elle a voulu une nouvelle voiture.
+Elle a vu le chien.
+Elle a vu les enfants.
+Elle croie aux fantômes ?
+Elle croira aux fantômes ?
+Elle débrouille parfaitement.
+Elle dira quelques mots.
+Elle disait quelques mots.
+Elle dit quelques mots.
+Elle écrira ne pas la liste?
+Elle écrira pas la liste?
+Elle écrira rapidement?
+Elle écriras rapidement?
+Elle écrirez rapidement?
+Elle écrirons rapidement?
+Elle écris rapidement?
+Elle écrit ne pas de longs courriels?
+Elle écrit pas de longs courriels?
+Elle écrit rapidement?
+Elle écrivez rapidement?
+Elle écrivons rapidement?
+Elle ennuiera ?
+Elle ennuiera pas.
+Elle ennuyée.
+Elle entraîne ?
+Elle entraîne pas.
+Elle entraînera ?
+Elle entraînera pas.
+Elle est allée à la plage.
+Elle est allée au cinéma.
+Elle est écrit rapidement?
+Elle est ennuyée.
+Elle est gardé ses billets?
+Elle est grande.
+Elle est heureuse.
+Elle est intéressée à la science ?
+Elle est lu le magazine?
+Elle est ne pas ici.
+Elle est perdu son parapluie hier?
+Elle est prête.
+Elle est pris son sac avec elle?
+Elle est venue de Londres.
+Elle est venue d'Espagne.
+Elle était fatiguée.
+Elle était heureuse.
+Elle était prête.
+Elle faisait la cuisine.
+Elle faisait les courses.
+Elle fait la cuisine.
+Elle fait les courses.
+Elle fera la cuisine.
+Elle fera les courses.
+Elle ferme les enveloppes lentement?
+Elle ferme les enveloppes rapidement?
+Elle ferme les enveloppes tout de suite?
+Elle ferme ne pas le magasin à 20 heures?
+Elle ferme pas le magasin à 20 heures?
+Elle fermera les enveloppes rapidement?
+Elle fermera ne pas le magasin à 20 heures?
+Elle fermera pas le magasin à 20 heures?
+Elle fermeras les enveloppes rapidement?
+Elle fermerez les enveloppes rapidement?
+Elle fermerons les enveloppes rapidement?
+Elle fermes les enveloppes rapidement?
+Elle garde ne pas contact avec ses amis?
+Elle garde pas contact avec ses amis?
+Elle gardera ne pas le contact avec ses amis?
+Elle gardera pas le contact avec ses amis?
+Elle gardera ses billets?
+Elle garderas ses billets?
+Elle garderez ses billets?
+Elle garderons ses billets?
+Elle garde ses billets?
+Elle gardes ses billets?
+Elle gardez ses billets?
+Elle gardons ses billets?
+Elle intéresse à la science ?
+Elle ira à la plage.
+Elle ira au cinéma.
+Elle lira la biographie?
+Elle lira ne pas les instructions?
+Elle liras la biographie?
+Elle lirez la biographie?
+Elle lirons la biographie?
+Elle lis des biographies?
+Elle lisez des biographies?
+Elle lisons des biographies?
+Elle lit des biographies?
+Elle lit ne pas de magazines?
+Elle lit pas de magazines?
+Elle n'adaptera pas?
+Elle n'a lu pas le courriel?
+Elle n'a mis pas les fleurs dans le vase ?
+Elle n'a parlé pas à son professeur ?
+Elle n'a pas adapté.
+Elle n'a pas écrit la liste?
+Elle n'a pas ennuyé.
+Elle n'a pas entraîné.
+Elle n'a pas fait les courses.
+Elle n'a pas fait son projet.
+Elle n'a pas fermé le magasin à 20 heures?
+Elle n'a pas gardé le contact avec ses amis?
+Elle n'a pas lu le courriel?
+Elle n'a pas ouvert le livre?
+Elle n'a pas perdu espoir?
+Elle n'a pas pris ses médicaments ce matin?
+Elle n'a pas réjoui.
+Elle n'a pas souvenu.
+Elle n'a pris pas ses médicaments ce matin?
+Elle n'a rien dit.
+Elle n'as pas écrit la liste?
+Elle n'as pas fermé le magasin à 20 heures?
+Elle n'as pas gardé le contact avec ses amis?
+Elle n'as pas lu le courriel?
+Elle n'as pas ouvert le livre?
+Elle n'as pas perdu espoir?
+Elle n'as pas pris ses médicaments ce matin?
+Elle n'aura pas d'argent.
+Elle n'aura pas de sac.
+Elle ne adapte pas.
+Elle ne adapte pas?
+Elle n'écrira pas la liste?
+Elle n'écriras pas la liste?
+Elle n'écris pas de longs courriels?
+Elle n'écrit pas de longs courriels?
+Elle ne croit pas cette histoire ?
+Elle ne dira rien.
+Elle ne disait rien.
+Elle ne dit rien.
+Elle ne ennuiera pas ?
+Elle ne ennuiera pas.
+Elle ne entraîne pas ?
+Elle ne entraîne pas.
+Elle ne entraînera pas ?
+Elle ne entraînera pas.
+Elle ne ferme pas le magasin à 20 heures?
+Elle ne fermera pas le magasin à 20 heures?
+Elle ne fermeras pas le magasin à 20 heures?
+Elle ne fermes pas le magasin à 20 heures?
+Elle ne garde pas contact avec ses amis?
+Elle ne gardera pas le contact avec ses amis?
+Elle ne garderas pas le contact avec ses amis?
+Elle ne gardes pas contact avec ses amis?
+Elle ne lirai pas les instructions?
+Elle ne lira pas les instructions?
+Elle ne liras pas les instructions?
+Elle ne lis pas de magazines?
+Elle ne lit pas de magazines?
+Elle ne parle pas fort ?
+Elle ne pas est ici.
+Elle ne pas s'intéresse à la photographie ?
+Elle ne perd pas espoir?
+Elle ne perdra pas espoir?
+Elle ne perdras pas espoir?
+Elle ne perds pas espoir?
+Elle ne prend pas de vacances cette année.
+Elle ne prendrai pas de risques?
+Elle ne prendra pas de risques?
+Elle ne prendras pas de risques?
+Elle ne prends pas de vacances cette année.
+Elle ne réjouit pas?
+Elle ne s'adapte pas.
+Elle ne s'adaptera pas.
+Elle ne se débrouille pas parfaitement.
+Elle ne s'ennuie pas.
+Elle ne s'ennuiera pas.
+Elle ne s'entraîne pas.
+Elle ne s'entraînera pas.
+Elle ne se pas adaptée.
+Elle ne se pas ennuyée.
+Elle ne se pas entraînée.
+Elle ne se pas réjouie.
+Elle ne se pas souvenue.
+Elle ne se réjouira pas.
+Elle ne se réjouit pas.
+Elle ne se souviendra pas.
+Elle ne se souvient pas.
+Elle ne s'est pas adaptée.
+Elle ne s'est pas ennuyée.
+Elle ne s'est pas entraînée.
+Elle ne s'est pas intéressée à la photographie ?
+Elle ne s'est pas réjouie.
+Elle ne s'est pas souvenue.
+Elle ne s'intéresse pas à la peinture.
+Elle ne s'intéresse pas à la photographie ?
+Elle ne s'intéressera pas à la peinture.
+Elle ne s'intéressera pas à la science ?
+Elle ne s'intéressera pas la peinture.
+Elle ne souviendra pas.
+Elle ne souviendra pas?
+Elle ne souvient pas.
+Elle ne souvient pas?
+Elle n'est pas adaptée?
+Elle n'est pas ennuyée ?
+Elle n'est pas ennuyée.
+Elle n'est pas entraînée ?
+Elle n'est pas ici.
+Elle n'est pas intéressée à la photographie ?
+Elle n'est pas réjouie?
+Elle n'est pas souvenue?
+Elle n'était pas ici.
+Elle ne trouves pas ses clés ?
+Elle n'ira pas à l'école demain.
+Elle n'ira pas au travail.
+Elle n'ouvre pas le livre?
+Elle n'ouvres pas le livre?
+Elle n'ouvrira pas le livre?
+Elle n'ouvriras pas le livre?
+Elle ouvre les cadeaux lentement?
+Elle ouvre les cadeaux rapidement?
+Elle ouvre les cadeaux tout de suite?
+Elle ouvre les cadeaux vite?
+Elle ouvre ne pas le livre?
+Elle ouvre pas le livre?
+Elle ouvrira les cadeaux rapidement?
+Elle ouvrira ne pas le livre?
+Elle ouvrira pas le livre?
+Elle ouvriras les cadeaux rapidement?
+Elle ouvrirez les cadeaux rapidement?
+Elle ouvrirons les cadeaux rapidement?
+Elle parlé avec son professeur ?
+Elle parle fort ?
+Elle parlera avec ses parents ?
+Elle perdez son parapluie souvent?
+Elle perd ne pas espoir?
+Elle perdons son parapluie souvent?
+Elle perd pas espoir?
+Elle perdra ne pas espoir?
+Elle perdra pas espoir?
+Elle perdra son parapluie demain?
+Elle perdras son parapluie demain?
+Elle perdrez son parapluie demain?
+Elle perdrons son parapluie demain?
+Elle perd son parapluie souvent?
+Elle perds son parapluie souvent?
+Elle peut parler français.
+Elle peut venir demain.
+Elle pourra parler français.
+Elle pourra venir demain.
+Elle pouvait parler français.
+Elle pouvait venir chaque jour.
+Elle prend des cours de français?
+Elle prend ne pas de vacances cette année.
+Elle prend pas de vacances cette année.
+Elle prendra ne pas de risques?
+Elle prendra son sac avec elle?
+Elle prendras son sac avec elle?
+Elle prendrez son sac avec elle?
+Elle prendrons son sac avec elle?
+Elle prends des cours de français?
+Elle prend ses médicaments le matin.
+Elle prends ses médicaments le matin.
+Elle prenez des cours de français?
+Elle prenez ses médicaments le matin.
+Elle prenons des cours de français?
+Elle prenons ses médicaments le matin.
+Elle réjouira?
+Elle réjouirait?
+Elle réjouirait pas.
+Elle réjouira pas?
+Elle réjouis?
+Elle réjouis pas.
+Elle réjouit?
+Elle réjouit pas.
+Elle s'adapte.
+Elle s'adapte?
+Elles adaptent pas.
+Elle s'adapte pas.
+Elle s'adapte pas?
+Elle s'adaptera.
+Elle s'adaptera?
+Elle s'adapterait?
+Elle s'adaptera pas.
+Elle s'adaptera pas?
+Elles adapteront?
+Elles adapteront pas.
+Elle s'adaptez?
+Elles a écrit ne pas les lettres.
+Elles a fermé ne pas les fenêtres la nuit.
+Elles a gardé ne pas le silence pendant la réunion.
+Elle sait cette chanson.
+Elle sait la vérité.
+Elles allaient à la bibliothèque.
+Elles allaient à la plage.
+Elles allaient au supermarché.
+Elles a ouvert ne pas les portes.
+Elles a perdu ne pas leurs clés.
+Elles a trouvé les billets ?
+Elles auraient des chats.
+Elle saura la nouvelle.
+Elle saura la vérité.
+Elles auront des chats.
+Elles auront des vélos.
+Elles auront les cadeaux.
+Elles auront un sac.
+Elles avaient des chats.
+Elles avaient des vélos.
+Elles avaient dit bonjour.
+Elles avaient fait le ménage.
+Elles avaient les cadeaux.
+Elles avaient parlé avec le principal ?
+Elles avaient pu commencer.
+Elles avaient un sac.
+Elles avaient voulu voyager.
+Elles avaient vu les oiseaux.
+Elle savait la nouvelle.
+Elle savait la vérité.
+Elles croient leurs parents ?
+Elles débrouillent sans problèmes.
+Elles débrouillent seules ?
+Elles diraient bonjour.
+Elles diront bonjour.
+Elles diront quelques mots.
+Elles disaient bonjour.
+Elles disaient quelques mots.
+Elles disent bonjour.
+Elles disent quelques mots.
+Elles écriront ne pas les lettres.
+Elles écriront ne pas les notes?
+Elles écriront ne pas les paroles.
+Elles écriront pas les lettres.
+Elles écrit ne pas des histoires.
+Elles écrivent ne pas des critiques?
+Elles écrivent ne pas des histoires.
+Elles écrivent ne pas les paroles.
+Elle se débrouille parfaitement.
+Elle se débrouilles parfaitement.
+Elle se débrouille toute seule ?
+Elle se ennuiera pas.
+Elle s'ennuie.
+Elles ennuient ?
+Elles ennuient.
+Elle s'ennuiera ?
+Elle s'ennuiera.
+Elle s'ennuiera pas ?
+Elle s'ennuiera pas.
+Elles ennuieront ?
+Elles ennuieront pas.
+Elle s'entraîne ?
+Elle s'entraîne.
+Elles entraînent ?
+Elles entraînent pas.
+Elle s'entraîne pas ?
+Elle s'entraîne pas.
+Elle s'entraînera ?
+Elle s'entraînera.
+Elle s'entraînera pas ?
+Elle s'entraînera pas.
+Elles entraîneront ?
+Elles entraîneront pas.
+Elle s'entraînes ?
+Elle sera à Paris.
+Elle sera fatiguée.
+Elle sera prête.
+Elle se réjouira.
+Elle se réjouira?
+Elle se réjouirait?
+Elle se réjouira pas.
+Elle se réjouira pas?
+Elle se réjouis?
+Elle se réjouit.
+Elle se réjouit?
+Elle se réjouit pas.
+Elle se réjouit pas?
+Elle se souvenir?
+Elle se souvenirai?
+Elle se souviendra.
+Elle se souviendra?
+Elle se souviendra pas.
+Elle se souviendra pas?
+Elle se souviens pas.
+Elle se souvient.
+Elle se souvient?
+Elle se souvient pas.
+Elle se souvient pas?
+Elle s'est adapté.
+Elle s'est adaptée.
+Elle s'est adaptée?
+Elle s'est ennuyé.
+Elle s'est ennuyée ?
+Elle s'est ennuyée.
+Elle s'est entraîné.
+Elle s'est entraînée ?
+Elle s'est entraînée.
+Elle s'est intéressée à la science ?
+Elle s'est pas adaptée.
+Elle s'est pas adaptée?
+Elle s'est pas ennuyée ?
+Elle s'est pas ennuyée.
+Elle s'est pas entraînée ?
+Elle s'est pas entraînée.
+Elle s'est pas réjouie.
+Elle s'est pas réjouie?
+Elle s'est pas souvenue.
+Elle s'est pas souvenue?
+Elle s'est réjoui.
+Elle s'est réjouie.
+Elle s'est réjouie?
+Elle s'est souvenu.
+Elle s'est souvenue.
+Elle s'est souvenue?
+Elles étaient allées à la bibliothèque.
+Elles étaient à Londres.
+Elles étaient à Paris.
+Elles étaient au bureau.
+Elles étaient en France.
+Elles étaient prêtes.
+Elles étaient venues rendre visite.
+Elles faisaient le ménage.
+Elles faisaient les courses.
+Elles faisaient leurs devoirs.
+Elles feraient le ménage.
+Elles ferme ne pas les fenêtres la nuit.
+Elles ferment ne pas l'armoire.
+Elles ferment ne pas les fenêtres la nuit.
+Elles ferment ne pas les sacs?
+Elles fermera ne pas les fenêtres la nuit.
+Elles fermeront ne pas l'armoire.
+Elles fermeront ne pas les sacs?
+Elles fermeront pas les fenêtres la nuit.
+Elles fermez pas l'armoire.
+Elles fermez pas les sacs?
+Elles feront le ménage.
+Elles feront les courses.
+Elles feront leurs devoirs.
+Elles font le ménage.
+Elles font les courses.
+Elles font leurs devoirs.
+Elles garde ne pas le silence pendant les réunions.
+Elles gardent ne pas de nourriture dans leurs chambres.
+Elles gardent ne pas le silence pendant les réunions.
+Elles gardent ne pas leurs vieux vêtements?
+Elles gardera ne pas le silence pendant la réunion.
+Elles garderont ne pas de nourriture dans leurs chambres.
+Elles garderont ne pas leurs vieux vêtements?
+Elles garderont pas le silence pendant la réunion.
+Elles gardez pas de nourriture dans leurs chambres.
+Elles gardez pas leurs vieux vêtements?
+Elle s'intéresse à la science ?
+Elles intéressent à la cuisine ?
+Elle s'intéressera à la peinture.
+Elle s'intéressera pas à la science ?
+Elle s'intéresse-t-elle à la science ?
+Elles iraient à la bibliothèque.
+Elles iront à la bibliothèque.
+Elles iront à la plage.
+Elles iront au cinéma sûrement.
+Elles iront au supermarché.
+Elles liront ne pas de bandes dessinées.
+Elles liront ne pas le journal demain.
+Elles liront ne pas les critiques?
+Elles liront pas le journal demain.
+Elles lisent ne pas avant de se coucher?
+Elles lisent ne pas le journal.
+Elles lisent ne pas les étiquettes.
+Elles lit ne pas le journal.
+Elles n'a écrit pas les lettres.
+Elles n'a écrit pas les paroles.
+Elles n'a fermé pas l'armoire.
+Elles n'a fermé pas les fenêtres la nuit.
+Elles n'a gardé pas de nourriture dans leurs chambres.
+Elles n'a gardé pas le silence pendant la réunion.
+Elles n'a ouvert pas les cadeaux.
+Elles n'a ouvert pas les portes.
+Elles n'a perdu pas la foi.
+Elles n'a perdu pas leurs clés.
+Elles n'auront pas de chance.
+Elles n'avez pas écrit les notes?
+Elles n'avez pas fermé les sacs?
+Elles n'avez pas gardé leurs vieux vêtements?
+Elles n'avez pas lu l'article.
+Elles n'avez pas lu les critiques.
+Elles n'avez pas lu les étiquettes?
+Elles n'avez pas ouvert l'enveloppe?
+Elles n'avez pas perdu de temps dans les embouteillages?
+Elles n'avez pas pris l'autoroute?
+Elles n'avez pas pris les conseils.
+Elles n'écrira pas les lettres.
+Elles n'écrirez pas les notes.
+Elles n'écrirez pas les paroles.
+Elles n'écriront pas les lettres.
+Elles n'écriront pas les notes.
+Elles n'écriront pas les paroles.
+Elles n'écrit pas des critiques?
+Elles n'écrit pas des histoires.
+Elles n'écrit pas les paroles.
+Elles n'écrivent pas des critiques?
+Elles n'écrivent pas des histoires.
+Elles n'écrivent pas les paroles.
+Elles n'écrivez pas des critiques?
+Elles n'écrivez pas les paroles.
+Elles ne écriras pas les notes.
+Elles ne écriras pas les paroles.
+Elles ne ferment pas l'armoire.
+Elles ne ferment pas les fenêtres la nuit.
+Elles ne ferment pas les sacs?
+Elles ne ferme pas l'armoire.
+Elles ne ferme pas les fenêtres la nuit.
+Elles ne ferme pas les sacs?
+Elles ne fermera pas les fenêtres la nuit.
+Elles ne fermeras pas l'armoire.
+Elles ne fermeras pas les sacs?
+Elles ne fermerez pas l'armoire.
+Elles ne fermerez pas les sacs?
+Elles ne fermeront pas l'armoire.
+Elles ne fermeront pas les fenêtres la nuit.
+Elles ne fermeront pas les sacs?
+Elles ne gardent pas de nourriture dans leurs chambres.
+Elles ne gardent pas le silence pendant les réunions.
+Elles ne gardent pas leurs vieux vêtements?
+Elles ne garde pas de nourriture dans leurs chambres.
+Elles ne garde pas le silence pendant les réunions.
+Elles ne garde pas leurs vieux vêtements?
+Elles ne gardera pas le silence pendant la réunion.
+Elles ne garderas pas de nourriture dans leurs chambres.
+Elles ne garderas pas leurs vieux vêtements?
+Elles ne garderez pas de nourriture dans leurs chambres.
+Elles ne garderez pas leurs vieux vêtements?
+Elles ne garderont pas de nourriture dans leurs chambres.
+Elles ne garderont pas le silence pendant la réunion.
+Elles ne garderont pas leurs vieux vêtements?
+Elles ne liras pas de bandes dessinées.
+Elles ne liras pas le journal demain.
+Elles ne liras pas les critiques?
+Elles ne lirez pas de bandes dessinées.
+Elles ne lirez pas les critiques?
+Elles ne liront pas de bandes dessinées.
+Elles ne liront pas le journal demain.
+Elles ne liront pas les critiques?
+Elles ne lisent pas avant de se coucher?
+Elles ne lisent pas le journal.
+Elles ne lisent pas les étiquettes.
+Elles ne lisez pas avant de se coucher?
+Elles ne lisez pas les étiquettes.
+Elles ne lit pas avant de se coucher?
+Elles ne lit pas le journal.
+Elles ne lit pas les étiquettes.
+Elles ne ouvriras pas l'enveloppe.
+Elles ne ouvriras pas les cadeaux.
+Elles ne ouvrirez pas l'enveloppe.
+Elles ne ouvrirez pas les cadeaux.
+Elles ne parlent pas anglais ?
+Elles ne perdent pas de temps dans les embouteillages?
+Elles ne perdent pas la foi.
+Elles ne perdent pas leurs clés.
+Elles ne perd pas de temps dans les embouteillages?
+Elles ne perd pas la foi.
+Elles ne perd pas leurs clés.
+Elles ne perdra pas leurs clés.
+Elles ne perdras pas de temps dans les embouteillages?
+Elles ne perdras pas la foi.
+Elles ne perdrez pas de temps dans les embouteillages?
+Elles ne perdrez pas la foi.
+Elles ne perdront pas de temps dans les embouteillages?
+Elles ne perdront pas la foi.
+Elles ne perdront pas leurs clés.
+Elles ne prend pas de sucre dans leur café.
+Elles ne prend pas le métro.
+Elles ne prendras pas l'autoroute?
+Elles ne prendras pas les conseils au sérieux.
+Elles ne prendras pas le train demain.
+Elles ne prendrez pas l'autoroute?
+Elles ne prendrez pas les conseils au sérieux.
+Elles ne prendront pas l'autoroute?
+Elles ne prendront pas les conseils au sérieux.
+Elles ne prendront pas le train demain.
+Elles ne prennent pas de sucre dans leur café.
+Elles ne prennent pas le métro.
+Elles ne s'adaptent pas.
+Elles ne s'adapteront pas.
+Elles ne se débrouillent pas sans problèmes.
+Elles ne s'ennuient pas ?
+Elles ne s'ennuient pas.
+Elles ne s'ennuieront pas.
+Elles ne s'entraînent pas.
+Elles ne s'entraîneront pas.
+Elles ne se réjouiront pas.
+Elles ne se réjouissent pas.
+Elles ne se sont pas adaptées.
+Elles ne se sont pas ennuyées.
+Elles ne se sont pas entraînées.
+Elles ne se sont pas réjouies.
+Elles ne se sont pas souvenues.
+Elles ne se souviendront pas.
+Elles ne se souviennent pas.
+Elles ne s'intéressent pas à ton idée.
+Elles ne s'intéresseront pas à ces problèmes ?
+Elles ne s'intéresseront pas à ta idée.
+Elles ne s'intéresseront pas à ton idée.
+Elles ne sont pas adapté.
+Elles ne sont pas ennuyé.
+Elles ne sont pas entraîné.
+Elles ne sont pas réjoui.
+Elles ne sont pas souvenu.
+Elles ne vont pas s'intéresser à ces problèmes ?
+Elles n'ont lu pas l'article.
+Elles n'ont lu pas les critiques.
+Elles n'ont lu pas les étiquettes?
+Elles n'ont mis pas leurs chapeaux ?
+Elles n'ont pas adapté.
+Elles n'ont pas écrit les lettres.
+Elles n'ont pas écrit les notes?
+Elles n'ont pas écrit les paroles.
+Elles n'ont pas ennuyé.
+Elles n'ont pas entraîné.
+Elles n'ont pas fait leur devoir.
+Elles n'ont pas fermé l'armoire.
+Elles n'ont pas fermé les fenêtres la nuit.
+Elles n'ont pas fermé les sacs?
+Elles n'ont pas gardé de nourriture dans leurs chambres.
+Elles n'ont pas gardé le silence pendant la réunion.
+Elles n'ont pas gardé leurs vieux vêtements?
+Elles n'ont pas lu l'article.
+Elles n'ont pas lu les critiques.
+Elles n'ont pas lu les étiquettes?
+Elles n'ont pas ouvert l'enveloppe.
+Elles n'ont pas ouvert les cadeaux.
+Elles n'ont pas ouvert les portes.
+Elles n'ont pas perdu de temps dans les embouteillages?
+Elles n'ont pas perdu la foi.
+Elles n'ont pas perdu leurs clés.
+Elles n'ont pas pris l'ascenseur.
+Elles n'ont pas pris l'autoroute?
+Elles n'ont pas pris les conseils.
+Elles n'ont pas réjoui.
+Elles n'ont pas souvenu.
+Elles n'ont pas trouvé leurs billets ?
+Elles n'ont pris pas l'ascenseur.
+Elles n'ont pris pas l'autoroute?
+Elles n'ont pris pas les conseils.
+Elles n'ouvrent pas l'enveloppe?
+Elles n'ouvrent pas les cadeaux.
+Elles n'ouvrent pas les portes.
+Elles n'ouvre pas l'enveloppe?
+Elles n'ouvre pas les cadeaux.
+Elles n'ouvre pas les portes.
+Elles n'ouvrez pas les cadeaux.
+Elles n'ouvrira pas les portes.
+Elles n'ouvriront pas l'enveloppe.
+Elles n'ouvriront pas les cadeaux.
+Elles n'ouvriront pas les portes.
+Elles ont adapté?
+Elles ont croyus leurs parents ?
+Elles ont des chats.
+Elles ont des vélos.
+Elles ont dit bonjour.
+Elles ont dit quelques mots.
+Elles ont écrit ne pas les lettres.
+Elles ont écrit ne pas les notes?
+Elles ont écrit ne pas les paroles.
+Elles ont écrit pas les notes?
+Elles ont écrit pas les paroles.
+Elles ont ennuyé ?
+Elles ont entraîné ?
+Elles ont été à Londres.
+Elles ont été heureuses.
+Elles ont été prêtes.
+Elles ont eu de la chance.
+Elles ont eu les cadeaux.
+Elles ont eu les documents.
+Elles ont fait le ménage.
+Elles ont fait les courses.
+Elles ont fait leurs devoirs.
+Elles ont fermé ne pas l'armoire.
+Elles ont fermé ne pas les sacs?
+Elles ont fermé pas l'armoire.
+Elles ont fermé pas les fenêtres la nuit.
+Elles ont fermé pas les sacs?
+Elles ont gardé ne pas de nourriture dans leurs chambres.
+Elles ont gardé ne pas leurs vieux vêtements?
+Elles ont gardé pas de nourriture dans leurs chambres.
+Elles ont gardé pas le silence pendant la réunion.
+Elles ont gardé pas leurs vieux vêtements?
+Elles ont intéressé à la cuisine ?
+Elles ont ne pas lu l'article.
+Elles ont ne pas lu les critiques.
+Elles ont ne pas lu les étiquettes?
+Elles ont ne pas pris l'ascenseur.
+Elles ont ne pas pris l'autoroute?
+Elles ont ne pas pris les conseils.
+Elles ont ouvert ne pas l'enveloppe?
+Elles ont ouvert ne pas les cadeaux.
+Elles ont ouvert pas l'enveloppe.
+Elles ont ouvert pas les cadeaux.
+Elles ont ouvert pas les portes.
+Elles ont parlé avec le principal ?
+Elles ont pas pris l'ascenseur.
+Elles ont perdu ne pas de temps dans les embouteillages?
+Elles ont perdu ne pas la foi.
+Elles ont perdu pas de temps dans les embouteillages?
+Elles ont perdu pas la foi.
+Elles ont perdu pas leurs clés.
+Elles ont pu commencer.
+Elles ont pu venir hier.
+Elles ont réjoui?
+Elles ont souvenu?
+Elles ont su la nouvelle.
+Elles ont su la réponse.
+Elles ont un sac.
+Elles ont voulu une maison à Paris.
+Elles ont voulu voyager.
+Elles ont vu les enfants.
+Elles ont vu les fleurs.
+Elles ont vu les oiseaux.
+Elle souviendra?
+Elle souviendra pas.
+Elle souvient?
+Elle souvient pas.
+Elles ouvre ne pas les portes.
+Elles ouvrent ne pas l'enveloppe?
+Elles ouvrent ne pas les cadeaux.
+Elles ouvrent ne pas les portes.
+Elles ouvrez pas l'enveloppe?
+Elles ouvrira ne pas les portes.
+Elles ouvriront ne pas l'enveloppe?
+Elles ouvriront ne pas les cadeaux.
+Elles ouvriront pas les portes.
+Elles parlent anglais ?
+Elles perdent ne pas de temps dans les embouteillages?
+Elles perdent ne pas la foi.
+Elles perdent ne pas leurs clés.
+Elles perdez pas de temps dans les embouteillages?
+Elles perdez pas la foi.
+Elles perd ne pas leurs clés.
+Elles perdra ne pas leurs clés.
+Elles perdront ne pas de temps dans les embouteillages?
+Elles perdront ne pas la foi.
+Elles perdront pas leurs clés.
+Elles peuvent commencer maintenant.
+Elles peuvent venir demain.
+Elles pourraient commencer bientôt.
+Elles pourraient commencer tôt.
+Elles pourront commencer.
+Elles pourront commencer bientôt.
+Elles pourront commencer maintenant.
+Elles pourront commencer tôt.
+Elles pourront venir demain.
+Elles pouvaient commencer bientôt.
+Elles pouvaient commencer maintenant.
+Elles pouvaient commencer tôt.
+Elles pouvaient venir chaque jour.
+Elles prendront ne pas l'autoroute?
+Elles prendront ne pas les conseils au sérieux.
+Elles prendront ne pas le train demain.
+Elles prendront pas le train demain.
+Elles prenez pas de sucre dans leur café.
+Elles prenez pas le métro.
+Elles prennent ne pas de sucre dans leur café.
+Elles prennent ne pas le métro.
+Elles réjouiront?
+Elles réjouiront pas.
+Elles réjouissent?
+Elles réjouissent pas.
+Elles s'adaptent?
+Elles s'adaptent pas.
+Elles s'adapteront?
+Elles s'adapteront pas.
+Elles s'adaptez?
+Elles sauraient la réponse.
+Elles sauront la nouvelle.
+Elles sauront la réponse.
+Elles sauront les règles.
+Elles savaient la nouvelle.
+Elles savaient la réponse.
+Elles savaient les règles.
+Elles savent la vérité.
+Elles savent les règles.
+Elles se débrouillent sans problèmes.
+Elles se débrouillent seules ?
+Elles se débrouillons sans problèmes.
+Elles s'ennuient ?
+Elles s'ennuient.
+Elles s'ennuieront ?
+Elles s'ennuieront pas.
+Elles s'entraînent ?
+Elles s'entraînent pas.
+Elles s'entraîneront ?
+Elles s'entraîneront pas.
+Elles seraient au bureau.
+Elles seraient en France.
+Elles se réjouiront?
+Elles se réjouiront pas.
+Elles se réjouissent?
+Elles se réjouissent pas.
+Elles seront à la maison.
+Elles seront à Londres.
+Elles seront à Paris.
+Elles seront au bureau.
+Elles seront en France.
+Elles se sont adaptées?
+Elles se sont ennuyées ?
+Elles se sont entraînées ?
+Elles se sont intéressées à la cuisine ?
+Elles se sont pas réjouies.
+Elles se sont réjouies?
+Elles se sont souvenues?
+Elles se souviendront?
+Elles se souviendront pas.
+Elles se souviennent?
+Elles se souviennent pas.
+Elles s'est pas adaptées.
+Elles s'est pas ennuyées.
+Elles s'est pas entraînées.
+Elles s'est pas souvenues.
+Elles s'intéressent à la cuisine ?
+Elles s'intéresseront à ton idée.
+Elles sont adaptées?
+Elles sont à la maison.
+Elles sont allées à la bibliothèque.
+Elles sont allées à la plage.
+Elles sont allées au supermarché.
+Elles sont en France.
+Elles sont ennuyées ?
+Elles sont ennuyées.
+Elles sont entraînées ?
+Elles sont intéressées à la cuisine ?
+Elles sont prêtes.
+Elles sont réjouies?
+Elles sont souvenues?
+Elles sont venues d'Espagne.
+Elles sont venues rendre visite.
+Elles souviendront?
+Elles souviendront pas.
+Elles souviennent?
+Elles souviennent pas.
+Elles trouveront leurs billets ?
+Elles venaient à la réunion.
+Elles venaient d'Espagne.
+Elles venaient rendre visite.
+Elles verraient les oiseaux.
+Elles verront les enfants.
+Elles verront les fleurs.
+Elles verront les oiseaux.
+Elles veulent une maison à Paris.
+Elles veulent voyager.
+Elles viendraient à la réunion.
+Elles viendraient rendre visite.
+Elles viendront à la réunion.
+Elles viendront bientôt.
+Elles viendront rendre visite.
+Elles viennent d'Espagne.
+Elles viennent rendre visite.
+Elles voient les enfants.
+Elles voient les fleurs.
+Elles voient les oiseaux.
+Elles vont à la bibliothèque.
+Elles vont à la plage.
+Elles vont au supermarché.
+Elles voudraient voyager.
+Elles voudront une maison à Paris.
+Elles voudront voyager.
+Elles voulaient une maison à Paris.
+Elles voulaient voyager.
+Elles voyaient les enfants.
+Elles voyaient les fleurs.
+Elles voyaient les oiseaux.
+Elle t'ennuie.
+Elle trouvera ses clés ?
+Elle va à la plage.
+Elle va au cinéma.
+Elle venait de Londres.
+Elle venait d'Espagne.
+Elle verra le chien.
+Elle verra les enfants.
+Elle veut une maison à Paris.
+Elle veut une nouvelle voiture.
+Elle viendra bientôt.
+Elle viendra la semaine prochaine.
+Elle vient de Londres.
+Elle vient d'Espagne.
+Elle voit le chien.
+Elle voit les enfants.
+Elle voudra une maison à Paris.
+Elle voudra une nouvelle voiture.
+Elle voulait une maison à Paris.
+Elle voulait une nouvelle voiture.
+Elle voyait le chien.
+Elle voyait les enfants.
+Est-ce que je débrouille tout seul ?
+Est-ce que je me débrouille tout seul ?
+Est-ce que je me débrouille tout seule ?
+Est-ce que je me suis intéressés à la musique ?
+Est-ce que je m'intéresse à la politique ?
+Est-ce que je n'ai pas parlé trop vite ?
+Est-ce que je n'ai pas trouvé mon portefeuille ?
+Est-ce que je ne me suis pas intéressé(e) à l'art ?
+Est-ce que je ne m'intéresse pas à l'histoire ?
+Est-ce qu'elle croira aux fantômes ?
+Est-ce qu'elle croit aux fantômes ?
+Est-ce qu'elle débrouille toute seule ?
+Est-ce qu'elle n'a pas trouvé son billet ?
+Est-ce qu'elle ne met pas les livres sur l'étagère ?
+Est-ce qu'elle ne s'est pas intéressée à la photographie ?
+Est-ce qu'elle ne s'intéresse pas à la photographie ?
+Est-ce qu'elle ne trouve pas l'école près d'ici ?
+Est-ce qu'elle ne trouve pas ses clés ?
+Est-ce qu'elle ne trouvera pas ses clés ?
+Est-ce qu'elles débrouillent seules ?
+Est-ce qu'elle s'est intéressée à la science ?
+Est-ce qu'elles ne mettent pas les livres sur l'étagère ?
+Est-ce qu'elles ne parleront pas avec la nouvelle élève ?
+Est-ce qu'elles n'ont pas parlé avec le principal ?
+Est-ce qu'elles n'ont pas trouvé les billets ?
+Est-ce qu'elles parleront pas avec la nouvelle élève ?
+Est-ce qu'elles se sont intéressées à la cuisine ?
+Est-ce qu'elles s'intéressent à la cuisine ?
+Est-ce qu'elle trouves ses clés ?
+Est-ce que nous débrouillons bien ?
+Est-ce que nous mettons de la musique pendant le dîner ?
+Est-ce que nous n'avons pas parlé au professeur ?
+Est-ce que nous ne mettons pas de sucre dans ton thé ?
+Est-ce que nous ne mettons pas vos téléphones sur le bureau ?
+Est-ce que nous ne nous sommes pas intéressé(e)s aux langues ?
+Est-ce que nous ne parlerons pas à la cérémonie ?
+Est-ce que nous ne trouverons pas le lieu fermé ?
+Est-ce que nous ne trouvons pas le musée fermé ?
+Est-ce que nous nous débrouillons bien ?
+Est-ce que nous nous débrouillons sans problèmes ?
+Est-ce que nous nous intéressons à la littérature ?
+Est-ce que nous nous sommes intéressé(e)s à la littérature ?
+Est-ce que nous se débrouillons bien ?
+Est-ce que tu as trouvé ces exercices faciles ?
+Est-ce que tu as trouvé la bonne réponse ?
+Est-ce que tu débrouilles bien ?
+Est-ce que tu me débrouilles bien ?
+Est-ce que tu mets de la musique pendant le dîner ?
+Est-ce que tu mets du sucre dans ton thé ?
+Est-ce que tu n'as pas cru cette idée ?
+Est-ce que tu n'as pas parlé avec tes amis ?
+Est-ce que tu ne mets pas de sucre dans ton thé ?
+Est-ce que tu ne mets pas ton téléphone sur le bureau ?
+Est-ce que tu ne mettras pas de sucre dans ton thé ?
+Est-ce que tu ne parleras pas pendant la réunion ?
+Est-ce que tu ne t'es pas intéressé(e) aux films ?
+Est-ce que tu te débrouille bien ?
+Est-ce que tu te débrouilles bien ?
+Est-ce que tu t'intéresses à la musique ?
+Est-ce que tu trouveras le musée fermé ?
+Est-ce que vous allez mettre du sucre dans votre thé ?
+Est-ce que vous croyez en notre succès ?
+Est-ce que vous débrouillez bien ?
+Est-ce que vous mets pas vos téléphones sur le bureau ?
+Est-ce que vous mettez de la musique pendant le dîner ?
+Est-ce que vous mettez du sucre dans ton thé ?
+Est-ce que vous n'avez pas parlé à vos voisins ?
+Est-ce que vous n'avez pas trouvé la bonne réponse ?
+Est-ce que vous n'avez pas trouvé l'endroit étrange ?
+Est-ce que vous ne mettez pas les livres sur l'étagère ?
+Est-ce que vous ne mettez pas vos téléphones sur le bureau ?
+Est-ce que vous ne parlerez pas à la conférence ?
+Est-ce que vous ne parlez pas à vos voisins ?
+Est-ce que vous ne trouverez pas cette idée utile ?
+Est-ce que vous ne trouverez pas le musée fermé ?
+Est-ce que vous ne trouvez pas cette idée étrange ?
+Est-ce que vous ne trouvez pas le musée fermé ?
+Est-ce que vous ne trouvez pas ses clés ?
+Est-ce que vous ne vous êtes pas intéressé(e)s au voyage ?
+Est-ce que vous ne vous intéressez pas au voyage ?
+Est-ce que vous trouvez cette leçon difficile ?
+Est-ce que vous vous débrouillez bien ?
+Est-ce que vous vous êtes intéressé(e)s à la technologie ?
+Est-ce qu'il a trouvé l'école près d'ici ?
+Est-ce qu'il met pas les livres sur l'étagère ?
+Est-ce qu'il n'a pas trouvé l'école près d'ici ?
+Est-ce qu'il ne débrouille pas du tout ?
+Est-ce qu'il ne se débrouille pas du tout ?
+Est-ce qu'il ne s'est pas intéressé à la mode ?
+Est-ce qu'il ne trouve pas cette idée étrange ?
+Est-ce qu'il ne trouve pas l'école près d'ici ?
+Est-ce qu'il ne trouvera pas cette réponse correcte ?
+Est-ce qu'ils débrouillent bien ?
+Est-ce qu'il se débrouille pas du tout ?
+Est-ce qu'il se ne débrouille pas du tout ?
+Est-ce qu'il s'est intéressé à la politique ?
+Est-ce qu'il s'intéresse à l'art ?
+Est-ce qu'ils mettent de la musique pendant le dîner ?
+Est-ce qu'ils ne parlent pas français ?
+Est-ce qu'ils ne se sont pas intéressés aux mathématiques ?
+Est-ce qu'ils ne trouvent pas les réponses ?
+Est-ce qu'ils ne trouveront pas l'hôtel ?
+Est-ce qu'ils n'ont pas parlé du voyage ?
+Est-ce qu'ils n'ont pas trouvé la solution ?
+Est-ce qu'ils se sont intéressés aux sports ?
+Est-ce qu'ils trouvaient les réponses ?
+Est-elle allée à Londres ?
+Est-elle allée à Paris ?
+Est-elle allée au marché ?
+Est-elle à Paris ?
+Est-elle fatiguée ?
+Est-il allé à l'école ?
+Est-il allé à Londres ?
+Est-il allé à Paris ?
+Est-il allé au marché ?
+Est-il allé au parc ?
+Est-il allé parfois ?
+Est-il allé souvent ?
+Est-il à Paris ?
+Est-il fatigué ?
+Est-il prêt ?
+Es-tu à la maison ?
+Es-tu allé à l'école ?
+Es-tu allé à Londres ?
+Es-tu allé à Paris ?
+Es-tu allé au marché ?
+Es-tu allé au parc ?
+Es-tu allé en train ?
+Es-tu allée régulièrement ?
+Es-tu allé parfois ?
+Es-tu allé régulièrement ?
+Es-tu allé souvent ?
+Es-tu à Paris ?
+Es-tu fatigué ?
+Es-tu prêt ?
+Es-tu prête ?
+Es-tu venue pour le dîner ?
+Es-tu venu pour le dîner ?
+Étaient-elles prêtes ?
+Étaient-ils prêts ?
+Étais-je prêt ?
+Étais-tu fatigué ?
+Étais-tu prêt ?
+Était-elle fatiguée ?
+Était-il fatigué ?
+Était-il prêt ?
+Êtes-vous à la maison ?
+Êtes-vous allées régulièrement ?
+Êtes-vous allés à Londres ?
+Êtes-vous allés au parc ?
+Êtes-vous allés en train ?
+Êtes-vous allés en voiture ?
+Êtes-vous allés parfois ?
+Êtes-vous allés régulièrement ?
+Êtes-vous à Paris ?
+Êtes-vous prêts ?
+Êtes-vous venues pour le dîner ?
+Êtes-vous venus pour le dîner ?
+Étiez-vous fatigués ?
+Étiez-vous prêtes ?
+Étiez-vous prêts ?
+Étions-nous prêts ?
+Il a adapté?
+Il adapte?
+Il adapte pas.
+Il adaptera?
+Il adapterait pas.
+Il a dit bonjour.
+Il a dit la vérité.
+Il a dit quelques mots.
+Il a écris une histoire la semaine dernière.
+Il a écrit pas le message?
+Il a écrit une histoire la semaine dernière.
+Il a écrivent une histoire la semaine dernière.
+Il a ennuyé ?
+Il a entraîné ?
+Il a été à Paris.
+Il a été fatigué.
+Il a été heureux.
+Il a été prêt.
+Il a eu de la chance.
+Il a eu des problèmes.
+Il a eu du café.
+Il a eu une bonne journée.
+Il a fait de l'exercice ce matin.
+Il a fait la cuisine.
+Il a fait la vaisselle.
+Il a fait les courses.
+Il a fait ses devoirs.
+Il a fait un excellent travail.
+Il a fait un excellent travail hier.
+Il a fermé le portail ce matin.
+Il a fermé pas la porte?
+Il a fermés le portail ce matin.
+Il a fermez le portail ce matin.
+Il a gardée ses documents organisés.
+Il a gardées ses documents organisés.
+Il a gardé pas ses promesses?
+Il a gardé ses documents organisées.
+Il a gardé ses documents organisés.
+Il a lis le journal ce matin.
+Il allait à la plage.
+Il allait à l'école.
+Il allait au cinéma.
+Il allait au parc.
+Il a lu le journal ce matin.
+Il a ne pas écrit le message?
+Il a ne pas fermé la porte?
+Il a ne pas gardé ses promesses?
+Il a ne pas lu le livre?
+Il a ne pas ouvert la fenêtre?
+Il a ne pas perdu son portefeuille?
+Il a ne pas pris ses clés?
+Il a ouvert la boîte rapidement.
+Il a ouvert pas la fenêtre?
+Il a ouvrez la boîte rapidement.
+Il a ouvris la boîte rapidement.
+Il a pas pris ses clés?
+Il a perde son stylo la semaine dernière.
+Il a perdit son stylo la semaine dernière.
+Il a perdu pas son portefeuille?
+Il a perdu son stylo la semaine dernière.
+Il a perdus son stylo la semaine dernière.
+Il a pris des vacances le mois dernier.
+Il a prit des vacances le mois dernier.
+Il a pu conduire une voiture.
+Il a pu nager.
+Il a pu parler français.
+Il a pu venir hier.
+Il a réjoui?
+Il as lu le journal ce matin.
+Il a souvenu?
+Il as pris des vacances le mois dernier.
+Il a su la nouvelle.
+Il a su la réponse.
+Il a su la vérité.
+Il a su les règles.
+Il a trouvé l'école près d'ici ?
+Il a un chien.
+Il a une maison.
+Il a une voiture.
+Il a un sac.
+Il aura beaucoup de livres.
+Il aura de bonnes idées.
+Il aura un bon travail.
+Il aura un chien.
+Il aura une maison.
+Il aura une voiture.
+Il aura un sac.
+Il avait un chien.
+Il avait une maison.
+Il avait une voiture.
+Il avait un sac.
+Il a voulu un café.
+Il a voulu une maison à Paris.
+Il a voulu une nouvelle voiture.
+Il a voulu un sandwich.
+Il a vu la maison.
+Il a vu la voiture.
+Il a vu le chien.
+Il a vu les enfants.
+Il dira bonjour.
+Il dira la vérité.
+Il dira quelques mots.
+Il disait bonjour.
+Il disait la vérité.
+Il disait quelques mots.
+Il dit bonjour.
+Il dit la vérité.
+Il dit quelques mots.
+Il écrirai une histoire la semaine prochaine.
+Il écrira ne pas le message?
+Il écrira pas le message?
+Il écriras une histoire la semaine prochaine.
+Il écrira une histoire la semaine prochaine.
+Il écriront une histoire la semaine prochaine.
+Il écris des histoires chaque semaine.
+Il écrit des histoires chaque semaine.
+Il écrit ne pas avec un stylo?
+Il écrit pas avec un stylo?
+Il écrivez des histoires chaque semaine.
+Il écrivons des histoires chaque semaine.
+Il ennui.
+Il ennuie ?
+Il ennuiera ?
+Il ennuiera pas.
+Il ennuyé.
+Il entraîne ?
+Il entraîne pas.
+Il entraînera ?
+Il entraînera pas.
+Il es étudiant.
+Il est allé à la plage.
+Il est allé à l'école.
+Il est allé au cinéma.
+Il est allé au parc.
+Il est étudiant.
+Il est grand.
+Il est heureux.
+Il est intéressé à l'art ?
+Il est lu le journal ce matin.
+Il est prêt.
+Il est pris des vacances le mois dernier.
+Il est venu de France.
+Il est venu de Londres.
+Il est venu de Paris.
+Il est venu d'Espagne.
+Il était étudiant.
+Il était fatigué.
+Il était heureux.
+Il était prêt.
+Il faisait la cuisine.
+Il faisait la vaisselle.
+Il faisait les courses.
+Il faisait ses devoirs.
+Il fait la cuisine.
+Il fait la vaisselle.
+Il fait les courses.
+Il fait ses devoirs.
+Il fera la cuisine.
+Il fera la vaisselle.
+Il fera les courses.
+Il fera ses devoirs.
+Il ferme le portail chaque matin.
+Il ferme ne pas la porte?
+Il ferme pas la porte?
+Il fermera le portail demain.
+Il fermera ne pas la porte?
+Il fermera pas la porte?
+Il fermeras le portail demain.
+Il fermeront le portail demain.
+Il fermes le portail chaque matin.
+Il fermez le portail chaque matin.
+Il fermons le portail chaque matin.
+Il garde ne pas ses promesses?
+Il garde pas ses promesses?
+Il garderai ses documents organisés.
+Il gardera ne pas ses promesses?
+Il gardera pas ses promesses?
+Il gardera ses documents organisés.
+Il garderas ses documents organisés.
+Il garderont ses documents organisés.
+Il garde ses documents organisés.
+Il gardes ses documents organisés.
+Il gardez ses documents organisés.
+Il gardons ses documents organisés.
+Il intéresse à l'art ?
+Il ira à la plage.
+Il ira à l'école.
+Il ira au cinéma.
+Il ira au marché la semaine prochaine.
+Il ira au musée.
+Il ira au parc.
+Il ira au restaurant vendredi prochain.
+Il lirai le rapport cet après-midi.
+Il lira le rapport cet après-midi.
+Il lira ne pas le contrat?
+Il liras le rapport cet après-midi.
+Il lirons le rapport cet après-midi.
+Il lis des romans en français.
+Il lisez des romans en français.
+Il lisons des romans en français.
+Il lit des romans en français.
+Il lit ne pas de livres?
+Il lit pas de livres?
+Il n'allait pas à l'école.
+Il n'allait pas au cinéma.
+Il n'a lu pas le livre?
+Il n'a mis pas ses lunettes ?
+Il n'a pas adapté.
+Il n'a pas de maison.
+Il n'a pas de voiture.
+Il n'a pas dit un mot.
+Il n'a pas écrit le message?
+Il n'a pas ennuyé.
+Il n'a pas entraîné.
+Il n'a pas été en retard.
+Il n'a pas été heureux.
+Il n'a pas eu d'aide.
+Il n'a pas eu de problèmes.
+Il n'a pas fait d'erreurs.
+Il n'a pas fait la cuisine.
+Il n'a pas fait la lessive.
+Il n'a pas fait la vaisselle.
+Il n'a pas fait le ménage.
+Il n'a pas fait les courses.
+Il n'a pas fait mes devoirs.
+Il n'a pas fait son projet.
+Il n'a pas fermé la porte?
+Il n'a pas gardé ses promesses?
+Il n'a pas lu le livre?
+Il n'a pas ouvert la fenêtre?
+Il n'a pas perdu son portefeuille?
+Il n'a pas pris ses clés?
+Il n'a pas pu nager.
+Il n'a pas pu venir aujourd'hui.
+Il n'a pas réjoui.
+Il n'a pas souvenu.
+Il n'a pas su la réponse.
+Il n'a pas su la vérité.
+Il n'a pas voulu de café.
+Il n'a pas voulu partir.
+Il n'a pas vu la voiture.
+Il n'a pas vu le chien.
+Il n'a rien dit.
+Il n'as pas écrit le message?
+Il n'as pas fermé la porte?
+Il n'as pas gardé ses promesses?
+Il n'as pas lu le livre?
+Il n'as pas ouvert la fenêtre?
+Il n'as pas perdu son portefeuille?
+Il n'as pas pris ses clés?
+Il n'aura pas d'argent.
+Il n'aura pas de chien.
+Il n'aura pas de maison.
+Il n'aura pas de patience.
+Il n'aura pas de problèmes.
+Il n'aura pas de sac.
+Il n'aura pas de voiture.
+Il n'aura pas ses clés.
+Il n'avait pas de maison.
+Il n'avait pas de voiture.
+Il n'écrira pas le message?
+Il n'écriras pas le message?
+Il n'écris pas avec un stylo?
+Il n'écrit pas avec un stylo?
+Il ne débrouille pas sans aide.
+Il ne dira pas un mot.
+Il ne dira rien.
+Il ne disait pas un mot.
+Il ne disait rien.
+Il ne dit pas un mot.
+Il ne dit rien.
+Il ne faisait pas la cuisine.
+Il ne faisait pas mes devoirs.
+Il ne fait pas la cuisine.
+Il ne fait pas mes devoirs.
+Il ne fera pas la cuisine.
+Il ne fera pas mes devoirs.
+Il ne ferme pas la porte?
+Il ne fermera pas la porte?
+Il ne fermeras pas la porte?
+Il ne fermes pas la porte?
+Il ne garde pas ses promesses?
+Il ne gardera pas ses promesses?
+Il ne garderas pas ses promesses?
+Il ne gardes pas ses promesses?
+Il ne lirai pas le contrat?
+Il ne lira pas le contrat?
+Il ne liras pas le contrat?
+Il ne lis pas de livres?
+Il ne lit pas de livres?
+Il ne pas s'intéresse à la mode ?
+Il ne perd pas son portefeuille?
+Il ne perdra pas son portefeuille?
+Il ne perdras pas son portefeuille?
+Il ne perds pas son portefeuille?
+Il ne peut pas nager.
+Il ne peut pas venir aujourd'hui.
+Il ne pourra pas nager.
+Il ne pourra pas venir.
+Il ne pouvait pas nager.
+Il ne pouvait pas venir.
+Il ne prend pas les conseils au sérieux.
+Il ne prend pas ses responsabilités?
+Il ne prendrai pas ses vacances le mois prochain?
+Il ne prendra pas ses vacances le mois prochain?
+Il ne prendras pas ses vacances le mois prochain?
+Il ne prends pas les conseils au sérieux.
+Il ne prends pas ses responsabilités?
+Il ne s'adapte pas.
+Il ne s'adaptera pas.
+Il ne sait pas cette chanson.
+Il ne sait pas la réponse.
+Il ne saura pas la réponse.
+Il ne saura pas la vérité.
+Il ne savait pas la réponse.
+Il ne savait pas la vérité.
+Il ne se débrouille pas sans aide.
+Il ne s'ennuie pas ?
+Il ne s'ennuie pas.
+Il ne s'ennuiera pas.
+Il ne s'entraîne pas.
+Il ne s'entraînera pas.
+Il ne sera pas en retard.
+Il ne sera pas heureux.
+Il ne se réjouira pas.
+Il ne se réjouit pas.
+Il ne se souviendra pas.
+Il ne se souvient pas.
+Il ne s'est pas adapté.
+Il ne s'est pas ennuyé.
+Il ne s'est pas entraîné.
+Il ne s'est pas intéressé à la mode ?
+Il ne s'est pas réjoui.
+Il ne s'est pas souvenu.
+Il ne s'intéresse pas à la mode ?
+Il ne s'intéressera pas au cinéma.
+Il n'est pas allé à l'école.
+Il n'est pas allé au cinéma.
+Il n'est pas fatigué.
+Il n'est pas heureux.
+Il n'est pas intéressé à la mode ?
+Il n'est pas venu souvent.
+Il n'est plus venu.
+Il n'était pas fatigué.
+Il n'était pas heureux.
+Il ne trouve pas l'école près d'ici ?
+Il ne va pas à l'école.
+Il ne va pas au cinéma.
+Il ne venait pas souvent.
+Il ne venait plus.
+Il ne verra pas la voiture.
+Il ne verra pas le chien.
+Il ne veut pas de café.
+Il ne veut pas partir.
+Il ne viendra pas demain.
+Il ne viendra pas la semaine prochaine.
+Il ne vient pas souvent.
+Il ne vient plus.
+Il ne voit pas la voiture.
+Il ne voit pas le chien.
+Il ne voudra pas de café.
+Il ne voudra pas partir.
+Il ne voulait pas de café.
+Il ne voulait pas partir.
+Il ne voyait pas la voiture.
+Il ne voyait pas le chien.
+Il n'ira pas à la fête.
+Il n'ira pas à l'école.
+Il n'ira pas à l'école demain.
+Il n'ira pas au cinéma.
+Il n'ira pas au cinéma le week-end prochain.
+Il n'ira pas au gymnase demain.
+Il n'ira pas au travail.
+Il n'ira pas en ville demain.
+Il n'ouvre pas la fenêtre?
+Il n'ouvres pas la fenêtre?
+Il n'ouvrira pas la fenêtre?
+Il n'ouvriras pas la fenêtre?
+Il ouvre la boîte rapidement.
+Il ouvre ne pas la fenêtre?
+Il ouvre pas la fenêtre?
+Il ouvres la boîte rapidement.
+Il ouvrez la boîte rapidement.
+Il ouvrirai la boîte rapidement.
+Il ouvrira la boîte rapidement.
+Il ouvrira ne pas la fenêtre?
+Il ouvrira pas la fenêtre?
+Il ouvriras la boîte rapidement.
+Il ouvriront la boîte rapidement.
+Il ouvrons la boîte rapidement.
+Il perdez son stylo tous les jours.
+Il perd ne pas son portefeuille?
+Il perdons son stylo tous les jours.
+Il perd pas son portefeuille?
+Il perdrai son stylo bientôt.
+Il perdra ne pas son portefeuille?
+Il perdra pas son portefeuille?
+Il perdra son stylo bientôt.
+Il perdras son stylo bientôt.
+Il perdront son stylo bientôt.
+Il perd son stylo tous les jours.
+Il perds son stylo tous les jours.
+Il peut bien nager.
+Il peut conduire une voiture.
+Il peut parler français.
+Il peut venir demain.
+Il pourra conduire une voiture.
+Il pourra nager.
+Il pourra parler français.
+Il pourra venir demain.
+Il pouvait bien nager.
+Il pouvait conduire une voiture.
+Il pouvait parler français.
+Il pouvait venir chaque jour.
+Il prend ne pas les conseils au sérieux.
+Il prend ne pas ses responsabilités?
+Il prendrai ses médicaments tous les matins.
+Il prendra ne pas ses vacances le mois prochain?
+Il prendra ses médicaments tous les matins.
+Il prendras ses médicaments tous les matins.
+Il prendrons ses médicaments tous les matins.
+Il prend son temps.
+Il prends son temps.
+Il prenez pas les conseils au sérieux.
+Il prenez pas ses responsabilités?
+Il prenez son temps.
+Il prenons son temps.
+Il réjouira?
+Il réjouirait pas.
+Il réjouis pas.
+Il réjouit?
+Il réjouit pas.
+Il s'adapte?
+Ils adaptent?
+Ils adaptent pas.
+Il s'adapte pas.
+Il s'adaptera?
+Il s'adapterait?
+Il s'adaptera pas.
+Ils adapteront?
+Il s'adaptes?
+Ils a écrit des textos pendant la classe.
+Ils a écrit un poème?
+Ils a fermé le portail?
+Ils a fermé les livres après l'examen.
+Ils a gardé leur parole.
+Ils a gardé leurs chaussures près de la porte?
+Il sait cette chanson.
+Il sait la réponse.
+Il sait la vérité.
+Il sait les règles.
+Ils allaient à la bibliothèque.
+Ils allaient au cinéma.
+Ils allaient au cinéma sûrement.
+Ils allaient au supermarché.
+Ils allaient au travail.
+Ils allaient en France.
+Ils a lu le contrat?
+Ils a lu le livre entier en un jour.
+Ils a ouvert le cadeau?
+Ils a ouvert les boîtes pendant la classe.
+Ils a perdu de l'argent l'année dernière?
+Ils a perdu leur chemin après la nuit.
+Ils a pris des cours de français l'année dernière.
+Ils a pris le métro ce matin?
+Ils auraient des vélos.
+Il saura la nouvelle.
+Il saura la réponse.
+Il saura la vérité.
+Il saura les règles.
+Ils auront beaucoup d'amis.
+Ils auront des chats.
+Ils auront des vélos.
+Ils auront du temps.
+Ils auront du temps demain.
+Ils auront les documents.
+Ils auront une belle maison.
+Ils auront une maison.
+Ils avaient beaucoup d'amis.
+Ils avaient des chats.
+Ils avaient des vélos.
+Ils avaient dit bonjour.
+Ils avaient du temps.
+Ils avaient fait leurs devoirs.
+Ils avaient les documents.
+Ils avaient pu commencer.
+Ils avaient une maison.
+Ils avaient voulu voyager.
+Ils avaient vu les fleurs.
+Il savait la nouvelle.
+Il savait la réponse.
+Il savait la vérité.
+Il savait les règles.
+Ils avez écrit des textos pendant la classe.
+Ils avez écrit un poème?
+Ils avez fermé le portail?
+Ils avez fermé les livres après l'examen.
+Ils avez gardé leur parole.
+Ils avez gardé leurs chaussures près de la porte?
+Ils avez lu le contrat?
+Ils avez lu le livre entier en un jour.
+Ils avez ouvert le cadeau?
+Ils avez ouvert les boîtes pendant la classe.
+Ils avez perdu de l'argent l'année dernière?
+Ils avez perdu leur chemin après la nuit.
+Ils avez pris des cours de français l'année dernière.
+Ils avez pris le métro ce matin?
+Ils croient l'histoire ?
+Ils croiront ton histoire ?
+Ils débrouillent bien ?
+Ils diraient bonjour.
+Ils diront bonjour.
+Ils diront la même chose.
+Ils diront merci.
+Ils disaient bonjour.
+Ils disaient la même chose.
+Ils disaient merci.
+Ils disent bonjour.
+Ils disent la même chose.
+Ils disent merci.
+Ils écrira des textos pendant la classe.
+Ils écriraient des textos pendant la classe.
+Ils écriras un poème?
+Ils écrira un poème?
+Ils écrirez un poème?
+Ils écriront des textos pendant la classe.
+Ils écriront ne pas le menu?
+Ils écriront un poème?
+Ils écrit des poèmes?
+Ils écrit des textos pendant la classe.
+Ils écrivent des poèmes?
+Ils écrivent des textos pendant la classe.
+Ils écrivent ne pas de fiction?
+Ils écrivez des poèmes?
+Ils écrivez des textos pendant la classe.
+Ils écrivons des poèmes?
+Ils écrivons des textos pendant la classe.
+Il se débrouille pas sans aide.
+Il se ne débrouille pas sans aide.
+Il s'ennuie ?
+Il s'ennuie.
+Ils ennuient ?
+Ils ennuient.
+Il s'ennuiera ?
+Il s'ennuiera pas.
+Ils ennuieront ?
+Ils ennuieront pas ?
+Il s'entraîne ?
+Ils entraînent ?
+Ils entraînent pas ?
+Il s'entraîne pas.
+Il s'entraînera ?
+Il s'entraînera pas.
+Ils entraîneront ?
+Ils entraîneront pas ?
+Il s'entraînes ?
+Il sera à Paris.
+Il sera heureux.
+Il sera prêt.
+Il se réjouira?
+Il se réjouirait?
+Il se réjouira pas.
+Il se réjouis?
+Il se réjouit?
+Il se réjouit pas.
+Il se souvenir?
+Il se souvenirait?
+Il se souviendra?
+Il se souviendra pas.
+Il se souviendra-t-il?
+Il se souvient?
+Il se souvient pas.
+Il s'est adapté.
+Il s'est adapté?
+Il s'est ennuyé ?
+Il s'est ennuyé.
+Il s'est entraîné ?
+Il s'est entraîné.
+Il s'est intéressé à la politique ?
+Il s'est pas adapté.
+Il s'est pas ennuyé.
+Il s'est pas entraîné.
+Il s'est pas réjoui.
+Il s'est pas souvenu.
+Il s'est réjoui.
+Il s'est réjoui?
+Il s'est souvenu.
+Il s'est souvenu?
+Ils étaient à la maison.
+Ils étaient allés au supermarché.
+Ils étaient à Paris.
+Ils étaient au bureau.
+Ils étaient en France.
+Ils étaient fatigués.
+Ils étaient heureux.
+Ils étaient venus rendre visite.
+Ils faisaient du sport.
+Ils faisaient la cuisine.
+Ils faisaient le ménage.
+Ils faisaient leurs devoirs.
+Ils faisaient leur travail.
+Ils feraient leurs devoirs.
+Ils fermaient les livres après l'examen.
+Ils ferme le portail?
+Ils ferme les livres après l'examen.
+Ils ferment le portail?
+Ils ferment les livres après l'examen.
+Ils ferment ne pas le magasin pendant le déjeuner?
+Ils ferment pas le magasin pendant le déjeuner?
+Ils fermerai le portail?
+Ils fermera le portail?
+Ils fermera les livres après l'examen.
+Ils fermerez le portail?
+Ils fermeront le portail?
+Ils fermeront les livres après l'examen.
+Ils fermeront ne pas le magasin pendant le déjeuner?
+Ils fermez le portail?
+Ils fermez les livres après l'examen.
+Ils fermons le portail?
+Ils fermons les livres après l'examen.
+Ils feront du sport.
+Ils feront la cuisine.
+Ils feront le ménage.
+Ils feront leurs devoirs.
+Ils feront leur travail.
+Ils font du sport.
+Ils font la cuisine.
+Ils font le ménage.
+Ils font leurs devoirs.
+Ils font leur travail.
+Ils garde leur parole.
+Ils garde leurs chaussures près de la porte?
+Ils gardent leur parole.
+Ils gardent leurs chaussures près de la porte?
+Ils gardent ne pas d'animaux?
+Ils gardent pas d'animaux?
+Ils garderaient leur parole.
+Ils gardera leur parole.
+Ils gardera leurs chaussures près de la porte?
+Ils garderas leur parole.
+Ils garderas leurs chaussures près de la porte?
+Ils garderez leurs chaussures près de la porte?
+Ils garderont leur parole.
+Ils garderont leurs chaussures près de la porte?
+Ils garderont ne pas d'animaux?
+Ils gardez leur parole.
+Ils gardez leurs chaussures près de la porte?
+Ils gardons leur parole.
+Ils gardons leurs chaussures près de la porte?
+Il s'intéresse à l'art ?
+Ils intéressent aux sports ?
+Il s'intéressera à la politique ?
+Il s'intéressera à le cinéma.
+Il s'intéressera au cinéma.
+Il s'intéresseras à la politique ?
+Il s'intéresseras au cinéma.
+Ils iraient au cinéma sûrement.
+Ils iraient au supermarché.
+Ils iront à la bibliothèque.
+Ils iront à l'école demain.
+Ils iront au cinéma.
+Ils iront au cinéma sûrement.
+Ils iront au concert demain soir.
+Ils iront au supermarché.
+Ils iront au travail.
+Ils iront en France.
+Ils iront en voiture le mois prochain.
+Ils lira de la poésie en classe.
+Ils lira l'article?
+Ils liras de la poésie en classe.
+Ils liras l'article?
+Ils lirez de la poésie en classe.
+Ils lirez l'article?
+Ils liront de la poésie en classe.
+Ils liront l'article?
+Ils liront ne pas les panneaux?
+Ils lisent des bandes dessinées?
+Ils lisent des histoires policières.
+Ils lisent ne pas de poésie?
+Ils lisez des bandes dessinées?
+Ils lisez des histoires policières.
+Ils lisons des bandes dessinées?
+Ils lisons des histoires policières.
+Ils lit des bandes dessinées?
+Ils lit des histoires policières.
+Ils mettront leurs jouets dans la boîte ?
+Ils n'allaient pas au cinéma.
+Ils n'auront pas de chance.
+Ils n'auront pas de maison.
+Ils n'auront pas de patience.
+Ils n'avaient pas de maison.
+Ils n'avez pas écrit le menu?
+Ils n'avez pas fermé le magasin pendant le déjeuner?
+Ils n'avez pas gardé d'animaux?
+Ils n'avez pas lu les panneaux?
+Ils n'avez pas ouvert la porte?
+Ils n'avez pas perdu leurs amis?
+Ils n'avez pas pris leurs parapluies?
+Ils n'écrirez pas le menu?
+Ils n'écriront pas le menu?
+Ils n'écrit pas de fiction?
+Ils n'écrivent pas de fiction?
+Ils n'écrivez pas de fiction?
+Ils ne débrouillent pas sans aide.
+Ils ne débrouillent pas seuls.
+Ils ne diront rien.
+Ils ne disaient rien.
+Ils ne disent rien.
+Ils ne écriras pas le menu?
+Ils ne faisaient pas la cuisine.
+Ils ne ferment pas le magasin pendant le déjeuner?
+Ils ne ferme pas le magasin pendant le déjeuner?
+Ils ne fermeras pas le magasin pendant le déjeuner?
+Ils ne fermerez pas le magasin pendant le déjeuner?
+Ils ne fermeront pas le magasin pendant le déjeuner?
+Ils ne feront pas la cuisine.
+Ils ne font pas la cuisine.
+Ils ne gardent pas d'animaux?
+Ils ne garde pas d'animaux?
+Ils ne garderas pas d'animaux?
+Ils ne garderez pas d'animaux?
+Ils ne garderont pas d'animaux?
+Ils ne liras pas les panneaux?
+Ils ne lirez pas les panneaux?
+Ils ne liront pas les panneaux?
+Ils ne lisent pas de poésie?
+Ils ne lisez pas de poésie?
+Ils ne lit pas de poésie?
+Ils ne mettent pas assez de sel dans la soupe ?
+Ils ne mettra pas leurs jouets dans la boîte ?
+Ils n'ennuieront pas.
+Ils n'entraînent pas.
+Ils n'entraîneront pas.
+Ils ne ouvriras pas la porte?
+Ils ne ouvrirez pas la porte?
+Ils ne parlent pas français ?
+Ils ne pas s'intéressent aux mathématiques ?
+Ils ne perdent pas leurs amis?
+Ils ne perd pas leurs amis?
+Ils ne perdras pas leurs amis?
+Ils ne perdrez pas leurs amis?
+Ils ne perdront pas leurs amis?
+Ils ne peuvent pas venir aujourd'hui.
+Ils ne pourront pas venir.
+Ils ne pouvaient pas venir.
+Ils ne prend pas ce chemin.
+Ils ne prendras pas leurs parapluies?
+Ils ne prendrez pas leurs parapluies?
+Ils ne prendront pas leurs parapluies?
+Ils ne prennent pas ce chemin.
+Ils ne s'adaptent pas.
+Ils ne s'adapteront pas.
+Ils ne sauront pas la vérité.
+Ils ne savaient pas la vérité.
+Ils ne savent pas cette chanson.
+Ils ne se débrouillent pas sans aide.
+Ils ne se débrouillent pas seuls.
+Ils ne s'ennuient pas ?
+Ils ne s'ennuient pas.
+Ils ne s'ennuieront pas.
+Ils ne s'entraînent pas.
+Ils ne s'entraîneront pas.
+Ils ne se réjouiront pas.
+Ils ne se réjouissent pas.
+Ils ne seront pas en retard.
+Ils ne se sont pas adaptés.
+Ils ne se sont pas ennuyés.
+Ils ne se sont pas entraînés.
+Ils ne se sont pas intéressés aux mathématiques ?
+Ils ne se sont pas réjouis.
+Ils ne se sont pas souvenus.
+Ils ne se souviendront pas.
+Ils ne se souviennent pas.
+Ils ne s'intéressent pas aux mathématiques ?
+Ils ne s'intéresseront pas à mes recherches.
+Ils ne sont pas allés au cinéma.
+Ils ne sont pas fatigués.
+Ils ne sont pas intéressés aux mathématiques ?
+Ils ne sont plus venus.
+Ils ne souviennent pas.
+Ils n'étaient pas fatigués.
+Ils ne trouvent pas les réponses ?
+Ils ne venaient plus.
+Ils ne verront pas le chien.
+Ils ne veulent pas partir.
+Ils ne viendront pas la semaine prochaine.
+Ils ne viennent plus.
+Ils ne voient pas le chien.
+Ils ne vont pas au cinéma.
+Ils ne voudront pas partir.
+Ils ne voulaient pas partir.
+Ils ne voyaient pas le chien.
+Ils n'iront pas au cinéma.
+Ils n'iront pas au gymnase demain.
+Ils n'ont lu pas les panneaux?
+Ils n'ont mis pas leurs jouets ?
+Ils n'ont pas cru ton histoire ?
+Ils n'ont pas de maison.
+Ils n'ont pas écrit le menu?
+Ils n'ont pas ennuyé.
+Ils n'ont pas entraîné.
+Ils n'ont pas été en retard.
+Ils n'ont pas eu d'aide.
+Ils n'ont pas fait la cuisine.
+Ils n'ont pas fait la lessive.
+Ils n'ont pas fait leur devoir.
+Ils n'ont pas fermé le magasin pendant le déjeuner?
+Ils n'ont pas gardé d'animaux?
+Ils n'ont pas lu les panneaux?
+Ils n'ont pas mis les assiettes sur la table ?
+Ils n'ont pas mis ses lunettes ?
+Ils n'ont pas ouvert la porte?
+Ils n'ont pas perdu leurs amis?
+Ils n'ont pas pris leurs parapluies?
+Ils n'ont pas pu venir aujourd'hui.
+Ils n'ont pas réjoui.
+Ils n'ont pas souvenu.
+Ils n'ont pas su la vérité.
+Ils n'ont pas trouvé la solution ?
+Ils n'ont pas voulu partir.
+Ils n'ont pas vu le chien.
+Ils n'ont pris pas leurs parapluies?
+Ils n'ont rien dit.
+Ils n'ouvrent pas la porte?
+Ils n'ouvre pas la porte?
+Ils n'ouvriront pas la porte?
+Ils ont adapté.
+Ils ont beaucoup d'amis.
+Ils ont des chats.
+Ils ont des vélos.
+Ils ont dit bonjour.
+Ils ont dit la même chose.
+Ils ont dit merci.
+Ils ont du temps.
+Ils ont écrit des textos pendant la classe.
+Ils ont écrit pas le menu?
+Ils ont écrit un poème?
+Ils ont ennuyé.
+Ils ont entraîné.
+Ils ont été à Londres.
+Ils ont été en retard.
+Ils ont été fatigués.
+Ils ont été heureux.
+Ils ont eu beaucoup d'amis.
+Ils ont eu de la pluie.
+Ils ont eu des problèmes.
+Ils ont eu les cadeaux.
+Ils ont eu les documents.
+Ils ont fait de leur mieux.
+Ils ont fait du sport.
+Ils ont fait du sport hier.
+Ils ont fait la cuisine.
+Ils ont fait le ménage.
+Ils ont fait leurs devoirs.
+Ils ont fait leur travail.
+Ils ont fermé le portail?
+Ils ont fermé les livres après l'examen.
+Ils ont fermé pas le magasin pendant le déjeuner?
+Ils ont gardé leur parole.
+Ils ont gardé leurs chaussures près de la porte?
+Ils ont gardé ne pas d'animaux?
+Ils ont gardé pas d'animaux?
+Ils ont intéressé aux sports ?
+Ils ont lu le contrat?
+Ils ont lu le livre entier en un jour.
+Ils ont mis les assiettes sur la table ?
+Ils ont ne pas écrit le menu?
+Ils ont ne pas fermé le magasin pendant le déjeuner?
+Ils ont ne pas lu les panneaux?
+Ils ont ne pas ouvert la porte?
+Ils ont ne pas perdu leurs amis?
+Ils ont ne pas pris leurs parapluies?
+Ils ont ouvert le cadeau?
+Ils ont ouvert les boîtes pendant la classe.
+Ils ont ouvert pas la porte?
+Ils ont parlé du voyage ?
+Ils ont perdu de l'argent l'année dernière?
+Ils ont perdu leur chemin après la nuit.
+Ils ont perdu pas leurs amis?
+Ils ont pris des cours de français l'année dernière.
+Ils ont pris le métro ce matin?
+Ils ont pu commencer.
+Ils ont pu manger ici.
+Ils ont pu parler français.
+Ils ont pu vous aider.
+Ils ont réjoui.
+Ils ont souvenu.
+Ils ont su l'adresse.
+Ils ont su la réponse.
+Ils ont su la vérité.
+Ils ont su l'histoire.
+Ils ont une maison.
+Ils ont voulu manger ici.
+Ils ont voulu une nouvelle voiture.
+Ils ont voulu vous aider.
+Ils ont voulu voyager.
+Ils ont vu le chien.
+Ils ont vu le parc.
+Ils ont vu les fleurs.
+Ils ont vu les montagnes.
+Ils ont vu les oiseaux.
+Il souviendra pas.
+Il souvient?
+Il souvient pas.
+Ils ouvre le cadeau?
+Ils ouvre les boîtes pendant la classe.
+Ils ouvrent le cadeau?
+Ils ouvrent les boîtes pendant la classe.
+Ils ouvrent ne pas la porte?
+Ils ouvre pas la porte?
+Ils ouvrez le cadeau?
+Ils ouvrez les boîtes pendant la classe.
+Ils ouvrirai le cadeau?
+Ils ouvrira le cadeau?
+Ils ouvrira les boîtes pendant la classe.
+Ils ouvriras les boîtes pendant la classe.
+Ils ouvrirez le cadeau?
+Ils ouvririez les boîtes pendant la classe.
+Ils ouvriront le cadeau?
+Ils ouvriront les boîtes pendant la classe.
+Ils ouvriront ne pas la porte?
+Ils ouvrons le cadeau?
+Ils ouvrons les boîtes pendant la classe.
+Ils parlent français ?
+Ils parleront au directeur ?
+Ils perd argent parfois?
+Ils perdent argent parfois?
+Ils perdent leur chemin après la nuit.
+Ils perdent ne pas leurs amis?
+Ils perdez argent parfois?
+Ils perdez leur chemin après la nuit.
+Ils perdez pas leurs amis?
+Ils perdons argent parfois?
+Ils perdons leur chemin après la nuit.
+Ils perdra de l'argent encore?
+Ils perdrait leur chemin la nuit.
+Ils perdra leur chemin la nuit.
+Ils perdras de l'argent encore?
+Ils perdras leur chemin la nuit.
+Ils perdrez de l'argent encore?
+Ils perdront de l'argent encore?
+Ils perdront leur chemin la nuit.
+Ils perdront ne pas leurs amis?
+Ils peuvent commencer maintenant.
+Ils peuvent manger ici.
+Ils peuvent parler français.
+Ils peuvent vous aider.
+Ils pourraient commencer bientôt.
+Ils pourraient commencer tôt.
+Ils pourront commencer.
+Ils pourront commencer bientôt.
+Ils pourront commencer maintenant.
+Ils pourront commencer tôt.
+Ils pourront manger ici.
+Ils pourront parler français.
+Ils pourront vous aider.
+Ils pouvaient commencer bientôt.
+Ils pouvaient commencer maintenant.
+Ils pouvaient commencer tôt.
+Ils pouvaient manger ici.
+Ils pouvaient parler français.
+Ils pouvaient vous aider.
+Ils prend le bus tous les jours.
+Ils prendra des cours de français l'année prochaine?
+Ils prendra le métro pour aller au centre-ville.
+Ils prendras des cours de français l'année prochaine?
+Ils prendras le métro pour aller au centre-ville.
+Ils prendrez des cours de français l'année prochaine?
+Ils prendrez le métro pour aller au centre-ville.
+Ils prendront des cours de français l'année prochaine?
+Ils prendront le métro pour aller au centre-ville.
+Ils prendront ne pas leurs parapluies?
+Ils prenez le bus tous les jours.
+Ils prenez pas ce chemin.
+Ils prennent le bus tous les jours.
+Ils prennent ne pas ce chemin.
+Ils prenons le bus tous les jours.
+Ils réjouiront?
+Ils réjouis?
+Ils réjouissent?
+Ils s'adaptent.
+Ils s'adaptent?
+Ils s'adaptent pas?
+Ils s'adapteraient?
+Ils s'adapteront.
+Ils s'adapteront?
+Ils sauraient la réponse.
+Ils sauront l'adresse.
+Ils sauront la réponse.
+Ils sauront la vérité.
+Ils sauront les règles.
+Ils sauront l'histoire.
+Ils savaient l'adresse.
+Ils savaient la réponse.
+Ils savaient la vérité.
+Ils savaient les règles.
+Ils savaient l'histoire.
+Ils savent cette chanson.
+Ils savent l'adresse.
+Ils savent les règles.
+Ils savent l'histoire.
+Ils se débrouillent bien ?
+Ils se débrouillent pas sans aide.
+Ils se débrouillent pas seuls.
+Ils se ne débrouillent pas sans aide.
+Ils se ne débrouillent pas seuls.
+Ils se ne sont pas adapté.
+Ils se ne sont pas ennuyé.
+Ils se ne sont pas entraîné.
+Ils se ne sont pas réjoui.
+Ils se ne sont pas souvenu.
+Ils s'ennuient ?
+Ils s'ennuient.
+Ils s'ennuieront ?
+Ils s'ennuieront.
+Ils s'entraînent ?
+Ils s'entraînent.
+Ils s'entraîneront ?
+Ils s'entraîneront.
+Ils seraient à la maison.
+Ils seraient à Paris.
+Ils se réjouiront.
+Ils se réjouiront?
+Ils se réjouiront pas?
+Ils se réjouissent.
+Ils se réjouissent?
+Ils se réjouissent pas?
+Ils seront à la maison.
+Ils seront à l'heure.
+Ils seront à Paris.
+Ils seront au bureau.
+Ils seront en retard.
+Ils seront heureux.
+Ils seront prêts.
+Ils se sont adaptés.
+Ils se sont ennuyés.
+Ils se sont entraînés.
+Ils se sont pas adaptés.
+Ils se sont pas ennuyés.
+Ils se sont pas entraînés.
+Ils se sont pas réjouis.
+Ils se sont pas souvenus.
+Ils se sont réjouis.
+Ils se sont souvenus.
+Ils se souviendront.
+Ils se souviendront?
+Ils se souviendront pas?
+Ils se souviennent.
+Ils se souviennent?
+Ils s'est adaptés.
+Ils s'est ennuyés.
+Ils s'est entraînés.
+Ils s'est réjouis.
+Ils s'est souvenus.
+Ils s'intéressent aux sports ?
+Ils s'intéresserons à la littérature ?
+Ils s'intéresseront à la littérature ?
+Ils s'intéresseront à ma recherche.
+Ils s'intéresseront à mes recherches.
+Ils sont adaptés.
+Ils sont à la maison.
+Ils sont allés à la bibliothèque.
+Ils sont allés au cinéma.
+Ils sont allés au supermarché.
+Ils sont allés au travail.
+Ils sont allés en France.
+Ils sont écrit des textos pendant la classe.
+Ils sont écrit un poème?
+Ils sont en France.
+Ils sont ennuyés ?
+Ils sont ennuyés.
+Ils sont entraînés.
+Ils sont fatigués.
+Ils sont fermé le portail?
+Ils sont fermé les livres après l'examen.
+Ils sont gardé leur parole.
+Ils sont gardé leurs chaussures près de la porte?
+Ils sont grands.
+Ils sont intéressés aux sports ?
+Ils sont lu le contrat?
+Ils sont lu le livre entier en un jour.
+Ils sont ouvert le cadeau?
+Ils sont ouvert les boîtes pendant la classe.
+Ils sont perdu de l'argent l'année dernière?
+Ils sont perdu leur chemin après la nuit.
+Ils sont prêts.
+Ils sont pris des cours de français l'année dernière.
+Ils sont pris le métro ce matin?
+Ils sont réjouis.
+Ils sont souvenus.
+Ils sont venus de Londres.
+Ils sont venus nous voir.
+Ils sont venus rendre visite.
+Ils sont venus vous aider.
+Ils souviendront?
+Ils souviendront pas?
+Ils souviennent?
+Ils souviennent pas?
+Ils trouveront l'hôtel ?
+Il suis étudiant.
+Ils venaient à la réunion.
+Ils venaient de Londres.
+Ils venaient nous voir.
+Ils venaient rendre visite.
+Ils venaient vous aider.
+Ils verraient les fleurs.
+Ils verront le chien.
+Ils verront le parc.
+Ils verront les fleurs.
+Ils verront les montagnes.
+Ils verront les oiseaux.
+Ils veulent manger maintenant.
+Ils veulent une nouvelle voiture.
+Ils veulent vous aider.
+Ils veulent voyager.
+Ils viendraient à la réunion.
+Ils viendraient rendre visite.
+Ils viendront à la réunion.
+Ils viendront ensemble.
+Ils viendront la semaine prochaine.
+Ils viendront rendre visite.
+Ils viendront tôt.
+Ils viennent de Londres.
+Ils viennent nous voir.
+Ils viennent rendre visite.
+Ils viennent vous aider.
+Ils voient le chien.
+Ils voient le parc.
+Ils voient les fleurs.
+Ils voient les montagnes.
+Ils voient les oiseaux.
+Ils vont à la bibliothèque.
+Ils vont au cinéma.
+Ils vont au supermarché.
+Ils vont au travail.
+Ils vont en France.
+Ils vont s'intéresser à la littérature ?
+Ils vont s'intéresser à mes recherches.
+Ils voudraient voyager.
+Ils voudront manger ici.
+Ils voudront une nouvelle voiture.
+Ils voudront vous aider.
+Ils voudront voyager.
+Ils voulaient manger ici.
+Ils voulaient une nouvelle voiture.
+Ils voulaient vous aider.
+Ils voulaient voyager.
+Ils voyaient le chien.
+Ils voyaient le parc.
+Ils voyaient les fleurs.
+Ils voyaient les montagnes.
+Ils voyaient les oiseaux.
+Il t'ennuie.
+Il trouvera cette réponse correcte ?
+Il va à la plage.
+Il va à l'école.
+Il va au cinéma.
+Il va au parc.
+Il va s'intéresser à la politique ?
+Il venait de France.
+Il venait de Londres.
+Il venait de Paris.
+Il venait d'Espagne.
+Il verra la maison.
+Il verra la voiture.
+Il verra le chien.
+Il verra les enfants.
+Il veut un café.
+Il veut une maison à Paris.
+Il veut une nouvelle voiture.
+Il veut un sandwich.
+Il viendra bientôt.
+Il viendra chez toi.
+Il viendra demain.
+Il viendra la semaine prochaine.
+Il vient de France.
+Il vient de Londres.
+Il vient de Paris.
+Il vient d'Espagne.
+Il voit la maison.
+Il voit la voiture.
+Il voit le chien.
+Il voit les enfants.
+Il voudra un café.
+Il voudra une maison à Paris.
+Il voudra une nouvelle voiture.
+Il voudra un sandwich.
+Il voulait un café.
+Il voulait une maison à Paris.
+Il voulait une nouvelle voiture.
+Il voulait un sandwich.
+Il voyait la maison.
+Il voyait la voiture.
+Il voyait le chien.
+Il voyait les enfants.
+Irai-je à la fête ?
+Irai-je à Paris ?
+Irai-je au marché ?
+Iras-tu à la bibliothèque la semaine prochaine ?
+Iras-tu à la fête ?
+Iras-tu à Londres ?
+Iras-tu à Paris ?
+Iras-tu au marché ?
+Iras-tu régulièrement ?
+Ira-t-elle à Londres ?
+Ira-t-elle à Paris ?
+Ira-t-il à la fête ?
+Ira-t-il à Londres ?
+Ira-t-il à Paris ?
+Ira-t-il au marché ?
+Irez-vous à la bibliothèque la semaine prochaine ?
+Irez-vous à la fête ?
+Irez-vous à Londres ?
+Irez-vous régulièrement ?
+Irons-nous au marché ?
+Iront-elles à la bibliothèque la semaine prochaine ?
+Iront-elles régulièrement ?
+Iront-ils à la bibliothèque la semaine prochaine ?
+Iront-ils régulièrement ?
+J'adapterai?
+J'ai adapté?
+J'ai cru à lui ?
+J'ai dit bonjour.
+J'ai dit la vérité.
+J'ai dit merci.
+J'ai du temps.
+J'ai écrit mon nom sur le formulaire?
+J'ai écrit ne pas avant le petit déjeuner.
+J'ai écrit pas avant le petit déjeuner.
+J'ai écrit vite?
+J'ai ennuyé ?
+J'ai entraîné ?
+J'ai été à Paris.
+J'ai été en retard.
+J'ai été heureux.
+J'ai eu de la pluie.
+J'ai eu du café.
+J'ai eu une bonne journée.
+J'ai fait de l'exercice ce matin.
+J'ai fait de mon mieux.
+J'ai fait du sport.
+J'ai fait du sport hier.
+J'ai fait la vaisselle.
+J'ai fait mes devoirs.
+J'ai fait un excellent travail.
+J'ai fait un excellent travail hier.
+J'ai fermé la porte après être parti?
+J'ai fermé mon livre hier soir?
+J'ai fermé ne pas le dossier avant de sauvegarder.
+J'ai fermé pas le dossier avant de sauvegarder.
+J'ai gardé ma porte ouverte?
+J'ai gardé ne pas aucun reçu.
+J'ai gardé pas aucun reçu.
+J'ai gardé toutes mes notes?
+J'ai lu ce roman l'année dernière?
+J'ai lu les instructions correctement?
+J'ai ne pas lu la biographie.
+J'ai ne pas pris de sucre dans mon café.
+J'ai ouvert la porte le matin?
+J'ai ouvert les cadeaux le jour de mon anniversaire?
+J'ai ouvert ne pas les fenêtres la nuit.
+J'ai ouvert pas les fenêtres la nuit.
+J'ai perdu mes lunettes hier?
+J'ai perdu mon chemin hier soir?
+J'ai perdu ne pas espoir.
+J'ai perdu pas espoir.
+J'ai pris le bon bus?
+J'ai pris le train à l'heure?
+J'ai pu conduire une voiture.
+J'ai pu nager.
+J'ai pu vous aider.
+J'ai réjoui?
+J'ai réjouirai?
+J'ai souvenirai?
+J'ai souvenu?
+J'ai su la réponse.
+J'ai su les règles.
+J'ai su l'histoire.
+J'ai un chien.
+J'ai une voiture.
+J'ai voulu un café.
+J'ai voulu un sandwich.
+J'ai voulu vous aider.
+J'ai vu la maison.
+J'ai vu la voiture.
+J'ai vu le parc.
+J'allais à l'école.
+J'allais au parc.
+J'allais en France.
+J'a lu ce roman l'année dernière?
+J'a lu les instructions correctement?
+J'a pas lu la biographie.
+J'a pas pris de sucre dans mon café.
+J'a pris le bon bus?
+J'a pris le train à l'heure?
+J'as écrit mon nom sur le formulaire?
+J'as écrit vite?
+J'as fermé la porte après être parti?
+J'as fermé mon livre hier soir?
+J'as gardé ma porte ouverte?
+J'as gardé toutes mes notes?
+J'as lu ce roman l'année dernière?
+J'as lu les instructions correctement?
+J'as ouvert la porte le matin?
+J'as ouvert les cadeaux le jour de mon anniversaire?
+J'as perdu mes lunettes hier?
+J'as perdu mon chemin hier soir?
+J'as pris le bon bus?
+J'as pris le train à l'heure?
+J'aurai beaucoup de livres.
+J'aurai de bonnes idées.
+J'aurai du temps.
+J'aurai du temps demain.
+J'aurai un bon travail.
+J'aurai un chien.
+J'aurai une belle maison.
+J'aurai une voiture.
+J'avais du temps.
+J'avais un chien.
+J'avais une voiture.
+Je adapte?
+Je a écrit mon nom sur le formulaire?
+Je a écrit vite?
+Je a fermé la porte après être parti?
+Je a fermé mon livre hier soir?
+Je a gardé ma porte ouverte?
+Je a gardé toutes mes notes?
+Je a ouvert la porte le matin?
+Je a ouvert les cadeaux le jour de mon anniversaire?
+Je a perdu mes lunettes hier?
+Je a perdu mon chemin hier soir?
+J'écrirai mon nom sur le formulaire?
+J'écrirai vite?
+J'écris mon nom clairement?
+J'écris vite?
+Je croirai en toi ?
+Je croirai toi ?
+Je croirai votre professeur ?
+Je crois en toi ?
+Je dirai bonjour.
+Je dirai la vérité.
+Je dirai merci.
+Je disais bonjour.
+Je disais la vérité.
+Je disais merci.
+Je dis bonjour.
+Je dis la vérité.
+Je dis merci.
+Je écrirai ne pas avant le petit déjeuner.
+Je écrira mon nom sur le formulaire?
+Je écriras mon nom sur le formulaire?
+Je écriras vite?
+Je écrira vite?
+Je écrirons mon nom sur le formulaire?
+Je écrirons vite?
+Je écris ne pas avant le petit déjeuner.
+Je écris pas avant le petit déjeuner.
+Je écrit mon nom clairement?
+Je écrit vite?
+Je écrivez mon nom clairement?
+Je écrivez vite?
+Je écrivons mon nom clairement?
+Je écrivons vite?
+Je ennuie ?
+Je ennuierai ?
+Je ennuierai pas.
+Je ennuyé ?
+Je ennuyé.
+Je es heureux.
+Je est heureux.
+Je étais heureuse.
+Je faisais du sport.
+Je faisais la vaisselle.
+Je faisais mes devoirs.
+Je fais du sport.
+Je fais la vaisselle.
+Je fais mes devoirs.
+Je ferai du sport.
+Je ferai la vaisselle.
+Je ferai mes devoirs.
+Je ferme la porte après être parti?
+Je ferme mon livre chaque soir?
+Je ferme ne pas le dossier avant de sauvegarder.
+Je ferme pas le dossier avant de sauvegarder.
+Je fermerai la porte après être parti?
+Je fermerai mon livre avant le dîner?
+Je fermerai ne pas le dossier avant de sauvegarder.
+Je fermeras la porte après être parti?
+Je fermerez la porte après être parti?
+Je fermerez mon livre avant le dîner?
+Je fermerons la porte après être parti?
+Je fermerons mon livre avant le dîner?
+Je fermes la porte après être parti?
+Je fermes mon livre chaque soir?
+Je fermez la porte après être parti?
+Je fermez mon livre chaque soir?
+Je fermons la porte après être parti?
+Je fermons mon livre chaque soir?
+Je garde ma porte ouverte?
+Je garde ne pas aucun reçu.
+Je garde pas aucun reçu.
+Je garderai ma porte ouverte?
+Je garderai ne pas aucun reçu.
+Je garderai toutes mes notes?
+Je garderas ma porte ouverte?
+Je gardera toutes mes notes?
+Je garderez ma porte ouverte?
+Je garderez toutes mes notes?
+Je garderons ma porte ouverte?
+Je garderons toutes mes notes?
+Je gardes ma porte ouverte?
+Je garde tous mes notes?
+Je garde toutes mes notes?
+Je gardez ma porte ouverte?
+Je gardez toutes mes notes?
+Je gardons ma porte ouverte?
+Je gardons toutes mes notes?
+Je intéresse à la politique ?
+Je irai à l'école demain.
+Je irai au concert demain soir.
+Je irai au musée.
+Je irai au restaurant vendredi prochain.
+Je irai en voiture le mois prochain.
+Je lira ce livre le mois prochain?
+Je lirai ce livre le mois prochain?
+Je lirai le roman entier?
+Je lirai ne pas de romans d'horreur.
+Je lira le roman entier?
+Je liras ce livre le mois prochain?
+Je liras le roman entier?
+Je lirons ce livre le mois prochain?
+Je lirons le roman entier?
+Je lisez le journal tous les matins?
+Je lisez trop vite?
+Je lis le journal tous les matins?
+Je lis ne pas de romans d'horreur.
+Je lisons le journal tous les matins?
+Je lisons trop vite?
+Je lis pas de romans d'horreur.
+Je lis trop vite?
+Je lit le journal tous les matins?
+Je lit trop vite?
+Je m'adapte?
+Je m'adapte pas.
+Je m'adapter?
+Je m'adapterai?
+Je m'adapterai pas.
+Je m'adaptez?
+Je m'ai ennuyé ?
+Je m'ai entraîné ?
+Je me débrouille pas seul(e).
+Je me débrouilles tout seul ?
+Je m'ennuie ?
+Je m'ennuie.
+Je m'ennuierai ?
+Je m'entraîne ?
+Je m'entraînerai ?
+Je m'entraînez ?
+Je me réjouir?
+Je me réjouirai?
+Je me réjouirai pas.
+Je me réjouis?
+Je me réjouis pas.
+Je me réjouissez?
+Je me souvenir?
+Je me souvenirai?
+Je me souviendrai?
+Je me souviens?
+Je me suis adapté(e)?
+Je me suis ennuyé ?
+Je me suis ennuyé.
+Je me suis entraîné ?
+Je me suis entraîné.
+Je me suis pas adapté.
+Je me suis pas ennuyé.
+Je me suis pas entraîné.
+Je me suis pas réjoui.
+Je me suis pas souvenu.
+Je me suis réjoui(e)?
+Je me suis souvenu.
+Je me suis souvenu?
+Je m'intéresse à la politique ?
+Je m'intéresserai à la musique ?
+Je m'intéresserai à les sports.
+Je m'intéresserai aux sports.
+Je m'intéresseras à la musique ?
+Je m'intéresseras aux sports.
+Je n'a gardé aucun reçu.
+Je n'ai gardé aucun reçu.
+Je n'ai mis pas assez de sucre dans mon café ?
+Je n'ai pas adapté.
+Je n'ai pas cru lui ?
+Je n'ai pas de maison.
+Je n'ai pas de voiture.
+Je n'ai pas dit un mot.
+Je n'ai pas ennuyé.
+Je n'ai pas entraîné.
+Je n'ai pas été en retard.
+Je n'ai pas été heureux.
+Je n'ai pas eu d'aide.
+Je n'ai pas eu de problèmes.
+Je n'ai pas fait d'erreurs.
+Je n'ai pas fait la cuisine.
+Je n'ai pas fait la lessive.
+Je n'ai pas fait la vaisselle.
+Je n'ai pas fait le ménage.
+Je n'ai pas fait mes devoirs.
+Je n'ai pas fermé le dossier avant de sauvegarder.
+Je n'ai pas lu la biographie.
+Je n'ai pas ouvert les fenêtres la nuit.
+Je n'ai pas parlé vite ?
+Je n'ai pas perdu espoir.
+Je n'ai pas pris de sucre dans mon café.
+Je n'ai pas pu nager.
+Je n'ai pas pu venir aujourd'hui.
+Je n'ai pas réjoui.
+Je n'ai pas souvenu.
+Je n'ai pas su la réponse.
+Je n'ai pas su la vérité.
+Je n'ai pas trouvé mon portefeuille ?
+Je n'ai pas voulu de café.
+Je n'ai pas voulu partir.
+Je n'ai pas vu la voiture.
+Je n'ai pas vu le chien.
+Je n'ai rien dit.
+Je n'ai rien écrit avant le petit déjeuner.
+Je n'allais pas à l'école.
+Je n'allais pas au cinéma.
+Je n'a pas fermé le dossier avant de sauvegarder.
+Je n'a pas perdu espoir.
+Je n'a rien écrit avant le petit déjeuner.
+Je n'as pas lu la biographie.
+Je n'as pas ouvert les fenêtres la nuit.
+Je n'as pas pris de sucre dans mon café.
+Je n'aurai pas de chien.
+Je n'aurai pas de maison.
+Je n'aurai pas de patience.
+Je n'aurai pas de problèmes.
+Je n'aurai pas de voiture.
+Je n'aurai pas tes clés.
+Je n'avais pas de maison.
+Je n'avais pas de voiture.
+Je n'écrirai rien avant le petit déjeuner.
+Je n'écrira rien avant le petit déjeuner.
+Je n'écriras rien avant le petit déjeuner.
+Je n'écris rien avant le petit déjeuner.
+Je n'écrit rien avant le petit déjeuner.
+Je ne croira pas toi ?
+Je ne crois pas votre professeur ?
+Je ne débrouille pas seul(e).
+Je ne dirai pas un mot.
+Je ne dirai rien.
+Je ne disais pas un mot.
+Je ne disais rien.
+Je ne dis pas un mot.
+Je ne dis rien.
+Je ne faisais pas la cuisine.
+Je ne faisais pas mes devoirs.
+Je ne fais pas la cuisine.
+Je ne fais pas mes devoirs.
+Je ne ferai pas la cuisine.
+Je ne ferai pas mes devoirs.
+Je ne ferme pas le dossier avant de sauvegarder.
+Je ne fermerai pas le dossier avant de sauvegarder.
+Je ne fermera pas le dossier avant de sauvegarder.
+Je ne fermeras pas le dossier avant de sauvegarder.
+Je ne fermes pas le dossier avant de sauvegarder.
+Je ne garde aucun reçu.
+Je ne gardera aucun reçu.
+Je ne garderai aucun reçu.
+Je ne garderas aucun reçu.
+Je ne gardes aucun reçu.
+Je ne lirai pas de romans d'horreur.
+Je ne lira pas de romans d'horreur.
+Je ne liras pas de romans d'horreur.
+Je ne lis pas de romans d'horreur.
+Je ne lit pas de romans d'horreur.
+Je ne m'adapte pas.
+Je ne m'adapterai pas.
+Je ne m'adaptes pas.
+Je ne me débrouille pas seul(e).
+Je ne m'ennuie pas.
+Je ne m'ennuierai pas.
+Je ne m'entraîne pas.
+Je ne m'entraînerai pas.
+Je ne me réjouirai pas.
+Je ne me réjouis pas.
+Je ne me souviendrai pas.
+Je ne me souviens pas.
+Je ne me suis pas adapté(e).
+Je ne me suis pas ennuyé(e).
+Je ne me suis pas entraîné(e).
+Je ne me suis pas intéressé(e) à l'art ?
+Je ne me suis pas réjoui(e).
+Je ne me suis pas souvenu(e).
+Je ne mets pas assez d'effort dans mon travail ?
+Je ne m'intéresse pas à l'histoire ?
+Je ne m'intéresserai jamais aux films ?
+Je ne m'intéresserai pas aux sports.
+Je ne parle pas trop ?
+Je ne parlerai pas vite ?
+Je ne pas m'intéresse à l'histoire ?
+Je ne perd pas espoir.
+Je ne perdrai pas espoir.
+Je ne perdra pas espoir.
+Je ne perdras pas espoir.
+Je ne perds pas espoir.
+Je ne peux pas nager.
+Je ne peux pas venir aujourd'hui.
+Je ne pourrai pas nager.
+Je ne pourrai pas venir.
+Je ne pouvais pas nager.
+Je ne pouvais pas venir.
+Je ne prend aucun risque.
+Je ne prendrai pas de sucre dans mon café.
+Je ne prendra pas de sucre dans mon café.
+Je ne prendras pas de sucre dans mon café.
+Je ne prends aucun risque.
+Je ne sais pas cette chanson.
+Je ne sais pas la réponse.
+Je ne saurai pas la réponse.
+Je ne saurai pas la vérité.
+Je ne savais pas la réponse.
+Je ne savais pas la vérité.
+Je ne serai pas en retard.
+Je ne serai pas heureux.
+Je ne suis pas allé à l'école.
+Je ne suis pas allé au cinéma.
+Je ne suis pas fatigué.
+Je ne suis pas heureux.
+Je ne suis pas intéressé à l'histoire ?
+Je ne suis pas venu souvent.
+Je ne suis plus venu.
+Je n'étais pas fatigué.
+Je n'étais pas heureux.
+Je ne trouve pas de bons restaurants facilement ?
+Je ne vais pas à l'école.
+Je ne vais pas au cinéma.
+Je ne venais pas souvent.
+Je ne venais plus.
+Je ne verrai pas la voiture.
+Je ne verrai pas le chien.
+Je ne veux pas de café.
+Je ne veux pas partir.
+Je ne viendrai pas demain.
+Je ne viendrai pas la semaine prochaine.
+Je ne viens pas souvent.
+Je ne viens plus.
+Je ne vois pas la voiture.
+Je ne vois pas le chien.
+Je ne voudrai pas de café.
+Je ne voudrai pas partir.
+Je ne voulais pas de café.
+Je ne voulais pas partir.
+Je ne voyais pas la voiture.
+Je ne voyais pas le chien.
+Je n'intéresserai jamais aux films ?
+Je n'irai pas à la fête.
+Je n'irai pas à l'école.
+Je n'irai pas au cinéma.
+Je n'irai pas au cinéma le week-end prochain.
+Je n'irai pas au gymnase demain.
+Je n'irai pas en ville demain.
+Je n'ouvre pas les fenêtres la nuit.
+Je n'ouvres pas les fenêtres la nuit.
+Je n'ouvrirai pas les fenêtres la nuit.
+Je n'ouvrira pas les fenêtres la nuit.
+Je n'ouvriras pas les fenêtres la nuit.
+J'entraîne ?
+J'entraîne pas.
+J'entraînerai ?
+J'entraînerai pas.
+Je ouvre la porte chaque matin?
+Je ouvre les cadeaux le jour de mon anniversaire?
+Je ouvrez la porte chaque matin?
+Je ouvrez les cadeaux le jour de mon anniversaire?
+Je ouvrirai la porte le matin?
+Je ouvrirai les cadeaux le jour de mon anniversaire?
+Je ouvrirai ne pas les fenêtres la nuit.
+Je ouvrirez la porte le matin?
+Je ouvrirez les cadeaux le jour de mon anniversaire?
+Je ouvrirons la porte le matin?
+Je ouvrirons les cadeaux le jour de mon anniversaire?
+Je ouvrons la porte chaque matin?
+Je ouvrons les cadeaux le jour de mon anniversaire?
+Je parlerai trop vite ?
+Je parle trop ?
+Je parle trop pas ?
+Je perdez mes lunettes souvent?
+Je perdez mon chemin parfois?
+Je perd mes lunettes souvent?
+Je perd mon chemin parfois?
+Je perdons mes lunettes souvent?
+Je perdons mon chemin parfois?
+Je perdrai mes lunettes demain?
+Je perdrai mon chemin?
+Je perdrai ne pas espoir.
+Je perdras mon chemin?
+Je perdrez mes lunettes demain?
+Je perdrez mon chemin?
+Je perdrons mes lunettes demain?
+Je perdrons mon chemin?
+Je perds mes lunettes souvent?
+Je perds mon chemin parfois?
+Je perds ne pas espoir.
+Je perds pas espoir.
+Je peux bien nager.
+Je peux conduire une voiture.
+Je peux vous aider.
+Je pourrai conduire une voiture.
+Je pourrai nager.
+Je pourrai vous aider.
+Je pouvais bien nager.
+Je pouvais conduire une voiture.
+Je pouvais vous aider.
+Je prend mon parapluie?
+Je prendrai le bus pour aller au travail?
+Je prendrai les escaliers ou l'ascenseur?
+Je prendrai ne pas de sucre dans mon café.
+Je prendra le bus pour aller au travail?
+Je prendra les escaliers ou l'ascenseur?
+Je prendras le bus pour aller au travail?
+Je prendras les escaliers ou l'ascenseur?
+Je prendrons le bus pour aller au travail?
+Je prendrons les escaliers ou l'ascenseur?
+Je prends aucun risque ne.
+Je prends mon parapluie?
+Je prends ne aucun risque.
+Je prends une douche tous les matins.
+Je prend une douche tous les matins.
+Je prenez mon parapluie?
+Je prenez une douche tous les matins.
+Je prenons mon parapluie?
+Je prenons une douche tous les matins.
+Je réjouis?
+Je sais la réponse.
+Je sais les règles.
+Je sais l'histoire.
+Je saurai la réponse.
+Je saurai les règles.
+Je saurai l'histoire.
+Je savais la réponse.
+Je savais les règles.
+Je savais l'histoire.
+Je se ne débrouille pas seul(e).
+Je serai à l'heure.
+Je serai fatiguée.
+Je serai heureux.
+Je souviendrai pas.
+Je souviens?
+Je souviens pas.
+Je suis adapté(e).
+Je suis allé à l'école.
+Je suis allé au parc.
+Je suis allé en France.
+Je suis contentes.
+Je suis écrit mon nom sur le formulaire?
+Je suis écrit vite?
+Je suis ennuyé.
+Je suis ennuyé(e).
+Je suis entraîné(e).
+Je suis fatigué.
+Je suis fermé la porte après être parti?
+Je suis fermé mon livre hier soir?
+Je suis gardé ma porte ouverte?
+Je suis heureuse.
+Je suis heureux.
+Je suis intéressé à la politique ?
+Je suis lu ce roman l'année dernière?
+Je suis lu les instructions correctement?
+Je suis m'intéressé à la musique ?
+Je suis occupée.
+Je suis ouvert la porte le matin?
+Je suis ouvert les cadeaux le jour de mon anniversaire?
+Je suis perdu mes lunettes hier?
+Je suis perdu mon chemin hier soir?
+Je suis prêt.
+Je suis prête.
+Je suis pris le bon bus?
+Je suis pris le train à l'heure?
+Je suis réjoui(e).
+Je suis souvenu(e).
+Je suis venu de France.
+Je suis venu de Paris.
+Je suis venu vous aider.
+J'étais à la maison.
+J'étais heureux.
+Je trouverai mon passeport ?
+Je vais à l'école.
+Je vais au parc.
+Je vais en France.
+Je vais m'intéresser à la musique ?
+Je venais de France.
+Je venais de Paris.
+Je venais vous aider.
+Je verrai la maison.
+Je verrai la voiture.
+Je verrai le parc.
+Je veux un café.
+Je veux un sandwich.
+Je veux vous aider.
+Je viendrai chez toi.
+Je viendrai demain.
+Je viendrai ensemble.
+Je viens de France.
+Je viens de Paris.
+Je viens vous aider.
+Je vois la maison.
+Je vois la voiture.
+Je vois le parc.
+Je voudrai un café.
+Je voudrai un sandwich.
+Je voudrai vous aider.
+Je voulais un café.
+Je voulais un sandwich.
+Je voulais vous aider.
+Je voyais la maison.
+Je voyais la voiture.
+Je voyais le parc.
+J'irai à la plage.
+J'irai à l'école.
+J'irai au marché la semaine prochaine.
+J'irai au parc.
+J'irai en France.
+J'ouvre la porte chaque matin?
+J'ouvre les cadeaux le jour de mon anniversaire?
+J'ouvre ne pas les fenêtres la nuit.
+J'ouvre pas les fenêtres la nuit.
+J'ouvrirai la porte le matin?
+J'ouvrirai les cadeaux le jour de mon anniversaire?
+Les filles ont trouvé les billets ?
+M'entraîne-je ?
+M'entraînerai-je ?
+Me réjouirai-je?
+Me réjouis-je?
+Me suis-je adapté(e)?
+Me suis-je ennuyé(e) ?
+Me suis-je entraîné(e) ?
+Me suis-je intéressé(e) à la musique ?
+Me suis-je réjoui(e)?
+Mettait-elle ses clés dans son sac ?
+Mettons-nous les enfants au lit tôt ?
+Mettras-tu du sucre dans ton thé ?
+Mettra-t-elle ses clés dans son sac ?
+Mettrons-nous les enfants au lit tôt ?
+Mettrons-nous leurs jouets dans la boîte ?
+M'intéresserai-je à la musique ?
+N'ai-je pas de problème ?
+N'ai-je pas été en retard ?
+N'ai-je pas été gentil ?
+N'ai-je pas été heureux ?
+N'ai-je pas été prêt ?
+N'ai-je pas eu de problème ?
+N'ai-je pas intéressé à l'art ?
+N'ai-je pas mis assez de sucre dans mon café ?
+N'allaient-elles pas à la plage ?
+N'allaient-ils pas à la plage ?
+N'allez-vous pas à la plage ?
+N'alliez-vous pas à la plage ?
+N'allions-nous pas à la plage ?
+N'allons-nous pas à la plage ?
+N'allons-nous pas à l'école ?
+N'as-tu pas de problème ?
+N'as-tu pas été en retard ?
+N'as-tu pas été gentil ?
+N'as-tu pas été heureux ?
+N'as-tu pas eu de problème ?
+N'as-tu pas intéressé aux films ?
+N'as-tu pas parlé à ta grand-mère ?
+N'as-tu pas parlé avec tes amis ?
+N'as-tu pas trouvé ton cahier ?
+N'a-t-elle pas cru aux fantômes ?
+N'a-t-elle pas été gentille ?
+N'a-t-elle pas intéressé à la photographie ?
+N'a-t-elle pas parlé à son professeur ?
+N'a-t-il pas de problème ?
+N'a-t-il pas été en retard ?
+N'a-t-il pas été gentil ?
+N'a-t-il pas été heureux ?
+N'a-t-il pas eu de problème ?
+N'a-t-il pas intéressé à la mode ?
+N'aurez-vous pas de vélos ?
+N'aurons-nous pas de vélos ?
+N'auront-elles pas de vélos ?
+N'auront-ils pas de vélos ?
+N'avaient-elles pas de vélos ?
+N'avaient-ils pas de vélos ?
+N'avez-vous pas de problème ?
+N'avez-vous pas de vélos ?
+N'avez-vous pas été en retard ?
+N'avez-vous pas été prêtes ?
+N'avez-vous pas été prêts ?
+N'avez-vous pas eu de problème ?
+N'avez-vous pas intéressé au voyage ?
+N'avez-vous pas parlé pendant la réunion ?
+N'avez-vous pas su la vérité ?
+N'aviez-vous pas de vélos ?
+N'avions-nous pas de vélos ?
+N'avons-nous pas cru en notre équipe ?
+N'avons-nous pas de vélos ?
+N'avons-nous pas été heureux ?
+N'avons-nous pas été prêts ?
+N'avons-nous pas intéressé aux langues ?
+N'avons-nous pas mis la lettre dans la boîte ?
+N'avons-nous pas parlé anglais ?
+N'avons-nous pas parlé au professeur ?
+N'avons-nous pas su la vérité ?
+N'avons-nous pas trouvé le musée fermé ?
+Ne croira-t-elle pas aux fantômes ?
+Ne croirons-nous pas en notre succès ?
+Ne croit-elle pas aux fantômes ?
+Ne croyons-nous pas en notre succès ?
+Ne me suis-je pas intéressé(e) à l'art ?
+Ne mettra-t-elle pas ses clés dans son sac ?
+Ne mettra-t-il pas les enfants au lit tôt ?
+Ne mettrons-nous pas les enfants au lit tôt ?
+Ne mettront-ils pas leurs jouets dans la boîte ?
+Ne m'intéresserai-je jamais aux films ?
+Ne m'intéresserai-je pas aux films ?
+Ne nous débrouillons-nous pas sans problèmes ?
+Ne nous entraînerons-nous pas ?
+Ne nous entraînons-nous pas ?
+Ne nous intéressons-nous pas aux langues ?
+Ne nous réjouirons-nous pas?
+Ne nous réjouissons-nous pas?
+Ne nous sommes-nous pas adapté(e)s?
+Ne nous sommes-nous pas adaptés?
+Ne nous sommes-nous pas ennuyé(e)s ?
+Ne nous sommes-nous pas ennuyés ?
+Ne nous sommes-nous pas entraîné(e)s ?
+Ne nous sommes-nous pas entraînés ?
+Ne nous sommes-nous pas intéressé(e)s aux langues ?
+Ne nous sommes-nous pas réjoui(e)s?
+Ne nous sommes-nous pas réjouis?
+Ne parleras-tu pas pendant la réunion ?
+Ne parles-tu pas à ton grand-père ?
+Ne pouvaient-elles pas commencer tôt ?
+Ne pouvaient-ils pas commencer tôt ?
+Ne pouviez-vous pas commencer tôt ?
+Ne pouvions-nous pas commencer tôt ?
+Ne sais-je pas la vérité ?
+Ne saurez-vous pas les règles ?
+Ne saurons-nous pas les règles ?
+Ne sauront-elles pas les règles ?
+Ne sauront-ils pas les règles ?
+Ne savaient-elles pas les règles ?
+Ne savaient-ils pas les règles ?
+Ne savent-elles pas les règles ?
+Ne savent-ils pas la vérité ?
+Ne savent-ils pas les règles ?
+Ne savez-vous pas la vérité ?
+Ne savez-vous pas les règles ?
+Ne saviez-vous pas les règles ?
+Ne savions-nous pas les règles ?
+Ne savons-nous pas la vérité ?
+Ne savons-nous pas les règles ?
+Ne s'entraînent-ils pas ?
+Ne s'entraînera-t-elle pas ?
+Ne s'entraîneront-ils pas ?
+Ne s'entraîne-t-elle pas ?
+Ne serai-je pas prêt ?
+Ne se réjouira-t-elle pas?
+Ne se réjouiront-ils pas?
+Ne se réjouissent-ils pas?
+Ne se réjouit-elle pas?
+Ne serez-vous pas prêts ?
+Ne serons-nous pas prêts ?
+Ne seront-ils pas prêts ?
+Ne se sont-ils pas intéressés aux mathématiques ?
+Ne s'est-elle pas adaptée?
+Ne s'est-elle pas ennuyée ?
+Ne s'est-elle pas entraînée ?
+Ne s'est-elle pas intéressée à la photographie ?
+Ne s'est-elle pas réjouie?
+Ne s'est-il pas intéressé à la mode ?
+Ne s'intéressent-ils pas aux mathématiques ?
+Ne s'intéressera-t-elle pas à la science ?
+Ne s'intéresseront-elles pas à ces problèmes ?
+Ne s'intéresse-t-il pas à la mode ?
+Ne sommes-nous pas allées à la plage ?
+Ne sommes-nous pas allés à l'école ?
+Ne sommes-nous pas allés au parc ?
+Ne sommes-nous pas prêts ?
+Ne sont-elles pas allées à la plage ?
+Ne sont-elles pas prêtes ?
+Ne sont-ils pas allés à la plage ?
+Ne sont-ils pas allés au parc ?
+Ne sont-ils pas prêts ?
+N'est-elle pas allée au marché ?
+N'est-il pas allé à l'école ?
+N'est-il pas allé au marché ?
+N'est-il pas allé au parc ?
+N'es-tu pas allé à l'école ?
+N'es-tu pas allé au marché ?
+N'es-tu pas allé au parc ?
+Ne suis-je pas allé à l'école ?
+Ne suis-je pas allé au marché ?
+Ne suis-je pas allé au parc ?
+N'étaient-elles pas heureuses ?
+N'étaient-ils pas heureux ?
+N'étaient-ils pas prêts ?
+N'étais-je pas prêt ?
+Ne t'as-tu pas intéressé(e) à l'histoire ?
+Ne te débrouilles-tu pas bien ?
+Ne te débrouille-tu pas bien ?
+Ne t'entraîneras-tu pas ?
+Ne t'entraînes-tu pas ?
+Ne te réjouiras-tu pas?
+Ne te réjouis-tu pas?
+Ne t'es-tu pas adapté(e)?
+Ne t'es-tu pas ennuyé(e) ?
+Ne t'es-tu pas entraîné(e) ?
+Ne t'es-tu pas intéressé(e) à l'histoire ?
+Ne t'es-tu pas intéressé(e) aux films ?
+Ne t'es-tu pas réjoui(e)?
+N'êtes-vous pas allées à la plage ?
+N'êtes-vous pas allés au parc ?
+N'êtes-vous pas en retard ?
+N'êtes-vous pas prêts ?
+N'êtes-vous pas venues rendre visite ?
+N'êtes-vous pas venus trop tard ?
+N'étiez-vous pas heureuses ?
+N'étiez-vous pas prêts ?
+Ne t'intéresseras-tu à rien ?
+Ne t'intéresses-tu pas aux films ?
+N'étions-nous pas heureuses ?
+N'étions-nous pas prêts ?
+Ne trouverons-nous pas le lieu fermé ?
+Ne trouvons-nous pas cette leçon difficile ?
+Ne trouvons-nous pas le musée fermé ?
+Ne vais-je pas à l'école ?
+Ne vais-je pas au marché ?
+Ne vas-tu pas à l'école ?
+Ne vas-tu pas au marché ?
+Ne va-t-elle pas au marché ?
+Ne va-t-il pas à l'école ?
+Ne va-t-il pas au marché ?
+Ne viendrez-vous pas bientôt ?
+Ne viendrons-nous pas bientôt ?
+Ne viendront-elles pas bientôt ?
+Ne viendront-ils pas bientôt ?
+Ne vont-elles pas à la plage ?
+Ne vont-ils pas à la plage ?
+Ne vous êtes-vous pas intéressé(e)s au voyage ?
+Ne vous intéresserez-vous pas à l'art ?
+N'irez-vous pas à la plage ?
+N'irons-nous pas à la plage ?
+N'iront-elles pas à la plage ?
+N'iront-ils pas à la plage ?
+N'ont-elles pas de vélos ?
+N'ont-elles pas été prêtes ?
+N'ont-elles pas su la vérité ?
+N'ont-ils pas de vélos ?
+N'ont-ils pas été prêts ?
+N'ont-ils pas intéressé aux mathématiques ?
+N'ont-ils pas mis la lettre dans la boîte ?
+N'ont-ils pas su la vérité ?
+Nous adapterons?
+Nous adaptons?
+Nous adaptons-nous?
+Nous a écrit des dissertations pour la classe.
+Nous a écrit en français?
+Nous a fermé la même fenêtre.
+Nous a fermé la porte avant de partir?
+Nous a fermé le magasin à 21 heures.
+Nous a gardé les mêmes habitudes l'année dernière.
+Nous a gardé nos promesses?
+Nous a gardé notre espace de travail propre.
+Nous allions à l'école.
+Nous allions au travail.
+Nous allions en France.
+Nous allons à l'école.
+Nous allons au travail.
+Nous allons en France.
+Nous allons nous intéresser à cette exposition.
+Nous allons nous intéresser à la technologie ?
+Nous a lu la bonne page?
+Nous a lu le menu attentivement.
+Nous a ouvert la fenêtre après le déjeuner?
+Nous a ouvert le magasin à neuf heures.
+Nous a ouvert le même livre.
+Nous a perdu intérêt vite.
+Nous a perdu la clé l'année dernière?
+Nous a perdu motivation en hiver.
+Nous a pris le bon chemin?
+Nous a pris une longue pause hier.
+Nous a trouvé le musée fermé ?
+Nous aurons beaucoup d'amis.
+Nous aurons du temps.
+Nous aurons du temps demain.
+Nous aurons un bon travail.
+Nous aurons une belle maison.
+Nous aurons une voiture.
+Nous avez écrit des dissertations pour la classe.
+Nous avez écrit en français?
+Nous avez écrit la même réponse.
+Nous avez fermé la même fenêtre.
+Nous avez fermé la porte avant de partir.
+Nous avez fermé le magasin à 21 heures.
+Nous avez gardé les mêmes habitudes l'année dernière.
+Nous avez gardé nos promesses?
+Nous avez gardé notre espace de travail propre.
+Nous avez lu la bonne page?
+Nous avez lu le même article hier.
+Nous avez lu le menu attentivement.
+Nous avez ouvert la fenêtre après le déjeuner.
+Nous avez ouvert le magasin à neuf heures.
+Nous avez ouvert le même livre.
+Nous avez perdu intérêt vite.
+Nous avez perdu la clé l'année dernière.
+Nous avez perdu motivation en hiver.
+Nous avez pris le bon chemin?
+Nous avez pris les escaliers au lieu de l'ascenseur.
+Nous avez pris une longue pause hier.
+Nous avions beaucoup d'amis.
+Nous avions du temps.
+Nous avions une voiture.
+Nous avons adapté.
+Nous avons amis.
+Nous avons anglais parlé ?
+Nous avons beaucoup d'amis.
+Nous avons cru elle ?
+Nous avons cru en notre équipe ?
+Nous avons dit la même chose.
+Nous avons dit la vérité.
+Nous avons dit merci.
+Nous avons du temps.
+Nous avons écrit des dissertations pour la classe.
+Nous avons écrit en français?
+Nous avons écrit la même réponse.
+Nous avons ennuyé.
+Nous avons entraîné.
+Nous avons été en retard.
+Nous avons été fatigués.
+Nous avons été heureux.
+Nous avons eu beaucoup d'amis.
+Nous avons eu de la pluie.
+Nous avons eu une bonne journée.
+Nous avons fait de l'exercice ce matin.
+Nous avons fait de notre mieux.
+Nous avons fait du sport.
+Nous avons fait du sport hier.
+Nous avons fait nos devoirs.
+Nous avons fait notre travail.
+Nous avons fermé la même fenêtre.
+Nous avons fermé la porte avant de partir.
+Nous avons fermé le magasin à 21 heures.
+Nous avons gardé les mêmes habitudes l'année dernière.
+Nous avons gardé nos promesses?
+Nous avons gardé notre espace de travail propre.
+Nous avons intéressé à la littérature ?
+Nous avons lu la bonne page?
+Nous avons lu le même article hier.
+Nous avons lu le menu attentivement.
+Nous avons ouvert la fenêtre après le déjeuner?
+Nous avons ouvert le magasin à neuf heures.
+Nous avons ouvert le même livre.
+Nous avons parlé au professeur ?
+Nous avons parlé en anglais ?
+Nous avons perdu intérêt vite.
+Nous avons perdu la clé l'année dernière.
+Nous avons perdu motivation en hiver.
+Nous avons pris le bon chemin?
+Nous avons pris les escaliers au lieu de l'ascenseur.
+Nous avons pris une longue pause hier.
+Nous avons pu manger ici.
+Nous avons pu nager.
+Nous avons pu vous aider.
+Nous avons réjoui.
+Nous avons souvenu.
+Nous avons su l'adresse.
+Nous avons su la réponse.
+Nous avons su l'histoire.
+Nous avons trouvé le musée fermé ?
+Nous avons une voiture.
+Nous avons voulu manger ici.
+Nous avons voulu un café.
+Nous avons voulu vous aider.
+Nous avons vu la voiture.
+Nous avons vu le parc.
+Nous avons vu les montagnes.
+Nous croirons elle ?
+Nous croirons en notre succès ?
+Nous croirons pas elle ?
+Nous croirons pas en notre succès ?
+Nous croyons elle ?
+Nous croyons en notre succès ?
+Nous débrouillons ensemble.
+Nous dirons la même chose.
+Nous dirons la vérité.
+Nous dirons merci.
+Nous disions la même chose.
+Nous disions la vérité.
+Nous disions merci.
+Nous disons la même chose.
+Nous disons la vérité.
+Nous disons merci.
+Nous écrira des dissertations pour la classe.
+Nous écrira en français?
+Nous écrira la même réponse.
+Nous écriras des dissertations pour la classe.
+Nous écriras en français?
+Nous écriras la même réponse.
+Nous écrirez des dissertations pour la classe.
+Nous écrirez en français?
+Nous écrirez la même réponse.
+Nous écrirons des dissertations pour la classe.
+Nous écrirons en français?
+Nous écrirons la même réponse.
+Nous écrit des dissertations pour la classe.
+Nous écrit en français?
+Nous écrit la même réponse.
+Nous écrivent des dissertations pour la classe.
+Nous écrivent en français?
+Nous écrivent la même réponse.
+Nous écrivez des dissertations pour la classe.
+Nous écrivez en français?
+Nous écrivez la même réponse.
+Nous écrivons des dissertations pour la classe.
+Nous écrivons en français?
+Nous écrivons la même réponse.
+Nous ennuierons ?
+Nous ennuierons-nous.
+Nous ennuyons ?
+Nous ennuyons.
+Nous ennuyons pas.
+Nous entraînerons ?
+Nous entraînerons-nous.
+Nous entraînons ?
+Nous entraînons-nous.
+Nous êtes amis.
+Nous étions à la maison.
+Nous étions au bureau.
+Nous étions heureux.
+Nous faisions du sport.
+Nous faisions nos devoirs.
+Nous faisions notre travail.
+Nous faisons du sport.
+Nous faisons nos devoirs.
+Nous faisons notre travail.
+Nous ferme la même fenêtre.
+Nous ferme la porte avant de partir?
+Nous ferme le magasin à 21 heures.
+Nous ferment la même fenêtre.
+Nous ferment la porte avant de partir?
+Nous ferment le magasin à 21 heures.
+Nous fermerai le magasin à 21 heures.
+Nous fermera la même fenêtre.
+Nous fermera la porte avant de partir?
+Nous fermeras la même fenêtre.
+Nous fermeras la porte avant de partir?
+Nous fermeras le magasin à 21 heures.
+Nous fermerez la même fenêtre.
+Nous fermerez la porte avant de partir?
+Nous fermerez le magasin à 21 heures.
+Nous fermerons la même fenêtre.
+Nous fermerons la porte avant de partir?
+Nous fermerons le magasin à 21 heures.
+Nous fermez la même fenêtre.
+Nous fermez la porte avant de partir?
+Nous fermez le magasin à 21 heures.
+Nous fermons la même fenêtre.
+Nous fermons la porte avant de partir?
+Nous fermons le magasin à 21 heures.
+Nous ferons du sport.
+Nous ferons nos devoirs.
+Nous ferons notre travail.
+Nous garde les mêmes habitudes chaque année.
+Nous garde nos promesses?
+Nous garde notre espace de travail propre.
+Nous gardent les mêmes habitudes chaque année.
+Nous gardent nos promesses?
+Nous gardent notre espace de travail propre.
+Nous gardera les mêmes habitudes l'année prochaine.
+Nous gardera nos promesses?
+Nous gardera notre espace de travail propre.
+Nous garderas les mêmes habitudes l'année prochaine.
+Nous garderas nos promesses?
+Nous garderas notre espace de travail propre.
+Nous garderez les mêmes habitudes l'année prochaine.
+Nous garderez nos promesses?
+Nous garderez notre espace de travail propre.
+Nous garderons les mêmes habitudes l'année prochaine.
+Nous garderons nos promesses?
+Nous garderons notre espace de travail propre.
+Nous gardez les mêmes habitudes chaque année.
+Nous gardez nos promesses?
+Nous gardez notre espace de travail propre.
+Nous gardons les mêmes habitudes chaque année.
+Nous gardons nos promesses?
+Nous gardons notre espace de travail propre.
+Nous intéresserons-nous à la technologie ?
+Nous intéressons à la littérature ?
+Nous irons à la plage.
+Nous irons à l'école.
+Nous irons à l'école demain.
+Nous irons au concert demain soir.
+Nous irons au marché la semaine prochaine.
+Nous irons au travail.
+Nous irons en France.
+Nous irons en voiture le mois prochain.
+Nous lirai le menu attentivement.
+Nous lira le même magazine.
+Nous lira le menu attentivement.
+Nous lira les nouvelles ce soir?
+Nous liras le même magazine.
+Nous liras le menu attentivement.
+Nous liras les nouvelles ce soir?
+Nous lirez le même magazine.
+Nous lirez les nouvelles ce soir?
+Nous lirons le même magazine.
+Nous lirons le menu attentivement.
+Nous lirons les nouvelles ce soir?
+Nous lisent des articles en ligne.
+Nous lisent le même livre.
+Nous lisent le menu?
+Nous lisez des articles en ligne.
+Nous lisez le même livre.
+Nous lisez le menu?
+Nous lisons des articles en ligne.
+Nous lisons le même livre.
+Nous lisons le menu?
+Nous lit des articles en ligne.
+Nous lit le même livre.
+Nous lit le menu?
+Nous n'allions pas à l'école.
+Nous n'allons pas à l'école.
+Nous n'allons pas mettre le lait dans le frigo ?
+Nous n'aurons pas d'argent.
+Nous n'aurons pas de chance.
+Nous n'aurons pas de chien.
+Nous n'aurons pas de problèmes.
+Nous n'aurons pas de sac.
+Nous n'aurons pas de voiture.
+Nous n'aurons pas leurs clés.
+Nous n'avions pas de voiture.
+Nous n'avons mis pas la lettre dans la boîte ?
+Nous n'avons pas adapté?
+Nous n'avons pas cru en notre équipe ?
+Nous n'avons pas de voiture.
+Nous n'avons pas dit un mot.
+Nous n'avons pas ennuyé ?
+Nous n'avons pas entraîné ?
+Nous n'avons pas été heureux.
+Nous n'avons pas eu de problèmes.
+Nous n'avons pas fait d'erreurs.
+Nous n'avons pas fait la vaisselle.
+Nous n'avons pas fait le ménage.
+Nous n'avons pas fait les courses.
+Nous n'avons pas fait mes devoirs.
+Nous n'avons pas fait notre devoir.
+Nous n'avons pas fait notre projet.
+Nous n'avons pas mis leurs jouets ?
+Nous n'avons pas parlé au professeur ?
+Nous n'avons pas pu nager.
+Nous n'avons pas réjoui?
+Nous n'avons pas souvenu?
+Nous n'avons pas su la réponse.
+Nous n'avons pas voulu de café.
+Nous n'avons pas vu la voiture.
+Nous ne croit pas elle ?
+Nous ne croit pas en notre succès ?
+Nous ne dirons pas un mot.
+Nous ne disions pas un mot.
+Nous ne disons pas un mot.
+Nous ne faisions pas mes devoirs.
+Nous ne faisons pas mes devoirs.
+Nous ne ferons pas mes devoirs.
+Nous ne nous adapterons pas.
+Nous ne nous adapterons pas?
+Nous ne nous adaptons pas.
+Nous ne nous adaptons pas?
+Nous ne nous débrouillons pas sans problèmes ?
+Nous ne nous ennuierons pas ?
+Nous ne nous ennuierons pas.
+Nous ne nous ennuyons pas.
+Nous ne nous entraînerons pas ?
+Nous ne nous entraînerons pas.
+Nous ne nous entraînons pas ?
+Nous ne nous entraînons pas.
+Nous ne nous intéressons pas aux langues ?
+Nous ne nous réjouirons pas.
+Nous ne nous réjouirons pas?
+Nous ne nous réjouissons pas.
+Nous ne nous réjouissons pas?
+Nous ne nous sommes pas adapté(e)s?
+Nous ne nous sommes pas ennuyé(e)s ?
+Nous ne nous sommes pas entraîné(e)s ?
+Nous ne nous sommes pas intéressé(e)s aux langues ?
+Nous ne nous sommes pas réjoui(e)s?
+Nous ne nous souvenons pas.
+Nous ne nous souvenons pas?
+Nous ne nous souviendrons pas.
+Nous ne nous souviendrons pas?
+Nous ne parlerons pas à la cérémonie ?
+Nous ne parlerons pas au professeur ?
+Nous ne parlons pas au professeur ?
+Nous ne parlons pas espagnol ?
+Nous ne pas nous intéressons aux langues ?
+Nous ne pourrons pas nager.
+Nous ne pouvions pas nager.
+Nous ne pouvons pas nager.
+Nous ne prend pas une pause maintenant?
+Nous ne prenons pas la voiture aujourd'hui.
+Nous ne prenons pas une pause maintenant?
+Nous ne saurons pas la réponse.
+Nous ne savions pas la réponse.
+Nous ne savons pas la réponse.
+Nous ne serons pas heureux.
+Nous ne sommes pas adaptés?
+Nous ne sommes pas allés à l'école.
+Nous ne sommes pas ennuyés ?
+Nous ne sommes pas entraînés ?
+Nous ne sommes pas heureux.
+Nous ne sommes pas intéressés aux langues ?
+Nous ne sommes pas réjouis?
+Nous ne sommes pas souvenus?
+Nous ne sommes pas venus souvent.
+Nous n'étions pas heureux.
+Nous ne trouvez pas le musée fermé ?
+Nous ne venions pas souvent.
+Nous ne venons pas souvent.
+Nous ne verrons pas la voiture.
+Nous ne viendrons pas demain.
+Nous ne voudrons pas de café.
+Nous ne voulions pas de café.
+Nous ne voulons pas de café.
+Nous ne voyions pas la voiture.
+Nous ne voyons pas la voiture.
+Nous n'irons pas à la fête.
+Nous n'irons pas à l'école.
+Nous n'irons pas à l'école demain.
+Nous n'irons pas au cinéma le week-end prochain.
+Nous n'irons pas au travail.
+Nous n'irons pas en ville demain.
+Nous nous adapterons.
+Nous nous adapterons?
+Nous nous adapterons pas?
+Nous nous adaptons.
+Nous nous adaptons?
+Nous nous adaptons pas?
+Nous nous débrouillent ensemble.
+Nous nous débrouillons bien ?
+Nous nous débrouillons ensemble.
+Nous nous débrouillons sans problèmes ?
+Nous nous ennuierons ?
+Nous nous ennuierons.
+Nous nous ennuierons pas ?
+Nous nous ennuyons ?
+Nous nous ennuyons.
+Nous nous entraînerons ?
+Nous nous entraînerons.
+Nous nous entraînerons pas ?
+Nous nous entraînons ?
+Nous nous entraînons.
+Nous nous entraînons pas ?
+Nous nous intéressera à la technologie ?
+Nous nous intéresserons à ce exposition.
+Nous nous intéresserons à ces exposition.
+Nous nous intéresserons à cette exposition.
+Nous nous intéresserons à la technologie ?
+Nous nous intéressons à la littérature ?
+Nous nous réjouirons.
+Nous nous réjouirons?
+Nous nous réjouirons pas?
+Nous nous réjouissons.
+Nous nous réjouissons?
+Nous nous réjouissons pas?
+Nous nous sommes adapté(e)s.
+Nous nous sommes adaptés?
+Nous nous sommes ennuyé(e)s.
+Nous nous sommes ennuyés ?
+Nous nous sommes entraîné(e)s.
+Nous nous sommes entraînés ?
+Nous nous sommes intéressé(e)s à la littérature ?
+Nous nous sommes pas adaptés?
+Nous nous sommes pas ennuyés ?
+Nous nous sommes pas entraînés ?
+Nous nous sommes pas souvenus?
+Nous nous sommes réjoui(e)s.
+Nous nous sommes réjouis?
+Nous nous sommes souvenus.
+Nous nous sommes souvenus?
+Nous nous souvenons.
+Nous nous souvenons?
+Nous nous souviendrons.
+Nous nous souviendrons?
+Nous nous souviendrons pas?
+Nous ont écrit la même réponse.
+Nous ont lu le même article hier.
+Nous ont pris les escaliers au lieu de l'ascenseur.
+Nous ouvre la fenêtre après le déjeuner?
+Nous ouvre le magasin à neuf heures.
+Nous ouvre le même livre.
+Nous ouvrent la fenêtre après le déjeuner?
+Nous ouvrent le magasin à neuf heures.
+Nous ouvrent le même livre.
+Nous ouvrez la fenêtre après le déjeuner?
+Nous ouvrez le magasin à neuf heures.
+Nous ouvrez le même livre.
+Nous ouvrirai la fenêtre après le déjeuner?
+Nous ouvrirai le magasin à neuf heures.
+Nous ouvrirai le même livre.
+Nous ouvriras le magasin à neuf heures.
+Nous ouvriras le même livre.
+Nous ouvrirez la fenêtre après le déjeuner?
+Nous ouvrirez le magasin à neuf heures.
+Nous ouvrirez le même livre.
+Nous ouvrirons la fenêtre après le déjeuner?
+Nous ouvrirons le magasin à neuf heures.
+Nous ouvrirons le même livre.
+Nous ouvrons la fenêtre après le déjeuner?
+Nous ouvrons le magasin à neuf heures.
+Nous ouvrons le même livre.
+Nous parle pas au professeur ?
+Nous parlerons à la cérémonie ?
+Nous parlerons au professeur ?
+Nous parlerons pas à la cérémonie ?
+Nous parlons au professeur ?
+Nous parlons bien espagnol ?
+Nous parlons espagnol bien ?
+Nous perdent intérêt vite.
+Nous perdent la clé chaque année?
+Nous perdent motivation en hiver.
+Nous perdez intérêt vite.
+Nous perdez la clé chaque année?
+Nous perdez motivation en hiver.
+Nous perd intérêt vite.
+Nous perd la clé chaque année?
+Nous perd motivation en hiver.
+Nous perdons intérêt vite.
+Nous perdons la clé chaque année?
+Nous perdons motivation en hiver.
+Nous perdra intérêt vite.
+Nous perdra la clé par accident?
+Nous perdra motivation en hiver.
+Nous perdras intérêt vite.
+Nous perdras la clé par accident?
+Nous perdras motivation en hiver.
+Nous perdrez intérêt vite.
+Nous perdrez la clé par accident?
+Nous perdrez motivation en hiver.
+Nous perdrons intérêt vite.
+Nous perdrons la clé par accident?
+Nous perdrons motivation en hiver.
+Nous pourrons manger ici.
+Nous pourrons nager.
+Nous pourrons vous aider.
+Nous pouvions bien nager.
+Nous pouvions manger ici.
+Nous pouvions vous aider.
+Nous pouvons bien nager.
+Nous pouvons manger ici.
+Nous pouvons vous aider.
+Nous prend les escaliers.
+Nous prend pas la voiture aujourd'hui.
+Nous prendra des vacances en août.
+Nous prendrai une longue pause après le déjeuner.
+Nous prendra le bon chemin?
+Nous prendras des vacances en août.
+Nous prendras le bon chemin?
+Nous prendras une longue pause après le déjeuner.
+Nous prendra une longue pause après le déjeuner.
+Nous prendrez des vacances en août.
+Nous prendrez le bon chemin?
+Nous prendrons des vacances en août.
+Nous prendrons le bon chemin?
+Nous prendrons une longue pause après le déjeuner.
+Nous prenez les escaliers.
+Nous prenez pas la voiture aujourd'hui.
+Nous prennent les escaliers.
+Nous prenons les escaliers.
+Nous prenons ne pas la voiture aujourd'hui.
+Nous prenons ne pas une pause maintenant?
+Nous prenons pas une pause maintenant?
+Nous réjouirons?
+Nous réjouissons?
+Nous réjouissons-nous?
+Nous saurons l'adresse.
+Nous saurons la réponse.
+Nous saurons l'histoire.
+Nous savions l'adresse.
+Nous savions la réponse.
+Nous savions l'histoire.
+Nous savons l'adresse.
+Nous savons la réponse.
+Nous savons l'histoire.
+Nous se débrouillons ensemble.
+Nous s'ennuions pas.
+Nous s'ennuyons ?
+Nous s'ennuyons.
+Nous s'entraînons ?
+Nous serons à l'heure.
+Nous serons en retard.
+Nous serons heureux.
+Nous s'est adaptés.
+Nous s'est ennuyés.
+Nous s'est entraînés.
+Nous s'est réjouis.
+Nous s'est souvenus.
+Nous sommes adapté.
+Nous sommes adaptés?
+Nous sommes allés à l'école.
+Nous sommes allés au travail.
+Nous sommes allés en France.
+Nous sommes amis.
+Nous sommes écrit des dissertations pour la classe.
+Nous sommes écrit en français?
+Nous sommes écrit la même réponse.
+Nous sommes ennuyé.
+Nous sommes ennuyés ?
+Nous sommes entraîné.
+Nous sommes entraînés ?
+Nous sommes fatigués.
+Nous sommes fermé la même fenêtre.
+Nous sommes fermé la porte avant de partir.
+Nous sommes fermé le magasin à 21 heures.
+Nous sommes gardé les mêmes habitudes l'année dernière.
+Nous sommes gardé nos promesses?
+Nous sommes gardé notre espace de travail propre.
+Nous sommes heureux.
+Nous sommes intéressés à la littérature ?
+Nous sommes lu la bonne page?
+Nous sommes lu le même article hier.
+Nous sommes lu le menu attentivement.
+Nous sommes-nous intéressé(e)s à la littérature ?
+Nous sommes ouvert la fenêtre après le déjeuner?
+Nous sommes ouvert le magasin à neuf heures.
+Nous sommes ouvert le même livre.
+Nous sommes perdu intérêt vite.
+Nous sommes perdu la clé l'année dernière?
+Nous sommes perdu motivation en hiver.
+Nous sommes prêts.
+Nous sommes pris le bon chemin?
+Nous sommes pris les escaliers au lieu de l'ascenseur.
+Nous sommes pris une longue pause hier.
+Nous sommes réjoui.
+Nous sommes réjouis?
+Nous sommes souvenu.
+Nous sommes souvenus?
+Nous sommes venus de France.
+Nous sommes venus vous aider.
+Nous sommes venus vous voir.
+Nous sont amis.
+Nous souvenons?
+Nous souvenons-nous.
+Nous souvenons pas?
+Nous souviendrons?
+Nous souviendrons-nous.
+Nous trouve pas cette leçon difficile ?
+Nous trouverons le lieu fermé ?
+Nous trouverons le musée fermé ?
+Nous trouverons une solution ?
+Nous trouves pas le musée fermé ?
+Nous trouvons le musée fermé ?
+Nous venions de France.
+Nous venions vous aider.
+Nous venions vous voir.
+Nous venons de France.
+Nous venons vous aider.
+Nous venons vous voir.
+Nous verrons la voiture.
+Nous verrons le parc.
+Nous verrons les montagnes.
+Nous viendrons chez toi.
+Nous viendrons ensemble.
+Nous viendrons tôt.
+Nous voudrons manger ici.
+Nous voudrons un café.
+Nous voudrons vous aider.
+Nous voulions manger ici.
+Nous voulions un café.
+Nous voulions vous aider.
+Nous voulons manger maintenant.
+Nous voulons un café.
+Nous voulons vous aider.
+Nous voyions la voiture.
+Nous voyions le parc.
+Nous voyions les montagnes.
+Nous voyons la voiture.
+Nous voyons le parc.
+Nous voyons les montagnes.
+Ont-elles été heureuses ?
+Ont-elles eu des problèmes ?
+Ont-elles pas trouvé les billets ?
+Ont-ils été fatigués ?
+Ont-ils été heureux ?
+Ont-ils été prêts ?
+Ont-ils eu des problèmes ?
+Ont-ils eu le dîner ?
+Ont-ils parlé du voyage ?
+Ont-ils pas parlé du voyage ?
+Ont-ils pas trouvé la solution ?
+Ont-ils su la vérité ?
+Ont-ils su les règles ?
+Ont-ils trouvé la solution ?
+Où a-t-il intéressé ?
+Où est-ce qu'il s'est intéressé ?
+Où il s'est intéressé ?
+Où s'est-il intéressé ?
+Parlent-ils à leurs voisins ?
+Parlent-ils français ?
+Parleras-tu pendant la réunion ?
+Parleront-elles avec la nouvelle élève ?
+Parleront-elles pas avec la nouvelle élève ?
+Parles-tu à ta grand-mère ?
+Parles-tu à ton grand-père ?
+Parles-tu pendant la réunion ?
+Parlez-vous à la conférence ?
+Pourquoi avons-nous intéressé à ce sujet ?
+Pourquoi est-ce que nous nous sommes intéressé(e)s à ce sujet ?
+Pourquoi nous intéressons à cela ?
+Pourquoi nous intéressons-nous à cela ?
+Pourquoi nous nous intéressons à cela ?
+Pourquoi nous nous sommes intéressé(e)s à ce sujet ?
+Pourquoi nous sommes-nous intéressé(e)s à ce sujet ?
+Pourquoi sommes-nous intéressés à cela ?
+Quand ai-je intéressé aux livres ?
+Quand est-ce que je me suis intéressé(e) aux livres ?
+Quand est-ce que je m'intéresserai aux livres ?
+Quand je me suis intéressé(e) aux livres ?
+Quand je m'intéresserai aux livres ?
+Quand me suis-je intéressé(e) aux livres ?
+Quand m'intéresserai-je aux livres ?
+Qu'est-ce que je m'intéresse ?
+Qu'est-ce que tu t'intéresses ?
+Qu'est-ce qu'il s'intéresse ?
+Quoi il s'intéresse ?
+Quoi je m'intéresse ?
+Quoi tu t'intéresses ?
+Réjouira-t-elle?
+Réjouirez-vous?
+Réjouirons-nous?
+Réjouiront-elles?
+Réjouiront-ils?
+Réjouissent-elles?
+Réjouissez-vous?
+Sais-tu la réponse ?
+Sais-tu les règles ?
+Sais-tu qui est ton père ?
+Sait-elle qui est ton père ?
+Sait-il qui est ton père ?
+Sauras-tu les règles ?
+Sauras-tu qui est mon père ?
+Saura-t-elle qui est ton père ?
+Saura-t-il qui est ton père ?
+Saurez-vous les règles ?
+Saurez-vous qui est mon père ?
+Saurons-nous les règles ?
+Sauront-ils les règles ?
+Savaient-ils les règles ?
+Savais-tu les règles ?
+Savais-tu qui est mon père ?
+Savait-elle qui est ton père ?
+Savait-il qui est ton père ?
+Savent-elles la réponse ?
+Savent-ils la réponse ?
+Savent-ils les règles ?
+Savez-vous la réponse ?
+Savez-vous les règles ?
+Savez-vous qui est ton père ?
+Saviez-vous les règles ?
+Saviez-vous qui est mon père ?
+Savions-nous les règles ?
+Savons-nous les règles ?
+Se débrouillent-elles seules ?
+Se débrouillent-ils bien ?
+Se débrouille-t-elle toute seule ?
+S'entraînent-elles ?
+S'entraînera-t-elle ?
+S'entraînera-t-il ?
+S'entraîneront-elles ?
+S'entraîne-t-elle ?
+S'entraîne-t-il ?
+Serai-je à l'heure ?
+Serai-je fatigué ?
+Serai-je prêt ?
+Seras-tu à la maison ?
+Seras-tu fatigué ?
+Seras-tu prêt ?
+Sera-t-elle à la maison ?
+Sera-t-elle fatiguée ?
+Sera-t-il à la maison ?
+Sera-t-il fatigué ?
+Sera-t-il prêt ?
+Se réjouira-t-elle?
+Se réjouira-t-elle pas?
+Se réjouira-t-il?
+Se réjouiront-elles?
+Se réjouissent-elles?
+Se réjouit-elle?
+Se réjouit-il?
+Serez-vous à la maison ?
+Serez-vous à l'heure ?
+Serez-vous fatigués ?
+Serez-vous prêtes ?
+Serez-vous prêts ?
+Serons-nous à l'heure ?
+Serons-nous fatigués ?
+Serons-nous prêts ?
+Seront-elles prêtes ?
+Seront-ils à l'heure ?
+Seront-ils fatigués ?
+Seront-ils prêts ?
+Se sont-elles adaptées?
+Se sont-elles ennuyées ?
+Se sont-elles entraînées ?
+Se sont-elles intéressées à la cuisine ?
+Se sont-elles réjouies?
+Se sont-ils intéressés aux sports ?
+S'est-elle adapté?
+S'est-elle adaptée?
+S'est-elle ennuyé ?
+S'est-elle ennuyée ?
+S'est-elle entraîné ?
+S'est-elle entraînée ?
+S'est-elle intéressée à la science ?
+S'est-elle réjoui?
+S'est-elle réjouie?
+S'est-il adapté?
+S'est-il ennuyé ?
+S'est-il entraîné ?
+S'est-il intéressé à la politique ?
+S'est-il réjoui?
+S'intéressent-ils aux sports ?
+S'intéressera-t-elle à la science ?
+S'intéressera-t-il à la politique ?
+S'intéresseront-elles à ces problèmes ?
+S'intéresseront-ils à la littérature ?
+Sommes-nous à la maison ?
+Sommes-nous allés à l'école ?
+Sommes-nous allés en train ?
+Sommes-nous allés en voiture ?
+Sommes-nous allés souvent ?
+Sont-elles allées régulièrement ?
+Sont-elles prêtes ?
+Sont-elles venues pour le dîner ?
+Sont-ils à la maison ?
+Sont-ils allés en train ?
+Sont-ils allés en voiture ?
+Sont-ils allés régulièrement ?
+Sont-ils prêts ?
+Sont-ils venus pour le dîner ?
+Suis-je allé à l'école ?
+Suis-je allé à Paris ?
+Suis-je allé au marché ?
+Suis-je allé au parc ?
+Suis-je allé en voiture ?
+Suis-je allé parfois ?
+Suis-je allé souvent ?
+Suis-je fatigué ?
+Suis-je prêt ?
+T'as-tu intéressé à l'histoire ?
+Te réjouiras-tu?
+Te réjouiras-tu pas?
+T'es-tu adapté?
+T'es-tu ennuyé ?
+T'es-tu entraîné ?
+T'es-tu réjoui?
+The conjugation 'êtes' is for vous, not nous.
+The conjugation 'êtes' is for vous, not tu.
+This is the correct present tense conjugation of être for il.
+This is the correct present tense conjugation of être for nous.
+This is the correct present tense conjugation of être for tu.
+This is the correct present tense conjugation of être for vous.
+This uses the correct present tense conjugation of être for je.
+This uses the wrong verb 'avoir' instead of être.
+T'intéresseras-tu à l'histoire ?
+T'intéresseras-tu à rien ?
+T'intéresseras-tu rien ?
+Trouvent-ils les réponses ?
+Trouvera-t-elle pas ses clés ?
+Trouvera-t-elle ses clés ?
+Trouvera-t-il cette réponse correcte ?
+Trouverez-vous cette idée utile ?
+Trouverez-vous cette réponse correcte ?
+Trouverez-vous le musée fermé ?
+Trouverez-vous pas cette idée utile ?
+Trouverons-nous le lieu fermé ?
+Trouveront-ils l'hôtel ?
+Trouveront-ils pas l'hôtel ?
+Trouvonz-nous cette leçon difficile ?
+Tu adapteras?
+Tu a écrit ne pas la réponse.
+Tu a fermé ne pas ton sac.
+Tu a gardé ne pas le secret.
+Tu allais à la plage.
+Tu allais à l'école.
+Tu allais au cinéma.
+Tu allais au parc.
+Tu allais au travail.
+Tu a ne pas lu le message.
+Tu a ne pas pris de photos.
+Tu a ouvert ne pas ton sac.
+Tu a perdu ne pas patience.
+Tu as beaucoup d'amis.
+Tu as cru la rumeur ?
+Tu as dit bonjour.
+Tu as dit la même chose.
+Tu as dit la vérité.
+Tu as dit quelques mots.
+Tu as écrit pas la réponse.
+Tu as été à Paris.
+Tu as été fatigué.
+Tu as été heureux.
+Tu as été prêt.
+Tu as eu beaucoup d'amis.
+Tu as eu de la chance.
+Tu as eu des problèmes.
+Tu as eu du café.
+Tu as eu une bonne journée.
+Tu as fait de l'exercice ce matin.
+Tu as fait la cuisine.
+Tu as fait la vaisselle.
+Tu as fait les courses.
+Tu as fait tes devoirs.
+Tu as fait ton travail.
+Tu as fait un excellent travail.
+Tu as fait un excellent travail hier.
+Tu as fermé pas ton sac.
+Tu as ne pas lu le message.
+Tu as ne pas pris de photos.
+Tu as ouvert pas ton sac.
+Tu as parlé à ta grand-mère ?
+Tu as parlé avec tes amis ?
+Tu as parlé trop vite ?
+Tu as perdu pas patience.
+Tu as pu conduire une voiture.
+Tu as pu manger ici.
+Tu as pu nager.
+Tu as pu parler français.
+Tu as pu venir hier.
+Tu as su l'adresse.
+Tu as su la nouvelle.
+Tu as su la réponse.
+Tu as su la vérité.
+Tu as su les règles.
+Tu as trouvé ton cahier ?
+Tu as un chien.
+Tu as une maison.
+Tu as une voiture.
+Tu as un sac.
+Tu as voulu manger ici.
+Tu as voulu un café.
+Tu as voulu une maison à Paris.
+Tu as voulu une nouvelle voiture.
+Tu as voulu un sandwich.
+Tu as vu la maison.
+Tu as vu la voiture.
+Tu as vu le chien.
+Tu as vu les enfants.
+Tu as vu les montagnes.
+Tu auras beaucoup d'amis.
+Tu auras beaucoup de livres.
+Tu auras de bonnes idées.
+Tu auras un bon travail.
+Tu auras un chien.
+Tu auras une maison.
+Tu auras une voiture.
+Tu auras un sac.
+Tu avais beaucoup d'amis.
+Tu avais un chien.
+Tu avais une maison.
+Tu avais une voiture.
+Tu avais un sac.
+Tu croiras cette histoire ?
+Tu diras bonjour.
+Tu diras la même chose.
+Tu diras la vérité.
+Tu diras quelques mots.
+Tu disais bonjour.
+Tu disais la même chose.
+Tu disais la vérité.
+Tu disais quelques mots.
+Tu dis bonjour.
+Tu dis la même chose.
+Tu dis la vérité.
+Tu dis quelques mots.
+Tu écrira ne pas la réponse.
+Tu écriras pas la réponse.
+Tu écris ne pas des lettres.
+Tu écrit ne pas des lettres.
+Tu ennuieras ?
+Tu ennuieras pas ?
+Tu ennuies ?
+Tu ennuyé ?
+Tu ennuyes ?
+Tu entraîneras ?
+Tu entraîneras pas ?
+Tu entraînes ?
+Tu entraînes pas ?
+Tu es allé à la plage.
+Tu es allé à l'école.
+Tu es allé au cinéma.
+Tu es allé au parc.
+Tu es allé au travail.
+Tu es fatigué.
+Tu es grand.
+Tu es heureuse.
+Tu es heureux.
+Tu es intéressé à la musique ?
+Tu es prêt.
+Tu es venu de France.
+Tu es venu de Londres.
+Tu es venu de Paris.
+Tu es venu d'Espagne.
+Tu es venu nous voir.
+Tu étais au bureau.
+Tu étais fatigué.
+Tu étais heureuse.
+Tu étais heureux.
+Tu étais prêt.
+Tu êtes fatigué.
+Tu faisais la cuisine.
+Tu faisais la vaisselle.
+Tu faisais les courses.
+Tu faisais tes devoirs.
+Tu faisais ton travail.
+Tu fais la cuisine.
+Tu fais la vaisselle.
+Tu fais les courses.
+Tu fais tes devoirs.
+Tu fais ton travail.
+Tu feras la cuisine.
+Tu feras la vaisselle.
+Tu feras les courses.
+Tu feras tes devoirs.
+Tu feras ton travail.
+Tu ferme ne pas ton sac.
+Tu fermera pas ton sac.
+Tu fermeras ne pas ton sac.
+Tu fermes ne pas ton sac.
+Tu garde ne pas des secrets.
+Tu gardera pas le secret.
+Tu garderas ne pas le secret.
+Tu gardes ne pas des secrets.
+Tu intéresse à la musique ?
+Tu iras à la plage.
+Tu iras à l'école.
+Tu iras au cinéma.
+Tu iras au marché la semaine prochaine.
+Tu iras au musée.
+Tu iras au parc.
+Tu iras au restaurant vendredi prochain.
+Tu iras au travail.
+Tu liras ne pas le courriel aujourd'hui.
+Tu lis ne pas les instructions.
+Tu lis pas les instructions.
+Tu n'a fermé pas ton sac.
+Tu n'a gardé pas le secret.
+Tu n'allais pas à l'école.
+Tu n'allais pas au cinéma.
+Tu n'a ouvert pas ton sac.
+Tu n'a pas adapté(e)?
+Tu n'a pas écrit la réponse.
+Tu n'a pas ennuyé(e) ?
+Tu n'a pas entraîné(e) ?
+Tu n'a pas lu le message.
+Tu n'a pas pris de photos.
+Tu n'a pas réjoui(e)?
+Tu n'a pas souvenu(e)?
+Tu n'a perdu pas patience.
+Tu n'as pas adapté?
+Tu n'as pas cru cette idée ?
+Tu n'as pas de maison.
+Tu n'as pas de voiture.
+Tu n'as pas dit un mot.
+Tu n'as pas écrit la réponse.
+Tu n'as pas ennuyé ?
+Tu n'as pas entraîné ?
+Tu n'as pas été en retard.
+Tu n'as pas été heureux.
+Tu n'as pas eu d'aide.
+Tu n'as pas eu de problèmes.
+Tu n'as pas fait d'erreurs.
+Tu n'as pas fait la cuisine.
+Tu n'as pas fait la lessive.
+Tu n'as pas fait la vaisselle.
+Tu n'as pas fait le ménage.
+Tu n'as pas fait les courses.
+Tu n'as pas fait mes devoirs.
+Tu n'as pas fait ton projet.
+Tu n'as pas fermé ton sac.
+Tu n'as pas gardé le secret.
+Tu n'as pas lu le message.
+Tu n'as pas ouvert ton sac.
+Tu n'as pas perdu patience.
+Tu n'as pas pris de photos.
+Tu n'as pas pu nager.
+Tu n'as pas pu venir aujourd'hui.
+Tu n'as pas réjoui?
+Tu n'as pas souvenu?
+Tu n'as pas su la réponse.
+Tu n'as pas su la vérité.
+Tu n'as pas voulu de café.
+Tu n'as pas voulu partir.
+Tu n'as pas vu la voiture.
+Tu n'as pas vu le chien.
+Tu n'as rien dit.
+Tu n'auras pas d'argent.
+Tu n'auras pas de chien.
+Tu n'auras pas de maison.
+Tu n'auras pas de patience.
+Tu n'auras pas de problèmes.
+Tu n'auras pas de sac.
+Tu n'auras pas de voiture.
+Tu n'auras pas mes clés.
+Tu n'avais pas de maison.
+Tu n'avais pas de voiture.
+Tu n'écrira pas la réponse.
+Tu n'écriras pas la réponse.
+Tu n'écris pas des lettres.
+Tu n'écrit pas des lettres.
+Tu ne croiras pas elle ?
+Tu ne crois pas elle ?
+Tu ne crois pas votre professeur ?
+Tu ne diras pas un mot.
+Tu ne diras rien.
+Tu ne disais pas un mot.
+Tu ne disais rien.
+Tu ne dis pas un mot.
+Tu ne dis rien.
+Tu ne ennuyé pas ?
+Tu ne faisais pas la cuisine.
+Tu ne faisais pas mes devoirs.
+Tu ne fais pas la cuisine.
+Tu ne fais pas mes devoirs.
+Tu ne feras pas la cuisine.
+Tu ne feras pas mes devoirs.
+Tu ne ferme pas ton sac.
+Tu ne fermera pas ton sac.
+Tu ne fermeras pas ton sac.
+Tu ne fermes pas ton sac.
+Tu ne garde pas des secrets.
+Tu ne gardera pas le secret.
+Tu ne garderas pas le secret.
+Tu ne gardes pas de secrets.
+Tu ne lirai pas le courriel aujourd'hui.
+Tu ne lira pas le courriel aujourd'hui.
+Tu ne liras pas le courriel aujourd'hui.
+Tu ne lis pas les instructions.
+Tu ne lit pas les instructions.
+Tu ne parle pas de politique ?
+Tu ne parleras pas avec le professeur ?
+Tu ne parles pas à ton grand-père ?
+Tu ne pas t'intéresses aux films ?
+Tu ne perd pas patience facilement.
+Tu ne perdra pas patience.
+Tu ne perdras pas patience.
+Tu ne perds pas patience facilement.
+Tu ne peux pas nager.
+Tu ne peux pas venir aujourd'hui.
+Tu ne pourras pas nager.
+Tu ne pourras pas venir.
+Tu ne pouvais pas nager.
+Tu ne pouvais pas venir.
+Tu ne prendrai pas le métro aujourd'hui.
+Tu ne prendra pas le métro aujourd'hui.
+Tu ne prendras pas le métro aujourd'hui.
+Tu ne sais pas cette chanson.
+Tu ne sais pas la réponse.
+Tu ne sauras pas la réponse.
+Tu ne sauras pas la vérité.
+Tu ne savais pas la réponse.
+Tu ne savais pas la vérité.
+Tu ne seras pas en retard.
+Tu ne seras pas heureux.
+Tu n'es pas adapté(e)?
+Tu n'es pas allé à l'école.
+Tu n'es pas allé au cinéma.
+Tu n'es pas ennuyé(e) ?
+Tu n'es pas entraîné(e) ?
+Tu n'es pas fatigué.
+Tu n'es pas heureux.
+Tu n'es pas intéressé aux films ?
+Tu n'es pas réjoui(e)?
+Tu n'es pas souvenu(e)?
+Tu n'es pas venu souvent.
+Tu n'es plus venu.
+Tu ne t'adapteras pas?
+Tu ne t'adaptes pas?
+Tu n'étais pas fatigué.
+Tu n'étais pas heureux.
+Tu ne te débrouilles pas bien ?
+Tu ne t'ennuieras pas ?
+Tu ne t'ennuies pas ?
+Tu ne t'entraîneras pas ?
+Tu ne t'entraînes pas ?
+Tu ne te réjouiras pas?
+Tu ne te réjouis pas?
+Tu ne te souviendras pas?
+Tu ne te souviens pas?
+Tu ne t'es pas adapté(e)?
+Tu ne t'es pas ennuyé(e) ?
+Tu ne t'es pas entraîné(e) ?
+Tu ne t'es pas intéressé(e) aux films ?
+Tu ne t'es pas réjoui(e)?
+Tu ne t'es pas souvenu(e)?
+Tu ne t'intéresse pas à la politique.
+Tu ne t'intéresseras à rien ?
+Tu ne t'intéresseras pas à la politique.
+Tu ne t'intéresseras pas la politique.
+Tu ne t'intéresses pas aux films ?
+Tu ne trouves pas cette idée étrange ?
+Tu ne vas pas à l'école.
+Tu ne vas pas au cinéma.
+Tu ne venais pas souvent.
+Tu ne venais plus.
+Tu ne verras pas la voiture.
+Tu ne verras pas le chien.
+Tu ne veux pas de café.
+Tu ne veux pas partir.
+Tu ne viendras pas demain.
+Tu ne viendras pas la semaine prochaine.
+Tu ne viens pas souvent.
+Tu ne viens plus.
+Tu ne vois pas la voiture.
+Tu ne vois pas le chien.
+Tu ne voudras pas de café.
+Tu ne voudras pas partir.
+Tu ne voulais pas de café.
+Tu ne voulais pas partir.
+Tu ne voyais pas la voiture.
+Tu ne voyais pas le chien.
+Tu n'iras pas à la fête.
+Tu n'iras pas à l'école.
+Tu n'iras pas à l'école demain.
+Tu n'iras pas au cinéma.
+Tu n'iras pas au cinéma le week-end prochain.
+Tu n'iras pas au gymnase demain.
+Tu n'iras pas au travail.
+Tu n'iras pas en ville demain.
+Tu n'ouvre pas ton sac.
+Tu n'ouvres pas ton sac.
+Tu n'ouvrira pas ton sac.
+Tu n'ouvriras pas ton sac.
+Tu ouvre ne pas ton sac.
+Tu ouvres ne pas ton sac.
+Tu ouvrira pas ton sac.
+Tu ouvriras ne pas ton sac.
+Tu parle avec tes amis ?
+Tu parles à ton grand-père ?
+Tu parles avec tes amis ?
+Tu perd ne pas patience facilement.
+Tu perdra pas patience.
+Tu perdras ne pas patience.
+Tu perds ne pas patience facilement.
+Tu peux bien nager.
+Tu peux conduire une voiture.
+Tu peux manger ici.
+Tu peux parler français.
+Tu peux venir demain.
+Tu pourras conduire une voiture.
+Tu pourras manger ici.
+Tu pourras nager.
+Tu pourras parler français.
+Tu pourras venir demain.
+Tu pouvais bien nager.
+Tu pouvais conduire une voiture.
+Tu pouvais manger ici.
+Tu pouvais parler français.
+Tu pouvais venir chaque jour.
+Tu prend des vitamines?
+Tu prendras ne pas le métro aujourd'hui.
+Tu prends des vitamines?
+Tu prenez des vitamines?
+Tu prenons des vitamines?
+Tu réjouiras?
+Tu réjouis?
+Tu s'adaptes?
+Tu sais cette chanson.
+Tu sais l'adresse.
+Tu sais la réponse.
+Tu sais la vérité.
+Tu sais les règles.
+Tu sauras l'adresse.
+Tu sauras la nouvelle.
+Tu sauras la réponse.
+Tu sauras la vérité.
+Tu sauras les règles.
+Tu savais l'adresse.
+Tu savais la nouvelle.
+Tu savais la réponse.
+Tu savais la vérité.
+Tu savais les règles.
+Tu s'ennuieras ?
+Tu s'ennuies ?
+Tu s'entraîneras ?
+Tu s'entraînes ?
+Tu sera fatigué.
+Tu seras à Paris.
+Tu seras en retard.
+Tu seras fatiguée.
+Tu seras heureux.
+Tu seras prêt.
+Tu se souviens?
+Tu s'est adapté(e)?
+Tu s'est ennuyé(e) ?
+Tu s'est entraîné(e) ?
+Tu s'est réjoui(e)?
+Tu s'est souvenu(e)?
+Tu souviendras pas?
+Tu souviens pas?
+Tu suis fatigué.
+Tu t'adapteras?
+Tu t'adapteras pas?
+Tu t'adaptes?
+Tu t'adaptes pas?
+Tu te débrouilles pas bien ?
+Tu t'ennuie ?
+Tu t'ennuieras ?
+Tu t'ennuies ?
+Tu t'entraîneras ?
+Tu t'entraînes ?
+Tu te réjouiras?
+Tu te réjouiras pas?
+Tu te réjouis?
+Tu te réjouis pas?
+Tu t'es adapté(e)?
+Tu t'es ennuyé(e) ?
+Tu t'es entraîné(e) ?
+Tu t'es intéressé(e) à l'histoire ?
+Tu te souviendras?
+Tu te souviens?
+Tu t'es réjoui(e)?
+Tu t'es souvenu(e)?
+Tu t'intéresserai à l'histoire ?
+Tu t'intéresseras à la politique.
+Tu t'intéresseras à l'histoire ?
+Tu t'intéresses à la musique ?
+Tu vas à la plage.
+Tu vas à l'école.
+Tu vas au cinéma.
+Tu vas au parc.
+Tu vas au travail.
+Tu vas t'intéresser à l'histoire ?
+Tu venais de France.
+Tu venais de Londres.
+Tu venais de Paris.
+Tu venais d'Espagne.
+Tu venais nous voir.
+Tu verras la maison.
+Tu verras la voiture.
+Tu verras le chien.
+Tu verras les enfants.
+Tu verras les montagnes.
+Tu veux manger maintenant.
+Tu veux un café.
+Tu veux une maison à Paris.
+Tu veux une nouvelle voiture.
+Tu veux un sandwich.
+Tu viendras bientôt.
+Tu viendras chez moi.
+Tu viendras demain.
+Tu viendras la semaine prochaine.
+Tu viendras tôt.
+Tu viens de France.
+Tu viens de Londres.
+Tu viens de Paris.
+Tu viens d'Espagne.
+Tu viens nous voir.
+Tu vois la maison.
+Tu vois la voiture.
+Tu vois le chien.
+Tu vois les enfants.
+Tu vois les montagnes.
+Tu voudras manger ici.
+Tu voudras un café.
+Tu voudras une maison à Paris.
+Tu voudras une nouvelle voiture.
+Tu voudras un sandwich.
+Tu voulais manger ici.
+Tu voulais un café.
+Tu voulais une maison à Paris.
+Tu voulais une nouvelle voiture.
+Tu voulais un sandwich.
+Tu voyais la maison.
+Tu voyais la voiture.
+Tu voyais le chien.
+Tu voyais les enfants.
+Tu voyais les montagnes.
+Vais-je à l'école ?
+Vais-je à Paris ?
+Vais-je au marché ?
+Vas-tu à l'école ?
+Vas-tu à Londres ?
+Vas-tu à Paris ?
+Vas-tu au marché ?
+Vas-tu mis du sucre dans ton thé ?
+Vas-tu régulièrement ?
+Va-t-elle à Londres ?
+Va-t-elle à Paris ?
+Va-t-elle au marché ?
+Va-t-elle mettre ses clés dans son sac ?
+Va-t-il à l'école ?
+Va-t-il à Londres ?
+Va-t-il à Paris ?
+Va-t-il au marché ?
+Venaient-elles pour le dîner ?
+Venaient-ils pour le dîner ?
+Venais-tu pour le dîner ?
+Venez-vous pour le dîner ?
+Veniez-vous pour le dîner ?
+Viendrai-je à l'heure ?
+Viendras-tu à l'heure ?
+Viendras-tu pour le dîner ?
+Viendra-t-elle pour le dîner ?
+Viendra-t-il à l'heure ?
+Viendra-t-il pour le dîner ?
+Viendrez-vous à l'heure ?
+Viendrez-vous pour le dîner ?
+Viendrons-nous à l'heure ?
+Viendront-elles à l'heure ?
+Viendront-ils à l'heure ?
+Viennent-elles pour le dîner ?
+Viennent-ils pour le dîner ?
+Viens-tu pour le dîner ?
+Vont-elles régulièrement ?
+Vont-ils régulièrement ?
+Vous adapterez?
+Vous adapterez pas?
+Vous adaptez?
+Vous adaptez-vous?
+Vous adaptez-vous pas?
+Vous allez au parc.
+Vous allez au travail.
+Vous allez en France.
+Vous alliez au parc.
+Vous alliez au travail.
+Vous alliez en France.
+Vous aurez beaucoup d'amis.
+Vous aurez beaucoup de livres.
+Vous aurez de bonnes idées.
+Vous aurez du temps.
+Vous aurez du temps demain.
+Vous aurez un chien.
+Vous aurez une belle maison.
+Vous avez adapté?
+Vous avez beaucoup d'amis.
+Vous avez croyu ses excuses ?
+Vous avez dit bonjour.
+Vous avez dit la même chose.
+Vous avez dit merci.
+Vous avez du temps.
+Vous avez écrit le rapport hier.
+Vous avez écrit ne pas au tableau.
+Vous avez écrit ne pas en français?
+Vous avez écrit pas en français?
+Vous avez ennuyé ?
+Vous avez entraîné ?
+Vous avez été à Paris.
+Vous avez été en retard.
+Vous avez été fatigués.
+Vous avez eu beaucoup d'amis.
+Vous avez eu de la pluie.
+Vous avez eu du café.
+Vous avez fait de votre mieux.
+Vous avez fait du sport.
+Vous avez fait du sport hier.
+Vous avez fait la vaisselle.
+Vous avez fait un excellent travail.
+Vous avez fait un excellent travail hier.
+Vous avez fait votre travail.
+Vous avez fermé la porte hier soir.
+Vous avez fermé ne pas la boîte pendant le cours.
+Vous avez fermé ne pas les fenêtres en été?
+Vous avez fermé pas les fenêtres en été?
+Vous avez gardé ne pas de vieux fichiers?
+Vous avez gardé ne pas la lumière allumée.
+Vous avez gardé pas de vieux fichiers?
+Vous avez gardé tous les reçus.
+Vous avez intéressé à la technologie ?
+Vous avez lu tous les chapitres.
+Vous avez mis du beurre sur ton pain ?
+Vous avez mis leurs jouets ?
+Vous avez ne pas lu l'annonce.
+Vous avez ne pas lu le rapport?
+Vous avez ne pas pris de notes pendant la réunion?
+Vous avez ne pas pris de risques.
+Vous avez ouvert les dossiers chaque matin.
+Vous avez ouvert ne pas la porte en hiver.
+Vous avez ouvert ne pas les fenêtres en été?
+Vous avez ouvert pas les fenêtres en été?
+Vous avez parlé à vos voisins ?
+Vous avez parlé pendant la réunion ?
+Vous avez pas écrit au tableau.
+Vous avez pas fermé la boîte pendant le cours.
+Vous avez pas gardé la lumière allumée.
+Vous avez pas lu l'annonce.
+Vous avez pas ouvert la porte en hiver.
+Vous avez pas perdu d'argent.
+Vous avez pas pris de risques.
+Vous avez perdu ne pas d'argent.
+Vous avez perdu ne pas vos billets?
+Vous avez perdu pas vos billets?
+Vous avez perdu votre mot de passe encore.
+Vous avez pris la voiture pour aller au travail.
+Vous avez pu conduire une voiture.
+Vous avez pu manger ici.
+Vous avez pu nous aider.
+Vous avez réjoui?
+Vous avez souvenu?
+Vous avez su l'adresse.
+Vous avez su les règles.
+Vous avez su l'histoire.
+Vous avez trouvé la bonne réponse ?
+Vous avez trouvé l'endroit étrange ?
+Vous avez un chien.
+Vous avez voulu manger ici.
+Vous avez voulu nous aider.
+Vous avez voulu un sandwich.
+Vous avez vu la maison.
+Vous avez vu le parc.
+Vous avez vu les montagnes.
+Vous aviez beaucoup d'amis.
+Vous aviez du temps.
+Vous aviez un chien.
+Vous avons écrit le rapport hier.
+Vous avons fermé la porte hier soir.
+Vous avons gardé tous les reçus.
+Vous avons lu tous les chapitres.
+Vous avons ouvert les dossiers chaque matin.
+Vous avons perdu votre mot de passe encore.
+Vous avons pris la voiture pour aller au travail.
+Vous croira pas ses excuses ?
+Vous croirez ses excuses ?
+Vous croirez votre professeur ?
+Vous croit pas votre professeur ?
+Vous débrouillez tout seuls.
+Vous débrouillez très bien.
+Vous débrouillez-vous bien ?
+Vous direz bonjour.
+Vous direz la même chose.
+Vous direz merci.
+Vous disiez bonjour.
+Vous disiez la même chose.
+Vous disiez merci.
+Vous dites bonjour.
+Vous dites la même chose.
+Vous dites merci.
+Vous écrira le rapport lundi prochain.
+Vous écriras le rapport lundi prochain.
+Vous écrirez le rapport lundi prochain.
+Vous écrirez ne pas au tableau.
+Vous écrirez ne pas en français?
+Vous écriront le rapport lundi prochain.
+Vous écrit le rapport chaque lundi.
+Vous écrivent le rapport chaque lundi.
+Vous écrivez le rapport chaque lundi.
+Vous écrivez ne pas au tableau.
+Vous écrivez ne pas en français?
+Vous écrivez pas en français?
+Vous écrivons le rapport chaque lundi.
+Vous ennuierez ?
+Vous ennuierez pas.
+Vous ennuierez-vous ?
+Vous ennuirez ?
+Vous ennuyez ?
+Vous ennuyez.
+Vous entraînerez ?
+Vous entraînerez pas.
+Vous entraînerez-vous ?
+Vous entraînez ?
+Vous entraînez pas.
+Vous entraînez-vous ?
+Vous es prêts.
+Vous êtes adapté?
+Vous êtes allé au parc.
+Vous êtes allés au travail.
+Vous êtes allés en France.
+Vous êtes écrit le rapport hier.
+Vous êtes ennuyé ?
+Vous êtes ennuyés.
+Vous êtes entraîné ?
+Vous êtes fatigués.
+Vous êtes fermé la porte hier soir.
+Vous êtes gardé tous les reçus.
+Vous êtes heureuses.
+Vous êtes intéressés à la technologie ?
+Vous êtes lu tous les chapitres.
+Vous êtes ouvert les dossiers chaque matin.
+Vous êtes perdu votre mot de passe encore.
+Vous êtes prêts.
+Vous êtes pris la voiture pour aller au travail.
+Vous êtes réjoui?
+Vous êtes souvenu?
+Vous êtes venu de Paris.
+Vous êtes venus nous aider.
+Vous êtes venus nous voir.
+Vous êtes-vous adapté(e)?
+Vous êtes-vous ennuyé(e) ?
+Vous êtes-vous entraîné(e) ?
+Vous êtes-vous intéressé(e)s à la technologie ?
+Vous êtes-vous réjoui(e)?
+Vous êtes-vous souvenu(e)?
+Vous étiez à la maison.
+Vous étiez au bureau.
+Vous étiez heureuses.
+Vous faisiez du sport.
+Vous faisiez la vaisselle.
+Vous faisiez votre travail.
+Vous faites du sport.
+Vous faites la vaisselle.
+Vous faites votre travail.
+Vous ferez du sport.
+Vous ferez la vaisselle.
+Vous ferez votre travail.
+Vous ferme la porte chaque soir.
+Vous ferment la porte chaque soir.
+Vous fermera la porte chaque nuit.
+Vous fermeras la porte chaque nuit.
+Vous fermerez la porte chaque nuit.
+Vous fermerez ne pas la boîte pendant le cours.
+Vous fermerez ne pas les fenêtres en été?
+Vous fermeront la porte chaque nuit.
+Vous fermez la porte chaque soir.
+Vous fermez ne pas la boîte pendant le cours.
+Vous fermez ne pas les fenêtres en été?
+Vous fermez pas les fenêtres en été?
+Vous fermons la porte chaque soir.
+Vous gardent tous les reçus.
+Vous garderas tous les reçus.
+Vous gardera tous les reçus.
+Vous garderez ne pas de vieux fichiers?
+Vous garderez ne pas la lumière allumée.
+Vous garderez tous les reçus.
+Vous garderont tous les reçus.
+Vous garde tous les reçus.
+Vous gardez ne pas de vieux fichiers?
+Vous gardez ne pas la lumière allumée.
+Vous gardez pas de vieux fichiers?
+Vous gardez tous les reçus.
+Vous gardons tous les reçus.
+Vous intéressez à la technologie ?
+Vous intéressez-vous à la technologie ?
+Vous irez à l'école demain.
+Vous irez au concert demain soir.
+Vous irez au musée.
+Vous irez au parc.
+Vous irez au restaurant vendredi prochain.
+Vous irez au travail.
+Vous irez en France.
+Vous irez en voiture le mois prochain.
+Vous liras tous les chapitres.
+Vous lira tous les chapitres.
+Vous lirez ne pas l'annonce.
+Vous lirez ne pas les étiquettes?
+Vous lirez tous les chapitres.
+Vous lirons tous les chapitres.
+Vous lisent les nouvelles tous les jours.
+Vous lisez les nouvelles tous les jours.
+Vous lisez ne pas les courriels.
+Vous lisez ne pas les panneaux?
+Vous lisez pas les panneaux?
+Vous lisons les nouvelles tous les jours.
+Vous lit les nouvelles tous les jours.
+Vous n'allez pas vous intéresser à l'art ?
+Vous n'aurez pas de chance.
+Vous n'avez cru pas ses excuses ?
+Vous n'avez lu pas le rapport?
+Vous n'avez mis pas leurs livres ?
+Vous n'avez pas adapté.
+Vous n'avez pas cru l'histoire ?
+Vous n'avez pas écrit au tableau.
+Vous n'avez pas écrit en français?
+Vous n'avez pas ennuyé.
+Vous n'avez pas entraîné.
+Vous n'avez pas fait votre devoir.
+Vous n'avez pas fermé la boîte pendant le cours.
+Vous n'avez pas fermé les fenêtres en été?
+Vous n'avez pas gardé de vieux fichiers?
+Vous n'avez pas gardé la lumière allumée.
+Vous n'avez pas lu l'annonce.
+Vous n'avez pas lu le rapport?
+Vous n'avez pas mis la lettre dans la boîte ?
+Vous n'avez pas ouvert la porte en hiver.
+Vous n'avez pas ouvert les fenêtres en été?
+Vous n'avez pas perdu d'argent.
+Vous n'avez pas perdu vos billets?
+Vous n'avez pas pris de notes pendant la réunion?
+Vous n'avez pas pris de risques.
+Vous n'avez pas réjoui.
+Vous n'avez pas souvenu.
+Vous n'avez pris pas de notes pendant la réunion?
+Vous n'avez trouvé pas la bonne réponse ?
+Vous n'avez trouvé pas l'endroit étrange ?
+Vous n'avons pas écrit au tableau.
+Vous n'avons pas écrit en français?
+Vous n'avons pas fermé la boîte pendant le cours.
+Vous n'avons pas fermé les fenêtres en été?
+Vous n'avons pas gardé de vieux fichiers?
+Vous n'avons pas gardé la lumière allumée.
+Vous n'avons pas lu l'annonce.
+Vous n'avons pas lu le rapport?
+Vous n'avons pas ouvert la porte en hiver.
+Vous n'avons pas ouvert les fenêtres en été?
+Vous n'avons pas perdu d'argent.
+Vous n'avons pas perdu vos billets?
+Vous n'avons pas pris de notes pendant la réunion?
+Vous n'avons pas pris de risques.
+Vous n'écrirez pas au tableau.
+Vous n'écrirez pas en français?
+Vous n'écrivez pas au tableau.
+Vous n'écrivez pas en français?
+Vous ne écrira pas au tableau.
+Vous ne écrira pas en français?
+Vous ne écriras pas au tableau.
+Vous ne écriras pas en français?
+Vous ne écrit pas au tableau.
+Vous ne écrit pas en français?
+Vous ne écrivons pas au tableau.
+Vous ne ennuyiez pas ?
+Vous ne ferme pas la boîte pendant le cours.
+Vous ne fermera pas la boîte pendant le cours.
+Vous ne fermera pas les fenêtres en été?
+Vous ne fermeras pas la boîte pendant le cours.
+Vous ne fermeras pas les fenêtres en été?
+Vous ne fermerez pas la boîte pendant le cours.
+Vous ne fermerez pas les fenêtres en été?
+Vous ne fermez pas la boîte pendant le cours.
+Vous ne fermez pas les fenêtres en été?
+Vous ne garde pas la lumière allumée.
+Vous ne gardera pas de vieux fichiers?
+Vous ne gardera pas la lumière allumée.
+Vous ne garderas pas de vieux fichiers?
+Vous ne garderas pas la lumière allumée.
+Vous ne garderez pas de vieux fichiers?
+Vous ne garderez pas la lumière allumée.
+Vous ne gardez pas de vieux fichiers?
+Vous ne gardez pas la lumière allumée.
+Vous ne lirai pas les étiquettes?
+Vous ne lira pas l'annonce.
+Vous ne liras pas l'annonce.
+Vous ne liras pas les étiquettes?
+Vous ne lirez pas l'annonce.
+Vous ne lirez pas les étiquettes?
+Vous ne lisez pas les courriels.
+Vous ne lisez pas les panneaux?
+Vous ne lisons pas les courriels.
+Vous ne lis pas les courriels.
+Vous ne lis pas les panneaux?
+Vous ne ouvrez pas la porte en hiver.
+Vous ne ouvrez pas les fenêtres en été?
+Vous ne ouvrira pas la porte en hiver.
+Vous ne ouvrira pas les fenêtres en été?
+Vous ne ouvriras pas la porte en hiver.
+Vous ne ouvriras pas les fenêtres en été?
+Vous ne ouvrons pas la porte en hiver.
+Vous ne parlerez pas à la conférence ?
+Vous ne parlez pas à vos voisins ?
+Vous ne pas vous intéressez au voyage ?
+Vous ne perdez pas d'argent.
+Vous ne perdez pas vos billets?
+Vous ne perdons pas d'argent.
+Vous ne perd pas d'argent.
+Vous ne perd pas vos billets?
+Vous ne perdra pas d'argent.
+Vous ne perdra pas vos billets?
+Vous ne perdras pas d'argent.
+Vous ne perdras pas vos billets?
+Vous ne perdrez pas d'argent.
+Vous ne perdrez pas vos billets?
+Vous ne prendrai pas de notes pendant la conférence?
+Vous ne prendra pas de raccourcis.
+Vous ne prendras pas de notes pendant la conférence?
+Vous ne prendras pas de raccourcis.
+Vous ne prendrez pas de notes pendant la conférence?
+Vous ne prendrez pas de raccourcis.
+Vous ne prenez pas des notes en cours.
+Vous ne prenons pas des notes en cours.
+Vous n'êtes pas adapté.
+Vous n'êtes pas ennuyé.
+Vous n'êtes pas entraîné.
+Vous n'êtes pas intéressés au voyage ?
+Vous n'êtes pas réjoui.
+Vous n'êtes pas souvenu.
+Vous ne trouverez pas le musée fermé ?
+Vous ne trouves pas cette idée étrange ?
+Vous ne vous adapterez pas.
+Vous ne vous adaptez pas.
+Vous ne vous ennuierez pas.
+Vous ne vous ennuyez pas ?
+Vous ne vous ennuyez pas.
+Vous ne vous entraînerez pas.
+Vous ne vous entraînez pas.
+Vous ne vous êtes pas adapté(e)(s).
+Vous ne vous êtes pas ennuyé(e)(s).
+Vous ne vous êtes pas entraîné(e)(s).
+Vous ne vous êtes pas intéressé(e)s au voyage ?
+Vous ne vous êtes pas réjoui(e)(s).
+Vous ne vous êtes pas souvenu(e)(s).
+Vous ne vous intéresserez jamais à ces sujets.
+Vous ne vous intéresserez jamais à cette sujet.
+Vous ne vous intéresserez pas à l'art ?
+Vous ne vous intéresserez plus à ces sujets.
+Vous ne vous intéresseront pas à l'art ?
+Vous ne vous intéressez pas au voyage ?
+Vous ne vous réjouirez pas.
+Vous ne vous réjouissez pas.
+Vous ne vous souvenez pas.
+Vous ne vous souviendrez pas.
+Vous n'ouvrez pas la porte en hiver.
+Vous n'ouvrez pas les fenêtres en été?
+Vous n'ouvrirez pas la porte en hiver.
+Vous n'ouvrirez pas les fenêtres en été?
+Vous ont écrit le rapport hier.
+Vous ont fermé la porte hier soir.
+Vous ont gardé tous les reçus.
+Vous ont lu tous les chapitres.
+Vous ont ouvert les dossiers chaque matin.
+Vous ont perdu votre mot de passe encore.
+Vous ont pris la voiture pour aller au travail.
+Vous ouvre les dossiers chaque matin.
+Vous ouvrent les dossiers chaque matin.
+Vous ouvrez les dossiers chaque matin.
+Vous ouvrez ne pas la porte en hiver.
+Vous ouvrez ne pas les fenêtres en été?
+Vous ouvrez pas les fenêtres en été?
+Vous ouvrira les dossiers chaque matin.
+Vous ouvriras les dossiers chaque matin.
+Vous ouvrirez les dossiers chaque matin.
+Vous ouvrirez ne pas la porte en hiver.
+Vous ouvrirez ne pas les fenêtres en été?
+Vous ouvriront les dossiers chaque matin.
+Vous ouvrons les dossiers chaque matin.
+Vous parlerez de vos projets ?
+Vous parlez à la conférence ?
+Vous parlez à vos voisins ?
+Vous parlez de politique ?
+Vous parlez de vos projets ?
+Vous parliez à vos voisins ?
+Vous perdent votre mot de passe souvent.
+Vous perdez ne pas d'argent.
+Vous perdez ne pas vos billets?
+Vous perdez pas vos billets?
+Vous perdez votre mot de passe souvent.
+Vous perdons votre mot de passe souvent.
+Vous perdrez ne pas d'argent.
+Vous perdrez ne pas vos billets?
+Vous perdrez votre mot de passe si vous n'êtes pas prudent.
+Vous perdrons votre mot de passe si vous n'êtes pas prudent.
+Vous perdront votre mot de passe si vous n'êtes pas prudent.
+Vous perds votre mot de passe si vous n'êtes pas prudent.
+Vous perd votre mot de passe souvent.
+Vous pourrez conduire une voiture.
+Vous pourrez manger ici.
+Vous pourrez nous aider.
+Vous pouvez conduire une voiture.
+Vous pouvez manger ici.
+Vous pouvez nous aider.
+Vous pouviez conduire une voiture.
+Vous pouviez manger ici.
+Vous pouviez nous aider.
+Vous prend des réservations?
+Vous prend le train pour aller au travail.
+Vous prendra la voiture pour aller à l'aéroport.
+Vous prendras la voiture pour aller à l'aéroport.
+Vous prendrez la voiture pour aller à l'aéroport.
+Vous prendrez ne pas de notes pendant la conférence?
+Vous prendrez ne pas de raccourcis.
+Vous prendrons la voiture pour aller à l'aéroport.
+Vous prenez des réservations?
+Vous prenez le train pour aller au travail.
+Vous prenez ne pas des notes en cours.
+Vous prenez pas des notes en cours.
+Vous prennent des réservations?
+Vous prennent le train pour aller au travail.
+Vous prenons des réservations?
+Vous prenons le train pour aller au travail.
+Vous réjouir?
+Vous réjouirez?
+Vous réjouirez pas?
+Vous réjouis?
+Vous réjouissez?
+Vous réjouissez-vous pas?
+Vous saurez l'adresse.
+Vous saurez les règles.
+Vous saurez l'histoire.
+Vous savez l'adresse.
+Vous savez les règles.
+Vous savez l'histoire.
+Vous saviez l'adresse.
+Vous saviez les règles.
+Vous saviez l'histoire.
+Vous se débrouillez tout seuls.
+Vous se débrouillez très bien.
+Vous serez à l'heure.
+Vous serez en retard.
+Vous serez fatiguées.
+Vous serez prêts.
+Vous s'êtes adaptés?
+Vous s'êtes ennuyés ?
+Vous s'êtes entraînés ?
+Vous s'êtes réjouis?
+Vous s'êtes souvenus?
+Vous sommes prêts.
+Vous souvenez?
+Vous souvenez pas.
+Vous souvenez-vous?
+Vous souviendrez pas.
+Vous souviendrez-vous?
+Vous trouvez cette idée utile ?
+Vous venez de Paris.
+Vous venez nous aider.
+Vous venez nous voir.
+Vous veniez de Paris.
+Vous veniez nous aider.
+Vous veniez nous voir.
+Vous verrez la maison.
+Vous verrez le parc.
+Vous verrez les montagnes.
+Vous viendrez demain.
+Vous viendrez ensemble.
+Vous viendrez tôt.
+Vous voudrez manger ici.
+Vous voudrez nous aider.
+Vous voudrez un sandwich.
+Vous voulez manger maintenant.
+Vous voulez nous aider.
+Vous voulez un sandwich.
+Vous vouliez manger ici.
+Vous vouliez nous aider.
+Vous vouliez un sandwich.
+Vous vous adapterez.
+Vous vous adapterez?
+Vous vous adapterez pas.
+Vous vous adaptez.
+Vous vous adaptez?
+Vous vous débrouillez bien ?
+Vous vous débrouillez tout seuls.
+Vous vous débrouillez très bien.
+Vous vous débrouillons tout seuls.
+Vous vous débrouillons très bien.
+Vous vous ennuierez ?
+Vous vous ennuierez.
+Vous vous ennuyez ?
+Vous vous ennuyez.
+Vous vous entraînerez ?
+Vous vous entraînerez.
+Vous vous entraîneurs.
+Vous vous entraînez ?
+Vous vous entraînez.
+Vous vous êtes adapté(e)?
+Vous vous êtes adapté(e)(s).
+Vous vous êtes adaptés?
+Vous vous êtes ennuyé ?
+Vous vous êtes ennuyé(e) ?
+Vous vous êtes ennuyé(e)(s).
+Vous vous êtes ennuyés.
+Vous vous êtes entraîné ?
+Vous vous êtes entraîné(e) ?
+Vous vous êtes entraîné(e)(s).
+Vous vous êtes entraînés.
+Vous vous êtes intéressé(e)s à la technologie ?
+Vous vous êtes réjoui(e)?
+Vous vous êtes réjoui(e)(s).
+Vous vous êtes souvenu?
+Vous vous êtes souvenu(e)?
+Vous vous êtes souvenu(e)(s).
+Vous vous intéresserez jamais à ces sujets.
+Vous vous intéressez à la technologie ?
+Vous vous réjouirez.
+Vous vous réjouirez?
+Vous vous réjouirez pas.
+Vous vous réjouirez-vous?
+Vous vous réjouissez.
+Vous vous réjouissez?
+Vous vous réjouissez-vous?
+Vous vous souvenez.
+Vous vous souvenez?
+Vous vous souvenir.
+Vous vous souviendrez.
+Vous vous souviendrez?
+Vous voyez la maison.
+Vous voyez le parc.
+Vous voyez les montagnes.
+Vous voyiez la maison.
+Vous voyiez le parc.
+Vous voyiez les montagnes.
