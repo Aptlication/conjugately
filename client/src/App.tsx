@@ -1488,7 +1488,7 @@ function App() {
                 !tts.isSupported
                   ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed border border-slate-700'
                   : tts.isEnabled 
-                    ? 'bg-green-600/20 text-green-400 border border-green-500/50 hover:bg-green-600/30' 
+                    ? 'bg-slate-700/50 text-cyan-400 border border-cyan-500/50 hover:bg-slate-600/50' 
                     : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
               }`}
               data-testid="button-tts-toggle"
