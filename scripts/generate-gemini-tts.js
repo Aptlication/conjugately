@@ -102,7 +102,7 @@ async function processBeginnerLevel(testMode = false) {
   let processed = 0;
   let skipped = 0;
   const maxTest = 10;
-  const maxBatch = parseInt(process.env.BATCH_SIZE || '0') || Infinity;
+  const maxBatch = parseInt(process.env.BATCH_SIZE || '100') || 100; // Default to daily limit
   
   let totalFiles = 0;
   for (const verb of verbs) {
