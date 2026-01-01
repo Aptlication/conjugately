@@ -1,0 +1,258 @@
+A-t-elle ?
+A-t-elle eu ?
+A-t-elle fait ?
+A-t-elle été ?
+A-t-il ?
+A-t-il eu ?
+A-t-il fait ?
+A-t-il été ?
+Ai-je ?
+Ai-je eu ?
+Ai-je fait ?
+Ai-je été ?
+As-tu ?
+As-tu eu ?
+As-tu fait ?
+As-tu été ?
+Aura-t-elle ?
+Aura-t-il ?
+Aurai-je ?
+Auras-tu ?
+Aurez-vous ?
+Aurons-nous ?
+Avez-vous ?
+Avez-vous eu ?
+Avez-vous fait ?
+Avez-vous été ?
+Avons-nous ?
+Avons-nous eu ?
+Avons-nous fait ?
+Avons-nous été ?
+Elle a
+Elle a eu
+Elle a fait
+Elle a été
+Elle aura
+Elle est
+Elle fait
+Elle fera
+Elle n'a pas
+Elle n'a pas eu
+Elle n'a pas fait
+Elle n'a pas été
+Elle n'aura pas
+Elle n'est pas
+Elle ne fait pas
+Elle ne fera pas
+Elle ne sera pas
+Elle sera
+Elles auront
+Elles avaient
+Elles faisaient
+Elles feront
+Elles font
+Elles n'auront pas
+Elles n'ont pas
+Elles n'ont pas eu
+Elles n'ont pas fait
+Elles n'ont pas été
+Elles ne feront pas
+Elles ne font pas
+Elles ne seront pas
+Elles ne sont pas
+Elles ont
+Elles ont eu
+Elles ont fait
+Elles ont été
+Elles seront
+Elles sont
+Elles étaient
+Es-tu ?
+Est-elle ?
+Est-il ?
+Fais-je ?
+Fais-tu ?
+Faisons-nous ?
+Fait-elle ?
+Fait-il ?
+Faites-vous ?
+Fera-t-elle ?
+Fera-t-il ?
+Ferai-je ?
+Feras-tu ?
+Ferez-vous ?
+Ferons-nous ?
+Il a
+Il a eu
+Il a fait
+Il a été
+Il aura
+Il est
+Il fait
+Il fera
+Il n'a pas
+Il n'a pas eu
+Il n'a pas fait
+Il n'a pas été
+Il n'aura pas
+Il n'est pas
+Il ne fait pas
+Il ne fera pas
+Il ne sera pas
+Il sera
+Ils auront
+Ils avaient
+Ils faisaient
+Ils feront
+Ils font
+Ils n'auront pas
+Ils n'ont pas
+Ils n'ont pas eu
+Ils n'ont pas fait
+Ils n'ont pas été
+Ils ne feront pas
+Ils ne font pas
+Ils ne seront pas
+Ils ne sont pas
+Ils ont
+Ils ont eu
+Ils ont fait
+Ils ont été
+Ils seront
+Ils sont
+Ils étaient
+J'ai
+J'ai eu
+J'ai fait
+J'ai été
+J'aurai
+Je fais
+Je ferai
+Je n'ai pas
+Je n'ai pas eu
+Je n'ai pas fait
+Je n'ai pas été
+Je n'aurai pas
+Je ne fais pas
+Je ne ferai pas
+Je ne serai pas
+Je ne suis pas
+Je serai
+Je suis
+N'a-t-elle pas ?
+N'a-t-elle pas eu ?
+N'a-t-elle pas fait ?
+N'a-t-elle pas été ?
+N'a-t-il pas ?
+N'a-t-il pas eu ?
+N'a-t-il pas fait ?
+N'a-t-il pas été ?
+N'ai-je pas ?
+N'ai-je pas eu ?
+N'ai-je pas fait ?
+N'ai-je pas été ?
+N'as-tu pas ?
+N'as-tu pas eu ?
+N'as-tu pas fait ?
+N'as-tu pas été ?
+N'aura-t-elle pas ?
+N'aura-t-il pas ?
+N'aurai-je pas ?
+N'auras-tu pas ?
+N'aurez-vous pas ?
+N'aurons-nous pas ?
+N'avez-vous pas ?
+N'avez-vous pas eu ?
+N'avez-vous pas fait ?
+N'avez-vous pas été ?
+N'avons-nous pas ?
+N'avons-nous pas eu ?
+N'avons-nous pas fait ?
+N'avons-nous pas été ?
+N'es-tu pas ?
+N'est-elle pas ?
+N'est-il pas ?
+N'êtes-vous pas ?
+Ne fais-je pas ?
+Ne fais-tu pas ?
+Ne faisons-nous pas ?
+Ne fait-elle pas ?
+Ne fait-il pas ?
+Ne faites-vous pas ?
+Ne fera-t-elle pas ?
+Ne fera-t-il pas ?
+Ne ferai-je pas ?
+Ne feras-tu pas ?
+Ne ferez-vous pas ?
+Ne ferons-nous pas ?
+Ne sera-t-elle pas ?
+Ne sera-t-il pas ?
+Ne serai-je pas ?
+Ne seras-tu pas ?
+Ne serez-vous pas ?
+Ne serons-nous pas ?
+Ne sommes-nous pas ?
+Ne suis-je pas ?
+Nous aurons
+Nous avons
+Nous avons eu
+Nous avons fait
+Nous avons été
+Nous faisons
+Nous ferons
+Nous n'aurons pas
+Nous n'avons pas
+Nous n'avons pas eu
+Nous n'avons pas fait
+Nous n'avons pas été
+Nous ne faisons pas
+Nous ne ferons pas
+Nous ne serons pas
+Nous ne sommes pas
+Nous serons
+Nous sommes
+Sera-t-elle ?
+Sera-t-il ?
+Serai-je ?
+Seras-tu ?
+Serez-vous ?
+Serons-nous ?
+Sommes-nous ?
+Suis-je ?
+Tu as
+Tu as eu
+Tu as fait
+Tu as été
+Tu auras
+Tu es
+Tu fais
+Tu feras
+Tu n'as pas
+Tu n'as pas eu
+Tu n'as pas fait
+Tu n'as pas été
+Tu n'auras pas
+Tu n'es pas
+Tu ne fais pas
+Tu ne feras pas
+Tu ne seras pas
+Tu seras
+Vous aurez
+Vous avez
+Vous avez eu
+Vous avez fait
+Vous avez été
+Vous faites
+Vous ferez
+Vous n'aurez pas
+Vous n'avez pas
+Vous n'avez pas eu
+Vous n'avez pas fait
+Vous n'avez pas été
+Vous n'êtes pas
+Vous ne faites pas
+Vous ne ferez pas
+Vous ne serez pas
+Vous serez
+Vous êtes
+Êtes-vous ?
