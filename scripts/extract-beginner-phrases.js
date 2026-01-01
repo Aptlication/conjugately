@@ -44,13 +44,21 @@ async function extractPhrases() {
       }
       
       const answersDir = path.join(textBase, verb, folderTense, 'answers');
+      const questionsDir = path.join(textBase, verb, folderTense, 'questions');
       fs.mkdirSync(answersDir, { recursive: true });
+      fs.mkdirSync(questionsDir, { recursive: true });
       
       console.log(`\n${verb} ${tense}: ${questions.length} questions`);
       
       for (let qNum = 0; qNum < questions.length; qNum++) {
         const q = questions[qNum];
         console.log(`  Q${qNum + 1}: "${q.question}"`);
+        
+        // Save English question text
+        const qFilename = `Q${qNum + 1}.txt`;
+        const qFilepath = path.join(questionsDir, qFilename);
+        fs.writeFileSync(qFilepath, q.question);
+        totalFiles++;
         
         for (let aNum = 0; aNum < q.answerOptions.length; aNum++) {
           const answer = q.answerOptions[aNum];
@@ -67,7 +75,7 @@ async function extractPhrases() {
         }
       }
       
-      console.log(`  → Created ${questions.length * 4} text files in ${verb}/${folderTense}/answers/`);
+      console.log(`  → Created ${questions.length} question + ${questions.length * 4} answer files in ${verb}/${folderTense}/`);
     }
   }
   

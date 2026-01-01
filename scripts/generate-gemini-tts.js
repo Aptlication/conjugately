@@ -39,12 +39,17 @@ function writeWavFile(filename, pcmData) {
   fs.writeFileSync(filename, wavBuffer);
 }
 
-async function generateAudio(text, outputPath, retries = 3) {
+async function generateAudio(text, outputPath, language = 'french', retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const prompt = text.length < 10 
-        ? `Pronounce this French phrase slowly and clearly: "${text}"`
-        : `Say in French with clear pronunciation: ${text}`;
+      let prompt;
+      if (language === 'english') {
+        prompt = `Say this English phrase clearly and naturally: "${text}"`;
+      } else {
+        prompt = text.length < 10 
+          ? `Pronounce this French phrase slowly and clearly: "${text}"`
+          : `Say in French with clear pronunciation: ${text}`;
+      }
       
       const response = await ai.models.generateContent({
         model: MODEL,
@@ -112,6 +117,12 @@ async function processBeginnerLevel(testMode = false) {
     for (const tense of tenses) {
       const tensePath = path.join(verbPath, tense);
       if (!fs.statSync(tensePath).isDirectory()) continue;
+      // Count questions (English)
+      const questionsPath = path.join(tensePath, 'questions');
+      if (fs.existsSync(questionsPath)) {
+        totalFiles += fs.readdirSync(questionsPath).filter(f => f.endsWith('.txt')).length;
+      }
+      // Count answers (French)
       const answersPath = path.join(tensePath, 'answers');
       if (fs.existsSync(answersPath)) {
         totalFiles += fs.readdirSync(answersPath).filter(f => f.endsWith('.txt')).length;
@@ -133,6 +144,53 @@ async function processBeginnerLevel(testMode = false) {
       const tensePath = path.join(verbPath, tense);
       if (!fs.statSync(tensePath).isDirectory()) continue;
       
+      // Process English questions first
+      const questionsPath = path.join(tensePath, 'questions');
+      if (fs.existsSync(questionsPath)) {
+        const questionFiles = fs.readdirSync(questionsPath).filter(f => f.endsWith('.txt'));
+        
+        for (const file of questionFiles) {
+          if (testMode && processed >= maxTest) {
+            console.log(`\n📊 Test complete: ${totalGenerated} generated, ${totalFailed} failed`);
+            return;
+          }
+          
+          if (totalGenerated >= maxBatch) {
+            console.log(`\n📊 Batch limit reached: ${totalGenerated} generated, ${totalFailed} failed, ${skipped} skipped`);
+            console.log(`💡 Run again to continue (existing files will be skipped)`);
+            return;
+          }
+          
+          const textFilePath = path.join(questionsPath, file);
+          const text = fs.readFileSync(textFilePath, 'utf-8').trim();
+          
+          const audioFileName = file.replace('.txt', '.wav');
+          const audioFilePath = path.join(audioBase, verb, tense, 'questions', audioFileName);
+          
+          if (fs.existsSync(audioFilePath)) {
+            skipped++;
+            continue;
+          }
+          
+          const success = await generateAudio(text, audioFilePath, 'english');
+          if (success) {
+            totalGenerated++;
+          } else {
+            totalFailed++;
+          }
+          processed++;
+          
+          if (processed % 10 === 0) {
+            const remaining = totalFiles - processed - skipped;
+            const eta = Math.ceil(remaining * 6.5 / 60);
+            console.log(`\n📈 Progress: ${processed}/${totalFiles} (${Math.round(processed/totalFiles*100)}%) - ETA: ${eta} min\n`);
+          }
+          
+          await new Promise(r => setTimeout(r, 6500));
+        }
+      }
+      
+      // Then process French answers
       const answersPath = path.join(tensePath, 'answers');
       if (!fs.existsSync(answersPath)) continue;
       
@@ -161,7 +219,7 @@ async function processBeginnerLevel(testMode = false) {
           continue;
         }
         
-        const success = await generateAudio(text, audioFilePath);
+        const success = await generateAudio(text, audioFilePath, 'french');
         if (success) {
           totalGenerated++;
         } else {
@@ -170,7 +228,7 @@ async function processBeginnerLevel(testMode = false) {
         processed++;
         
         if (processed % 10 === 0) {
-          const remaining = totalFiles - processed;
+          const remaining = totalFiles - processed - skipped;
           const eta = Math.ceil(remaining * 6.5 / 60);
           console.log(`\n📈 Progress: ${processed}/${totalFiles} (${Math.round(processed/totalFiles*100)}%) - ETA: ${eta} min\n`);
         }
