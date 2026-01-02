@@ -258,6 +258,12 @@ export default function FrenchQuiz() {
         lastSpokenQuestionRef.current = currentQuestionIndex;
         // Small delay to ensure UI has updated
         setTimeout(() => {
+          console.log('📢 FrenchQuiz calling speakQuestion with:', {
+            question: currentQuestion.question.substring(0, 30),
+            verb: selectedVerb,
+            tense: selectedTenseType,
+            questionNum: currentQuestionIndex + 1
+          });
           tts.speakQuestion(currentQuestion.question, selectedVerb, selectedTenseType, currentQuestionIndex + 1);
         }, 300);
       }
