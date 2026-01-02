@@ -258,11 +258,11 @@ export default function FrenchQuiz() {
         lastSpokenQuestionRef.current = currentQuestionIndex;
         // Small delay to ensure UI has updated
         setTimeout(() => {
-          tts.speakQuestion(currentQuestion.question);
+          tts.speakQuestion(currentQuestion.question, selectedVerb, selectedTenseType, currentQuestionIndex + 1);
         }, 300);
       }
     }
-  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
+  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled, selectedVerb, selectedTenseType]);
 
   // TTS: Speak correct French answer when answer is confirmed
   useEffect(() => {

@@ -206,9 +206,77 @@ export function useTTS() {
     synth.speak(utterance);
   }, [state.isSupported, state.isEnabled, state.englishVoice, state.frenchVoice]);
 
-  const speakQuestion = useCallback((text: string) => {
-    speak(text, { lang: 'en', rate: 0.9 });
-  }, [speak]);
+  const speakStaticQuestion = useCallback(async (verb: string, tense: string, questionNum: number): Promise<boolean> => {
+    if (!state.isEnabled) return false;
+    if (!isCloudTTSEnabled()) return false;
+    
+    const audio = getOrCreateAudioElement();
+    
+    // Map tense names to folder names
+    const tenseMap: Record<string, string> = {
+      'Présent': 'present',
+      'Passé Composé': 'passe_compose',
+      'Futur Simple': 'futur_simple'
+    };
+    
+    const tensePath = tenseMap[tense] || tense.toLowerCase().replace(/\s+/g, '_');
+    const audioPath = `/attached_assets/audio/quizzes/beginner/${verb}/${tensePath}/questions/Q${questionNum}.wav`;
+    
+    try {
+      // Check if file exists by trying to fetch headers
+      const response = await fetch(audioPath, { method: 'HEAD' });
+      if (!response.ok) return false;
+      
+      audio.src = audioPath;
+      
+      setState(prev => ({ ...prev, isSpeaking: true }));
+      
+      await new Promise<void>((resolve, reject) => {
+        const cleanup = () => {
+          audio.oncanplaythrough = null;
+          audio.onended = null;
+          audio.onerror = null;
+        };
+        
+        audio.onended = () => {
+          cleanup();
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          resolve();
+        };
+        
+        audio.onerror = () => {
+          cleanup();
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          reject(new Error('Audio playback failed'));
+        };
+        
+        audio.oncanplaythrough = () => {
+          audio.play().catch(reject);
+        };
+        
+        if (audio.readyState >= 3) {
+          audio.play().catch(reject);
+        }
+      });
+      
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }, [state.isEnabled]);
+
+  const speakQuestion = useCallback((text: string, verb?: string, tense?: string, questionNum?: number) => {
+    // If context is provided, try static audio first
+    if (verb && tense && questionNum) {
+      speakStaticQuestion(verb, tense, questionNum).then(success => {
+        if (!success) {
+          speak(text, { lang: 'en', rate: 0.9 });
+        }
+      });
+    } else {
+      speak(text, { lang: 'en', rate: 0.9 });
+    }
+  }, [speak, speakStaticQuestion]);
 
   const speakStaticFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
