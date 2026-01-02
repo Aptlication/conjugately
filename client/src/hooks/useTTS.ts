@@ -207,6 +207,7 @@ export function useTTS() {
   }, [state.isSupported, state.isEnabled, state.englishVoice, state.frenchVoice]);
 
   const speakStaticQuestion = useCallback(async (verb: string, tense: string, questionNum: number): Promise<boolean> => {
+    console.log('🔈 speakStaticQuestion:', { verb, tense, questionNum, isEnabled: state.isEnabled, cloudTTS: isCloudTTSEnabled() });
     if (!state.isEnabled) return false;
     if (!isCloudTTSEnabled()) return false;
     
@@ -221,6 +222,7 @@ export function useTTS() {
     
     const tensePath = tenseMap[tense] || tense.toLowerCase().replace(/\s+/g, '_');
     const audioPath = `/attached_assets/audio/quizzes/beginner/${verb}/${tensePath}/questions/Q${questionNum}.wav`;
+    console.log('🔈 Audio path:', audioPath);
     
     try {
       // Check if file exists by trying to fetch headers
@@ -266,14 +268,18 @@ export function useTTS() {
   }, [state.isEnabled]);
 
   const speakQuestion = useCallback((text: string, verb?: string, tense?: string, questionNum?: number) => {
+    console.log('🎯 speakQuestion called:', { text: text.substring(0, 30), verb, tense, questionNum });
     // If context is provided, try static audio first
     if (verb && tense && questionNum) {
+      console.log('🎯 Trying static question audio...');
       speakStaticQuestion(verb, tense, questionNum).then(success => {
+        console.log('🎯 Static question result:', success);
         if (!success) {
           speak(text, { lang: 'en', rate: 0.9 });
         }
       });
     } else {
+      console.log('🎯 No context, using browser TTS');
       speak(text, { lang: 'en', rate: 0.9 });
     }
   }, [speak, speakStaticQuestion]);
