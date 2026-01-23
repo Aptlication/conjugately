@@ -93,7 +93,6 @@ export default function FrenchQuiz() {
   const [quizData, setQuizData] = useState<QuizQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
-  const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   
   // Text-to-speech
@@ -321,7 +320,6 @@ export default function FrenchQuiz() {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
       setIsAnswerConfirmed(false);
-      setShowHint(false);
     } else {
       setQuizState('results');
     }
@@ -331,7 +329,6 @@ export default function FrenchQuiz() {
     setQuizState('config');
     setCurrentQuestionIndex(0);
     setUserAnswers({});
-    setShowHint(false);
     setSelectedAnswerIndex(null);
     setIsAnswerConfirmed(false);
   };
@@ -374,13 +371,6 @@ export default function FrenchQuiz() {
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-white text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
-                  <button 
-                    onClick={() => setShowHint(!showHint)}
-                    className="text-purple-300 hover:text-purple-200 text-sm"
-                    data-testid="button-toggle-hint"
-                  >
-                    {showHint ? 'Hide Hint' : 'Show Hint'}
-                  </button>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div 
@@ -393,11 +383,6 @@ export default function FrenchQuiz() {
               {/* Question */}
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-white mb-4">{currentQuestion.question}</h2>
-                {showHint && (
-                  <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 mb-4">
-                    <p className="text-blue-200">💡 {currentQuestion.hint}</p>
-                  </div>
-                )}
               </div>
 
               {/* Answer Options */}
