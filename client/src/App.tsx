@@ -39,7 +39,6 @@ function App() {
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
-  const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
   const [showInstructionPopup, setShowInstructionPopup] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>("Elementary");
@@ -1298,7 +1297,6 @@ function App() {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
       setIsAnswerConfirmed(false);
-      setShowHint(false);
     } else {
       setQuizState('results');
     }
@@ -1313,7 +1311,6 @@ function App() {
     setQuizData([]);
     setCurrentQuestionIndex(0);
     setUserAnswers({});
-    setShowHint(false);
     setSelectedAnswerIndex(null);
     setShowInstructionPopup(false);
     setShowElementaryCourseModal(false);
@@ -1384,12 +1381,6 @@ function App() {
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
-              <button
-                onClick={() => setShowHint(!showHint)}
-                className="text-purple-300 text-sm hover:text-purple-200"
-              >
-                {showHint ? 'Hide Hint' : 'Show Hint'}
-              </button>
             </div>
             <div className="w-full bg-white/20 rounded-lg h-2">
               <div 
@@ -1434,11 +1425,6 @@ function App() {
 
           <div className="mb-6">
             <h2 className="text-2xl font-bold mb-4">{currentQuestion.question}</h2>
-            {showHint && (
-              <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 mb-4">
-                <p className="text-blue-200">💡 {currentQuestion.hint}</p>
-              </div>
-            )}
           </div>
 
           <div className="mb-8">

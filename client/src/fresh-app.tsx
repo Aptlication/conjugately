@@ -55,7 +55,6 @@ function FreshAppCore({ user }: { user: any }) {
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
-  const [showHint, setShowHint] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
 
   // Cache the advanced difficulty state to avoid repeated function calls in JSX
@@ -179,7 +178,6 @@ function FreshAppCore({ user }: { user: any }) {
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
-      setShowHint(false);
     } else {
       setQuizState('results');
     }
@@ -189,7 +187,6 @@ function FreshAppCore({ user }: { user: any }) {
     setQuizState('config');
     setCurrentQuestionIndex(0);
     setUserAnswers({});
-    setShowHint(false);
     setSelectedAnswerIndex(null);
   };
 
@@ -224,9 +221,6 @@ function FreshAppCore({ user }: { user: any }) {
           <div style={{ marginBottom: '24px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
               <span style={{ fontSize: '14px' }}>Question {currentQuestionIndex + 1} of {quizData.length}</span>
-              <button onClick={() => setShowHint(!showHint)} style={{ color: '#a78bfa', background: 'none', border: 'none', fontSize: '14px', cursor: 'pointer' }}>
-                {showHint ? 'Hide Hint' : 'Show Hint'}
-              </button>
             </div>
             <div style={{ width: '100%', background: 'rgba(255,255,255,0.2)', borderRadius: '8px', height: '8px' }}>
               <div style={{ background: 'linear-gradient(to right, #10b981, #3b82f6)', height: '8px', borderRadius: '8px', width: `${((currentQuestionIndex + 1) / quizData.length) * 100}%`, transition: 'width 0.3s' }}></div>
@@ -235,11 +229,6 @@ function FreshAppCore({ user }: { user: any }) {
 
           <div style={{ marginBottom: '24px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>{currentQuestion.question}</h2>
-            {showHint && (
-              <div style={{ background: 'rgba(59, 130, 246, 0.2)', border: '1px solid rgba(59, 130, 246, 0.3)', borderRadius: '8px', padding: '16px', marginBottom: '16px' }}>
-                <p style={{ color: '#93c5fd' }}>💡 {currentQuestion.hint}</p>
-              </div>
-            )}
           </div>
 
           <div style={{ marginBottom: '32px' }}>

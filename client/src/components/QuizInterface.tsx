@@ -28,7 +28,6 @@ interface QuizInterfaceProps {
 export default function QuizInterface({ quiz, onComplete }: QuizInterfaceProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [showHint, setShowHint] = useState(false);
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
 
@@ -50,7 +49,6 @@ export default function QuizInterface({ quiz, onComplete }: QuizInterfaceProps) 
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setSelectedAnswer(null);
-        setShowHint(false);
       }
     }
   };
@@ -58,7 +56,6 @@ export default function QuizInterface({ quiz, onComplete }: QuizInterfaceProps) 
   const handleRestart = () => {
     setCurrentQuestionIndex(0);
     setSelectedAnswer(null);
-    setShowHint(false);
     setAnswers([]);
     setShowResults(false);
   };
@@ -138,15 +135,7 @@ export default function QuizInterface({ quiz, onComplete }: QuizInterfaceProps) 
             </div>
 
             {/* Bottom actions */}
-            <div className="flex justify-between items-center">
-              <Button
-                variant="ghost"
-                onClick={() => setShowHint(!showHint)}
-                className="text-muted-foreground hover:text-white"
-              >
-                {showHint ? "Hide Hint" : "Show Hint"}
-              </Button>
-
+            <div className="flex justify-end items-center">
               <Button
                 onClick={handleNext}
                 disabled={selectedAnswer === null}
@@ -156,15 +145,6 @@ export default function QuizInterface({ quiz, onComplete }: QuizInterfaceProps) 
                 {isLastQuestion ? "Finish" : "Next"}
               </Button>
             </div>
-
-            {/* Hint display */}
-            {showHint && (
-              <div className="mt-6 p-4 bg-muted/20 rounded-lg border border-border">
-                <p className="text-muted-foreground text-sm">
-                  <strong>Hint:</strong> {currentQuestion.hint}
-                </p>
-              </div>
-            )}
           </CardContent>
         </Card>
       </div>
