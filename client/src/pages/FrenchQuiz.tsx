@@ -99,6 +99,7 @@ export default function FrenchQuiz() {
   // Text-to-speech
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
+  const quizContextRef = useRef<{verb: string, tense: string}>({verb: '', tense: ''});
 
 
 
@@ -232,6 +233,8 @@ export default function FrenchQuiz() {
       
       if (data.success) {
         console.log('Quiz loaded successfully:', data.quiz);
+        // Store quiz context for TTS
+        quizContextRef.current = { verb: selectedVerb, tense: selectedTenseType };
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
@@ -258,13 +261,14 @@ export default function FrenchQuiz() {
         lastSpokenQuestionRef.current = currentQuestionIndex;
         // Small delay to ensure UI has updated
         setTimeout(() => {
+          const { verb, tense } = quizContextRef.current;
           console.log('📢 FrenchQuiz calling speakQuestion with:', {
             question: currentQuestion.question.substring(0, 30),
-            verb: selectedVerb,
-            tense: selectedTenseType,
+            verb,
+            tense,
             questionNum: currentQuestionIndex + 1
           });
-          tts.speakQuestion(currentQuestion.question, selectedVerb, selectedTenseType, currentQuestionIndex + 1);
+          tts.speakQuestion(currentQuestion.question, verb, tense, currentQuestionIndex + 1);
         }, 300);
       }
     }
