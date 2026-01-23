@@ -268,18 +268,18 @@ export function useTTS() {
   }, [state.isEnabled]);
 
   const speakQuestion = useCallback((text: string, verb?: string, tense?: string, questionNum?: number) => {
-    console.log('🎯 speakQuestion called:', { text: text.substring(0, 30), verb, tense, questionNum });
+    console.log('🎯 speakQuestion:', `verb="${verb}", tense="${tense}", qNum=${questionNum}, text="${text.substring(0,25)}"`);
     // If context is provided, try static audio first
     if (verb && tense && questionNum) {
-      console.log('🎯 Trying static question audio...');
+      console.log('🎯 HAS CONTEXT - trying static audio');
       speakStaticQuestion(verb, tense, questionNum).then(success => {
-        console.log('🎯 Static question result:', success);
+        console.log('🎯 Static result:', success ? 'SUCCESS' : 'FAILED - fallback to browser');
         if (!success) {
           speak(text, { lang: 'en', rate: 0.9 });
         }
       });
     } else {
-      console.log('🎯 No context, using browser TTS');
+      console.log('🎯 NO CONTEXT - browser TTS only');
       speak(text, { lang: 'en', rate: 0.9 });
     }
   }, [speak, speakStaticQuestion]);
