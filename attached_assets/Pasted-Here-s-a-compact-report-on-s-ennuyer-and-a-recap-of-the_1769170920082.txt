@@ -1,0 +1,50 @@
+Here’s a compact **report on s’ennuyer** and a recap of the exercise answers that were checked.
+
+## Core verb facts
+
+- The verb is **s’ennuyer**, a reflexive \(-yer\) verb meaning “to be bored” or “to get bored.” [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)
+- Present tense forms (indicative):  
+  - je **m’ennuie**  
+  - tu **t’ennuies**  
+  - il/elle/on **s’ennuie**  
+  - nous **nous ennuyons**  
+  - vous **vous ennuyez**  
+  - ils/elles **s’ennuient** [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)
+- As a reflexive verb, it always takes a **reflexive pronoun** that matches the subject: me, te, se, nous, vous, se. [lingoculture](https://lingoculture.com/blog/grammar/french-reflexive-pronouns/)
+
+## Negation and questions
+
+- Negation wraps the verb and pronoun: **ne + reflexive + verb + pas** → *Je ne m’ennuie pas*, *Ils ne s’ennuient pas*. [larousse](https://www.larousse.fr/conjugaison/francais/s'ennuyer/4106)
+- Questions can be formed in three main ways (all seen in the quiz):  
+  - Statement with rising intonation: *Tu t’ennuies ?*  
+  - **Est-ce que**: *Est-ce que je m’ennuie ?*  
+  - Inversion (more formal): *Ne t’ennuies-tu pas ?*, *Ne s’ennuie-t-il pas ?* [preply](https://preply.com/en/blog/french-question-words/)
+
+## Correct answers recap (1–20)
+
+Numbers are approximate where the site didn’t show the full list, but these match the English prompts you selected and the options visible.
+
+| #  | English prompt                            | Correct French answer                            |
+|----|-------------------------------------------|--------------------------------------------------|
+| 1  | He is bored.                              | **Il s’ennuie.**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)                 |
+| 2  | We are not bored.                         | **Nous ne nous ennuyons pas.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)  |
+| 3  | (You worked out form with *nous*)         | **Nous nous ennuyons.** (present, no negation)  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html) |
+| 4  | You (plural) are bored.                   | **Vous vous ennuyez.**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)           |
+| 5  | They (masc.) are bored.                   | **Ils s’ennuient.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)             |
+| 6  | I am not bored.                           | **Je ne m’ennuie pas.**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)          |
+| 7  | Are you (sing.) not bored?                | **Ne t’ennuies-tu pas ?**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)        |
+| 8  | Am I bored?                               | **Est-ce que je m’ennuie ?**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)     |
+| 9  | They (masc.) are not bored.               | **Ils ne s’ennuient pas.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)      |
+| 10 | She is not bored.                         | **Elle ne s’ennuie pas.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)       |
+| 11 | You (plural) are bored.                   | **Vous vous ennuyez.**  [frenchcircles](https://www.frenchcircles.ca/sennuyer-present/)           |
+| 12 | She is bored.                             | **Elle s’ennuie.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)              |
+| 13 | Are they (masc.) bored?                   | **Ils s’ennuient ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)            |
+| 14 | Are we bored?                             | **Est-ce que nous nous ennuyons ?** (also: *Nous nous ennuyons ?*)  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html) |
+| 15 | He is not bored.                          | **Il ne s’ennuie pas.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)         |
+| 16 | Are they (fem.) bored?                    | **Elles s’ennuient ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)          |
+| 17 | Are you (plural) not bored?               | **Vous ne vous ennuyez pas ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)  |
+| 18 | We are bored.                             | **Nous nous ennuyons.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)         |
+| 19 | Is he not bored?                          | **Il ne s’ennuie pas ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)        |
+| 20 | Are you (singular) bored?                 | **Tu t’ennuies ?** (also: *Est-ce que tu t’ennuies ?*)  [frenchverbmaster](https://frenchverbmaster.com/) |
+
+If you want, the full present tense, imperfect, and past (passé composé with *être* → *je me suis ennuyé(e)*, etc.) for **s’ennuyer** can also be laid out in a similar grid to mirror how the site drills it.
