@@ -235,6 +235,7 @@ export default function FrenchQuiz() {
         console.log('Quiz loaded successfully:', data.quiz);
         // Store quiz context for TTS
         quizContextRef.current = { verb: selectedVerb, tense: selectedTenseType };
+        console.log('📦 Quiz context stored:', quizContextRef.current);
         setQuizData(data.quiz.questions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
