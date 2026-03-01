@@ -11,6 +11,20 @@ interface TTSManifest {
 let manifestCache: TTSManifest | null = null;
 let manifestLoading: Promise<TTSManifest | null> | null = null;
 let sharedAudioElement: HTMLAudioElement | null = null;
+let audioUnlocked = false;
+
+function unlockAudio() {
+  if (audioUnlocked || !sharedAudioElement) return;
+  // Play a silent tiny buffer to satisfy autoplay policy
+  sharedAudioElement.src = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+  sharedAudioElement.volume = 0;
+  sharedAudioElement.play().then(() => {
+    sharedAudioElement!.volume = 1;
+    sharedAudioElement!.src = '';
+    audioUnlocked = true;
+    console.log('🔊 Audio unlocked');
+  }).catch(() => {});
+}
 
 // Normalize text for manifest lookup - handles apostrophe variants, quotes, whitespace
 function normalizeText(text: string): string {
@@ -90,9 +104,14 @@ export function useTTS() {
       return;
     }
 
-    // Ensure audio element exists for static TTS
+    // Ensure audio element exists for static TTS and unlock autoplay on first click
     if (isCloudTTSEnabled()) {
       getOrCreateAudioElement();
+      const handleFirstClick = () => {
+        unlockAudio();
+        document.removeEventListener('click', handleFirstClick);
+      };
+      document.addEventListener('click', handleFirstClick);
     }
 
     const synth = window.speechSynthesis;
@@ -213,7 +232,6 @@ export function useTTS() {
     
     const audio = getOrCreateAudioElement();
     
-    // Map tense names to folder names
     const tenseMap: Record<string, string> = {
       'Présent': 'present',
       'Passé Composé': 'passe_compose',
@@ -221,54 +239,52 @@ export function useTTS() {
     };
     
     const tensePath = tenseMap[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-    const basePath = `/attached_assets/audio/quizzes/beginner/${verb}/${tensePath}/questions/Q${questionNum}`;
+    const basePath = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${questionNum}`;
 
-    // Try .mp3 first (new generated files), then .wav (legacy files)
+    // Try .mp3 first, then .wav
     let audioPath = `${basePath}.mp3`;
     let response = await fetch(audioPath, { method: 'HEAD' });
     if (!response.ok) {
       audioPath = `${basePath}.wav`;
       response = await fetch(audioPath, { method: 'HEAD' });
     }
-    console.log('🔈 Audio path:', audioPath);
+    console.log('🔈 Audio path:', audioPath, '| status:', response.status);
+
+    if (!response.ok) return false;
 
     try {
-      if (!response.ok) return false;
-      
+      audio.pause();
       audio.src = audioPath;
-      
+      audio.load();
+
       setState(prev => ({ ...prev, isSpeaking: true }));
-      
+
       await new Promise<void>((resolve, reject) => {
-        const cleanup = () => {
-          audio.oncanplaythrough = null;
-          audio.onended = null;
-          audio.onerror = null;
-        };
-        
-        audio.onended = () => {
-          cleanup();
+        const onEnded = () => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
           setState(prev => ({ ...prev, isSpeaking: false }));
           resolve();
         };
-        
-        audio.onerror = () => {
-          cleanup();
+        const onError = () => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
           setState(prev => ({ ...prev, isSpeaking: false }));
           reject(new Error('Audio playback failed'));
         };
-        
-        audio.oncanplaythrough = () => {
-          audio.play().catch(reject);
-        };
-        
-        if (audio.readyState >= 3) {
-          audio.play().catch(reject);
-        }
+        audio.addEventListener('ended', onEnded, { once: true });
+        audio.addEventListener('error', onError, { once: true });
+        audio.play().catch(err => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          reject(err);
+        });
       });
       
       return true;
     } catch (error) {
+      console.warn('🔇 Static question audio failed:', error);
       return false;
     }
   }, [state.isEnabled]);
@@ -317,42 +333,38 @@ export function useTTS() {
     if (!audioFile) return false;
     
     try {
+      audio.pause();
       audio.src = `/attached_assets/audio/${audioFile}`;
-      
+      audio.load();
+
       setState(prev => ({ ...prev, isSpeaking: true }));
-      
+
       await new Promise<void>((resolve, reject) => {
-        const cleanup = () => {
-          audio.oncanplaythrough = null;
-          audio.onended = null;
-          audio.onerror = null;
-        };
-        
-        audio.onended = () => {
-          cleanup();
+        const onEnded = () => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
           setState(prev => ({ ...prev, isSpeaking: false }));
           resolve();
         };
-        
-        audio.onerror = () => {
-          cleanup();
+        const onError = () => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
           setState(prev => ({ ...prev, isSpeaking: false }));
           reject(new Error('Audio playback failed'));
         };
-        
-        // Play as soon as enough data is buffered
-        audio.oncanplaythrough = () => {
-          audio.play().catch(reject);
-        };
-        
-        // If already ready, play immediately
-        if (audio.readyState >= 3) {
-          audio.play().catch(reject);
-        }
+        audio.addEventListener('ended', onEnded, { once: true });
+        audio.addEventListener('error', onError, { once: true });
+        audio.play().catch(err => {
+          audio.removeEventListener('ended', onEnded);
+          audio.removeEventListener('error', onError);
+          setState(prev => ({ ...prev, isSpeaking: false }));
+          reject(err);
+        });
       });
       
       return true;
     } catch (error) {
+      console.warn('🔇 Static French audio failed:', error);
       return false;
     }
   }, [state.isEnabled]);
