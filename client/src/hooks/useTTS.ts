@@ -221,12 +221,18 @@ export function useTTS() {
     };
     
     const tensePath = tenseMap[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-    const audioPath = `/attached_assets/audio/quizzes/beginner/${verb}/${tensePath}/questions/Q${questionNum}.wav`;
+    const basePath = `/attached_assets/audio/quizzes/beginner/${verb}/${tensePath}/questions/Q${questionNum}`;
+
+    // Try .mp3 first (new generated files), then .wav (legacy files)
+    let audioPath = `${basePath}.mp3`;
+    let response = await fetch(audioPath, { method: 'HEAD' });
+    if (!response.ok) {
+      audioPath = `${basePath}.wav`;
+      response = await fetch(audioPath, { method: 'HEAD' });
+    }
     console.log('🔈 Audio path:', audioPath);
-    
+
     try {
-      // Check if file exists by trying to fetch headers
-      const response = await fetch(audioPath, { method: 'HEAD' });
       if (!response.ok) return false;
       
       audio.src = audioPath;
