@@ -52,7 +52,8 @@ function App() {
 
   // Text-to-speech for pronunciation
   const tts = useTTS();
-  const lastSpokenQuestionRef = useRef<number>(-1);
+  const questionAudioRef = useRef<HTMLAudioElement | null>(null);
+  const lastPlayedQuestionRef = useRef<number>(-1);
   
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -841,45 +842,45 @@ function App() {
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
 
-  // Play question audio when a new question is shown.
-  // Beginner mode: plays the pre-recorded ElevenLabs MP3 directly.
-  // All other modes: falls back to browser TTS via the hook.
+  // Play ElevenLabs question audio when a new question is shown.
+  // Only plays for Beginner quizzes where pre-recorded MP3s exist.
   useEffect(() => {
-    if (quizState !== 'active' || quizData.length === 0) return;
+    if (quizState !== 'active' || quizData.length === 0 || !tts.isEnabled) return;
     const currentQuestion = quizData[currentQuestionIndex];
     if (!currentQuestion) return;
-    if (lastSpokenQuestionRef.current === currentQuestionIndex) return;
-    lastSpokenQuestionRef.current = currentQuestionIndex;
+    if (lastPlayedQuestionRef.current === currentQuestionIndex) return;
+    lastPlayedQuestionRef.current = currentQuestionIndex;
 
-    const questionText = currentQuestion.question;
+    if (questionAudioRef.current) {
+      questionAudioRef.current.pause();
+      questionAudioRef.current = null;
+    }
+
     const verb = activeQuizVerb;
     const tense = activeQuizTense;
     const qNum = currentQuestionIndex + 1;
 
-    console.log('▶️ Q audio effect:', JSON.stringify({ verb, tense, qNum, q: questionText.substring(0, 25) }));
+    if (!verb || !tense) return;
+
+    const TENSE_MAP: Record<string, string> = {
+      'Présent': 'present',
+      'Passé Composé': 'passe_compose',
+      'Futur Simple': 'futur_simple',
+    };
+    const tensePath = TENSE_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
+    const url = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
 
     const timer = setTimeout(() => {
-      if (verb && tense) {
-        const TENSE_MAP: Record<string, string> = {
-          'Présent': 'present',
-          'Passé Composé': 'passe_compose',
-          'Futur Simple': 'futur_simple',
-        };
-        const tensePath = TENSE_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-        const url = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
-        console.log('🔊 Playing MP3:', url);
-        const audio = new Audio(url);
-        audio.play().catch(err => {
-          console.warn('🔇 MP3 failed, falling back to TTS:', err.message);
-          if (tts.isEnabled) tts.speakQuestion(questionText);
-        });
-      } else {
-        if (tts.isEnabled) tts.speakQuestion(questionText);
-      }
+      console.log('🔊 Playing question:', url);
+      const audio = new Audio(url);
+      questionAudioRef.current = audio;
+      audio.play().catch(err => {
+        console.warn('🔇 Question audio failed:', err.message);
+      });
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [quizState, currentQuestionIndex, quizData, activeQuizVerb, activeQuizTense]);
+  }, [quizState, currentQuestionIndex, quizData, activeQuizVerb, activeQuizTense, tts.isEnabled]);
 
   // TTS: Speak the SELECTED French answer when confirmed (whether correct or wrong)
   useEffect(() => {
@@ -896,11 +897,14 @@ function App() {
     }
   }, [isAnswerConfirmed, selectedAnswerIndex, currentQuestionIndex, quizData, tts.isEnabled]);
 
-  // TTS: Stop speech when leaving quiz
   useEffect(() => {
     if (quizState !== 'active') {
+      if (questionAudioRef.current) {
+        questionAudioRef.current.pause();
+        questionAudioRef.current = null;
+      }
+      lastPlayedQuestionRef.current = -1;
       tts.stop();
-      lastSpokenQuestionRef.current = -1;
     }
   }, [quizState]);
 
@@ -1505,20 +1509,17 @@ function App() {
               Start Over
             </button>
             <button
-              onClick={tts.isSupported ? tts.toggleEnabled : undefined}
-              disabled={!tts.isSupported}
+              onClick={tts.toggleEnabled}
               className={`px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-2 ${
-                !tts.isSupported
-                  ? 'bg-slate-700/30 text-slate-500 cursor-not-allowed border border-slate-700'
-                  : tts.isEnabled 
-                    ? 'bg-slate-700/50 text-cyan-400 border border-cyan-500/50 hover:bg-slate-600/50' 
-                    : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
+                tts.isEnabled 
+                  ? 'bg-slate-700/50 text-cyan-400 border border-cyan-500/50 hover:bg-slate-600/50' 
+                  : 'bg-slate-700/50 text-slate-400 border border-slate-600 hover:bg-slate-600/50'
               }`}
               data-testid="button-tts-toggle"
-              title={!tts.isSupported ? 'Voice not available' : tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
+              title={tts.isEnabled ? 'Pronunciation ON' : 'Pronunciation OFF'}
             >
-              {tts.isEnabled && tts.isSupported ? '🔊' : '🔇'}
-              <span className="text-sm">{tts.isEnabled && tts.isSupported ? 'ON' : 'OFF'}</span>
+              {tts.isEnabled ? '🔊' : '🔇'}
+              <span className="text-sm">{tts.isEnabled ? 'ON' : 'OFF'}</span>
             </button>
           </div>
         </div>
