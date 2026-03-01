@@ -6,6 +6,7 @@ interface TTSManifest {
   voiceId: string;
   generatedAt: string;
   phrases: Record<string, string>;
+  novice_phrases?: Record<string, string>;
 }
 
 let manifestCache: TTSManifest | null = null;
@@ -113,17 +114,29 @@ export function useTTS() {
     setIsSpeaking(false);
   }, []);
 
-  const speakAnswer = useCallback(async (text: string) => {
+  const speakAnswer = useCallback(async (text: string, difficulty?: string) => {
     if (!isEnabled || !isCloudTTSEnabled()) return;
 
     const manifest = await preloadManifest();
     if (!manifest) return;
 
+    const phraseMap = (difficulty === 'Novice' && manifest.novice_phrases)
+      ? manifest.novice_phrases
+      : manifest.phrases;
+
     const normalizedText = normalizeText(text);
-    let audioFile = manifest.phrases[text] || manifest.phrases[normalizedText];
+    let audioFile = phraseMap[text] || phraseMap[normalizedText];
     if (!audioFile) {
-      const matchingKey = Object.keys(manifest.phrases).find(key => normalizeText(key) === normalizedText);
-      if (matchingKey) audioFile = manifest.phrases[matchingKey];
+      const matchingKey = Object.keys(phraseMap).find(key => normalizeText(key) === normalizedText);
+      if (matchingKey) audioFile = phraseMap[matchingKey];
+    }
+    if (!audioFile) {
+      let fallback = manifest.phrases[text] || manifest.phrases[normalizedText];
+      if (!fallback) {
+        const matchingKey = Object.keys(manifest.phrases).find(key => normalizeText(key) === normalizedText);
+        if (matchingKey) fallback = manifest.phrases[matchingKey];
+      }
+      audioFile = fallback;
     }
     if (!audioFile) return;
 

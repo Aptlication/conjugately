@@ -364,8 +364,8 @@ export function getRandomNoviceQuestions(verb: string, tense: string, count: num
     throw new Error(`Tense '${tense}' not found for verb '${verb}' in novice quiz data`);
   }
   
-  // Shuffle the questions and return the requested count
-  const shuffled = [...tenseData].sort(() => Math.random() - 0.5);
+  const tagged = tenseData.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }
 
@@ -394,6 +394,7 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
       id: index + 1,
       question: cleanQuestion,
       hint: `Focus on the subject and verb agreement.`,
+      audioIndex: (q as any).audioIndex,
       answerOptions: shuffledAnswerOptions
     };
   });

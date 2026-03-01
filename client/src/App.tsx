@@ -38,6 +38,7 @@ function App() {
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
   const [activeQuizVerb, setActiveQuizVerb] = useState("");
   const [activeQuizTense, setActiveQuizTense] = useState("");
+  const [activeQuizDifficulty, setActiveQuizDifficulty] = useState("");
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
@@ -376,8 +377,9 @@ function App() {
         setUserAnswers({});
         setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
         setIsAnswerConfirmed(false); // Reset confirmation state
-        setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
-        setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
+        setActiveQuizVerb((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? selectedVerb : "");
+        setActiveQuizTense((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? finalTenseType : "");
+        setActiveQuizDifficulty(selectedDifficulty || "");
         setQuizState('active');
         // Only show popup if user hasn't disabled it
         const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
@@ -869,7 +871,8 @@ function App() {
       'Futur Simple': 'futur_simple',
     };
     const tensePath = TENSE_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-    const url = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
+    const difficultyPath = activeQuizDifficulty?.toLowerCase() || 'beginner';
+    const url = `/attached_assets/audio/quizzes/${difficultyPath}/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
 
     const timer = setTimeout(() => {
       console.log(`🔊 Playing question: Q${qNum} (audioIndex=${(currentQuestion as any).audioIndex}, displayIndex=${currentQuestionIndex}, text="${currentQuestion.question}")`, url);
@@ -881,7 +884,7 @@ function App() {
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [quizState, currentQuestionIndex, quizData, activeQuizVerb, activeQuizTense, tts.isEnabled]);
+  }, [quizState, currentQuestionIndex, quizData, activeQuizVerb, activeQuizTense, activeQuizDifficulty, tts.isEnabled]);
 
   // TTS: Speak the SELECTED French answer when confirmed (whether correct or wrong)
   useEffect(() => {
@@ -891,7 +894,7 @@ function App() {
         const selectedOption = currentQuestion.answerOptions[selectedAnswerIndex];
         if (selectedOption) {
           setTimeout(() => {
-            tts.speakAnswer(selectedOption.text);
+            tts.speakAnswer(selectedOption.text, activeQuizDifficulty);
           }, 1500);
         }
       }
@@ -950,8 +953,9 @@ function App() {
         setUserAnswers({});
         setSelectedAnswerIndex(null);
         setIsAnswerConfirmed(false);
-        setActiveQuizVerb(difficulty === "Beginner" ? (unit.verb || "") : "");
-        setActiveQuizTense(difficulty === "Beginner" ? (tense || "") : "");
+        setActiveQuizVerb((difficulty === "Beginner" || difficulty === "Novice") ? (unit.verb || "") : "");
+        setActiveQuizTense((difficulty === "Beginner" || difficulty === "Novice") ? (tense || "") : "");
+        setActiveQuizDifficulty(difficulty || "");
         setQuizState('active');
         
         // Show instruction popup if not disabled
@@ -2877,8 +2881,9 @@ function App() {
                           setUserAnswers({});
                           setSelectedAnswerIndex(null);
                           setIsAnswerConfirmed(false);
-                          setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
-                          setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
+                          setActiveQuizVerb((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? selectedVerb : "");
+                          setActiveQuizTense((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? finalTenseType : "");
+                          setActiveQuizDifficulty(selectedDifficulty || "");
                           setQuizState('active');
                         }
                       } catch (error) {
@@ -2932,8 +2937,9 @@ function App() {
                             setUserAnswers({});
                             setSelectedAnswerIndex(null);
                             setIsAnswerConfirmed(false);
-                            setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
-                            setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
+                            setActiveQuizVerb((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? selectedVerb : "");
+                            setActiveQuizTense((selectedDifficulty === "Beginner" || selectedDifficulty === "Novice") ? finalTenseType : "");
+                            setActiveQuizDifficulty(selectedDifficulty || "");
                             setQuizState('active');
                           }
                         } catch (error) {
