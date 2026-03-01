@@ -36,6 +36,8 @@ function App() {
     return localStorage.getItem('beginnerPronounGuideShown') === 'true';
   });
   const [quizState, setQuizState] = useState<'config' | 'loading' | 'active' | 'results'>('config');
+  const [activeQuizVerb, setActiveQuizVerb] = useState("");
+  const [activeQuizTense, setActiveQuizTense] = useState("");
   const [quizData, setQuizData] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({});
@@ -373,6 +375,8 @@ function App() {
         setUserAnswers({});
         setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
         setIsAnswerConfirmed(false); // Reset confirmation state
+        setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
+        setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
         setQuizState('active');
         // Only show popup if user hasn't disabled it
         const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
@@ -517,6 +521,8 @@ function App() {
       setUserAnswers({});
       setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
       setIsAnswerConfirmed(false); // Reset confirmation state
+      setActiveQuizVerb("");
+      setActiveQuizTense("");
       setQuizState('active');
       
       // Show instruction popup if not disabled
@@ -818,6 +824,8 @@ function App() {
       setUserAnswers({});
       setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
       setIsAnswerConfirmed(false); // Reset confirmation state
+      setActiveQuizVerb("");
+      setActiveQuizTense("");
       setQuizState('active');
       
       // Show instruction popup if not disabled
@@ -840,11 +848,11 @@ function App() {
       if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
         lastSpokenQuestionRef.current = currentQuestionIndex;
         setTimeout(() => {
-          tts.speakQuestion(currentQuestion.question, selectedVerb, selectedTenseType, currentQuestionIndex + 1);
+          tts.speakQuestion(currentQuestion.question, activeQuizVerb, activeQuizTense, currentQuestionIndex + 1);
         }, 300);
       }
     }
-  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled]);
+  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled, activeQuizVerb, activeQuizTense]);
 
   // TTS: Speak the SELECTED French answer when confirmed (whether correct or wrong)
   useEffect(() => {
@@ -910,6 +918,8 @@ function App() {
         setUserAnswers({});
         setSelectedAnswerIndex(null);
         setIsAnswerConfirmed(false);
+        setActiveQuizVerb(difficulty === "Beginner" ? (unit.verb || "") : "");
+        setActiveQuizTense(difficulty === "Beginner" ? (tense || "") : "");
         setQuizState('active');
         
         // Show instruction popup if not disabled
