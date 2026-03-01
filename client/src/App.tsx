@@ -2862,6 +2862,8 @@ function App() {
                           setUserAnswers({});
                           setSelectedAnswerIndex(null);
                           setIsAnswerConfirmed(false);
+                          setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
+                          setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
                           setQuizState('active');
                         }
                       } catch (error) {
@@ -2915,6 +2917,8 @@ function App() {
                             setUserAnswers({});
                             setSelectedAnswerIndex(null);
                             setIsAnswerConfirmed(false);
+                            setActiveQuizVerb(selectedDifficulty === "Beginner" ? selectedVerb : "");
+                            setActiveQuizTense(selectedDifficulty === "Beginner" ? finalTenseType : "");
                             setQuizState('active');
                           }
                         } catch (error) {
