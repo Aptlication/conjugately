@@ -53,6 +53,10 @@ function App() {
   // Text-to-speech for pronunciation
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
+  // Refs so setTimeout always reads the latest values, not stale closure values
+  const activeQuizVerbRef = useRef<string>("");
+  const activeQuizTenseRef = useRef<string>("");
+  const currentQuestionIndexRef = useRef<number>(0);
   
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -841,14 +845,24 @@ function App() {
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
 
+  // Keep refs in sync so setTimeout always has latest values
+  useEffect(() => { activeQuizVerbRef.current = activeQuizVerb; }, [activeQuizVerb]);
+  useEffect(() => { activeQuizTenseRef.current = activeQuizTense; }, [activeQuizTense]);
+  useEffect(() => { currentQuestionIndexRef.current = currentQuestionIndex; }, [currentQuestionIndex]);
+
   // TTS: Speak English question when displayed
   useEffect(() => {
     if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
       const currentQuestion = quizData[currentQuestionIndex];
       if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
         lastSpokenQuestionRef.current = currentQuestionIndex;
+        const questionText = currentQuestion.question;
         setTimeout(() => {
-          tts.speakQuestion(currentQuestion.question, activeQuizVerb, activeQuizTense, currentQuestionIndex + 1);
+          const verb = activeQuizVerbRef.current;
+          const tense = activeQuizTenseRef.current;
+          const qNum = currentQuestionIndexRef.current + 1;
+          console.log('🟢 TTS fire — verb:', JSON.stringify(verb), 'tense:', JSON.stringify(tense), 'qNum:', qNum);
+          tts.speakQuestion(questionText, verb, tense, qNum);
         }, 300);
       }
     }
