@@ -872,7 +872,7 @@ function App() {
     const url = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
 
     const timer = setTimeout(() => {
-      console.log('🔊 Playing question:', url);
+      console.log(`🔊 Playing question: Q${qNum} (audioIndex=${(currentQuestion as any).audioIndex}, displayIndex=${currentQuestionIndex}, text="${currentQuestion.question}")`, url);
       const audio = new Audio(url);
       questionAudioRef.current = audio;
       audio.play().catch(err => {
