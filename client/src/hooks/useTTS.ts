@@ -14,13 +14,11 @@ let sharedAudioElement: HTMLAudioElement | null = null;
 let audioUnlocked = false;
 
 function unlockAudio() {
-  if (audioUnlocked || !sharedAudioElement) return;
-  // Play a silent tiny buffer to satisfy autoplay policy
-  sharedAudioElement.src = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
-  sharedAudioElement.volume = 0;
-  sharedAudioElement.play().then(() => {
-    sharedAudioElement!.volume = 1;
-    sharedAudioElement!.src = '';
+  if (audioUnlocked) return;
+  // Use a SEPARATE throwaway element so the shared audio element is never polluted
+  const tmp = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=');
+  tmp.volume = 0;
+  tmp.play().then(() => {
     audioUnlocked = true;
     console.log('🔊 Audio unlocked');
   }).catch(() => {});
@@ -70,11 +68,27 @@ interface TTSState {
   frenchVoice: SpeechSynthesisVoice | null;
 }
 
+function getFreshAudioElement(): HTMLAudioElement {
+  // Tear down previous element to eliminate any stale event listeners
+  if (sharedAudioElement) {
+    sharedAudioElement.pause();
+    sharedAudioElement.removeAttribute('src');
+    if (sharedAudioElement.parentNode) {
+      sharedAudioElement.parentNode.removeChild(sharedAudioElement);
+    }
+  }
+  const el = document.createElement('audio');
+  el.setAttribute('playsinline', '');
+  el.preload = 'auto';
+  document.body.appendChild(el);
+  sharedAudioElement = el;
+  return el;
+}
+
 function getOrCreateAudioElement(): HTMLAudioElement {
   if (!sharedAudioElement) {
     sharedAudioElement = document.createElement('audio');
-    sharedAudioElement.style.display = 'none';
-    sharedAudioElement.setAttribute('playsInline', '');
+    sharedAudioElement.setAttribute('playsinline', '');
     sharedAudioElement.preload = 'auto';
     document.body.appendChild(sharedAudioElement);
     console.log('🔊 Static TTS: Audio element created');
@@ -229,64 +243,44 @@ export function useTTS() {
     console.log('🔈 speakStaticQuestion:', { verb, tense, questionNum, isEnabled: state.isEnabled, cloudTTS: isCloudTTSEnabled() });
     if (!state.isEnabled) return false;
     if (!isCloudTTSEnabled()) return false;
-    
-    const audio = getOrCreateAudioElement();
-    
+
     const tenseMap: Record<string, string> = {
       'Présent': 'present',
       'Passé Composé': 'passe_compose',
       'Futur Simple': 'futur_simple'
     };
-    
+
     const tensePath = tenseMap[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-    const basePath = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${questionNum}`;
+    const audioPath = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${questionNum}.mp3`;
 
-    // Try .mp3 first, then .wav
-    let audioPath = `${basePath}.mp3`;
-    let response = await fetch(audioPath, { method: 'HEAD' });
-    if (!response.ok) {
-      audioPath = `${basePath}.wav`;
-      response = await fetch(audioPath, { method: 'HEAD' });
-    }
+    const response = await fetch(audioPath, { method: 'HEAD' });
     console.log('🔈 Audio path:', audioPath, '| status:', response.status);
-
     if (!response.ok) return false;
 
-    try {
-      audio.pause();
-      audio.src = audioPath;
-      audio.load();
+    // Fresh element each time — zero stale listeners possible
+    const audio = getFreshAudioElement();
+    audio.src = audioPath;
 
-      setState(prev => ({ ...prev, isSpeaking: true }));
+    setState(prev => ({ ...prev, isSpeaking: true }));
 
-      await new Promise<void>((resolve, reject) => {
-        const onEnded = () => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          resolve();
-        };
-        const onError = () => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          reject(new Error('Audio playback failed'));
-        };
-        audio.addEventListener('ended', onEnded, { once: true });
-        audio.addEventListener('error', onError, { once: true });
-        audio.play().catch(err => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          reject(err);
-        });
+    return new Promise<boolean>((resolve) => {
+      audio.addEventListener('ended', () => {
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(true);
+      }, { once: true });
+
+      audio.addEventListener('error', (e) => {
+        console.warn('🔇 Audio element error:', e);
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(false);
+      }, { once: true });
+
+      audio.play().catch(err => {
+        console.warn('🔇 audio.play() rejected:', err);
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(false);
       });
-      
-      return true;
-    } catch (error) {
-      console.warn('🔇 Static question audio failed:', error);
-      return false;
-    }
+    });
   }, [state.isEnabled]);
 
   const speakQuestion = useCallback((text: string, verb?: string, tense?: string, questionNum?: number) => {
@@ -308,65 +302,43 @@ export function useTTS() {
 
   const speakStaticFrench = useCallback(async (text: string): Promise<boolean> => {
     if (!state.isEnabled) return false;
-    
     if (!isCloudTTSEnabled()) return false;
-    
-    const audio = getOrCreateAudioElement();
 
-    // Use preloaded manifest
     const manifest = await preloadManifest();
     if (!manifest) return false;
-    
-    // Try exact match first, then normalized match
+
     const normalizedText = normalizeText(text);
     let audioFile = manifest.phrases[text] || manifest.phrases[normalizedText];
-    
-    // If still no match, try to find a close match by normalizing manifest keys
     if (!audioFile) {
-      const manifestKeys = Object.keys(manifest.phrases);
-      const matchingKey = manifestKeys.find(key => normalizeText(key) === normalizedText);
-      if (matchingKey) {
-        audioFile = manifest.phrases[matchingKey];
-      }
+      const matchingKey = Object.keys(manifest.phrases).find(key => normalizeText(key) === normalizedText);
+      if (matchingKey) audioFile = manifest.phrases[matchingKey];
     }
-    
     if (!audioFile) return false;
-    
-    try {
-      audio.pause();
-      audio.src = `/attached_assets/audio/${audioFile}`;
-      audio.load();
 
-      setState(prev => ({ ...prev, isSpeaking: true }));
+    // Fresh element each time — zero stale listeners possible
+    const audio = getFreshAudioElement();
+    audio.src = `/attached_assets/audio/${audioFile}`;
 
-      await new Promise<void>((resolve, reject) => {
-        const onEnded = () => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          resolve();
-        };
-        const onError = () => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          reject(new Error('Audio playback failed'));
-        };
-        audio.addEventListener('ended', onEnded, { once: true });
-        audio.addEventListener('error', onError, { once: true });
-        audio.play().catch(err => {
-          audio.removeEventListener('ended', onEnded);
-          audio.removeEventListener('error', onError);
-          setState(prev => ({ ...prev, isSpeaking: false }));
-          reject(err);
-        });
+    setState(prev => ({ ...prev, isSpeaking: true }));
+
+    return new Promise<boolean>((resolve) => {
+      audio.addEventListener('ended', () => {
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(true);
+      }, { once: true });
+
+      audio.addEventListener('error', (e) => {
+        console.warn('🔇 French audio element error:', e);
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(false);
+      }, { once: true });
+
+      audio.play().catch(err => {
+        console.warn('🔇 French audio.play() rejected:', err);
+        setState(prev => ({ ...prev, isSpeaking: false }));
+        resolve(false);
       });
-      
-      return true;
-    } catch (error) {
-      console.warn('🔇 Static French audio failed:', error);
-      return false;
-    }
+    });
   }, [state.isEnabled]);
 
   const speakAnswer = useCallback(async (text: string) => {
