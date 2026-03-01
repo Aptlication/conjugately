@@ -840,7 +840,7 @@ function App() {
       if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
         lastSpokenQuestionRef.current = currentQuestionIndex;
         setTimeout(() => {
-          tts.speakQuestion(currentQuestion.question);
+          tts.speakQuestion(currentQuestion.question, selectedVerb, selectedTenseType, currentQuestionIndex + 1);
         }, 300);
       }
     }
