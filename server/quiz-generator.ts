@@ -1765,6 +1765,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         questions: beginnerQuestions.map(q => ({
           question: q.question,
           hint: q.hint,
+          audioIndex: q.audioIndex,
           answerOptions: q.answerOptions
         }))
       };

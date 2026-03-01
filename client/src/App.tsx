@@ -858,9 +858,10 @@ function App() {
 
     const verb = activeQuizVerb;
     const tense = activeQuizTense;
-    const qNum = currentQuestionIndex + 1;
 
     if (!verb || !tense) return;
+
+    const qNum = (currentQuestion as any).audioIndex || (currentQuestionIndex + 1);
 
     const TENSE_MAP: Record<string, string> = {
       'Présent': 'present',

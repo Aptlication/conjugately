@@ -4,6 +4,7 @@
 export interface BeginnerPronounQuestion {
   question: string;
   hint: string;
+  audioIndex?: number;
   answerOptions: Array<{
     text: string;
     rationale: string;
@@ -2055,7 +2056,7 @@ export function getRandomBeginnerPronounQuestions(verb: string, tense: string, c
     return generated.length > 0 ? generated : curatedQuestions;
   }
   
-  // Shuffle and return curated questions
-  const shuffled = [...curatedQuestions].sort(() => Math.random() - 0.5);
+  const tagged = curatedQuestions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }
