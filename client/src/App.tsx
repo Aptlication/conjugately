@@ -53,10 +53,6 @@ function App() {
   // Text-to-speech for pronunciation
   const tts = useTTS();
   const lastSpokenQuestionRef = useRef<number>(-1);
-  // Refs so setTimeout always reads the latest values, not stale closure values
-  const activeQuizVerbRef = useRef<string>("");
-  const activeQuizTenseRef = useRef<string>("");
-  const currentQuestionIndexRef = useRef<number>(0);
   
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -845,28 +841,45 @@ function App() {
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
 
-  // Keep refs in sync so setTimeout always has latest values
-  useEffect(() => { activeQuizVerbRef.current = activeQuizVerb; }, [activeQuizVerb]);
-  useEffect(() => { activeQuizTenseRef.current = activeQuizTense; }, [activeQuizTense]);
-  useEffect(() => { currentQuestionIndexRef.current = currentQuestionIndex; }, [currentQuestionIndex]);
-
-  // TTS: Speak English question when displayed
+  // Play question audio when a new question is shown.
+  // Beginner mode: plays the pre-recorded ElevenLabs MP3 directly.
+  // All other modes: falls back to browser TTS via the hook.
   useEffect(() => {
-    if (quizState === 'active' && quizData.length > 0 && tts.isEnabled) {
-      const currentQuestion = quizData[currentQuestionIndex];
-      if (currentQuestion && lastSpokenQuestionRef.current !== currentQuestionIndex) {
-        lastSpokenQuestionRef.current = currentQuestionIndex;
-        const questionText = currentQuestion.question;
-        setTimeout(() => {
-          const verb = activeQuizVerbRef.current;
-          const tense = activeQuizTenseRef.current;
-          const qNum = currentQuestionIndexRef.current + 1;
-          console.log('🟢 TTS fire — verb:', JSON.stringify(verb), 'tense:', JSON.stringify(tense), 'qNum:', qNum);
-          tts.speakQuestion(questionText, verb, tense, qNum);
-        }, 300);
+    if (quizState !== 'active' || quizData.length === 0) return;
+    const currentQuestion = quizData[currentQuestionIndex];
+    if (!currentQuestion) return;
+    if (lastSpokenQuestionRef.current === currentQuestionIndex) return;
+    lastSpokenQuestionRef.current = currentQuestionIndex;
+
+    const questionText = currentQuestion.question;
+    const verb = activeQuizVerb;
+    const tense = activeQuizTense;
+    const qNum = currentQuestionIndex + 1;
+
+    console.log('▶️ Q audio effect:', JSON.stringify({ verb, tense, qNum, q: questionText.substring(0, 25) }));
+
+    const timer = setTimeout(() => {
+      if (verb && tense) {
+        const TENSE_MAP: Record<string, string> = {
+          'Présent': 'present',
+          'Passé Composé': 'passe_compose',
+          'Futur Simple': 'futur_simple',
+        };
+        const tensePath = TENSE_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
+        const url = `/attached_assets/audio/quizzes/beginner/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
+        console.log('🔊 Playing MP3:', url);
+        const audio = new Audio(url);
+        audio.play().catch(err => {
+          console.warn('🔇 MP3 failed, falling back to TTS:', err.message);
+          if (tts.isEnabled) tts.speakQuestion(questionText);
+        });
+      } else {
+        if (tts.isEnabled) tts.speakQuestion(questionText);
       }
-    }
-  }, [quizState, currentQuestionIndex, quizData, tts.isEnabled, activeQuizVerb, activeQuizTense]);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [quizState, currentQuestionIndex, quizData, activeQuizVerb, activeQuizTense]);
 
   // TTS: Speak the SELECTED French answer when confirmed (whether correct or wrong)
   useEffect(() => {
