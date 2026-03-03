@@ -40,6 +40,7 @@ Preferred communication style: Simple, everyday language.
 - **Grammar & Negation**: Comprehensive French negation system, proper French contractions, and accurate English grammar in generated questions.
 - **Cloud Text-to-Speech Integration (ElevenLabs)**: REST API integration with server-side memoization caching. Frontend `useTTS` hook provides `speakAnswer()` with fallback to browser TTS. Supports iOS Safari. Default voice is Léa.
 - **Advanced Difficulty Lock System**: Configuration-driven feature management using `shared/config.ts` to enable/disable Advanced difficulty. Frontend displays lock icons and informational modals, while backend enforces security with 403 responses.
+- **Vocabulary Builder**: Client-side vocabulary collection system. Correct answers from completed quizzes are automatically saved to localStorage. Features flashcard-style review with spaced repetition (new → learning → mastered progression), filter/sort word list, and stats dashboard. Component at `client/src/components/VocabularyBuilder.tsx`, hook at `client/src/hooks/useVocabulary.ts`.
 
 ## External Dependencies
 

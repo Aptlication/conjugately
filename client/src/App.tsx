@@ -2,7 +2,9 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { useTTS } from "@/hooks/useTTS";
+import { useVocabulary } from "@/hooks/useVocabulary";
 import { isAdvancedDifficultyEnabled } from "@shared/config";
+import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 
 // Type guard function to check if user has id
 const hasUserId = (user: any): user is { id: string } => {
@@ -12,6 +14,8 @@ const hasUserId = (user: any): user is { id: string } => {
 function App() {
   // French Verb Master - No reminder version
   const { user, isLoading, isAuthenticated } = useAuth();
+  const vocab = useVocabulary();
+  const [showVocabulary, setShowVocabulary] = useState(false);
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
   const [selectedTenseType, setSelectedTenseType] = useState("");
@@ -1345,6 +1349,22 @@ function App() {
       setIsAnswerConfirmed(false);
     } else {
       setQuizState('results');
+      const vocabWords: Array<{ french: string; english: string; verb?: string; tense?: string; difficulty?: string }> = [];
+      quizData.forEach(q => {
+        const correctOption = q.answerOptions?.find((opt: any) => opt.isCorrect);
+        if (correctOption) {
+          vocabWords.push({
+            french: correctOption.text,
+            english: q.question,
+            verb: activeQuizVerb || undefined,
+            tense: activeQuizTense || undefined,
+            difficulty: activeQuizDifficulty || undefined,
+          });
+        }
+      });
+      if (vocabWords.length > 0) {
+        vocab.addWords(vocabWords);
+      }
     }
   };
 
@@ -1383,6 +1403,10 @@ function App() {
     });
     return { correctAnswers, totalQuestions: quizData.length };
   };
+
+  if (showVocabulary) {
+    return <VocabularyBuilder onClose={() => setShowVocabulary(false)} />;
+  }
 
   if (quizState === 'loading') {
     return (
@@ -2186,6 +2210,17 @@ function App() {
               className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
             >
               📚 Mini-Courses
+            </button>
+            <button
+              onClick={() => setShowVocabulary(true)}
+              className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl hover:scale-105 transition-transform shadow-lg relative"
+            >
+              📖 Vocabulary
+              {vocab.stats.total > 0 && (
+                <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                  {vocab.stats.total}
+                </span>
+              )}
             </button>
           </div>
         </div>

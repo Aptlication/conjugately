@@ -74,6 +74,21 @@ export const completedCourses = pgTable("completed_courses", {
   examPassed: boolean("exam_passed").notNull(),
 });
 
+export const vocabulary = pgTable("vocabulary", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull().default(1),
+  french: text("french").notNull(),
+  english: text("english").notNull(),
+  verb: text("verb"),
+  tense: text("tense"),
+  difficulty: text("difficulty"),
+  status: text("status").notNull().default("new"),
+  timesCorrect: integer("times_correct").notNull().default(0),
+  timesIncorrect: integer("times_incorrect").notNull().default(0),
+  lastReviewedAt: timestamp("last_reviewed_at"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const insertQuizSchema = createInsertSchema(quizzes).pick({
   verb: true,
   timeFrame: true,
@@ -86,6 +101,10 @@ export const insertCourseProgressSchema = createInsertSchema(courseProgress).omi
 });
 
 export const insertCompletedCourseSchema = createInsertSchema(completedCourses).omit({
+  id: true,
+});
+
+export const insertVocabularySchema = createInsertSchema(vocabulary).omit({
   id: true,
 });
 
@@ -107,6 +126,9 @@ export type CourseProgress = typeof courseProgress.$inferSelect;
 export type InsertCourseProgress = z.infer<typeof insertCourseProgressSchema>;
 export type CompletedCourse = typeof completedCourses.$inferSelect;
 export type InsertCompletedCourse = z.infer<typeof insertCompletedCourseSchema>;
+
+export type VocabularyWord = typeof vocabulary.$inferSelect;
+export type InsertVocabularyWord = z.infer<typeof insertVocabularySchema>;
 
 export interface QuizQuestion {
   question: string;
