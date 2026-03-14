@@ -492,13 +492,18 @@ function App() {
 
   const handleStartFinalExam = async (timeFrame: string, tense: string) => {
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+    const TENSE_PATH_MAP: Record<string, string> = {
+      'Présent': 'present',
+      'Passé Composé': 'passe_compose',
+      'Futur Simple': 'futur_simple',
+    };
     
     setQuizState('loading');
     
     try {
-      // Generate 40 questions total: 10 questions from each of the 4 verbs for final exam
+      // Generate 30 questions total: 10 questions from each of the 3 Beginner verbs
       const allQuestions: any[] = [];
-      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+      const beginnerVerbs = ["être", "avoir", "faire"];
       
       for (const currentVerb of beginnerVerbs) {
         const response = await fetch('/api/get-quiz', {
@@ -515,21 +520,28 @@ function App() {
 
         const data = await response.json();
         if (data.success) {
-          // Take exactly 10 questions from each verb for final exam
-          allQuestions.push(...data.quiz.questions.slice(0, 10));
+          // Tag each question with its verb and tense path so exam audio can play correctly
+          const tensePath = TENSE_PATH_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
+          const tagged = data.quiz.questions.slice(0, 10).map((q: any) => ({
+            ...q,
+            _verb: currentVerb,
+            _tensePath: tensePath,
+          }));
+          allQuestions.push(...tagged);
         }
       }
       
-      // Shuffle all 40 final exam questions (10 from each of the 4 verbs)
+      // Shuffle all 30 final exam questions (10 from each of the 3 verbs)
       const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
       
-      setQuizData(shuffledQuestions); // 40 final exam questions
+      setQuizData(shuffledQuestions); // 30 final exam questions
       setCurrentQuestionIndex(0);
       setUserAnswers({});
       setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
       setIsAnswerConfirmed(false); // Reset confirmation state
       setActiveQuizVerb("");
       setActiveQuizTense("");
+      setActiveQuizDifficulty("Beginner");
       setQuizState('active');
       
       // Show instruction popup if not disabled
@@ -862,19 +874,21 @@ function App() {
       questionAudioRef.current = null;
     }
 
-    const verb = activeQuizVerb;
-    const tense = activeQuizTense;
-
-    if (!verb || !tense) return;
-
-    const qNum = (currentQuestion as any).audioIndex || (currentQuestionIndex + 1);
-
+    // In exam mode, activeQuizVerb/Tense are cleared — fall back to per-question tags
+    const verb = activeQuizVerb || (currentQuestion as any)._verb;
     const TENSE_MAP: Record<string, string> = {
       'Présent': 'present',
       'Passé Composé': 'passe_compose',
       'Futur Simple': 'futur_simple',
     };
-    const tensePath = TENSE_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
+    const rawTense = activeQuizTense;
+    const tensePath = (currentQuestion as any)._tensePath
+      || TENSE_MAP[rawTense] || rawTense?.toLowerCase().replace(/\s+/g, '_');
+
+    if (!verb || !tensePath) return;
+
+    const qNum = (currentQuestion as any).audioIndex || (currentQuestionIndex + 1);
+
     const difficultyPath = activeQuizDifficulty?.toLowerCase() || 'beginner';
     const url = `/attached_assets/audio/quizzes/${difficultyPath}/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
 
