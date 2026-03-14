@@ -2172,6 +2172,7 @@ function App() {
                   setQuizState('loading');
                   try {
                     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
+                    const courseDifficulty = courseInfo.courseLevel || "Beginner";
                     const response = await fetch('/api/get-quiz', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
@@ -2179,7 +2180,7 @@ function App() {
                         verb: currentVerb,
                         timeFrame: timeFrameMapping[courseInfo.timeFrame as keyof typeof timeFrameMapping],
                         tenseType: courseInfo.tense,
-                        difficulty: "Novice",
+                        difficulty: courseDifficulty,
                       })
                     });
                     
@@ -2188,8 +2189,11 @@ function App() {
                       setQuizData(data.quiz.questions);
                       setCurrentQuestionIndex(0);
                       setUserAnswers({});
-                      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
-                      setIsAnswerConfirmed(false); // Reset confirmation state
+                      setSelectedAnswerIndex(null);
+                      setIsAnswerConfirmed(false);
+                      setActiveQuizVerb(currentVerb);
+                      setActiveQuizTense(courseInfo.tense);
+                      setActiveQuizDifficulty(courseDifficulty);
                       setQuizState('active');
                     }
                   } catch (error) {
