@@ -1171,6 +1171,14 @@ function App() {
       "Future": "Futur Simple"
     };
     const tense = tenseMapping[timeFrame as keyof typeof tenseMapping];
+
+    const TENSE_PATH_MAP: Record<string, string> = {
+      'Présent': 'present',
+      'Passé Composé': 'passe_compose',
+      'Futur Simple': 'futur_simple',
+      'Passé Simple': 'passe_compose',
+    };
+    const tensePath = TENSE_PATH_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
     
     setQuizState('loading');
     setShowCourseOverviewModal(false);
@@ -1198,8 +1206,13 @@ function App() {
 
         const data = await response.json();
         if (data.success) {
-          // Take exact number of questions per verb for final exam
-          allQuestions.push(...data.quiz.questions.slice(0, questionsPerVerb));
+          // Tag each question with its verb and tense path so exam audio can play correctly
+          const tagged = data.quiz.questions.slice(0, questionsPerVerb).map((q: any) => ({
+            ...q,
+            _verb: verb,
+            _tensePath: tensePath,
+          }));
+          allQuestions.push(...tagged);
         }
       }
       
@@ -1211,6 +1224,7 @@ function App() {
       setUserAnswers({});
       setSelectedAnswerIndex(null);
       setIsAnswerConfirmed(false);
+      setActiveQuizDifficulty(courseLevel);
       setQuizState('active');
       
       // Set course info for final exam tracking
