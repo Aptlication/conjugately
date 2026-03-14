@@ -971,8 +971,8 @@ function App() {
         setUserAnswers({});
         setSelectedAnswerIndex(null);
         setIsAnswerConfirmed(false);
-        setActiveQuizVerb((difficulty === "Beginner" || difficulty === "Novice") ? (unit.verb || "") : "");
-        setActiveQuizTense((difficulty === "Beginner" || difficulty === "Novice") ? (tense || "") : "");
+        setActiveQuizVerb(unit.verb || "");
+        setActiveQuizTense(tense || "");
         setActiveQuizDifficulty(difficulty || "");
         setQuizState('active');
         
