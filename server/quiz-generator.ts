@@ -1820,7 +1820,8 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
         questions: elementaryQuestions.map(q => ({
           question: q.question,
           hint: q.hint,
-          answerOptions: q.answerOptions
+          answerOptions: q.answerOptions,
+          audioIndex: (q as any).audioIndex,
         }))
       };
     } else {

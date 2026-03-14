@@ -5123,22 +5123,19 @@ export function getRandomElementaryPresentQuestions(verb: string, count: number)
     console.log(`⚠️  No Elementary present questions found for verb: ${verb}`);
     return [];
   }
-  
-  // Shuffle and return requested count
-  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+
+  // Tag with audioIndex BEFORE shuffling so audio files map to original positions
+  const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   // If we need more questions than available, repeat with shuffled options
-  while (result.length < count && questions.length > 0) {
-    const additional = [...questions].sort(() => Math.random() - 0.5);
+  while (result.length < count && tagged.length > 0) {
+    const additional = [...tagged].sort(() => Math.random() - 0.5);
     for (const q of additional) {
       if (result.length >= count) break;
-      // Create variation with shuffled answer options
       const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
-      result.push({
-        ...q,
-        answerOptions: shuffledOptions
-      });
+      result.push({ ...q, answerOptions: shuffledOptions });
     }
   }
   
@@ -5153,22 +5150,17 @@ export function getRandomElementaryPasseComposeQuestions(verb: string, count: nu
     console.log(`⚠️  No Elementary passé composé questions found for verb: ${verb}`);
     return [];
   }
-  
-  // Shuffle and return requested count
-  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+
+  const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
-  // If we need more questions than available, repeat with shuffled options
-  while (result.length < count && questions.length > 0) {
-    const additional = [...questions].sort(() => Math.random() - 0.5);
+  while (result.length < count && tagged.length > 0) {
+    const additional = [...tagged].sort(() => Math.random() - 0.5);
     for (const q of additional) {
       if (result.length >= count) break;
-      // Create variation with shuffled answer options
       const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
-      result.push({
-        ...q,
-        answerOptions: shuffledOptions
-      });
+      result.push({ ...q, answerOptions: shuffledOptions });
     }
   }
   
@@ -5183,22 +5175,17 @@ export function getRandomElementaryFutureSimpleQuestions(verb: string, count: nu
     console.log(`⚠️  No Elementary future simple questions found for verb: ${verb}`);
     return [];
   }
-  
-  // Shuffle and return requested count
-  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+
+  const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
-  // If we need more questions than available, repeat with shuffled options
-  while (result.length < count && questions.length > 0) {
-    const additional = [...questions].sort(() => Math.random() - 0.5);
+  while (result.length < count && tagged.length > 0) {
+    const additional = [...tagged].sort(() => Math.random() - 0.5);
     for (const q of additional) {
       if (result.length >= count) break;
-      // Create variation with shuffled answer options
       const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
-      result.push({
-        ...q,
-        answerOptions: shuffledOptions
-      });
+      result.push({ ...q, answerOptions: shuffledOptions });
     }
   }
   
