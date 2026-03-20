@@ -7,6 +7,7 @@ export interface IntermediateQuizQuestion {
   question: string;
   options: string[];
   answer: string; // A, B, C, or D
+  audioIndex?: number;
 }
 
 export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQuizQuestion[]>> = {
@@ -2142,8 +2143,11 @@ export function getRandomIntermediateQuestions(verb: string, tense: string, coun
     return [];
   }
   
+  // Tag with audioIndex BEFORE shuffle so Q*.mp3 filenames stay stable
+  const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
+
   // Shuffle and return requested count
-  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   // If we need more questions than available, repeat with shuffled options
@@ -2177,6 +2181,7 @@ export function convertIntermediateToQuizFormat(intermediateQuestions: Intermedi
     return {
       question: q.question,
       hint: `Select the correct conjugation`,
+      audioIndex: q.audioIndex,
       answerOptions: q.options.map((option, index) => ({
         text: option,
         rationale: index === correctIndex ? "Correct conjugation!" : "Incorrect conjugation.",

@@ -880,6 +880,7 @@ function App() {
       'Présent': 'present',
       'Passé Composé': 'passe_compose',
       'Futur Simple': 'futur_simple',
+      'Imparfait': 'imparfait',
     };
     const rawTense = activeQuizTense;
     const tensePath = (currentQuestion as any)._tensePath

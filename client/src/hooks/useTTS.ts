@@ -8,6 +8,7 @@ interface TTSManifest {
   phrases: Record<string, string>;
   novice_phrases?: Record<string, string>;
   elementary_phrases?: Record<string, string>;
+  intermediate_phrases?: Record<string, string>;
 }
 
 let manifestCache: TTSManifest | null = null;
@@ -125,7 +126,9 @@ export function useTTS() {
       ? manifest.novice_phrases
       : (difficulty === 'Elementary' && manifest.elementary_phrases)
         ? manifest.elementary_phrases
-        : manifest.phrases;
+        : (difficulty === 'Intermediate' && manifest.intermediate_phrases)
+          ? manifest.intermediate_phrases
+          : manifest.phrases;
 
     const normalizedText = normalizeText(text);
     let audioFile = phraseMap[text] || phraseMap[normalizedText];

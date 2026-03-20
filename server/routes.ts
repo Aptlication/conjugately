@@ -5,7 +5,7 @@ import path from "path";
 import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { generateInternalQuiz } from "./quiz-generator";
-import { getRandomIntermediateQuestions } from "./intermediate-quiz-data";
+import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
 import { ZodError, z } from "zod";
 import { db } from "./db";
 import { courseProgress, completedCourses } from "@shared/schema";
@@ -102,17 +102,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           if (intermediateQuestions.length > 0) {
             console.log(`✅ Found ${intermediateQuestions.length} intermediate questions`);
             
-            // Convert intermediate questions to the format expected by the frontend
-            const convertedQuestions = intermediateQuestions.map((q, index) => ({
-              id: `q${index + 1}`,
-              question: q.question,
-              answerOptions: q.options.map((option, optIndex) => ({
-                text: option,
-                rationale: `Option ${String.fromCharCode(65 + optIndex)}: ${option}`,
-                isCorrect: String.fromCharCode(65 + optIndex) === q.answer
-              }))
-            }));
-            
+            // Convert using the proper function which preserves audioIndex for question audio
+            const convertedQuestions = convertIntermediateToQuizFormat(intermediateQuestions);
             generatedQuiz = { questions: convertedQuestions };
             console.log(`🎯 Using intermediate quiz data for ${verb} - ${normalizedTense}`);
           } else {

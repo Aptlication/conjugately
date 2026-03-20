@@ -2,6 +2,7 @@ import { GeneratedQuiz } from "./gemini-quiz";
 import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQuestion } from "./novice-quiz-data";
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
 import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, getRandomElementaryFutureSimpleQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
+import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -1828,7 +1829,31 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       console.log(`⚠️ No verified Elementary questions found for ${verb} - ${tense}, falling back to generated`);
     }
   }
-  
+
+  // Use Intermediate questions
+  if (difficulty === 'Intermediate') {
+    const intermediateTenseMap: Record<string, string> = {
+      'présent': 'present',
+      'present': 'present',
+      'passé composé': 'passé_composé',
+      'passe_compose': 'passé_composé',
+      'passé_composé': 'passé_composé',
+      'futur simple': 'futur_simple',
+      'futur_simple': 'futur_simple',
+      'imparfait': 'imparfait',
+    };
+    const mappedTense = intermediateTenseMap[tense.toLowerCase()] || tense.toLowerCase();
+    console.log(`🎓 Using Intermediate questions for ${verb} - ${mappedTense} (original: ${tense})`);
+
+    const intermediateQuestions = getRandomIntermediateQuestions(verb, mappedTense, 20);
+    if (intermediateQuestions.length > 0) {
+      console.log(`✅ Found ${intermediateQuestions.length} Intermediate questions`);
+      return { questions: convertIntermediateToQuizFormat(intermediateQuestions) };
+    } else {
+      console.log(`⚠️ No Intermediate questions found for ${verb} - ${mappedTense}, falling back to generated`);
+    }
+  }
+
   // Normalize tense names - map frontend tense names to backend tense keys
   let normalizedTense = tense.toLowerCase();
   
