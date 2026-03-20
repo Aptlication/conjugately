@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "voiceId": "mixed",
-  "generatedAt": "2026-03-20T18:21:34.195Z",
+  "generatedAt": "2026-03-20T18:56:06.731Z",
   "phrases": {
     "A-t-elle ?": "60e7df37c4d4d460.mp3",
     "A-t-elle adaptée?": "578843fb8a98267c.mp3",
@@ -6160,6 +6160,25 @@
     "Étions-nous prêts ?": "intr_ee1a52fe3b8c420a.mp3",
     "Êtes-vous allés en train ?": "intr_acdef2b21078fdf8.mp3",
     "Êtes-vous venus en train ?": "intr_481169d1a9bba97c.mp3",
-    "Êtes-vous à la maison ?": "intr_f327a6f258bf40b5.mp3"
+    "Êtes-vous à la maison ?": "intr_f327a6f258bf40b5.mp3",
+    "Adapterez-vous?": "intr_2838a4b6708fbecb.mp3",
+    "Elle s'adapte.": "intr_61e4947eb53b258a.mp3",
+    "Elle s'adaptera?": "intr_bf2ef0f5bc9652e4.mp3",
+    "Elles se sont réjouies?": "intr_72af7571d8b46dc8.mp3",
+    "Elles se sont souvenues?": "intr_920f7dc044aebd4d.mp3",
+    "Il ne s'est pas adapté.": "intr_6dab3e6c67b73d43.mp3",
+    "Je m'adapte?": "intr_5e611cf309e0bede.mp3",
+    "Je m'adapterai?": "intr_f66683467bdb83fb.mp3",
+    "Je ne m'adapte pas.": "intr_d840870c34ea3c85.mp3",
+    "Je ne m'adapterai pas.": "intr_6fbac20151aa4729.mp3",
+    "Je ne me suis pas adapté(e).": "intr_f1b106f2f7494dbc.mp3",
+    "Je ne me suis pas réjoui(e).": "intr_e96fe157e0b5c104.mp3",
+    "Je ne me suis pas souvenu(e).": "intr_93b7c22427b3d378.mp3",
+    "Ne s'adapte-t-elle pas?": "intr_0af9000da7d19245.mp3",
+    "Vous ne vous adaptez pas.": "intr_4f0bd358fca62f57.mp3",
+    "Vous ne vous êtes pas adapté(e)(s).": "intr_1f277fa6149405a5.mp3",
+    "Vous vous adapterez.": "intr_fea624f6a0d32303.mp3",
+    "Vous vous adaptez.": "intr_c040b3554961c5d6.mp3",
+    "Vous vous adaptez?": "intr_8d3884997c581ced.mp3"
   }
 }
