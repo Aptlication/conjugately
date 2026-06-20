@@ -15,10 +15,32 @@ import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // --- SEO: canonical-domain-aware robots.txt and sitemap.xml ---
+  const SITE_URL = `https://${(process.env.CANONICAL_HOST || "conjugately.com").toLowerCase()}`;
+
+  app.get("/robots.txt", (_req, res) => {
+    res
+      .type("text/plain")
+      .send(`User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+  });
+
+  app.get("/sitemap.xml", (_req, res) => {
+    // Public, indexable routes. Expand as marketing/landing pages are added.
+    const paths = ["/", "/frenchverb"];
+    const body =
+      `<?xml version="1.0" encoding="UTF-8"?>\n` +
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+      paths
+        .map((p) => `  <url><loc>${SITE_URL}${p}</loc></url>`)
+        .join("\n") +
+      `\n</urlset>\n`;
+    res.type("application/xml").send(body);
+  });
+
   // Serve static audio assets
   const assetsPath = path.resolve(import.meta.dirname, '..', 'attached_assets');
   app.use('/attached_assets', express.static(assetsPath));
-  
+
   // Auth middleware
   await setupAuth(app);
 

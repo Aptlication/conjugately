@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Verb Quiz Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'french-blue': '#1976D2',
+                    'french-light': '#E3F2FD',
+                    'french-accent': '#FF9800',
+                    'french-success': '#4CAF50',
+                    'french-error': '#F44336'
+                },
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                }
+            }
+        }
+    };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-inter">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-graduation-cap text-french-blue text-2xl"></i>
+                    <h1 class="text-xl font-semibold text-gray-900">French Verb Quiz Generator</h1>
+                </div>
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                    <i class="fas fa-language"></i>
+                    <span>Master French Verbs</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Instructions Section -->
+        <div class="bg-french-light rounded-lg p-6 mb-8">
+            <h2 class="text-lg font-semibold text-french-blue mb-4 flex items-center">
+                <i class="fas fa-info-circle mr-2"></i>
+                How to Use This Quiz Generator
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">Step 1: Enter a French Verb</h3>
+                    <p class="text-sm text-gray-700 mb-4">Type any French verb in its infinitive form (e.g., "faire", "avoir", "être")</p>
+                    
+                    <h3 class="font-medium text-gray-900 mb-2">Step 2: Select a Tense</h3>
+                    <p class="text-sm text-gray-700">Choose from 8 supported French tenses to practice</p>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">What You'll Get</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• 20 multiple-choice questions</li>
+                        <li>• All subject pronouns covered</li>
+                        <li>• Negative sentences included</li>
+                        <li>• Hints and detailed rationales</li>
+                        <li>• JSON format for easy integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Generator Form -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+            <h2 class="text-lg font-semibold text-gray-900 mb-6 flex items-center">
+                <i class="fas fa-cog mr-2 text-french-blue"></i>
+                Quiz Configuration
+            </h2>
+            
+            <form id="quizForm" class="space-y-6">
+                <!-- Verb Input -->
+                <div>
+                    <label for="verb" class="block text-sm font-medium text-gray-700 mb-2">
+                        French Verb <span class="text-french-error">*</span>
+                    </label>
+                    <div class="relative">
+                        <input 
+                            type="text" 
+                            id="verb" 
+                            name="verb" 
+                            required
+                            placeholder="e.g., faire, avoir, être"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-french-blue focus:border-french-blue transition-colors"
+                            data-mock="true"
+                        />
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <i class="fas fa-language text-gray-400"></i>
+                        </div>
+                    </div>
+                    <p class="mt-1 text-xs text-gray-500">Enter the verb in its infinitive form</p>
+                </div>
+
+                <!-- Tense Selection -->
+                <div>
+                    <label for="tense" class="block text-sm font-medium text-gray-700 mb-2">
+                        French Tense <span class="text-french-error">*</span>
+                    </label>
+                    <select 
+                        id="tense" 
+                        name="tense" 
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-french-blue focus:border-french-blue transition-colors"
+                    >
+                        <option value="">Select a tense...</option>
+                        <option value="present">Présent (Present)</option>
+                        <option value="passe_compose">Passé Composé (Past Perfect)</option>
+                        <option value="imparfait">Imparfait (Imperfect)</option>
+                        <option value="futur_simple">Futur Simple (Simple Future)</option>
+                        <option value="present_progressif">Présent Progressif (Present Continuous)</option>
+                        <option value="present_depuis">Présent + depuis (Present Perfect Continuous)</option>
+                        <option value="conditionnel_present">Conditionnel Présent (Present Conditional)</option>
+                        <option value="conditionnel_passe">Conditionnel Passé (Conditional Perfect)</option>
+                    </select>
+                    <p class="mt-1 text-xs text-gray-500">Choose the tense you want to practice</p>
+                </div>
+
+                <!-- Quiz Settings -->
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-medium text-gray-900 mb-3">Quiz Settings</h3>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-question-circle text-french-blue"></i>
+                            <span class="text-gray-700">Questions: <strong>20</strong></span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-users text-french-blue"></i>
+                            <span class="text-gray-700">All pronouns covered</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-times text-french-blue"></i>
+                            <span class="text-gray-700">4-5 negative sentences</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-lightbulb text-french-blue"></i>
+                            <span class="text-gray-700">Hints included</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="flex justify-center">
+                    <button 
+                        type="submit" 
+                        id="generateBtn"
+                        class="bg-french-blue hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center space-x-2"
+                        data-event="click:generateQuiz"
+                    >
+                        <i class="fas fa-magic"></i>
+                        <span>Generate Quiz</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="hidden bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-french-blue"></div>
+                <p class="text-gray-600">Generating your personalized French quiz...</p>
+                <p class="text-sm text-gray-500">This may take a few moments</p>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+            <div class="flex items-start space-x-3">
+                <i class="fas fa-exclamation-triangle text-french-error text-xl mt-1"></i>
+                <div>
+                    <h3 class="font-medium text-red-800">Error Generating Quiz</h3>
+                    <p class="text-sm text-red-700 mt-1" id="errorMessage">Please check your input and try again.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <!-- Quiz Info -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-check-circle text-french-success mr-2"></i>
+                        Quiz Generated Successfully
+                    </h2>
+                    <div class="flex items-center space-x-4">
+                        <button 
+                            id="downloadBtn"
+                            class="bg-french-accent hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center space-x-2"
+                            data-event="click:downloadQuiz"
+                        >
+                            <i class="fas fa-download"></i>
+                            <span>Download JSON</span>
+                        </button>
+                        <button 
+                            id="copyBtn"
+                            class="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center space-x-2"
+                            data-event="click:copyQuiz"
+                        >
+                            <i class="fas fa-copy"></i>
+                            <span>Copy JSON</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-language text-french-blue"></i>
+                        <span>Verb: <strong data-bind="quiz.verb">faire</strong></span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-french-blue"></i>
+                        <span>Tense: <strong data-bind="quiz.tense">Conditionnel Passé</strong></span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-question-circle text-french-blue"></i>
+                        <span>Questions: <strong>20</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JSON Output -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                <div class="border-b border-gray-200 p-4">
+                    <h3 class="font-medium text-gray-900 flex items-center">
+                        <i class="fas fa-code text-french-blue mr-2"></i>
+                        Generated Quiz JSON
+                    </h3>
+                </div>
+                <div class="p-4">
+                    <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                        <pre id="jsonOutput" class="text-sm text-gray-300 font-mono"><code data-mock="true">{
+  "questions": [
+    {
+      "question": "I would have done my homework if I had had time.",
+      "hint": "Think about the conditional perfect tense with 'avoir'",
+      "answerOptions": [
+        {
+          "text": "J'aurais fait mes devoirs si j'avais eu le temps.",
+          "rationale": "This correctly uses the conditional perfect of 'faire' with the auxiliary 'avoir'.",
+          "isCorrect": true
+        },
+        {
+          "text": "Je ferais mes devoirs si j'avais eu le temps.",
+          "rationale": "This uses the present conditional, not the conditional perfect.",
+          "isCorrect": false
+        },
+        {
+          "text": "J'avais fait mes devoirs si j'avais eu le temps.",
+          "rationale": "This uses the pluperfect tense, not the conditional perfect.",
+          "isCorrect": false
+        },
+        {
+          "text": "Je faisais mes devoirs si j'avais eu le temps.",
+          "rationale": "This uses the imperfect tense, not the conditional perfect.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "You would not have eaten at that restaurant.",
+      "hint": "Remember the negative form with 'ne...pas' around the auxiliary",
+      "answerOptions": [
+        {
+          "text": "Tu n'aurais pas mangé dans ce restaurant.",
+          "rationale": "This correctly uses the negative conditional perfect with proper negation placement.",
+          "isCorrect": true
+        },
+        {
+          "text": "Tu ne mangerais pas dans ce restaurant.",
+          "rationale": "This uses the present conditional, not the conditional perfect.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu n'avais pas mangé dans ce restaurant.",
+          "rationale": "This uses the pluperfect tense, not the conditional perfect.",
+          "isCorrect": false
+        },
+        {
+          "text": "Tu ne pas aurais mangé dans ce restaurant.",
+          "rationale": "This has incorrect negation placement in the conditional perfect.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="mt-12 bg-gray-50 rounded-lg p-6">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Usage Examples</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">Common Verbs to Try</h3>
+                    <div class="space-y-2">
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>être</strong> - to be
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>avoir</strong> - to have
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>faire</strong> - to do/make
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>aller</strong> - to go
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">Tense Examples</h3>
+                    <div class="space-y-2">
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>Présent:</strong> Je fais (I do)
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>Passé Composé:</strong> J'ai fait (I did)
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>Futur Simple:</strong> Je ferai (I will do)
+                        </div>
+                        <div class="bg-white rounded px-3 py-2 text-sm">
+                            <strong>Conditionnel:</strong> Je ferais (I would do)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-sm text-gray-600">
+                <p>© 2024 French Verb Quiz Generator. Perfect for language learning and education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // TODO: Implement business logic, API calls, and state management
+        (function() {
+            'use strict';
+            
+            // DOM elements
+            const form = document.getElementById('quizForm');
+            const generateBtn = document.getElementById('generateBtn');
+            const loadingState = document.getElementById('loadingState');
+            const errorState = document.getElementById('errorState');
+            const resultsSection = document.getElementById('resultsSection');
+            const jsonOutput = document.getElementById('jsonOutput');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const copyBtn = document.getElementById('copyBtn');
+
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const verb = document.getElementById('verb').value.trim();
+                const tense = document.getElementById('tense').value;
+                
+                if (!verb || !tense) {
+                    showError('Please fill in all required fields.');
+                    return;
+                }
+                
+                generateQuiz(verb, tense);
+            });
+
+            // Generate quiz function
+            function generateQuiz(verb, tense) {
+                showLoading();
+                
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Mock quiz generation
+                    const mockQuiz = generateMockQuiz(verb, tense);
+                    showResults(mockQuiz);
+                }, 2000);
+            }
+
+            // Show loading state
+            function showLoading() {
+                hideAllStates();
+                loadingState.classList.remove('hidden');
+            }
+
+            // Show error state
+            function showError(message) {
+                hideAllStates();
+                document.getElementById('errorMessage').textContent = message;
+                errorState.classList.remove('hidden');
+            }
+
+            // Show results
+            function showResults(quiz) {
+                hideAllStates();
+                
+                // Update quiz info
+                document.querySelector('[data-bind="quiz.verb"]').textContent = quiz.verb;
+                document.querySelector('[data-bind="quiz.tense"]').textContent = quiz.tense;
+                
+                // Update JSON output
+                jsonOutput.innerHTML = '<code>' + JSON.stringify(quiz.questions, null, 2) + '</code>';
+                
+                resultsSection.classList.remove('hidden');
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Hide all states
+            function hideAllStates() {
+                loadingState.classList.add('hidden');
+                errorState.classList.add('hidden');
+                resultsSection.classList.add('hidden');
+            }
+
+            // Generate mock quiz data
+            function generateMockQuiz(verb, tense) {
+                return {
+                    verb: verb,
+                    tense: tense,
+                    questions: [
+                        {
+                            question: "I would have done my homework if I had had time.",
+                            hint: "Think about the conditional perfect tense with 'avoir'",
+                            answerOptions: [
+                                {
+                                    text: "J'aurais fait mes devoirs si j'avais eu le temps.",
+                                    rationale: "This correctly uses the conditional perfect of 'faire' with the auxiliary 'avoir'.",
+                                    isCorrect: true
+                                },
+                                {
+                                    text: "Je ferais mes devoirs si j'avais eu le temps.",
+                                    rationale: "This uses the present conditional, not the conditional perfect.",
+                                    isCorrect: false
+                                }
+                            ]
+                        }
+                    ]
+                };
+            }
+
+            // Download JSON
+            downloadBtn.addEventListener('click', function() {
+                const jsonData = jsonOutput.textContent;
+                const blob = new Blob([jsonData], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'french-verb-quiz.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+
+            // Copy JSON
+            copyBtn.addEventListener('click', function() {
+                const jsonData = jsonOutput.textContent;
+                navigator.clipboard.writeText(jsonData).then(function() {
+                    // Show success feedback
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                    }, 2000);
+                });
+            });
+
+            // Form validation
+            const verbInput = document.getElementById('verb');
+            const tenseSelect = document.getElementById('tense');
+
+            verbInput.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.classList.add('border-red-300');
+                } else {
+                    this.classList.remove('border-red-300');
+                }
+            });
+
+            tenseSelect.addEventListener('change', function() {
+                if (this.value === '') {
+                    this.classList.add('border-red-300');
+                } else {
+                    this.classList.remove('border-red-300');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K6:21:50 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 17 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+6:21:54 PM [express] GET /api/auth/user 401 in 2ms :: {"message":"Unauthorized"}
+📝 Raw request body: {
+  "verb": "faire",
+  "timeFrame": "past",
+  "tenseType": "passé composé",
+  "difficulty": "Novice"
+}
+Generating quiz for: faire - passé composé (Novice)
+⚡ Generating quiz with internal system...
+🔧 Using internal quiz system for faire - passé composé
+🎓 Using corrected verified novice questions for faire - passé_composé (original: passé composé)
+✅ Found 20 corrected verified novice questions
+✅ Generated 20 questions instantly
+6:22:27 PM [express] POST /api/get-quiz 200 in 6ms :: {"success":true,"quiz":{"id":1774030947531,"ve…
+📝 Raw request body: {
+  "verb": "avoir",
+  "timeFrame": "present",
+  "tenseType": "présent",
+  "difficulty": "Intermediate"
+}
+Generating quiz for: avoir - présent (Intermediate)
+⚡ Generating quiz with internal system...
+🔧 Checking intermediate quiz data...
+🔧 Looking for intermediate data: avoir - present
+✅ Found 20 intermediate questions
+🎯 Using intermediate quiz data for avoir - present
+✅ Generated 20 questions instantly
+6:22:27 PM [express] POST /api/get-quiz 200 in 2ms :: {"success":true,"quiz":{"id":1774030947626,"ve…

@@ -1,8 +1,17 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { canonicalHost } from "./canonicalHost";
 
 const app = express();
+
+// Trust the platform proxy so req.protocol / X-Forwarded-* are read correctly.
+app.set("trust proxy", true);
+
+// Canonical-host 301 redirects must run before anything else. Inert until
+// REDIRECT_TO_CANONICAL=true (see server/canonicalHost.ts).
+app.use(canonicalHost);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
