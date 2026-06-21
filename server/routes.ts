@@ -10,8 +10,7 @@ import { ZodError, z } from "zod";
 import { db } from "./db";
 import { courseProgress, completedCourses } from "@shared/schema";
 import { eq, and } from "drizzle-orm";
-import { setupAuth, isAuthenticated } from "./replitAuth";
-import { storage } from "./storage";
+import { setupAuth, isAuthenticated } from "./auth";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -41,21 +40,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const assetsPath = path.resolve(import.meta.dirname, '..', 'attached_assets');
   app.use('/attached_assets', express.static(assetsPath));
 
-  // Auth middleware
+  // Auth middleware + routes (register/login/logout/me, Google, password reset)
+  // are all registered inside setupAuth (server/auth.ts).
   await setupAuth(app);
 
-  // Auth routes
-  app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
-    try {
-      const replitUserId = req.user.claims.sub;
-      const user = await storage.getUserByReplitId(replitUserId);
-      res.json(user);
-    } catch (error) {
-      console.error("Error fetching user:", error);
-      res.status(500).json({ message: "Failed to fetch user" });
-    }
-  });
-  
   // Serve the fresh French Verb Master app
   app.get("/verbmaster", (req, res) => {
     res.sendFile(path.join(import.meta.dirname, "french-master.html"));

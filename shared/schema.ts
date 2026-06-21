@@ -15,14 +15,23 @@ export const sessions = pgTable(
   (table) => [index("IDX_session_expire").on(table.expire)],
 );
 
-// User storage table - keeping existing structure for now
+// User storage table
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
-  // Add Replit Auth fields while preserving existing structure
-  replitUserId: varchar("replit_user_id").unique(), // Replit's actual user ID
+  // username is optional now (kept for backward-compat; we identify users by email)
+  username: text("username").unique(),
+  // password holds a bcrypt hash. Null for Google-only accounts.
+  password: text("password"),
+  // Legacy Replit Auth id (deprecated; retained so old rows aren't orphaned)
+  replitUserId: varchar("replit_user_id").unique(),
+  // Primary identity for local + Google accounts
   email: varchar("email"),
+  emailVerified: boolean("email_verified").default(false),
+  authProvider: text("auth_provider").default("local"), // "local" | "google"
+  googleId: varchar("google_id").unique(),
+  // Password-reset flow
+  resetToken: varchar("reset_token"),
+  resetTokenExpiry: timestamp("reset_token_expiry"),
   firstName: varchar("first_name"),
   lastName: varchar("last_name"),
   profileImageUrl: varchar("profile_image_url"),
