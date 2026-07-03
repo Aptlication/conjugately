@@ -172,7 +172,7 @@ const QuizSelectionScreen: React.FC<QuizSelectionScreenProps> = ({
         >
           {/* Header Section */}
           <View style={styles.header}>
-            <Text style={styles.mainTitle}>French Verb Master</Text>
+            <Text style={styles.mainTitle}>Conjugately</Text>
             <Text style={styles.subtitle}>For serious students.</Text>
             <Text style={styles.description}>
               Master French verb conjugations—the key to fluency—with your own personalized

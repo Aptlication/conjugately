@@ -201,7 +201,7 @@ export default function App() {
 
 const Header = () => (
   <header className="text-center mb-4">
-    <h1 className="text-3xl sm:text-4xl font-bold text-white">French Verb Master</h1>
+    <h1 className="text-3xl sm:text-4xl font-bold text-white">Conjugately</h1>
   </header>
 );
 

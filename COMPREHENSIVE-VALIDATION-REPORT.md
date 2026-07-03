@@ -301,4 +301,4 @@ All 205 static English text entries are grammatically perfect. One dynamic gener
 **Dynamic generation grammar errors:** 0 ✅
 **Comprehensive fix applied:** Future tense "to be" verb handling ✅
 
-The French Verb Master application now generates grammatically perfect English sentences.
+The Conjugately application now generates grammatically perfect English sentences.

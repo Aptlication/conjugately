@@ -1,6 +1,6 @@
-# French Verb Master - V2 Directory File Index (DFI)
+# Conjugately - V2 Directory File Index (DFI)
 
-This document provides a comprehensive index of all directories and files in the French Verb Master application project structure.
+This document provides a comprehensive index of all directories and files in the Conjugately application project structure.
 
 ## AA. 📁 Root Directory Structure [CLASSIFICATION SYSTEM]
 
@@ -165,7 +165,7 @@ This document provides a comprehensive index of all directories and files in the
    (b) `index-CufX3s_H.css` - Compiled CSS styles
 
 2. **`index.html`** - Production HTML file
-3. **`french-master.html`** - Alternative entry HTML
+3. **`conjugately.html`** - Alternative entry HTML
 
 ### F. Development Tools
 1. **`vite.ts`** - Vite development server integration
@@ -181,7 +181,7 @@ This document provides a comprehensive index of all directories and files in the
 ## EE. 📱 Mobile Applications (`apps/`)
 
 ### A. Mobile Web App Directory Structure
-1. **French Verb Master Mobile**
+1. **Conjugately Mobile**
    (a) Progressive Web App implementation
    (b) Mobile-optimized interface
    (c) Offline functionality
@@ -212,7 +212,7 @@ This document provides a comprehensive index of all directories and files in the
 ### B. Marketing Graphics
 1. **Feature Graphics**
    (a) `feature-graphic-main.png/svg` - Primary marketing image
-   (b) `french-verb-master-feature-graphic-hd.png` - High definition version
+   (b) `conjugately-feature-graphic-hd.png` - High definition version
 
 ## HH. 📂 User Assets (`attached_assets/`)
 
@@ -312,15 +312,15 @@ This document provides a comprehensive index of all directories and files in the
 
 ### A. Feature Graphics
 1. **High Definition Graphics**
-   (a) `french-verb-master-feature-graphic-hd.png` - HD PNG version
-   (b) `french-verb-master-feature-graphic-hd.svg` - HD SVG version
+   (a) `conjugately-feature-graphic-hd.png` - HD PNG version
+   (b) `conjugately-feature-graphic-hd.svg` - HD SVG version
 
 2. **Standard Graphics**
-   (a) `french-verb-master-feature-graphic.png` - Standard PNG
-   (b) `french-verb-master-feature-graphic.svg` - Standard SVG
+   (a) `conjugately-feature-graphic.png` - Standard PNG
+   (b) `conjugately-feature-graphic.svg` - Standard SVG
 
 ### B. App Icons & Descriptions
-1. **`French_Verb_Master_App_Icon_Description.txt`** - Icon specifications
+1. **`Conjugately_App_Icon_Description.txt`** - Icon specifications
 
 ## LL. 📋 Index & Reference Files
 

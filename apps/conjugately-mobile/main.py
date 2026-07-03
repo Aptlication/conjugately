@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple HTTP server for French Verb Master Mobile App
+Simple HTTP server for Conjugately Mobile App
 Serves the mobile-optimized PWA on port 80
 """
 
@@ -21,5 +21,5 @@ if __name__ == "__main__":
     os.chdir(web_dir)
     
     with socketserver.TCPServer(("", PORT), MyHTTPRequestHandler) as httpd:
-        print(f"French Verb Master Mobile serving at port {PORT}")
+        print(f"Conjugately Mobile serving at port {PORT}")
         httpd.serve_forever()

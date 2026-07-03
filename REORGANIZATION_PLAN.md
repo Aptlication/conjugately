@@ -62,12 +62,12 @@ Based on the Landing Pages Index (LPI) and Directory File Index (DFI), here's a 
 #### 2. `assets/` - Media & Resource Management [CATEGORY: ASSETS]
    **A. Application Graphics** [SUBCATEGORY: GRAPHICS]
    1. Feature Graphics:
-      (a) `french-verb-master-feature-graphic-hd.png` → `assets/graphics/features/hd/`
-      (b) `french-verb-master-feature-graphic-hd.svg` → `assets/graphics/features/hd/`
-      (c) `french-verb-master-feature-graphic.png` → `assets/graphics/features/standard/`
-      (d) `french-verb-master-feature-graphic.svg` → `assets/graphics/features/standard/`
+      (a) `conjugately-feature-graphic-hd.png` → `assets/graphics/features/hd/`
+      (b) `conjugately-feature-graphic-hd.svg` → `assets/graphics/features/hd/`
+      (c) `conjugately-feature-graphic.png` → `assets/graphics/features/standard/`
+      (d) `conjugately-feature-graphic.svg` → `assets/graphics/features/standard/`
    2. Application Icons:
-      (a) `French_Verb_Master_App_Icon_Description.txt` → `assets/graphics/icons/`
+      (a) `Conjugately_App_Icon_Description.txt` → `assets/graphics/icons/`
 
    **B. Application Screenshots** [SUBCATEGORY: SCREENSHOTS]
    1. UI Documentation:
@@ -156,8 +156,8 @@ Move these files:
 
 ### B. Assets (`assets/`)
 Move and organize:
-- `french-verb-master-feature-graphic*` → `assets/graphics/`
-- `French_Verb_Master_App_Icon_Description.txt` → `assets/graphics/`
+- `conjugately-feature-graphic*` → `assets/graphics/`
+- `Conjugately_App_Icon_Description.txt` → `assets/graphics/`
 - `canvas/` contents → `assets/screenshots/`
 - `attached_assets/` contents → `assets/attachments/`
 

@@ -3,7 +3,7 @@ export default function SimpleQuiz() {
   
   return (
     <div>
-      <h1>French Verb Master - New Route Working!</h1>
+      <h1>Conjugately - New Route Working!</h1>
       <p>Success! The caching issue is resolved.</p>
       <button>Test Button</button>
     </div>

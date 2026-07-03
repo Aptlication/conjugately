@@ -1,4 +1,4 @@
-// French Verb Master - Complete Data Export for React Native
+// Conjugately - Complete Data Export for React Native
 // Comprehensive verb conjugation data with 13 verbs across 9 tenses
 // Includes 4-tier difficulty system and question contexts
 

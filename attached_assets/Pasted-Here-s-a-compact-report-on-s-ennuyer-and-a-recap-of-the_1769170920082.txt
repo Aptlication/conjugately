@@ -45,6 +45,6 @@ Numbers are approximate where the site didn’t show the full list, but these ma
 | 17 | Are you (plural) not bored?               | **Vous ne vous ennuyez pas ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)  |
 | 18 | We are bored.                             | **Nous nous ennuyons.**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)         |
 | 19 | Is he not bored?                          | **Il ne s’ennuie pas ?**  [leconjugueur.lefigaro](https://leconjugueur.lefigaro.fr/conjugaison/verbe/ennuyer_pronominal.html)        |
-| 20 | Are you (singular) bored?                 | **Tu t’ennuies ?** (also: *Est-ce que tu t’ennuies ?*)  [frenchverbmaster](https://frenchverbmaster.com/) |
+| 20 | Are you (singular) bored?                 | **Tu t’ennuies ?** (also: *Est-ce que tu t’ennuies ?*)  [conjugately](https://conjugately.com/) |
 
 If you want, the full present tense, imperfect, and past (passé composé with *être* → *je me suis ennuyé(e)*, etc.) for **s’ennuyer** can also be laid out in a similar grid to mirror how the site drills it.

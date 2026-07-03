@@ -12,7 +12,7 @@ Comet’s TTS and voice features are compatible with your app’s Web Speech–b
 
 ## Practical Implications For Testing
 
-- You can test on Comet using your Replit preview or `frenchverbmaster.com`; if `speechSynthesis` is available and audio isn’t blocked, your existing `tts.speak*` calls should work the same as in a standard Chromium‑based browser.[1][5]
+- You can test on Comet using your Replit preview or `conjugately.com`; if `speechSynthesis` is available and audio isn’t blocked, your existing `tts.speak*` calls should work the same as in a standard Chromium‑based browser.[1][5]
 - Use the console logging you added (`"🔊 TTS speak called"` vs `"🔇 TTS blocked"`) in Comet’s devtools to distinguish between “code is firing” and “engine/permissions are preventing audio,” just as you planned.[5]
 
 If you want, the next step can be to add a one‑time runtime check in your code that logs the result of `typeof window.speechSynthesis` and `speechSynthesis.getVoices()` so you can see exactly what Comet is exposing.
@@ -21,7 +21,7 @@ If you want, the next step can be to add a one‑time runtime check in your code
 [2](https://www.perplexity.ai/changelog/what-we-shipped-september-5th)
 [3](https://www.perplexity.ai/changelog/what-we-shipped-november-22nd)
 [4](https://www.perplexity.ai/hub/blog/comet-for-android-is-here)
-[5](https://replit.com/@JonathanGdeC/V4-French-Verb-Master)
+[5](https://replit.com/@JonathanGdeC/V4-conjugately)
 [6](https://www.perplexity.ai/hub/getting-started)
 [7](https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you)
 [8](https://www.perplexity.ai/changelog/)

@@ -1,6 +1,6 @@
-# French Verb Master — Project Synopsis
+# Conjugately — Project Synopsis
 
-**Site:** [frenchverbmaster.com](https://frenchverbmaster.com/)
+**Site:** [conjugately.com](https://conjugately.com/)
 **Tagline:** *"For serious students"*
 
 ## Purpose

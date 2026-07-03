@@ -20,7 +20,7 @@ function FreshAppWithAuth() {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-white text-3xl mb-4">French Verb Master</h1>
+          <h1 className="text-white text-3xl mb-4">Conjugately</h1>
           <p className="text-gray-300 mb-6">Please log in to continue</p>
           <a 
             href="/api/login" 
@@ -36,7 +36,7 @@ function FreshAppWithAuth() {
   return <FreshAppCore user={user} />;
 }
 
-// Complete French Verb Master Application - Fresh Implementation
+// Complete Conjugately Application - Fresh Implementation
 function FreshAppCore({ user }: { user: any }) {
   const [selectedVerb, setSelectedVerb] = useState("");
   const [selectedTimeFrame, setSelectedTimeFrame] = useState("");
@@ -411,7 +411,7 @@ function FreshAppCore({ user }: { user: any }) {
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <h1 style={{ fontSize: '48px', fontWeight: 'bold', marginBottom: '16px' }}>
-            French Verb Master
+            Conjugately
           </h1>
           <p style={{ fontSize: '20px', color: '#cbd5e1', maxWidth: '600px', margin: '0 auto' }}>
             Master French verb conjugations with personalized quizzes. 
@@ -688,7 +688,7 @@ function FreshAppCore({ user }: { user: any }) {
               
               <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '16px', marginBottom: '24px' }}>
                 <p style={{ color: '#cbd5e1', fontSize: '14px', textAlign: 'center' }}>
-                  <strong style={{ color: '#fde047' }}>French Verb Master Version 1</strong> focuses on building a solid foundation with Elementary through Intermediate levels.
+                  <strong style={{ color: '#fde047' }}>Conjugately Version 1</strong> focuses on building a solid foundation with Elementary through Intermediate levels.
                 </p>
               </div>
               

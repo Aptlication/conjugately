@@ -8,7 +8,7 @@ export function PrivacyPolicy() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-          <p className="text-lg text-slate-300">French Verb Master</p>
+          <p className="text-lg text-slate-300">Conjugately</p>
           <p className="text-sm text-slate-400 mt-2">Last updated: January 11, 2025</p>
         </div>
 
@@ -26,7 +26,7 @@ export function PrivacyPolicy() {
           
           {/* Introduction */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-purple-200">Welcome to French Verb Master!</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-purple-200">Welcome to Conjugately!</h2>
             <p className="text-slate-300 leading-relaxed">
               We're excited to help you learn French! This privacy policy explains how we handle your information 
               when you use our app. We've written this in simple language so everyone, including young learners, 
@@ -201,7 +201,7 @@ export function PrivacyPolicy() {
         <div className="mt-8 text-center">
           <Link href="/">
             <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl text-white font-medium shadow-lg">
-              Return to French Verb Master
+              Return to Conjugately
             </button>
           </Link>
         </div>

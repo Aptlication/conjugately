@@ -1,7 +1,7 @@
-# French Verb Master
+# Conjugately
 
 ## Overview
-French Verb Master is a full-stack application designed to help students master French verb conjugations through personalized, AI-powered quizzes and optional mini-courses. It features a dark-themed UI, allowing users to customize 20-question multiple-choice quizzes based on verb, time frame, and tense using Google Gemini 2.5 Pro. The project's vision is to become a go-to resource for French language learners, offering a highly effective and engaging way to practice and solidify verb conjugation knowledge, thereby unlocking greater fluency.
+Conjugately is a full-stack application designed to help students master French verb conjugations through personalized, AI-powered quizzes and optional mini-courses. It features a dark-themed UI, allowing users to customize 20-question multiple-choice quizzes based on verb, time frame, and tense using Google Gemini 2.5 Pro. The project's vision is to become a go-to resource for French language learners, offering a highly effective and engaging way to practice and solidify verb conjugation knowledge, thereby unlocking greater fluency.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.

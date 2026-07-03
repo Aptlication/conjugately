@@ -1,7 +1,7 @@
-FRENCH VERB MASTER - APP ICON DESCRIPTION FOR GEMINI AI
+Conjugately - APP ICON DESCRIPTION FOR GEMINI AI
 ================================================================
 
-Create a modern, professional app icon for "French Verb Master" - an advanced AI-powered French language learning application focused on verb conjugation mastery.
+Create a modern, professional app icon for "Conjugately" - an advanced AI-powered French language learning application focused on verb conjugation mastery.
 
 DESIGN REQUIREMENTS:
 - Square format (1024x1024 pixels)

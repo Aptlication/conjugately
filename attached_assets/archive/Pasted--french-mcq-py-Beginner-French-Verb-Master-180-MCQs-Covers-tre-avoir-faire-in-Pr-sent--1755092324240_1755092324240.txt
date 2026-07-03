@@ -1,5 +1,5 @@
 # french_mcq.py
-# Beginner French Verb Master – 180+ MCQs
+# Beginner Conjugately – 180+ MCQs
 # Covers être, avoir, faire in Présent, Passé Composé, Futur Simple
 # Each question has 4 answers (A–D), with answer key
 

@@ -1,4 +1,4 @@
-// French Verb Master - Complete Verb Data Export for React Native Mobile App
+// Conjugately - Complete Verb Data Export for React Native Mobile App
 // Comprehensive conjugation database with 13 verbs × 9 tenses + question contexts
 // Designed for serious French learners with mobile-optimized structure and offline capability
 // Includes pronunciation guides, grammar rules, and pedagogical metadata
@@ -6,7 +6,7 @@
 export const FRENCH_VERB_DATA = {
   // Data System Overview
   DATA_SYSTEM: {
-    title: "French Verb Master Conjugation Database",
+    title: "Conjugately Conjugation Database",
     description: "Complete conjugation data for 13 essential French verbs across 9 tenses",
     version: "2.0.0",
     lastUpdated: "2025-01-05",
@@ -2149,7 +2149,7 @@ export const FRENCH_VERB_DATA = {
   // Comprehensive UI Design System for Mobile Replication
   UI_DESIGN_SYSTEM: {
     theme: {
-      name: "French Verb Master Dark Theme",
+      name: "Conjugately Dark Theme",
       primary_colors: {
         background: "#0F0F23", // Deep navy for main background
         surface: "#1A1A2E", // Slightly lighter navy for cards

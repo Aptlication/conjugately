@@ -1,4 +1,4 @@
-# BEGINNER LEVEL - COMPLETE FRENCH VERB MASTER CONTENT
+# BEGINNER LEVEL - COMPLETE Conjugately CONTENT
 *Created: January 12, 2025*
 *For French grammar verification and error correction*
 

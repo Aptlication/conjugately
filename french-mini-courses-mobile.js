@@ -1,4 +1,4 @@
-// French Verb Master - Mini-Courses Data Export for React Native Mobile App
+// Conjugately - Mini-Courses Data Export for React Native Mobile App
 // Complete course system with 4-tier difficulty progression, units, and final exams
 // Designed for serious French learners targeting fluency
 // Includes comprehensive UI specifications and component structures
@@ -6,7 +6,7 @@
 export const FRENCH_MINI_COURSES_DATA = {
   // Course System Overview
   COURSE_SYSTEM: {
-    title: "French Verb Master Mini-Courses",
+    title: "Conjugately Mini-Courses",
     subtitle: "For serious students targeting fluency",
     description: "Structured learning path with sequential progression and 90% mastery requirement",
     totalDifficulties: 4,
@@ -686,7 +686,7 @@ export const FRENCH_MINI_COURSES_DATA = {
         },
         {
           difficulty: "Difficult",
-          certificate: "French Verb Master Certificate",
+          certificate: "Conjugately Certificate",
           description: "Complete mastery of French verb conjugation system"
         }
       ]
@@ -737,7 +737,7 @@ export const FRENCH_MINI_COURSES_DATA = {
   // Comprehensive UI Design System
   UI_DESIGN_SYSTEM: {
     theme: {
-      name: "French Verb Master Dark Theme",
+      name: "Conjugately Dark Theme",
       description: "Professional dark theme optimized for extended study sessions",
       
       colors: {
@@ -1838,7 +1838,7 @@ export const FRENCH_MINI_COURSES_DATA = {
                   marginBottom: 8
                 }
               },
-              text: "Welcome to French Verb Master"
+              text: "Welcome to Conjugately"
             },
             {
               component: "Text", 

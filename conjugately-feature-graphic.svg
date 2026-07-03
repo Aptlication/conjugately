@@ -40,11 +40,11 @@
       <!-- Blue Diamond Background -->
       <polygon points="0,-50 50,0 0,50 -50,0" fill="#002395"/>
       <!-- VM Text - Professional Typography -->
-      <text x="0" y="12" text-anchor="middle" fill="white" font-family="Times, serif" font-weight="bold" font-size="38" letter-spacing="2px">VM</text>
+      <text x="0" y="12" text-anchor="middle" fill="white" font-family="Times, serif" font-weight="bold" font-size="38" letter-spacing="0px">C</text>
     </g>
     
     <!-- Main Title -->
-    <text x="60" y="240" fill="url(#textGradient)" font-family="Arial, sans-serif" font-weight="bold" font-size="42">French Verb Master</text>
+    <text x="60" y="240" fill="url(#textGradient)" font-family="Arial, sans-serif" font-weight="bold" font-size="42">Conjugately</text>
     
     <!-- Tagline -->
     <text x="60" y="275" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="22">Master French verbs, get fluent quicker</text>

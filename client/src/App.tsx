@@ -12,7 +12,7 @@ const hasUserId = (user: any): user is { id: string } => {
 };
 
 function App() {
-  // French Verb Master - No reminder version
+  // Conjugately - No reminder version
   const { user, isLoading, isAuthenticated } = useAuth();
   const vocab = useVocabulary();
   const [showVocabulary, setShowVocabulary] = useState(false);
@@ -2022,7 +2022,7 @@ function App() {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
             <div className="text-center mb-6">
               <h2 className="text-4xl font-bold mb-2">📚 {courseInfo.timeFrame} Tense Course Overview</h2>
-              <p className="text-lg text-purple-300 font-semibold italic">French Verb Master - For serious students.</p>
+              <p className="text-lg text-purple-300 font-semibold italic">Conjugately - For serious students.</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -2217,7 +2217,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-2">French Verb Master</h1>
+          <h1 className="text-5xl font-bold mb-2">Conjugately</h1>
           <p className="text-2xl text-purple-300 font-semibold mb-4 italic">For serious students.</p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Master French verb conjugations—the key to fluency—with your own personalized quizzes and optional mini-courses.
@@ -3419,7 +3419,7 @@ function App() {
                   {selectedCourseTimeFrame} Tense Course Overview
                 </h3>
                 <p className="text-sm text-slate-300 italic">
-                  French Verb Master - For serious students.
+                  Conjugately - For serious students.
                 </p>
               </div>
               
@@ -3837,7 +3837,7 @@ function App() {
               
               <div className="bg-white/5 rounded-lg p-4 mb-6">
                 <p className="text-slate-300 text-sm text-center">
-                  <strong className="text-yellow-300">French Verb Master Version 1</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
+                  <strong className="text-yellow-300">Conjugately Version 1</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
                 </p>
               </div>
               

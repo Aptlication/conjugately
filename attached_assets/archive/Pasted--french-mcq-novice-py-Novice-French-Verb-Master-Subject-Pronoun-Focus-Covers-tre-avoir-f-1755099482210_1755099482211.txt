@@ -1,5 +1,5 @@
 # french_mcq_novice.py
-# Novice French Verb Master – Subject Pronoun Focus
+# Novice Conjugately – Subject Pronoun Focus
 # Covers être, avoir, faire, aller in Présent, Passé Composé, Futur Simple
 # Each question has 4 answer choices (A–D), only one correct
 

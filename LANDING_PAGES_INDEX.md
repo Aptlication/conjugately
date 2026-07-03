@@ -1,6 +1,6 @@
-# French Verb Master - Landing Pages Index
+# Conjugately - Landing Pages Index
 
-This document provides a comprehensive index of all landing pages, routes, and entry points in the French Verb Master application.
+This document provides a comprehensive index of all landing pages, routes, and entry points in the Conjugately application.
 
 ## AA. 🌐 Web Application Routes
 
@@ -21,14 +21,14 @@ This document provides a comprehensive index of all landing pages, routes, and e
 
 4. **`/verbmaster`** - Alternative Quiz Entry
    (a) Route Handler: `server/routes.ts` (line 31)
-   (b) Description: Serves `french-master.html` static file
+   (b) Description: Serves `conjugately.html` static file
    (c) Features: Alternative entry point for quiz application
 
 ## BB. 📱 Mobile Application
 
 ### A. Mobile Web App
-1. **Landing Page**: `apps/french-verb-master-mobile/index.html`
-2. **Server**: `apps/french-verb-master-mobile/main.py` (Port 80)
+1. **Landing Page**: `apps/conjugately-mobile/index.html`
+2. **Server**: `apps/conjugately-mobile/main.py` (Port 80)
 3. **Description**: Mobile-optimized PWA with offline capabilities
 4. **Features**: Touch-friendly interface, service worker, mobile-specific styling
 
@@ -85,8 +85,8 @@ This document provides a comprehensive index of all landing pages, routes, and e
 3. **Various `.txt` and `.md` files** - Content validation and analysis
 
 ## GG. 🎨 Assets & Graphics
-1. **`french-verb-master-feature-graphic-hd.png/svg`** - High-definition app graphics
-2. **`French_Verb_Master_App_Icon_Description.txt`** - App icon specifications
+1. **`conjugately-feature-graphic-hd.png/svg`** - High-definition app graphics
+2. **`Conjugately_App_Icon_Description.txt`** - App icon specifications
 
 ## HH. 📊 Usage Patterns
 

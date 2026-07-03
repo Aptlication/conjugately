@@ -56,9 +56,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  // Serve the fresh French Verb Master app
+  // Serve the fresh Conjugately app
   app.get("/verbmaster", (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, "french-master.html"));
+    res.sendFile(path.join(import.meta.dirname, "conjugately.html"));
   });
   
   // Serve FrenchQuiz component at /frenchverb route (fresh slug to bypass cache)
@@ -68,7 +68,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>French Verb Master</title>
+    <title>Conjugately</title>
     <script type="module" src="/@vite/client"></script>
   </head>
   <body>
@@ -314,7 +314,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/health", (req, res) => {
     res.json({
       success: true,
-      message: "French Verb Master API is running",
+      message: "Conjugately API is running",
       timestamp: new Date().toISOString()
     });
   });

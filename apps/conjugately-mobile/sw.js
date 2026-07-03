@@ -1,5 +1,5 @@
 // Service Worker for PWA functionality
-const CACHE_NAME = 'french-verb-master-v1';
+const CACHE_NAME = 'conjugately-v1';
 const urlsToCache = [
   '/',
   '/index.html',

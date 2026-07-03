@@ -191,7 +191,7 @@ server/routes.ts:8:import { db } from "./db";
 server/routes.ts:9:import { courseProgress, completedCourses } from "@shared/schema";
 server/routes.ts:10:import { eq, and } from "drizzle-orm";
 server/routes.ts:15:  app.get("/verbmaster", (req, res) => {
-server/routes.ts:16:    res.sendFile(path.join(import.meta.dirname, "french-master.html"));
+server/routes.ts:16:    res.sendFile(path.join(import.meta.dirname, "conjugately.html"));
 server/routes.ts:20:  app.get("/frenchverb", (req, res) => {
 server/routes.ts:22:<html lang="en">
 server/routes.ts:24:    <meta charset="UTF-8" />
@@ -220,4 +220,4 @@ server/routes.ts:216:      res.json({ success: true, message: "Course reset succ
 server/routes.ts:218:      console.error("Error resetting course:", error);
 server/routes.ts:219:      res.status(500).json({ success: false, error: "Failed to reset course" });
 server/routes.ts:224:  app.get("/api/health", (req, res) => {
-server/routes.ts:227:      message: "French Verb Master API is running",
+server/routes.ts:227:      message: "Conjugately API is running",

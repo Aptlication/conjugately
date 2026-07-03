@@ -1,4 +1,4 @@
-# French Verb Master Mobile
+# Conjugately Mobile
 
 *For serious students.*
 
@@ -46,7 +46,7 @@ A mobile-optimized web application for mastering French verb conjugations with A
 ## Project Structure
 
 ```
-apps/french-verb-master-mobile/
+apps/conjugately-mobile/
 ├── index.html        # Main mobile app interface
 ├── package.json      # Project configuration
 ├── .replit          # Replit deployment config

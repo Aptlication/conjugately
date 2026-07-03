@@ -1,4 +1,4 @@
-// Comprehensive Grammar Check Script for French Verb Master
+// Comprehensive Grammar Check Script for Conjugately
 // Tests all difficulty levels and identifies grammar issues in generated questions
 
 import { execSync } from 'child_process';

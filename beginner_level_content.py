@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-French Verb Master - Beginner Level Content
+Conjugately - Beginner Level Content
 Created: January 12, 2025
 For French grammar verification and error correction via Claude/Perplexity
 """
@@ -342,7 +342,7 @@ beginner_content_corrected = {
 }
 
 if __name__ == "__main__":
-    print("French Verb Master - Beginner Level Content")
+    print("Conjugately - Beginner Level Content")
     print(f"Total verbs: {len(beginner_content_original['level_info']['verbs'])}")
     print(f"Total tenses: {len(beginner_content_original['level_info']['tenses'])}")
     print(f"Total context sentences: {sum(len(sentences) for sentences in beginner_content_original['context_sentences'].values())}")

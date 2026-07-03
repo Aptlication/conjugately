@@ -54,11 +54,11 @@
       <!-- Blue Diamond Background (Inner) -->
       <polygon points="0,-62 62,0 0,62 -62,0" fill="#002395"/>
       <!-- VM Text - Ultra High Quality -->
-      <text x="0" y="15" text-anchor="middle" fill="white" font-family="Times New Roman, Times, serif" font-weight="900" font-size="48" letter-spacing="3px" style="text-rendering: optimizeLegibility;">VM</text>
+      <text x="0" y="15" text-anchor="middle" fill="white" font-family="Times New Roman, Times, serif" font-weight="900" font-size="48" letter-spacing="0px" style="text-rendering: optimizeLegibility;">C</text>
     </g>
     
     <!-- Premium Title -->
-    <text x="80" y="280" fill="url(#goldGradient)" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="52" style="text-rendering: optimizeLegibility;">French Verb Master</text>
+    <text x="80" y="280" fill="url(#goldGradient)" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="52" style="text-rendering: optimizeLegibility;">Conjugately</text>
     
     <!-- Enhanced Tagline -->
     <text x="80" y="320" fill="#ffffff" font-family="Arial, sans-serif" font-weight="600" font-size="26" style="text-rendering: optimizeLegibility;">Master French verbs, get fluent quicker</text>

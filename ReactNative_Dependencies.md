@@ -1,4 +1,4 @@
-# React Native Dependencies for French Verb Master Quiz Selection Screen
+# React Native Dependencies for Conjugately Quiz Selection Screen
 
 ## Required Dependencies
 
@@ -141,4 +141,4 @@ const colors = {
 - Proper key props for lists
 - Gesture handling optimization
 
-This implementation provides a pixel-perfect recreation of your French Verb Master interface with full React Native compatibility and excellent performance.
+This implementation provides a pixel-perfect recreation of your Conjugately interface with full React Native compatibility and excellent performance.

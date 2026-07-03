@@ -169,7 +169,7 @@ const QuizScreen: React.FC<QuizScreenProps> = ({
         {/* REPLACE WITH LinearGradient AFTER INSTALLING */}
         <View style={styles.loadingGradient}>
           <ActivityIndicator size="large" color="#FFFFFF" />
-          <Text style={styles.loadingTitle}>French Verb Master</Text>
+          <Text style={styles.loadingTitle}>Conjugately</Text>
           <Text style={styles.loadingText}>Loading your quiz...</Text>
           <Text style={styles.loadingDetail}>Verb: {selectedVerb}</Text>
           <Text style={styles.loadingDetail}>Tense: {selectedTenseType}</Text>

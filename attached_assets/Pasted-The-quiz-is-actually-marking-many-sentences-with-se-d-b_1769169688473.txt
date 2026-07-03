@@ -1,79 +1,79 @@
-The quiz is actually **marking many sentences with “se débrouiller” as wrong**, even though your French is correct; it is (incorrectly) treating **débrouiller** as a non‑reflexive verb in several items. [frenchverbmaster](https://frenchverbmaster.com/)
+The quiz is actually **marking many sentences with “se débrouiller” as wrong**, even though your French is correct; it is (incorrectly) treating **débrouiller** as a non‑reflexive verb in several items. [conjugately](https://conjugately.com/)
 
 ## What the quiz shows (1–20)
 
 Here is what appears as “correct” *inside the quiz* versus what is good French:
 
 - 1) Are we managing fine?  
-  - Marked correct: **Est-ce que nous se débrouillons bien ?** (ungrammatical French) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Est-ce que nous se débrouillons bien ?** (ungrammatical French) [conjugately](https://conjugately.com/)
   - Good French: **Est-ce que nous nous débrouillons bien ?**
 
 - 2) Do I manage on my own?  
-  - Marked correct: **Est-ce que je me débrouille tout seul ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Est-ce que je me débrouille tout seul ?** [conjugately](https://conjugately.com/)
 
 - 3) How do I manage this?  
-  - Marked correct: **Comment est-ce que je me débrouille avec ça ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Comment est-ce que je me débrouille avec ça ?** [conjugately](https://conjugately.com/)
 
 - 4) He does not manage without help.  
-  - Marked correct: **Il ne débrouille pas sans aide.** (should be reflexive) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Il ne débrouille pas sans aide.** (should be reflexive) [conjugately](https://conjugately.com/)
   - Good French: **Il ne se débrouille pas sans aide.**
 
 - 5) Do they (feminine) manage alone?  
-  - Marked correct: **Elles se débrouillent seules ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Elles se débrouillent seules ?** [conjugately](https://conjugately.com/)
 
 - 6) You (plural) manage very well.  
-  - Marked correct: **Vous débrouillez très bien.** (missing *vous*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Vous débrouillez très bien.** (missing *vous*) [conjugately](https://conjugately.com/)
   - Good French: **Vous vous débrouillez très bien.**
 
 - 7) Do you (formal) manage alright?  
-  - Marked correct: **Vous vous débrouillez bien ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Vous vous débrouillez bien ?** [conjugately](https://conjugately.com/)
 
 - 8) They (feminine) manage without problems.  
-  - Marked correct: **Elles ne se débrouillent pas sans problèmes.** (negative, opposite meaning) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Elles ne se débrouillent pas sans problèmes.** (negative, opposite meaning) [conjugately](https://conjugately.com/)
   - Good French for the English prompt: **Elles se débrouillent sans problèmes.**
 
 - 9) Don't you (singular) manage well?  
-  - Marked correct: **Ne te débrouilles-tu pas bien ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Ne te débrouilles-tu pas bien ?** [conjugately](https://conjugately.com/)
 
 - 10) She manages perfectly.  
-  - Marked correct: **Elle se débrouille parfaitement.** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Elle se débrouille parfaitement.** [conjugately](https://conjugately.com/)
 
 - 11) You (plural) manage everything alone.  
-  - Your answer: **Vous vous débrouillez tout seuls.** [frenchverbmaster](https://frenchverbmaster.com/)
-  - Quiz “correct”: **Vous se débrouillez tout seuls.** (wrong; should be *vous vous*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Your answer: **Vous vous débrouillez tout seuls.** [conjugately](https://conjugately.com/)
+  - Quiz “correct”: **Vous se débrouillez tout seuls.** (wrong; should be *vous vous*) [conjugately](https://conjugately.com/)
 
 - 12) Are you (singular) managing well?  
-  - Marked correct: **Est-ce que tu débrouilles bien ?** (missing *te*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Est-ce que tu débrouilles bien ?** (missing *te*) [conjugately](https://conjugately.com/)
   - Good French: **Est-ce que tu te débrouilles bien ?**
 
 - 13) We manage together.  
-  - Marked correct: **Nous nous débrouillons ensemble.** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Nous nous débrouillons ensemble.** [conjugately](https://conjugately.com/)
 
 - 14) They (masculine) do not manage without help.  
-  - Your answer: **Ils se ne débrouillent pas sans aide.** (word order error) [frenchverbmaster](https://frenchverbmaster.com/)
-  - Quiz “correct”: **Ils ne débrouillent pas sans aide.** (still missing *se*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Your answer: **Ils se ne débrouillent pas sans aide.** (word order error) [conjugately](https://conjugately.com/)
+  - Quiz “correct”: **Ils ne débrouillent pas sans aide.** (still missing *se*) [conjugately](https://conjugately.com/)
   - Good French: **Ils ne se débrouillent pas sans aide.**
 
 - 15) They (masculine) do not manage alone.  
-  - Your answer: **Ils ne se débrouillent pas seuls.** [frenchverbmaster](https://frenchverbmaster.com/)
-  - Quiz “correct”: **Ils ne débrouillent pas seuls.** (again missing *se*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Your answer: **Ils ne se débrouillent pas seuls.** [conjugately](https://conjugately.com/)
+  - Quiz “correct”: **Ils ne débrouillent pas seuls.** (again missing *se*) [conjugately](https://conjugately.com/)
 
 - 16) Don't we manage without problems?  
-  - Marked correct: **Nous ne nous débrouillons pas sans problèmes ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Nous ne nous débrouillons pas sans problèmes ?** [conjugately](https://conjugately.com/)
 
 - 17) I do not manage alone.  
-  - Your answer: **Je ne me débrouille pas seul(e).** [frenchverbmaster](https://frenchverbmaster.com/)
-  - Quiz “correct”: **Je ne débrouille pas seul(e).** (missing *me*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Your answer: **Je ne me débrouille pas seul(e).** [conjugately](https://conjugately.com/)
+  - Quiz “correct”: **Je ne débrouille pas seul(e).** (missing *me*) [conjugately](https://conjugately.com/)
 
 - 18) Do they (masculine) manage well?  
-  - Marked correct: **Ils se débrouillent bien ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Ils se débrouillent bien ?** [conjugately](https://conjugately.com/)
 
 - 19) Does she manage on her own?  
-  - Marked correct: **Se débrouille-t-elle toute seule ?** [frenchverbmaster](https://frenchverbmaster.com/)
+  - Marked correct: **Se débrouille-t-elle toute seule ?** [conjugately](https://conjugately.com/)
 
 - 20) Is he not managing at all?  
-  - Your answer: **Est-ce qu'il ne se débrouille pas du tout ?** [frenchverbmaster](https://frenchverbmaster.com/)
-  - Quiz “correct”: **Est-ce qu'il ne débrouille pas du tout ?** (missing *se*) [frenchverbmaster](https://frenchverbmaster.com/)
+  - Your answer: **Est-ce qu'il ne se débrouille pas du tout ?** [conjugately](https://conjugately.com/)
+  - Quiz “correct”: **Est-ce qu'il ne débrouille pas du tout ?** (missing *se*) [conjugately](https://conjugately.com/)
 
 ## How *se débrouiller* actually works
 
@@ -90,6 +90,6 @@ Here is what appears as “correct” *inside the quiz* versus what is good Fren
 
 So:  
 - Your instinct to include the reflexive pronoun (**me, te, se, nous, vous, se**) is **correct** for the meaning tested.  
-- The quiz appears to contain multiple internal errors where it drops the reflexive pronoun or mismatches the English prompt. [frenchverbmaster](https://frenchverbmaster.com/)
+- The quiz appears to contain multiple internal errors where it drops the reflexive pronoun or mismatches the English prompt. [conjugately](https://conjugately.com/)
 
 If you want, a cleaned-up answer key can be written for all 20 using **natural, correct French**, ignoring the quiz’s bugs.

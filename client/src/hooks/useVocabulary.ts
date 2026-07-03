@@ -14,7 +14,7 @@ export interface VocabularyWord {
   createdAt: string;
 }
 
-const STORAGE_KEY = 'frenchVerbMaster_vocabulary';
+const STORAGE_KEY = 'conjugately_vocabulary';
 
 function loadVocabulary(): VocabularyWord[] {
   try {

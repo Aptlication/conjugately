@@ -1,6 +1,6 @@
 /*
 ======================================================================================
-COMPLETE REACT NATIVE FRENCH VERB MASTER MINI-COURSES COMPONENT
+COMPLETE REACT NATIVE Conjugately MINI-COURSES COMPONENT
 ======================================================================================
 
 COPY AND PASTE INSTRUCTIONS:

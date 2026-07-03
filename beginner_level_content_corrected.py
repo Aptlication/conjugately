@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-French Verb Master - Beginner Level Content (CORRECTED VERSION)
+Conjugately - Beginner Level Content (CORRECTED VERSION)
 Created: January 12, 2025
 Corrected via Perplexity AI grammar verification
 """
@@ -384,7 +384,7 @@ def run_quiz():
     print(f"\nYour final score: {score}/{len(mcq_data)}")
 
 if __name__ == "__main__":
-    print("French Verb Master - Beginner Level Content (CORRECTED)")
+    print("Conjugately - Beginner Level Content (CORRECTED)")
     print(f"Verification Status: {beginner_content_corrected['verification_status']['status']}")
     print(f"Verified by: {beginner_content_corrected['verification_status']['verified_by']}")
     print(f"Total corrections applied: {len(beginner_content_corrected['verification_status']['corrections_applied'])}")
