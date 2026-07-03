@@ -8,9 +8,11 @@ import memoize from "memoizee";
 import connectPg from "connect-pg-simple";
 import { storage } from "./storage";
 
-if (!process.env.REPLIT_DOMAINS) {
-  throw new Error("Environment variable REPLIT_DOMAINS not provided");
-}
+// Auth is optional. When REPLIT_DOMAINS is not set (e.g. running off-Replit
+// before the replacement auth system lands), the app boots in guest mode:
+// no sessions, no passport, login endpoints no-op back to the home page, and
+// every quiz feature is available anonymously. See PARALLEL_RUN_PROTOCOL.md.
+export const authEnabled = !!process.env.REPLIT_DOMAINS;
 
 const getOidcConfig = memoize(
   async () => {
@@ -67,6 +69,14 @@ async function upsertUser(
 }
 
 export async function setupAuth(app: Express) {
+  if (!authEnabled) {
+    // Guest mode: keep the endpoints so client links don't 404, but no-op.
+    app.get(["/api/login", "/api/callback", "/api/logout"], (_req, res) =>
+      res.redirect("/"),
+    );
+    return;
+  }
+
   app.set("trust proxy", 1);
   app.use(getSession());
   app.use(passport.initialize());
@@ -128,6 +138,11 @@ export async function setupAuth(app: Express) {
 }
 
 export const isAuthenticated: RequestHandler = async (req, res, next) => {
+  if (!authEnabled) {
+    // Guest mode: no accounts exist, so nothing is ever authenticated.
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
   const user = req.user as any;
 
   if (!req.isAuthenticated() || !user.expires_at) {

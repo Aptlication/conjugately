@@ -1,64 +1,52 @@
-# Parallel-Run Protocol — conjugately.com (primary) + frenchverbmaster.com (fallback)
+# Domain & Deployment Protocol — conjugately.com live, frenchverbmaster.com dormant
 
-Decision date: 2026-07-03. This document is the standing protocol for running both sites side by side. It stays in force until the final cutover (last section). If you are about to change branding, auth, hosting, DNS, or the database schema — read this first.
+Last updated: 2026-07-03 (supersedes the original parallel-run plan: Replit hosting was deactivated to avoid the expense, so the old site is offline rather than a live fallback). Read this before changing branding, auth, hosting, DNS, or the database schema.
 
 ## The arrangement
 
-**conjugately.com is the primary site and the future.** All new development happens here: the rebrand, the auth replacement, the React Native app, subscriptions. It deploys from `main` to the new host (Railway/Render — see the App Store upgrade report).
+**conjugately.com is the primary site and the only live deployment.** It deploys from `main` to Render (free tier), with the database on a Neon free-tier project. All new development happens here: auth replacement, React Native app, subscriptions.
 
-**frenchverbmaster.com is the frozen fallback.** It keeps serving the original French Verb Master site from the existing Replit deployment, pinned to the `fvm-legacy` branch. It gets no new features — critical fixes only.
+**frenchverbmaster.com is dormant.** The domain stays registered at Namecheap but points nowhere. The complete pre-rebrand site is preserved on the `fvm-legacy` branch. Resurrection, if there is ever a fatal issue with Conjugately: deploy `fvm-legacy` to any Node host (it needs Replit Auth env vars or the guest-mode patch cherry-picked), point frenchverbmaster.com's DNS at it. Do not let the domain registration lapse.
 
-**Redirects stay OFF for the whole parallel-run period.** `REDIRECT_TO_CANONICAL` must remain unset/false on the FVM deployment. The moment it is set `true`, frenchverbmaster.com stops being a fallback and 301s everything to conjugately.com. That is the cutover switch; flipping it is a deliberate decision, not a config tidy-up.
+**Guest mode is in effect.** The server boots without any Replit env vars (`server/replitAuth.ts` → `authEnabled = false`): every quiz feature works anonymously, `/api/auth/user` returns 401, `/api/login` no-ops to `/`, vocabulary persists in localStorage. Real accounts arrive with the auth replacement (email/password + Google + Sign in with Apple — see the App Store upgrade report §4). The visible Login button is a known cosmetic leftover until then.
 
 ## Branch map
 
 | Branch | Purpose | Rules |
 |---|---|---|
-| `main` | Conjugately development | Normal development |
-| `fvm-legacy` | Frozen French Verb Master fallback, created at commit `5acbd7a` (the last commit before the FVM→Conjugately rebrand) | Never rebase, never delete, never merge `main` into it. Critical hotfixes only, via cherry-pick |
+| `main` | Conjugately development; auto-deploys to Render | Normal development |
+| `fvm-legacy` | Frozen French Verb Master site, created at `5acbd7a` (last pre-rebrand commit) | Never rebase, never delete, never merge `main` into it |
 
-In GitHub → Settings → Branches, add a protection rule for `fvm-legacy` (block force-push and deletion).
+In GitHub → Settings → Branches, keep a protection rule on `fvm-legacy` (block force-push and deletion).
 
 ## Deployment map
 
-| Domain | Serves | Branch | Host | Env flags |
+| Domain | Serves | Branch | Host | Env vars |
 |---|---|---|---|---|
-| frenchverbmaster.com | Old FVM site (fallback) | `fvm-legacy` | Replit Deployments (existing, untouched) | `REDIRECT_TO_CANONICAL` unset |
-| conjugately.com | New Conjugately site | `main` | Railway/Render (new) | `CANONICAL_HOST=conjugately.com`, `REDIRECT_TO_CANONICAL` unset |
+| conjugately.com | Conjugately (guest mode) | `main` | Render free tier | `DATABASE_URL` (Neon), `CANONICAL_HOST=conjugately.com`, `GEMINI_API_KEY`, `REDIRECT_TO_CANONICAL` unset |
+| frenchverbmaster.com | Nothing (dormant) | — | — | — |
 
-Set the Replit deployment to deploy from `fvm-legacy`, not `main` — otherwise the next Replit deploy would push Conjugately branding onto the FVM domain.
+## Database
 
-## Shared database — the one coupling that can break the fallback
-
-Both deployments use the **same Neon Postgres database**, so user progress is identical on either domain. This means every schema change on `main` must remain compatible with the legacy code still running against it.
-
-Schema rules while FVM is live: additive changes only. New tables and new nullable (or defaulted) columns are fine. **Never** drop or rename a table or column the legacy branch reads, and never change a column's type. Check `fvm-legacy`'s `shared/schema.ts` before any `drizzle-kit push`. If a breaking change becomes unavoidable, that is the trigger to do the final cutover first.
-
-The auth replacement (Replit Auth → email/password + Apple/Google) must follow the same rule: keep the `sessions` and `users` tables intact for legacy login; add new tables (`refresh_tokens`, etc.) alongside.
-
-## Hotfix procedure for the fallback
-
-Only for breakage (site down, login broken, data corruption) — not improvements.
-
-1. Fix on `main` first if the bug exists there too.
-2. `git checkout fvm-legacy && git cherry-pick <fix-commit>` (or write a minimal fix directly if `main` has diverged too far).
-3. Push, redeploy the Replit deployment, verify frenchverbmaster.com.
+Neon free tier, connected via `DATABASE_URL`. The old Replit-provisioned database is assumed gone; the Neon project starts fresh (`npx drizzle-kit push` once to create tables). With FVM offline, there is no shared-database constraint — but if `fvm-legacy` is ever resurrected against this same database, additive-only schema rules apply from that moment (no dropping/renaming columns the legacy code reads).
 
 ## Standing checklist (current status)
 
+- [x] Rebrand + protocol committed and pushed to `origin/main`
 - [x] `fvm-legacy` branch created at `5acbd7a` and pushed
-- [ ] Rebrand + protocol commits pushed to `origin/main`
+- [x] Guest-mode patch (server boots without Replit env vars)
 - [ ] `fvm-legacy` branch protection enabled on GitHub
-- [ ] Replit deployment repointed to `fvm-legacy`
-- [ ] Feature-graphic PNGs regenerated from the rebranded SVGs (SVGs are done; PNGs still show old branding)
-- [ ] conjugately.com deployed from `main` on new host (blocked on auth replacement — the server currently won't boot without Replit env vars)
-- [ ] Both domains verified serving correct branding
-- [ ] DNS: conjugately.com → new host; frenchverbmaster.com → Replit (unchanged)
+- [ ] Neon project created; `DATABASE_URL` set on Render; `npx drizzle-kit push` run once
+- [ ] Render web service created from GitHub `main` (build `npm run build`, start `npm run start`)
+- [ ] conjugately.com + www linked on Render; Namecheap DNS records added
+- [ ] conjugately.com verified: HTTPS certificate, `/api/health`, `/robots.txt`, `/sitemap.xml`
+- [ ] Feature-graphic PNGs regenerated from the rebranded SVGs (SVGs done; PNG pixels still old brand)
+- [ ] Google Search Console: verify conjugately.com property, submit sitemap
 
-## Final cutover (ends the parallel run)
+## Redirecting the old domain (optional, later)
 
-When Conjugately is stable and you no longer want the fallback: follow `DOMAIN_MIGRATION_RUNBOOK.md` from Step 5 — set `REDIRECT_TO_CANONICAL=true` on the FVM deployment, verify the 301s, do the Google Search Console Change of Address, keep the frenchverbmaster.com registration for 6–12 months, then decommission the Replit deployment and archive `fvm-legacy` (tag it, don't delete it).
+When you want frenchverbmaster.com's residual traffic and SEO value: point its DNS at the same Render service (add it as a custom domain there), set `REDIRECT_TO_CANONICAL=true`, and verify old URLs 301 to `https://conjugately.com/...`. Then do Google Search Console's Change of Address. Until then, the old domain simply resolves nowhere and `REDIRECT_TO_CANONICAL` stays unset.
 
-## Rollback
+## Rollback / resurrection
 
-At any point before the final cutover, the fallback is instant: frenchverbmaster.com is already serving independently. If conjugately.com breaks, users can simply use the old domain; nothing needs redeploying. After cutover, rollback = set `REDIRECT_TO_CANONICAL=false` and redeploy the FVM deployment.
+If conjugately.com has a fatal issue: fix forward on Render if possible (redeploys are one click, and Render keeps previous deploys for instant rollback). Catastrophic case: deploy `fvm-legacy` per "The arrangement" above and repoint frenchverbmaster.com — users get the old site while Conjugately is repaired. Tag `fvm-legacy` (e.g. `v1-fvm-final`) rather than ever deleting it.
