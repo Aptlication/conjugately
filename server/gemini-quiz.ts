@@ -82,7 +82,7 @@ Generate the complete 20-question quiz now.`;
     
     // Add timeout wrapper - reduce timeout for faster failure detection
     const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error('Gemini API timeout after 15 seconds')), 15000);
+      setTimeout(() => reject(new Error('Gemini API timeout after 45 seconds')), 45000);
     });
 
     const geminiPromise = ai.models.generateContent({
