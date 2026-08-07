@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Stack } from "expo-router";
-import Dial, { DialHandle } from "../components/Dial";
-import { LEVELS, TENSES, VERBS } from "../lib/data";
+import Dial, { DialHandle } from "@/components/Dial";
+import { LEVELS, TENSES, VERBS } from "@/lib/data";
 
 export default function Select() {
   const levelRef = useRef<DialHandle>(null);
