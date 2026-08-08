@@ -5,6 +5,7 @@ import { useTTS } from "@/hooks/useTTS";
 import { useVocabulary } from "@/hooks/useVocabulary";
 import { isAdvancedDifficultyEnabled } from "@shared/config";
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
+import { WheelSelect } from "@/components/WheelSelect";
 
 // Type guard function to check if user has id
 const hasUserId = (user: any): user is { id: string } => {
@@ -2278,7 +2279,7 @@ function App() {
                 )}
               </button>
             </div>
-            <select
+            <WheelSelect
               value={selectedDifficulty || ""}
               onChange={(e) => handleDifficultyChange(e.target.value)}
               disabled={isDifficultyLocked}
@@ -2303,12 +2304,12 @@ function App() {
                   : "🔒 Advanced - Coming Soon!"
                 }
               </option>
-            </select>
+            </WheelSelect>
           </div>
 
           <div className="mb-8">
             <label className="text-lg font-semibold mb-4 block">2. Choose a French Verb</label>
-            <select
+            <WheelSelect
               value={selectedVerb}
               onChange={(e) => handleVerbSelection(e.target.value)}
               disabled={!selectedDifficulty}
@@ -2325,12 +2326,12 @@ function App() {
                   {verb} ({VERB_MEANINGS[verb as keyof typeof VERB_MEANINGS]})
                 </option>
               ))}
-            </select>
+            </WheelSelect>
           </div>
 
           <div className="mb-8">
             <label className="text-lg font-semibold mb-4 block">3. Choose Time Frame</label>
-            <select
+            <WheelSelect
               value={selectedTimeFrame}
               onChange={(e) => { 
                 setSelectedTimeFrame(e.target.value); 
@@ -2370,13 +2371,13 @@ function App() {
               {Object.keys(TIME_FRAMES).map((timeFrame) => (
                 <option key={timeFrame} value={timeFrame} className="bg-gray-800 text-white">{timeFrame}</option>
               ))}
-            </select>
+            </WheelSelect>
           </div>
 
           {selectedDifficulty === "Advanced" && (
             <div className="mb-8">
               <label className="text-lg font-semibold mb-4 block">4. Choose Specific Tense</label>
-              <select
+              <WheelSelect
                 value={selectedTenseType}
                 onChange={(e) => setSelectedTenseType(e.target.value)}
                 disabled={!selectedTimeFrame}
@@ -2388,7 +2389,7 @@ function App() {
                 {selectedTimeFrame && TIME_FRAMES[selectedTimeFrame as keyof typeof TIME_FRAMES].map((tense) => (
                   <option key={tense} value={tense} className="bg-gray-800 text-white">{tense}</option>
                 ))}
-              </select>
+              </WheelSelect>
             </div>
           )}
 
