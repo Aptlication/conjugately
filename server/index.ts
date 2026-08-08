@@ -12,6 +12,22 @@ app.set("trust proxy", true);
 // REDIRECT_TO_CANONICAL=true (see server/canonicalHost.ts).
 app.use(canonicalHost);
 
+// CORS for the RN-web staging preview only (native apps are unaffected).
+const CORS_ALLOWED = new Set([
+  "https://conjugately-preview.onrender.com",
+  "https://preview.conjugately.com",
+]);
+app.use((req, res, next) => {
+  const origin = req.headers.origin as string | undefined;
+  if (origin && CORS_ALLOWED.has(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
