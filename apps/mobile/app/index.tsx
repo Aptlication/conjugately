@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { Stack } from "expo-router";
+import { Stack, router } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import Dial, { DialHandle, DialOption } from "../components/Dial";
 import { DIFFICULTY_CONFIGS, LEVELS, TIME_FRAMES, VERB_MEANINGS } from "../lib/data";
@@ -90,7 +90,7 @@ export default function Home() {
             onSettle={(v) => setTimeFrame(v)} />
 
           <Pressable disabled={!ready || spinning}
-            onPress={() => Alert.alert("Quiz", "The quiz flow arrives in the next app update — this build mirrors the website's setup screen.")}>
+            onPress={() => router.push({ pathname: "/quiz", params: { difficulty, verb, timeFrame } })}>
             <LinearGradient colors={ready ? ["#22c55e", "#3b82f6"] : ["#334155", "#334155"]}
               start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.startBtn}>
               <Text style={styles.startText}>
