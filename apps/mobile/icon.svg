@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#1e1b4b"/>
+  <g transform="translate(512,512) rotate(45)">
+    <rect x="-290" y="-290" width="580" height="580" fill="#1e40af" stroke="#ffffff" stroke-width="26"/>
+  </g>
+  <text x="512" y="512" text-anchor="middle" dominant-baseline="central" dy="20"
+    font-family="Times New Roman, Times, serif" font-weight="900" font-size="430" fill="#ffffff">C</text>
+</svg>
