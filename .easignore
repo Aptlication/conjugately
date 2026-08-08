@@ -1,0 +1,9 @@
+attached_assets*/
+.local/
+canvas/
+client/
+server/
+scripts/
+dist/
+conjugately-feature-graphic*.png
+*.mp3
