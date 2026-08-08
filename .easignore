@@ -7,3 +7,4 @@ scripts/
 dist/
 conjugately-feature-graphic*.png
 *.mp3
+apps/mobile/package-lock.json
