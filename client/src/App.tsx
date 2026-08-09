@@ -860,6 +860,11 @@ function App() {
   };
 
   const [isAnswerConfirmed, setIsAnswerConfirmed] = useState(false);
+  const [reviewIndex, setReviewIndex] = useState<number | null>(null);
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelAutoAdvance = () => {
+    if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; }
+  };
 
   // Play ElevenLabs question audio when a new question is shown.
   // Only plays for Beginner quizzes where pre-recorded MP3s exist.
@@ -1360,6 +1365,7 @@ function App() {
   };
 
   const handleAnswerSelect = (answerIndex: number) => {
+    if (reviewIndex !== null) return; // read-only while reviewing
     if (selectedAnswerIndex === answerIndex && isAnswerConfirmed) {
       // Second click - advance to next question
       handleNextQuestion();
@@ -1369,10 +1375,17 @@ function App() {
       setSelectedAnswerIndex(answerIndex);
       setIsAnswerConfirmed(true);
       setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerIndex }));
+      // Auto-advance 2.5s after a CORRECT answer (post answer-audio); wrong answers wait.
+      cancelAutoAdvance();
+      if (quizData[currentQuestionIndex]?.answerOptions[answerIndex]?.isCorrect) {
+        autoAdvanceRef.current = setTimeout(() => { handleNextQuestion(); }, 2500);
+      }
     }
   };
 
   const handleNextQuestion = () => {
+    cancelAutoAdvance();
+    setReviewIndex(null);
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
       setSelectedAnswerIndex(null);
@@ -1473,6 +1486,11 @@ function App() {
       return null;
     }
     
+    const displayIndex = reviewIndex !== null ? reviewIndex : currentQuestionIndex;
+    const displayQuestion = quizData[displayIndex] || currentQuestion;
+    const displaySelected = reviewIndex !== null ? (userAnswers[displayIndex] ?? null) : selectedAnswerIndex;
+    const displayConfirmed = reviewIndex !== null ? userAnswers[displayIndex] !== undefined : isAnswerConfirmed;
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
 
@@ -1480,13 +1498,13 @@ function App() {
         <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm">Question {currentQuestionIndex + 1} of {quizData.length}</span>
+              <span className="text-sm">Question {displayIndex + 1} of {quizData.length}</span>
               <span className="text-sm font-semibold text-purple-200">Score: {Object.entries(userAnswers).filter(([qi, ai]) => quizData[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect).length}</span>
             </div>
             <div className="w-full bg-white/20 rounded-lg h-2">
               <div 
                 className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-lg transition-all duration-300"
-                style={{ width: `${((currentQuestionIndex + 1) / quizData.length) * 100}%` }}
+                style={{ width: `${((displayIndex + 1) / quizData.length) * 100}%` }}
               ></div>
             </div>
           </div>
@@ -1499,7 +1517,7 @@ function App() {
                   <div className="text-3xl animate-bounce">💡</div>
                   <div>
                     <p className="text-blue-100 font-bold text-lg">Quick Tip</p>
-                    <p className="text-blue-50 text-base font-medium">Click answer twice to move to the next question.</p>
+                    <p className="text-blue-50 text-base font-medium">Correct answers advance automatically — press Back anytime to review.</p>
                   </div>
                 </div>
                 <button
@@ -1525,18 +1543,18 @@ function App() {
           )}
 
           <div className="mb-6">
-            <h2 className="text-2xl font-bold mb-4">{currentQuestion.question}</h2>
+            <h2 className="text-2xl font-bold mb-4">{displayQuestion.question}</h2>
           </div>
 
           <div className="mb-8">
-            {currentQuestion.answerOptions.map((option: any, index: number) => (
+            {displayQuestion.answerOptions.map((option: any, index: number) => (
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
                 className={`w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center ${
-                  selectedAnswerIndex === index && isAnswerConfirmed
+                  displaySelected === index && displayConfirmed
                     ? 'border-2 border-green-500 bg-green-500/20 shadow-lg shadow-green-500/20'
-                    : selectedAnswerIndex === index
+                    : displaySelected === index
                     ? 'border-2 border-purple-600 bg-purple-600/20'
                     : 'border-2 border-white/20 bg-white/10 hover:bg-white/20'
                 }`}
@@ -1551,13 +1569,13 @@ function App() {
 
 
 
-          {selectedAnswerIndex !== null && isAnswerConfirmed && (
+          {displaySelected !== null && displayConfirmed && (
             <div className={`mb-6 p-4 rounded-xl border ${
-              currentQuestion.answerOptions[selectedAnswerIndex].isCorrect
+              displayQuestion.answerOptions[displaySelected].isCorrect
                 ? 'border-green-500/30 bg-green-500/20 text-green-200'
                 : 'border-red-500/30 bg-red-500/20 text-red-200'
             }`}>
-              <p>📝 {currentQuestion.answerOptions[selectedAnswerIndex].rationale}</p>
+              <p>📝 {displayQuestion.answerOptions[displaySelected].isCorrect ? "Correct!" : displayQuestion.answerOptions[displaySelected].rationale}</p>
             </div>
           )}
 
@@ -1567,6 +1585,17 @@ function App() {
               className="px-6 py-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20"
             >
               Start Over
+            </button>
+            <button
+              onClick={() => {
+                cancelAutoAdvance();
+                const di = reviewIndex ?? currentQuestionIndex;
+                if (di > 0 && userAnswers[di - 1] !== undefined) setReviewIndex(di - 1);
+              }}
+              disabled={(reviewIndex ?? currentQuestionIndex) === 0 || userAnswers[(reviewIndex ?? currentQuestionIndex) - 1] === undefined}
+              className="px-6 py-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              ‹ Back
             </button>
             <button
               onClick={tts.toggleEnabled}
@@ -1580,6 +1609,20 @@ function App() {
             >
               {tts.isEnabled ? '🔊' : '🔇'}
               <span className="text-sm">{tts.isEnabled ? 'ON' : 'OFF'}</span>
+            </button>
+            <button
+              onClick={() => {
+                if (reviewIndex !== null) {
+                  const nxt = reviewIndex + 1;
+                  if (nxt >= currentQuestionIndex) setReviewIndex(null); else setReviewIndex(nxt);
+                } else if (isAnswerConfirmed) {
+                  handleNextQuestion();
+                }
+              }}
+              disabled={reviewIndex === null && !isAnswerConfirmed}
+              className="px-6 py-3 text-slate-400 border border-slate-600 rounded-xl hover:bg-slate-600/20 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Next ›
             </button>
           </div>
         </div>
