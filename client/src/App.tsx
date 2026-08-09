@@ -465,6 +465,10 @@ function App() {
       const timeFrameTenses = TIME_FRAMES[randomTimeFrame as keyof typeof TIME_FRAMES] || [];
       availableTenses = timeFrameTenses.filter(tense => config.tenses.includes(tense));
     }
+    const IMPARFAIT_READY = ["être","avoir","faire","aller","voir","dire","pouvoir","vouloir","venir","savoir"];
+    if (!IMPARFAIT_READY.includes(randomVerb)) {
+      availableTenses = availableTenses.filter(t => t !== "Imparfait");
+    }
     const randomTense = availableTenses[Math.floor(Math.random() * availableTenses.length)];
     setSelectedTenseType(randomTense);
     setShowDifficultyModal(false);
