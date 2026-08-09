@@ -66,9 +66,9 @@ export default function Home() {
           <GradBtn colors={["#4f46e5", "#9333ea", "#db2777"]} label="🎲 Choose All for Me"
             onPress={() => !spinning && setModal(true)} />
           <GradBtn colors={["#2563eb", "#0891b2", "#0d9488"]} label="📚 Mini-Courses"
-            onPress={() => Alert.alert("Mini-Courses", "Coming to the app soon — available now on conjugately.com.")} />
+            onPress={() => router.push("/mini-courses")} />
           <GradBtn colors={["#059669", "#0d9488", "#0891b2"]} label="📖 Vocabulary"
-            onPress={() => Alert.alert("Vocabulary", "Coming to the app soon — available now on conjugately.com.")} />
+            onPress={() => router.push("/vocabulary")} />
         </View>
 
         <View style={styles.card}>
