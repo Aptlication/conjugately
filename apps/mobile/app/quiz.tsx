@@ -174,7 +174,10 @@ export default function Quiz() {
         {state === "active" && q && (
           <View style={styles.card}>
             <View style={styles.metaRow}>
+              <View style={styles.metaRow}>
               <Text style={styles.meta}>Question {idx + 1} of {questions.length}</Text>
+              <Text style={styles.metaScore}>Score: {score}</Text>
+            </View>
               <Text style={styles.meta}>Score: {score}</Text>
             </View>
             <Text style={styles.qText}>{q.question}</Text>
