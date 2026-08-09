@@ -78,7 +78,7 @@ export default function Vocabulary() {
           </View>
         ))}
 
-        <Pressable onPress={() => router.back()}><Text style={styles.back}>← Home</Text></Pressable>
+        <Pressable onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}><Text style={styles.back}>← Home</Text></Pressable>
       </ScrollView>
     </LinearGradient>
   );

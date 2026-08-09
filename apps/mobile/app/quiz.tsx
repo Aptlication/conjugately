@@ -79,6 +79,10 @@ export default function Quiz() {
   const [answerUrl, setAnswerUrl] = useState<string | null>(null);
   const [showTip, setShowTip] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
+  const [reviewIndex, setReviewIndex] = useState<number | null>(null);
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelAutoAdvance = () => { if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; } };
+  const goHome = () => { cancelAutoAdvance(); if (router.canGoBack()) router.back(); else router.replace("/"); };
 
   const q = questions[idx];
   const questionAudioOn = difficulty === "Beginner" || difficulty === "Novice";
@@ -88,6 +92,10 @@ export default function Quiz() {
   const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
   const aPlayer = useAudioPlayer(answerUrl ? { uri: answerUrl } : null);
 
+  const dispIdx = reviewIndex !== null ? reviewIndex : idx;
+  const dispQ = questions[dispIdx] || q;
+  const dispSelected = reviewIndex !== null ? (answers[dispIdx] ?? null) : selected;
+  const dispConfirmed = reviewIndex !== null ? answers[dispIdx] !== undefined : confirmed;
   const score = Object.entries(answers).reduce((n, [qi, ai]) =>
     n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
 
@@ -149,6 +157,7 @@ export default function Quiz() {
 
   // Main's model: first tap selects+confirms; tapping the SAME answer again advances.
   const handleAnswerSelect = (i: number) => {
+    if (reviewIndex !== null) return;
     if (selected === i && confirmed) { nextQuestion(); return; }
     setSelected(i);
     setConfirmed(true);
@@ -157,9 +166,13 @@ export default function Quiz() {
     if (opt?.isCorrect) Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     else Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
     speakAnswer(i);
+    cancelAutoAdvance();
+    if (opt?.isCorrect) { autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 2500); }
   };
 
   const nextQuestion = () => {
+    cancelAutoAdvance();
+    setReviewIndex(null);
     setSelected(null); setConfirmed(false); setAnswerUrl(null);
     if (idx + 1 >= questions.length) setState("done");
     else setIdx(idx + 1);
@@ -187,26 +200,26 @@ export default function Quiz() {
             <Text style={styles.qText}>Quiz not available</Text>
             <Text style={styles.feedbackText}>{error}</Text>
             <Pressable style={styles.ghostBtn} onPress={load}><Text style={styles.ghostText}>Try Again</Text></Pressable>
-            <Pressable style={styles.ghostBtn} onPress={() => router.back()}><Text style={styles.ghostText}>← Back</Text></Pressable>
+            <Pressable style={styles.ghostBtn} onPress={goHome}><Text style={styles.ghostText}>← Back</Text></Pressable>
           </View>
         )}
 
         {state === "active" && q && (
           <View style={styles.card}>
             <View style={styles.metaRow}>
-              <Text style={styles.meta}>Question {idx + 1} of {questions.length}</Text>
+              <Text style={styles.meta}>Question {dispIdx + 1} of {questions.length}</Text>
               <Text style={styles.metaScore}>Score: {score}</Text>
             </View>
             <View style={styles.progressTrack}>
               <LinearGradient colors={["#22c55e", "#3b82f6"]}
                 start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
-                style={[styles.progressFill, { width: `${((idx + 1) / questions.length) * 100}%` }]} />
+                style={[styles.progressFill, { width: `${((dispIdx + 1) / questions.length) * 100}%` }]} />
             </View>
 
             {showTip && (
               <View style={styles.tipBox}>
                 <Text style={styles.tipTitle}>💡 Quick Tip</Text>
-                <Text style={styles.tipText}>Click answer twice to move to the next question.</Text>
+                <Text style={styles.tipText}>Correct answers advance automatically — press Back anytime to review.</Text>
                 <View style={styles.tipActions}>
                   <Pressable onPress={() => setShowTip(false)}><Text style={styles.tipLink}>Dismiss</Text></Pressable>
                   <Pressable onPress={() => { setShowTip(false);
@@ -217,10 +230,10 @@ export default function Quiz() {
               </View>
             )}
 
-            <Text style={styles.qText}>{q.question}</Text>
+            <Text style={styles.qText}>{dispQ.question}</Text>
 
-            {q.answerOptions.map((o, i) => {
-              const isSel = selected === i && confirmed;
+            {dispQ.answerOptions.map((o, i) => {
+              const isSel = dispSelected === i && dispConfirmed;
               return (
                 <Pressable key={i} onPress={() => handleAnswerSelect(i)}
                   style={[styles.opt, isSel && styles.optConfirmed]}>
@@ -234,19 +247,23 @@ export default function Quiz() {
               );
             })}
 
-            {selected !== null && confirmed && (
+            {dispSelected !== null && dispConfirmed && (
               <View style={[styles.feedback,
-                q.answerOptions[selected].isCorrect ? styles.feedbackGood : styles.feedbackBad]}>
+                dispQ.answerOptions[dispSelected].isCorrect ? styles.feedbackGood : styles.feedbackBad]}>
                 <Text style={[styles.feedbackText,
-                  { color: q.answerOptions[selected].isCorrect ? "#bbf7d0" : "#fecaca" }]}>
-                  📝 {q.answerOptions[selected].rationale}
+                  { color: dispQ.answerOptions[dispSelected].isCorrect ? "#bbf7d0" : "#fecaca" }]}>
+                  📝 {dispQ.answerOptions[dispSelected].isCorrect ? "Correct!" : dispQ.answerOptions[dispSelected].rationale}
                 </Text>
               </View>
             )}
 
             <View style={styles.bottomRow}>
-              <Pressable style={styles.ghostBtn} onPress={() => router.back()}>
+              <Pressable style={styles.ghostBtn} onPress={goHome}>
                 <Text style={styles.ghostText}>Start Over</Text>
+              </Pressable>
+              <Pressable style={[styles.ghostBtn, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
+                onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
+                <Text style={styles.ghostText}>‹ Back</Text>
               </Pressable>
               <Pressable onPress={() => setSound((s) => {
                   if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
@@ -257,6 +274,10 @@ export default function Quiz() {
                 <Text style={[styles.toggleText, { color: sound ? "#22d3ee" : "#94a3b8" }]}>
                   {sound ? "ON" : "OFF"}
                 </Text>
+              </Pressable>
+              <Pressable style={[styles.ghostBtn, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
+                onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
+                <Text style={styles.ghostText}>Next ›</Text>
               </Pressable>
             </View>
           </View>
@@ -272,7 +293,7 @@ export default function Quiz() {
                 : "Good effort — practice makes perfect! 📚"}
             </Text>
             <Pressable style={styles.ghostBtn} onPress={load}><Text style={styles.ghostText}>Try Again</Text></Pressable>
-            <Pressable style={styles.ghostBtn} onPress={() => router.back()}><Text style={styles.ghostText}>← Back to Quiz Setup</Text></Pressable>
+            <Pressable style={styles.ghostBtn} onPress={goHome}><Text style={styles.ghostText}>← Back to Quiz Setup</Text></Pressable>
           </View>
         )}
       </ScrollView>
