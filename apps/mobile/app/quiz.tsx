@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -21,6 +21,41 @@ type Q = {
   answerOptions: { text: string; rationale: string; isCorrect: boolean }[];
 };
 
+let manifestCache: any = null;
+async function getManifest() {
+  if (manifestCache) return manifestCache;
+  try {
+    const r = await fetch(`${API_BASE}/attached_assets/tts-manifest.json`);
+    manifestCache = r.ok ? await r.json() : null;
+  } catch { manifestCache = null; }
+  return manifestCache;
+}
+function normalizeText(t: string) {
+  return t.trim()
+    .replace(/[\u2018\u2019\u0060\u00B4]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/\s+/g, " ");
+}
+function lookupAnswerFile(m: any, text: string, difficulty: string): string | null {
+  if (!m) return null;
+  const levelMap =
+    difficulty === "Novice" ? m.novice_phrases
+    : difficulty === "Elementary" ? m.elementary_phrases
+    : difficulty === "Intermediate" ? m.intermediate_phrases
+    : null;
+  const maps = [levelMap, m.phrases].filter(Boolean);
+  const norm = normalizeText(text);
+  for (const pm of maps) {
+    let f = pm[text] || pm[norm];
+    if (!f) {
+      const k = Object.keys(pm).find((key) => normalizeText(key) === norm);
+      if (k) f = pm[k];
+    }
+    if (f) return f;
+  }
+  return null;
+}
+
 export default function Quiz() {
   const p = useLocalSearchParams<{ difficulty: string; verb: string; timeFrame: string }>();
   const difficulty = String(p.difficulty || "");
@@ -35,16 +70,21 @@ export default function Quiz() {
   const [chosen, setChosen] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [showHint, setShowHint] = useState(false);
+  const [sound, setSound] = useState(true);
+  const soundRef = useRef(true);
+  useEffect(() => { soundRef.current = sound; }, [sound]);
+  const [answerUrl, setAnswerUrl] = useState<string | null>(null);
 
   const q = questions[idx];
-  const audioOn = difficulty === "Beginner" || difficulty === "Novice";
-  const audioUrl = q && audioOn
+  const questionAudioOn = difficulty === "Beginner" || difficulty === "Novice";
+  const questionUrl = q && questionAudioOn
     ? `${API_BASE}/attached_assets/audio/quizzes/${difficulty.toLowerCase()}/${encodeURIComponent(verb)}/${TENSE_PATH[tense]}/questions/Q${q.audioIndex || idx + 1}.mp3`
     : null;
-  const player = useAudioPlayer(audioUrl ? { uri: audioUrl } : null);
+  const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
+  const aPlayer = useAudioPlayer(answerUrl ? { uri: answerUrl } : null);
 
   const load = async () => {
-    setState("loading"); setIdx(0); setScore(0); setChosen(null); setShowHint(false);
+    setState("loading"); setIdx(0); setScore(0); setChosen(null); setShowHint(false); setAnswerUrl(null);
     try {
       const r = await fetch(`${API_BASE}/api/get-quiz`, {
         method: "POST",
@@ -60,25 +100,49 @@ export default function Quiz() {
     } catch (e: any) { setError(e.message || "Network error"); setState("error"); }
   };
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(); getManifest(); }, []);
 
   useEffect(() => {
-    if (state === "active" && audioUrl) {
-      const t = setTimeout(() => { try { player.seekTo(0); player.play(); } catch {} }, 300);
+    if (state === "active" && questionUrl && sound) {
+      const t = setTimeout(() => { try { qPlayer.seekTo(0); qPlayer.play(); } catch {} }, 300);
       return () => clearTimeout(t);
     }
-  }, [idx, state, audioUrl]);
+  }, [idx, state, questionUrl]);
+
+  useEffect(() => {
+    if (answerUrl && soundRef.current) {
+      try { aPlayer.seekTo(0); aPlayer.play(); } catch {}
+    }
+  }, [answerUrl]);
+
+  const toggleSound = () => {
+    setSound((s) => {
+      if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
+      return !s;
+    });
+  };
 
   const pick = (i: number) => {
     if (chosen !== null) return;
     setChosen(i);
-    const correct = q.answerOptions[i]?.isCorrect;
-    if (correct) { setScore((s) => s + 1); Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success); }
+    const opt = q.answerOptions[i];
+    if (opt?.isCorrect) { setScore((s) => s + 1); Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success); }
     else Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+    // Site behavior: speak the SELECTED French answer 1.5s after confirmation,
+    // only if that exact phrase exists in the pre-recorded manifest.
+    setTimeout(async () => {
+      if (!soundRef.current || !opt) return;
+      const m = await getManifest();
+      const f = lookupAnswerFile(m, opt.text, difficulty);
+      if (f) {
+        setAnswerUrl(null);
+        setTimeout(() => setAnswerUrl(`${API_BASE}/attached_assets/audio/${f}`), 20);
+      }
+    }, 1500);
   };
 
   const next = () => {
-    setChosen(null); setShowHint(false);
+    setChosen(null); setShowHint(false); setAnswerUrl(null);
     if (idx + 1 >= questions.length) setState("done");
     else setIdx(idx + 1);
   };
@@ -114,8 +178,8 @@ export default function Quiz() {
               <Text style={styles.meta}>Score: {score}</Text>
             </View>
             <Text style={styles.qText}>{q.question}</Text>
-            {audioOn && (
-              <Pressable onPress={() => { try { player.seekTo(0); player.play(); } catch {} }}>
+            {questionAudioOn && sound && (
+              <Pressable onPress={() => { try { qPlayer.seekTo(0); qPlayer.play(); } catch {} }}>
                 <Text style={styles.audioBtn}>🔊 Play audio</Text>
               </Pressable>
             )}
@@ -160,7 +224,15 @@ export default function Quiz() {
             <Btn label="← Back to Quiz Setup" ghost onPress={() => router.back()} />
           </View>
         )}
+        <View style={{ height: 80 }} />
       </ScrollView>
+
+      <View style={styles.soundBar} pointerEvents="box-none">
+        <Pressable onPress={toggleSound} style={styles.soundBtn}>
+          <Text style={{ fontSize: 20 }}>{sound ? "🔊" : "🔇"}</Text>
+          <Text style={styles.soundLabel}>{sound ? "Sound on" : "Sound off"}</Text>
+        </Pressable>
+      </View>
     </LinearGradient>
   );
 }
@@ -198,4 +270,10 @@ const styles = StyleSheet.create({
   resultScore: { color: "#fff", fontSize: 44, fontWeight: "700", textAlign: "center" },
   resultPct: { color: "#4ade80", fontSize: 22, fontWeight: "600", textAlign: "center", marginBottom: 8 },
   resultMsg: { color: "#e9d5ff", fontSize: 16, textAlign: "center", marginBottom: 10 },
+  soundBar: { position: "absolute", bottom: 24, left: 0, right: 0, alignItems: "center" },
+  soundBtn: { flexDirection: "row", alignItems: "center", gap: 8,
+    backgroundColor: "rgba(30,27,75,0.85)", borderWidth: 1,
+    borderColor: "rgba(196,181,253,0.4)", borderRadius: 24,
+    paddingVertical: 10, paddingHorizontal: 18 },
+  soundLabel: { color: "#e9d5ff", fontSize: 14, fontWeight: "600" },
 });
