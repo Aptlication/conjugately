@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
   metaRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center",
     marginBottom: 8 },
   meta: { color: "#5A6472", fontSize: 13 },
-  metaScore: { color: "#2B5FD9", fontSize: 13, fontWeight: "600" },
+  metaScore: { color: "#5A6472", fontSize: 13, fontWeight: "600" },
   progressTrack: { height: 8, backgroundColor: "#E3E6EA", borderRadius: 8,
     overflow: "hidden", marginBottom: 18 },
   progressFill: { height: 8, borderRadius: 8 },

@@ -1503,7 +1503,7 @@ function App() {
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm">Question {displayIndex + 1} of {quizData.length}</span>
-              <span className="text-sm font-semibold text-[#2B5FD9]">Score: {Object.entries(userAnswers).filter(([qi, ai]) => quizData[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect).length}</span>
+              <span className="text-sm font-semibold text-[#5A6472]">Score: {Object.entries(userAnswers).filter(([qi, ai]) => quizData[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect).length}</span>
             </div>
             <div className="w-full bg-[#E4E7EB] rounded-lg h-2">
               <div 
