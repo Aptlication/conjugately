@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
-import { useAudioPlayer } from "expo-audio";
+import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import * as Haptics from "expo-haptics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
@@ -91,6 +91,16 @@ export default function Quiz() {
     : null;
   const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
   const aPlayer = useAudioPlayer(answerUrl ? { uri: answerUrl } : null);
+  const aStatus = useAudioPlayerStatus(aPlayer);
+  const aPlayingRef = useRef(false);
+  const waitAudioRef = useRef(false);
+  useEffect(() => {
+    aPlayingRef.current = !!aStatus?.playing;
+    if (waitAudioRef.current && aStatus && !aStatus.playing && aStatus.didJustFinish) {
+      waitAudioRef.current = false;
+      autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 400);
+    }
+  }, [aStatus]);
 
   const dispIdx = reviewIndex !== null ? reviewIndex : idx;
   const dispQ = questions[dispIdx] || q;
@@ -140,19 +150,17 @@ export default function Quiz() {
     }
   }, [answerUrl]);
 
-  const speakAnswer = (i: number) => {
-    // APPROVED EXCEPTION: 0.5s delay (main uses 1.5s). Pre-recorded manifest only.
-    setTimeout(async () => {
-      if (!soundRef.current) return;
-      const opt = questions[idx]?.answerOptions[i];
-      if (!opt) return;
-      const m = await getManifest();
-      const f = lookupAnswerFile(m, opt.text, difficulty);
-      if (f) {
-        setAnswerUrl(null);
-        setTimeout(() => setAnswerUrl(`${API_BASE}/attached_assets/audio/${f}`), 20);
-      }
-    }, 500);
+  const speakAnswer = async (i: number) => {
+    // APPROVED EXCEPTION: plays immediately on selection (main uses 1.5s delay). Pre-recorded manifest only.
+    if (!soundRef.current) return;
+    const opt = questions[idx]?.answerOptions[i];
+    if (!opt) return;
+    const m = await getManifest();
+    const f = lookupAnswerFile(m, opt.text, difficulty);
+    if (f) {
+      setAnswerUrl(null);
+      setTimeout(() => setAnswerUrl(`${API_BASE}/attached_assets/audio/${f}`), 20);
+    }
   };
 
   // Main's model: first tap selects+confirms; tapping the SAME answer again advances.
@@ -167,11 +175,17 @@ export default function Quiz() {
     else Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
     speakAnswer(i);
     cancelAutoAdvance();
-    if (opt?.isCorrect) { autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 2500); }
+    if (opt?.isCorrect) {
+      autoAdvanceRef.current = setTimeout(() => {
+        if (aPlayingRef.current) { waitAudioRef.current = true; }
+        else { nextQuestion(); }
+      }, 2500);
+    }
   };
 
   const nextQuestion = () => {
     cancelAutoAdvance();
+    waitAudioRef.current = false;
     setReviewIndex(null);
     setSelected(null); setConfirmed(false); setAnswerUrl(null);
     if (idx + 1 >= questions.length) setState("done");
