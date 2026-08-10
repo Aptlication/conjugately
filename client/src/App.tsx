@@ -1457,7 +1457,7 @@ function App() {
 
   if (quizState === 'loading') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center text-white">
+      <div className="min-h-screen bg-[#1B2145] flex items-center justify-center text-white">
 
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -1644,7 +1644,7 @@ function App() {
       const currentVerb = beginnerVerbs[courseInfo.currentVerbIndex - 1];
       
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
     
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1841,7 +1841,7 @@ function App() {
       } else if (examPassed && !hasUserId(user)) {
         // If user passed but isn't authenticated, show login prompt
         return (
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+          <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
         
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1871,7 +1871,7 @@ function App() {
       }
       
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+        <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
     
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1971,7 +1971,7 @@ function App() {
     }
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+      <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
 
         <div className="max-w-5xl mx-auto">
           {/* Summary Section */}
@@ -2065,7 +2065,7 @@ function App() {
   // Show course overview at the beginning
   if (quizState === 'config' && courseInfo && courseInfo.currentVerbIndex === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+      <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
@@ -2180,7 +2180,7 @@ function App() {
     const info = verbInfo[currentVerb as keyof typeof verbInfo];
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+      <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
@@ -2263,7 +2263,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 py-12 text-white">
+    <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-2">Conjugately</h1>
@@ -2280,7 +2280,7 @@ function App() {
                 console.log('🟢 NEW CODE: Choose All for Me clicked - Cache Cleared');
                 setShowDifficultyModal(true);
               }}
-              className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
+              className="px-6 py-3 text-lg font-bold text-white bg-[#4A78F2] rounded-2xl hover:scale-105 transition-transform"
             >
               🎲 Choose All for Me
             </button>
@@ -2289,17 +2289,17 @@ function App() {
                 console.log('Mini-Courses clicked');
                 setShowMiniCoursesModal(true);
               }}
-              className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-2xl hover:scale-105 transition-transform shadow-lg"
+              className="px-6 py-3 text-lg font-bold text-white bg-[#2C4194] border border-[#5B77D6] rounded-2xl hover:scale-105 transition-transform"
             >
               📚 Mini-Courses
             </button>
             <button
               onClick={() => setShowVocabulary(true)}
-              className="px-6 py-3 text-lg font-bold text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl hover:scale-105 transition-transform shadow-lg relative"
+              className="px-6 py-3 text-lg font-bold text-white bg-[#2C4194] border border-[#5B77D6] rounded-2xl hover:scale-105 transition-transform relative"
             >
               📖 Vocabulary
               {vocab.stats.total > 0 && (
-                <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-[#9DB4F5] text-[#21337A] text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
                   {vocab.stats.total}
                 </span>
               )}
@@ -2331,10 +2331,10 @@ function App() {
               value={selectedDifficulty || ""}
               onChange={(e) => handleDifficultyChange(e.target.value)}
               disabled={isDifficultyLocked}
-              className={`w-full p-4 rounded-xl border text-white text-lg transition-all ${
+              className={`w-full p-4 rounded-xl border text-[#1B1F24] text-lg transition-all ${
                 isDifficultyLocked 
                   ? 'bg-green-500/20 border-green-500/30 cursor-not-allowed opacity-75' 
-                  : 'bg-white/10 border-white/20'
+                  : 'bg-[#EAF0FC] border-[#C9D6F2]'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
@@ -2361,8 +2361,8 @@ function App() {
               value={selectedVerb}
               onChange={(e) => handleVerbSelection(e.target.value)}
               disabled={!selectedDifficulty}
-              className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedDifficulty ? 'bg-white/10' : 'bg-white/5 opacity-50'
+              className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
+                selectedDifficulty ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">
@@ -2411,8 +2411,8 @@ function App() {
                 }
               }}
               disabled={!selectedVerb}
-              className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                selectedDifficulty && selectedVerb ? 'bg-white/10' : 'bg-white/5 opacity-50'
+              className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
+                selectedDifficulty && selectedVerb ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select time frame...</option>
@@ -2429,8 +2429,8 @@ function App() {
                 value={selectedTenseType}
                 onChange={(e) => setSelectedTenseType(e.target.value)}
                 disabled={!selectedTimeFrame}
-                className={`w-full p-4 rounded-xl border border-white/20 text-white text-lg ${
-                  selectedTimeFrame ? 'bg-white/10' : 'bg-white/5 opacity-50'
+                className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
+                  selectedTimeFrame ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
                 }`}
               >
                 <option value="" className="bg-gray-800 text-white">Select tense type...</option>
@@ -2446,7 +2446,7 @@ function App() {
             disabled={!selectedDifficulty || !selectedVerb || !selectedTimeFrame || (!selectedTenseType && selectedDifficulty === "Advanced")}
             className={`w-full p-3 text-base font-bold rounded-xl transition-all ${
               (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced"))
-                ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
+                ? 'bg-[#4A78F2] text-white hover:bg-[#3B66E0]'
                 : 'bg-gradient-to-r from-blue-900 to-purple-600 text-white cursor-not-allowed'
             }`}
           >

@@ -181,15 +181,15 @@ export function WheelSelect({ value, onChange, disabled, className, children }: 
             key={`${o.value}-${i}`}
             ref={(el) => (rowsRef.current[i] = el)}
             style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 0, right: 0, height: ROW_H, display: "flex", alignItems: "center", justifyContent: "center", willChange: "transform,opacity", opacity: o.disabled ? 0.4 : 1 }}
-            className="text-white text-lg font-medium whitespace-nowrap px-2"
+            className="text-[#1B1F24] text-lg font-medium whitespace-nowrap px-2"
           >
             {o.label}
           </div>
         ))}
-        <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none" }} className="rounded-lg border border-purple-300/50 bg-purple-400/10" />
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(rgba(15,15,35,0.75), transparent 32%, transparent 68%, rgba(15,15,35,0.75))" }} />
+        <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none" }} className="rounded-lg border-2 border-[#1B1F24] bg-transparent" />
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(rgba(234,240,252,0.92), transparent 32%, transparent 68%, rgba(234,240,252,0.92))" }} />
       </div>
-      <div ref={captionRef} className="text-center text-sm text-purple-200 min-h-5 pb-2 px-3" />
+      <div ref={captionRef} className="text-center text-sm text-[#5A6472] min-h-5 pb-2 px-3" />
     </div>
   );
 }
