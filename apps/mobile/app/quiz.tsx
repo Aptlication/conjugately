@@ -233,12 +233,15 @@ export default function Quiz() {
             <Text style={styles.qText}>{dispQ.question}</Text>
 
             {dispQ.answerOptions.map((o, i) => {
-              const isSel = dispSelected === i && dispConfirmed;
+              const confirmedNow = dispSelected !== null && dispConfirmed;
+              const isSel = dispSelected === i && confirmedNow;
+              const showCorrect = confirmedNow && o.isCorrect;
+              const showWrong = isSel && !o.isCorrect;
               return (
                 <Pressable key={i} onPress={() => handleAnswerSelect(i)}
-                  style={[styles.opt, isSel && styles.optConfirmed]}>
-                  <View style={[styles.letter, isSel && { borderColor: "#17734A" }]}>
-                    <Text style={[styles.letterText, isSel && { color: "#17734A" }]}>
+                  style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong]}>
+                  <View style={[styles.letter, showCorrect && { borderColor: "#17734A" }, showWrong && { borderColor: "#C0392B" }]}>
+                    <Text style={[styles.letterText, showCorrect && { color: "#17734A" }, showWrong && { color: "#C0392B" }]}>
                       {String.fromCharCode(65 + i)}
                     </Text>
                   </View>
@@ -258,13 +261,6 @@ export default function Quiz() {
             )}
 
             <View style={styles.bottomRow}>
-              <Pressable style={styles.ghostBtn} onPress={goHome}>
-                <Text style={styles.ghostText}>Start Over</Text>
-              </Pressable>
-              <Pressable style={[styles.ghostBtn, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
-                onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
-                <Text style={styles.ghostText}>‹ Back</Text>
-              </Pressable>
               <Pressable onPress={() => setSound((s) => {
                   if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
                   return !s;
@@ -274,6 +270,13 @@ export default function Quiz() {
                 <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
                   {sound ? "ON" : "OFF"}
                 </Text>
+              </Pressable>
+              <Pressable style={styles.ghostBtn} onPress={goHome}>
+                <Text style={styles.ghostText}>Start Over</Text>
+              </Pressable>
+              <Pressable style={[styles.ghostBtn, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
+                onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
+                <Text style={styles.ghostText}>‹ Back</Text>
               </Pressable>
               <Pressable style={[styles.ghostBtn, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
                 onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
@@ -345,7 +348,8 @@ const styles = StyleSheet.create({
   opt: { flexDirection: "row", alignItems: "center", borderWidth: 2,
     borderColor: "#C6CCD4", backgroundColor: "#FFFFFF",
     borderRadius: 14, padding: 14, marginBottom: 12 },
-  optConfirmed: { borderColor: "#17734A", backgroundColor: "rgba(23,115,74,0.08)" },
+  optCorrect: { borderColor: "#17734A", backgroundColor: "rgba(23,115,74,0.08)" },
+  optWrong: { borderColor: "#C0392B", backgroundColor: "rgba(192,57,43,0.08)" },
   letter: { width: 30, height: 30, borderRadius: 15, borderWidth: 2,
     borderColor: "#8A93A0", alignItems: "center", justifyContent: "center",
     marginRight: 14 },
