@@ -2266,7 +2266,7 @@ function App() {
     <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-3" style={{ background: "linear-gradient(90deg,#4E7FE1 0%,#4E7FE1 26%,#F5F6F8 46%,#F5F6F8 54%,#E06C6C 74%,#E06C6C 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Conjugately</h1>
+          <h1 className="text-5xl font-bold mb-3 pb-2 leading-tight" style={{ background: "linear-gradient(90deg,#4E7FE1 0%,#4E7FE1 26%,#F5F6F8 46%,#F5F6F8 54%,#E06C6C 74%,#E06C6C 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Conjugately</h1>
           <p className="text-3xl text-white mb-6" style={{ fontFamily: "'Dancing Script', 'Segoe Script', cursive", fontWeight: 600 }}>French tout de suite!</p>
 
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
