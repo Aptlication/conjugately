@@ -208,7 +208,7 @@ export default function Quiz() {
           <View style={styles.card}>
             <View style={styles.metaRow}>
               <Text style={styles.meta}>Question {dispIdx + 1} of {questions.length}</Text>
-              <Text style={styles.metaScore}>Score: {score}</Text>
+              <Text style={styles.metaScore}>Score: {score} / {questions.length}</Text>
             </View>
             <View style={styles.progressTrack}>
               <LinearGradient colors={["#2B5FD9", "#2B5FD9"]}
