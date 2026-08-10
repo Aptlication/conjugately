@@ -411,6 +411,10 @@ function App() {
   // Handler for verb selection with reflexive verb modal
   const handleVerbSelection = (verb: string) => {
     setSelectedVerb(verb);
+    if (verb === "se débrouiller" && selectedTimeFrame && selectedTimeFrame !== "Present") {
+      setSelectedTimeFrame("");
+      setSelectedTenseType("");
+    }
     
     // Show reflexive modal if:
     // 1. It's a reflexive verb
@@ -438,7 +442,7 @@ function App() {
   };
 
   const handleChooseTimeFrame = () => {
-    const timeFrames = Object.keys(TIME_FRAMES);
+    const timeFrames = Object.keys(TIME_FRAMES).filter(tf => selectedVerb !== "se débrouiller" || tf === "Present");
     const randomTimeFrame = timeFrames[Math.floor(Math.random() * timeFrames.length)];
     setSelectedTimeFrame(randomTimeFrame);
     setSelectedTenseType("");
@@ -456,7 +460,7 @@ function App() {
     const config = DIFFICULTY_CONFIGS[difficulty];
     const randomVerb = config.verbs[Math.floor(Math.random() * config.verbs.length)];
     setSelectedVerb(randomVerb);
-    const randomTimeFrame = config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)];
+    const randomTimeFrame = randomVerb === "se débrouiller" ? "Present" : config.timeFrames[Math.floor(Math.random() * config.timeFrames.length)];
     setSelectedTimeFrame(randomTimeFrame);
     let availableTenses: string[] = [];
     if (difficulty === "Elementary") {
@@ -2266,7 +2270,7 @@ function App() {
     <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-3 pb-2 leading-tight" style={{ background: "linear-gradient(90deg,#4E7FE1 0%,#4E7FE1 26%,#F5F6F8 46%,#F5F6F8 54%,#E06C6C 74%,#E06C6C 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Conjugately</h1>
+          <h1 className="text-5xl font-bold mb-3 pb-2 leading-tight"><span style={{ color: "#7FA8EC" }}>Con</span><span style={{ color: "#EC9A9A" }}>j</span><span style={{ color: "#F5F6F8" }}>ugat</span><span style={{ color: "#EC9A9A" }}>ely</span></h1>
           <p className="text-3xl text-white mb-6" style={{ fontFamily: "'Dancing Script', 'Segoe Script', cursive", fontWeight: 600 }}>French tout de suite!</p>
 
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -2418,7 +2422,7 @@ function App() {
             >
               <option value="" className="bg-gray-800 text-white">Select time frame...</option>
               {Object.keys(TIME_FRAMES).map((timeFrame) => (
-                <option key={timeFrame} value={timeFrame} className="bg-gray-800 text-white">{timeFrame}</option>
+                <option key={timeFrame} value={timeFrame} disabled={selectedVerb === "se débrouiller" && timeFrame !== "Present"} className="bg-gray-800 text-white">{timeFrame}</option>
               ))}
             </WheelSelect>
           </div>

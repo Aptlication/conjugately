@@ -27,7 +27,7 @@ export default function Home() {
   ];
   const timeOptions: DialOption[] = [
     { value: "", label: "Select time frame..." },
-    ...TIME_FRAMES.map((t) => ({ value: t, label: t })),
+    ...TIME_FRAMES.filter((t) => verb !== "se débrouiller" || t === "Present").map((t) => ({ value: t, label: t })),
   ];
 
   const ready = difficulty && verb && timeFrame;
@@ -39,7 +39,7 @@ export default function Home() {
     setVerb(""); setTimeFrame("");
     const cfg = DIFFICULTY_CONFIGS[levelKey];
     const v = cfg.verbs[Math.floor(Math.random() * cfg.verbs.length)];
-    const tf = TIME_FRAMES[Math.floor(Math.random() * TIME_FRAMES.length)];
+    const tf = v === "se débrouiller" ? "Present" : TIME_FRAMES[Math.floor(Math.random() * TIME_FRAMES.length)];
     const li = levelOptions.findIndex((o) => o.value === levelKey);
     d1.current?.spinTo(li, 50);
     setTimeout(() => {
@@ -88,7 +88,7 @@ export default function Home() {
 
           <Text style={[styles.label, styles.gap]}>2. Choose a French Verb</Text>
           <Dial ref={d2} options={verbOptions} disabled={!difficulty}
-            onSettle={(v) => setVerb(v)} />
+            onSettle={(v) => { setVerb(v); if (v === "se débrouiller" && timeFrame !== "Present") setTimeFrame(""); }} />
 
           <Text style={[styles.label, styles.gap]}>3. Choose Time Frame</Text>
           <Dial ref={d3} options={timeOptions} disabled={!difficulty}
