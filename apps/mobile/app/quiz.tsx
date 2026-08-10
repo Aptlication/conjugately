@@ -184,13 +184,13 @@ export default function Quiz() {
   };
 
   return (
-    <LinearGradient colors={["#0f172a", "#581c87", "#0f172a"]}
+    <LinearGradient colors={["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
         {state === "loading" && (
           <View style={styles.center}>
-            <ActivityIndicator size="large" color="#c4b5fd" />
+            <ActivityIndicator size="large" color="#2B5FD9" />
             <Text style={styles.loadingText}>Generating your quiz…</Text>
           </View>
         )}
@@ -211,7 +211,7 @@ export default function Quiz() {
               <Text style={styles.metaScore}>Score: {score}</Text>
             </View>
             <View style={styles.progressTrack}>
-              <LinearGradient colors={["#22c55e", "#3b82f6"]}
+              <LinearGradient colors={["#2B5FD9", "#2B5FD9"]}
                 start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                 style={[styles.progressFill, { width: `${((dispIdx + 1) / questions.length) * 100}%` }]} />
             </View>
@@ -237,8 +237,8 @@ export default function Quiz() {
               return (
                 <Pressable key={i} onPress={() => handleAnswerSelect(i)}
                   style={[styles.opt, isSel && styles.optConfirmed]}>
-                  <View style={[styles.letter, isSel && { borderColor: "#22c55e" }]}>
-                    <Text style={[styles.letterText, isSel && { color: "#22c55e" }]}>
+                  <View style={[styles.letter, isSel && { borderColor: "#17734A" }]}>
+                    <Text style={[styles.letterText, isSel && { color: "#17734A" }]}>
                       {String.fromCharCode(65 + i)}
                     </Text>
                   </View>
@@ -251,8 +251,8 @@ export default function Quiz() {
               <View style={[styles.feedback,
                 dispQ.answerOptions[dispSelected].isCorrect ? styles.feedbackGood : styles.feedbackBad]}>
                 <Text style={[styles.feedbackText,
-                  { color: dispQ.answerOptions[dispSelected].isCorrect ? "#bbf7d0" : "#fecaca" }]}>
-                  📝 {dispQ.answerOptions[dispSelected].isCorrect ? "Correct!" : dispQ.answerOptions[dispSelected].rationale}
+                  { color: dispQ.answerOptions[dispSelected].isCorrect ? "#17734A" : "#C0392B" }]}>
+                  {dispQ.answerOptions[dispSelected].isCorrect ? "✓" : "✗"} {dispQ.answerOptions[dispSelected].rationale}
                 </Text>
               </View>
             )}
@@ -271,7 +271,7 @@ export default function Quiz() {
                 })}
                 style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff]}>
                 <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
-                <Text style={[styles.toggleText, { color: sound ? "#22d3ee" : "#94a3b8" }]}>
+                <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
                   {sound ? "ON" : "OFF"}
                 </Text>
               </Pressable>
@@ -326,58 +326,58 @@ export default function Quiz() {
 const styles = StyleSheet.create({
   scroll: { padding: 16, paddingTop: 64, paddingBottom: 48 },
   center: { alignItems: "center", marginTop: 60 },
-  loadingText: { color: "#cbd5e1", marginTop: 14, fontSize: 15 },
-  card: { backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 24, padding: 18 },
+  loadingText: { color: "#5A6472", marginTop: 14, fontSize: 15 },
+  card: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 24, padding: 18 },
   metaRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center",
     marginBottom: 8 },
-  meta: { color: "#e2e8f0", fontSize: 13 },
-  metaScore: { color: "#d8b4fe", fontSize: 13, fontWeight: "600" },
-  progressTrack: { height: 8, backgroundColor: "rgba(255,255,255,0.2)", borderRadius: 8,
+  meta: { color: "#5A6472", fontSize: 13 },
+  metaScore: { color: "#2B5FD9", fontSize: 13, fontWeight: "600" },
+  progressTrack: { height: 8, backgroundColor: "#E3E6EA", borderRadius: 8,
     overflow: "hidden", marginBottom: 18 },
   progressFill: { height: 8, borderRadius: 8 },
-  tipBox: { backgroundColor: "rgba(59,130,246,0.3)", borderWidth: 2, borderColor: "#60a5fa",
+  tipBox: { backgroundColor: "#EAF0FC", borderWidth: 2, borderColor: "#2B5FD9",
     borderRadius: 14, padding: 14, marginBottom: 16 },
-  tipTitle: { color: "#dbeafe", fontWeight: "700", fontSize: 16 },
-  tipText: { color: "#eff6ff", fontSize: 14, marginTop: 3 },
+  tipTitle: { color: "#1B1F24", fontWeight: "700", fontSize: 16 },
+  tipText: { color: "#3A4354", fontSize: 14, marginTop: 3 },
   tipActions: { flexDirection: "row", gap: 18, marginTop: 8 },
-  tipLink: { color: "#93c5fd", fontSize: 13, textAlign: "center", paddingTop: 6 },
-  qText: { color: "#fff", fontSize: 20, fontWeight: "700", marginBottom: 14, lineHeight: 28 },
+  tipLink: { color: "#2B5FD9", fontSize: 13, textAlign: "center", paddingTop: 6 },
+  qText: { color: "#1B1F24", fontSize: 20, fontWeight: "700", marginBottom: 14, lineHeight: 28 },
   opt: { flexDirection: "row", alignItems: "center", borderWidth: 2,
-    borderColor: "rgba(255,255,255,0.2)", backgroundColor: "rgba(255,255,255,0.10)",
+    borderColor: "#C6CCD4", backgroundColor: "#FFFFFF",
     borderRadius: 14, padding: 14, marginBottom: 12 },
-  optConfirmed: { borderColor: "#22c55e", backgroundColor: "rgba(34,197,94,0.2)" },
+  optConfirmed: { borderColor: "#17734A", backgroundColor: "rgba(23,115,74,0.08)" },
   letter: { width: 30, height: 30, borderRadius: 15, borderWidth: 2,
-    borderColor: "rgba(255,255,255,0.7)", alignItems: "center", justifyContent: "center",
+    borderColor: "#8A93A0", alignItems: "center", justifyContent: "center",
     marginRight: 14 },
-  letterText: { color: "#fff", fontSize: 13, fontWeight: "700" },
-  optText: { color: "#fff", fontSize: 16, fontWeight: "500", flex: 1 },
+  letterText: { color: "#5A6472", fontSize: 13, fontWeight: "700" },
+  optText: { color: "#1B1F24", fontSize: 16, fontWeight: "500", flex: 1 },
   feedback: { borderWidth: 1, borderRadius: 14, padding: 14, marginBottom: 16 },
-  feedbackGood: { borderColor: "rgba(34,197,94,0.3)", backgroundColor: "rgba(34,197,94,0.2)" },
-  feedbackBad: { borderColor: "rgba(239,68,68,0.3)", backgroundColor: "rgba(239,68,68,0.2)" },
+  feedbackGood: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
+  feedbackBad: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
   feedbackText: { fontSize: 14, lineHeight: 20 },
   bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center",
     gap: 14, marginTop: 6 },
-  ghostBtn: { borderWidth: 1, borderColor: "#475569", borderRadius: 12,
+  ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12,
     paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },
-  ghostText: { color: "#94a3b8", fontSize: 15 },
+  ghostText: { color: "#5A6472", fontSize: 15 },
   togglePill: { flexDirection: "row", alignItems: "center", gap: 6, borderWidth: 1,
     borderRadius: 12, paddingVertical: 11, paddingHorizontal: 14, marginTop: 8 },
-  toggleOn: { backgroundColor: "rgba(51,65,85,0.5)", borderColor: "rgba(6,182,212,0.5)" },
-  toggleOff: { backgroundColor: "rgba(51,65,85,0.5)", borderColor: "#475569" },
+  toggleOn: { backgroundColor: "#EAF0FC", borderColor: "#2B5FD9" },
+  toggleOff: { backgroundColor: "#F0F2F5", borderColor: "#C6CCD4" },
   toggleText: { fontSize: 13, fontWeight: "700" },
-  resultScore: { color: "#fff", fontSize: 44, fontWeight: "700", textAlign: "center" },
-  resultPct: { color: "#4ade80", fontSize: 22, fontWeight: "600", textAlign: "center", marginBottom: 8 },
-  resultMsg: { color: "#e9d5ff", fontSize: 16, textAlign: "center", marginBottom: 10 },
+  resultScore: { color: "#1B1F24", fontSize: 44, fontWeight: "700", textAlign: "center" },
+  resultPct: { color: "#17734A", fontSize: 22, fontWeight: "600", textAlign: "center", marginBottom: 8 },
+  resultMsg: { color: "#5A6472", fontSize: 16, textAlign: "center", marginBottom: 10 },
   modalBg: { flex: 1, backgroundColor: "rgba(0,0,0,0.7)", justifyContent: "center", padding: 24 },
-  modalCard: { backgroundColor: "rgba(30,27,60,0.97)", borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)", borderRadius: 18, padding: 20 },
-  modalTitle: { color: "#e5e7eb", fontSize: 20, fontWeight: "700", textAlign: "center", marginBottom: 6 },
-  modalSub: { color: "#cbd5e1", fontSize: 14, textAlign: "center", marginBottom: 14 },
+  modalCard: { backgroundColor: "#FFFFFF", borderWidth: 1,
+    borderColor: "#E3E6EA", borderRadius: 18, padding: 20 },
+  modalTitle: { color: "#1B1F24", fontSize: 20, fontWeight: "700", textAlign: "center", marginBottom: 6 },
+  modalSub: { color: "#5A6472", fontSize: 14, textAlign: "center", marginBottom: 14 },
   pronounRow: { flexDirection: "row", alignItems: "center", gap: 10,
-    backgroundColor: "rgba(75,85,99,0.2)", borderRadius: 10, padding: 10, marginBottom: 6 },
-  pronounFr: { color: "#fff", fontWeight: "700", fontSize: 15 },
-  pronounEn: { color: "#cbd5e1", fontSize: 14 },
-  guideBtn: { backgroundColor: "#16a34a", borderRadius: 12, paddingVertical: 13,
+    backgroundColor: "#F0F2F5", borderRadius: 10, padding: 10, marginBottom: 6 },
+  pronounFr: { color: "#1B1F24", fontWeight: "700", fontSize: 15 },
+  pronounEn: { color: "#5A6472", fontSize: 14 },
+  guideBtn: { backgroundColor: "#17734A", borderRadius: 12, paddingVertical: 13,
     alignItems: "center", marginTop: 10, marginBottom: 6 },
   guideBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
 });

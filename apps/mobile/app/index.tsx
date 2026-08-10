@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useFonts, DancingScript_600SemiBold } from "@expo-google-fonts/dancing-script";
 import { Stack, router } from "expo-router";
-import { LinearGradient } from "expo-linear-gradient";
 import Dial, { DialHandle, DialOption } from "../components/Dial";
 import { DIFFICULTY_CONFIGS, LEVELS, TIME_FRAMES, VERB_MEANINGS } from "../lib/data";
 
 export default function Home() {
+  const [fontsLoaded] = useFonts({ DancingScript_600SemiBold });
   const [difficulty, setDifficulty] = useState("");
   const [verb, setVerb] = useState("");
   const [timeFrame, setTimeFrame] = useState("");
@@ -51,23 +52,26 @@ export default function Home() {
   };
 
   return (
-    <LinearGradient colors={["#0f172a", "#581c87", "#0f172a"]}
-      start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Text style={styles.h1}>Conjugately</Text>
-        <Text style={styles.tagline}>For serious students.</Text>
+        <Text style={styles.h1}>
+          <Text style={{ color: "#4E7FE1" }}>Conj</Text>
+          <Text style={{ color: "#F5F6F8" }}>ugat</Text>
+          <Text style={{ color: "#E06C6C" }}>ely</Text>
+        </Text>
+        <Text style={styles.cursive}>French tout de suite!</Text>
         <Text style={styles.blurb}>
           Master French verb conjugations—the key to fluency—with your own
           personalized quizzes and optional mini-courses.
         </Text>
 
         <View style={styles.btnRow}>
-          <GradBtn colors={["#4f46e5", "#9333ea", "#db2777"]} label="🎲 Choose All for Me"
+          <FlatBtn bg="#4A78F2" label="🎲 Choose All for Me"
             onPress={() => !spinning && setModal(true)} />
-          <GradBtn colors={["#2563eb", "#0891b2", "#0d9488"]} label="📚 Mini-Courses"
+          <FlatBtn bg="#2C4194" border="#5B77D6" label="📚 Mini-Courses"
             onPress={() => router.push("/mini-courses")} />
-          <GradBtn colors={["#059669", "#0d9488", "#0891b2"]} label="📖 Vocabulary"
+          <FlatBtn bg="#2C4194" border="#5B77D6" label="📖 Vocabulary"
             onPress={() => router.push("/vocabulary")} />
         </View>
 
@@ -91,12 +95,11 @@ export default function Home() {
 
           <Pressable disabled={!ready || spinning}
             onPress={() => router.push({ pathname: "/quiz", params: { difficulty, verb, timeFrame } })}>
-            <LinearGradient colors={ready ? ["#22c55e", "#3b82f6"] : ["#334155", "#334155"]}
-              start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.startBtn}>
+            <View style={[styles.startBtn, ready ? { backgroundColor: "#4A78F2" } : { backgroundColor: "#2C4194", opacity: 0.7 }]}>
               <Text style={styles.startText}>
                 {ready ? `Start ${verb} Quiz (${difficulty} - ${timeFrame})` : "Start Quiz"}
               </Text>
-            </LinearGradient>
+            </View>
           </Pressable>
         </View>
 
@@ -127,28 +130,27 @@ export default function Home() {
           </View>
         </View>
       </Modal>
-    </LinearGradient>
+    </View>
   );
 }
 
-function GradBtn({ colors, label, onPress }: any) {
+function FlatBtn({ bg, border, label, onPress }: any) {
   return (
     <Pressable onPress={onPress}>
-      <LinearGradient colors={colors} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
-        style={styles.gradBtn}>
+      <View style={[styles.gradBtn, { backgroundColor: bg }, border && { borderWidth: 1, borderColor: border }]}>
         <Text style={styles.gradBtnText}>{label}</Text>
-      </LinearGradient>
+      </View>
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   scroll: { padding: 16, paddingTop: 64, paddingBottom: 48 },
-  h1: { color: "#fff", fontSize: 40, fontWeight: "700", textAlign: "center", marginBottom: 4 },
-  tagline: { color: "#d8b4fe", fontSize: 20, fontWeight: "600", fontStyle: "italic",
-    textAlign: "center", marginBottom: 12 },
-  blurb: { color: "#cbd5e1", fontSize: 16, textAlign: "center", marginBottom: 20,
-    lineHeight: 23 },
+  h1: { fontSize: 40, fontWeight: "700", textAlign: "center", marginBottom: 8 },
+  cursive: { color: "#FFFFFF", fontSize: 26, fontFamily: "DancingScript_600SemiBold",
+    textAlign: "center", marginBottom: 20 },
+  blurb: { color: "#CBD6F5", fontSize: 16, textAlign: "center", marginBottom: 20,
+    lineHeight: 25 },
   btnRow: { gap: 10, marginBottom: 24 },
   gradBtn: { paddingVertical: 13, borderRadius: 18, alignItems: "center" },
   gradBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },

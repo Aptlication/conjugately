@@ -10,7 +10,7 @@ export default function MiniCourses() {
   const course = level ? COURSES[level] : null;
 
   return (
-    <LinearGradient colors={["#0f172a", "#581c87", "#0f172a"]}
+    <LinearGradient colors={["#1B2145", "#1B2145"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>

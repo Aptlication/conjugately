@@ -6,6 +6,7 @@ import Animated, {
   useSharedValue, withSequence, withTiming,
 } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
+import { LinearGradient } from "expo-linear-gradient";
 
 export const ROW_H = 40;
 const VISIBLE = 5;
@@ -75,11 +76,15 @@ const Dial = forwardRef<DialHandle, Props>(function Dial({ options, onSettle, di
     <View style={[styles.box, disabled && { opacity: 0.55 }]}>
       <GestureDetector gesture={pan}>
         <View style={styles.wheel}>
+          <View pointerEvents="none" style={styles.lens} />
           {options.map((o, i) => (
             <Row key={`${o.value}-${i}`} index={i} text={o.label} offset={offset}
               n={n} total={total} dim={!!o.disabled} />
           ))}
-          <View pointerEvents="none" style={styles.band} />
+          <LinearGradient pointerEvents="none"
+            colors={["rgba(90,105,135,0.22)", "rgba(223,231,245,0)", "rgba(223,231,245,0)", "rgba(90,105,135,0.22)"]}
+            locations={[0, 0.22, 0.78, 1]}
+            style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }} />
         </View>
       </GestureDetector>
       <Caption offset={offset} options={options} n={n} />
@@ -121,16 +126,17 @@ function Row({ index, text, offset, n, total, dim }: any) {
 }
 
 const styles = StyleSheet.create({
-  box: { backgroundColor: "rgba(255,255,255,0.10)", borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)", borderRadius: 12, overflow: "hidden" },
+  box: { backgroundColor: "#DFE7F5", borderWidth: 1,
+    borderColor: "#C9D6F2", borderRadius: 12, overflow: "hidden" },
   wheel: { height: WHEEL_H, width: "100%" },
   row: { position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 0, right: 0,
     height: ROW_H, alignItems: "center", justifyContent: "center" },
-  rowText: { color: "#ffffff", fontSize: 17, fontWeight: "500", paddingHorizontal: 12 },
-  band: { position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8,
-    height: ROW_H, borderRadius: 8, borderWidth: 1,
-    borderColor: "rgba(196,181,253,0.5)", backgroundColor: "rgba(167,139,250,0.10)" },
-  caption: { color: "#ddd6fe", fontSize: 13, textAlign: "center",
+  rowText: { color: "#1B1F24", fontSize: 17, fontWeight: "500", paddingHorizontal: 12 },
+  lens: { position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8,
+    height: ROW_H, borderRadius: 9, borderWidth: 1,
+    borderColor: "rgba(27,31,36,0.10)", backgroundColor: "#F5F6F8",
+    shadowColor: "#1B1F24", shadowOpacity: 0.2, shadowRadius: 3, shadowOffset: { width: 0, height: 1 }, elevation: 2 },
+  caption: { color: "#5A6472", fontSize: 13, textAlign: "center",
     paddingBottom: 8, paddingHorizontal: 12 },
 });
 
