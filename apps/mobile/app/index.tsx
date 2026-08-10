@@ -56,9 +56,10 @@ export default function Home() {
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={styles.h1}>
-          <Text style={{ color: "#4E7FE1" }}>Conj</Text>
+          <Text style={{ color: "#7FA8EC" }}>Con</Text>
+          <Text style={{ color: "#EC9A9A" }}>j</Text>
           <Text style={{ color: "#F5F6F8" }}>ugat</Text>
-          <Text style={{ color: "#E06C6C" }}>ely</Text>
+          <Text style={{ color: "#EC9A9A" }}>ely</Text>
         </Text>
         <Text style={styles.cursive}>French tout de suite!</Text>
         <Text style={styles.blurb}>
