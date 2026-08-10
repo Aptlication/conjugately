@@ -176,7 +176,7 @@ export function WheelSelect({ value, onChange, disabled, className, children }: 
         onWheel={onWheel}
         style={{ position: "relative", height: WHEEL_H, touchAction: "none", cursor: disabled ? "not-allowed" : "grab" }}
       >
-        <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none", background: "#FFFFFF", border: "1px solid rgba(27,31,36,0.10)", borderRadius: 9, boxShadow: "0 1px 3px rgba(27,31,36,0.20)" }} />
+        <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none", background: "#F5F6F8", border: "1px solid rgba(27,31,36,0.10)", borderRadius: 9, boxShadow: "0 1px 3px rgba(27,31,36,0.20)" }} />
         {opts.map((o, i) => (
           <div
             key={`${o.value}-${i}`}
