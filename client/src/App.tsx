@@ -1462,7 +1462,7 @@ function App() {
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-xl mb-2">Generating your quiz...</p>
-          <p className="text-purple-300">Creating 20 questions for {selectedVerb} in {selectedTenseType}</p>
+          <p className="text-[#B9CBFA]">Creating 20 questions for {selectedVerb} in {selectedTenseType}</p>
         </div>
       </div>
     );
@@ -2071,7 +2071,7 @@ function App() {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
             <div className="text-center mb-6">
               <h2 className="text-4xl font-bold mb-2">📚 {courseInfo.timeFrame} Tense Course Overview</h2>
-              <p className="text-lg text-purple-300 font-semibold italic">Conjugately - For serious students.</p>
+              <p className="text-lg text-[#B9CBFA] font-semibold italic">Conjugately - For serious students.</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -2267,7 +2267,7 @@ function App() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-2">Conjugately</h1>
-          <p className="text-2xl text-purple-300 font-semibold mb-4 italic">For serious students.</p>
+          <p className="text-2xl text-[#B9CBFA] font-semibold mb-4 italic">For serious students.</p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Master French verb conjugations—the key to fluency—with your own personalized quizzes and optional mini-courses.
           </p>
@@ -2313,7 +2313,7 @@ function App() {
               <label className="text-lg font-semibold">1. Choose Difficulty</label>
               <button
                 onClick={handleDifficultyLockToggle}
-                className="text-white hover:text-purple-300 transition-colors"
+                className="text-white hover:text-[#B9CBFA] transition-colors"
                 title={isDifficultyLocked ? "Click to unlock difficulty selection" : "Click to lock current difficulty"}
               >
                 {isDifficultyLocked ? (
@@ -2334,7 +2334,7 @@ function App() {
               className={`w-full p-4 rounded-xl border text-[#1B1F24] text-lg transition-all ${
                 isDifficultyLocked 
                   ? 'bg-green-500/20 border-green-500/30 cursor-not-allowed opacity-75' 
-                  : 'bg-[#EAF0FC] border-[#C9D6F2]'
+                  : 'bg-[#DFE7F5] border-[#C9D6F2]'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select difficulty level...</option>
@@ -2362,7 +2362,7 @@ function App() {
               onChange={(e) => handleVerbSelection(e.target.value)}
               disabled={!selectedDifficulty}
               className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
-                selectedDifficulty ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
+                selectedDifficulty ? 'bg-[#DFE7F5]' : 'bg-[#DFE7F5] opacity-60'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">
@@ -2412,7 +2412,7 @@ function App() {
               }}
               disabled={!selectedVerb}
               className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
-                selectedDifficulty && selectedVerb ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
+                selectedDifficulty && selectedVerb ? 'bg-[#DFE7F5]' : 'bg-[#DFE7F5] opacity-60'
               }`}
             >
               <option value="" className="bg-gray-800 text-white">Select time frame...</option>
@@ -2430,7 +2430,7 @@ function App() {
                 onChange={(e) => setSelectedTenseType(e.target.value)}
                 disabled={!selectedTimeFrame}
                 className={`w-full p-4 rounded-xl border border-[#C9D6F2] text-[#1B1F24] text-lg ${
-                  selectedTimeFrame ? 'bg-[#EAF0FC]' : 'bg-[#EAF0FC] opacity-60'
+                  selectedTimeFrame ? 'bg-[#DFE7F5]' : 'bg-[#DFE7F5] opacity-60'
                 }`}
               >
                 <option value="" className="bg-gray-800 text-white">Select tense type...</option>
@@ -2447,7 +2447,7 @@ function App() {
             className={`w-full p-3 text-base font-bold rounded-xl transition-all ${
               (selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced"))
                 ? 'bg-[#4A78F2] text-white hover:bg-[#3B66E0]'
-                : 'bg-gradient-to-r from-blue-900 to-purple-600 text-white cursor-not-allowed'
+                : 'bg-[#2C4194] text-white opacity-70 cursor-not-allowed'
             }`}
           >
             {selectedDifficulty && selectedVerb && selectedTimeFrame && (selectedTenseType || selectedDifficulty !== "Advanced") ? (
@@ -3911,7 +3911,7 @@ function App() {
               
               <div className="text-white/90 space-y-4 mb-6">
                 <p>
-                  Reflexive verbs are actions you do to yourself. They use <strong className="text-purple-300">me, te, se, nous, vous, se</strong>.
+                  Reflexive verbs are actions you do to yourself. They use <strong className="text-[#B9CBFA]">me, te, se, nous, vous, se</strong>.
                 </p>
                 
                 <div className="bg-white/10 rounded-lg p-4 space-y-2">

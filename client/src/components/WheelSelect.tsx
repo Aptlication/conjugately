@@ -166,7 +166,7 @@ export function WheelSelect({ value, onChange, disabled, className, children }: 
   useEffect(() => { render(); });
 
   return (
-    <div className={className} style={{ padding: 0, overflow: "hidden" }}>
+    <div className={className} style={{ padding: 0, overflow: "hidden", boxShadow: "inset 0 2px 6px rgba(27,31,36,0.12)" }}>
       <div
         ref={boxRef}
         onPointerDown={onPointerDown}
@@ -176,6 +176,7 @@ export function WheelSelect({ value, onChange, disabled, className, children }: 
         onWheel={onWheel}
         style={{ position: "relative", height: WHEEL_H, touchAction: "none", cursor: disabled ? "not-allowed" : "grab" }}
       >
+        <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none", background: "#FFFFFF", border: "1px solid rgba(27,31,36,0.10)", borderRadius: 9, boxShadow: "0 1px 3px rgba(27,31,36,0.20)" }} />
         {opts.map((o, i) => (
           <div
             key={`${o.value}-${i}`}
@@ -187,7 +188,7 @@ export function WheelSelect({ value, onChange, disabled, className, children }: 
           </div>
         ))}
         <div style={{ position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8, height: ROW_H, pointerEvents: "none" }} className="rounded-lg border-2 border-[#1B1F24] bg-transparent" />
-        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(rgba(234,240,252,0.92), transparent 32%, transparent 68%, rgba(234,240,252,0.92))" }} />
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(rgba(90,105,135,0.22), rgba(223,231,245,0) 22%, rgba(223,231,245,0) 78%, rgba(90,105,135,0.22))" }} />
       </div>
       <div ref={captionRef} className="text-center text-sm text-[#5A6472] min-h-5 pb-2 px-3" />
     </div>
