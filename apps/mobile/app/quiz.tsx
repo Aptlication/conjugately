@@ -261,16 +261,6 @@ export default function Quiz() {
             )}
 
             <View style={styles.bottomRow}>
-              <Pressable onPress={() => setSound((s) => {
-                  if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
-                  return !s;
-                })}
-                style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff]}>
-                <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
-                <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
-                  {sound ? "ON" : "OFF"}
-                </Text>
-              </Pressable>
               <Pressable style={styles.ghostBtn} onPress={goHome}>
                 <Text style={styles.ghostText}>Start Over</Text>
               </Pressable>
@@ -281,6 +271,19 @@ export default function Quiz() {
               <Pressable style={[styles.ghostBtn, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
                 onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
                 <Text style={styles.ghostText}>Next ›</Text>
+              </Pressable>
+            </View>
+
+            <View style={styles.audioRow}>
+              <Pressable onPress={() => setSound((s) => {
+                  if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
+                  return !s;
+                })}
+                style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff]}>
+                <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
+                <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
+                  {sound ? "ON" : "OFF"}
+                </Text>
               </Pressable>
             </View>
           </View>
@@ -361,6 +364,7 @@ const styles = StyleSheet.create({
   feedbackText: { fontSize: 14, lineHeight: 20 },
   bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center",
     gap: 14, marginTop: 16 },
+  audioRow: { alignItems: "center", marginTop: 2 },
   ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12,
     paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },
   ghostText: { color: "#5A6472", fontSize: 15 },
