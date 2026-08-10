@@ -2266,7 +2266,8 @@ function App() {
     <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-2">Conjugately</h1>
+          <h1 className="text-5xl font-bold mb-1" style={{ background: "linear-gradient(90deg,#A9C6F2 0%,#A9C6F2 22%,#FFFFFF 42%,#FFFFFF 58%,#F2B3B3 78%,#F2B3B3 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Conjugately</h1>
+          <p className="text-3xl text-white mb-1" style={{ fontFamily: "'Dancing Script', 'Segoe Script', cursive", fontWeight: 600 }}>French tout de suite!</p>
           <p className="text-2xl text-[#B9CBFA] font-semibold mb-4 italic">For serious students.</p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Master French verb conjugations—the key to fluency—with your own personalized quizzes and optional mini-courses.
