@@ -24,7 +24,7 @@ export async function logQuizResult(r: QuizResult) {
     const h = await getQuizHistory();
     h.push(r);
     await AsyncStorage.setItem(QUIZ_KEY, JSON.stringify(h.slice(-200)));
-    if (r.courseKey !== undefined && r.unitIndex !== undefined && r.score / Math.max(1, r.total) >= 0.7) {
+    if (r.courseKey !== undefined && r.unitIndex !== undefined) {
       await markUnitComplete(r.courseKey, r.unitIndex);
     }
   } catch {}

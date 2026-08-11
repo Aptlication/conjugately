@@ -1,14 +1,26 @@
 import NavBar from "../components/NavBar";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { Stack, router } from "expo-router";
+import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { COURSES, COURSE_TIME_FRAMES } from "../lib/courses";
+import { getCourseProgress } from "../lib/progress";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
   const [timeFrame, setTimeFrame] = useState<string | null>(null);
   const course = level ? COURSES[level] : null;
+  const [prog, setProg] = useState<Record<string, number[]>>({});
+  useFocusEffect(useCallback(() => {
+    let on = true;
+    getCourseProgress().then((cp) => {
+      if (!on) return;
+      const map: Record<string, number[]> = {};
+      for (const [k, v] of Object.entries(cp)) map[k] = v.completedUnits;
+      setProg(map);
+    });
+    return () => { on = false; };
+  }, []));
 
   return (
     <LinearGradient colors={["#1B2145", "#1B2145"]}
@@ -48,15 +60,21 @@ export default function MiniCourses() {
         {level && timeFrame && (
           <View style={styles.card}>
             <Text style={styles.blurb}>{course!.emoji} {course!.title} · {timeFrame}</Text>
-            {course!.units.map((u) => (
-              <Pressable key={u.name} style={styles.row}
-                onPress={() => router.push({ pathname: "/quiz",
-                  params: { difficulty: level, verb: u.verb, timeFrame,
-                    courseKey: `${level}|${timeFrame}`, unitIndex: String(course!.units.indexOf(u)) } })}>
-                <Text style={styles.rowTitle}>{u.name}</Text>
-                <Text style={styles.rowSub}>{u.questions} questions</Text>
-              </Pressable>
-            ))}
+            {course!.units.map((u, ui) => {
+              const doneArr = prog[`${level}|${timeFrame}`] || [];
+              const done = doneArr.includes(ui);
+              const nextIdx = course!.units.findIndex((_, i) => !doneArr.includes(i));
+              const isNext = ui === nextIdx && doneArr.length > 0;
+              return (
+                <Pressable key={u.name} style={[styles.row, done && styles.rowDone, isNext && styles.rowNext]}
+                  onPress={() => router.push({ pathname: "/quiz",
+                    params: { difficulty: level, verb: u.verb, timeFrame,
+                      courseKey: `${level}|${timeFrame}`, unitIndex: String(ui) } })}>
+                  <Text style={[styles.rowTitle, done && styles.rowTitleDone]}>{done ? "✓ " : ""}{u.name}</Text>
+                  <Text style={styles.rowSub}>{done ? "Completed" : isNext ? `▸ Up next — ${u.questions} questions` : `${u.questions} questions`}</Text>
+                </Pressable>
+              );
+            })}
             <View style={[styles.row, { opacity: 0.55 }]}>
               <Text style={styles.rowTitle}>🎓 Final Exam</Text>
               <Text style={styles.rowSub}>{course!.finalExam.description} — arrives in the next update</Text>
@@ -81,5 +99,8 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.2)", borderRadius: 14, padding: 14, marginBottom: 10 },
   rowTitle: { color: "#fff", fontSize: 16, fontWeight: "600" },
   rowSub: { color: "#cbd5e1", fontSize: 13, marginTop: 3 },
+  rowDone: { opacity: 0.55 },
+  rowTitleDone: { color: "#5BD48F" },
+  rowNext: { borderColor: "#4A78F2", borderWidth: 2 },
   back: { color: "#c4b5fd", fontSize: 15, textAlign: "center", padding: 10 },
 });
