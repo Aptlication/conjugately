@@ -1,10 +1,18 @@
 import React, { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
+import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, JourneySummary } from "../lib/progress";
 
 const LEVELS = ["Beginner", "Novice", "Elementary", "Intermediate"];
+
+const TEMP = ["#4A78F2", "#8B7CE8", "#C77BD9", "#F0A05A", "#F0564A"];
+function tempColors(pct: number): string[] {
+  if (pct >= 100) return ["#5BD48F", "#5BD48F"];
+  const n = Math.max(2, Math.min(TEMP.length, Math.ceil(pct / 25) + 1));
+  return TEMP.slice(0, n);
+}
 
 export default function Journey() {
   const [s, setS] = useState<JourneySummary | null>(null);
@@ -47,15 +55,20 @@ export default function Journey() {
         </View>
 
         <View style={styles.card}>
-          <Text style={styles.cardLabel}>MINI-COURSES{s && s.courses.length ? ` · ${s.overallCoursePct}% OVERALL` : ""}</Text>
+          <Text style={styles.cardLabel}>PROGRESS{s && s.courses.length ? ` · ${s.overallCoursePct}% OVERALL` : ""}</Text>
           {s && s.courses.length > 0 ? s.courses.map((c) => (
             <View key={c.key} style={{ marginBottom: 8 }}>
               <View style={styles.progRow}>
                 <Text style={styles.progLabel}>{c.label}</Text>
-                <Text style={[styles.progPct, c.pct >= 100 ? { color: "#5BD48F" } : c.pct > 0 ? { color: "#9DB4F5" } : { color: "#8A93A0" }]}>{c.pct}%</Text>
+                <Text style={[styles.progPct, c.pct > 0 ? { color: tempColors(c.pct)[tempColors(c.pct).length - 1] } : { color: "#8A93A0" }]}>{c.pct}%</Text>
               </View>
-              <View style={styles.track}><View style={[styles.fill, { width: `${Math.min(100, c.pct)}%` },
-                c.pct >= 100 && { backgroundColor: "#5BD48F" }]} /></View>
+              <View style={styles.track}>
+                {c.pct > 0 && (
+                  <LinearGradient colors={tempColors(c.pct) as any}
+                    start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+                    style={[styles.fill, { width: `${Math.min(100, c.pct)}%` }]} />
+                )}
+              </View>
             </View>
           )) : (
             <Text style={styles.cardText}>No course units completed yet — start one from the Courses tab.</Text>
@@ -107,10 +120,10 @@ const styles = StyleSheet.create({
   progPct: { fontSize: 12, fontWeight: "700" },
   track: { height: 6, backgroundColor: "rgba(255,255,255,0.2)", borderRadius: 3, overflow: "hidden" },
   fill: { height: 6, backgroundColor: "#4A78F2", borderRadius: 3 },
-  nextCard: { backgroundColor: "rgba(74,120,242,0.18)", borderWidth: 1, borderColor: "#4A78F2",
+  nextCard: { backgroundColor: "rgba(34,197,94,0.16)", borderWidth: 1, borderColor: "#22C55E",
     borderRadius: 14, padding: 14, marginBottom: 12 },
-  nextLabel: { fontSize: 11, fontWeight: "700", color: "#9DB4F5", letterSpacing: 0.5, marginBottom: 4 },
-  nextBtn: { backgroundColor: "#4A78F2", borderRadius: 10, paddingVertical: 9,
+  nextLabel: { fontSize: 11, fontWeight: "700", color: "#5BD48F", letterSpacing: 0.5, marginBottom: 4 },
+  nextBtn: { backgroundColor: "#22C55E", borderRadius: 10, paddingVertical: 9,
     alignItems: "center", marginTop: 8 },
   nextBtnText: { color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
   statsRow: { flexDirection: "row", gap: 8 },
