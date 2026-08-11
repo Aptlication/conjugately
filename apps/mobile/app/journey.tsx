@@ -42,7 +42,7 @@ export default function Journey() {
           <Text style={styles.cardText}>
             {levelIdx >= 0
               ? `You're working at ${s!.highestLevelTouched} level. Keep going!`
-              : "Take your first quiz and your journey begins here."}
+              : "Take your first Mini-Course Quiz and your journey begins here."}
           </Text>
         </View>
 
