@@ -54,27 +54,6 @@ export default function Journey() {
           </Text>
         </View>
 
-        <View style={styles.card}>
-          <Text style={styles.cardLabel}>PROGRESS{s && s.courses.length ? ` · ${s.overallCoursePct}% OVERALL` : ""}</Text>
-          {s && s.courses.length > 0 ? s.courses.map((c) => (
-            <View key={c.key} style={{ marginBottom: 8 }}>
-              <View style={styles.progRow}>
-                <Text style={styles.progLabel}>{c.label}</Text>
-                <Text style={[styles.progPct, c.pct > 0 ? { color: tempColors(c.pct)[tempColors(c.pct).length - 1] } : { color: "#8A93A0" }]}>{c.pct}%</Text>
-              </View>
-              <View style={styles.track}>
-                {c.pct > 0 && (
-                  <LinearGradient colors={tempColors(c.pct) as any}
-                    start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
-                    style={[styles.fill, { width: `${Math.min(100, c.pct)}%` }]} />
-                )}
-              </View>
-            </View>
-          )) : (
-            <Text style={styles.cardText}>No course units completed yet — start one from the Courses tab.</Text>
-          )}
-        </View>
-
         {s && s.levels && s.levels.length > 0 && (
           <View style={styles.card}>
             <Text style={styles.cardLabel}>LEVEL COMPLETION</Text>
@@ -96,6 +75,27 @@ export default function Journey() {
             ))}
           </View>
         )}
+
+        <View style={styles.card}>
+          <Text style={styles.cardLabel}>PROGRESS{s && s.courses.length ? ` · ${s.overallCoursePct}% OVERALL` : ""}</Text>
+          {s && s.courses.length > 0 ? s.courses.map((c) => (
+            <View key={c.key} style={{ marginBottom: 8 }}>
+              <View style={styles.progRow}>
+                <Text style={styles.progLabel}>{c.label}</Text>
+                <Text style={[styles.progPct, c.pct > 0 ? { color: tempColors(c.pct)[tempColors(c.pct).length - 1] } : { color: "#8A93A0" }]}>{c.pct}%</Text>
+              </View>
+              <View style={styles.track}>
+                {c.pct > 0 && (
+                  <LinearGradient colors={tempColors(c.pct) as any}
+                    start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+                    style={[styles.fill, { width: `${Math.min(100, c.pct)}%` }]} />
+                )}
+              </View>
+            </View>
+          )) : (
+            <Text style={styles.cardText}>No course units completed yet — start one from the Courses tab.</Text>
+          )}
+        </View>
 
         {s?.nextStep && (
           <View style={styles.nextCard}>
