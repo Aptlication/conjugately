@@ -85,10 +85,11 @@ function endingPerson(word: string, tense: string): { ending: string; person: st
   for (const k of keys) if (word.toLowerCase().endsWith(k)) return { ending: k, person: table[k] };
   return null;
 }
-function detectTense(qText: string): string {
+function detectTense(qText: string, correctText?: string): string {
   if (/futur/i.test(qText) || /\bwill\b/i.test(qText)) return "futur";
   if (/imparfait/i.test(qText)) return "imparfait";
   if (/passé composé/i.test(qText)) return "pc";
+  if (correctText && /(?:^|\s)(ai|as|a|avons|avez|ont|suis|es|est|sommes|êtes|sont)\s+(?:pas\s+|jamais\s+|plus\s+|déjà\s+|encore\s+)?[a-zàâäéèêëîïôöûüù']*?(é|ée|és|ées|is|ie|ies|us|ues|it|ert|erte|i|u)(?=\s|[.?!,]|$)/i.test(correctText.replace(/n'/gi, ""))) return "pc";
   return "present";
 }
 function firstPronoun(s: string): string | null {
@@ -97,7 +98,7 @@ function firstPronoun(s: string): string | null {
 }
 
 export function contrastExplain(qText: string, wrongText: string, correctText: string): string | null {
-  const tense = detectTense(qText);
+  const tense = detectTense(qText, correctText);
   const bare = !wrongText.includes(" ") && !correctText.includes(" ");
   if (bare && tense !== "pc") {
     const w = endingPerson(wrongText, tense), c = endingPerson(correctText, tense);
@@ -121,6 +122,20 @@ export function contrastExplain(qText: string, wrongText: string, correctText: s
     }
     if (!etreCorrect && etreWrong && wp === cp) {
       return `This verb forms the passé composé with avoir, not être: «${correctText}».`;
+    }
+    const AUXP: Record<string, string> = { "ai": "je", "as": "tu", "a": "il/elle",
+      "avons": "nous", "avez": "vous", "ont": "ils/elles",
+      "suis": "je", "es": "tu", "est": "il/elle", "sommes": "nous", "êtes": "vous", "sont": "ils/elles" };
+    const wW = wrongText.replace(/[.?!]/g, "").split(" ");
+    const cW = correctText.replace(/[.?!]/g, "").split(" ");
+    if (wp === cp && wW.length === cW.length) {
+      const dif = wW.map((w, i) => [w, cW[i]] as [string, string]).filter(([x, y]) => x !== y);
+      if (dif.length === 1) {
+        const wa = dif[0][0].toLowerCase().replace(/^n'/, ""), ca = dif[0][1].toLowerCase().replace(/^n'/, "");
+        if (AUXP[wa] && AUXP[ca] && AUXP[wa] !== AUXP[ca]) {
+          return `«${dif[0][0]}» is the ${AUXP[wa]} form of the auxiliary — ${PRONOUN_PERSON[cp!] || cp} takes «${dif[0][1]}».`;
+        }
+      }
     }
     const wWords = wrongText.replace(/[.?!]/g, "").split(" ");
     const cWords = correctText.replace(/[.?!]/g, "").split(" ");
@@ -179,6 +194,23 @@ export function polishQuestions<T extends {
   for (const q of questions ?? []) {
     q.question = normalizeLabels(q.question);
     q.hint = normalizeLabels(q.hint);
+
+    if (q.answerOptions && q.answerOptions.length) {
+      const seen = new Map<string, { text?: string; rationale?: string; isCorrect?: boolean }>();
+      const deduped: typeof q.answerOptions = [];
+      for (const opt of q.answerOptions) {
+        const k = (opt.text ?? "").trim().toLowerCase();
+        const kept = k ? seen.get(k) : undefined;
+        if (kept) {
+          if (opt.isCorrect) { kept.isCorrect = true; kept.rationale = opt.rationale; }
+          continue;
+        }
+        if (k) seen.set(k, opt);
+        deduped.push(opt);
+      }
+      q.answerOptions = deduped;
+    }
+
     const correct = (q.answerOptions ?? []).find((o) => o.isCorrect);
     for (const opt of q.answerOptions ?? []) {
       let r = polishText(opt.rationale);
@@ -188,6 +220,20 @@ export function polishQuestions<T extends {
         if (e) r = e;
       }
       opt.rationale = normalizeLabels(r);
+    }
+
+    if (correct?.text && correct.rationale === "Correct!") {
+      const opts = q.answerOptions ?? [];
+      for (let i = 0; i < opts.length; i++) {
+        const o = opts[i];
+        if (o.isCorrect || !o.text) continue;
+        let e = contrastExplain(q.question ?? "", o.text, correct.text);
+        if (e) {
+          e = e.replace(`: «${correct.text}».`, ".");
+          correct.rationale = normalizeLabels(`Correct! Compare option ${String.fromCharCode(65 + i)} — ${e}`);
+          break;
+        }
+      }
     }
   }
   return questions;
