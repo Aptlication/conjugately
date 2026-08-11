@@ -32,12 +32,18 @@ export default function MiniCourses() {
         {!level && (
           <View style={styles.card}>
             <Text style={styles.blurb}>Choose a difficulty level for structured learning</Text>
-            {Object.entries(COURSES).map(([key, c]) => (
-              <Pressable key={key} style={styles.row} onPress={() => setLevel(key)}>
-                <Text style={styles.rowTitle}>{c.emoji} {c.title}</Text>
-                <Text style={styles.rowSub}>{c.blurb}</Text>
-              </Pressable>
-            ))}
+            {Object.entries(COURSES).map(([key, c]) => {
+              const totals = COURSE_TIME_FRAMES.map((tf) => (prog[`${key}|${tf}`] || []).length);
+              const doneUnits = totals.reduce((n, x) => n + x, 0);
+              const allDone = doneUnits >= c.units.length * COURSE_TIME_FRAMES.length;
+              const commenced = doneUnits > 0 && !allDone;
+              return (
+                <Pressable key={key} style={[styles.row, allDone && styles.rowDone]} onPress={() => setLevel(key)}>
+                  <Text style={[styles.rowTitle, allDone && styles.rowTitleDone]}>{allDone ? "✓ " : ""}{c.emoji} {c.title}</Text>
+                  <Text style={[styles.rowSub, commenced && styles.rowSubStarted]}>{allDone ? "Level complete" : commenced ? `▸ In progress — ${doneUnits} of ${c.units.length * COURSE_TIME_FRAMES.length} units` : c.blurb}</Text>
+                </Pressable>
+              );
+            })}
             <Pressable style={[styles.row, { opacity: 0.5 }]}>
               <Text style={styles.rowTitle}>🔒 Advanced Course</Text>
               <Text style={styles.rowSub}>Coming Soon!</Text>
@@ -48,11 +54,20 @@ export default function MiniCourses() {
         {level && !timeFrame && (
           <View style={styles.card}>
             <Text style={styles.blurb}>{course!.emoji} {course!.title} — choose a time frame</Text>
-            {COURSE_TIME_FRAMES.map((tf) => (
-              <Pressable key={tf} style={styles.row} onPress={() => setTimeFrame(tf)}>
-                <Text style={styles.rowTitle}>{tf}</Text>
-              </Pressable>
-            ))}
+            {COURSE_TIME_FRAMES.map((tf) => {
+              const done = (prog[`${level}|${tf}`] || []).length;
+              const total = course!.units.length;
+              const complete = done >= total;
+              const commenced = done > 0 && !complete;
+              return (
+                <Pressable key={tf} style={[styles.row, complete && styles.rowDone]} onPress={() => setTimeFrame(tf)}>
+                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense</Text>
+                  {complete ? <Text style={styles.rowSub}>Completed</Text>
+                    : commenced ? <Text style={[styles.rowSub, styles.rowSubStarted]}>▸ In progress — {done} of {total} units</Text>
+                    : null}
+                </Pressable>
+              );
+            })}
             <Pressable onPress={() => setLevel(null)}><Text style={styles.back}>← Back to levels</Text></Pressable>
           </View>
         )}
@@ -102,5 +117,6 @@ const styles = StyleSheet.create({
   rowDone: { opacity: 0.55 },
   rowTitleDone: { color: "#5BD48F" },
   rowNext: { borderColor: "#4A78F2", borderWidth: 2 },
+  rowSubStarted: { color: "#9DB4F5" },
   back: { color: "#c4b5fd", fontSize: 15, textAlign: "center", padding: 10 },
 });
