@@ -6,6 +6,8 @@ import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import * as Haptics from "expo-haptics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
+import NavBar from "../components/NavBar";
+import { logQuizResult } from "../lib/progress";
 
 const TENSE_BY_TIMEFRAME: Record<string, string> = {
   Present: "Présent", Past: "Passé Composé", Future: "Futur Simple",
@@ -60,11 +62,13 @@ function lookupAnswerFile(m: any, text: string, difficulty: string): string | nu
 }
 
 export default function Quiz() {
-  const p = useLocalSearchParams<{ difficulty: string; verb: string; timeFrame: string }>();
+  const p = useLocalSearchParams<{ difficulty: string; verb: string; timeFrame: string; courseKey?: string; unitIndex?: string }>();
   const difficulty = String(p.difficulty || "");
   const verb = String(p.verb || "");
   const timeFrame = String(p.timeFrame || "");
   const tense = TENSE_BY_TIMEFRAME[timeFrame] || "Présent";
+  const courseKey = p.courseKey ? String(p.courseKey) : undefined;
+  const unitIndex = p.unitIndex !== undefined && p.unitIndex !== "" ? Number(p.unitIndex) : undefined;
 
   const [state, setState] = useState<"loading" | "active" | "done" | "error">("loading");
   const [error, setError] = useState("");
@@ -198,7 +202,13 @@ export default function Quiz() {
     audioPendingRef.current = false;
     setReviewIndex(null);
     setSelected(null); setConfirmed(false); setAnswerUrl(null);
-    if (idx + 1 >= questions.length) setState("done");
+    if (idx + 1 >= questions.length) {
+      const finalScore = Object.entries({ ...answers, [idx]: selected ?? -1 }).reduce((n, [qi, ai]) =>
+        n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
+      logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
+        date: new Date().toISOString(), courseKey, unitIndex });
+      setState("done");
+    }
     else setIdx(idx + 1);
   };
 
@@ -349,12 +359,13 @@ export default function Quiz() {
           </View>
         </View>
       </Modal>
+      <NavBar variant="neutral" />
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  scroll: { padding: 16, paddingTop: 64, paddingBottom: 48 },
+  scroll: { padding: 16, paddingTop: 64, paddingBottom: 110 },
   center: { alignItems: "center", marginTop: 60 },
   loadingText: { color: "#5A6472", marginTop: 14, fontSize: 15 },
   card: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 24, padding: 18 },

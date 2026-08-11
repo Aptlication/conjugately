@@ -3,6 +3,7 @@ import { Alert, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "rea
 import { useFonts, DancingScript_600SemiBold } from "@expo-google-fonts/dancing-script";
 import { Stack, router } from "expo-router";
 import Dial, { DialHandle, DialOption } from "../components/Dial";
+import NavBar from "../components/NavBar";
 import { DIFFICULTY_CONFIGS, LEVELS, TIME_FRAMES, VERB_MEANINGS } from "../lib/data";
 
 export default function Home() {
@@ -131,6 +132,7 @@ export default function Home() {
           </View>
         </View>
       </Modal>
+      <NavBar variant="dark" active="home" />
     </View>
   );
 }
@@ -146,7 +148,7 @@ function FlatBtn({ bg, border, label, onPress }: any) {
 }
 
 const styles = StyleSheet.create({
-  scroll: { padding: 16, paddingTop: 64, paddingBottom: 48 },
+  scroll: { padding: 16, paddingTop: 64, paddingBottom: 110 },
   h1: { fontSize: 40, fontWeight: "700", textAlign: "center", marginBottom: 8 },
   cursive: { color: "#FFFFFF", fontSize: 26, fontFamily: "DancingScript_600SemiBold",
     textAlign: "center", marginBottom: 20 },

@@ -1,3 +1,4 @@
+import NavBar from "../components/NavBar";
 import React, { useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router } from "expo-router";
@@ -80,6 +81,7 @@ export default function Vocabulary() {
 
         <Pressable onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}><Text style={styles.back}>← Home</Text></Pressable>
       </ScrollView>
+      <NavBar variant="dark" active="vocab" />
     </LinearGradient>
   );
 }

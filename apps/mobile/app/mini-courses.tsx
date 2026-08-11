@@ -1,3 +1,4 @@
+import NavBar from "../components/NavBar";
 import React, { useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router } from "expo-router";
@@ -50,7 +51,8 @@ export default function MiniCourses() {
             {course!.units.map((u) => (
               <Pressable key={u.name} style={styles.row}
                 onPress={() => router.push({ pathname: "/quiz",
-                  params: { difficulty: level, verb: u.verb, timeFrame } })}>
+                  params: { difficulty: level, verb: u.verb, timeFrame,
+                    courseKey: `${level}|${timeFrame}`, unitIndex: String(course!.units.indexOf(u)) } })}>
                 <Text style={styles.rowTitle}>{u.name}</Text>
                 <Text style={styles.rowSub}>{u.questions} questions</Text>
               </Pressable>
@@ -65,6 +67,7 @@ export default function MiniCourses() {
 
         <Pressable onPress={() => (router.canGoBack() ? router.back() : router.replace("/"))}><Text style={styles.back}>← Home</Text></Pressable>
       </ScrollView>
+      <NavBar variant="dark" active="courses" />
     </LinearGradient>
   );
 }
