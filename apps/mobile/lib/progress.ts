@@ -99,8 +99,40 @@ export async function getJourneySummary(): Promise<JourneySummary> {
     const units = COURSES[level]?.units || [];
     const idx = units.findIndex((_, i) => !e.completedUnits.includes(i));
     if (idx >= 0) {
-      nextStep = { courseKey: key, label: `${level} · ${timeFrame}`, unitIndex: idx,
+      nextStep = { courseKey: key, label: `${level} · ${timeFrame} Tense`, unitIndex: idx,
         unitName: units[idx].name, verb: units[idx].verb, level, timeFrame };
+    }
+  }
+  if (!nextStep) {
+    const ORDER_TF = ["Present", "Past", "Future"];
+    const LV = ["Beginner", "Novice", "Elementary", "Intermediate"];
+    const doneEntries = Object.entries(prog)
+      .filter(([, e]) => e.completedUnits.length > 0)
+      .sort((a, b) => (b[1].updatedAt || "").localeCompare(a[1].updatedAt || ""));
+    if (doneEntries.length) {
+      const [lastKey] = doneEntries[0];
+      const level = lastKey.split("|")[0];
+      const units = COURSES[level]?.units || [];
+      for (const tf of ORDER_TF) {
+        const e = prog[`${level}|${tf}`];
+        const doneCount = e ? e.completedUnits.length : 0;
+        if (doneCount < units.length) {
+          const idx = units.findIndex((_, i) => !(e?.completedUnits || []).includes(i));
+          if (idx >= 0) {
+            nextStep = { courseKey: `${level}|${tf}`, label: `${level} · ${tf} Tense`, unitIndex: idx,
+              unitName: units[idx].name, verb: units[idx].verb, level, timeFrame: tf };
+          }
+          break;
+        }
+      }
+      if (!nextStep) {
+        const nxt = LV[LV.indexOf(level) + 1];
+        if (nxt && COURSES[nxt]) {
+          const u = COURSES[nxt].units[0];
+          nextStep = { courseKey: `${nxt}|Present`, label: `${nxt} · Present Tense`, unitIndex: 0,
+            unitName: u.name, verb: u.verb, level: nxt, timeFrame: "Present" };
+        }
+      }
     }
   }
   const ORDER = ["Beginner", "Novice", "Elementary", "Intermediate"];
