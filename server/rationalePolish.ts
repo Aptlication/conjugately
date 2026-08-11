@@ -107,18 +107,10 @@ export function contrastExplain(qText: string, wrongText: string, correctText: s
     return null;
   }
   const wp = firstPronoun(wrongText), cp = firstPronoun(correctText);
-  const correctReflexive = /\b(me|te|se|s'|m'|t'|nous|vous)\s*(débrouill|intéress|ennuy|entraîn|souvien|souvenu|adapt|réjou)/i.test(correctText);
-  if (correctReflexive && cp) {
-    const wLower = " " + wrongText.toLowerCase();
-    const reflexOk: Record<string, RegExp> = {
-      "je": /\bje (me |m')/, "tu": /\btu (te |t')/, "il": /\bil (se |s')/,
-      "elle": /\belle (se |s')/, "nous": /\bnous nous /, "vous": /\bvous vous /,
-      "ils": /\bils (se |s')/, "elles": /\belles (se |s')/,
-    };
-    const ok = reflexOk[cp];
-    if (wp === cp && ok && !ok.test(wLower)) {
-      return `This verb is reflexive — with ${PRONOUN_PERSON[cp] || cp} it needs the reflexive pronoun: see «${correctText}».`;
-    }
+  const reflexRe = /\b(me|te|se|s'|m'|t'|nous|vous)\s*(débrouill|intéress|ennuy|entraîn|souvien|souvenu|adapt|réjou)/i;
+  const correctReflexive = reflexRe.test(correctText);
+  if (correctReflexive && cp && wp === cp && !reflexRe.test(wrongText)) {
+    return `This verb is reflexive — with ${PRONOUN_PERSON[cp] || cp} it needs the reflexive pronoun: see «${correctText}».`;
   }
   if (tense === "pc") {
     const etreCorrect = /\b(suis|es|est|sommes|êtes|sont)\b/.test(correctText.toLowerCase());
