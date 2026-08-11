@@ -52,6 +52,7 @@ export async function markUnitComplete(courseKey: string, unitIndex: number) {
 export type JourneySummary = {
   quizzes: number; avgPct: number; streakDays: number;
   overallCoursePct: number;
+  levels: { level: string; done: number; total: number; pct: number }[];
   courses: { key: string; label: string; pct: number }[];
   nextStep: { courseKey: string; label: string; unitIndex: number; unitName: string; verb: string; level: string; timeFrame: string } | null;
   highestLevelTouched: string | null;
@@ -74,11 +75,20 @@ export async function getJourneySummary(): Promise<JourneySummary> {
   }
   const courses = Object.entries(prog).map(([key, e]) => {
     const [level, tf] = key.split("|");
-    return { key, label: `${level} · ${tf}`, pct: e.totalUnits ? Math.round((e.completedUnits.length / e.totalUnits) * 100) : 0 };
+    return { key, label: `${level} · ${tf} Tense`, pct: e.totalUnits ? Math.round((e.completedUnits.length / e.totalUnits) * 100) : 0 };
   });
   const overallCoursePct = courses.length
     ? Math.round(courses.reduce((n, c) => n + c.pct, 0) / courses.length)
     : 0;
+  const levelAgg: Record<string, number> = {};
+  for (const [key, e] of Object.entries(prog)) {
+    const level = key.split("|")[0];
+    levelAgg[level] = (levelAgg[level] || 0) + e.completedUnits.length;
+  }
+  const levels = Object.entries(levelAgg).map(([level, done]) => {
+    const total = (COURSES[level]?.units.length ?? 0) * 3;
+    return { level, done, total, pct: total ? Math.round((done / total) * 100) : 0 };
+  });
   let nextStep: JourneySummary["nextStep"] = null;
   const inProgress = Object.entries(prog)
     .filter(([, e]) => e.completedUnits.length > 0 && e.completedUnits.length < e.totalUnits)
@@ -98,5 +108,5 @@ export async function getJourneySummary(): Promise<JourneySummary> {
   const highestLevelTouched = touched.length
     ? ORDER[Math.max(...touched.map((t) => ORDER.indexOf(t)).filter((i) => i >= 0))] ?? null
     : null;
-  return { quizzes, avgPct, streakDays, overallCoursePct, courses, nextStep, highestLevelTouched };
+  return { quizzes, avgPct, streakDays, overallCoursePct, courses, levels, nextStep, highestLevelTouched };
 }

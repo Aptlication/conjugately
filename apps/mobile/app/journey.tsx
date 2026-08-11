@@ -33,7 +33,7 @@ export default function Journey() {
         <Text style={styles.sub}>Votre route vers la fluidité</Text>
 
         <View style={styles.card}>
-          <Text style={styles.cardLabel}>WHERE YOU ARE</Text>
+          <Text style={styles.cardLabel}>WHERE YOU ARE (MINI-COURSES)</Text>
           <View style={styles.pathRow}>
             {LEVELS.map((l, i) => (
               <React.Fragment key={l}>
@@ -74,6 +74,28 @@ export default function Journey() {
             <Text style={styles.cardText}>No course units completed yet — start one from the Courses tab.</Text>
           )}
         </View>
+
+        {s && s.levels && s.levels.length > 0 && (
+          <View style={styles.card}>
+            <Text style={styles.cardLabel}>LEVEL COMPLETION</Text>
+            {s.levels.map((lv) => (
+              <View key={lv.level} style={{ marginBottom: 4 }}>
+                <View style={styles.progRow}>
+                  <Text style={styles.progLabel}>{lv.level} — Present, Past & Future Tenses</Text>
+                  <Text style={[styles.progPct, lv.pct > 0 ? { color: tempColors(lv.pct)[tempColors(lv.pct).length - 1] } : { color: "#8A93A0" }]}>{lv.pct}%</Text>
+                </View>
+                <View style={styles.track}>
+                  {lv.pct > 0 && (
+                    <LinearGradient colors={tempColors(lv.pct) as any}
+                      start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+                      style={[styles.fill, { width: `${Math.min(100, lv.pct)}%` }]} />
+                  )}
+                </View>
+                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the three tenses</Text>
+              </View>
+            ))}
+          </View>
+        )}
 
         {s?.nextStep && (
           <View style={styles.nextCard}>
@@ -130,4 +152,5 @@ const styles = StyleSheet.create({
   stat: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 12, padding: 10, alignItems: "center" },
   statNum: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   statSub: { fontSize: 10, color: "#B9CBFA" },
+  levelSub: { fontSize: 11, color: "#8A93A0", marginTop: 6 },
 });
