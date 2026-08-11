@@ -94,10 +94,13 @@ export default function Quiz() {
   const aStatus = useAudioPlayerStatus(aPlayer);
   const aPlayingRef = useRef(false);
   const waitAudioRef = useRef(false);
+  const audioPendingRef = useRef(false);
   useEffect(() => {
     aPlayingRef.current = !!aStatus?.playing;
+    if (aStatus?.playing) audioPendingRef.current = false;
     if (waitAudioRef.current && aStatus && !aStatus.playing && aStatus.didJustFinish) {
       waitAudioRef.current = false;
+      cancelAutoAdvance();
       autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 400);
     }
   }, [aStatus]);
@@ -158,6 +161,7 @@ export default function Quiz() {
     const m = await getManifest();
     const f = lookupAnswerFile(m, opt.text, difficulty);
     if (f) {
+      audioPendingRef.current = true;
       setAnswerUrl(null);
       setTimeout(() => setAnswerUrl(`${API_BASE}/attached_assets/audio/${f}`), 20);
     }
@@ -177,7 +181,12 @@ export default function Quiz() {
     cancelAutoAdvance();
     if (opt?.isCorrect) {
       autoAdvanceRef.current = setTimeout(() => {
-        if (aPlayingRef.current) { waitAudioRef.current = true; }
+        if (aPlayingRef.current || audioPendingRef.current) {
+          waitAudioRef.current = true;
+          autoAdvanceRef.current = setTimeout(() => {
+            if (waitAudioRef.current) { waitAudioRef.current = false; nextQuestion(); }
+          }, 8000);
+        }
         else { nextQuestion(); }
       }, 2500);
     }
@@ -186,6 +195,7 @@ export default function Quiz() {
   const nextQuestion = () => {
     cancelAutoAdvance();
     waitAudioRef.current = false;
+    audioPendingRef.current = false;
     setReviewIndex(null);
     setSelected(null); setConfirmed(false); setAnswerUrl(null);
     if (idx + 1 >= questions.length) setState("done");
