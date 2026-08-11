@@ -4,6 +4,7 @@ import { createServer, type Server } from "http";
 import path from "path";
 import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
+import { polishQuestions } from "./rationalePolish";
 import { generateInternalQuiz } from "./quiz-generator";
 import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
 import { ZodError, z } from "zod";
@@ -143,7 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             id: Date.now(),
             verb: verb,
             tense: `${timeFrame}-${tenseType}`,
-            questions: generatedQuiz.questions
+            questions: polishQuestions(generatedQuiz.questions)
           },
           source: 'internal'
         });
@@ -162,7 +163,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               id: Date.now(),
               verb: verb,
               tense: `${timeFrame}-${tenseType}`,
-              questions: generatedQuiz.questions
+              questions: polishQuestions(generatedQuiz.questions)
             },
             source: 'ai'
           });
@@ -182,7 +183,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 id: Date.now(),
                 verb: verb,
                 tense: `${timeFrame}-${tenseType}`,
-                questions: templateQuiz.questions
+                questions: polishQuestions(templateQuiz.questions)
               },
               source: 'template'
             });
