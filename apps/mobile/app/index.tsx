@@ -69,11 +69,11 @@ export default function Home() {
         </Text>
 
         <View style={styles.btnRow}>
-          <FlatBtn bg="#4A78F2" label="🎲 Choose All for Me"
+          <FlatBtn bg="#2D3354" border="#3D4261" label="🎲 Choose All for Me"
             onPress={() => !spinning && setModal(true)} />
-          <FlatBtn bg="#2C4194" border="#5B77D6" label="📚 Mini-Courses"
+          <FlatBtn bg="#2D3354" border="#3D4261" label="📚 Mini-Courses"
             onPress={() => router.push("/mini-courses")} />
-          <FlatBtn bg="#2C4194" border="#5B77D6" label="📖 Vocabulary"
+          <FlatBtn bg="#2D3354" border="#3D4261" label="📖 Vocabulary"
             onPress={() => router.push("/vocabulary")} />
         </View>
 

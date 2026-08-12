@@ -29,7 +29,7 @@ export default function Journey() {
     <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Text style={styles.h1}>My Journey</Text>
+        <Text style={styles.h1}>🧭 My Journey</Text>
         <Text style={styles.sub}>Votre route vers la fluidité</Text>
 
         <View style={styles.card}>

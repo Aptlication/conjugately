@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8, paddingHorizontal: 6,
     shadowColor: "#000", shadowOpacity: 0.35, shadowRadius: 10, shadowOffset: { width: 0, height: 4 },
     elevation: 8 },
-  wrapDark: { backgroundColor: "#2C4194", borderWidth: 1, borderColor: "#5B77D6" },
+  wrapDark: { backgroundColor: "#2D3354", borderWidth: 1, borderColor: "#3D4261" },
   wrapNeutral: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E3E6EA",
     shadowOpacity: 0.12, opacity: 0.95 },
   tab: { alignItems: "center", paddingVertical: 4, paddingHorizontal: 12, borderRadius: 16 },
