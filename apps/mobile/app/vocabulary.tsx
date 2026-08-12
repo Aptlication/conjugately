@@ -56,8 +56,8 @@ export default function Vocabulary() {
         {words.length === 0 && (
           <View style={styles.card}>
             <Text style={styles.empty}>
-              No vocabulary words yet. Words you collect from quizzes on conjugately.com
-              (and soon in this app) will appear here.
+              No vocabulary words yet. Miss a question in any quiz and the correct
+              phrase is saved here automatically for review.
             </Text>
           </View>
         )}

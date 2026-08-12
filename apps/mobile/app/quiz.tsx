@@ -8,6 +8,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
+import { collectMissedWord } from "../lib/vocab";
 
 const TENSE_BY_TIMEFRAME: Record<string, string> = {
   Present: "Présent", Past: "Passé Composé", Future: "Futur Simple",
@@ -181,6 +182,11 @@ export default function Quiz() {
     const opt = q.answerOptions[i];
     if (opt?.isCorrect) Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     else Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+    if (opt && !opt.isCorrect && answers[idx] === undefined) {
+      const c = q.answerOptions.find((o) => o.isCorrect);
+      if (c) collectMissedWord({ french: c.text, english: q.question,
+        verb, tense: TENSE_BY_TIMEFRAME[timeFrame] ?? timeFrame, difficulty });
+    }
     speakAnswer(i);
     cancelAutoAdvance();
     if (opt?.isCorrect) {
