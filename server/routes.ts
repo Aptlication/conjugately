@@ -15,6 +15,53 @@ import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 
+/**
+ * Randomise the position of the correct answer (register item 1.1.3).
+ *
+ * Applied at the single response boundary rather than in each generator,
+ * because questions reach the client by three different routes — the curated
+ * per-level datasets, the internal generator, and the AI/template fallbacks —
+ * and only the generator ever shuffled. Curated questions were served in file
+ * order every time, so a learner repeating a course saw the correct answer in
+ * the same slot on every attempt and could learn the position instead of the
+ * conjugation. Doing it here covers all three routes at once and cannot be
+ * forgotten when a fourth is added.
+ *
+ * Fisher–Yates, not `sort(() => Math.random() - 0.5)`. The comparator trick is
+ * not a shuffle: it gives a measurably skewed distribution, which is the exact
+ * failure this item is about.
+ *
+ * Safe with audio: answer audio is looked up by exact phrase text and question
+ * audio by `audioIndex`, and neither is affected by option order.
+ */
+function shuffleAnswerOptions<T extends { answerOptions?: unknown[] }>(questions: T[]): T[] {
+  return questions.map((question) => {
+    const options = question.answerOptions;
+    if (!Array.isArray(options) || options.length < 2) return question;
+
+    const shuffled = [...options];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    // `rationale` carries the literal text "Option A".."Option D" in the
+    // curated data, so it has to follow the new position or the explanation
+    // shown after answering names the wrong slot.
+    const relabelled = shuffled.map((option, index) => {
+      if (option && typeof option === "object" && "rationale" in option) {
+        const rationale = (option as { rationale?: unknown }).rationale;
+        if (typeof rationale === "string" && /^Option [A-Z]$/.test(rationale.trim())) {
+          return { ...(option as object), rationale: `Option ${"ABCD"[index] ?? index + 1}` };
+        }
+      }
+      return option;
+    });
+
+    return { ...question, answerOptions: relabelled };
+  });
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // --- SEO: canonical-domain-aware robots.txt and sitemap.xml ---
   const SITE_URL = `https://${(process.env.CANONICAL_HOST || "conjugately.com").toLowerCase()}`;
@@ -144,7 +191,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             id: Date.now(),
             verb: verb,
             tense: `${timeFrame}-${tenseType}`,
-            questions: polishQuestions(generatedQuiz.questions)
+            questions: shuffleAnswerOptions(polishQuestions(generatedQuiz.questions))
           },
           source: 'internal'
         });
@@ -163,7 +210,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               id: Date.now(),
               verb: verb,
               tense: `${timeFrame}-${tenseType}`,
-              questions: polishQuestions(generatedQuiz.questions)
+              questions: shuffleAnswerOptions(polishQuestions(generatedQuiz.questions))
             },
             source: 'ai'
           });
@@ -183,7 +230,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 id: Date.now(),
                 verb: verb,
                 tense: `${timeFrame}-${tenseType}`,
-                questions: polishQuestions(templateQuiz.questions)
+                questions: shuffleAnswerOptions(polishQuestions(templateQuiz.questions))
               },
               source: 'template'
             });

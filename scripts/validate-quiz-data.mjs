@@ -68,8 +68,11 @@ function parseQuestions(src) {
 }
 
 const failures = [];
+const warnings = [];
 const positions = [0, 0, 0, 0];
 let positionTotal = 0;
+/** Correct-answer slot for each question, in file order, per dataset. */
+const slotsByFile = {};
 let checked = 0;
 let parsed = 0;
 
@@ -94,8 +97,10 @@ for (const rel of DATASETS) {
 
     // 2 — the correct answer is not always in the same slot.
     if (q.options.length === 4) {
-      positions[q.options.findIndex((o) => o.isCorrect)]++;
+      const slot = q.options.findIndex((o) => o.isCorrect);
+      positions[slot]++;
       positionTotal++;
+      (slotsByFile[rel] ||= []).push(slot);
     }
 
     // 3 — the flagged option matches the form the hint names.
@@ -152,10 +157,46 @@ if (positionTotal > 0) {
   }
 }
 
+// 6 — position distribution WITHIN one quiz, which is what a learner actually
+//     sees. Check 5 alone is not enough, and on 13 September it said the
+//     corpus was fine while the live Elementary dire futur quiz put the
+//     correct answer in slot A for 17 of 20 questions — always pressing A
+//     scored 85%. Blocks that lean the other way cancelled it out in the
+//     corpus total. Questions are authored and served in contiguous
+//     per-verb, per-tense runs of 20, so that run is the unit that matters.
+const QUIZ_LENGTH = 20;
+for (const [file, slots] of Object.entries(slotsByFile)) {
+  for (let start = 0; start + QUIZ_LENGTH <= slots.length; start += QUIZ_LENGTH) {
+    const counts = [0, 0, 0, 0];
+    for (const slot of slots.slice(start, start + QUIZ_LENGTH)) counts[slot]++;
+    const worst = Math.max(...counts);
+    // Half of one quiz in a single slot is well past anything chance produces
+    // (expected 5 of 20) and is enough for a learner to notice the pattern.
+    if (worst > QUIZ_LENGTH / 2) {
+      // A WARNING, not a failure. `shuffleAnswerOptions` in server/routes.ts
+      // randomises option order on every response, so source skew is not
+      // visible to a learner and rewriting the datasets would buy nothing.
+      // This becomes load-bearing again the moment that shuffle is removed,
+      // which is why it still reports.
+      warnings.push(
+        `${file}: questions ${start + 1}-${start + QUIZ_LENGTH} put the correct answer ` +
+        `in slot ${"ABCD"[counts.indexOf(worst)]} ${worst} times out of ${QUIZ_LENGTH} — ` +
+        `always picking that slot would score ${Math.round((worst / QUIZ_LENGTH) * 100)}% ` +
+        `if options were served unshuffled`
+      );
+    }
+  }
+}
+
 console.log(`quiz-data validation — ${parsed} questions parsed, ${checked} answer keys checked`);
 if (positionTotal) {
   const pct = positions.map((n) => ((n / positionTotal) * 100).toFixed(1) + "%");
   console.log(`  correct-answer position: A ${pct[0]}  B ${pct[1]}  C ${pct[2]}  D ${pct[3]}  (chi-square ${chi.toFixed(2)})`);
+}
+
+if (warnings.length) {
+  console.warn(`\n${warnings.length} warning(s) — not build-breaking:\n`);
+  for (const w of warnings) console.warn("  " + w);
 }
 
 if (failures.length) {
