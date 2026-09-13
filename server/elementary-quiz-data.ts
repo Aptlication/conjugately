@@ -3926,10 +3926,10 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "You (informal) will say / are going to say that soon.",
       hint: "Use future simple of dire: tu diras",
       answerOptions: [
-        { text: "Tu diras ça bientôt.", rationale: "Option A", isCorrect: false },
+        { text: "Tu diras ça bientôt.", rationale: "Option A", isCorrect: true },
         { text: "Tu dirai ça bientôt.", rationale: "Option B", isCorrect: false },
         { text: "Tu direz ça bientôt.", rationale: "Option C", isCorrect: false },
-        { text: "Tu diront ça bientôt.", rationale: "Option D", isCorrect: true }
+        { text: "Tu diront ça bientôt.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
@@ -3946,9 +3946,9 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "We will say / are going to say hello.",
       hint: "Use future simple of dire: nous dirons",
       answerOptions: [
-        { text: "Nous dirons bonjour.", rationale: "Option A", isCorrect: false },
+        { text: "Nous dirons bonjour.", rationale: "Option A", isCorrect: true },
         { text: "Nous diras bonjour.", rationale: "Option B", isCorrect: false },
-        { text: "Nous direz bonjour.", rationale: "Option C", isCorrect: true },
+        { text: "Nous direz bonjour.", rationale: "Option C", isCorrect: false },
         { text: "Nous diront bonjour.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -3966,18 +3966,18 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "They (male/mixed group) will say / are going to say nothing.",
       hint: "Use future simple of dire: ils ne diront rien",
       answerOptions: [
-        { text: "Ils ne diront rien.", rationale: "Option A", isCorrect: false },
+        { text: "Ils ne diront rien.", rationale: "Option A", isCorrect: true },
         { text: "Ils ne diras rien.", rationale: "Option B", isCorrect: false },
         { text: "Ils ne dira rien.", rationale: "Option C", isCorrect: false },
-        { text: "Ils ne dirai rien.", rationale: "Option D", isCorrect: true }
+        { text: "Ils ne dirai rien.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "They (female) will say / are going to say everything.",
       hint: "Use future simple of dire: elles diront",
       answerOptions: [
-        { text: "Elles diront tout.", rationale: "Option A", isCorrect: false },
-        { text: "Elles diras tout.", rationale: "Option B", isCorrect: true },
+        { text: "Elles diront tout.", rationale: "Option A", isCorrect: true },
+        { text: "Elles diras tout.", rationale: "Option B", isCorrect: false },
         { text: "Elles dira tout.", rationale: "Option C", isCorrect: false },
         { text: "Elles dirai tout.", rationale: "Option D", isCorrect: false }
       ]
@@ -3986,9 +3986,9 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "I will not say / am not going to say that.",
       hint: "Use future simple of dire: je ne dirai pas",
       answerOptions: [
-        { text: "Je ne dirai pas ça.", rationale: "Option A", isCorrect: false },
+        { text: "Je ne dirai pas ça.", rationale: "Option A", isCorrect: true },
         { text: "Je ne diras pas ça.", rationale: "Option B", isCorrect: false },
-        { text: "Je ne dira pas ça.", rationale: "Option C", isCorrect: true },
+        { text: "Je ne dira pas ça.", rationale: "Option C", isCorrect: false },
         { text: "Je ne diront pas ça.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -4006,8 +4006,8 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "We will not say / are not going to say a word.",
       hint: "Use future simple of dire: nous ne dirons pas",
       answerOptions: [
-        { text: "Nous ne dirons pas un mot.", rationale: "Option A", isCorrect: false },
-        { text: "Nous ne diras pas un mot.", rationale: "Option B", isCorrect: true },
+        { text: "Nous ne dirons pas un mot.", rationale: "Option A", isCorrect: true },
+        { text: "Nous ne diras pas un mot.", rationale: "Option B", isCorrect: false },
         { text: "Nous ne dira pas un mot.", rationale: "Option C", isCorrect: false },
         { text: "Nous ne diront pas un mot.", rationale: "Option D", isCorrect: false }
       ]
@@ -4016,10 +4016,10 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "You (informal) will not say / are not going to say please.",
       hint: "Use future simple of dire: tu ne diras pas",
       answerOptions: [
-        { text: "Tu ne diras pas s'il te plaît.", rationale: "Option A", isCorrect: false },
+        { text: "Tu ne diras pas s'il te plaît.", rationale: "Option A", isCorrect: true },
         { text: "Tu ne dira pas s'il te plaît.", rationale: "Option B", isCorrect: false },
         { text: "Tu ne diront pas s'il te plaît.", rationale: "Option C", isCorrect: false },
-        { text: "Tu ne dirai pas s'il te plaît.", rationale: "Option D", isCorrect: true }
+        { text: "Tu ne dirai pas s'il te plaît.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
@@ -4036,9 +4036,9 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "You (formal/plural) will not say / are not going to say that.",
       hint: "Use future simple of dire: vous ne direz pas",
       answerOptions: [
-        { text: "Vous ne direz pas ça.", rationale: "Option A", isCorrect: false },
+        { text: "Vous ne direz pas ça.", rationale: "Option A", isCorrect: true },
         { text: "Vous ne diront pas ça.", rationale: "Option B", isCorrect: false },
-        { text: "Vous ne diras pas ça.", rationale: "Option C", isCorrect: true },
+        { text: "Vous ne diras pas ça.", rationale: "Option C", isCorrect: false },
         { text: "Vous ne dirai pas ça.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -4066,18 +4066,18 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "We will say / are going to say yes.",
       hint: "Use future simple of dire: nous dirons",
       answerOptions: [
-        { text: "Nous dirons oui.", rationale: "Option A", isCorrect: false },
+        { text: "Nous dirons oui.", rationale: "Option A", isCorrect: true },
         { text: "Nous diras oui.", rationale: "Option B", isCorrect: false },
         { text: "Nous dira oui.", rationale: "Option C", isCorrect: false },
-        { text: "Nous dirai oui.", rationale: "Option D", isCorrect: true }
+        { text: "Nous dirai oui.", rationale: "Option D", isCorrect: false }
       ]
     },
     {
       question: "You (informal) will say / are going to say a lie.",
       hint: "Use future simple of dire: tu diras",
       answerOptions: [
-        { text: "Tu diras un mensonge.", rationale: "Option A", isCorrect: false },
-        { text: "Tu dira un mensonge.", rationale: "Option B", isCorrect: true },
+        { text: "Tu diras un mensonge.", rationale: "Option A", isCorrect: true },
+        { text: "Tu dira un mensonge.", rationale: "Option B", isCorrect: false },
         { text: "Tu diront un mensonge.", rationale: "Option C", isCorrect: false },
         { text: "Tu dirai un mensonge.", rationale: "Option D", isCorrect: false }
       ]
