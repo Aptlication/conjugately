@@ -41,8 +41,29 @@ const ORACLE_EXCEPTIONS = new Set([
 const norm = (s) =>
   s.normalize("NFC").toLowerCase()
     .replace(/[‘’]/g, "'")
-    .replace(/[.,!?;:]/g, "")
+    .replace(/[.,!?;:«»"]/g, " ")
     .replace(/\s+/g, " ").trim();
+
+const tokens = (s) => norm(s).split(" ").filter(Boolean);
+
+/**
+ * Does the expected form appear in the option as WHOLE TOKENS?
+ *
+ * The first version of this check used String.includes(), which passes whenever
+ * the option merely starts with the expected form — so "il diras ..." was
+ * accepted for an expected "il dira". That is exactly the -s / -i / -ai
+ * confusion the app exists to teach, so the check was blind precisely where it
+ * mattered, and it let two misflagged questions through the first repair.
+ */
+function containsPhrase(haystack, needle) {
+  const h = tokens(haystack), n = tokens(needle);
+  if (!n.length) return false;
+  outer: for (let i = 0; i + n.length <= h.length; i++) {
+    for (let j = 0; j < n.length; j++) if (h[i + j] !== n[j]) continue outer;
+    return true;
+  }
+  return false;
+}
 
 function parseQuestions(src) {
   const out = [];
@@ -95,6 +116,16 @@ for (const rel of DATASETS) {
       continue;
     }
 
+    // 1b — duplicate option text. polishQuestions() in server/rationalePolish.ts
+    //      dedupes options by lowercased text before they are served, so a
+    //      duplicated distractor silently becomes a THREE-option question —
+    //      a 33% guess rate instead of 25%, and visibly broken next to its
+    //      neighbours.
+    const optionTexts = q.options.map((o) => norm(o.text));
+    if (new Set(optionTexts).size !== optionTexts.length) {
+      failures.push(`${where}: duplicate option text — will be served as ${new Set(optionTexts).size} options, not ${q.options.length} — "${q.question}"`);
+    }
+
     // 2 — the correct answer is not always in the same slot.
     if (q.options.length === 4) {
       const slot = q.options.findIndex((o) => o.isCorrect);
@@ -105,14 +136,14 @@ for (const rel of DATASETS) {
 
     // 3 — the flagged option matches the form the hint names.
     const colon = q.hint.lastIndexOf(":");
-    const expected = colon >= 0 ? norm(q.hint.slice(colon + 1)) : "";
-    const usable = expected && expected.split(" ").length <= 5;
+    const expected = colon >= 0 ? q.hint.slice(colon + 1).trim() : "";
+    const usable = expected && tokens(expected).length <= 5;
     if (usable && !ORACLE_EXCEPTIONS.has(q.question)) {
       checked++;
-      if (!norm(trues[0].text).includes(expected)) {
-        const match = q.options.filter((o) => norm(o.text).includes(expected));
+      if (!containsPhrase(trues[0].text, expected)) {
+        const match = q.options.filter((o) => containsPhrase(o.text, expected));
         failures.push(
-          `${where}: isCorrect on the wrong option — hint says "${expected}", ` +
+          `${where}: isCorrect on the wrong option — hint says "${norm(expected)}", ` +
           `flagged "${trues[0].text}"` +
           (match.length === 1 ? `, should be "${match[0].text}"` : "")
         );

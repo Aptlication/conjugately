@@ -1628,7 +1628,7 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "We cannot / are not able to see anything.",
       hint: "Use present tense negative: nous ne pouvons rien voir",
       answerOptions: [
-        { text: "Nous ne pouvons rien voir.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne peux rien voir.", rationale: "Option A", isCorrect: false },
         { text: "Nous ne peuvent rien voir.", rationale: "Option B", isCorrect: false },
         { text: "Nous ne pouvez rien voir.", rationale: "Option C", isCorrect: false },
         { text: "Nous ne pouvons rien voir.", rationale: "Option D", isCorrect: true }
@@ -3936,8 +3936,8 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "He will say / is going to say something important.",
       hint: "Use future simple of dire: il dira",
       answerOptions: [
-        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: false },
-        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: true },
+        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: true },
+        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: false },
         { text: "Il dirai quelque chose d'important.", rationale: "Option C", isCorrect: false },
         { text: "Il diront quelque chose d'important.", rationale: "Option D", isCorrect: false }
       ]
@@ -4046,9 +4046,9 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "He will say / is going to say something important.",
       hint: "Use future simple of dire: il dira",
       answerOptions: [
-        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: false },
-        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: true },
-        { text: "Il dira quelque chose d'important.", rationale: "Option C", isCorrect: false },
+        { text: "Il dira quelque chose d'important.", rationale: "Option A", isCorrect: true },
+        { text: "Il diras quelque chose d'important.", rationale: "Option B", isCorrect: false },
+        { text: "Il diront quelque chose d'important.", rationale: "Option C", isCorrect: false },
         { text: "Il dirai quelque chose d'important.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -4058,7 +4058,7 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       answerOptions: [
         { text: "Elle ne dira rien.", rationale: "Option A", isCorrect: true },
         { text: "Elle ne diras rien.", rationale: "Option B", isCorrect: false },
-        { text: "Elle ne dira rien.", rationale: "Option C", isCorrect: false },
+        { text: "Elle ne diront rien.", rationale: "Option C", isCorrect: false },
         { text: "Elle ne dirai rien.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -4400,7 +4400,7 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "When will we see / are we going to see each other?",
       hint: "Use future simple interrogative: nous verrons-nous",
       answerOptions: [
-        { text: "Quand nous verrons-nous ?", rationale: "Option A", isCorrect: false },
+        { text: "Quand nous verra-nous ?", rationale: "Option A", isCorrect: false },
         { text: "Quand nous verrez-nous ?", rationale: "Option B", isCorrect: false },
         { text: "Quand nous verrons-nous ?", rationale: "Option C", isCorrect: true },
         { text: "Quand nous verront-nous ?", rationale: "Option D", isCorrect: false }
