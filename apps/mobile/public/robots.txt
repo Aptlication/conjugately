@@ -1,2 +1,12 @@
+# preview.conjugately.com — staging.
+#
+# This is the browser-rendered twin of the iOS app. It is not the product and
+# it must never appear in search results: indexed staging competes with
+# conjugately.com for the same queries and splits the ranking the domain
+# migration was run to preserve.
+#
+# robots.txt alone is a request, not an instruction — the X-Robots-Tag header
+# configured in render.yaml is what actually keeps it out of the index.
+
 User-agent: *
 Disallow: /

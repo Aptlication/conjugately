@@ -1,0 +1,67 @@
+# Render blueprint — both Conjugately services in one file.
+#
+# Written 12 September 2026. Until now both services were created and edited by
+# hand in the Render dashboard, which meant the difference between main and
+# staging lived only in someone's memory. This file is the record.
+#
+# NOMENCLATURE (GLOSSARY.md):
+#   main        conjugately.com            the live website, source of truth
+#   staging     preview.conjugately.com    RN-web twin of the app, noindexed
+#   production  the TestFlight / App Store build — not a Render service
+#
+# Adopting this blueprint against services that already exist: Render will match
+# by `name`, so confirm the names below match the existing services BEFORE
+# syncing, or it will create duplicates. Check the dashboard first.
+
+services:
+  # ---------------------------------------------------------------- main ----
+  - type: web
+    name: conjugately
+    runtime: node
+    # Starter, not free. The free tier sleeps after ~15 minutes idle and
+    # cold-starts in ~50s; an App Review tester hitting a sleeping backend sees
+    # a spinner and then a failure, and there is no offline path for quiz
+    # content. This line is the 5 October submission gate.
+    plan: starter
+    branch: main
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CANONICAL_HOST
+        value: conjugately.com
+      # Leave unset until frenchverbmaster.com is pointed here deliberately.
+      # See DOMAIN_MIGRATION_RUNBOOK.md step 5.
+      # - key: REDIRECT_TO_CANONICAL
+      #   value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+
+  # ------------------------------------------------------------- staging ----
+  - type: web
+    name: conjugately-preview
+    runtime: static
+    branch: main
+    rootDir: apps/mobile
+    buildCommand: npm ci && npx expo export -p web
+    staticPublishPath: dist
+    # Expo Router uses client-side routing, so every unknown path has to fall
+    # through to the app shell or /matcher 404s on a hard refresh.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      # The header, not robots.txt, is what actually keeps staging out of the
+      # index — robots.txt only asks crawlers not to fetch, which does not stop
+      # a URL discovered elsewhere from being listed.
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow, noarchive
+      - path: /*
+        name: X-Frame-Options
+        value: DENY

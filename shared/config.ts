@@ -6,6 +6,7 @@ export interface AppConfig {
   features: {
     advancedDifficultyEnabled: boolean;
     cloudTTSEnabled: boolean;
+    progressionLocksEnabled: boolean;
   };
   
   // Version information
@@ -24,6 +25,17 @@ export const APP_CONFIG: AppConfig = {
     // Cloud TTS (ElevenLabs) enabled for high-quality French pronunciation
     // Set to false to disable and use browser TTS only
     cloudTTSEnabled: true,
+    // Course progression locks — each tense behind the previous one,
+    // each level behind the level below.
+    //
+    // OFF as of 14 Sep 2026, deliberately and temporarily. The locks read
+    // `completedCourses`, which comes from the API and is always empty in
+    // guest mode, so every tense past Present and every level past Beginner
+    // was sealed for every visitor and no exam pass could ever open them.
+    // Rather than ship half-working gating, everything is open while the
+    // exam and persistence work is finished. Set back to true once passing
+    // an exam is confirmed to unlock the next step end to end.
+    progressionLocksEnabled: false,
   },
   
   version: {
@@ -56,4 +68,9 @@ export const isDifficultyAllowed = (difficulty: string): boolean => {
 // Check if cloud TTS (ElevenLabs) is enabled
 export const isCloudTTSEnabled = (): boolean => {
   return APP_CONFIG.features.cloudTTSEnabled;
+};
+
+// Are course progression locks in force? See progressionLocksEnabled above.
+export const areProgressionLocksEnabled = (): boolean => {
+  return APP_CONFIG.features.progressionLocksEnabled;
 };

@@ -91,7 +91,7 @@ export default function MiniCourses() {
               );
             })}
             <View style={[styles.row, { opacity: 0.55 }]}>
-              <Text style={styles.rowTitle}>🎓 Final Exam</Text>
+              <Text style={styles.rowTitle}>🎓 Final Level Exam</Text>
               <Text style={styles.rowSub}>{course!.finalExam.description} — arrives in the next update</Text>
             </View>
             <Pressable onPress={() => setTimeFrame(null)}><Text style={styles.back}>← Back to time frames</Text></Pressable>

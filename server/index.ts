@@ -89,7 +89,12 @@ app.use((req, res, next) => {
   server.listen({
     port,
     host: "0.0.0.0",
-    reusePort: true,
+    // reusePort needs SO_REUSEPORT, which Windows does not have: setting it
+    // there throws ENOTSUP and the dev server never starts at all. It was only
+    // ever here for the old Replit environment, and does nothing for a
+    // single-process server, so it is applied on Linux only. Render is Linux,
+    // so production behaviour is unchanged.
+    ...(process.platform === "linux" ? { reusePort: true } : {}),
   }, () => {
     log(`serving on port ${port}`);
   });

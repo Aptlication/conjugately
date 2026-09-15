@@ -3,9 +3,32 @@ import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { useTTS } from "@/hooks/useTTS";
 import { useVocabulary } from "@/hooks/useVocabulary";
-import { isAdvancedDifficultyEnabled } from "@shared/config";
+import { isAdvancedDifficultyEnabled, areProgressionLocksEnabled } from "@shared/config";
+import {
+  getExam,
+  selectExamQuestions,
+  upsertExamResult,
+  parseExamResults,
+  hasPassedAnyExamForLevel,
+  EXAM_RESULTS_STORAGE_KEY,
+  type ExamDefinition,
+  type ExamResult,
+} from "@shared/exams";
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 import { WheelSelect } from "@/components/WheelSelect";
+
+/**
+ * Exam passes recorded on this device, read fresh rather than held in state so
+ * that a pass written on the results screen is visible the moment the course
+ * modal re-renders. Cheap: a handful of small objects.
+ */
+const getLocalExamPasses = (): ExamResult[] => {
+  try {
+    return parseExamResults(localStorage.getItem(EXAM_RESULTS_STORAGE_KEY));
+  } catch {
+    return [];
+  }
+};
 
 // Type guard function to check if user has id
 const hasUserId = (user: any): user is { id: string } => {
@@ -126,7 +149,13 @@ function App() {
     totalQuestions: number;
     isFinalExam?: boolean;
     courseLevel?: string;
+    /** Set for exams: the id from shared/exams.ts, e.g. "beginner-past". */
+    examId?: string;
+    /** Set for exams: the pass mark, so results never recompute it locally. */
+    examPassMark?: number;
   } | null>(null);
+  /** Attempt keys already written to local exam results — see the results block. */
+  const savedExamAttempts = useRef<Set<string>>(new Set());
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [showExamOption, setShowExamOption] = useState(false);
 
@@ -499,69 +528,156 @@ function App() {
     }
   };
 
-  const handleStartFinalExam = async (timeFrame: string, tense: string) => {
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
-    const TENSE_PATH_MAP: Record<string, string> = {
-      'Présent': 'present',
-      'Passé Composé': 'passe_compose',
-      'Futur Simple': 'futur_simple',
-    };
-    
-    setQuizState('loading');
-    
-    try {
-      // Generate 30 questions total: 10 questions from each of the 3 Beginner verbs
-      const allQuestions: any[] = [];
-      const beginnerVerbs = ["être", "avoir", "faire"];
-      
-      for (const currentVerb of beginnerVerbs) {
+  /**
+   * Unbiased shuffle. The previous `sort(() => Math.random() - 0.5)` is not a
+   * shuffle at all — comparator-based shuffles give a skewed distribution, so
+   * exam questions arrived in a partly predictable order.
+   */
+  const shuffle = <T,>(input: T[]): T[] => {
+    const items = [...input];
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    return items;
+  };
+
+  /**
+   * Assemble an exam from its definition in shared/exams.ts.
+   *
+   * Three things this fixes, all of which were live on conjugately.com:
+   *
+   *  1. Requests run in PARALLEL. One awaited fetch per verb meant 3 round
+   *     trips for Beginner and 18 for Intermediate, in series, the first of
+   *     them paying the backend cold start.
+   *  2. A failed request THROWS. Previously `if (data.success)` silently
+   *     skipped it, so a dropped request produced a shorter exam — and the 90%
+   *     gate was then computed against however many questions happened to
+   *     arrive, which quietly changes what passing means.
+   *  3. The assembled count is ASSERTED against the definition before anyone
+   *     starts answering.
+   */
+  const loadExamQuestions = async (exam: ExamDefinition): Promise<any[]> => {
+    const perVerb = await Promise.all(
+      exam.verbs.map(async (verb) => {
         const response = await fetch('/api/get-quiz', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            verb: currentVerb,
-            timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
-            tenseType: tense,
-            difficulty: "Beginner",
+            verb,
+            timeFrame: exam.apiTimeFrame,
+            tenseType: exam.tense,
+            difficulty: exam.level,
             isExam: true,
           })
         });
 
-        const data = await response.json();
-        if (data.success) {
-          // Tag each question with its verb and tense path so exam audio can play correctly
-          const tensePath = TENSE_PATH_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-          const tagged = data.quiz.questions.slice(0, 10).map((q: any) => ({
-            ...q,
-            _verb: currentVerb,
-            _tensePath: tensePath,
-          }));
-          allQuestions.push(...tagged);
+        if (!response.ok) {
+          throw new Error(`${verb}: server returned ${response.status}`);
         }
-      }
-      
-      // Shuffle all 30 final exam questions (10 from each of the 3 verbs)
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
-      
-      setQuizData(shuffledQuestions); // 30 final exam questions
+        const data = await response.json();
+        if (!data?.success) {
+          throw new Error(`${verb}: ${data?.error || 'quiz generation failed'}`);
+        }
+
+        const returned = data.quiz?.questions || [];
+        if (returned.length < exam.questionsPerVerb) {
+          throw new Error(
+            `${verb}: received ${returned.length} of ${exam.questionsPerVerb} questions`
+          );
+        }
+
+        // Stratified by grammatical person rather than taking the first n off
+        // a shuffled pool. The pools are lopsided — `tu` and `vous` appear only
+        // once or twice in twenty — so an unweighted sample left 40% of verbs
+        // never asking for `tu` at all, and gave the same person three or more
+        // times in 12% of cases. See selectExamQuestions in shared/exams.ts.
+        const questions = selectExamQuestions(
+          returned,
+          exam.questionsPerVerb,
+          (q: any) => (q.answerOptions || []).find((o: any) => o.isCorrect)?.text || ""
+        );
+
+        // Tag each question with its verb and tense path so exam audio plays correctly.
+        return questions.map((q: any) => ({
+          ...q,
+          _verb: verb,
+          _tensePath: exam.tensePath,
+        }));
+      })
+    );
+
+    const allQuestions = perVerb.flat();
+    if (allQuestions.length !== exam.totalQuestions) {
+      throw new Error(
+        `assembled ${allQuestions.length} questions, expected ${exam.totalQuestions}`
+      );
+    }
+    return shuffle(allQuestions);
+  };
+
+  /** Shared setup for both exam entry points. */
+  const startExam = async (exam: ExamDefinition, previous?: {
+    completedVerbs?: Array<{verb: string, score: number}>;
+    totalScore?: number;
+  }) => {
+    setQuizState('loading');
+    try {
+      const questions = await loadExamQuestions(exam);
+
+      setQuizData(questions);
       setCurrentQuestionIndex(0);
       setUserAnswers({});
-      setSelectedAnswerIndex(null); // Ensure no answer is pre-selected
-      setIsAnswerConfirmed(false); // Reset confirmation state
+      setSelectedAnswerIndex(null);
+      setIsAnswerConfirmed(false);
       setActiveQuizVerb("");
       setActiveQuizTense("");
-      setActiveQuizDifficulty("Beginner");
+      setActiveQuizDifficulty(exam.level);
+
+      setCourseInfo({
+        timeFrame: exam.timeFrame,
+        tense: exam.tense,
+        currentVerbIndex: exam.verbs.length,
+        completedVerbs: previous?.completedVerbs ?? exam.verbs.map(verb => ({ verb, score: 0 })),
+        totalScore: previous?.totalScore ?? 0,
+        totalQuestions: exam.totalQuestions,
+        isFinalExam: true,
+        courseLevel: exam.level,
+        examId: exam.id,
+        examPassMark: exam.passMark,
+      });
+
       setQuizState('active');
-      
-      // Show instruction popup if not disabled
+
       const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
       if (!dontRemindAgain) {
         setShowInstructionPopup(true);
       }
     } catch (error) {
-      console.error('Error generating final exam:', error);
+      // Fail loudly. A silently short exam is worse than no exam.
+      console.error('Error generating final level exam:', error);
+      alert(
+        `The exam could not be prepared: ${(error as Error).message}.\n\n` +
+        `Nothing has been scored. Please try again in a moment.`
+      );
       setQuizState('config');
     }
+  };
+
+  const handleStartFinalExam = async (timeFrame: string, _tense?: string) => {
+    // The tense now comes from shared/exams.ts rather than the caller, which is
+    // what fixes the Passé Simple / Passé Composé mismatch: the exam asks for
+    // the tense the course actually taught.
+    const exam = getExam("Beginner", timeFrame);
+    if (!exam) {
+      console.error(`No Beginner exam defined for time frame "${timeFrame}"`);
+      setQuizState('config');
+      return;
+    }
+    await startExam(exam, {
+      completedVerbs: courseInfo?.completedVerbs,
+      totalScore: courseInfo?.totalScore,
+    });
   };
 
   const handleMiniCourseSelect = (difficulty: string) => {
@@ -1167,102 +1283,28 @@ function App() {
   };
 
   const handleStartElementaryFinalExam = async (timeFrame: string) => {
-    // Show section overview modal for final exam
+    // Show section overview modal for final level exam
     setSelectedCourseLevel("Elementary");
     setSelectedCourseTimeFrame(timeFrame);
     // Final exam - handled separately;
     setShowCourseOverviewModal(true);
   };
 
-  // Generic final exam handler for all course levels
+  // Generic final level exam handler for all course levels
   const handleStartCourseOverviewFinalExam = async (courseLevel: string, timeFrame: string) => {
-    const config = DIFFICULTY_CONFIGS[courseLevel as keyof typeof DIFFICULTY_CONFIGS];
-    if (!config) return;
-    
-    // Get the tense for this timeframe based on course level
-    const tenseMapping = {
-      "Present": "Présent",
-      "Past": courseLevel === "Elementary" ? "Passé Composé" : "Passé Simple", 
-      "Future": "Futur Simple"
-    };
-    const tense = tenseMapping[timeFrame as keyof typeof tenseMapping];
-
-    const TENSE_PATH_MAP: Record<string, string> = {
-      'Présent': 'present',
-      'Passé Composé': 'passe_compose',
-      'Futur Simple': 'futur_simple',
-      'Passé Simple': 'passe_compose',
-    };
-    const tensePath = TENSE_PATH_MAP[tense] || tense.toLowerCase().replace(/\s+/g, '_');
-    
-    setQuizState('loading');
-    setShowCourseOverviewModal(false);
-    
-    try {
-      const finalExam = config.courseStructure.finalExam;
-      const verbs = config.verbs;
-      const questionsPerVerb = finalExam.questionsPerVerb;
-      
-      const allQuestions: any[] = [];
-      
-      // Generate questions from each verb for the final exam
-      for (const verb of verbs) {
-        const response = await fetch('/api/get-quiz', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            verb: verb,
-            timeFrame: timeFrame.toLowerCase(),
-            tenseType: tense,
-            difficulty: courseLevel,
-            isExam: true,
-          })
-        });
-
-        const data = await response.json();
-        if (data.success) {
-          // Tag each question with its verb and tense path so exam audio can play correctly
-          const tagged = data.quiz.questions.slice(0, questionsPerVerb).map((q: any) => ({
-            ...q,
-            _verb: verb,
-            _tensePath: tensePath,
-          }));
-          allQuestions.push(...tagged);
-        }
-      }
-      
-      // Shuffle all final exam questions
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
-      
-      setQuizData(shuffledQuestions);
-      setCurrentQuestionIndex(0);
-      setUserAnswers({});
-      setSelectedAnswerIndex(null);
-      setIsAnswerConfirmed(false);
-      setActiveQuizDifficulty(courseLevel);
-      setQuizState('active');
-      
-      // Set course info for final exam tracking
-      setCourseInfo({
-        timeFrame,
-        tense,
-        currentVerbIndex: verbs.length, // Indicates final exam
-        completedVerbs: verbs.map(verb => ({ verb, score: 0 })),
-        totalScore: 0,
-        totalQuestions: finalExam.questions,
-        isFinalExam: true,
-        courseLevel: courseLevel
-      });
-      
-      // Show instruction popup if not disabled
-      const dontRemindAgain = localStorage.getItem('dontShowInstructionPopup') === 'true';
-      if (!dontRemindAgain) {
-        setShowInstructionPopup(true);
-      }
-    } catch (error) {
-      console.error('Error generating final exam:', error);
-      setQuizState('config');
+    // Exam shape now comes from shared/exams.ts rather than from
+    // DIFFICULTY_CONFIGS.courseStructure.finalExam, which fixes three things at
+    // once: Intermediate no longer runs 18 verbs while declaring 110 questions,
+    // the past-tense exam asks for Passé Composé rather than a Passé Simple the
+    // course never taught, and the app can read the same definitions.
+    const exam = getExam(courseLevel, timeFrame);
+    if (!exam) {
+      console.error(`No exam defined for ${courseLevel} / ${timeFrame}`);
+      return;
     }
+
+    setShowCourseOverviewModal(false);
+    await startExam(exam);
   };
 
   // Intermediate Course Functions  
@@ -1290,7 +1332,7 @@ function App() {
   };
 
   const handleStartIntermediateFinalExam = async (timeFrame: string) => {
-    // Show section overview modal for final exam
+    // Show section overview modal for final level exam
     setSelectedCourseLevel("Intermediate");
     setSelectedCourseTimeFrame(timeFrame);
     // Final exam - handled separately;
@@ -1328,7 +1370,7 @@ function App() {
     setQuizState('loading');
     
     try {
-      // Generate 60 questions total: 10 questions from each of the 6 verbs for final exam
+      // Generate 60 questions total: 10 questions from each of the 6 verbs for final level exam
       const allQuestions: any[] = [];
       
       for (const currentVerb of config.verbs) {
@@ -1338,7 +1380,7 @@ function App() {
           body: JSON.stringify({
             verb: currentVerb,
             timeFrame: timeFrameMapping[timeFrame as keyof typeof timeFrameMapping],
-            tenseType: "Présent", // Use present tense for final exam
+            tenseType: "Présent", // Use present tense for final level exam
             difficulty: "Elementary",
             isExam: true,
           })
@@ -1346,12 +1388,12 @@ function App() {
 
         const data = await response.json();
         if (data.success) {
-          // Take exactly 10 questions from each verb for final exam
+          // Take exactly 10 questions from each verb for final level exam
           allQuestions.push(...data.quiz.questions.slice(0, 10));
         }
       }
       
-      // Shuffle all 60 final exam questions
+      // Shuffle all 60 final level exam questions
       const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
       
       setQuizData(shuffledQuestions);
@@ -1367,7 +1409,7 @@ function App() {
         setShowInstructionPopup(true);
       }
     } catch (error) {
-      console.error('Error generating Elementary final exam:', error);
+      console.error('Error generating Elementary final level exam:', error);
       setQuizState('config');
     }
   };
@@ -1683,7 +1725,7 @@ function App() {
                     courseInfo.currentVerbIndex > 4 ? 'bg-yellow-500/20 text-yellow-300 hover:bg-yellow-500/30' : 'bg-yellow-500/10 text-yellow-200 hover:bg-yellow-500/20'
                   }`}
                 >
-                  🏆 Final Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
+                  🏆 Final Level Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
                   <div className="text-xs opacity-75">(40 questions)</div>
                 </button>
               </div>
@@ -1764,16 +1806,54 @@ function App() {
       );
     }
 
-    // Handle exam results (when it's a final exam or currentVerbIndex is 5 for legacy)
+    // Handle exam results (when it's a final level exam or currentVerbIndex is 5 for legacy)
     if (courseInfo && (courseInfo.isFinalExam || courseInfo.currentVerbIndex === 5)) {
-      // For exam, we need exactly 90% or higher (18/20 for 20-question exam, 36/40 for 40-question exam)
-      const requiredScore = Math.ceil(totalQuestions * 0.9);
+      // 90% of the exam as DEFINED, not of however many questions happened to
+      // load. loadExamQuestions already asserts the two agree, so this is belt
+      // and braces — but the gate must never float with a short exam.
+      const examDefinition = courseInfo.examId ? getExam(courseInfo.courseLevel || "", courseInfo.timeFrame) : undefined;
+      const requiredScore = courseInfo.examPassMark
+        ?? (examDefinition ? examDefinition.passMark : Math.ceil(totalQuestions * 0.9));
       const examPassed = correctAnswers >= requiredScore;
-      
-      // Debug logging
+
       console.log(`Exam Results: ${correctAnswers}/${totalQuestions} = ${percentage}%`);
       console.log(`Exam passed: ${examPassed} (need ${requiredScore}/${totalQuestions} or higher)`);
-      
+
+      // Record the result on this device, whether or not anyone is signed in.
+      // Until 12 September this save was gated behind hasUserId(user), and guest
+      // mode means that is false for every visitor — so no exam pass had ever
+      // been persisted, and passing led to a "log in to save" screen whose
+      // button goes to /api/login, which no-ops back to the home page.
+      //
+      // Written inline rather than in an effect because this block sits inside a
+      // conditional render path, where a hook would break the rules of hooks.
+      // The ref guard makes it idempotent across re-renders; a retake carries a
+      // different score and writes again.
+      if (courseInfo.examId) {
+        const attemptKey = `${courseInfo.examId}:${correctAnswers}/${totalQuestions}`;
+        if (!savedExamAttempts.current.has(attemptKey)) {
+          savedExamAttempts.current.add(attemptKey);
+          try {
+            const stored = parseExamResults(localStorage.getItem(EXAM_RESULTS_STORAGE_KEY));
+            const result: ExamResult = {
+              examId: courseInfo.examId,
+              correct: correctAnswers,
+              total: totalQuestions,
+              passed: examPassed,
+              date: new Date().toISOString(),
+            };
+            localStorage.setItem(
+              EXAM_RESULTS_STORAGE_KEY,
+              JSON.stringify(upsertExamResult(stored, result))
+            );
+          } catch (error) {
+            // Storage is unavailable in some private windows. Losing the record
+            // is not worth losing the results screen over.
+            console.warn('Could not save exam result locally:', error);
+          }
+        }
+      }
+
       // Save completed course and update progress if passed - do this once when exam is complete
       // CRITICAL FIX: Check if user is authenticated before trying to save
       if (examPassed && hasUserId(user) && !completedCourses.some(course => 
@@ -1843,30 +1923,28 @@ function App() {
         };
         saveCompletedCourse();
       } else if (examPassed && !hasUserId(user)) {
-        // If user passed but isn't authenticated, show login prompt
+        // Guests used to land here on a "log in to save your progress" screen
+        // whose button goes to /api/login — which no-ops back to the home page
+        // in guest mode. So the only thing the screen reliably did was tell
+        // someone who had just passed that their result was lost, and then lose
+        // it. The pass is now recorded on this device above, so say that
+        // plainly and let them carry on.
         return (
           <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
-        
+
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4">🏆 Exam Passed!</h2>
                 <div className="mb-6">
                   <div className="text-6xl font-bold mb-2 text-green-400">{percentage}%</div>
                   <p className="text-xl text-slate-300">You got {correctAnswers} out of {totalQuestions} questions correct</p>
-                  <p className="text-lg text-red-400 mt-4">⚠️ Please log in to save your progress!</p>
-                  <p className="text-sm text-slate-400 mt-2">Your amazing score won't be saved until you log in.</p>
+                  <p className="text-sm text-slate-400 mt-4">Saved on this device. Accounts are coming, and your results will carry over.</p>
                 </div>
                 <button
-                  onClick={() => window.location.href = '/api/login'}
-                  className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 mr-4"
-                >
-                  Log In to Save Progress
-                </button>
-                <button
                   onClick={handleStartOver}
-                  className="px-8 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl font-semibold hover:from-gray-700 hover:to-gray-800"
+                  className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700"
                 >
-                  Continue Without Saving
+                  Continue
                 </button>
               </div>
             </div>
@@ -1891,7 +1969,7 @@ function App() {
                 </p>
                 <p className="text-lg text-slate-400 mt-2">
                   {examPassed ? 
-                    'Congratulations! You passed the final exam!' :
+                    'Congratulations! You passed the final level exam!' :
                     `We have high standards! You need 90% (${requiredScore}/${totalQuestions}) to pass. You got ${correctAnswers}/${totalQuestions}. Try again!`
                   }
                 </p>
@@ -2102,7 +2180,7 @@ function App() {
                   )}
                   <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/20">
                     <span className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-sm font-bold">🏆</span>
-                    <span className="font-semibold">Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)</span>
+                    <span className="font-semibold">Final Level Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)</span>
                   </div>
                 </div>
               </div>
@@ -2114,7 +2192,7 @@ function App() {
                   <li>• Practice {courseInfo.tense} conjugations</li>
                   <li>• Learn proper French grammar patterns</li>
                   <li>• Build confidence with structured progression</li>
-                  <li>• Achieve 90% mastery on final exam</li>
+                  <li>• Achieve 90% mastery on final level exam</li>
                 </ul>
                 
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
@@ -2139,7 +2217,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)
+                🏆 Take Final Level Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)
               </button>
             </div>
           </div>
@@ -2611,7 +2689,7 @@ function App() {
                 >
                   <div className="text-gray-200 font-semibold text-lg">⚪ Beginner Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    3 Units (20 questions each) + Final Exam (30 questions, 90% to pass)
+                    3 Units (20 questions each) + Final Level Exam (30 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2620,7 +2698,7 @@ function App() {
                 >
                   <div className="text-blue-200 font-semibold text-lg">🔵 Novice Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)
+                    4 Units (20 questions each) + Final Level Exam (40 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2629,7 +2707,7 @@ function App() {
                 >
                   <div className="text-emerald-200 font-semibold text-lg">🟢 Elementary Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
+                    7 Units (20 questions each) + Final Level Exam (42 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2638,7 +2716,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Intermediate Course</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
+                    11 Units (20 questions each) + Final Level Exam (66 questions, 90% to pass)
                   </div>
                 </button>
                 <button
@@ -2657,7 +2735,7 @@ function App() {
                   </div>
                   <div className="text-slate-400 text-sm mt-1">
                     {isAdvancedDifficultyEnabled()
-                      ? "13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)"
+                      ? "13 Units (20 questions each) + Final Level Exam (130 questions, 90% to pass)"
                       : "Advanced course with comprehensive verb mastery • Available in next version"
                     }
                   </div>
@@ -2745,7 +2823,7 @@ function App() {
                   }}
                   className="w-full p-4 text-left bg-yellow-500/20 border border-yellow-500/30 rounded-xl text-white hover:bg-yellow-500/30"
                 >
-                  <div className="text-yellow-200 font-semibold text-lg">🏆 Take Final Exam</div>
+                  <div className="text-yellow-200 font-semibold text-lg">🏆 Take Final Level Exam</div>
                   <div className="text-slate-300 text-sm mt-1">
                     40 mixed questions - Need 90% to pass (36/40)
                   </div>
@@ -2806,7 +2884,7 @@ function App() {
                       course.timeFrame === "Present" && 
                       course.examPassed
                     );
-                    isLocked = !presentCompleted;
+                    isLocked = areProgressionLocksEnabled() && !presentCompleted;
                   } else if (timeFrame === "Future") {
                     // Future is locked until Past exam is passed
                     const pastCompleted = completedCourses.find(course => 
@@ -2814,7 +2892,7 @@ function App() {
                       course.timeFrame === "Past" && 
                       course.examPassed
                     );
-                    isLocked = !pastCompleted;
+                    isLocked = areProgressionLocksEnabled() && !pastCompleted;
                   }
                   
                   const iconMap = {
@@ -2880,7 +2958,7 @@ function App() {
                             ? "📝 In Progress - Click to continue"
                             : isLocked 
                             ? "🔒 Complete previous course first"
-                            : "3 units (être, avoir, faire) + Final Exam (27/30 to pass)"
+                            : "3 units (être, avoir, faire) + Final Level Exam (27/30 to pass)"
                           }
                         </div>
                         {isCompleted && !isLocked && (
@@ -3120,7 +3198,7 @@ function App() {
                       course.timeFrame === "Present" && 
                       course.examPassed
                     );
-                    isLocked = !presentCompleted;
+                    isLocked = areProgressionLocksEnabled() && !presentCompleted;
                   } else if (timeFrame === "Future") {
                     // Future is locked until Past exam is passed
                     const pastCompleted = completedCourses.find(course => 
@@ -3128,7 +3206,7 @@ function App() {
                       course.timeFrame === "Past" && 
                       course.examPassed
                     );
-                    isLocked = !pastCompleted;
+                    isLocked = areProgressionLocksEnabled() && !pastCompleted;
                   }
                   
                   const iconMap = {
@@ -3184,7 +3262,7 @@ function App() {
                           {isLocked && timeFrame === "Future" && <span className="text-sm">🔒 Complete Past exam first</span>}
                         </div>
                         <div className="text-slate-300 text-sm mt-1">
-                          Section 1: 80 mixed questions (20 from each verb) + Final Exam (90% to pass)
+                          Section 1: 80 mixed questions (20 from each verb) + Final Level Exam (90% to pass)
                         </div>
                         {inProgress && (
                           <div className="text-orange-200 text-xs mt-1">
@@ -3250,8 +3328,8 @@ function App() {
                   // For Elementary level, require Novice completion first
                   const beginnerCompleted = completedCourses.some(course => 
                     course.courseType === "beginner" && course.examPassed
-                  );
-                  const isLocked = !beginnerCompleted;
+                  ) || hasPassedAnyExamForLevel(getLocalExamPasses(), "Beginner");
+                  const isLocked = areProgressionLocksEnabled() && !beginnerCompleted;
                   
                   const iconMap = {
                     "Past": "⏮️",
@@ -3305,7 +3383,7 @@ function App() {
                           {isLocked && <span className="text-sm">🔒 Complete Novice exam first</span>}
                         </div>
                         <div className="text-slate-300 text-sm mt-1">
-                          6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)
+                          7 Units (20 questions each) + Final Level Exam (42 questions, 90% to pass)
                         </div>
                         {inProgress && (
                           <div className="text-orange-200 text-xs mt-1">
@@ -3371,8 +3449,11 @@ function App() {
                   // For Intermediate level, require Elementary completion first
                   const easyCompleted = completedCourses.some(course => 
                     course.courseType === "easy" && course.examPassed
-                  );
-                  const isLocked = !easyCompleted;
+                  ) || hasPassedAnyExamForLevel(getLocalExamPasses(), "Novice");
+                  // NB: the API-side courseType is the legacy string "easy";
+                  // the level it actually means is Novice, which is what the
+                  // lock text says and what shared/exams.ts ids use.
+                  const isLocked = areProgressionLocksEnabled() && !easyCompleted;
                   
                   const iconMap = {
                     "Past": "⏮️",
@@ -3420,7 +3501,7 @@ function App() {
                           {isLocked && <span className="text-sm">🔒 Complete Elementary exam first</span>}
                         </div>
                         <div className="text-slate-300 text-sm mt-1">
-                          8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)
+                          11 Units (20 questions each) + Final Level Exam (66 questions, 90% to pass)
                         </div>
                         {inProgress && (
                           <div className="text-orange-200 text-xs mt-1">
@@ -3505,7 +3586,11 @@ function App() {
                           <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                             🏆
                           </div>
-                          <span className="font-medium text-white">Final Exam ({finalExam?.questions} questions)</span>
+                          {/* Length comes from shared/exams.ts, not from
+                              courseStructure.finalExam — the two disagree for
+                              Elementary and Intermediate, and the registry is
+                              what the exam actually runs. */}
+                          <span className="font-medium text-white">Final Level Exam ({getExam(selectedCourseLevel, selectedCourseTimeFrame)?.totalQuestions ?? finalExam?.questions} questions)</span>
                         </div>
                       </div>
                     </div>
@@ -3521,7 +3606,7 @@ function App() {
                         <li>• Practice {selectedCourseTimeFrame === "Present" ? "Présent" : selectedCourseTimeFrame === "Past" ? "Passé Composé" : "Futur Simple"} conjugations</li>
                         <li>• Learn proper French grammar patterns</li>
                         <li>• Build confidence with structured progression</li>
-                        <li>• Achieve 90% mastery on final exam</li>
+                        <li>• Achieve 90% mastery on final level exam</li>
                       </ul>
                       
                       {finalExam && (
@@ -3602,7 +3687,7 @@ function App() {
                   }}
                   className="w-full px-6 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-xl text-white font-medium shadow-lg text-lg"
                 >
-                  🏆 Take Final Exam ({DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.finalExam?.questions} questions)
+                  🏆 Take Final Level Exam ({getExam(selectedCourseLevel, selectedCourseTimeFrame)?.totalQuestions ?? DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.finalExam?.questions} questions)
                 </button>
                 
                 <button
@@ -3723,7 +3808,7 @@ function App() {
               </h3>
               <p className="text-slate-300 text-center mb-6">
                 {selectedUnit === "section1" ? 
-                  "Choose a section to practice. Complete all parts to unlock the final exam." :
+                  "Choose a section to practice. Complete all parts to unlock the final level exam." :
                   "Choose an exam part. You must pass both parts with 90% combined score."
                 }
               </p>
@@ -3746,7 +3831,7 @@ function App() {
                     }}
                     className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-500 rounded-xl text-white font-medium"
                   >
-                    Go to Final Exam
+                    Go to Final Level Exam
                   </button>
                 )}
               </div>
@@ -3827,7 +3912,7 @@ function App() {
                           {isLocked && <span className="text-sm">🔒 Complete Intermediate exam first</span>}
                         </div>
                         <div className="text-slate-300 text-sm mt-1">
-                          13 Units (20 questions each) + Final Exam (130 questions, 90% to pass)
+                          13 Units (20 questions each) + Final Level Exam (130 questions, 90% to pass)
                         </div>
                         {inProgress && (
                           <div className="text-orange-200 text-xs mt-1">

@@ -1,3 +1,11 @@
+// NOTE: exam lengths and pass marks below MUST match shared/exams.ts, which is
+// the source of truth for both surfaces. They are repeated here rather than
+// imported only until the @shared path alias is verified in the Expo build.
+//
+// Before 14 Sep 2026 the blurb, the units array and finalExam disagreed with
+// each other: Elementary said "6 Units" for 7 units and a 60-question exam that
+// was declared as 70, Intermediate said "8 Units" for 11 and 80 against 110.
+
 export type CourseUnit = { name: string; verb: string; questions: number };
 
 export const COURSES: Record<string, {
@@ -6,7 +14,7 @@ export const COURSES: Record<string, {
 }> = {
   Beginner: {
     emoji: "⚪", title: "Beginner Course",
-    blurb: "3 Units (20 questions each) + Final Exam (30 questions, 90% to pass)",
+    blurb: "3 Units (20 questions each) + Final Level Exam (30 questions, 90% to pass)",
     units: [
       { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
       { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
@@ -16,7 +24,7 @@ export const COURSES: Record<string, {
   },
   Novice: {
     emoji: "🔵", title: "Novice Course",
-    blurb: "4 Units (20 questions each) + Final Exam (40 questions, 90% to pass)",
+    blurb: "4 Units (20 questions each) + Final Level Exam (40 questions, 90% to pass)",
     units: [
       { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
       { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
@@ -27,7 +35,7 @@ export const COURSES: Record<string, {
   },
   Elementary: {
     emoji: "🟢", title: "Elementary Course",
-    blurb: "6 Units (20 questions each) + Final Exam (60 questions, 90% to pass)",
+    blurb: "7 Units (20 questions each) + Final Level Exam (42 questions, 90% to pass)",
     units: [
       { name: "Unit 1: dire (to say)", verb: "dire", questions: 20 },
       { name: "Unit 2: voir (to see)", verb: "voir", questions: 20 },
@@ -37,11 +45,11 @@ export const COURSES: Record<string, {
       { name: "Unit 6: pouvoir (to be able)", verb: "pouvoir", questions: 20 },
       { name: "Unit 7: besoin (to need)", verb: "besoin", questions: 20 },
     ],
-    finalExam: { questions: 70, passThreshold: 63, description: "10 questions from each of the 7 verbs" },
+    finalExam: { questions: 42, passThreshold: 38, description: "6 questions from each of the 7 verbs" },
   },
   Intermediate: {
     emoji: "🟡", title: "Intermediate Course",
-    blurb: "8 Units (20 questions each) + Final Exam (80 questions, 90% to pass)",
+    blurb: "11 Units (20 questions each) + Final Level Exam (66 questions, 90% to pass)",
     units: [
       { name: "Unit 1: être (to be)", verb: "être", questions: 20 },
       { name: "Unit 2: avoir (to have)", verb: "avoir", questions: 20 },
@@ -55,7 +63,7 @@ export const COURSES: Record<string, {
       { name: "Unit 10: venir (to come)", verb: "venir", questions: 20 },
       { name: "Unit 11: savoir (to know)", verb: "savoir", questions: 20 },
     ],
-    finalExam: { questions: 110, passThreshold: 99, description: "10 questions from each verb" },
+    finalExam: { questions: 66, passThreshold: 60, description: "6 questions from each of the 11 verbs" },
   },
 };
 export const COURSE_TIME_FRAMES = ["Present", "Past", "Future"];

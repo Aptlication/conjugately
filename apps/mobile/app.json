@@ -2,7 +2,7 @@
   "expo": {
     "name": "Conjugately",
     "slug": "conjugately",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "conjugately",
@@ -45,7 +45,14 @@
           }
         }
       ],
-      "expo-audio"
+      "expo-audio",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Conjugately uses the microphone so you can speak your answers aloud in Masters Mic instead of tapping them.",
+          "speechRecognitionPermission": "Conjugately uses speech recognition to check the French conjugation you speak. Recognition runs on this iPhone and your audio is not sent anywhere."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
