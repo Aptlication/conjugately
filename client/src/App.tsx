@@ -10,6 +10,7 @@ import {
   upsertExamResult,
   parseExamResults,
   hasPassedAnyExamForLevel,
+  EXAM_VERB_SETS,
   EXAM_RESULTS_STORAGE_KEY,
   type ExamDefinition,
   type ExamResult,
@@ -931,7 +932,7 @@ function App() {
   };
 
   const handleStartVerbSection = async (verbIndex: number, timeFrame: string, tense: string) => {
-    const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+    const beginnerVerbs = EXAM_VERB_SETS.Beginner;
     const verb = beginnerVerbs[verbIndex];
     const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
     
@@ -1541,19 +1542,33 @@ function App() {
     const displaySelected = reviewIndex !== null ? (userAnswers[displayIndex] ?? null) : selectedAnswerIndex;
     const displayConfirmed = reviewIndex !== null ? userAnswers[displayIndex] !== undefined : isAnswerConfirmed;
 
+    // Exam mode inverts the whole screen to black. Practice quizzes are light;
+    // an exam is the one place where the score is kept and a 90% gate applies,
+    // so it should be impossible to be in one without noticing.
+    const isExamMode = courseInfo?.isFinalExam === true;
+
     return (
-      <div className="min-h-screen bg-[#F7F8FA] px-4 py-12 text-[#1B1F24]">
+      <div className={`min-h-screen px-4 py-12 ${isExamMode ? "bg-black text-white" : "bg-[#F7F8FA] text-[#1B1F24]"}`}>
 
         
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-[#E3E6EA] p-8 shadow-sm">
+        <div className={`max-w-4xl mx-auto rounded-2xl border p-8 shadow-sm ${isExamMode ? "bg-[#0A0A0A] border-[#3A3A3A]" : "bg-white border-[#E3E6EA]"}`}>
+          {isExamMode && (
+            <div className="mb-6 flex items-center justify-center gap-3 rounded-xl border border-[#F5C518]/40 bg-[#F5C518]/10 px-4 py-3">
+              <span className="text-lg" aria-hidden="true">🏆</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-[#F5C518]">
+                Final Level Exam — {courseInfo?.examPassMark ?? Math.ceil(quizData.length * 0.9)} of {quizData.length} to pass
+              </span>
+            </div>
+          )}
+
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm">Question {displayIndex + 1} of {quizData.length}</span>
-              <span className="text-sm font-semibold text-[#5A6472]">Score: {Object.entries(userAnswers).filter(([qi, ai]) => quizData[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect).length} / {quizData.length}</span>
+              <span className={`text-sm font-semibold ${isExamMode ? "text-[#C3CAD4]" : "text-[#5A6472]"}`}>Score: {Object.entries(userAnswers).filter(([qi, ai]) => quizData[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect).length} / {quizData.length}</span>
             </div>
-            <div className="w-full bg-[#E4E7EB] rounded-lg h-2">
+            <div className={`w-full rounded-lg h-2 ${isExamMode ? "bg-[#2A2A2A]" : "bg-[#E4E7EB]"}`}>
               <div 
-                className="bg-[#2B5FD9] h-2 rounded-lg transition-all duration-300"
+                className={`h-2 rounded-lg transition-all duration-300 ${isExamMode ? "bg-[#F5C518]" : "bg-[#2B5FD9]"}`}
                 style={{ width: `${((displayIndex + 1) / quizData.length) * 100}%` }}
               ></div>
             </div>
@@ -1601,7 +1616,7 @@ function App() {
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
-                className={`w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center text-[#0F6E5C] font-medium ${
+                className={`w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center text-black font-medium ${
                   displaySelected === index && displayConfirmed
                     ? 'border-2 border-[#17734A] bg-[#EAF4EF]'
                     : displaySelected === index
@@ -1685,8 +1700,14 @@ function App() {
     const percentage = Math.round((correctAnswers / totalQuestions) * 100);
     
     // Handle individual unit completion for beginner courses
-    if (courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= 4) {
-      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+    // `!isFinalExam` matters: startExam sets currentVerbIndex to the exam's verb
+    // count, which is 3 for Beginner and 4 for Novice — both inside this range.
+    // Without the guard the unit-complete screen claims the exam result and
+    // returns, so the pass gate, the localStorage write and the pass screen below
+    // never run, and the learner is invited to "continue to Unit 4" after sitting
+    // a final exam. Elementary (7) and Intermediate (11) escaped this by accident.
+    if (courseInfo && !courseInfo.isFinalExam && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= EXAM_VERB_SETS.Beginner.length) {
+      const beginnerVerbs = EXAM_VERB_SETS.Beginner;
       const currentVerb = beginnerVerbs[courseInfo.currentVerbIndex - 1];
       
       return (
@@ -1726,12 +1747,15 @@ function App() {
                   }`}
                 >
                   🏆 Final Level Exam {courseInfo.currentVerbIndex > 4 ? '✓' : ''}
-                  <div className="text-xs opacity-75">(40 questions)</div>
+                  {/* Was hardcoded to 40. The Beginner exam is 30, so this screen
+                      told a Beginner learner the wrong exam length. Read the
+                      registry instead. */}
+                  <div className="text-xs opacity-75">({getExam(courseInfo.courseLevel || "Beginner", courseInfo.timeFrame)?.totalQuestions ?? 30} questions)</div>
                 </button>
               </div>
 
               <div className="flex gap-4 justify-center">
-                {courseInfo.currentVerbIndex < 4 ? (
+                {courseInfo.currentVerbIndex < beginnerVerbs.length ? (
                   <button
                     onClick={async () => {
                       // Update course info to track completed verb and move to next unit
@@ -1854,6 +1878,21 @@ function App() {
         }
       }
 
+      // What is ACTUALLY on the device now. upsertExamResult keeps the best
+      // attempt per exam and discards anything not strictly better, so a retake
+      // that matches or falls short writes nothing. The screen used to say
+      // "Saved on this device" regardless, which is a claim the code does not
+      // always back: someone who passes 30/30 and later scores 26 would be told
+      // their 26 was saved when it was correctly discarded. Report the stored
+      // best instead — always true, and more use to the learner.
+      let storedBest: ExamResult | undefined;
+      try {
+        storedBest = parseExamResults(localStorage.getItem(EXAM_RESULTS_STORAGE_KEY))
+          .find((r) => r.examId === courseInfo.examId);
+      } catch {
+        storedBest = undefined;
+      }
+
       // Save completed course and update progress if passed - do this once when exam is complete
       // CRITICAL FIX: Check if user is authenticated before trying to save
       if (examPassed && hasUserId(user) && !completedCourses.some(course => 
@@ -1930,7 +1969,7 @@ function App() {
         // it. The pass is now recorded on this device above, so say that
         // plainly and let them carry on.
         return (
-          <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
+          <div className="min-h-screen bg-black px-4 py-12 text-white">
 
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1938,7 +1977,13 @@ function App() {
                 <div className="mb-6">
                   <div className="text-6xl font-bold mb-2 text-green-400">{percentage}%</div>
                   <p className="text-xl text-slate-300">You got {correctAnswers} out of {totalQuestions} questions correct</p>
-                  <p className="text-sm text-slate-400 mt-4">Saved on this device. Accounts are coming, and your results will carry over.</p>
+                  <p className="text-sm text-slate-300 mt-2">Pass mark: {requiredScore} of {totalQuestions}</p>
+                  <p className="text-sm text-slate-400 mt-4">
+                    {storedBest
+                      ? `Saved on this device — your best for this exam is ${storedBest.correct}/${storedBest.total}.`
+                      : "Could not save to this device — your browser is blocking local storage."}
+                    {" "}Accounts are coming, and your results will carry over.
+                  </p>
                 </div>
                 <button
                   onClick={handleStartOver}
@@ -1953,7 +1998,7 @@ function App() {
       }
       
       return (
-        <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
+        <div className="min-h-screen bg-black px-4 py-12 text-white">
     
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 text-center mb-8">
@@ -1976,17 +2021,21 @@ function App() {
               </div>
               
               <div className="mb-8">
-                <h3 className="text-lg font-semibold mb-4">Course Summary ({courseInfo.timeFrame} Tense)</h3>
+                {/* Was "Course Summary" showing courseInfo.totalQuestions + totalQuestions.
+                    Since the rework, courseInfo.totalQuestions IS the exam total on this
+                    screen, so it added the exam to itself: a 30-question exam reported 60
+                    questions, and 26 correct came out as 43%. It also called itself a
+                    course summary while holding only exam data — someone who goes straight
+                    to the exam has no unit scores to summarise. It reports the exam. */}
+                <h3 className="text-lg font-semibold mb-4">Exam Summary ({courseInfo.timeFrame} Tense)</h3>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-slate-300">Total Questions</div>
-                    <div className="text-2xl font-bold">{courseInfo.totalQuestions + totalQuestions}</div>
+                    <div className="text-slate-300">Questions</div>
+                    <div className="text-2xl font-bold">{totalQuestions}</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-slate-300">Overall Score</div>
-                    <div className="text-2xl font-bold">
-                      {Math.round(((courseInfo.totalScore + correctAnswers) / (courseInfo.totalQuestions + totalQuestions)) * 100)}%
-                    </div>
+                    <div className="text-slate-300">Required to Pass</div>
+                    <div className="text-2xl font-bold">{requiredScore}</div>
                   </div>
                 </div>
               </div>
@@ -2000,7 +2049,7 @@ function App() {
                       const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future" };
                       
                       try {
-                        const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+                        const beginnerVerbs = EXAM_VERB_SETS.Beginner;
                         const allQuestions: any[] = [];
                         
                         for (const verb of beginnerVerbs) {
@@ -2784,7 +2833,7 @@ function App() {
                     setQuizState('loading');
                     
                     try {
-                      const beginnerVerbs = ["être", "avoir", "faire", "aller"];
+                      const beginnerVerbs = EXAM_VERB_SETS.Beginner;
                       const allQuestions: any[] = [];
                       
                       for (const verb of beginnerVerbs) {

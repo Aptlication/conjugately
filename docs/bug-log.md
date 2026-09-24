@@ -16,7 +16,7 @@ Last updated: **14 September 2026**.
 | Item | Level | Area | Status |
 |---|---|---|---|
 | 1.1.1 | All levels | Mini-Courses — end-of-tense exam appears missing | Decided (14 Sep) — composition in code; app side still to build |
-| 1.1.2 | All levels | Microphone alternative ("Hands Free" / "Masters Mic") | Scope decided; **name still open** |
+| 1.1.2 | All levels | Microphone alternative — **Masters Mic** | Name and scope decided (15 Sep); feature not yet built |
 | 1.1.3 | All levels | Randomisation of answer positions (A–D) | **Live** (13 Sep) |
 | 1.1.4 | Elementary | `dire` futur simple — wrong answer key | **Live** (13 Sep) |
 | 1.1.5 | Elementary | Answer key flagged on the wrong option (12 questions) | **Live** (13 Sep) |
@@ -27,6 +27,7 @@ Last updated: **14 September 2026**.
 | 1.1.10 | All levels | Exam passes were never saved; guest hit a dead end | In code |
 | 1.1.11 | All levels | Exam length, tense and assembly defects | In code |
 | 2.1.1 | All levels | Cross-reference difficulty with CEFR (A1–C2) | Open — later release |
+| 2.1.2 | All levels | Gold coins — practice currency spent to sit an exam | **Decided (15 Sep)** — spec below; 1.2, not 1.1 |
 
 **Deployed to conjugately.com on 13 September:** `479f107`, `147b2ab`, `5901ed6`.
 
@@ -121,7 +122,7 @@ Options B (split the pool 15/5) and C (author a separate exam bank, ~600 sentenc
 
 **Scope decided 13 Sep: ships on all levels**, not Intermediate-only as the spreadsheet scoped it. The matcher and ladder are level-agnostic; restricting it would mean writing gating code rather than saving work, and an App Store editor demoing at Beginner would otherwise never see the signature feature.
 
-**Name still open** — "Masters Mic" vs "Hands Free". This blocks the featuring nomination, which is due **18 September**, and then the ASO copy and screenshots.
+**Name decided 15 September: "Masters Mic"**, with *hands-free* as descriptive copy rather than as the name. The App Store subtitle carries the description — `French conjugation, hands-free`, exactly 30 characters — while the name itself does the branding work in-app, in What's New, in the nomination and on the screenshots. Voice/speaking/pronunciation go in the invisible keywords field. Full copy spec in `docs/FEATURING_NOMINATION_1.1.md`.
 
 Recommendation: **Masters Mic** as the feature name (in-app, What's New, nomination, screenshot captions), with *hands-free* as descriptive copy. The 30-character App Store subtitle then carries `French conjugation, hands-free` — exactly 30 characters, keeping *French*, *conjugation* and *hands-free* in the visible line, with voice/speaking/pronunciation in the invisible keyword field.
 
@@ -138,6 +139,26 @@ Same family of fault as the substring bug: a check that looks like it passed bec
 1,124 of 1,840 Intermediate questions have the answer in position A. Before 1.1.3 shipped, pressing A on every Intermediate question scored about 61%.
 
 Now mitigated at serve time by the shuffle, so it is not user-visible and rewriting the data buys nothing — but it becomes load-bearing again the moment that shuffle is removed. The validator reports per-quiz skew as a warning for exactly this reason, and will cover Intermediate once 1.1.7 is closed.
+
+### 2.1.2 — Gold coins: practice currency spent to sit a Final Level Exam
+
+**Proposed and specified 15 September. For 1.2 — deliberately not 1.1.**
+
+**Stated purpose:** coins make you practise more before being assessed. Everything below is tuned to that, and any later change to the mechanic should be tested against it rather than against "is it fun".
+
+Coins only add something the course does not already do. The units are *already* a prerequisite for the exam — what coins add is a requirement to practise **repeatedly** rather than once, because one pass through a unit does not make anything stick.
+
+| Rule | Decision | Why |
+|---|---|---|
+| Earning | 1 coin per **correct answer** in a unit quiz; exam questions earn nothing | Per *completion* would make the fastest route to an exam clicking through wrong answers at speed — rewarding the exact behaviour the app exists to prevent |
+| Price | ~1.5 clean passes of the level's units: `units × 20 × 1.5` → Beginner 90, Novice 120, Elementary 210, Intermediate 330 | Starting numbers, to be balanced against real usage rather than trusted |
+| Charged | On **starting** the exam, not on the result | Charging on failure alone makes attempting early and often the cheapest strategy, inverting the purpose |
+| Failing | **First retry free**, then 10% of the price | Nudged back to practice without being wiped out; one bad run should not cost hours |
+| Purchase | **Coins are never purchasable** | A currency plus a paywall invites pay-to-progress, and Conjugately Pro is coming. Free to decide now, awkward to unpick later — and both App Review and reviewers notice |
+
+**Open risk:** coins are device-local, like exam passes, so a reinstall wipes accumulated effort. Losing a pass is annoying; losing weeks of coins is worse. This argues for accounts landing before or alongside the economy.
+
+**Why not 1.1:** the freeze is 1 October and Masters Mic has not started. An economy means earning rules, a wallet, display, persistence and balancing — and balancing always runs longer than expected. It would also not strengthen the featuring nomination, which is written around the mic.
 
 ### 2.1.1 — Cross-reference with CEFR (A1–C2)
 
@@ -163,6 +184,157 @@ Found during the 12 Sep audit of the existing exam implementation (`docs/EXAM_AU
 The save was guarded by `hasUserId(user)`, and guest mode makes that false for every visitor, so **no exam pass had ever been persisted**. Worse, passing showed a "log in to save your progress" screen whose button goes to `/api/login` — which no-ops back to the home page in guest mode. The only thing that screen reliably did was tell someone who had just passed that their result was lost, and then lose it.
 
 Now written to `conjugately_exam_results` in localStorage for every visitor, with a plain "saved on this device" pass screen. Device-local until accounts exist — worth stating in the release notes.
+
+### 1.1.13 — The error handler crashes the server on any 500
+
+**Severity: high. Affects production.** `server/index.ts` had the Replit
+starter template's Express error middleware, unmodified:
+
+```ts
+res.status(status).json({ message });
+throw err;
+```
+
+It sends the response and then rethrows. Because the handler runs after the
+response has gone out, the rethrow escapes into the async context, Node treats
+it as an uncaught exception, and **the process exits**. Any route that 500s
+takes the whole server down with it.
+
+Locally this is what had been killing the dev server on every attempt to sit an
+exam: the placeholder `DATABASE_URL` points at a Postgres that isn't there, the
+first request touching course progress throws, and the handler kills the
+process mid-exam. It cost several test runs and was misread as a flaky server.
+
+In production the same line means **any unhandled 500 on conjugately.com takes
+the Render instance down** until Render restarts it. It has presumably fired
+rarely because the live database is real, but it is a live single-point crash
+and it should ship to main on its own, ahead of the exam work.
+
+Fixed: log the error instead of rethrowing, plus `unhandledRejection` and
+`uncaughtException` handlers so a stray rejection elsewhere is loud in the log
+rather than fatal.
+
+### 1.1.12 — Course Overview exam button hardcodes the question count
+
+Cosmetic. `client/src/App.tsx` lines 2183 and 2220 render the exam length as
+`(courseLevel === 'Advanced' ? '40' : '30')` instead of reading `getExam()`.
+That screen is the Beginner course overview — hardcoded to être / avoir / faire
+— so `30` is correct there and the `40` branch only fires for Advanced, which
+isn't built. Harmless today; wrong the moment that screen is reused. Both
+handlers behind it (`handleStartFinalExam`, `handleStartCourseOverviewFinalExam`)
+correctly route through `startExam` → `loadExamQuestions`.
+
+### 1.1.14 — Regression: the Beginner and Novice exam result rendered as a unit result
+
+**Introduced by the 12 Sep exam rework — my error, found 24 Sep on the first
+successful local pass.**
+
+`startExam` sets `currentVerbIndex: exam.verbs.length`. The results renderer
+tests the unit-complete branch first:
+
+```ts
+if (courseInfo && courseInfo.currentVerbIndex >= 1 && courseInfo.currentVerbIndex <= 4)
+```
+
+Beginner has 3 verbs and Novice 4 — both inside that range. So the unit-complete
+screen claimed the exam result and returned before the exam branch at line 1810
+was reached. The learner sat a 30-question final exam, scored 30/30, and was
+shown **"Unit 3: 'faire' Complete!"** with a button to continue to Unit 4.
+
+Everything downstream of that branch was skipped: the 90% pass gate, the
+`conjugately_exam_results` localStorage write, and the pass screen. So the three
+fixes logged under 1.1.10 and 1.1.11 were all correct and all unreachable on the
+two levels most people start with. Elementary (7 verbs) and Intermediate (11)
+escaped it only because their verb counts fall outside the range.
+
+The old code signalled exam mode with the sentinel `currentVerbIndex: 5`. The
+rework replaced that with a real verb count and inherited the collision.
+
+Fixed by guarding the unit branch with `!courseInfo.isFinalExam`. The sentinel
+comparison stays for legacy records. **The lesson is the one from 1.1.5: a fix
+that has never been executed is not a fix.** This one type-checked, built
+cleanly and was wrong.
+
+### 1.1.12a — Unit-complete screen hardcodes four units and a 40-question exam
+
+Same screen. `beginnerVerbs` is hardcoded `["être","avoir","faire","aller"]`, so
+a Beginner learner — whose course is three units — is shown a fourth unit and
+offered "Continue to Unit 4: 'aller'". The exam card was hardcoded to
+`(40 questions)` when the Beginner exam is 30.
+
+**Resolved 24 Sep — Beginner is three units.** The hardcoded array was
+`["être","avoir","faire","aller"]`, which is the *Novice* verb set wearing a
+`beginnerVerbs` label; `EXAM_VERB_SETS.Beginner` has always been three. The rest
+of the file already agreed — the unit-intro screen caps non-Advanced courses at
+three and its comment reads "exclude Unit 4: aller". Only the results screen
+disagreed. All four copies of the literal now read `EXAM_VERB_SETS.Beginner`,
+and the two `4` gates read its length. The `(40 questions)` label reads
+`getExam(...).totalQuestions`. No new behaviour — one source of truth.
+
+### 1.1.15 — Vite's error logger called process.exit(1)
+
+**This is what had actually been killing the dev server, and it cost about a
+week.** `server/vite.ts`:
+
+```ts
+error: (msg, options) => {
+  viteLogger.error(msg, options);
+  process.exit(1);
+},
+```
+
+Vite's logger fires on ordinary development errors — a syntax error mid-typing,
+or a transient parse failure when the watcher reads a file being written. The
+Replit template killed the process on every one. So the server died on nearly
+every edit, including edits that were themselves correct: rewriting a file
+leaves a few-millisecond window where it is truncated, Babel reads that, throws,
+and the server exits. The file is valid again a moment later; the server is
+already gone.
+
+It was misread as a flaky server, a database problem, and at one point as a
+Render or Railway problem. It was none of those. Fixed: log and keep serving.
+
+Dev-only — production takes the `serveStatic` path and never calls `setupVite` —
+so unlike 1.1.13 this is not a conjugately.com risk. It is purely a tax on
+verification, which is exactly why 1.1.14 survived twelve days unnoticed: every
+attempt to exercise the exam path died before reaching a result screen.
+
+### 1.1.17 — The pass screen claimed a save the code had not made
+
+Found 24 Sep by an automated browser pass, which reported that storage was
+byte-identical before and after a 30/30 pass while the screen said "Saved on
+this device".
+
+Storage was in fact correct. `upsertExamResult` keeps the **best** attempt per
+exam and discards anything not strictly better (`result.correct <=
+existing.correct`). A 30/30 record already existed from an earlier run, so a
+26/30 fail and a second 30/30 were both correctly discarded. The write path
+works; the 06:03 record proves it.
+
+The defect is the copy. "Saved on this device" was printed unconditionally, so a
+learner who had passed 30/30 and later scored 26 would be told their 26 was
+saved when it had been dropped. A UI claim the code does not always back is the
+same class of error as 1.1.5 and 1.1.14 — an assertion nobody checked against
+what actually happened.
+
+Now reads the stored record back and reports it: "Saved on this device — your
+best for this exam is 30/30", or, if storage threw, says plainly that the
+browser is blocking it. Always true, and more use to the learner than a claim.
+
+**Verification note.** The automated report was right to say its evidence could
+not distinguish "not written" from "correctly discarded", and to name the test
+that would: clear the key, fail, check, pass, check. That test is no longer
+needed — the discard rule accounts for both non-writes — but the discipline is
+the one that has been missing all week.
+
+### 1.1.16 — sort(() => Math.random() - 0.5) survives in the non-exam paths
+
+The exam shuffle was replaced with Fisher–Yates under 1.1.11. The same
+non-shuffle is still used at six other sites in `client/src/App.tsx` (lines
+~965, 1166, 1255, 1398, 2049, 2833), all on course and unit paths. A comparator
+returning a random sign is not a permutation: order stays partly predictable and
+the bias depends on the engine's sort. Not urgent, but it is the same defect
+already fixed once, and it should not ship in two states.
 
 ---
 

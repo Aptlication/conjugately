@@ -88,6 +88,33 @@ in the language they are studying.
 
 ---
 
+## Naming and store copy — approved 15 September 2026
+
+**Feature name: "Masters Mic".** Used verbatim everywhere the name is doing
+branding work — in-app control, What's New, this nomination, screenshot
+captions. Not varied, not abbreviated.
+
+**"Hands-free" is descriptive copy, not the name.** It says what the feature
+does in words people actually search, so it belongs in the places that are read
+and indexed rather than in the places that are branded.
+
+**App Store subtitle (30 characters, visible under the app name, indexed):**
+
+> `French conjugation, hands-free`
+
+Exactly 30 characters, and it keeps all three of the words that matter —
+*French*, *conjugation*, *hands-free* — in the visible line. The temptation is
+to spend the subtitle on the feature name, but nobody searches "Masters Mic",
+and that field is the highest-value 30 characters on the product page.
+
+**Keywords field (100 characters, invisible):** voice, speaking, pronunciation,
+speech, oral, aloud. Never spend visible characters on words the keyword field
+indexes for free.
+
+**In-app:** "Masters Mic" as the control name, with a supporting line such as
+"answer out loud" or "hands-free practice". Avoid "also hands-free" — the
+"also" frames the defining behaviour as an afterthought.
+
 ## Checklist before submitting
 
 - [ ] Product page updated: new screenshots and an app preview video that open

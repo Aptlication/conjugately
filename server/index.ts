@@ -69,7 +69,23 @@ app.use((req, res, next) => {
     const message = err.message || "Internal Server Error";
 
     res.status(status).json({ message });
-    throw err;
+
+    // Do NOT rethrow. This handler runs after the response has been sent, so a
+    // rethrow escapes into the async context, Node treats it as an uncaught
+    // exception and the process exits. That is a crash-on-any-500: locally it
+    // killed the dev server on the first request that touched an unreachable
+    // database, and in production it takes the Render instance down until it
+    // restarts. Log it instead.
+    console.error(`[error] ${status} ${message}`, err?.stack ?? err);
+  });
+
+  // Last line of defence. An unhandled rejection anywhere else should be loud
+  // in the log, not fatal to a server that is otherwise serving fine.
+  process.on("unhandledRejection", (reason) => {
+    console.error("[unhandledRejection]", reason);
+  });
+  process.on("uncaughtException", (error) => {
+    console.error("[uncaughtException]", error);
   });
 
   // importantly only setup vite in development and after

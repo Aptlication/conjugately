@@ -31,9 +31,16 @@ export async function setupVite(app: Express, server: Server) {
     configFile: false,
     customLogger: {
       ...viteLogger,
+      // Do NOT exit here. This is Vite's logger, so it fires for ordinary
+      // development errors: a syntax error you are halfway through typing, or
+      // a transient parse failure when the watcher reads a file mid-write. The
+      // Replit template called process.exit(1) on every one of them, so any
+      // typo — or any edit landing at the wrong millisecond — killed the dev
+      // server outright instead of showing Vite's error overlay. That is what
+      // had been ending the server on nearly every local attempt to sit an
+      // exam. Log it and keep serving; Vite recovers on the next transform.
       error: (msg, options) => {
         viteLogger.error(msg, options);
-        process.exit(1);
       },
     },
     server: serverOptions,
