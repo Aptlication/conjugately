@@ -17,6 +17,7 @@ import {
 } from "@shared/exams";
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 import { WheelSelect } from "@/components/WheelSelect";
+import { shuffle } from "@shared/shuffle";
 
 /**
  * Exam passes recorded on this device, read fresh rather than held in state so
@@ -530,20 +531,6 @@ function App() {
   };
 
   /**
-   * Unbiased shuffle. The previous `sort(() => Math.random() - 0.5)` is not a
-   * shuffle at all — comparator-based shuffles give a skewed distribution, so
-   * exam questions arrived in a partly predictable order.
-   */
-  const shuffle = <T,>(input: T[]): T[] => {
-    const items = [...input];
-    for (let i = items.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [items[i], items[j]] = [items[j], items[i]];
-    }
-    return items;
-  };
-
-  /**
    * Assemble an exam from its definition in shared/exams.ts.
    *
    * Three things this fixes, all of which were live on conjugately.com:
@@ -962,7 +949,7 @@ function App() {
       }
       
       // Shuffle all 80 questions (20 from each of the 4 verbs)
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      const shuffledQuestions = shuffle(allQuestions);
       
       setQuizData(shuffledQuestions); // All 80 questions mixed from 4 verbs
       setCurrentQuestionIndex(0);
@@ -1163,7 +1150,7 @@ function App() {
       }
       
       // Ensure we have exactly the right number of questions for this part
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5).slice(0, partConfig.questions);
+      const shuffledQuestions = shuffle(allQuestions).slice(0, partConfig.questions);
       
       setQuizData(shuffledQuestions);
       setCurrentQuestionIndex(0);
@@ -1252,7 +1239,7 @@ function App() {
       }
       
       // Shuffle all 120 questions
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      const shuffledQuestions = shuffle(allQuestions);
       
       setQuizData(shuffledQuestions);
       setCurrentQuestionIndex(0);
@@ -1395,7 +1382,7 @@ function App() {
       }
       
       // Shuffle all 60 final level exam questions
-      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+      const shuffledQuestions = shuffle(allQuestions);
       
       setQuizData(shuffledQuestions);
       setCurrentQuestionIndex(0);
@@ -2071,7 +2058,7 @@ function App() {
                           }
                         }
                         
-                        const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+                        const shuffledQuestions = shuffle(allQuestions);
                         setQuizData(shuffledQuestions);
                         setCurrentQuestionIndex(0);
                         setUserAnswers({});
@@ -2855,7 +2842,7 @@ function App() {
                         }
                       }
                       
-                      const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+                      const shuffledQuestions = shuffle(allQuestions);
                       setQuizData(shuffledQuestions);
                       setCurrentQuestionIndex(0);
                       setUserAnswers({});

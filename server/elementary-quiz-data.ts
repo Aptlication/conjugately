@@ -1,3 +1,4 @@
+import { shuffle } from "@shared/shuffle";
 // Elementary Level Quiz Question Interface
 export interface ElementaryQuizQuestion {
   question: string;
@@ -5126,15 +5127,15 @@ export function getRandomElementaryPresentQuestions(verb: string, count: number)
 
   // Tag with audioIndex BEFORE shuffling so audio files map to original positions
   const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   // If we need more questions than available, repeat with shuffled options
   while (result.length < count && tagged.length > 0) {
-    const additional = [...tagged].sort(() => Math.random() - 0.5);
+    const additional = shuffle(tagged);
     for (const q of additional) {
       if (result.length >= count) break;
-      const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
+      const shuffledOptions = shuffle(q.answerOptions);
       result.push({ ...q, answerOptions: shuffledOptions });
     }
   }
@@ -5152,14 +5153,14 @@ export function getRandomElementaryPasseComposeQuestions(verb: string, count: nu
   }
 
   const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   while (result.length < count && tagged.length > 0) {
-    const additional = [...tagged].sort(() => Math.random() - 0.5);
+    const additional = shuffle(tagged);
     for (const q of additional) {
       if (result.length >= count) break;
-      const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
+      const shuffledOptions = shuffle(q.answerOptions);
       result.push({ ...q, answerOptions: shuffledOptions });
     }
   }
@@ -5177,14 +5178,14 @@ export function getRandomElementaryFutureSimpleQuestions(verb: string, count: nu
   }
 
   const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   while (result.length < count && tagged.length > 0) {
-    const additional = [...tagged].sort(() => Math.random() - 0.5);
+    const additional = shuffle(tagged);
     for (const q of additional) {
       if (result.length >= count) break;
-      const shuffledOptions = [...q.answerOptions].sort(() => Math.random() - 0.5);
+      const shuffledOptions = shuffle(q.answerOptions);
       result.push({ ...q, answerOptions: shuffledOptions });
     }
   }

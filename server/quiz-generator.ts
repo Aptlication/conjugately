@@ -3,6 +3,7 @@ import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQue
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
 import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, getRandomElementaryFutureSimpleQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
 import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
+import { shuffle } from "@shared/shuffle";
 
 // French verb conjugation data
 const VERB_CONJUGATIONS = {
@@ -943,7 +944,7 @@ function generateExamDistractors(correctForm: string, verb: string, tense: strin
   }
   
   // Shuffle and take first 3
-  return distractors.sort(() => Math.random() - 0.5).slice(0, 3);
+  return shuffle(distractors).slice(0, 3);
 }
 
 // Original distractor function for regular unit quizzes (same verb only)
@@ -993,7 +994,7 @@ function generateDistractors(correctForm: string, verb: string, tense: string, p
   }
   
   // Shuffle and take first 3
-  return distractors.sort(() => Math.random() - 0.5).slice(0, 3);
+  return shuffle(distractors).slice(0, 3);
 }
 
 // Helper function to apply French contractions
@@ -1994,7 +1995,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
       
       // Shuffle answers
       const allAnswers = [correctAnswer, ...wrongAnswers];
-      const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+      const shuffledAnswers = shuffle(allAnswers);
       
       questions.push({
         question: englishQuestion, // Use context-based questions for Novice too
@@ -2114,7 +2115,7 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     ];
     
     // Shuffle answers
-    const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+    const shuffledAnswers = shuffle(allAnswers);
     
     // Convert English to proper tense based on French tense
     let englishQuestion = fixEnglishGrammar(context.en);

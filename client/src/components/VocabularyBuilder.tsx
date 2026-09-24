@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { useVocabulary, type VocabularyWord } from '../hooks/useVocabulary';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Star, Trash2, ArrowLeft, RotateCcw, Check, X, Brain, Sparkles, Filter } from 'lucide-react';
+import { shuffle } from "@shared/shuffle";
 
 interface VocabularyBuilderProps {
   onClose: () => void;
@@ -36,7 +37,7 @@ export function VocabularyBuilder({ onClose }: VocabularyBuilderProps) {
   function startReview() {
     const cards = vocab.getReviewWords(10);
     if (cards.length === 0) return;
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    const shuffled = shuffle(cards);
     setReviewCards(shuffled);
     setCurrentCardIndex(0);
     setIsFlipped(false);

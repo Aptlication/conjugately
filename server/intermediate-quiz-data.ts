@@ -1,3 +1,4 @@
+import { shuffle } from "@shared/shuffle";
 // Intermediate Level Quiz Data - Perplexity Validated
 // 17 verbs × 4 tenses × 20 questions = 1360 total MCQs
 // Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre, garder
@@ -1090,7 +1091,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did I write my name on the form?", "options": ["Je a écrit mon nom sur le formulaire?", "J'ai écrit mon nom sur le formulaire?", "Je suis écrit mon nom sur le formulaire?", "J'as écrit mon nom sur le formulaire?"], "answer": "B"},
       {"question": "Did she not write the list?", "options": ["Elle n'a pas écrit la liste?", "Elle a ne pas écrit la liste?", "Elle n'as pas écrit la liste?", "Elle a écrit pas la liste?"], "answer": "A"},
       {"question": "You (inf.) did not write the answer.", "options": ["Tu a écrit ne pas la réponse.", "Tu n'as pas écrit la réponse.", "Tu n'a pas écrit la réponse.", "Tu as écrit pas la réponse."], "answer": "B"},
-      {"question": "He wrote a story last week.", "options": ["Il a écrit une histoire la semaine dernière.", "Il a écris une histoire la semaine dernière.", "Il a écrivent une histoire la semaine dernière.", "Il a écrit une histoire la semaine dernière."], "answer": "D"},
+      {"question": "He wrote a story last week.", "options": ["Ils ont écrit des textos pendant la classe.", "Il a écris une histoire la semaine dernière.", "Il a écrivent une histoire la semaine dernière.", "Il a écrit une histoire la semaine dernière."], "answer": "D"},
       {"question": "Did I write fast?", "options": ["J'ai écrit vite?", "Je a écrit vite?", "Je suis écrit vite?", "J'as écrit vite?"], "answer": "A"},
       {"question": "Did you (pl.) not write in French?", "options": ["Vous avez écrit ne pas en français?", "Vous n'avons pas écrit en français?", "Vous n'avez pas écrit en français?", "Vous avez écrit pas en français?"], "answer": "C"},
       {"question": "We wrote essays for class.", "options": ["Nous a écrit des dissertations pour la classe.", "Nous avons écrit des dissertations pour la classe.", "Nous sommes écrit des dissertations pour la classe.", "Nous avez écrit des dissertations pour la classe."], "answer": "B"},
@@ -1160,7 +1161,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did I open the door in the morning?", "options": ["Je a ouvert la porte le matin?", "J'ai ouvert la porte le matin?", "Je suis ouvert la porte le matin?", "J'as ouvert la porte le matin?"], "answer": "B"},
       {"question": "Did she not open the book?", "options": ["Elle n'a pas ouvert le livre?", "Elle a ne pas ouvert le livre?", "Elle n'as pas ouvert le livre?", "Elle a ouvert pas le livre?"], "answer": "A"},
       {"question": "You (inf.) did not open your bag.", "options": ["Tu a ouvert ne pas ton sac.", "Tu n'as pas ouvert ton sac.", "Tu n'a ouvert pas ton sac.", "Tu as ouvert pas ton sac."], "answer": "B"},
-      {"question": "He opened the box quickly.", "options": ["Il a ouvert la boîte rapidement.", "Il a ouvris la boîte rapidement.", "Il a ouvrez la boîte rapidement.", "Il a ouvert la boîte rapidement."], "answer": "D"},
+      {"question": "He opened the box quickly.", "options": ["Nous avons ouvert le même livre.", "Il a ouvris la boîte rapidement.", "Il a ouvrez la boîte rapidement.", "Il a ouvert la boîte rapidement."], "answer": "D"},
       {"question": "Did I open the gifts on my birthday?", "options": ["J'ai ouvert les cadeaux le jour de mon anniversaire?", "Je a ouvert les cadeaux le jour de mon anniversaire?", "Je suis ouvert les cadeaux le jour de mon anniversaire?", "J'as ouvert les cadeaux le jour de mon anniversaire?"], "answer": "A"},
       {"question": "Did you (pl.) not open the windows in summer?", "options": ["Vous avez ouvert ne pas les fenêtres en été?", "Vous n'avons pas ouvert les fenêtres en été?", "Vous n'avez pas ouvert les fenêtres en été?", "Vous avez ouvert pas les fenêtres en été?"], "answer": "C"},
       {"question": "We opened the store at 9 a.m.", "options": ["Nous a ouvert le magasin à neuf heures.", "Nous avons ouvert le magasin à neuf heures.", "Nous sommes ouvert le magasin à neuf heures.", "Nous avez ouvert le magasin à neuf heures."], "answer": "B"},
@@ -1168,7 +1169,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (form.) opened the files every morning.", "options": ["Vous avons ouvert les dossiers chaque matin.", "Vous ont ouvert les dossiers chaque matin.", "Vous avez ouvert les dossiers chaque matin.", "Vous êtes ouvert les dossiers chaque matin."], "answer": "C"},
       {"question": "Did they (m.) not open the door?", "options": ["Ils n'ont pas ouvert la porte?", "Ils ont ne pas ouvert la porte?", "Ils n'avez pas ouvert la porte?", "Ils ont ouvert pas la porte?"], "answer": "A"},
       {"question": "Did they (f.) not open the envelope?", "options": ["Elles ont ouvert ne pas l'enveloppe?", "Elles n'ont pas ouvert l'enveloppe.", "Elles n'avez pas ouvert l'enveloppe?", "Elles ont ouvert pas l'enveloppe."], "answer": "B"},
-      {"question": "We opened the same book.", "options": ["Nous a ouvert le même livre.", "Nous avons ouvert le même livre.", "Nous sommes ouvert le même livre.", "Nous avez ouvert le même livre."], "answer": "C"},
+      {"question": "We opened the same book.", "options": ["Nous a ouvert le même livre.", "Nous avons ouvert le même livre.", "Nous sommes ouvert le même livre.", "Nous avez ouvert le même livre."], "answer": "B"},
       {"question": "They (m.) opened the boxes during class.", "options": ["Ils avez ouvert les boîtes pendant la classe.", "Ils sont ouvert les boîtes pendant la classe.", "Ils a ouvert les boîtes pendant la classe.", "Ils ont ouvert les boîtes pendant la classe."], "answer": "D"},
       {"question": "You (pl.) did not open the door in winter.", "options": ["Vous avez ouvert ne pas la porte en hiver.", "Vous n'avons pas ouvert la porte en hiver.", "Vous avez pas ouvert la porte en hiver.", "Vous n'avez pas ouvert la porte en hiver."], "answer": "D"},
       {"question": "They (f.) did not open the gifts.", "options": ["Elles ont ouvert ne pas les cadeaux.", "Elles n'a ouvert pas les cadeaux.", "Elles n'ont pas ouvert les cadeaux.", "Elles ont ouvert pas les cadeaux."], "answer": "C"},
@@ -1196,7 +1197,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "They (f.) will not open the gifts.", "options": ["Elles ouvriront ne pas les cadeaux.", "Elles ne ouvriras pas les cadeaux.", "Elles n'ouvriront pas les cadeaux.", "Elles ne ouvrirez pas les cadeaux."], "answer": "C"},
       {"question": "I will not open the windows at night.", "options": ["Je n'ouvrirai pas les fenêtres la nuit.", "Je ouvrirai ne pas les fenêtres la nuit.", "Je n'ouvriras pas les fenêtres la nuit.", "Je n'ouvrira pas les fenêtres la nuit."], "answer": "A"},
       {"question": "Will she open the gifts quickly?", "options": ["Elle ouvriras les cadeaux rapidement?", "Elle ouvrirons les cadeaux rapidement?", "Elle ouvrira les cadeaux rapidement?", "Elle ouvrirez les cadeaux rapidement?"], "answer": "C"},
-      {"question": "Will we open the window after lunch?", "options": ["Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirez la fenêtre après le déjeuner?", "Nous ouvrirons la fenêtre après le déjeuner?"], "answer": "D"}
+      {"question": "Will we open the window after lunch?", "options": ["Ils ouvriront les boîtes pendant la classe.", "Nous ouvrirai la fenêtre après le déjeuner?", "Nous ouvrirez la fenêtre après le déjeuner?", "Nous ouvrirons la fenêtre après le déjeuner?"], "answer": "D"}
     ],
     "imparfait": []
   },
@@ -1210,7 +1211,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (inf.) do not close your bag.", "options": ["Tu ferme ne pas ton sac.", "Tu ne fermes pas ton sac.", "Tu ne ferme pas ton sac.", "Tu fermes ne pas ton sac."], "answer": "B"},
       {"question": "He closes the gate every morning.", "options": ["Il fermes le portail chaque matin.", "Il fermons le portail chaque matin.", "Il fermez le portail chaque matin.", "Il ferme le portail chaque matin."], "answer": "D"},
       {"question": "Do I close the door after leaving?", "options": ["Je fermes la porte après être parti?", "Je ferme la porte après être parti?", "Je fermons la porte après être parti?", "Je fermez la porte après être parti?"], "answer": "B"},
-      {"question": "Do you (pl.) not close the windows in summer?", "options": ["Vous fermez ne pas les fenêtres en été?", "Vous ne fermez pas les fenêtres en été?", "Vous ne fermez pas les fenêtres en été?", "Vous fermez pas les fenêtres en été?"], "answer": "C"},
+      {"question": "Do you (pl.) not close the windows in summer?", "options": ["Vous fermez ne pas les fenêtres en été?", "Elle ferme les enveloppes tout de suite?", "Vous ne fermez pas les fenêtres en été?", "Vous fermez pas les fenêtres en été?"], "answer": "C"},
       {"question": "We close the store at 9 p.m.", "options": ["Nous ferme le magasin à 21 heures.", "Nous fermons le magasin à 21 heures.", "Nous fermez le magasin à 21 heures.", "Nous ferment le magasin à 21 heures."], "answer": "B"},
       {"question": "Do they (m.) close the gate?", "options": ["Ils ferme le portail?", "Ils fermez le portail?", "Ils fermons le portail?", "Ils ferment le portail?"], "answer": "D"},
       {"question": "You (form.) close the door every evening.", "options": ["Vous ferme la porte chaque soir.", "Vous fermons la porte chaque soir.", "Vous fermez la porte chaque soir.", "Vous ferment la porte chaque soir."], "answer": "C"},
@@ -1218,7 +1219,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Do they (f.) not close the bags?", "options": ["Elles ferment ne pas les sacs?", "Elles ne ferment pas les sacs?", "Elles ne ferme pas les sacs?", "Elles fermez pas les sacs?"], "answer": "B"},
       {"question": "We close the same window.", "options": ["Nous ferme la même fenêtre.", "Nous fermez la même fenêtre.", "Nous fermons la même fenêtre.", "Nous ferment la même fenêtre."], "answer": "C"},
       {"question": "They (m.) close the books after the exam.", "options": ["Ils ferme les livres après l'examen.", "Ils fermez les livres après l'examen.", "Ils fermons les livres après l'examen.", "Ils ferment les livres après l'examen."], "answer": "D"},
-      {"question": "You (pl.) do not close the box during class.", "options": ["Vous fermez ne pas la boîte pendant le cours.", "Vous ne fermez pas la boîte pendant le cours.", "Vous ne ferme pas la boîte pendant le cours.", "Vous ne fermez pas la boîte pendant le cours."], "answer": "D"},
+      {"question": "You (pl.) do not close the box during class.", "options": ["Vous fermez ne pas la boîte pendant le cours.", "Elles ne ferment pas les fenêtres la nuit.", "Vous ne ferme pas la boîte pendant le cours.", "Vous ne fermez pas la boîte pendant le cours."], "answer": "D"},
       {"question": "They (f.) do not close the cabinet.", "options": ["Elles ferment ne pas l'armoire.", "Elles ne ferme pas l'armoire.", "Elles ne ferment pas l'armoire.", "Elles fermez pas l'armoire."], "answer": "C"},
       {"question": "I do not close the file before saving.", "options": ["Je ne ferme pas le dossier avant de sauvegarder.", "Je ferme ne pas le dossier avant de sauvegarder.", "Je ne fermes pas le dossier avant de sauvegarder.", "Je ferme pas le dossier avant de sauvegarder."], "answer": "A"},
       {"question": "Does she close the envelopes quickly?", "options": ["Elle ferme les enveloppes rapidement?", "Elle fermes les enveloppes rapidement?", "Elle ferme les enveloppes tout de suite?", "Elle ferme les enveloppes lentement?"], "answer": "C"},
@@ -1230,7 +1231,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did I close my book last night?", "options": ["Je a fermé mon livre hier soir?", "J'ai fermé mon livre hier soir?", "Je suis fermé mon livre hier soir?", "J'as fermé mon livre hier soir?"], "answer": "B"},
       {"question": "Did she not close the shop at 8 pm?", "options": ["Elle n'a pas fermé le magasin à 20 heures?", "Elle a ne pas fermé le magasin à 20 heures?", "Elle n'as pas fermé le magasin à 20 heures?", "Elle a fermé pas le magasin à 20 heures?"], "answer": "A"},
       {"question": "You (inf.) did not close your bag.", "options": ["Tu a fermé ne pas ton sac.", "Tu n'as pas fermé ton sac.", "Tu n'a fermé pas ton sac.", "Tu as fermé pas ton sac."], "answer": "B"},
-      {"question": "He closed the gate this morning.", "options": ["Il a fermé le portail ce matin.", "Il a fermés le portail ce matin.", "Il a fermez le portail ce matin.", "Il a fermé le portail ce matin."], "answer": "D"},
+      {"question": "He closed the gate this morning.", "options": ["Elles n'ont pas fermé les sacs?", "Il a fermés le portail ce matin.", "Il a fermez le portail ce matin.", "Il a fermé le portail ce matin."], "answer": "D"},
       {"question": "Did I close the door after leaving?", "options": ["J'ai fermé la porte après être parti?", "Je a fermé la porte après être parti?", "Je suis fermé la porte après être parti?", "J'as fermé la porte après être parti?"], "answer": "A"},
       {"question": "Did you (pl.) not close the windows in summer?", "options": ["Vous avez fermé ne pas les fenêtres en été?", "Vous n'avons pas fermé les fenêtres en été?", "Vous n'avez pas fermé les fenêtres en été?", "Vous avez fermé pas les fenêtres en été?"], "answer": "C"},
       {"question": "We closed the store at 9 p.m.", "options": ["Nous a fermé le magasin à 21 heures.", "Nous avons fermé le magasin à 21 heures.", "Nous sommes fermé le magasin à 21 heures.", "Nous avez fermé le magasin à 21 heures."], "answer": "B"},
@@ -1249,10 +1250,10 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "futur_simple": [
       {"question": "They (f.) will not close the windows at night.", "options": ["Elles fermera ne pas les fenêtres la nuit.", "Elles ne fermeront pas les fenêtres la nuit.", "Elles ne fermera pas les fenêtres la nuit.", "Elles fermeront pas les fenêtres la nuit."], "answer": "B"},
       {"question": "Will he not close the door?", "options": ["Il ne fermera pas la porte?", "Il fermera ne pas la porte?", "Il ne fermeras pas la porte?", "Il fermera pas la porte?"], "answer": "A"},
-      {"question": "Will I close my book before dinner?", "options": ["Je fermerai mon livre avant le dîner?", "Je fermerai mon livre avant le dîner?", "Je fermerons mon livre avant le dîner?", "Je fermerez mon livre avant le dîner?"], "answer": "B"},
+      {"question": "Will I close my book before dinner?", "options": ["Nous fermerons le magasin à 21 heures.", "Je fermerai mon livre avant le dîner?", "Je fermerons mon livre avant le dîner?", "Je fermerez mon livre avant le dîner?"], "answer": "B"},
       {"question": "Will she not close the shop at 8 pm?", "options": ["Elle ne fermera pas le magasin à 20 heures?", "Elle fermera ne pas le magasin à 20 heures?", "Elle ne fermeras pas le magasin à 20 heures?", "Elle fermera pas le magasin à 20 heures?"], "answer": "A"},
       {"question": "You (inf.) will not close your bag.", "options": ["Tu fermeras ne pas ton sac.", "Tu ne fermeras pas ton sac.", "Tu ne fermera pas ton sac.", "Tu fermera pas ton sac."], "answer": "B"},
-      {"question": "He will close the gate tomorrow.", "options": ["Il fermera le portail demain.", "Il fermeras le portail demain.", "Il fermeront le portail demain.", "Il fermera le portail demain."], "answer": "D"},
+      {"question": "He will close the gate tomorrow.", "options": ["Nous fermerons la même fenêtre.", "Il fermeras le portail demain.", "Il fermeront le portail demain.", "Il fermera le portail demain."], "answer": "D"},
       {"question": "Will I close the door after leaving?", "options": ["Je fermerai la porte après être parti?", "Je fermeras la porte après être parti?", "Je fermerons la porte après être parti?", "Je fermerez la porte après être parti?"], "answer": "A"},
       {"question": "Will you (pl.) not close the windows in summer?", "options": ["Vous fermerez ne pas les fenêtres en été?", "Vous ne fermeras pas les fenêtres en été?", "Vous ne fermerez pas les fenêtres en été?", "Vous ne fermera pas les fenêtres en été?"], "answer": "C"},
       {"question": "We will close the store at 9 p.m.", "options": ["Nous fermerai le magasin à 21 heures.", "Nous fermerons le magasin à 21 heures.", "Nous fermerez le magasin à 21 heures.", "Nous fermeras le magasin à 21 heures."], "answer": "B"},
@@ -1287,7 +1288,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Do they (m.) not lose their friends?", "options": ["Ils ne perdent pas leurs amis?", "Ils perdent ne pas leurs amis?", "Ils ne perd pas leurs amis?", "Ils perdez pas leurs amis?"], "answer": "A"},
       {"question": "Do they (f.) not lose time in traffic?", "options": ["Elles perdent ne pas de temps dans les embouteillages?", "Elles ne perdent pas de temps dans les embouteillages?", "Elles ne perd pas de temps dans les embouteillages?", "Elles perdez pas de temps dans les embouteillages?"], "answer": "B"},
       {"question": "We lose interest quickly.", "options": ["Nous perd intérêt vite.", "Nous perdez intérêt vite.", "Nous perdons intérêt vite.", "Nous perdent intérêt vite."], "answer": "C"},
-      {"question": "They (m.) lose their way after dark.", "options": ["Ils perdent leur chemin après la nuit.", "Ils perdez leur chemin après la nuit.", "Ils perdons leur chemin après la nuit.", "Ils perdent leur chemin après la nuit."], "answer": "D"},
+      {"question": "They (m.) lose their way after dark.", "options": ["Vous perdez votre mot de passe souvent.", "Ils perdez leur chemin après la nuit.", "Ils perdons leur chemin après la nuit.", "Ils perdent leur chemin après la nuit."], "answer": "D"},
       {"question": "You (pl.) do not lose money.", "options": ["Vous perdez ne pas d'argent.", "Vous ne perd pas d'argent.", "Vous ne perdons pas d'argent.", "Vous ne perdez pas d'argent."], "answer": "D"},
       {"question": "They (f.) do not lose faith.", "options": ["Elles perdent ne pas la foi.", "Elles ne perd pas la foi.", "Elles ne perdent pas la foi.", "Elles perdez pas la foi."], "answer": "C"},
       {"question": "I do not lose hope.", "options": ["Je ne perds pas espoir.", "Je perds ne pas espoir.", "Je ne perd pas espoir.", "Je perds pas espoir."], "answer": "A"},
@@ -1319,7 +1320,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "futur_simple": [
       {"question": "They (f.) will not lose their keys.", "options": ["Elles perdra ne pas leurs clés.", "Elles ne perdront pas leurs clés.", "Elles ne perdra pas leurs clés.", "Elles perdront pas leurs clés."], "answer": "B"},
       {"question": "Will he not lose his wallet?", "options": ["Il ne perdra pas son portefeuille?", "Il perdra ne pas son portefeuille?", "Il ne perdras pas son portefeuille?", "Il perdra pas son portefeuille?"], "answer": "A"},
-      {"question": "Will I lose my glasses tomorrow?", "options": ["Je perdrai mes lunettes demain?", "Je perdrai mes lunettes demain?", "Je perdrons mes lunettes demain?", "Je perdrez mes lunettes demain?"], "answer": "B"},
+      {"question": "Will I lose my glasses tomorrow?", "options": ["Ils ne perdront pas leurs amis?", "Je perdrai mes lunettes demain?", "Je perdrons mes lunettes demain?", "Je perdrez mes lunettes demain?"], "answer": "B"},
       {"question": "Will she not lose hope?", "options": ["Elle ne perdra pas espoir?", "Elle perdra ne pas espoir?", "Elle ne perdras pas espoir?", "Elle perdra pas espoir?"], "answer": "A"},
       {"question": "You (inf.) will not lose patience.", "options": ["Tu perdras ne pas patience.", "Tu ne perdras pas patience.", "Tu ne perdra pas patience.", "Tu perdra pas patience."], "answer": "B"},
       {"question": "He will lose his pen soon.", "options": ["Il perdras son stylo bientôt.", "Il perdront son stylo bientôt.", "Il perdrai son stylo bientôt.", "Il perdra son stylo bientôt."], "answer": "D"},
@@ -1350,7 +1351,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (inf.) do not keep secrets.", "options": ["Tu garde ne pas des secrets.", "Tu ne gardes pas de secrets.", "Tu ne garde pas des secrets.", "Tu gardes ne pas des secrets."], "answer": "B"},
       {"question": "He keeps his documents organized.", "options": ["Il gardes ses documents organisés.", "Il gardons ses documents organisés.", "Il gardez ses documents organisés.", "Il garde ses documents organisés."], "answer": "D"},
       {"question": "Do I keep my door open?", "options": ["Je garde ma porte ouverte?", "Je gardes ma porte ouverte?", "Je gardons ma porte ouverte?", "Je gardez ma porte ouverte?"], "answer": "A"},
-      {"question": "Do you (pl.) not keep old files?", "options": ["Vous gardez ne pas de vieux fichiers?", "Vous ne gardez pas de vieux fichiers?", "Vous ne gardez pas de vieux fichiers?", "Vous gardez pas de vieux fichiers?"], "answer": "C"},
+      {"question": "Do you (pl.) not keep old files?", "options": ["Vous gardez ne pas de vieux fichiers?", "Elle ne garde pas contact avec ses amis?", "Vous ne gardez pas de vieux fichiers?", "Vous gardez pas de vieux fichiers?"], "answer": "C"},
       {"question": "We keep our workspace clean.", "options": ["Nous garde notre espace de travail propre.", "Nous gardez notre espace de travail propre.", "Nous gardent notre espace de travail propre.", "Nous gardons notre espace de travail propre."], "answer": "D"},
       {"question": "Do they (m.) keep their shoes by the door?", "options": ["Ils garde leurs chaussures près de la porte?", "Ils gardez leurs chaussures près de la porte?", "Ils gardons leurs chaussures près de la porte?", "Ils gardent leurs chaussures près de la porte?"], "answer": "D"},
       {"question": "You (form.) keep all receipts.", "options": ["Vous garde tous les reçus.", "Vous gardons tous les reçus.", "Vous gardez tous les reçus.", "Vous gardent tous les reçus."], "answer": "C"},
@@ -1358,7 +1359,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Do they (f.) not keep their old clothes?", "options": ["Elles gardent ne pas leurs vieux vêtements?", "Elles ne gardent pas leurs vieux vêtements?", "Elles ne garde pas leurs vieux vêtements?", "Elles gardez pas leurs vieux vêtements?"], "answer": "B"},
       {"question": "We keep the same habits every year.", "options": ["Nous garde les mêmes habitudes chaque année.", "Nous gardez les mêmes habitudes chaque année.", "Nous gardons les mêmes habitudes chaque année.", "Nous gardent les mêmes habitudes chaque année."], "answer": "C"},
       {"question": "They (m.) keep their word.", "options": ["Ils garde leur parole.", "Ils gardez leur parole.", "Ils gardons leur parole.", "Ils gardent leur parole."], "answer": "D"},
-      {"question": "You (pl.) do not keep the light on.", "options": ["Vous gardez ne pas la lumière allumée.", "Vous ne gardez pas la lumière allumée.", "Vous ne garde pas la lumière allumée.", "Vous ne gardez pas la lumière allumée."], "answer": "D"},
+      {"question": "You (pl.) do not keep the light on.", "options": ["Vous gardez ne pas la lumière allumée.", "Elles ne gardent pas leurs vieux vêtements?", "Vous ne garde pas la lumière allumée.", "Vous ne gardez pas la lumière allumée."], "answer": "D"},
       {"question": "They (f.) do not keep food in their rooms.", "options": ["Elles gardent ne pas de nourriture dans leurs chambres.", "Elles ne garde pas de nourriture dans leurs chambres.", "Elles ne gardent pas de nourriture dans leurs chambres.", "Elles gardez pas de nourriture dans leurs chambres."], "answer": "C"},
       {"question": "I do not keep any receipts.", "options": ["Je ne garde aucun reçu.", "Je garde ne pas aucun reçu.", "Je ne gardes aucun reçu.", "Je garde pas aucun reçu."], "answer": "A"},
       {"question": "Does she keep her tickets?", "options": ["Elle gardes ses billets?", "Elle gardons ses billets?", "Elle garde ses billets?", "Elle gardez ses billets?"], "answer": "C"},
@@ -1367,9 +1368,9 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "passé_composé": [
       {"question": "They (f.) did not keep quiet during the meeting.", "options": ["Elles a gardé ne pas le silence pendant la réunion.", "Elles n'ont pas gardé le silence pendant la réunion.", "Elles n'a gardé pas le silence pendant la réunion.", "Elles ont gardé pas le silence pendant la réunion."], "answer": "B"},
       {"question": "Did he not keep his promises?", "options": ["Il n'a pas gardé ses promesses?", "Il a ne pas gardé ses promesses?", "Il n'as pas gardé ses promesses?", "Il a gardé pas ses promesses?"], "answer": "A"},
-      {"question": "Did I keep all my notes?", "options": ["Je a gardé toutes mes notes?", "J'ai gardé toutes mes notes?", "J'ai gardé toutes mes notes?", "J'as gardé toutes mes notes?"], "answer": "C"},
+      {"question": "Did I keep all my notes?", "options": ["Je a gardé toutes mes notes?", "Tu n'as pas gardé le secret.", "J'ai gardé toutes mes notes?", "J'as gardé toutes mes notes?"], "answer": "C"},
       {"question": "Did she not keep in touch with her friends?", "options": ["Elle n'a pas gardé le contact avec ses amis?", "Elle a ne pas gardé le contact avec ses amis?", "Elle n'as pas gardé le contact avec ses amis?", "Elle a gardé pas le contact avec ses amis?"], "answer": "A"},
-      {"question": "You (inf.) did not keep the secret.", "options": ["Tu a gardé ne pas le secret.", "Tu n'as pas gardé le secret.", "Tu n'a gardé pas le secret.", "Tu n'as pas gardé le secret."], "answer": "D"},
+      {"question": "You (inf.) did not keep the secret.", "options": ["Tu a gardé ne pas le secret.", "J'ai gardé ma porte ouverte?", "Tu n'a gardé pas le secret.", "Tu n'as pas gardé le secret."], "answer": "D"},
       {"question": "He kept his documents organized.", "options": ["Il a gardé ses documents organisées.", "Il a gardée ses documents organisés.", "Il a gardées ses documents organisés.", "Il a gardé ses documents organisés."], "answer": "D"},
       {"question": "Did I keep my door open?", "options": ["J'ai gardé ma porte ouverte?", "Je a gardé ma porte ouverte?", "Je suis gardé ma porte ouverte?", "J'as gardé ma porte ouverte?"], "answer": "A"},
       {"question": "Did you (pl.) not keep old files?", "options": ["Vous avez gardé ne pas de vieux fichiers?", "Vous n'avons pas gardé de vieux fichiers?", "Vous n'avez pas gardé de vieux fichiers?", "Vous avez gardé pas de vieux fichiers?"], "answer": "C"},
@@ -1475,7 +1476,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "You (plural) will never take an interest in those topics. (Futur Simple)", "options": ["Vous vous intéresserez jamais à ces sujets.", "Vous ne vous intéresserez plus à ces sujets.", "Vous ne vous intéresserez jamais à cette sujet.", "Vous ne vous intéresserez jamais à ces sujets."], "answer": "D"},
       {"question": "They (masc.) will take an interest in my research. (Futur Simple)", "options": ["Ils s'intéresseront à mes recherches.", "Ils vont s'intéresser à mes recherches.", "Ils s'intéresseront à ma recherche.", "Ils ne s'intéresseront pas à mes recherches."], "answer": "A"},
       {"question": "They (fem.) will not take an interest in your idea. (Futur Simple)", "options": ["Elles s'intéresseront à ton idée.", "Elles ne s'intéresseront pas à ton idée.", "Elles ne s'intéressent pas à ton idée.", "Elles ne s'intéresseront pas à ta idée."], "answer": "B"},
-      {"question": "When will I take an interest in books? (Futur Simple)", "options": ["Quand m'intéresserai-je aux livres ?", "Quand je m'intéresserai aux livres ?", "Quand m'intéresserai-je aux livres ?", "Quand est-ce que je m'intéresserai aux livres ?"], "answer": "C"},
+      {"question": "When will I take an interest in books? (Futur Simple)", "options": ["Ils s'intéresseront à mes recherches.", "Quand je m'intéresserai aux livres ?", "Quand m'intéresserai-je aux livres ?", "Quand est-ce que je m'intéresserai aux livres ?"], "answer": "C"},
       {"question": "How will they take an interest in everything? (Futur Simple)", "options": ["Comment ils s'intéresseront à tout ?", "Comment s'intéresseront-ils à tout ?", "Comment est-ce qu'ils s'intéresseront à tout ?", "Comment se s'intéresseront-ils à tout ?"], "answer": "D"}
     ]
   },
@@ -1600,24 +1601,24 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
     "passé_composé": [
       {"question": "Did I get bored?", "options": ["Me suis-je ennuyé(e) ?", "J'ai ennuyé ?", "Je me suis ennuyé ?", "Ai-je ennuyé(e) ?"], "answer": "A"},
       {"question": "Did you (tu) not get bored?", "options": ["Tu t'es ennuyé(e) ?", "Ne t'es-tu pas ennuyé(e) ?", "Tu n'as pas ennuyé ?", "T'es-tu ennuyé ?"], "answer": "B"},
-      {"question": "Did he get bored?", "options": ["S'est-il ennuyé ?", "Il a ennuyé ?", "A-t-il ennuyé ?", "Il s'est ennuyé ?"], "answer": "C"},
+      {"question": "Did he get bored?", "options": ["S'est-il ennuyé ?", "Il a ennuyé ?", "A-t-il ennuyé ?", "Il s'est ennuyé ?"], "answer": "A"},
       {"question": "Did we not get bored?", "options": ["Ne nous sommes-nous pas ennuyé(e)s ?", "Nous nous sommes pas ennuyés ?", "Nous n'avons pas ennuyé ?", "Nous sommes ennuyés ?"], "answer": "D"},
       {"question": "Did she get bored?", "options": ["Elle s'est ennuyée ?", "S'est-elle ennuyée ?", "Elle a ennuyé ?", "A-t-elle ennuyée ?"], "answer": "A"},
       {"question": "You (plural) got bored.", "options": ["Vous avez ennuyé ?", "Vous vous êtes ennuyé(e)(s).", "Vous s'êtes ennuyés ?", "Vous êtes ennuyé ?"], "answer": "B"},
       {"question": "They (masc.) did not get bored.", "options": ["Ils n'ont pas ennuyé.", "Ils ne se sont pas ennuyés.", "Ils se sont pas ennuyés.", "Ils se ne sont pas ennuyé."], "answer": "C"},
-      {"question": "Did you (formal) get bored?", "options": ["Vous vous êtes ennuyé(e) ?", "Vous êtes-vous ennuyé(e) ?", "Vous avez ennuyé ?", "Avez-vous ennuyé ?"], "answer": "D"},
-      {"question": "Did they (fem.) get bored?", "options": ["Elles ont ennuyé ?", "Elles sont ennuyées ?", "Elles se sont ennuyées ?", "Se sont-elles ennuyées ?"], "answer": "A"},
+      {"question": "Did you (formal) get bored?", "options": ["Vous vous êtes ennuyé(e) ?", "Vous êtes-vous ennuyé(e) ?", "Vous avez ennuyé ?", "Avez-vous ennuyé ?"], "answer": "B"},
+      {"question": "Did they (fem.) get bored?", "options": ["Elles ont ennuyé ?", "Elles sont ennuyées ?", "Elles se sont ennuyées ?", "Se sont-elles ennuyées ?"], "answer": "D"},
       {"question": "Did we not get bored?", "options": ["Nous ne nous sommes pas ennuyé(e)s ?", "Nous ne sommes pas ennuyés ?", "Ne nous sommes-nous pas ennuyés ?", "Nous nous sommes ennuyés ?"], "answer": "B"},
       {"question": "I did not get bored.", "options": ["Je ne me suis pas ennuyé(e).", "Je n'ai pas ennuyé.", "Je me suis pas ennuyé.", "Je suis ennuyé(e)."], "answer": "C"},
       {"question": "She got bored.", "options": ["Elle a ennuyé.", "Elle s'est ennuyée.", "Elle s'est pas ennuyée.", "Elle s'est ennuyé."], "answer": "D"},
       {"question": "We got bored.", "options": ["Nous nous sommes ennuyé(e)s.", "Nous avons ennuyé.", "Nous sommes ennuyé.", "Nous s'est ennuyés."], "answer": "A"},
       {"question": "Did you (tu) not get bored?", "options": ["Tu n'es pas ennuyé(e) ?", "Tu ne t'es pas ennuyé(e) ?", "Tu n'a pas ennuyé(e) ?", "Tu s'est ennuyé(e) ?"], "answer": "B"},
-      {"question": "She did not get bored.", "options": ["Elle ne s'est pas ennuyée.", "Elle s'est pas ennuyée.", "Elle n'a pas ennuyé.", "Elle ne se pas ennuyée."], "answer": "C"},
+      {"question": "She did not get bored.", "options": ["Elle ne s'est pas ennuyée.", "Elle s'est pas ennuyée.", "Elle n'a pas ennuyé.", "Elle ne se pas ennuyée."], "answer": "A"},
       {"question": "You (plural) did not get bored.", "options": ["Vous vous êtes ennuyé(e)(s).", "Vous n'avez pas ennuyé.", "Vous ne vous êtes pas ennuyé(e)(s).", "Vous n'êtes pas ennuyé."], "answer": "D"},
       {"question": "He did not get bored.", "options": ["Il ne s'est pas ennuyé.", "Il s'est pas ennuyé.", "Il n'a pas ennuyé.", "Il s'est ennuyé."], "answer": "A"},
-      {"question": "They (masc.) got bored.", "options": ["Ils se sont ennuyés.", "Ils ont ennuyé.", "Ils s'est ennuyés.", "Ils sont ennuyés."], "answer": "B"},
+      {"question": "They (masc.) got bored.", "options": ["Ils se sont ennuyés.", "Ils ont ennuyé.", "Ils s'est ennuyés.", "Ils sont ennuyés."], "answer": "A"},
       {"question": "Did she not get bored?", "options": ["Ne s'est-elle pas ennuyée ?", "Elle s'est pas ennuyée ?", "S'est-elle ennuyé ?", "Elle n'est pas ennuyée ?"], "answer": "C"},
-      {"question": "They (fem.) did not get bored.", "options": ["Elles ne se sont pas ennuyées.", "Elles ne sont pas ennuyé.", "Elles s'est pas ennuyées.", "Elles n'ont pas ennuyé."], "answer": "D"}
+      {"question": "They (fem.) did not get bored.", "options": ["Elles ne se sont pas ennuyées.", "Elles ne sont pas ennuyé.", "Elles s'est pas ennuyées.", "Elles n'ont pas ennuyé."], "answer": "A"}
     ],
     "futur_simple": [
       {"question": "Will I get bored?", "options": ["M'ennuierai-je ?", "Je m'ennuierai ?", "Je ennuierai ?", "Je m'ai ennuyé ?"], "answer": "A"},
@@ -1674,19 +1675,19 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did she remember?", "options": ["Elle s'est souvenue?", "S'est-elle souvenue?", "Elle a souvenu?", "A-t-elle souvenue?"], "answer": "A"},
       {"question": "You (vous) remembered.", "options": ["Vous avez souvenu?", "Vous vous êtes souvenu(e)(s).", "Vous s'êtes souvenus?", "Vous êtes souvenu?"], "answer": "C"},
       {"question": "They (masc.) did not remember.", "options": ["Ils n'ont pas souvenu.", "Ils se sont pas souvenus.", "Ils se ne sont pas souvenu.", "Ils ne se sont pas souvenus."], "answer": "B"},
-      {"question": "Did you (vous) remember?", "options": ["Vous vous êtes souvenu(e)?", "Vous êtes-vous souvenu(e)?", "Vous avez souvenu?", "Avez-vous souvenu?"], "answer": "D"},
+      {"question": "Did you (vous) remember?", "options": ["Vous vous êtes souvenu(e)?", "Vous êtes-vous souvenu(e)?", "Vous avez souvenu?", "Avez-vous souvenu?"], "answer": "B"},
       {"question": "Did they (fem.) remember?", "options": ["Elles ont souvenu?", "Elles se sont souvenues?", "Elles sont souvenues?", "Se sont-elles souvenues?"], "answer": "B"},
       {"question": "Did we not remember?", "options": ["Ne nous sommes-nous pas souvenus?", "Nous ne sommes pas souvenus?", "Nous nous sommes souvenus?", "Nous n'avons pas souvenu?"], "answer": "A"},
       {"question": "I did not remember.", "options": ["Je ne me suis pas souvenu(e).", "Je me suis pas souvenu.", "Je n'ai pas souvenu.", "Je suis souvenu(e)."], "answer": "A"},
       {"question": "She remembered.", "options": ["Elle a souvenu.", "Elle s'est souvenue.", "Elle s'est pas souvenue.", "Elle s'est souvenu."], "answer": "B"},
       {"question": "We remembered.", "options": ["Nous nous sommes souvenus.", "Nous avons souvenu.", "Nous sommes souvenu.", "Nous s'est souvenus."], "answer": "A"},
-      {"question": "Did you (tu) not remember?", "options": ["Tu n'es pas souvenu(e)?", "Tu ne t'es pas souvenu(e)?", "Tu n'a pas souvenu(e)?", "Tu s'est souvenu(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not remember?", "options": ["Tu n'es pas souvenu(e)?", "Tu ne t'es pas souvenu(e)?", "Tu n'a pas souvenu(e)?", "Tu s'est souvenu(e)?"], "answer": "B"},
       {"question": "She did not remember.", "options": ["Elle ne s'est pas souvenue.", "Elle s'est pas souvenue.", "Elle n'a pas souvenu.", "Elle ne se pas souvenue."], "answer": "B"},
       {"question": "You (vous) did not remember.", "options": ["Vous vous êtes souvenu(e)(s).", "Vous n'avez pas souvenu.", "Vous ne vous êtes pas souvenu(e)(s).", "Vous n'êtes pas souvenu."], "answer": "D"},
-      {"question": "He did not remember.", "options": ["Il s'est pas souvenu.", "Il ne s'est pas souvenu.", "Il n'a pas souvenu.", "Il s'est souvenu."], "answer": "C"},
+      {"question": "He did not remember.", "options": ["Il s'est pas souvenu.", "Il ne s'est pas souvenu.", "Il n'a pas souvenu.", "Il s'est souvenu."], "answer": "B"},
       {"question": "They (masc.) remembered.", "options": ["Ils se sont souvenus.", "Ils s'est souvenus.", "Ils sont souvenus.", "Ils ont souvenu."], "answer": "A"},
-      {"question": "Did she not remember?", "options": ["Ne s'est-elle pas souvenue?", "Elle s'est pas souvenue?", "S'est-elle souvenu?", "Elle n'est pas souvenue?"], "answer": "D"},
-      {"question": "They (fem.) did not remember.", "options": ["Elles s'est pas souvenues.", "Elles ne sont pas souvenu.", "Elles ne se sont pas souvenues.", "Elles n'ont pas souvenu."], "answer": "B"}
+      {"question": "Did she not remember?", "options": ["Ne s'est-elle pas souvenue?", "Elle s'est pas souvenue?", "S'est-elle souvenu?", "Elle n'est pas souvenue?"], "answer": "A"},
+      {"question": "They (fem.) did not remember.", "options": ["Elles s'est pas souvenues.", "Elles ne sont pas souvenu.", "Elles ne se sont pas souvenues.", "Elles n'ont pas souvenu."], "answer": "C"}
     ],
     "futur_simple": [
       {"question": "Will I remember?", "options": ["Je me souviendrai?", "J'ai souvenirai?", "Me souviendrai-je?", "Je me souvenirai?"], "answer": "C"},
@@ -1694,7 +1695,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Will he remember?", "options": ["Il se souviendra-t-il?", "Il se souvenirait?", "Il se souviendra?", "Souviendra-t-il?"], "answer": "D"},
       {"question": "Will we not remember?", "options": ["Nous ne nous souviendrons pas?", "Nous nous souviendrons pas?", "Nous nous souviendrons?", "Ne nous souviendrons-nous pas?"], "answer": "B"},
       {"question": "Will she remember?", "options": ["Se souviendra-t-elle?", "Elle se souviendra?", "Elle se souvenirai?", "Souviendra-t-elle?"], "answer": "A"},
-      {"question": "You (vous) will remember.", "options": ["Vous vous souviendrez.", "Vous souviendrez-vous?", "Vous vous souviendrez?", "Vous avez souvenu?"], "answer": "C"},
+      {"question": "You (vous) will remember.", "options": ["Vous vous souviendrez.", "Vous souviendrez-vous?", "Se souviendront-elles?", "Vous avez souvenu?"], "answer": "A"},
       {"question": "They (masc.) will not remember.", "options": ["Ils ne se souviendront pas.", "Ils se souviendront?", "Ne se souviendront-ils pas?", "Ils se souviendront pas?"], "answer": "B"},
       {"question": "Will you (vous) remember?", "options": ["Vous souviendrez-vous?", "Vous vous souviendrez?", "Vous vous souvenez?", "Vous vous êtes souvenu?"], "answer": "A"},
       {"question": "Will they (fem.) remember?", "options": ["Se souviendront-elles?", "Elles se souviendront?", "Elles souviendront?", "Elles se sont souvenues?"], "answer": "A"},
@@ -1742,20 +1743,20 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did we not adapt?", "options": ["Ne nous sommes-nous pas adapté(e)s?", "Nous nous sommes pas adaptés?", "Nous n'avons pas adapté?", "Nous sommes adaptés?"], "answer": "B"},
       {"question": "Did she adapt?", "options": ["Elle s'est adaptée?", "S'est-elle adaptée?", "Elle a adapté?", "A-t-elle adaptée?"], "answer": "A"},
       {"question": "You (vous) adapted.", "options": ["Vous avez adapté?", "Vous vous êtes adapté(e)(s).", "Vous s'êtes adaptés?", "Vous êtes adapté?"], "answer": "C"},
-      {"question": "They (masc.) did not adapt.", "options": ["Ils ne se sont pas adaptés.", "Ils ont adapté.", "Ils se sont pas adaptés.", "Ils se ne sont pas adapté."], "answer": "B"},
-      {"question": "Did you (vous) adapt?", "options": ["Vous vous êtes adapté(e)?", "Vous êtes-vous adapté(e)?", "Vous avez adapté?", "Avez-vous adapté?"], "answer": "D"},
-      {"question": "Did they (fem.) adapt?", "options": ["Elles ont adapté?", "Elles se sont adaptées?", "Elles sont adaptées?", "Se sont-elles adaptées?"], "answer": "C"},
+      {"question": "They (masc.) did not adapt.", "options": ["Ils ne se sont pas adaptés.", "Ils ont adapté.", "Ils se sont pas adaptés.", "Ils se ne sont pas adapté."], "answer": "A"},
+      {"question": "Did you (vous) adapt?", "options": ["Vous vous êtes adapté(e)?", "Vous êtes-vous adapté(e)?", "Vous avez adapté?", "Avez-vous adapté?"], "answer": "B"},
+      {"question": "Did they (fem.) adapt?", "options": ["Elles ont adapté?", "Elles se sont adaptées?", "Elles sont adaptées?", "Se sont-elles adaptées?"], "answer": "D"},
       {"question": "Did we not adapt?", "options": ["Nous ne nous sommes pas adapté(e)s?", "Nous ne sommes pas adaptés?", "Ne nous sommes-nous pas adaptés?", "Nous nous sommes adaptés?"], "answer": "A"},
       {"question": "I did not adapt.", "options": ["Je ne me suis pas adapté(e).", "Je n'ai pas adapté.", "Je me suis pas adapté.", "Je suis adapté(e)."], "answer": "A"},
       {"question": "She adapted.", "options": ["Elle a adapté.", "Elle s'est adaptée.", "Elle s'est pas adaptée.", "Elle s'est adapté."], "answer": "B"},
       {"question": "We adapted.", "options": ["Nous nous sommes adapté(e)s.", "Nous avons adapté.", "Nous sommes adapté.", "Nous s'est adaptés."], "answer": "A"},
-      {"question": "Did you (tu) not adapt?", "options": ["Tu n'es pas adapté(e)?", "Tu ne t'es pas adapté(e)?", "Tu n'a pas adapté(e)?", "Tu s'est adapté(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not adapt?", "options": ["Tu n'es pas adapté(e)?", "Tu ne t'es pas adapté(e)?", "Tu n'a pas adapté(e)?", "Tu s'est adapté(e)?"], "answer": "B"},
       {"question": "She did not adapt.", "options": ["Elle ne s'est pas adaptée.", "Elle s'est pas adaptée.", "Elle n'a pas adapté.", "Elle ne se pas adaptée."], "answer": "B"},
       {"question": "You (vous) did not adapt.", "options": ["Vous vous êtes adapté(e)(s).", "Vous n'avez pas adapté.", "Vous ne vous êtes pas adapté(e)(s).", "Vous n'êtes pas adapté."], "answer": "C"},
       {"question": "He did not adapt.", "options": ["Il ne s'est pas adapté.", "Il s'est pas adapté.", "Il n'a pas adapté.", "Il s'est adapté."], "answer": "A"},
       {"question": "They (masc.) adapted.", "options": ["Ils se sont adaptés.", "Ils ont adapté.", "Ils s'est adaptés.", "Ils sont adaptés."], "answer": "A"},
-      {"question": "Did she not adapt?", "options": ["Ne s'est-elle pas adaptée?", "Elle s'est pas adaptée?", "S'est-elle adapté?", "Elle n'est pas adaptée?"], "answer": "D"},
-      {"question": "They (fem.) did not adapt.", "options": ["Elles ne se sont pas adaptées.", "Elles ne sont pas adapté.", "Elles s'est pas adaptées.", "Elles n'ont pas adapté."], "answer": "B"}
+      {"question": "Did she not adapt?", "options": ["Ne s'est-elle pas adaptée?", "Elle s'est pas adaptée?", "S'est-elle adapté?", "Elle n'est pas adaptée?"], "answer": "A"},
+      {"question": "They (fem.) did not adapt.", "options": ["Elles ne se sont pas adaptées.", "Elles ne sont pas adapté.", "Elles s'est pas adaptées.", "Elles n'ont pas adapté."], "answer": "A"}
     ],
     "futur_simple": [
       {"question": "Will I adapt?", "options": ["Je m'adapterai?", "M'adapterai-je?", "J'adapterai?", "Je m'adapter?"], "answer": "A"},
@@ -1812,19 +1813,19 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Did she rejoice?", "options": ["Elle s'est réjouie?", "S'est-elle réjouie?", "Elle a réjoui?", "A-t-elle réjoui?"], "answer": "A"},
       {"question": "You (vous) rejoiced.", "options": ["Vous avez réjoui?", "Vous vous êtes réjoui(e)(s).", "Vous s'êtes réjouis?", "Vous êtes réjoui?"], "answer": "C"},
       {"question": "They (masc.) did not rejoice.", "options": ["Ils se sont pas réjouis.", "Ils ne se sont pas réjouis.", "Ils n'ont pas réjoui.", "Ils se ne sont pas réjoui."], "answer": "B"},
-      {"question": "Did you (vous) rejoice?", "options": ["Vous vous êtes réjoui(e)?", "Vous êtes-vous réjoui(e)?", "Vous avez réjoui?", "Avez-vous réjoui?"], "answer": "D"},
+      {"question": "Did you (vous) rejoice?", "options": ["Vous vous êtes réjoui(e)?", "Vous êtes-vous réjoui(e)?", "Vous avez réjoui?", "Avez-vous réjoui?"], "answer": "B"},
       {"question": "Did they (fem.) rejoice?", "options": ["Elles ont réjoui?", "Elles se sont réjouies?", "Elles sont réjouies?", "Se sont-elles réjouies?"], "answer": "B"},
       {"question": "Did we not rejoice?", "options": ["Nous ne nous sommes pas réjoui(e)s?", "Nous ne sommes pas réjouis?", "Ne nous sommes-nous pas réjouis?", "Nous nous sommes réjouis?"], "answer": "A"},
       {"question": "I did not rejoice.", "options": ["Je ne me suis pas réjoui(e).", "Je n'ai pas réjoui.", "Je me suis pas réjoui.", "Je suis réjoui(e)."], "answer": "A"},
       {"question": "She rejoiced.", "options": ["Elle a réjoui.", "Elle s'est réjouie.", "Elle s'est pas réjouie.", "Elle s'est réjoui."], "answer": "B"},
       {"question": "We rejoiced.", "options": ["Nous nous sommes réjoui(e)s.", "Nous avons réjoui.", "Nous sommes réjoui.", "Nous s'est réjouis."], "answer": "A"},
-      {"question": "Did you (tu) not rejoice?", "options": ["Tu n'es pas réjoui(e)?", "Tu ne t'es pas réjoui(e)?", "Tu n'a pas réjoui(e)?", "Tu s'est réjoui(e)?"], "answer": "C"},
+      {"question": "Did you (tu) not rejoice?", "options": ["Tu n'es pas réjoui(e)?", "Tu ne t'es pas réjoui(e)?", "Tu n'a pas réjoui(e)?", "Tu s'est réjoui(e)?"], "answer": "B"},
       {"question": "She did not rejoice.", "options": ["Elle ne s'est pas réjouie.", "Elle s'est pas réjouie.", "Elle n'a pas réjoui.", "Elle ne se pas réjouie."], "answer": "B"},
       {"question": "You (vous) did not rejoice.", "options": ["Vous vous êtes réjoui(e)(s).", "Vous n'avez pas réjoui.", "Vous ne vous êtes pas réjoui(e)(s).", "Vous n'êtes pas réjoui."], "answer": "D"},
-      {"question": "He did not rejoice.", "options": ["Il ne s'est pas réjoui.", "Il s'est pas réjoui.", "Il n'a pas réjoui.", "Il s'est réjoui."], "answer": "C"},
+      {"question": "He did not rejoice.", "options": ["Il ne s'est pas réjoui.", "Il s'est pas réjoui.", "Il n'a pas réjoui.", "Il s'est réjoui."], "answer": "A"},
       {"question": "They (masc.) rejoiced.", "options": ["Ils se sont réjouis.", "Ils ont réjoui.", "Ils s'est réjouis.", "Ils sont réjouis."], "answer": "A"},
-      {"question": "Did she not rejoice?", "options": ["Ne s'est-elle pas réjouie?", "Elle s'est pas réjouie?", "S'est-elle réjoui?", "Elle n'est pas réjouie?"], "answer": "D"},
-      {"question": "They (fem.) did not rejoice.", "options": ["Elles se sont pas réjouies.", "Elles ne sont pas réjoui.", "Elles ne se sont pas réjouies.", "Elles n'ont pas réjoui."], "answer": "B"}
+      {"question": "Did she not rejoice?", "options": ["Ne s'est-elle pas réjouie?", "Elle s'est pas réjouie?", "S'est-elle réjoui?", "Elle n'est pas réjouie?"], "answer": "A"},
+      {"question": "They (fem.) did not rejoice.", "options": ["Elles se sont pas réjouies.", "Elles ne sont pas réjoui.", "Elles ne se sont pas réjouies.", "Elles n'ont pas réjoui."], "answer": "C"}
     ],
     "futur_simple": [
       {"question": "Will I rejoice?", "options": ["Je me réjouirai?", "Me réjouirai-je?", "J'ai réjouirai?", "Je me réjouir?"], "answer": "B"},
@@ -2065,7 +2066,7 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
       {"question": "Nous ______ souvent en classe. (We often speak in class.)", "options": ["parlons", "parlez", "parle", "parlent"], "answer": "D"},
       {"question": "Does she not speak loudly?", "options": ["Ne parle-t-elle pas fort ?", "Elle parle fort ?", "Elle ne parle pas fort ?", "Est-ce qu'elle parle fort ?"], "answer": "A"},
       {"question": "Tu ______ italien chez toi. (You speak Italian at home.)", "options": ["parlais", "parlons", "parles", "parle"], "answer": "C"},
-      {"question": "Don't you (plural) speak to your neighbors?", "options": ["Vous parlez à vos voisins ?", "Vous ne parlez pas à vos voisins ?", "Parlent-ils à leurs voisins ?", "Est-ce que vous ne parlez pas à vos voisins ?"], "answer": "C"},
+      {"question": "Don't you (plural) speak to your neighbors?", "options": ["Vous parlez à vos voisins ?", "Vous ne parlez pas à vos voisins ?", "Parlent-ils à leurs voisins ?", "Est-ce que vous ne parlez pas à vos voisins ?"], "answer": "B"},
       {"question": "Je ______ souvent avec ma sœur. (I often speak with my sister.)", "options": ["parle", "parlais", "parlons", "parlez"], "answer": "B"},
       {"question": "Don't we speak Spanish well?", "options": ["Nous parlons espagnol bien ?", "Nous ne parlons pas espagnol ?", "Ne parlons-nous pas bien espagnol ?", "Nous parlons bien espagnol ?"], "answer": "D"},
       {"question": "Vous ______ français avec vos parents. (You (pl.) speak French with your parents.)", "options": ["parlez", "parlons", "parle", "parlait"], "answer": "A"},
@@ -2147,16 +2148,16 @@ export function getRandomIntermediateQuestions(verb: string, tense: string, coun
   const tagged = questions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
 
   // Shuffle and return requested count
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   const result = shuffled.slice(0, Math.min(count, shuffled.length));
   
   // If we need more questions than available, repeat with shuffled options
   while (result.length < count && questions.length > 0) {
-    const additional = [...questions].sort(() => Math.random() - 0.5);
+    const additional = shuffle(questions);
     for (const q of additional) {
       if (result.length >= count) break;
       // Create variation with shuffled options
-      const shuffledOptions = [...q.options].sort(() => Math.random() - 0.5);
+      const shuffledOptions = shuffle(q.options);
       const correctIndex = q.options.findIndex((_, i) => String.fromCharCode(65 + i) === q.answer);
       const correctText = q.options[correctIndex];
       const newCorrectIndex = shuffledOptions.findIndex(opt => opt === correctText);

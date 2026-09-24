@@ -1,3 +1,4 @@
+import { shuffle } from "@shared/shuffle";
 // Beginner level pronoun-focused questions for être, avoir, faire
 // Focus on simple subject pronoun conjugations (Je suis, Tu es, Il/Elle est, etc.)
 
@@ -2019,17 +2020,17 @@ function generateBeginnerQuestions(verb: string, tense: string, count: number): 
     // Create 3 different question variations with different wrong answer combinations
     for (let variation = 0; variation < 3 && questions.length < count; variation++) {
       // Shuffle wrong options for each variation
-      const shuffledWrong = [...availableWrong].sort(() => Math.random() - 0.5);
+      const shuffledWrong = shuffle(availableWrong);
       const wrongOptions = shuffledWrong.slice(0, 3);
       
       if (wrongOptions.length >= 3) {
         // Create shuffled answer options for each variation
-        const answerOptions = [
+        const answerOptions = shuffle([
           { text: frenchForm, rationale: `Correct! '${frenchForm}' is '${englishForm}' in French.`, isCorrect: true },
           { text: wrongOptions[0], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false },
           { text: wrongOptions[1], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false },
           { text: wrongOptions[2], rationale: `This is a different conjugation of ${verb}.`, isCorrect: false }
-        ].sort(() => Math.random() - 0.5); // Randomize order
+        ]); // Fisher–Yates, via shared/shuffle
         
         questions.push({
           question: englishForm,
@@ -2041,7 +2042,7 @@ function generateBeginnerQuestions(verb: string, tense: string, count: number): 
   });
 
   // Shuffle all questions and return requested count
-  return questions.sort(() => Math.random() - 0.5).slice(0, count);
+  return shuffle(questions).slice(0, count);
 }
 
 // Function to get random beginner pronoun questions for a specific verb and tense
@@ -2057,6 +2058,6 @@ export function getRandomBeginnerPronounQuestions(verb: string, tense: string, c
   }
   
   const tagged = curatedQuestions.map((q, i) => ({ ...q, audioIndex: i + 1 }));
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }

@@ -327,14 +327,116 @@ that would: clear the key, fail, check, pass, check. That test is no longer
 needed — the discard rule accounts for both non-writes — but the discipline is
 the one that has been missing all week.
 
-### 1.1.16 — sort(() => Math.random() - 0.5) survives in the non-exam paths
+### 1.1.16 — CLOSED. It was 29 sites, not six
 
-The exam shuffle was replaced with Fisher–Yates under 1.1.11. The same
-non-shuffle is still used at six other sites in `client/src/App.tsx` (lines
-~965, 1166, 1255, 1398, 2049, 2833), all on course and unit paths. A comparator
-returning a random sign is not a permutation: order stays partly predictable and
-the bias depends on the engine's sort. Not urgent, but it is the same defect
-already fixed once, and it should not ship in two states.
+The exam shuffle became Fisher–Yates under 1.1.11. The register recorded six
+survivors in `client/src/App.tsx`. The real count was **29 live sites across
+seven files** — App.tsx (6), VocabularyBuilder (1), beginner-pronoun-data (4),
+elementary-quiz-data (9), intermediate-quiz-data (3), novice-quiz-data (2),
+quiz-generator (4).
+
+`sort(() => Math.random() - 0.5)` is not a shuffle. A comparator returning a
+random sign is inconsistent, so the permutation distribution depends on the
+engine's sort and is measurably skewed — early elements tend to stay early.
+
+All 29 now call `shuffle()` from the new `shared/shuffle.ts`, which both
+surfaces and the server import. App.tsx's local copy, written during the exam
+rework, was deleted: after adding the import it shadowed the shared one, which
+would have left the defect fixed in two different implementations — the thing
+this item exists to stop. `novice-quiz-data-old.ts` was left alone; nothing
+imports it.
+
+**A note on how the count was wrong.** The six-site figure came from a grep I
+ran over `client/src/App.tsx` only. When I later grepped the server directory
+the command returned nothing and I nearly recorded "none elsewhere" — a false
+negative from my own tooling, caught only because I had seen one of those sites
+with my own eyes an hour earlier. Same failure mode as 1.1.5 and 1.1.7: a check
+that appears to pass because it did not really run.
+
+### 1.1.7 — CLOSED, and it found 25 wrong answer keys
+
+The validator parsed 684 of ~2,760 questions and reported a total that read as
+complete. It now parses **2,764** — Intermediate and Novice included.
+
+Two new oracles were needed, because neither dataset has a `hint` field, so the
+check that caught 1.1.4 and 1.1.5 had nothing to work with:
+
+- **Subject agreement.** The English question names the subject, so the keyed
+  French must agree in person. 1,796 questions checked, **one** flag — a rate
+  low enough to trust.
+- **Auxiliary agreement (passé composé).** Added after the subject oracle
+  missed `Nous sommes ouvert le même livre` keyed as correct: every option used
+  *nous*, so person agreement was silent. This is the most-taught rule in the
+  tense and a wrong key here teaches the error outright.
+
+**25 wrong answer keys, all live on conjugately.com:**
+
+| Where | Was keyed | Should be |
+|---|---|---|
+| intermediate:1697 | `Vous vous souviendrez?` (interrogative for a declarative prompt) | `Vous vous souviendrez.` |
+| intermediate:2068 | `Parlent-ils à leurs voisins ?` (third person for a *vous* prompt) | `Vous ne parlez pas à vos voisins ?` |
+| intermediate:1171 | `Nous sommes ouvert le même livre.` | `Nous avons ouvert le même livre.` |
+| 22 rows across s'ennuyer, se souvenir, s'adapter, se réjouir | forms with the reflexive pronoun dropped — `A-t-il ennuyé ?`, `Avez-vous souvenu?`, `Ils ont adapté.` | the correct reflexive form, already present unkeyed in the same question |
+
+The reflexive rows are the serious ones. `A-t-il ennuyé ?` is not a register
+choice for "Did he get bored?" — it is not French. The correct option sat
+in the same question, unselected, in all 22 cases, so every fix re-points a key
+at text already in the corpus. Nothing was invented.
+
+**18 duplicate-distractor questions** (1.1.6's defect, in the two datasets the
+validator could not previously read) were served as three options rather than
+four — a 33% guess rate. Each duplicate was replaced with a conjugated form
+already attested elsewhere in the same verb block, in a different grammatical
+person. Again nothing invented; the borrowed forms are the corpus's own.
+
+**Proved rather than asserted.** Two defects were deliberately re-planted and
+both were caught; both cleared on restore. After the week this file records,
+a check that has not been seen to fire is not a check.
+
+### 1.1.8 — RESTATED. It is worse than 61%
+
+"1,124 of 1,840 in slot A" is the file average and it understates the problem.
+Per-block, **over forty Intermediate verb×tense blocks are 20 out of 20 slot A**,
+as are three Novice blocks. Beginner is skewed the other way: **zero** of 180
+answers in slot A. Pooling hid this, which is the same measurement error as the
+13 September miss.
+
+Check 5 previously failed the build on the pooled corpus and passed only because
+the data it could parse happened to be uniform. Reaching Intermediate would have
+turned it red, and the tempting fix — loosen the threshold — leaves a check that
+means nothing. Instead skew is now a **per-dataset warning**, on the reasoning
+check 6 already documented (the serve-time shuffle makes source order invisible),
+and the shuffle itself is promoted to **check 7, which fails the build**: every
+`polishQuestions(...)` in `server/routes.ts` must be wrapped in
+`shuffleAnswerOptions(...)`. The mitigation is now enforced rather than assumed.
+
+### EAS pipeline — proved 24 September, ahead of need
+
+Not a defect. Recorded because it retires the release's largest unknown.
+
+A development client was built and installed on a physical iPhone with nothing
+new in it. Its only purpose was to prove the toolchain end to end before Masters
+Mic depends on it: Apple Developer auth, bundle identifier registration,
+capability sync, distribution certificate reuse (the existing cert, shared with
+@jonathan75/sloka-hub — a new one would have crowded out the one the shipped app
+is signed with), device registration by website profile, and a full Xcode build
+including `expo-speech-recognition`'s native module.
+
+Build: `67e5cdb4-4deb-447c-bc8b-8142f89c6f04`.
+
+**A correction to the record.** Earlier sitreps in this project stated the wrong
+version of `expo-speech-recognition` was installed. That was false. The npm
+`sdk-54` tag resolves to **3.1.3**, which is exactly what `package.json` pins and
+what `node_modules` holds; the plugin block and both permission strings were
+already in `app.json`, and `eas.json` already carried a `development` profile.
+The scaffolding was complete. What remains for 1.1.2 is the feature — capture,
+ladder UI, equaliser, wiring to the already-tested matcher — not the plumbing.
+The Masters Mic position was reported as worse than it was, twice.
+
+**One live hazard this did surface.** The `latest` tag for
+`expo-speech-recognition` is now **57.1.0**. A plain
+`npm install expo-speech-recognition` would pull it and break SDK 54. Any future
+install must use the `@sdk-54` tag.
 
 ---
 

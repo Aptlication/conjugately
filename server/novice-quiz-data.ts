@@ -1,3 +1,4 @@
+import { shuffle } from "@shared/shuffle";
 // Novice Level Full-Sentence Quiz Data
 // Corrected and validated content from user
 // Verbs: aller, faire, avoir, être (4 verbs)
@@ -162,8 +163,8 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "She will be / She shall be late", "options": ["Il sera en retard", "Elle sera en retard", "Elles seront en retard", "Tu seras en retard"], "answer": "B"},
       {"question": "We will be / We shall be happy", "options": ["Vous serez heureux", "Ils seront heureux", "Je serai heureux", "Nous serons heureux"], "answer": "D"},
       {"question": "You will be / You shall be kind (formal / plural)", "options": ["Tu seras gentil", "Nous serons gentils", "Vous serez gentils", "Ils seront gentils"], "answer": "C"},
-      {"question": "They will be / They shall be teachers (male / mixed)", "options": ["Elles seront professeures", "Ils étaient professeurs", "Ils seront professeurs", "Ils seront professeurs"], "answer": "D"},
-      {"question": "They will be / They shall be friends (female)", "options": ["Ils seront amis", "Elles seront amies", "Elles étaient amies", "Elles seront amies"], "answer": "B"},
+      {"question": "They will be / They shall be teachers (male / mixed)", "options": ["Elles seront professeures", "Ils étaient professeurs", "Je ne serai pas fatigué", "Ils seront professeurs"], "answer": "D"},
+      {"question": "They will be / They shall be friends (female)", "options": ["Ils seront amis", "Elles seront amies", "Elles étaient amies", "Serai-je heureux ?"], "answer": "B"},
 
       // Negative statements (6 questions)
       {"question": "I will not be / I shall not be tired", "options": ["Tu ne seras pas fatigué", "Il ne sera pas fatigué", "Je ne serai pas fatigué", "Nous ne serons pas fatigués"], "answer": "C"},
@@ -365,7 +366,7 @@ export function getRandomNoviceQuestions(verb: string, tense: string, count: num
   }
   
   const tagged = tenseData.map((q, i) => ({ ...q, audioIndex: i + 1 }));
-  const shuffled = [...tagged].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle(tagged);
   return shuffled.slice(0, Math.min(count, shuffled.length));
 }
 
@@ -388,7 +389,7 @@ export function convertNoviceToQuizFormat(noviceQuestions: NoviceQuizQuestion[])
     }));
 
     // Shuffle the answer options to randomize correct answer position
-    const shuffledAnswerOptions = [...answerOptions].sort(() => Math.random() - 0.5);
+    const shuffledAnswerOptions = shuffle(answerOptions);
 
     return {
       id: index + 1,

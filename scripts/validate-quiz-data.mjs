@@ -88,6 +88,113 @@ function parseQuestions(src) {
   return out;
 }
 
+/**
+ * Second shape. Intermediate and Novice store
+ * {"question": "...", "options": [...], "answer": "A"} rather than
+ * {text, isCorrect}. The original parser matched nothing in them, so it read
+ * roughly 684 of ~2,760 questions while reporting a total that looked
+ * complete — the same fault as the substring bug: a check that appeared to
+ * pass because it never ran.
+ */
+function parseLetterQuestions(src) {
+  const out = [];
+  const lines = src.split("\n");
+  const re = /\{"question":\s*"((?:[^"\\]|\\.)*)",\s*"options":\s*\[([^\]]*)\],\s*"answer":\s*"([A-D])"/;
+  let verb = null, tense = null;
+  lines.forEach((ln, i) => {
+    let m = ln.match(/^\s{2}"([^"]+)":\s*\{/);
+    if (m) { verb = m[1]; return; }
+    m = ln.match(/^\s{4}"([^"]+)":\s*\[/);
+    if (m) { tense = m[1]; return; }
+    const e = ln.match(re);
+    if (!e) return;
+    const options = [];
+    const optRe = /"((?:[^"\\]|\\.)*)"/g;
+    let o;
+    while ((o = optRe.exec(e[2])) !== null) options.push(o[1]);
+    out.push({
+      question: e[1],
+      options,
+      answerIndex: "ABCD".indexOf(e[3]),
+      verb, tense,
+      line: i + 1,
+    });
+  });
+  return out;
+}
+
+/**
+ * These datasets carry no `hint`, so the oracle that caught 1.1.4 and 1.1.5
+ * is unavailable. The English question names the subject, though, so the
+ * keyed French answer must agree in person — and a key pointing at the wrong
+ * option almost always points at a different person. That is the same defect
+ * class, caught a different way.
+ */
+const PERSON_WORDS = {
+  je: ["je", "j"], tu: ["tu"], il: ["il"], elle: ["elle"],
+  nous: ["nous", "on"], vous: ["vous"], ils: ["ils"], elles: ["elles"],
+};
+
+function frenchPersons(text) {
+  // Split on anything that is not a letter, so inversion ("N'a-t-il pas")
+  // and elision ("j'ai") both surface the pronoun as its own token.
+  const toks = new Set(text.toLowerCase().split(/[^a-zà-ÿ]+/).filter(Boolean));
+  const found = new Set();
+  for (const [person, words] of Object.entries(PERSON_WORDS)) {
+    if (words.some((w) => toks.has(w))) found.add(person);
+  }
+  return found;
+}
+
+function expectedPersons(englishQuestion) {
+  const q = englishQuestion.toLowerCase();
+  // Order matters: "we"/"they" before "you"/"I".
+  if (/\bwe\b/.test(q)) return ["nous"];
+  if (/\bthey\b/.test(q)) return /female|feminine/.test(q) ? ["elles"] : ["ils", "elles"];
+  if (/\byou\b/.test(q)) {
+    if (/informal/.test(q)) return ["tu"];
+    if (/formal|plural/.test(q)) return ["vous"];
+    return null; // genuinely ambiguous — do not guess
+  }
+  if (/\bi\b|\bi'm\b/.test(q)) return ["je"];
+  if (/\bhe\b/.test(q)) return ["il"];
+  if (/\bshe\b/.test(q)) return ["elle"];
+  return null;
+}
+
+/**
+ * Auxiliary agreement in the passé composé.
+ *
+ * Added 24 Sep after the subject oracle missed a keyed answer reading
+ * "Nous sommes ouvert le même livre" — être as the auxiliary for ouvrir. Every
+ * option in that question used nous, so person agreement said nothing. This is
+ * the single most-taught rule in the tense, and a wrong key here teaches the
+ * error directly.
+ *
+ * Reflexives always take être. Of the intransitive movement verbs that do, none
+ * currently appear as a corpus verb, but the list is here so the check stays
+ * right if one is added.
+ */
+const ETRE_VERBS = new Set([
+  "aller", "venir", "revenir", "devenir", "arriver", "partir", "entrer",
+  "rentrer", "sortir", "monter", "descendre", "rester", "tomber", "retourner",
+  "naître", "mourir", "passer",
+]);
+
+function auxiliaryProblem(blockVerb, text) {
+  const t = text.toLowerCase();
+  const reflexive = /^s['’]|^se\s/.test(blockVerb);
+  const wantsEtre = reflexive || ETRE_VERBS.has(blockVerb);
+  const hasEtre = /\b(suis|es|est|sommes|êtes|sont)\b/.test(t);
+  const hasAvoir = /\b(ai|as|a|avons|avez|ont)\b/.test(t);
+  // Only judge when exactly one auxiliary family is present, and only when a
+  // past participle plausibly follows — otherwise this fires on présent forms.
+  if (hasEtre === hasAvoir) return null;
+  if (hasEtre && !wantsEtre) return `uses être as the auxiliary, but "${blockVerb}" takes avoir`;
+  if (hasAvoir && wantsEtre) return `uses avoir as the auxiliary, but "${blockVerb}" takes être`;
+  return null;
+}
+
 const failures = [];
 const warnings = [];
 const positions = [0, 0, 0, 0];
@@ -96,6 +203,8 @@ let positionTotal = 0;
 const slotsByFile = {};
 let checked = 0;
 let parsed = 0;
+let parsedLetter = 0;
+let personChecked = 0;
 
 for (const rel of DATASETS) {
   const file = join(repoRoot, rel);
@@ -171,19 +280,104 @@ for (const rel of DATASETS) {
       }
     }
   }
+
+  // ---- the same questions asked of the letter-keyed shape ----
+  for (const q of parseLetterQuestions(src)) {
+    parsedLetter++;
+    const where = `${rel}:${q.line}`;
+
+    // 1L — the answer letter has to point at an option that exists.
+    if (q.answerIndex < 0 || q.answerIndex >= q.options.length) {
+      failures.push(`${where}: answer letter is out of range for ${q.options.length} options — "${q.question}"`);
+      continue;
+    }
+
+    // 2L — four options, or the guess rate is wrong.
+    if (q.options.length !== 4) {
+      failures.push(`${where}: ${q.options.length} options, expected 4 — "${q.question}"`);
+    }
+
+    // 3L — duplicate distractors collapse to a three-option question.
+    const norms = q.options.map(norm);
+    if (new Set(norms).size !== norms.length) {
+      failures.push(`${where}: duplicate option text — will be served as ${new Set(norms).size} options — "${q.question}"`);
+    }
+
+    // 4L — slot distribution, same counters as the hint-keyed data.
+    if (q.options.length === 4) {
+      positions[q.answerIndex]++;
+      positionTotal++;
+      (slotsByFile[rel] ||= []).push(q.answerIndex);
+    }
+
+    // 6L — auxiliary agreement, passé composé only. The subject oracle is
+    //      blind here: every option in the question that prompted this check
+    //      used "nous", so person agreement had nothing to say, while the key
+    //      pointed at "Nous sommes ouvert" — être for a verb that takes avoir.
+    if (q.tense && /passé_composé|passe_compose/i.test(q.tense) && q.verb) {
+      const aux = auxiliaryProblem(q.verb, q.options[q.answerIndex]);
+      if (aux) {
+        failures.push(`${where}: keyed answer ${aux} — "${q.options[q.answerIndex]}"`);
+      }
+    }
+
+    // 5L — subject agreement. No hint field here, so the 1.1.5 oracle is
+    //      unavailable; the English subject is the oracle instead. A key on
+    //      the wrong option nearly always lands on a different person.
+    const want = expectedPersons(q.question);
+    const keyed = q.options[q.answerIndex];
+    if (want && keyed) {
+      const got = frenchPersons(keyed);
+      if (got.size > 0) {
+        personChecked++;
+        if (!want.some((w) => got.has(w))) {
+          const better = q.options.filter((o) => want.some((w) => frenchPersons(o).has(w)));
+          failures.push(
+            `${where}: subject disagreement — English wants ${want.join(" or ")}, ` +
+            `keyed option is "${keyed}"` +
+            (better.length === 1 ? `, should be "${better[0]}"` : "")
+          );
+        }
+      }
+    }
+  }
 }
 
 // 5 — position distribution across the whole corpus. Chi-square against
 //     uniform, 3 degrees of freedom, p = 0.001 → 16.27. Generous on purpose:
 //     this catches "the answer is always A", not ordinary lumpiness.
+//
+//     CHANGED 24 Sep, and the reasoning matters. This was a FAILURE and it
+//     passed only because the corpus it could parse happened to be uniform.
+//     Once the parser reached Intermediate — 61% slot A — it would have gone
+//     red, and the tempting fix is to loosen the threshold until it passes.
+//     That would leave a check that means nothing.
+//
+//     The honest position is the one check 6 already documents: source skew
+//     is not visible to a learner because shuffleAnswerOptions randomises
+//     option order at serve time. So skew is reported as a warning, per
+//     dataset rather than pooled (pooling let blocks cancel each other out,
+//     which is exactly how the 13 September miss happened) — and the shuffle
+//     it depends on is promoted from an assumption to check 7, which DOES
+//     fail the build. The protection is now real rather than nominal.
 let chi = 0;
 if (positionTotal > 0) {
   const expectedPer = positionTotal / 4;
   chi = positions.reduce((sum, n) => sum + (n - expectedPer) ** 2 / expectedPer, 0);
-  if (chi > 16.27) {
-    failures.push(
-      `correct-answer position is not uniform across the corpus: ` +
-      `A/B/C/D = ${positions.join("/")}, chi-square ${chi.toFixed(2)} > 16.27`
+}
+for (const [file, slots] of Object.entries(slotsByFile)) {
+  if (slots.length < 40) continue;
+  const counts = [0, 0, 0, 0];
+  for (const slot of slots) counts[slot]++;
+  const per = slots.length / 4;
+  const x2 = counts.reduce((sum, n) => sum + (n - per) ** 2 / per, 0);
+  if (x2 > 16.27) {
+    const worst = Math.max(...counts);
+    warnings.push(
+      `${file}: correct-answer position is not uniform — A/B/C/D = ${counts.join("/")} ` +
+      `of ${slots.length} (chi-square ${x2.toFixed(2)}); always picking slot ` +
+      `${"ABCD"[counts.indexOf(worst)]} would score ${Math.round((worst / slots.length) * 100)}% ` +
+      `if options were served unshuffled`
     );
   }
 }
@@ -219,7 +413,31 @@ for (const [file, slots] of Object.entries(slotsByFile)) {
   }
 }
 
-console.log(`quiz-data validation — ${parsed} questions parsed, ${checked} answer keys checked`);
+// 7 — the shuffle is load-bearing, so its removal must break the build.
+//     Every position warning above is tolerable ONLY because option order is
+//     randomised at the response boundary. If someone deletes that call, the
+//     Intermediate data alone hands a learner 61% for pressing A.
+const routesFile = join(repoRoot, "server/routes.ts");
+if (!existsSync(routesFile)) {
+  failures.push("server/routes.ts: missing — cannot verify answer shuffling");
+} else {
+  const routes = readFileSync(routesFile, "utf8");
+  const polishCalls = (routes.match(/polishQuestions\s*\(/g) || []).length;
+  const shuffled = (routes.match(/shuffleAnswerOptions\s*\(\s*polishQuestions\s*\(/g) || []).length;
+  if (polishCalls === 0) {
+    failures.push("server/routes.ts: no polishQuestions call found — the response boundary has moved, so this check no longer proves anything");
+  } else if (shuffled !== polishCalls) {
+    failures.push(
+      `server/routes.ts: ${shuffled} of ${polishCalls} question responses are shuffled. ` +
+      `Every polishQuestions(...) must be wrapped in shuffleAnswerOptions(...) — ` +
+      `the answer-position warnings above are only tolerable because of it`
+    );
+  }
+}
+
+console.log(`quiz-data validation — ${parsed + parsedLetter} questions parsed ` +
+  `(${parsed} hint-keyed, ${parsedLetter} letter-keyed), ` +
+  `${checked} answer keys checked against hints, ${personChecked} against subject agreement`);
 if (positionTotal) {
   const pct = positions.map((n) => ((n / positionTotal) * 100).toFixed(1) + "%");
   console.log(`  correct-answer position: A ${pct[0]}  B ${pct[1]}  C ${pct[2]}  D ${pct[3]}  (chi-square ${chi.toFixed(2)})`);
