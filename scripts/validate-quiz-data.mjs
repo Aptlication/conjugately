@@ -435,6 +435,63 @@ if (!existsSync(routesFile)) {
   }
 }
 
+// 8 — every verb an exam draws from must have questions in all three tenses.
+//     "se débrouiller" had présent only, so an Intermediate Past or Future exam
+//     would have thrown on assembly. That is the RIGHT failure - loadExamQuestions
+//     refuses to serve a short exam - but it should never reach a learner's
+//     phone, and nothing was checking for it. The exam registry is parsed
+//     textually because this script is plain .mjs and shared/exams.ts is
+//     TypeScript; if that parse stops matching, the check says so rather than
+//     silently passing.
+const examsSrc = existsSync(join(repoRoot, "shared/exams.ts"))
+  ? readFileSync(join(repoRoot, "shared/exams.ts"), "utf8") : "";
+const DATASET_FOR_LEVEL = {
+  Novice: "server/novice-quiz-data.ts",
+  Intermediate: "server/intermediate-quiz-data.ts",
+};
+const setsBlock = examsSrc.match(/EXAM_VERB_SETS[^=]*=\s*\{([\s\S]*?)\n\};/);
+if (!setsBlock) {
+  failures.push("shared/exams.ts: could not read EXAM_VERB_SETS — exam verb coverage is UNCHECKED");
+} else {
+  for (const [level, rel] of Object.entries(DATASET_FOR_LEVEL)) {
+    // Verb arrays hold no nested brackets, so stop at the first "]" - Beginner
+    // and Novice are written on one line, so a newline-anchored terminator ran
+    // past them and swallowed the rest of the file.
+    const m = setsBlock[1].match(new RegExp(`${level}: \\[([^\\]]*)\\]`));
+    if (!m) { failures.push(`shared/exams.ts: no verb set found for ${level}`); continue; }
+    const verbs = (m[1].match(/"([^"]+)"/g) || []).map((x) => x.slice(1, -1));
+    const file = join(repoRoot, rel);
+    if (!existsSync(file)) { failures.push(`${rel}: missing`); continue; }
+    const src = readFileSync(file, "utf8");
+    const byVerb = {};
+    let cur = null;
+    for (const ln of src.split(/\r?\n/)) {
+      const v = ln.match(/^  "([^"]+)": \{/);
+      if (v) { cur = v[1]; byVerb[cur] = []; continue; }
+      const t = ln.match(/^    "([^"]+)": \[/);
+      if (t && cur) byVerb[cur].push(t[1]);
+    }
+    // Name the three tenses rather than counting keys. Counting passed a
+    // deliberately planted defect: renaming futur_simple still left three keys.
+    // A check that counts what it should identify is not a check.
+    const REQUIRED_TENSES = ["present", "passé_composé", "futur_simple"];
+    for (const verb of verbs) {
+      const tenses = byVerb[verb];
+      if (!tenses) {
+        failures.push(`${rel}: exam verb "${verb}" (${level}) has no questions at all`);
+        continue;
+      }
+      const missing = REQUIRED_TENSES.filter((t) => !tenses.includes(t));
+      if (missing.length) {
+        failures.push(
+          `${rel}: exam verb "${verb}" (${level}) is missing ${missing.join(" and ")} ` +
+          `(has [${tenses.join(", ")}]) — that exam would throw on assembly`
+        );
+      }
+    }
+  }
+}
+
 console.log(`quiz-data validation — ${parsed + parsedLetter} questions parsed ` +
   `(${parsed} hint-keyed, ${parsedLetter} letter-keyed), ` +
   `${checked} answer keys checked against hints, ${personChecked} against subject agreement`);

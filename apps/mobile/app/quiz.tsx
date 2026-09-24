@@ -8,6 +8,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
+import { getExamById, type ExamResult } from "@shared/exams";
+import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
 
 const TENSE_BY_TIMEFRAME: Record<string, string> = {
@@ -63,7 +65,12 @@ function lookupAnswerFile(m: any, text: string, difficulty: string): string | nu
 }
 
 export default function Quiz() {
-  const p = useLocalSearchParams<{ difficulty: string; verb: string; timeFrame: string; courseKey?: string; unitIndex?: string }>();
+  const p = useLocalSearchParams<{ difficulty: string; verb: string; timeFrame: string; courseKey?: string; unitIndex?: string; examId?: string }>();
+  // An exam is a MODE of this screen, not a second screen. Everything it
+  // shares with a practice quiz - audio, answer handling, review, styling -
+  // is identical, and duplicating 400 lines to change the loader and the
+  // verdict is how two surfaces drift apart.
+  const exam = p.examId ? getExamById(String(p.examId)) : undefined;
   const difficulty = String(p.difficulty || "");
   const verb = String(p.verb || "");
   const timeFrame = String(p.timeFrame || "");
@@ -85,14 +92,21 @@ export default function Quiz() {
   const [showTip, setShowTip] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
   const [reviewIndex, setReviewIndex] = useState<number | null>(null);
+  const [examBest, setExamBest] = useState<ExamResult | undefined>(undefined);
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const cancelAutoAdvance = () => { if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; } };
   const goHome = () => { cancelAutoAdvance(); if (router.canGoBack()) router.back(); else router.replace("/"); };
 
   const q = questions[idx];
   const questionAudioOn = difficulty === "Beginner" || difficulty === "Novice";
+  // In an exam the questions come from several verbs, so the screen-level
+  // `verb` and `tense` are wrong for them. loadExamQuestions tags each question
+  // with the verb and tense path it actually came from.
+  const qVerb = (q as any)?._verb || verb;
+  const qTensePath = (q as any)?._tensePath || TENSE_PATH[tense];
+  const audioLevel = (exam ? exam.level : difficulty).toLowerCase();
   const questionUrl = q && questionAudioOn
-    ? `${API_BASE}/attached_assets/audio/quizzes/${difficulty.toLowerCase()}/${encodeURIComponent(verb)}/${TENSE_PATH[tense]}/questions/Q${q.audioIndex || idx + 1}.mp3`
+    ? `${API_BASE}/attached_assets/audio/quizzes/${audioLevel}/${encodeURIComponent(qVerb)}/${qTensePath}/questions/Q${q.audioIndex || idx + 1}.mp3`
     : null;
   const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
   const aPlayer = useAudioPlayer(answerUrl ? { uri: answerUrl } : null);
@@ -120,6 +134,18 @@ export default function Quiz() {
   const load = async () => {
     setState("loading"); setIdx(0); setSelected(null); setConfirmed(false);
     setAnswers({}); setAnswerUrl(null);
+    if (exam) {
+      // Parallel, and loud on any failure. A dropped request must never produce
+      // a shorter exam scored against the same 90% gate.
+      try {
+        setQuestions(await loadExamQuestions(exam));
+        setState("active");
+      } catch (e: any) {
+        setError(e.message || "The exam could not be prepared. Nothing has been scored.");
+        setState("error");
+      }
+      return;
+    }
     try {
       const r = await fetch(`${API_BASE}/api/get-quiz`, {
         method: "POST",
@@ -211,8 +237,20 @@ export default function Quiz() {
     if (idx + 1 >= questions.length) {
       const finalScore = Object.entries({ ...answers, [idx]: selected ?? -1 }).reduce((n, [qi, ai]) =>
         n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
-      logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
-        date: new Date().toISOString(), courseKey, unitIndex });
+      if (exam) {
+        // Kept out of conjugately_quiz_history on purpose: a pass/fail score is
+        // not practice and must not move the practice average.
+        recordExamResult({
+          examId: exam.id,
+          correct: finalScore,
+          total: exam.totalQuestions,
+          passed: finalScore >= exam.passMark,
+          date: new Date().toISOString(),
+        }).then(setExamBest).catch(() => {});
+      } else {
+        logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
+          date: new Date().toISOString(), courseKey, unitIndex });
+      }
       setState("done");
     }
     else setIdx(idx + 1);
@@ -224,14 +262,24 @@ export default function Quiz() {
   };
 
   return (
-    <LinearGradient colors={["#F7F8FA", "#F7F8FA"]}
+    <LinearGradient colors={exam ? ["#000000", "#000000"] : ["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
+        {exam && state !== "loading" && (
+          <View style={styles.examBanner}>
+            <Text style={styles.examBannerText}>
+              🏆 FINAL LEVEL EXAM — {exam.passMark} OF {exam.totalQuestions} TO PASS
+            </Text>
+          </View>
+        )}
+
         {state === "loading" && (
           <View style={styles.center}>
-            <ActivityIndicator size="large" color="#2B5FD9" />
-            <Text style={styles.loadingText}>Generating your quiz…</Text>
+            <ActivityIndicator size="large" color={exam ? "#F5C518" : "#2B5FD9"} />
+            <Text style={[styles.loadingText, exam && { color: "#C3CAD4" }]}>
+              {exam ? `Preparing your ${exam.totalQuestions}-question exam…` : "Generating your quiz…"}
+            </Text>
           </View>
         )}
 
@@ -329,7 +377,29 @@ export default function Quiz() {
           </View>
         )}
 
-        {state === "done" && (
+        {state === "done" && exam && (
+          <View style={styles.card}>
+            <Text style={styles.resultTitle}>
+              {score >= exam.passMark ? "🏆 Exam Passed" : "❌ Exam Failed"}
+            </Text>
+            <Text style={styles.resultScore}>{score} / {exam.totalQuestions}</Text>
+            <Text style={styles.resultPct}>{Math.round((score / exam.totalQuestions) * 100)}%</Text>
+            <Text style={styles.resultMsg}>
+              {score >= exam.passMark
+                ? `You needed ${exam.passMark} of ${exam.totalQuestions}. Vous êtes formidable! 🌟`
+                : `You need ${exam.passMark} of ${exam.totalQuestions} to pass. Try again when you are ready.`}
+            </Text>
+            <Text style={styles.resultNote}>
+              {examBest
+                ? `Saved on this device — your best for this exam is ${examBest.correct}/${examBest.total}.`
+                : "Could not save to this device."}
+            </Text>
+            <Pressable style={styles.ghostBtn} onPress={load}><Text style={styles.ghostText}>Retry Exam</Text></Pressable>
+            <Pressable style={styles.ghostBtn} onPress={goHome}><Text style={styles.ghostText}>← Back</Text></Pressable>
+          </View>
+        )}
+
+        {state === "done" && !exam && (
           <View style={styles.card}>
             <Text style={styles.resultScore}>{score} / {questions.length}</Text>
             <Text style={styles.resultPct}>{Math.round((score / Math.max(1, questions.length)) * 100)}%</Text>
@@ -371,6 +441,13 @@ export default function Quiz() {
 }
 
 const styles = StyleSheet.create({
+  examBanner: {
+    borderWidth: 1, borderColor: "rgba(245,197,24,0.4)", backgroundColor: "rgba(245,197,24,0.1)",
+    borderRadius: 14, paddingVertical: 12, paddingHorizontal: 16, marginBottom: 16, alignItems: "center",
+  },
+  examBannerText: { color: "#F5C518", fontWeight: "700", fontSize: 13, letterSpacing: 1.2, textAlign: "center" },
+  resultTitle: { fontSize: 26, fontWeight: "800", textAlign: "center", marginBottom: 6, color: "#1B1F24" },
+  resultNote: { fontSize: 13, color: "#5A6472", textAlign: "center", marginTop: 10, marginBottom: 4 },
   scroll: { padding: 16, paddingTop: 64, paddingBottom: 110 },
   center: { alignItems: "center", marginTop: 60 },
   loadingText: { color: "#5A6472", marginTop: 14, fontSize: 15 },

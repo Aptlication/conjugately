@@ -60,9 +60,26 @@ export const EXAM_VERB_SETS: Record<ExamLevel, string[]> = {
   Beginner: ["être", "avoir", "faire"],
   Novice: ["être", "avoir", "faire", "aller"],
   Elementary: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"],
+  // DECIDED 24 Sep by Jonathan: Intermediate is all EIGHTEEN verbs, reflexives
+  // included. The September cut to eleven was justified in the audit as
+  // "matching the eleven course units" — but that matched a COUNT, not a SET.
+  // The app's eleven units were être/avoir/faire/aller/voir/dire/pouvoir/
+  // vouloir/prendre/venir/savoir, which are the Beginner and Novice verbs, so
+  // the app would have taught one set and examined another. Corrected in
+  // apps/mobile/lib/courses.ts to match this list.
+  //
+  // Reflexive passé composé is the hardest thing the level teaches and the
+  // reason Intermediate is a step up. It is also where 22 of the 25 wrong
+  // answer keys found on 24 September were hiding.
+  //
+  // "se débrouiller" had questions in the présent only, which would have made
+  // the Past and Future exams throw on assembly. Rather than shrink the level,
+  // the missing passé composé and futur simple were authored on 24 September
+  // (1.1.18). Those 40 questions have no ElevenLabs answer audio yet.
   Intermediate: [
-    "mettre", "trouver", "croire", "parler", "prendre",
-    "lire", "écrire", "ouvrir", "fermer", "perdre", "garder",
+    "s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir",
+    "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler",
+    "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder",
   ],
 };
 
@@ -89,13 +106,25 @@ export const EXAM_VERB_SETS: Record<ExamLevel, string[]> = {
  *   Beginner       3 verbs × 10 = 30, pass 27
  *   Novice         4 verbs × 10 = 40, pass 36
  *   Elementary     7 verbs ×  6 = 42, pass 38
- *   Intermediate  11 verbs ×  6 = 66, pass 60
+ *   Intermediate  18 verbs ×  4 = 72, pass 65
+ *
+ * REVISED 24 September 2026. Intermediate became eighteen verbs (see
+ * EXAM_VERB_SETS), so six each would be a 108-question exam — defect 1 in a
+ * smaller hat. Four gives 72: long, but it is the top level and the step up
+ * from Elementary's 42 is meant to be felt.
+ *
+ * Four sits below the six persons a verb can take, so no single verb tests them
+ * all. That is acceptable here in a way it was not at five for eleven verbs,
+ * because selectExamQuestions shuffles the person order independently for each
+ * verb: WHICH four are tested varies verb by verb, and over eighteen verbs every
+ * person is covered many times. The per-verb guarantee is traded for breadth,
+ * deliberately. Changing it is one number.
  */
 export const QUESTIONS_PER_VERB: Record<ExamLevel, number> = {
   Beginner: 10,
   Novice: 10,
   Elementary: 6,
-  Intermediate: 6,
+  Intermediate: 4,
 };
 
 /**

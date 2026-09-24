@@ -3,14 +3,18 @@ import React, { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
-import { COURSES, COURSE_TIME_FRAMES } from "../lib/courses";
+import { COURSES, COURSE_TIME_FRAMES, courseBlurb } from "../lib/courses";
 import { getCourseProgress } from "../lib/progress";
+import { getExam } from "@shared/exams";
+import { readExamResults } from "../lib/exams";
+import type { ExamResult } from "@shared/exams";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
   const [timeFrame, setTimeFrame] = useState<string | null>(null);
   const course = level ? COURSES[level] : null;
   const [prog, setProg] = useState<Record<string, number[]>>({});
+  const [examResults, setExamResults] = useState<ExamResult[]>([]);
   useFocusEffect(useCallback(() => {
     let on = true;
     getCourseProgress().then((cp) => {
@@ -19,6 +23,7 @@ export default function MiniCourses() {
       for (const [k, v] of Object.entries(cp)) map[k] = v.completedUnits;
       setProg(map);
     });
+    readExamResults().then((r) => { if (on) setExamResults(r); });
     return () => { on = false; };
   }, []));
 
@@ -40,7 +45,7 @@ export default function MiniCourses() {
               return (
                 <Pressable key={key} style={[styles.row, allDone && styles.rowDone]} onPress={() => setLevel(key)}>
                   <Text style={[styles.rowTitle, allDone && styles.rowTitleDone]}>{allDone ? "✓ " : ""}{c.emoji} {c.title}</Text>
-                  <Text style={[styles.rowSub, commenced && styles.rowSubStarted]}>{allDone ? "Level complete" : commenced ? `▸ In progress — ${doneUnits} of ${c.units.length * COURSE_TIME_FRAMES.length} units` : c.blurb}</Text>
+                  <Text style={[styles.rowSub, commenced && styles.rowSubStarted]}>{allDone ? "Level complete" : commenced ? `▸ In progress — ${doneUnits} of ${c.units.length * COURSE_TIME_FRAMES.length} units` : courseBlurb(key)}</Text>
                 </Pressable>
               );
             })}
@@ -90,10 +95,30 @@ export default function MiniCourses() {
                 </Pressable>
               );
             })}
-            <View style={[styles.row, { opacity: 0.55 }]}>
-              <Text style={styles.rowTitle}>🎓 Final Level Exam</Text>
-              <Text style={styles.rowSub}>{course!.finalExam.description} — arrives in the next update</Text>
-            </View>
+            {(() => {
+              const exam = getExam(level, timeFrame);
+              if (!exam) {
+                return (
+                  <View style={[styles.row, { opacity: 0.55 }]}>
+                    <Text style={styles.rowTitle}>🎓 Final Level Exam</Text>
+                    <Text style={styles.rowSub}>Not available for this level yet</Text>
+                  </View>
+                );
+              }
+              const best = examResults.find((r) => r.examId === exam.id);
+              return (
+                <Pressable style={[styles.row, best?.passed && styles.rowDone]}
+                  onPress={() => router.push({ pathname: "/quiz", params: { examId: exam.id } })}>
+                  <Text style={[styles.rowTitle, best?.passed && styles.rowTitleDone]}>
+                    {best?.passed ? "✓ " : ""}🎓 Final Level Exam
+                  </Text>
+                  <Text style={styles.rowSub}>
+                    {exam.totalQuestions} questions · {exam.passMark} to pass
+                    {best ? ` · best ${best.correct}/${best.total}` : ""}
+                  </Text>
+                </Pressable>
+              );
+            })()}
             <Pressable onPress={() => setTimeFrame(null)}><Text style={styles.back}>← Back to time frames</Text></Pressable>
           </View>
         )}

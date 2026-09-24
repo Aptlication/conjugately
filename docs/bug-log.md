@@ -438,6 +438,66 @@ The Masters Mic position was reported as worse than it was, twice.
 `npm install expo-speech-recognition` would pull it and break SDK 54. Any future
 install must use the `@sdk-54` tag.
 
+### 1.1.18 — Intermediate is eighteen verbs, and one of them had no past or future
+
+**Decided 24 September by Jonathan: Intermediate is all eighteen verbs,
+reflexives included.**
+
+Three different answers existed in the codebase for what Intermediate is. The
+website config said eighteen. `shared/exams.ts` said eleven. The app's
+`courses.ts` said eleven *different* ones — être, avoir, faire, aller, voir,
+dire, pouvoir, vouloir, prendre, venir, savoir, which are the Beginner and
+Novice verbs. Only `prendre` was common to the app's course and the exam, so on
+the app a learner would have been taught one set of eleven and examined on
+another. Defect 2 in a new place.
+
+**That one is mine.** The September audit justified cutting eighteen to eleven
+as "matching the eleven course units". It matched a COUNT, not a SET. I never
+checked which verbs those units were.
+
+Now: eighteen verbs at **4 questions each = 72, pass 65**. Six each would have
+been 108 — defect 1 in a smaller hat. Four sits below the six grammatical
+persons, so no single verb tests them all; that is acceptable here in a way it
+was not at five for eleven verbs, because `selectExamQuestions` shuffles the
+person order independently per verb, so which four are tested varies across the
+exam. Per-verb guarantee traded for breadth, deliberately.
+
+**`se débrouiller` had questions in the présent only.** No passé composé, no
+futur simple — so an Intermediate Past or Future exam would have thrown on
+assembly. Correct behaviour (a short exam must never be scored against the same
+gate) but it should never reach a phone. Rather than shrink the level, the
+missing **40 questions were authored** in the same structure as the existing
+reflexive blocks: twenty per tense, answer letters rotating A→B→C→D, distractors
+that are near-misses on the reflexive pronoun, auxiliary, agreement and word
+order. `se débrouiller` is a regular -er reflexive, so both tenses are
+mechanically derivable rather than a matter of style.
+
+The new content was then checked by the validator rather than asserted: all 40
+passed option-count, duplicate, subject-agreement and — for the twenty passé
+composé — auxiliary-agreement checks. Corpus is now 2,804 questions.
+
+**Outstanding on this item:** those 40 questions have **no ElevenLabs answer
+audio**. Per GLOSSARY.md audio is never generated at runtime, so they will play
+nothing until recorded. Needs doing before release. Native-speaker review of the
+authored French is also worth having, though every form is regular.
+
+### Check 8 — exam verbs must have all three tenses
+
+Added so 1.1.18 cannot recur silently: every verb in `EXAM_VERB_SETS` must have
+`present`, `passé_composé` and `futur_simple` in its dataset.
+
+Two things went wrong building it, both caught, both worth recording. The first
+draft's regex was newline-anchored, and Beginner and Novice write their verb
+arrays on one line, so it ran past them and swallowed the rest of the file —
+reporting an "exam verb" called `matching the eleven course units`. Loud and
+obviously wrong, which is the right failure.
+
+The second is the instructive one. The check counted tense keys rather than
+naming them, so a deliberately planted defect — renaming `futur_simple` — still
+left three keys and **passed**. A check that counts what it should identify is
+not a check. It now names the three required tenses, and the same planted
+defect is caught with the missing tense named.
+
 ---
 
 ## Environment note
