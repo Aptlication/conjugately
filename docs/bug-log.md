@@ -498,6 +498,55 @@ left three keys and **passed**. A check that counts what it should identify is
 not a check. It now names the three required tenses, and the same planted
 defect is caught with the missing tense named.
 
+### 1.1.2 — Masters Mic: built 24 September, NOT YET RUN
+
+Three pieces, split so each can be reasoned about alone:
+
+- **`shared/answerMatch.ts`** — the comparison. Unchanged, already fixture-tested,
+  tuned on staging at `/matcher`. Runs on both surfaces.
+- **`apps/mobile/lib/mastersMic.ts`** — the recogniser and the ladder. Device only.
+- **`apps/mobile/components/MastersMic.tsx`** — the control, equaliser and the
+  French disambiguation prompt.
+
+**The ladder**, which is the feature:
+
+| Band | Behaviour |
+|---|---|
+| accept | scored, quiz advances, no confirmation step |
+| disambiguate | asks **in French** which of two forms, order randomised |
+| retry | « Comment ? », listens once more |
+| second miss | gives up gracefully — **not** marked wrong |
+
+A confirmed alternative scores **full marks**: someone who said the right thing
+and had to confirm it has not made a mistake, only the recogniser was unsure.
+
+**Two things the verified API gave us that the spec had not assumed.**
+`contextualStrings` hands Apple's recogniser the exact conjugations under test as
+bias — without it the recogniser returns common French words that merely sound
+similar, and the matcher then rejects something it was never given a fair shot
+at. And `volumechange` emits a real float on a settable interval, so the
+equaliser reflects actual input rather than being decorative motion: when it is
+flat the learner is being told something true.
+
+`requiresOnDeviceRecognition` is set **explicitly** rather than left to a
+default, because "recognition runs entirely on the device" is a claim the App
+Store nomination makes.
+
+**A spoken answer routes through `handleAnswerSelect`** — the same path a tap
+takes — so scoring, missed-word collection, answer audio and auto-advance cannot
+drift between the two ways of answering. A parallel scoring path is how two ways
+of answering end up disagreeing.
+
+**Gated out of exams** by `MIC_ALLOWED_IN_EXAMS`. Progression must not depend on
+speech recognition, and the accessibility claim only holds if every exam is
+completable without speaking.
+
+**Status: compiles and typechecks clean; has never executed.** That is exactly
+the state 1.1.14 was in for twelve days. Nothing here should be believed until a
+development build has run it on a physical iPhone: permission prompt, on-device
+recognition of French, the accept band, a real disambiguation, the « Comment ? »
+retry, and the equaliser moving with an actual voice.
+
 ---
 
 ## Environment note

@@ -8,7 +8,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
-import { getExamById, type ExamResult } from "@shared/exams";
+import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
+import { normaliseFrench, similarity } from "@shared/answerMatch";
+import MastersMic from "../components/MastersMic";
+import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
 
@@ -256,6 +259,36 @@ export default function Quiz() {
     else setIdx(idx + 1);
   };
 
+  /**
+   * A spoken answer is still an answer: it goes through handleAnswerSelect, the
+   * same path a tap takes, so scoring, missed-word collection, audio and
+   * auto-advance cannot drift between the two ways of answering.
+   */
+  const handleMicOutcome = (o: MicOutcome) => {
+    // Not heard twice: say nothing, mark nothing. Failing to be understood is
+    // not a wrong answer, and the learner can tap or try the mic again.
+    if (o.via === "unheard") return;
+
+    const opts = q?.answerOptions || [];
+    if (o.correct) {
+      const i = opts.findIndex((x: any) => x.isCorrect);
+      if (i >= 0) handleAnswerSelect(i);
+      return;
+    }
+
+    // They confirmed saying something that is not the expected form. Select the
+    // option closest to what they said - which is what tapping would have done
+    // had they tapped what they spoke. If nothing is close, leave it alone
+    // rather than guess a wrong answer on their behalf.
+    let bestIdx = -1;
+    let bestScore = -1;
+    opts.forEach((x: any, i: number) => {
+      const sc = similarity(normaliseFrench(x.text || ""), o.heard);
+      if (sc > bestScore) { bestScore = sc; bestIdx = i; }
+    });
+    if (bestIdx >= 0 && bestScore >= 0.6) handleAnswerSelect(bestIdx);
+  };
+
   const dismissGuide = async () => {
     setShowGuide(false);
     await AsyncStorage.setItem("beginnerPronounGuideShown", "true").catch(() => {});
@@ -337,6 +370,17 @@ export default function Quiz() {
                 </Pressable>
               );
             })}
+
+            {/* Masters Mic. Hidden in exams by MIC_ALLOWED_IN_EXAMS: progression
+                must never depend on speech recognition, and the accessibility
+                claim only holds if every exam is completable without speaking.
+                Hidden once an answer is confirmed, and while reviewing. */}
+            {(!exam || MIC_ALLOWED_IN_EXAMS) && reviewIndex === null && !dispConfirmed && (
+              <MastersMic
+                expected={(dispQ.answerOptions.find((o: any) => o.isCorrect)?.text) || ""}
+                onOutcome={handleMicOutcome}
+              />
+            )}
 
             {dispSelected !== null && dispConfirmed && (
               <View style={[styles.feedback,
