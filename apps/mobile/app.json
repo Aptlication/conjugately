@@ -13,7 +13,8 @@
       "bundleIdentifier": "com.conjugately.app",
       "buildNumber": "1",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "Conjugately does not access your photo library. This description is required because a component included in the app references the photo library API."
       }
     },
     "android": {
