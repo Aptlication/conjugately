@@ -208,7 +208,11 @@ export function useMastersMic(opts: {
       }
     });
 
-    const usable = bestScore >= DEFAULT_THRESHOLDS.disambiguateAt;
+    // Anything heard at all snaps to the nearest of the four. The point of the
+    // exercise is to corral the learner onto one of the forms on offer, so a
+    // near-miss is scored against the form it was nearest to rather than
+    // dismissed as unheard. Only genuine silence has nothing to snap to.
+    const usable = text.trim().length > 0;
     return {
       heard: text,
       optionIndex: usable ? bestIndex : null,

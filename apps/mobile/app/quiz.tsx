@@ -241,6 +241,24 @@ export default function Quiz() {
     }
   };
 
+  /**
+   * Move on after a spoken answer, right or wrong. Waits for the answer audio
+   * the same way the correct-answer path does, so the two never race.
+   */
+  const advanceAfterMic = (immediate: boolean) => {
+    cancelAutoAdvance();
+    if (immediate) { nextQuestion(); return; }
+    autoAdvanceRef.current = setTimeout(() => {
+      if (aPlayingRef.current || audioPendingRef.current) {
+        waitAudioRef.current = true;
+        autoAdvanceRef.current = setTimeout(() => {
+          if (waitAudioRef.current) { waitAudioRef.current = false; nextQuestion(); }
+        }, 8000);
+      }
+      else { nextQuestion(); }
+    }, 2500);
+  };
+
   const nextQuestion = () => {
     cancelAutoAdvance();
     waitAudioRef.current = false;
@@ -275,28 +293,24 @@ export default function Quiz() {
    * auto-advance cannot drift between the two ways of answering.
    */
   const handleMicOutcome = (o: MicOutcome) => {
-    // Not heard twice: say nothing, mark nothing. Failing to be understood is
-    // not a wrong answer, and the learner can tap or try the mic again.
-    if (o.via === "unheard") return;
-
     const opts = q?.answerOptions || [];
-    if (o.correct) {
-      const i = opts.findIndex((x: any) => x.isCorrect);
-      if (i >= 0) handleAnswerSelect(i);
+
+    // Nothing was heard at all, so there is nothing to snap to and nothing
+    // honest to mark. Move on rather than attributing an answer they did not
+    // give - Enter must never be a dead end.
+    if (o.via === "unheard" || o.optionIndex === null) {
+      advanceAfterMic(true);
       return;
     }
 
-    // They confirmed saying something that is not the expected form. Select the
-    // option closest to what they said - which is what tapping would have done
-    // had they tapped what they spoke. If nothing is close, leave it alone
-    // rather than guess a wrong answer on their behalf.
-    let bestIdx = -1;
-    let bestScore = -1;
-    opts.forEach((x: any, i: number) => {
-      const sc = similarity(normaliseFrench(x.text || ""), o.heard);
-      if (sc > bestScore) { bestScore = sc; bestIdx = i; }
-    });
-    if (bestIdx >= 0 && bestScore >= 0.6) handleAnswerSelect(bestIdx);
+    const i = o.correct ? opts.findIndex((x: any) => x.isCorrect) : o.optionIndex;
+    if (i < 0 || i >= opts.length) { advanceAfterMic(true); return; }
+    handleAnswerSelect(i);
+
+    // A wrong tap waits for Next so the learner can read the feedback against
+    // the options. In mic mode the options are hidden on purpose, so there is
+    // nothing to read and sitting there looks like the button did nothing.
+    if (!o.correct) advanceAfterMic(false);
   };
 
   const dismissGuide = async () => {
@@ -542,9 +556,11 @@ export default function Quiz() {
             <Text style={styles.modalTitle}>Masters Mic</Text>
             <Text style={styles.modalSub}>Say the answer out loud instead of tapping it.</Text>
             <View style={styles.micIntroList}>
-              <Text style={styles.micIntroItem}>1.  Speak, then press Enter to submit.</Text>
-              <Text style={styles.micIntroItem}>2.  The four answers are hidden while it listens, so you answer from memory.</Text>
-              <Text style={styles.micIntroItem}>3.  Tap the mic again at any time to bring them back.</Text>
+              <Text style={styles.micIntroItem}>
+                1.  <Text style={styles.micIntroStrong}>Hold Record, wait a second, then speak.</Text> Starting too soon clips the first word.
+              </Text>
+              <Text style={styles.micIntroItem}>2.  Let go when you have finished. The four answers stay hidden, so you answer from memory.</Text>
+              <Text style={styles.micIntroItem}>3.  Press Enter to submit. Right or wrong, it moves straight to the next question.</Text>
             </View>
             <Pressable style={styles.guideBtn} onPress={() => dismissMicIntro(false)}>
               <Text style={styles.guideBtnText}>Dismiss</Text>
@@ -641,4 +657,5 @@ const styles = StyleSheet.create({
   },
   micIntroList: { marginTop: 16, gap: 10, alignSelf: "stretch" },
   micIntroItem: { fontSize: 14, lineHeight: 20, color: "#334155" },
+  micIntroStrong: { fontWeight: "700", color: "#1B1F24" },
 });
