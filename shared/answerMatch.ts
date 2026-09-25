@@ -47,8 +47,8 @@ export interface MatchThresholds {
  */
 export const DEFAULT_THRESHOLDS: MatchThresholds = {
   confidenceFloor: 0.4,
-  acceptAt: 0.9,
-  disambiguateAt: 0.75,
+  acceptAt: 0.75,
+  disambiguateAt: 0.6,
 };
 
 export interface MatchResult {

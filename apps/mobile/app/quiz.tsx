@@ -8,8 +8,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
+import { usePro } from "../lib/pro";
 import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
 import { normaliseFrench, similarity } from "@shared/answerMatch";
+import { Ionicons } from "@expo/vector-icons";
 import MastersMic from "../components/MastersMic";
 import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
@@ -88,7 +90,14 @@ export default function Quiz() {
   const [selected, setSelected] = useState<number | null>(null);
   const [confirmed, setConfirmed] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const { isPro } = usePro();
   const [sound, setSound] = useState(true);
+  // Masters Mic is a MODE, not a per-question button: on until switched off.
+  const [micOn, setMicOn] = useState(false);
+  const [micIntroSeen, setMicIntroSeen] = useState(true);
+  const [showMicIntro, setShowMicIntro] = useState(false);
+  // The one question the learner asked to see the options for, if any.
+  const [showOptionsFor, setShowOptionsFor] = useState<number | null>(null);
   const soundRef = useRef(true);
   useEffect(() => { soundRef.current = sound; }, [sound]);
   const [answerUrl, setAnswerUrl] = useState<string | null>(null);
@@ -167,6 +176,7 @@ export default function Quiz() {
   useEffect(() => {
     load(); getManifest();
     AsyncStorage.getItem("dontShowInstructionPopup").then((v) => setShowTip(v !== "true"));
+    AsyncStorage.getItem("mastersMicIntroShown").then((v) => setMicIntroSeen(v === "true"));
     if (difficulty === "Beginner") {
       AsyncStorage.getItem("beginnerPronounGuideShown").then((v) => {
         if (v !== "true") setShowGuide(true);
@@ -294,8 +304,31 @@ export default function Quiz() {
     await AsyncStorage.setItem("beginnerPronounGuideShown", "true").catch(() => {});
   };
 
+  // Mic mode is off-limits in exams (MIC_ALLOWED_IN_EXAMS), while reviewing,
+  // and once an answer is in - the same gate the control itself used before.
+  const micAllowed = (!exam || MIC_ALLOWED_IN_EXAMS) && reviewIndex === null && !dispConfirmed;
+  const micActive = micOn && micAllowed;
+  const optionsHidden = micActive && showOptionsFor !== dispIdx;
+
+  const toggleMic = () => {
+    if (micOn) { setMicOn(false); setShowOptionsFor(null); return; }
+    // Masters Mic is a Pro feature. Beginner's courses stay open; this does not.
+    if (!isPro) { router.push("/paywall" as any); return; }
+    if (!micIntroSeen) setShowMicIntro(true);
+    setMicOn(true);
+    setShowOptionsFor(null);
+  };
+
+  const dismissMicIntro = (never: boolean) => {
+    setShowMicIntro(false);
+    if (never) {
+      setMicIntroSeen(true);
+      AsyncStorage.setItem("mastersMicIntroShown", "true").catch(() => {});
+    }
+  };
+
   return (
-    <LinearGradient colors={exam ? ["#000000", "#000000"] : ["#F7F8FA", "#F7F8FA"]}
+    <LinearGradient colors={exam ? ["#000000", "#000000"] : micActive ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -326,10 +359,10 @@ export default function Quiz() {
         )}
 
         {state === "active" && q && (
-          <View style={styles.card}>
+          <View style={[styles.card, micActive && styles.cardMic]}>
             <View style={styles.metaRow}>
-              <Text style={styles.meta}>Question {dispIdx + 1} of {questions.length}</Text>
-              <Text style={styles.metaScore}>Score: {score} / {questions.length}</Text>
+              <Text style={[styles.meta, micActive && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
+              <Text style={[styles.metaScore, micActive && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
             </View>
             <View style={styles.progressTrack}>
               <LinearGradient colors={["#2B5FD9", "#2B5FD9"]}
@@ -351,9 +384,9 @@ export default function Quiz() {
               </View>
             )}
 
-            <Text style={styles.qText}>{dispQ.question}</Text>
+            <Text style={[styles.qText, micActive && styles.qTextMic]}>{dispQ.question}</Text>
 
-            {dispQ.answerOptions.map((o, i) => {
+            {!optionsHidden && dispQ.answerOptions.map((o, i) => {
               const confirmedNow = dispSelected !== null && dispConfirmed;
               const isSel = dispSelected === i && confirmedNow;
               const showCorrect = confirmedNow && o.isCorrect;
@@ -375,10 +408,14 @@ export default function Quiz() {
                 must never depend on speech recognition, and the accessibility
                 claim only holds if every exam is completable without speaking.
                 Hidden once an answer is confirmed, and while reviewing. */}
-            {(!exam || MIC_ALLOWED_IN_EXAMS) && reviewIndex === null && !dispConfirmed && (
+            {micActive && (
               <MastersMic
+                key={dispIdx}
                 expected={(dispQ.answerOptions.find((o: any) => o.isCorrect)?.text) || ""}
+                options={dispQ.answerOptions.map((o: any) => o.text)}
+                correctIndex={dispQ.answerOptions.findIndex((o: any) => o.isCorrect)}
                 onOutcome={handleMicOutcome}
+                onShowOptions={() => setShowOptionsFor(dispIdx)}
               />
             )}
 
@@ -393,16 +430,16 @@ export default function Quiz() {
             )}
 
             <View style={styles.bottomRow}>
-              <Pressable style={styles.ghostBtn} onPress={goHome}>
-                <Text style={styles.ghostText}>Start Over</Text>
+              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic]} onPress={goHome}>
+                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>Start Over</Text>
               </Pressable>
-              <Pressable style={[styles.ghostBtn, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
+              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
                 onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
-                <Text style={styles.ghostText}>‹ Back</Text>
+                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>‹ Back</Text>
               </Pressable>
-              <Pressable style={[styles.ghostBtn, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
+              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
                 onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
-                <Text style={styles.ghostText}>Next ›</Text>
+                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>Next ›</Text>
               </Pressable>
             </View>
 
@@ -414,9 +451,24 @@ export default function Quiz() {
                 style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff]}>
                 <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
                 <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
-                  {sound ? "ON" : "OFF"}
+                  {sound ? "Sound On" : "Sound Off"}
                 </Text>
               </Pressable>
+
+              {micAllowed && (
+                <Pressable
+                  onPress={toggleMic}
+                  accessibilityRole="switch"
+                  accessibilityState={{ checked: micOn }}
+                  accessibilityLabel="Masters Mic"
+                  accessibilityHint="Answer out loud instead of tapping. The options are hidden while it is on."
+                  style={[styles.togglePill, micOn ? styles.micOn : styles.toggleOff]}>
+                  <Ionicons name="mic" size={16} color={micOn ? "#06242E" : "#5A6472"} />
+                  <Text style={[styles.toggleText, { color: micOn ? "#06242E" : "#5A6472" }]}>
+                    {micOn ? "Mic On" : "Mic Off"}
+                  </Text>
+                </Pressable>
+              )}
             </View>
           </View>
         )}
@@ -479,6 +531,30 @@ export default function Quiz() {
           </View>
         </View>
       </Modal>
+
+      <Modal visible={showMicIntro} transparent animationType="fade">
+        <View style={styles.modalBg}>
+          <View style={styles.modalCard}>
+            <View style={styles.micIntroIcon}>
+              <Ionicons name="mic" size={26} color="#2B5FD9" />
+            </View>
+            <Text style={styles.modalTitle}>Masters Mic</Text>
+            <Text style={styles.modalSub}>Say the answer out loud instead of tapping it.</Text>
+            <View style={styles.micIntroList}>
+              <Text style={styles.micIntroItem}>1.  Speak, then press Enter to submit.</Text>
+              <Text style={styles.micIntroItem}>2.  The four answers are hidden while it listens, so you answer from memory.</Text>
+              <Text style={styles.micIntroItem}>3.  Tap the mic again at any time to bring them back.</Text>
+            </View>
+            <Pressable style={styles.guideBtn} onPress={() => dismissMicIntro(false)}>
+              <Text style={styles.guideBtnText}>Dismiss</Text>
+            </Pressable>
+            <Pressable onPress={() => dismissMicIntro(true)}>
+              <Text style={styles.tipLink}>Don't remind me again</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
       <NavBar variant="neutral" />
     </LinearGradient>
   );
@@ -550,4 +626,18 @@ const styles = StyleSheet.create({
   guideBtn: { backgroundColor: "#17734A", borderRadius: 12, paddingVertical: 13,
     alignItems: "center", marginTop: 10, marginBottom: 6 },
   guideBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+
+  cardMic: { backgroundColor: "#10203F", borderColor: "#2E4270" },
+  metaMic: { color: "#A8B8D6" },
+  metaScoreMic: { color: "#FFFFFF" },
+  qTextMic: { color: "#FFFFFF" },
+  ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
+  ghostTextMic: { color: "#E2E9F7" },
+  micOn: { backgroundColor: "#22D3EE", borderColor: "#22D3EE" },
+  micIntroIcon: {
+    width: 56, height: 56, borderRadius: 28, alignSelf: "center",
+    alignItems: "center", justifyContent: "center", backgroundColor: "#EAF1FD", marginBottom: 14,
+  },
+  micIntroList: { marginTop: 16, gap: 10, alignSelf: "stretch" },
+  micIntroItem: { fontSize: 14, lineHeight: 20, color: "#334155" },
 });

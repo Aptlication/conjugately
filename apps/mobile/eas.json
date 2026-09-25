@@ -9,10 +9,16 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_UjVXOrfMIlEcEWJEWnuiwTyylOv"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_UjVXOrfMIlEcEWJEWnuiwTyylOv"
+      }
     }
   },
   "submit": {

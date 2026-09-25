@@ -5,6 +5,7 @@ import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { COURSES, COURSE_TIME_FRAMES, courseBlurb } from "../lib/courses";
 import { getCourseProgress } from "../lib/progress";
+import { usePro } from "../lib/pro";
 import { getExam } from "@shared/exams";
 import { readExamResults } from "../lib/exams";
 import type { ExamResult } from "@shared/exams";
@@ -13,6 +14,10 @@ export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
   const [timeFrame, setTimeFrame] = useState<string | null>(null);
   const course = level ? COURSES[level] : null;
+  // Beginner stays open forever - anyone who downloaded 1.0 keeps what they
+  // were using. Every level above it needs Pro.
+  const { isPro } = usePro();
+  const locked = !!level && level !== "Beginner" && !isPro;
   const [prog, setProg] = useState<Record<string, number[]>>({});
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
   useFocusEffect(useCallback(() => {
@@ -87,10 +92,13 @@ export default function MiniCourses() {
               const isNext = ui === nextIdx && doneArr.length > 0;
               return (
                 <Pressable key={u.name} style={[styles.row, done && styles.rowDone, isNext && styles.rowNext]}
-                  onPress={() => router.push({ pathname: "/quiz",
-                    params: { difficulty: level, verb: u.verb, timeFrame,
-                      courseKey: `${level}|${timeFrame}`, unitIndex: String(ui) } })}>
-                  <Text style={[styles.rowTitle, done && styles.rowTitleDone]}>{done ? "✓ " : ""}{u.name}</Text>
+                  accessibilityHint={locked ? "Requires Conjugately Pro" : undefined}
+                  onPress={() => locked
+                    ? router.push("/paywall" as any)
+                    : router.push({ pathname: "/quiz",
+                        params: { difficulty: level, verb: u.verb, timeFrame,
+                          courseKey: `${level}|${timeFrame}`, unitIndex: String(ui) } })}>
+                  <Text style={[styles.rowTitle, done && styles.rowTitleDone]}>{locked ? "🔒 " : done ? "✓ " : ""}{u.name}</Text>
                   <Text style={styles.rowSub}>{done ? "Completed" : isNext ? `▸ Up next — ${u.questions} questions` : `${u.questions} questions`}</Text>
                 </Pressable>
               );
@@ -108,9 +116,12 @@ export default function MiniCourses() {
               const best = examResults.find((r) => r.examId === exam.id);
               return (
                 <Pressable style={[styles.row, best?.passed && styles.rowDone]}
-                  onPress={() => router.push({ pathname: "/quiz", params: { examId: exam.id } })}>
+                  accessibilityHint={locked ? "Requires Conjugately Pro" : undefined}
+                  onPress={() => locked
+                    ? router.push("/paywall" as any)
+                    : router.push({ pathname: "/quiz", params: { examId: exam.id } })}>
                   <Text style={[styles.rowTitle, best?.passed && styles.rowTitleDone]}>
-                    {best?.passed ? "✓ " : ""}🎓 Final Level Exam
+                    {locked ? "🔒 " : best?.passed ? "✓ " : ""}🎓 Final Level Exam
                   </Text>
                   <Text style={styles.rowSub}>
                     {exam.totalQuestions} questions · {exam.passMark} to pass
