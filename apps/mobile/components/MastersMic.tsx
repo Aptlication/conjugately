@@ -191,7 +191,7 @@ function StatusLine({ phase, reduceMotion }: { phase: string; reduceMotion: bool
         <View style={styles.stoppedBadge}>
           <Ionicons name={waiting ? "mic-outline" : "stop"} size={13} color={MUTED} />
         </View>
-        <Text style={styles.statusText}>Press Record to answer and Enter to submit</Text>
+        <Text style={styles.statusText}>Press Record to answer, Enter to submit</Text>
       </View>
     );
   }
@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
     width: 26, height: 26, borderRadius: 13, alignItems: "center", justifyContent: "center",
     backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE,
   },
-  statusText: { fontSize: 15, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.2 },
+  statusText: { flex: 1, fontSize: 14, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.1, lineHeight: 19 },
 
   eq: { height: EQ_HEIGHT, marginTop: 16, flexDirection: "row", alignItems: "flex-end" },
   barTrack: { flex: 1, marginHorizontal: 3, maxWidth: 16, height: EQ_HEIGHT, justifyContent: "flex-end", backgroundColor: TRACK, borderRadius: 2 },

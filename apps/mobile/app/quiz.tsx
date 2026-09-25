@@ -320,9 +320,15 @@ export default function Quiz() {
 
   // Mic mode is off-limits in exams (MIC_ALLOWED_IN_EXAMS), while reviewing,
   // and once an answer is in - the same gate the control itself used before.
-  const micAllowed = (!exam || MIC_ALLOWED_IN_EXAMS) && reviewIndex === null && !dispConfirmed;
-  const micActive = micOn && micAllowed;
-  const optionsHidden = micActive && showOptionsFor !== dispIdx;
+  const micEligible = (!exam || MIC_ALLOWED_IN_EXAMS) && reviewIndex === null;
+  // micMode is the SCREEN: navy, options hidden, dark tab bar. It deliberately
+  // survives an answer being marked. Ending it there reverted to the light A-D
+  // screen for the two seconds before advancing, showing the learner the
+  // options they had just answered without - and, when right, the answer.
+  const micMode = micOn && micEligible;
+  // micControl is the mic itself, which does go away once an answer is in.
+  const micControl = micMode && !dispConfirmed;
+  const optionsHidden = micMode && showOptionsFor !== dispIdx;
 
   const toggleMic = () => {
     if (micOn) { setMicOn(false); setShowOptionsFor(null); return; }
@@ -342,7 +348,7 @@ export default function Quiz() {
   };
 
   return (
-    <LinearGradient colors={exam ? ["#000000", "#000000"] : micActive ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
+    <LinearGradient colors={exam ? ["#000000", "#000000"] : micMode ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -373,10 +379,10 @@ export default function Quiz() {
         )}
 
         {state === "active" && q && (
-          <View style={[styles.card, micActive && styles.cardMic]}>
+          <View style={[styles.card, micMode && styles.cardMic]}>
             <View style={styles.metaRow}>
-              <Text style={[styles.meta, micActive && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
-              <Text style={[styles.metaScore, micActive && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
+              <Text style={[styles.meta, micMode && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
+              <Text style={[styles.metaScore, micMode && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
             </View>
             <View style={styles.progressTrack}>
               <LinearGradient colors={["#2B5FD9", "#2B5FD9"]}
@@ -398,7 +404,7 @@ export default function Quiz() {
               </View>
             )}
 
-            <Text style={[styles.qText, micActive && styles.qTextMic]}>{dispQ.question}</Text>
+            <Text style={[styles.qText, micMode && styles.qTextMic]}>{dispQ.question}</Text>
 
             {!optionsHidden && dispQ.answerOptions.map((o, i) => {
               const confirmedNow = dispSelected !== null && dispConfirmed;
@@ -422,7 +428,7 @@ export default function Quiz() {
                 must never depend on speech recognition, and the accessibility
                 claim only holds if every exam is completable without speaking.
                 Hidden once an answer is confirmed, and while reviewing. */}
-            {micActive && (
+            {micControl && (
               <MastersMic
                 key={dispIdx}
                 expected={(dispQ.answerOptions.find((o: any) => o.isCorrect)?.text) || ""}
@@ -445,16 +451,16 @@ export default function Quiz() {
             )}
 
             <View style={styles.bottomRow}>
-              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic]} onPress={goHome}>
-                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>Start Over</Text>
+              <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic]} onPress={goHome}>
+                <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Start Over</Text>
               </Pressable>
-              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
+              <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
                 onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
-                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>‹ Back</Text>
+                <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>‹ Back</Text>
               </Pressable>
-              <Pressable style={[styles.ghostBtn, micActive && styles.ghostBtnMic, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
+              <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
                 onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
-                <Text style={[styles.ghostText, micActive && styles.ghostTextMic]}>Next ›</Text>
+                <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Next ›</Text>
               </Pressable>
             </View>
 
@@ -470,7 +476,7 @@ export default function Quiz() {
                 </Text>
               </Pressable>
 
-              {micAllowed && (
+              {micEligible && (
                 <Pressable
                   onPress={toggleMic}
                   accessibilityRole="switch"
@@ -572,7 +578,7 @@ export default function Quiz() {
         </View>
       </Modal>
 
-      <NavBar variant="neutral" />
+      <NavBar variant={micMode ? "dark" : "neutral"} />
     </LinearGradient>
   );
 }
@@ -619,7 +625,7 @@ const styles = StyleSheet.create({
   feedbackText: { fontSize: 14, lineHeight: 20 },
   bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center",
     gap: 14, marginTop: 16 },
-  audioRow: { alignItems: "center", marginTop: 2 },
+  audioRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10, marginTop: 2 },
   ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12,
     paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },
   ghostText: { color: "#5A6472", fontSize: 15 },
