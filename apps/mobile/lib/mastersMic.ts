@@ -13,24 +13,20 @@ import {
 /**
  * Masters Mic - the recogniser half.
  *
- * The comparison half is shared/answerMatch.ts, which both surfaces run and
- * which is tuned on staging at /matcher. This file is the part that only exists
- * on a device: microphone permission, Apple's Speech framework, and the state
- * machine around what was heard.
+ * Hold to speak, release to stop. NOTHING IS MARKED UNTIL ENTER IS PRESSED: if
+ * a correct answer advanced on its own and a wrong one did not, the absence of
+ * an advance would tell the learner they were wrong before they had committed,
+ * and it would stop being a test.
  *
- * NOTHING IS MARKED UNTIL THE LEARNER PRESSES ENTER. That is the whole point.
- * If a correct answer advanced on its own and a wrong one did not, the absence
- * of an advance would tell the learner they were wrong before they had
- * committed to anything - and it would stop being a test. So every spoken
- * answer stops at "ready", shows the transcript, and waits.
+ * The transcript is matched against ALL FOUR options, because "you said a wrong
+ * answer" and "I did not hear you" are different events and only the first
+ * deserves a mark.
  *
- * The transcript is matched against ALL FOUR options, not just the correct one,
- * because "you said a wrong answer" and "I did not hear you" are different
- * events and only the first one deserves a mark:
- *
- *   best match is the correct form,  >= acceptAt  -> submitting scores it right
- *   best match is a distractor,      >= acceptAt  -> submitting scores it wrong
- *   nothing reaches disambiguateAt                -> "not caught", no mark, retry
+ * On-device recognition is preferred - it works on a plane and no audio leaves
+ * the phone, which the App Store nomination claims - but it is NOT assumed. If
+ * the device has no on-device French, we fall back to server recognition rather
+ * than telling the learner the feature is unavailable. Build 21 showed why: a
+ * phone without the French pack got a hard "not available" with no way back.
  */
 
 export type MicPhase =
@@ -41,15 +37,10 @@ export type MicPhase =
   | "denied"
   | "unavailable";
 
-/** What the transcript was judged to be, before the learner commits to it. */
 export type MicReading = {
-  /** Raw transcript, shown live under the equaliser. */
   heard: string;
-  /** Index into the options array, or null when nothing was recognised. */
   optionIndex: number | null;
-  /** True when that option is the correct one. */
   correct: boolean;
-  /** Confident enough to be worth submitting at all. */
   usable: boolean;
   match?: MatchResult;
 };
@@ -62,21 +53,14 @@ export type MicOutcome = {
   match?: MatchResult;
 };
 
-/** Below 0 is inaudible per the module's own docs; 10 is the top of its range. */
 const VOLUME_FLOOR = 0;
 const VOLUME_CEIL = 10;
-
-/** Fast enough that the bars read as a voice rather than as a meter. */
 const VOLUME_INTERVAL_MS = 50;
 
 export function useMastersMic(opts: {
-  /** The conjugation being tested. An array allows accepted variants. */
   expected: string | string[];
-  /** Every option on screen, in order, so a spoken distractor can be named. */
   options: string[];
-  /** Index of the correct option within `options`. */
   correctIndex: number;
-  /** Called once the learner submits, never before. */
   onOutcome: (outcome: MicOutcome) => void;
   lang?: string;
 }) {
@@ -86,10 +70,11 @@ export function useMastersMic(opts: {
   const [level, setLevel] = useState(0);
   const [transcript, setTranscript] = useState("");
   const [reading, setReading] = useState<MicReading | null>(null);
+  /** The real reason, surfaced in the notice. Guessing at this cost a build. */
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
-  // Refs, not state: the event handlers below are registered once and must not
-  // close over a stale question.
   const activeRef = useRef(false);
+  const onDeviceRef = useRef(true);
   const expectedRef = useRef(expected);
   useEffect(() => { expectedRef.current = expected; }, [expected]);
   const optionsRef = useRef(options);
@@ -105,64 +90,109 @@ export function useMastersMic(opts: {
     setReading(r);
   }, []);
 
-  const beginListening = useCallback(() => {
-    activeRef.current = true;
-    setTranscript("");
-    setReadingBoth(null);
-    setPhase("listening");
-    const forms = Array.isArray(expectedRef.current) ? expectedRef.current : [expectedRef.current];
-    ExpoSpeechRecognitionModule.start({
-      lang,
-      // Interim results drive the live transcript under the equaliser. They are
-      // jumpy by nature - words appear and are rewritten as more is heard - so
-      // the display treats them as provisional until isFinal.
-      interimResults: true,
-      maxAlternatives: 3,
-      // Hand the recogniser every option being shown, not only the right one.
-      // Without this it returns common French words that merely sound similar,
-      // and a learner who said a distractor cleanly would read as unheard.
-      contextualStrings: [...forms, ...optionsRef.current],
-      // On-device: works on a plane and in the Metro, and no audio leaves the
-      // phone. That is a claim the App Store nomination makes, so it is set
-      // explicitly rather than left to a default.
-      requiresOnDeviceRecognition: true,
-      continuous: false,
-      volumeChangeEventOptions: { enabled: true, intervalMillis: VOLUME_INTERVAL_MS },
-    });
-  }, [lang, setReadingBoth]);
+  /** Decide once per mount whether on-device French is actually there. */
+  useEffect(() => {
+    (async () => {
+      try {
+        if (!ExpoSpeechRecognitionModule.isRecognitionAvailable()) {
+          setErrorDetail("Speech recognition is not available on this device.");
+          setPhase("unavailable");
+          return;
+        }
+        let onDevice = false;
+        try {
+          if (ExpoSpeechRecognitionModule.supportsOnDeviceRecognition()) {
+            const res = await ExpoSpeechRecognitionModule.getSupportedLocales({
+              androidRecognitionServicePackage: undefined,
+            } as any);
+            const installed: string[] = (res as any)?.installedLocales ?? [];
+            onDevice = installed.some((l) => String(l).toLowerCase().startsWith("fr"));
+          }
+        } catch {
+          onDevice = false;
+        }
+        onDeviceRef.current = onDevice;
+      } catch (e: any) {
+        setErrorDetail(String(e?.message ?? e));
+        setPhase("unavailable");
+      }
+    })();
+  }, []);
 
-  const start = useCallback(async () => {
+  const beginListening = useCallback(async () => {
     try {
       const perm = await ExpoSpeechRecognitionModule.requestPermissionsAsync();
       if (!perm.granted) { setPhase("denied"); return; }
-      beginListening();
-    } catch {
+    } catch (e: any) {
+      setErrorDetail(String(e?.message ?? e));
+      setPhase("unavailable");
+      return;
+    }
+
+    activeRef.current = true;
+    setTranscript("");
+    setReadingBoth(null);
+    setErrorDetail(null);
+    setPhase("listening");
+
+    const forms = Array.isArray(expectedRef.current) ? expectedRef.current : [expectedRef.current];
+    const base = {
+      lang,
+      interimResults: true,
+      maxAlternatives: 3,
+      contextualStrings: [...forms, ...optionsRef.current],
+      continuous: false,
+      volumeChangeEventOptions: { enabled: true, intervalMillis: VOLUME_INTERVAL_MS },
+    };
+
+    try {
+      ExpoSpeechRecognitionModule.start({
+        ...base,
+        requiresOnDeviceRecognition: onDeviceRef.current,
+      });
+    } catch (first: any) {
+      // On-device refused. Fall back to server recognition rather than telling
+      // the learner the whole feature is gone.
+      if (onDeviceRef.current) {
+        onDeviceRef.current = false;
+        try {
+          ExpoSpeechRecognitionModule.start({ ...base, requiresOnDeviceRecognition: false });
+          return;
+        } catch (second: any) {
+          activeRef.current = false;
+          setErrorDetail(String(second?.message ?? second));
+          setPhase("unavailable");
+          return;
+        }
+      }
+      activeRef.current = false;
+      setErrorDetail(String(first?.message ?? first));
       setPhase("unavailable");
     }
-  }, [beginListening]);
+  }, [lang, setReadingBoth]);
 
-  /** Throw this attempt away and listen again. Nothing has been marked. */
-  const retry = useCallback(() => {
-    try { ExpoSpeechRecognitionModule.abort(); } catch {}
+  /** Record button pressed. */
+  const startHold = useCallback(() => {
+    if (phase === "listening") return;
     beginListening();
-  }, [beginListening]);
+  }, [beginListening, phase]);
 
-  /** Stop listening but keep whatever was heard, so Enter can act on it. */
-  const stop = useCallback(() => {
+  /** Record button released - keep whatever was heard so Enter can act on it. */
+  const stopHold = useCallback(() => {
     try { ExpoSpeechRecognitionModule.stop(); } catch {}
   }, []);
 
-  /** Leave mic mode entirely. */
-  const cancel = useCallback(() => {
+  /** Delete: throw everything away and go back to the start of the question. */
+  const reset = useCallback(() => {
     activeRef.current = false;
     try { ExpoSpeechRecognitionModule.abort(); } catch {}
-    setPhase("idle");
     setTranscript("");
     setReadingBoth(null);
+    setErrorDetail(null);
     setLevel(0);
+    setPhase("idle");
   }, [setReadingBoth]);
 
-  /** Read a transcript against every option and say what it amounts to. */
   const readTranscript = useCallback((text: string, confidence: number): MicReading => {
     const opts = optionsRef.current;
     let bestIndex: number | null = null;
@@ -204,7 +234,6 @@ export function useMastersMic(opts: {
     activeRef.current = false;
     setLevel(0);
     setReadingBoth(readTranscript(text, confidence));
-    // Stop here. The learner presses Enter; nothing is scored before that.
     setPhase("ready");
   });
 
@@ -217,14 +246,13 @@ export function useMastersMic(opts: {
       setPhase("ready");
       return;
     }
-    setPhase(e.error === "not-allowed" ? "denied" : "unavailable");
+    if (e.error === "not-allowed") { setPhase("denied"); return; }
+    // Anything else is this attempt failing, not the feature being gone: go
+    // back to idle so the Record button still works.
+    setErrorDetail(e.message ? `${e.error}: ${e.message}` : String(e.error));
+    setPhase("idle");
   });
 
-  /**
-   * The learner committed. Only now is anything marked, and a reading that was
-   * never usable is reported as unheard rather than as a wrong answer - being
-   * misheard is not a mistake the learner made.
-   */
   const submit = useCallback(() => {
     const r = readingRef.current;
     if (!r) return;
@@ -242,8 +270,7 @@ export function useMastersMic(opts: {
 
   useEffect(() => () => { try { ExpoSpeechRecognitionModule.abort(); } catch {} }, []);
 
-  return { phase, level, transcript, reading, start, stop, retry, cancel, submit };
+  return { phase, level, transcript, reading, errorDetail, startHold, stopHold, reset, submit };
 }
 
-/** Exported for the matcher page and tests. */
 export { normaliseFrench };

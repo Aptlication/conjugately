@@ -415,7 +415,8 @@ export default function Quiz() {
                 options={dispQ.answerOptions.map((o: any) => o.text)}
                 correctIndex={dispQ.answerOptions.findIndex((o: any) => o.isCorrect)}
                 onOutcome={handleMicOutcome}
-                onShowOptions={() => setShowOptionsFor(dispIdx)}
+                optionsShown={showOptionsFor === dispIdx}
+                onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
               />
             )}
 

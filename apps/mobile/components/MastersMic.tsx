@@ -7,13 +7,12 @@ import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
 /**
  * Masters Mic - the control.
  *
- * Mount one per question (quiz.tsx gives it a key of the question index) so it
- * starts listening on its own when the learner moves on. The mic itself is a
- * MODE held by quiz.tsx, not a per-question button: it stays on until switched
- * off.
+ * Hold Record to speak, release to stop. Nothing is scored here: the learner
+ * sees what was heard and presses Enter. See lib/mastersMic.ts for why.
  *
- * Nothing here scores anything. The learner speaks, sees what was heard, and
- * presses Enter; only then does onOutcome fire. See lib/mastersMic.ts for why.
+ * Build 21 auto-started the recogniser on mount, which meant a device without
+ * on-device French hit a dead "not available" before the learner had touched
+ * anything. Recording now only ever starts from a deliberate press.
  */
 
 const BARS = 16;
@@ -21,6 +20,9 @@ const SEGMENTS = 16;
 const SEG_H = 8;
 const SEG_GAP = 3;
 const EQ_HEIGHT = SEGMENTS * SEG_H + (SEGMENTS - 1) * SEG_GAP;
+
+/** The question is 20pt; the transcript must never out-shout it. */
+const HEARD_SIZE = 14;
 
 const NAVY_CARD = "#10203F";
 const TRACK = "#1B2C4E";
@@ -32,26 +34,26 @@ const SOFT = "#C3D0E8";
 
 export default function MastersMic(props: {
   expected: string | string[];
-  /** Every option on screen, in order. */
   options: string[];
-  /** Index of the correct option. */
   correctIndex: number;
   onOutcome: (o: MicOutcome) => void;
-  /** Bring options A-D back for this question without leaving mic mode. */
-  onShowOptions: () => void;
+  /** Toggles options A-D for this question. */
+  onToggleOptions: () => void;
+  optionsShown: boolean;
   disabled?: boolean;
 }) {
-  const { phase, level, transcript, reading, start, stop, retry, submit } = useMastersMic({
-    expected: props.expected,
-    options: props.options,
-    correctIndex: props.correctIndex,
-    onOutcome: (o) => {
-      Haptics.notificationAsync(
-        o.correct ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Warning,
-      ).catch(() => {});
-      props.onOutcome(o);
-    },
-  });
+  const { phase, level, transcript, reading, errorDetail, startHold, stopHold, reset, submit } =
+    useMastersMic({
+      expected: props.expected,
+      options: props.options,
+      correctIndex: props.correctIndex,
+      onOutcome: (o) => {
+        Haptics.notificationAsync(
+          o.correct ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Warning,
+        ).catch(() => {});
+        props.onOutcome(o);
+      },
+    });
 
   const [reduceMotion, setReduceMotion] = useState(false);
   useEffect(() => {
@@ -60,14 +62,6 @@ export default function MastersMic(props: {
     return () => { try { (sub as any)?.remove?.(); } catch {} };
   }, []);
 
-  // Start listening as soon as this question's control appears.
-  const startedRef = useRef(false);
-  useEffect(() => {
-    if (props.disabled || startedRef.current) return;
-    startedRef.current = true;
-    start();
-  }, [props.disabled, start]);
-
   const listening = phase === "listening";
   const ready = phase === "ready";
 
@@ -75,36 +69,31 @@ export default function MastersMic(props: {
 
   if (phase === "denied") {
     return (
-      <View style={styles.notice}>
-        <Text style={styles.noticeTitle}>Microphone access is off</Text>
-        <Text style={styles.noticeBody}>
-          Masters Mic needs the microphone and speech recognition. You can turn them on in
-          Settings, and the quiz works perfectly well by tapping in the meantime.
-        </Text>
-        <Pressable onPress={props.onShowOptions} accessibilityRole="button" style={styles.noticeBtn}>
-          <Text style={styles.noticeBtnText}>Show the options</Text>
-        </Pressable>
-      </View>
+      <Notice
+        title="Microphone access is off"
+        body="Masters Mic needs the microphone and speech recognition. You can turn them on in Settings, and the quiz works perfectly well by tapping in the meantime."
+        onShowOptions={props.onToggleOptions}
+      />
     );
   }
 
   if (phase === "unavailable") {
     return (
-      <View style={styles.notice}>
-        <Text style={styles.noticeTitle}>Masters Mic is not available right now</Text>
-        <Text style={styles.noticeBody}>Carry on by tapping an answer - nothing is lost.</Text>
-        <Pressable onPress={props.onShowOptions} accessibilityRole="button" style={styles.noticeBtn}>
-          <Text style={styles.noticeBtnText}>Show the options</Text>
-        </Pressable>
-      </View>
+      <Notice
+        title="Masters Mic is not available on this device"
+        body="Carry on by tapping an answer - nothing is lost."
+        detail={errorDetail}
+        onShowOptions={props.onToggleOptions}
+      />
     );
   }
 
   const shownText = ready ? (reading?.heard ?? "") : transcript;
+  const placeholder = listening ? "…" : ready ? "nothing caught" : "Hold Record and say the answer";
 
   return (
     <View style={styles.wrap}>
-      <StatusLine listening={listening} reduceMotion={reduceMotion} />
+      <StatusLine phase={phase} reduceMotion={reduceMotion} />
 
       <Equaliser level={listening ? level : 0} reduceMotion={reduceMotion} />
 
@@ -113,27 +102,32 @@ export default function MastersMic(props: {
         <Text
           style={[styles.heardText, !ready && styles.heardProvisional]}
           numberOfLines={2}
-          adjustsFontSizeToFit
-          minimumFontScale={0.45}
           accessibilityLiveRegion="polite"
         >
-          {shownText || (listening ? "…" : "nothing caught")}
+          {shownText || placeholder}
         </Text>
       </View>
 
+      {!!errorDetail && phase === "idle" && (
+        <Text style={styles.inlineError} numberOfLines={2}>{errorDetail}</Text>
+      )}
+
       <View style={styles.row}>
         <SquareButton
-          icon="refresh"
-          label="Retry"
-          onPress={retry}
-          hint="Throw this attempt away and listen again"
+          icon="trash-outline"
+          label="Delete"
+          onPress={reset}
+          hint="Throw this attempt away and start the question again"
         />
         <SquareButton
-          icon={listening ? "stop" : "mic"}
-          label={listening ? "Stop" : "Speak"}
+          icon="mic"
+          label={listening ? "Recording" : "Record"}
           active={listening}
-          onPress={listening ? stop : retry}
-          hint={listening ? "Stop listening and keep what was heard" : "Listen again"}
+          attention={!listening && !ready && !reduceMotion}
+          hold
+          onPressIn={startHold}
+          onPressOut={stopHold}
+          hint="Hold to speak, release when you have finished"
         />
         <SquareButton
           icon="return-down-back"
@@ -144,17 +138,31 @@ export default function MastersMic(props: {
           hint="Submit this answer for marking"
         />
         <SquareButton
-          icon="list"
-          label="Show A-D"
-          onPress={props.onShowOptions}
-          hint="Bring the four options back for this question"
+          icon={props.optionsShown ? "eye-off-outline" : "list"}
+          label={props.optionsShown ? "Hide A-D" : "Show A-D"}
+          onPress={props.onToggleOptions}
+          hint={props.optionsShown ? "Hide the four options again" : "Bring the four options back for this question"}
         />
       </View>
     </View>
   );
 }
 
-function StatusLine({ listening, reduceMotion }: { listening: boolean; reduceMotion: boolean }) {
+function Notice(props: { title: string; body: string; detail?: string | null; onShowOptions: () => void }) {
+  return (
+    <View style={styles.notice}>
+      <Text style={styles.noticeTitle}>{props.title}</Text>
+      <Text style={styles.noticeBody}>{props.body}</Text>
+      {!!props.detail && <Text style={styles.noticeDetail}>{props.detail}</Text>}
+      <Pressable onPress={props.onShowOptions} accessibilityRole="button" style={styles.noticeBtn}>
+        <Text style={styles.noticeBtnText}>Show the options</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+function StatusLine({ phase, reduceMotion }: { phase: string; reduceMotion: boolean }) {
+  const listening = phase === "listening";
   const blink = useRef(new Animated.Value(1)).current;
   const ring = useRef(new Animated.Value(0)).current;
 
@@ -172,12 +180,13 @@ function StatusLine({ listening, reduceMotion }: { listening: boolean; reduceMot
   }, [listening, reduceMotion, blink, ring]);
 
   if (!listening) {
+    const waiting = phase === "idle";
     return (
       <View style={styles.statusLine}>
         <View style={styles.stoppedBadge}>
-          <Ionicons name="stop" size={13} color={MUTED} />
+          <Ionicons name={waiting ? "mic-outline" : "stop"} size={13} color={MUTED} />
         </View>
-        <Text style={styles.statusText}>Press Enter to submit</Text>
+        <Text style={styles.statusText}>Press Record to answer and Enter to submit</Text>
       </View>
     );
   }
@@ -199,10 +208,9 @@ function StatusLine({ listening, reduceMotion }: { listening: boolean; reduceMot
 }
 
 /**
- * The bars are drawn as solid animated columns with the segment gaps painted
- * across the top as stripes in the card colour. Drawing 256 individual
- * segment views and recolouring them twenty times a second is what it looks
- * like it should be, and it drops frames on an older phone.
+ * Solid animated columns with the segment gaps painted over them as stripes in
+ * the card colour. Drawing 256 individual segments and recolouring them twenty
+ * times a second drops frames on an older phone.
  */
 function Equaliser({ level, reduceMotion }: { level: number; reduceMotion: boolean }) {
   const vals = useRef([...Array(BARS)].map(() => new Animated.Value(0.06))).current;
@@ -214,7 +222,6 @@ function Equaliser({ level, reduceMotion }: { level: number; reduceMotion: boole
   useEffect(() => {
     if (reduceMotion) { vals.forEach((v) => v.setValue(0.4)); return; }
     vals.forEach((v, i) => {
-      // A little per-bar scatter so the row reads as a voice, not one block.
       const jitter = 0.85 + 0.3 * Math.abs(Math.sin(i * 12.9898 + level * 47.3));
       Animated.timing(v, {
         toValue: Math.max(0.06, Math.min(1, level * weights[i] * jitter * 1.3)),
@@ -225,11 +232,7 @@ function Equaliser({ level, reduceMotion }: { level: number; reduceMotion: boole
   }, [level, reduceMotion, vals, weights]);
 
   return (
-    <View
-      style={styles.eq}
-      accessibilityElementsHidden
-      importantForAccessibility="no-hide-descendants"
-    >
+    <View style={styles.eq} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
       {vals.map((v, i) => (
         <View key={i} style={styles.barTrack}>
           <Animated.View
@@ -253,29 +256,52 @@ function SquareButton(props: {
   label: string;
   hint?: string;
   active?: boolean;
+  hold?: boolean;
+  /** Flashes red to say "press me" before the learner has recorded anything. */
+  attention?: boolean;
   submitState?: "off" | "on" | "flashing";
   disabled?: boolean;
-  onPress: () => void;
+  onPress?: () => void;
+  onPressIn?: () => void;
+  onPressOut?: () => void;
 }) {
   const flash = useRef(new Animated.Value(1)).current;
-  const flashing = props.submitState === "flashing";
+  const flashing = props.submitState === "flashing" || !!props.attention;
 
   useEffect(() => {
     if (!flashing) { flash.setValue(1); return; }
+    const driver = !props.attention;
     const a = Animated.loop(Animated.sequence([
-      Animated.timing(flash, { toValue: 0.35, duration: 425, useNativeDriver: true }),
-      Animated.timing(flash, { toValue: 1, duration: 425, useNativeDriver: true }),
+      Animated.timing(flash, { toValue: 0, duration: 450, easing: Easing.step0, useNativeDriver: driver }),
+      Animated.timing(flash, { toValue: 1, duration: 450, easing: Easing.step0, useNativeDriver: driver }),
     ]));
     a.start();
     return () => a.stop();
-  }, [flashing, flash]);
+  }, [flashing, flash, props.attention]);
 
-  const submitOn = props.submitState === "on" || flashing;
-  const tint = props.active ? "#06242E" : submitOn ? "#FFFFFF" : props.disabled ? MUTED : "#FFFFFF";
+  const attentionStyle = props.attention
+    ? {
+        backgroundColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#6B1226", "#E11D48"] }),
+        borderColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#B0143A", "#E11D48"] }),
+      }
+    : null;
+
+  const submitOn = props.submitState === "on" || props.submitState === "flashing";
+  const tint = props.active
+    ? "#FFFFFF"
+    : props.attention
+      ? "#FFFFFF"
+      : submitOn
+        ? "#FFFFFF"
+        : props.disabled
+          ? MUTED
+          : "#FFFFFF";
 
   return (
     <Pressable
       onPress={props.onPress}
+      onPressIn={props.onPressIn}
+      onPressOut={props.onPressOut}
       disabled={props.disabled}
       accessibilityRole="button"
       accessibilityLabel={props.label}
@@ -286,10 +312,13 @@ function SquareButton(props: {
       <Animated.View
         style={[
           styles.btn,
+          props.hold && styles.btnHold,
+          props.attention && styles.btnAttention,
+          attentionStyle,
           props.active && styles.btnActive,
           submitOn && styles.btnSubmit,
           props.disabled && styles.btnDisabled,
-          flashing && { opacity: flash },
+          flashing && !props.attention && { opacity: flash.interpolate({ inputRange: [0, 1], outputRange: [0.35, 1] }) },
         ]}
       >
         <Ionicons name={props.icon} size={22} color={tint} />
@@ -323,10 +352,11 @@ const styles = StyleSheet.create({
   stripes: { position: "absolute", top: 0, left: 0, right: 0, height: EQ_HEIGHT },
   stripe: { position: "absolute", left: 0, right: 0, height: SEG_GAP, backgroundColor: NAVY_CARD },
 
-  heardBlock: { marginTop: 14, minHeight: 78, alignItems: "center", justifyContent: "center", gap: 3 },
+  heardBlock: { marginTop: 14, minHeight: 44, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
-  heardText: { fontSize: 50, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
+  heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
+  inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
   row: { marginTop: 12, flexDirection: "row", justifyContent: "center", gap: 16 },
   btnWrap: { width: 66, alignItems: "center", gap: 7 },
@@ -334,8 +364,10 @@ const styles = StyleSheet.create({
     width: 62, height: 56, borderRadius: 16, alignItems: "center", justifyContent: "center",
     backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE,
   },
-  btnActive: { backgroundColor: LIT, borderColor: LIT },
-  btnSubmit: { backgroundColor: "#2B5FD9", borderColor: "#5B8CFF" },
+  btnHold: { borderColor: "#5B8CFF" },
+  btnAttention: { borderColor: "#E11D48", backgroundColor: "#E11D48" },
+  btnActive: { backgroundColor: "#E11D48", borderColor: "#E11D48" },
+  btnSubmit: { backgroundColor: "#16A34A", borderColor: "#4ADE80" },
   btnDisabled: { backgroundColor: "#16264A", borderColor: "#22345C" },
   btnLabel: { fontSize: 12, fontWeight: "600", color: SOFT },
   btnLabelStrong: { fontWeight: "700", color: "#FFFFFF" },
@@ -346,6 +378,7 @@ const styles = StyleSheet.create({
   },
   noticeTitle: { fontWeight: "700", color: "#FFFFFF", marginBottom: 4 },
   noticeBody: { color: SOFT, fontSize: 13, lineHeight: 19 },
+  noticeDetail: { color: "#FCA5A5", fontSize: 11, lineHeight: 16, marginTop: 8 },
   noticeBtn: { marginTop: 12, alignSelf: "flex-start", paddingVertical: 10, paddingHorizontal: 16, borderRadius: 12, borderWidth: 1.5, borderColor: EDGE },
   noticeBtnText: { color: "#FFFFFF", fontWeight: "700", fontSize: 14 },
 });
