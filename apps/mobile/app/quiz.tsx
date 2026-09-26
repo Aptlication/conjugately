@@ -110,7 +110,12 @@ export default function Quiz() {
   const goHome = () => { cancelAutoAdvance(); if (router.canGoBack()) router.back(); else router.replace("/"); };
 
   const q = questions[idx];
-  const questionAudioOn = difficulty === "Beginner" || difficulty === "Novice";
+  // Every level, exams included. Elementary and Intermediate were silent not
+  // because the recordings were missing - 419 and 1,720 question files sit in
+  // attached_assets - but because this line never let the URL be built. Exams
+  // were silent by accident too: `difficulty` is undefined there, so the check
+  // failed. The URL builder below already resolves exams via exam.level.
+  const questionAudioOn = true;
   // In an exam the questions come from several verbs, so the screen-level
   // `verb` and `tense` are wrong for them. loadExamQuestions tags each question
   // with the verb and tense path it actually came from.
@@ -566,7 +571,8 @@ export default function Quiz() {
                 1.  <Text style={styles.micIntroStrong}>Hold Record, wait a second, then speak.</Text> Starting too soon clips the first word.
               </Text>
               <Text style={styles.micIntroItem}>2.  Let go when you have finished. The four answers stay hidden, so you answer from memory.</Text>
-              <Text style={styles.micIntroItem}>3.  Press Enter to submit. Right or wrong, it moves straight to the next question.</Text>
+              <Text style={styles.micIntroItem}>3.  Not happy with it? Just hold Record again - it records over your last attempt. Nothing to delete.</Text>
+              <Text style={styles.micIntroItem}>4.  Press Enter to submit. Right or wrong, it moves straight to the next question.</Text>
             </View>
             <Pressable style={styles.guideBtn} onPress={() => dismissMicIntro(false)}>
               <Text style={styles.guideBtnText}>Dismiss</Text>

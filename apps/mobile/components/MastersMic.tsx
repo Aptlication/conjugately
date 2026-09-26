@@ -65,6 +65,17 @@ export default function MastersMic(props: {
   const listening = phase === "listening";
   const ready = phase === "ready";
 
+  // A flat equaliser and a broken one look identical, so the bars only appear
+  // once sound is genuinely arriving. Until then the pause symbol stands in -
+  // including during the gap between the press and the first audio, which is
+  // what made build 24 feel dead.
+  const [gotAudio, setGotAudio] = useState(false);
+  useEffect(() => {
+    if (listening && level > 0) setGotAudio(true);
+  }, [listening, level]);
+  const hearing = listening && gotAudio;
+  const warming = listening && !gotAudio;
+
   if (props.disabled) return null;
 
   if (phase === "denied") {
@@ -93,9 +104,9 @@ export default function MastersMic(props: {
 
   return (
     <View style={styles.wrap}>
-      <StatusLine phase={phase} reduceMotion={reduceMotion} />
+      <StatusLine phase={phase} warming={warming} reduceMotion={reduceMotion} />
 
-      <Equaliser level={listening ? level : 0} reduceMotion={reduceMotion} />
+      {hearing ? <Equaliser level={level} reduceMotion={reduceMotion} /> : <PauseGlyph />}
 
       <View style={styles.heardBlock}>
         <Text style={styles.heardLabel}>Heard</Text>
@@ -119,20 +130,25 @@ export default function MastersMic(props: {
 
       <View style={styles.row}>
         <SquareButton
-          icon="trash-outline"
-          label="Delete"
-          onPress={reset}
-          hint="Throw this attempt away and start the question again"
+          icon={props.optionsShown ? "eye-off-outline" : "list"}
+          label={props.optionsShown ? "Hide A-D" : "Show A-D"}
+          onPress={props.onToggleOptions}
+          hint={props.optionsShown ? "Hide the four options again" : "Bring the four options back for this question"}
         />
         <SquareButton
           icon="mic"
-          label={listening ? "Recording" : "Record"}
+          big
+          // Delete is gone: holding this again replaces whatever was there, so
+          // a separate destructive-looking control was a second route to the
+          // same outcome. The label carries the meaning instead.
+          label={listening ? "Recording" : ready ? "Re-record" : "Record"}
           active={listening}
+          again={ready}
           attention={!listening && !ready && !reduceMotion}
           hold
           onPressIn={startHold}
           onPressOut={stopHold}
-          hint="Hold to speak, release when you have finished"
+          hint={ready ? "Hold to record again over your last attempt" : "Hold to speak, release when you have finished"}
         />
         <SquareButton
           icon="return-down-back"
@@ -141,12 +157,6 @@ export default function MastersMic(props: {
           onPress={submit}
           disabled={!ready}
           hint="Submit this answer for marking"
-        />
-        <SquareButton
-          icon={props.optionsShown ? "eye-off-outline" : "list"}
-          label={props.optionsShown ? "Hide A-D" : "Show A-D"}
-          onPress={props.onToggleOptions}
-          hint={props.optionsShown ? "Hide the four options again" : "Bring the four options back for this question"}
         />
       </View>
     </View>
@@ -166,8 +176,21 @@ function Notice(props: { title: string; body: string; detail?: string | null; on
   );
 }
 
-function StatusLine({ phase, reduceMotion }: { phase: string; reduceMotion: boolean }) {
-  const listening = phase === "listening";
+function PauseGlyph() {
+  return (
+    <View
+      style={styles.pauseWrap}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants"
+    >
+      <View style={styles.pauseBar} />
+      <View style={styles.pauseBar} />
+    </View>
+  );
+}
+
+function StatusLine({ phase, warming, reduceMotion }: { phase: string; warming: boolean; reduceMotion: boolean }) {
+  const listening = phase === "listening" && !warming;
   const blink = useRef(new Animated.Value(1)).current;
   const ring = useRef(new Animated.Value(0)).current;
 
@@ -185,13 +208,14 @@ function StatusLine({ phase, reduceMotion }: { phase: string; reduceMotion: bool
   }, [listening, reduceMotion, blink, ring]);
 
   if (!listening) {
-    const waiting = phase === "idle";
     return (
       <View style={styles.statusLine}>
         <View style={styles.stoppedBadge}>
-          <Ionicons name={waiting ? "mic-outline" : "stop"} size={13} color={MUTED} />
+          <Ionicons name="pause" size={13} color={MUTED} />
         </View>
-        <Text style={styles.statusText}>Press Record to answer, Enter to submit</Text>
+        <Text style={styles.statusText}>
+          {warming ? "Getting ready - hold on a moment" : "Press Record to answer, Enter to submit"}
+        </Text>
       </View>
     );
   }
@@ -262,6 +286,10 @@ function SquareButton(props: {
   hint?: string;
   active?: boolean;
   hold?: boolean;
+  /** Record: four times the area of its neighbours. */
+  big?: boolean;
+  /** There is already an attempt, so this records over it. */
+  again?: boolean;
   /** Flashes red to say "press me" before the learner has recorded anything. */
   attention?: boolean;
   submitState?: "off" | "on" | "flashing";
@@ -292,7 +320,9 @@ function SquareButton(props: {
     : null;
 
   const submitOn = props.submitState === "on" || props.submitState === "flashing";
-  const tint = props.active
+  const tint = props.again
+    ? "#FB5570"
+    : props.active
     ? "#FFFFFF"
     : props.attention
       ? "#FFFFFF"
@@ -312,12 +342,13 @@ function SquareButton(props: {
       accessibilityLabel={props.label}
       accessibilityHint={props.hint}
       accessibilityState={{ disabled: !!props.disabled }}
-      style={styles.btnWrap}
+      style={props.big ? styles.btnWrapBig : styles.btnWrap}
     >
       <Animated.View
         style={[
-          styles.btn,
+          props.big ? styles.btnBig : styles.btn,
           props.hold && styles.btnHold,
+          props.again && styles.btnAgain,
           props.attention && styles.btnAttention,
           attentionStyle,
           props.active && styles.btnActive,
@@ -326,9 +357,13 @@ function SquareButton(props: {
           flashing && !props.attention && { opacity: flash.interpolate({ inputRange: [0, 1], outputRange: [0.35, 1] }) },
         ]}
       >
-        <Ionicons name={props.icon} size={22} color={tint} />
+        <Ionicons name={props.icon} size={props.big ? 46 : 26} color={tint} />
       </Animated.View>
-      <Text style={[styles.btnLabel, (props.active || submitOn) && styles.btnLabelStrong, props.disabled && { color: MUTED }]}>
+      <Text style={[
+        props.big ? styles.btnLabelBig : styles.btnLabel,
+        (props.active || submitOn || props.big) && styles.btnLabelStrong,
+        props.disabled && { color: MUTED },
+      ]}>
         {props.label}
       </Text>
     </Pressable>
@@ -364,18 +399,31 @@ const styles = StyleSheet.create({
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
-  row: { marginTop: 12, flexDirection: "row", justifyContent: "center", gap: 16 },
-  btnWrap: { width: 66, alignItems: "center", gap: 7 },
+  pauseWrap: {
+    height: EQ_HEIGHT, marginTop: 16, flexDirection: "row",
+    alignItems: "center", justifyContent: "center", gap: 26,
+  },
+  pauseBar: { width: 30, height: 104, borderRadius: 8, backgroundColor: "#24365E" },
+
+  row: { marginTop: 10, flexDirection: "row", alignItems: "flex-start", justifyContent: "center", gap: 12 },
+  btnWrap: { width: 84, alignItems: "center", gap: 8 },
+  btnWrapBig: { width: 128, alignItems: "center", gap: 8 },
   btn: {
-    width: 62, height: 56, borderRadius: 16, alignItems: "center", justifyContent: "center",
+    width: 80, height: 80, borderRadius: 22, alignItems: "center", justifyContent: "center",
     backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE,
   },
+  btnBig: {
+    width: 124, height: 112, borderRadius: 28, alignItems: "center", justifyContent: "center",
+    backgroundColor: TRACK, borderWidth: 2, borderColor: EDGE,
+  },
+  btnAgain: { backgroundColor: "#2A1A2B", borderColor: "#E11D48" },
   btnHold: { borderColor: "#5B8CFF" },
   btnAttention: { borderColor: "#E11D48", backgroundColor: "#E11D48" },
   btnActive: { backgroundColor: "#E11D48", borderColor: "#E11D48" },
   btnSubmit: { backgroundColor: "#16A34A", borderColor: "#4ADE80" },
   btnDisabled: { backgroundColor: "#16264A", borderColor: "#22345C" },
   btnLabel: { fontSize: 12, fontWeight: "600", color: SOFT },
+  btnLabelBig: { fontSize: 15, fontWeight: "700", color: "#FFFFFF" },
   btnLabelStrong: { fontWeight: "700", color: "#FFFFFF" },
 
   notice: {
