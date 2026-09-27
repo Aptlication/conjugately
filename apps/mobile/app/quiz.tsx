@@ -131,13 +131,21 @@ export default function Quiz() {
   const aPlayingRef = useRef(false);
   const waitAudioRef = useRef(false);
   const audioPendingRef = useRef(false);
+  // Whether the answer audio has actually FINISHED. `playing` is a moving
+  // state: sampling it once at the 2.5s mark advanced while the clip was
+  // between loading and playing, which killed the player a word in.
+  const audioDoneRef = useRef(true);
   useEffect(() => {
     aPlayingRef.current = !!aStatus?.playing;
     if (aStatus?.playing) audioPendingRef.current = false;
-    if (waitAudioRef.current && aStatus && !aStatus.playing && aStatus.didJustFinish) {
-      waitAudioRef.current = false;
-      cancelAutoAdvance();
-      autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 400);
+    if (aStatus?.didJustFinish) {
+      audioDoneRef.current = true;
+      if (waitAudioRef.current) {
+        waitAudioRef.current = false;
+        cancelAutoAdvance();
+        // Let the last syllable land before the next question replaces it.
+        autoAdvanceRef.current = setTimeout(() => { nextQuestion(); }, 800);
+      }
     }
   }, [aStatus]);
 
@@ -211,6 +219,7 @@ export default function Quiz() {
     const f = lookupAnswerFile(m, opt.text, difficulty);
     if (f) {
       audioPendingRef.current = true;
+      audioDoneRef.current = false;
       setAnswerUrl(null);
       setTimeout(() => setAnswerUrl(`${API_BASE}/attached_assets/audio/${f}`), 20);
     }
@@ -235,7 +244,7 @@ export default function Quiz() {
     cancelAutoAdvance();
     if (opt?.isCorrect) {
       autoAdvanceRef.current = setTimeout(() => {
-        if (aPlayingRef.current || audioPendingRef.current) {
+        if (!audioDoneRef.current) {
           waitAudioRef.current = true;
           autoAdvanceRef.current = setTimeout(() => {
             if (waitAudioRef.current) { waitAudioRef.current = false; nextQuestion(); }
@@ -254,7 +263,7 @@ export default function Quiz() {
     cancelAutoAdvance();
     if (immediate) { nextQuestion(); return; }
     autoAdvanceRef.current = setTimeout(() => {
-      if (aPlayingRef.current || audioPendingRef.current) {
+      if (!audioDoneRef.current) {
         waitAudioRef.current = true;
         autoAdvanceRef.current = setTimeout(() => {
           if (waitAudioRef.current) { waitAudioRef.current = false; nextQuestion(); }
@@ -268,6 +277,7 @@ export default function Quiz() {
     cancelAutoAdvance();
     waitAudioRef.current = false;
     audioPendingRef.current = false;
+    audioDoneRef.current = true;
     setReviewIndex(null);
     setSelected(null); setConfirmed(false); setAnswerUrl(null);
     if (idx + 1 >= questions.length) {

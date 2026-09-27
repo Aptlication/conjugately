@@ -107,7 +107,13 @@ export default function MastersMic(props: {
     <View style={styles.wrap}>
       <StatusLine phase={phase} warming={warming} reduceMotion={reduceMotion} />
 
-      {hearing ? <Equaliser level={level} reduceMotion={reduceMotion} /> : <PauseGlyph />}
+      {/* The equaliser appears the moment recording is live, not when the first
+          sound arrives: the learner needs to see that Record took effect. While
+          nothing is being heard yet it breathes at a low idle amplitude, which
+          reads as alive without pretending to show speech. */}
+      {listening
+        ? <Equaliser level={level} idle={warming} reduceMotion={reduceMotion} />
+        : <PauseGlyph />}
 
       <View style={styles.heardBlock}>
         <Text style={styles.heardLabel}>Heard</Text>
@@ -133,6 +139,7 @@ export default function MastersMic(props: {
         <SquareButton
           icon={props.optionsShown ? "eye-off-outline" : "list"}
           label={props.optionsShown ? "Hide A-D" : "Show A-D"}
+          rose
           onPress={props.onToggleOptions}
           hint={props.optionsShown ? "Hide the four options again" : "Bring the four options back for this question"}
         />
@@ -154,7 +161,9 @@ export default function MastersMic(props: {
         <SquareButton
           icon="return-down-back"
           label="Enter"
-          submitState={ready ? (reduceMotion ? "on" : "flashing") : "off"}
+          // Green from the start, the way Show A-D is rose from the start.
+          // Being ready is said by the flash, not by the colour arriving.
+          submitState={ready ? (reduceMotion ? "on" : "flashing") : "on"}
           onPress={submit}
           disabled={!ready}
           hint="Submit this answer for marking"
@@ -242,15 +251,35 @@ function StatusLine({ phase, warming, reduceMotion }: { phase: string; warming: 
  * the card colour. Drawing 256 individual segments and recolouring them twenty
  * times a second drops frames on an older phone.
  */
-function Equaliser({ level, reduceMotion }: { level: number; reduceMotion: boolean }) {
+function Equaliser({ level, idle, reduceMotion }: { level: number; idle: boolean; reduceMotion: boolean }) {
   const vals = useRef([...Array(BARS)].map(() => new Animated.Value(0.06))).current;
   const weights = useMemo(
     () => [...Array(BARS)].map((_, i) => 0.55 + 0.45 * Math.sin((i / (BARS - 1)) * Math.PI)),
     [],
   );
 
+  // Idle: a slow travelling wave while the recogniser warms up. Low amplitude
+  // so it cannot be mistaken for speech, but plainly moving.
+  useEffect(() => {
+    if (reduceMotion || !idle) return;
+    let frame = 0;
+    const id = setInterval(() => {
+      frame += 1;
+      vals.forEach((v, i) => {
+        const t = frame / 5 + i * 0.5;
+        Animated.timing(v, {
+          toValue: 0.10 + 0.09 * (0.5 + 0.5 * Math.sin(t)),
+          duration: 170,
+          useNativeDriver: false,
+        }).start();
+      });
+    }, 170);
+    return () => clearInterval(id);
+  }, [idle, reduceMotion, vals]);
+
   useEffect(() => {
     if (reduceMotion) { vals.forEach((v) => v.setValue(0.4)); return; }
+    if (idle) return;
     vals.forEach((v, i) => {
       const jitter = 0.85 + 0.3 * Math.abs(Math.sin(i * 12.9898 + level * 47.3));
       Animated.timing(v, {
@@ -259,7 +288,7 @@ function Equaliser({ level, reduceMotion }: { level: number; reduceMotion: boole
         useNativeDriver: false,
       }).start();
     });
-  }, [level, reduceMotion, vals, weights]);
+  }, [level, idle, reduceMotion, vals, weights]);
 
   return (
     <View style={styles.eq} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
@@ -293,6 +322,8 @@ function SquareButton(props: {
   again?: boolean;
   /** Flashes red to say "press me" before the learner has recorded anything. */
   attention?: boolean;
+  /** The old rose. Record is warm red now, so the two never read as one pair. */
+  rose?: boolean;
   submitState?: "off" | "on" | "flashing";
   disabled?: boolean;
   onPress?: () => void;
@@ -315,8 +346,8 @@ function SquareButton(props: {
 
   const attentionStyle = props.attention
     ? {
-        backgroundColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#6B1226", "#E11D48"] }),
-        borderColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#B0143A", "#E11D48"] }),
+        backgroundColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#7A1F18", "#E63A2E"] }),
+        borderColor: flash.interpolate({ inputRange: [0, 1], outputRange: ["#B12D23", "#E63A2E"] }),
       }
     : null;
 
@@ -349,12 +380,13 @@ function SquareButton(props: {
         style={[
           props.big ? styles.btnBig : styles.btn,
           props.hold && styles.btnHold,
+          props.rose && styles.btnRose,
           props.again && styles.btnAgain,
           props.attention && styles.btnAttention,
           attentionStyle,
           props.active && styles.btnActive,
           submitOn && styles.btnSubmit,
-          props.disabled && styles.btnDisabled,
+          props.disabled && !submitOn && styles.btnDisabled,
           flashing && !props.attention && { opacity: flash.interpolate({ inputRange: [0, 1], outputRange: [0.35, 1] }) },
         ]}
       >
@@ -362,14 +394,14 @@ function SquareButton(props: {
           colors={["rgba(255,255,255,0.34)", "rgba(255,255,255,0.05)", "rgba(0,0,0,0.30)"]}
           locations={[0, 0.45, 1]}
           pointerEvents="none"
-          style={[StyleSheet.absoluteFillObject, { borderRadius: props.big ? 78 : 20 }]}
+          style={[StyleSheet.absoluteFillObject, { borderRadius: props.big ? 62 : 20 }]}
         />
-        <Ionicons name={props.icon} size={props.big ? 60 : 24} color={tint} />
+        <Ionicons name={props.icon} size={props.big ? 48 : 24} color={tint} />
       </Animated.View>
       <Text style={[
         props.big ? styles.btnLabelBig : styles.btnLabel,
         (props.active || submitOn || props.big) && styles.btnLabelStrong,
-        props.disabled && { color: MUTED },
+        props.disabled && !submitOn && { color: MUTED },
       ]}>
         {props.label}
       </Text>
@@ -414,25 +446,27 @@ const styles = StyleSheet.create({
 
   row: { marginTop: 4, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
   btnWrap: { width: 72, alignItems: "center", gap: 7 },
-  btnWrapBig: { width: 156, alignItems: "center", gap: 10 },
+  btnWrapBig: { width: 125, alignItems: "center", gap: 10 },
   btn: {
     width: 64, height: 64, borderRadius: 20, alignItems: "center", justifyContent: "center",
     backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE, overflow: "hidden",
     shadowColor: "#000", shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.42, shadowRadius: 10, elevation: 7,
   },
-  // Round, and a quarter larger than its neighbours: the one control the
-  // learner reaches for on every question, often without looking.
+  // Round, and clearly larger than its neighbours: the one control the
+  // learner reaches for on every question, often without looking. Reduced 20%
+  // from 156 on 27 Sep - it dominated the control row.
   btnBig: {
-    width: 156, height: 156, borderRadius: 78, alignItems: "center", justifyContent: "center",
+    width: 125, height: 125, borderRadius: 62, alignItems: "center", justifyContent: "center",
     backgroundColor: TRACK, borderWidth: 2, borderColor: EDGE, overflow: "hidden",
     shadowColor: "#000", shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.5, shadowRadius: 16, elevation: 12,
   },
-  btnAgain: { backgroundColor: "#2A1A2B", borderColor: "#E11D48" },
+  btnAgain: { backgroundColor: "#2B1A18", borderColor: "#E63A2E" },
   btnHold: { borderColor: "#5B8CFF" },
-  btnAttention: { borderColor: "#E11D48", backgroundColor: "#E11D48" },
-  btnActive: { backgroundColor: "#E11D48", borderColor: "#E11D48" },
+  btnAttention: { borderColor: "#E63A2E", backgroundColor: "#E63A2E" },
+  btnActive: { backgroundColor: "#E63A2E", borderColor: "#E63A2E" },
+  btnRose: { backgroundColor: "#E11D48", borderColor: "#E11D48" },
   btnSubmit: { backgroundColor: "#16A34A", borderColor: "#4ADE80" },
   btnDisabled: { backgroundColor: "#16264A", borderColor: "#22345C" },
   btnLabel: { fontSize: 11, fontWeight: "600", color: SOFT },

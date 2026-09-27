@@ -512,49 +512,177 @@ if (!setsBlock) {
   if (!existsSync(coursesFile)) {
     warnings.push("apps/mobile/lib/courses.ts not found — course audio coverage is UNCHECKED");
   } else {
+    // The expected number of recordings is the SIZE OF THE QUESTION POOL, not
+    // the `questions:` figure in COURSES. That figure is how many a learner is
+    // asked; the server shuffles the whole pool and slices to it, so any
+    // question in the pool can be served and every one of them needs audio.
+    // Assuming 20 hid 65 silent questions in Elementary `dire` present (pool of
+    // 85) and 20 more in `savoir` passé composé (pool of 40), and it invented a
+    // missing Q20 for `dire` futur simple, whose pool is only 19.
+    const readLiteral = (file, constName) => {
+      const path = join(repoRoot, file);
+      if (!existsSync(path)) return null;
+      const src = readFileSync(path, "utf8");
+      const at = src.indexOf(`export const ${constName}`);
+      if (at < 0) return null;
+      let i = src.indexOf("{", at);
+      if (i < 0) return null;
+      const ws = () => {
+        for (;;) {
+          while (i < src.length && /\s/.test(src[i])) i++;
+          if (src[i] === "/" && src[i + 1] === "/") { while (i < src.length && src[i] !== "\n") i++; continue; }
+          if (src[i] === "/" && src[i + 1] === "*") { i = src.indexOf("*/", i) + 2; continue; }
+          return;
+        }
+      };
+      const str = () => {
+        const q = src[i++]; let out = "";
+        while (i < src.length && src[i] !== q) {
+          if (src[i] === "\\") { out += src[i + 1]; i += 2; } else out += src[i++];
+        }
+        i++; return out;
+      };
+      const value = () => {
+        ws();
+        const c = src[i];
+        if (c === "{") {
+          i++; const o = {};
+          for (;;) {
+            ws();
+            if (src[i] === "}") { i++; break; }
+            let k;
+            if (src[i] === '"' || src[i] === "'" || src[i] === "`") k = str();
+            else { const s = i; while (i < src.length && !/[\s:]/.test(src[i])) i++; k = src.slice(s, i); }
+            ws(); i++;
+            o[k] = value();
+            ws(); if (src[i] === ",") i++;
+          }
+          return o;
+        }
+        if (c === "[") {
+          i++; const a = [];
+          for (;;) { ws(); if (src[i] === "]") { i++; break; } a.push(value()); ws(); if (src[i] === ",") i++; }
+          return a;
+        }
+        if (c === '"' || c === "'" || c === "`") return str();
+        const s = i; while (i < src.length && !/[,}\]]/.test(src[i])) i++;
+        return src.slice(s, i).trim();
+      };
+      try { return value(); } catch { return null; }
+    };
+
+    const POOLS = {};
+    const addPool = (level, verb, tense, arr) => {
+      if (!Array.isArray(arr)) return;
+      POOLS[level] = POOLS[level] || {};
+      POOLS[level][verb] = POOLS[level][verb] || {};
+      POOLS[level][verb][tense] = arr.length;
+    };
+    // Tense keys differ per file: "present", "passé_composé", "Futur Simple".
+    // Normalise to the folder spelling rather than listing every variant.
+    const tenseKey = (t) =>
+      t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim().replace(/[\s-]+/g, "_");
+    for (const [constName, tense] of [
+      ["ELEMENTARY_PRESENT_QUESTIONS", "present"],
+      ["ELEMENTARY_PASSE_COMPOSE_QUESTIONS", "passe_compose"],
+      ["ELEMENTARY_FUTURE_SIMPLE_QUESTIONS", "futur_simple"],
+    ]) {
+      const lit = readLiteral("server/elementary-quiz-data.ts", constName);
+      if (lit) for (const [verb, arr] of Object.entries(lit)) addPool("elementary", verb, tense, arr);
+    }
+    for (const [level, file, constName] of [
+      ["intermediate", "server/intermediate-quiz-data.ts", "INTERMEDIATE_QUIZ_DATA"],
+      ["novice", "server/novice-quiz-data.ts", "NOVICE_QUIZ_DATA"],
+      ["beginner", "server/beginner-pronoun-data.ts", "BEGINNER_PRONOUN_QUESTIONS"],
+    ]) {
+      const lit = readLiteral(file, constName);
+      if (lit) for (const [verb, tenses] of Object.entries(lit)) {
+        if (!tenses || typeof tenses !== "object") continue;
+        for (const [t, arr] of Object.entries(tenses)) addPool(level, verb, tenseKey(t), arr);
+      }
+    }
+
     const src = readFileSync(coursesFile, "utf8");
     const TENSES = ["present", "passe_compose", "futur_simple"];
     const levelRe = /(\w+):\s*\{\s*emoji:[\s\S]*?units:\s*\[([\s\S]*?)\n\s*\],/g;
     let m;
-    let unitsChecked = 0;
-    let missingTotal = 0;
-    let silentUnits = 0;
+    let unitsChecked = 0, missingTotal = 0, silentUnits = 0;
+    let poolShort = 0, poolUnknown = 0, orphanTotal = 0;
     while ((m = levelRe.exec(src))) {
       const level = m[1];
+      const key = level.toLowerCase();
       const unitRe = /verb:\s*"([^"]+)"\s*,\s*questions:\s*(\d+)/g;
       let u;
       while ((u = unitRe.exec(m[2]))) {
         const verb = u[1];
-        const want = Number(u[2]);
+        const served = Number(u[2]);
         unitsChecked += 1;
         for (const tense of TENSES) {
-          const dir = join(repoRoot, "attached_assets/audio/quizzes", level.toLowerCase(), verb, tense, "questions");
-          if (!existsSync(dir)) {
+          const pool = POOLS[key] && POOLS[key][verb] ? POOLS[key][verb][tense] : undefined;
+          const dir = join(repoRoot, "attached_assets/audio/quizzes", key, verb, tense, "questions");
+
+          if (pool === undefined) {
             warnings.push(
-              `audio: ${level} "${verb}" ${tense} has no folder at all — all ${want} questions are silent`
+              `content: ${level} "${verb}" ${tense} — the course lists this unit but the quiz data has no pool for it; audio coverage UNCHECKED`
             );
-            missingTotal += want;
+            poolUnknown += 1;
+            continue;
+          }
+          if (pool === 0) {
+            warnings.push(`content: ${level} "${verb}" ${tense} — question pool is empty; the unit cannot be played`);
+            poolUnknown += 1;
+            continue;
+          }
+          if (pool < served) {
+            warnings.push(
+              `content: ${level} "${verb}" ${tense} has only ${pool} questions but the course serves ${served} — ` +
+              `${served - pool} will be repeated within a single quiz`
+            );
+            poolShort += 1;
+          }
+
+          if (!existsSync(dir)) {
+            warnings.push(`audio: ${level} "${verb}" ${tense} has no folder at all — all ${pool} questions are silent`);
+            missingTotal += pool;
             silentUnits += 1;
             continue;
           }
+          // One readdir, not one existsSync per file: this walks ~100 units and
+          // the repo is often on a network mount.
+          const have = new Set(readdirSync(dir).filter((f) => /^Q\d+\.mp3$/.test(f)));
           const missing = [];
-          for (let i = 1; i <= want; i++) {
-            if (!existsSync(join(dir, `Q${i}.mp3`))) missing.push(`Q${i}`);
+          for (let i = 1; i <= pool; i++) {
+            if (!have.has(`Q${i}.mp3`)) missing.push(`Q${i}`);
           }
           if (missing.length) {
             const shown = missing.length > 6 ? missing.slice(0, 6).join(", ") + `, +${missing.length - 6} more` : missing.join(", ");
-            warnings.push(
-              `audio: ${level} "${verb}" ${tense} has ${want - missing.length} of ${want} — missing ${shown}`
-            );
+            warnings.push(`audio: ${level} "${verb}" ${tense} has ${pool - missing.length} of ${pool} — missing ${shown}`);
             missingTotal += missing.length;
+          }
+          // Recordings past the end of the pool: questions that were deleted or
+          // renumbered, leaving audio the app can never request.
+          const orphans = [...have]
+            .map((f) => Number(f.slice(1, -4)))
+            .filter((n) => n > pool)
+            .sort((a, b) => a - b)
+            .map((n) => `Q${n}`);
+          if (orphans.length) {
+            warnings.push(
+              `audio: ${level} "${verb}" ${tense} has ${orphans.length} recording(s) past the end of a ${pool}-question pool ` +
+              `(${orphans.slice(0, 4).join(", ")}${orphans.length > 4 ? ", …" : ""}) — orphaned, never served`
+            );
+            orphanTotal += orphans.length;
           }
         }
       }
     }
     console.log(
-      `  course audio: ${unitsChecked} units x 3 tenses checked, ` +
+      `  course audio: ${unitsChecked} units x 3 tenses checked against the real question pools, ` +
       `${missingTotal} question file(s) missing` +
-      (silentUnits ? `, ${silentUnits} tense-folder(s) absent entirely` : "")
+      (silentUnits ? `, ${silentUnits} tense-folder(s) absent entirely` : "") +
+      (orphanTotal ? `, ${orphanTotal} orphaned recording(s)` : "") +
+      (poolShort ? `, ${poolShort} pool(s) shorter than the quiz` : "") +
+      (poolUnknown ? `, ${poolUnknown} pool(s) UNCHECKED` : "")
     );
   }
 }

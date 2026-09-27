@@ -4102,6 +4102,16 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Je le dira avant.", rationale: "Option C", isCorrect: false },
         { text: "Je le diront avant.", rationale: "Option D", isCorrect: false }
       ]
+    },
+    {
+      question: "She will say / is going to say the truth tomorrow.",
+      hint: "Use future simple of dire: elle dira",
+      answerOptions: [
+        { text: "Elle diras la vérité demain.", rationale: "Option A", isCorrect: false },
+        { text: "Elle dirai la vérité demain.", rationale: "Option B", isCorrect: false },
+        { text: "Elle dira la vérité demain.", rationale: "Option C", isCorrect: true },
+        { text: "Elle diront la vérité demain.", rationale: "Option D", isCorrect: false }
+      ]
     }
   ],
   "savoir": [

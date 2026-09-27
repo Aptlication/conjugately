@@ -223,6 +223,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "N'est-il pas ?", rationale: "Correct! 'N'est-il pas ?' is 'Isn't he?' in French negative interrogative form.", isCorrect: true },
           { text: "N'es-tu pas ?", rationale: "This means 'Aren't you?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "It is (impersonal)",
+        hint: "Impersonal 'it' with être uses ce, not il or elle",
+        answerOptions: [
+          { text: "Il est", rationale: "This is 'he is' — a person, not an impersonal 'it'.", isCorrect: false },
+          { text: "C'est", rationale: "Correct! 'C'est' is the impersonal 'it is'.", isCorrect: true },
+          { text: "Elle est", rationale: "This is 'she is' — a person, not an impersonal 'it'.", isCorrect: false },
+          { text: "Ce sont", rationale: "This is 'these are' — plural, not singular.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It is not (impersonal)",
+        hint: "Negative of the impersonal c'est — ne ... pas around est",
+        answerOptions: [
+          { text: "Il n'est pas", rationale: "This is 'he is not' — a person.", isCorrect: false },
+          { text: "Elle n'est pas", rationale: "This is 'she is not' — a person.", isCorrect: false },
+          { text: "Ce ne sont pas", rationale: "This is 'these are not' — plural.", isCorrect: false },
+          { text: "Ce n'est pas", rationale: "Correct! 'Ce n'est pas' is the impersonal 'it is not'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "It is easy",
+        hint: "Impersonal c'est in the present tense",
+        answerOptions: [
+          { text: "Ce sera facile", rationale: "This is 'it will be easy' — future, not present.", isCorrect: false },
+          { text: "Ce sont faciles", rationale: "This is 'they are easy' — plural.", isCorrect: false },
+          { text: "C'est facile", rationale: "Correct! 'C'est facile' is 'it is easy'.", isCorrect: true },
+          { text: "Ce n'est pas facile", rationale: "This is 'it is not easy' — negative.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It is not difficult",
+        hint: "Negative impersonal c'est with an adjective",
+        answerOptions: [
+          { text: "Ce n'est pas difficile", rationale: "Correct! 'Ce n'est pas difficile' is 'it is not difficult'.", isCorrect: true },
+          { text: "C'est difficile", rationale: "This is 'it is difficult' — affirmative, not negative.", isCorrect: false },
+          { text: "Il n'est pas difficile", rationale: "This is 'he is not difficult' — a person.", isCorrect: false },
+          { text: "Ce ne sera pas difficile", rationale: "This is 'it will not be difficult' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "These are / They are (things)",
+        hint: "Plural of the impersonal ce with être",
+        answerOptions: [
+          { text: "C'est", rationale: "This is 'it is' — singular.", isCorrect: false },
+          { text: "Ils sont", rationale: "This is 'they are' for people or masculine nouns, not the presenting 'these are'.", isCorrect: false },
+          { text: "Ce sont", rationale: "Correct! 'Ce sont' is the plural of 'c'est'.", isCorrect: true },
+          { text: "Ce seront", rationale: "This is 'these will be' — future.", isCorrect: false }
+        ]
       }
     ],
     "Passé Composé": [
@@ -641,6 +691,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "Ne sera-t-il pas ?", rationale: "Correct! 'Ne sera-t-il pas ?' is 'Won't he be?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "Ne seras-tu pas ?", rationale: "This means 'Won't you be?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "It will be (impersonal)",
+        hint: "Future simple of the impersonal ce with être",
+        answerOptions: [
+          { text: "Ce sera", rationale: "Correct! 'Ce sera' is the impersonal 'it will be'.", isCorrect: true },
+          { text: "C'est", rationale: "This is 'it is' — present, not future.", isCorrect: false },
+          { text: "Il sera", rationale: "This is 'he will be' — a person.", isCorrect: false },
+          { text: "Ce seront", rationale: "This is 'these will be' — plural.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will not be (impersonal)",
+        hint: "Negative future of the impersonal ce",
+        answerOptions: [
+          { text: "Ce n'est pas", rationale: "This is 'it is not' — present.", isCorrect: false },
+          { text: "Il ne sera pas", rationale: "This is 'he will not be' — a person.", isCorrect: false },
+          { text: "Ce ne sera pas", rationale: "Correct! 'Ce ne sera pas' is 'it will not be'.", isCorrect: true },
+          { text: "Ce ne seront pas", rationale: "This is 'these will not be' — plural.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will be easy",
+        hint: "Impersonal ce in the future with an adjective",
+        answerOptions: [
+          { text: "C'est facile", rationale: "This is 'it is easy' — present.", isCorrect: false },
+          { text: "Ce sera facile", rationale: "Correct! 'Ce sera facile' is 'it will be easy'.", isCorrect: true },
+          { text: "Ce seront faciles", rationale: "This is 'they will be easy' — plural.", isCorrect: false },
+          { text: "Il sera facile", rationale: "This is 'he will be easy' — a person.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will be better",
+        hint: "Impersonal ce in the future",
+        answerOptions: [
+          { text: "C'est mieux", rationale: "This is 'it is better' — present.", isCorrect: false },
+          { text: "Ce ne sera pas mieux", rationale: "This is 'it will not be better' — negative.", isCorrect: false },
+          { text: "Il sera mieux", rationale: "This refers to a person, not an impersonal 'it'.", isCorrect: false },
+          { text: "Ce sera mieux", rationale: "Correct! 'Ce sera mieux' is 'it will be better'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "These will be / They will be (things)",
+        hint: "Plural future of the impersonal ce",
+        answerOptions: [
+          { text: "Ce sera", rationale: "This is 'it will be' — singular.", isCorrect: false },
+          { text: "Ce seront", rationale: "Correct! 'Ce seront' is the plural of 'ce sera'.", isCorrect: true },
+          { text: "Ils seront", rationale: "This is 'they will be' for people or masculine nouns.", isCorrect: false },
+          { text: "Ce sont", rationale: "This is 'these are' — present.", isCorrect: false }
+        ]
       }
     ]
   },
@@ -852,6 +952,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "N'a-t-il pas ?", rationale: "Correct! 'N'a-t-il pas ?' is 'Doesn't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'as-tu pas ?", rationale: "This means 'Don't you have?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "There is / There are",
+        hint: "The fixed expression for 'there is' uses avoir with y",
+        answerOptions: [
+          { text: "Il a", rationale: "This is 'he has' — a person possessing something.", isCorrect: false },
+          { text: "Ils ont", rationale: "This is 'they have'.", isCorrect: false },
+          { text: "Il y a", rationale: "Correct! 'Il y a' is 'there is' or 'there are'.", isCorrect: true },
+          { text: "Il y aura", rationale: "This is 'there will be' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There is not / There isn't",
+        hint: "Negative of il y a — ne ... pas around a",
+        answerOptions: [
+          { text: "Il n'y a pas", rationale: "Correct! 'Il n'y a pas' is 'there is not'.", isCorrect: true },
+          { text: "Il n'a pas", rationale: "This is 'he does not have'.", isCorrect: false },
+          { text: "Il n'y aura pas", rationale: "This is 'there will not be' — future.", isCorrect: false },
+          { text: "Il y a", rationale: "This is 'there is' — affirmative.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There is a problem",
+        hint: "Il y a with a singular noun",
+        answerOptions: [
+          { text: "Il a un problème", rationale: "This is 'he has a problem' — a person.", isCorrect: false },
+          { text: "Ils ont un problème", rationale: "This is 'they have a problem'.", isCorrect: false },
+          { text: "Il y aura un problème", rationale: "This is 'there will be a problem' — future.", isCorrect: false },
+          { text: "Il y a un problème", rationale: "Correct! 'Il y a un problème' is 'there is a problem'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "There is nothing",
+        hint: "Il y a with rien — ne goes before y",
+        answerOptions: [
+          { text: "Il n'a rien", rationale: "This is 'he has nothing' — a person.", isCorrect: false },
+          { text: "Il n'y a rien", rationale: "Correct! 'Il n'y a rien' is 'there is nothing'.", isCorrect: true },
+          { text: "Il n'y aura rien", rationale: "This is 'there will be nothing' — future.", isCorrect: false },
+          { text: "Il y a rien", rationale: "This drops the 'ne' — heard in speech but incorrect in written French.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There are three books",
+        hint: "Il y a does not change for plural nouns",
+        answerOptions: [
+          { text: "Il a trois livres", rationale: "This is 'he has three books'.", isCorrect: false },
+          { text: "Ils ont trois livres", rationale: "This is 'they have three books'.", isCorrect: false },
+          { text: "Il y a trois livres", rationale: "Correct! 'Il y a' stays the same whether one thing or many.", isCorrect: true },
+          { text: "Il y aura trois livres", rationale: "This is 'there will be three books' — future.", isCorrect: false }
+        ]
       }
     ],
     "Passé Composé": [
@@ -1061,6 +1211,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "N'a-t-il pas eu ?", rationale: "Correct! 'N'a-t-il pas eu ?' is 'Hasn't he had?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'as-tu pas eu ?", rationale: "This means 'Haven't you had?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "There was / There has been",
+        hint: "Passé composé of il y a — the past participle is eu",
+        answerOptions: [
+          { text: "Il a eu", rationale: "This is 'he had' — a person.", isCorrect: false },
+          { text: "Il y a eu", rationale: "Correct! 'Il y a eu' is 'there was' or 'there has been'.", isCorrect: true },
+          { text: "Il y a", rationale: "This is 'there is' — present.", isCorrect: false },
+          { text: "Ils ont eu", rationale: "This is 'they had'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There was not / There has not been",
+        hint: "Negative passé composé of il y a",
+        answerOptions: [
+          { text: "Il n'a pas eu", rationale: "This is 'he did not have'.", isCorrect: false },
+          { text: "Il n'y a pas", rationale: "This is 'there is not' — present.", isCorrect: false },
+          { text: "Ils n'ont pas eu", rationale: "This is 'they did not have'.", isCorrect: false },
+          { text: "Il n'y a pas eu", rationale: "Correct! 'Il n'y a pas eu' is 'there was not'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "There was a problem",
+        hint: "Il y a eu with a singular noun",
+        answerOptions: [
+          { text: "Il y a eu un problème", rationale: "Correct! 'Il y a eu un problème' is 'there was a problem'.", isCorrect: true },
+          { text: "Il a eu un problème", rationale: "This is 'he had a problem' — a person.", isCorrect: false },
+          { text: "Il y a un problème", rationale: "This is 'there is a problem' — present.", isCorrect: false },
+          { text: "Il y aura un problème", rationale: "This is 'there will be a problem' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There was an accident",
+        hint: "Il y a eu reporting a past event",
+        answerOptions: [
+          { text: "Il a eu un accident", rationale: "This is 'he had an accident' — a person.", isCorrect: false },
+          { text: "Il y a un accident", rationale: "This is 'there is an accident' — present.", isCorrect: false },
+          { text: "Il y a eu un accident", rationale: "Correct! 'Il y a eu un accident' is 'there was an accident'.", isCorrect: true },
+          { text: "Ils ont eu un accident", rationale: "This is 'they had an accident'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There has been nothing",
+        hint: "Rien sits between the auxiliary and the participle",
+        answerOptions: [
+          { text: "Il n'a rien eu", rationale: "This is 'he had nothing' — a person.", isCorrect: false },
+          { text: "Il n'y a rien eu", rationale: "Correct! 'Il n'y a rien eu' is 'there has been nothing'.", isCorrect: true },
+          { text: "Il n'y a rien", rationale: "This is 'there is nothing' — present.", isCorrect: false },
+          { text: "Il n'y aura rien", rationale: "This is 'there will be nothing' — future.", isCorrect: false }
+        ]
       }
     ],
     "Futur Simple": [
@@ -1269,6 +1469,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "N'aurai-je pas ?", rationale: "This means 'Won't I have?'.", isCorrect: false },
           { text: "N'aura-t-il pas ?", rationale: "Correct! 'N'aura-t-il pas ?' is 'Won't he have?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'auras-tu pas ?", rationale: "This means 'Won't you have?' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "There will be",
+        hint: "Future simple of il y a",
+        answerOptions: [
+          { text: "Il y aura", rationale: "Correct! 'Il y aura' is 'there will be'.", isCorrect: true },
+          { text: "Il aura", rationale: "This is 'he will have' — a person.", isCorrect: false },
+          { text: "Il y a", rationale: "This is 'there is' — present.", isCorrect: false },
+          { text: "Ils auront", rationale: "This is 'they will have'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There will not be",
+        hint: "Negative future of il y a",
+        answerOptions: [
+          { text: "Il n'aura pas", rationale: "This is 'he will not have'.", isCorrect: false },
+          { text: "Il n'y a pas", rationale: "This is 'there is not' — present.", isCorrect: false },
+          { text: "Il n'y aura pas", rationale: "Correct! 'Il n'y aura pas' is 'there will not be'.", isCorrect: true },
+          { text: "Ils n'auront pas", rationale: "This is 'they will not have'.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There will be a party",
+        hint: "Il y aura with a singular noun",
+        answerOptions: [
+          { text: "Il aura une fête", rationale: "This is 'he will have a party'.", isCorrect: false },
+          { text: "Il y a une fête", rationale: "This is 'there is a party' — present.", isCorrect: false },
+          { text: "Il y a eu une fête", rationale: "This is 'there was a party' — passé composé.", isCorrect: false },
+          { text: "Il y aura une fête", rationale: "Correct! 'Il y aura une fête' is 'there will be a party'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "There will be nothing",
+        hint: "Future of il y a with rien",
+        answerOptions: [
+          { text: "Il n'aura rien", rationale: "This is 'he will have nothing'.", isCorrect: false },
+          { text: "Il n'y aura rien", rationale: "Correct! 'Il n'y aura rien' is 'there will be nothing'.", isCorrect: true },
+          { text: "Il n'y a rien", rationale: "This is 'there is nothing' — present.", isCorrect: false },
+          { text: "Il n'y a rien eu", rationale: "This is 'there has been nothing' — passé composé.", isCorrect: false }
+        ]
+      },
+      {
+        question: "There will be a problem",
+        hint: "Il y aura reporting something still to come",
+        answerOptions: [
+          { text: "Il aura un problème", rationale: "This is 'he will have a problem'.", isCorrect: false },
+          { text: "Il y a un problème", rationale: "This is 'there is a problem' — present.", isCorrect: false },
+          { text: "Il y aura un problème", rationale: "Correct! 'Il y aura un problème' is 'there will be a problem'.", isCorrect: true },
+          { text: "Ils auront un problème", rationale: "This is 'they will have a problem'.", isCorrect: false }
         ]
       }
     ]
@@ -1481,6 +1731,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "Ne fait-il pas ?", rationale: "Correct! 'Ne fait-il pas ?' is 'Doesn't he do / Doesn't he make?' in French negative interrogative form.", isCorrect: true },
           { text: "Ne fais-tu pas ?", rationale: "This means 'Don't you do / Don't you make?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "It is cold (the weather)",
+        hint: "Weather uses faire, not être or avoir",
+        answerOptions: [
+          { text: "Il est froid", rationale: "This describes an object as cold, not the weather.", isCorrect: false },
+          { text: "Il fait froid", rationale: "Correct! Weather takes faire: 'il fait froid'.", isCorrect: true },
+          { text: "Il a froid", rationale: "This is 'he is cold' — a person feeling cold.", isCorrect: false },
+          { text: "Il fera froid", rationale: "This is 'it will be cold' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It is hot (the weather)",
+        hint: "Weather uses faire — compare 'il a chaud' for a person",
+        answerOptions: [
+          { text: "Il a chaud", rationale: "This is 'he is hot' — a person feeling hot.", isCorrect: false },
+          { text: "Il est chaud", rationale: "This describes an object as hot, not the weather.", isCorrect: false },
+          { text: "Il fera chaud", rationale: "This is 'it will be hot' — future.", isCorrect: false },
+          { text: "Il fait chaud", rationale: "Correct! Weather takes faire: 'il fait chaud'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "The weather is nice",
+        hint: "Il fait beau is the fixed expression for good weather",
+        answerOptions: [
+          { text: "Il fait beau", rationale: "Correct! 'Il fait beau' is 'the weather is nice'.", isCorrect: true },
+          { text: "Il est beau", rationale: "This is 'he is handsome' — a person.", isCorrect: false },
+          { text: "Il fera beau", rationale: "This is 'the weather will be nice' — future.", isCorrect: false },
+          { text: "Il a fait beau", rationale: "This is 'the weather was nice' — passé composé.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It is not cold (the weather)",
+        hint: "Negative weather expression — ne ... pas around fait",
+        answerOptions: [
+          { text: "Il n'a pas froid", rationale: "This is 'he is not cold' — a person.", isCorrect: false },
+          { text: "Il n'est pas froid", rationale: "This describes an object, not the weather.", isCorrect: false },
+          { text: "Il ne fait pas froid", rationale: "Correct! 'Il ne fait pas froid' is 'it is not cold'.", isCorrect: true },
+          { text: "Il ne fera pas froid", rationale: "This is 'it will not be cold' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It is night / It is dark",
+        hint: "Time of day also takes faire",
+        answerOptions: [
+          { text: "Il est nuit", rationale: "Nuit takes faire, not être.", isCorrect: false },
+          { text: "Il fait nuit", rationale: "Correct! 'Il fait nuit' is 'it is night' or 'it is dark'.", isCorrect: true },
+          { text: "Il fera nuit", rationale: "This is 'it will be dark' — future.", isCorrect: false },
+          { text: "Il a fait nuit", rationale: "This is 'it was dark' — passé composé.", isCorrect: false }
+        ]
       }
     ],
     "Passé Composé": [
@@ -1690,6 +1990,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "N'a-t-il pas fait ?", rationale: "Correct! 'N'a-t-il pas fait ?' is 'Hasn't he made?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "N'as-tu pas fait ?", rationale: "This means 'Haven't you made?' (informal).", isCorrect: false }
         ]
+      },
+      {
+        question: "It was cold (the weather)",
+        hint: "Passé composé of the weather expression",
+        answerOptions: [
+          { text: "Il fait froid", rationale: "This is 'it is cold' — present.", isCorrect: false },
+          { text: "Il a eu froid", rationale: "This is 'he was cold' — a person.", isCorrect: false },
+          { text: "Il a fait froid", rationale: "Correct! 'Il a fait froid' is 'it was cold'.", isCorrect: true },
+          { text: "Il fera froid", rationale: "This is 'it will be cold' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "The weather was nice",
+        hint: "Passé composé of il fait beau",
+        answerOptions: [
+          { text: "Il a fait beau", rationale: "Correct! 'Il a fait beau' is 'the weather was nice'.", isCorrect: true },
+          { text: "Il fait beau", rationale: "This is 'the weather is nice' — present.", isCorrect: false },
+          { text: "Il fera beau", rationale: "This is 'the weather will be nice' — future.", isCorrect: false },
+          { text: "Il a été beau", rationale: "This is 'he was handsome' — a person.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It was hot (the weather)",
+        hint: "Passé composé of the weather expression",
+        answerOptions: [
+          { text: "Il fait chaud", rationale: "This is 'it is hot' — present.", isCorrect: false },
+          { text: "Il a eu chaud", rationale: "This is 'he was hot' — a person.", isCorrect: false },
+          { text: "Il fera chaud", rationale: "This is 'it will be hot' — future.", isCorrect: false },
+          { text: "Il a fait chaud", rationale: "Correct! 'Il a fait chaud' is 'it was hot'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "It was not cold (the weather)",
+        hint: "Negative passé composé — ne ... pas around the auxiliary",
+        answerOptions: [
+          { text: "Il ne fait pas froid", rationale: "This is 'it is not cold' — present.", isCorrect: false },
+          { text: "Il n'a pas fait froid", rationale: "Correct! 'Il n'a pas fait froid' is 'it was not cold'.", isCorrect: true },
+          { text: "Il n'a pas eu froid", rationale: "This is 'he was not cold' — a person.", isCorrect: false },
+          { text: "Il ne fera pas froid", rationale: "This is 'it will not be cold' — future.", isCorrect: false }
+        ]
+      },
+      {
+        question: "The weather was nice yesterday",
+        hint: "Hier fixes the sentence in the past",
+        answerOptions: [
+          { text: "Il fait beau hier", rationale: "Present tense cannot take 'hier'.", isCorrect: false },
+          { text: "Il fera beau hier", rationale: "Future tense cannot take 'hier'.", isCorrect: false },
+          { text: "Il a fait beau hier", rationale: "Correct! 'Il a fait beau hier' is 'the weather was nice yesterday'.", isCorrect: true },
+          { text: "Il a été beau hier", rationale: "This is 'he was handsome yesterday' — a person.", isCorrect: false }
+        ]
       }
     ],
     "Futur Simple": [
@@ -1898,6 +2248,56 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
           { text: "Ne ferai-je pas ?", rationale: "This means 'Won't I do / Won't I make?'.", isCorrect: false },
           { text: "Ne fera-t-il pas ?", rationale: "Correct! 'Ne fera-t-il pas ?' is 'Won't he do / Won't he make?' in French negative interrogative with liaison 't'.", isCorrect: true },
           { text: "Ne feras-tu pas ?", rationale: "This means 'Won't you do / Won't you make?' (informal).", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will be cold (the weather)",
+        hint: "Future simple of the weather expression",
+        answerOptions: [
+          { text: "Il fera froid", rationale: "Correct! 'Il fera froid' is 'it will be cold'.", isCorrect: true },
+          { text: "Il fait froid", rationale: "This is 'it is cold' — present.", isCorrect: false },
+          { text: "Il a fait froid", rationale: "This is 'it was cold' — passé composé.", isCorrect: false },
+          { text: "Il aura froid", rationale: "This is 'he will be cold' — a person.", isCorrect: false }
+        ]
+      },
+      {
+        question: "The weather will be nice",
+        hint: "Future simple of il fait beau",
+        answerOptions: [
+          { text: "Il fait beau", rationale: "This is 'the weather is nice' — present.", isCorrect: false },
+          { text: "Il a fait beau", rationale: "This is 'the weather was nice' — passé composé.", isCorrect: false },
+          { text: "Il fera beau", rationale: "Correct! 'Il fera beau' is 'the weather will be nice'.", isCorrect: true },
+          { text: "Il sera beau", rationale: "This is 'he will be handsome' — a person.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will be hot (the weather)",
+        hint: "Future simple of the weather expression",
+        answerOptions: [
+          { text: "Il fait chaud", rationale: "This is 'it is hot' — present.", isCorrect: false },
+          { text: "Il fera chaud", rationale: "Correct! 'Il fera chaud' is 'it will be hot'.", isCorrect: true },
+          { text: "Il aura chaud", rationale: "This is 'he will be hot' — a person.", isCorrect: false },
+          { text: "Il a fait chaud", rationale: "This is 'it was hot' — passé composé.", isCorrect: false }
+        ]
+      },
+      {
+        question: "It will not be cold (the weather)",
+        hint: "Negative future — ne ... pas around fera",
+        answerOptions: [
+          { text: "Il ne fait pas froid", rationale: "This is 'it is not cold' — present.", isCorrect: false },
+          { text: "Il n'a pas fait froid", rationale: "This is 'it was not cold' — passé composé.", isCorrect: false },
+          { text: "Il n'aura pas froid", rationale: "This is 'he will not be cold' — a person.", isCorrect: false },
+          { text: "Il ne fera pas froid", rationale: "Correct! 'Il ne fera pas froid' is 'it will not be cold'.", isCorrect: true }
+        ]
+      },
+      {
+        question: "The weather will be nice tomorrow",
+        hint: "Demain fixes the sentence in the future",
+        answerOptions: [
+          { text: "Il fait beau demain", rationale: "Present tense does not carry 'demain' here.", isCorrect: false },
+          { text: "Il fera beau demain", rationale: "Correct! 'Il fera beau demain' is 'the weather will be nice tomorrow'.", isCorrect: true },
+          { text: "Il a fait beau demain", rationale: "Passé composé cannot take 'demain'.", isCorrect: false },
+          { text: "Il fera beau hier", rationale: "Future tense cannot take 'hier'.", isCorrect: false }
         ]
       }
     ]
