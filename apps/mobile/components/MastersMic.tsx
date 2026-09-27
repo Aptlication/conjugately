@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AccessibilityInfo, Animated, Easing, Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import * as Haptics from "expo-haptics";
 import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
 
@@ -17,7 +18,7 @@ import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
 
 const BARS = 16;
 const SEGMENTS = 16;
-const SEG_H = 8;
+const SEG_H = 6;
 const SEG_GAP = 3;
 const EQ_HEIGHT = SEGMENTS * SEG_H + (SEGMENTS - 1) * SEG_GAP;
 
@@ -357,7 +358,13 @@ function SquareButton(props: {
           flashing && !props.attention && { opacity: flash.interpolate({ inputRange: [0, 1], outputRange: [0.35, 1] }) },
         ]}
       >
-        <Ionicons name={props.icon} size={props.big ? 46 : 26} color={tint} />
+        <LinearGradient
+          colors={["rgba(255,255,255,0.34)", "rgba(255,255,255,0.05)", "rgba(0,0,0,0.30)"]}
+          locations={[0, 0.45, 1]}
+          pointerEvents="none"
+          style={[StyleSheet.absoluteFillObject, { borderRadius: props.big ? 78 : 20 }]}
+        />
+        <Ionicons name={props.icon} size={props.big ? 60 : 24} color={tint} />
       </Animated.View>
       <Text style={[
         props.big ? styles.btnLabelBig : styles.btnLabel,
@@ -392,7 +399,7 @@ const styles = StyleSheet.create({
   stripes: { position: "absolute", top: 0, left: 0, right: 0, height: EQ_HEIGHT },
   stripe: { position: "absolute", left: 0, right: 0, height: SEG_GAP, backgroundColor: NAVY_CARD },
 
-  heardBlock: { marginTop: 14, minHeight: 44, alignItems: "center", justifyContent: "center", gap: 3 },
+  heardBlock: { marginTop: 10, minHeight: 40, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
@@ -401,20 +408,26 @@ const styles = StyleSheet.create({
 
   pauseWrap: {
     height: EQ_HEIGHT, marginTop: 16, flexDirection: "row",
-    alignItems: "center", justifyContent: "center", gap: 26,
+    alignItems: "center", justifyContent: "center", gap: 22,
   },
-  pauseBar: { width: 30, height: 104, borderRadius: 8, backgroundColor: "#24365E" },
+  pauseBar: { width: 26, height: 100, borderRadius: 7, backgroundColor: "#24365E" },
 
-  row: { marginTop: 10, flexDirection: "row", alignItems: "flex-start", justifyContent: "center", gap: 12 },
-  btnWrap: { width: 84, alignItems: "center", gap: 8 },
-  btnWrapBig: { width: 128, alignItems: "center", gap: 8 },
+  row: { marginTop: 4, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
+  btnWrap: { width: 72, alignItems: "center", gap: 7 },
+  btnWrapBig: { width: 156, alignItems: "center", gap: 10 },
   btn: {
-    width: 80, height: 80, borderRadius: 22, alignItems: "center", justifyContent: "center",
-    backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE,
+    width: 64, height: 64, borderRadius: 20, alignItems: "center", justifyContent: "center",
+    backgroundColor: TRACK, borderWidth: 1.5, borderColor: EDGE, overflow: "hidden",
+    shadowColor: "#000", shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.42, shadowRadius: 10, elevation: 7,
   },
+  // Round, and a quarter larger than its neighbours: the one control the
+  // learner reaches for on every question, often without looking.
   btnBig: {
-    width: 124, height: 112, borderRadius: 28, alignItems: "center", justifyContent: "center",
-    backgroundColor: TRACK, borderWidth: 2, borderColor: EDGE,
+    width: 156, height: 156, borderRadius: 78, alignItems: "center", justifyContent: "center",
+    backgroundColor: TRACK, borderWidth: 2, borderColor: EDGE, overflow: "hidden",
+    shadowColor: "#000", shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.5, shadowRadius: 16, elevation: 12,
   },
   btnAgain: { backgroundColor: "#2A1A2B", borderColor: "#E11D48" },
   btnHold: { borderColor: "#5B8CFF" },
@@ -422,8 +435,8 @@ const styles = StyleSheet.create({
   btnActive: { backgroundColor: "#E11D48", borderColor: "#E11D48" },
   btnSubmit: { backgroundColor: "#16A34A", borderColor: "#4ADE80" },
   btnDisabled: { backgroundColor: "#16264A", borderColor: "#22345C" },
-  btnLabel: { fontSize: 12, fontWeight: "600", color: SOFT },
-  btnLabelBig: { fontSize: 15, fontWeight: "700", color: "#FFFFFF" },
+  btnLabel: { fontSize: 11, fontWeight: "600", color: SOFT },
+  btnLabelBig: { fontSize: 16, fontWeight: "700", color: "#FFFFFF" },
   btnLabelStrong: { fontWeight: "700", color: "#FFFFFF" },
 
   notice: {

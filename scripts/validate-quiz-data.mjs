@@ -15,7 +15,7 @@
  * The checks below are the cheap permanent guard against that whole class.
  */
 
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -489,6 +489,73 @@ if (!setsBlock) {
         );
       }
     }
+  }
+}
+
+
+// ── CHECK 9: every course unit has its question audio ────────────────────────
+//     Elementary and Intermediate shipped silent for weeks. The recordings were
+//     there - 419 and 1,720 files - but one line in quiz.tsx never let them be
+//     requested, and nothing here compared the course to the audio, so the gap
+//     was invisible until a learner met it.
+//
+//     The course moving is the dangerous half. Intermediate was re-pointed at
+//     eighteen verbs on 24 Sep; the audio had been recorded against the old
+//     eleven, so two units (mettre, croire) have no recordings at all and
+//     nobody noticed.
+//
+//     WARNINGS, not failures. A missing recording is a content gap, not a
+//     broken build, and making it build-breaking would block every release
+//     until the last file is cut. It is loud enough here to be acted on.
+{
+  const coursesFile = join(repoRoot, "apps/mobile/lib/courses.ts");
+  if (!existsSync(coursesFile)) {
+    warnings.push("apps/mobile/lib/courses.ts not found — course audio coverage is UNCHECKED");
+  } else {
+    const src = readFileSync(coursesFile, "utf8");
+    const TENSES = ["present", "passe_compose", "futur_simple"];
+    const levelRe = /(\w+):\s*\{\s*emoji:[\s\S]*?units:\s*\[([\s\S]*?)\n\s*\],/g;
+    let m;
+    let unitsChecked = 0;
+    let missingTotal = 0;
+    let silentUnits = 0;
+    while ((m = levelRe.exec(src))) {
+      const level = m[1];
+      const unitRe = /verb:\s*"([^"]+)"\s*,\s*questions:\s*(\d+)/g;
+      let u;
+      while ((u = unitRe.exec(m[2]))) {
+        const verb = u[1];
+        const want = Number(u[2]);
+        unitsChecked += 1;
+        for (const tense of TENSES) {
+          const dir = join(repoRoot, "attached_assets/audio/quizzes", level.toLowerCase(), verb, tense, "questions");
+          if (!existsSync(dir)) {
+            warnings.push(
+              `audio: ${level} "${verb}" ${tense} has no folder at all — all ${want} questions are silent`
+            );
+            missingTotal += want;
+            silentUnits += 1;
+            continue;
+          }
+          const missing = [];
+          for (let i = 1; i <= want; i++) {
+            if (!existsSync(join(dir, `Q${i}.mp3`))) missing.push(`Q${i}`);
+          }
+          if (missing.length) {
+            const shown = missing.length > 6 ? missing.slice(0, 6).join(", ") + `, +${missing.length - 6} more` : missing.join(", ");
+            warnings.push(
+              `audio: ${level} "${verb}" ${tense} has ${want - missing.length} of ${want} — missing ${shown}`
+            );
+            missingTotal += missing.length;
+          }
+        }
+      }
+    }
+    console.log(
+      `  course audio: ${unitsChecked} units x 3 tenses checked, ` +
+      `${missingTotal} question file(s) missing` +
+      (silentUnits ? `, ${silentUnits} tense-folder(s) absent entirely` : "")
+    );
   }
 }
 
