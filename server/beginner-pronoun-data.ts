@@ -265,13 +265,13 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "These are / They are (things)",
-        hint: "Plural of the impersonal ce with être",
+        question: "These are my keys.",
+        hint: "A noun complement takes ce, never il or elle",
         answerOptions: [
-          { text: "C'est", rationale: "This is 'it is' — singular.", isCorrect: false },
-          { text: "Ils sont", rationale: "This is 'they are' for people or masculine nouns, not the presenting 'these are'.", isCorrect: false },
-          { text: "Ce sont", rationale: "Correct! 'Ce sont' is the plural of 'c'est'.", isCorrect: true },
-          { text: "Ce seront", rationale: "This is 'these will be' — future.", isCorrect: false }
+          { text: "Ils sont mes clés.", rationale: "With a noun complement French requires ce - 'Ils sont mes clés' is not said.", isCorrect: false },
+          { text: "C'est mes clés.", rationale: "'C'est' is singular; 'clés' is plural.", isCorrect: false },
+          { text: "Ce sont mes clés.", rationale: "Correct! A plural noun complement takes 'Ce sont'.", isCorrect: true },
+          { text: "Ce seront mes clés.", rationale: "This is 'these will be my keys' - future.", isCorrect: false }
         ]
       }
     ],
@@ -733,13 +733,13 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "These will be / They will be (things)",
-        hint: "Plural future of the impersonal ce",
+        question: "These will be my new shoes.",
+        hint: "Future of ce with a plural noun complement",
         answerOptions: [
-          { text: "Ce sera", rationale: "This is 'it will be' — singular.", isCorrect: false },
-          { text: "Ce seront", rationale: "Correct! 'Ce seront' is the plural of 'ce sera'.", isCorrect: true },
-          { text: "Ils seront", rationale: "This is 'they will be' for people or masculine nouns.", isCorrect: false },
-          { text: "Ce sont", rationale: "This is 'these are' — present.", isCorrect: false }
+          { text: "Ce sont mes nouvelles chaussures.", rationale: "This is 'these are' - present, not future.", isCorrect: false },
+          { text: "Ce seront mes nouvelles chaussures.", rationale: "Correct! 'Ce seront' is the plural future of 'ce sera'.", isCorrect: true },
+          { text: "Elles seront mes nouvelles chaussures.", rationale: "With a noun complement French requires ce, not elles.", isCorrect: false },
+          { text: "Ce sera mes nouvelles chaussures.", rationale: "'Ce sera' is singular; 'chaussures' is plural.", isCorrect: false }
         ]
       }
     ]
@@ -985,12 +985,12 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
       },
       {
         question: "There is nothing",
-        hint: "Il y a with rien — ne goes before y",
+        hint: "Il y a with rien - ne goes before y",
         answerOptions: [
-          { text: "Il n'a rien", rationale: "This is 'he has nothing' — a person.", isCorrect: false },
-          { text: "Il n'y a rien", rationale: "Correct! 'Il n'y a rien' is 'there is nothing'.", isCorrect: true },
-          { text: "Il n'y aura rien", rationale: "This is 'there will be nothing' — future.", isCorrect: false },
-          { text: "Il y a rien", rationale: "This drops the 'ne' — heard in speech but incorrect in written French.", isCorrect: false }
+          { text: "Il n'a rien.", rationale: "This is 'he has nothing' - a person.", isCorrect: false },
+          { text: "Il n'y a rien.", rationale: "Correct! 'Il n'y a rien' is 'there is nothing'.", isCorrect: true },
+          { text: "Il n'y aura rien.", rationale: "This is 'there will be nothing' - future.", isCorrect: false },
+          { text: "Il n'y a personne.", rationale: "This is 'there is nobody' - about people, not things.", isCorrect: false }
         ]
       },
       {
@@ -1773,13 +1773,13 @@ export const BEGINNER_PRONOUN_QUESTIONS: Record<string, Record<string, BeginnerP
         ]
       },
       {
-        question: "It is night / It is dark",
+        question: "It is night",
         hint: "Time of day also takes faire",
         answerOptions: [
-          { text: "Il est nuit", rationale: "Nuit takes faire, not être.", isCorrect: false },
-          { text: "Il fait nuit", rationale: "Correct! 'Il fait nuit' is 'it is night' or 'it is dark'.", isCorrect: true },
-          { text: "Il fera nuit", rationale: "This is 'it will be dark' — future.", isCorrect: false },
-          { text: "Il a fait nuit", rationale: "This is 'it was dark' — passé composé.", isCorrect: false }
+          { text: "Il est nuit.", rationale: "Nuit takes faire, not être.", isCorrect: false },
+          { text: "Il fait nuit.", rationale: "Correct! 'Il fait nuit' is 'it is night'.", isCorrect: true },
+          { text: "Il fera nuit.", rationale: "This is 'it will be night' - future.", isCorrect: false },
+          { text: "Il a fait nuit.", rationale: "This is 'it was night' - passé composé.", isCorrect: false }
         ]
       }
     ],

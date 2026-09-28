@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "voiceId": "mixed",
-  "generatedAt": "2026-09-28T02:11:27.494Z",
+  "generatedAt": "2026-09-28T02:18:37.957Z",
   "phrases": {
     "A-t-elle ?": "60e7df37c4d4d460.mp3",
     "A-t-elle adaptée?": "578843fb8a98267c.mp3",
@@ -1792,7 +1792,23 @@
     "Il n'aura pas froid": "caf85086246901b2.mp3",
     "Il fait beau demain": "ea75c110236c8b93.mp3",
     "Il fera beau demain": "9838a39379e7c237.mp3",
-    "Il a fait beau demain": "1e7fb4170904170b.mp3"
+    "Il a fait beau demain": "1e7fb4170904170b.mp3",
+    "Ils sont mes clés.": "96d40251aa2011eb.mp3",
+    "C'est mes clés.": "82d1d570b5a808a2.mp3",
+    "Ce sont mes clés.": "5cd98b2fbecf58ba.mp3",
+    "Ce seront mes clés.": "af64ad8b249166f0.mp3",
+    "Ce sont mes nouvelles chaussures.": "5ed2241cf1b219e6.mp3",
+    "Ce seront mes nouvelles chaussures.": "11f13ea1a7907075.mp3",
+    "Elles seront mes nouvelles chaussures.": "698941b8757082cd.mp3",
+    "Ce sera mes nouvelles chaussures.": "6c6006feb258e7f5.mp3",
+    "Il n'a rien.": "77819438a185ded0.mp3",
+    "Il n'y a rien.": "779b4c4f23364165.mp3",
+    "Il n'y aura rien.": "9eb8e2be99f13147.mp3",
+    "Il n'y a personne.": "93bbbc9586ac8d61.mp3",
+    "Il est nuit.": "36be8aaafd1a6eab.mp3",
+    "Il fait nuit.": "77d09895bd6d3650.mp3",
+    "Il fera nuit.": "62627d494952f43d.mp3",
+    "Il a fait nuit.": "13cdd4af325f0a80.mp3"
   },
   "novice_phrases": {
     "A-t-elle eu un chien ?": "novice_09997e74e65379af.mp3",
