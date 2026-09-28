@@ -19,3 +19,7 @@ First, the domain migration from frenchverbmaster.com to conjugately.com, curren
 Run `npm install`, then `npm run dev` to serve the API and client on port 5000. For production, run `npm run build` followed by `npm run start`.
 
 See `PARALLEL_RUN_PROTOCOL.md` for how the two domains run side by side, and `DOMAIN_MIGRATION_RUNBOOK.md` for the final cutover procedure.
+
+## Deployment
+
+Render auto-deploys `main` on every commit via the Render GitHub App (installed on the Aptlication org, 27 September 2026).
