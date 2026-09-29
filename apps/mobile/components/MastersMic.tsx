@@ -105,8 +105,6 @@ export default function MastersMic(props: {
 
   return (
     <View style={styles.wrap}>
-      <StatusLine phase={phase} warming={warming} reduceMotion={reduceMotion} />
-
       {/* The equaliser appears the moment recording is live, not when the first
           sound arrives: the learner needs to see that Record took effect. While
           nothing is being heard yet it breathes at a low idle amplitude, which
@@ -195,53 +193,6 @@ function PauseGlyph() {
     >
       <View style={styles.pauseBar} />
       <View style={styles.pauseBar} />
-    </View>
-  );
-}
-
-function StatusLine({ phase, warming, reduceMotion }: { phase: string; warming: boolean; reduceMotion: boolean }) {
-  const listening = phase === "listening" && !warming;
-  const blink = useRef(new Animated.Value(1)).current;
-  const ring = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    if (!listening || reduceMotion) { blink.setValue(1); ring.setValue(0); return; }
-    const a = Animated.loop(Animated.sequence([
-      Animated.timing(blink, { toValue: 0.15, duration: 550, useNativeDriver: true }),
-      Animated.timing(blink, { toValue: 1, duration: 550, useNativeDriver: true }),
-    ]));
-    const b = Animated.loop(Animated.timing(ring, {
-      toValue: 1, duration: 1100, easing: Easing.out(Easing.ease), useNativeDriver: true,
-    }));
-    a.start(); b.start();
-    return () => { a.stop(); b.stop(); };
-  }, [listening, reduceMotion, blink, ring]);
-
-  if (!listening) {
-    return (
-      <View style={styles.statusLine}>
-        <View style={styles.stoppedBadge}>
-          <Ionicons name="pause" size={13} color={MUTED} />
-        </View>
-        <Text style={styles.statusText}>
-          {warming ? "Getting ready - hold on a moment" : "Press Record to answer, Enter to submit"}
-        </Text>
-      </View>
-    );
-  }
-
-  return (
-    <View style={styles.statusLine}>
-      <View style={styles.recWrap}>
-        <Animated.View
-          style={[styles.recRing, {
-            opacity: ring.interpolate({ inputRange: [0, 0.7, 1], outputRange: [0.95, 0.1, 0.95] }),
-            transform: [{ scale: ring.interpolate({ inputRange: [0, 0.7, 1], outputRange: [0.82, 1.18, 0.82] }) }],
-          }]}
-        />
-        <Animated.View style={[styles.recDot, { opacity: blink }]} />
-      </View>
-      <Text style={styles.statusText}>Speak now</Text>
     </View>
   );
 }
@@ -424,14 +375,14 @@ const styles = StyleSheet.create({
   },
   statusText: { flex: 1, fontSize: 14, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.1, lineHeight: 19 },
 
-  eq: { height: EQ_HEIGHT, marginTop: 16, flexDirection: "row", alignItems: "flex-end" },
+  eq: { height: EQ_HEIGHT, marginTop: 18, flexDirection: "row", alignItems: "flex-end" },
   barTrack: { flex: 1, marginHorizontal: 3, maxWidth: 16, height: EQ_HEIGHT, justifyContent: "flex-end", backgroundColor: TRACK, borderRadius: 2 },
   bar: { width: "100%", borderRadius: 2, backgroundColor: LIT, justifyContent: "flex-start" },
   barCap: { height: SEG_H, borderRadius: 2, backgroundColor: CAP },
   stripes: { position: "absolute", top: 0, left: 0, right: 0, height: EQ_HEIGHT },
   stripe: { position: "absolute", left: 0, right: 0, height: SEG_GAP, backgroundColor: NAVY_CARD },
 
-  heardBlock: { marginTop: 10, minHeight: 40, alignItems: "center", justifyContent: "center", gap: 3 },
+  heardBlock: { marginTop: 18, minHeight: 40, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
@@ -439,12 +390,12 @@ const styles = StyleSheet.create({
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
   pauseWrap: {
-    height: EQ_HEIGHT, marginTop: 16, flexDirection: "row",
+    height: EQ_HEIGHT, marginTop: 18, flexDirection: "row",
     alignItems: "center", justifyContent: "center", gap: 22,
   },
   pauseBar: { width: 26, height: 100, borderRadius: 7, backgroundColor: "#24365E" },
 
-  row: { marginTop: 4, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
+  row: { marginTop: 14, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
   btnWrap: { width: 72, alignItems: "center", gap: 7 },
   btnWrapBig: { width: 125, alignItems: "center", gap: 10 },
   btn: {

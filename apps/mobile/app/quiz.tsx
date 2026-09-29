@@ -484,9 +484,11 @@ export default function Quiz() {
                   if (s) { try { qPlayer.pause(); aPlayer.pause(); } catch {} }
                   return !s;
                 })}
-                style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff]}>
+                style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff,
+                  micMode && styles.togglePillMic]}>
                 <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
-                <Text style={[styles.toggleText, { color: sound ? "#2B5FD9" : "#5A6472" }]}>
+                <Text style={[styles.toggleText,
+                  { color: micMode ? "#E2E9F7" : sound ? "#2B5FD9" : "#5A6472" }]}>
                   {sound ? "Sound On" : "Sound Off"}
                 </Text>
               </Pressable>
@@ -669,8 +671,11 @@ const styles = StyleSheet.create({
   cardMic: { backgroundColor: "#10203F", borderColor: "#2E4270" },
   metaMic: { color: "#A8B8D6" },
   metaScoreMic: { color: "#FFFFFF" },
-  qTextMic: { color: "#FFFFFF" },
+  // Bigger in mic mode: the options are hidden, so the prompt is the only
+  // thing to read and it inherits the space the status line used to take.
+  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 20 },
   ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
+  togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   ghostTextMic: { color: "#E2E9F7" },
   micOn: { backgroundColor: "#22D3EE", borderColor: "#22D3EE" },
   micIntroIcon: {
