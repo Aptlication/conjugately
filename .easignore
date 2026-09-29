@@ -8,3 +8,10 @@ dist/
 conjugately-feature-graphic*.png
 *.mp3
 apps/mobile/package-lock.json
+node_modules/
+**/node_modules/
+.expo/
+**/.expo/
+*.log
+docs/
+*.tar.gz

@@ -1,1 +1,9 @@
-../../attached_assets/
+# EAS archives the working tree once a .easignore exists,
+# so .gitignore no longer applies - exclude build junk explicitly.
+node_modules/
+**/node_modules/
+.expo/
+ios/
+android/
+*.log
+package-lock.json
