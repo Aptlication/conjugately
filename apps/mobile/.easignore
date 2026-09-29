@@ -1,9 +1,31 @@
-# EAS archives the working tree once a .easignore exists,
-# so .gitignore no longer applies - exclude build junk explicitly.
+# EAS reads the .easignore next to eas.json, but matches patterns
+# against the REPOSITORY root (it archives the whole repo, not apps/mobile).
+# So every exclusion for the whole monorepo has to be listed HERE.
+# The repo-root .easignore is NOT consulted.
+
+# Build junk (a .easignore replaces .gitignore, so these need listing)
 node_modules/
 **/node_modules/
 .expo/
+**/.expo/
 ios/
 android/
 *.log
 package-lock.json
+apps/mobile/package-lock.json
+
+# Monorepo siblings the iOS app does not import
+.local/
+attached_assets*/
+canvas/
+client/
+server/
+scripts/
+docs/
+dist/
+
+# Large media and archives
+*.mp3
+*.tar.gz
+conjugately-feature-graphic*.png
+all-english-templates.txt

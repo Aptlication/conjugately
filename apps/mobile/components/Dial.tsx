@@ -19,9 +19,11 @@ type Props = {
   options: DialOption[];
   onSettle?: (value: string) => void;
   disabled?: boolean;
+  /** Narrow three-up reel: smaller type, tighter lens, caption handled by the parent. */
+  compact?: boolean;
 };
 
-const Dial = forwardRef<DialHandle, Props>(function Dial({ options, onSettle, disabled }, ref) {
+const Dial = forwardRef<DialHandle, Props>(function Dial({ options, onSettle, disabled, compact }, ref) {
   const n = options.length;
   const total = n * ROW_H;
   const offset = useSharedValue(0);
@@ -73,13 +75,13 @@ const Dial = forwardRef<DialHandle, Props>(function Dial({ options, onSettle, di
     });
 
   return (
-    <View style={[styles.box, disabled && { opacity: 0.55 }]}>
+    <View style={[styles.box, compact && styles.boxCompact, disabled && { opacity: 0.55 }]}>
       <GestureDetector gesture={pan}>
         <View style={styles.wheel}>
-          <View pointerEvents="none" style={styles.lens} />
+          <View pointerEvents="none" style={[styles.lens, compact && styles.lensCompact]} />
           {options.map((o, i) => (
             <Row key={`${o.value}-${i}`} index={i} text={o.label} offset={offset}
-              n={n} total={total} dim={!!o.disabled} />
+              n={n} total={total} dim={!!o.disabled} compact={compact} />
           ))}
           <LinearGradient pointerEvents="none"
             colors={["rgba(90,105,135,0.22)", "rgba(223,231,245,0)", "rgba(223,231,245,0)", "rgba(90,105,135,0.22)"]}
@@ -87,7 +89,7 @@ const Dial = forwardRef<DialHandle, Props>(function Dial({ options, onSettle, di
             style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }} />
         </View>
       </GestureDetector>
-      <Caption offset={offset} options={options} n={n} />
+      {!compact && <Caption offset={offset} options={options} n={n} />}
     </View>
   );
 });
@@ -103,7 +105,7 @@ function Caption({ offset, options, n }: any) {
   return <Text style={styles.caption}>{text}</Text>;
 }
 
-function Row({ index, text, offset, n, total, dim }: any) {
+function Row({ index, text, offset, n, total, dim, compact }: any) {
   const style = useAnimatedStyle(() => {
     let d = ((index * ROW_H - offset.value) % total + total * 1.5) % total - total / 2;
     const half = WHEEL_H / 2;
@@ -120,7 +122,7 @@ function Row({ index, text, offset, n, total, dim }: any) {
   });
   return (
     <Animated.View style={[styles.row, style, dim && { opacity: 0.4 }]}>
-      <Text style={styles.rowText} numberOfLines={1}>{text}</Text>
+      <Text style={[styles.rowText, compact && styles.rowTextCompact]} numberOfLines={1}>{text}</Text>
     </Animated.View>
   );
 }
@@ -132,6 +134,9 @@ const styles = StyleSheet.create({
   row: { position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 0, right: 0,
     height: ROW_H, alignItems: "center", justifyContent: "center" },
   rowText: { color: "#1B1F24", fontSize: 17, fontWeight: "500", paddingHorizontal: 12 },
+  boxCompact: { borderRadius: 10 },
+  lensCompact: { left: 5, right: 5, borderRadius: 8 },
+  rowTextCompact: { fontSize: 14, paddingHorizontal: 6 },
   lens: { position: "absolute", top: (WHEEL_H - ROW_H) / 2, left: 8, right: 8,
     height: ROW_H, borderRadius: 9, borderWidth: 1,
     borderColor: "rgba(27,31,36,0.10)", backgroundColor: "#F5F6F8",

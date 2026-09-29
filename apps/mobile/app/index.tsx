@@ -19,19 +19,26 @@ export default function Home() {
   const d3 = useRef<DialHandle>(null);
 
   const levelOptions: DialOption[] = LEVELS.map((l) => ({
-    value: l.key, label: l.label, detail: l.detail, disabled: (l as any).disabled,
+    value: l.key, label: l.key || "Difficulty…", detail: l.detail, disabled: (l as any).disabled,
   }));
   const verbs = difficulty ? DIFFICULTY_CONFIGS[difficulty]?.verbs ?? [] : [];
   const verbOptions: DialOption[] = [
-    { value: "", label: difficulty ? "Select a verb..." : "Choose difficulty first..." },
-    ...verbs.map((v) => ({ value: v, label: `${v} (${VERB_MEANINGS[v] ?? ""})` })),
+    { value: "", label: difficulty ? "Verb…" : "Level first" },
+    ...verbs.map((v) => ({ value: v, label: v })),
   ];
   const timeOptions: DialOption[] = [
-    { value: "", label: "Select time frame..." },
-    ...TIME_FRAMES.filter((t) => verb !== "se débrouiller" || t === "Present").map((t) => ({ value: t, label: t })),
+    { value: "", label: "Tense…" },
+    ...TIME_FRAMES.map((t) => ({ value: t, label: t })),
   ];
 
   const ready = difficulty && verb && timeFrame;
+
+  const levelDetail = LEVELS.find((l) => l.key === difficulty)?.detail ?? "";
+  const reelCaption = verb
+    ? `${verb} — ${VERB_MEANINGS[verb] ?? ""}`
+    : difficulty
+      ? levelDetail
+      : "Swipe each reel, or tap \u{1F3B2} Choose All for Me.";
 
   const chooseAll = (levelKey: string) => {
     setModal(false);
@@ -40,7 +47,7 @@ export default function Home() {
     setVerb(""); setTimeFrame("");
     const cfg = DIFFICULTY_CONFIGS[levelKey];
     const v = cfg.verbs[Math.floor(Math.random() * cfg.verbs.length)];
-    const tf = v === "se débrouiller" ? "Present" : TIME_FRAMES[Math.floor(Math.random() * TIME_FRAMES.length)];
+    const tf = TIME_FRAMES[Math.floor(Math.random() * TIME_FRAMES.length)];
     const li = levelOptions.findIndex((o) => o.value === levelKey);
     d1.current?.spinTo(li, 50);
     setTimeout(() => {
@@ -78,22 +85,40 @@ export default function Home() {
         </View>
 
         <View style={styles.card}>
-          <View style={styles.labelRow}>
-            <Text style={styles.label}>1. Choose Difficulty</Text>
-            <Pressable onPress={() => setLocked(!locked)} hitSlop={8}>
-              <Text style={{ fontSize: 16 }}>{locked ? "🔒" : "🔓"}</Text>
-            </Pressable>
+          <View style={styles.reelHead}>
+            <View style={[styles.reelHeadCell, styles.reelHeadFirst]}>
+              <Pressable onPress={() => setLocked(!locked)} hitSlop={10}>
+                <Text style={styles.lock}>{locked ? "🔒" : "🔓"}</Text>
+              </Pressable>
+              <Text style={styles.reelNum}>1.</Text>
+              <Text style={styles.reelLabel}>Difficulty</Text>
+            </View>
+            <View style={styles.reelHeadCell}>
+              <Text style={styles.reelNum}>2.</Text>
+              <Text style={styles.reelLabel}>Verb</Text>
+            </View>
+            <View style={styles.reelHeadCell}>
+              <Text style={styles.reelNum}>3.</Text>
+              <Text style={styles.reelLabel}>Tense</Text>
+            </View>
           </View>
-          <Dial ref={d1} options={levelOptions} disabled={locked}
-            onSettle={(v) => { if (v !== difficulty) { setDifficulty(v); setVerb(""); } }} />
 
-          <Text style={[styles.label, styles.gap]}>2. Choose a French Verb</Text>
-          <Dial ref={d2} options={verbOptions} disabled={!difficulty}
-            onSettle={(v) => { setVerb(v); if (v === "se débrouiller" && timeFrame !== "Present") setTimeFrame(""); }} />
+          <View style={styles.reelRow}>
+            <View style={styles.reelCol}>
+              <Dial ref={d1} compact options={levelOptions} disabled={locked}
+                onSettle={(v) => { if (v !== difficulty) { setDifficulty(v); setVerb(""); } }} />
+            </View>
+            <View style={styles.reelCol}>
+              <Dial ref={d2} compact options={verbOptions} disabled={!difficulty}
+                onSettle={(v) => setVerb(v)} />
+            </View>
+            <View style={styles.reelCol}>
+              <Dial ref={d3} compact options={timeOptions} disabled={!difficulty}
+                onSettle={(v) => setTimeFrame(v)} />
+            </View>
+          </View>
 
-          <Text style={[styles.label, styles.gap]}>3. Choose Time Frame</Text>
-          <Dial ref={d3} options={timeOptions} disabled={!difficulty}
-            onSettle={(v) => setTimeFrame(v)} />
+          <Text style={styles.reelCaption} numberOfLines={2}>{reelCaption}</Text>
 
           <Pressable disabled={!ready || spinning}
             onPress={() => router.push({ pathname: "/quiz", params: { difficulty, verb, timeFrame } })}>
@@ -162,6 +187,17 @@ const styles = StyleSheet.create({
     alignItems: "center", marginBottom: 10 },
   label: { color: "#fff", fontSize: 17, fontWeight: "600" },
   gap: { marginTop: 20, marginBottom: 10 },
+  reelHead: { flexDirection: "row", marginBottom: 8 },
+  reelHeadCell: { flex: 1, flexDirection: "row", alignItems: "center",
+    justifyContent: "center", gap: 4 },
+  reelHeadFirst: { transform: [{ translateX: -10 }] },
+  reelNum: { color: "#7FA8EC", fontSize: 11.5, fontWeight: "700" },
+  reelLabel: { color: "#fff", fontSize: 11.5, fontWeight: "600" },
+  lock: { fontSize: 11 },
+  reelRow: { flexDirection: "row", gap: 8 },
+  reelCol: { flex: 1, minWidth: 0 },
+  reelCaption: { marginTop: 8, minHeight: 34, color: "#CBD6F5", fontSize: 12,
+    lineHeight: 17, textAlign: "center", paddingHorizontal: 4 },
   startBtn: { marginTop: 22, paddingVertical: 13, borderRadius: 12, alignItems: "center" },
   startText: { color: "#fff", fontSize: 15, fontWeight: "700" },
   preview: { marginTop: 18, backgroundColor: "rgba(6,78,59,0.45)", borderWidth: 1,
