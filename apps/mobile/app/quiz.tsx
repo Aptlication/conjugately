@@ -409,8 +409,12 @@ export default function Quiz() {
     }
   };
 
+  // Practice results are uniform navy, matching the coin panel and the website
+  // (Jonathan, 9 Oct 2026: no white on this page).
+  const resultsNavy = state === "done" && !exam;
+
   return (
-    <LinearGradient colors={exam ? ["#000000", "#000000"] : micMode ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
+    <LinearGradient colors={exam ? ["#000000", "#000000"] : resultsNavy ? ["#1B2145", "#1B2145"] : micMode ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -581,10 +585,10 @@ export default function Quiz() {
         )}
 
         {state === "done" && !exam && (
-          <View style={styles.card}>
-            <Text style={styles.resultScore}>{score} / {questions.length}</Text>
-            <Text style={styles.resultPct}>{Math.round((score / Math.max(1, questions.length)) * 100)}%</Text>
-            <Text style={styles.resultMsg}>
+          <View style={[styles.card, styles.cardNavy]}>
+            <Text style={[styles.resultScore, styles.onNavy]}>{score} / {questions.length}</Text>
+            <Text style={[styles.resultPct, styles.pctNavy]}>{Math.round((score / Math.max(1, questions.length)) * 100)}%</Text>
+            <Text style={[styles.resultMsg, styles.msgNavy]}>
               {score / questions.length >= 0.9 ? "Excellent! Vous êtes formidable! 🌟"
                 : score / questions.length >= 0.7 ? "Great work! Keep practicing! 💪"
                 : "Good effort — practice makes perfect! 📚"}
@@ -594,12 +598,12 @@ export default function Quiz() {
                 balance={award.balance} previousBest={award.previousBest} muted={!sound} />
             )}
             {award?.tenseComplete && (
-              <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame}
+              <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame} variant="dark"
                 locked={courseLevel !== "Beginner" && !isPro}
                 refreshKey={award.balance} celebrate />
             )}
-            <Pressable style={styles.ghostBtn} onPress={load}><Text style={styles.ghostText}>Try Again</Text></Pressable>
-            <Pressable style={styles.ghostBtn} onPress={goHome}><Text style={styles.ghostText}>← Back to Quiz Setup</Text></Pressable>
+            <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={load}><Text style={[styles.ghostText, styles.ghostTextNavy]}>Try Again</Text></Pressable>
+            <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={goHome}><Text style={[styles.ghostText, styles.ghostTextNavy]}>← Back to Quiz Setup</Text></Pressable>
           </View>
         )}
       </ScrollView>
@@ -694,12 +698,18 @@ export default function Quiz() {
         </View>
       </Modal>
 
-      <NavBar variant={micMode ? "dark" : "neutral"} />
+      <NavBar variant={micMode || resultsNavy ? "dark" : "neutral"} />
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  cardNavy: { backgroundColor: "#1B2145", borderColor: "#1B2145" },
+  onNavy: { color: "#FFFFFF" },
+  pctNavy: { color: "#5FD39A" },
+  msgNavy: { color: "#C3CAD4" },
+  ghostNavy: { borderColor: "rgba(255,255,255,0.35)" },
+  ghostTextNavy: { color: "#E6E9EE" },
   inviteCoins: { color: "#B8860B", fontSize: 30, fontWeight: "800", textAlign: "center", marginBottom: 4 },
   inviteDetail: { color: "#5A6472", fontSize: 13, textAlign: "center", marginTop: 8, marginBottom: 14 },
   inviteBtn: { backgroundColor: "#F5C518", borderRadius: 14, paddingVertical: 14, alignItems: "center", marginBottom: 10 },
