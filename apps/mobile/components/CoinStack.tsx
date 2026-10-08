@@ -87,7 +87,7 @@ export default function CoinStack({ earned, unitMax, balance, previousBest, mute
   if (earned <= 0) {
     return (
       <View style={styles.wrap} accessible accessibilityLabel={`No new coins. Balance ${balance} coins.`}>
-        <IcedDoughnut />
+        <IcedDoughnut muted={muted} />
         <Text style={styles.zero}>0 coins</Text>
         <Text style={styles.none}>No new coins this time</Text>
         <Text style={styles.sub}>
@@ -164,15 +164,21 @@ const SPRINKLES = [
   { x: 57.0, y: 25.6, r: 63, c: "#C79BFF" },
   { x: 68.9, y: 35.7, r: 110, c: "#FFFFFF" },
 ];
-function IcedDoughnut() {
+function IcedDoughnut({ muted }: { muted?: boolean }) {
   const a = useRef(new Animated.Value(0)).current;
+  // Clown-horn honk-honk as it lands: Easing.bounce first touches down at ~36%.
+  const honk = useAudioPlayer(require("../assets/sounds/donut-honk.mp3"));
   useEffect(() => {
+    let t: ReturnType<typeof setTimeout> | undefined;
+    const playHonk = () => { if (!muted) { try { honk.volume = 0.7; honk.seekTo(0); honk.play(); } catch {} } };
     AccessibilityInfo.isReduceMotionEnabled().then((reduce) => {
-      if (reduce) { a.setValue(1); return; }
+      if (reduce) { a.setValue(1); playHonk(); return; }
+      t = setTimeout(playHonk, 325);
       Animated.timing(a, { toValue: 1, duration: 900, easing: Easing.bounce, useNativeDriver: true }).start(() => {
         if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Soft).catch(() => {});
       });
     });
+    return () => { if (t) clearTimeout(t); };
   }, []);
   return (
     <Animated.View style={[donut.dough, {

@@ -64,7 +64,7 @@ export function CoinStack({ earned, unitMax, balance, previousBest, muted }: Pro
     return (
       <div className="mt-6 text-center" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
         role="status" aria-label={`No new coins. Balance ${balance} coins.`}>
-        <IcedDoughnut />
+        <IcedDoughnut muted={muted} />
         <div className="text-2xl font-extrabold text-pink-300 mt-2">0 coins</div>
         <div className="text-lg font-semibold text-slate-200">No new coins this time</div>
         {previousBest !== undefined && (
@@ -131,7 +131,13 @@ export function CoinStack({ earned, unitMax, balance, previousBest, muted }: Pro
 }
 
 /** Zero, as an iced doughnut: drops in and settles. The hole is real (even-odd), so any background shows through. */
-function IcedDoughnut() {
+function IcedDoughnut({ muted }: { muted?: boolean }) {
+  // Clown-horn honk-honk as it lands (keyframe 60% of 900 ms).
+  useEffect(() => {
+    if (muted) return;
+    const t = setTimeout(() => playSfx("/sounds/donut-honk.mp3", 0.7), 540);
+    return () => clearTimeout(t);
+  }, [muted]);
   return (
     <>
       <style>{`
