@@ -3,10 +3,13 @@ import {
   awardQuiz,
   emptyCoinState,
   examGate,
+  examInvitation,
+  markInvited,
   parseCoinState,
   unlockExam,
   type CoinState,
   type ExamGate,
+  type ExamInvitation,
   type QuizAward,
 } from "@shared/coins";
 import { EXAM_RESULTS_STORAGE_KEY, parseExamResults, type ExamResult } from "@shared/exams";
@@ -35,10 +38,16 @@ function readResults(): ExamResult[] {
   try { return parseExamResults(localStorage.getItem(EXAM_RESULTS_STORAGE_KEY)); } catch { return []; }
 }
 
-export function recordCourseQuiz(level: string, timeFrame: string, verb: string, correct: number, total: number): QuizAward {
-  const award = awardQuiz(readCoins(), level, timeFrame, verb, correct, total);
-  writeCoins(award.state);
-  return award;
+/** Record a course quiz; returns the payout and the 100-coin invitation, if this quiz earned one. */
+export function recordCourseQuiz(
+  level: string, timeFrame: string, verb: string, correct: number, total: number,
+): QuizAward & { invitation: ExamInvitation | null } {
+  const before = readCoins();
+  const award = awardQuiz(before, level, timeFrame, verb, correct, total);
+  const invitation = examInvitation(before, award.state, level, timeFrame, readResults());
+  const state = invitation ? markInvited(award.state, invitation) : award.state;
+  writeCoins(state);
+  return { ...award, state, invitation };
 }
 
 export function readExamGate(level: string, timeFrame: string): ExamGate {

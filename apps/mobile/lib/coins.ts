@@ -4,10 +4,13 @@ import {
   awardQuiz,
   emptyCoinState,
   examGate,
+  examInvitation,
+  markInvited,
   parseCoinState,
   unlockExam,
   type CoinState,
   type ExamGate,
+  type ExamInvitation,
   type QuizAward,
 } from "@shared/coins";
 import { COURSES } from "./courses";
@@ -79,14 +82,21 @@ function serial<T>(fn: () => Promise<T>): Promise<T> {
   return next;
 }
 
-/** Record a finished course quiz and return what it paid. */
+/**
+ * Record a finished course quiz. Returns what it paid and, when this quiz is
+ * the one that took the learner to 100 coins, the invitation to show. The
+ * invitation is marked as shown in the same write, so it appears once.
+ */
 export function recordCourseQuiz(
   level: string, timeFrame: string, verb: string, correct: number, total: number,
-): Promise<QuizAward> {
+): Promise<QuizAward & { invitation: ExamInvitation | null }> {
   return serial(async () => {
-    const award = awardQuiz(await readCoins(), level, timeFrame, verb, correct, total);
-    try { await write(award.state); } catch {}
-    return award;
+    const before = await readCoins();
+    const award = awardQuiz(before, level, timeFrame, verb, correct, total);
+    const invitation = examInvitation(before, award.state, level, timeFrame, await readExamResults());
+    const state = invitation ? markInvited(award.state, invitation) : award.state;
+    try { await write(state); } catch {}
+    return { ...award, state, invitation };
   });
 }
 

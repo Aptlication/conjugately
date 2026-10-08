@@ -59,10 +59,12 @@ export interface CoinState {
   spent: number;
   /** Exam ids unlocked with coins. */
   unlockedExams: string[];
+  /** Invitation modals already shown, e.g. "beginner-present" or "elementary-past:almost". */
+  invited: string[];
 }
 
 export function emptyCoinState(): CoinState {
-  return { version: 1, best: {}, spent: 0, unlockedExams: [] };
+  return { version: 1, best: {}, spent: 0, unlockedExams: [], invited: [] };
 }
 
 /** Units are identified by verb, not position: the site and app number them differently. */
@@ -228,8 +230,77 @@ export function parseCoinState(raw: string | null | undefined): CoinState | null
       best,
       spent: typeof p.spent === "number" && p.spent >= 0 ? Math.floor(p.spent) : 0,
       unlockedExams: Array.isArray(p.unlockedExams) ? p.unlockedExams.filter((x: unknown) => typeof x === "string") : [],
+      invited: Array.isArray(p.invited) ? p.invited.filter((x: unknown) => typeof x === "string") : [],
     };
   } catch {
     return null;
   }
 }
+
+// ------------------------------------------------------------ invitation ---
+
+/**
+ * The modal that greets a learner the moment a quiz takes them to 100 coins
+ * (approved 9 Oct 2026). Two forms, because the exam needs both conditions:
+ *
+ *   "ready"  - this quiz made the exam unlockable (tense finished AND 100+
+ *              coins): invite them to sit it if they feel confident.
+ *   "almost" - this quiz took the balance to 100+ but the tense still has
+ *              units to do (Elementary and Intermediate pay 140 / 360 per
+ *              tense, so this happens mid-course): congratulate, and say how
+ *              many units are left.
+ *
+ * Each form is shown once per exam; `invited` remembers it.
+ */
+export type ExamInvitation =
+  | { kind: "ready"; examId: string; level: string; timeFrame: string; balance: number }
+  | { kind: "almost"; examId: string; level: string; timeFrame: string; balance: number; remaining: string[] };
+
+export function examInvitation(
+  before: CoinState,
+  after: CoinState,
+  level: string,
+  timeFrame: string,
+  results: ExamResult[] = [],
+): ExamInvitation | null {
+  const exam = getExam(level, timeFrame);
+  if (!exam) return null;
+  const was = examGate(before, level, timeFrame, results);
+  const now = examGate(after, level, timeFrame, results);
+  const balance = coinBalance(after);
+  if (now.kind === "canUnlock" && was.kind !== "canUnlock" && !after.invited.includes(exam.id)) {
+    return { kind: "ready", examId: exam.id, level, timeFrame, balance };
+  }
+  const almostKey = `${exam.id}:almost`;
+  if (now.kind === "needUnits" && coinBalance(before) < EXAM_COIN_COST && balance >= EXAM_COIN_COST
+      && !after.invited.includes(almostKey)) {
+    return { kind: "almost", examId: exam.id, level, timeFrame, balance, remaining: now.remaining };
+  }
+  return null;
+}
+
+/** Remember that an invitation was shown. */
+export function markInvited(s: CoinState, inv: ExamInvitation): CoinState {
+  const key = inv.kind === "ready" ? inv.examId : `${inv.examId}:almost`;
+  return s.invited.includes(key) ? s : { ...s, invited: [...s.invited, key] };
+}
+
+/** Modal copy, shared so both surfaces say the same thing. */
+export function invitationCopy(inv: ExamInvitation): { title: string; body: string; detail: string } {
+  const exam = getExam(inv.level, inv.timeFrame)!;
+  const tense = inv.timeFrame === "Present" ? "Présent" : inv.timeFrame === "Past" ? "Passé Composé" : "Futur Simple";
+  if (inv.kind === "ready") {
+    return {
+      title: `🎉 You've earned ${EXAM_COIN_COST} coins!`,
+      body: `You've finished every ${inv.level} ${tense} unit and saved ${inv.balance} coins — enough to sit the Final Level Exam. Feeling confident? Give it a go.`,
+      detail: `${exam.totalQuestions} questions · ${exam.passMark} correct (90%) to pass. Unlocking costs ${EXAM_COIN_COST} coins, and retakes are free after that.`,
+    };
+  }
+  const n = inv.remaining.length;
+  return {
+    title: `🎉 You've reached ${EXAM_COIN_COST} coins!`,
+    body: `That's enough for the ${inv.level} ${tense} Final Level Exam. Finish the last ${n} unit${n === 1 ? "" : "s"} of this tense and it's yours to unlock.`,
+    detail: `Still to do: ${inv.remaining.join(", ")}.`,
+  };
+}
+

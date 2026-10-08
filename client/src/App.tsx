@@ -18,8 +18,8 @@ import {
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 import { WheelSelect } from "@/components/WheelSelect";
 import { shuffle } from "@shared/shuffle";
-import { coinBalance, tenseProgress, isExamUnlocked } from "@shared/coins";
-import { readCoins, recordCourseQuiz } from "@/lib/coins";
+import { coinBalance, tenseProgress, isExamUnlocked, invitationCopy, EXAM_COIN_COST, type ExamInvitation } from "@shared/coins";
+import { readCoins, recordCourseQuiz, spendOnExam } from "@/lib/coins";
 import { CoinStack } from "@/components/CoinStack";
 import { ExamGatePanel } from "@/components/ExamGatePanel";
 
@@ -181,6 +181,10 @@ function App() {
     level: string; timeFrame: string; earned: number; unitMax: number;
     balance: number; previousBest?: number; tenseComplete: boolean; questions: any[];
   } | null>(null);
+  /** The 100-coin invitation, shown once the coin animation has landed. */
+  const [examInvite, setExamInvite] = useState<ExamInvitation | null>(null);
+  const inviteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (inviteTimer.current) clearTimeout(inviteTimer.current); }, []);
   /** An exam the learner tried to start before unlocking it. */
   const [examGateFor, setExamGateFor] = useState<{
     exam: ExamDefinition; previous?: { completedVerbs?: Array<{verb: string, score: number}>; totalScore?: number };
@@ -1533,13 +1537,51 @@ function App() {
       balance: coinBalance(a.state), previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
       tenseComplete: tenseProgress(a.state, unit.level, unit.timeFrame).complete, questions: quizData,
     });
+    if (a.invitation) {
+      const inv = a.invitation;
+      inviteTimer.current = setTimeout(() => setExamInvite(inv), 2300);
+    }
   }, [quizState, quizData]);
 
   const renderCourseReward = () => {
     if (!courseAward || courseAward.questions !== quizData) return null;
     const exam = getExam(courseAward.level, courseAward.timeFrame);
+    const invite = examInvite;
+    const copy = invite ? invitationCopy(invite) : null;
     return (
       <>
+        {invite && copy && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4" role="dialog" aria-modal="true" aria-labelledby="cj-invite-title">
+            <div className="w-full max-w-md rounded-2xl border border-yellow-400/40 bg-[#1B2145] p-8 text-center shadow-2xl">
+              <div className="text-4xl font-extrabold text-yellow-300">🪙 {invite.balance}</div>
+              <h3 id="cj-invite-title" className="mt-2 text-2xl font-bold text-white">{copy.title}</h3>
+              <p className="mt-3 text-slate-200">{copy.body}</p>
+              <p className="mt-3 text-sm text-slate-400">{copy.detail}</p>
+              {invite.kind === "ready" ? (
+                <>
+                  <button
+                    autoFocus
+                    onClick={() => {
+                      const ex = getExam(invite.level, invite.timeFrame);
+                      const gate = spendOnExam(invite.level, invite.timeFrame);
+                      setExamInvite(null);
+                      if (ex && gate.kind === "unlocked") startExam(ex);
+                    }}
+                    className="mt-6 w-full rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-[#1B2145] hover:bg-yellow-300">
+                    Unlock &amp; start exam — {EXAM_COIN_COST} 🪙
+                  </button>
+                  <button onClick={() => setExamInvite(null)} className="mt-3 w-full rounded-xl border border-white/30 px-6 py-3 text-slate-100 hover:bg-white/10">
+                    Not yet — I'll keep practising
+                  </button>
+                </>
+              ) : (
+                <button autoFocus onClick={() => setExamInvite(null)} className="mt-6 w-full rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-[#1B2145] hover:bg-yellow-300">
+                  Keep going →
+                </button>
+              )}
+            </div>
+          </div>
+        )}
         <CoinStack earned={courseAward.earned} unitMax={courseAward.unitMax}
           balance={courseAward.balance} previousBest={courseAward.previousBest} />
         {courseAward.tenseComplete && exam && (

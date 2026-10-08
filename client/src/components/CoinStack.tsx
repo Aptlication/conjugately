@@ -12,9 +12,18 @@ const DURATION = 2000;
 const MAX_DISCS = 10;
 const DISC_STEP = 7;
 
-type Props = { earned: number; unitMax: number; balance: number; previousBest?: number };
+type Props = { earned: number; unitMax: number; balance: number; previousBest?: number; muted?: boolean };
 
-export function CoinStack({ earned, unitMax, balance, previousBest }: Props) {
+/** Casino sound: a clink as each coin lands, cha-ching on the last. Files in client/public/sounds. */
+function playSfx(src: string, volume: number) {
+  try {
+    const a = new Audio(src);
+    a.volume = volume;
+    a.play().catch(() => {});
+  } catch {}
+}
+
+export function CoinStack({ earned, unitMax, balance, previousBest, muted }: Props) {
   const discs = earned > 0 ? Math.max(1, Math.min(MAX_DISCS, Math.round((earned / Math.max(1, unitMax)) * MAX_DISCS))) : 0;
   const reduce = useMemo(() => {
     try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch { return false; }
@@ -37,6 +46,20 @@ export function CoinStack({ earned, unitMax, balance, previousBest }: Props) {
 
   const per = DURATION / (discs + 1);
 
+  // Sound on each impact. The keyframes land at 70% of each coin's drop.
+  useEffect(() => {
+    if (earned <= 0 || muted) return;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    for (let i = 0; i < discs; i++) {
+      const at = reduce ? 0 : i * per + 0.7 * per * 1.4;
+      if (reduce && i > 0) break;
+      timers.push(setTimeout(() => playSfx("/sounds/coin-clink.mp3", 0.55), at));
+    }
+    const end = reduce ? 120 : (discs - 1) * per + 0.7 * per * 1.4 + 140;
+    timers.push(setTimeout(() => playSfx("/sounds/coin-chaching.mp3", 0.8), end));
+    return () => timers.forEach(clearTimeout);
+  }, [earned, muted]);
+
   if (earned <= 0) {
     return (
       <div className="mt-6 text-center" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -58,29 +81,44 @@ export function CoinStack({ earned, unitMax, balance, previousBest }: Props) {
     <div className="mt-6 flex flex-col items-center" style={{ display: "flex", flexDirection: "column", alignItems: "center" }} role="status" aria-label={`You earned ${earned} coins. Balance ${balance} coins.`}>
       <style>{`
         @keyframes cj-coin-drop {
-          0%   { transform: translate(var(--jx), -160px); opacity: 0; }
+          0%   { transform: translate(var(--jx), -90px); opacity: 0; }
           15%  { opacity: 1; }
           70%  { transform: translate(var(--jx), 0); }
           82%  { transform: translate(var(--jx), -6px); }
           100% { transform: translate(var(--jx), 0); opacity: 1; }
         }
         .cj-coin {
-          position: absolute; left: 50%; margin-left: -32px; width: 64px; height: 18px; border-radius: 9999px;
-          background: radial-gradient(ellipse at 40% 35%, #FFE27A 0%, #F5C518 45%, #D4A20A 100%);
-          border: 2px solid #B8860B; box-shadow: 0 2px 2px rgba(122,90,0,.45);
+          position: absolute; left: 50%; margin-left: -30px; width: 60px; height: 29px;
           opacity: 0; animation: cj-coin-drop var(--d) ease-out var(--delay) forwards;
         }
-        .cj-coin::after { content: ""; position: absolute; inset: 4px 9px; border-radius: 9999px; border: 1px solid #FFE27A; }
+        /* A coin lying flat: an oval face over a ridged oval edge. border-radius 50% gives a true
+           ellipse; the old 9999px gave a stadium, which read as a pill. */
+        .cj-coin .cj-edge, .cj-coin .cj-face { position: absolute; left: 0; width: 60px; height: 24px; border-radius: 50%; }
+        .cj-coin .cj-edge {
+          top: 5px;
+          background: repeating-linear-gradient(90deg, #B8860B 0 2px, #8C6508 2px 4px);
+          box-shadow: 0 2px 3px rgba(0,0,0,.45);
+        }
+        .cj-coin .cj-face {
+          top: 0;
+          background: radial-gradient(ellipse at 38% 35%, #FFF1A8 0%, #F7D04A 40%, #E0A912 75%, #C99410 100%);
+          box-shadow: inset 0 0 0 1.5px #B8860B;
+        }
+        .cj-coin .cj-face::after {
+          content: ""; position: absolute; inset: 4px 8px; border-radius: 50%;
+          border: 1.5px solid rgba(255, 236, 150, .9); box-shadow: inset 0 1px 0 rgba(140,101,8,.5);
+        }
         @media (prefers-reduced-motion: reduce) { .cj-coin { animation: none; opacity: 1; transform: translateX(var(--jx)); } }
       `}</style>
-      <div className="relative w-24" style={{ position: "relative", width: 96, height: 30 + discs * DISC_STEP }} aria-hidden="true">
+      <div className="relative w-24" style={{ position: "relative", width: 96, height: 34 + discs * DISC_STEP }} aria-hidden="true">
         {Array.from({ length: discs }, (_, i) => (
           <span key={i} className="cj-coin" style={{
+            zIndex: i,
             bottom: i * DISC_STEP,
             ["--jx" as any]: `${jitter[i]}px`,
             ["--d" as any]: `${Math.round(per * 1.4)}ms`,
             ["--delay" as any]: `${Math.round(i * per)}ms`,
-          }} />
+          }}><span className="cj-edge" /><span className="cj-face" /></span>
         ))}
       </div>
       <div className="text-3xl font-extrabold text-yellow-300 tabular-nums mt-2">+{shown} {shown === 1 ? "coin" : "coins"}</div>

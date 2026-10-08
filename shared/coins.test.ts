@@ -46,4 +46,30 @@ for (const [lvl, tot] of [["Beginner",102],["Novice",100],["Elementary",140],["I
 }
 assert.deepEqual(parseCoinState("garbage"), null);
 assert.equal(coinBalance(parseCoinState(JSON.stringify(s))!), 2);
+// invitations
+{
+  const { examInvitation, markInvited } = await import("./coins");
+  let a0 = emptyCoinState();
+  a0 = awardQuiz(a0, "Beginner", "Present", "être", 20).state;
+  a0 = awardQuiz(a0, "Beginner", "Present", "avoir", 20).state;
+  const b4 = a0; const af = awardQuiz(a0, "Beginner", "Present", "faire", 20).state;
+  const inv = examInvitation(b4, af, "Beginner", "Present");
+  assert.equal(inv?.kind, "ready");
+  assert.equal(examInvitation(b4, markInvited(af, inv!), "Beginner", "Present"), null); // once only
+  // Elementary: 100 coins after 5 perfect units -> "almost", 2 units left
+  let e = emptyCoinState(); const ev = ["dire","voir","savoir","vouloir","venir","pouvoir","besoin"];
+  for (const v of ev.slice(0, 4)) e = awardQuiz(e, "Elementary", "Past", v, 20).state;
+  const e5 = awardQuiz(e, "Elementary", "Past", "venir", 20).state;
+  const inv2 = examInvitation(e, e5, "Elementary", "Past");
+  assert.equal(inv2?.kind, "almost"); assert.deepEqual((inv2 as any).remaining, ["pouvoir","besoin"]);
+  // finishing the tense later -> "ready"
+  let e6 = markInvited(e5, inv2!); e6 = awardQuiz(e6, "Elementary", "Past", "pouvoir", 20).state;
+  const e7 = awardQuiz(e6, "Elementary", "Past", "besoin", 20).state;
+  assert.equal(examInvitation(e6, e7, "Elementary", "Past")?.kind, "ready");
+  // finishing tense with < 100 -> nothing; later improvement crossing 100 -> ready
+  let n = emptyCoinState(); for (const v of ["être","avoir","faire","aller"]) n = awardQuiz(n, "Novice", "Future", v, 18).state;
+  assert.equal(coinBalance(n), 92);
+  const n2 = awardQuiz(n, "Novice", "Future", "être", 20).state; // +2 -> 94
+  assert.equal(examInvitation(n, n2, "Novice", "Future"), null);
+}
 console.log("coins: all assertions passed");

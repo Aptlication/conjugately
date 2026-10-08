@@ -17,7 +17,9 @@ import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
 import { recordCourseQuiz, readExamGate } from "../lib/coins";
-import { coinBalance, tenseProgress } from "@shared/coins";
+import { coinBalance, tenseProgress, invitationCopy, EXAM_COIN_COST, type ExamInvitation } from "@shared/coins";
+import { getExam } from "@shared/exams";
+import { spendOnExam } from "../lib/coins";
 import CoinStack from "../components/CoinStack";
 import ExamGateCard from "../components/ExamGateCard";
 
@@ -114,6 +116,12 @@ export default function Quiz() {
   const [award, setAward] = useState<{
     earned: number; unitMax: number; balance: number; previousBest?: number; tenseComplete: boolean;
   } | null>(null);
+  // Shown once the coin animation has landed, when this quiz took the
+  // learner to 100 coins (shared/coins.ts examInvitation).
+  const [invite, setInvite] = useState<ExamInvitation | null>(null);
+  const [inviteBusy, setInviteBusy] = useState(false);
+  const inviteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (inviteTimer.current) clearTimeout(inviteTimer.current); }, []);
   const courseLevel = courseKey ? courseKey.split("|")[0] : "";
   const courseTimeFrame = courseKey ? courseKey.split("|")[1] : "";
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -324,6 +332,10 @@ export default function Quiz() {
               previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
               tenseComplete: tenseProgress(a.state, courseLevel, courseTimeFrame).complete,
             });
+            if (a.invitation) {
+              const inv = a.invitation;
+              inviteTimer.current = setTimeout(() => setInvite(inv), 2300);
+            }
           })
           .catch(() => {})
           .finally(() => logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total,
@@ -579,7 +591,7 @@ export default function Quiz() {
             </Text>
             {award && (
               <CoinStack earned={award.earned} unitMax={award.unitMax}
-                balance={award.balance} previousBest={award.previousBest} />
+                balance={award.balance} previousBest={award.previousBest} muted={!sound} />
             )}
             {award?.tenseComplete && (
               <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame}
@@ -591,6 +603,48 @@ export default function Quiz() {
           </View>
         )}
       </ScrollView>
+
+      <Modal visible={!!invite} transparent animationType="fade" onRequestClose={() => setInvite(null)}>
+        <View style={styles.modalBg}>
+          {invite && (() => {
+            const copy = invitationCopy(invite);
+            const proLocked = invite.level !== "Beginner" && !isPro;
+            const unlockAndStart = async () => {
+              if (proLocked) { setInvite(null); router.push("/paywall" as any); return; }
+              setInviteBusy(true);
+              const gate = await spendOnExam(invite.level, invite.timeFrame);
+              setInviteBusy(false);
+              setInvite(null);
+              const exam = getExam(invite.level, invite.timeFrame);
+              if (gate.kind === "unlocked" && exam) router.push({ pathname: "/quiz", params: { examId: exam.id } });
+            };
+            return (
+              <View style={styles.modalCard} accessibilityViewIsModal>
+                <Text style={styles.inviteCoins}>🪙 {invite.balance}</Text>
+                <Text style={styles.modalTitle}>{copy.title}</Text>
+                <Text style={styles.modalSub}>{copy.body}</Text>
+                <Text style={styles.inviteDetail}>{copy.detail}</Text>
+                {invite.kind === "ready" ? (
+                  <>
+                    <Pressable style={styles.inviteBtn} onPress={unlockAndStart} disabled={inviteBusy} accessibilityRole="button">
+                      <Text style={styles.inviteBtnText}>
+                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : `Unlock & start exam — ${EXAM_COIN_COST} 🪙`}
+                      </Text>
+                    </Pressable>
+                    <Pressable onPress={() => setInvite(null)} accessibilityRole="button">
+                      <Text style={styles.tipLink}>Not yet — I'll keep practising</Text>
+                    </Pressable>
+                  </>
+                ) : (
+                  <Pressable style={styles.inviteBtn} onPress={() => setInvite(null)} accessibilityRole="button">
+                    <Text style={styles.inviteBtnText}>Keep going →</Text>
+                  </Pressable>
+                )}
+              </View>
+            );
+          })()}
+        </View>
+      </Modal>
 
       <Modal visible={showGuide} transparent animationType="fade">
         <View style={styles.modalBg}>
@@ -646,6 +700,10 @@ export default function Quiz() {
 }
 
 const styles = StyleSheet.create({
+  inviteCoins: { color: "#B8860B", fontSize: 30, fontWeight: "800", textAlign: "center", marginBottom: 4 },
+  inviteDetail: { color: "#5A6472", fontSize: 13, textAlign: "center", marginTop: 8, marginBottom: 14 },
+  inviteBtn: { backgroundColor: "#F5C518", borderRadius: 14, paddingVertical: 14, alignItems: "center", marginBottom: 10 },
+  inviteBtnText: { color: "#1B2145", fontSize: 16, fontWeight: "800" },
   examBanner: {
     borderWidth: 1, borderColor: "rgba(245,197,24,0.4)", backgroundColor: "rgba(245,197,24,0.1)",
     borderRadius: 14, paddingVertical: 12, paddingHorizontal: 16, marginBottom: 16, alignItems: "center",
