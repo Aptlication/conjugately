@@ -16,6 +16,10 @@ import MastersMic from "../components/MastersMic";
 import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
+import { recordCourseQuiz, readExamGate } from "../lib/coins";
+import { coinBalance, tenseProgress } from "@shared/coins";
+import CoinStack from "../components/CoinStack";
+import ExamGateCard from "../components/ExamGateCard";
 
 const TENSE_BY_TIMEFRAME: Record<string, string> = {
   Present: "Présent", Past: "Passé Composé", Future: "Futur Simple",
@@ -105,6 +109,13 @@ export default function Quiz() {
   const [showGuide, setShowGuide] = useState(false);
   const [reviewIndex, setReviewIndex] = useState<number | null>(null);
   const [examBest, setExamBest] = useState<ExamResult | undefined>(undefined);
+  // Coins paid by the quiz just finished. Course quizzes only; null for
+  // free-play quizzes from the home screen and for exams.
+  const [award, setAward] = useState<{
+    earned: number; unitMax: number; balance: number; previousBest?: number; tenseComplete: boolean;
+  } | null>(null);
+  const courseLevel = courseKey ? courseKey.split("|")[0] : "";
+  const courseTimeFrame = courseKey ? courseKey.split("|")[1] : "";
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const cancelAutoAdvance = () => { if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; } };
   const goHome = () => { cancelAutoAdvance(); if (router.canGoBack()) router.back(); else router.replace("/"); };
@@ -158,8 +169,16 @@ export default function Quiz() {
 
   const load = async () => {
     setState("loading"); setIdx(0); setSelected(null); setConfirmed(false);
-    setAnswers({}); setAnswerUrl(null);
+    setAnswers({}); setAnswerUrl(null); setAward(null);
     if (exam) {
+      // The exam is bought with coins (shared/coins.ts). Every entry point
+      // checks first, but a deep link or a stale screen must not bypass it.
+      const { gate } = await readExamGate(exam.level, exam.timeFrame);
+      if (gate.kind !== "unlocked") {
+        setError("This exam is locked. Finish every unit of the tense and unlock it with 100 coins from the course screen.");
+        setState("error");
+        return;
+      }
       // Parallel, and loud on any failure. A dropped request must never produce
       // a shorter exam scored against the same 90% gate.
       try {
@@ -293,6 +312,22 @@ export default function Quiz() {
           passed: finalScore >= exam.passMark,
           date: new Date().toISOString(),
         }).then(setExamBest).catch(() => {});
+      } else if (courseKey && unitIndex !== undefined) {
+        // Coins first, history second: on the first run after the update the
+        // coin store backfills from history, and it must not see this quiz
+        // there and then pay for it a second time.
+        const total = questions.length;
+        recordCourseQuiz(courseLevel, courseTimeFrame, verb, finalScore, total)
+          .then((a) => {
+            setAward({
+              earned: a.earned, unitMax: a.unitMax, balance: coinBalance(a.state),
+              previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
+              tenseComplete: tenseProgress(a.state, courseLevel, courseTimeFrame).complete,
+            });
+          })
+          .catch(() => {})
+          .finally(() => logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total,
+            date: new Date().toISOString(), courseKey, unitIndex }));
       } else {
         logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
           date: new Date().toISOString(), courseKey, unitIndex });
@@ -542,6 +577,15 @@ export default function Quiz() {
                 : score / questions.length >= 0.7 ? "Great work! Keep practicing! 💪"
                 : "Good effort — practice makes perfect! 📚"}
             </Text>
+            {award && (
+              <CoinStack earned={award.earned} unitMax={award.unitMax}
+                balance={award.balance} previousBest={award.previousBest} />
+            )}
+            {award?.tenseComplete && (
+              <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame}
+                locked={courseLevel !== "Beginner" && !isPro}
+                refreshKey={award.balance} celebrate />
+            )}
             <Pressable style={styles.ghostBtn} onPress={load}><Text style={styles.ghostText}>Try Again</Text></Pressable>
             <Pressable style={styles.ghostBtn} onPress={goHome}><Text style={styles.ghostText}>← Back to Quiz Setup</Text></Pressable>
           </View>

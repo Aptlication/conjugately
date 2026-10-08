@@ -9,6 +9,9 @@ import { usePro } from "../lib/pro";
 import { getExam } from "@shared/exams";
 import { readExamResults } from "../lib/exams";
 import type { ExamResult } from "@shared/exams";
+import { coinBalance } from "@shared/coins";
+import { readCoins } from "../lib/coins";
+import ExamGateCard from "../components/ExamGateCard";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
@@ -20,6 +23,7 @@ export default function MiniCourses() {
   const locked = !!level && level !== "Beginner" && !isPro;
   const [prog, setProg] = useState<Record<string, number[]>>({});
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
+  const [balance, setBalance] = useState<number | null>(null);
   useFocusEffect(useCallback(() => {
     let on = true;
     getCourseProgress().then((cp) => {
@@ -29,6 +33,7 @@ export default function MiniCourses() {
       setProg(map);
     });
     readExamResults().then((r) => { if (on) setExamResults(r); });
+    readCoins().then((c) => { if (on) setBalance(coinBalance(c)); });
     return () => { on = false; };
   }, []));
 
@@ -38,6 +43,9 @@ export default function MiniCourses() {
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={styles.h1}>📚 Mini-Courses</Text>
+        {balance !== null && (
+          <Text style={styles.coins} accessibilityLabel={`${balance} coins`}>🪙 {balance} coins</Text>
+        )}
 
         {!level && (
           <View style={styles.card}>
@@ -105,29 +113,16 @@ export default function MiniCourses() {
             })}
             {(() => {
               const exam = getExam(level, timeFrame);
-              if (!exam) {
-                return (
-                  <View style={[styles.row, { opacity: 0.55 }]}>
-                    <Text style={styles.rowTitle}>🎓 Final Level Exam</Text>
-                    <Text style={styles.rowSub}>Not available for this level yet</Text>
-                  </View>
-                );
-              }
-              const best = examResults.find((r) => r.examId === exam.id);
+              const best = exam ? examResults.find((r) => r.examId === exam.id) : undefined;
               return (
-                <Pressable style={[styles.row, best?.passed && styles.rowDone]}
-                  accessibilityHint={locked ? "Requires Conjugately Pro" : undefined}
-                  onPress={() => locked
-                    ? router.push("/paywall" as any)
-                    : router.push({ pathname: "/quiz", params: { examId: exam.id } })}>
-                  <Text style={[styles.rowTitle, best?.passed && styles.rowTitleDone]}>
-                    {locked ? "🔒 " : best?.passed ? "✓ " : ""}🎓 Final Level Exam
-                  </Text>
-                  <Text style={styles.rowSub}>
-                    {exam.totalQuestions} questions · {exam.passMark} to pass
-                    {best ? ` · best ${best.correct}/${best.total}` : ""}
-                  </Text>
-                </Pressable>
+                <>
+                  <ExamGateCard level={level} timeFrame={timeFrame} variant="dark" locked={locked} />
+                  {best && (
+                    <Text style={styles.rowSub}>
+                      {best.passed ? "✓ Passed" : "Not passed yet"} · best {best.correct}/{best.total}
+                    </Text>
+                  )}
+                </>
               );
             })()}
             <Pressable onPress={() => setTimeFrame(null)}><Text style={styles.back}>← Back to time frames</Text></Pressable>
@@ -142,6 +137,7 @@ export default function MiniCourses() {
 }
 
 const styles = StyleSheet.create({
+  coins: { color: "#F5C518", fontSize: 16, fontWeight: "700", textAlign: "center", marginBottom: 10 },
   scroll: { padding: 16, paddingTop: 64, paddingBottom: 48 },
   h1: { color: "#fff", fontSize: 28, fontWeight: "700", textAlign: "center", marginBottom: 16 },
   card: { backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 24, padding: 18, marginBottom: 16 },

@@ -18,6 +18,16 @@ import {
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 import { WheelSelect } from "@/components/WheelSelect";
 import { shuffle } from "@shared/shuffle";
+import { coinBalance, tenseProgress, isExamUnlocked } from "@shared/coins";
+import { readCoins, recordCourseQuiz } from "@/lib/coins";
+import { CoinStack } from "@/components/CoinStack";
+import { ExamGatePanel } from "@/components/ExamGatePanel";
+
+/** Course units, one per verb, in the same order as the app (apps/mobile/lib/courses.ts). */
+const courseUnitsFor = (level: string) =>
+  (EXAM_VERB_SETS[level as keyof typeof EXAM_VERB_SETS] ?? []).map((verb, i) => ({
+    name: `Unit ${i + 1}: ${verb}`, verb, questions: 20,
+  }));
 
 /**
  * Exam passes recorded on this device, read fresh rather than held in state so
@@ -160,6 +170,22 @@ function App() {
   const savedExamAttempts = useRef<Set<string>>(new Set());
   const [showCourseProgress, setShowCourseProgress] = useState(false);
   const [showExamOption, setShowExamOption] = useState(false);
+  /**
+   * The course unit the CURRENT quizData belongs to. Matched by array identity
+   * at the results screen, so a free-play quiz on the same verb can never be
+   * paid as a course unit, and a re-render can never pay twice.
+   */
+  const courseUnitRef = useRef<{ level: string; timeFrame: string; verb: string; questions: any[] } | null>(null);
+  const paidQuizzes = useRef<WeakSet<any[]>>(new WeakSet());
+  const [courseAward, setCourseAward] = useState<{
+    level: string; timeFrame: string; earned: number; unitMax: number;
+    balance: number; previousBest?: number; tenseComplete: boolean; questions: any[];
+  } | null>(null);
+  /** An exam the learner tried to start before unlocking it. */
+  const [examGateFor, setExamGateFor] = useState<{
+    exam: ExamDefinition; previous?: { completedVerbs?: Array<{verb: string, score: number}>; totalScore?: number };
+    reopenOverview?: boolean;
+  } | null>(null);
 
 
   // Most used French verbs in order of frequency - including reflexive verbs for complete coverage
@@ -608,7 +634,14 @@ function App() {
   const startExam = async (exam: ExamDefinition, previous?: {
     completedVerbs?: Array<{verb: string, score: number}>;
     totalScore?: number;
-  }) => {
+  }, opts?: { reopenOverview?: boolean }) => {
+    // Coins gate (shared/coins.ts): every exam entry point comes through here.
+    if (!isExamUnlocked(readCoins(), exam.id, getLocalExamPasses())) {
+      setExamGateFor({ exam, previous, reopenOverview: opts?.reopenOverview });
+      return;
+    }
+    setExamGateFor(null);
+    courseUnitRef.current = null;
     setQuizState('loading');
     try {
       const questions = await loadExamQuestions(exam);
@@ -1085,7 +1118,9 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        setQuizData(data.quiz.questions || []);
+        const unitQuestions = data.quiz.questions || [];
+        courseUnitRef.current = { level: difficulty, timeFrame, verb: unit.verb, questions: unitQuestions };
+        setQuizData(unitQuestions);
         setCurrentQuestionIndex(0);
         setUserAnswers({});
         setSelectedAnswerIndex(null);
@@ -1292,7 +1327,7 @@ function App() {
     }
 
     setShowCourseOverviewModal(false);
-    await startExam(exam);
+    await startExam(exam, undefined, { reopenOverview: true });
   };
 
   // Intermediate Course Functions  
@@ -1484,6 +1519,61 @@ function App() {
     });
     return { correctAnswers, totalQuestions: quizData.length };
   };
+
+  // Pay coins once when a course unit quiz reaches its results screen.
+  useEffect(() => {
+    const unit = courseUnitRef.current;
+    if (quizState !== 'results' || !unit || unit.questions !== quizData || courseInfo?.isFinalExam) return;
+    if (paidQuizzes.current.has(quizData)) return;
+    paidQuizzes.current.add(quizData);
+    const { correctAnswers, totalQuestions } = calculateResults();
+    const a = recordCourseQuiz(unit.level, unit.timeFrame, unit.verb, correctAnswers, totalQuestions);
+    setCourseAward({
+      level: unit.level, timeFrame: unit.timeFrame, earned: a.earned, unitMax: a.unitMax,
+      balance: coinBalance(a.state), previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
+      tenseComplete: tenseProgress(a.state, unit.level, unit.timeFrame).complete, questions: quizData,
+    });
+  }, [quizState, quizData]);
+
+  const renderCourseReward = () => {
+    if (!courseAward || courseAward.questions !== quizData) return null;
+    const exam = getExam(courseAward.level, courseAward.timeFrame);
+    return (
+      <>
+        <CoinStack earned={courseAward.earned} unitMax={courseAward.unitMax}
+          balance={courseAward.balance} previousBest={courseAward.previousBest} />
+        {courseAward.tenseComplete && exam && (
+          <ExamGatePanel level={courseAward.level} timeFrame={courseAward.timeFrame} celebrate
+            refreshKey={courseAward.balance} onStart={() => startExam(exam)} />
+        )}
+      </>
+    );
+  };
+
+  if (examGateFor) {
+    const { exam } = examGateFor;
+    return (
+      <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
+        <div className="max-w-xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
+          <h2 className="text-3xl font-bold text-center">{exam.level} · {exam.timeFrame} Tense</h2>
+          <p className="text-center text-yellow-200 mt-2">🪙 {coinBalance(readCoins())} coins</p>
+          <ExamGatePanel level={exam.level} timeFrame={exam.timeFrame}
+            onStart={() => startExam(exam, examGateFor.previous)} />
+          <p className="text-sm text-slate-300 mt-4">
+            Course quizzes earn coins for your score. Finish every unit of the tense and save 100 coins to unlock its Final Level Exam. Once unlocked, retakes are free.
+          </p>
+          <button
+            onClick={() => {
+              if (examGateFor.reopenOverview) setShowCourseOverviewModal(true);
+              setExamGateFor(null);
+            }}
+            className="mt-6 w-full px-6 py-3 bg-slate-600 hover:bg-slate-500 rounded-xl text-white font-medium">
+            ← Back
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (showVocabulary) {
     return <VocabularyBuilder onClose={() => setShowVocabulary(false)} />;
@@ -1708,6 +1798,7 @@ function App() {
                 <p className="text-xl text-slate-300">
                   You got {correctAnswers} out of {totalQuestions} questions correct
                 </p>
+                {renderCourseReward()}
               </div>
               
               {/* Unit Progress */}
@@ -2110,6 +2201,7 @@ function App() {
                   <span className="text-red-300">{totalQuestions - correctAnswers} Incorrect</span>
                 </div>
               </div>
+              {renderCourseReward()}
             </div>
           </div>
 
@@ -2233,7 +2325,12 @@ function App() {
                 
                 <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                   <p className="text-yellow-200 font-semibold">We have high standards!</p>
-                  <p className="text-sm text-slate-300 mt-1">Final exam requires 90% ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '36/40' : '27/30'}) to pass and unlock the next course.</p>
+                  <p className="text-sm text-slate-300 mt-1">{(() => {
+                    const ex = getExam(courseInfo?.courseLevel || "Beginner", courseInfo?.timeFrame || "Present");
+                    return ex
+                      ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Finish every unit and save 100 coins to unlock it.`
+                      : "Final exam requires 90% to pass.";
+                  })()}</p>
                 </div>
               </div>
             </div>
@@ -2253,7 +2350,7 @@ function App() {
                 }}
                 className="block w-full px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-700 hover:to-orange-700"
               >
-                🏆 Take Final Level Exam ({(courseInfo?.courseLevel === 'Advanced' || selectedDifficulty === 'Advanced') ? '40' : '30'} questions)
+                🏆 Take Final Level Exam ({getExam(courseInfo?.courseLevel || "Beginner", courseInfo?.timeFrame || "Present")?.totalQuestions ?? 30} questions)
               </button>
             </div>
           </div>
@@ -2354,6 +2451,8 @@ function App() {
                     
                     const data = await response.json();
                     if (data.success) {
+                      courseUnitRef.current = { level: courseDifficulty, timeFrame: courseInfo.timeFrame,
+                        verb: currentVerb, questions: data.quiz.questions };
                       setQuizData(data.quiz.questions);
                       setCurrentQuestionIndex(0);
                       setUserAnswers({});
@@ -3597,8 +3696,9 @@ function App() {
               {(() => {
                 const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
                 const allUnits = config?.courseStructure?.units || [];
-                // For non-Advanced courses, limit to first 3 units only
-                const units = selectedCourseLevel === 'Advanced' ? allUnits : allUnits.slice(0, 3);
+                // Same units as the app, one per exam verb (3 / 4 / 7 / 18). The old
+                // slice showed 3 / 3 / 3 / 3 here and 3 / 4 / 6 / 8 below.
+                const units = selectedCourseLevel === 'Advanced' ? allUnits : courseUnitsFor(selectedCourseLevel);
                 const finalExam = config?.courseStructure?.finalExam;
                 
                 return (
@@ -3638,7 +3738,7 @@ function App() {
                         <h4 className="text-xl font-semibold text-white">What You'll Learn</h4>
                       </div>
                       <ul className="space-y-2 text-slate-300 mb-4">
-                        <li>• Master the {selectedCourseLevel === 'Advanced' ? config.verbs.length : Math.min(3, config.verbs.length)} most essential French verbs</li>
+                        <li>• Master {units.length} essential French verbs</li>
                         <li>• Practice {selectedCourseTimeFrame === "Present" ? "Présent" : selectedCourseTimeFrame === "Past" ? "Passé Composé" : "Futur Simple"} conjugations</li>
                         <li>• Learn proper French grammar patterns</li>
                         <li>• Build confidence with structured progression</li>
@@ -3650,7 +3750,12 @@ function App() {
                           <div className="text-center">
                             <div className="text-lg font-semibold text-yellow-200 mb-1">We have high standards!</div>
                             <p className="text-sm text-slate-300">
-                              Final exam requires 90% ({selectedCourseLevel === 'Advanced' ? finalExam.passThreshold : Math.ceil((selectedCourseLevel === 'Advanced' ? finalExam.questions : units.length * 10) * 0.9)}/{selectedCourseLevel === 'Advanced' ? finalExam.questions : units.length * 10}) to pass and unlock the next course.
+                              {(() => {
+                                const ex = getExam(selectedCourseLevel, selectedCourseTimeFrame);
+                                return ex
+                                  ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Finish every unit and save 100 coins to unlock it.`
+                                  : `Final exam requires 90% (${finalExam.passThreshold}/${finalExam.questions}) to pass.`;
+                              })()}
                             </p>
                           </div>
                         </div>
@@ -3667,12 +3772,8 @@ function App() {
                   {(() => {
                     const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
                     const allUnits = config?.courseStructure?.units || [];
-                    // For non-Advanced courses, limit to appropriate number of units
-                    const units = selectedCourseLevel === 'Advanced' ? allUnits : allUnits.slice(0, 
-                      selectedCourseLevel === 'Novice' ? 4 : 
-                      selectedCourseLevel === 'Elementary' ? 6 : 
-                      selectedCourseLevel === 'Intermediate' ? 8 : allUnits.length
-                    );
+                    const units = selectedCourseLevel === 'Advanced' ? allUnits : courseUnitsFor(selectedCourseLevel);
+                    const coins = readCoins();
                     
                     return units.map((unit: any, index: number) => (
                       <button
@@ -3689,11 +3790,14 @@ function App() {
                             {index + 1}
                           </div>
                           <div className="font-semibold text-lg">
-                            Unit {index + 1}: {unit.verb}
+                            {coins.best[`${selectedCourseLevel}|${selectedCourseTimeFrame}|${unit.verb}`] !== undefined ? '✓ ' : ''}Unit {index + 1}: {unit.verb}
                           </div>
                         </div>
                         <div className="text-purple-200 text-sm ml-11">
                           ({VERB_MEANINGS[unit.verb as keyof typeof VERB_MEANINGS] || unit.verb}) ({unit.questions} questions)
+                          {coins.best[`${selectedCourseLevel}|${selectedCourseTimeFrame}|${unit.verb}`] !== undefined && (
+                            <span className="text-yellow-200"> · 🪙 {coins.best[`${selectedCourseLevel}|${selectedCourseTimeFrame}|${unit.verb}`]}</span>
+                          )}
                         </div>
                       </button>
                     ));
@@ -3708,7 +3812,7 @@ function App() {
                     setShowCourseOverviewModal(false);
                     // Start with Unit 1
                     const config = DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS];
-                    const firstUnit = config.courseStructure.units[0];
+                    const firstUnit = courseUnitsFor(selectedCourseLevel)[0] ?? config.courseStructure.units[0];
                     setSelectedUnit(firstUnit);
                     setShowUnitIntroModal(true);
                   }}
@@ -3724,6 +3828,16 @@ function App() {
                   className="w-full px-6 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-xl text-white font-medium shadow-lg text-lg"
                 >
                   🏆 Take Final Level Exam ({getExam(selectedCourseLevel, selectedCourseTimeFrame)?.totalQuestions ?? DIFFICULTY_CONFIGS[selectedCourseLevel as keyof typeof DIFFICULTY_CONFIGS]?.courseStructure?.finalExam?.questions} questions)
+                  {getExam(selectedCourseLevel, selectedCourseTimeFrame) && (
+                    <div className="text-sm font-normal opacity-90 mt-1">
+                      {(() => {
+                        const p = tenseProgress(readCoins(), selectedCourseLevel, selectedCourseTimeFrame);
+                        return isExamUnlocked(readCoins(), getExam(selectedCourseLevel, selectedCourseTimeFrame)!.id, getLocalExamPasses())
+                          ? 'Unlocked'
+                          : `🔒 ${p.done}/${p.total} units · 🪙 ${coinBalance(readCoins())}/100 coins`;
+                      })()}
+                    </div>
+                  )}
                 </button>
                 
                 <button
