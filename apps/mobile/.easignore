@@ -29,3 +29,7 @@ dist/
 *.tar.gz
 conjugately-feature-graphic*.png
 all-english-templates.txt
+
+# Exception: the app's own sound effects (coin clink, cha-ching, doughnut horn)
+!apps/mobile/assets/sounds/
+!apps/mobile/assets/sounds/*.mp3
