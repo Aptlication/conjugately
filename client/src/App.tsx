@@ -4229,8 +4229,13 @@ function App() {
           </div>
         )}
         
-        {/* Privacy Policy Footer Link */}
-        <div className="fixed bottom-4 right-4">
+        {/* Footer links. Guarantee is a plain <a>: it is a server page, not a
+            wouter route, so it needs a full navigation. */}
+        <div className="fixed bottom-4 right-4 flex gap-2">
+          <a href="/guarantee"
+            className="px-3 py-2 bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm border border-slate-500/50 rounded-lg text-slate-300 hover:text-white text-sm transition-colors">
+            Guarantee
+          </a>
           <Link href="/privacy">
             <button className="px-3 py-2 bg-slate-700/80 hover:bg-slate-600/80 backdrop-blur-sm border border-slate-500/50 rounded-lg text-slate-300 hover:text-white text-sm transition-colors">
               Privacy Policy

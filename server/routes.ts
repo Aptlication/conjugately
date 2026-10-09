@@ -2,6 +2,7 @@ import type { Express } from "express";
 import express from "express";
 import { createServer, type Server } from "http";
 import path from "path";
+import fs from "fs";
 import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSchema } from "@shared/schema";
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { polishQuestions } from "./rationalePolish";
@@ -74,7 +75,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/sitemap.xml", (_req, res) => {
     // Public, indexable routes. Expand as marketing/landing pages are added.
-    const paths = ["/", "/frenchverb"];
+    const paths = ["/", "/frenchverb", "/guarantee"];
     const body =
       `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
@@ -83,6 +84,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
         .join("\n") +
       `\n</urlset>\n`;
     res.type("application/xml").send(body);
+  });
+
+  // The Conjugately Guarantee (linked from the App Store screenshots and
+  // promotional text, so App Review opens it). A real 200 page, not the SPA:
+  // the SPA fallback rendered the home screen here, which read as a redirect.
+  // Express routing is non-strict, so /guarantee/ is served by this too.
+  // The file lives in client/public, which Vite copies to dist/public.
+  app.get("/guarantee", (_req, res) => {
+    const candidates = [
+      path.resolve(import.meta.dirname, "public", "guarantee.html"),          // production: dist/public
+      path.resolve(import.meta.dirname, "..", "client", "public", "guarantee.html"), // dev
+    ];
+    const file = candidates.find((f) => fs.existsSync(f));
+    if (!file) return res.status(404).send("Not found");
+    res.set("Cache-Control", "public, max-age=300");
+    res.sendFile(file);
   });
 
   // Serve static audio assets
