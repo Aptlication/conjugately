@@ -25,11 +25,8 @@ docs/
 dist/
 
 # Large media and archives
-*.mp3
+# (No blanket *.mp3: every audio folder is already excluded by name above,
+# and the app's own sound effects in apps/mobile/assets/sounds must ship.)
 *.tar.gz
 conjugately-feature-graphic*.png
 all-english-templates.txt
-
-# Exception: the app's own sound effects (coin clink, cha-ching, doughnut horn)
-!apps/mobile/assets/sounds/
-!apps/mobile/assets/sounds/*.mp3
