@@ -1,17 +1,30 @@
-attached_assets*/
-.local/
-canvas/
-client/
-server/
-scripts/
-dist/
-conjugately-feature-graphic*.png
-*.mp3
-apps/mobile/package-lock.json
+# EAS reads THIS file (repo root). Proved 10 Oct 2026: build 39 failed with
+# "Unable to resolve module ../assets/sounds/coin-clink.mp3" because a blanket
+# *.mp3 here stripped the app's sound effects, even though apps/mobile/.easignore
+# had no such line. Keep apps/mobile/.easignore identical to avoid confusion.
+
+# Build junk
 node_modules/
 **/node_modules/
 .expo/
 **/.expo/
+ios/
+android/
 *.log
+apps/mobile/package-lock.json
+
+# Monorepo siblings the iOS app does not import
+.local/
+attached_assets*/
+canvas/
+client/
+server/
+scripts/
 docs/
+dist/
+
+# Large media and archives. No blanket *.mp3: the audio folders are excluded by
+# name above, and apps/mobile/assets/sounds/*.mp3 must ship in the bundle.
 *.tar.gz
+conjugately-feature-graphic*.png
+all-english-templates.txt
