@@ -84,7 +84,7 @@ function serial<T>(fn: () => Promise<T>): Promise<T> {
 
 /**
  * Record a finished course quiz. Returns what it paid and, when this quiz is
- * the one that took the learner to 100 coins, the invitation to show. The
+ * the one that took the learner to the exam's price, the invitation to show. The
  * invitation is marked as shown in the same write, so it appears once.
  */
 export function recordCourseQuiz(
@@ -105,7 +105,7 @@ export async function readExamGate(level: string, timeFrame: string): Promise<{ 
   return { gate: examGate(coins, level, timeFrame, results), coins };
 }
 
-/** Spend 100 coins. Resolves to the new gate (unchanged if not allowed). */
+/** Spend the exam's price in coins. Resolves to the new gate (unchanged if not allowed). */
 export function spendOnExam(level: string, timeFrame: string): Promise<ExamGate> {
   return serial(async () => {
     const [coins, results] = await Promise.all([readCoins(), readExamResults()]);

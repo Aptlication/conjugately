@@ -54,7 +54,7 @@ export function readExamGate(level: string, timeFrame: string): ExamGate {
   return examGate(readCoins(), level, timeFrame, readResults());
 }
 
-/** Spend 100 coins on an exam; returns the gate afterwards. */
+/** Spend the exam's price in coins; returns the gate afterwards. */
 export function spendOnExam(level: string, timeFrame: string): ExamGate {
   const coins = readCoins();
   const results = readResults();

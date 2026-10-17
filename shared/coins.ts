@@ -1,7 +1,7 @@
 /**
  * Coins and the Final Level Exam unlock — single source of truth.
  *
- * Approved by Jonathan, 9 October 2026:
+ * RULES OF 18 OCTOBER 2026 (Jonathan) — these replace the 9 October rules.
  *
  *   1. Course quizzes earn coins. A quiz is worth a fixed maximum per level,
  *      paid in proportion to the score, half-coins rounded UP:
@@ -13,23 +13,29 @@
  *
  *      e.g. Beginner 20/20 = 34, 15/20 = 25.5 → 26, 10/20 = 17.
  *
- *   2. Repeating a quiz pays only the IMPROVEMENT on that unit's best. Each
- *      unit pays out its maximum once in total, so a tense can never earn more
- *      than the totals above, and grinding the shortest quiz earns nothing.
+ *   2. Repeats pay. Every finished course quiz pays its full score value, so
+ *      coins can be re-earned by repeating units. No caps. (9 Oct: repeats
+ *      paid only the improvement on the unit's best.)
  *
- *   3. A Final Level Exam costs 100 coins to unlock, and may only be unlocked
- *      once EVERY unit of that level and tense has been finished (any score).
- *      Both conditions, not either.
+ *   3. An exam costs HALF of what one pass through that tense's course pays —
+ *      i.e. a learner needs to complete about half the course to afford it.
+ *      Computed from the course config (examCoinCost), never hard-coded:
+ *      Beginner 51 · Novice 50 · Elementary 70 · Intermediate 180.
+ *      There is no "finish every unit first" condition any more; coins alone
+ *      unlock the exam. (9 Oct: a flat 100 coins AND every unit finished.)
  *
- *   4. Once unlocked, retakes are free — the exam stays unlocked for good.
+ *   4. Once bought, retakes are free: a failed attempt (below 90%) never uses
+ *      the purchase up. The exam stays unlocked after a pass too.
  *
- *   5. One shared balance across all levels and tenses.
+ *   5. One shared balance across all levels and tenses; coins carry over.
  *
  *   6. Coins are earned only. They are never sold and never granted for a
  *      purchase: that keeps them outside Apple's in-app currency rules.
  *
  * Grandfathering: an exam this device already has a result for counts as
- * unlocked, so nobody who sat an exam under 1.1 loses access to it.
+ * unlocked, so nobody who sat an exam under 1.1 loses access to it. A coin
+ * store written under the 9 Oct rules has no `earned` total; it is read as
+ * the sum of its unit bests, so nobody's balance moves on upgrade.
  *
  * Pure functions only. The website stores the state in localStorage and the
  * app in AsyncStorage under the same key and shape, as with exam results.
@@ -37,7 +43,8 @@
 
 import { EXAM_VERB_SETS, getExam, type ExamLevel, type ExamResult } from "./exams";
 
-export const EXAM_COIN_COST = 100;
+/** Share of one pass through a tense's course that its exam costs. */
+export const EXAM_PRICE_SHARE = 0.5;
 
 /** Questions in one course quiz (unit). */
 export const QUIZ_QUESTIONS = 20;
@@ -55,6 +62,8 @@ export interface CoinState {
   version: 1;
   /** Best payout per unit, keyed by unitKey(). Presence = unit finished. */
   best: Record<string, number>;
+  /** Lifetime coins earned (every quiz pays; 18 Oct rules). */
+  earned: number;
   /** Total coins spent on exam unlocks. */
   spent: number;
   /** Exam ids unlocked with coins. */
@@ -64,7 +73,7 @@ export interface CoinState {
 }
 
 export function emptyCoinState(): CoinState {
-  return { version: 1, best: {}, spent: 0, unlockedExams: [], invited: [] };
+  return { version: 1, best: {}, earned: 0, spent: 0, unlockedExams: [], invited: [] };
 }
 
 /** Units are identified by verb, not position: the site and app number them differently. */
@@ -92,14 +101,29 @@ export function coinsForScore(level: string, correct: number, total: number = QU
   return Math.floor((2 * max * c + total) / (2 * total));
 }
 
+/** Coins one full pass through a tense of this level's course pays. */
+export function courseCoinTotal(level: string): number {
+  if (!isCoinLevel(level)) return 0;
+  return COIN_MAX_PER_QUIZ[level] * courseVerbs(level).length;
+}
+
+/** Exam price: half a pass through the tense's course, from config. */
+export function examCoinCost(level: string): number {
+  return Math.round(EXAM_PRICE_SHARE * courseCoinTotal(level));
+}
+
+function sumBest(best: Record<string, number>): number {
+  return Object.values(best).reduce((n, x) => n + x, 0);
+}
+
 export function coinBalance(s: CoinState): number {
-  const earned = Object.values(s.best).reduce((n, x) => n + x, 0);
+  const earned = typeof s.earned === "number" ? s.earned : sumBest(s.best);
   return Math.max(0, earned - s.spent);
 }
 
 export interface QuizAward {
   state: CoinState;
-  /** Coins added to the balance by this quiz (0 if no improvement). */
+  /** Coins added to the balance by this quiz (its full score value). */
   earned: number;
   /** What this score is worth on its own. */
   scoreValue: number;
@@ -132,8 +156,9 @@ export function awardQuiz(
   const previous = s.best[key];
   const scoreValue = coinsForScore(level, correct, total);
   const unitBest = Math.max(previous ?? 0, scoreValue);
-  const earned = unitBest - (previous ?? 0);
-  const state: CoinState = { ...s, best: { ...s.best, [key]: unitBest } };
+  const earned = scoreValue; // repeats pay in full (18 Oct)
+  const before = typeof s.earned === "number" ? s.earned : sumBest(s.best);
+  const state: CoinState = { ...s, best: { ...s.best, [key]: unitBest }, earned: before + earned };
   return { state, earned, scoreValue, unitBest, unitMax, firstFinish: previous === undefined };
 }
 
@@ -162,9 +187,8 @@ export function isExamUnlocked(s: CoinState, examId: string, results: ExamResult
 
 export type ExamGate =
   | { kind: "unlocked" }
-  | { kind: "needUnits"; done: number; total: number; remaining: string[]; balance: number }
-  | { kind: "needCoins"; balance: number; short: number }
-  | { kind: "canUnlock"; balance: number }
+  | { kind: "needCoins"; balance: number; short: number; cost: number }
+  | { kind: "canUnlock"; balance: number; cost: number }
   | { kind: "noExam" };
 
 /** Where does this learner stand with this exam? Drives every exam button. */
@@ -178,14 +202,13 @@ export function examGate(
   if (!exam) return { kind: "noExam" };
   if (isExamUnlocked(s, exam.id, results)) return { kind: "unlocked" };
   const balance = coinBalance(s);
-  const p = tenseProgress(s, level, timeFrame);
-  if (!p.complete) return { kind: "needUnits", done: p.done, total: p.total, remaining: p.remaining, balance };
-  if (balance < EXAM_COIN_COST) return { kind: "needCoins", balance, short: EXAM_COIN_COST - balance };
-  return { kind: "canUnlock", balance };
+  const cost = examCoinCost(level);
+  if (balance < cost) return { kind: "needCoins", balance, short: cost - balance, cost };
+  return { kind: "canUnlock", balance, cost };
 }
 
 /**
- * Spend 100 coins on an exam. Returns null when the gate does not allow it,
+ * Spend the exam's price in coins. Returns null when the gate does not allow it,
  * so a caller can never unlock by skipping the check.
  */
 export function unlockExam(
@@ -199,16 +222,15 @@ export function unlockExam(
   const gate = examGate(s, level, timeFrame, results);
   if (gate.kind === "unlocked") return s;
   if (gate.kind !== "canUnlock") return null;
-  return { ...s, spent: s.spent + EXAM_COIN_COST, unlockedExams: [...s.unlockedExams, exam.id] };
+  return { ...s, spent: s.spent + gate.cost, unlockedExams: [...s.unlockedExams, exam.id] };
 }
 
 /** One-line explanation for an exam button or row. */
 export function examGateLabel(g: ExamGate): string {
   switch (g.kind) {
     case "unlocked": return "Unlocked — retakes are free";
-    case "canUnlock": return `Ready — unlock for ${EXAM_COIN_COST} coins (you have ${g.balance})`;
-    case "needCoins": return `Unit complete — ${g.short} more coins needed (you have ${g.balance}). Retake quizzes to improve your scores.`;
-    case "needUnits": return `Finish all units first — ${g.done} of ${g.total} done`;
+    case "canUnlock": return `Ready — unlock for ${g.cost} coins (you have ${g.balance})`;
+    case "needCoins": return `${g.short} more coins needed (you have ${g.balance} of ${g.cost}). Every course quiz earns coins, repeats included.`;
     case "noExam": return "Not available for this level yet";
   }
 }
@@ -228,6 +250,8 @@ export function parseCoinState(raw: string | null | undefined): CoinState | null
     return {
       version: 1,
       best,
+      earned: typeof p.earned === "number" && Number.isFinite(p.earned) && p.earned >= 0
+        ? Math.floor(p.earned) : sumBest(best),
       spent: typeof p.spent === "number" && p.spent >= 0 ? Math.floor(p.spent) : 0,
       unlockedExams: Array.isArray(p.unlockedExams) ? p.unlockedExams.filter((x: unknown) => typeof x === "string") : [],
       invited: Array.isArray(p.invited) ? p.invited.filter((x: unknown) => typeof x === "string") : [],
@@ -240,17 +264,13 @@ export function parseCoinState(raw: string | null | undefined): CoinState | null
 // ------------------------------------------------------------ invitation ---
 
 /**
- * The modal that greets a learner the moment a quiz takes them to 100 coins
- * (approved 9 Oct 2026). Two forms, because the exam needs both conditions:
+ * The modal that greets a learner the moment a quiz takes their balance to an
+ * exam's price (18 Oct rules: coins alone unlock it). Shown once per exam;
+ * `invited` remembers it.
  *
- *   "ready"  - this quiz made the exam unlockable (tense finished AND 100+
- *              coins): invite them to sit it if they feel confident.
- *   "almost" - this quiz took the balance to 100+ but the tense still has
- *              units to do (Elementary and Intermediate pay 140 / 360 per
- *              tense, so this happens mid-course): congratulate, and say how
- *              many units are left.
- *
- * Each form is shown once per exam; `invited` remembers it.
+ * The "almost" form (enough coins, units still to do) belonged to the 9 Oct
+ * rules and is no longer produced. The type keeps it so a stored `invited`
+ * entry or an old screen still type-checks.
  */
 export type ExamInvitation =
   | { kind: "ready"; examId: string; level: string; timeFrame: string; balance: number }
@@ -267,14 +287,8 @@ export function examInvitation(
   if (!exam) return null;
   const was = examGate(before, level, timeFrame, results);
   const now = examGate(after, level, timeFrame, results);
-  const balance = coinBalance(after);
   if (now.kind === "canUnlock" && was.kind !== "canUnlock" && !after.invited.includes(exam.id)) {
-    return { kind: "ready", examId: exam.id, level, timeFrame, balance };
-  }
-  const almostKey = `${exam.id}:almost`;
-  if (now.kind === "needUnits" && coinBalance(before) < EXAM_COIN_COST && balance >= EXAM_COIN_COST
-      && !after.invited.includes(almostKey)) {
-    return { kind: "almost", examId: exam.id, level, timeFrame, balance, remaining: now.remaining };
+    return { kind: "ready", examId: exam.id, level, timeFrame, balance: coinBalance(after) };
   }
   return null;
 }
@@ -288,19 +302,11 @@ export function markInvited(s: CoinState, inv: ExamInvitation): CoinState {
 /** Modal copy, shared so both surfaces say the same thing. */
 export function invitationCopy(inv: ExamInvitation): { title: string; body: string; detail: string } {
   const exam = getExam(inv.level, inv.timeFrame)!;
+  const cost = examCoinCost(inv.level);
   const tense = inv.timeFrame === "Present" ? "Présent" : inv.timeFrame === "Past" ? "Passé Composé" : "Futur Simple";
-  if (inv.kind === "ready") {
-    return {
-      title: `🎉 You've earned ${EXAM_COIN_COST} coins!`,
-      body: `You've finished every ${inv.level} ${tense} unit and saved ${inv.balance} coins — enough to sit the Final Level Exam. Feeling confident? Give it a go.`,
-      detail: `${exam.totalQuestions} questions · ${exam.passMark} correct (90%) to pass. Unlocking costs ${EXAM_COIN_COST} coins, and retakes are free after that.`,
-    };
-  }
-  const n = inv.remaining.length;
   return {
-    title: `🎉 You've reached ${EXAM_COIN_COST} coins!`,
-    body: `That's enough for the ${inv.level} ${tense} Final Level Exam. Finish the last ${n} unit${n === 1 ? "" : "s"} of this tense and it's yours to unlock.`,
-    detail: `Still to do: ${inv.remaining.join(", ")}.`,
+    title: `🎉 You've saved ${inv.balance} coins!`,
+    body: `That's enough to sit the ${inv.level} ${tense} Final Level Exam. Feeling confident? Give it a go — or keep practising first.`,
+    detail: `${exam.totalQuestions} questions · ${exam.passMark} correct (90%) to pass. Unlocking costs ${cost} coins, and retakes are free until you pass.`,
   };
 }
-

@@ -18,7 +18,7 @@ import {
 import { VocabularyBuilder } from "@/components/VocabularyBuilder";
 import { WheelSelect } from "@/components/WheelSelect";
 import { shuffle } from "@shared/shuffle";
-import { coinBalance, tenseProgress, isExamUnlocked, invitationCopy, EXAM_COIN_COST, type ExamInvitation } from "@shared/coins";
+import { coinBalance, tenseProgress, isExamUnlocked, invitationCopy, examCoinCost, type ExamInvitation } from "@shared/coins";
 import { readCoins, recordCourseQuiz, spendOnExam } from "@/lib/coins";
 import { CoinStack } from "@/components/CoinStack";
 import { ExamGatePanel } from "@/components/ExamGatePanel";
@@ -1534,7 +1534,8 @@ function App() {
     const a = recordCourseQuiz(unit.level, unit.timeFrame, unit.verb, correctAnswers, totalQuestions);
     setCourseAward({
       level: unit.level, timeFrame: unit.timeFrame, earned: a.earned, unitMax: a.unitMax,
-      balance: coinBalance(a.state), previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
+      // 18 Oct rules: repeats pay in full, so no "beat your best" wording.
+      balance: coinBalance(a.state), previousBest: undefined,
       tenseComplete: tenseProgress(a.state, unit.level, unit.timeFrame).complete, questions: quizData,
     });
     if (a.invitation) {
@@ -1568,7 +1569,7 @@ function App() {
                       if (ex && gate.kind === "unlocked") startExam(ex);
                     }}
                     className="mt-6 w-full rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-[#1B2145] hover:bg-yellow-300">
-                    Unlock &amp; start exam — {EXAM_COIN_COST} 🪙
+                    Unlock &amp; start exam — {examCoinCost(invite.level)} 🪙
                   </button>
                   <button onClick={() => setExamInvite(null)} className="mt-3 w-full rounded-xl border border-white/30 px-6 py-3 text-slate-100 hover:bg-white/10">
                     Not yet — I'll keep practising
@@ -1602,7 +1603,7 @@ function App() {
           <ExamGatePanel level={exam.level} timeFrame={exam.timeFrame}
             onStart={() => startExam(exam, examGateFor.previous)} />
           <p className="text-sm text-slate-300 mt-4">
-            Course quizzes earn coins for your score. Finish every unit of the tense and save 100 coins to unlock its Final Level Exam. Once unlocked, retakes are free.
+            Course quizzes earn coins for your score — repeats included. Save {examCoinCost(exam.level)} coins (about half the course) to unlock this Final Level Exam. Retakes are free until you pass.
           </p>
           <button
             onClick={() => {
@@ -2370,7 +2371,7 @@ function App() {
                   <p className="text-sm text-slate-300 mt-1">{(() => {
                     const ex = getExam(courseInfo?.courseLevel || "Beginner", courseInfo?.timeFrame || "Present");
                     return ex
-                      ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Finish every unit and save 100 coins to unlock it.`
+                      ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Save ${examCoinCost(ex.level)} coins (about half the course) to unlock it.`
                       : "Final exam requires 90% to pass.";
                   })()}</p>
                 </div>
@@ -3795,7 +3796,7 @@ function App() {
                               {(() => {
                                 const ex = getExam(selectedCourseLevel, selectedCourseTimeFrame);
                                 return ex
-                                  ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Finish every unit and save 100 coins to unlock it.`
+                                  ? `Final exam requires 90% (${ex.passMark}/${ex.totalQuestions}) to pass. Save ${examCoinCost(ex.level)} coins (about half the course) to unlock it.`
                                   : `Final exam requires 90% (${finalExam.passThreshold}/${finalExam.questions}) to pass.`;
                               })()}
                             </p>
@@ -3873,10 +3874,9 @@ function App() {
                   {getExam(selectedCourseLevel, selectedCourseTimeFrame) && (
                     <div className="text-sm font-normal opacity-90 mt-1">
                       {(() => {
-                        const p = tenseProgress(readCoins(), selectedCourseLevel, selectedCourseTimeFrame);
                         return isExamUnlocked(readCoins(), getExam(selectedCourseLevel, selectedCourseTimeFrame)!.id, getLocalExamPasses())
                           ? 'Unlocked'
-                          : `🔒 ${p.done}/${p.total} units · 🪙 ${coinBalance(readCoins())}/100 coins`;
+                          : `🔒 🪙 ${coinBalance(readCoins())}/${examCoinCost(selectedCourseLevel)} coins`;
                       })()}
                     </div>
                   )}

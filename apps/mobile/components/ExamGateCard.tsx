@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
-import { EXAM_COIN_COST, examGateLabel, type ExamGate } from "@shared/coins";
+import { examCoinCost, examGateLabel, type ExamGate } from "@shared/coins";
 import { getExam } from "@shared/exams";
 import { readExamGate, spendOnExam } from "../lib/coins";
 
@@ -41,6 +41,7 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
   useFocusEffect(refresh);
 
   if (!exam) return null;
+  const cost = examCoinCost(level);
   const dark = variant === "dark";
   const s = dark ? dk : lt;
 
@@ -56,8 +57,8 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
     : "🔒 Final Level Exam";
 
   return (
-    <View style={[s.box, celebrate && gate?.kind !== "needUnits" && s.boxHot]}>
-      {celebrate && gate && gate.kind !== "needUnits" && (
+    <View style={[s.box, celebrate && s.boxHot]}>
+      {celebrate && gate && (
         <Text style={s.kicker}>{timeFrame} tense complete!</Text>
       )}
       <Text style={s.title}>{title}</Text>
@@ -77,10 +78,10 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
           ) : gate.kind === "canUnlock" ? (
             confirming ? (
               <View>
-                <Text style={s.status}>Spend {EXAM_COIN_COST} of your {gate.balance} coins? Retakes are free after this.</Text>
+                <Text style={s.status}>Spend {cost} of your {gate.balance} coins? Retakes are free until you pass.</Text>
                 <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
                   <Pressable style={[s.btn, { flex: 1, marginTop: 0 }]} onPress={unlock} disabled={busy}>
-                    <Text style={s.btnText}>{busy ? "…" : `Confirm — ${EXAM_COIN_COST} 🪙`}</Text>
+                    <Text style={s.btnText}>{busy ? "…" : `Confirm — ${cost} 🪙`}</Text>
                   </Pressable>
                   <Pressable style={[s.ghost, { flex: 1 }]} onPress={() => setConfirming(false)}>
                     <Text style={s.ghostText}>Not now</Text>
@@ -89,7 +90,7 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
               </View>
             ) : (
               <Pressable style={s.btn} onPress={() => setConfirming(true)} accessibilityRole="button">
-                <Text style={s.btnText}>Unlock for {EXAM_COIN_COST} 🪙</Text>
+                <Text style={s.btnText}>Unlock for {cost} 🪙</Text>
               </Pressable>
             )
           ) : null}

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { coinsForScore, awardQuiz, emptyCoinState, coinBalance, examGate, unlockExam, tenseProgress, parseCoinState } from "./coins";
+import { coinsForScore, awardQuiz, emptyCoinState, coinBalance, examGate, unlockExam, tenseProgress, parseCoinState, examCoinCost, courseCoinTotal } from "./coins";
 
 // Jonathan's examples (15/20 Beginner corrected from 27 to 26)
 assert.equal(coinsForScore("Beginner", 20), 34);
@@ -12,64 +12,66 @@ assert.equal(coinsForScore("Elementary", 20), 20);
 assert.equal(coinsForScore("Intermediate", 19), 19);
 assert.equal(coinsForScore("Advanced", 20), 0);
 
-// improvement only
+// 18 Oct rules: repeats pay in full
 let s = emptyCoinState();
 let a = awardQuiz(s, "Beginner", "Present", "être", 15); assert.equal(a.earned, 26); assert.ok(a.firstFinish);
-a = awardQuiz(a.state, "Beginner", "Present", "être", 12); assert.equal(a.earned, 0);
-a = awardQuiz(a.state, "Beginner", "Present", "être", 20); assert.equal(a.earned, 8); assert.equal(coinBalance(a.state), 34);
+a = awardQuiz(a.state, "Beginner", "Present", "être", 12); assert.equal(a.earned, 20);   // 20.4 -> 20
+a = awardQuiz(a.state, "Beginner", "Present", "être", 20); assert.equal(a.earned, 34); assert.equal(coinBalance(a.state), 80);
 // non-course verb earns nothing
 assert.equal(awardQuiz(a.state, "Beginner", "Present", "aller", 20).earned, 0);
 
-// gate: needUnits -> needCoins -> canUnlock -> unlocked
-s = a.state;
-assert.equal(examGate(s, "Beginner", "Present").kind, "needUnits");
-s = awardQuiz(s, "Beginner", "Present", "avoir", 20).state;
-s = awardQuiz(s, "Beginner", "Present", "faire", 10).state; // 34+34+17 = 85
-assert.equal(coinBalance(s), 85);
-const g = examGate(s, "Beginner", "Present"); assert.equal(g.kind, "needCoins"); assert.equal((g as any).short, 15);
+// price = half a pass through the tense, from config
+assert.equal(examCoinCost("Beginner"), 51);
+assert.equal(examCoinCost("Novice"), 50);
+assert.equal(examCoinCost("Elementary"), 70);
+assert.equal(examCoinCost("Intermediate"), 180);
+for (const lvl of ["Beginner","Novice","Elementary","Intermediate"]) assert.equal(examCoinCost(lvl), Math.round(courseCoinTotal(lvl) / 2), lvl);
+
+// gate: coins alone decide (no "finish every unit" rule any more)
+s = emptyCoinState();
+s = awardQuiz(s, "Beginner", "Present", "être", 20).state; // 34
+let g = examGate(s, "Beginner", "Present"); assert.equal(g.kind, "needCoins"); assert.equal((g as any).short, 17);
 assert.equal(unlockExam(s, "Beginner", "Present"), null);
-s = awardQuiz(s, "Beginner", "Present", "faire", 20).state; // 102
+s = awardQuiz(s, "Beginner", "Present", "être", 10).state; // repeat: +17 -> 51
 assert.equal(examGate(s, "Beginner", "Present").kind, "canUnlock");
+assert.ok(!tenseProgress(s, "Beginner", "Present").complete);
 s = unlockExam(s, "Beginner", "Present")!;
-assert.equal(coinBalance(s), 2);
+assert.equal(coinBalance(s), 0);
 assert.equal(examGate(s, "Beginner", "Present").kind, "unlocked");
 assert.equal(unlockExam(s, "Beginner", "Present"), s); // free retake, no double charge
-assert.equal(coinBalance(s), 2);
+assert.equal(coinBalance(s), 0);
+// single wallet: Beginner coins pay for a Novice exam
+let w = emptyCoinState();
+for (const v of ["être","avoir"]) w = awardQuiz(w, "Beginner", "Future", v, 20).state; // 68
+assert.equal(examGate(w, "Novice", "Past").kind, "canUnlock");
+w = unlockExam(w, "Novice", "Past")!; assert.equal(coinBalance(w), 18);
 
-// grandfathered
+// grandfathered exam result
 assert.equal(examGate(emptyCoinState(), "Novice", "Past", [{examId:"novice-past",correct:1,total:40,passed:false,date:""}]).kind, "unlocked");
-// totals
+// one pass totals unchanged
 for (const [lvl, tot] of [["Beginner",102],["Novice",100],["Elementary",140],["Intermediate",360]] as const) {
   let t = emptyCoinState();
   for (const v of (await import("./exams")).EXAM_VERB_SETS[lvl]) t = awardQuiz(t, lvl, "Future", v, 20).state;
-  assert.equal(coinBalance(t), tot, lvl); assert.ok(tenseProgress(t, lvl, "Future").complete);
+  assert.equal(coinBalance(t), tot, lvl); assert.equal(courseCoinTotal(lvl), tot, lvl);
 }
 assert.deepEqual(parseCoinState("garbage"), null);
-assert.equal(coinBalance(parseCoinState(JSON.stringify(s))!), 2);
-// invitations
+assert.equal(coinBalance(parseCoinState(JSON.stringify(w))!), 18);
+// a 9 Oct store (no `earned`) keeps its balance on upgrade
+const old = JSON.stringify({ version: 1, best: { "Beginner|Present|être": 34, "Beginner|Present|avoir": 26 }, spent: 0, unlockedExams: [], invited: [] });
+assert.equal(coinBalance(parseCoinState(old)!), 60);
+// invitations: once, when the balance first reaches the price
 {
   const { examInvitation, markInvited } = await import("./coins");
-  let a0 = emptyCoinState();
-  a0 = awardQuiz(a0, "Beginner", "Present", "être", 20).state;
-  a0 = awardQuiz(a0, "Beginner", "Present", "avoir", 20).state;
-  const b4 = a0; const af = awardQuiz(a0, "Beginner", "Present", "faire", 20).state;
+  const b4 = awardQuiz(emptyCoinState(), "Beginner", "Present", "être", 20).state; // 34
+  const af = awardQuiz(b4, "Beginner", "Present", "avoir", 20).state;              // 68
   const inv = examInvitation(b4, af, "Beginner", "Present");
   assert.equal(inv?.kind, "ready");
   assert.equal(examInvitation(b4, markInvited(af, inv!), "Beginner", "Present"), null); // once only
-  // Elementary: 100 coins after 5 perfect units -> "almost", 2 units left
-  let e = emptyCoinState(); const ev = ["dire","voir","savoir","vouloir","venir","pouvoir","besoin"];
-  for (const v of ev.slice(0, 4)) e = awardQuiz(e, "Elementary", "Past", v, 20).state;
-  const e5 = awardQuiz(e, "Elementary", "Past", "venir", 20).state;
-  const inv2 = examInvitation(e, e5, "Elementary", "Past");
-  assert.equal(inv2?.kind, "almost"); assert.deepEqual((inv2 as any).remaining, ["pouvoir","besoin"]);
-  // finishing the tense later -> "ready"
-  let e6 = markInvited(e5, inv2!); e6 = awardQuiz(e6, "Elementary", "Past", "pouvoir", 20).state;
-  const e7 = awardQuiz(e6, "Elementary", "Past", "besoin", 20).state;
-  assert.equal(examInvitation(e6, e7, "Elementary", "Past")?.kind, "ready");
-  // finishing tense with < 100 -> nothing; later improvement crossing 100 -> ready
-  let n = emptyCoinState(); for (const v of ["être","avoir","faire","aller"]) n = awardQuiz(n, "Novice", "Future", v, 18).state;
-  assert.equal(coinBalance(n), 92);
-  const n2 = awardQuiz(n, "Novice", "Future", "être", 20).state; // +2 -> 94
-  assert.equal(examInvitation(n, n2, "Novice", "Future"), null);
+  const n = awardQuiz(emptyCoinState(), "Novice", "Future", "être", 20).state; // 25
+  assert.equal(examInvitation(emptyCoinState(), n, "Novice", "Future"), null); // short of 50
+  const ev = ["dire","voir","savoir"]; let e = emptyCoinState();
+  for (const v of ev) e = awardQuiz(e, "Elementary", "Past", v, 20).state; // 60
+  const e4 = awardQuiz(e, "Elementary", "Past", "vouloir", 20).state;     // 80, 3 units still to do
+  assert.equal(examInvitation(e, e4, "Elementary", "Past")?.kind, "ready");
 }
 console.log("coins: all assertions passed");

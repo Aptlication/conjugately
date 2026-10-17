@@ -26,12 +26,58 @@ Last updated: **14 September 2026**.
 | 1.1.9 | All levels | Exams draw only questions the learner has already seen | **Decided (14 Sep)** — option A, renamed *Final Level Exam* |
 | 1.1.10 | All levels | Exam passes were never saved; guest hit a dead end | In code |
 | 1.1.11 | All levels | Exam length, tense and assembly defects | In code |
+| 1.2.2 | All levels | Coins — exam price = coins from half a tense's course (18 Oct rules replace 9 Oct) | *In code* (18 Oct) — app + website; free = Beginner exam only, above Beginner needs Pro + coins |
+| 1.2.3 | All levels | Tab bar — add "Verbs"; new Home (wordmark turn, tagline build, Continue) | *In code* (18 Oct) — awaiting staging + device check |
+| 1.2.4 | All levels | Move the Difficulty/Verb/Tense reels to Verbs → "Build Your Quiz" | *In code* (18 Oct) — awaiting staging + device check |
+| 1.2.5 | All levels | Post-quiz conversation (10–30 s, from the quiz's language) | Open — **moved to 1.3** (18 Oct); design drafted in docs/POST_QUIZ_CONVERSATION_SPEC.md |
 | 2.1.1 | All levels | Cross-reference difficulty with CEFR (A1–C2) | Open — later release |
 | 2.1.2 | All levels | Gold coins — practice currency spent to sit an exam | **Decided (15 Sep)** — spec below; 1.2, not 1.1 |
 
 **Deployed to conjugately.com on 13 September:** `479f107`, `147b2ab`, `5901ed6`.
 
 ---
+
+## 1.2 release — 18 Oct 2026
+
+### 1.2.2 — Coins buy exams: 18 Oct rules (replace the 9 Oct rules)
+- **Status:** *In code* (18 Oct).
+- **Price:** `examCoinCost(level) = round(0.5 × courseCoinTotal(level))`, where the course total is coins per quiz × units in one tense, read from config. That gives Beginner 51 · Novice 50 · Elementary 70 · Intermediate 180 (was a flat 100).
+- **Repeats pay in full:** every course quiz pays its full score value, with no cap (was improvement-only).
+- **No unit gate:** the "finish every unit" condition is removed; coins alone unlock an exam.
+- **Retakes:** free, and the exam stays unlocked.
+- **Wallet:** one wallet, as before.
+- **Upgrade path:** a 9 Oct store with no `earned` field is read as the sum of its unit bests, so balances don't move on upgrade.
+- **Files:**
+  - `shared/coins.ts`, plus `shared/coins.test.ts` (rewritten; passes).
+  - App: `apps/mobile/components/ExamGateCard.tsx`, `app/quiz.tsx`, `lib/coins.ts`.
+  - Website: `client/src/App.tsx`, `components/ExamGatePanel.tsx`, `lib/coins.ts`.
+- **Checks:** `vite build` succeeds, and there are no new type errors.
+- **Retakes are fresh:** confirmed. `shuffleAnswerOptions` (server/routes.ts) reshuffles answer positions on every request, and `selectExamQuestions` draws a new mix each attempt.
+- **Decided 18 Oct (Jonathan), to review later:** the free tier stays as it is. Free users get the Beginner course and can buy only the Beginner exam with coins. Above Beginner, a learner needs Pro, and coins still buy the exam. The Pro lock stays unchanged in `app/quiz.tsx` and `app/mini-courses.tsx`. Opening Novice and Elementary to free users was considered and parked.
+- **Still to check:** the Conjugately Guarantee wording against the coin price.
+- **No "the reels moved" hint (Jonathan, 18 Oct).**
+
+### 1.2.3 / 1.2.4 — Five-tab bar, new Home, Build Your Quiz
+- **Status:** *In code* (18 Oct).
+- **Files:** `apps/mobile/components/NavBar.tsx`, `app/index.tsx`, `app/verbs.tsx` (new).
+- **Home:** wordmark (two-face 360° turn with a glow), tagline built out of order (de → French → suite! → tout) on one 9 s Reanimated clock, the description inset +10 each side, and the Continue button:
+  - *Bonne continuation* takes returning learners to Journey's next step, or to their last quiz if no course is under way.
+  - *Commençons !* takes first-time users to the Verbs tab.
+- **Accessibility:** Reduce Motion → still. VoiceOver reads the tagline as one sentence.
+- **Web-only effect:** blur → sharp runs on the web twin only.
+- **Verbs tab:** "Build Your Quiz" title, then Choose All for Me (filled Con blue), then the reels moved over unchanged.
+- **Checks:** web export screenshots at 390 and 375 wide.
+- **Not done:** the one-time "the reels moved" hint, pending Jonathan's decision.
+
+### 1.2.5 — Post-quiz conversation
+- **Status:** Open. Item 5 on the "V2 Conjugately update 1.2.0" list. **Design drafted:** `docs/POST_QUIZ_CONVERSATION_SPEC.md`.
+- **Decided 18 Oct:** written in advance; spoken replies through the record feature; white screen; Pro only; course units only (not home quizzes or exams); a "Final conversation" modal with Continue / Opt out.
+- **Proposed shape:** a 3–5 line French exchange on the results screen, using the quiz's verb and tense, spoken with the app's native audio.
+- **To decide:**
+  - Written in advance per verb × tense, or generated per quiz?
+  - Listen-only, or does the learner answer a line?
+  - Free or Pro?
+  - Which quizzes does it follow?
 
 ## Fixed and live
 

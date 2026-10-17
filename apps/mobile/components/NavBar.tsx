@@ -3,11 +3,12 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { router, usePathname } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
-type TabKey = "home" | "courses" | "vocab" | "journey";
+type TabKey = "home" | "courses" | "verbs" | "vocab" | "journey";
 
-const TABS: { key: TabKey; label: string; icon: keyof typeof Ionicons.glyphMap; path: string }[] = [
+const TABS: { key: TabKey; label: string; icon: keyof typeof Ionicons.glyphMap | null; path: string }[] = [
   { key: "home", label: "Home", icon: "home-outline", path: "/" },
   { key: "courses", label: "Courses", icon: "book-outline", path: "/mini-courses" },
+  { key: "verbs", label: "Verbs", icon: null, path: "/verbs" },
   { key: "vocab", label: "Vocab", icon: "library-outline", path: "/vocabulary" },
   { key: "journey", label: "Journey", icon: "compass-outline", path: "/journey" },
 ];
@@ -35,7 +36,7 @@ export default function NavBar({ variant = "dark", active = null, badgeJourney =
           <Pressable key={t.key} onPress={() => go(t.path)}
             style={[styles.tab, isActive && styles.tabActive]}>
             <View>
-              <Ionicons name={t.icon} size={19} color={color} />
+              {t.icon ? <Ionicons name={t.icon} size={19} color={color} /> : <ReelsIcon color={color} />}
               {t.key === "journey" && badgeJourney > 0 && (
                 <View style={styles.badge}><Text style={styles.badgeText}>{badgeJourney}</Text></View>
               )}
@@ -44,6 +45,26 @@ export default function NavBar({ variant = "dark", active = null, badgeJourney =
           </Pressable>
         );
       })}
+    </View>
+  );
+}
+
+/**
+ * Verbs tab icon: three vertical reels (the Difficulty / Verb / Tense picker),
+ * drawn in the Ionicons outline weight. Ionicons has no reel glyph and the app
+ * ships no SVG library, so it is three bordered views and a centre line.
+ */
+function ReelsIcon({ color }: { color: string }) {
+  const k = 19 / 24;
+  const sw = 1.4;
+  return (
+    <View style={{ width: 19, height: 19 }}>
+      {[3, 9.5, 16].map((x) => (
+        <View key={x} style={{ position: "absolute", left: x * k, top: 4 * k, width: 5 * k, height: 16 * k,
+          borderWidth: sw, borderColor: color, borderRadius: 1.5 * k }} />
+      ))}
+      <View style={{ position: "absolute", left: 3 * k, top: 12 * k - sw / 2, width: 18 * k, height: sw,
+        backgroundColor: color }} />
     </View>
   );
 }

@@ -17,7 +17,7 @@ import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
 import { recordCourseQuiz, readExamGate } from "../lib/coins";
-import { coinBalance, tenseProgress, invitationCopy, EXAM_COIN_COST, type ExamInvitation } from "@shared/coins";
+import { coinBalance, tenseProgress, invitationCopy, examCoinCost, type ExamInvitation } from "@shared/coins";
 import { getExam } from "@shared/exams";
 import { spendOnExam } from "../lib/coins";
 import CoinStack from "../components/CoinStack";
@@ -117,7 +117,7 @@ export default function Quiz() {
     earned: number; unitMax: number; balance: number; previousBest?: number; tenseComplete: boolean;
   } | null>(null);
   // Shown once the coin animation has landed, when this quiz took the
-  // learner to 100 coins (shared/coins.ts examInvitation).
+  // learner to an exam's price (shared/coins.ts examInvitation).
   const [invite, setInvite] = useState<ExamInvitation | null>(null);
   const [inviteBusy, setInviteBusy] = useState(false);
   const inviteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -183,7 +183,7 @@ export default function Quiz() {
       // checks first, but a deep link or a stale screen must not bypass it.
       const { gate } = await readExamGate(exam.level, exam.timeFrame);
       if (gate.kind !== "unlocked") {
-        setError("This exam is locked. Finish every unit of the tense and unlock it with 100 coins from the course screen.");
+        setError(`This exam is locked. Unlock it with ${examCoinCost(exam.level)} coins from the course screen.`);
         setState("error");
         return;
       }
@@ -329,7 +329,9 @@ export default function Quiz() {
           .then((a) => {
             setAward({
               earned: a.earned, unitMax: a.unitMax, balance: coinBalance(a.state),
-              previousBest: a.firstFinish ? undefined : a.unitBest - a.earned,
+              // 18 Oct rules: repeats pay in full, so the "improvement on your
+              // best" wording in CoinStack no longer applies.
+              previousBest: undefined,
               tenseComplete: tenseProgress(a.state, courseLevel, courseTimeFrame).complete,
             });
             if (a.invitation) {
@@ -612,6 +614,7 @@ export default function Quiz() {
         <View style={styles.modalBg}>
           {invite && (() => {
             const copy = invitationCopy(invite);
+            // Free users can buy only the Beginner exam; above Beginner needs Pro and coins (Jonathan, 18 Oct).
             const proLocked = invite.level !== "Beginner" && !isPro;
             const unlockAndStart = async () => {
               if (proLocked) { setInvite(null); router.push("/paywall" as any); return; }
@@ -632,7 +635,7 @@ export default function Quiz() {
                   <>
                     <Pressable style={styles.inviteBtn} onPress={unlockAndStart} disabled={inviteBusy} accessibilityRole="button">
                       <Text style={styles.inviteBtnText}>
-                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : `Unlock & start exam — ${EXAM_COIN_COST} 🪙`}
+                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : `Unlock & start exam — ${examCoinCost(invite.level)} 🪙`}
                       </Text>
                     </Pressable>
                     <Pressable onPress={() => setInvite(null)} accessibilityRole="button">
