@@ -6,85 +6,86 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, {
   Easing, cancelAnimation, useAnimatedStyle, useReducedMotion, useSharedValue,
-  withDelay, withRepeat, withTiming, type SharedValue,
+  withDelay, withTiming, type SharedValue,
 } from "react-native-reanimated";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, getQuizHistory } from "../lib/progress";
 
 /**
- * Home (1.2.3, design locked 18 Oct 2026).
+ * Home (1.2.3). Wordmark, tagline, description and one Continue button,
+ * centred above the tab bar.
  *
- * Wordmark, tagline, description and one Continue button, centred above the
- * tab bar. The reels and Choose All for Me moved to the Verbs tab; Mini-Courses
- * and Vocabulary are reached from their tabs.
+ * Entrance (approved 18 Oct 2026, replacing the wordmark turn): the eleven
+ * letters of "Conjugately" fly in from different directions, spinning and
+ * settling with a small overshoot, in a scattered arrival order; a soft glow
+ * pulses as the last one lands. The tagline keeps its agreed build:
+ * de → French → suite! → tout (which drops in from above).
+ * Plays once each time Home appears. Timings match the approved browser
+ * sample ("Conjugately Letter Assembly"). Reduce Motion: shown still.
  *
- * Animation: one 9 s clock drives everything, so the wordmark turn and the
- * tagline build can never drift apart. Keyframes are the mock-up's
- * (Main.dc.html: cj-turn, cj-glow, cj-de, cj-french, cj-suite, cj-tout),
- * with each segment eased as CSS eases a keyframe segment.
+ * One clock (milliseconds since the entrance began) drives every piece.
  */
 
-const CYCLE_MS = 9000;
-const FIRST_RUN_DELAY_MS = 600;
-const TURN_EASE = Easing.bezierFn(0.65, 0, 0.35, 1);
-const GLOW_EASE = Easing.bezierFn(0.42, 0, 0.58, 1); // CSS ease-in-out
-const WORD_EASE = Easing.bezierFn(0.22, 1, 0.36, 1);
-const WEB = Platform.OS === "web";
+const START_DELAY_MS = 400;
+const TOTAL_MS = 2100;
+const EASE = Easing.bezierFn(0.22, 1, 0.36, 1);
+const GLOW_EASE = Easing.bezierFn(0.42, 0, 0.58, 1);
 
-/** Value at time t (0..1) for keyframes `stops` → `vals`, easing each segment. */
-function kf(t: number, stops: number[], vals: number[], ease: (x: number) => number): number {
+/** Value at progress p (0..1) for keyframes `stops` → `vals`, easing each segment. */
+function kf(p: number, stops: number[], vals: number[], ease: (x: number) => number): number {
   "worklet";
-  if (t <= stops[0]) return vals[0];
+  if (p <= stops[0]) return vals[0];
   for (let i = 0; i < stops.length - 1; i++) {
-    if (t <= stops[i + 1]) {
+    if (p <= stops[i + 1]) {
       const span = stops[i + 1] - stops[i];
-      const p = span > 0 ? (t - stops[i]) / span : 1;
-      return vals[i] + (vals[i + 1] - vals[i]) * ease(p);
+      const q = span > 0 ? (p - stops[i]) / span : 1;
+      return vals[i] + (vals[i + 1] - vals[i]) * ease(q);
     }
   }
   return vals[vals.length - 1];
 }
+/** 0..1 progress of a piece that starts at `delay` and lasts `dur` (ms). */
+function prog(ms: number, delay: number, dur: number): number {
+  "worklet";
+  return Math.min(1, Math.max(0, (ms - delay) / dur));
+}
 
-type WordSpec = { stops: number[]; y: number[]; op: number[]; blur: number[] };
-const OUT = [0.94, 0.985, 1];
-const rise = (start: number, peak: number, settle: number): WordSpec => ({
-  stops: [0, ...(start > 0 ? [start] : []), peak, settle, ...OUT],
-  y: [1.05, ...(start > 0 ? [1.05] : []), -0.07, 0, 0, -1.05, -1.05],
-  op: [0, ...(start > 0 ? [0] : []), 1, 1, 1, 0, 0],
-  blur: [3, ...(start > 0 ? [3] : []), 0, 0, 0, 2, 2],
-});
-const W_DE = rise(0, 0.026, 0.036);
-const W_FRENCH = rise(0.028, 0.054, 0.064);
-const W_SUITE = rise(0.056, 0.082, 0.092);
-// "tout" drops in from above, landing as the turn completes.
-const W_TOUT: WordSpec = {
-  stops: [0, 0.084, 0.112, 0.124, ...OUT],
-  y: [-1.05, -1.05, 0.07, 0, 0, -1.05, -1.05],
-  op: [0, 0, 1, 1, 1, 0, 0],
-  blur: [3, 3, 0, 0, 0, 2, 2],
-};
+const LETTERS: { ch: string; color: string }[] = [
+  { ch: "C", color: "#7FA8EC" }, { ch: "o", color: "#7FA8EC" }, { ch: "n", color: "#7FA8EC" },
+  { ch: "j", color: "#EC9A9A" },
+  { ch: "u", color: "#F5F6F8" }, { ch: "g", color: "#F5F6F8" }, { ch: "a", color: "#F5F6F8" }, { ch: "t", color: "#F5F6F8" },
+  { ch: "e", color: "#EC9A9A" }, { ch: "l", color: "#EC9A9A" }, { ch: "y", color: "#EC9A9A" },
+];
+// Well-spread starting directions (degrees), so neighbouring letters never come from the same side.
+const DIRS = [200, 20, 290, 110, 335, 155, 245, 65, 180, 310, 90];
+// Arrival order (not left to right).
+const ORDER = [5, 0, 8, 3, 10, 1, 6, 9, 2, 7, 4];
+const LETTER_STAGGER_MS = 55;
+const LETTER_MS = 820;
+const GLOW_DELAY_MS = 1150;
+const GLOW_MS = 900;
+
+type WordSpec = { delay: number; fromTop?: boolean };
+const WORD_MS = 330;
 
 type Resume =
   | { kind: "first" }
   | { kind: "returning"; line: string; params: Record<string, string> };
 
 export default function Home() {
-  const [fontsLoaded] = useFonts({ DancingScript_600SemiBold });
+  // Dancing Script is embedded at build time (app.json expo-font plugin);
+  // useFonts keeps the web twin working.
+  useFonts({ DancingScript_600SemiBold });
   const insets = useSafeAreaInsets();
   const reduceMotion = useReducedMotion();
-  const t = useSharedValue(0);
+  const ms = useSharedValue(0);
   const [resume, setResume] = useState<Resume | null>(null);
 
   useEffect(() => {
-    if (reduceMotion) {
-      // Mid-cycle: wordmark face-on, glow off, the whole tagline settled.
-      t.value = 0.5;
-      return;
-    }
-    t.value = 0;
-    t.value = withDelay(FIRST_RUN_DELAY_MS,
-      withRepeat(withTiming(1, { duration: CYCLE_MS, easing: Easing.linear }), -1, false));
-    return () => cancelAnimation(t);
+    if (reduceMotion) { ms.value = TOTAL_MS; return; }
+    ms.value = 0;
+    ms.value = withDelay(START_DELAY_MS, withTiming(TOTAL_MS, { duration: TOTAL_MS, easing: Easing.linear }));
+    return () => cancelAnimation(ms);
   }, [reduceMotion]);
 
   // Continue: same destination as Journey's "Next step" when a course is under
@@ -131,8 +132,8 @@ export default function Home() {
     <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={[styles.center, { paddingTop: insets.top }]}>
-        <Wordmark t={t} />
-        <Tagline t={t} fontsLoaded={fontsLoaded} />
+        <Wordmark ms={ms} />
+        <Tagline ms={ms} />
         <Text style={styles.blurb}>
           {"Master French verb conjugations—\nthe key to fluency."}
         </Text>
@@ -153,32 +154,12 @@ export default function Home() {
   );
 }
 
-function WordmarkText() {
-  return (
-    <Text style={styles.h1}>
-      <Text style={{ color: "#7FA8EC" }}>Con</Text>
-      <Text style={{ color: "#EC9A9A" }}>j</Text>
-      <Text style={{ color: "#F5F6F8" }}>ugat</Text>
-      <Text style={{ color: "#EC9A9A" }}>ely</Text>
-    </Text>
-  );
-}
-
-/** Two faces, backface hidden, so the lettering is never seen mirrored. */
-function Wordmark({ t }: { t: SharedValue<number> }) {
-  const front = useAnimatedStyle(() => {
-    const a = kf(t.value, [0, 0.14, 1], [0, 360, 360], TURN_EASE);
-    return { transform: [{ perspective: 900 }, { rotateY: `${a}deg` }] };
-  });
-  const back = useAnimatedStyle(() => {
-    const a = kf(t.value, [0, 0.14, 1], [0, 360, 360], TURN_EASE);
-    return { transform: [{ perspective: 900 }, { rotateY: `${a + 180}deg` }] };
-  });
+function Wordmark({ ms }: { ms: SharedValue<number> }) {
   const glow = useAnimatedStyle(() => ({
-    opacity: kf(t.value, [0, 0.07, 0.16, 1], [0, 0.55, 0, 0], GLOW_EASE),
+    opacity: kf(prog(ms.value, GLOW_DELAY_MS, GLOW_MS), [0, 0.35, 1], [0, 0.55, 0], GLOW_EASE),
   }));
   return (
-    <View style={styles.markWrap}>
+    <View style={styles.markWrap} accessible accessibilityRole="header" accessibilityLabel="Conjugately">
       <Animated.View pointerEvents="none" style={[styles.glowBox, glow]}
         accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
         <View style={styles.glowOval}>
@@ -187,46 +168,62 @@ function Wordmark({ t }: { t: SharedValue<number> }) {
           ))}
         </View>
       </Animated.View>
-      <Animated.View style={[styles.face, front]} accessible accessibilityLabel="Conjugately">
-        <WordmarkText />
-      </Animated.View>
-      <Animated.View style={[styles.face, styles.faceBack, back]}
-        accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-        <WordmarkText />
-      </Animated.View>
+      <View style={styles.markRow} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
+        {LETTERS.map((l, i) => <Letter key={i} ms={ms} index={i} ch={l.ch} color={l.color} />)}
+      </View>
     </View>
   );
+}
+
+function Letter({ ms, index, ch, color }: { ms: SharedValue<number>; index: number; ch: string; color: string }) {
+  const rad = (DIRS[index] * Math.PI) / 180;
+  const dist = 230 + (index % 3) * 45;
+  const x = Math.cos(rad) * dist;
+  const y = Math.sin(rad) * dist * 0.9;
+  const rot = (index % 2 ? 1 : -1) * (120 + ((index * 37) % 120));
+  const delay = ORDER.indexOf(index) * LETTER_STAGGER_MS;
+  const style = useAnimatedStyle(() => {
+    const p = prog(ms.value, delay, LETTER_MS);
+    const S = [0, 0.75, 1];
+    return {
+      opacity: kf(p, S, [0, 1, 1], EASE),
+      transform: [
+        { translateX: kf(p, S, [x, -x * 0.04, 0], EASE) },
+        { translateY: kf(p, S, [y, -y * 0.04, 0], EASE) },
+        { rotate: `${kf(p, S, [rot, -rot * 0.04, 0], EASE)}deg` },
+        { scale: kf(p, S, [0.4, 1.06, 1], EASE) },
+      ],
+    };
+  });
+  return <Animated.Text style={[styles.h1, { color }, style]}>{ch}</Animated.Text>;
 }
 
 // Stacked translucent circles, squashed to an oval: a radial glow without a
-// gradient library (closest-side, rgba(127,160,238,0.55) → 0 in the mock-up).
+// gradient library.
 const GLOW_RINGS = [260, 228, 196, 164, 132, 100, 68, 36];
 
 /** Each word in its own clipped slot, built out of order: de, French, suite!, tout. */
-function Tagline({ t, fontsLoaded }: { t: SharedValue<number>; fontsLoaded: boolean }) {
+function Tagline({ ms }: { ms: SharedValue<number> }) {
   return (
     <View style={styles.tagRow} accessible accessibilityRole="text" accessibilityLabel="French tout de suite!">
-      <Word t={t} spec={W_FRENCH} text="French" fontsLoaded={fontsLoaded} />
-      <Word t={t} spec={W_TOUT} text="tout" fontsLoaded={fontsLoaded} />
-      <Word t={t} spec={W_DE} text="de" fontsLoaded={fontsLoaded} />
-      <Word t={t} spec={W_SUITE} text="suite!" fontsLoaded={fontsLoaded} />
+      <Word ms={ms} spec={{ delay: 550 }} text="French" />
+      <Word ms={ms} spec={{ delay: 1060, fromTop: true }} text="tout" />
+      <Word ms={ms} spec={{ delay: 300 }} text="de" />
+      <Word ms={ms} spec={{ delay: 800 }} text="suite!" />
     </View>
   );
 }
 
-function Word({ t, spec, text, fontsLoaded }: {
-  t: SharedValue<number>; spec: WordSpec; text: string; fontsLoaded: boolean;
-}) {
+function Word({ ms, spec, text }: { ms: SharedValue<number>; spec: WordSpec; text: string }) {
   const h = useSharedValue(36);
+  const dir = spec.fromTop ? -1 : 1;
   const style = useAnimatedStyle(() => {
-    const s: any = {
-      opacity: kf(t.value, spec.stops, spec.op, WORD_EASE),
-      transform: [{ translateY: kf(t.value, spec.stops, spec.y, WORD_EASE) * h.value }],
+    const p = prog(ms.value, spec.delay, WORD_MS);
+    const S = [0, 0.72, 1];
+    return {
+      opacity: kf(p, S, [0, 1, 1], EASE),
+      transform: [{ translateY: kf(p, S, [1.05 * dir, -0.07 * dir, 0], EASE) * h.value }],
     };
-    // Blurred → sharp on the web twin. iOS has no per-view blur filter in RN,
-    // so on device the entrance is the rise + fade alone.
-    if (WEB) s.filter = `blur(${kf(t.value, spec.stops, spec.blur, WORD_EASE)}px)`;
-    return s;
   });
   const onLayout = (e: LayoutChangeEvent) => { h.value = e.nativeEvent.layout.height; };
   return (
@@ -243,8 +240,7 @@ const styles = StyleSheet.create({
   center: { flex: 1, alignItems: "center", justifyContent: "center",
     paddingHorizontal: 16, paddingBottom: 90 },
   markWrap: { alignItems: "center", justifyContent: "center", marginBottom: 8 },
-  face: { backfaceVisibility: "hidden" },
-  faceBack: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
+  markRow: { flexDirection: "row" },
   glowBox: { position: "absolute", width: 260, height: 60, alignItems: "center", justifyContent: "center" },
   glowOval: { width: 260, height: 260, alignItems: "center", justifyContent: "center",
     transform: [{ scaleY: 60 / 260 }] },
@@ -252,20 +248,16 @@ const styles = StyleSheet.create({
   h1: { fontSize: 40, fontWeight: "700", textAlign: "center" },
   // Each word rolls inside its own clipped slot. On iOS, Dancing Script's
   // swashes (the F, the !) overhang the Text box, so the slot needs real room
-  // or the glyph edges are cut off (build 43 defect). The extra padding is
-  // taken back out with negative margins, so word spacing and the tagline's
-  // position are unchanged.
+  // or the glyph edges are cut off. The extra padding is taken back out with
+  // negative margins, so word spacing and the tagline's position are unchanged.
   tagRow: { flexDirection: "row", justifyContent: "center", gap: 5,
     marginTop: -10, marginBottom: 8 },
   slot: { overflow: "hidden", paddingTop: 10, paddingBottom: 12, paddingHorizontal: 10,
     marginHorizontal: -8.5 },
-  // Dancing Script is embedded at build time (expo-font plugin in app.json), so
-  // it exists from launch on device. iOS addresses an embedded font by its
-  // PostScript name; the web twin uses the useFonts alias. (Build 43 showed the
-  // system font: it waited on a runtime "loaded" flag that never arrived.)
+  // Dancing Script is embedded at build time; iOS addresses an embedded font by
+  // its PostScript name, the web twin by the useFonts alias.
   cursive: { color: "#FFFFFF", fontSize: 26,
     fontFamily: Platform.select({ ios: "DancingScript-SemiBold", default: "DancingScript_600SemiBold" }) },
-  // Inset a further 10 each side (1.2.3).
   blurb: { color: "#CBD6F5", fontSize: 16, textAlign: "center", lineHeight: 25,
     paddingHorizontal: 10 },
   continueBtn: { marginTop: 18, minHeight: 58, paddingVertical: 8, paddingHorizontal: 24,
