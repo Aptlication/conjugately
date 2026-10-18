@@ -8,7 +8,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
-import { usePro } from "../lib/pro";
+import { purchasesAvailable, usePro } from "../lib/pro";
+import { getConversation } from "../lib/conversations";
 import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
 import { normaliseFrench, similarity } from "@shared/answerMatch";
 import { Ionicons } from "@expo/vector-icons";
@@ -122,10 +123,34 @@ export default function Quiz() {
   const [inviteBusy, setInviteBusy] = useState(false);
   const inviteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => () => { if (inviteTimer.current) clearTimeout(inviteTimer.current); }, []);
+  // 1.2.1: the "Final conversation" offered after a course unit. Asked once per
+  // finished quiz, after the coins have landed and any exam invitation is closed.
+  const [convoAsk, setConvoAsk] = useState(false);
+  const convoAskedRef = useRef(false);
   const courseLevel = courseKey ? courseKey.split("|")[0] : "";
   const courseTimeFrame = courseKey ? courseKey.split("|")[1] : "";
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const cancelAutoAdvance = () => { if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; } };
+  const conversation = courseKey && unitIndex !== undefined && !exam
+    ? getConversation(courseLevel, courseTimeFrame, verb) : undefined;
+  // A Pro feature. Where there is no store (the web staging build) it is open,
+  // so the flow can be checked there.
+  const convoLocked = !isPro && purchasesAvailable();
+  const openConversation = () => {
+    setConvoAsk(false);
+    if (convoLocked) { router.push("/paywall" as any); return; }
+    router.push({ pathname: "/conversation" as any, params: { level: courseLevel, timeFrame: courseTimeFrame, verb } });
+  };
+  useEffect(() => {
+    if (state !== "done" || !conversation || !award || invite || convoAskedRef.current) return;
+    const t = setTimeout(() => {
+      if (convoAskedRef.current) return;
+      convoAskedRef.current = true;
+      setConvoAsk(true);
+    }, 2800);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, award, invite, !!conversation]);
   const goHome = () => { cancelAutoAdvance(); if (router.canGoBack()) router.back(); else router.replace("/"); };
 
   const q = questions[idx];
@@ -176,6 +201,7 @@ export default function Quiz() {
     n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
 
   const load = async () => {
+    convoAskedRef.current = false; setConvoAsk(false);
     setState("loading"); setIdx(0); setSelected(null); setConfirmed(false);
     setAnswers({}); setAnswerUrl(null); setAward(null);
     if (exam) {
@@ -604,6 +630,14 @@ export default function Quiz() {
                 locked={courseLevel !== "Beginner" && !isPro}
                 refreshKey={award.balance} celebrate />
             )}
+            {conversation && (
+              <Pressable style={styles.convoBtn} onPress={openConversation} accessibilityRole="button"
+                accessibilityLabel={convoLocked ? "Final conversation, requires Conjugately Pro" : "Final conversation"}>
+                <Ionicons name="chatbubbles" size={18} color="#1B2145" />
+                <Text style={styles.convoBtnText}>Final conversation</Text>
+                <View style={styles.proPill}><Text style={styles.proPillText}>PRO</Text></View>
+              </Pressable>
+            )}
             <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={load}><Text style={[styles.ghostText, styles.ghostTextNavy]}>Try Again</Text></Pressable>
             <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={goHome}><Text style={[styles.ghostText, styles.ghostTextNavy]}>← Back to Quiz Setup</Text></Pressable>
           </View>
@@ -650,6 +684,31 @@ export default function Quiz() {
               </View>
             );
           })()}
+        </View>
+      </Modal>
+
+      <Modal visible={convoAsk && !invite} transparent animationType="fade" onRequestClose={() => setConvoAsk(false)}>
+        <View style={styles.modalBg}>
+          {conversation && (
+            <View style={styles.modalCard} accessibilityViewIsModal>
+              <View style={styles.convoIcon}><Ionicons name="chatbubbles" size={28} color="#FFFFFF" /></View>
+              <Text style={styles.modalTitle}>Final conversation</Text>
+              <Text style={styles.modalSub}>
+                A 20-second chat using <Text style={{ fontWeight: "800" }}>{conversation.verb}</Text> in the {conversation.tense.toLowerCase()}. Listen, then answer out loud.
+              </Text>
+              {convoLocked && (
+                <View style={[styles.proPill, { alignSelf: "center", marginBottom: 12 }]}>
+                  <Text style={styles.proPillText}>CONJUGATELY PRO</Text>
+                </View>
+              )}
+              <Pressable style={styles.convoContinue} onPress={openConversation} accessibilityRole="button">
+                <Text style={styles.convoContinueText}>{convoLocked ? "Continue with Pro" : "Continue"}</Text>
+              </Pressable>
+              <Pressable onPress={() => setConvoAsk(false)} accessibilityRole="button">
+                <Text style={styles.tipLink}>Opt out</Text>
+              </Pressable>
+            </View>
+          )}
         </View>
       </Modal>
 
@@ -770,6 +829,16 @@ const styles = StyleSheet.create({
   resultScore: { color: "#3A4354", fontSize: 44, fontWeight: "700", textAlign: "center" },
   resultPct: { color: "#17734A", fontSize: 22, fontWeight: "600", textAlign: "center", marginBottom: 8 },
   resultMsg: { color: "#5A6472", fontSize: 16, textAlign: "center", marginBottom: 10 },
+  convoBtn: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8,
+    backgroundColor: "#F5F6F8", borderRadius: 14, paddingVertical: 14, marginTop: 14, marginBottom: 4 },
+  convoBtnText: { color: "#1B2145", fontSize: 16, fontWeight: "800" },
+  proPill: { backgroundColor: "#F5C518", borderRadius: 8, paddingVertical: 2, paddingHorizontal: 7 },
+  proPillText: { color: "#1B2145", fontSize: 11, fontWeight: "900", letterSpacing: 0.6 },
+  convoIcon: { width: 56, height: 56, borderRadius: 28, backgroundColor: "#7FA8EC", alignSelf: "center",
+    alignItems: "center", justifyContent: "center", marginBottom: 12 },
+  convoContinue: { backgroundColor: "#7FA8EC", borderWidth: 1, borderColor: "#A3BCF4", borderRadius: 26,
+    height: 52, alignItems: "center", justifyContent: "center", marginBottom: 6 },
+  convoContinueText: { color: "#FFFFFF", fontSize: 17, fontWeight: "800" },
   modalBg: { flex: 1, backgroundColor: "rgba(0,0,0,0.7)", justifyContent: "center", padding: 24 },
   modalCard: { backgroundColor: "#FFFFFF", borderWidth: 1,
     borderColor: "#E3E6EA", borderRadius: 18, padding: 20 },

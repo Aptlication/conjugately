@@ -1,0 +1,289 @@
+﻿file,conversation,voice,level,verb,tense,line,french,english
+BEG_etre_pres_1.mp3,BEG_etre_pres,Audrey,BEG,être,Présent,1,Bonjour ! Tu es étudiant ?,Hello! Are you a student?
+BEG_etre_pres_3.mp3,BEG_etre_pres,Audrey,BEG,être,Présent,3,"Et ton ami, il est où ?","And your friend, where is he?"
+BEG_etre_pres_5.mp3,BEG_etre_pres,Audrey,BEG,être,Présent,5,"Super. Moi, je suis au café !",Great. I'm at the café!
+BEG_etre_pc_1.mp3,BEG_etre_pc,Voix grand père,BEG,être,Passé composé,1,Tu as été malade hier ?,Were you ill yesterday?
+BEG_etre_pc_3.mp3,BEG_etre_pc,Voix grand père,BEG,être,Passé composé,3,"Et vous, vous avez été en retard ce matin ?","And you all, were you late this morning?"
+BEG_etre_pc_5.mp3,BEG_etre_pc,Voix grand père,BEG,être,Passé composé,5,Ce n'est pas grave !,That's all right!
+BEG_etre_fut_1.mp3,BEG_etre_fut,David Vautrin - Tech Narrator,BEG,être,Futur simple,1,Tu seras à Paris demain ?,Will you be in Paris tomorrow?
+BEG_etre_fut_3.mp3,BEG_etre_fut,David Vautrin - Tech Narrator,BEG,être,Futur simple,3,"Et tes parents, ils seront là aussi ?","And your parents, will they be there too?"
+BEG_etre_fut_5.mp3,BEG_etre_fut,David Vautrin - Tech Narrator,BEG,être,Futur simple,5,Bon voyage !,Have a good trip!
+BEG_avoir_pres_1.mp3,BEG_avoir_pres,Maxime - Dynamic and Natural,BEG,avoir,Présent,1,Tu as un chien ?,Do you have a dog?
+BEG_avoir_pres_3.mp3,BEG_avoir_pres,Maxime - Dynamic and Natural,BEG,avoir,Présent,3,"Et ta sœur, elle a un chat ?","And your sister, does she have a cat?"
+BEG_avoir_pres_5.mp3,BEG_avoir_pres,Maxime - Dynamic and Natural,BEG,avoir,Présent,5,Quelle famille !,What a family!
+BEG_avoir_pc_1.mp3,BEG_avoir_pc,Cécile - Interactive Customer Support,BEG,avoir,Passé composé,1,Tu as eu un cadeau pour ton anniversaire ?,Did you get a present for your birthday?
+BEG_avoir_pc_3.mp3,BEG_avoir_pc,Cécile - Interactive Customer Support,BEG,avoir,Passé composé,3,"Et ton frère, il a eu un cadeau aussi ?","And your brother, did he get a present too?"
+BEG_avoir_pc_5.mp3,BEG_avoir_pc,Cécile - Interactive Customer Support,BEG,avoir,Passé composé,5,Quelle chance !,How lucky!
+BEG_avoir_fut_1.mp3,BEG_avoir_fut,Audrey,BEG,avoir,Futur simple,1,Tu auras le temps demain ?,Will you have time tomorrow?
+BEG_avoir_fut_3.mp3,BEG_avoir_fut,Audrey,BEG,avoir,Futur simple,3,"Et Paul, il aura le temps aussi ?","And Paul, will he have time too?"
+BEG_avoir_fut_5.mp3,BEG_avoir_fut,Audrey,BEG,avoir,Futur simple,5,"D'accord, à demain !","OK, see you tomorrow!"
+BEG_faire_pres_1.mp3,BEG_faire_pres,Voix grand père,BEG,faire,Présent,1,Qu'est-ce que tu fais ce soir ?,What are you doing tonight?
+BEG_faire_pres_3.mp3,BEG_faire_pres,Voix grand père,BEG,faire,Présent,3,"Et tes amis, qu'est-ce qu'ils font ?","And your friends, what are they doing?"
+BEG_faire_pres_5.mp3,BEG_faire_pres,Voix grand père,BEG,faire,Présent,5,Bon courage à tous !,"Good luck, everyone!"
+BEG_faire_pc_1.mp3,BEG_faire_pc,David Vautrin - Tech Narrator,BEG,faire,Passé composé,1,Qu'est-ce que tu as fait hier ?,What did you do yesterday?
+BEG_faire_pc_3.mp3,BEG_faire_pc,David Vautrin - Tech Narrator,BEG,faire,Passé composé,3,"Et ta mère, qu'est-ce qu'elle a fait ?","And your mother, what did she do?"
+BEG_faire_pc_5.mp3,BEG_faire_pc,David Vautrin - Tech Narrator,BEG,faire,Passé composé,5,"Miam, très bien !","Yum, lovely!"
+BEG_faire_fut_1.mp3,BEG_faire_fut,Maxime - Dynamic and Natural,BEG,faire,Futur simple,1,Qu'est-ce que tu feras samedi ?,What will you do on Saturday?
+BEG_faire_fut_3.mp3,BEG_faire_fut,Maxime - Dynamic and Natural,BEG,faire,Futur simple,3,"Et dimanche, vous ferez du sport ?","And on Sunday, will you all do some sport?"
+BEG_faire_fut_5.mp3,BEG_faire_fut,Maxime - Dynamic and Natural,BEG,faire,Futur simple,5,Excellent !,Excellent!
+NOV_etre_pres_1.mp3,NOV_etre_pres,Cécile - Interactive Customer Support,NOV,être,Présent,1,Vous êtes français ?,Are you French?
+NOV_etre_pres_3.mp3,NOV_etre_pres,Cécile - Interactive Customer Support,NOV,être,Présent,3,Et vous êtes ici en vacances ?,And are you here on holiday?
+NOV_etre_pres_5.mp3,NOV_etre_pres,Cécile - Interactive Customer Support,NOV,être,Présent,5,Bienvenue en France !,Welcome to France!
+NOV_etre_pc_1.mp3,NOV_etre_pc,Audrey,NOV,être,Passé composé,1,Tu as été en Italie cet été ?,Have you been to Italy this summer?
+NOV_etre_pc_3.mp3,NOV_etre_pc,Audrey,NOV,être,Passé composé,3,Et vous avez été contents du voyage ?,And were you happy with the trip?
+NOV_etre_pc_5.mp3,NOV_etre_pc,Audrey,NOV,être,Passé composé,5,Ça me fait plaisir !,I'm glad to hear it!
+NOV_etre_fut_1.mp3,NOV_etre_fut,Voix grand père,NOV,être,Futur simple,1,Vous serez à la fête ce soir ?,Will you be at the party tonight?
+NOV_etre_fut_3.mp3,NOV_etre_fut,Voix grand père,NOV,être,Futur simple,3,"Et Julie, elle sera là aussi ?","And Julie, will she be there too?"
+NOV_etre_fut_5.mp3,NOV_etre_fut,Voix grand père,NOV,être,Futur simple,5,Dommage ! À ce soir.,Shame! See you tonight.
+NOV_avoir_pres_1.mp3,NOV_avoir_pres,David Vautrin - Tech Narrator,NOV,avoir,Présent,1,Vous avez des enfants ?,Do you have children?
+NOV_avoir_pres_3.mp3,NOV_avoir_pres,David Vautrin - Tech Narrator,NOV,avoir,Présent,3,Ils ont quel âge ?,How old are they?
+NOV_avoir_pres_5.mp3,NOV_avoir_pres,David Vautrin - Tech Narrator,NOV,avoir,Présent,5,Quel bel âge !,What a lovely age!
+NOV_avoir_pc_1.mp3,NOV_avoir_pc,Maxime - Dynamic and Natural,NOV,avoir,Passé composé,1,Tu as eu peur pendant le film ?,Were you scared during the film?
+NOV_avoir_pc_3.mp3,NOV_avoir_pc,Maxime - Dynamic and Natural,NOV,avoir,Passé composé,3,"Et tes amis, ils ont eu peur aussi ?","And your friends, were they scared too?"
+NOV_avoir_pc_5.mp3,NOV_avoir_pc,Maxime - Dynamic and Natural,NOV,avoir,Passé composé,5,Ils sont courageux !,They're brave!
+NOV_avoir_fut_1.mp3,NOV_avoir_fut,Cécile - Interactive Customer Support,NOV,avoir,Futur simple,1,Tu auras ton permis cette année ?,Will you get your driving licence this year?
+NOV_avoir_fut_3.mp3,NOV_avoir_fut,Cécile - Interactive Customer Support,NOV,avoir,Futur simple,3,"Et ta sœur, elle aura une voiture ?","And your sister, will she have a car?"
+NOV_avoir_fut_5.mp3,NOV_avoir_fut,Cécile - Interactive Customer Support,NOV,avoir,Futur simple,5,Bonne route !,Safe driving!
+NOV_faire_pres_1.mp3,NOV_faire_pres,Audrey,NOV,faire,Présent,1,Il fait beau aujourd'hui ?,Is the weather nice today?
+NOV_faire_pres_3.mp3,NOV_faire_pres,Audrey,NOV,faire,Présent,3,"Alors, qu'est-ce que vous faites ?","So, what are you doing?"
+NOV_faire_pres_5.mp3,NOV_faire_pres,Audrey,NOV,faire,Présent,5,Bonne idée !,Good idea!
+NOV_faire_pc_1.mp3,NOV_faire_pc,Voix grand père,NOV,faire,Passé composé,1,Vous avez fait bon voyage ?,Did you have a good trip?
+NOV_faire_pc_3.mp3,NOV_faire_pc,Voix grand père,NOV,faire,Passé composé,3,"Et ce matin, qu'est-ce que vous avez fait ?","And this morning, what did you do?"
+NOV_faire_pc_5.mp3,NOV_faire_pc,Voix grand père,NOV,faire,Passé composé,5,Parfait !,Perfect!
+NOV_faire_fut_1.mp3,NOV_faire_fut,David Vautrin - Tech Narrator,NOV,faire,Futur simple,1,Qu'est-ce que vous ferez cet été ?,What will you do this summer?
+NOV_faire_fut_3.mp3,NOV_faire_fut,David Vautrin - Tech Narrator,NOV,faire,Futur simple,3,"Et ton fils, il fera le voyage aussi ?","And your son, will he come on the trip too?"
+NOV_faire_fut_5.mp3,NOV_faire_fut,David Vautrin - Tech Narrator,NOV,faire,Futur simple,5,Bonnes vacances !,Have a good holiday!
+NOV_aller_pres_1.mp3,NOV_aller_pres,Maxime - Dynamic and Natural,NOV,aller,Présent,1,Où est-ce que tu vas ?,Where are you going?
+NOV_aller_pres_3.mp3,NOV_aller_pres,Maxime - Dynamic and Natural,NOV,aller,Présent,3,Tes amis vont avec toi ?,Are your friends going with you?
+NOV_aller_pres_5.mp3,NOV_aller_pres,Maxime - Dynamic and Natural,NOV,aller,Présent,5,À tout à l'heure !,See you later!
+NOV_aller_pc_1.mp3,NOV_aller_pc,Cécile - Interactive Customer Support,NOV,aller,Passé composé,1,Tu es allé au cinéma hier ?,Did you go to the cinema yesterday?
+NOV_aller_pc_3.mp3,NOV_aller_pc,Cécile - Interactive Customer Support,NOV,aller,Passé composé,3,"Et ta copine, elle est allée avec toi ?","And your girlfriend, did she go with you?"
+NOV_aller_pc_5.mp3,NOV_aller_pc,Cécile - Interactive Customer Support,NOV,aller,Passé composé,5,Chacun son plaisir !,Each to their own!
+NOV_aller_fut_1.mp3,NOV_aller_fut,Audrey,NOV,aller,Futur simple,1,Tu iras à la plage demain ?,Will you go to the beach tomorrow?
+NOV_aller_fut_3.mp3,NOV_aller_fut,Audrey,NOV,aller,Futur simple,3,"Et vous, vous irez en voiture ?","And you all, will you go by car?"
+NOV_aller_fut_5.mp3,NOV_aller_fut,Audrey,NOV,aller,Futur simple,5,Bonne journée !,Have a nice day!
+ELE_dire_pres_1.mp3,ELE_dire_pres,Voix grand père,ELE,dire,Présent,1,Comment est-ce qu'on dit « thank you » en français ?,"How do you say ""thank you"" in French?"
+ELE_dire_pres_3.mp3,ELE_dire_pres,Voix grand père,ELE,dire,Présent,3,"Et toi, tu dis bonjour à tes voisins ?","And you, do you say hello to your neighbours?"
+ELE_dire_pres_5.mp3,ELE_dire_pres,Voix grand père,ELE,dire,Présent,5,C'est très poli !,That's very polite!
+ELE_dire_pc_1.mp3,ELE_dire_pc,David Vautrin - Tech Narrator,ELE,dire,Passé composé,1,Qu'est-ce que tu as dit à Marie ?,What did you say to Marie?
+ELE_dire_pc_3.mp3,ELE_dire_pc,David Vautrin - Tech Narrator,ELE,dire,Passé composé,3,"Et elle, qu'est-ce qu'elle a dit ?",And what did she say?
+ELE_dire_pc_5.mp3,ELE_dire_pc,David Vautrin - Tech Narrator,ELE,dire,Passé composé,5,Ah bon ? Vous ne vous êtes pas dit grand-chose !,Really? You didn't say much to each other!
+ELE_dire_fut_1.mp3,ELE_dire_fut,Maxime - Dynamic and Natural,ELE,dire,Futur simple,1,Tu diras la vérité à ta mère ?,Will you tell your mother the truth?
+ELE_dire_fut_3.mp3,ELE_dire_fut,Maxime - Dynamic and Natural,ELE,dire,Futur simple,3,"Et ton frère, il dira quoi ?","And your brother, what will he say?"
+ELE_dire_fut_5.mp3,ELE_dire_fut,Maxime - Dynamic and Natural,ELE,dire,Futur simple,5,Sage décision !,Wise choice!
+ELE_voir_pres_1.mp3,ELE_voir_pres,Cécile - Interactive Customer Support,ELE,voir,Présent,1,Tu vois la tour Eiffel d'ici ?,Can you see the Eiffel Tower from here?
+ELE_voir_pres_3.mp3,ELE_voir_pres,Cécile - Interactive Customer Support,ELE,voir,Présent,3,"Et vous, vous voyez la Seine ?","And you all, can you see the Seine?"
+ELE_voir_pres_5.mp3,ELE_voir_pres,Cécile - Interactive Customer Support,ELE,voir,Présent,5,"Montez plus haut, alors !","Go higher up, then!"
+ELE_voir_pc_1.mp3,ELE_voir_pc,Audrey,ELE,voir,Passé composé,1,Tu as vu le match hier soir ?,Did you see the match last night?
+ELE_voir_pc_3.mp3,ELE_voir_pc,Audrey,ELE,voir,Passé composé,3,"Et tes amis, ils ont vu le match aussi ?","And your friends, did they see the match too?"
+ELE_voir_pc_5.mp3,ELE_voir_pc,Audrey,ELE,voir,Passé composé,5,Chacun ses goûts !,Each to their own!
+ELE_voir_fut_1.mp3,ELE_voir_fut,Voix grand père,ELE,voir,Futur simple,1,Tu verras tes grands-parents ce week-end ?,Will you see your grandparents this weekend?
+ELE_voir_fut_3.mp3,ELE_voir_fut,Voix grand père,ELE,voir,Futur simple,3,"Et ta sœur, elle les verra aussi ?","And your sister, will she see them too?"
+ELE_voir_fut_5.mp3,ELE_voir_fut,Voix grand père,ELE,voir,Futur simple,5,Bon week-end !,Have a good weekend!
+ELE_savoir_pres_1.mp3,ELE_savoir_pres,David Vautrin - Tech Narrator,ELE,savoir,Présent,1,Tu sais nager ?,Can you swim?
+ELE_savoir_pres_3.mp3,ELE_savoir_pres,David Vautrin - Tech Narrator,ELE,savoir,Présent,3,"Et tes enfants, ils savent nager ?","And your children, can they swim?"
+ELE_savoir_pres_5.mp3,ELE_savoir_pres,David Vautrin - Tech Narrator,ELE,savoir,Présent,5,Ils apprendront vite !,They'll learn quickly!
+ELE_savoir_pc_1.mp3,ELE_savoir_pc,Maxime - Dynamic and Natural,ELE,savoir,Passé composé,1,Comment tu as su la nouvelle ?,How did you find out the news?
+ELE_savoir_pc_3.mp3,ELE_savoir_pc,Maxime - Dynamic and Natural,ELE,savoir,Passé composé,3,"Et Marc, il l'a su avant toi ?","And Marc, did he find out before you?"
+ELE_savoir_pc_5.mp3,ELE_savoir_pc,Maxime - Dynamic and Natural,ELE,savoir,Passé composé,5,Les nouvelles vont vite !,News travels fast!
+ELE_savoir_fut_1.mp3,ELE_savoir_fut,Cécile - Interactive Customer Support,ELE,savoir,Futur simple,1,Tu sauras le résultat demain ?,Will you know the result tomorrow?
+ELE_savoir_fut_3.mp3,ELE_savoir_fut,Cécile - Interactive Customer Support,ELE,savoir,Futur simple,3,"Et tes parents, ils le sauront quand ?","And your parents, when will they know?"
+ELE_savoir_fut_5.mp3,ELE_savoir_fut,Cécile - Interactive Customer Support,ELE,savoir,Futur simple,5,Bonne chance !,Good luck!
+ELE_vouloir_pres_1.mp3,ELE_vouloir_pres,Audrey,ELE,vouloir,Présent,1,Tu veux un café ?,Do you want a coffee?
+ELE_vouloir_pres_3.mp3,ELE_vouloir_pres,Audrey,ELE,vouloir,Présent,3,"Et ton ami, il veut un thé ?","And your friend, does he want a tea?"
+ELE_vouloir_pres_5.mp3,ELE_vouloir_pres,Audrey,ELE,vouloir,Présent,5,Tout de suite !,Coming right up!
+ELE_vouloir_pc_1.mp3,ELE_vouloir_pc,Voix grand père,ELE,vouloir,Passé composé,1,Pourquoi tu as voulu partir tôt ?,Why did you want to leave early?
+ELE_vouloir_pc_3.mp3,ELE_vouloir_pc,Voix grand père,ELE,vouloir,Passé composé,3,"Et tes amis, ils ont voulu venir ?","And your friends, did they want to come?"
+ELE_vouloir_pc_5.mp3,ELE_vouloir_pc,Voix grand père,ELE,vouloir,Passé composé,5,Tant pis pour eux !,Their loss!
+ELE_vouloir_fut_1.mp3,ELE_vouloir_fut,David Vautrin - Tech Narrator,ELE,vouloir,Futur simple,1,Qu'est-ce que tu voudras faire à Paris ?,What will you want to do in Paris?
+ELE_vouloir_fut_3.mp3,ELE_vouloir_fut,David Vautrin - Tech Narrator,ELE,vouloir,Futur simple,3,"Et ta copine, elle voudra faire du shopping ?","And your girlfriend, will she want to go shopping?"
+ELE_vouloir_fut_5.mp3,ELE_vouloir_fut,David Vautrin - Tech Narrator,ELE,vouloir,Futur simple,5,Paris vous attend !,Paris is waiting for you!
+ELE_venir_pres_1.mp3,ELE_venir_pres,Maxime - Dynamic and Natural,ELE,venir,Présent,1,Tu viens à la fête samedi ?,Are you coming to the party on Saturday?
+ELE_venir_pres_3.mp3,ELE_venir_pres,Maxime - Dynamic and Natural,ELE,venir,Présent,3,Vos amis viennent aussi ?,Are your friends coming too?
+ELE_venir_pres_5.mp3,ELE_venir_pres,Maxime - Dynamic and Natural,ELE,venir,Présent,5,"Parfait, à samedi !","Perfect, see you Saturday!"
+ELE_venir_pc_1.mp3,ELE_venir_pc,Cécile - Interactive Customer Support,ELE,venir,Passé composé,1,Tu es venu en train ?,Did you come by train?
+ELE_venir_pc_3.mp3,ELE_venir_pc,Cécile - Interactive Customer Support,ELE,venir,Passé composé,3,"Et ta femme, elle est venue avec toi ?","And your wife, did she come with you?"
+ELE_venir_pc_5.mp3,ELE_venir_pc,Cécile - Interactive Customer Support,ELE,venir,Passé composé,5,Bienvenue à tous les deux !,Welcome to you both!
+ELE_venir_fut_1.mp3,ELE_venir_fut,Audrey,ELE,venir,Futur simple,1,Tu viendras me voir à Noël ?,Will you come and see me at Christmas?
+ELE_venir_fut_3.mp3,ELE_venir_fut,Audrey,ELE,venir,Futur simple,3,"Et tes enfants, ils viendront aussi ?","And your children, will they come too?"
+ELE_venir_fut_5.mp3,ELE_venir_fut,Audrey,ELE,venir,Futur simple,5,Quelle joie !,How lovely!
+ELE_pouvoir_pres_1.mp3,ELE_pouvoir_pres,Voix grand père,ELE,pouvoir,Présent,1,Tu peux m'aider ?,Can you help me?
+ELE_pouvoir_pres_3.mp3,ELE_pouvoir_pres,Voix grand père,ELE,pouvoir,Présent,3,Tes amis peuvent venir aussi ?,Can your friends come too?
+ELE_pouvoir_pres_5.mp3,ELE_pouvoir_pres,Voix grand père,ELE,pouvoir,Présent,5,Merci quand même !,Thanks anyway!
+ELE_pouvoir_pc_1.mp3,ELE_pouvoir_pc,David Vautrin - Tech Narrator,ELE,pouvoir,Passé composé,1,Tu as pu finir ton travail ?,Were you able to finish your work?
+ELE_pouvoir_pc_3.mp3,ELE_pouvoir_pc,David Vautrin - Tech Narrator,ELE,pouvoir,Passé composé,3,"Et Sophie, elle a pu venir à la réunion ?","And Sophie, was she able to come to the meeting?"
+ELE_pouvoir_pc_5.mp3,ELE_pouvoir_pc,David Vautrin - Tech Narrator,ELE,pouvoir,Passé composé,5,Dommage pour elle !,Too bad for her!
+ELE_pouvoir_fut_1.mp3,ELE_pouvoir_fut,Maxime - Dynamic and Natural,ELE,pouvoir,Futur simple,1,Tu pourras venir demain ?,Will you be able to come tomorrow?
+ELE_pouvoir_fut_3.mp3,ELE_pouvoir_fut,Maxime - Dynamic and Natural,ELE,pouvoir,Futur simple,3,"Et vous, vous pourrez rester dîner ?","And you all, will you be able to stay for dinner?"
+ELE_pouvoir_fut_5.mp3,ELE_pouvoir_fut,Maxime - Dynamic and Natural,ELE,pouvoir,Futur simple,5,"Une autre fois, alors !","Another time, then!"
+ELE_avoir-besoin-de_pres_1.mp3,ELE_avoir-besoin-de_pres,Cécile - Interactive Customer Support,ELE,avoir besoin de,Présent,1,Tu as besoin d'aide ?,Do you need help?
+ELE_avoir-besoin-de_pres_3.mp3,ELE_avoir-besoin-de_pres,Cécile - Interactive Customer Support,ELE,avoir besoin de,Présent,3,"Et ton voisin, il a besoin de quelque chose ?","And your neighbour, does he need anything?"
+ELE_avoir-besoin-de_pres_5.mp3,ELE_avoir-besoin-de_pres,Cécile - Interactive Customer Support,ELE,avoir besoin de,Présent,5,J'en ai un !,I've got one!
+ELE_avoir-besoin-de_pc_1.mp3,ELE_avoir-besoin-de_pc,Audrey,ELE,avoir besoin de,Passé composé,1,Tu as eu besoin d'un médecin ?,Did you need a doctor?
+ELE_avoir-besoin-de_pc_3.mp3,ELE_avoir-besoin-de_pc,Audrey,ELE,avoir besoin de,Passé composé,3,"Et tes enfants, ils ont eu besoin de médicaments ?","And your children, did they need medicine?"
+ELE_avoir-besoin-de_pc_5.mp3,ELE_avoir-besoin-de_pc,Audrey,ELE,avoir besoin de,Passé composé,5,Tant mieux !,Good!
+ELE_avoir-besoin-de_fut_1.mp3,ELE_avoir-besoin-de_fut,Voix grand père,ELE,avoir besoin de,Futur simple,1,Tu auras besoin de la voiture demain ?,Will you need the car tomorrow?
+ELE_avoir-besoin-de_fut_3.mp3,ELE_avoir-besoin-de_fut,Voix grand père,ELE,avoir besoin de,Futur simple,3,"Et ton père, il aura besoin de la voiture ?","And your father, will he need the car?"
+ELE_avoir-besoin-de_fut_5.mp3,ELE_avoir-besoin-de_fut,Voix grand père,ELE,avoir besoin de,Futur simple,5,Pas de problème !,No problem!
+INT_s-interesser_pres_1.mp3,INT_s-interesser_pres,David Vautrin - Tech Narrator,INT,s'intéresser,Présent,1,Tu t'intéresses à l'histoire ?,Are you interested in history?
+INT_s-interesser_pres_3.mp3,INT_s-interesser_pres,David Vautrin - Tech Narrator,INT,s'intéresser,Présent,3,"Et ton frère, il s'intéresse à quoi ?","And your brother, what is he interested in?"
+INT_s-interesser_pres_5.mp3,INT_s-interesser_pres,David Vautrin - Tech Narrator,INT,s'intéresser,Présent,5,C'est passionnant !,That's fascinating!
+INT_s-interesser_pc_1.mp3,INT_s-interesser_pc,Maxime - Dynamic and Natural,INT,s'intéresser,Passé composé,1,Comment tu t'es intéressé au français ?,How did you get interested in French?
+INT_s-interesser_pc_3.mp3,INT_s-interesser_pc,Maxime - Dynamic and Natural,INT,s'intéresser,Passé composé,3,"Et tes amis, ils se sont intéressés au français aussi ?","And your friends, did they get interested in French too?"
+INT_s-interesser_pc_5.mp3,INT_s-interesser_pc,Maxime - Dynamic and Natural,INT,s'intéresser,Passé composé,5,Pourquoi pas !,Why not!
+INT_s-interesser_fut_1.mp3,INT_s-interesser_fut,Cécile - Interactive Customer Support,INT,s'intéresser,Futur simple,1,Tu t'intéresseras au jardinage à la retraite ?,Will you take up gardening when you retire?
+INT_s-interesser_fut_3.mp3,INT_s-interesser_fut,Cécile - Interactive Customer Support,INT,s'intéresser,Futur simple,3,"Et ta femme, elle s'intéressera à quoi ?","And your wife, what will she take up?"
+INT_s-interesser_fut_5.mp3,INT_s-interesser_fut,Cécile - Interactive Customer Support,INT,s'intéresser,Futur simple,5,Quelle belle retraite !,What a lovely retirement!
+INT_se-debrouiller_pres_1.mp3,INT_se-debrouiller_pres,Audrey,INT,se débrouiller,Présent,1,Tu te débrouilles en français ?,Do you get by in French?
+INT_se-debrouiller_pres_3.mp3,INT_se-debrouiller_pres,Audrey,INT,se débrouiller,Présent,3,"Et ta sœur, elle se débrouille en anglais ?","And your sister, does she get by in English?"
+INT_se-debrouiller_pres_5.mp3,INT_se-debrouiller_pres,Audrey,INT,se débrouiller,Présent,5,Bravo à vous deux !,"Well done, both of you!"
+INT_se-debrouiller_pc_1.mp3,INT_se-debrouiller_pc,Voix grand père,INT,se débrouiller,Passé composé,1,Tu t'es débrouillé à l'aéroport ?,Did you manage at the airport?
+INT_se-debrouiller_pc_3.mp3,INT_se-debrouiller_pc,Voix grand père,INT,se débrouiller,Passé composé,3,"Et tes parents, ils se sont débrouillés avec les bagages ?","And your parents, did they manage with the luggage?"
+INT_se-debrouiller_pc_5.mp3,INT_se-debrouiller_pc,Voix grand père,INT,se débrouiller,Passé composé,5,Super !,Great!
+INT_se-debrouiller_fut_1.mp3,INT_se-debrouiller_fut,David Vautrin - Tech Narrator,INT,se débrouiller,Futur simple,1,Tu te débrouilleras sans moi demain ?,Will you manage without me tomorrow?
+INT_se-debrouiller_fut_3.mp3,INT_se-debrouiller_fut,David Vautrin - Tech Narrator,INT,se débrouiller,Futur simple,3,"Et les enfants, ils se débrouilleront pour le déjeuner ?","And the children, will they manage lunch?"
+INT_se-debrouiller_fut_5.mp3,INT_se-debrouiller_fut,David Vautrin - Tech Narrator,INT,se débrouiller,Futur simple,5,Parfait !,Perfect!
+INT_s-ennuyer_pres_1.mp3,INT_s-ennuyer_pres,Maxime - Dynamic and Natural,INT,s'ennuyer,Présent,1,Tu t'ennuies le dimanche ?,Do you get bored on Sundays?
+INT_s-ennuyer_pres_3.mp3,INT_s-ennuyer_pres,Maxime - Dynamic and Natural,INT,s'ennuyer,Présent,3,"Et ton chien, il s'ennuie quand tu travailles ?","And your dog, does he get bored when you're working?"
+INT_s-ennuyer_pres_5.mp3,INT_s-ennuyer_pres,Maxime - Dynamic and Natural,INT,s'ennuyer,Présent,5,Pauvre chien !,Poor dog!
+INT_s-ennuyer_pc_1.mp3,INT_s-ennuyer_pc,Cécile - Interactive Customer Support,INT,s'ennuyer,Passé composé,1,Tu t'es ennuyé pendant le concert ?,Did you get bored during the concert?
+INT_s-ennuyer_pc_3.mp3,INT_s-ennuyer_pc,Cécile - Interactive Customer Support,INT,s'ennuyer,Passé composé,3,"Et ta copine, elle s'est ennuyée ?","And your girlfriend, did she get bored?"
+INT_s-ennuyer_pc_5.mp3,INT_s-ennuyer_pc,Cécile - Interactive Customer Support,INT,s'ennuyer,Passé composé,5,C'est la vie !,That's life!
+INT_s-ennuyer_fut_1.mp3,INT_s-ennuyer_fut,Audrey,INT,s'ennuyer,Futur simple,1,Tu ne t'ennuieras pas pendant le long voyage ?,Won't you get bored on the long trip?
+INT_s-ennuyer_fut_3.mp3,INT_s-ennuyer_fut,Audrey,INT,s'ennuyer,Futur simple,3,"Et ton fils, il s'ennuiera ?","And your son, will he get bored?"
+INT_s-ennuyer_fut_5.mp3,INT_s-ennuyer_fut,Audrey,INT,s'ennuyer,Futur simple,5,"Bon voyage, alors !","Have a good trip, then!"
+INT_s-entrainer_pres_1.mp3,INT_s-entrainer_pres,Voix grand père,INT,s'entraîner,Présent,1,Tu t'entraînes souvent ?,Do you train often?
+INT_s-entrainer_pres_3.mp3,INT_s-entrainer_pres,Voix grand père,INT,s'entraîner,Présent,3,"Et ton équipe, elle s'entraîne le samedi ?","And your team, does it train on Saturdays?"
+INT_s-entrainer_pres_5.mp3,INT_s-entrainer_pres,Voix grand père,INT,s'entraîner,Présent,5,Bon entraînement !,Enjoy your training!
+INT_s-entrainer_pc_1.mp3,INT_s-entrainer_pc,David Vautrin - Tech Narrator,INT,s'entraîner,Passé composé,1,Tu t'es entraîné pour le marathon ?,Did you train for the marathon?
+INT_s-entrainer_pc_3.mp3,INT_s-entrainer_pc,David Vautrin - Tech Narrator,INT,s'entraîner,Passé composé,3,"Et ta sœur, elle s'est entraînée avec toi ?","And your sister, did she train with you?"
+INT_s-entrainer_pc_5.mp3,INT_s-entrainer_pc,David Vautrin - Tech Narrator,INT,s'entraîner,Passé composé,5,"Vous êtes prêts, alors !","You're ready, then!"
+INT_s-entrainer_fut_1.mp3,INT_s-entrainer_fut,Maxime - Dynamic and Natural,INT,s'entraîner,Futur simple,1,Tu t'entraîneras avant l'examen ?,Will you practise before the exam?
+INT_s-entrainer_fut_3.mp3,INT_s-entrainer_fut,Maxime - Dynamic and Natural,INT,s'entraîner,Futur simple,3,"Et tes camarades, ils s'entraîneront aussi ?","And your classmates, will they practise too?"
+INT_s-entrainer_fut_5.mp3,INT_s-entrainer_fut,Maxime - Dynamic and Natural,INT,s'entraîner,Futur simple,5,Excellent !,Excellent!
+INT_se-souvenir_pres_1.mp3,INT_se-souvenir_pres,Cécile - Interactive Customer Support,INT,se souvenir,Présent,1,Tu te souviens de ton premier jour d'école ?,Do you remember your first day at school?
+INT_se-souvenir_pres_3.mp3,INT_se-souvenir_pres,Cécile - Interactive Customer Support,INT,se souvenir,Présent,3,"Et ta mère, elle s'en souvient aussi ?","And your mother, does she remember it too?"
+INT_se-souvenir_pres_5.mp3,INT_se-souvenir_pres,Cécile - Interactive Customer Support,INT,se souvenir,Présent,5,Que de souvenirs !,So many memories!
+INT_se-souvenir_pc_1.mp3,INT_se-souvenir_pc,Audrey,INT,se souvenir,Passé composé,1,Tu t'es souvenu de l'anniversaire de ta sœur ?,Did you remember your sister's birthday?
+INT_se-souvenir_pc_3.mp3,INT_se-souvenir_pc,Audrey,INT,se souvenir,Passé composé,3,"Et ton frère, il s'en est souvenu ?","And your brother, did he remember it?"
+INT_se-souvenir_pc_5.mp3,INT_se-souvenir_pc,Audrey,INT,se souvenir,Passé composé,5,Oh là là !,Oh dear!
+INT_se-souvenir_fut_1.mp3,INT_se-souvenir_fut,Voix grand père,INT,se souvenir,Futur simple,1,Tu te souviendras de ce voyage ?,Will you remember this trip?
+INT_se-souvenir_fut_3.mp3,INT_se-souvenir_fut,Voix grand père,INT,se souvenir,Futur simple,3,"Et les enfants, ils s'en souviendront ?","And the children, will they remember it?"
+INT_se-souvenir_fut_5.mp3,INT_se-souvenir_fut,Voix grand père,INT,se souvenir,Futur simple,5,"C'est ça, les beaux voyages !",That's what great trips are like!
+INT_s-adapter_pres_1.mp3,INT_s-adapter_pres,David Vautrin - Tech Narrator,INT,s'adapter,Présent,1,Tu t'adaptes bien à ton nouveau travail ?,Are you settling into your new job?
+INT_s-adapter_pres_3.mp3,INT_s-adapter_pres,David Vautrin - Tech Narrator,INT,s'adapter,Présent,3,"Et tes collègues, ils s'adaptent à toi ?","And your colleagues, are they getting used to you?"
+INT_s-adapter_pres_5.mp3,INT_s-adapter_pres,David Vautrin - Tech Narrator,INT,s'adapter,Présent,5,"Tout va bien, alors !","All's well, then!"
+INT_s-adapter_pc_1.mp3,INT_s-adapter_pc,Maxime - Dynamic and Natural,INT,s'adapter,Passé composé,1,Tu t'es adapté à la vie en France ?,Did you adapt to life in France?
+INT_s-adapter_pc_3.mp3,INT_s-adapter_pc,Maxime - Dynamic and Natural,INT,s'adapter,Passé composé,3,"Et ta famille, elle s'est adaptée aussi ?","And your family, did they adapt too?"
+INT_s-adapter_pc_5.mp3,INT_s-adapter_pc,Maxime - Dynamic and Natural,INT,s'adapter,Passé composé,5,Félicitations !,Congratulations!
+INT_s-adapter_fut_1.mp3,INT_s-adapter_fut,Cécile - Interactive Customer Support,INT,s'adapter,Futur simple,1,Tu t'adapteras au climat là-bas ?,Will you adapt to the climate over there?
+INT_s-adapter_fut_3.mp3,INT_s-adapter_fut,Cécile - Interactive Customer Support,INT,s'adapter,Futur simple,3,"Et tes plantes, elles s'adapteront ?","And your plants, will they adapt?"
+INT_s-adapter_fut_5.mp3,INT_s-adapter_fut,Cécile - Interactive Customer Support,INT,s'adapter,Futur simple,5,"Alors, laisse-les chez moi !",Then leave them at my place!
+INT_se-rejouir_pres_1.mp3,INT_se-rejouir_pres,Audrey,INT,se réjouir,Présent,1,Tu te réjouis de partir en vacances ?,Are you excited to go on holiday?
+INT_se-rejouir_pres_3.mp3,INT_se-rejouir_pres,Audrey,INT,se réjouir,Présent,3,"Et tes enfants, ils se réjouissent aussi ?","And your children, are they excited too?"
+INT_se-rejouir_pres_5.mp3,INT_se-rejouir_pres,Audrey,INT,se réjouir,Présent,5,Profitez bien !,Enjoy it!
+INT_se-rejouir_pc_1.mp3,INT_se-rejouir_pc,Voix grand père,INT,se réjouir,Passé composé,1,Tu t'es réjoui de la nouvelle ?,Were you delighted by the news?
+INT_se-rejouir_pc_3.mp3,INT_se-rejouir_pc,Voix grand père,INT,se réjouir,Passé composé,3,"Et tes grands-parents, ils se sont réjouis ?","And your grandparents, were they delighted?"
+INT_se-rejouir_pc_5.mp3,INT_se-rejouir_pc,Voix grand père,INT,se réjouir,Passé composé,5,Quelle belle nouvelle !,What lovely news!
+INT_se-rejouir_fut_1.mp3,INT_se-rejouir_fut,David Vautrin - Tech Narrator,INT,se réjouir,Futur simple,1,Tu te réjouiras de le voir ?,Will you be glad to see him?
+INT_se-rejouir_fut_3.mp3,INT_se-rejouir_fut,David Vautrin - Tech Narrator,INT,se réjouir,Futur simple,3,"Et ta mère, elle se réjouira aussi ?","And your mother, will she be glad too?"
+INT_se-rejouir_fut_5.mp3,INT_se-rejouir_fut,David Vautrin - Tech Narrator,INT,se réjouir,Futur simple,5,Ce sera une belle journée !,It'll be a lovely day!
+INT_mettre_pres_1.mp3,INT_mettre_pres,Maxime - Dynamic and Natural,INT,mettre,Présent,1,Tu mets un manteau aujourd'hui ?,Are you wearing a coat today?
+INT_mettre_pres_3.mp3,INT_mettre_pres,Maxime - Dynamic and Natural,INT,mettre,Présent,3,"Et ton fils, il met quoi ?","And your son, what is he wearing?"
+INT_mettre_pres_5.mp3,INT_mettre_pres,Maxime - Dynamic and Natural,INT,mettre,Présent,5,"Bien couverts, tous les deux !","Well wrapped up, both of you!"
+INT_mettre_pc_1.mp3,INT_mettre_pc,Cécile - Interactive Customer Support,INT,mettre,Passé composé,1,Où est-ce que tu as mis les clés ?,Where did you put the keys?
+INT_mettre_pc_3.mp3,INT_mettre_pc,Cécile - Interactive Customer Support,INT,mettre,Passé composé,3,"Et le pain, ta sœur l'a mis où ?","And the bread, where did your sister put it?"
+INT_mettre_pc_5.mp3,INT_mettre_pc,Cécile - Interactive Customer Support,INT,mettre,Passé composé,5,"Merci, c'est noté !","Thanks, got it!"
+INT_mettre_fut_1.mp3,INT_mettre_fut,Audrey,INT,mettre,Futur simple,1,Tu mettras la table ce soir ?,Will you set the table tonight?
+INT_mettre_fut_3.mp3,INT_mettre_fut,Audrey,INT,mettre,Futur simple,3,"Et ton frère, il mettra combien d'assiettes ?","And your brother, how many plates will he put out?"
+INT_mettre_fut_5.mp3,INT_mettre_fut,Audrey,INT,mettre,Futur simple,5,"Parfait, on sera six !","Perfect, there'll be six of us!"
+INT_trouver_pres_1.mp3,INT_trouver_pres,Voix grand père,INT,trouver,Présent,1,Tu trouves ce livre intéressant ?,Do you find this book interesting?
+INT_trouver_pres_3.mp3,INT_trouver_pres,Voix grand père,INT,trouver,Présent,3,"Et ta copine, elle le trouve comment ?","And your girlfriend, what does she think of it?"
+INT_trouver_pres_5.mp3,INT_trouver_pres,Voix grand père,INT,trouver,Présent,5,Chacun son avis !,Everyone has their own opinion!
+INT_trouver_pc_1.mp3,INT_trouver_pc,David Vautrin - Tech Narrator,INT,trouver,Passé composé,1,Tu as trouvé ton portefeuille ?,Did you find your wallet?
+INT_trouver_pc_3.mp3,INT_trouver_pc,David Vautrin - Tech Narrator,INT,trouver,Passé composé,3,"Et tes lunettes, ta mère les a trouvées ?","And your glasses, did your mother find them?"
+INT_trouver_pc_5.mp3,INT_trouver_pc,David Vautrin - Tech Narrator,INT,trouver,Passé composé,5,On va chercher ensemble !,We'll look together!
+INT_trouver_fut_1.mp3,INT_trouver_fut,Maxime - Dynamic and Natural,INT,trouver,Futur simple,1,Tu trouveras un appartement à Paris ?,Will you find a flat in Paris?
+INT_trouver_fut_3.mp3,INT_trouver_fut,Maxime - Dynamic and Natural,INT,trouver,Futur simple,3,"Et tes amis, ils trouveront du travail là-bas ?","And your friends, will they find work there?"
+INT_trouver_fut_5.mp3,INT_trouver_fut,Maxime - Dynamic and Natural,INT,trouver,Futur simple,5,Bonne installation !,Good luck settling in!
+INT_croire_pres_1.mp3,INT_croire_pres,Cécile - Interactive Customer Support,INT,croire,Présent,1,Tu crois aux fantômes ?,Do you believe in ghosts?
+INT_croire_pres_3.mp3,INT_croire_pres,Cécile - Interactive Customer Support,INT,croire,Présent,3,"Et ta grand-mère, elle y croit ?","And your grandmother, does she believe in them?"
+INT_croire_pres_5.mp3,INT_croire_pres,Cécile - Interactive Customer Support,INT,croire,Présent,5,Chacun ses croyances !,Everyone has their own beliefs!
+INT_croire_pc_1.mp3,INT_croire_pc,Audrey,INT,croire,Passé composé,1,Tu as cru son histoire ?,Did you believe his story?
+INT_croire_pc_3.mp3,INT_croire_pc,Audrey,INT,croire,Passé composé,3,"Et ton patron, il l'a crue ?","And your boss, did he believe it?"
+INT_croire_pc_5.mp3,INT_croire_pc,Audrey,INT,croire,Passé composé,5,Quel naïf !,How gullible!
+INT_croire_fut_1.mp3,INT_croire_fut,Voix grand père,INT,croire,Futur simple,1,Tes parents te croiront ?,Will your parents believe you?
+INT_croire_fut_3.mp3,INT_croire_fut,Voix grand père,INT,croire,Futur simple,3,"Et ton professeur, il te croira ?","And your teacher, will he believe you?"
+INT_croire_fut_5.mp3,INT_croire_fut,Voix grand père,INT,croire,Futur simple,5,"Dis la vérité, alors !","Tell the truth, then!"
+INT_parler_pres_1.mp3,INT_parler_pres,David Vautrin - Tech Narrator,INT,parler,Présent,1,Tu parles quelles langues ?,Which languages do you speak?
+INT_parler_pres_3.mp3,INT_parler_pres,David Vautrin - Tech Narrator,INT,parler,Présent,3,"Et tes voisins, ils parlent anglais ?","And your neighbours, do they speak English?"
+INT_parler_pres_5.mp3,INT_parler_pres,David Vautrin - Tech Narrator,INT,parler,Présent,5,"Tu as de la chance, alors !","You're lucky, then!"
+INT_parler_pc_1.mp3,INT_parler_pc,Maxime - Dynamic and Natural,INT,parler,Passé composé,1,Tu as parlé à ton propriétaire ?,Did you speak to your landlord?
+INT_parler_pc_3.mp3,INT_parler_pc,Maxime - Dynamic and Natural,INT,parler,Passé composé,3,"Et ta colocataire, elle lui a parlé ?","And your flatmate, did she speak to him?"
+INT_parler_pc_5.mp3,INT_parler_pc,Maxime - Dynamic and Natural,INT,parler,Passé composé,5,Il faut lui parler vite !,She needs to speak to him soon!
+INT_parler_fut_1.mp3,INT_parler_fut,Cécile - Interactive Customer Support,INT,parler,Futur simple,1,Tu parleras au directeur demain ?,Will you speak to the manager tomorrow?
+INT_parler_fut_3.mp3,INT_parler_fut,Cécile - Interactive Customer Support,INT,parler,Futur simple,3,"Et tes collègues, ils lui parleront aussi ?","And your colleagues, will they speak to him too?"
+INT_parler_fut_5.mp3,INT_parler_fut,Cécile - Interactive Customer Support,INT,parler,Futur simple,5,Courage !,Hang in there!
+INT_prendre_pres_1.mp3,INT_prendre_pres,Audrey,INT,prendre,Présent,1,Tu prends le bus pour aller au travail ?,Do you take the bus to work?
+INT_prendre_pres_3.mp3,INT_prendre_pres,Audrey,INT,prendre,Présent,3,"Et ta femme, elle prend le métro aussi ?","And your wife, does she take the metro too?"
+INT_prendre_pres_5.mp3,INT_prendre_pres,Audrey,INT,prendre,Présent,5,C'est bon pour la santé !,That's good for your health!
+INT_prendre_pc_1.mp3,INT_prendre_pc,Voix grand père,INT,prendre,Passé composé,1,Qu'est-ce que tu as pris au restaurant ?,What did you have at the restaurant?
+INT_prendre_pc_3.mp3,INT_prendre_pc,Voix grand père,INT,prendre,Passé composé,3,"Et ton ami, il a pris quoi ?","And your friend, what did he have?"
+INT_prendre_pc_5.mp3,INT_prendre_pc,Voix grand père,INT,prendre,Passé composé,5,Ça a l'air délicieux !,That sounds delicious!
+INT_prendre_fut_1.mp3,INT_prendre_fut,David Vautrin - Tech Narrator,INT,prendre,Futur simple,1,Tu prendras des vacances cet été ?,Will you take a holiday this summer?
+INT_prendre_fut_3.mp3,INT_prendre_fut,David Vautrin - Tech Narrator,INT,prendre,Futur simple,3,"Et ta sœur, elle prendra des vacances ?","And your sister, will she take a holiday?"
+INT_prendre_fut_5.mp3,INT_prendre_fut,David Vautrin - Tech Narrator,INT,prendre,Futur simple,5,La pauvre !,Poor thing!
+INT_lire_pres_1.mp3,INT_lire_pres,Maxime - Dynamic and Natural,INT,lire,Présent,1,Tu lis le journal le matin ?,Do you read the paper in the morning?
+INT_lire_pres_3.mp3,INT_lire_pres,Maxime - Dynamic and Natural,INT,lire,Présent,3,"Et ton père, il lit le journal ?","And your father, does he read the paper?"
+INT_lire_pres_5.mp3,INT_lire_pres,Maxime - Dynamic and Natural,INT,lire,Présent,5,À l'ancienne !,Old school!
+INT_lire_pc_1.mp3,INT_lire_pc,Cécile - Interactive Customer Support,INT,lire,Passé composé,1,Tu as lu le dernier roman de cet auteur ?,Have you read this author's latest novel?
+INT_lire_pc_3.mp3,INT_lire_pc,Cécile - Interactive Customer Support,INT,lire,Passé composé,3,"Et ta mère, elle l'a lu ?","And your mother, has she read it?"
+INT_lire_pc_5.mp3,INT_lire_pc,Cécile - Interactive Customer Support,INT,lire,Passé composé,5,Elle va l'adorer !,She's going to love it!
+INT_lire_fut_1.mp3,INT_lire_fut,Audrey,INT,lire,Futur simple,1,Tu liras une histoire aux enfants ce soir ?,Will you read the children a story tonight?
+INT_lire_fut_3.mp3,INT_lire_fut,Audrey,INT,lire,Futur simple,3,"Et leur grand-père, il leur lira aussi ?","And their grandfather, will he read to them too?"
+INT_lire_fut_5.mp3,INT_lire_fut,Audrey,INT,lire,Futur simple,5,Quelle belle soirée !,What a lovely evening!
+INT_ecrire_pres_1.mp3,INT_ecrire_pres,Voix grand père,INT,écrire,Présent,1,Tu écris souvent à ta famille ?,Do you often write to your family?
+INT_ecrire_pres_3.mp3,INT_ecrire_pres,Voix grand père,INT,écrire,Présent,3,"Et ton cousin, il t'écrit ?","And your cousin, does he write to you?"
+INT_ecrire_pres_5.mp3,INT_ecrire_pres,Voix grand père,INT,écrire,Présent,5,Envoie-lui un message !,Send him a message!
+INT_ecrire_pc_1.mp3,INT_ecrire_pc,David Vautrin - Tech Narrator,INT,écrire,Passé composé,1,Tu as écrit ta lettre de motivation ?,Have you written your cover letter?
+INT_ecrire_pc_3.mp3,INT_ecrire_pc,David Vautrin - Tech Narrator,INT,écrire,Passé composé,3,"Et ta sœur, elle a écrit son CV ?","And your sister, has she written her CV?"
+INT_ecrire_pc_5.mp3,INT_ecrire_pc,David Vautrin - Tech Narrator,INT,écrire,Passé composé,5,Bonne chance à vous deux !,"Good luck, both of you!"
+INT_ecrire_fut_1.mp3,INT_ecrire_fut,Maxime - Dynamic and Natural,INT,écrire,Futur simple,1,Tu m'écriras pendant ton voyage ?,Will you write to me during your trip?
+INT_ecrire_fut_3.mp3,INT_ecrire_fut,Maxime - Dynamic and Natural,INT,écrire,Futur simple,3,"Et tes amis, ils m'écriront aussi ?","And your friends, will they write to me too?"
+INT_ecrire_fut_5.mp3,INT_ecrire_fut,Maxime - Dynamic and Natural,INT,écrire,Futur simple,5,J'ai hâte !,I can't wait!
+INT_ouvrir_pres_1.mp3,INT_ouvrir_pres,Cécile - Interactive Customer Support,INT,ouvrir,Présent,1,Il fait chaud. Tu ouvres la fenêtre ?,It's hot. Will you open the window?
+INT_ouvrir_pres_3.mp3,INT_ouvrir_pres,Cécile - Interactive Customer Support,INT,ouvrir,Présent,3,"Et la porte, ton frère l'ouvre aussi ?","And the door, will your brother open it too?"
+INT_ouvrir_pres_5.mp3,INT_ouvrir_pres,Cécile - Interactive Customer Support,INT,ouvrir,Présent,5,"Ah, ça fait du bien !","Ah, that's better!"
+INT_ouvrir_pc_1.mp3,INT_ouvrir_pc,Audrey,INT,ouvrir,Passé composé,1,Tu as ouvert tes cadeaux ?,Have you opened your presents?
+INT_ouvrir_pc_3.mp3,INT_ouvrir_pc,Audrey,INT,ouvrir,Passé composé,3,"Et ta petite sœur, elle a ouvert les siens ?","And your little sister, has she opened hers?"
+INT_ouvrir_pc_5.mp3,INT_ouvrir_pc,Audrey,INT,ouvrir,Passé composé,5,Elle est patiente !,She's patient!
+INT_ouvrir_fut_1.mp3,INT_ouvrir_fut,Voix grand père,INT,ouvrir,Futur simple,1,Tu ouvriras ton magasin dimanche ?,Will you open your shop on Sunday?
+INT_ouvrir_fut_3.mp3,INT_ouvrir_fut,Voix grand père,INT,ouvrir,Futur simple,3,"Et la boulangerie, elle ouvrira ?","And the bakery, will it open?"
+INT_ouvrir_fut_5.mp3,INT_ouvrir_fut,Voix grand père,INT,ouvrir,Futur simple,5,"Super, j'irai chercher du pain !","Great, I'll go and get some bread!"
+INT_fermer_pres_1.mp3,INT_fermer_pres,David Vautrin - Tech Narrator,INT,fermer,Présent,1,Tu fermes la porte à clé le soir ?,Do you lock the door at night?
+INT_fermer_pres_3.mp3,INT_fermer_pres,David Vautrin - Tech Narrator,INT,fermer,Présent,3,"Et tes voisins, ils ferment leur porte ?","And your neighbours, do they lock their door?"
+INT_fermer_pres_5.mp3,INT_fermer_pres,David Vautrin - Tech Narrator,INT,fermer,Présent,5,Ils ont confiance !,They're trusting!
+INT_fermer_pc_1.mp3,INT_fermer_pc,Maxime - Dynamic and Natural,INT,fermer,Passé composé,1,Tu as fermé le gaz ?,Did you turn off the gas?
+INT_fermer_pc_3.mp3,INT_fermer_pc,Maxime - Dynamic and Natural,INT,fermer,Passé composé,3,"Et les fenêtres, ton fils les a fermées ?","And the windows, did your son close them?"
+INT_fermer_pc_5.mp3,INT_fermer_pc,Maxime - Dynamic and Natural,INT,fermer,Passé composé,5,On peut partir tranquilles !,We can leave with peace of mind!
+INT_fermer_fut_1.mp3,INT_fermer_fut,Cécile - Interactive Customer Support,INT,fermer,Futur simple,1,À quelle heure tu fermeras le bureau ?,What time will you close the office?
+INT_fermer_fut_3.mp3,INT_fermer_fut,Cécile - Interactive Customer Support,INT,fermer,Futur simple,3,"Et la banque, elle fermera à quelle heure ?","And the bank, what time will it close?"
+INT_fermer_fut_5.mp3,INT_fermer_fut,Cécile - Interactive Customer Support,INT,fermer,Futur simple,5,"Alors, dépêche-toi !",Then hurry up!
+INT_perdre_pres_1.mp3,INT_perdre_pres,Audrey,INT,perdre,Présent,1,Tu perds souvent tes clés ?,Do you often lose your keys?
+INT_perdre_pres_3.mp3,INT_perdre_pres,Audrey,INT,perdre,Présent,3,"Et ton père, il perd ses lunettes ?","And your father, does he lose his glasses?"
+INT_perdre_pres_5.mp3,INT_perdre_pres,Audrey,INT,perdre,Présent,5,C'est de famille !,It runs in the family!
+INT_perdre_pc_1.mp3,INT_perdre_pc,Voix grand père,INT,perdre,Passé composé,1,Vous avez perdu le match ?,Did your team lose the match?
+INT_perdre_pc_3.mp3,INT_perdre_pc,Voix grand père,INT,perdre,Passé composé,3,"Et l'autre équipe de ton club, elle a perdu aussi ?","And the other team at your club, did it lose too?"
+INT_perdre_pc_5.mp3,INT_perdre_pc,Voix grand père,INT,perdre,Passé composé,5,Au moins une victoire !,At least one win!
+INT_perdre_fut_1.mp3,INT_perdre_fut,David Vautrin - Tech Narrator,INT,perdre,Futur simple,1,Tu ne perdras pas ton passeport cette fois ?,You won't lose your passport this time?
+INT_perdre_fut_3.mp3,INT_perdre_fut,David Vautrin - Tech Narrator,INT,perdre,Futur simple,3,"Et ta sœur, elle ne perdra pas le sien ?","And your sister, won't she lose hers?"
+INT_perdre_fut_5.mp3,INT_perdre_fut,David Vautrin - Tech Narrator,INT,perdre,Futur simple,5,Promis ?,Promise?
+INT_garder_pres_1.mp3,INT_garder_pres,Maxime - Dynamic and Natural,INT,garder,Présent,1,Tu gardes tes petits-enfants le mercredi ?,Do you look after your grandchildren on Wednesdays?
+INT_garder_pres_3.mp3,INT_garder_pres,Maxime - Dynamic and Natural,INT,garder,Présent,3,"Et ta femme, elle les garde aussi ?","And your wife, does she look after them too?"
+INT_garder_pres_5.mp3,INT_garder_pres,Maxime - Dynamic and Natural,INT,garder,Présent,5,Quelle chance pour eux !,How lucky they are!
+INT_garder_pc_1.mp3,INT_garder_pc,Cécile - Interactive Customer Support,INT,garder,Passé composé,1,Tu as gardé tes vieilles photos ?,Did you keep your old photos?
+INT_garder_pc_3.mp3,INT_garder_pc,Cécile - Interactive Customer Support,INT,garder,Passé composé,3,"Et ta mère, elle a gardé tes dessins d'enfant ?","And your mother, did she keep your childhood drawings?"
+INT_garder_pc_5.mp3,INT_garder_pc,Cécile - Interactive Customer Support,INT,garder,Passé composé,5,Comme c'est mignon !,How sweet!
+INT_garder_fut_1.mp3,INT_garder_fut,Audrey,INT,garder,Futur simple,1,Tu garderas mon chat pendant les vacances ?,Will you look after my cat during the holidays?
+INT_garder_fut_3.mp3,INT_garder_fut,Audrey,INT,garder,Futur simple,3,"Et ta fille, elle gardera mes plantes ?","And your daughter, will she look after my plants?"
+INT_garder_fut_5.mp3,INT_garder_fut,Audrey,INT,garder,Futur simple,5,Merci mille fois !,Thanks a million!

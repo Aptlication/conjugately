@@ -9,8 +9,14 @@ const STORAGE_KEY = "conjugately_vocabulary";
 type Word = {
   id: string; french: string; english: string; verb?: string; tense?: string;
   difficulty?: string; status: "new" | "learning" | "mastered";
-  timesCorrect: number; timesIncorrect: number; createdAt: string;
+  timesCorrect: number; timesIncorrect: number; createdAt: string; source?: string;
 };
+const VERB_LABEL: Record<string, string> = { besoin: "avoir besoin de" };
+/** Words are grouped by the unit they came from: level · verb · tense. */
+function unitOf(w: Word): string {
+  if (!w.difficulty && !w.verb) return "Other words";
+  return [w.difficulty, w.verb ? (VERB_LABEL[w.verb] ?? w.verb) : undefined, w.tense].filter(Boolean).join(" · ");
+}
 const NEXT_STATUS: Record<Word["status"], Word["status"]> =
   { new: "learning", learning: "mastered", mastered: "new" };
 const STATUS_COLOR: Record<Word["status"], string> =
@@ -56,13 +62,24 @@ export default function Vocabulary() {
         {words.length === 0 && (
           <View style={styles.card}>
             <Text style={styles.empty}>
-              No vocabulary words yet. Miss a question in any quiz and the correct
-              phrase is saved here automatically for review.
+              No vocabulary words yet. Miss a question in any quiz, or finish a
+              Final conversation, and the words are saved here for review.
             </Text>
           </View>
         )}
 
-        {words.map((w) => (
+        {(() => {
+          const groups: { unit: string; list: Word[] }[] = [];
+          for (const w of words) {
+            const u = unitOf(w);
+            const g = groups.find((x) => x.unit === u);
+            if (g) g.list.push(w); else groups.push({ unit: u, list: [w] });
+          }
+          return groups;
+        })().map(({ unit, list }) => (
+          <View key={unit}>
+            <Text style={styles.unitHead}>{unit}</Text>
+            {list.map((w) => (
           <View key={w.id} style={styles.wordCard}>
             <View style={{ flex: 1 }}>
               <Text style={styles.french}>{w.french}</Text>
@@ -76,6 +93,8 @@ export default function Vocabulary() {
             <Pressable onPress={() => setWords((ws) => ws.filter((x) => x.id !== w.id))}>
               <Text style={styles.delete}>✕</Text>
             </Pressable>
+          </View>
+            ))}
           </View>
         ))}
 
@@ -96,6 +115,8 @@ const styles = StyleSheet.create({
   statLabel: { color: "#c4b5fd", fontSize: 12 },
   card: { backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 24, padding: 18 },
   empty: { color: "#cbd5e1", fontSize: 15, textAlign: "center", lineHeight: 22 },
+  unitHead: { color: "#c4b5fd", fontSize: 13, fontWeight: "800", letterSpacing: 0.5,
+    marginTop: 10, marginBottom: 8, marginLeft: 4 },
   wordCard: { flexDirection: "row", alignItems: "center", gap: 10,
     backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 14, padding: 14, marginBottom: 10 },
   french: { color: "#fff", fontSize: 16, fontWeight: "600" },
