@@ -5,6 +5,7 @@
   },
   "build": {
     "development": {
+      "node": "22.13.0",
       "developmentClient": true,
       "distribution": "internal",
       "env": {
@@ -12,12 +13,14 @@
       }
     },
     "preview": {
+      "node": "22.13.0",
       "distribution": "internal",
       "env": {
         "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_UjVXOrfMIlEcEWJEWnuiwTyylOv"
       }
     },
     "production": {
+      "node": "22.13.0",
       "autoIncrement": true,
       "env": {
         "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_UjVXOrfMIlEcEWJEWnuiwTyylOv"
