@@ -47,6 +47,14 @@
       ],
       "expo-audio",
       [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/dancing-script/600SemiBold/DancingScript_600SemiBold.ttf"
+          ]
+        }
+      ],
+      [
         "expo-speech-recognition",
         {
           "microphonePermission": "Conjugately uses the microphone so you can speak your answers aloud in Masters Mic instead of tapping them.",

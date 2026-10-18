@@ -134,8 +134,7 @@ export default function Home() {
         <Wordmark t={t} />
         <Tagline t={t} fontsLoaded={fontsLoaded} />
         <Text style={styles.blurb}>
-          Master French verb conjugations—the key to fluency—with your own
-          personalized quizzes and optional mini-courses.
+          {"Master French verb conjugations—\nthe key to fluency."}
         </Text>
 
         {/* Rendered (invisible) before progress loads, so nothing shifts. */}
@@ -233,7 +232,7 @@ function Word({ t, spec, text, fontsLoaded }: {
   return (
     <View style={styles.slot} importantForAccessibility="no">
       <Animated.View style={style} onLayout={onLayout}>
-        <Text style={[styles.cursive, !fontsLoaded && { fontFamily: undefined }]}>{text}</Text>
+        <Text style={styles.cursive}>{text}</Text>
       </Animated.View>
     </View>
   );
@@ -251,12 +250,21 @@ const styles = StyleSheet.create({
     transform: [{ scaleY: 60 / 260 }] },
   glowRing: { position: "absolute", backgroundColor: "rgba(127,160,238,0.10)" },
   h1: { fontSize: 40, fontWeight: "700", textAlign: "center" },
-  // Slot padding (0.12em top, 0.18em bottom) is taken back out of the margins,
-  // so the tagline sits where it always did.
+  // Each word rolls inside its own clipped slot. On iOS, Dancing Script's
+  // swashes (the F, the !) overhang the Text box, so the slot needs real room
+  // or the glyph edges are cut off (build 43 defect). The extra padding is
+  // taken back out with negative margins, so word spacing and the tagline's
+  // position are unchanged.
   tagRow: { flexDirection: "row", justifyContent: "center", gap: 5,
-    marginTop: -3, marginBottom: 15 },
-  slot: { overflow: "hidden", paddingTop: 3, paddingBottom: 5, paddingHorizontal: 1.5 },
-  cursive: { color: "#FFFFFF", fontSize: 26, fontFamily: "DancingScript_600SemiBold" },
+    marginTop: -10, marginBottom: 8 },
+  slot: { overflow: "hidden", paddingTop: 10, paddingBottom: 12, paddingHorizontal: 10,
+    marginHorizontal: -8.5 },
+  // Dancing Script is embedded at build time (expo-font plugin in app.json), so
+  // it exists from launch on device. iOS addresses an embedded font by its
+  // PostScript name; the web twin uses the useFonts alias. (Build 43 showed the
+  // system font: it waited on a runtime "loaded" flag that never arrived.)
+  cursive: { color: "#FFFFFF", fontSize: 26,
+    fontFamily: Platform.select({ ios: "DancingScript-SemiBold", default: "DancingScript_600SemiBold" }) },
   // Inset a further 10 each side (1.2.3).
   blurb: { color: "#CBD6F5", fontSize: 16, textAlign: "center", lineHeight: 25,
     paddingHorizontal: 10 },
