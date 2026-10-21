@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import VisCue from "../components/VisCue";
 import { optionsFor, recordAnswer, unitKey, wordsDue, type CheckWord } from "../lib/vocabCheck";
+import { awardVocabCoin, VOCAB_COINS_PER_WORD } from "../lib/coins";
 
 /**
  * Vocab check — the post-quiz vocabulary session (spec: Jonathan, 21 Oct 2026).
@@ -36,6 +37,9 @@ export default function VocabCheck() {
   const [total, setTotal] = useState(0);
   const [passed, setPassed] = useState(0);
   const [quit, setQuit] = useState(false);
+  // Coins this session: one per word right without VIS-CUE (21 Oct 2026).
+  const [coins, setCoins] = useState(0);
+  const [balance, setBalance] = useState<number | null>(null);
 
   // Per-card state.
   const [options, setOptions] = useState<string[]>([]);
@@ -85,9 +89,14 @@ export default function VocabCheck() {
     setVerdict(v);
     buzz(v === "right" ? Haptics.NotificationFeedbackType.Success
       : v === "cued" ? Haptics.NotificationFeedbackType.Warning : Haptics.NotificationFeedbackType.Error);
-    await recordAnswer(word.id, correct, cued);
+    const nowPassed = await recordAnswer(word.id, correct, cued);
     if (v === "right") {
       setPassed((n) => n + 1);
+      // recordAnswer is true only when the word passes, and a passed word is never asked again: one coin per word.
+      if (nowPassed) {
+        setCoins((c) => c + VOCAB_COINS_PER_WORD);
+        awardVocabCoin().then(setBalance).catch(() => {});
+      }
       timer.current = setTimeout(() => next("right"), 1100);
     }
   };
@@ -202,7 +211,7 @@ export default function VocabCheck() {
             {verdict && (
               <View style={[styles.verdict, { borderColor: verdict === "right" ? GREEN : verdict === "cued" ? AMBER : RED }]}>
                 <Text style={[styles.verdictTitle, { color: verdict === "right" ? GREEN : verdict === "cued" ? AMBER : RED }]}>
-                  {verdict === "right" ? "Correct!" : verdict === "cued" ? "Right — but VIS-CUE was used" : "Not quite"}
+                  {verdict === "right" ? `Correct!  +${VOCAB_COINS_PER_WORD} 🪙` : verdict === "cued" ? "Right — but VIS-CUE was used" : "Not quite"}
                 </Text>
                 {verdict !== "right" && (
                   <Text style={styles.verdictSub}>
@@ -226,6 +235,11 @@ export default function VocabCheck() {
               <Text style={styles.p}>
                 {passed} of {total} {total === 1 ? "word" : "words"} learnt.
                 {quit && remaining > 0 ? ` ${remaining} will come back at your next vocab check.` : ""}
+              </Text>
+            )}
+            {coins > 0 && (
+              <Text style={styles.coinLine}>
+                +{coins} 🪙{balance !== null ? `  ·  balance ${balance}` : ""}
               </Text>
             )}
           </View>
@@ -296,4 +310,5 @@ const styles = StyleSheet.create({
   primaryText: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
   linkBtn: { alignItems: "center", padding: 8 },
   linkText: { color: BLUE, fontSize: 15, fontWeight: "600" },
+  coinLine: { color: INK, fontSize: 20, fontWeight: "800", marginTop: 6, fontVariant: ["tabular-nums"] },
 });

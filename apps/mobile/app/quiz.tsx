@@ -148,24 +148,28 @@ export default function Quiz() {
     router.push({ pathname: "/conversation" as any, params: { level: courseLevel, timeFrame: courseTimeFrame, verb } });
   };
   // Vocab check (21 Oct 2026): the unit's new nouns, adjectives and adverbs are
-  // tested after the quiz and the conversation. If the learner takes the
-  // conversation, the check follows it (conversation.tsx); if they opt out, or
-  // the unit has no conversation, it follows the quiz. Course units only.
-  const isCourseUnit = !!courseKey && unitIndex !== undefined && !exam;
-  const vocabUnit = unitKey(courseLevel, courseTimeFrame, verb);
+  // tested after EVERY quiz that has words — course units and home-screen
+  // quizzes alike (all of Beginner so far); never after an exam. If the learner
+  // takes a course unit's conversation, the check follows it (conversation.tsx);
+  // otherwise it follows the quiz.
+  const vocabLevel = courseLevel || difficulty;
+  const vocabTimeFrame = courseTimeFrame || timeFrame;
+  const isCourseUnit = !exam;
+  const vocabUnit = unitKey(vocabLevel, vocabTimeFrame, verb);
   const [vocabDue, setVocabDue] = useState(0);
   const vocabAutoRef = useRef(false);
   const openVocab = (from?: "card") => {
     vocabAutoRef.current = true;
     router.push({ pathname: "/vocab-check" as any,
-      params: { level: courseLevel, timeFrame: courseTimeFrame, verb, ...(from ? { from } : {}) } });
+      params: { level: vocabLevel, timeFrame: vocabTimeFrame, verb, ...(from ? { from } : {}) } });
   };
   useFocusEffect(React.useCallback(() => {
     if (state === "done" && isCourseUnit) countDue(vocabUnit).then(setVocabDue).catch(() => {});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, vocabUnit]));
   useEffect(() => {
-    if (state !== "done" || !isCourseUnit || conversation || !award || invite || vocabAutoRef.current || vocabDue === 0) return;
+    // Course quizzes wait for their coins to land; home-screen quizzes pay no coins, so they go straight on.
+    if (state !== "done" || !isCourseUnit || conversation || (courseKey && !award) || invite || vocabAutoRef.current || vocabDue === 0) return;
     const t = setTimeout(() => { if (!vocabAutoRef.current) openVocab(); }, 2800);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
