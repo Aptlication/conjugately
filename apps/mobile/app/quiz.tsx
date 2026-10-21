@@ -14,6 +14,7 @@ import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exam
 import { normaliseFrench, similarity } from "@shared/answerMatch";
 import { Ionicons } from "@expo/vector-icons";
 import MastersMic from "../components/MastersMic";
+import { AiWhyButton, AiWhyPanel } from "../components/AiWhy";
 import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
@@ -136,6 +137,10 @@ export default function Quiz() {
   // A Pro feature. Where there is no store (the web staging build) it is open,
   // so the flow can be checked there.
   const convoLocked = !isPro && purchasesAvailable();
+  // AI WHY (21 Oct 2026): Pro, open where there is no store (web staging) like
+  // the conversations, and never during an exam. Which question it is open on.
+  const whyLocked = !isPro && purchasesAvailable();
+  const [whyOpenFor, setWhyOpenFor] = useState<number | null>(null);
   const openConversation = () => {
     setConvoAsk(false);
     if (convoLocked) { router.push("/paywall" as any); return; }
@@ -203,7 +208,7 @@ export default function Quiz() {
   const load = async () => {
     convoAskedRef.current = false; setConvoAsk(false);
     setState("loading"); setIdx(0); setSelected(null); setConfirmed(false);
-    setAnswers({}); setAnswerUrl(null); setAward(null);
+    setAnswers({}); setAnswerUrl(null); setAward(null); setWhyOpenFor(null);
     if (exam) {
       // The exam is bought with coins (shared/coins.ts). Every entry point
       // checks first, but a deep link or a stale screen must not bypass it.
@@ -420,6 +425,20 @@ export default function Quiz() {
   const micControl = micMode && !dispConfirmed;
   const optionsHidden = micMode && showOptionsFor !== dispIdx;
 
+  // AI WHY. Opening it holds the learner on this question: correct answers and
+  // every Mic On answer otherwise move on by themselves after ~2.5s, which
+  // would take the explanation away mid-sentence. Next moves on instead.
+  const whyAvailable = !exam;
+  const whyOpen = whyAvailable && whyOpenFor === dispIdx;
+  const openWhy = () => {
+    cancelAutoAdvance();
+    waitAudioRef.current = false;
+    if (whyLocked) { router.push("/paywall" as any); return; }
+    setWhyOpenFor(dispIdx);
+    // Mic On hides A-D on purpose, but the explanation names every option.
+    if (micMode) setShowOptionsFor(dispIdx);
+  };
+
   const toggleMic = () => {
     if (micOn) { setMicOn(false); setShowOptionsFor(null); return; }
     // Masters Mic is a Pro feature. Beginner's courses stay open; this does not.
@@ -499,6 +518,9 @@ export default function Quiz() {
             )}
 
             <Text style={[styles.qText, micMode && styles.qTextMic]}>{dispQ.question}</Text>
+            {micMode && whyOpen && (
+              <Text style={styles.whyMicNote}>Options shown so you can follow the explanation.</Text>
+            )}
 
             {!optionsHidden && dispQ.answerOptions.map((o, i) => {
               const confirmedNow = dispSelected !== null && dispConfirmed;
@@ -514,6 +536,7 @@ export default function Quiz() {
                     </Text>
                   </View>
                   <Text style={styles.optText}>{o.text}</Text>
+                  {micMode && showWrong && <Text style={styles.youSaid}>You said</Text>}
                 </Pressable>
               );
             })}
@@ -541,7 +564,18 @@ export default function Quiz() {
                   { color: dispQ.answerOptions[dispSelected].isCorrect ? "#17734A" : "#C0392B" }]}>
                   {dispQ.answerOptions[dispSelected].isCorrect ? "✓" : "✗"} {dispQ.answerOptions[dispSelected].rationale}
                 </Text>
+                {whyAvailable && !whyOpen && <AiWhyButton locked={whyLocked} onPress={openWhy} />}
               </View>
+            )}
+
+            {whyOpen && dispSelected !== null && dispConfirmed && (
+              <AiWhyPanel key={dispIdx} dark={micMode}
+                onBeforeListen={() => { try { qPlayer.pause(); aPlayer.pause(); } catch {} }}
+                request={{
+                  question: dispQ.question, hint: dispQ.hint, level: difficulty, tense,
+                  options: dispQ.answerOptions.map((o) => ({ text: o.text, isCorrect: o.isCorrect })),
+                  selectedIndex: dispSelected,
+                }} />
             )}
 
             <View style={styles.bottomRow}>
@@ -862,6 +896,8 @@ const styles = StyleSheet.create({
   togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   ghostTextMic: { color: "#E2E9F7" },
   micOn: { backgroundColor: "#22D3EE", borderColor: "#22D3EE" },
+  whyMicNote: { color: "#A8B8D6", fontSize: 13, lineHeight: 18, marginTop: -8, marginBottom: 12 },
+  youSaid: { marginLeft: 8, fontSize: 12, fontWeight: "700", color: "#B03426" },
   micIntroIcon: {
     width: 56, height: 56, borderRadius: 28, alignSelf: "center",
     alignItems: "center", justifyContent: "center", backgroundColor: "#EAF1FD", marginBottom: 14,
