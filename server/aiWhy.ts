@@ -152,7 +152,7 @@ async function callClaude(system: string, messages: { role: "user" | "assistant"
   const r = await fetchImpl("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: MODEL(), max_tokens: 400, temperature: 0.3, system, messages }),
+    body: JSON.stringify({ model: MODEL(), max_tokens: 400, system, messages }),
   });
   if (!r.ok) {
     console.error("[ai-why] model error", r.status, (await r.text()).slice(0, 300));
