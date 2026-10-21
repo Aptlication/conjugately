@@ -120,7 +120,11 @@ export default function Home() {
 
   const onContinue = () => {
     if (!resume) return;
-    if (resume.kind === "returning") router.push({ pathname: "/quiz", params: resume.params });
+    // A course unit gets the 2.5 s "Bonne continuation" overview first (app/resume.tsx),
+    // which then replaces itself with the quiz. A home-screen quiz resumes straight away.
+    if (resume.kind === "returning") {
+      router.push({ pathname: resume.params.courseKey ? "/resume" as any : "/quiz", params: resume.params });
+    }
     else router.push("/verbs" as any);
   };
 
