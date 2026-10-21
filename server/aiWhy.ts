@@ -79,7 +79,8 @@ export function cacheKey(b: ExplainInput): string {
   const correct = b.options.findIndex((o) => o.isCorrect);
   const outcome = b.options[b.selectedIndex].isCorrect ? "correct" : "incorrect";
   const basis = JSON.stringify({
-    v: 1, q: b.question, h: b.hint, o: b.options.map((o) => o.text), c: correct, outcome,
+    // v2 (21 Oct 2026): precise tense naming. Bumping v retires every saved explanation.
+    v: 2, q: b.question, h: b.hint, o: b.options.map((o) => o.text), c: correct, outcome,
   });
   return createHash("sha256").update(basis).digest("hex").slice(0, 32);
 }
@@ -92,6 +93,7 @@ Rules — follow every one:
 - If the learner was right, begin exactly: "Yes! Option X, <option text>, is right." If the learner was wrong, begin exactly: "Close, but the correct answer is Option X, <option text>."
 - Then one short sentence giving the rule that makes it right (person and ending, auxiliary verb, agreement, tense, accent, meaning — whichever applies).
 - Then every other option in letter order, each as "Option Y, <option text>, ..." with a short reason it does not fit this prompt (for example: it is the tu form, it uses avoir, it is the future, it means something else).
+- Name every tense precisely. A compound tense is named by the tense of its auxiliary (avoir or être) plus the past participle: présent + participle is the passé composé (elle est partie, she left or has left); imparfait + participle is the plus-que-parfait (elle était partie, she had left); futur + participle is the futur antérieur (elle sera partie, she will have left); conditionnel + participle is the conditionnel passé (elle serait partie, she would have left). Never call a compound form the imparfait: the imparfait is a single verb (elle partait, she was leaving or used to leave).
 - End with one short question inviting a follow-up about a related point, followed by "Just ask!"
 - One paragraph of plain text, at most 90 words. No markdown, lists, emoji, brackets, slashes or symbols: it may be read aloud.
 - Write French exactly as it appears in the options, accents included. Keep the English simple and warm.`;
