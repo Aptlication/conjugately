@@ -27,6 +27,7 @@ function graphemes(s: string): number {
   for (const ch of Array.from(s)) {
     const cp = ch.codePointAt(0) ?? 0;
     if (cp === 0x200d) { joined = true; continue; }
+    if (cp === 0x20e3) { n++; continue; } // keycap: 6️⃣ is "6" + VS16 + U+20E3
     const pict = cp >= 0x1f000 || (cp >= 0x2190 && cp <= 0x2bff) || (cp >= 0x2600 && cp <= 0x27bf);
     if (pict) { if (!joined) n++; joined = false; }
   }

@@ -18,7 +18,7 @@ import { shuffle } from "@shared/shuffle";
  *    passed. If the learner quits, it carries to the next vocab check, and so
  *    on, until it is passed.
  *
- * The word bank is written by hand, unit by unit: Beginner être and avoir so far.
+ * The word bank is written by hand, unit by unit: all of Beginner (être, avoir, faire) so far.
  * Beginner quizzes are pronoun + verb only ("Je suis", "Il n'a pas été"), so
  * at Beginner the words come from the unit's Final conversation.
  */
@@ -46,8 +46,9 @@ export type CheckWord = {
 const W = (w: CheckWord) => w;
 
 /**
- * Beginner quizzes are pronoun + verb only, so at Beginner every word comes
- * from the unit's Final conversation. A word an earlier verb already teaches
+ * Beginner être and avoir quizzes are pronoun + verb only, so their words come
+ * from the unit's Final conversation; faire's quizzes add the weather words
+ * (chaud, froid, la nuit — "Il fait froid"). A word an earlier verb already teaches
  * is not repeated (avoir's conversations use demain and aussi; être has them).
  * Set phrases are tested by their noun: "Quelle chance !" -> la chance.
  */
@@ -122,6 +123,41 @@ export const CHECK_WORDS: CheckWord[] = [
     distractors: ["holiday",  "school",  "rest"], pos: "noun", gender: "m", emoji: "💼" }),
   W({ id: "beg-avoir-d-accord", unit: "Beginner|Future|avoir", fr: "d'accord", en: "OK, agreed",
     distractors: ["sorry",  "maybe",  "never"], pos: "adverb", emoji: "👌" }),
+  // ── Beginner · Present · faire ──────────────────────────────────────
+  W({ id: "beg-faire-soir", unit: "Beginner|Present|faire", fr: "le soir", en: "evening",
+    distractors: ["morning",  "afternoon",  "weekend"], pos: "noun", gender: "m", emoji: "🌆" }),
+  W({ id: "beg-faire-gateau", unit: "Beginner|Present|faire", fr: "un gâteau", en: "cake",
+    distractors: ["bread",  "biscuit",  "pie"], pos: "noun", gender: "m", emoji: "🍰" }),
+  W({ id: "beg-faire-devoirs", unit: "Beginner|Present|faire", fr: "les devoirs", en: "homework",
+    distractors: ["holidays",  "exams",  "lessons"], pos: "noun", gender: "m", emoji: "📝" }),
+  W({ id: "beg-faire-chaud", unit: "Beginner|Present|faire", fr: "chaud", en: "hot",
+    distractors: ["cold",  "wet",  "windy"], pos: "adjective", emoji: "🥵" }),
+  W({ id: "beg-faire-froid", unit: "Beginner|Present|faire", fr: "froid", en: "cold",
+    distractors: ["hot",  "dry",  "sunny"], pos: "adjective", emoji: "🥶" }),
+  W({ id: "beg-faire-nuit", unit: "Beginner|Present|faire", fr: "la nuit", en: "night",
+    distractors: ["day",  "morning",  "evening"], pos: "noun", gender: "f", emoji: "🌙" }),
+  // ── Beginner · Past · faire ─────────────────────────────────────────
+  W({ id: "beg-faire-courses", unit: "Beginner|Past|faire", fr: "les courses", en: "shopping",
+    distractors: ["cooking",  "cleaning",  "washing"], pos: "noun", gender: "f", emoji: "🛒" }),
+  W({ id: "beg-faire-mere", unit: "Beginner|Past|faire", fr: "une mère", en: "mother",
+    distractors: ["father",  "sister",  "aunt"], pos: "noun", gender: "f", emoji: "👩‍👧" }),
+  W({ id: "beg-faire-soupe", unit: "Beginner|Past|faire", fr: "une soupe", en: "soup",
+    distractors: ["salad",  "bread",  "cake"], pos: "noun", gender: "f", emoji: "🍲" }),
+  W({ id: "beg-faire-tres", unit: "Beginner|Past|faire", fr: "très", en: "very",
+    distractors: ["too",  "quite",  "not"], pos: "adverb", emoji: "💯" }),
+  W({ id: "beg-faire-bien", unit: "Beginner|Past|faire", fr: "bien", en: "well",
+    distractors: ["badly",  "often",  "soon"], pos: "adverb", emoji: "✅" }),
+  // ── Beginner · Future · faire ───────────────────────────────────────
+  W({ id: "beg-faire-samedi", unit: "Beginner|Future|faire", fr: "samedi", en: "Saturday",
+    distractors: ["Sunday",  "Friday",  "Monday"], pos: "noun", gender: "m", emoji: "🗓️6️⃣" }),
+  W({ id: "beg-faire-dimanche", unit: "Beginner|Future|faire", fr: "dimanche", en: "Sunday",
+    distractors: ["Saturday",  "Monday",  "Friday"], pos: "noun", gender: "m", emoji: "🗓️7️⃣" }),
+  W({ id: "beg-faire-promenade", unit: "Beginner|Future|faire", fr: "une promenade", en: "walk",
+    distractors: ["run",  "ride",  "swim"], pos: "noun", gender: "f", emoji: "🚶" }),
+  W({ id: "beg-faire-sport", unit: "Beginner|Future|faire", fr: "le sport", en: "sport",
+    distractors: ["music",  "dance",  "game"], pos: "noun", gender: "m", emoji: "⚽" }),
+  W({ id: "beg-faire-excellent", unit: "Beginner|Future|faire", fr: "excellent", en: "excellent",
+    distractors: ["awful",  "average",  "boring"], pos: "adjective", emoji: "🌟" }),
 ];
 
 const BY_ID = new Map(CHECK_WORDS.map((w) => [w.id, w]));
