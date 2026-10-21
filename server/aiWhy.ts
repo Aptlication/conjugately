@@ -149,18 +149,32 @@ export function __setFetch(f: Fetch) { fetchImpl = f; }
 async function callClaude(system: string, messages: { role: "user" | "assistant"; content: string }[]): Promise<string> {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw Object.assign(new Error("AI WHY is not configured"), { status: 503 });
-  const r = await fetchImpl("https://api.anthropic.com/v1/messages", {
+  // Haiku 5.5 thinks adaptively and its thinking counts against max_tokens, so
+  // the ceiling is generous and effort is low: these are short, easy answers.
+  const send = (withEffort: boolean) => fetchImpl("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: MODEL(), max_tokens: 400, system, messages }),
+    body: JSON.stringify({
+      model: MODEL(), max_tokens: 2000, system, messages,
+      ...(withEffort ? { output_config: { effort: "low" } } : {}),
+    }),
   });
+  let r = await send(true);
+  if (r.status === 400) {
+    const detail = await r.text();
+    console.warn("[ai-why] retrying without effort:", detail.slice(0, 200));
+    r = await send(false);
+  }
   if (!r.ok) {
     console.error("[ai-why] model error", r.status, (await r.text()).slice(0, 300));
     throw Object.assign(new Error("The tutor is unavailable right now"), { status: 502 });
   }
   const data: any = await r.json();
   const text = (data?.content || []).filter((c: any) => c.type === "text").map((c: any) => c.text).join("").trim();
-  if (!text) throw Object.assign(new Error("The tutor gave no answer"), { status: 502 });
+  if (!text) {
+    console.error("[ai-why] empty reply", data?.stop_reason, JSON.stringify(data?.usage || {}));
+    throw Object.assign(new Error("The tutor gave no answer"), { status: 502 });
+  }
   return text.replace(/\s+/g, " ");
 }
 
