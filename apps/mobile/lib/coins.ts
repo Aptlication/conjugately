@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   COINS_STORAGE_KEY,
   awardQuiz,
+  coinBalance,
   emptyCoinState,
   examGate,
   examInvitation,
@@ -113,4 +114,26 @@ export function spendOnExam(level: string, timeFrame: string): Promise<ExamGate>
     if (next && next !== coins) { try { await write(next); } catch {} }
     return examGate(next ?? coins, level, timeFrame, results);
   });
+}
+
+/** Coins paid for each vocab-check word answered right without VIS-CUE (Jonathan, 21 Oct 2026). */
+export const VOCAB_COINS_PER_WORD = 1;
+
+/**
+ * Pay for a vocab-check word passed (right, no VIS-CUE). Each word passes once,
+ * so this pays at most once per word. Adds to the lifetime `earned` total like
+ * a quiz; earned, never sold (rule 6 in shared/coins.ts). Resolves to the new balance.
+ */
+export function awardVocabCoin(): Promise<number> {
+  return serial(async () => {
+    const s = await readCoins();
+    const next: CoinState = { ...s, earned: coinBalanceEarned(s) + VOCAB_COINS_PER_WORD };
+    try { await write(next); } catch {}
+    return coinBalance(next);
+  });
+}
+
+function coinBalanceEarned(s: CoinState): number {
+  // A pre-18-Oct store has no `earned`; its balance was the sum of unit bests.
+  return typeof s.earned === "number" ? s.earned : coinBalance(s) + s.spent;
 }

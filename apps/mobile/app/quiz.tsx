@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { Stack, router, useLocalSearchParams } from "expo-router";
+import { Stack, router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import * as Haptics from "expo-haptics";
@@ -18,6 +18,7 @@ import { AiWhyButton, AiWhyPanel } from "../components/AiWhy";
 import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
 import { collectMissedWord } from "../lib/vocab";
+import { countDue, unitKey } from "../lib/vocabCheck";
 import { recordCourseQuiz, readExamGate } from "../lib/coins";
 import { coinBalance, tenseProgress, invitationCopy, examCoinCost, type ExamInvitation } from "@shared/coins";
 import { getExam } from "@shared/exams";
@@ -146,6 +147,29 @@ export default function Quiz() {
     if (convoLocked) { router.push("/paywall" as any); return; }
     router.push({ pathname: "/conversation" as any, params: { level: courseLevel, timeFrame: courseTimeFrame, verb } });
   };
+  // Vocab check (21 Oct 2026): the unit's new nouns, adjectives and adverbs are
+  // tested after the quiz and the conversation. If the learner takes the
+  // conversation, the check follows it (conversation.tsx); if they opt out, or
+  // the unit has no conversation, it follows the quiz. Course units only.
+  const isCourseUnit = !!courseKey && unitIndex !== undefined && !exam;
+  const vocabUnit = unitKey(courseLevel, courseTimeFrame, verb);
+  const [vocabDue, setVocabDue] = useState(0);
+  const vocabAutoRef = useRef(false);
+  const openVocab = (from?: "card") => {
+    vocabAutoRef.current = true;
+    router.push({ pathname: "/vocab-check" as any,
+      params: { level: courseLevel, timeFrame: courseTimeFrame, verb, ...(from ? { from } : {}) } });
+  };
+  useFocusEffect(React.useCallback(() => {
+    if (state === "done" && isCourseUnit) countDue(vocabUnit).then(setVocabDue).catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, vocabUnit]));
+  useEffect(() => {
+    if (state !== "done" || !isCourseUnit || conversation || !award || invite || vocabAutoRef.current || vocabDue === 0) return;
+    const t = setTimeout(() => { if (!vocabAutoRef.current) openVocab(); }, 2800);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, award, invite, vocabDue, !!conversation]);
   useEffect(() => {
     if (state !== "done" || !conversation || !award || invite || convoAskedRef.current) return;
     const t = setTimeout(() => {
@@ -206,7 +230,7 @@ export default function Quiz() {
     n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
 
   const load = async () => {
-    convoAskedRef.current = false; setConvoAsk(false);
+    convoAskedRef.current = false; setConvoAsk(false); vocabAutoRef.current = false;
     setState("loading"); setIdx(0); setSelected(null); setConfirmed(false);
     setAnswers({}); setAnswerUrl(null); setAward(null); setWhyOpenFor(null);
     if (exam) {
@@ -672,6 +696,13 @@ export default function Quiz() {
                 <View style={styles.proPill}><Text style={styles.proPillText}>PRO</Text></View>
               </Pressable>
             )}
+            {isCourseUnit && vocabDue > 0 && (
+              <Pressable style={styles.convoBtn} onPress={() => openVocab("card")} accessibilityRole="button"
+                accessibilityLabel={`Vocab check, ${vocabDue} words`}>
+                <Ionicons name="albums" size={18} color="#1B2145" />
+                <Text style={styles.convoBtnText}>Vocab check · {vocabDue}</Text>
+              </Pressable>
+            )}
             <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={load}><Text style={[styles.ghostText, styles.ghostTextNavy]}>Try Again</Text></Pressable>
             <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={goHome}><Text style={[styles.ghostText, styles.ghostTextNavy]}>← Back to Quiz Setup</Text></Pressable>
           </View>
@@ -738,7 +769,7 @@ export default function Quiz() {
               <Pressable style={styles.convoContinue} onPress={openConversation} accessibilityRole="button">
                 <Text style={styles.convoContinueText}>{convoLocked ? "Continue with Pro" : "Continue"}</Text>
               </Pressable>
-              <Pressable onPress={() => setConvoAsk(false)} accessibilityRole="button">
+              <Pressable onPress={() => { setConvoAsk(false); if (vocabDue > 0 && !vocabAutoRef.current) openVocab(); }} accessibilityRole="button">
                 <Text style={styles.tipLink}>Opt out</Text>
               </Pressable>
             </View>

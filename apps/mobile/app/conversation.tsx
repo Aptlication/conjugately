@@ -9,6 +9,7 @@ import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-au
 import { normaliseFrench, similarity } from "@shared/answerMatch";
 import { CONVERSATION_AUDIO, getConversation, type ConvTurn } from "../lib/conversations";
 import { collectConversationWords } from "../lib/vocab";
+import { countDue, unitKey } from "../lib/vocabCheck";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
 /**
@@ -388,9 +389,16 @@ export default function ConversationScreen() {
     if (router.canGoBack()) router.back(); else router.replace("/");
   };
   /** Continue: back past the results screen to the course, the next part of it. */
-  const continueOn = () => {
+  const continueOn = async () => {
     try { SR?.abort(); } catch {}
     try { player.pause(); } catch {}
+    // Vocab check (21 Oct 2026) follows the conversation. It takes this
+    // screen's place, so its own Continue still lands back on the course.
+    const unit = unitKey(level, timeFrame, unitVerb);
+    if ((await countDue(unit).catch(() => 0)) > 0) {
+      router.replace({ pathname: "/vocab-check" as any, params: { level, timeFrame, verb: unitVerb } });
+      return;
+    }
     try { (router as any).dismiss(2); return; } catch {}
     if (router.canGoBack()) router.back(); else router.replace("/");
   };
