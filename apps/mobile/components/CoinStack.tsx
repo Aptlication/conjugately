@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AccessibilityInfo, Animated, Easing, Platform, StyleSheet, Text, View } from "react-native";
 import * as Haptics from "expo-haptics";
 import { useAudioPlayer } from "expo-audio";
+import CoinIcon from "./CoinIcon";
 
 /**
  * Post-quiz reward: gold coins dropping onto a stack, casino style, while the
@@ -93,7 +94,7 @@ export default function CoinStack({ earned, unitMax, balance, previousBest, mute
         <Text style={styles.sub}>
           {previousBest !== undefined ? `Your best on this unit already earned ${previousBest} of ${unitMax}. Beat it to earn the difference.` : ""}
         </Text>
-        <Text style={styles.balance}>🪙 Balance: {balance}</Text>
+        <Text style={styles.balance}><CoinIcon size={15} /> Balance: {balance}</Text>
       </View>
     );
   }
@@ -123,7 +124,7 @@ export default function CoinStack({ earned, unitMax, balance, previousBest, mute
       {previousBest !== undefined && previousBest > 0 && (
         <Text style={styles.sub}>Improvement on your best for this unit</Text>
       )}
-      <Text style={styles.balance}>🪙 Balance: {balance}</Text>
+      <Text style={styles.balance}><CoinIcon size={15} /> Balance: {balance}</Text>
     </View>
   );
 }

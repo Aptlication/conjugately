@@ -12,6 +12,7 @@ import type { ExamResult } from "@shared/exams";
 import { coinBalance } from "@shared/coins";
 import { readCoins } from "../lib/coins";
 import ExamGateCard from "../components/ExamGateCard";
+import CoinIcon from "../components/CoinIcon";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
@@ -44,7 +45,7 @@ export default function MiniCourses() {
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={styles.h1}>📚 Mini-Courses</Text>
         {balance !== null && (
-          <Text style={styles.coins} accessibilityLabel={`${balance} coins`}>🪙 {balance} coins</Text>
+          <Text style={styles.coins} accessibilityLabel={`${balance} coins`}><CoinIcon size={16} /> {balance} coins</Text>
         )}
 
         {!level && (

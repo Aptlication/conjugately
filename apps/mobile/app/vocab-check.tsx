@@ -6,6 +6,16 @@ import * as Haptics from "expo-haptics";
 import VisCue from "../components/VisCue";
 import { optionsFor, recordAnswer, unitKey, wordsDue, type CheckWord } from "../lib/vocabCheck";
 import { awardVocabCoin, VOCAB_COINS_PER_WORD } from "../lib/coins";
+import { setAudioModeAsync, useAudioPlayer } from "expo-audio";
+import { API_BASE } from "../lib/data";
+import CoinIcon from "../components/CoinIcon";
+
+/**
+ * Each card says its French word as it appears (Jonathan, 23 Oct 2026). The
+ * recordings live on the server, one per word id, made with
+ * scripts/record-vocab-audio.mjs; a word with no recording simply stays silent.
+ */
+const vocabAudioUrl = (id: string) => `${API_BASE}/attached_assets/audio/vocab/${id}.mp3`;
 
 /**
  * Vocab check — the post-quiz vocabulary session (spec: Jonathan, 21 Oct 2026).
@@ -63,11 +73,19 @@ export default function VocabCheck() {
     });
   }, [unit]);
 
+  const wordPlayer = useAudioPlayer(null);
+  const sayWord = async (w: CheckWord | undefined) => {
+    if (!w) return;
+    try { await setAudioModeAsync({ playsInSilentMode: true, allowsRecording: false }); } catch {}
+    try { wordPlayer.replace({ uri: vocabAudioUrl(w.id) }); wordPlayer.play(); } catch {}
+  };
+
   const dealCard = (w: CheckWord | undefined) => {
     clearTimer();
     setPicked(null); setVerdict(null); setCued(false); setCueOpen(false); setShowOptions(false);
     if (!w) return;
     setOptions(optionsFor(w));
+    sayWord(w);
     timer.current = setTimeout(() => setShowOptions(true), OPTIONS_DELAY_MS);
   };
 
@@ -165,6 +183,10 @@ export default function VocabCheck() {
           <>
             <View style={styles.wordCard}>
               <Text style={styles.wordFr} accessibilityLanguage="fr">{word.fr}</Text>
+              <Pressable onPress={() => sayWord(word)} hitSlop={12} accessibilityRole="button"
+                accessibilityLabel={`Hear ${word.fr}`} style={styles.speaker}>
+                <Ionicons name="volume-high" size={22} color={BLUE} />
+              </Pressable>
               <Text style={styles.pos}>{word.pos}</Text>
             </View>
 
@@ -211,7 +233,7 @@ export default function VocabCheck() {
             {verdict && (
               <View style={[styles.verdict, { borderColor: verdict === "right" ? GREEN : verdict === "cued" ? AMBER : RED }]}>
                 <Text style={[styles.verdictTitle, { color: verdict === "right" ? GREEN : verdict === "cued" ? AMBER : RED }]}>
-                  {verdict === "right" ? `Correct!  +${VOCAB_COINS_PER_WORD} 🪙` : verdict === "cued" ? "Right — but VIS-CUE was used" : "Not quite"}
+                  {verdict === "right" ? <>Correct!  +{VOCAB_COINS_PER_WORD} <CoinIcon size={16} /></> : verdict === "cued" ? "Right — but VIS-CUE was used" : "Not quite"}
                 </Text>
                 {verdict !== "right" && (
                   <Text style={styles.verdictSub}>
@@ -239,7 +261,7 @@ export default function VocabCheck() {
             )}
             {coins > 0 && (
               <Text style={styles.coinLine}>
-                +{coins} 🪙{balance !== null ? `  ·  balance ${balance}` : ""}
+                +{coins} <CoinIcon size={20} />{balance !== null ? `  ·  balance ${balance}` : ""}
               </Text>
             )}
           </View>
@@ -289,6 +311,7 @@ const styles = StyleSheet.create({
   wordCard: { backgroundColor: "#F4F7FE", borderRadius: 24, borderWidth: 1, borderColor: "#DDE5F7",
     paddingVertical: 34, paddingHorizontal: 16, alignItems: "center", marginTop: 12 },
   wordFr: { color: INK, fontSize: 38, fontWeight: "800", textAlign: "center" },
+  speaker: { position: "absolute", top: 12, right: 12, padding: 6 },
   pos: { color: SOFT, fontSize: 13, marginTop: 6, textTransform: "uppercase", letterSpacing: 1 },
   visCue: { flexDirection: "row", alignSelf: "center", alignItems: "center", gap: 8, marginTop: 16,
     backgroundColor: "#7C4DDB", borderRadius: 22, paddingVertical: 11, paddingHorizontal: 24 },

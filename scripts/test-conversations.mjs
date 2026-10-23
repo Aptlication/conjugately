@@ -154,6 +154,7 @@ for (const w of CHECK_WORDS) {
   const u = `vocab ${w.id}`;
   if (!unitKeys.has(w.unit.normalize("NFC"))) fail(u, `unit "${w.unit}" is not a course unit (never shown)`);
   if (ids.has(w.id)) fail(u, "duplicate id"); ids.add(w.id);
+  if (!/^[a-z0-9-]+$/.test(w.id)) fail(u, "id is not URL-safe (it names the word's audio file)");
   if (frs.has(w.fr)) fail(u, `duplicate word "${w.fr}"`); frs.add(w.fr);
   if (emo.has(w.emoji)) fail(u, `duplicate emoji ${w.emoji}`); emo.add(w.emoji);
   const opts = [w.en, ...w.distractors];

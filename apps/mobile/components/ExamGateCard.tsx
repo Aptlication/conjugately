@@ -4,6 +4,7 @@ import { router, useFocusEffect } from "expo-router";
 import { examCoinCost, examGateLabel, type ExamGate } from "@shared/coins";
 import { getExam } from "@shared/exams";
 import { readExamGate, spendOnExam } from "../lib/coins";
+import CoinIcon from "./CoinIcon";
 
 /**
  * The Final Level Exam entry point, used after a course quiz and in the
@@ -81,7 +82,7 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
                 <Text style={s.status}>Spend {cost} of your {gate.balance} coins? Retakes are free until you pass.</Text>
                 <View style={{ flexDirection: "row", gap: 8, marginTop: 8 }}>
                   <Pressable style={[s.btn, { flex: 1, marginTop: 0 }]} onPress={unlock} disabled={busy}>
-                    <Text style={s.btnText}>{busy ? "…" : `Confirm — ${cost} 🪙`}</Text>
+                    <Text style={s.btnText}>{busy ? "…" : <>Confirm — {cost} <CoinIcon size={15} /></>}</Text>
                   </Pressable>
                   <Pressable style={[s.ghost, { flex: 1 }]} onPress={() => setConfirming(false)}>
                     <Text style={s.ghostText}>Not now</Text>
@@ -90,7 +91,7 @@ export default function ExamGateCard({ level, timeFrame, variant = "light", lock
               </View>
             ) : (
               <Pressable style={s.btn} onPress={() => setConfirming(true)} accessibilityRole="button">
-                <Text style={s.btnText}>Unlock for {cost} 🪙</Text>
+                <Text style={s.btnText}>Unlock for {cost} <CoinIcon size={15} /></Text>
               </Pressable>
             )
           ) : null}

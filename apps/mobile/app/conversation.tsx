@@ -189,20 +189,46 @@ export default function ConversationScreen() {
     try { SR?.abort(); } catch {}
   }, []);
 
+  /**
+   * Play one app line. Hardened 23 Oct 2026 (build 50: Intermediate lines silent
+   * on iPhone, fine on the web). After the learner speaks, iOS still holds the
+   * audio session for recording; a clip started then can play silently. So:
+   * release the recogniser, wait a beat, switch the session back to playback
+   * (retrying), wait for the clip to load, play, nudge it once if it hasn't
+   * started, and size the safety timer to the clip's real length.
+   */
   const play = useCallback(async (audioKey: string, onEnd: () => void) => {
     clearFallback();
     const src = CONVERSATION_AUDIO[audioKey];
     playingRef.current = true;
     endRef.current = onEnd;
     // If a clip is missing or the player stalls, the conversation still moves on.
-    fallbackTimer.current = setTimeout(() => finishPlayback(), 7000);
-    try {
-      await setAudioModeAsync({ playsInSilentMode: true, allowsRecording: false });
-    } catch {}
+    fallbackTimer.current = setTimeout(() => finishPlayback(), 12000);
+    const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
+    try { SR?.abort(); } catch {}
+    await wait(250);
+    for (let i = 0; i < 3; i++) {
+      try {
+        await setAudioModeAsync({ playsInSilentMode: true, allowsRecording: false, shouldRouteThroughEarpiece: false });
+        break;
+      } catch { await wait(150); }
+    }
     try {
       if (!src) throw new Error("missing clip");
       player.replace(src);
+      const t0 = Date.now();
+      while (!player.isLoaded && Date.now() - t0 < 2000) await wait(50);
+      try { player.seekTo(0); } catch {}
       player.play();
+      if (player.duration > 0) {
+        clearFallback();
+        fallbackTimer.current = setTimeout(() => finishPlayback(), (player.duration + 2) * 1000);
+      }
+      setTimeout(() => {
+        if (playingRef.current && !player.playing && !player.currentStatus?.didJustFinish) {
+          try { player.play(); } catch {}
+        }
+      }, 800);
     } catch {
       clearFallback();
       fallbackTimer.current = setTimeout(() => finishPlayback(), 1800);

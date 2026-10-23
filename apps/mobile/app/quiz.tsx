@@ -25,6 +25,7 @@ import { getExam } from "@shared/exams";
 import { spendOnExam } from "../lib/coins";
 import CoinStack from "../components/CoinStack";
 import ExamGateCard from "../components/ExamGateCard";
+import CoinIcon from "../components/CoinIcon";
 
 const TENSE_BY_TIMEFRAME: Record<string, string> = {
   Present: "Présent", Past: "Passé Composé", Future: "Futur Simple",
@@ -730,7 +731,7 @@ export default function Quiz() {
             };
             return (
               <View style={styles.modalCard} accessibilityViewIsModal>
-                <Text style={styles.inviteCoins}>🪙 {invite.balance}</Text>
+                <Text style={styles.inviteCoins}><CoinIcon size={22} /> {invite.balance}</Text>
                 <Text style={styles.modalTitle}>{copy.title}</Text>
                 <Text style={styles.modalSub}>{copy.body}</Text>
                 <Text style={styles.inviteDetail}>{copy.detail}</Text>
@@ -738,7 +739,7 @@ export default function Quiz() {
                   <>
                     <Pressable style={styles.inviteBtn} onPress={unlockAndStart} disabled={inviteBusy} accessibilityRole="button">
                       <Text style={styles.inviteBtnText}>
-                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : `Unlock & start exam — ${examCoinCost(invite.level)} 🪙`}
+                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : <>Unlock & start exam — {examCoinCost(invite.level)} <CoinIcon size={15} /></>}
                       </Text>
                     </Pressable>
                     <Pressable onPress={() => setInvite(null)} accessibilityRole="button">
