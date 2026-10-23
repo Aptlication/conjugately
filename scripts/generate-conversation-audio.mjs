@@ -8,6 +8,7 @@
 //   --dry-run        list what would be generated, call nothing
 //   --only=BEG_etre  only lines whose file name starts with this
 //   --force          regenerate files that already exist
+//   --lines=FILE     record the lines in FILE instead (same JSON shape)
 //
 // Re-running is safe: clips that already exist are skipped, so an interrupted
 // run picks up where it stopped.
@@ -17,7 +18,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const LINES = path.join(here, "data", "conversation-app-lines.json");
+// --lines=<file> records another list, e.g. the 1.2.3 warm-ups:
+//   node scripts/generate-conversation-audio.mjs --lines=scripts/data/conversation-warmup-lines.json
+const linesArg = (process.argv.slice(2).find((a) => a.startsWith("--lines=")) || "").slice(8);
+const LINES = linesArg ? path.resolve(linesArg) : path.join(here, "data", "conversation-app-lines.json");
 const OUT_DIR = path.join(here, "..", "apps", "mobile", "assets", "audio", "conversations");
 const MODEL = "eleven_multilingual_v2";
 const FORMAT = "mp3_44100_128";

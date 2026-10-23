@@ -11,7 +11,9 @@ import { COURSES, COURSE_TIME_FRAMES } from "../lib/courses";
  * course quiz it resumes: where the learner is (level path), how far through the
  * level and each tense (My Journey's gradient bars), and the unit starting now.
  * Then it replaces itself with the quiz, so Back from the quiz returns home.
- * Course units only; a home-screen quiz resumes straight away (index.tsx).
+ * 1.2.3: shown before EVERY course quiz — Bonne continuation (index.tsx), a
+ * Mini-courses unit (mini-courses.tsx) and My Journey's Continue (journey.tsx).
+ * A home-screen quiz still starts straight away.
  */
 
 const HOLD_MS = 2500;

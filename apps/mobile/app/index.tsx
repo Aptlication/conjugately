@@ -138,9 +138,6 @@ export default function Home() {
       <View style={[styles.center, { paddingTop: insets.top }]}>
         <Wordmark ms={ms} />
         <Tagline ms={ms} />
-        <Text style={styles.blurb}>
-          {"Master French verb conjugations—\nthe key to fluency."}
-        </Text>
 
         {/* Rendered (invisible) before progress loads, so nothing shifts. */}
         <Pressable onPress={onContinue} disabled={!resume}

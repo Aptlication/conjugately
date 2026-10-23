@@ -103,7 +103,8 @@ export default function MiniCourses() {
                   accessibilityHint={locked ? "Requires Conjugately Pro" : undefined}
                   onPress={() => locked
                     ? router.push("/paywall" as any)
-                    : router.push({ pathname: "/quiz",
+                    // 1.2.3: every course quiz opens with the 2.5 s progress overview (app/resume.tsx).
+                    : router.push({ pathname: "/resume" as any,
                         params: { difficulty: level, verb: u.verb, timeFrame,
                           courseKey: `${level}|${timeFrame}`, unitIndex: String(ui) } })}>
                   <Text style={[styles.rowTitle, done && styles.rowTitleDone]}>{locked ? "🔒 " : done ? "✓ " : ""}{u.name}</Text>

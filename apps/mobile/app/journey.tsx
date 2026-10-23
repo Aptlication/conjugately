@@ -102,7 +102,7 @@ export default function Journey() {
             <Text style={styles.nextLabel}>NEXT STEP</Text>
             <Text style={styles.cardText}>Up next: {s.nextStep.label} — {s.nextStep.unitName}</Text>
             <Pressable style={styles.nextBtn}
-              onPress={() => router.push({ pathname: "/quiz", params: {
+              onPress={() => router.push({ pathname: "/resume" as any, params: {
                 difficulty: s.nextStep!.level, verb: s.nextStep!.verb, timeFrame: s.nextStep!.timeFrame,
                 courseKey: s.nextStep!.courseKey, unitIndex: String(s.nextStep!.unitIndex),
               } })}>

@@ -9,7 +9,7 @@ import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
 import { purchasesAvailable, usePro } from "../lib/pro";
-import { getConversation } from "../lib/conversations";
+import { getConversation, conversationSeconds } from "../lib/conversationsFull";
 import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
 import { normaliseFrench, similarity } from "@shared/answerMatch";
 import { Ionicons } from "@expo/vector-icons";
@@ -763,7 +763,7 @@ export default function Quiz() {
               <View style={styles.convoIcon}><Ionicons name="chatbubbles" size={28} color="#FFFFFF" /></View>
               <Text style={styles.modalTitle}>Final conversation</Text>
               <Text style={styles.modalSub}>
-                A 20-second chat using <Text style={{ fontWeight: "800" }}>{conversation.verb}</Text> in the {conversation.tense.toLowerCase()}. Listen, then answer out loud.
+                A {conversationSeconds(conversation.level)}-second chat using <Text style={{ fontWeight: "800" }}>{conversation.verb}</Text> in the {conversation.tense.toLowerCase()}. Listen, then answer out loud.
               </Text>
               {convoLocked && (
                 <View style={[styles.proPill, { alignSelf: "center", marginBottom: 12 }]}>
