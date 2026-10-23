@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   AccessibilityInfo, Animated, Easing, Platform, Pressable, ScrollView, StyleSheet, Text, View,
 } from "react-native";
@@ -124,7 +124,8 @@ export default function ConversationScreen() {
   const level = String(p.level || "");
   const timeFrame = String(p.timeFrame || "");
   const unitVerb = String(p.verb || "");
-  const conv = getConversation(level, timeFrame, unitVerb);
+  // Held for the life of the screen: effects below depend on conv, so it must not change identity between renders.
+  const conv = useMemo(() => getConversation(level, timeFrame, unitVerb), [level, timeFrame, unitVerb]);
   const { isPro, loading } = usePro();
 
   const [phase, setPhase] = useState<Phase>("start");

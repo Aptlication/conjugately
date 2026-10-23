@@ -22,11 +22,20 @@ import { WARMUP_AUDIO } from "./conversationWarmupAudio";
 
 export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WARMUP_AUDIO };
 
+// Built once per unit and reused. The conversation screen's effects depend on
+// this object, so a fresh copy on every render restarted the dialogue at its
+// first line in a loop (TestFlight 48, 23 Oct 2026: "Bonjour, bonjour, …").
+// The same object must come back every time: scripts/test-conversations.mjs checks it.
+const FULL = new Map<string, Conversation | undefined>();
+
 export function getConversation(level: string, timeFrame: string, verb: string): Conversation | undefined {
+  const key = `${level}|${timeFrame}|${verb}`.normalize("NFC");
+  if (FULL.has(key)) return FULL.get(key);
   const base = getBaseConversation(level, timeFrame, verb);
-  if (!base) return undefined;
-  const warm = WARMUPS[`${level}|${timeFrame}|${verb}`.normalize("NFC")];
-  return warm?.length ? { ...base, turns: [...warm, ...base.turns] } : base;
+  const warm = WARMUPS[key];
+  const full = base && warm?.length ? { ...base, turns: [...warm, ...base.turns] } : base;
+  FULL.set(key, full);
+  return full;
 }
 
 /** What the conversation offer says: about 20 s, plus 15 at Elementary and 30 at Intermediate. */
