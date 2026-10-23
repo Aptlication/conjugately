@@ -3299,6 +3299,16 @@ export const CONVERSATIONS: Record<string, Conversation> = {
     "audio": "INT_se-souvenir_fut_3"
    },
    {
+    "who": "you",
+    "fr": "Oui, ils s'en souviendront aussi.",
+    "en": "Yes, they'll remember it too.",
+    "accept": [
+     "Oui, ils s'en souviendront aussi.",
+     "Oui, ils s'en souviendront.",
+     "Oui, ils s'en souviendront toujours."
+    ]
+   },
+   {
     "who": "app",
     "fr": "C'est ça, les beaux voyages !",
     "en": "That's what great trips are like!",

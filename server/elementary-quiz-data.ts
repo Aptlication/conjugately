@@ -1418,7 +1418,7 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       hint: "Use present tense negative: il ne voit pas",
       answerOptions: [
         { text: "Il ne voient pas nous.", rationale: "Option A", isCorrect: false },
-        { text: "Il ne voit pas nous.", rationale: "Option B", isCorrect: true },
+        { text: "Il ne nous voit pas.", rationale: "Option B", isCorrect: true },
         { text: "Il ne voyez pas nous.", rationale: "Option C", isCorrect: false },
         { text: "Il ne vois pas nous.", rationale: "Option D", isCorrect: false }
       ]
@@ -2355,7 +2355,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "They (female) saw / have seen everything.",
       hint: "Use passé composé of voir: elles ont vu",
       answerOptions: [
-        { text: "Elles ont vu tout.", rationale: "Option A", isCorrect: true },
+        { text: "Elles ont tout vu.", rationale: "Option A", isCorrect: true },
         { text: "Elles sont vues tout.", rationale: "Option B", isCorrect: false },
         { text: "Elles ont vues tout.", rationale: "Option C", isCorrect: false },
         { text: "Elles voyaient tout.", rationale: "Option D", isCorrect: false }
@@ -2455,9 +2455,9 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "We didn't see / haven't seen them.",
       hint: "Use passé composé negative: nous ne les avons pas vu",
       answerOptions: [
-        { text: "Nous ne les avons pas vus.", rationale: "Option A", isCorrect: false },
+        { text: "Nous ne les avons pas vus.", rationale: "Correct! 'Nous ne les avons pas vus.' — with avoir, the participle agrees with the preceding direct object 'les'.", isCorrect: true },
         { text: "Nous ne les voyions pas.", rationale: "Option B", isCorrect: false },
-        { text: "Nous ne les avons pas vu.", rationale: "Option C", isCorrect: true },
+        { text: "Nous ne les avons pas vu.", rationale: "Past participle must agree with the preceding direct object 'les': vus.", isCorrect: false },
         { text: "Nous ne les sommes pas vus.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -2658,7 +2658,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       hint: "Use passé composé of dire: tu as dit",
       answerOptions: [
         { text: "Tu a dit tout.", rationale: "Option A", isCorrect: false },
-        { text: "Tu as dit tout.", rationale: "Option B", isCorrect: true },
+        { text: "Tu as tout dit.", rationale: "Option B", isCorrect: true },
         { text: "Tu avons dit tout.", rationale: "Option C", isCorrect: false },
         { text: "Tu ont dit tout.", rationale: "Option D", isCorrect: false }
       ]
@@ -2771,7 +2771,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       answerOptions: [
         { text: "Ils sait tout.", rationale: "Option A", isCorrect: false },
         { text: "Ils savions tout.", rationale: "Option B", isCorrect: false },
-        { text: "Ils ont su tout.", rationale: "Option C", isCorrect: true },
+        { text: "Ils ont tout su.", rationale: "Option C", isCorrect: true },
         { text: "Ils sauront tout.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -2839,7 +2839,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "We knew / have known that it was important.",
       hint: "Use passé composé of savoir: nous avons su",
       answerOptions: [
-        { text: "Nous avons su que c'est important.", rationale: "Option A", isCorrect: true },
+        { text: "Nous avons su que c'était important.", rationale: "Option A", isCorrect: true },
         { text: "Nous savent que c'est important.", rationale: "Option B", isCorrect: false },
         { text: "Nous savions que c'est important.", rationale: "Option C", isCorrect: false },
         { text: "Nous saurons que c'est important.", rationale: "Option D", isCorrect: false }
@@ -2869,7 +2869,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "I knew / have known what he was thinking.",
       hint: "Use passé composé of savoir: j'ai su",
       answerOptions: [
-        { text: "J'ai su ce qu'il pense.", rationale: "Option A", isCorrect: true },
+        { text: "J'ai su ce qu'il pensait.", rationale: "Option A", isCorrect: true },
         { text: "Je savais ce qu'il pense.", rationale: "Option B", isCorrect: false },
         { text: "Je saurai ce qu'il pense.", rationale: "Option C", isCorrect: false },
         { text: "Je sais ce qu'il pense.", rationale: "Option D", isCorrect: false }
@@ -3012,7 +3012,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
         { text: "Elle est sue nager depuis l'année dernière.", rationale: "Option A", isCorrect: false },
         { text: "Elle savait nager depuis l'année dernière.", rationale: "Option B", isCorrect: false },
         { text: "Elle a sue nager depuis l'année dernière.", rationale: "Option C", isCorrect: false },
-        { text: "Elle a su nager depuis l'année dernière.", rationale: "Option D", isCorrect: true }
+        { text: "Elle a su nager dès l'année dernière.", rationale: "Option D", isCorrect: true }
       ]
     },
     {
@@ -3071,7 +3071,7 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       answerOptions: [
         { text: "Avez-vous sus faire cela depuis longtemps ?", rationale: "Option A", isCorrect: false },
         { text: "Saviez-vous faire cela depuis longtemps ?", rationale: "Option B", isCorrect: false },
-        { text: "Avez-vous su faire cela depuis longtemps ?", rationale: "Option C", isCorrect: true },
+        { text: "Avez-vous toujours su faire cela ?", rationale: "Option C", isCorrect: true },
         { text: "Êtes-vous su faire cela depuis longtemps ?", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -4795,7 +4795,7 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "Will you (formal) want / Are you going to want to join us?",
       hint: "Use irregular future interrogative: voudrez-vous",
       answerOptions: [
-        { text: "Voudrez-vous nous joindre ?", rationale: "Option A", isCorrect: true },
+        { text: "Voudrez-vous nous rejoindre ?", rationale: "Option A", isCorrect: true },
         { text: "Voudrons-nous nous joindre ?", rationale: "Option B", isCorrect: false },
         { text: "Voudra-t-il nous joindre ?", rationale: "Option C", isCorrect: false },
         { text: "Voudras-tu nous joindre ?", rationale: "Option D", isCorrect: false }
@@ -5015,11 +5015,11 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
     },
     {
       question: "One day, I will come / am going to come back.",
-      hint: "Use irregular future form: je viendrai",
+      hint: "Use irregular future form: je reviendrai",
       answerOptions: [
         { text: "Un jour, je viendras.", rationale: "Option A", isCorrect: false },
         { text: "Un jour, je viendra.", rationale: "Option B", isCorrect: false },
-        { text: "Un jour, je viendrai.", rationale: "Option C", isCorrect: true },
+        { text: "Un jour, je reviendrai.", rationale: "Option C", isCorrect: true },
         { text: "Un jour, je viendrez.", rationale: "Option D", isCorrect: false }
       ]
     },
@@ -5067,7 +5067,7 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "They (female) will come / are going to come to visit us.",
       hint: "Use irregular future form: elles viendront",
       answerOptions: [
-        { text: "Elles viendront nous visiter.", rationale: "Option A", isCorrect: true },
+        { text: "Elles viendront nous rendre visite.", rationale: "Option A", isCorrect: true },
         { text: "Elles viendrons nous visiter.", rationale: "Option B", isCorrect: false },
         { text: "Elles viendra nous visiter.", rationale: "Option C", isCorrect: false },
         { text: "Elles viendrez nous visiter.", rationale: "Option D", isCorrect: false }
@@ -5085,9 +5085,9 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
     },
     {
       question: "She will not come / is not going to come back.",
-      hint: "Use irregular future negative: elle ne viendra pas",
+      hint: "Use irregular future negative: elle ne reviendra pas",
       answerOptions: [
-        { text: "Elle ne viendra pas.", rationale: "Option A", isCorrect: true },
+        { text: "Elle ne reviendra pas.", rationale: "Option A", isCorrect: true },
         { text: "Elle ne viendrai pas.", rationale: "Option B", isCorrect: false },
         { text: "Elle ne viendras pas.", rationale: "Option C", isCorrect: false },
         { text: "Elle ne viendrez pas.", rationale: "Option D", isCorrect: false }
@@ -5095,10 +5095,10 @@ export const ELEMENTARY_FUTURE_SIMPLE_QUESTIONS: Record<string, ElementaryQuizQu
     },
     {
       question: "When will they (male/mixed) come / are they going to come back?",
-      hint: "Use irregular future interrogative: quand viendront-ils",
+      hint: "Use irregular future interrogative: quand reviendront-ils",
       answerOptions: [
         { text: "Quand viendra-t-il revenir ?", rationale: "Option A", isCorrect: false },
-        { text: "Quand viendront-ils revenir ?", rationale: "Option B", isCorrect: true },
+        { text: "Quand reviendront-ils ?", rationale: "Option B", isCorrect: true },
         { text: "Quand viendrez-vous revenir ?", rationale: "Option C", isCorrect: false },
         { text: "Quand viendrons-nous revenir ?", rationale: "Option D", isCorrect: false }
       ]
