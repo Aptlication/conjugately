@@ -57,8 +57,8 @@
       [
         "expo-speech-recognition",
         {
-          "microphonePermission": "Conjugately uses the microphone so you can speak your answers aloud in Masters Mic instead of tapping them.",
-          "speechRecognitionPermission": "Conjugately uses speech recognition to check the French conjugation you speak. Recognition runs on this iPhone and your audio is not sent anywhere."
+          "microphonePermission": "Conjugately uses the microphone so you can speak your answers in Masters Mic and reply out loud in the Final conversations.",
+          "speechRecognitionPermission": "Conjugately uses speech recognition to check the French you speak. It runs on your iPhone when French is available offline; otherwise Apple's speech service is used. Conjugately does not record or keep your audio."
         }
       ]
     ],
