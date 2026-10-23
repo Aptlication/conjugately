@@ -97,8 +97,12 @@ async function main() {
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
-  const manifest = Object.fromEntries(lines.map((l) => [l.file.replace(/\.mp3$/, ""), { voice: l.voice, french: l.french, english: l.english }]));
-  fs.writeFileSync(path.join(OUT_DIR, "manifest.json"), JSON.stringify(manifest, null, 1));
+  // Merge into the existing record, so recording one list (e.g. --lines=…warmup…) never drops the others.
+  const mPath = path.join(OUT_DIR, "manifest.json");
+  let manifest = {};
+  try { manifest = JSON.parse(fs.readFileSync(mPath, "utf8")); } catch {}
+  for (const l of lines) manifest[l.file.replace(/\.mp3$/, "")] = { voice: l.voice, french: l.french, english: l.english };
+  fs.writeFileSync(mPath, JSON.stringify(manifest, null, 1));
   console.log(`\nDone: ${done} generated, ${failed} failed. Clips are in apps/mobile/assets/audio/conversations.`);
   if (failed) console.log("Run the same command again to retry the failed ones.");
 }

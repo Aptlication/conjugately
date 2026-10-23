@@ -1438,5 +1438,650 @@
   "voice": "Audrey",
   "french": "Merci mille fois !",
   "english": "Thanks a million!"
+ },
+ "ELE_dire_pres_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Tu dis la vérité maintenant ?",
+  "english": "Hello! Are you telling the truth now?"
+ },
+ "ELE_voir_pres_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Qu'est-ce que tu vois dans le ciel ?",
+  "english": "Hello! What can you see in the sky?"
+ },
+ "ELE_savoir_pres_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Tu sais la réponse ?",
+  "english": "Hello! Do you know the answer?"
+ },
+ "ELE_vouloir_pres_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Vous voulez voir le directeur ?",
+  "english": "Hello! Do you want to see the manager?"
+ },
+ "ELE_venir_pres_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Tu viens du bureau ?",
+  "english": "Hi! Are you coming from the office?"
+ },
+ "ELE_pouvoir_pres_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Vous pouvez commencer ?",
+  "english": "Hello! Can you start?"
+ },
+ "ELE_avoir-besoin-de_pres_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Vous avez besoin d'eau ?",
+  "english": "Hello! Do you need water?"
+ },
+ "ELE_dire_pc_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu as dit oui ?",
+  "english": "Hi! Did you say yes?"
+ },
+ "ELE_voir_pc_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Tu as vu ce film ?",
+  "english": "Hi! Have you seen that film?"
+ },
+ "ELE_savoir_pc_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Tu as su la réponse ?",
+  "english": "Hello! Did you find out the answer?"
+ },
+ "ELE_vouloir_pc_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu as voulu m'appeler ?",
+  "english": "Hi! Did you want to call me?"
+ },
+ "ELE_venir_pc_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu es venu avec ta famille ?",
+  "english": "Hello! Did you come with your family?"
+ },
+ "ELE_pouvoir_pc_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Tu as pu te reposer ?",
+  "english": "Hello! Were you able to get some rest?"
+ },
+ "ELE_avoir-besoin-de_pc_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Vous avez eu besoin d'eau ?",
+  "english": "Hello! Did you need water?"
+ },
+ "ELE_dire_fut_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Vous direz bonjour ?",
+  "english": "Hi! Will you say hello?"
+ },
+ "ELE_voir_fut_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Vous verrez une pièce de théâtre ?",
+  "english": "Hello! Will you see a play?"
+ },
+ "ELE_savoir_fut_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu sauras le faire ?",
+  "english": "Hello! Will you know how to do it?"
+ },
+ "ELE_vouloir_fut_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Tu voudras partir tôt ?",
+  "english": "Hello! Will you want to leave early?"
+ },
+ "ELE_venir_fut_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Vous viendrez pour le dîner ?",
+  "english": "Hi! Will you come for dinner?"
+ },
+ "ELE_pouvoir_fut_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Tu pourras m'appeler ?",
+  "english": "Hi! Will you be able to call me?"
+ },
+ "ELE_avoir-besoin-de_fut_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Tu auras besoin d'un livre ?",
+  "english": "Hello! Will you need a book?"
+ },
+ "INT_s-interesser_pres_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Ta sœur s'intéresse à la science ?",
+  "english": "Hello! Is your sister interested in science?"
+ },
+ "INT_s-interesser_pres_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ah bon ? Et moi, je m'intéresse à quoi ?",
+  "english": "Really? And me, what am I interested in?"
+ },
+ "INT_se-debrouiller_pres_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Ton ami et toi, vous vous débrouillez comment ?",
+  "english": "Hi! How are you and your friend managing?"
+ },
+ "INT_se-debrouiller_pres_w3": {
+  "voice": "Audrey",
+  "french": "Ah bon ? Et ton fils, il se débrouille sans aide ?",
+  "english": "Really? And your son, does he manage without help?"
+ },
+ "INT_s-ennuyer_pres_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Ton ami et toi, vous vous ennuyez ?",
+  "english": "Hi! Are you and your friend bored?"
+ },
+ "INT_s-ennuyer_pres_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ah bon ? Et ta sœur, elle s'ennuie ?",
+  "english": "Really? And your sister, is she bored?"
+ },
+ "INT_s-entrainer_pres_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Ton frère et toi, vous vous entraînez ?",
+  "english": "Hi! Do you and your brother train?"
+ },
+ "INT_s-entrainer_pres_w3": {
+  "voice": "Voix grand père",
+  "french": "Ah bon ? Et tes amis, ils s'entraînent aussi ?",
+  "english": "Really? And your friends, do they train too?"
+ },
+ "INT_se-souvenir_pres_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Ta sœur et toi, vous vous souvenez de moi ?",
+  "english": "Hello! Do you and your sister remember me?"
+ },
+ "INT_se-souvenir_pres_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Super ! Et ton frère, il se souvient de moi ?",
+  "english": "Great! And your brother, does he remember me?"
+ },
+ "INT_s-adapter_pres_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Ta famille et toi, vous vous adaptez ici ?",
+  "english": "Hi! Are you and your family adapting here?"
+ },
+ "INT_s-adapter_pres_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Super ! Et ton chat, il s'adapte ?",
+  "english": "Great! And your cat, is he adapting?"
+ },
+ "INT_se-rejouir_pres_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Ta sœur et toi, vous vous réjouissez de la fête ?",
+  "english": "Hello! Are you and your sister looking forward to the party?"
+ },
+ "INT_se-rejouir_pres_w3": {
+  "voice": "Audrey",
+  "french": "Super ! Et ton frère, il se réjouit aussi ?",
+  "english": "Great! And your brother, is he looking forward to it too?"
+ },
+ "INT_mettre_pres_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Où est-ce que tu mets tes clés ?",
+  "english": "Hi! Where do you put your keys?"
+ },
+ "INT_mettre_pres_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ah bon ? Et ton téléphone, tu le mets en silencieux ?",
+  "english": "Really? And your phone, do you put it on silent?"
+ },
+ "INT_trouver_pres_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Tu trouves ça facile de parler français ?",
+  "english": "Hello! Do you find it easy to speak French?"
+ },
+ "INT_trouver_pres_w3": {
+  "voice": "Voix grand père",
+  "french": "Super ! Et tu trouves souvent de l'argent par terre ?",
+  "english": "Great! And do you often find money on the ground?"
+ },
+ "INT_croire_pres_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Tu crois en tes amis ?",
+  "english": "Hi! Do you believe in your friends?"
+ },
+ "INT_croire_pres_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "C'est bien ! Et tu crois tout ce que je dis ?",
+  "english": "That's good! And do you believe everything I say?"
+ },
+ "INT_parler_pres_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Tu parles souvent avec ta sœur ?",
+  "english": "Hello! Do you often talk with your sister?"
+ },
+ "INT_parler_pres_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et au cinéma, vous parlez pendant le film ?",
+  "english": "And at the cinema, do you (both) talk during the film?"
+ },
+ "INT_prendre_pres_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Tu prends une douche le matin ?",
+  "english": "Hi! Do you take a shower in the morning?"
+ },
+ "INT_prendre_pres_w3": {
+  "voice": "Audrey",
+  "french": "Et ta femme et toi, vous prenez la voiture aujourd'hui ?",
+  "english": "And are you and your wife taking the car today?"
+ },
+ "INT_lire_pres_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Tu lis des romans d'horreur ?",
+  "english": "Hello! Do you read horror novels?"
+ },
+ "INT_lire_pres_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ah bon ? Tes amis et toi, vous lisez le même livre ?",
+  "english": "Really? And do you and your friends read the same book?"
+ },
+ "INT_ecrire_pres_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu écris avant le petit déjeuner ?",
+  "english": "Hi! Do you write before breakfast?"
+ },
+ "INT_ecrire_pres_w3": {
+  "voice": "Voix grand père",
+  "french": "Et à l'école, vous écrivez des dissertations ?",
+  "english": "And at school, do you (all) write essays?"
+ },
+ "INT_ouvrir_pres_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu ouvres tes cadeaux le jour de ton anniversaire ?",
+  "english": "Hello! Do you open your presents on your birthday?"
+ },
+ "INT_ouvrir_pres_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et au travail, vous ouvrez le magasin à neuf heures ?",
+  "english": "And at work, do you (all) open the shop at nine o'clock?"
+ },
+ "INT_fermer_pres_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu fermes le dossier avant de sauvegarder ?",
+  "english": "Hi! Do you close the file before saving?"
+ },
+ "INT_fermer_pres_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et au travail, vous fermez le magasin à 21 heures ?",
+  "english": "And at work, do you (all) close the shop at 9 p.m.?"
+ },
+ "INT_perdre_pres_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Tu perds parfois ton chemin ?",
+  "english": "Hi! Do you sometimes lose your way?"
+ },
+ "INT_perdre_pres_w3": {
+  "voice": "Audrey",
+  "french": "Ah bon ? Mais tu ne perds pas espoir ?",
+  "english": "Really? But you don't lose hope?"
+ },
+ "INT_garder_pres_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Tu gardes tes reçus ?",
+  "english": "Hello! Do you keep your receipts?"
+ },
+ "INT_garder_pres_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ah bon ? Et au travail, vous gardez votre espace propre ?",
+  "english": "Really? And at work, do you (all) keep your space clean?"
+ },
+ "INT_s-interesser_pc_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Devine : mon frère s'est intéressé à un nouveau sujet.",
+  "english": "Hi! Guess what: my brother got interested in a new subject."
+ },
+ "INT_s-interesser_pc_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, bravo ! Et ma sœur, elle s'est intéressée à quoi ?",
+  "english": "Yes, well done! And my sister, what did she get interested in?"
+ },
+ "INT_se-debrouiller_pc_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Ton frère et toi, vous vous êtes bien débrouillés ?",
+  "english": "Hi! Did you and your brother manage well?"
+ },
+ "INT_se-debrouiller_pc_w3": {
+  "voice": "Voix grand père",
+  "french": "Super ! Et ta sœur, elle s'est débrouillée toute seule ?",
+  "english": "Great! And your sister, did she manage on her own?"
+ },
+ "INT_s-ennuyer_pc_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Tes amis se sont ennuyés hier soir ?",
+  "english": "Hi! Did your friends get bored last night?"
+ },
+ "INT_s-ennuyer_pc_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ah bon ? Et ton frère, il s'est ennuyé aussi ?",
+  "english": "Really? And your brother, did he get bored too?"
+ },
+ "INT_s-entrainer_pc_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tes amis se sont entraînés ce matin ?",
+  "english": "Hi! Did your friends train this morning?"
+ },
+ "INT_s-entrainer_pc_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Super ! Et ton frère, il s'est entraîné aussi ?",
+  "english": "Great! And your brother, did he train too?"
+ },
+ "INT_se-souvenir_pc_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Ta mère s'est souvenue de la fête ?",
+  "english": "Hello! Did your mother remember the party?"
+ },
+ "INT_se-souvenir_pc_w3": {
+  "voice": "Audrey",
+  "french": "Super ! Et tes amis, ils se sont souvenus aussi ?",
+  "english": "Great! And your friends, did they remember too?"
+ },
+ "INT_s-adapter_pc_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Tes enfants se sont adaptés à l'école ?",
+  "english": "Hi! Have your children adapted to school?"
+ },
+ "INT_s-adapter_pc_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Super ! Et ton chat, il s'est adapté ?",
+  "english": "Great! And your cat, has he adapted?"
+ },
+ "INT_se-rejouir_pc_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Ta sœur s'est réjouie de son cadeau ?",
+  "english": "Hello! Was your sister delighted with her present?"
+ },
+ "INT_se-rejouir_pc_w3": {
+  "voice": "Voix grand père",
+  "french": "Ah bon ? Et ton frère, il s'est réjoui aussi ?",
+  "english": "Really? And your brother, was he delighted too?"
+ },
+ "INT_mettre_pc_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Ton frère et toi, où avez-vous mis vos manteaux ?",
+  "english": "Hi! You and your brother, where did you put your coats?"
+ },
+ "INT_mettre_pc_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "D'accord. Et ton fils, il a mis une écharpe ?",
+  "english": "OK. And your son, did he put on a scarf?"
+ },
+ "INT_trouver_pc_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu as trouvé un bon restaurant hier soir ?",
+  "english": "Hi! Did you find a good restaurant last night?"
+ },
+ "INT_trouver_pc_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Super ! Ton ami et toi, vous avez trouvé une idée ?",
+  "english": "Great! Did you and your friend find an idea?"
+ },
+ "INT_croire_pc_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Ton équipe et toi, vous avez cru en ce projet ?",
+  "english": "Hi! Did you and your team believe in this project?"
+ },
+ "INT_croire_pc_w3": {
+  "voice": "Audrey",
+  "french": "Super ! Et toi, tu as cru en tes amis ?",
+  "english": "Great! And you, did you believe in your friends?"
+ },
+ "INT_parler_pc_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Tu as parlé avec ta sœur ce matin ?",
+  "english": "Hello! Did you talk with your sister this morning?"
+ },
+ "INT_parler_pc_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et au travail, vous avez parlé avec le directeur ?",
+  "english": "And at work, did you (all) talk with the director?"
+ },
+ "INT_prendre_pc_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu as pris du sucre dans ton café ?",
+  "english": "Hi! Did you take sugar in your coffee?"
+ },
+ "INT_prendre_pc_w3": {
+  "voice": "Voix grand père",
+  "french": "Et ton ami et toi, vous avez pris l'ascenseur ?",
+  "english": "And did you and your friend take the lift?"
+ },
+ "INT_lire_pc_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu as lu la biographie ?",
+  "english": "Hello! Did you read the biography?"
+ },
+ "INT_lire_pc_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ton ami et toi, vous avez lu le même article ?",
+  "english": "And did you and your friend read the same article?"
+ },
+ "INT_ecrire_pc_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu as écrit ton nom sur le formulaire ?",
+  "english": "Hi! Did you write your name on the form?"
+ },
+ "INT_ecrire_pc_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et à l'école, vous avez écrit en français ?",
+  "english": "And at school, did you (all) write in French?"
+ },
+ "INT_ouvrir_pc_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Tu as ouvert les fenêtres la nuit ?",
+  "english": "Hello! Did you open the windows at night?"
+ },
+ "INT_ouvrir_pc_w3": {
+  "voice": "Audrey",
+  "french": "Et au travail, vous avez ouvert le magasin à neuf heures ?",
+  "english": "And at work, did you (all) open the shop at nine o'clock?"
+ },
+ "INT_fermer_pc_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Tu as fermé le dossier avant de sauvegarder ?",
+  "english": "Hi! Did you close the file before saving?"
+ },
+ "INT_fermer_pc_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bien ! Ta famille et toi, vous avez fermé la porte ?",
+  "english": "Good! Did you and your family close the door?"
+ },
+ "INT_perdre_pc_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu as perdu tes lunettes hier ?",
+  "english": "Hi! Did you lose your glasses yesterday?"
+ },
+ "INT_perdre_pc_w3": {
+  "voice": "Voix grand père",
+  "french": "Oh non ! Et tu as perdu ton chemin hier soir ?",
+  "english": "Oh no! And did you lose your way last night?"
+ },
+ "INT_garder_pc_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu as gardé tes reçus ?",
+  "english": "Hello! Did you keep your receipts?"
+ },
+ "INT_garder_pc_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta famille et toi, vous avez gardé vos promesses ?",
+  "english": "And did you and your family keep your promises?"
+ },
+ "INT_s-interesser_fut_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Ton frère s'intéressera au cinéma ?",
+  "english": "Hello! Will your brother take an interest in cinema?"
+ },
+ "INT_s-interesser_fut_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ah bon ? Et toi, tu t'intéresseras aux sports ?",
+  "english": "Really? And you, will you take an interest in sports?"
+ },
+ "INT_se-debrouiller_fut_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Ta sœur se débrouillera toute seule ce soir ?",
+  "english": "Hi! Will your sister manage on her own tonight?"
+ },
+ "INT_se-debrouiller_fut_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Super ! Et ton frère et toi, vous vous débrouillerez ?",
+  "english": "Great! And will you and your brother manage?"
+ },
+ "INT_s-ennuyer_fut_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Ta sœur s'ennuiera à la fête ce soir ?",
+  "english": "Hi! Will your sister be bored at the party tonight?"
+ },
+ "INT_s-ennuyer_fut_w3": {
+  "voice": "Audrey",
+  "french": "Super ! Et tes parents, ils s'ennuieront ?",
+  "english": "Great! And your parents, will they be bored?"
+ },
+ "INT_s-entrainer_fut_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Ton ami et toi, vous vous entraînerez samedi ?",
+  "english": "Hi! Will you and your friend train on Saturday?"
+ },
+ "INT_s-entrainer_fut_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Super ! Et ta sœur, elle s'entraînera aussi ?",
+  "english": "Great! And your sister, will she train too?"
+ },
+ "INT_se-souvenir_fut_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Ta sœur se souviendra de mon anniversaire ?",
+  "english": "Hello! Will your sister remember my birthday?"
+ },
+ "INT_se-souvenir_fut_w3": {
+  "voice": "Voix grand père",
+  "french": "Super ! Et ton frère, il se souviendra aussi ?",
+  "english": "Great! And your brother, will he remember too?"
+ },
+ "INT_s-adapter_fut_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Ta famille et toi, vous vous adapterez à la ville ?",
+  "english": "Hi! Will you and your family adapt to the city?"
+ },
+ "INT_s-adapter_fut_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Super ! Et ton chien, il s'adaptera aussi ?",
+  "english": "Great! And your dog, will he adapt too?"
+ },
+ "INT_se-rejouir_fut_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Ton frère et toi, vous vous réjouirez de la fête ?",
+  "english": "Hello! Will you and your brother be glad about the party?"
+ },
+ "INT_se-rejouir_fut_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Super ! Mon fils sera là aussi. Tes parents se réjouiront ?",
+  "english": "Great! My son will be there too. Will your parents be glad?"
+ },
+ "INT_mettre_fut_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Tu mettras des épices dans ce plat ?",
+  "english": "Hi! Will you put spices in this dish?"
+ },
+ "INT_mettre_fut_w3": {
+  "voice": "Audrey",
+  "french": "Ah bon ? Et ton fils, il mettra ses chaussures ?",
+  "english": "Really? And your son, will he put his shoes on?"
+ },
+ "INT_trouver_fut_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Ta sœur trouvera un taxi demain matin ?",
+  "english": "Hi! Will your sister find a taxi tomorrow morning?"
+ },
+ "INT_trouver_fut_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Super ! Ton ami et toi, vous trouverez la rue ?",
+  "english": "Great! Will you and your friend find the street?"
+ },
+ "INT_croire_fut_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu croiras tout ce que je dis ?",
+  "english": "Hi! Will you believe everything I say?"
+ },
+ "INT_croire_fut_w3": {
+  "voice": "Voix grand père",
+  "french": "Et ta famille et toi, vous croirez en l'avenir ?",
+  "english": "And will you and your family believe in the future?"
+ },
+ "INT_parler_fut_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Tu parleras avec tes voisins demain ?",
+  "english": "Hello! Will you talk with your neighbours tomorrow?"
+ },
+ "INT_parler_fut_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et au travail, vous parlerez français à la réunion ?",
+  "english": "And at work, will you (all) speak French at the meeting?"
+ },
+ "INT_prendre_fut_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu prendras le bus pour aller au travail ?",
+  "english": "Hi! Will you take the bus to go to work?"
+ },
+ "INT_prendre_fut_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et à midi, vous prendrez une longue pause ?",
+  "english": "And at midday, will you (all) take a long break?"
+ },
+ "INT_lire_fut_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Tu liras ce livre le mois prochain ?",
+  "english": "Hello! Will you read this book next month?"
+ },
+ "INT_lire_fut_w3": {
+  "voice": "Audrey",
+  "french": "Et tu liras des romans d'horreur ?",
+  "english": "And will you read horror novels?"
+ },
+ "INT_ecrire_fut_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Salut ! Tu écriras ton nom sur le formulaire ?",
+  "english": "Hi! Will you write your name on the form?"
+ },
+ "INT_ecrire_fut_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et à l'école, vous écrirez en français ?",
+  "english": "And at school, will you (all) write in French?"
+ },
+ "INT_ouvrir_fut_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Tu ouvriras tes cadeaux le jour de ton anniversaire ?",
+  "english": "Hi! Will you open your presents on your birthday?"
+ },
+ "INT_ouvrir_fut_w3": {
+  "voice": "Voix grand père",
+  "french": "Et tu ouvriras les fenêtres la nuit ?",
+  "english": "And will you open the windows at night?"
+ },
+ "INT_fermer_fut_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Tu fermeras le dossier avant de sauvegarder ?",
+  "english": "Hi! Will you close the file before saving?"
+ },
+ "INT_fermer_fut_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et au travail, vous fermerez la porte avant de partir ?",
+  "english": "And at work, will you (all) close the door before leaving?"
+ },
+ "INT_perdre_fut_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Tu perdras ton chemin en ville ?",
+  "english": "Hi! Will you lose your way in town?"
+ },
+ "INT_perdre_fut_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ah bon ? Mais tu ne perdras pas espoir ?",
+  "english": "Really? But you won't lose hope?"
+ },
+ "INT_garder_fut_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Tu garderas toutes tes notes ?",
+  "english": "Hello! Will you keep all your notes?"
+ },
+ "INT_garder_fut_w3": {
+  "voice": "Audrey",
+  "french": "Et ta famille et toi, vous garderez vos promesses ?",
+  "english": "And will you and your family keep your promises?"
  }
 }
