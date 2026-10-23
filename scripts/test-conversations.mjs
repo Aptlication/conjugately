@@ -45,7 +45,7 @@ const full = load(path.join(MOBILE, "lib", "conversationsFull.ts"));
 const { COURSES, COURSE_TIME_FRAMES } = load(path.join(MOBILE, "lib", "courses.ts"));
 const { normaliseFrench, similarity } = load(path.join(ROOT, "shared", "answerMatch.ts"));
 const { CHECK_WORDS } = load(path.join(MOBILE, "lib", "vocabCheck.ts"));
-const CLEAR = 0.75; // conversation.tsx
+const gmJudge = load(path.join(MOBILE, "lib", "generousMatch.ts")).judgeReply;
 const EXPECTED_TURNS = { Beginner: 5, Novice: 5, Elementary: 7, Intermediate: 9 };
 
 const fails = [];
@@ -79,14 +79,16 @@ for (const [level, course] of Object.entries(COURSES)) {
         if (seenAudio.has(t.audio) && seenAudio.get(t.audio) !== `${unit}#${i}`) fail(unit, `audio key ${t.audio} also used by ${seenAudio.get(t.audio)}`);
         seenAudio.set(t.audio, `${unit}#${i}`);
       });
-      // 5. every reply is reachable: its model answer and each accepted answer clear the bar
+      // 5. every reply is reachable: each accepted answer, said as written, is judged "good"
       conv.turns.forEach((t, i) => {
         if (t.who !== "you") return;
         replies++;
         if (!t.accept?.length) return fail(unit, `turn ${i + 1} has no accepted answers`);
         if (!t.accept.includes(t.fr)) fail(unit, `turn ${i + 1} model answer not in accept list`);
-        const score = Math.max(...t.accept.map((a) => similarity(normaliseFrench(t.fr), normaliseFrench(a))));
-        if (score < CLEAR) fail(unit, `turn ${i + 1} model answer scores ${score.toFixed(2)} < ${CLEAR}`);
+        for (const a of t.accept) {
+          const v = gmJudge([a], t.accept, verb);
+          if (v.verdict !== "good") fail(unit, `turn ${i + 1} accepted answer "${a}" is judged ${v.verdict}`);
+        }
       });
       // 6. simulate the screen: app lines play once each, replies answered with the model answer, ends "done"
       let step = 0, plays = 0, guard = 0;
@@ -101,6 +103,49 @@ for (const [level, course] of Object.entries(COURSES)) {
     }
   }
 }
+
+// ── generous listening (lib/generousMatch.ts) ───────────────────────────────
+// Every reply must be judged "good" when said right but heard imperfectly, and
+// must NOT be "good" when the learner says something else entirely.
+const gm = load(path.join(MOBILE, "lib", "generousMatch.ts"));
+const allReplies = [];
+for (const [level, course] of Object.entries(COURSES)) for (const tf of COURSE_TIME_FRAMES) for (const { verb } of course.units) {
+  const c = full.getConversation(level, tf, verb);
+  if (c) c.turns.forEach((t, i) => { if (t.who === "you") allReplies.push({ unit: `${level}|${tf}|${verb}`, verb, i, t }); });
+}
+const fold = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const mishear = (fr) => [
+  fr,                                                         // as written
+  fr.replace(/^(Oui|Non|Si)\s*,\s*/i, ""),                    // dropped "Oui,"
+  fr.replace(/^(\S+)/, "$1 euh"),                             // filler word
+  fold(fr).toLowerCase().replace(/[.,!?;:]/g, ""),            // no accents or punctuation
+  fr.replace(/\best\b/g, "et").replace(/\bsont\b/g, "son").replace(/(^|\s)à(?=\s)/g, "$1a").replace(/é(?=[\s.,!?]|$)/g, "er"), // sound-alikes
+  "Euh, " + fr.replace(/^(Oui|Non)\s*,\s*/i, "").toLowerCase(), // both
+];
+let genOk = 0, genTotal = 0, wrongGood = 0, wrongMiss = 0, wrongTotal = 0, engGood = 0;
+const genFails = [], wrongFails = [];
+allReplies.forEach((r, n) => {
+  for (const h of mishear(r.t.fr)) {
+    genTotal++;
+    const v = gm.judgeReply([h], r.t.accept, r.verb);
+    if (v.verdict === "good") genOk++; else genFails.push(`${r.unit} turn ${r.i + 1}: "${h}" → ${v.verdict} (${v.score.toFixed(2)})`);
+  }
+  // wrong answers: replies from three other units that practise a different verb
+  const others = allReplies.filter((o) => o.verb !== r.verb);
+  for (let k = 1; k <= 3; k++) {
+    const o = others[(n * 7 + k * 31) % others.length];
+    wrongTotal++;
+    const v = gm.judgeReply([o.t.fr], r.t.accept, r.verb);
+    if (v.verdict === "good") { wrongGood++; wrongFails.push(`${r.unit} turn ${r.i + 1}: accepted "${o.t.fr}" for ${JSON.stringify(r.t.accept)} (${v.score.toFixed(2)})`); }
+    if (v.verdict === "miss") wrongMiss++;
+  }
+  { const v = gm.judgeReply([r.t.en], r.t.accept, r.verb); if (v.verdict === "good") { engGood++; wrongFails.push(`ENGLISH ${r.unit}: "${r.t.en}" accepted for ${JSON.stringify(r.t.accept)}`); } }
+});
+console.log(`Generous listening: right-but-misheard accepted ${genOk}/${genTotal}; wrong answers accepted ${wrongGood}/${wrongTotal} (told "pas tout à fait": ${wrongMiss}); English accepted ${engGood}/${allReplies.length}.`);
+if (genOk / genTotal < 0.97) fail("generous", `only ${genOk}/${genTotal} right-but-misheard replies accepted (need 97%)`);
+if (wrongGood / wrongTotal > 0.02) fail("generous", `${wrongGood}/${wrongTotal} wrong answers accepted (max 2%)`);
+if (engGood) fail("generous", `${engGood} English replies accepted`);
+if (process.argv.includes("--verbose")) { genFails.slice(0, 25).forEach((f) => console.log("   miss:", f)); wrongFails.slice(0, 25).forEach((f) => console.log("   wrong:", f)); }
 
 // ── vocab check word bank ──────────────────────────────────────────────────
 const unitKeys = new Set(Object.entries(COURSES).flatMap(([l, c]) => COURSE_TIME_FRAMES.flatMap((tf) => c.units.map((u) => `${l}|${tf}|${u.verb}`.normalize("NFC")))));

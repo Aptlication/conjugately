@@ -6,7 +6,7 @@ import { Stack, router, useLocalSearchParams } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
-import { normaliseFrench, similarity } from "@shared/answerMatch";
+import { judgeReply } from "../lib/generousMatch";
 import { type ConvTurn } from "../lib/conversations";
 import { CONVERSATION_AUDIO, getConversation } from "../lib/conversationsFull";
 import { collectConversationWords } from "../lib/vocab";
@@ -20,17 +20,20 @@ import { purchasesAvailable, usePro } from "../lib/pro";
  * cue, and the app replies. Three app lines and two learner replies, about 20
  * seconds. Written and recorded in advance (docs/POST_QUIZ_CONVERSATION_SPEC.md).
  *
- * The 50% rule (Jonathan, 18 Oct) - standing rule for conversations:
- *   clear match (>= 75%)  green tick, move on
- *   50% up to clear        « Tu veux dire : … ? » with the right sentence; counts as understood
- *   below 50%              « Comment ? » and one more try, then the model answer. Nothing is marked wrong.
+ * Generous listening (Jonathan, 23 Oct; replaces the 18 Oct letter-by-letter rule).
+ * Replies are judged by key words in lib/generousMatch.ts, over every guess the
+ * recogniser made, ignoring order, fillers, accents and French sound-alikes:
+ *   good   green tick, the full correct sentence shown, move on
+ *   close  « Tu veux dire : … ? » with the right sentence; counts as understood
+ *   miss   « Pas tout à fait. On dit : … » with the French revealed, one more try;
+ *          a second miss shows the model answer and moves on. Silence gets « Comment ? ».
+ * Tapping the English cue reveals the French, so a learner can read it aloud and
+ * keep going; reading it counts. Nothing is ever marked wrong: it is practice.
  *
  * Tapping a French bubble flips it to the English; tapping again flips it back.
  * No coins, no marks: it is practice. New words go to Vocab, tagged with the unit.
  */
 
-const CLEAR = 0.75;
-const HALF = 0.5;
 
 const INK = "#1B2145";
 const SOFT = "#5A6390";
@@ -72,11 +75,6 @@ const voiceAvailable = () => {
 /** French spacing: the space before ? ! : ; and inside « » never breaks a line. */
 const fr = (t: string) => `«\u00A0${t.replace(/ ([?!:;])/g, "\u00A0$1")}\u00A0»`;
 
-function scoreReply(heard: string, accept: string[]): number {
-  const h = normaliseFrench(heard);
-  if (!h) return 0;
-  return Math.max(...accept.map((a) => similarity(h, normaliseFrench(a))));
-}
 
 /** A French bubble that flips to its English when tapped. */
 function FlipBubble(props: { fr: string; en: string; speaking?: boolean; reduceMotion: boolean }) {
@@ -113,7 +111,7 @@ function FlipBubble(props: { fr: string; en: string; speaking?: boolean; reduceM
 }
 
 const BADGE: Record<Badge, { label: string; bg: string; fg: string }> = {
-  correct: { label: "Heard & correct", bg: "#E3F7EC", fg: "#15824A" },
+  correct: { label: "Très bien !", bg: "#E3F7EC", fg: "#15824A" },
   close: { label: "Understood", bg: "#E3F7EC", fg: "#15824A" },
   unheard: { label: "Didn't catch that", bg: "#FFF0DD", fg: "#A35A00" },
   notQuite: { label: "Not quite", bg: "#FFF0DD", fg: "#A35A00" },
@@ -136,6 +134,10 @@ export default function ConversationScreen() {
   const [step, setStep] = useState(0);
   const [log, setLog] = useState<LogItem[]>([]);
   const [attempt, setAttempt] = useState(0);
+  // Every transcript the recogniser offered this turn (alternatives + interim): the best one counts.
+  const heardAllRef = useRef<Set<string>>(new Set());
+  // The English cue flips to the French when tapped, so the learner can read it out.
+  const [cueOpen, setCueOpen] = useState(false);
   const [heard, setHeard] = useState("");
   const [level01, setLevel01] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
@@ -244,6 +246,8 @@ export default function ConversationScreen() {
     }
     if (t.who === "you" && phase === "speaking") {
       setAttempt(0);
+      setCueOpen(false);
+      heardAllRef.current = new Set();
       setHeard("");
       setNotice(null);
       setPhase("yourTurn");
@@ -272,6 +276,7 @@ export default function ConversationScreen() {
   useSREvent("result", (e: any) => {
     if (!listeningRef.current) return;
     const text = e.results?.[0]?.transcript ?? "";
+    for (const r of e.results ?? []) if (r?.transcript) heardAllRef.current.add(String(r.transcript));
     setHeard(text);
     if (e.isFinal) {
       listeningRef.current = false;
@@ -300,6 +305,7 @@ export default function ConversationScreen() {
     if (!t || t.who !== "you") return;
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     setHeard("");
+    heardAllRef.current = new Set();
     setNotice(null);
     listeningRef.current = true;
     setPhase("listening");
@@ -341,16 +347,17 @@ export default function ConversationScreen() {
   const submit = (webTap = false) => {
     const t = turns[step];
     if (!t || t.who !== "you") return;
-    const said = webTap ? t.fr : heard;
-    const score = webTap ? 1 : scoreReply(said, t.accept);
+    const guesses = webTap ? [t.fr] : [heard, ...heardAllRef.current];
+    const judged = judgeReply(guesses, t.accept, unitVerb);
+    const said = webTap ? t.fr : (judged.best || heard);
     const k = `y${step}-${attempt}`;
-    if (score >= CLEAR) {
+    if (judged.verdict === "good") {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
       if (attempt === 0) setFirstTime((n) => n + 1);
       setLog((l) => [...l, { kind: "you", text: t.fr, badge: "correct", key: k }]);
       setPhase("model");
       advance(700);
-    } else if (score >= HALF) {
+    } else if (judged.verdict === "close") {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
       if (attempt === 0) setFirstTime((n) => n + 1);
       setLog((l) => [...l,
@@ -359,13 +366,25 @@ export default function ConversationScreen() {
       ]);
       setPhase("model");
       advance(1600);
-    } else if (attempt === 0) {
+    } else if (attempt === 0 && !said.trim()) {
+      // Nothing heard: ask again.
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
       setLog((l) => [...l,
-        { kind: "you", text: said || "…", badge: "unheard", key: k },
+        { kind: "you", text: "…", badge: "unheard", key: k },
         { kind: "app", fr: "Comment ?", en: "Sorry?", key: `${k}-comment` },
       ]);
       setAttempt(1);
+      setHeard("");
+      setPhase("yourTurn");
+    } else if (attempt === 0) {
+      // Heard, but it isn't the answer: say so plainly, show the French, one more try.
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
+      setLog((l) => [...l,
+        { kind: "you", text: said, badge: "notQuite", key: k },
+        { kind: "app", fr: `Pas tout à fait. On dit : ${t.fr}`, en: `Not quite. You say: ${t.en}`, key: `${k}-ptaf` },
+      ]);
+      setAttempt(1);
+      setCueOpen(true);
       setHeard("");
       setPhase("yourTurn");
     } else {
@@ -477,10 +496,20 @@ export default function ConversationScreen() {
 
 
         {youTurn && (phase === "yourTurn" || phase === "listening" || phase === "heard") && (
-          <View style={styles.cue} accessibilityLiveRegion="polite">
+          <Pressable style={styles.cue} accessibilityLiveRegion="polite" accessibilityRole="button"
+            accessibilityHint={cueOpen ? undefined : "Shows the answer in French"}
+            onPress={() => { Haptics.selectionAsync().catch(() => {}); setCueOpen((o) => !o); }}>
             <Text style={styles.cueLabel}>SAY IT IN FRENCH</Text>
             <Text style={styles.cueText}>"{youTurn.en}"</Text>
-          </View>
+            {cueOpen ? (
+              <View style={styles.cueReveal}>
+                <Text style={styles.cueRevealText} accessibilityLanguage="fr">{fr(youTurn.fr)}</Text>
+                <Text style={styles.cueHint}>Read it out loud — that counts.</Text>
+              </View>
+            ) : (
+              <Text style={styles.cueHint}>Stuck? Tap to see it in French</Text>
+            )}
+          </Pressable>
         )}
 
         {youTurn && phase === "model" && log[log.length - 1]?.kind === "you" &&
@@ -664,6 +693,9 @@ const styles = StyleSheet.create({
   },
   cueLabel: { fontSize: 12, fontWeight: "800", letterSpacing: 1, color: "#9A7400" },
   cueText: { fontSize: 18, fontWeight: "700", color: INK },
+  cueHint: { fontSize: 12, fontWeight: "600", color: "#9A7400", marginTop: 2 },
+  cueReveal: { marginTop: 6, paddingTop: 8, borderTopWidth: 1, borderTopColor: "#F0DFA0", gap: 2 },
+  cueRevealText: { fontSize: 19, fontWeight: "800", color: INK },
   model: { padding: 16, borderRadius: 18, borderWidth: 1, borderColor: "#C9D6F5", backgroundColor: "#F6F8FE", gap: 4 },
   modelLabel: { fontSize: 12, fontWeight: "800", letterSpacing: 1, color: SOFT },
   modelText: { fontSize: 19, fontWeight: "800", color: INK },
