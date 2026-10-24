@@ -17,6 +17,8 @@ const TENSES: Array<{ dataKey: string; audioPath: string }> = [
   { dataKey: 'passé_composé', audioPath: 'passe_compose' },
   { dataKey: 'futur_simple', audioPath: 'futur_simple' },
   { dataKey: 'imparfait', audioPath: 'imparfait' },
+  // Intermediate A and B (25 Oct 2026). Run with --tense=plus_que_parfait.
+  { dataKey: 'plus_que_parfait', audioPath: 'plus_que_parfait' },
 ];
 
 const args = process.argv.slice(2);

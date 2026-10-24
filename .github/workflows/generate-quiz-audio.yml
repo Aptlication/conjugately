@@ -1,0 +1,64 @@
+# Records ElevenLabs audio for quiz questions and answers, and commits it to the
+# branch it ran on. Run it from the Actions tab ("Run workflow").
+#
+# Needs the repository secret ELEVENLABS_API_KEY
+# (Settings → Secrets and variables → Actions).
+#
+# Added 25 Oct 2026 for the Intermediate A / B pluperfect: Claude sessions
+# cannot reach api.elevenlabs.io, GitHub's runners can. Existing files are
+# skipped, so re-running only fills gaps.
+name: Generate quiz audio
+
+on:
+  workflow_dispatch:
+    inputs:
+      tense:
+        description: "Intermediate tense folder to record"
+        required: true
+        default: plus_que_parfait
+        type: choice
+        options: [plus_que_parfait, present, passe_compose, futur_simple, imparfait]
+      dry_run:
+        description: "Dry run (count characters, record nothing)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-quiz-audio
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Record audio
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          ARGS="--tense=${{ inputs.tense }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          npx -y tsx@4.19.2 server/scripts/generate-intermediate-audio.ts $ARGS 2>&1 | tee audio.log
+          if grep -q "❌" audio.log; then echo "::warning::Some files failed — re-run to fill the gaps"; fi
+
+      - name: Commit audio
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add attached_assets/audio attached_assets/tts-manifest.json
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          COUNT=$(git diff --cached --name-only | wc -l)
+          git commit -m "Audio: ${{ inputs.tense }} — $COUNT files recorded by ElevenLabs"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
