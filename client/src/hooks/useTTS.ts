@@ -1,3 +1,4 @@
+import { isIntermediate } from "@shared/levels";
 import { useState, useEffect, useCallback } from 'react';
 import { isCloudTTSEnabled } from '@shared/config';
 
@@ -126,7 +127,7 @@ export function useTTS() {
       ? manifest.novice_phrases
       : (difficulty === 'Elementary' && manifest.elementary_phrases)
         ? manifest.elementary_phrases
-        : (difficulty === 'Intermediate' && manifest.intermediate_phrases)
+        : (difficulty && isIntermediate(difficulty) && manifest.intermediate_phrases)
           ? manifest.intermediate_phrases
           : manifest.phrases;
 

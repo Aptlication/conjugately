@@ -3,7 +3,7 @@ import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-nati
 import { Stack, router } from "expo-router";
 import Dial, { DialHandle, DialOption } from "../components/Dial";
 import NavBar from "../components/NavBar";
-import { DIFFICULTY_CONFIGS, LEVELS, TIME_FRAMES, VERB_MEANINGS } from "../lib/data";
+import { DIFFICULTY_CONFIGS, LEVELS, VERB_MEANINGS, timeFramesForLevel } from "../lib/data";
 
 /**
  * Verbs tab — "Build Your Quiz" (1.2.3 / 1.2.4, design locked 18 Oct 2026).
@@ -32,9 +32,11 @@ export default function Verbs() {
     { value: "", label: difficulty ? "Verb…" : "Level first" },
     ...verbs.map((v) => ({ value: v, label: v })),
   ];
+  // Pluperfect appears for Intermediate A and B only (25 Oct 2026).
+  const levelTimeFrames = timeFramesForLevel(difficulty);
   const timeOptions: DialOption[] = [
     { value: "", label: "Tense…" },
-    ...TIME_FRAMES.map((t) => ({ value: t, label: t })),
+    ...levelTimeFrames.map((t) => ({ value: t, label: t })),
   ];
 
   const ready = difficulty && verb && timeFrame;
@@ -53,13 +55,14 @@ export default function Verbs() {
     setVerb(""); setTimeFrame("");
     const cfg = DIFFICULTY_CONFIGS[levelKey];
     const v = cfg.verbs[Math.floor(Math.random() * cfg.verbs.length)];
-    const tf = TIME_FRAMES[Math.floor(Math.random() * TIME_FRAMES.length)];
+    const tfs = timeFramesForLevel(levelKey);
+    const tf = tfs[Math.floor(Math.random() * tfs.length)];
     const li = levelOptions.findIndex((o) => o.value === levelKey);
     d1.current?.spinTo(li, 50);
     setTimeout(() => {
       const vi = cfg.verbs.indexOf(v) + 1;
       d2.current?.spinTo(vi, 0, () => setVerb(v));
-      d3.current?.spinTo(TIME_FRAMES.indexOf(tf) + 1, 350, () => {
+      d3.current?.spinTo(tfs.indexOf(tf) + 1, 350, () => {
         setTimeFrame(tf); setSpinning(false);
       });
     }, 500);
@@ -101,7 +104,7 @@ export default function Verbs() {
           <View style={styles.reelRow}>
             <View style={styles.reelCol}>
               <Dial ref={d1} compact options={levelOptions} disabled={locked}
-                onSettle={(v) => { if (v !== difficulty) { setDifficulty(v); setVerb(""); } }} />
+                onSettle={(v) => { if (v !== difficulty) { setDifficulty(v); setVerb(""); if (!timeFramesForLevel(v).includes(timeFrame)) setTimeFrame(""); } }} />
             </View>
             <View style={styles.reelCol}>
               <Dial ref={d2} compact options={verbOptions} disabled={!difficulty}

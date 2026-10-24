@@ -1,3 +1,4 @@
+import { contentLevel, isIntermediate } from "@shared/levels";
 import {
   CONVERSATION_AUDIO as BASE_AUDIO,
   getConversation as getBaseConversation,
@@ -29,9 +30,11 @@ export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WA
 const FULL = new Map<string, Conversation | undefined>();
 
 export function getConversation(level: string, timeFrame: string, verb: string): Conversation | undefined {
-  const key = `${level}|${timeFrame}|${verb}`.normalize("NFC");
+  // Intermediate A and B use the conversations written for Intermediate.
+  // The Pluperfect has none yet, so its units simply offer no conversation.
+  const key = `${contentLevel(level)}|${timeFrame}|${verb}`.normalize("NFC");
   if (FULL.has(key)) return FULL.get(key);
-  const base = getBaseConversation(level, timeFrame, verb);
+  const base = getBaseConversation(contentLevel(level), timeFrame, verb);
   const warm = WARMUPS[key];
   const full = base && warm?.length ? { ...base, turns: [...warm, ...base.turns] } : base;
   FULL.set(key, full);
@@ -40,5 +43,5 @@ export function getConversation(level: string, timeFrame: string, verb: string):
 
 /** What the conversation offer says: about 20 s, plus 15 at Elementary and 30 at Intermediate. */
 export function conversationSeconds(level: string): number {
-  return 20 + (level === "Elementary" ? 15 : level === "Intermediate" ? 30 : 0);
+  return 20 + (level === "Elementary" ? 15 : isIntermediate(level) ? 30 : 0);
 }

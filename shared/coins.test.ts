@@ -9,7 +9,9 @@ assert.equal(coinsForScore("Novice", 20), 25);
 assert.equal(coinsForScore("Novice", 13), 16);   // 16.25
 assert.equal(coinsForScore("Novice", 2), 3);     // 2.5 -> 3
 assert.equal(coinsForScore("Elementary", 20), 20);
-assert.equal(coinsForScore("Intermediate", 19), 19);
+assert.equal(coinsForScore("Intermediate A", 19), 19);
+assert.equal(coinsForScore("Intermediate B", 19), 19);
+assert.equal(coinsForScore("Intermediate", 19), 0);   // legacy key is not a level any more
 assert.equal(coinsForScore("Advanced", 20), 0);
 
 // 18 Oct rules: repeats pay in full
@@ -24,8 +26,9 @@ assert.equal(awardQuiz(a.state, "Beginner", "Present", "aller", 20).earned, 0);
 assert.equal(examCoinCost("Beginner"), 51);
 assert.equal(examCoinCost("Novice"), 50);
 assert.equal(examCoinCost("Elementary"), 70);
-assert.equal(examCoinCost("Intermediate"), 180);
-for (const lvl of ["Beginner","Novice","Elementary","Intermediate"]) assert.equal(examCoinCost(lvl), Math.round(courseCoinTotal(lvl) / 2), lvl);
+assert.equal(examCoinCost("Intermediate A"), 110);
+assert.equal(examCoinCost("Intermediate B"), 70);
+for (const lvl of ["Beginner","Novice","Elementary","Intermediate A","Intermediate B"]) assert.equal(examCoinCost(lvl), Math.round(courseCoinTotal(lvl) / 2), lvl);
 
 // gate: coins alone decide (no "finish every unit" rule any more)
 s = emptyCoinState();
@@ -49,7 +52,7 @@ w = unlockExam(w, "Novice", "Past")!; assert.equal(coinBalance(w), 18);
 // grandfathered exam result
 assert.equal(examGate(emptyCoinState(), "Novice", "Past", [{examId:"novice-past",correct:1,total:40,passed:false,date:""}]).kind, "unlocked");
 // one pass totals unchanged
-for (const [lvl, tot] of [["Beginner",102],["Novice",100],["Elementary",140],["Intermediate",360]] as const) {
+for (const [lvl, tot] of [["Beginner",102],["Novice",100],["Elementary",140],["Intermediate A",220],["Intermediate B",140]] as const) {
   let t = emptyCoinState();
   for (const v of (await import("./exams")).EXAM_VERB_SETS[lvl]) t = awardQuiz(t, lvl, "Future", v, 20).state;
   assert.equal(coinBalance(t), tot, lvl); assert.equal(courseCoinTotal(lvl), tot, lvl);
@@ -73,5 +76,25 @@ assert.equal(coinBalance(parseCoinState(old)!), 60);
   for (const v of ev) e = awardQuiz(e, "Elementary", "Past", v, 20).state; // 60
   const e4 = awardQuiz(e, "Elementary", "Past", "vouloir", 20).state;     // 80, 3 units still to do
   assert.equal(examInvitation(e, e4, "Elementary", "Past")?.kind, "ready");
+}
+// 25 Oct 2026 split: legacy Intermediate keys and unlocks carry over
+{
+  const legacy = JSON.stringify({ version: 1, best: { "Intermediate|Past|trouver": 20, "Intermediate|Past|se souvenir": 15 },
+    earned: 35, spent: 180, unlockedExams: ["intermediate-past"], invited: [] });
+  const m = parseCoinState(legacy)!;
+  assert.equal(coinBalance(m), 0);
+  assert.ok("Intermediate A|Past|trouver" in m.best);
+  assert.ok("Intermediate B|Past|se souvenir" in m.best);
+  assert.ok(m.unlockedExams.includes("intermediate-a-past") && m.unlockedExams.includes("intermediate-b-past"));
+  assert.equal(examGate(m, "Intermediate A", "Past").kind, "unlocked");
+  assert.equal(examGate(m, "Intermediate B", "Pluperfect").kind, "needCoins");
+  const ex = await import("./exams");
+  const r = ex.parseExamResults(JSON.stringify([{ examId: "intermediate-future", correct: 66, total: 72, passed: true, date: "" }]));
+  assert.ok(ex.hasPassedExam(r, "intermediate-a-future") && ex.hasPassedExam(r, "intermediate-b-future"));
+  assert.ok(ex.hasPassedAnyExamForLevel(r, "Intermediate B"));
+  assert.equal(ex.getExam("Intermediate A", "Pluperfect")?.totalQuestions, 55);
+  assert.equal(ex.getExam("Intermediate B", "Pluperfect")?.passMark, 38);
+  assert.equal(ex.getExam("Elementary", "Pluperfect"), undefined);
+  assert.equal(ex.EXAMS.length, 3 * 3 + 2 * 4);
 }
 console.log("coins: all assertions passed");

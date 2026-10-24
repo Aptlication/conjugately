@@ -1,5 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { shuffle } from "@shared/shuffle";
+import { contentLevel } from "@shared/levels";
 
 /**
  * Vocab check (post-quiz vocabulary session), specified by Jonathan 21 Oct 2026.
@@ -949,7 +950,8 @@ export const CHECK_WORDS: CheckWord[] = [
 ];
 
 const BY_ID = new Map(CHECK_WORDS.map((w) => [w.id, w]));
-export const unitKey = (level: string, timeFrame: string, verb: string) => `${level}|${timeFrame}|${verb}`;
+/** Intermediate A and B share the word bank written for Intermediate (25 Oct 2026). */
+export const unitKey = (level: string, timeFrame: string, verb: string) => `${contentLevel(level)}|${timeFrame}|${verb}`;
 export const wordsForUnit = (unit: string) => CHECK_WORDS.filter((w) => w.unit === unit);
 
 // ── Progress store ──────────────────────────────────────────────────────────

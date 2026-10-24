@@ -3,7 +3,8 @@ import React, { useCallback, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
-import { COURSES, COURSE_TIME_FRAMES, courseBlurb } from "../lib/courses";
+import { COURSES, courseTimeFrames, courseBlurb } from "../lib/courses";
+import { tenseFor } from "@shared/levels";
 import { getCourseProgress } from "../lib/progress";
 import { usePro } from "../lib/pro";
 import { getExam } from "@shared/exams";
@@ -52,14 +53,15 @@ export default function MiniCourses() {
           <View style={styles.card}>
             <Text style={styles.blurb}>Choose a difficulty level for structured learning</Text>
             {Object.entries(COURSES).map(([key, c]) => {
-              const totals = COURSE_TIME_FRAMES.map((tf) => (prog[`${key}|${tf}`] || []).length);
+              const tfs = courseTimeFrames(key);
+              const totals = tfs.map((tf) => (prog[`${key}|${tf}`] || []).length);
               const doneUnits = totals.reduce((n, x) => n + x, 0);
-              const allDone = doneUnits >= c.units.length * COURSE_TIME_FRAMES.length;
+              const allDone = doneUnits >= c.units.length * tfs.length;
               const commenced = doneUnits > 0 && !allDone;
               return (
                 <Pressable key={key} style={[styles.row, allDone && styles.rowDone]} onPress={() => setLevel(key)}>
                   <Text style={[styles.rowTitle, allDone && styles.rowTitleDone]}>{allDone ? "✓ " : ""}{c.emoji} {c.title}</Text>
-                  <Text style={[styles.rowSub, commenced && styles.rowSubStarted]}>{allDone ? "Level complete" : commenced ? `▸ In progress — ${doneUnits} of ${c.units.length * COURSE_TIME_FRAMES.length} units` : courseBlurb(key)}</Text>
+                  <Text style={[styles.rowSub, commenced && styles.rowSubStarted]}>{allDone ? "Level complete" : commenced ? `▸ In progress — ${doneUnits} of ${c.units.length * tfs.length} units` : courseBlurb(key)}</Text>
                 </Pressable>
               );
             })}
@@ -73,14 +75,14 @@ export default function MiniCourses() {
         {level && !timeFrame && (
           <View style={styles.card}>
             <Text style={styles.blurb}>{course!.emoji} {course!.title} — choose a time frame</Text>
-            {COURSE_TIME_FRAMES.map((tf) => {
+            {courseTimeFrames(level).map((tf) => {
               const done = (prog[`${level}|${tf}`] || []).length;
               const total = course!.units.length;
               const complete = done >= total;
               const commenced = done > 0 && !complete;
               return (
                 <Pressable key={tf} style={[styles.row, complete && styles.rowDone]} onPress={() => setTimeFrame(tf)}>
-                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense</Text>
+                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense{tf === "Pluperfect" ? ` (${tenseFor(tf).label})` : ""}</Text>
                   {complete ? <Text style={styles.rowSub}>Completed</Text>
                     : commenced ? <Text style={[styles.rowSub, styles.rowSubStarted]}>▸ In progress — {done} of {total} units</Text>
                     : null}

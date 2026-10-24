@@ -2,7 +2,8 @@ import { GeneratedQuiz } from "./gemini-quiz";
 import { getRandomNoviceQuestions, convertNoviceToQuizFormat, type NoviceQuizQuestion } from "./novice-quiz-data";
 import { getRandomBeginnerPronounQuestions, type BeginnerPronounQuestion } from "./beginner-pronoun-data";
 import { getRandomElementaryPresentQuestions, getRandomElementaryPasseComposeQuestions, getRandomElementaryFutureSimpleQuestions, type ElementaryQuizQuestion } from "./elementary-quiz-data";
-import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
+import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat, normalizeIntermediateTense } from "./intermediate-quiz-data";
+import { isIntermediate } from "@shared/levels";
 import { shuffle } from "@shared/shuffle";
 
 // French verb conjugation data
@@ -1831,19 +1832,9 @@ export function generateInternalQuiz(verb: string, tense: string, difficulty?: s
     }
   }
 
-  // Use Intermediate questions
-  if (difficulty === 'Intermediate') {
-    const intermediateTenseMap: Record<string, string> = {
-      'présent': 'present',
-      'present': 'present',
-      'passé composé': 'passé_composé',
-      'passe_compose': 'passé_composé',
-      'passé_composé': 'passé_composé',
-      'futur simple': 'futur_simple',
-      'futur_simple': 'futur_simple',
-      'imparfait': 'imparfait',
-    };
-    const mappedTense = intermediateTenseMap[tense.toLowerCase()] || tense.toLowerCase();
+  // Use Intermediate questions (Intermediate A and B share the bank, 25 Oct 2026)
+  if (difficulty && isIntermediate(difficulty)) {
+    const mappedTense = normalizeIntermediateTense(tense);
     console.log(`🎓 Using Intermediate questions for ${verb} - ${mappedTense} (original: ${tense})`);
 
     const intermediateQuestions = getRandomIntermediateQuestions(verb, mappedTense, 20);
