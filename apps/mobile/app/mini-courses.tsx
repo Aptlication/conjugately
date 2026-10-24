@@ -82,7 +82,7 @@ export default function MiniCourses() {
               const commenced = done > 0 && !complete;
               return (
                 <Pressable key={tf} style={[styles.row, complete && styles.rowDone]} onPress={() => setTimeFrame(tf)}>
-                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense{tf === "Pluperfect" ? ` (${tenseFor(tf).label})` : ""}</Text>
+                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense{tf === "Pluperfect" || tf === "Imperfect" ? ` (${tenseFor(tf).label})` : ""}</Text>
                   {complete ? <Text style={styles.rowSub}>Completed</Text>
                     : commenced ? <Text style={[styles.rowSub, styles.rowSubStarted]}>▸ In progress — {done} of {total} units</Text>
                     : null}

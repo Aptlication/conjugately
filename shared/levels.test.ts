@@ -8,7 +8,7 @@ assert.equal(resolveLegacyLevel("Intermediate", "se souvenir"), "Intermediate B"
 assert.equal(resolveLegacyLevel("Elementary", "dire"), "Elementary");
 assert.equal(contentLevel("Intermediate B"), "Intermediate");
 assert.equal(audioLevelFolder("Intermediate A"), "intermediate");
-assert.equal(timeFramesFor("Intermediate A").length, 4);
+assert.deepEqual(timeFramesFor("Intermediate A"), ["Present", "Past", "Imperfect", "Pluperfect", "Future"]);
 assert.equal(timeFramesFor("Novice").length, 3);
 assert.equal(LEVEL_VERBS["Intermediate A"].length + LEVEL_VERBS["Intermediate B"].length, LEGACY_INTERMEDIATE_VERBS.length);
 console.log("levels: all assertions passed");

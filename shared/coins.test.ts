@@ -95,6 +95,7 @@ assert.equal(coinBalance(parseCoinState(old)!), 60);
   assert.equal(ex.getExam("Intermediate A", "Pluperfect")?.totalQuestions, 55);
   assert.equal(ex.getExam("Intermediate B", "Pluperfect")?.passMark, 38);
   assert.equal(ex.getExam("Elementary", "Pluperfect"), undefined);
-  assert.equal(ex.EXAMS.length, 3 * 3 + 2 * 4);
+  assert.equal(ex.EXAMS.length, 3 * 3 + 2 * 5);
+  assert.equal(ex.getExam("Intermediate B", "Imperfect")?.tense, "Imparfait");
 }
 console.log("coins: all assertions passed");

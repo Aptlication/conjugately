@@ -69,7 +69,7 @@ export default function Journey() {
                       style={[styles.fill, { width: `${Math.min(100, lv.pct)}%` }]} />
                   )}
                 </View>
-                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the {timeFramesFor(lv.level).length === 4 ? "four" : "three"} tenses</Text>
+                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the {timeFramesFor(lv.level).length === 5 ? "five" : "three"} tenses</Text>
               </View>
             ))}
           </View>

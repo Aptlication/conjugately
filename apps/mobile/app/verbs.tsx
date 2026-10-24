@@ -32,7 +32,7 @@ export default function Verbs() {
     { value: "", label: difficulty ? "Verb…" : "Level first" },
     ...verbs.map((v) => ({ value: v, label: v })),
   ];
-  // Pluperfect appears for Intermediate A and B only (25 Oct 2026).
+  // Imperfect and Pluperfect appear for Intermediate A and B only (25 Oct 2026).
   const levelTimeFrames = timeFramesForLevel(difficulty);
   const timeOptions: DialOption[] = [
     { value: "", label: "Tense…" },

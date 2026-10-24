@@ -43,7 +43,7 @@ const courseUnitsFor = (level: string) =>
  * Intermediate A and B only (25 Oct 2026); everything else keeps three.
  */
 const pickerTimeFrames = (level: string | null) =>
-  ["Present", "Past", "Future", "Pluperfect"].filter((tf) => tf !== "Pluperfect" || isIntermediate(level || ""));
+  isIntermediate(level || "") ? timeFramesFor("Intermediate A") : ["Present", "Past", "Future"];
 
 /**
  * Exam passes recorded on this device, read fresh rather than held in state so
@@ -277,6 +277,7 @@ function App() {
     "Past": ["Passé Simple", "Passé Composé", "Imparfait", "Plus-que-parfait"],
     "Future": ["Futur Simple", "Futur Antérieur"],
     // Intermediate A and B only (25 Oct 2026) — filtered out of the picker below for other levels.
+    "Imperfect": ["Imparfait"],
     "Pluperfect": ["Plus-que-parfait"],
   };
 
@@ -346,8 +347,8 @@ function App() {
     // each with the pluperfect. Verbs and units come from shared/levels.ts.
     "Intermediate A": {
       verbs: LEVEL_VERBS["Intermediate A"],
-      timeFrames: ["Present", "Past", "Future", "Pluperfect"],
-      tenses: ["Présent", "Passé Composé", "Futur Simple", "Plus-que-parfait"],
+      timeFrames: timeFramesFor("Intermediate A"),
+      tenses: ["Présent", "Passé Composé", "Imparfait", "Plus-que-parfait", "Futur Simple"],
       courseStructure: {
         units: courseUnitsFor("Intermediate A"),
         finalExam: {
@@ -360,8 +361,8 @@ function App() {
     },
     "Intermediate B": {
       verbs: LEVEL_VERBS["Intermediate B"],
-      timeFrames: ["Present", "Past", "Future", "Pluperfect"],
-      tenses: ["Présent", "Passé Composé", "Futur Simple", "Plus-que-parfait"],
+      timeFrames: timeFramesFor("Intermediate A"),
+      tenses: ["Présent", "Passé Composé", "Imparfait", "Plus-que-parfait", "Futur Simple"],
       courseStructure: {
         units: courseUnitsFor("Intermediate B"),
         finalExam: {
@@ -411,6 +412,7 @@ function App() {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple",
+          "Imperfect": "Imparfait",
           "Pluperfect": "Plus-que-parfait"
         };
         finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
@@ -419,6 +421,7 @@ function App() {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple",
+          "Imperfect": "Imparfait",
           "Pluperfect": "Plus-que-parfait"
         };
         finalTenseType = noviceTenseMap[selectedTimeFrame as keyof typeof noviceTenseMap] || "";
@@ -427,6 +430,7 @@ function App() {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple",
+          "Imperfect": "Imparfait",
           "Pluperfect": "Plus-que-parfait"
         };
         finalTenseType = easyTenseMap[selectedTimeFrame as keyof typeof easyTenseMap] || "";
@@ -435,6 +439,7 @@ function App() {
           "Past": "Passé Composé",
           "Present": "Présent", 
           "Future": "Futur Simple",
+          "Imperfect": "Imparfait",
           "Pluperfect": "Plus-que-parfait"
         };
         finalTenseType = moderateTenseMap[selectedTimeFrame as keyof typeof moderateTenseMap] || "";
@@ -452,7 +457,7 @@ function App() {
     setQuizState('loading');
 
     try {
-      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
       const response = await fetch('/api/get-quiz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -754,6 +759,7 @@ function App() {
       "Past": "Passé Composé",
       "Present": "Présent", 
       "Future": "Futur Simple",
+      "Imperfect": "Imparfait",
       "Pluperfect": "Plus-que-parfait"
     };
     
@@ -816,6 +822,7 @@ function App() {
       "Past": "Passé Composé", // Changed from Passé Simple to Passé Composé for consistency
       "Present": "Présent", 
       "Future": "Futur Simple",
+      "Imperfect": "Imparfait",
       "Pluperfect": "Plus-que-parfait"
     };
     
@@ -985,7 +992,7 @@ function App() {
   const handleStartVerbSection = async (verbIndex: number, timeFrame: string, tense: string) => {
     const beginnerVerbs = EXAM_VERB_SETS.Beginner;
     const verb = beginnerVerbs[verbIndex];
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
     
     setQuizState('loading');
     
@@ -1131,11 +1138,12 @@ function App() {
       "Present": "Présent",
       "Past": "Passé Composé", 
       "Future": "Futur Simple",
+      "Imperfect": "Imparfait",
       "Pluperfect": "Plus-que-parfait"
     };
     
     const tense = tenseMapping[timeFrame as keyof typeof tenseMapping];
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
     setQuizState('loading');
     
     try {
@@ -1188,7 +1196,7 @@ function App() {
     }
     
     const courseTenses = config.tenses;
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
     setQuizState('loading');
     
     try {
@@ -1266,6 +1274,7 @@ function App() {
         "Present": "Présent",
         "Past": "Passé Composé", 
         "Future": "Futur Simple",
+        "Imperfect": "Imparfait",
         "Pluperfect": "Plus-que-parfait"
       };
       setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
@@ -1279,7 +1288,7 @@ function App() {
     const config = DIFFICULTY_CONFIGS.Elementary;
     const courseTenses = config.tenses;
     
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
     setQuizState('loading');
     
     try {
@@ -1406,6 +1415,7 @@ function App() {
         "Present": "Présent",
         "Past": "Passé Composé", 
         "Future": "Futur Simple",
+        "Imperfect": "Imparfait",
         "Pluperfect": "Plus-que-parfait"
       };
       setCurrentTense(tenseMapping[timeFrame as keyof typeof tenseMapping]);
@@ -1417,7 +1427,7 @@ function App() {
 
   const handleStartElementaryFinalExamLegacy = async (timeFrame: string) => {
     const config = DIFFICULTY_CONFIGS.Elementary;
-    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
     
     setQuizState('loading');
     
@@ -2192,7 +2202,7 @@ function App() {
                     onClick={async () => {
                       // Retry exam - generate new mixed questions
                       setQuizState('loading');
-                      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+                      const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
                       
                       try {
                         const beginnerVerbs = EXAM_VERB_SETS.Beginner;
@@ -2504,7 +2514,7 @@ function App() {
                   // Generate quiz for current verb
                   setQuizState('loading');
                   try {
-                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
                     const courseDifficulty = courseInfo.courseLevel || "Beginner";
                     const response = await fetch('/api/get-quiz', {
                       method: 'POST',
@@ -2627,8 +2637,8 @@ function App() {
               <option value="Beginner" className="bg-gray-800 text-white">⚪ Beginner - Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)</option>
               <option value="Novice" className="bg-gray-800 text-white">🔵 Novice - 4 verbs (être, avoir, faire, aller), Present, past, and future tenses</option>
               <option value="Elementary" className="bg-gray-800 text-white">🟢 Elementary - 7 verbs, Present, past, and future tenses</option>
-              <option value="Intermediate A" className="bg-gray-800 text-white">🟡 Intermediate A - 11 non-reflexive verbs, Present, past, future + the pluperfect</option>
-              <option value="Intermediate B" className="bg-gray-800 text-white">🟠 Intermediate B - 7 reflexive verbs, Present, past, future + the pluperfect</option>
+              <option value="Intermediate A" className="bg-gray-800 text-white">🟡 Intermediate A - 11 non-reflexive verbs, Present, past, imperfect, pluperfect and future</option>
+              <option value="Intermediate B" className="bg-gray-800 text-white">🟠 Intermediate B - 7 reflexive verbs, Present, past, imperfect, pluperfect and future</option>
               <option 
                 value={isAdvancedDifficultyEnabled() ? "Advanced" : ""} 
                 className="bg-gray-800 text-white"
@@ -2676,6 +2686,7 @@ function App() {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple",
+                    "Imperfect": "Imparfait",
                     "Pluperfect": "Plus-que-parfait"
                   };
                   setSelectedTenseType(beginnerTenseMap[e.target.value as keyof typeof beginnerTenseMap] || "");
@@ -2684,6 +2695,7 @@ function App() {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple",
+                    "Imperfect": "Imparfait",
                     "Pluperfect": "Plus-que-parfait"
                   };
                   setSelectedTenseType(easyTenseMap[e.target.value as keyof typeof easyTenseMap] || "");
@@ -2692,6 +2704,7 @@ function App() {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple",
+                    "Imperfect": "Imparfait",
                     "Pluperfect": "Plus-que-parfait"
                   };
                   setSelectedTenseType(moderateTenseMap[e.target.value as keyof typeof moderateTenseMap] || "");
@@ -2846,7 +2859,7 @@ function App() {
                 >
                   <div className="text-yellow-200 font-semibold text-lg">🟡 Intermediate A</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    11 non-reflexive verbs • Present, past, future + the pluperfect
+                    11 non-reflexive verbs • Present, past, imperfect, pluperfect & future
                   </div>
                 </button>
 
@@ -2856,7 +2869,7 @@ function App() {
                 >
                   <div className="text-orange-200 font-semibold text-lg">🟠 Intermediate B</div>
                   <div className="text-slate-300 text-sm mt-1">
-                    7 reflexive verbs • Present, past, future + the pluperfect
+                    7 reflexive verbs • Present, past, imperfect, pluperfect & future
                   </div>
                 </button>
                 
@@ -3006,7 +3019,7 @@ function App() {
                   onClick={async () => {
                     setShowExamOption(false);
                     // Generate mixed exam with all 4 verbs
-                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+                    const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
                     setQuizState('loading');
                     
                     try {
@@ -3083,6 +3096,7 @@ function App() {
                     "Past": "Passé Composé",
                     "Present": "Présent", 
                     "Future": "Futur Simple",
+                    "Imperfect": "Imparfait",
                     "Pluperfect": "Plus-que-parfait"
                   };
                   const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
@@ -3279,13 +3293,14 @@ function App() {
                     // Continue with quiz generation
                     const continueQuiz = async () => {
                       try {
-                        const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+                        const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
                         let finalTenseType = selectedTenseType;
                         if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
                           const beginnerTenseMap = {
                             "Past": "Passé Composé",
                             "Present": "Présent", 
                             "Future": "Futur Simple",
+                            "Imperfect": "Imparfait",
                             "Pluperfect": "Plus-que-parfait"
                           };
                           finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
@@ -3336,13 +3351,14 @@ function App() {
                       // Continue with quiz generation
                       const continueQuiz = async () => {
                         try {
-                          const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Pluperfect": "past" };
+                          const timeFrameMapping = { "Past": "past", "Present": "present", "Future": "future", "Imperfect": "past", "Pluperfect": "past" };
                           let finalTenseType = selectedTenseType;
                           if (selectedDifficulty === "Beginner" && selectedTimeFrame) {
                             const beginnerTenseMap = {
                               "Past": "Passé Composé",
                               "Present": "Présent", 
                               "Future": "Futur Simple",
+                              "Imperfect": "Imparfait",
                               "Pluperfect": "Plus-que-parfait"
                             };
                             finalTenseType = beginnerTenseMap[selectedTimeFrame as keyof typeof beginnerTenseMap] || "";
@@ -3400,6 +3416,7 @@ function App() {
                     "Past": "Passé Simple",
                     "Present": "Présent", 
                     "Future": "Futur Simple",
+                    "Imperfect": "Imparfait",
                     "Pluperfect": "Plus-que-parfait"
                   };
                   const tense = beginnerTenseMap[timeFrame as keyof typeof beginnerTenseMap];
@@ -3661,8 +3678,8 @@ function App() {
               <h3 className="text-2xl font-bold text-center mb-4">{intermediateHalf === "Intermediate A" ? "🟡" : "🟠"} {intermediateHalf} Course</h3>
               <p className="text-slate-300 text-center mb-6">
                 {intermediateHalf === "Intermediate A"
-                  ? "11 non-reflexive verbs — and your first pluperfect. Choose any tense to start."
-                  : "7 reflexive verbs, pluperfect included. Choose any tense to start."}
+                  ? "11 non-reflexive verbs — with the imparfait and your first pluperfect. Choose any tense to start."
+                  : "7 reflexive verbs, imparfait and pluperfect included. Choose any tense to start."}
               </p>
               <div className="space-y-3 mb-6">
                 {timeFramesFor(intermediateHalf).map((timeFrame, index) => {
@@ -3692,6 +3709,7 @@ function App() {
                     "Past": "⏮️",
                     "Present": "▶️",
                     "Future": "⏭️",
+                    "Imperfect": "🔁",
                     "Pluperfect": "⏪"
                   };
                   
@@ -3730,7 +3748,7 @@ function App() {
                             ? 'text-green-200'
                             : 'text-blue-200'
                         }`}>
-                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame === "Pluperfect" ? "Pluperfect (Plus-que-parfait)" : timeFrame} Tense Course
+                          {iconMap[timeFrame as keyof typeof iconMap]} {timeFrame === "Pluperfect" || timeFrame === "Imperfect" ? `${timeFrame} (${tenseFor(timeFrame).label})` : timeFrame} Tense Course
                           {isCompleted && completed?.examPassed && <span className="text-green-300 ml-2">✓ Passed</span>}
                           {isCompleted && !completed?.examPassed && <span className="text-green-200 ml-2">✓ Completed</span>}
                           {isLocked && <span className="text-sm">🔒 Complete the {prerequisite} exam first</span>}
