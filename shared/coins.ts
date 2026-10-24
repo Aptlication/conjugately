@@ -9,7 +9,9 @@
  *        Beginner      34 per quiz × 3 units  = 102 per tense
  *        Novice        25 per quiz × 4 units  = 100 per tense
  *        Elementary    20 per quiz × 7 units  = 140 per tense
- *        Intermediate  20 per quiz × 18 units = 360 per tense
+ *        Intermediate A  20 per quiz × 11 units = 220 per tense
+ *        Intermediate B  20 per quiz ×  7 units = 140 per tense
+ *        (until 25 Oct 2026: Intermediate 20 × 18 = 360)
  *
  *      e.g. Beginner 20/20 = 34, 15/20 = 25.5 → 26, 10/20 = 17.
  *
@@ -20,7 +22,8 @@
  *   3. An exam costs HALF of what one pass through that tense's course pays —
  *      i.e. a learner needs to complete about half the course to afford it.
  *      Computed from the course config (examCoinCost), never hard-coded:
- *      Beginner 51 · Novice 50 · Elementary 70 · Intermediate 180.
+ *      Beginner 51 · Novice 50 · Elementary 70 · Intermediate A 110 ·
+ *      Intermediate B 70.
  *      There is no "finish every unit first" condition any more; coins alone
  *      unlock the exam. (9 Oct: a flat 100 coins AND every unit finished.)
  *
@@ -41,7 +44,8 @@
  * app in AsyncStorage under the same key and shape, as with exam results.
  */
 
-import { EXAM_VERB_SETS, getExam, type ExamLevel, type ExamResult } from "./exams";
+import { EXAM_VERB_SETS, getExam, legacyExamIdTargets, type ExamLevel, type ExamResult } from "./exams";
+import { LEGACY_INTERMEDIATE, resolveLegacyLevel, tenseFor } from "./levels";
 
 /** Share of one pass through a tense's course that its exam costs. */
 export const EXAM_PRICE_SHARE = 0.5;
@@ -53,7 +57,8 @@ export const COIN_MAX_PER_QUIZ: Record<ExamLevel, number> = {
   Beginner: 34,
   Novice: 25,
   Elementary: 20,
-  Intermediate: 20,
+  "Intermediate A": 20,
+  "Intermediate B": 20,
 };
 
 export const COINS_STORAGE_KEY = "conjugately_coins";
@@ -235,7 +240,18 @@ export function examGateLabel(g: ExamGate): string {
   }
 }
 
-/** Parse whatever came out of storage without trusting it. */
+/**
+ * A unit key from before the 25 Oct 2026 split ("Intermediate|Past|trouver")
+ * is filed under the half its verb now belongs to. `earned` is stored
+ * separately, so no balance moves; this only keeps "unit finished" true.
+ */
+export function migrateUnitKey(key: string): string {
+  const [level, timeFrame, verb] = key.split("|");
+  if (level !== LEGACY_INTERMEDIATE || !verb) return key;
+  return unitKey(resolveLegacyLevel(level, verb), timeFrame, verb);
+}
+
+/** Parse whatever came out of storage without trusting it. A legacy Intermediate exam unlock unlocks both halves. */
 export function parseCoinState(raw: string | null | undefined): CoinState | null {
   if (!raw) return null;
   try {
@@ -244,8 +260,16 @@ export function parseCoinState(raw: string | null | undefined): CoinState | null
     const best: Record<string, number> = {};
     if (p.best && typeof p.best === "object") {
       for (const [k, v] of Object.entries(p.best)) {
-        if (typeof v === "number" && Number.isFinite(v) && v >= 0) best[k] = Math.floor(v);
+        if (typeof v === "number" && Number.isFinite(v) && v >= 0) {
+          const key = migrateUnitKey(k);
+          best[key] = Math.max(best[key] ?? 0, Math.floor(v));
+        }
       }
+    }
+    const unlocked: string[] = Array.isArray(p.unlockedExams)
+      ? p.unlockedExams.filter((x: unknown) => typeof x === "string") : [];
+    for (const id of [...unlocked]) {
+      for (const t of legacyExamIdTargets(id)) if (!unlocked.includes(t)) unlocked.push(t);
     }
     return {
       version: 1,
@@ -253,7 +277,7 @@ export function parseCoinState(raw: string | null | undefined): CoinState | null
       earned: typeof p.earned === "number" && Number.isFinite(p.earned) && p.earned >= 0
         ? Math.floor(p.earned) : sumBest(best),
       spent: typeof p.spent === "number" && p.spent >= 0 ? Math.floor(p.spent) : 0,
-      unlockedExams: Array.isArray(p.unlockedExams) ? p.unlockedExams.filter((x: unknown) => typeof x === "string") : [],
+      unlockedExams: unlocked,
       invited: Array.isArray(p.invited) ? p.invited.filter((x: unknown) => typeof x === "string") : [],
     };
   } catch {
@@ -303,7 +327,7 @@ export function markInvited(s: CoinState, inv: ExamInvitation): CoinState {
 export function invitationCopy(inv: ExamInvitation): { title: string; body: string; detail: string } {
   const exam = getExam(inv.level, inv.timeFrame)!;
   const cost = examCoinCost(inv.level);
-  const tense = inv.timeFrame === "Present" ? "Présent" : inv.timeFrame === "Past" ? "Passé Composé" : "Futur Simple";
+  const tense = tenseFor(inv.timeFrame).tense;
   return {
     title: `🎉 You've saved ${inv.balance} coins!`,
     body: `That's enough to sit the ${inv.level} ${tense} Final Level Exam. Feeling confident? Give it a go — or keep practising first.`,

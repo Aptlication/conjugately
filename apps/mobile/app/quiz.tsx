@@ -22,17 +22,19 @@ import { countDue, unitKey } from "../lib/vocabCheck";
 import { recordCourseQuiz, readExamGate } from "../lib/coins";
 import { coinBalance, tenseProgress, invitationCopy, examCoinCost, type ExamInvitation } from "@shared/coins";
 import { getExam } from "@shared/exams";
+import { TENSES, audioLevelFolder, isIntermediate, tenseFor } from "@shared/levels";
 import { spendOnExam } from "../lib/coins";
 import CoinStack from "../components/CoinStack";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
 
-const TENSE_BY_TIMEFRAME: Record<string, string> = {
-  Present: "Présent", Past: "Passé Composé", Future: "Futur Simple",
-};
+// From shared/levels.ts; Pluperfect added 25 Oct 2026 (Intermediate A and B).
+const TENSE_BY_TIMEFRAME: Record<string, string> = Object.fromEntries(
+  Object.entries(TENSES).map(([tf, t]) => [tf, t.tense]),
+);
 const TENSE_PATH: Record<string, string> = {
-  "Présent": "present", "Passé Composé": "passe_compose",
-  "Futur Simple": "futur_simple", "Imparfait": "imparfait",
+  ...Object.fromEntries(Object.values(TENSES).map((t) => [t.tense, t.tensePath])),
+  "Imparfait": "imparfait",
 };
 const PRONOUNS: [string, string, string][] = [
   ["👤", "Je", "I"], ["🫵", "Tu", "You (informal)"], ["🎩", "Vous", "You (formal/plural)"],
@@ -64,7 +66,7 @@ function lookupAnswerFile(m: any, text: string, difficulty: string): string | nu
   const levelMap =
     difficulty === "Novice" ? m.novice_phrases
     : difficulty === "Elementary" ? m.elementary_phrases
-    : difficulty === "Intermediate" ? m.intermediate_phrases
+    : isIntermediate(difficulty) ? m.intermediate_phrases
     : null;
   const maps = [levelMap, m.phrases].filter(Boolean);
   const norm = normalizeText(text);
@@ -199,7 +201,8 @@ export default function Quiz() {
   // with the verb and tense path it actually came from.
   const qVerb = (q as any)?._verb || verb;
   const qTensePath = (q as any)?._tensePath || TENSE_PATH[tense];
-  const audioLevel = (exam ? exam.level : difficulty).toLowerCase();
+  // Intermediate A and B share the "intermediate" folder (shared/levels.ts).
+  const audioLevel = audioLevelFolder(exam ? exam.level : difficulty);
   const questionUrl = q && questionAudioOn
     ? `${API_BASE}/attached_assets/audio/quizzes/${audioLevel}/${encodeURIComponent(qVerb)}/${qTensePath}/questions/Q${q.audioIndex || idx + 1}.mp3`
     : null;
@@ -263,7 +266,7 @@ export default function Quiz() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          verb, timeFrame: timeFrame.toLowerCase(), tenseType: tense,
+          verb, timeFrame: tenseFor(timeFrame).apiTimeFrame, tenseType: tense,
           ...(difficulty && { difficulty }),
         }),
       });

@@ -1,5 +1,15 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { COURSES } from "./courses";
+import {
+  LEGACY_INTERMEDIATE,
+  LEGACY_INTERMEDIATE_VERBS,
+  LEVELS,
+  INTERMEDIATE_A_VERBS,
+  INTERMEDIATE_B_VERBS,
+  resolveLegacyLevel,
+  splitLegacyIntermediateUnits,
+  timeFramesFor,
+} from "@shared/levels";
 
 const QUIZ_KEY = "conjugately_quiz_history";
 const COURSE_KEY = "conjugately_course_progress";
@@ -15,8 +25,51 @@ export type CourseProgress = Record<string, {
 }>;
 
 export async function getQuizHistory(): Promise<QuizResult[]> {
-  try { return JSON.parse((await AsyncStorage.getItem(QUIZ_KEY)) || "[]"); }
+  try { return migrateLegacyHistory(JSON.parse((await AsyncStorage.getItem(QUIZ_KEY)) || "[]")); }
   catch { return []; }
+}
+
+/**
+ * 25 Oct 2026: Intermediate became Intermediate A and B. Records written
+ * before the split say "Intermediate"; file each under the half its verb now
+ * belongs to, with the unit index renumbered for that half. Read-time only and
+ * idempotent, so nothing is lost if the app is rolled back.
+ */
+export function migrateLegacyHistory(h: QuizResult[]): QuizResult[] {
+  return h.map((r) => {
+    if (r.difficulty !== LEGACY_INTERMEDIATE && !r.courseKey?.startsWith(`${LEGACY_INTERMEDIATE}|`)) return r;
+    const level = resolveLegacyLevel(LEGACY_INTERMEDIATE, r.verb);
+    const out: QuizResult = { ...r, difficulty: r.difficulty === LEGACY_INTERMEDIATE ? level : r.difficulty };
+    if (r.courseKey?.startsWith(`${LEGACY_INTERMEDIATE}|`)) {
+      const tf = r.courseKey.split("|")[1];
+      out.courseKey = `${level}|${tf}`;
+      const verb = r.unitIndex !== undefined ? LEGACY_INTERMEDIATE_VERBS[r.unitIndex] ?? r.verb : r.verb;
+      const units = level === "Intermediate A" ? INTERMEDIATE_A_VERBS : INTERMEDIATE_B_VERBS;
+      const i = units.indexOf(verb);
+      out.unitIndex = i >= 0 ? i : undefined;
+      if (i < 0) out.courseKey = undefined;
+    }
+    return out;
+  });
+}
+
+/** The same split for stored course progress ("Intermediate|Past" → A and B entries). */
+export function migrateLegacyProgress(p: CourseProgress): CourseProgress {
+  const out: CourseProgress = {};
+  for (const [key, e] of Object.entries(p)) {
+    const [level, tf] = key.split("|");
+    if (level !== LEGACY_INTERMEDIATE) { out[key] = e; continue; }
+    const { a, b } = splitLegacyIntermediateUnits(e.completedUnits);
+    for (const [lv, idx] of [["Intermediate A", a], ["Intermediate B", b]] as const) {
+      if (!idx.length) continue;
+      const k = `${lv}|${tf}`;
+      const prev = out[k] ?? p[k];
+      const merged = Array.from(new Set([...(prev?.completedUnits ?? []), ...idx]));
+      out[k] = { completedUnits: merged, totalUnits: COURSES[lv].units.length,
+        updatedAt: [prev?.updatedAt ?? "", e.updatedAt].sort().pop() ?? "" };
+    }
+  }
+  return out;
 }
 
 export async function logQuizResult(r: QuizResult) {
@@ -31,7 +84,7 @@ export async function logQuizResult(r: QuizResult) {
 }
 
 export async function getCourseProgress(): Promise<CourseProgress> {
-  try { return JSON.parse((await AsyncStorage.getItem(COURSE_KEY)) || "{}"); }
+  try { return migrateLegacyProgress(JSON.parse((await AsyncStorage.getItem(COURSE_KEY)) || "{}")); }
   catch { return {}; }
 }
 
@@ -86,7 +139,7 @@ export async function getJourneySummary(): Promise<JourneySummary> {
     levelAgg[level] = (levelAgg[level] || 0) + e.completedUnits.length;
   }
   const levels = Object.entries(levelAgg).map(([level, done]) => {
-    const total = (COURSES[level]?.units.length ?? 0) * 3;
+    const total = (COURSES[level]?.units.length ?? 0) * timeFramesFor(level).length;
     return { level, done, total, pct: total ? Math.round((done / total) * 100) : 0 };
   });
   let nextStep: JourneySummary["nextStep"] = null;
@@ -104,8 +157,8 @@ export async function getJourneySummary(): Promise<JourneySummary> {
     }
   }
   if (!nextStep) {
-    const ORDER_TF = ["Present", "Past", "Future"];
-    const LV = ["Beginner", "Novice", "Elementary", "Intermediate"];
+    const ORDER_TF = timeFramesFor(lastLevelOf(prog));
+    const LV: string[] = LEVELS;
     const doneEntries = Object.entries(prog)
       .filter(([, e]) => e.completedUnits.length > 0)
       .sort((a, b) => (b[1].updatedAt || "").localeCompare(a[1].updatedAt || ""));
@@ -135,10 +188,18 @@ export async function getJourneySummary(): Promise<JourneySummary> {
       }
     }
   }
-  const ORDER = ["Beginner", "Novice", "Elementary", "Intermediate"];
+  const ORDER: string[] = LEVELS;
   const touched = hist.map((r) => r.difficulty).filter(Boolean);
   const highestLevelTouched = touched.length
     ? ORDER[Math.max(...touched.map((t) => ORDER.indexOf(t)).filter((i) => i >= 0))] ?? null
     : null;
   return { quizzes, avgPct, streakDays, overallCoursePct, courses, levels, nextStep, highestLevelTouched };
+}
+
+/** Level of the most recently updated progress entry. */
+function lastLevelOf(prog: CourseProgress): string {
+  const latest = Object.entries(prog)
+    .filter(([, e]) => e.completedUnits.length > 0)
+    .sort((a, b) => (b[1].updatedAt || "").localeCompare(a[1].updatedAt || ""))[0];
+  return latest ? latest[0].split("|")[0] : "";
 }

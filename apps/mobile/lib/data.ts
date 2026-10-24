@@ -1,20 +1,18 @@
+import { LEVELS as LEVEL_KEYS, LEVEL_DETAIL, LEVEL_EMOJI, LEVEL_VERBS, ALL_TIME_FRAMES, timeFramesFor } from "@shared/levels";
+
 export const API_BASE = "https://conjugately.onrender.com";
 
+// Levels, verbs and time frames come from shared/levels.ts (25 Oct 2026:
+// Intermediate split into Intermediate A and Intermediate B).
 export const LEVELS = [
   { key: "", label: "Select difficulty level...", detail: "" },
-  { key: "Beginner", label: "⚪ Beginner", detail: "Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)" },
-  { key: "Novice", label: "🔵 Novice", detail: "4 verbs (être, avoir, faire, aller), Present, past, and future tenses" },
-  { key: "Elementary", label: "🟢 Elementary", detail: "7 verbs, Present, past, and future tenses" },
-  { key: "Intermediate", label: "🟡 Intermediate", detail: "18 verbs (7 reflexive + 11 non-reflexive), Present, past, and future tenses" },
+  ...LEVEL_KEYS.map((k) => ({ key: k, label: `${LEVEL_EMOJI[k]} ${k}`, detail: LEVEL_DETAIL[k] })),
   { key: "Advanced", label: "🔒 Advanced - Coming Soon!", detail: "", disabled: true },
 ];
 
-export const DIFFICULTY_CONFIGS: Record<string, { verbs: string[] }> = {
-  Beginner: { verbs: ["être", "avoir", "faire"] },
-  Novice: { verbs: ["être", "avoir", "faire", "aller"] },
-  Elementary: { verbs: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"] },
-  Intermediate: { verbs: ["s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir", "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler", "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder"] },
-};
+export const DIFFICULTY_CONFIGS: Record<string, { verbs: string[] }> = Object.fromEntries(
+  LEVEL_KEYS.map((k) => [k, { verbs: LEVEL_VERBS[k] }]),
+);
 
 export const VERB_MEANINGS: Record<string, string> = {
   "être": "to be", "avoir": "to have", "faire": "to do/make", "dire": "to say/tell",
@@ -29,4 +27,6 @@ export const VERB_MEANINGS: Record<string, string> = {
   "ouvrir": "to open", "fermer": "to close", "perdre": "to lose", "garder": "to keep",
 };
 
-export const TIME_FRAMES = ["Present", "Past", "Future"];
+/** Every time frame; use timeFramesForLevel() for what a given level offers. */
+export const TIME_FRAMES: string[] = ALL_TIME_FRAMES;
+export const timeFramesForLevel = (level: string): string[] => timeFramesFor(level);

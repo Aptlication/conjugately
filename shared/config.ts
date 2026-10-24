@@ -1,3 +1,5 @@
+import { LEVELS, LEGACY_INTERMEDIATE } from "./levels";
+
 // Global application configuration
 // This file contains feature flags and settings that control application behavior
 
@@ -51,7 +53,8 @@ export const isAdvancedDifficultyEnabled = (): boolean => {
 
 // Available difficulty levels based on configuration
 export const getAvailableDifficulties = () => {
-  const baseDifficulties = ["Beginner", "Novice", "Elementary", "Intermediate"];
+  // 25 Oct 2026: Intermediate split into A and B (shared/levels.ts).
+  const baseDifficulties: string[] = [...LEVELS];
   
   if (isAdvancedDifficultyEnabled()) {
     return [...baseDifficulties, "Advanced"];
@@ -62,7 +65,8 @@ export const getAvailableDifficulties = () => {
 
 // Check if a difficulty level is allowed
 export const isDifficultyAllowed = (difficulty: string): boolean => {
-  return getAvailableDifficulties().includes(difficulty);
+  // The pre-split "Intermediate" is still accepted from older app builds.
+  return difficulty === LEGACY_INTERMEDIATE || getAvailableDifficulties().includes(difficulty);
 };
 
 // Check if cloud TTS (ElevenLabs) is enabled

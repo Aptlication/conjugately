@@ -4,8 +4,7 @@ import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, JourneySummary } from "../lib/progress";
-
-const LEVELS = ["Beginner", "Novice", "Elementary", "Intermediate"];
+import { LEVELS, timeFrameListLabel, timeFramesFor } from "@shared/levels";
 
 const TEMP = ["#4A78F2", "#8B7CE8", "#C77BD9", "#F0A05A", "#F0564A"];
 function tempColors(pct: number): string[] {
@@ -23,7 +22,7 @@ export default function Journey() {
     return () => { on = false; };
   }, []));
 
-  const levelIdx = s?.highestLevelTouched ? LEVELS.indexOf(s.highestLevelTouched) : -1;
+  const levelIdx = s?.highestLevelTouched ? (LEVELS as string[]).indexOf(s.highestLevelTouched) : -1;
 
   return (
     <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
@@ -60,7 +59,7 @@ export default function Journey() {
             {s.levels.map((lv) => (
               <View key={lv.level} style={{ marginBottom: 4 }}>
                 <View style={styles.progRow}>
-                  <Text style={styles.progLabel}>{lv.level} — Present, Past & Future Tenses</Text>
+                  <Text style={styles.progLabel}>{lv.level} — {timeFrameListLabel(lv.level)} Tenses</Text>
                   <Text style={[styles.progPct, lv.pct > 0 ? { color: tempColors(lv.pct)[tempColors(lv.pct).length - 1] } : { color: "#8A93A0" }]}>{lv.pct}%</Text>
                 </View>
                 <View style={styles.track}>
@@ -70,7 +69,7 @@ export default function Journey() {
                       style={[styles.fill, { width: `${Math.min(100, lv.pct)}%` }]} />
                   )}
                 </View>
-                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the three tenses</Text>
+                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the {timeFramesFor(lv.level).length === 4 ? "four" : "three"} tenses</Text>
               </View>
             ))}
           </View>

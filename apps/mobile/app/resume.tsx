@@ -3,7 +3,8 @@ import { AccessibilityInfo, Animated, Easing, Pressable, StyleSheet, Text, View 
 import { Stack, router, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { getCourseProgress, type CourseProgress } from "../lib/progress";
-import { COURSES, COURSE_TIME_FRAMES } from "../lib/courses";
+import { COURSES, courseTimeFrames } from "../lib/courses";
+import { LEVELS, TENSES, timeFrameListLabel } from "@shared/levels";
 
 /**
  * "Bonne continuation" overview (approved mock-up, 21 Oct 2026).
@@ -17,8 +18,7 @@ import { COURSES, COURSE_TIME_FRAMES } from "../lib/courses";
  */
 
 const HOLD_MS = 2500;
-const LEVELS = ["Beginner", "Novice", "Elementary", "Intermediate"];
-const TF_NAME: Record<string, string> = { Present: "Présent", Past: "Passé composé", Future: "Futur" };
+const TF_NAME: Record<string, string> = Object.fromEntries(Object.entries(TENSES).map(([k, t]) => [k, t.label]));
 
 // Same colour ramp as My Journey (journey.tsx).
 const TEMP = ["#4A78F2", "#8B7CE8", "#C77BD9", "#F0A05A", "#F0564A"];
@@ -67,10 +67,11 @@ export default function Resume() {
   }, []);
 
   const doneIn = (tf: string) => (prog?.[`${level}|${tf}`]?.completedUnits ?? []).filter((i) => i < verbs.length);
-  const total = verbs.length * COURSE_TIME_FRAMES.length;
-  const done = COURSE_TIME_FRAMES.reduce((n, tf) => n + doneIn(tf).length, 0);
+  const timeFrames = courseTimeFrames(level);
+  const total = verbs.length * timeFrames.length;
+  const done = timeFrames.reduce((n, tf) => n + doneIn(tf).length, 0);
   const levelPct = total ? Math.round((done / total) * 100) : 0;
-  const levelIdx = LEVELS.indexOf(level);
+  const levelIdx = (LEVELS as string[]).indexOf(level);
   const doneHere = doneIn(timeFrame);
   const tfName = TF_NAME[timeFrame] ?? timeFrame;
 
@@ -108,16 +109,16 @@ export default function Resume() {
       <View style={styles.card}>
         <Text style={styles.cardLabel}>LEVEL COMPLETION</Text>
         <View style={styles.progRow}>
-          <Text style={styles.progLabel}>{level} — Present, Past & Future Tenses</Text>
+          <Text style={styles.progLabel}>{level} — {timeFrameListLabel(level)} Tenses</Text>
           <Text style={[styles.progPct, { color: pctColor(levelPct) }]}>{levelPct}%</Text>
         </View>
         <Bar pct={levelPct} />
-        <Text style={styles.levelSub}>{done} of {total} units across the three tenses</Text>
+        <Text style={styles.levelSub}>{done} of {total} units across the {timeFrames.length === 4 ? "four" : "three"} tenses</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.cardLabel}>PROGRESS</Text>
-        {COURSE_TIME_FRAMES.map((tf) => {
+        {timeFrames.map((tf) => {
           const here = tf === timeFrame;
           const d = doneIn(tf);
           const pct = verbs.length ? Math.round((d.length / verbs.length) * 100) : 0;

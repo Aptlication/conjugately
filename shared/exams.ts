@@ -1,5 +1,7 @@
 /**
- * The twelve examinations — single source of truth.
+ * The examinations — single source of truth. Twelve until 25 Oct 2026; since
+ * the Intermediate A / B split there are seventeen (three each for Beginner,
+ * Novice and Elementary; four each — with the Pluperfect — for A and B).
  *
  * These definitions already existed, but only as literals inside
  * `client/src/App.tsx` (`DIFFICULTY_CONFIGS[level].courseStructure.finalExam`
@@ -24,11 +26,21 @@ export const EXAM_PASS_RATIO = 0.9;
  */
 export const MIC_ALLOWED_IN_EXAMS = false;
 
-export type ExamLevel = "Beginner" | "Novice" | "Elementary" | "Intermediate";
-export type ExamTimeFrame = "Present" | "Past" | "Future";
+import {
+  LEVELS as ALL_LEVELS,
+  LEVEL_VERBS,
+  TENSES,
+  timeFramesFor,
+  type Level,
+  type TimeFrame,
+} from "./levels";
+
+/** 25 Oct 2026: Intermediate became Intermediate A and Intermediate B (shared/levels.ts). */
+export type ExamLevel = Level;
+export type ExamTimeFrame = TimeFrame;
 
 export interface ExamDefinition {
-  /** Stable id, e.g. "intermediate-past". Use this as the storage key. */
+  /** Stable id, e.g. "intermediate-b-past". Use this as the storage key. */
   id: string;
   level: ExamLevel;
   timeFrame: ExamTimeFrame;
@@ -56,32 +68,18 @@ export interface ExamDefinition {
  * `finalExam.questions: 110`, producing a 180-question exam recorded as 110.
  * Eleven verbs matches the declared length and the eleven course units.
  */
-export const EXAM_VERB_SETS: Record<ExamLevel, string[]> = {
-  Beginner: ["être", "avoir", "faire"],
-  Novice: ["être", "avoir", "faire", "aller"],
-  Elementary: ["dire", "voir", "savoir", "vouloir", "venir", "pouvoir", "besoin"],
-  // DECIDED 24 Sep by Jonathan: Intermediate is all EIGHTEEN verbs, reflexives
-  // included. The September cut to eleven was justified in the audit as
-  // "matching the eleven course units" — but that matched a COUNT, not a SET.
-  // The app's eleven units were être/avoir/faire/aller/voir/dire/pouvoir/
-  // vouloir/prendre/venir/savoir, which are the Beginner and Novice verbs, so
-  // the app would have taught one set and examined another. Corrected in
-  // apps/mobile/lib/courses.ts to match this list.
-  //
-  // Reflexive passé composé is the hardest thing the level teaches and the
-  // reason Intermediate is a step up. It is also where 22 of the 25 wrong
-  // answer keys found on 24 September were hiding.
-  //
-  // "se débrouiller" had questions in the présent only, which would have made
-  // the Past and Future exams throw on assembly. Rather than shrink the level,
-  // the missing passé composé and futur simple were authored on 24 September
-  // (1.1.18). Those 40 questions have no ElevenLabs answer audio yet.
-  Intermediate: [
-    "s'intéresser", "se débrouiller", "s'ennuyer", "s'entraîner", "se souvenir",
-    "s'adapter", "se réjouir", "mettre", "trouver", "croire", "parler",
-    "prendre", "lire", "écrire", "ouvrir", "fermer", "perdre", "garder",
-  ],
-};
+export const EXAM_VERB_SETS: Record<ExamLevel, string[]> = LEVEL_VERBS;
+
+// History of the Intermediate verb set, kept because the reasoning still holds:
+// DECIDED 24 Sep by Jonathan, Intermediate was all EIGHTEEN verbs, reflexives
+// included — the September cut to eleven had matched a COUNT, not a SET, so the
+// app would have taught one set and examined another. Reflexive passé composé
+// is the hardest thing the level teaches, and where 22 of the 25 wrong answer
+// keys found on 24 September were hiding. "se débrouiller" gained passé composé
+// and futur simple on 24 September (1.1.18) so every exam could assemble.
+//
+// SPLIT 25 Oct 2026 by Jonathan: the eleven non-reflexives are Intermediate A,
+// the seven reflexives Intermediate B. Both add the pluperfect.
 
 /**
  * Questions per verb, per level.
@@ -106,7 +104,9 @@ export const EXAM_VERB_SETS: Record<ExamLevel, string[]> = {
  *   Beginner       3 verbs × 10 = 30, pass 27
  *   Novice         4 verbs × 10 = 40, pass 36
  *   Elementary     7 verbs ×  6 = 42, pass 38
- *   Intermediate  18 verbs ×  4 = 72, pass 65
+ *   Intermediate  18 verbs ×  4 = 72, pass 65   (until 25 Oct 2026)
+ *   Intermediate A 11 verbs × 5 = 55, pass 50   (from 25 Oct 2026)
+ *   Intermediate B  7 verbs × 6 = 42, pass 38
  *
  * REVISED 24 September 2026. Intermediate became eighteen verbs (see
  * EXAM_VERB_SETS), so six each would be a 108-question exam — defect 1 in a
@@ -124,7 +124,12 @@ export const QUESTIONS_PER_VERB: Record<ExamLevel, number> = {
   Beginner: 10,
   Novice: 10,
   Elementary: 6,
-  Intermediate: 4,
+  // 25 Oct 2026, the split. A has eleven verbs, B seven. Five each for A is
+  // 55 questions (pass 50), the step up from Elementary's 42; six each for B
+  // is 42 (pass 38) — B has fewer verbs, but reflexive agreement in four
+  // tenses is the hardest material in the app, and six covers every person.
+  "Intermediate A": 5,
+  "Intermediate B": 6,
 };
 
 /**
@@ -135,17 +140,14 @@ export const QUESTIONS_PER_VERB: Record<ExamLevel, number> = {
  * that it was never intended. The exam was testing a tense the course never
  * taught. Passé Composé throughout.
  */
-const TENSE_BY_TIMEFRAME: Record<
-  ExamTimeFrame,
-  { tense: string; tensePath: string; apiTimeFrame: "past" | "present" | "future" }
-> = {
-  Present: { tense: "Présent", tensePath: "present", apiTimeFrame: "present" },
-  Past: { tense: "Passé Composé", tensePath: "passe_compose", apiTimeFrame: "past" },
-  Future: { tense: "Futur Simple", tensePath: "futur_simple", apiTimeFrame: "future" },
-};
+const TENSE_BY_TIMEFRAME = TENSES;
 
-const LEVELS: ExamLevel[] = ["Beginner", "Novice", "Elementary", "Intermediate"];
-const TIME_FRAMES: ExamTimeFrame[] = ["Present", "Past", "Future"];
+const LEVELS: ExamLevel[] = ALL_LEVELS;
+
+/** "intermediate-a" for "Intermediate A". Exam ids are `${levelSlug}-${timeFrame}`. */
+export function levelSlug(level: string): string {
+  return level.toLowerCase().replace(/\s+/g, "-");
+}
 
 /** ceil(total × 0.9) — the same arithmetic App.tsx already used. */
 export function passMarkFor(totalQuestions: number): number {
@@ -153,13 +155,13 @@ export function passMarkFor(totalQuestions: number): number {
 }
 
 export const EXAMS: ExamDefinition[] = LEVELS.flatMap((level) =>
-  TIME_FRAMES.map((timeFrame): ExamDefinition => {
+  timeFramesFor(level).map((timeFrame): ExamDefinition => {
     const verbs = EXAM_VERB_SETS[level];
     const questionsPerVerb = QUESTIONS_PER_VERB[level];
     const totalQuestions = verbs.length * questionsPerVerb;
     const { tense, tensePath, apiTimeFrame } = TENSE_BY_TIMEFRAME[timeFrame];
     return {
-      id: `${level.toLowerCase()}-${timeFrame.toLowerCase()}`,
+      id: `${levelSlug(level)}-${timeFrame.toLowerCase()}`,
       level,
       timeFrame,
       tense,
@@ -233,14 +235,41 @@ export function parseExamResults(raw: string | null | undefined): ExamResult[] {
   try {
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter(
+    return migrateLegacyExamResults(parsed.filter(
       (r): r is ExamResult =>
         r && typeof r.examId === "string" && typeof r.correct === "number" &&
         typeof r.total === "number" && typeof r.passed === "boolean",
-    );
+    ));
   } catch {
     return [];
   }
+}
+
+/**
+ * An exam id from before the 25 Oct 2026 split ("intermediate-past") stands
+ * for both halves: that exam drew on all eighteen verbs, so whoever sat it sat
+ * both Intermediate A's and Intermediate B's material. Returns the new ids it
+ * maps to, or [] for an id that is already current.
+ */
+export function legacyExamIdTargets(examId: string): string[] {
+  const m = examId.match(/^intermediate-(present|past|future)$/);
+  if (!m) return [];
+  return [`intermediate-a-${m[1]}`, `intermediate-b-${m[1]}`];
+}
+
+/**
+ * Carry legacy Intermediate results onto both halves, so a pass (or a coin
+ * unlock grandfathered by a result) survives the upgrade. Pure and
+ * idempotent; the legacy record itself is kept.
+ */
+export function migrateLegacyExamResults(results: ExamResult[]): ExamResult[] {
+  let out = results;
+  for (const r of results) {
+    for (const id of legacyExamIdTargets(r.examId)) {
+      out = upsertExamResult(out, { ...r, examId: id });
+    }
+  }
+  return out;
 }
 
 // ------------------------------------------------- Final Level Exam selection ---
@@ -403,6 +432,17 @@ export function selectExamQuestions<T>(
  * them still leaves progression dead.
  */
 export function hasPassedAnyExamForLevel(results: ExamResult[], level: string): boolean {
-  const prefix = `${level.toLowerCase()}-`;
-  return results.some((r) => r.passed && r.examId.startsWith(prefix));
+  const ids = new Set(EXAMS.filter((e) => e.level === level).map((e) => e.id));
+  return migrateLegacyExamResults(results).some((r) => r.passed && ids.has(r.examId));
+}
+
+/**
+ * "11 Units (20 questions each) + Final Level Exam (55 questions, 90% to pass)".
+ * Derived, never copied, so both surfaces' course blurbs follow shared numbers.
+ */
+export function courseBlurbFor(level: string, exam: ExamDefinition | undefined = getExam(level, "Present")): string {
+  const units = (EXAM_VERB_SETS[level as ExamLevel] ?? []).length;
+  if (!exam) return `${units} Units (20 questions each)`;
+  return `${units} Units (20 questions each) + Final Level Exam ` +
+    `(${exam.totalQuestions} questions, ${Math.round(EXAM_PASS_RATIO * 100)}% to pass)`;
 }

@@ -7,7 +7,8 @@ import { quizRequestSchema, insertCourseProgressSchema, insertCompletedCourseSch
 import { generateFrenchVerbQuiz } from "./gemini-quiz";
 import { polishQuestions } from "./rationalePolish";
 import { generateInternalQuiz } from "./quiz-generator";
-import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat } from "./intermediate-quiz-data";
+import { getRandomIntermediateQuestions, convertIntermediateToQuizFormat, normalizeIntermediateTense } from "./intermediate-quiz-data";
+import { contentLevel, isIntermediate } from "@shared/levels";
 import { ZodError, z } from "zod";
 import { db } from "./db";
 import { courseProgress, completedCourses } from "@shared/schema";
@@ -173,33 +174,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
         
         let generatedQuiz;
         
-        // Check if this is an intermediate level quiz with available data
-        if (difficulty === 'Intermediate') {
-          console.log('🔧 Checking intermediate quiz data...');
-          
-          // Normalize tense for intermediate data lookup
-          let normalizedTense = tenseType.toLowerCase().replace(/\s+/g, '_');
-          if (normalizedTense === 'présent') {
-            normalizedTense = 'present';
-          } else if (normalizedTense === 'passé_composé') {
-            normalizedTense = 'passé_composé';  
-          } else if (normalizedTense === 'futur_simple') {
-            normalizedTense = 'futur_simple';
-          }
-          
+        // Intermediate A and B (25 Oct 2026) both draw on the Intermediate bank;
+        // older app builds still send "Intermediate".
+        if (isIntermediate(difficulty || '')) {
+          const normalizedTense = normalizeIntermediateTense(tenseType);
           console.log(`🔧 Looking for intermediate data: ${verb} - ${normalizedTense}`);
           const intermediateQuestions = getRandomIntermediateQuestions(verb, normalizedTense, 20);
-          
+
           if (intermediateQuestions.length > 0) {
-            console.log(`✅ Found ${intermediateQuestions.length} intermediate questions`);
-            
             // Convert using the proper function which preserves audioIndex for question audio
-            const convertedQuestions = convertIntermediateToQuizFormat(intermediateQuestions);
-            generatedQuiz = { questions: convertedQuestions };
+            generatedQuiz = { questions: convertIntermediateToQuizFormat(intermediateQuestions) };
             console.log(`🎯 Using intermediate quiz data for ${verb} - ${normalizedTense}`);
+          } else if (normalizedTense === 'plus_que_parfait') {
+            // Never invent pluperfect questions: the generated fallback has no
+            // reviewed plus-que-parfait content, and the content is locked.
+            return res.status(404).json({ success: false, error: `No pluperfect questions for ${verb}` });
           } else {
             console.log('⚠️ No intermediate data found, falling back to regular generation');
-            generatedQuiz = generateInternalQuiz(verb, tenseType, difficulty, isExam);
+            generatedQuiz = generateInternalQuiz(verb, tenseType, contentLevel(difficulty || ''), isExam);
           }
         } else {
           // Use regular internal quiz generation for non-intermediate levels  

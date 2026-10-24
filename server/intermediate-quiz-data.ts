@@ -1,4 +1,5 @@
 import { shuffle } from "@shared/shuffle";
+import { PLUPERFECT_QUIZ_DATA } from "./pluperfect-quiz-data";
 // Intermediate Level Quiz Data - Perplexity Validated
 // 17 verbs × 4 tenses × 20 questions = 1360 total MCQs
 // Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre, garder
@@ -2175,6 +2176,14 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 };
 
 // Function to get random Intermediate questions for a specific verb and tense
+// 25 Oct 2026: the plus-que-parfait (Intermediate A and B) lives in its own
+// generated file — see scripts/build-pluperfect-quiz-data.ts — and is filed
+// here under "plus_que_parfait" so every lookup path finds it the same way.
+for (const [verb, questions] of Object.entries(PLUPERFECT_QUIZ_DATA)) {
+  if (!INTERMEDIATE_QUIZ_DATA[verb]) INTERMEDIATE_QUIZ_DATA[verb] = {};
+  INTERMEDIATE_QUIZ_DATA[verb]["plus_que_parfait"] = questions;
+}
+
 export function getRandomIntermediateQuestions(verb: string, tense: string, count: number): IntermediateQuizQuestion[] {
   const verbData = INTERMEDIATE_QUIZ_DATA[verb];
   if (!verbData) {
@@ -2234,4 +2243,20 @@ export function convertIntermediateToQuizFormat(intermediateQuestions: Intermedi
       }))
     };
   });
+}
+/**
+ * "Présent" / "Passé Composé" / "Futur Simple" / "Plus-que-parfait" (as sent
+ * by the clients) to the keys this bank uses.
+ */
+export function normalizeIntermediateTense(tense: string): string {
+  const t = tense.toLowerCase().normalize("NFC").trim();
+  const map: Record<string, string> = {
+    "présent": "present", "present": "present",
+    "passé composé": "passé_composé", "passe_compose": "passé_composé", "passé_composé": "passé_composé",
+    "futur simple": "futur_simple", "futur_simple": "futur_simple",
+    "imparfait": "imparfait",
+    "plus-que-parfait": "plus_que_parfait", "plus que parfait": "plus_que_parfait",
+    "plus_que_parfait": "plus_que_parfait", "pluperfect": "plus_que_parfait",
+  };
+  return map[t] ?? t.replace(/\s+/g, "_");
 }
