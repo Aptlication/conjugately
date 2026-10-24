@@ -66,11 +66,14 @@ const A: Verb[] = [
       ["putting the milk in the fridge", "le lait au frigo"], ["putting the books on the shelf", "les livres sur l'étagère"]] },
   { inf: "trouver", reflexive: false, pp: "trouvé", stem: "trouv", present: ["trouve", "trouves", "trouve", "trouvons", "trouvez", "trouvent"],
     habit: [["find the answers in the book", "les réponses dans le livre"], ["find mushrooms in the forest every autumn", "des champignons dans la forêt chaque automne"],
-      ["find the keys under the mat", "les clés sous le paillasson"], ["find time to read every evening", "le temps de lire tous les soirs"],
-      ["find the lessons easy", "les leçons faciles"], ["find shells on the beach every summer", "des coquillages sur la plage chaque été"]] },
+      ["find the keys in the bag", "les clés dans le sac"], ["find time to read every evening", "le temps de lire tous les soirs"],
+      ["find the lessons easy", "les leçons faciles"], ["find shells on the beach every summer", "des coquillages sur la plage chaque été"],
+      ["find four-leaf clovers in the garden", "des trèfles à quatre feuilles dans le jardin"], ["find the films boring", "les films ennuyeux"],
+      ["find a parking space easily", "une place facilement"], ["find good restaurants in Lyon", "de bons restaurants à Lyon"]] },
   { inf: "croire", reflexive: false, pp: "cru", stem: "croy", present: ["crois", "crois", "croit", "croyons", "croyez", "croient"],
     habit: [["believe in Father Christmas", "au père Noël"], ["believe the weather forecast", "la météo"], ["believe the rumours", "les rumeurs"],
-      ["believe in ghosts", "aux fantômes"], ["believe the politicians", "les politiciens"], ["believe the teacher", "le professeur"]] },
+      ["believe in ghosts", "aux fantômes"], ["believe the politicians", "les politiciens"], ["believe the teacher", "le professeur"],
+      ["believe in luck", "à la chance"], ["believe the adverts", "les publicités"], ["believe in miracles", "aux miracles"], ["believe the horoscope", "l'horoscope"]] },
   { inf: "parler", reflexive: false, pp: "parlé", stem: "parl", present: ["parle", "parles", "parle", "parlons", "parlez", "parlent"],
     habit: [["speak French at home", "français à la maison"], ["speak to the neighbours every morning", "aux voisins tous les matins"],
       ["talk about the holidays every evening", "des vacances tous les soirs"], ["speak English at work", "anglais au travail"],
@@ -92,7 +95,7 @@ const A: Verb[] = [
   { inf: "écrire", reflexive: false, pp: "écrit", stem: "écriv", present: ["écris", "écris", "écrit", "écrivons", "écrivez", "écrivent"],
     habit: [["write to Marie every week", "à Marie chaque semaine"], ["write a lot of emails", "beaucoup d'e-mails"],
       ["write the shopping list on Saturdays", "la liste de courses le samedi"], ["write poems", "des poèmes"],
-      ["write postcards every summer", "des cartes postales chaque été"], ["write in a diary every evening", "dans un journal tous les soirs"]],
+      ["write postcards every summer", "des cartes postales chaque été"], ["write in a notebook every evening", "dans un carnet tous les soirs"]],
     prog: [["writing a letter", "une lettre"], ["writing the report", "le rapport"],
       ["writing a song", "une chanson"], ["writing an email to the boss", "un e-mail au patron"]] },
   { inf: "ouvrir", reflexive: false, pp: "ouvert", stem: "ouvr", present: ["ouvre", "ouvres", "ouvre", "ouvrons", "ouvrez", "ouvrent"],
@@ -112,23 +115,24 @@ const A: Verb[] = [
       ["lose patience easily", "patience facilement"], ["lose the umbrella every winter", "le parapluie chaque hiver"],
       ["lose the train tickets", "les billets de train"], ["lose time in traffic jams", "du temps dans les embouteillages"]],
     prog: [["losing the match", "le match"], ["losing patience", "patience"],
-      ["losing weight", "du poids"], ["losing time", "du temps"]] },
+      ["losing weight", "du poids"], ["losing at cards", "aux cartes"]] },
   { inf: "garder", reflexive: false, pp: "gardé", stem: "gard", present: ["garde", "gardes", "garde", "gardons", "gardez", "gardent"],
     habit: [["keep the receipts", "les reçus"], ["look after the neighbours' dog in the summer", "le chien des voisins l'été"],
       ["keep the old letters", "les vieilles lettres"], ["keep the change", "la monnaie"],
       ["keep a seat for Marie", "une place pour Marie"], ["look after the children on Wednesdays", "les enfants le mercredi"]],
     prog: [["looking after the neighbours' cat", "le chat des voisins"], ["looking after the children", "les enfants"],
-      ["looking after the shop", "le magasin"], ["keeping a secret", "un secret"]] },
+      ["looking after the shop", "le magasin"], ["looking after the baby", "le bébé"]] },
 ];
 
 const B: Verb[] = [
   { inf: "s'intéresser", reflexive: true, pp: "intéressé", stem: "intéress", present: ["intéresse", "intéresses", "intéresse", "intéressons", "intéressez", "intéressent"],
     habit: [["be interested in politics", "à la politique"], ["be interested in music", "à la musique"], ["be interested in history", "à l'histoire"],
-      ["be interested in fashion", "à la mode"], ["be interested in science", "à la science"], ["be interested in cooking", "à la cuisine"]] },
+      ["be interested in fashion", "à la mode"], ["be interested in science", "à la science"], ["be interested in cooking", "à la cuisine"],
+      ["be interested in sport", "au sport"], ["be interested in art", "à l'art"], ["be interested in languages", "aux langues"], ["be interested in photography", "à la photographie"]] },
   { inf: "se débrouiller", reflexive: true, pp: "débrouillé", stem: "débrouill", present: ["débrouille", "débrouilles", "débrouille", "débrouillons", "débrouillez", "débrouillent"],
     habit: [["get by in English", "en anglais"], ["cope without a car", "sans voiture"], ["cope on very little money", "avec très peu d'argent"],
-      ["get by without help", "sans aide"], ["cope well at work", "bien au travail"], ["get by in Paris", "à Paris"]],
-    prog: [["coping without a map", "sans carte"], ["getting by in English", "en anglais"],
+      ["get by without help", "sans aide"], ["cope at the market", "au marché"], ["get by in Paris", "à Paris"]],
+    prog: [["coping without a map", "sans carte"], ["coping with the ticket machine", "avec le distributeur de billets"],
       ["coping at the airport", "à l'aéroport"], ["coping with the computer", "avec l'ordinateur"]] },
   { inf: "s'ennuyer", reflexive: true, pp: "ennuyé", stem: "ennuy", present: ["ennuie", "ennuies", "ennuie", "ennuyons", "ennuyez", "ennuient"],
     habit: [["get bored at school", "à l'école"], ["get bored on Sundays", "le dimanche"], ["get bored during the holidays", "pendant les vacances"],
@@ -143,16 +147,22 @@ const B: Verb[] = [
   { inf: "se souvenir", reflexive: true, pp: "souvenu", stem: "souven", present: ["souviens", "souviens", "souvient", "souvenons", "souvenez", "souviennent"],
     habit: [["remember everyone's birthday", "de l'anniversaire de tout le monde"], ["remember the students' names", "des noms des étudiants"],
       ["remember the passwords", "des mots de passe"], ["remember the recipes", "des recettes"],
-      ["remember the dates", "des dates"], ["remember the songs", "des chansons"]] },
+      ["remember the dates", "des dates"], ["remember the songs", "des chansons"],
+      ["remember the phone numbers", "des numéros de téléphone"], ["remember the poems", "des poèmes"],
+      ["remember the addresses", "des adresses"], ["remember the neighbours' names", "des noms des voisins"]] },
   { inf: "s'adapter", reflexive: true, pp: "adapté", stem: "adapt", present: ["adapte", "adaptes", "adapte", "adaptons", "adaptez", "adaptent"],
-    habit: [["adapt easily to changes", "facilement aux changements"], ["adapt to the climate", "au climat"], ["adapt to new teams", "aux nouvelles équipes"],
-      ["adapt to the rules", "aux règles"], ["adapt to the noise", "au bruit"], ["adapt quickly to new jobs", "vite aux nouveaux emplois"]],
-    prog: [["adapting to the new school", "à la nouvelle école"], ["adapting to life in Paris", "à la vie à Paris"],
-      ["adapting to the cold", "au froid"], ["adapting to the new job", "au nouveau travail"]] },
+    // Habit only: adapting is gradual, so "was adapting … when the phone rang" reads oddly.
+    habit: [["adapt easily to changes", "facilement aux changements"], ["adapt quickly to each new climate", "vite à chaque nouveau climat"],
+      ["adapt to new teams", "aux nouvelles équipes"], ["adapt to the rules of each new school", "aux règles de chaque nouvelle école"],
+      ["adapt to the noise every summer", "au bruit chaque été"], ["adapt quickly to new jobs", "vite aux nouveaux emplois"],
+      ["adapt to each new town", "à chaque nouvelle ville"], ["adapt to the new timetables every September", "aux nouveaux horaires chaque septembre"],
+      ["adapt quickly to new colleagues", "vite aux nouveaux collègues"], ["adapt to the heat every summer", "à la chaleur chaque été"]] },
   { inf: "se réjouir", reflexive: true, pp: "réjoui", stem: "réjouiss", present: ["réjouis", "réjouis", "réjouit", "réjouissons", "réjouissez", "réjouissent"],
     habit: [["be delighted about the good weather", "du beau temps"], ["be delighted about every visit", "de chaque visite"],
       ["be delighted about the holidays", "des vacances"], ["be delighted about the results", "des résultats"],
-      ["be delighted about the parties", "des fêtes"], ["be delighted about the good news", "des bonnes nouvelles"]] },
+      ["be delighted about the parties", "des fêtes"], ["be delighted about the good news", "des bonnes nouvelles"],
+      ["be delighted about the weekends", "des week-ends"], ["be delighted about the summer holidays", "des grandes vacances"],
+      ["be delighted about the snow", "de la neige"], ["be delighted about the family meals", "des repas de famille"]] },
 ];
 
 /** The interruption added to "I" questions — a passé composé event, identical in all options. */
@@ -240,16 +250,22 @@ const rand = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 21474836
 
 const out: Record<string, { question: string; options: string[]; answer: string }[]> = {};
 for (const v of [...A, ...B]) {
-  if (v.habit.length !== 6) throw new Error(`${v.inf}: need 6 habit complements`);
+  // Six habits when the verb also has "-ing" items; ten when habit is its only use,
+  // so slots 1 and 19 never land on the same sentence.
+  if (v.habit.length !== (v.prog ? 6 : 10)) throw new Error(`${v.inf}: need ${v.prog ? 6 : 10} habit complements`);
   if (v.prog && v.prog.length !== 4) throw new Error(`${v.inf}: need 4 progressive complements`);
   let h = 0, g = 0, k = 0;
   out[v.inf] = PATTERNS.map((pat, i) => {
     const use: Use = v.prog ? pat.use : "H";
     let en: string, fr: string, tailEn = "", tailFr = "";
-    if (use === "H") [en, fr] = v.habit[h++ % 6];
+    if (use === "H") [en, fr] = v.habit[h++ % v.habit.length];
     else {
       [en, fr] = v.prog![g++ % 4];
-      if (use === "I") [tailEn, tailFr] = INTERRUPT[k++ % INTERRUPT.length];
+      if (use === "I") {
+        [tailEn, tailFr] = INTERRUPT[k++ % INTERRUPT.length];
+        // Never "talking on the phone when the phone rang".
+        if (en.includes("phone") && tailEn.includes("phone")) [tailEn, tailFr] = INTERRUPT[k++ % INTERRUPT.length];
+      }
     }
     const frC = pat.form === "neg" || pat.form === "negq" ? negComplement(v, fr) : fr;
     const pool: Kind[] = v.reflexive && ["je", "tu", "nous", "vous"].includes(pat.p)

@@ -229,12 +229,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "He used to find the keys under the mat.",
+      "question": "He used to find the keys in the bag.",
       "options": [
-        "Il a trouvé les clés sous le paillasson.",
-        "Il trouvais les clés sous le paillasson.",
-        "Il trouvait les clés sous le paillasson.",
-        "Il trouve les clés sous le paillasson."
+        "Il a trouvé les clés dans le sac.",
+        "Il trouvais les clés dans le sac.",
+        "Il trouvait les clés dans le sac.",
+        "Il trouve les clés dans le sac."
       ],
       "answer": "C"
     },
@@ -269,142 +269,142 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "They used to find the answers in the book. (male/mixed)",
+      "question": "They used to find four-leaf clovers in the garden. (male/mixed)",
       "options": [
-        "Ils ont trouvé les réponses dans le livre.",
-        "Ils trouvent les réponses dans le livre.",
-        "Ils trouvaient les réponses dans le livre.",
-        "Ils avaient trouvé les réponses dans le livre."
+        "Ils ont trouvé des trèfles à quatre feuilles dans le jardin.",
+        "Ils trouvent des trèfles à quatre feuilles dans le jardin.",
+        "Ils trouvaient des trèfles à quatre feuilles dans le jardin.",
+        "Ils avaient trouvé des trèfles à quatre feuilles dans le jardin."
       ],
       "answer": "C"
     },
     {
-      "question": "They used to find mushrooms in the forest every autumn. (female)",
+      "question": "They used to find the films boring. (female)",
       "options": [
-        "Elles ont trouvé des champignons dans la forêt chaque automne.",
-        "Elles avaient trouvé des champignons dans la forêt chaque automne.",
-        "Elles trouvaient des champignons dans la forêt chaque automne.",
-        "Elles trouvait des champignons dans la forêt chaque automne."
+        "Elles ont trouvé les films ennuyeux.",
+        "Elles avaient trouvé les films ennuyeux.",
+        "Elles trouvaient les films ennuyeux.",
+        "Elles trouvait les films ennuyeux."
       ],
       "answer": "C"
     },
     {
-      "question": "I didn't use to find the keys under the mat.",
+      "question": "I didn't use to find a parking space easily.",
       "options": [
-        "Je n'ai pas trouvé les clés sous le paillasson.",
-        "Je ne trouvais pas les clés sous le paillasson.",
-        "Je ne trouvait pas les clés sous le paillasson.",
-        "Je ne trouve pas les clés sous le paillasson."
+        "Je n'ai pas trouvé de place facilement.",
+        "Je ne trouvais pas de place facilement.",
+        "Je ne trouvait pas de place facilement.",
+        "Je ne trouve pas de place facilement."
       ],
       "answer": "B"
     },
     {
-      "question": "You didn't use to find time to read every evening. (informal)",
+      "question": "You didn't use to find good restaurants in Lyon. (informal)",
       "options": [
-        "Tu n'as pas trouvé le temps de lire tous les soirs.",
-        "Tu ne trouvais pas le temps de lire tous les soirs.",
-        "Tu ne trouves pas le temps de lire tous les soirs.",
-        "Tu n'avais pas trouvé le temps de lire tous les soirs."
+        "Tu n'as pas trouvé de bons restaurants à Lyon.",
+        "Tu ne trouvais pas de bons restaurants à Lyon.",
+        "Tu ne trouves pas de bons restaurants à Lyon.",
+        "Tu n'avais pas trouvé de bons restaurants à Lyon."
       ],
       "answer": "B"
     },
     {
-      "question": "He didn't use to find the lessons easy.",
+      "question": "He didn't use to find the answers in the book.",
       "options": [
-        "Il n'a pas trouvé les leçons faciles.",
-        "Il n'avait pas trouvé les leçons faciles.",
-        "Il ne trouvait pas les leçons faciles.",
-        "Il ne trouvais pas les leçons faciles."
+        "Il n'a pas trouvé les réponses dans le livre.",
+        "Il n'avait pas trouvé les réponses dans le livre.",
+        "Il ne trouvait pas les réponses dans le livre.",
+        "Il ne trouvais pas les réponses dans le livre."
       ],
       "answer": "C"
     },
     {
-      "question": "We didn't use to find shells on the beach every summer.",
+      "question": "We didn't use to find mushrooms in the forest every autumn.",
       "options": [
-        "Nous ne trouvions pas de coquillages sur la plage chaque été.",
-        "Nous n'avons pas trouvé de coquillages sur la plage chaque été.",
-        "Nous ne trouviez pas de coquillages sur la plage chaque été.",
-        "Nous ne trouvons pas de coquillages sur la plage chaque été."
+        "Nous ne trouvions pas de champignons dans la forêt chaque automne.",
+        "Nous n'avons pas trouvé de champignons dans la forêt chaque automne.",
+        "Nous ne trouviez pas de champignons dans la forêt chaque automne.",
+        "Nous ne trouvons pas de champignons dans la forêt chaque automne."
       ],
       "answer": "A"
     },
     {
-      "question": "You didn't use to find the answers in the book. (formal/plural)",
+      "question": "You didn't use to find the keys in the bag. (formal/plural)",
       "options": [
-        "Vous n'avez pas trouvé les réponses dans le livre.",
-        "Vous ne trouviez pas les réponses dans le livre.",
-        "Vous ne trouvez pas les réponses dans le livre.",
-        "Vous n'aviez pas trouvé les réponses dans le livre."
+        "Vous n'avez pas trouvé les clés dans le sac.",
+        "Vous ne trouviez pas les clés dans le sac.",
+        "Vous ne trouvez pas les clés dans le sac.",
+        "Vous n'aviez pas trouvé les clés dans le sac."
       ],
       "answer": "B"
     },
     {
-      "question": "They didn't use to find mushrooms in the forest every autumn. (male/mixed)",
+      "question": "They didn't use to find time to read every evening. (male/mixed)",
       "options": [
-        "Ils n'ont pas trouvé de champignons dans la forêt chaque automne.",
-        "Ils n'avaient pas trouvé de champignons dans la forêt chaque automne.",
-        "Ils ne trouvaient pas de champignons dans la forêt chaque automne.",
-        "Ils ne trouvait pas de champignons dans la forêt chaque automne."
+        "Ils n'ont pas trouvé le temps de lire tous les soirs.",
+        "Ils n'avaient pas trouvé le temps de lire tous les soirs.",
+        "Ils ne trouvaient pas le temps de lire tous les soirs.",
+        "Ils ne trouvait pas le temps de lire tous les soirs."
       ],
       "answer": "C"
     },
     {
-      "question": "Did you use to find the keys under the mat? (informal)",
+      "question": "Did you use to find the lessons easy? (informal)",
       "options": [
-        "As-tu trouvé les clés sous le paillasson ?",
-        "Trouvait-tu les clés sous le paillasson ?",
-        "Trouves-tu les clés sous le paillasson ?",
-        "Trouvais-tu les clés sous le paillasson ?"
+        "As-tu trouvé les leçons faciles ?",
+        "Trouvait-tu les leçons faciles ?",
+        "Trouves-tu les leçons faciles ?",
+        "Trouvais-tu les leçons faciles ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did he use to find time to read every evening?",
+      "question": "Did he use to find shells on the beach every summer?",
       "options": [
-        "A-t-il trouvé le temps de lire tous les soirs ?",
-        "Trouvait-il le temps de lire tous les soirs ?",
-        "Trouve-t-il le temps de lire tous les soirs ?",
-        "Avait-il trouvé le temps de lire tous les soirs ?"
+        "A-t-il trouvé des coquillages sur la plage chaque été ?",
+        "Trouvait-il des coquillages sur la plage chaque été ?",
+        "Trouve-t-il des coquillages sur la plage chaque été ?",
+        "Avait-il trouvé des coquillages sur la plage chaque été ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to find the lessons easy? (formal/plural)",
+      "question": "Did you use to find four-leaf clovers in the garden? (formal/plural)",
       "options": [
-        "Avez-vous trouvé les leçons faciles ?",
-        "Aviez-vous trouvé les leçons faciles ?",
-        "Trouviez-vous les leçons faciles ?",
-        "Trouvions-vous les leçons faciles ?"
+        "Avez-vous trouvé des trèfles à quatre feuilles dans le jardin ?",
+        "Aviez-vous trouvé des trèfles à quatre feuilles dans le jardin ?",
+        "Trouviez-vous des trèfles à quatre feuilles dans le jardin ?",
+        "Trouvions-vous des trèfles à quatre feuilles dans le jardin ?"
       ],
       "answer": "C"
     },
     {
-      "question": "Did they use to find shells on the beach every summer? (female)",
+      "question": "Did they use to find the films boring? (female)",
       "options": [
-        "Ont-elles trouvé des coquillages sur la plage chaque été ?",
-        "Trouvait-elles des coquillages sur la plage chaque été ?",
-        "Trouvent-elles des coquillages sur la plage chaque été ?",
-        "Trouvaient-elles des coquillages sur la plage chaque été ?"
+        "Ont-elles trouvé les films ennuyeux ?",
+        "Trouvait-elles les films ennuyeux ?",
+        "Trouvent-elles les films ennuyeux ?",
+        "Trouvaient-elles les films ennuyeux ?"
       ],
       "answer": "D"
     },
     {
-      "question": "I used to find the answers in the book.",
+      "question": "I used to find a parking space easily.",
       "options": [
-        "J'ai trouvé les réponses dans le livre.",
-        "Je trouvais les réponses dans le livre.",
-        "Je trouve les réponses dans le livre.",
-        "J'avais trouvé les réponses dans le livre."
+        "J'ai trouvé une place facilement.",
+        "Je trouvais une place facilement.",
+        "Je trouve une place facilement.",
+        "J'avais trouvé une place facilement."
       ],
       "answer": "B"
     },
     {
-      "question": "Didn't we use to find mushrooms in the forest every autumn?",
+      "question": "Didn't we use to find good restaurants in Lyon?",
       "options": [
-        "N'avons-nous pas trouvé de champignons dans la forêt chaque automne ?",
-        "N'avions-nous pas trouvé de champignons dans la forêt chaque automne ?",
-        "Ne trouviez-nous pas de champignons dans la forêt chaque automne ?",
-        "Ne trouvions-nous pas de champignons dans la forêt chaque automne ?"
+        "N'avons-nous pas trouvé de bons restaurants à Lyon ?",
+        "N'avions-nous pas trouvé de bons restaurants à Lyon ?",
+        "Ne trouviez-nous pas de bons restaurants à Lyon ?",
+        "Ne trouvions-nous pas de bons restaurants à Lyon ?"
       ],
       "answer": "D"
     }
@@ -471,142 +471,142 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "B"
     },
     {
-      "question": "They used to believe in Father Christmas. (male/mixed)",
+      "question": "They used to believe in luck. (male/mixed)",
       "options": [
-        "Ils croyaient au père Noël.",
-        "Ils ont cru au père Noël.",
-        "Ils croient au père Noël.",
-        "Ils avaient cru au père Noël."
+        "Ils croyaient à la chance.",
+        "Ils ont cru à la chance.",
+        "Ils croient à la chance.",
+        "Ils avaient cru à la chance."
       ],
       "answer": "A"
     },
     {
-      "question": "They used to believe the weather forecast. (female)",
+      "question": "They used to believe the adverts. (female)",
       "options": [
-        "Elles croyaient la météo.",
-        "Elles ont cru la météo.",
-        "Elles avaient cru la météo.",
-        "Elles croyait la météo."
+        "Elles croyaient les publicités.",
+        "Elles ont cru les publicités.",
+        "Elles avaient cru les publicités.",
+        "Elles croyait les publicités."
       ],
       "answer": "A"
     },
     {
-      "question": "I didn't use to believe the rumours.",
+      "question": "I didn't use to believe in miracles.",
       "options": [
-        "Je n'ai pas cru les rumeurs.",
-        "Je ne croyais pas les rumeurs.",
-        "Je ne croyait pas les rumeurs.",
-        "Je ne crois pas les rumeurs."
+        "Je n'ai pas cru aux miracles.",
+        "Je ne croyais pas aux miracles.",
+        "Je ne croyait pas aux miracles.",
+        "Je ne crois pas aux miracles."
       ],
       "answer": "B"
     },
     {
-      "question": "You didn't use to believe in ghosts. (informal)",
+      "question": "You didn't use to believe the horoscope. (informal)",
       "options": [
-        "Tu n'as pas cru aux fantômes.",
-        "Tu ne crois pas aux fantômes.",
-        "Tu n'avais pas cru aux fantômes.",
-        "Tu ne croyais pas aux fantômes."
+        "Tu n'as pas cru l'horoscope.",
+        "Tu ne crois pas l'horoscope.",
+        "Tu n'avais pas cru l'horoscope.",
+        "Tu ne croyais pas l'horoscope."
       ],
       "answer": "D"
     },
     {
-      "question": "He didn't use to believe the politicians.",
+      "question": "He didn't use to believe in Father Christmas.",
       "options": [
-        "Il ne croyait pas les politiciens.",
-        "Il n'a pas cru les politiciens.",
-        "Il n'avait pas cru les politiciens.",
-        "Il ne croyais pas les politiciens."
+        "Il ne croyait pas au père Noël.",
+        "Il n'a pas cru au père Noël.",
+        "Il n'avait pas cru au père Noël.",
+        "Il ne croyais pas au père Noël."
       ],
       "answer": "A"
     },
     {
-      "question": "We didn't use to believe the teacher.",
+      "question": "We didn't use to believe the weather forecast.",
       "options": [
-        "Nous n'avons pas cru le professeur.",
-        "Nous ne croyiez pas le professeur.",
-        "Nous ne croyions pas le professeur.",
-        "Nous ne croyons pas le professeur."
+        "Nous n'avons pas cru la météo.",
+        "Nous ne croyiez pas la météo.",
+        "Nous ne croyions pas la météo.",
+        "Nous ne croyons pas la météo."
       ],
       "answer": "C"
     },
     {
-      "question": "You didn't use to believe in Father Christmas. (formal/plural)",
+      "question": "You didn't use to believe the rumours. (formal/plural)",
       "options": [
-        "Vous ne croyiez pas au père Noël.",
-        "Vous n'avez pas cru au père Noël.",
-        "Vous ne croyez pas au père Noël.",
-        "Vous n'aviez pas cru au père Noël."
+        "Vous ne croyiez pas les rumeurs.",
+        "Vous n'avez pas cru les rumeurs.",
+        "Vous ne croyez pas les rumeurs.",
+        "Vous n'aviez pas cru les rumeurs."
       ],
       "answer": "A"
     },
     {
-      "question": "They didn't use to believe the weather forecast. (male/mixed)",
+      "question": "They didn't use to believe in ghosts. (male/mixed)",
       "options": [
-        "Ils n'ont pas cru la météo.",
-        "Ils n'avaient pas cru la météo.",
-        "Ils ne croyaient pas la météo.",
-        "Ils ne croyait pas la météo."
+        "Ils n'ont pas cru aux fantômes.",
+        "Ils n'avaient pas cru aux fantômes.",
+        "Ils ne croyaient pas aux fantômes.",
+        "Ils ne croyait pas aux fantômes."
       ],
       "answer": "C"
     },
     {
-      "question": "Did you use to believe the rumours? (informal)",
+      "question": "Did you use to believe the politicians? (informal)",
       "options": [
-        "As-tu cru les rumeurs ?",
-        "Croyait-tu les rumeurs ?",
-        "Crois-tu les rumeurs ?",
-        "Croyais-tu les rumeurs ?"
+        "As-tu cru les politiciens ?",
+        "Croyait-tu les politiciens ?",
+        "Crois-tu les politiciens ?",
+        "Croyais-tu les politiciens ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did he use to believe in ghosts?",
+      "question": "Did he use to believe the teacher?",
       "options": [
-        "A-t-il cru aux fantômes ?",
-        "Croyait-il aux fantômes ?",
-        "Croit-il aux fantômes ?",
-        "Avait-il cru aux fantômes ?"
+        "A-t-il cru le professeur ?",
+        "Croyait-il le professeur ?",
+        "Croit-il le professeur ?",
+        "Avait-il cru le professeur ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to believe the politicians? (formal/plural)",
+      "question": "Did you use to believe in luck? (formal/plural)",
       "options": [
-        "Croyiez-vous les politiciens ?",
-        "Avez-vous cru les politiciens ?",
-        "Aviez-vous cru les politiciens ?",
-        "Croyions-vous les politiciens ?"
+        "Croyiez-vous à la chance ?",
+        "Avez-vous cru à la chance ?",
+        "Aviez-vous cru à la chance ?",
+        "Croyions-vous à la chance ?"
       ],
       "answer": "A"
     },
     {
-      "question": "Did they use to believe the teacher? (female)",
+      "question": "Did they use to believe the adverts? (female)",
       "options": [
-        "Croyaient-elles le professeur ?",
-        "Ont-elles cru le professeur ?",
-        "Croyait-elles le professeur ?",
-        "Croient-elles le professeur ?"
+        "Croyaient-elles les publicités ?",
+        "Ont-elles cru les publicités ?",
+        "Croyait-elles les publicités ?",
+        "Croient-elles les publicités ?"
       ],
       "answer": "A"
     },
     {
-      "question": "I used to believe in Father Christmas.",
+      "question": "I used to believe in miracles.",
       "options": [
-        "J'ai cru au père Noël.",
-        "Je crois au père Noël.",
-        "J'avais cru au père Noël.",
-        "Je croyais au père Noël."
+        "J'ai cru aux miracles.",
+        "Je crois aux miracles.",
+        "J'avais cru aux miracles.",
+        "Je croyais aux miracles."
       ],
       "answer": "D"
     },
     {
-      "question": "Didn't we use to believe the weather forecast?",
+      "question": "Didn't we use to believe the horoscope?",
       "options": [
-        "N'avons-nous pas cru la météo ?",
-        "N'avions-nous pas cru la météo ?",
-        "Ne croyions-nous pas la météo ?",
-        "Ne croyiez-nous pas la météo ?"
+        "N'avons-nous pas cru l'horoscope ?",
+        "N'avions-nous pas cru l'horoscope ?",
+        "Ne croyions-nous pas l'horoscope ?",
+        "Ne croyiez-nous pas l'horoscope ?"
       ],
       "answer": "C"
     }
@@ -633,12 +633,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "C"
     },
     {
-      "question": "He was talking on the phone when the phone rang.",
+      "question": "He was talking on the phone when the doorbell rang.",
       "options": [
-        "Il a parlé au téléphone quand le téléphone a sonné.",
-        "Il parlais au téléphone quand le téléphone a sonné.",
-        "Il parle au téléphone quand le téléphone a sonné.",
-        "Il parlait au téléphone quand le téléphone a sonné."
+        "Il a parlé au téléphone quand on a sonné à la porte.",
+        "Il parlais au téléphone quand on a sonné à la porte.",
+        "Il parle au téléphone quand on a sonné à la porte.",
+        "Il parlait au téléphone quand on a sonné à la porte."
       ],
       "answer": "D"
     },
@@ -673,12 +673,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "D"
     },
     {
-      "question": "They were talking about the project when the doorbell rang. (male/mixed)",
+      "question": "They were talking about the project when the lights went out. (male/mixed)",
       "options": [
-        "Ils ont parlé du projet quand on a sonné à la porte.",
-        "Ils parlent du projet quand on a sonné à la porte.",
-        "Ils avaient parlé du projet quand on a sonné à la porte.",
-        "Ils parlaient du projet quand on a sonné à la porte."
+        "Ils ont parlé du projet quand la lumière s'est éteinte.",
+        "Ils parlent du projet quand la lumière s'est éteinte.",
+        "Ils avaient parlé du projet quand la lumière s'est éteinte.",
+        "Ils parlaient du projet quand la lumière s'est éteinte."
       ],
       "answer": "D"
     },
@@ -793,12 +793,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "D"
     },
     {
-      "question": "I was speaking to the manager when the lights went out.",
+      "question": "I was speaking to the manager when the phone rang.",
       "options": [
-        "Je parlais au directeur quand la lumière s'est éteinte.",
-        "J'ai parlé au directeur quand la lumière s'est éteinte.",
-        "Je parle au directeur quand la lumière s'est éteinte.",
-        "J'avais parlé au directeur quand la lumière s'est éteinte."
+        "Je parlais au directeur quand le téléphone a sonné.",
+        "J'ai parlé au directeur quand le téléphone a sonné.",
+        "Je parle au directeur quand le téléphone a sonné.",
+        "J'avais parlé au directeur quand le téléphone a sonné."
       ],
       "answer": "A"
     },
@@ -1319,12 +1319,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "C"
     },
     {
-      "question": "He didn't use to write in a diary every evening.",
+      "question": "He didn't use to write in a notebook every evening.",
       "options": [
-        "Il n'a pas écrit dans un journal tous les soirs.",
-        "Il n'avait pas écrit dans un journal tous les soirs.",
-        "Il n'écrivais pas dans un journal tous les soirs.",
-        "Il n'écrivait pas dans un journal tous les soirs."
+        "Il n'a pas écrit dans un carnet tous les soirs.",
+        "Il n'avait pas écrit dans un carnet tous les soirs.",
+        "Il n'écrivais pas dans un carnet tous les soirs.",
+        "Il n'écrivait pas dans un carnet tous les soirs."
       ],
       "answer": "D"
     },
@@ -1885,12 +1885,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "D"
     },
     {
-      "question": "They were losing time when the doorbell rang. (male/mixed)",
+      "question": "They were losing at cards when the doorbell rang. (male/mixed)",
       "options": [
-        "Ils perdaient du temps quand on a sonné à la porte.",
-        "Ils ont perdu du temps quand on a sonné à la porte.",
-        "Ils perdent du temps quand on a sonné à la porte.",
-        "Ils avaient perdu du temps quand on a sonné à la porte."
+        "Ils perdaient aux cartes quand on a sonné à la porte.",
+        "Ils ont perdu aux cartes quand on a sonné à la porte.",
+        "Ils perdent aux cartes quand on a sonné à la porte.",
+        "Ils avaient perdu aux cartes quand on a sonné à la porte."
       ],
       "answer": "A"
     },
@@ -1995,12 +1995,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "D"
     },
     {
-      "question": "Were they losing time? (female)",
+      "question": "Were they losing at cards? (female)",
       "options": [
-        "Perdaient-elles du temps ?",
-        "Ont-elles perdu du temps ?",
-        "Perdait-elles du temps ?",
-        "Perdent-elles du temps ?"
+        "Perdaient-elles aux cartes ?",
+        "Ont-elles perdu aux cartes ?",
+        "Perdait-elles aux cartes ?",
+        "Perdent-elles aux cartes ?"
       ],
       "answer": "A"
     },
@@ -2087,12 +2087,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "D"
     },
     {
-      "question": "They were keeping a secret when the doorbell rang. (male/mixed)",
+      "question": "They were looking after the baby when the doorbell rang. (male/mixed)",
       "options": [
-        "Ils gardaient un secret quand on a sonné à la porte.",
-        "Ils ont gardé un secret quand on a sonné à la porte.",
-        "Ils gardent un secret quand on a sonné à la porte.",
-        "Ils avaient gardé un secret quand on a sonné à la porte."
+        "Ils gardaient le bébé quand on a sonné à la porte.",
+        "Ils ont gardé le bébé quand on a sonné à la porte.",
+        "Ils gardent le bébé quand on a sonné à la porte.",
+        "Ils avaient gardé le bébé quand on a sonné à la porte."
       ],
       "answer": "A"
     },
@@ -2197,12 +2197,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "B"
     },
     {
-      "question": "Were they keeping a secret? (female)",
+      "question": "Were they looking after the baby? (female)",
       "options": [
-        "Gardaient-elles un secret ?",
-        "Ont-elles gardé un secret ?",
-        "Gardait-elles un secret ?",
-        "Gardent-elles un secret ?"
+        "Gardaient-elles le bébé ?",
+        "Ont-elles gardé le bébé ?",
+        "Gardait-elles le bébé ?",
+        "Gardent-elles le bébé ?"
       ],
       "answer": "A"
     },
@@ -2289,142 +2289,142 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "They used to be interested in politics. (male/mixed)",
+      "question": "They used to be interested in sport. (male/mixed)",
       "options": [
-        "Ils s'intéressaient à la politique.",
-        "Ils se sont intéressés à la politique.",
-        "Ils s'intéressent à la politique.",
-        "Ils s'étaient intéressés à la politique."
+        "Ils s'intéressaient au sport.",
+        "Ils se sont intéressés au sport.",
+        "Ils s'intéressent au sport.",
+        "Ils s'étaient intéressés au sport."
       ],
       "answer": "A"
     },
     {
-      "question": "They used to be interested in music. (female)",
+      "question": "They used to be interested in art. (female)",
       "options": [
-        "Elles se sont intéressées à la musique.",
-        "Elles s'étaient intéressées à la musique.",
-        "Elles s'intéressait à la musique.",
-        "Elles s'intéressaient à la musique."
+        "Elles se sont intéressées à l'art.",
+        "Elles s'étaient intéressées à l'art.",
+        "Elles s'intéressait à l'art.",
+        "Elles s'intéressaient à l'art."
       ],
       "answer": "D"
     },
     {
-      "question": "I didn't use to be interested in history.",
+      "question": "I didn't use to be interested in languages.",
       "options": [
-        "Je ne m'intéressais pas à l'histoire.",
-        "Je ne me suis pas intéressé à l'histoire.",
-        "Je ne m'intéresse pas à l'histoire.",
-        "Je ne m'étais pas intéressé à l'histoire."
+        "Je ne m'intéressais pas aux langues.",
+        "Je ne me suis pas intéressé aux langues.",
+        "Je ne m'intéresse pas aux langues.",
+        "Je ne m'étais pas intéressé aux langues."
       ],
       "answer": "A"
     },
     {
-      "question": "You didn't use to be interested in fashion. (informal)",
+      "question": "You didn't use to be interested in photography. (informal)",
       "options": [
-        "Tu ne t'es pas intéressé à la mode.",
-        "Tu ne t'étais pas intéressé à la mode.",
-        "Tu ne t'intéressais pas à la mode.",
-        "Tu ne t'intéressait pas à la mode."
+        "Tu ne t'es pas intéressé à la photographie.",
+        "Tu ne t'étais pas intéressé à la photographie.",
+        "Tu ne t'intéressais pas à la photographie.",
+        "Tu ne t'intéressait pas à la photographie."
       ],
       "answer": "C"
     },
     {
-      "question": "He didn't use to be interested in science.",
+      "question": "He didn't use to be interested in politics.",
       "options": [
-        "Il ne s'intéressait pas à la science.",
-        "Il ne s'est pas intéressé à la science.",
-        "Il ne s'était pas intéressé à la science.",
-        "Il ne s'intéressais pas à la science."
+        "Il ne s'intéressait pas à la politique.",
+        "Il ne s'est pas intéressé à la politique.",
+        "Il ne s'était pas intéressé à la politique.",
+        "Il ne s'intéressais pas à la politique."
       ],
       "answer": "A"
     },
     {
-      "question": "We didn't use to be interested in cooking.",
+      "question": "We didn't use to be interested in music.",
       "options": [
-        "Nous ne nous sommes pas intéressés à la cuisine.",
-        "Nous ne s'intéressions pas à la cuisine.",
-        "Nous ne nous intéressons pas à la cuisine.",
-        "Nous ne nous intéressions pas à la cuisine."
+        "Nous ne nous sommes pas intéressés à la musique.",
+        "Nous ne s'intéressions pas à la musique.",
+        "Nous ne nous intéressons pas à la musique.",
+        "Nous ne nous intéressions pas à la musique."
       ],
       "answer": "D"
     },
     {
-      "question": "You didn't use to be interested in politics. (formal/plural)",
+      "question": "You didn't use to be interested in history. (formal/plural)",
       "options": [
-        "Vous ne vous êtes pas intéressés à la politique.",
-        "Vous ne vous intéressez pas à la politique.",
-        "Vous ne vous étiez pas intéressés à la politique.",
-        "Vous ne vous intéressiez pas à la politique."
+        "Vous ne vous êtes pas intéressés à l'histoire.",
+        "Vous ne vous intéressez pas à l'histoire.",
+        "Vous ne vous étiez pas intéressés à l'histoire.",
+        "Vous ne vous intéressiez pas à l'histoire."
       ],
       "answer": "D"
     },
     {
-      "question": "They didn't use to be interested in music. (male/mixed)",
+      "question": "They didn't use to be interested in fashion. (male/mixed)",
       "options": [
-        "Ils ne se sont pas intéressés à la musique.",
-        "Ils ne s'intéressaient pas à la musique.",
-        "Ils ne s'étaient pas intéressés à la musique.",
-        "Ils ne s'intéressait pas à la musique."
+        "Ils ne se sont pas intéressés à la mode.",
+        "Ils ne s'intéressaient pas à la mode.",
+        "Ils ne s'étaient pas intéressés à la mode.",
+        "Ils ne s'intéressait pas à la mode."
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to be interested in history? (informal)",
+      "question": "Did you use to be interested in science? (informal)",
       "options": [
-        "T'es-tu intéressé à l'histoire ?",
-        "T'intéressais-tu à l'histoire ?",
-        "T'intéressait-tu à l'histoire ?",
-        "S'intéressais-tu à l'histoire ?"
+        "T'es-tu intéressé à la science ?",
+        "T'intéressais-tu à la science ?",
+        "T'intéressait-tu à la science ?",
+        "S'intéressais-tu à la science ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Did he use to be interested in fashion?",
+      "question": "Did he use to be interested in cooking?",
       "options": [
-        "S'est-il intéressé à la mode ?",
-        "S'intéresse-t-il à la mode ?",
-        "S'était-il intéressé à la mode ?",
-        "S'intéressait-il à la mode ?"
+        "S'est-il intéressé à la cuisine ?",
+        "S'intéresse-t-il à la cuisine ?",
+        "S'était-il intéressé à la cuisine ?",
+        "S'intéressait-il à la cuisine ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did you use to be interested in science? (formal/plural)",
+      "question": "Did you use to be interested in sport? (formal/plural)",
       "options": [
-        "Vous êtes-vous intéressés à la science ?",
-        "Vous intéressez-vous à la science ?",
-        "Vous étiez-vous intéressés à la science ?",
-        "Vous intéressiez-vous à la science ?"
+        "Vous êtes-vous intéressés au sport ?",
+        "Vous intéressez-vous au sport ?",
+        "Vous étiez-vous intéressés au sport ?",
+        "Vous intéressiez-vous au sport ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did they use to be interested in cooking? (female)",
+      "question": "Did they use to be interested in art? (female)",
       "options": [
-        "Se sont-elles intéressées à la cuisine ?",
-        "S'intéressait-elles à la cuisine ?",
-        "S'intéressaient-elles à la cuisine ?",
-        "S'intéressent-elles à la cuisine ?"
+        "Se sont-elles intéressées à l'art ?",
+        "S'intéressait-elles à l'art ?",
+        "S'intéressaient-elles à l'art ?",
+        "S'intéressent-elles à l'art ?"
       ],
       "answer": "C"
     },
     {
-      "question": "I used to be interested in politics.",
+      "question": "I used to be interested in languages.",
       "options": [
-        "Je me suis intéressé à la politique.",
-        "Je m'intéressais à la politique.",
-        "Je m'intéressait à la politique.",
-        "Je s'intéressais à la politique."
+        "Je me suis intéressé aux langues.",
+        "Je m'intéressais aux langues.",
+        "Je m'intéressait aux langues.",
+        "Je s'intéressais aux langues."
       ],
       "answer": "B"
     },
     {
-      "question": "Didn't we use to be interested in music?",
+      "question": "Didn't we use to be interested in photography?",
       "options": [
-        "Ne nous sommes-nous pas intéressés à la musique ?",
-        "Ne s'intéressions-nous pas à la musique ?",
-        "Ne nous intéressons-nous pas à la musique ?",
-        "Ne nous intéressions-nous pas à la musique ?"
+        "Ne nous sommes-nous pas intéressés à la photographie ?",
+        "Ne s'intéressions-nous pas à la photographie ?",
+        "Ne nous intéressons-nous pas à la photographie ?",
+        "Ne nous intéressions-nous pas à la photographie ?"
       ],
       "answer": "D"
     }
@@ -2451,12 +2451,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "B"
     },
     {
-      "question": "He was getting by in English when the phone rang.",
+      "question": "He was coping with the ticket machine when the phone rang.",
       "options": [
-        "Il s'est débrouillé en anglais quand le téléphone a sonné.",
-        "Il se débrouillais en anglais quand le téléphone a sonné.",
-        "Il se débrouille en anglais quand le téléphone a sonné.",
-        "Il se débrouillait en anglais quand le téléphone a sonné."
+        "Il s'est débrouillé avec le distributeur de billets quand le téléphone a sonné.",
+        "Il se débrouillais avec le distributeur de billets quand le téléphone a sonné.",
+        "Il se débrouille avec le distributeur de billets quand le téléphone a sonné.",
+        "Il se débrouillait avec le distributeur de billets quand le téléphone a sonné."
       ],
       "answer": "D"
     },
@@ -2511,12 +2511,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "C"
     },
     {
-      "question": "I didn't use to cope well at work.",
+      "question": "I didn't use to cope at the market.",
       "options": [
-        "Je ne me suis pas débrouillé bien au travail.",
-        "Je ne me débrouillais pas bien au travail.",
-        "Je ne me débrouille pas bien au travail.",
-        "Je ne m'étais pas débrouillé bien au travail."
+        "Je ne me suis pas débrouillé au marché.",
+        "Je ne me débrouillais pas au marché.",
+        "Je ne me débrouille pas au marché.",
+        "Je ne m'étais pas débrouillé au marché."
       ],
       "answer": "B"
     },
@@ -2551,12 +2551,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "You weren't getting by in English. (formal/plural)",
+      "question": "You weren't coping with the ticket machine. (formal/plural)",
       "options": [
-        "Vous ne vous êtes pas débrouillés en anglais.",
-        "Vous ne vous débrouillez pas en anglais.",
-        "Vous ne vous débrouilliez pas en anglais.",
-        "Vous ne vous étiez pas débrouillés en anglais."
+        "Vous ne vous êtes pas débrouillés avec le distributeur de billets.",
+        "Vous ne vous débrouillez pas avec le distributeur de billets.",
+        "Vous ne vous débrouilliez pas avec le distributeur de billets.",
+        "Vous ne vous étiez pas débrouillés avec le distributeur de billets."
       ],
       "answer": "C"
     },
@@ -2621,12 +2621,12 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "B"
     },
     {
-      "question": "Didn't we use to cope well at work?",
+      "question": "Didn't we use to cope at the market?",
       "options": [
-        "Ne nous sommes-nous pas débrouillés bien au travail ?",
-        "Ne se débrouillions-nous pas bien au travail ?",
-        "Ne nous débrouillions-nous pas bien au travail ?",
-        "Ne nous débrouillons-nous pas bien au travail ?"
+        "Ne nous sommes-nous pas débrouillés au marché ?",
+        "Ne se débrouillions-nous pas au marché ?",
+        "Ne nous débrouillions-nous pas au marché ?",
+        "Ne nous débrouillons-nous pas au marché ?"
       ],
       "answer": "C"
     }
@@ -3097,142 +3097,142 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "They used to remember everyone's birthday. (male/mixed)",
+      "question": "They used to remember the phone numbers. (male/mixed)",
       "options": [
-        "Ils se sont souvenus de l'anniversaire de tout le monde.",
-        "Ils se souviennent de l'anniversaire de tout le monde.",
-        "Ils s'étaient souvenus de l'anniversaire de tout le monde.",
-        "Ils se souvenaient de l'anniversaire de tout le monde."
+        "Ils se sont souvenus des numéros de téléphone.",
+        "Ils se souviennent des numéros de téléphone.",
+        "Ils s'étaient souvenus des numéros de téléphone.",
+        "Ils se souvenaient des numéros de téléphone."
       ],
       "answer": "D"
     },
     {
-      "question": "They used to remember the students' names. (female)",
+      "question": "They used to remember the poems. (female)",
       "options": [
-        "Elles se sont souvenues des noms des étudiants.",
-        "Elles se souvenaient des noms des étudiants.",
-        "Elles s'étaient souvenues des noms des étudiants.",
-        "Elles se souvenait des noms des étudiants."
+        "Elles se sont souvenues des poèmes.",
+        "Elles se souvenaient des poèmes.",
+        "Elles s'étaient souvenues des poèmes.",
+        "Elles se souvenait des poèmes."
       ],
       "answer": "B"
     },
     {
-      "question": "I didn't use to remember the passwords.",
+      "question": "I didn't use to remember the addresses.",
       "options": [
-        "Je ne me souvenais pas des mots de passe.",
-        "Je ne me suis pas souvenu des mots de passe.",
-        "Je ne me souviens pas des mots de passe.",
-        "Je ne m'étais pas souvenu des mots de passe."
+        "Je ne me souvenais pas des adresses.",
+        "Je ne me suis pas souvenu des adresses.",
+        "Je ne me souviens pas des adresses.",
+        "Je ne m'étais pas souvenu des adresses."
       ],
       "answer": "A"
     },
     {
-      "question": "You didn't use to remember the recipes. (informal)",
+      "question": "You didn't use to remember the neighbours' names. (informal)",
       "options": [
-        "Tu ne te souvenais pas des recettes.",
-        "Tu ne t'es pas souvenu des recettes.",
-        "Tu ne t'étais pas souvenu des recettes.",
-        "Tu ne te souvenait pas des recettes."
+        "Tu ne te souvenais pas des noms des voisins.",
+        "Tu ne t'es pas souvenu des noms des voisins.",
+        "Tu ne t'étais pas souvenu des noms des voisins.",
+        "Tu ne te souvenait pas des noms des voisins."
       ],
       "answer": "A"
     },
     {
-      "question": "He didn't use to remember the dates.",
+      "question": "He didn't use to remember everyone's birthday.",
       "options": [
-        "Il ne s'est pas souvenu des dates.",
-        "Il ne s'était pas souvenu des dates.",
-        "Il ne se souvenais pas des dates.",
-        "Il ne se souvenait pas des dates."
+        "Il ne s'est pas souvenu de l'anniversaire de tout le monde.",
+        "Il ne s'était pas souvenu de l'anniversaire de tout le monde.",
+        "Il ne se souvenais pas de l'anniversaire de tout le monde.",
+        "Il ne se souvenait pas de l'anniversaire de tout le monde."
       ],
       "answer": "D"
     },
     {
-      "question": "We didn't use to remember the songs.",
+      "question": "We didn't use to remember the students' names.",
       "options": [
-        "Nous ne nous sommes pas souvenus des chansons.",
-        "Nous ne se souvenions pas des chansons.",
-        "Nous ne nous souvenions pas des chansons.",
-        "Nous ne nous souvenons pas des chansons."
+        "Nous ne nous sommes pas souvenus des noms des étudiants.",
+        "Nous ne se souvenions pas des noms des étudiants.",
+        "Nous ne nous souvenions pas des noms des étudiants.",
+        "Nous ne nous souvenons pas des noms des étudiants."
       ],
       "answer": "C"
     },
     {
-      "question": "You didn't use to remember everyone's birthday. (formal/plural)",
+      "question": "You didn't use to remember the passwords. (formal/plural)",
       "options": [
-        "Vous ne vous souveniez pas de l'anniversaire de tout le monde.",
-        "Vous ne vous êtes pas souvenus de l'anniversaire de tout le monde.",
-        "Vous ne vous souvenez pas de l'anniversaire de tout le monde.",
-        "Vous ne vous étiez pas souvenus de l'anniversaire de tout le monde."
+        "Vous ne vous souveniez pas des mots de passe.",
+        "Vous ne vous êtes pas souvenus des mots de passe.",
+        "Vous ne vous souvenez pas des mots de passe.",
+        "Vous ne vous étiez pas souvenus des mots de passe."
       ],
       "answer": "A"
     },
     {
-      "question": "They didn't use to remember the students' names. (male/mixed)",
+      "question": "They didn't use to remember the recipes. (male/mixed)",
       "options": [
-        "Ils ne se sont pas souvenus des noms des étudiants.",
-        "Ils ne s'étaient pas souvenus des noms des étudiants.",
-        "Ils ne se souvenaient pas des noms des étudiants.",
-        "Ils ne se souvenait pas des noms des étudiants."
+        "Ils ne se sont pas souvenus des recettes.",
+        "Ils ne s'étaient pas souvenus des recettes.",
+        "Ils ne se souvenaient pas des recettes.",
+        "Ils ne se souvenait pas des recettes."
       ],
       "answer": "C"
     },
     {
-      "question": "Did you use to remember the passwords? (informal)",
+      "question": "Did you use to remember the dates? (informal)",
       "options": [
-        "Te souvenais-tu des mots de passe ?",
-        "T'es-tu souvenu des mots de passe ?",
-        "Te souvenait-tu des mots de passe ?",
-        "Se souvenais-tu des mots de passe ?"
+        "Te souvenais-tu des dates ?",
+        "T'es-tu souvenu des dates ?",
+        "Te souvenait-tu des dates ?",
+        "Se souvenais-tu des dates ?"
       ],
       "answer": "A"
     },
     {
-      "question": "Did he use to remember the recipes?",
+      "question": "Did he use to remember the songs?",
       "options": [
-        "S'est-il souvenu des recettes ?",
-        "Se souvenait-il des recettes ?",
-        "Se souvient-il des recettes ?",
-        "S'était-il souvenu des recettes ?"
+        "S'est-il souvenu des chansons ?",
+        "Se souvenait-il des chansons ?",
+        "Se souvient-il des chansons ?",
+        "S'était-il souvenu des chansons ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to remember the dates? (formal/plural)",
+      "question": "Did you use to remember the phone numbers? (formal/plural)",
       "options": [
-        "Vous souveniez-vous des dates ?",
-        "Vous êtes-vous souvenus des dates ?",
-        "Vous souvenez-vous des dates ?",
-        "Vous étiez-vous souvenus des dates ?"
+        "Vous souveniez-vous des numéros de téléphone ?",
+        "Vous êtes-vous souvenus des numéros de téléphone ?",
+        "Vous souvenez-vous des numéros de téléphone ?",
+        "Vous étiez-vous souvenus des numéros de téléphone ?"
       ],
       "answer": "A"
     },
     {
-      "question": "Did they use to remember the songs? (female)",
+      "question": "Did they use to remember the poems? (female)",
       "options": [
-        "Se souvenaient-elles des chansons ?",
-        "Se sont-elles souvenues des chansons ?",
-        "Se souvenait-elles des chansons ?",
-        "Se souviennent-elles des chansons ?"
+        "Se souvenaient-elles des poèmes ?",
+        "Se sont-elles souvenues des poèmes ?",
+        "Se souvenait-elles des poèmes ?",
+        "Se souviennent-elles des poèmes ?"
       ],
       "answer": "A"
     },
     {
-      "question": "I used to remember everyone's birthday.",
+      "question": "I used to remember the addresses.",
       "options": [
-        "Je me suis souvenu de l'anniversaire de tout le monde.",
-        "Je me souvenais de l'anniversaire de tout le monde.",
-        "Je me souvenait de l'anniversaire de tout le monde.",
-        "Je se souvenais de l'anniversaire de tout le monde."
+        "Je me suis souvenu des adresses.",
+        "Je me souvenais des adresses.",
+        "Je me souvenait des adresses.",
+        "Je se souvenais des adresses."
       ],
       "answer": "B"
     },
     {
-      "question": "Didn't we use to remember the students' names?",
+      "question": "Didn't we use to remember the neighbours' names?",
       "options": [
-        "Ne nous sommes-nous pas souvenus des noms des étudiants ?",
-        "Ne se souvenions-nous pas des noms des étudiants ?",
-        "Ne nous souvenions-nous pas des noms des étudiants ?",
-        "Ne nous souvenons-nous pas des noms des étudiants ?"
+        "Ne nous sommes-nous pas souvenus des noms des voisins ?",
+        "Ne se souvenions-nous pas des noms des voisins ?",
+        "Ne nous souvenions-nous pas des noms des voisins ?",
+        "Ne nous souvenons-nous pas des noms des voisins ?"
       ],
       "answer": "C"
     }
@@ -3249,192 +3249,192 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "A"
     },
     {
-      "question": "You were adapting to the new school. (informal)",
+      "question": "You used to adapt quickly to each new climate. (informal)",
       "options": [
-        "Tu t'adaptais à la nouvelle école.",
-        "Tu t'es adapté à la nouvelle école.",
-        "Tu t'étais adapté à la nouvelle école.",
-        "Tu t'adaptait à la nouvelle école."
+        "Tu t'adaptais vite à chaque nouveau climat.",
+        "Tu t'es adapté vite à chaque nouveau climat.",
+        "Tu t'étais adapté vite à chaque nouveau climat.",
+        "Tu t'adaptait vite à chaque nouveau climat."
       ],
       "answer": "A"
     },
     {
-      "question": "He was adapting to life in Paris when the phone rang.",
+      "question": "He used to adapt to new teams.",
       "options": [
-        "Il s'est adapté à la vie à Paris quand le téléphone a sonné.",
-        "Il s'adaptais à la vie à Paris quand le téléphone a sonné.",
-        "Il s'adaptait à la vie à Paris quand le téléphone a sonné.",
-        "Il s'adapte à la vie à Paris quand le téléphone a sonné."
+        "Il s'est adapté aux nouvelles équipes.",
+        "Il s'adaptais aux nouvelles équipes.",
+        "Il s'adaptait aux nouvelles équipes.",
+        "Il s'adapte aux nouvelles équipes."
       ],
       "answer": "C"
     },
     {
-      "question": "She used to adapt to the climate.",
+      "question": "She used to adapt to the rules of each new school.",
       "options": [
-        "Elle s'adaptait au climat.",
-        "Elle s'est adaptée au climat.",
-        "Elle s'adapte au climat.",
-        "Elle s'était adaptée au climat."
+        "Elle s'adaptait aux règles de chaque nouvelle école.",
+        "Elle s'est adaptée aux règles de chaque nouvelle école.",
+        "Elle s'adapte aux règles de chaque nouvelle école.",
+        "Elle s'était adaptée aux règles de chaque nouvelle école."
       ],
       "answer": "A"
     },
     {
-      "question": "We were adapting to the cold.",
+      "question": "We used to adapt to the noise every summer.",
       "options": [
-        "Nous nous sommes adaptés au froid.",
-        "Nous nous adaptons au froid.",
-        "Nous nous adaptions au froid.",
-        "Nous nous étions adaptés au froid."
+        "Nous nous sommes adaptés au bruit chaque été.",
+        "Nous nous adaptons au bruit chaque été.",
+        "Nous nous adaptions au bruit chaque été.",
+        "Nous nous étions adaptés au bruit chaque été."
       ],
       "answer": "C"
     },
     {
-      "question": "You used to adapt to new teams. (formal/plural)",
+      "question": "You used to adapt quickly to new jobs. (formal/plural)",
       "options": [
-        "Vous vous êtes adaptés aux nouvelles équipes.",
-        "Vous vous étiez adaptés aux nouvelles équipes.",
-        "Vous vous adaptiez aux nouvelles équipes.",
-        "Vous vous adaptions aux nouvelles équipes."
+        "Vous vous êtes adaptés vite aux nouveaux emplois.",
+        "Vous vous étiez adaptés vite aux nouveaux emplois.",
+        "Vous vous adaptiez vite aux nouveaux emplois.",
+        "Vous vous adaptions vite aux nouveaux emplois."
       ],
       "answer": "C"
     },
     {
-      "question": "They were adapting to the new job when the doorbell rang. (male/mixed)",
+      "question": "They used to adapt to each new town. (male/mixed)",
       "options": [
-        "Ils se sont adaptés au nouveau travail quand on a sonné à la porte.",
-        "Ils s'adaptent au nouveau travail quand on a sonné à la porte.",
-        "Ils s'étaient adaptés au nouveau travail quand on a sonné à la porte.",
-        "Ils s'adaptaient au nouveau travail quand on a sonné à la porte."
+        "Ils se sont adaptés à chaque nouvelle ville.",
+        "Ils s'adaptent à chaque nouvelle ville.",
+        "Ils s'étaient adaptés à chaque nouvelle ville.",
+        "Ils s'adaptaient à chaque nouvelle ville."
       ],
       "answer": "D"
     },
     {
-      "question": "They used to adapt to the rules. (female)",
+      "question": "They used to adapt to the new timetables every September. (female)",
       "options": [
-        "Elles s'adaptaient aux règles.",
-        "Elles se sont adaptées aux règles.",
-        "Elles s'étaient adaptées aux règles.",
-        "Elles s'adaptait aux règles."
+        "Elles s'adaptaient aux nouveaux horaires chaque septembre.",
+        "Elles se sont adaptées aux nouveaux horaires chaque septembre.",
+        "Elles s'étaient adaptées aux nouveaux horaires chaque septembre.",
+        "Elles s'adaptait aux nouveaux horaires chaque septembre."
       ],
       "answer": "A"
     },
     {
-      "question": "I didn't use to adapt to the noise.",
+      "question": "I didn't use to adapt quickly to new colleagues.",
       "options": [
-        "Je ne me suis pas adapté au bruit.",
-        "Je ne m'adapte pas au bruit.",
-        "Je ne m'adaptais pas au bruit.",
-        "Je ne m'étais pas adapté au bruit."
+        "Je ne me suis pas adapté vite aux nouveaux collègues.",
+        "Je ne m'adapte pas vite aux nouveaux collègues.",
+        "Je ne m'adaptais pas vite aux nouveaux collègues.",
+        "Je ne m'étais pas adapté vite aux nouveaux collègues."
       ],
       "answer": "C"
     },
     {
-      "question": "You weren't adapting to the new school. (informal)",
+      "question": "You didn't use to adapt to the heat every summer. (informal)",
       "options": [
-        "Tu ne t'adaptais pas à la nouvelle école.",
-        "Tu ne t'es pas adapté à la nouvelle école.",
-        "Tu ne t'étais pas adapté à la nouvelle école.",
-        "Tu ne t'adaptait pas à la nouvelle école."
+        "Tu ne t'adaptais pas à la chaleur chaque été.",
+        "Tu ne t'es pas adapté à la chaleur chaque été.",
+        "Tu ne t'étais pas adapté à la chaleur chaque été.",
+        "Tu ne t'adaptait pas à la chaleur chaque été."
       ],
       "answer": "A"
     },
     {
-      "question": "He didn't use to adapt quickly to new jobs.",
+      "question": "He didn't use to adapt easily to changes.",
       "options": [
-        "Il ne s'est pas adapté vite aux nouveaux emplois.",
-        "Il ne s'était pas adapté vite aux nouveaux emplois.",
-        "Il ne s'adaptais pas vite aux nouveaux emplois.",
-        "Il ne s'adaptait pas vite aux nouveaux emplois."
+        "Il ne s'est pas adapté facilement aux changements.",
+        "Il ne s'était pas adapté facilement aux changements.",
+        "Il ne s'adaptais pas facilement aux changements.",
+        "Il ne s'adaptait pas facilement aux changements."
       ],
       "answer": "D"
     },
     {
-      "question": "We didn't use to adapt easily to changes.",
+      "question": "We didn't use to adapt quickly to each new climate.",
       "options": [
-        "Nous ne nous sommes pas adaptés facilement aux changements.",
-        "Nous ne nous adaptions pas facilement aux changements.",
-        "Nous ne s'adaptions pas facilement aux changements.",
-        "Nous ne nous adaptons pas facilement aux changements."
+        "Nous ne nous sommes pas adaptés vite à chaque nouveau climat.",
+        "Nous ne nous adaptions pas vite à chaque nouveau climat.",
+        "Nous ne s'adaptions pas vite à chaque nouveau climat.",
+        "Nous ne nous adaptons pas vite à chaque nouveau climat."
       ],
       "answer": "B"
     },
     {
-      "question": "You weren't adapting to life in Paris. (formal/plural)",
+      "question": "You didn't use to adapt to new teams. (formal/plural)",
       "options": [
-        "Vous ne vous adaptiez pas à la vie à Paris.",
-        "Vous ne vous êtes pas adaptés à la vie à Paris.",
-        "Vous ne vous adaptez pas à la vie à Paris.",
-        "Vous ne vous étiez pas adaptés à la vie à Paris."
+        "Vous ne vous adaptiez pas aux nouvelles équipes.",
+        "Vous ne vous êtes pas adaptés aux nouvelles équipes.",
+        "Vous ne vous adaptez pas aux nouvelles équipes.",
+        "Vous ne vous étiez pas adaptés aux nouvelles équipes."
       ],
       "answer": "A"
     },
     {
-      "question": "They didn't use to adapt to the climate. (male/mixed)",
+      "question": "They didn't use to adapt to the rules of each new school. (male/mixed)",
       "options": [
-        "Ils ne se sont pas adaptés au climat.",
-        "Ils ne s'étaient pas adaptés au climat.",
-        "Ils ne s'adaptaient pas au climat.",
-        "Ils ne s'adaptait pas au climat."
+        "Ils ne se sont pas adaptés aux règles de chaque nouvelle école.",
+        "Ils ne s'étaient pas adaptés aux règles de chaque nouvelle école.",
+        "Ils ne s'adaptaient pas aux règles de chaque nouvelle école.",
+        "Ils ne s'adaptait pas aux règles de chaque nouvelle école."
       ],
       "answer": "C"
     },
     {
-      "question": "Did you use to adapt to new teams? (informal)",
+      "question": "Did you use to adapt to the noise every summer? (informal)",
       "options": [
-        "T'es-tu adapté aux nouvelles équipes ?",
-        "T'adaptais-tu aux nouvelles équipes ?",
-        "T'adaptait-tu aux nouvelles équipes ?",
-        "S'adaptais-tu aux nouvelles équipes ?"
+        "T'es-tu adapté au bruit chaque été ?",
+        "T'adaptais-tu au bruit chaque été ?",
+        "T'adaptait-tu au bruit chaque été ?",
+        "S'adaptais-tu au bruit chaque été ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Was he adapting to the cold?",
+      "question": "Did he use to adapt quickly to new jobs?",
       "options": [
-        "S'est-il adapté au froid ?",
-        "S'adapte-t-il au froid ?",
-        "S'adaptait-il au froid ?",
-        "S'était-il adapté au froid ?"
+        "S'est-il adapté vite aux nouveaux emplois ?",
+        "S'adapte-t-il vite aux nouveaux emplois ?",
+        "S'adaptait-il vite aux nouveaux emplois ?",
+        "S'était-il adapté vite aux nouveaux emplois ?"
       ],
       "answer": "C"
     },
     {
-      "question": "Did you use to adapt to the rules? (formal/plural)",
+      "question": "Did you use to adapt to each new town? (formal/plural)",
       "options": [
-        "Vous êtes-vous adaptés aux règles ?",
-        "Vous adaptez-vous aux règles ?",
-        "Vous adaptiez-vous aux règles ?",
-        "Vous étiez-vous adaptés aux règles ?"
+        "Vous êtes-vous adaptés à chaque nouvelle ville ?",
+        "Vous adaptez-vous à chaque nouvelle ville ?",
+        "Vous adaptiez-vous à chaque nouvelle ville ?",
+        "Vous étiez-vous adaptés à chaque nouvelle ville ?"
       ],
       "answer": "C"
     },
     {
-      "question": "Were they adapting to the new job? (female)",
+      "question": "Did they use to adapt to the new timetables every September? (female)",
       "options": [
-        "Se sont-elles adaptées au nouveau travail ?",
-        "S'adaptait-elles au nouveau travail ?",
-        "S'adaptent-elles au nouveau travail ?",
-        "S'adaptaient-elles au nouveau travail ?"
+        "Se sont-elles adaptées aux nouveaux horaires chaque septembre ?",
+        "S'adaptait-elles aux nouveaux horaires chaque septembre ?",
+        "S'adaptent-elles aux nouveaux horaires chaque septembre ?",
+        "S'adaptaient-elles aux nouveaux horaires chaque septembre ?"
       ],
       "answer": "D"
     },
     {
-      "question": "I was adapting to the new school when the lights went out.",
+      "question": "I used to adapt quickly to new colleagues.",
       "options": [
-        "Je m'adaptais à la nouvelle école quand la lumière s'est éteinte.",
-        "Je me suis adapté à la nouvelle école quand la lumière s'est éteinte.",
-        "Je m'adaptait à la nouvelle école quand la lumière s'est éteinte.",
-        "Je s'adaptais à la nouvelle école quand la lumière s'est éteinte."
+        "Je m'adaptais vite aux nouveaux collègues.",
+        "Je me suis adapté vite aux nouveaux collègues.",
+        "Je m'adaptait vite aux nouveaux collègues.",
+        "Je s'adaptais vite aux nouveaux collègues."
       ],
       "answer": "A"
     },
     {
-      "question": "Didn't we use to adapt to the noise?",
+      "question": "Didn't we use to adapt to the heat every summer?",
       "options": [
-        "Ne nous sommes-nous pas adaptés au bruit ?",
-        "Ne s'adaptions-nous pas au bruit ?",
-        "Ne nous adaptions-nous pas au bruit ?",
-        "Ne nous adaptons-nous pas au bruit ?"
+        "Ne nous sommes-nous pas adaptés à la chaleur chaque été ?",
+        "Ne s'adaptions-nous pas à la chaleur chaque été ?",
+        "Ne nous adaptions-nous pas à la chaleur chaque été ?",
+        "Ne nous adaptons-nous pas à la chaleur chaque été ?"
       ],
       "answer": "C"
     }
@@ -3501,142 +3501,142 @@ export const IMPARFAIT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = {
       "answer": "B"
     },
     {
-      "question": "They used to be delighted about the good weather. (male/mixed)",
+      "question": "They used to be delighted about the weekends. (male/mixed)",
       "options": [
-        "Ils se sont réjouis du beau temps.",
-        "Ils se réjouissent du beau temps.",
-        "Ils se réjouissaient du beau temps.",
-        "Ils s'étaient réjouis du beau temps."
+        "Ils se sont réjouis des week-ends.",
+        "Ils se réjouissent des week-ends.",
+        "Ils se réjouissaient des week-ends.",
+        "Ils s'étaient réjouis des week-ends."
       ],
       "answer": "C"
     },
     {
-      "question": "They used to be delighted about every visit. (female)",
+      "question": "They used to be delighted about the summer holidays. (female)",
       "options": [
-        "Elles se sont réjouies de chaque visite.",
-        "Elles se réjouissaient de chaque visite.",
-        "Elles s'étaient réjouies de chaque visite.",
-        "Elles se réjouissait de chaque visite."
+        "Elles se sont réjouies des grandes vacances.",
+        "Elles se réjouissaient des grandes vacances.",
+        "Elles s'étaient réjouies des grandes vacances.",
+        "Elles se réjouissait des grandes vacances."
       ],
       "answer": "B"
     },
     {
-      "question": "I didn't use to be delighted about the holidays.",
+      "question": "I didn't use to be delighted about the snow.",
       "options": [
-        "Je ne me suis pas réjoui des vacances.",
-        "Je ne me réjouissais pas des vacances.",
-        "Je ne me réjouis pas des vacances.",
-        "Je ne m'étais pas réjoui des vacances."
+        "Je ne me suis pas réjoui de la neige.",
+        "Je ne me réjouissais pas de la neige.",
+        "Je ne me réjouis pas de la neige.",
+        "Je ne m'étais pas réjoui de la neige."
       ],
       "answer": "B"
     },
     {
-      "question": "You didn't use to be delighted about the results. (informal)",
+      "question": "You didn't use to be delighted about the family meals. (informal)",
       "options": [
-        "Tu ne te réjouissais pas des résultats.",
-        "Tu ne t'es pas réjoui des résultats.",
-        "Tu ne t'étais pas réjoui des résultats.",
-        "Tu ne te réjouissait pas des résultats."
+        "Tu ne te réjouissais pas des repas de famille.",
+        "Tu ne t'es pas réjoui des repas de famille.",
+        "Tu ne t'étais pas réjoui des repas de famille.",
+        "Tu ne te réjouissait pas des repas de famille."
       ],
       "answer": "A"
     },
     {
-      "question": "He didn't use to be delighted about the parties.",
+      "question": "He didn't use to be delighted about the good weather.",
       "options": [
-        "Il ne s'est pas réjoui des fêtes.",
-        "Il ne se réjouissait pas des fêtes.",
-        "Il ne s'était pas réjoui des fêtes.",
-        "Il ne se réjouissais pas des fêtes."
+        "Il ne s'est pas réjoui du beau temps.",
+        "Il ne se réjouissait pas du beau temps.",
+        "Il ne s'était pas réjoui du beau temps.",
+        "Il ne se réjouissais pas du beau temps."
       ],
       "answer": "B"
     },
     {
-      "question": "We didn't use to be delighted about the good news.",
+      "question": "We didn't use to be delighted about every visit.",
       "options": [
-        "Nous ne nous sommes pas réjouis des bonnes nouvelles.",
-        "Nous ne nous réjouissions pas des bonnes nouvelles.",
-        "Nous ne se réjouissions pas des bonnes nouvelles.",
-        "Nous ne nous réjouissons pas des bonnes nouvelles."
+        "Nous ne nous sommes pas réjouis de chaque visite.",
+        "Nous ne nous réjouissions pas de chaque visite.",
+        "Nous ne se réjouissions pas de chaque visite.",
+        "Nous ne nous réjouissons pas de chaque visite."
       ],
       "answer": "B"
     },
     {
-      "question": "You didn't use to be delighted about the good weather. (formal/plural)",
+      "question": "You didn't use to be delighted about the holidays. (formal/plural)",
       "options": [
-        "Vous ne vous êtes pas réjouis du beau temps.",
-        "Vous ne vous réjouissez pas du beau temps.",
-        "Vous ne vous étiez pas réjouis du beau temps.",
-        "Vous ne vous réjouissiez pas du beau temps."
+        "Vous ne vous êtes pas réjouis des vacances.",
+        "Vous ne vous réjouissez pas des vacances.",
+        "Vous ne vous étiez pas réjouis des vacances.",
+        "Vous ne vous réjouissiez pas des vacances."
       ],
       "answer": "D"
     },
     {
-      "question": "They didn't use to be delighted about every visit. (male/mixed)",
+      "question": "They didn't use to be delighted about the results. (male/mixed)",
       "options": [
-        "Ils ne se sont pas réjouis de chaque visite.",
-        "Ils ne se réjouissaient pas de chaque visite.",
-        "Ils ne s'étaient pas réjouis de chaque visite.",
-        "Ils ne se réjouissait pas de chaque visite."
+        "Ils ne se sont pas réjouis des résultats.",
+        "Ils ne se réjouissaient pas des résultats.",
+        "Ils ne s'étaient pas réjouis des résultats.",
+        "Ils ne se réjouissait pas des résultats."
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to be delighted about the holidays? (informal)",
+      "question": "Did you use to be delighted about the parties? (informal)",
       "options": [
-        "T'es-tu réjoui des vacances ?",
-        "Te réjouissait-tu des vacances ?",
-        "Se réjouissais-tu des vacances ?",
-        "Te réjouissais-tu des vacances ?"
+        "T'es-tu réjoui des fêtes ?",
+        "Te réjouissait-tu des fêtes ?",
+        "Se réjouissais-tu des fêtes ?",
+        "Te réjouissais-tu des fêtes ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did he use to be delighted about the results?",
+      "question": "Did he use to be delighted about the good news?",
       "options": [
-        "S'est-il réjoui des résultats ?",
-        "Se réjouissait-il des résultats ?",
-        "Se réjouit-il des résultats ?",
-        "S'était-il réjoui des résultats ?"
+        "S'est-il réjoui des bonnes nouvelles ?",
+        "Se réjouissait-il des bonnes nouvelles ?",
+        "Se réjouit-il des bonnes nouvelles ?",
+        "S'était-il réjoui des bonnes nouvelles ?"
       ],
       "answer": "B"
     },
     {
-      "question": "Did you use to be delighted about the parties? (formal/plural)",
+      "question": "Did you use to be delighted about the weekends? (formal/plural)",
       "options": [
-        "Vous êtes-vous réjouis des fêtes ?",
-        "Vous réjouissez-vous des fêtes ?",
-        "Vous étiez-vous réjouis des fêtes ?",
-        "Vous réjouissiez-vous des fêtes ?"
+        "Vous êtes-vous réjouis des week-ends ?",
+        "Vous réjouissez-vous des week-ends ?",
+        "Vous étiez-vous réjouis des week-ends ?",
+        "Vous réjouissiez-vous des week-ends ?"
       ],
       "answer": "D"
     },
     {
-      "question": "Did they use to be delighted about the good news? (female)",
+      "question": "Did they use to be delighted about the summer holidays? (female)",
       "options": [
-        "Se sont-elles réjouies des bonnes nouvelles ?",
-        "Se réjouissaient-elles des bonnes nouvelles ?",
-        "Se réjouissait-elles des bonnes nouvelles ?",
-        "Se réjouissent-elles des bonnes nouvelles ?"
+        "Se sont-elles réjouies des grandes vacances ?",
+        "Se réjouissaient-elles des grandes vacances ?",
+        "Se réjouissait-elles des grandes vacances ?",
+        "Se réjouissent-elles des grandes vacances ?"
       ],
       "answer": "B"
     },
     {
-      "question": "I used to be delighted about the good weather.",
+      "question": "I used to be delighted about the snow.",
       "options": [
-        "Je me suis réjoui du beau temps.",
-        "Je me réjouissait du beau temps.",
-        "Je me réjouissais du beau temps.",
-        "Je se réjouissais du beau temps."
+        "Je me suis réjoui de la neige.",
+        "Je me réjouissait de la neige.",
+        "Je me réjouissais de la neige.",
+        "Je se réjouissais de la neige."
       ],
       "answer": "C"
     },
     {
-      "question": "Didn't we use to be delighted about every visit?",
+      "question": "Didn't we use to be delighted about the family meals?",
       "options": [
-        "Ne nous sommes-nous pas réjouis de chaque visite ?",
-        "Ne nous réjouissions-nous pas de chaque visite ?",
-        "Ne se réjouissions-nous pas de chaque visite ?",
-        "Ne nous réjouissons-nous pas de chaque visite ?"
+        "Ne nous sommes-nous pas réjouis des repas de famille ?",
+        "Ne nous réjouissions-nous pas des repas de famille ?",
+        "Ne se réjouissions-nous pas des repas de famille ?",
+        "Ne nous réjouissons-nous pas des repas de famille ?"
       ],
       "answer": "B"
     }
