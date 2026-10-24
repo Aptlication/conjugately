@@ -48,12 +48,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "We had put the phone in the pocket.",
+      "question": "We had put the phone on the desk.",
       "options": [
-        "Nous avons mis le téléphone dans la poche.",
-        "Nous mettions le téléphone dans la poche.",
-        "Nous avions mis le téléphone dans la poche.",
-        "Nous aurons mis le téléphone dans la poche."
+        "Nous avons mis le téléphone sur le bureau.",
+        "Nous mettions le téléphone sur le bureau.",
+        "Nous avions mis le téléphone sur le bureau.",
+        "Nous aurons mis le téléphone sur le bureau."
       ],
       "answer": "C"
     },
@@ -148,12 +148,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "They had not put the phone in the pocket. (male/mixed)",
+      "question": "They had not put the phone on the desk. (male/mixed)",
       "options": [
-        "Ils n'ont pas mis le téléphone dans la poche.",
-        "Ils n'avaient pas mis le téléphone dans la poche.",
-        "Ils n'avaient mis pas le téléphone dans la poche.",
-        "Ils ne mettaient pas le téléphone dans la poche."
+        "Ils n'ont pas mis le téléphone sur le bureau.",
+        "Ils n'avaient pas mis le téléphone sur le bureau.",
+        "Ils n'avaient mis pas le téléphone sur le bureau.",
+        "Ils ne mettaient pas le téléphone sur le bureau."
       ],
       "answer": "B"
     },
@@ -482,7 +482,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "They had believed the news. (female)",
+      "question": "They had believed the news story. (female)",
       "options": [
         "Elles avaient cru la nouvelle.",
         "Elles ont cru la nouvelle.",
@@ -582,7 +582,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "Had you believed the news? (formal/plural)",
+      "question": "Had you believed the news story? (formal/plural)",
       "options": [
         "Avez-vous cru la nouvelle ?",
         "Aviez-vous cru la nouvelle ?",
@@ -1684,12 +1684,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "They had closed the computer. (male/mixed)",
+      "question": "They had closed the laptop. (male/mixed)",
       "options": [
-        "Ils avaient fermé l'ordinateur.",
-        "Ils ont fermé l'ordinateur.",
-        "Ils fermaient l'ordinateur.",
-        "Ils auront fermé l'ordinateur."
+        "Ils avaient fermé l'ordinateur portable.",
+        "Ils ont fermé l'ordinateur portable.",
+        "Ils fermaient l'ordinateur portable.",
+        "Ils auront fermé l'ordinateur portable."
       ],
       "answer": "A"
     },
@@ -1784,12 +1784,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "Had he closed the computer?",
+      "question": "Had he closed the laptop?",
       "options": [
-        "A-t-il fermé l'ordinateur ?",
-        "Fermait-il l'ordinateur ?",
-        "Avait-il fermé l'ordinateur ?",
-        "Aura-t-il fermé l'ordinateur ?"
+        "A-t-il fermé l'ordinateur portable ?",
+        "Fermait-il l'ordinateur portable ?",
+        "Avait-il fermé l'ordinateur portable ?",
+        "Aura-t-il fermé l'ordinateur portable ?"
       ],
       "answer": "C"
     },
@@ -2108,12 +2108,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "I had not kept the seat.",
+      "question": "I had not kept the menu as a souvenir.",
       "options": [
-        "Je n'ai pas gardé la place.",
-        "Je n'avais pas gardé la place.",
-        "Je n'avais gardé pas la place.",
-        "Je ne gardais pas la place."
+        "Je n'ai pas gardé le menu en souvenir.",
+        "Je n'avais pas gardé le menu en souvenir.",
+        "Je n'avais gardé pas le menu en souvenir.",
+        "Je ne gardais pas le menu en souvenir."
       ],
       "answer": "B"
     },
@@ -2208,12 +2208,12 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "Had they kept the seat? (female)",
+      "question": "Had they kept the menu as a souvenir? (female)",
       "options": [
-        "Ont-elles gardé la place ?",
-        "Gardaient-elles la place ?",
-        "Avaient-elles gardé la place ?",
-        "Auront-elles gardé la place ?"
+        "Ont-elles gardé le menu en souvenir ?",
+        "Gardaient-elles le menu en souvenir ?",
+        "Avaient-elles gardé le menu en souvenir ?",
+        "Auront-elles gardé le menu en souvenir ?"
       ],
       "answer": "C"
     },
@@ -2432,7 +2432,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
   ],
   "se débrouiller": [
     {
-      "question": "I had managed without help. (male)",
+      "question": "I had coped without help. (male)",
       "options": [
         "Je me suis débrouillé sans aide.",
         "Je m'étais débrouillé sans aide.",
@@ -2442,7 +2442,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "You had managed in English. (informal, female)",
+      "question": "You had coped in English. (informal, female)",
       "options": [
         "Tu t'étais débrouillée en anglais.",
         "Tu t'es débrouillée en anglais.",
@@ -2452,7 +2452,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "He had managed with very little money.",
+      "question": "He had coped with very little money.",
       "options": [
         "Il s'est débrouillé avec très peu d'argent.",
         "Il s'avait débrouillé avec très peu d'argent.",
@@ -2462,7 +2462,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "She had managed at the airport.",
+      "question": "She had coped at the airport.",
       "options": [
         "Elle s'est débrouillée à l'aéroport.",
         "Elle s'avait débrouillée à l'aéroport.",
@@ -2472,7 +2472,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "We had managed without a map. (male/mixed)",
+      "question": "We had coped without a map. (male/mixed)",
       "options": [
         "Nous nous sommes débrouillés sans carte.",
         "Nous nous étions débrouillés sans carte.",
@@ -2482,7 +2482,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "You had managed in the kitchen. (plural, male/mixed)",
+      "question": "You had coped in the kitchen. (plural, male/mixed)",
       "options": [
         "Vous vous êtes débrouillés dans la cuisine.",
         "Vous vous aviez débrouillés dans la cuisine.",
@@ -2492,7 +2492,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "They had managed at work. (male/mixed)",
+      "question": "They had coped at work. (male/mixed)",
       "options": [
         "Ils se sont débrouillés au travail.",
         "Ils s'étaient débrouillés au travail.",
@@ -2502,7 +2502,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "They had managed in Paris. (female)",
+      "question": "They had coped in Paris. (female)",
       "options": [
         "Elles se sont débrouillées à Paris.",
         "Elles s'avaient débrouillées à Paris.",
@@ -2512,7 +2512,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "I had not managed with the computer. (female)",
+      "question": "I had not coped with the computer. (female)",
       "options": [
         "Je ne me suis pas débrouillée avec l'ordinateur.",
         "Je ne m'avais pas débrouillée avec l'ordinateur.",
@@ -2522,7 +2522,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "You had not managed without a car. (informal, male)",
+      "question": "You had not coped without a car. (informal, male)",
       "options": [
         "Tu ne t'es pas débrouillé sans voiture.",
         "Tu ne t'avais pas débrouillé sans voiture.",
@@ -2532,7 +2532,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "He had not managed without help.",
+      "question": "He had not coped without help.",
       "options": [
         "Il ne s'est pas débrouillé sans aide.",
         "Il ne s'avait pas débrouillé sans aide.",
@@ -2542,7 +2542,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "She had not managed in English.",
+      "question": "She had not coped in English.",
       "options": [
         "Elle ne s'est pas débrouillée en anglais.",
         "Elle ne s'avait pas débrouillée en anglais.",
@@ -2552,7 +2552,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "We had not managed with very little money. (female)",
+      "question": "We had not coped with very little money. (female)",
       "options": [
         "Nous ne nous sommes pas débrouillées avec très peu d'argent.",
         "Nous ne nous avions pas débrouillées avec très peu d'argent.",
@@ -2562,7 +2562,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "You had not managed at the airport. (formal, to one woman)",
+      "question": "You had not coped at the airport. (formal, to one woman)",
       "options": [
         "Vous ne vous étiez pas débrouillée à l'aéroport.",
         "Vous ne vous êtes pas débrouillée à l'aéroport.",
@@ -2572,7 +2572,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "A"
     },
     {
-      "question": "They had not managed without a map. (male/mixed)",
+      "question": "They had not coped without a map. (male/mixed)",
       "options": [
         "Ils ne se sont pas débrouillés sans carte.",
         "Ils ne s'avaient pas débrouillés sans carte.",
@@ -2582,7 +2582,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "Had you managed in the kitchen? (informal, male)",
+      "question": "Had you coped in the kitchen? (informal, male)",
       "options": [
         "T'es-tu débrouillé dans la cuisine ?",
         "T'étais-tu débrouillé dans la cuisine ?",
@@ -2592,7 +2592,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "B"
     },
     {
-      "question": "Had he managed at work?",
+      "question": "Had he coped at work?",
       "options": [
         "S'est-il débrouillé au travail ?",
         "S'avait-il débrouillé au travail ?",
@@ -2602,7 +2602,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "C"
     },
     {
-      "question": "Had you managed in Paris? (plural, female)",
+      "question": "Had you coped in Paris? (plural, female)",
       "options": [
         "Vous êtes-vous débrouillées à Paris ?",
         "Vous aviez-vous débrouillées à Paris ?",
@@ -2612,7 +2612,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "Had they managed with the computer? (female)",
+      "question": "Had they coped with the computer? (female)",
       "options": [
         "Se sont-elles débrouillées avec l'ordinateur ?",
         "S'avaient-elles débrouillées avec l'ordinateur ?",
@@ -2622,7 +2622,7 @@ export const PLUPERFECT_QUIZ_DATA: Record<string, IntermediateQuizQuestion[]> = 
       "answer": "D"
     },
     {
-      "question": "Hadn't we managed without a car? (male/mixed)",
+      "question": "Hadn't we coped without a car? (male/mixed)",
       "options": [
         "Ne nous sommes-nous pas débrouillés sans voiture ?",
         "Ne nous étions-nous pas débrouillés sans voiture ?",

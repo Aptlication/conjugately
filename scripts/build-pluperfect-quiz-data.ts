@@ -97,7 +97,7 @@ const A: Verb[] = [
   { inf: "mettre", reflexive: false, pp: "mis", stem: "mett", en: "put", complements: [
     ["the coat on the bed", "le manteau sur le lit"], ["the keys in the drawer", "les clés dans le tiroir"],
     ["a scarf in the bag", "une écharpe dans le sac"], ["the plates on the table", "les assiettes sur la table"],
-    ["the phone in the pocket", "le téléphone dans la poche"], ["the flowers in a vase", "les fleurs dans un vase"],
+    ["the phone on the desk", "le téléphone sur le bureau"], ["the flowers in a vase", "les fleurs dans un vase"],
     ["sugar in the coffee", "du sucre dans le café"], ["the books on the shelf", "les livres sur l'étagère"],
     ["the milk in the fridge", "le lait au frigo"], ["the cake in the oven", "le gâteau au four"]] },
   { inf: "trouver", reflexive: false, pp: "trouvé", stem: "trouv", en: "found", complements: [
@@ -109,7 +109,7 @@ const A: Verb[] = [
   { inf: "croire", reflexive: false, pp: "cru", stem: "croy", en: "believed", complements: [
     ["the story", "l'histoire"], ["the journalist", "le journaliste"], ["the doctor", "le médecin"],
     ["the rumour", "la rumeur"], ["the witnesses", "les témoins"], ["the weather forecast", "la météo"],
-    ["the teacher", "le professeur"], ["the news", "la nouvelle"], ["the children", "les enfants"],
+    ["the teacher", "le professeur"], ["the news story", "la nouvelle"], ["the children", "les enfants"],
     ["the salesman", "le vendeur"]] },
   { inf: "parler", reflexive: false, pp: "parlé", stem: "parl", en: "spoken", complements: [
     ["to the manager", "au directeur"], ["to the neighbours", "aux voisins"], ["with the doctor", "avec le médecin"],
@@ -136,7 +136,7 @@ const A: Verb[] = [
     ["the letter", "la lettre"], ["the box", "la boîte"], ["a restaurant", "un restaurant"], ["the curtains", "les rideaux"]] },
   { inf: "fermer", reflexive: false, pp: "fermé", stem: "ferm", en: "closed", complements: [
     ["the door", "la porte"], ["the windows", "les fenêtres"], ["the shop", "le magasin"], ["the suitcase", "la valise"],
-    ["the gate", "le portail"], ["the book", "le livre"], ["the computer", "l'ordinateur"], ["the shutters", "les volets"],
+    ["the gate", "le portail"], ["the book", "le livre"], ["the laptop", "l'ordinateur portable"], ["the shutters", "les volets"],
     ["the account", "le compte"], ["the curtains", "les rideaux"]] },
   { inf: "perdre", reflexive: false, pp: "perdu", stem: "perd", en: "lost", complements: [
     ["the keys", "les clés"], ["the match", "le match"], ["the wallet", "le portefeuille"],
@@ -145,7 +145,7 @@ const A: Verb[] = [
   { inf: "garder", reflexive: false, pp: "gardé", stem: "gard", en: "kept", complements: [
     ["the receipt", "le reçu"], ["the photos", "les photos"], ["the secret", "le secret"], ["the change", "la monnaie"],
     ["the letters", "les lettres"], ["the dog for a week", "le chien pendant une semaine"], ["the old car", "la vieille voiture"],
-    ["the tickets", "les billets"], ["the seat", "la place"], ["the cake for later", "le gâteau pour plus tard"]] },
+    ["the tickets", "les billets"], ["the menu as a souvenir", "le menu en souvenir"], ["the cake for later", "le gâteau pour plus tard"]] },
 ];
 
 const B: Verb[] = [
@@ -153,7 +153,7 @@ const B: Verb[] = [
     ["in politics", "à la politique"], ["in music", "à la musique"], ["in art", "à l'art"], ["in history", "à l'histoire"],
     ["in science", "à la science"], ["in cooking", "à la cuisine"], ["in photography", "à la photographie"],
     ["in fashion", "à la mode"], ["in languages", "aux langues"], ["in this project", "à ce projet"]] },
-  { inf: "se débrouiller", reflexive: true, pp: "débrouillé", stem: "débrouill", en: "managed", complements: [
+  { inf: "se débrouiller", reflexive: true, pp: "débrouillé", stem: "débrouill", en: "coped", complements: [
     ["without help", "sans aide"], ["in English", "en anglais"], ["with very little money", "avec très peu d'argent"],
     ["at the airport", "à l'aéroport"], ["without a map", "sans carte"], ["in the kitchen", "dans la cuisine"],
     ["at work", "au travail"], ["in Paris", "à Paris"], ["with the computer", "avec l'ordinateur"], ["without a car", "sans voiture"]] },
