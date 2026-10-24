@@ -11,6 +11,11 @@
  * Both levels have four time frames: Present, Past (passé composé), Future and
  * Pluperfect. Beginner, Novice and Elementary keep the three they had.
  *
+ * Later the same day (Jonathan, 25 Oct 2026): the imparfait joins A and B as a
+ * fifth time frame, "Imperfect", placed before the pluperfect because the
+ * pluperfect is built from it (j'avais trouvé). Order in A and B:
+ * Present → Past → Imperfect → Pluperfect → Future.
+ *
  * For the Conjugately Guarantee and the CEFR-style B1 test, "passing
  * Intermediate" means passing Intermediate B. Intermediate A is a step on the way.
  *
@@ -21,7 +26,7 @@
  */
 
 export type Level = "Beginner" | "Novice" | "Elementary" | "Intermediate A" | "Intermediate B";
-export type TimeFrame = "Present" | "Past" | "Future" | "Pluperfect";
+export type TimeFrame = "Present" | "Past" | "Imperfect" | "Pluperfect" | "Future";
 
 /** In order. Each level is the step after the one before it. */
 export const LEVELS: Level[] = ["Beginner", "Novice", "Elementary", "Intermediate A", "Intermediate B"];
@@ -56,18 +61,18 @@ export const LEVEL_VERBS: Record<Level, string[]> = {
 };
 
 const THREE: TimeFrame[] = ["Present", "Past", "Future"];
-const FOUR: TimeFrame[] = ["Present", "Past", "Future", "Pluperfect"];
+const INTERMEDIATE: TimeFrame[] = ["Present", "Past", "Imperfect", "Pluperfect", "Future"];
 
 export const LEVEL_TIME_FRAMES: Record<Level, TimeFrame[]> = {
   Beginner: THREE,
   Novice: THREE,
   Elementary: THREE,
-  "Intermediate A": FOUR,
-  "Intermediate B": FOUR,
+  "Intermediate A": INTERMEDIATE,
+  "Intermediate B": INTERMEDIATE,
 };
 
 /** Every time frame any level uses, in teaching order. */
-export const ALL_TIME_FRAMES: TimeFrame[] = FOUR;
+export const ALL_TIME_FRAMES: TimeFrame[] = INTERMEDIATE;
 
 /** Time frames for a level; three for anything unknown, as before the split. */
 export function timeFramesFor(level: string): TimeFrame[] {
@@ -129,6 +134,7 @@ export const TENSES: Record<TimeFrame, TenseInfo> = {
   Present: { tense: "Présent", apiTimeFrame: "present", tensePath: "present", label: "Présent", english: "Present" },
   Past: { tense: "Passé Composé", apiTimeFrame: "past", tensePath: "passe_compose", label: "Passé composé", english: "Past" },
   Future: { tense: "Futur Simple", apiTimeFrame: "future", tensePath: "futur_simple", label: "Futur simple", english: "Future" },
+  Imperfect: { tense: "Imparfait", apiTimeFrame: "past", tensePath: "imparfait", label: "Imparfait", english: "Imperfect" },
   Pluperfect: { tense: "Plus-que-parfait", apiTimeFrame: "past", tensePath: "plus_que_parfait", label: "Plus-que-parfait", english: "Pluperfect" },
 };
 
@@ -136,7 +142,7 @@ export function tenseFor(timeFrame: string): TenseInfo {
   return TENSES[timeFrame as TimeFrame] ?? TENSES.Present;
 }
 
-/** "Present, Past & Future" or "Present, Past, Future & Pluperfect". */
+/** "Present, Past & Future", or for Intermediate "Present, Past, Imperfect, Pluperfect & Future". */
 export function timeFrameListLabel(level: string): string {
   const tfs = timeFramesFor(level);
   return tfs.length > 1 ? `${tfs.slice(0, -1).join(", ")} & ${tfs[tfs.length - 1]}` : tfs.join("");
@@ -156,8 +162,8 @@ export const LEVEL_DETAIL: Record<Level, string> = {
   Beginner: "Subject pronoun focus (Je suis, Tu es), 3 verbs (être, avoir, faire)",
   Novice: "4 verbs (être, avoir, faire, aller), Present, past, and future tenses",
   Elementary: "7 verbs, Present, past, and future tenses",
-  "Intermediate A": "11 non-reflexive verbs, Present, past, future + the pluperfect",
-  "Intermediate B": "7 reflexive verbs, Present, past, future + the pluperfect",
+  "Intermediate A": "11 non-reflexive verbs, Present, past, imperfect, pluperfect and future",
+  "Intermediate B": "7 reflexive verbs, Present, past, imperfect, pluperfect and future",
 };
 
 // ------------------------------------------------------ legacy records ---

@@ -185,10 +185,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
             // Convert using the proper function which preserves audioIndex for question audio
             generatedQuiz = { questions: convertIntermediateToQuizFormat(intermediateQuestions) };
             console.log(`🎯 Using intermediate quiz data for ${verb} - ${normalizedTense}`);
-          } else if (normalizedTense === 'plus_que_parfait') {
-            // Never invent pluperfect questions: the generated fallback has no
-            // reviewed plus-que-parfait content, and the content is locked.
-            return res.status(404).json({ success: false, error: `No pluperfect questions for ${verb}` });
+          } else if (normalizedTense === 'plus_que_parfait' || normalizedTense === 'imparfait') {
+            // Never invent pluperfect or Intermediate A/B imparfait questions: the
+            // generated fallback has no reviewed content for them, and content is locked.
+            return res.status(404).json({ success: false, error: `No ${tenseType} questions for ${verb}` });
           } else {
             console.log('⚠️ No intermediate data found, falling back to regular generation');
             generatedQuiz = generateInternalQuiz(verb, tenseType, contentLevel(difficulty || ''), isExam);

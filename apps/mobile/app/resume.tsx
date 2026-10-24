@@ -113,7 +113,7 @@ export default function Resume() {
           <Text style={[styles.progPct, { color: pctColor(levelPct) }]}>{levelPct}%</Text>
         </View>
         <Bar pct={levelPct} />
-        <Text style={styles.levelSub}>{done} of {total} units across the {timeFrames.length === 4 ? "four" : "three"} tenses</Text>
+        <Text style={styles.levelSub}>{done} of {total} units across the {timeFrames.length === 5 ? "five" : "three"} tenses</Text>
       </View>
 
       <View style={styles.card}>

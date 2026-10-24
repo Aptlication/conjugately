@@ -1,5 +1,6 @@
 import { shuffle } from "@shared/shuffle";
 import { PLUPERFECT_QUIZ_DATA } from "./pluperfect-quiz-data";
+import { IMPARFAIT_QUIZ_DATA } from "./imparfait-quiz-data";
 // Intermediate Level Quiz Data - Perplexity Validated
 // 17 verbs × 4 tenses × 20 questions = 1360 total MCQs
 // Verbs: être, avoir, faire, aller, voir, dire, pouvoir, vouloir, prendre, venir, savoir, lire, écrire, ouvrir, fermer, perdre, garder
@@ -2182,6 +2183,13 @@ export const INTERMEDIATE_QUIZ_DATA: Record<string, Record<string, IntermediateQ
 for (const [verb, questions] of Object.entries(PLUPERFECT_QUIZ_DATA)) {
   if (!INTERMEDIATE_QUIZ_DATA[verb]) INTERMEDIATE_QUIZ_DATA[verb] = {};
   INTERMEDIATE_QUIZ_DATA[verb]["plus_que_parfait"] = questions;
+}
+// Same for the imparfait (25 Oct 2026, scripts/build-imparfait-quiz-data.ts).
+// These 18 verbs had no imparfait questions before (empty or missing slots).
+for (const [verb, questions] of Object.entries(IMPARFAIT_QUIZ_DATA)) {
+  if (!INTERMEDIATE_QUIZ_DATA[verb]) INTERMEDIATE_QUIZ_DATA[verb] = {};
+  if (INTERMEDIATE_QUIZ_DATA[verb]["imparfait"]?.length) throw new Error(`imparfait for ${verb} would overwrite existing questions`);
+  INTERMEDIATE_QUIZ_DATA[verb]["imparfait"] = questions;
 }
 
 export function getRandomIntermediateQuestions(verb: string, tense: string, count: number): IntermediateQuizQuestion[] {
