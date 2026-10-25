@@ -8,7 +8,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|dire": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu dis la vérité maintenant ?",
+      "fr": "Bonjour ! Dis-tu la vérité maintenant ?",
       "en": "Hello! Are you telling the truth now?",
       "audio": "ELE_dire_pres_w1"
     },
@@ -44,7 +44,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|savoir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu sais la réponse ?",
+      "fr": "Bonjour ! Sais-tu la réponse ?",
       "en": "Hello! Do you know the answer?",
       "audio": "ELE_savoir_pres_w1"
     },
@@ -62,7 +62,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|vouloir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Vous voulez voir le directeur ?",
+      "fr": "Bonjour ! Voulez-vous voir le directeur ?",
       "en": "Hello! Do you want to see the manager?",
       "audio": "ELE_vouloir_pres_w1"
     },
@@ -80,7 +80,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|venir": [
     {
       "who": "app",
-      "fr": "Salut ! Tu viens du bureau ?",
+      "fr": "Salut ! Viens-tu du bureau ?",
       "en": "Hi! Are you coming from the office?",
       "audio": "ELE_venir_pres_w1"
     },
@@ -97,7 +97,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|pouvoir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Vous pouvez commencer ?",
+      "fr": "Bonjour ! Pouvez-vous commencer ?",
       "en": "Hello! Can you start?",
       "audio": "ELE_pouvoir_pres_w1"
     },
@@ -115,7 +115,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Present|besoin": [
     {
       "who": "app",
-      "fr": "Bonjour ! Vous avez besoin d'eau ?",
+      "fr": "Bonjour ! Avez-vous besoin d'eau ?",
       "en": "Hello! Do you need water?",
       "audio": "ELE_avoir-besoin-de_pres_w1"
     },
@@ -133,7 +133,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|dire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as dit oui ?",
+      "fr": "Salut ! As-tu dit oui ?",
       "en": "Hi! Did you say yes?",
       "audio": "ELE_dire_pc_w1"
     },
@@ -150,7 +150,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|voir": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as vu ce film ?",
+      "fr": "Salut ! As-tu vu ce film ?",
       "en": "Hi! Have you seen that film?",
       "audio": "ELE_voir_pc_w1"
     },
@@ -168,7 +168,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|savoir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as su la réponse ?",
+      "fr": "Bonjour ! As-tu su la réponse ?",
       "en": "Hello! Did you find out the answer?",
       "audio": "ELE_savoir_pc_w1"
     },
@@ -185,7 +185,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|vouloir": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as voulu m'appeler ?",
+      "fr": "Salut ! As-tu voulu m'appeler ?",
       "en": "Hi! Did you want to call me?",
       "audio": "ELE_vouloir_pc_w1"
     },
@@ -202,7 +202,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|venir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu es venu avec ta famille ?",
+      "fr": "Bonjour ! Es-tu venu avec ta famille ?",
       "en": "Hello! Did you come with your family?",
       "audio": "ELE_venir_pc_w1"
     },
@@ -220,7 +220,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|pouvoir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as pu te reposer ?",
+      "fr": "Bonjour ! As-tu pu te reposer ?",
       "en": "Hello! Were you able to get some rest?",
       "audio": "ELE_pouvoir_pc_w1"
     },
@@ -237,7 +237,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Past|besoin": [
     {
       "who": "app",
-      "fr": "Bonjour ! Vous avez eu besoin d'eau ?",
+      "fr": "Bonjour ! Avez-vous eu besoin d'eau ?",
       "en": "Hello! Did you need water?",
       "audio": "ELE_avoir-besoin-de_pc_w1"
     },
@@ -255,7 +255,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|dire": [
     {
       "who": "app",
-      "fr": "Salut ! Vous direz bonjour ?",
+      "fr": "Salut ! Direz-vous bonjour ?",
       "en": "Hi! Will you say hello?",
       "audio": "ELE_dire_fut_w1"
     },
@@ -273,7 +273,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|voir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Vous verrez une pièce de théâtre ?",
+      "fr": "Bonjour ! Verrez-vous une pièce de théâtre ?",
       "en": "Hello! Will you see a play?",
       "audio": "ELE_voir_fut_w1"
     },
@@ -291,7 +291,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|savoir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu sauras le faire ?",
+      "fr": "Bonjour ! Sauras-tu le faire ?",
       "en": "Hello! Will you know how to do it?",
       "audio": "ELE_savoir_fut_w1"
     },
@@ -308,7 +308,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|vouloir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu voudras partir tôt ?",
+      "fr": "Bonjour ! Voudras-tu partir tôt ?",
       "en": "Hello! Will you want to leave early?",
       "audio": "ELE_vouloir_fut_w1"
     },
@@ -325,7 +325,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|venir": [
     {
       "who": "app",
-      "fr": "Salut ! Vous viendrez pour le dîner ?",
+      "fr": "Salut ! Viendrez-vous pour le dîner ?",
       "en": "Hi! Will you come for dinner?",
       "audio": "ELE_venir_fut_w1"
     },
@@ -343,7 +343,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|pouvoir": [
     {
       "who": "app",
-      "fr": "Salut ! Tu pourras m'appeler ?",
+      "fr": "Salut ! Pourras-tu m'appeler ?",
       "en": "Hi! Will you be able to call me?",
       "audio": "ELE_pouvoir_fut_w1"
     },
@@ -360,7 +360,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Elementary|Future|besoin": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu auras besoin d'un livre ?",
+      "fr": "Bonjour ! Auras-tu besoin d'un livre ?",
       "en": "Hello! Will you need a book?",
       "audio": "ELE_avoir-besoin-de_fut_w1"
     },
@@ -377,7 +377,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|s'intéresser": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta sœur s'intéresse à la science ?",
+      "fr": "Bonjour ! Ta sœur s'intéresse-t-elle à la science ?",
       "en": "Hello! Is your sister interested in science?",
       "audio": "INT_s-interesser_pres_w1"
     },
@@ -424,7 +424,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ton fils, il se débrouille sans aide ?",
+      "fr": "Ah bon ? Et ton fils, se débrouille-t-il sans aide ?",
       "en": "Really? And your son, does he manage without help?",
       "audio": "INT_se-debrouiller_pres_w3"
     },
@@ -442,7 +442,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|s'ennuyer": [
     {
       "who": "app",
-      "fr": "Salut ! Ton ami et toi, vous vous ennuyez ?",
+      "fr": "Salut ! Ton ami et toi, vous ennuyez-vous ?",
       "en": "Hi! Are you and your friend bored?",
       "audio": "INT_s-ennuyer_pres_w1"
     },
@@ -458,7 +458,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ta sœur, elle s'ennuie ?",
+      "fr": "Ah bon ? Et ta sœur, s'ennuie-t-elle ?",
       "en": "Really? And your sister, is she bored?",
       "audio": "INT_s-ennuyer_pres_w3"
     },
@@ -476,7 +476,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|s'entraîner": [
     {
       "who": "app",
-      "fr": "Salut ! Ton frère et toi, vous vous entraînez ?",
+      "fr": "Salut ! Ton frère et toi, vous entraînez-vous ?",
       "en": "Hi! Do you and your brother train?",
       "audio": "INT_s-entrainer_pres_w1"
     },
@@ -492,7 +492,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et tes amis, ils s'entraînent aussi ?",
+      "fr": "Ah bon ? Et tes amis, s'entraînent-ils aussi ?",
       "en": "Really? And your friends, do they train too?",
       "audio": "INT_s-entrainer_pres_w3"
     },
@@ -509,7 +509,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|se souvenir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta sœur et toi, vous vous souvenez de moi ?",
+      "fr": "Bonjour ! Ta sœur et toi, vous souvenez-vous de moi ?",
       "en": "Hello! Do you and your sister remember me?",
       "audio": "INT_se-souvenir_pres_w1"
     },
@@ -525,7 +525,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton frère, il se souvient de moi ?",
+      "fr": "Super ! Et ton frère, se souvient-il de moi ?",
       "en": "Great! And your brother, does he remember me?",
       "audio": "INT_se-souvenir_pres_w3"
     },
@@ -543,7 +543,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|s'adapter": [
     {
       "who": "app",
-      "fr": "Salut ! Ta famille et toi, vous vous adaptez ici ?",
+      "fr": "Salut ! Ta famille et toi, vous adaptez-vous ici ?",
       "en": "Hi! Are you and your family adapting here?",
       "audio": "INT_s-adapter_pres_w1"
     },
@@ -559,7 +559,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton chat, il s'adapte ?",
+      "fr": "Super ! Et ton chat, s'adapte-t-il ?",
       "en": "Great! And your cat, is he adapting?",
       "audio": "INT_s-adapter_pres_w3"
     },
@@ -576,7 +576,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|se réjouir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta sœur et toi, vous vous réjouissez de la fête ?",
+      "fr": "Bonjour ! Ta sœur et toi, vous réjouissez-vous de la fête ?",
       "en": "Hello! Are you and your sister looking forward to the party?",
       "audio": "INT_se-rejouir_pres_w1"
     },
@@ -592,7 +592,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton frère, il se réjouit aussi ?",
+      "fr": "Super ! Et ton frère, se réjouit-il aussi ?",
       "en": "Great! And your brother, is he looking forward to it too?",
       "audio": "INT_se-rejouir_pres_w3"
     },
@@ -624,7 +624,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ton téléphone, tu le mets en silencieux ?",
+      "fr": "Ah bon ? Et ton téléphone, le mets-tu en silencieux ?",
       "en": "Really? And your phone, do you put it on silent?",
       "audio": "INT_mettre_pres_w3"
     },
@@ -642,7 +642,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|trouver": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu trouves ça facile de parler français ?",
+      "fr": "Bonjour ! Trouves-tu facile de parler français ?",
       "en": "Hello! Do you find it easy to speak French?",
       "audio": "INT_trouver_pres_w1"
     },
@@ -658,7 +658,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et tu trouves souvent de l'argent par terre ?",
+      "fr": "Super ! Et trouves-tu souvent de l'argent par terre ?",
       "en": "Great! And do you often find money on the ground?",
       "audio": "INT_trouver_pres_w3"
     },
@@ -676,7 +676,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|croire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu crois en tes amis ?",
+      "fr": "Salut ! Crois-tu en tes amis ?",
       "en": "Hi! Do you believe in your friends?",
       "audio": "INT_croire_pres_w1"
     },
@@ -692,7 +692,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "C'est bien ! Et tu crois tout ce que je dis ?",
+      "fr": "C'est bien ! Et crois-tu tout ce que je dis ?",
       "en": "That's good! And do you believe everything I say?",
       "audio": "INT_croire_pres_w3"
     },
@@ -709,7 +709,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|parler": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu parles souvent avec ta sœur ?",
+      "fr": "Bonjour ! Parles-tu souvent avec ta sœur ?",
       "en": "Hello! Do you often talk with your sister?",
       "audio": "INT_parler_pres_w1"
     },
@@ -725,7 +725,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au cinéma, vous parlez pendant le film ?",
+      "fr": "Et au cinéma, parlez-vous pendant le film ?",
       "en": "And at the cinema, do you (both) talk during the film?",
       "audio": "INT_parler_pres_w3"
     },
@@ -743,7 +743,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|prendre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu prends une douche le matin ?",
+      "fr": "Salut ! Prends-tu une douche le matin ?",
       "en": "Hi! Do you take a shower in the morning?",
       "audio": "INT_prendre_pres_w1"
     },
@@ -759,7 +759,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ta femme et toi, vous prenez la voiture aujourd'hui ?",
+      "fr": "Et ta femme et toi, prenez-vous la voiture aujourd'hui ?",
       "en": "And are you and your wife taking the car today?",
       "audio": "INT_prendre_pres_w3"
     },
@@ -777,7 +777,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|lire": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu lis des romans d'horreur ?",
+      "fr": "Bonjour ! Lis-tu des romans d'horreur ?",
       "en": "Hello! Do you read horror novels?",
       "audio": "INT_lire_pres_w1"
     },
@@ -793,7 +793,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Tes amis et toi, vous lisez le même livre ?",
+      "fr": "Ah bon ? Tes amis et toi, lisez-vous le même livre ?",
       "en": "Really? And do you and your friends read the same book?",
       "audio": "INT_lire_pres_w3"
     },
@@ -811,7 +811,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|écrire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu écris avant le petit déjeuner ?",
+      "fr": "Salut ! Écris-tu avant le petit déjeuner ?",
       "en": "Hi! Do you write before breakfast?",
       "audio": "INT_ecrire_pres_w1"
     },
@@ -827,7 +827,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et à l'école, vous écrivez des dissertations ?",
+      "fr": "Et à l'école, écrivez-vous des dissertations ?",
       "en": "And at school, do you (all) write essays?",
       "audio": "INT_ecrire_pres_w3"
     },
@@ -845,7 +845,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|ouvrir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu ouvres tes cadeaux le jour de ton anniversaire ?",
+      "fr": "Bonjour ! Ouvres-tu tes cadeaux le jour de ton anniversaire ?",
       "en": "Hello! Do you open your presents on your birthday?",
       "audio": "INT_ouvrir_pres_w1"
     },
@@ -861,7 +861,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous ouvrez le magasin à neuf heures ?",
+      "fr": "Et au travail, ouvrez-vous le magasin à neuf heures ?",
       "en": "And at work, do you (all) open the shop at nine o'clock?",
       "audio": "INT_ouvrir_pres_w3"
     },
@@ -879,7 +879,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|fermer": [
     {
       "who": "app",
-      "fr": "Salut ! Tu fermes le dossier avant de sauvegarder ?",
+      "fr": "Salut ! Fermes-tu le dossier avant de sauvegarder ?",
       "en": "Hi! Do you close the file before saving?",
       "audio": "INT_fermer_pres_w1"
     },
@@ -895,7 +895,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous fermez le magasin à 21 heures ?",
+      "fr": "Et au travail, fermez-vous le magasin à 21 heures ?",
       "en": "And at work, do you (all) close the shop at 9 p.m.?",
       "audio": "INT_fermer_pres_w3"
     },
@@ -913,7 +913,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|perdre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu perds parfois ton chemin ?",
+      "fr": "Salut ! Perds-tu parfois ton chemin ?",
       "en": "Hi! Do you sometimes lose your way?",
       "audio": "INT_perdre_pres_w1"
     },
@@ -929,7 +929,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Mais tu ne perds pas espoir ?",
+      "fr": "Ah bon ? Mais ne perds-tu pas espoir ?",
       "en": "Really? But you don't lose hope?",
       "audio": "INT_perdre_pres_w3"
     },
@@ -947,7 +947,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Present|garder": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu gardes tes reçus ?",
+      "fr": "Bonjour ! Gardes-tu tes reçus ?",
       "en": "Hello! Do you keep your receipts?",
       "audio": "INT_garder_pres_w1"
     },
@@ -963,7 +963,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et au travail, vous gardez votre espace propre ?",
+      "fr": "Ah bon ? Et au travail, gardez-vous votre espace propre ?",
       "en": "Really? And at work, do you (all) keep your space clean?",
       "audio": "INT_garder_pres_w3"
     },
@@ -1015,7 +1015,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|se débrouiller": [
     {
       "who": "app",
-      "fr": "Salut ! Ton frère et toi, vous vous êtes bien débrouillés ?",
+      "fr": "Salut ! Ton frère et toi, vous êtes-vous bien débrouillés ?",
       "en": "Hi! Did you and your brother manage well?",
       "audio": "INT_se-debrouiller_pc_w1"
     },
@@ -1031,7 +1031,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ta sœur, elle s'est débrouillée toute seule ?",
+      "fr": "Super ! Et ta sœur, s'est-elle débrouillée toute seule ?",
       "en": "Great! And your sister, did she manage on her own?",
       "audio": "INT_se-debrouiller_pc_w3"
     },
@@ -1049,7 +1049,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|s'ennuyer": [
     {
       "who": "app",
-      "fr": "Salut ! Tes amis se sont ennuyés hier soir ?",
+      "fr": "Salut ! Tes amis se sont-ils ennuyés hier soir ?",
       "en": "Hi! Did your friends get bored last night?",
       "audio": "INT_s-ennuyer_pc_w1"
     },
@@ -1065,7 +1065,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ton frère, il s'est ennuyé aussi ?",
+      "fr": "Ah bon ? Et ton frère, s'est-il ennuyé aussi ?",
       "en": "Really? And your brother, did he get bored too?",
       "audio": "INT_s-ennuyer_pc_w3"
     },
@@ -1082,7 +1082,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|s'entraîner": [
     {
       "who": "app",
-      "fr": "Salut ! Tes amis se sont entraînés ce matin ?",
+      "fr": "Salut ! Tes amis se sont-ils entraînés ce matin ?",
       "en": "Hi! Did your friends train this morning?",
       "audio": "INT_s-entrainer_pc_w1"
     },
@@ -1098,7 +1098,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton frère, il s'est entraîné aussi ?",
+      "fr": "Super ! Et ton frère, s'est-il entraîné aussi ?",
       "en": "Great! And your brother, did he train too?",
       "audio": "INT_s-entrainer_pc_w3"
     },
@@ -1115,7 +1115,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|se souvenir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta mère s'est souvenue de la fête ?",
+      "fr": "Bonjour ! Ta mère s'est-elle souvenue de la fête ?",
       "en": "Hello! Did your mother remember the party?",
       "audio": "INT_se-souvenir_pc_w1"
     },
@@ -1131,7 +1131,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et tes amis, ils se sont souvenus aussi ?",
+      "fr": "Super ! Et tes amis, se sont-ils souvenus aussi ?",
       "en": "Great! And your friends, did they remember too?",
       "audio": "INT_se-souvenir_pc_w3"
     },
@@ -1149,7 +1149,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|s'adapter": [
     {
       "who": "app",
-      "fr": "Salut ! Tes enfants se sont adaptés à l'école ?",
+      "fr": "Salut ! Tes enfants se sont-ils adaptés à l'école ?",
       "en": "Hi! Have your children adapted to school?",
       "audio": "INT_s-adapter_pc_w1"
     },
@@ -1165,7 +1165,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton chat, il s'est adapté ?",
+      "fr": "Super ! Et ton chat, s'est-il adapté ?",
       "en": "Great! And your cat, has he adapted?",
       "audio": "INT_s-adapter_pc_w3"
     },
@@ -1182,7 +1182,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|se réjouir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta sœur s'est réjouie de son cadeau ?",
+      "fr": "Bonjour ! Ta sœur s'est-elle réjouie de son cadeau ?",
       "en": "Hello! Was your sister delighted with her present?",
       "audio": "INT_se-rejouir_pc_w1"
     },
@@ -1198,7 +1198,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ton frère, il s'est réjoui aussi ?",
+      "fr": "Ah bon ? Et ton frère, s'est-il réjoui aussi ?",
       "en": "Really? And your brother, was he delighted too?",
       "audio": "INT_se-rejouir_pc_w3"
     },
@@ -1231,7 +1231,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "D'accord. Et ton fils, il a mis une écharpe ?",
+      "fr": "D'accord. Et ton fils, a-t-il mis une écharpe ?",
       "en": "OK. And your son, did he put on a scarf?",
       "audio": "INT_mettre_pc_w3"
     },
@@ -1249,7 +1249,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|trouver": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as trouvé un bon restaurant hier soir ?",
+      "fr": "Salut ! As-tu trouvé un bon restaurant hier soir ?",
       "en": "Hi! Did you find a good restaurant last night?",
       "audio": "INT_trouver_pc_w1"
     },
@@ -1265,7 +1265,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Ton ami et toi, vous avez trouvé une idée ?",
+      "fr": "Super ! Ton ami et toi, avez-vous trouvé une idée ?",
       "en": "Great! Did you and your friend find an idea?",
       "audio": "INT_trouver_pc_w3"
     },
@@ -1283,7 +1283,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|croire": [
     {
       "who": "app",
-      "fr": "Salut ! Ton équipe et toi, vous avez cru en ce projet ?",
+      "fr": "Salut ! Ton équipe et toi, avez-vous cru en ce projet ?",
       "en": "Hi! Did you and your team believe in this project?",
       "audio": "INT_croire_pc_w1"
     },
@@ -1299,7 +1299,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et toi, tu as cru en tes amis ?",
+      "fr": "Super ! Et toi, as-tu cru en tes amis ?",
       "en": "Great! And you, did you believe in your friends?",
       "audio": "INT_croire_pc_w3"
     },
@@ -1318,7 +1318,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|parler": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as parlé avec ta sœur ce matin ?",
+      "fr": "Bonjour ! As-tu parlé avec ta sœur ce matin ?",
       "en": "Hello! Did you talk with your sister this morning?",
       "audio": "INT_parler_pc_w1"
     },
@@ -1334,7 +1334,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous avez parlé avec le directeur ?",
+      "fr": "Et au travail, avez-vous parlé avec le directeur ?",
       "en": "And at work, did you (all) talk with the director?",
       "audio": "INT_parler_pc_w3"
     },
@@ -1352,7 +1352,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|prendre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as pris du sucre dans ton café ?",
+      "fr": "Salut ! As-tu pris du sucre dans ton café ?",
       "en": "Hi! Did you take sugar in your coffee?",
       "audio": "INT_prendre_pc_w1"
     },
@@ -1368,7 +1368,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ton ami et toi, vous avez pris l'ascenseur ?",
+      "fr": "Et ton ami et toi, avez-vous pris l'ascenseur ?",
       "en": "And did you and your friend take the lift?",
       "audio": "INT_prendre_pc_w3"
     },
@@ -1386,7 +1386,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|lire": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as lu la biographie ?",
+      "fr": "Bonjour ! As-tu lu la biographie ?",
       "en": "Hello! Did you read the biography?",
       "audio": "INT_lire_pc_w1"
     },
@@ -1402,7 +1402,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ton ami et toi, vous avez lu le même article ?",
+      "fr": "Et ton ami et toi, avez-vous lu le même article ?",
       "en": "And did you and your friend read the same article?",
       "audio": "INT_lire_pc_w3"
     },
@@ -1420,7 +1420,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|écrire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as écrit ton nom sur le formulaire ?",
+      "fr": "Salut ! As-tu écrit ton nom sur le formulaire ?",
       "en": "Hi! Did you write your name on the form?",
       "audio": "INT_ecrire_pc_w1"
     },
@@ -1436,7 +1436,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et à l'école, vous avez écrit en français ?",
+      "fr": "Et à l'école, avez-vous écrit en français ?",
       "en": "And at school, did you (all) write in French?",
       "audio": "INT_ecrire_pc_w3"
     },
@@ -1454,7 +1454,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|ouvrir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as ouvert les fenêtres la nuit ?",
+      "fr": "Bonjour ! As-tu ouvert les fenêtres la nuit ?",
       "en": "Hello! Did you open the windows at night?",
       "audio": "INT_ouvrir_pc_w1"
     },
@@ -1470,7 +1470,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous avez ouvert le magasin à neuf heures ?",
+      "fr": "Et au travail, avez-vous ouvert le magasin à neuf heures ?",
       "en": "And at work, did you (all) open the shop at nine o'clock?",
       "audio": "INT_ouvrir_pc_w3"
     },
@@ -1488,7 +1488,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|fermer": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as fermé le dossier avant de sauvegarder ?",
+      "fr": "Salut ! As-tu fermé le dossier avant de sauvegarder ?",
       "en": "Hi! Did you close the file before saving?",
       "audio": "INT_fermer_pc_w1"
     },
@@ -1504,7 +1504,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Bien ! Ta famille et toi, vous avez fermé la porte ?",
+      "fr": "Bien ! Ta famille et toi, avez-vous fermé la porte ?",
       "en": "Good! Did you and your family close the door?",
       "audio": "INT_fermer_pc_w3"
     },
@@ -1522,7 +1522,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|perdre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu as perdu tes lunettes hier ?",
+      "fr": "Salut ! As-tu perdu tes lunettes hier ?",
       "en": "Hi! Did you lose your glasses yesterday?",
       "audio": "INT_perdre_pc_w1"
     },
@@ -1538,7 +1538,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Oh non ! Et tu as perdu ton chemin hier soir ?",
+      "fr": "Oh non ! Et as-tu perdu ton chemin hier soir ?",
       "en": "Oh no! And did you lose your way last night?",
       "audio": "INT_perdre_pc_w3"
     },
@@ -1556,7 +1556,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Past|garder": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu as gardé tes reçus ?",
+      "fr": "Bonjour ! As-tu gardé tes reçus ?",
       "en": "Hello! Did you keep your receipts?",
       "audio": "INT_garder_pc_w1"
     },
@@ -1572,7 +1572,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ta famille et toi, vous avez gardé vos promesses ?",
+      "fr": "Et ta famille et toi, avez-vous gardé vos promesses ?",
       "en": "And did you and your family keep your promises?",
       "audio": "INT_garder_pc_w3"
     },
@@ -1590,7 +1590,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|s'intéresser": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ton frère s'intéressera au cinéma ?",
+      "fr": "Bonjour ! Ton frère s'intéressera-t-il au cinéma ?",
       "en": "Hello! Will your brother take an interest in cinema?",
       "audio": "INT_s-interesser_fut_w1"
     },
@@ -1605,7 +1605,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et toi, tu t'intéresseras aux sports ?",
+      "fr": "Ah bon ? Et toi, t'intéresseras-tu aux sports ?",
       "en": "Really? And you, will you take an interest in sports?",
       "audio": "INT_s-interesser_fut_w3"
     },
@@ -1623,7 +1623,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|se débrouiller": [
     {
       "who": "app",
-      "fr": "Salut ! Ta sœur se débrouillera toute seule ce soir ?",
+      "fr": "Salut ! Ta sœur se débrouillera-t-elle toute seule ce soir ?",
       "en": "Hi! Will your sister manage on her own tonight?",
       "audio": "INT_se-debrouiller_fut_w1"
     },
@@ -1639,7 +1639,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton frère et toi, vous vous débrouillerez ?",
+      "fr": "Super ! Et ton frère et toi, vous débrouillerez-vous ?",
       "en": "Great! And will you and your brother manage?",
       "audio": "INT_se-debrouiller_fut_w3"
     },
@@ -1657,7 +1657,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|s'ennuyer": [
     {
       "who": "app",
-      "fr": "Salut ! Ta sœur s'ennuiera à la fête ce soir ?",
+      "fr": "Salut ! Ta sœur s'ennuiera-t-elle à la fête ce soir ?",
       "en": "Hi! Will your sister be bored at the party tonight?",
       "audio": "INT_s-ennuyer_fut_w1"
     },
@@ -1672,7 +1672,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et tes parents, ils s'ennuieront ?",
+      "fr": "Super ! Et tes parents, s'ennuieront-ils ?",
       "en": "Great! And your parents, will they be bored?",
       "audio": "INT_s-ennuyer_fut_w3"
     },
@@ -1690,7 +1690,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|s'entraîner": [
     {
       "who": "app",
-      "fr": "Salut ! Ton ami et toi, vous vous entraînerez samedi ?",
+      "fr": "Salut ! Ton ami et toi, vous entraînerez-vous samedi ?",
       "en": "Hi! Will you and your friend train on Saturday?",
       "audio": "INT_s-entrainer_fut_w1"
     },
@@ -1706,7 +1706,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ta sœur, elle s'entraînera aussi ?",
+      "fr": "Super ! Et ta sœur, s'entraînera-t-elle aussi ?",
       "en": "Great! And your sister, will she train too?",
       "audio": "INT_s-entrainer_fut_w3"
     },
@@ -1723,7 +1723,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|se souvenir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ta sœur se souviendra de mon anniversaire ?",
+      "fr": "Bonjour ! Ta sœur se souviendra-t-elle de mon anniversaire ?",
       "en": "Hello! Will your sister remember my birthday?",
       "audio": "INT_se-souvenir_fut_w1"
     },
@@ -1739,7 +1739,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton frère, il se souviendra aussi ?",
+      "fr": "Super ! Et ton frère, se souviendra-t-il aussi ?",
       "en": "Great! And your brother, will he remember too?",
       "audio": "INT_se-souvenir_fut_w3"
     },
@@ -1757,7 +1757,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|s'adapter": [
     {
       "who": "app",
-      "fr": "Salut ! Ta famille et toi, vous vous adapterez à la ville ?",
+      "fr": "Salut ! Ta famille et toi, vous adapterez-vous à la ville ?",
       "en": "Hi! Will you and your family adapt to the city?",
       "audio": "INT_s-adapter_fut_w1"
     },
@@ -1773,7 +1773,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Et ton chien, il s'adaptera aussi ?",
+      "fr": "Super ! Et ton chien, s'adaptera-t-il aussi ?",
       "en": "Great! And your dog, will he adapt too?",
       "audio": "INT_s-adapter_fut_w3"
     },
@@ -1790,7 +1790,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|se réjouir": [
     {
       "who": "app",
-      "fr": "Bonjour ! Ton frère et toi, vous vous réjouirez de la fête ?",
+      "fr": "Bonjour ! Ton frère et toi, vous réjouirez-vous de la fête ?",
       "en": "Hello! Will you and your brother be glad about the party?",
       "audio": "INT_se-rejouir_fut_w1"
     },
@@ -1806,7 +1806,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Mon fils sera là aussi. Tes parents se réjouiront ?",
+      "fr": "Super ! Mon fils sera là aussi. Tes parents se réjouiront-ils ?",
       "en": "Great! My son will be there too. Will your parents be glad?",
       "audio": "INT_se-rejouir_fut_w3"
     },
@@ -1824,7 +1824,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|mettre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu mettras des épices dans ce plat ?",
+      "fr": "Salut ! Mettras-tu des épices dans ce plat ?",
       "en": "Hi! Will you put spices in this dish?",
       "audio": "INT_mettre_fut_w1"
     },
@@ -1840,7 +1840,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Et ton fils, il mettra ses chaussures ?",
+      "fr": "Ah bon ? Et ton fils, mettra-t-il ses chaussures ?",
       "en": "Really? And your son, will he put his shoes on?",
       "audio": "INT_mettre_fut_w3"
     },
@@ -1858,7 +1858,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|trouver": [
     {
       "who": "app",
-      "fr": "Salut ! Ta sœur trouvera un taxi demain matin ?",
+      "fr": "Salut ! Ta sœur trouvera-t-elle un taxi demain matin ?",
       "en": "Hi! Will your sister find a taxi tomorrow morning?",
       "audio": "INT_trouver_fut_w1"
     },
@@ -1874,7 +1874,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Super ! Ton ami et toi, vous trouverez la rue ?",
+      "fr": "Super ! Ton ami et toi, trouverez-vous la rue ?",
       "en": "Great! Will you and your friend find the street?",
       "audio": "INT_trouver_fut_w3"
     },
@@ -1892,7 +1892,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|croire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu croiras tout ce que je dis ?",
+      "fr": "Salut ! Croiras-tu tout ce que je dis ?",
       "en": "Hi! Will you believe everything I say?",
       "audio": "INT_croire_fut_w1"
     },
@@ -1908,7 +1908,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ta famille et toi, vous croirez en l'avenir ?",
+      "fr": "Et ta famille et toi, croirez-vous en l'avenir ?",
       "en": "And will you and your family believe in the future?",
       "audio": "INT_croire_fut_w3"
     },
@@ -1926,7 +1926,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|parler": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu parleras avec tes voisins demain ?",
+      "fr": "Bonjour ! Parleras-tu avec tes voisins demain ?",
       "en": "Hello! Will you talk with your neighbours tomorrow?",
       "audio": "INT_parler_fut_w1"
     },
@@ -1942,7 +1942,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous parlerez français à la réunion ?",
+      "fr": "Et au travail, parlerez-vous français à la réunion ?",
       "en": "And at work, will you (all) speak French at the meeting?",
       "audio": "INT_parler_fut_w3"
     },
@@ -1960,7 +1960,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|prendre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu prendras le bus pour aller au travail ?",
+      "fr": "Salut ! Prendras-tu le bus pour aller au travail ?",
       "en": "Hi! Will you take the bus to go to work?",
       "audio": "INT_prendre_fut_w1"
     },
@@ -1976,7 +1976,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et à midi, vous prendrez une longue pause ?",
+      "fr": "Et à midi, prendrez-vous une longue pause ?",
       "en": "And at midday, will you (all) take a long break?",
       "audio": "INT_prendre_fut_w3"
     },
@@ -1994,7 +1994,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|lire": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu liras ce livre le mois prochain ?",
+      "fr": "Bonjour ! Liras-tu ce livre le mois prochain ?",
       "en": "Hello! Will you read this book next month?",
       "audio": "INT_lire_fut_w1"
     },
@@ -2010,7 +2010,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et tu liras des romans d'horreur ?",
+      "fr": "Et liras-tu des romans d'horreur ?",
       "en": "And will you read horror novels?",
       "audio": "INT_lire_fut_w3"
     },
@@ -2028,7 +2028,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|écrire": [
     {
       "who": "app",
-      "fr": "Salut ! Tu écriras ton nom sur le formulaire ?",
+      "fr": "Salut ! Écriras-tu ton nom sur le formulaire ?",
       "en": "Hi! Will you write your name on the form?",
       "audio": "INT_ecrire_fut_w1"
     },
@@ -2044,7 +2044,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et à l'école, vous écrirez en français ?",
+      "fr": "Et à l'école, écrirez-vous en français ?",
       "en": "And at school, will you (all) write in French?",
       "audio": "INT_ecrire_fut_w3"
     },
@@ -2062,7 +2062,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|ouvrir": [
     {
       "who": "app",
-      "fr": "Salut ! Tu ouvriras tes cadeaux le jour de ton anniversaire ?",
+      "fr": "Salut ! Ouvriras-tu tes cadeaux le jour de ton anniversaire ?",
       "en": "Hi! Will you open your presents on your birthday?",
       "audio": "INT_ouvrir_fut_w1"
     },
@@ -2078,7 +2078,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et tu ouvriras les fenêtres la nuit ?",
+      "fr": "Et ouvriras-tu les fenêtres la nuit ?",
       "en": "And will you open the windows at night?",
       "audio": "INT_ouvrir_fut_w3"
     },
@@ -2096,7 +2096,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|fermer": [
     {
       "who": "app",
-      "fr": "Salut ! Tu fermeras le dossier avant de sauvegarder ?",
+      "fr": "Salut ! Fermeras-tu le dossier avant de sauvegarder ?",
       "en": "Hi! Will you close the file before saving?",
       "audio": "INT_fermer_fut_w1"
     },
@@ -2112,7 +2112,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et au travail, vous fermerez la porte avant de partir ?",
+      "fr": "Et au travail, fermerez-vous la porte avant de partir ?",
       "en": "And at work, will you (all) close the door before leaving?",
       "audio": "INT_fermer_fut_w3"
     },
@@ -2130,7 +2130,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|perdre": [
     {
       "who": "app",
-      "fr": "Salut ! Tu perdras ton chemin en ville ?",
+      "fr": "Salut ! Perdras-tu ton chemin en ville ?",
       "en": "Hi! Will you lose your way in town?",
       "audio": "INT_perdre_fut_w1"
     },
@@ -2146,7 +2146,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Ah bon ? Mais tu ne perdras pas espoir ?",
+      "fr": "Ah bon ? Mais ne perdras-tu pas espoir ?",
       "en": "Really? But you won't lose hope?",
       "audio": "INT_perdre_fut_w3"
     },
@@ -2164,7 +2164,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
   "Intermediate|Future|garder": [
     {
       "who": "app",
-      "fr": "Bonjour ! Tu garderas toutes tes notes ?",
+      "fr": "Bonjour ! Garderas-tu toutes tes notes ?",
       "en": "Hello! Will you keep all your notes?",
       "audio": "INT_garder_fut_w1"
     },
@@ -2180,7 +2180,7 @@ export const WARMUPS: Record<string, ConvTurn[]> = {
     },
     {
       "who": "app",
-      "fr": "Et ta famille et toi, vous garderez vos promesses ?",
+      "fr": "Et ta famille et toi, garderez-vous vos promesses ?",
       "en": "And will you and your family keep your promises?",
       "audio": "INT_garder_fut_w3"
     },

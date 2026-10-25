@@ -5,7 +5,7 @@
   "verb": "dire",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu dis la vérité maintenant ?",
+  "french": "Bonjour ! Dis-tu la vérité maintenant ?",
   "english": "Hello! Are you telling the truth now?",
   "conversation": "ELE_dire_pres",
   "voice": "Voix grand père"
@@ -27,7 +27,7 @@
   "verb": "savoir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu sais la réponse ?",
+  "french": "Bonjour ! Sais-tu la réponse ?",
   "english": "Hello! Do you know the answer?",
   "conversation": "ELE_savoir_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -38,7 +38,7 @@
   "verb": "vouloir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Vous voulez voir le directeur ?",
+  "french": "Bonjour ! Voulez-vous voir le directeur ?",
   "english": "Hello! Do you want to see the manager?",
   "conversation": "ELE_vouloir_pres",
   "voice": "Audrey"
@@ -49,7 +49,7 @@
   "verb": "venir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu viens du bureau ?",
+  "french": "Salut ! Viens-tu du bureau ?",
   "english": "Hi! Are you coming from the office?",
   "conversation": "ELE_venir_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -60,7 +60,7 @@
   "verb": "pouvoir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Vous pouvez commencer ?",
+  "french": "Bonjour ! Pouvez-vous commencer ?",
   "english": "Hello! Can you start?",
   "conversation": "ELE_pouvoir_pres",
   "voice": "Voix grand père"
@@ -71,7 +71,7 @@
   "verb": "besoin",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Vous avez besoin d'eau ?",
+  "french": "Bonjour ! Avez-vous besoin d'eau ?",
   "english": "Hello! Do you need water?",
   "conversation": "ELE_avoir-besoin-de_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -82,7 +82,7 @@
   "verb": "dire",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as dit oui ?",
+  "french": "Salut ! As-tu dit oui ?",
   "english": "Hi! Did you say yes?",
   "conversation": "ELE_dire_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -93,7 +93,7 @@
   "verb": "voir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as vu ce film ?",
+  "french": "Salut ! As-tu vu ce film ?",
   "english": "Hi! Have you seen that film?",
   "conversation": "ELE_voir_pc",
   "voice": "Audrey"
@@ -104,7 +104,7 @@
   "verb": "savoir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as su la réponse ?",
+  "french": "Bonjour ! As-tu su la réponse ?",
   "english": "Hello! Did you find out the answer?",
   "conversation": "ELE_savoir_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -115,7 +115,7 @@
   "verb": "vouloir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as voulu m'appeler ?",
+  "french": "Salut ! As-tu voulu m'appeler ?",
   "english": "Hi! Did you want to call me?",
   "conversation": "ELE_vouloir_pc",
   "voice": "Voix grand père"
@@ -126,7 +126,7 @@
   "verb": "venir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu es venu avec ta famille ?",
+  "french": "Bonjour ! Es-tu venu avec ta famille ?",
   "english": "Hello! Did you come with your family?",
   "conversation": "ELE_venir_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -137,7 +137,7 @@
   "verb": "pouvoir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as pu te reposer ?",
+  "french": "Bonjour ! As-tu pu te reposer ?",
   "english": "Hello! Were you able to get some rest?",
   "conversation": "ELE_pouvoir_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -148,7 +148,7 @@
   "verb": "besoin",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Vous avez eu besoin d'eau ?",
+  "french": "Bonjour ! Avez-vous eu besoin d'eau ?",
   "english": "Hello! Did you need water?",
   "conversation": "ELE_avoir-besoin-de_pc",
   "voice": "Audrey"
@@ -159,7 +159,7 @@
   "verb": "dire",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Vous direz bonjour ?",
+  "french": "Salut ! Direz-vous bonjour ?",
   "english": "Hi! Will you say hello?",
   "conversation": "ELE_dire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -170,7 +170,7 @@
   "verb": "voir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Vous verrez une pièce de théâtre ?",
+  "french": "Bonjour ! Verrez-vous une pièce de théâtre ?",
   "english": "Hello! Will you see a play?",
   "conversation": "ELE_voir_fut",
   "voice": "Voix grand père"
@@ -181,7 +181,7 @@
   "verb": "savoir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu sauras le faire ?",
+  "french": "Bonjour ! Sauras-tu le faire ?",
   "english": "Hello! Will you know how to do it?",
   "conversation": "ELE_savoir_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -192,7 +192,7 @@
   "verb": "vouloir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu voudras partir tôt ?",
+  "french": "Bonjour ! Voudras-tu partir tôt ?",
   "english": "Hello! Will you want to leave early?",
   "conversation": "ELE_vouloir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -203,7 +203,7 @@
   "verb": "venir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Vous viendrez pour le dîner ?",
+  "french": "Salut ! Viendrez-vous pour le dîner ?",
   "english": "Hi! Will you come for dinner?",
   "conversation": "ELE_venir_fut",
   "voice": "Audrey"
@@ -214,7 +214,7 @@
   "verb": "pouvoir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu pourras m'appeler ?",
+  "french": "Salut ! Pourras-tu m'appeler ?",
   "english": "Hi! Will you be able to call me?",
   "conversation": "ELE_pouvoir_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -225,7 +225,7 @@
   "verb": "besoin",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu auras besoin d'un livre ?",
+  "french": "Bonjour ! Auras-tu besoin d'un livre ?",
   "english": "Hello! Will you need a book?",
   "conversation": "ELE_avoir-besoin-de_fut",
   "voice": "Voix grand père"
@@ -236,7 +236,7 @@
   "verb": "s'intéresser",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Ta sœur s'intéresse à la science ?",
+  "french": "Bonjour ! Ta sœur s'intéresse-t-elle à la science ?",
   "english": "Hello! Is your sister interested in science?",
   "conversation": "INT_s-interesser_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -269,7 +269,7 @@
   "verb": "se débrouiller",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Et ton fils, il se débrouille sans aide ?",
+  "french": "Ah bon ? Et ton fils, se débrouille-t-il sans aide ?",
   "english": "Really? And your son, does he manage without help?",
   "conversation": "INT_se-debrouiller_pres",
   "voice": "Audrey"
@@ -280,7 +280,7 @@
   "verb": "s'ennuyer",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Ton ami et toi, vous vous ennuyez ?",
+  "french": "Salut ! Ton ami et toi, vous ennuyez-vous ?",
   "english": "Hi! Are you and your friend bored?",
   "conversation": "INT_s-ennuyer_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -291,7 +291,7 @@
   "verb": "s'ennuyer",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Et ta sœur, elle s'ennuie ?",
+  "french": "Ah bon ? Et ta sœur, s'ennuie-t-elle ?",
   "english": "Really? And your sister, is she bored?",
   "conversation": "INT_s-ennuyer_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -302,7 +302,7 @@
   "verb": "s'entraîner",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Ton frère et toi, vous vous entraînez ?",
+  "french": "Salut ! Ton frère et toi, vous entraînez-vous ?",
   "english": "Hi! Do you and your brother train?",
   "conversation": "INT_s-entrainer_pres",
   "voice": "Voix grand père"
@@ -313,7 +313,7 @@
   "verb": "s'entraîner",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Et tes amis, ils s'entraînent aussi ?",
+  "french": "Ah bon ? Et tes amis, s'entraînent-ils aussi ?",
   "english": "Really? And your friends, do they train too?",
   "conversation": "INT_s-entrainer_pres",
   "voice": "Voix grand père"
@@ -324,7 +324,7 @@
   "verb": "se souvenir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Ta sœur et toi, vous vous souvenez de moi ?",
+  "french": "Bonjour ! Ta sœur et toi, vous souvenez-vous de moi ?",
   "english": "Hello! Do you and your sister remember me?",
   "conversation": "INT_se-souvenir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -335,7 +335,7 @@
   "verb": "se souvenir",
   "tense": "Présent",
   "line": "w3",
-  "french": "Super ! Et ton frère, il se souvient de moi ?",
+  "french": "Super ! Et ton frère, se souvient-il de moi ?",
   "english": "Great! And your brother, does he remember me?",
   "conversation": "INT_se-souvenir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -346,7 +346,7 @@
   "verb": "s'adapter",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Ta famille et toi, vous vous adaptez ici ?",
+  "french": "Salut ! Ta famille et toi, vous adaptez-vous ici ?",
   "english": "Hi! Are you and your family adapting here?",
   "conversation": "INT_s-adapter_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -357,7 +357,7 @@
   "verb": "s'adapter",
   "tense": "Présent",
   "line": "w3",
-  "french": "Super ! Et ton chat, il s'adapte ?",
+  "french": "Super ! Et ton chat, s'adapte-t-il ?",
   "english": "Great! And your cat, is he adapting?",
   "conversation": "INT_s-adapter_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -368,7 +368,7 @@
   "verb": "se réjouir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Ta sœur et toi, vous vous réjouissez de la fête ?",
+  "french": "Bonjour ! Ta sœur et toi, vous réjouissez-vous de la fête ?",
   "english": "Hello! Are you and your sister looking forward to the party?",
   "conversation": "INT_se-rejouir_pres",
   "voice": "Audrey"
@@ -379,7 +379,7 @@
   "verb": "se réjouir",
   "tense": "Présent",
   "line": "w3",
-  "french": "Super ! Et ton frère, il se réjouit aussi ?",
+  "french": "Super ! Et ton frère, se réjouit-il aussi ?",
   "english": "Great! And your brother, is he looking forward to it too?",
   "conversation": "INT_se-rejouir_pres",
   "voice": "Audrey"
@@ -401,7 +401,7 @@
   "verb": "mettre",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Et ton téléphone, tu le mets en silencieux ?",
+  "french": "Ah bon ? Et ton téléphone, le mets-tu en silencieux ?",
   "english": "Really? And your phone, do you put it on silent?",
   "conversation": "INT_mettre_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -412,7 +412,7 @@
   "verb": "trouver",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu trouves ça facile de parler français ?",
+  "french": "Bonjour ! Trouves-tu facile de parler français ?",
   "english": "Hello! Do you find it easy to speak French?",
   "conversation": "INT_trouver_pres",
   "voice": "Voix grand père"
@@ -423,7 +423,7 @@
   "verb": "trouver",
   "tense": "Présent",
   "line": "w3",
-  "french": "Super ! Et tu trouves souvent de l'argent par terre ?",
+  "french": "Super ! Et trouves-tu souvent de l'argent par terre ?",
   "english": "Great! And do you often find money on the ground?",
   "conversation": "INT_trouver_pres",
   "voice": "Voix grand père"
@@ -434,7 +434,7 @@
   "verb": "croire",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu crois en tes amis ?",
+  "french": "Salut ! Crois-tu en tes amis ?",
   "english": "Hi! Do you believe in your friends?",
   "conversation": "INT_croire_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -445,7 +445,7 @@
   "verb": "croire",
   "tense": "Présent",
   "line": "w3",
-  "french": "C'est bien ! Et tu crois tout ce que je dis ?",
+  "french": "C'est bien ! Et crois-tu tout ce que je dis ?",
   "english": "That's good! And do you believe everything I say?",
   "conversation": "INT_croire_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -456,7 +456,7 @@
   "verb": "parler",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu parles souvent avec ta sœur ?",
+  "french": "Bonjour ! Parles-tu souvent avec ta sœur ?",
   "english": "Hello! Do you often talk with your sister?",
   "conversation": "INT_parler_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -467,7 +467,7 @@
   "verb": "parler",
   "tense": "Présent",
   "line": "w3",
-  "french": "Et au cinéma, vous parlez pendant le film ?",
+  "french": "Et au cinéma, parlez-vous pendant le film ?",
   "english": "And at the cinema, do you (both) talk during the film?",
   "conversation": "INT_parler_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -478,7 +478,7 @@
   "verb": "prendre",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu prends une douche le matin ?",
+  "french": "Salut ! Prends-tu une douche le matin ?",
   "english": "Hi! Do you take a shower in the morning?",
   "conversation": "INT_prendre_pres",
   "voice": "Audrey"
@@ -489,7 +489,7 @@
   "verb": "prendre",
   "tense": "Présent",
   "line": "w3",
-  "french": "Et ta femme et toi, vous prenez la voiture aujourd'hui ?",
+  "french": "Et ta femme et toi, prenez-vous la voiture aujourd'hui ?",
   "english": "And are you and your wife taking the car today?",
   "conversation": "INT_prendre_pres",
   "voice": "Audrey"
@@ -500,7 +500,7 @@
   "verb": "lire",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu lis des romans d'horreur ?",
+  "french": "Bonjour ! Lis-tu des romans d'horreur ?",
   "english": "Hello! Do you read horror novels?",
   "conversation": "INT_lire_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -511,7 +511,7 @@
   "verb": "lire",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Tes amis et toi, vous lisez le même livre ?",
+  "french": "Ah bon ? Tes amis et toi, lisez-vous le même livre ?",
   "english": "Really? And do you and your friends read the same book?",
   "conversation": "INT_lire_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -522,7 +522,7 @@
   "verb": "écrire",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu écris avant le petit déjeuner ?",
+  "french": "Salut ! Écris-tu avant le petit déjeuner ?",
   "english": "Hi! Do you write before breakfast?",
   "conversation": "INT_ecrire_pres",
   "voice": "Voix grand père"
@@ -533,7 +533,7 @@
   "verb": "écrire",
   "tense": "Présent",
   "line": "w3",
-  "french": "Et à l'école, vous écrivez des dissertations ?",
+  "french": "Et à l'école, écrivez-vous des dissertations ?",
   "english": "And at school, do you (all) write essays?",
   "conversation": "INT_ecrire_pres",
   "voice": "Voix grand père"
@@ -544,7 +544,7 @@
   "verb": "ouvrir",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu ouvres tes cadeaux le jour de ton anniversaire ?",
+  "french": "Bonjour ! Ouvres-tu tes cadeaux le jour de ton anniversaire ?",
   "english": "Hello! Do you open your presents on your birthday?",
   "conversation": "INT_ouvrir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -555,7 +555,7 @@
   "verb": "ouvrir",
   "tense": "Présent",
   "line": "w3",
-  "french": "Et au travail, vous ouvrez le magasin à neuf heures ?",
+  "french": "Et au travail, ouvrez-vous le magasin à neuf heures ?",
   "english": "And at work, do you (all) open the shop at nine o'clock?",
   "conversation": "INT_ouvrir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -566,7 +566,7 @@
   "verb": "fermer",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu fermes le dossier avant de sauvegarder ?",
+  "french": "Salut ! Fermes-tu le dossier avant de sauvegarder ?",
   "english": "Hi! Do you close the file before saving?",
   "conversation": "INT_fermer_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -577,7 +577,7 @@
   "verb": "fermer",
   "tense": "Présent",
   "line": "w3",
-  "french": "Et au travail, vous fermez le magasin à 21 heures ?",
+  "french": "Et au travail, fermez-vous le magasin à 21 heures ?",
   "english": "And at work, do you (all) close the shop at 9 p.m.?",
   "conversation": "INT_fermer_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -588,7 +588,7 @@
   "verb": "perdre",
   "tense": "Présent",
   "line": "w1",
-  "french": "Salut ! Tu perds parfois ton chemin ?",
+  "french": "Salut ! Perds-tu parfois ton chemin ?",
   "english": "Hi! Do you sometimes lose your way?",
   "conversation": "INT_perdre_pres",
   "voice": "Audrey"
@@ -599,7 +599,7 @@
   "verb": "perdre",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Mais tu ne perds pas espoir ?",
+  "french": "Ah bon ? Mais ne perds-tu pas espoir ?",
   "english": "Really? But you don't lose hope?",
   "conversation": "INT_perdre_pres",
   "voice": "Audrey"
@@ -610,7 +610,7 @@
   "verb": "garder",
   "tense": "Présent",
   "line": "w1",
-  "french": "Bonjour ! Tu gardes tes reçus ?",
+  "french": "Bonjour ! Gardes-tu tes reçus ?",
   "english": "Hello! Do you keep your receipts?",
   "conversation": "INT_garder_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -621,7 +621,7 @@
   "verb": "garder",
   "tense": "Présent",
   "line": "w3",
-  "french": "Ah bon ? Et au travail, vous gardez votre espace propre ?",
+  "french": "Ah bon ? Et au travail, gardez-vous votre espace propre ?",
   "english": "Really? And at work, do you (all) keep your space clean?",
   "conversation": "INT_garder_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -654,7 +654,7 @@
   "verb": "se débrouiller",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Ton frère et toi, vous vous êtes bien débrouillés ?",
+  "french": "Salut ! Ton frère et toi, vous êtes-vous bien débrouillés ?",
   "english": "Hi! Did you and your brother manage well?",
   "conversation": "INT_se-debrouiller_pc",
   "voice": "Voix grand père"
@@ -665,7 +665,7 @@
   "verb": "se débrouiller",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Et ta sœur, elle s'est débrouillée toute seule ?",
+  "french": "Super ! Et ta sœur, s'est-elle débrouillée toute seule ?",
   "english": "Great! And your sister, did she manage on her own?",
   "conversation": "INT_se-debrouiller_pc",
   "voice": "Voix grand père"
@@ -676,7 +676,7 @@
   "verb": "s'ennuyer",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tes amis se sont ennuyés hier soir ?",
+  "french": "Salut ! Tes amis se sont-ils ennuyés hier soir ?",
   "english": "Hi! Did your friends get bored last night?",
   "conversation": "INT_s-ennuyer_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -687,7 +687,7 @@
   "verb": "s'ennuyer",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Ah bon ? Et ton frère, il s'est ennuyé aussi ?",
+  "french": "Ah bon ? Et ton frère, s'est-il ennuyé aussi ?",
   "english": "Really? And your brother, did he get bored too?",
   "conversation": "INT_s-ennuyer_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -698,7 +698,7 @@
   "verb": "s'entraîner",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tes amis se sont entraînés ce matin ?",
+  "french": "Salut ! Tes amis se sont-ils entraînés ce matin ?",
   "english": "Hi! Did your friends train this morning?",
   "conversation": "INT_s-entrainer_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -709,7 +709,7 @@
   "verb": "s'entraîner",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Et ton frère, il s'est entraîné aussi ?",
+  "french": "Super ! Et ton frère, s'est-il entraîné aussi ?",
   "english": "Great! And your brother, did he train too?",
   "conversation": "INT_s-entrainer_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -720,7 +720,7 @@
   "verb": "se souvenir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Ta mère s'est souvenue de la fête ?",
+  "french": "Bonjour ! Ta mère s'est-elle souvenue de la fête ?",
   "english": "Hello! Did your mother remember the party?",
   "conversation": "INT_se-souvenir_pc",
   "voice": "Audrey"
@@ -731,7 +731,7 @@
   "verb": "se souvenir",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Et tes amis, ils se sont souvenus aussi ?",
+  "french": "Super ! Et tes amis, se sont-ils souvenus aussi ?",
   "english": "Great! And your friends, did they remember too?",
   "conversation": "INT_se-souvenir_pc",
   "voice": "Audrey"
@@ -742,7 +742,7 @@
   "verb": "s'adapter",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tes enfants se sont adaptés à l'école ?",
+  "french": "Salut ! Tes enfants se sont-ils adaptés à l'école ?",
   "english": "Hi! Have your children adapted to school?",
   "conversation": "INT_s-adapter_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -753,7 +753,7 @@
   "verb": "s'adapter",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Et ton chat, il s'est adapté ?",
+  "french": "Super ! Et ton chat, s'est-il adapté ?",
   "english": "Great! And your cat, has he adapted?",
   "conversation": "INT_s-adapter_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -764,7 +764,7 @@
   "verb": "se réjouir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Ta sœur s'est réjouie de son cadeau ?",
+  "french": "Bonjour ! Ta sœur s'est-elle réjouie de son cadeau ?",
   "english": "Hello! Was your sister delighted with her present?",
   "conversation": "INT_se-rejouir_pc",
   "voice": "Voix grand père"
@@ -775,7 +775,7 @@
   "verb": "se réjouir",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Ah bon ? Et ton frère, il s'est réjoui aussi ?",
+  "french": "Ah bon ? Et ton frère, s'est-il réjoui aussi ?",
   "english": "Really? And your brother, was he delighted too?",
   "conversation": "INT_se-rejouir_pc",
   "voice": "Voix grand père"
@@ -797,7 +797,7 @@
   "verb": "mettre",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "D'accord. Et ton fils, il a mis une écharpe ?",
+  "french": "D'accord. Et ton fils, a-t-il mis une écharpe ?",
   "english": "OK. And your son, did he put on a scarf?",
   "conversation": "INT_mettre_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -808,7 +808,7 @@
   "verb": "trouver",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as trouvé un bon restaurant hier soir ?",
+  "french": "Salut ! As-tu trouvé un bon restaurant hier soir ?",
   "english": "Hi! Did you find a good restaurant last night?",
   "conversation": "INT_trouver_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -819,7 +819,7 @@
   "verb": "trouver",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Ton ami et toi, vous avez trouvé une idée ?",
+  "french": "Super ! Ton ami et toi, avez-vous trouvé une idée ?",
   "english": "Great! Did you and your friend find an idea?",
   "conversation": "INT_trouver_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -830,7 +830,7 @@
   "verb": "croire",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Ton équipe et toi, vous avez cru en ce projet ?",
+  "french": "Salut ! Ton équipe et toi, avez-vous cru en ce projet ?",
   "english": "Hi! Did you and your team believe in this project?",
   "conversation": "INT_croire_pc",
   "voice": "Audrey"
@@ -841,7 +841,7 @@
   "verb": "croire",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Super ! Et toi, tu as cru en tes amis ?",
+  "french": "Super ! Et toi, as-tu cru en tes amis ?",
   "english": "Great! And you, did you believe in your friends?",
   "conversation": "INT_croire_pc",
   "voice": "Audrey"
@@ -852,7 +852,7 @@
   "verb": "parler",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as parlé avec ta sœur ce matin ?",
+  "french": "Bonjour ! As-tu parlé avec ta sœur ce matin ?",
   "english": "Hello! Did you talk with your sister this morning?",
   "conversation": "INT_parler_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -863,7 +863,7 @@
   "verb": "parler",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et au travail, vous avez parlé avec le directeur ?",
+  "french": "Et au travail, avez-vous parlé avec le directeur ?",
   "english": "And at work, did you (all) talk with the director?",
   "conversation": "INT_parler_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -874,7 +874,7 @@
   "verb": "prendre",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as pris du sucre dans ton café ?",
+  "french": "Salut ! As-tu pris du sucre dans ton café ?",
   "english": "Hi! Did you take sugar in your coffee?",
   "conversation": "INT_prendre_pc",
   "voice": "Voix grand père"
@@ -885,7 +885,7 @@
   "verb": "prendre",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et ton ami et toi, vous avez pris l'ascenseur ?",
+  "french": "Et ton ami et toi, avez-vous pris l'ascenseur ?",
   "english": "And did you and your friend take the lift?",
   "conversation": "INT_prendre_pc",
   "voice": "Voix grand père"
@@ -896,7 +896,7 @@
   "verb": "lire",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as lu la biographie ?",
+  "french": "Bonjour ! As-tu lu la biographie ?",
   "english": "Hello! Did you read the biography?",
   "conversation": "INT_lire_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -907,7 +907,7 @@
   "verb": "lire",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et ton ami et toi, vous avez lu le même article ?",
+  "french": "Et ton ami et toi, avez-vous lu le même article ?",
   "english": "And did you and your friend read the same article?",
   "conversation": "INT_lire_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -918,7 +918,7 @@
   "verb": "écrire",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as écrit ton nom sur le formulaire ?",
+  "french": "Salut ! As-tu écrit ton nom sur le formulaire ?",
   "english": "Hi! Did you write your name on the form?",
   "conversation": "INT_ecrire_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -929,7 +929,7 @@
   "verb": "écrire",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et à l'école, vous avez écrit en français ?",
+  "french": "Et à l'école, avez-vous écrit en français ?",
   "english": "And at school, did you (all) write in French?",
   "conversation": "INT_ecrire_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -940,7 +940,7 @@
   "verb": "ouvrir",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as ouvert les fenêtres la nuit ?",
+  "french": "Bonjour ! As-tu ouvert les fenêtres la nuit ?",
   "english": "Hello! Did you open the windows at night?",
   "conversation": "INT_ouvrir_pc",
   "voice": "Audrey"
@@ -951,7 +951,7 @@
   "verb": "ouvrir",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et au travail, vous avez ouvert le magasin à neuf heures ?",
+  "french": "Et au travail, avez-vous ouvert le magasin à neuf heures ?",
   "english": "And at work, did you (all) open the shop at nine o'clock?",
   "conversation": "INT_ouvrir_pc",
   "voice": "Audrey"
@@ -962,7 +962,7 @@
   "verb": "fermer",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as fermé le dossier avant de sauvegarder ?",
+  "french": "Salut ! As-tu fermé le dossier avant de sauvegarder ?",
   "english": "Hi! Did you close the file before saving?",
   "conversation": "INT_fermer_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -973,7 +973,7 @@
   "verb": "fermer",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Bien ! Ta famille et toi, vous avez fermé la porte ?",
+  "french": "Bien ! Ta famille et toi, avez-vous fermé la porte ?",
   "english": "Good! Did you and your family close the door?",
   "conversation": "INT_fermer_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -984,7 +984,7 @@
   "verb": "perdre",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Salut ! Tu as perdu tes lunettes hier ?",
+  "french": "Salut ! As-tu perdu tes lunettes hier ?",
   "english": "Hi! Did you lose your glasses yesterday?",
   "conversation": "INT_perdre_pc",
   "voice": "Voix grand père"
@@ -995,7 +995,7 @@
   "verb": "perdre",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Oh non ! Et tu as perdu ton chemin hier soir ?",
+  "french": "Oh non ! Et as-tu perdu ton chemin hier soir ?",
   "english": "Oh no! And did you lose your way last night?",
   "conversation": "INT_perdre_pc",
   "voice": "Voix grand père"
@@ -1006,7 +1006,7 @@
   "verb": "garder",
   "tense": "Passé composé",
   "line": "w1",
-  "french": "Bonjour ! Tu as gardé tes reçus ?",
+  "french": "Bonjour ! As-tu gardé tes reçus ?",
   "english": "Hello! Did you keep your receipts?",
   "conversation": "INT_garder_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1017,7 +1017,7 @@
   "verb": "garder",
   "tense": "Passé composé",
   "line": "w3",
-  "french": "Et ta famille et toi, vous avez gardé vos promesses ?",
+  "french": "Et ta famille et toi, avez-vous gardé vos promesses ?",
   "english": "And did you and your family keep your promises?",
   "conversation": "INT_garder_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1028,7 +1028,7 @@
   "verb": "s'intéresser",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Ton frère s'intéressera au cinéma ?",
+  "french": "Bonjour ! Ton frère s'intéressera-t-il au cinéma ?",
   "english": "Hello! Will your brother take an interest in cinema?",
   "conversation": "INT_s-interesser_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1039,7 +1039,7 @@
   "verb": "s'intéresser",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Ah bon ? Et toi, tu t'intéresseras aux sports ?",
+  "french": "Ah bon ? Et toi, t'intéresseras-tu aux sports ?",
   "english": "Really? And you, will you take an interest in sports?",
   "conversation": "INT_s-interesser_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1050,7 +1050,7 @@
   "verb": "se débrouiller",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Ta sœur se débrouillera toute seule ce soir ?",
+  "french": "Salut ! Ta sœur se débrouillera-t-elle toute seule ce soir ?",
   "english": "Hi! Will your sister manage on her own tonight?",
   "conversation": "INT_se-debrouiller_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1061,7 +1061,7 @@
   "verb": "se débrouiller",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Et ton frère et toi, vous vous débrouillerez ?",
+  "french": "Super ! Et ton frère et toi, vous débrouillerez-vous ?",
   "english": "Great! And will you and your brother manage?",
   "conversation": "INT_se-debrouiller_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1072,7 +1072,7 @@
   "verb": "s'ennuyer",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Ta sœur s'ennuiera à la fête ce soir ?",
+  "french": "Salut ! Ta sœur s'ennuiera-t-elle à la fête ce soir ?",
   "english": "Hi! Will your sister be bored at the party tonight?",
   "conversation": "INT_s-ennuyer_fut",
   "voice": "Audrey"
@@ -1083,7 +1083,7 @@
   "verb": "s'ennuyer",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Et tes parents, ils s'ennuieront ?",
+  "french": "Super ! Et tes parents, s'ennuieront-ils ?",
   "english": "Great! And your parents, will they be bored?",
   "conversation": "INT_s-ennuyer_fut",
   "voice": "Audrey"
@@ -1094,7 +1094,7 @@
   "verb": "s'entraîner",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Ton ami et toi, vous vous entraînerez samedi ?",
+  "french": "Salut ! Ton ami et toi, vous entraînerez-vous samedi ?",
   "english": "Hi! Will you and your friend train on Saturday?",
   "conversation": "INT_s-entrainer_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1105,7 +1105,7 @@
   "verb": "s'entraîner",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Et ta sœur, elle s'entraînera aussi ?",
+  "french": "Super ! Et ta sœur, s'entraînera-t-elle aussi ?",
   "english": "Great! And your sister, will she train too?",
   "conversation": "INT_s-entrainer_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1116,7 +1116,7 @@
   "verb": "se souvenir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Ta sœur se souviendra de mon anniversaire ?",
+  "french": "Bonjour ! Ta sœur se souviendra-t-elle de mon anniversaire ?",
   "english": "Hello! Will your sister remember my birthday?",
   "conversation": "INT_se-souvenir_fut",
   "voice": "Voix grand père"
@@ -1127,7 +1127,7 @@
   "verb": "se souvenir",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Et ton frère, il se souviendra aussi ?",
+  "french": "Super ! Et ton frère, se souviendra-t-il aussi ?",
   "english": "Great! And your brother, will he remember too?",
   "conversation": "INT_se-souvenir_fut",
   "voice": "Voix grand père"
@@ -1138,7 +1138,7 @@
   "verb": "s'adapter",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Ta famille et toi, vous vous adapterez à la ville ?",
+  "french": "Salut ! Ta famille et toi, vous adapterez-vous à la ville ?",
   "english": "Hi! Will you and your family adapt to the city?",
   "conversation": "INT_s-adapter_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1149,7 +1149,7 @@
   "verb": "s'adapter",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Et ton chien, il s'adaptera aussi ?",
+  "french": "Super ! Et ton chien, s'adaptera-t-il aussi ?",
   "english": "Great! And your dog, will he adapt too?",
   "conversation": "INT_s-adapter_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1160,7 +1160,7 @@
   "verb": "se réjouir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Ton frère et toi, vous vous réjouirez de la fête ?",
+  "french": "Bonjour ! Ton frère et toi, vous réjouirez-vous de la fête ?",
   "english": "Hello! Will you and your brother be glad about the party?",
   "conversation": "INT_se-rejouir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1171,7 +1171,7 @@
   "verb": "se réjouir",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Mon fils sera là aussi. Tes parents se réjouiront ?",
+  "french": "Super ! Mon fils sera là aussi. Tes parents se réjouiront-ils ?",
   "english": "Great! My son will be there too. Will your parents be glad?",
   "conversation": "INT_se-rejouir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1182,7 +1182,7 @@
   "verb": "mettre",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu mettras des épices dans ce plat ?",
+  "french": "Salut ! Mettras-tu des épices dans ce plat ?",
   "english": "Hi! Will you put spices in this dish?",
   "conversation": "INT_mettre_fut",
   "voice": "Audrey"
@@ -1193,7 +1193,7 @@
   "verb": "mettre",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Ah bon ? Et ton fils, il mettra ses chaussures ?",
+  "french": "Ah bon ? Et ton fils, mettra-t-il ses chaussures ?",
   "english": "Really? And your son, will he put his shoes on?",
   "conversation": "INT_mettre_fut",
   "voice": "Audrey"
@@ -1204,7 +1204,7 @@
   "verb": "trouver",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Ta sœur trouvera un taxi demain matin ?",
+  "french": "Salut ! Ta sœur trouvera-t-elle un taxi demain matin ?",
   "english": "Hi! Will your sister find a taxi tomorrow morning?",
   "conversation": "INT_trouver_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1215,7 +1215,7 @@
   "verb": "trouver",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Super ! Ton ami et toi, vous trouverez la rue ?",
+  "french": "Super ! Ton ami et toi, trouverez-vous la rue ?",
   "english": "Great! Will you and your friend find the street?",
   "conversation": "INT_trouver_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1226,7 +1226,7 @@
   "verb": "croire",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu croiras tout ce que je dis ?",
+  "french": "Salut ! Croiras-tu tout ce que je dis ?",
   "english": "Hi! Will you believe everything I say?",
   "conversation": "INT_croire_fut",
   "voice": "Voix grand père"
@@ -1237,7 +1237,7 @@
   "verb": "croire",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et ta famille et toi, vous croirez en l'avenir ?",
+  "french": "Et ta famille et toi, croirez-vous en l'avenir ?",
   "english": "And will you and your family believe in the future?",
   "conversation": "INT_croire_fut",
   "voice": "Voix grand père"
@@ -1248,7 +1248,7 @@
   "verb": "parler",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu parleras avec tes voisins demain ?",
+  "french": "Bonjour ! Parleras-tu avec tes voisins demain ?",
   "english": "Hello! Will you talk with your neighbours tomorrow?",
   "conversation": "INT_parler_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1259,7 +1259,7 @@
   "verb": "parler",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et au travail, vous parlerez français à la réunion ?",
+  "french": "Et au travail, parlerez-vous français à la réunion ?",
   "english": "And at work, will you (all) speak French at the meeting?",
   "conversation": "INT_parler_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1270,7 +1270,7 @@
   "verb": "prendre",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu prendras le bus pour aller au travail ?",
+  "french": "Salut ! Prendras-tu le bus pour aller au travail ?",
   "english": "Hi! Will you take the bus to go to work?",
   "conversation": "INT_prendre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1281,7 +1281,7 @@
   "verb": "prendre",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et à midi, vous prendrez une longue pause ?",
+  "french": "Et à midi, prendrez-vous une longue pause ?",
   "english": "And at midday, will you (all) take a long break?",
   "conversation": "INT_prendre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1292,7 +1292,7 @@
   "verb": "lire",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu liras ce livre le mois prochain ?",
+  "french": "Bonjour ! Liras-tu ce livre le mois prochain ?",
   "english": "Hello! Will you read this book next month?",
   "conversation": "INT_lire_fut",
   "voice": "Audrey"
@@ -1303,7 +1303,7 @@
   "verb": "lire",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et tu liras des romans d'horreur ?",
+  "french": "Et liras-tu des romans d'horreur ?",
   "english": "And will you read horror novels?",
   "conversation": "INT_lire_fut",
   "voice": "Audrey"
@@ -1314,7 +1314,7 @@
   "verb": "écrire",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu écriras ton nom sur le formulaire ?",
+  "french": "Salut ! Écriras-tu ton nom sur le formulaire ?",
   "english": "Hi! Will you write your name on the form?",
   "conversation": "INT_ecrire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1325,7 +1325,7 @@
   "verb": "écrire",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et à l'école, vous écrirez en français ?",
+  "french": "Et à l'école, écrirez-vous en français ?",
   "english": "And at school, will you (all) write in French?",
   "conversation": "INT_ecrire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1336,7 +1336,7 @@
   "verb": "ouvrir",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu ouvriras tes cadeaux le jour de ton anniversaire ?",
+  "french": "Salut ! Ouvriras-tu tes cadeaux le jour de ton anniversaire ?",
   "english": "Hi! Will you open your presents on your birthday?",
   "conversation": "INT_ouvrir_fut",
   "voice": "Voix grand père"
@@ -1347,7 +1347,7 @@
   "verb": "ouvrir",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et tu ouvriras les fenêtres la nuit ?",
+  "french": "Et ouvriras-tu les fenêtres la nuit ?",
   "english": "And will you open the windows at night?",
   "conversation": "INT_ouvrir_fut",
   "voice": "Voix grand père"
@@ -1358,7 +1358,7 @@
   "verb": "fermer",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu fermeras le dossier avant de sauvegarder ?",
+  "french": "Salut ! Fermeras-tu le dossier avant de sauvegarder ?",
   "english": "Hi! Will you close the file before saving?",
   "conversation": "INT_fermer_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1369,7 +1369,7 @@
   "verb": "fermer",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et au travail, vous fermerez la porte avant de partir ?",
+  "french": "Et au travail, fermerez-vous la porte avant de partir ?",
   "english": "And at work, will you (all) close the door before leaving?",
   "conversation": "INT_fermer_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1380,7 +1380,7 @@
   "verb": "perdre",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Salut ! Tu perdras ton chemin en ville ?",
+  "french": "Salut ! Perdras-tu ton chemin en ville ?",
   "english": "Hi! Will you lose your way in town?",
   "conversation": "INT_perdre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1391,7 +1391,7 @@
   "verb": "perdre",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Ah bon ? Mais tu ne perdras pas espoir ?",
+  "french": "Ah bon ? Mais ne perdras-tu pas espoir ?",
   "english": "Really? But you won't lose hope?",
   "conversation": "INT_perdre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1402,7 +1402,7 @@
   "verb": "garder",
   "tense": "Futur simple",
   "line": "w1",
-  "french": "Bonjour ! Tu garderas toutes tes notes ?",
+  "french": "Bonjour ! Garderas-tu toutes tes notes ?",
   "english": "Hello! Will you keep all your notes?",
   "conversation": "INT_garder_fut",
   "voice": "Audrey"
@@ -1413,7 +1413,7 @@
   "verb": "garder",
   "tense": "Futur simple",
   "line": "w3",
-  "french": "Et ta famille et toi, vous garderez vos promesses ?",
+  "french": "Et ta famille et toi, garderez-vous vos promesses ?",
   "english": "And will you and your family keep your promises?",
   "conversation": "INT_garder_fut",
   "voice": "Audrey"
