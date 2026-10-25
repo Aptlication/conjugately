@@ -80,7 +80,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "nov-faire-cuisine": "lah kwee-ZEEN", // la cuisine
   "nov-faire-menage": "luh may-NAHZH", // le ménage
   "nov-faire-lessive": "lah leh-SEEV", // la lessive
-  "nov-faire-puzzle": "uhn PUH-zuhl", // un puzzle
+  "nov-faire-puzzle": "uhn PUHZL", // un puzzle
   "nov-faire-aujourd-hui": "oh-zhoor-DWEE", // aujourd'hui
   "nov-faire-idee": "ewn-nee-DAY", // une idée
   "nov-faire-alors": "ah-LOHR", // alors
@@ -98,7 +98,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "nov-avoir-courageux": "koo-rah-ZHUH", // courageux
   "nov-faire-projet": "uhn proh-ZHEH", // un projet
   "nov-faire-erreur": "ewn-neh-RUHR", // une erreur
-  "nov-faire-exercice": "uhn-neg-zehr-SEES", // un exercice
+  "nov-faire-exercice": "uhn-nehg-zehr-SEES", // un exercice
   "nov-faire-chose": "lah SHOHZ", // la chose
   "nov-faire-ville": "lah VEEL", // la ville
   "nov-faire-parfait": "pahr-FEH", // parfait
@@ -332,7 +332,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-prendre-pause": "ewn POHZ", // une pause
   "int-lire-auteur": "uhn-noh-TUHR", // un auteur
   "int-lire-chapitre": "uhn shah-PEE-truh", // un chapitre
-  "int-lire-annonce": "ewn ah-NOHNS", // une annonce
+  "int-lire-annonce": "ewn-nah-NOHNS", // une annonce
   "int-lire-page": "ewn PAHZH", // une page
   "int-lire-article": "uhn-nahr-TEEKL", // un article
   "int-ecrire-cv": "uhn say-VAY", // un CV
@@ -340,7 +340,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-ecrire-paroles": "lay pah-ROHL", // les paroles
   "int-ecrire-liste": "ewn LEEST", // une liste
   "int-ouvrir-patient": "pah-SYAHN", // patient
-  "int-ouvrir-enveloppe": "ewn ahn-VLOHP", // une enveloppe
+  "int-ouvrir-enveloppe": "ewn-nahn-VLOHP", // une enveloppe
   "int-ouvrir-boite": "ewn BWAHT", // une boîte
   "int-fermer-gaz": "luh GAHZ", // le gaz
   "int-fermer-tranquille": "trahn-KEEL", // tranquille
@@ -360,7 +360,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-s-interesser-peinture": "lah pan-TEWR", // la peinture
   "int-s-interesser-recherche": "lah ruh-SHEHRSH", // la recherche
   "int-se-debrouiller-dejeuner": "luh day-zhuh-NAY", // le déjeuner
-  "int-se-debrouiller-sandwich": "uhn sahnd-WEESH", // un sandwich
+  "int-se-debrouiller-sandwich": "uhn sahnd-WEETSH", // un sandwich
   "int-s-ennuyer-long": "LOHN", // long
   "int-s-ennuyer-tablette": "ewn tah-BLEHT", // une tablette
   "int-s-entrainer-camarade": "uhn kah-mah-RAHD", // un camarade
