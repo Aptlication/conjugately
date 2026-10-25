@@ -330,7 +330,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
     ],
     "futur_simple": [
       {"question": "I will have a car. (Futur Simple)", "options": ["J'aurai une voiture.", "Tu auras une voiture.", "Il aura une voiture.", "Nous aurons une voiture."], "answer": "A"},
-      {"question": "You will not have a dog. (Futur Simple - Negative)", "options": ["Tu n'auras pas de chien.", "Je n'aurai pas de chien.", "Il n'aura pas de chien.", "Nous n'aurons pas de chien."], "answer": "A"},
+      {"question": "You will not have a dog. (informal) (Futur Simple - Negative)", "options": ["Tu n'auras pas de chien.", "Je n'aurai pas de chien.", "Il n'aura pas de chien.", "Nous n'aurons pas de chien."], "answer": "A"},
       {"question": "Will he have a house? (Futur Simple - Question)", "options": ["Aura-t-il une maison ?", "Auras-tu une maison ?", "Aurai-je une maison ?", "Aurez-vous une maison ?"], "answer": "A"},
       {"question": "We will have time tomorrow. (Futur Simple)", "options": ["Nous aurons du temps demain.", "Vous aurez du temps demain.", "Ils auront du temps demain.", "J'aurai du temps demain."], "answer": "A"},
       {"question": "She will not have a bag. (Futur Simple - Negative)", "options": ["Elle n'aura pas de sac.", "Il n'aura pas de sac.", "Tu n'auras pas de sac.", "Nous n'aurons pas de sac."], "answer": "A"},
@@ -338,7 +338,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "They will have bikes. (male/mixed) (Futur Simple)", "options": ["Ils auront des vélos.", "Elles auront des vélos.", "Ils auraient des vélos.", "Ils avaient des vélos."], "answer": "A"},
       {"question": "I will not have your keys. (Futur Simple - Negative)", "options": ["Je n'aurai pas tes clés.", "Tu n'auras pas mes clés.", "Il n'aura pas ses clés.", "Nous n'aurons pas leurs clés."], "answer": "A"},
       {"question": "Will we have bread? (Futur Simple - Question)", "options": ["Aurons-nous du pain ?", "Aurai-je du pain ?", "Aurez-vous du pain ?", "Auront-ils du pain ?"], "answer": "A"},
-      {"question": "You will have many books. (Futur Simple)", "options": ["Tu auras beaucoup de livres.", "J'aurai beaucoup de livres.", "Il aura beaucoup de livres.", "Vous aurez beaucoup de livres."], "answer": "A"},
+      {"question": "You will have many books. (informal) (Futur Simple)", "options": ["Tu auras beaucoup de livres.", "J'aurai beaucoup de livres.", "Il aura beaucoup de livres.", "Vous aurez beaucoup de livres."], "answer": "A"},
       {"question": "I will have a good job. (Futur Simple)", "options": ["J'aurai un bon travail.", "Tu auras un bon travail.", "Il aura un bon travail.", "Nous aurons un bon travail."], "answer": "A"},
       {"question": "She will not have money. (Futur Simple - Negative)", "options": ["Elle n'aura pas d'argent.", "Il n'aura pas d'argent.", "Tu n'auras pas d'argent.", "Nous n'aurons pas d'argent."], "answer": "A"},
       {"question": "Will you have water? (Futur Simple - Question, informal)", "options": ["Auras-tu de l'eau ?", "Aurai-je de l'eau ?", "Aura-t-il de l'eau ?", "Aurez-vous de l'eau ?"], "answer": "A"},
@@ -347,7 +347,7 @@ export const NOVICE_QUIZ_DATA: Record<string, Record<string, NoviceQuizQuestion[
       {"question": "Will they have children? (Futur Simple - Question, male/mixed)", "options": ["Auront-ils des enfants ?", "Auront-elles des enfants ?", "Aurez-vous des enfants ?", "Auras-tu des enfants ?"], "answer": "A"},
       {"question": "I will not have problems. (Futur Simple - Negative)", "options": ["Je n'aurai pas de problèmes.", "Tu n'auras pas de problèmes.", "Il n'aura pas de problèmes.", "Nous n'aurons pas de problèmes."], "answer": "A"},
       {"question": "Will we have enough food? (Futur Simple - Question)", "options": ["Aurons-nous assez de nourriture ?", "Aurai-je assez de nourriture ?", "Aurez-vous assez de nourriture ?", "Auront-ils assez de nourriture ?"], "answer": "A"},
-      {"question": "You will have great ideas. (Futur Simple)", "options": ["Tu auras de bonnes idées.", "J'aurai de bonnes idées.", "Il aura de bonnes idées.", "Vous aurez de bonnes idées."], "answer": "A"},
+      {"question": "You will have great ideas. (informal) (Futur Simple)", "options": ["Tu auras de bonnes idées.", "J'aurai de bonnes idées.", "Il aura de bonnes idées.", "Vous aurez de bonnes idées."], "answer": "A"},
       {"question": "They will not have luck (female). (Futur Simple - Negative)", "options": ["Elles n'auront pas de chance.", "Ils n'auront pas de chance.", "Vous n'aurez pas de chance.", "Nous n'aurons pas de chance."], "answer": "A"}
     ]
   }

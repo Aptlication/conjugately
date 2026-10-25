@@ -24,8 +24,9 @@ export default function Paywall() {
 
   const annual = packages.find((p) => p.period === "annual");
   const monthly = packages.find((p) => p.period === "monthly");
-  const [chosen, setChosen] = useState<"annual" | "monthly">("annual");
-  const selected: ProPackage | undefined = chosen === "annual" ? annual : monthly;
+  const lifetime = packages.find((p) => p.period === "lifetime");
+  const [chosen, setChosen] = useState<"annual" | "monthly" | "lifetime">("annual");
+  const selected: ProPackage | undefined = chosen === "annual" ? annual : chosen === "monthly" ? monthly : lifetime;
 
   const buy = async () => {
     if (!selected || busy) return;
@@ -44,7 +45,7 @@ export default function Paywall() {
     setNote(null);
     const res = await restore();
     setBusy(false);
-    setNote(res.ok ? "Your subscription is back." : "No previous purchase found on this Apple ID.");
+    setNote(res.ok ? "Your Pro access is back." : "No previous purchase found on this Apple ID.");
   };
 
   return (
@@ -99,6 +100,15 @@ export default function Paywall() {
                 onPress={() => setChosen("monthly")}
               />
             )}
+            {lifetime && (
+              <PlanRow
+                label="Lifetime"
+                price={lifetime.priceString}
+                caption="Pay once, keep Pro for good"
+                selected={chosen === "lifetime"}
+                onPress={() => setChosen("lifetime")}
+              />
+            )}
 
             <Pressable
               onPress={buy}
@@ -106,15 +116,25 @@ export default function Paywall() {
               accessibilityRole="button"
               style={[styles.cta, (!selected || busy) && { opacity: 0.5 }]}
             >
-              {busy ? <ActivityIndicator color="#FFFFFF" /> : <Text style={styles.ctaText}>Start 14-day free trial</Text>}
+              {busy ? <ActivityIndicator color="#FFFFFF" /> : (
+                <Text style={styles.ctaText}>{chosen === "lifetime" ? "Buy Lifetime Pro" : "Start 14-day free trial"}</Text>
+              )}
             </Pressable>
 
-            <Text style={styles.legal}>
-              Free for 14 days, then {selected?.priceString ?? ""}
-              {chosen === "annual" ? " a year" : " a month"}. It renews automatically unless
-              cancelled at least 24 hours before the period ends. Manage or cancel in your
-              Apple ID settings. Payment is charged to your Apple ID on confirmation.
-            </Text>
+            {chosen === "lifetime" ? (
+              <Text style={styles.legal}>
+                One payment of {selected?.priceString ?? ""}. Not a subscription: there is no free
+                trial and nothing renews. Payment is charged to your Apple ID on confirmation, and
+                Restore Purchases brings it back on a new device.
+              </Text>
+            ) : (
+              <Text style={styles.legal}>
+                Free for 14 days, then {selected?.priceString ?? ""}
+                {chosen === "annual" ? " a year" : " a month"}. It renews automatically unless
+                cancelled at least 24 hours before the period ends. Manage or cancel in your
+                Apple ID settings. Payment is charged to your Apple ID on confirmation.
+              </Text>
+            )}
           </>
         )}
 
@@ -134,7 +154,7 @@ export default function Paywall() {
           </Pressable>
         </View>
 
-        {isPro && <Text style={styles.already}>You're already subscribed. Thank you.</Text>}
+        {isPro && <Text style={styles.already}>You already have Pro. Thank you.</Text>}
       </ScrollView>
     </View>
   );

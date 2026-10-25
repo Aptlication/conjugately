@@ -847,6 +847,16 @@ export const CHECK_WORDS: CheckWord[] = [
   W({ id: "int-s-entrainer-camarade", unit: "Intermediate|Future|s'entraîner", fr: "un camarade", en: "classmate; mate",
     distractors: ["teacher",  "neighbour",  "stranger"], pos: "noun", gender: "m", emoji: "🎒" }),
   // ── Intermediate · Future · s'adapter ─────────────────────────
+  // ── Intermediate · Past · se souvenir (1.2.4.5) ─────────────────
+  // The only word in this unit's quiz and conversation not taught earlier.
+  W({ id: "int-se-souvenir-a-temps", unit: "Intermediate|Past|se souvenir", fr: "à temps", en: "in time",
+    distractors: ["too late",  "on purpose",  "at last"], pos: "adverb", emoji: "⏰✅" }),
+  // ── Intermediate · Past · s'adapter (1.2.4.5) ───────────────────
+  W({ id: "int-s-adapter-felicitations", unit: "Intermediate|Past|s'adapter", fr: "les félicitations", en: "congratulations",
+    distractors: ["apologies",  "thanks",  "greetings"], pos: "noun", gender: "f", emoji: "👏" }),
+  // Intermediate · Future · se souvenir has no new words: everything in it
+  // (toujours, longtemps, beau, le voyage, les enfants) is taught earlier, and
+  // the bank never repeats a word.
   W({ id: "int-s-adapter-climat", unit: "Intermediate|Future|s'adapter", fr: "le climat", en: "climate",
     distractors: ["landscape",  "language",  "food"], pos: "noun", gender: "m", emoji: "🌦️" }),
   W({ id: "int-s-adapter-la-bas", unit: "Intermediate|Future|s'adapter", fr: "là-bas", en: "over there",

@@ -9,6 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
+      "appStoreUrl": "https://apps.apple.com/app/id6799402337",
       "supportsTablet": false,
       "bundleIdentifier": "com.conjugately.app",
       "infoPlist": {
