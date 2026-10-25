@@ -7,7 +7,6 @@ import {
   INTERMEDIATE_A_VERBS,
   INTERMEDIATE_B_VERBS,
   resolveLegacyLevel,
-  splitLegacyIntermediateUnits,
   timeFramesFor,
 } from "@shared/levels";
 
@@ -53,21 +52,20 @@ export function migrateLegacyHistory(h: QuizResult[]): QuizResult[] {
   });
 }
 
-/** The same split for stored course progress ("Intermediate|Past" → A and B entries). */
+/**
+ * Stored course progress from the old single Intermediate course is DROPPED,
+ * not carried over (decision 25 Oct 2026, bug 1.3.4). Carrying it over split
+ * old "Intermediate|Past" units into both halves, so a learner who had finished
+ * the old Past course saw Intermediate A and B Past at 100% straight away; and
+ * progress saved before 24 Sep belongs to a different set of verbs entirely.
+ * Intermediate A and B therefore start fresh. Quiz history, coins and passed
+ * exams are untouched. The next write (markUnitComplete) removes the old keys.
+ */
 export function migrateLegacyProgress(p: CourseProgress): CourseProgress {
   const out: CourseProgress = {};
   for (const [key, e] of Object.entries(p)) {
-    const [level, tf] = key.split("|");
-    if (level !== LEGACY_INTERMEDIATE) { out[key] = e; continue; }
-    const { a, b } = splitLegacyIntermediateUnits(e.completedUnits);
-    for (const [lv, idx] of [["Intermediate A", a], ["Intermediate B", b]] as const) {
-      if (!idx.length) continue;
-      const k = `${lv}|${tf}`;
-      const prev = out[k] ?? p[k];
-      const merged = Array.from(new Set([...(prev?.completedUnits ?? []), ...idx]));
-      out[k] = { completedUnits: merged, totalUnits: COURSES[lv].units.length,
-        updatedAt: [prev?.updatedAt ?? "", e.updatedAt].sort().pop() ?? "" };
-    }
+    if (key.split("|")[0] === LEGACY_INTERMEDIATE) continue;
+    out[key] = e;
   }
   return out;
 }
