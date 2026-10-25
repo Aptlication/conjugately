@@ -14,6 +14,8 @@ import { coinBalance } from "@shared/coins";
 import { readCoins } from "../lib/coins";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
+import CefrGateCard from "../components/CefrGateCard";
+import { cefrTestForLevel } from "@shared/cefrTests";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
@@ -89,6 +91,8 @@ export default function MiniCourses() {
                 </Pressable>
               );
             })}
+            {/* 1.3: the level's CEFR-style test, after its Final Level Exams */}
+            {cefrTestForLevel(level) && <CefrGateCard testId={cefrTestForLevel(level)!.id} locked={locked} />}
             <Pressable onPress={() => setLevel(null)}><Text style={styles.back}>← Back to levels</Text></Pressable>
           </View>
         )}

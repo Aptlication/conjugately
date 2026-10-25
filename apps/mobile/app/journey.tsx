@@ -1,10 +1,20 @@
 import React, { useCallback, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, JourneySummary } from "../lib/progress";
 import { LEVELS, timeFrameListLabel, timeFramesFor } from "@shared/levels";
+import { CEFR_IDS, CEFR_TESTS } from "@shared/cefrTests";
+import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
+import { readCefrResults } from "../lib/cefr";
+
+/** 1.3: the "Rate Conjugately" button opens the App Store's write-a-review page. */
+const APP_STORE_ID = "6799402337";
+const openReviewPage = () => {
+  Linking.openURL(`itms-apps://apps.apple.com/app/id${APP_STORE_ID}?action=write-review`)
+    .catch(() => Linking.openURL(`https://apps.apple.com/app/id${APP_STORE_ID}?action=write-review`).catch(() => {}));
+};
 
 const TEMP = ["#4A78F2", "#8B7CE8", "#C77BD9", "#F0A05A", "#F0564A"];
 function tempColors(pct: number): string[] {
@@ -15,10 +25,12 @@ function tempColors(pct: number): string[] {
 
 export default function Journey() {
   const [s, setS] = useState<JourneySummary | null>(null);
+  const [cefr, setCefr] = useState<CefrResult[]>([]);
 
   useFocusEffect(useCallback(() => {
     let on = true;
     getJourneySummary().then((x) => { if (on) setS(x); });
+    readCefrResults().then((r) => { if (on) setCefr(r); });
     return () => { on = false; };
   }, []));
 
@@ -115,6 +127,30 @@ export default function Journey() {
           <View style={styles.stat}><Text style={[styles.statNum, { color: "#5BD48F" }]}>{s?.avgPct ?? 0}%</Text><Text style={styles.statSub}>avg score</Text></View>
           <View style={styles.stat}><Text style={[styles.statNum, { color: "#EC9A9A" }]}>🔥 {s?.streakDays ?? 0}</Text><Text style={styles.statSub}>day streak</Text></View>
         </View>
+
+        {/* 1.3: CEFR-style badges */}
+        <View style={[styles.card, { marginTop: 12 }]}>
+          <Text style={styles.cardLabel}>CEFR-STYLE BADGES</Text>
+          <View style={styles.badges}>
+            {CEFR_IDS.map((id) => {
+              const earned = hasCefrBadge(cefr, id);
+              return (
+                <View key={id} style={styles.badgeCol} accessible accessibilityLabel={`${id} badge ${earned ? "earned" : "not earned yet"}`}>
+                  <View style={[styles.badge, !earned && styles.badgeOff]}>
+                    <Text style={[styles.badgeText, !earned && { color: "#8A93A0" }]}>{id}</Text>
+                  </View>
+                  <Text style={styles.statSub}>{earned ? "Earned" : `After ${CEFR_TESTS[id].level}`}</Text>
+                </View>
+              );
+            })}
+          </View>
+          <Text style={[styles.cardText, { marginTop: 8, color: "#A7B0BD" }]}>Practice tests in the format of official A1, A2 and B1 French exams. Not official certificates.</Text>
+        </View>
+
+        {/* 1.3: permanent Rate Conjugately button (Apple's own prompt is rationed) */}
+        <Pressable style={styles.rate} onPress={openReviewPage} accessibilityRole="link" accessibilityHint="Opens the App Store">
+          <Text style={styles.rateText}>⭐ Enjoying Conjugately? Rate it on the App Store</Text>
+        </Pressable>
       </ScrollView>
       <NavBar variant="dark" active="journey" />
     </View>
@@ -148,6 +184,13 @@ const styles = StyleSheet.create({
     alignItems: "center", marginTop: 8 },
   nextBtnText: { color: "#FFFFFF", fontSize: 13, fontWeight: "700" },
   statsRow: { flexDirection: "row", gap: 8 },
+  badges: { flexDirection: "row", justifyContent: "space-around" },
+  badgeCol: { alignItems: "center", gap: 4 },
+  badge: { width: 54, height: 54, borderRadius: 27, backgroundColor: "#1B2145", borderWidth: 3, borderColor: "#F5C518", alignItems: "center", justifyContent: "center" },
+  badgeOff: { borderColor: "rgba(255,255,255,0.2)", backgroundColor: "transparent" },
+  badgeText: { color: "#fff", fontSize: 17, fontWeight: "800" },
+  rate: { marginTop: 4, marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", paddingVertical: 14, alignItems: "center" },
+  rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700", textAlign: "center", paddingHorizontal: 12 },
   stat: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 12, padding: 10, alignItems: "center" },
   statNum: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   statSub: { fontSize: 10, color: "#B9CBFA" },

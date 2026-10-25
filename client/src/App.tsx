@@ -23,6 +23,7 @@ import { coinBalance, tenseProgress, isExamUnlocked, invitationCopy, examCoinCos
 import { readCoins, recordCourseQuiz, spendOnExam } from "@/lib/coins";
 import { CoinStack } from "@/components/CoinStack";
 import { ExamGatePanel } from "@/components/ExamGatePanel";
+import { CefrAppCard } from "@/components/CefrAppCard";
 import {
   LEVEL_VERBS,
   audioLevelFolder,
@@ -3537,6 +3538,7 @@ function App() {
                   );
                 })}
               </div>
+              <CefrAppCard level={"Novice"} />
               <button
                 onClick={() => {
                   setShowNoviceCourseModal(false);
@@ -3658,6 +3660,7 @@ function App() {
                   );
                 })}
               </div>
+              <CefrAppCard level={"Elementary"} />
               <button
                 onClick={() => {
                   setShowElementaryCourseModal(false);
@@ -3784,6 +3787,7 @@ function App() {
               </div>
 
               
+              <CefrAppCard level={intermediateHalf} />
               <button
                 onClick={() => {
                   setShowIntermediateCourseModal(false);

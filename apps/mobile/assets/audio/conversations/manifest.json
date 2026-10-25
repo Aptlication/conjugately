@@ -2083,5 +2083,415 @@
   "voice": "Audrey",
   "french": "Et ta famille et toi, vous garderez vos promesses ?",
   "english": "And will you and your family keep your promises?"
+ },
+ "CEFR_A1_L1_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour, c'est Julie ! Samedi, nous avons une fête à la maison pour mon anniversaire. La fête sera à huit heures. Paul et Marc seront là. Tu feras un gâteau ? Bonne journée, et à samedi !",
+  "english": ""
+ },
+ "CEFR_A1_L2_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Aujourd'hui, il fait froid à Paris. Demain, il fera beau et chaud à Lyon. Et ce week-end, il fera beau à Nice. Bonne journée !",
+  "english": ""
+ },
+ "CEFR_A1_L3_01": {
+  "voice": "Audrey",
+  "french": "Un.",
+  "english": ""
+ },
+ "CEFR_A1_L3_02": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Où est-ce que tu vas ?",
+  "english": ""
+ },
+ "CEFR_A1_L3_03": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Je vais à la boulangerie.",
+  "english": ""
+ },
+ "CEFR_A1_L3_04": {
+  "voice": "Audrey",
+  "french": "Deux.",
+  "english": ""
+ },
+ "CEFR_A1_L3_05": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu as eu peur pendant le film ?",
+  "english": ""
+ },
+ "CEFR_A1_L3_06": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, j'ai eu très peur.",
+  "english": ""
+ },
+ "CEFR_A1_L3_07": {
+  "voice": "Audrey",
+  "french": "Trois.",
+  "english": ""
+ },
+ "CEFR_A1_L3_08": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qu'est-ce que vous ferez cet été ?",
+  "english": ""
+ },
+ "CEFR_A1_L3_09": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Nous ferons un voyage en Espagne.",
+  "english": ""
+ },
+ "CEFR_A1_L4_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour Paul, c'est ton professeur. Tu n'as pas fait tes devoirs hier. Tu feras tes devoirs ce soir ? À demain !",
+  "english": ""
+ },
+ "CEFR_A1_P1_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous êtes français ?",
+  "english": ""
+ },
+ "CEFR_A1_P1_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous avez des enfants ?",
+  "english": ""
+ },
+ "CEFR_A1_P1_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qu'est-ce que vous faites le week-end ?",
+  "english": ""
+ },
+ "CEFR_A1_P2_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "âge",
+  "english": ""
+ },
+ "CEFR_A1_P2_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vacances",
+  "english": ""
+ },
+ "CEFR_A1_P2_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "week-end",
+  "english": ""
+ },
+ "CEFR_A1_P3_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Vous êtes ici en vacances ?",
+  "english": ""
+ },
+ "CEFR_A1_P3_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous avez fait bon voyage ?",
+  "english": ""
+ },
+ "CEFR_A1_P3_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ce matin, qu'est-ce que vous avez fait ?",
+  "english": ""
+ },
+ "CEFR_A1_P3_4": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous serez à la fête ce soir ?",
+  "english": ""
+ },
+ "CEFR_A1_P3_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et demain, qu'est-ce que vous ferez ?",
+  "english": ""
+ },
+ "CEFR_A2_L1_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut, c'est Marc ! Tu viens à la fête samedi ? Mes amis viennent à huit heures. Tu peux venir avec ton frère. Nous avons besoin d'eau et de pain. Tu pourras m'appeler ? À samedi !",
+  "english": ""
+ },
+ "CEFR_A2_L2_01": {
+  "voice": "Audrey",
+  "french": "Un.",
+  "english": ""
+ },
+ "CEFR_A2_L2_02": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu as vu le match hier soir ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_03": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, j'ai vu le match.",
+  "english": ""
+ },
+ "CEFR_A2_L2_04": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes amis, ils ont vu le match aussi ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_05": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Non, ils ont vu un film.",
+  "english": ""
+ },
+ "CEFR_A2_L2_06": {
+  "voice": "Audrey",
+  "french": "Deux.",
+  "english": ""
+ },
+ "CEFR_A2_L2_07": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu sais nager ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_08": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je sais nager.",
+  "english": ""
+ },
+ "CEFR_A2_L2_09": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes enfants, ils savent nager ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_10": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Non, ils ne savent pas encore.",
+  "english": ""
+ },
+ "CEFR_A2_L2_11": {
+  "voice": "Audrey",
+  "french": "Trois.",
+  "english": ""
+ },
+ "CEFR_A2_L2_12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu veux un café ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_13": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je veux un café.",
+  "english": ""
+ },
+ "CEFR_A2_L2_14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ton ami, il veut un thé ?",
+  "english": ""
+ },
+ "CEFR_A2_L2_15": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Non, il veut un chocolat chaud.",
+  "english": ""
+ },
+ "CEFR_A2_L3_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu pourras venir demain ?",
+  "english": ""
+ },
+ "CEFR_A2_L3_02": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je pourrai venir.",
+  "english": ""
+ },
+ "CEFR_A2_L3_03": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous, vous pourrez rester dîner ?",
+  "english": ""
+ },
+ "CEFR_A2_L3_04": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Non, nous ne pourrons pas rester.",
+  "english": ""
+ },
+ "CEFR_A2_L3_05": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Une autre fois, alors ! Et tu viendras me voir à Noël ?",
+  "english": ""
+ },
+ "CEFR_A2_L3_06": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je viendrai le 24.",
+  "english": ""
+ },
+ "CEFR_A2_L3_07": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes enfants, ils viendront aussi ?",
+  "english": ""
+ },
+ "CEFR_A2_L3_08": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, ils viendront aussi.",
+  "english": ""
+ },
+ "CEFR_A2_L4_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu verras tes grands-parents ce week-end ?",
+  "english": ""
+ },
+ "CEFR_A2_L4_02": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je les verrai dimanche.",
+  "english": ""
+ },
+ "CEFR_A2_L4_03": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta sœur, elle les verra aussi ?",
+  "english": ""
+ },
+ "CEFR_A2_L4_04": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Non, elle verra ses amis.",
+  "english": ""
+ },
+ "CEFR_A2_P1_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qu'est-ce que vous voulez faire ce week-end ?",
+  "english": ""
+ },
+ "CEFR_A2_P1_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous venez d'où ?",
+  "english": ""
+ },
+ "CEFR_A2_P1_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous savez nager ?",
+  "english": ""
+ },
+ "CEFR_A2_P2_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qu'est-ce que vous avez fait le week-end dernier ? Qu'est-ce que vous avez vu ?",
+  "english": ""
+ },
+ "CEFR_A2_P3_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu viens à la fête samedi ?",
+  "english": ""
+ },
+ "CEFR_A2_P3_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Dommage ! Tu veux voir un film dimanche, alors ?",
+  "english": ""
+ },
+ "CEFR_A2_P3_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu sais à quelle heure est le film ?",
+  "english": ""
+ },
+ "CEFR_A2_P3_4": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu viendras en voiture ?",
+  "english": ""
+ },
+ "CEFR_A2_P3_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Super ! Ta sœur viendra aussi ?",
+  "english": ""
+ },
+ "CEFR_B1_L1_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu t'es adapté à la vie en France ?",
+  "english": ""
+ },
+ "CEFR_B1_L1_02": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je me suis vite adapté. Le premier mois, je me suis un peu ennuyé. Mais je m'étais intéressé au français avant de venir, et maintenant, je me débrouille assez bien.",
+  "english": ""
+ },
+ "CEFR_B1_L1_03": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta famille, elle s'est adaptée aussi ?",
+  "english": ""
+ },
+ "CEFR_B1_L1_04": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, elle s'est adaptée sans problème.",
+  "english": ""
+ },
+ "CEFR_B1_L1_05": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et l'année prochaine ?",
+  "english": ""
+ },
+ "CEFR_B1_L1_06": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Je trouverai un petit appartement à Paris.",
+  "english": ""
+ },
+ "CEFR_B1_L1_07": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonne chance !",
+  "english": ""
+ },
+ "CEFR_B1_L2_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour à tous ! Avant, j'ouvrais le magasin à huit heures. Maintenant, nous ouvrons à neuf heures et nous fermons à 21 heures. Dimanche, je n'ouvrirai pas. Mais la boulangerie, elle ouvrira le matin. Ce soir, je fermerai le bureau à dix-huit heures. La banque, elle, fermera à dix-sept heures. Et vous fermerez la porte avant de partir. Merci !",
+  "english": ""
+ },
+ "CEFR_B1_L3_01": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Léo, tu lis le journal le matin ?",
+  "english": ""
+ },
+ "CEFR_B1_L3_02": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je lis le journal en ligne.",
+  "english": ""
+ },
+ "CEFR_B1_L3_03": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ton père, il lit le journal ?",
+  "english": ""
+ },
+ "CEFR_B1_L3_04": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, il lit le journal papier. Avant, il lisait le journal tous les matins au café. À l'ancienne !",
+  "english": ""
+ },
+ "CEFR_B1_L3_05": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et toi, tu as lu le dernier roman de Zola ?",
+  "english": ""
+ },
+ "CEFR_B1_L3_06": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Oui, je l'ai lu en deux jours. Je le trouve très intéressant. Ma copine, elle le trouve un peu long.",
+  "english": ""
+ },
+ "CEFR_B1_L3_07": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Chacun son avis !",
+  "english": ""
+ },
+ "CEFR_B1_P1_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu t'intéresses à l'histoire ?",
+  "english": ""
+ },
+ "CEFR_B1_P1_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand tu étais enfant, tu t'intéressais à quoi ?",
+  "english": ""
+ },
+ "CEFR_B1_P1_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu te souviens de ton premier jour d'école ?",
+  "english": ""
+ },
+ "CEFR_B1_P2_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour, je peux vous aider ?",
+  "english": ""
+ },
+ "CEFR_B1_P2_2": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Il est comment, votre sac ?",
+  "english": ""
+ },
+ "CEFR_B1_P2_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous ne l'avons pas trouvé. Vous pouvez revenir demain ?",
+  "english": ""
+ },
+ "CEFR_B1_P3_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu trouves que c'est une bonne idée ? Pourquoi ?",
+  "english": ""
  }
 }
