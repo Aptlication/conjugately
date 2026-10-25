@@ -263,10 +263,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Does she say / is she saying the answer?",
       hint: "Use 'est-ce que' structure: est-ce qu'elle dit",
       answerOptions: [
-        { text: "Est-ce qu'elle dites la réponse ?", rationale: "Option A", isCorrect: false },
-        { text: "Est-ce qu'elle dit la réponse ?", rationale: "Option B", isCorrect: true },
-        { text: "Est-ce qu'elle dis la réponse ?", rationale: "Option C", isCorrect: false },
-        { text: "Est-ce qu'elle disent la réponse ?", rationale: "Option D", isCorrect: false }
+        { text: "Dira-t-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Dis-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Disait-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Dit-elle la réponse ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true }
       ]
     },
     {
@@ -713,10 +713,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Does she say / is she saying the answer?",
       hint: "Use feminine singular interrogative: est-ce qu'elle dit",
       answerOptions: [
-        { text: "Est-ce qu'elle dites la réponse ?", rationale: "Option A", isCorrect: false },
-        { text: "Est-ce qu'elle dit la réponse ?", rationale: "Option B", isCorrect: true },
-        { text: "Est-ce qu'elle dis la réponse ?", rationale: "Option C", isCorrect: false },
-        { text: "Est-ce qu'elle disent la réponse ?", rationale: "Option D", isCorrect: false }
+        { text: "Disait-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Dit-elle la réponse ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Dira-t-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Dis-elle la réponse ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -1125,10 +1125,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do they (female) know / are they knowing the news?",
       hint: "Use feminine plural interrogative form",
       answerOptions: [
-        { text: "Saviez-elles les nouvelles ?", rationale: "Option A", isCorrect: false },
-        { text: "Sait-elle les nouvelles ?", rationale: "Option B", isCorrect: false },
-        { text: "Sauront-elles les nouvelles ?", rationale: "Option C", isCorrect: false },
-        { text: "Elles savent les nouvelles ?", rationale: "Option D", isCorrect: true }
+        { text: "Savent-elles les nouvelles ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Sauront-elles les nouvelles ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Sait-elles les nouvelles ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Savaient-elles les nouvelles ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -1195,10 +1195,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do you (formal) know / are you knowing the time?",
       hint: "Use formal interrogative: vous savez",
       answerOptions: [
-        { text: "Savez-vous l'heure ?", rationale: "Option A", isCorrect: false },
-        { text: "Vous savez l'heure ?", rationale: "Option B", isCorrect: true },
-        { text: "Vous saviez l'heure ?", rationale: "Option C", isCorrect: false },
-        { text: "Vous saurez l'heure ?", rationale: "Option D", isCorrect: false }
+        { text: "Savons-vous l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Saviez-vous l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Saurez-vous l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Savez-vous l'heure ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true }
       ]
     },
     {
@@ -1265,10 +1265,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do you (informal) know / are you knowing the password?",
       hint: "Use informal interrogative: tu sais",
       answerOptions: [
-        { text: "Tu savais le mot de passe ?", rationale: "Option A", isCorrect: false },
-        { text: "Tu sauras le mot de passe ?", rationale: "Option B", isCorrect: false },
-        { text: "Tu sais le mot de passe ?", rationale: "Option C", isCorrect: true },
-        { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
+        { text: "Sait-tu le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Sais-tu le mot de passe ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Savais-tu le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Sauras-tu le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     }
   ],
@@ -1297,10 +1297,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Why do you (formal) see / are you seeing a doctor?",
       hint: "Use present tense interrogative: pourquoi vous voyez",
       answerOptions: [
-        { text: "Pourquoi vous voient un médecin ?", rationale: "Option A", isCorrect: false },
-        { text: "Pourquoi vous vois un médecin ?", rationale: "Option B", isCorrect: false },
-        { text: "Pourquoi vous voyons un médecin ?", rationale: "Option C", isCorrect: false },
-        { text: "Pourquoi vous voyez un médecin ?", rationale: "Option D", isCorrect: true }
+        { text: "Pourquoi voyons-vous un médecin ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Pourquoi voyez-vous un médecin ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Pourquoi verrez-vous un médecin ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Pourquoi voyiez-vous un médecin ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -1357,10 +1357,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do we see / Are we seeing the same thing?",
       hint: "Use present tense interrogative: est-ce que nous voyons",
       answerOptions: [
-        { text: "Est-ce que nous voient la même chose ?", rationale: "Option A", isCorrect: false },
-        { text: "Est-ce que nous voyons la même chose ?", rationale: "Option B", isCorrect: true },
-        { text: "Est-ce que nous voit la même chose ?", rationale: "Option C", isCorrect: false },
-        { text: "Est-ce que nous vois la même chose ?", rationale: "Option D", isCorrect: false }
+        { text: "Voient-nous la même chose ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Voyons-nous la même chose ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Voyions-nous la même chose ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Verrons-nous la même chose ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -1377,10 +1377,10 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       question: "Do you (informal) see / Are you seeing that star?",
       hint: "Use present tense interrogative: est-ce que tu vois",
       answerOptions: [
-        { text: "Est-ce que tu voient cette étoile ?", rationale: "Option A", isCorrect: false },
-        { text: "Est-ce que tu voit cette étoile ?", rationale: "Option B", isCorrect: false },
-        { text: "Est-ce que tu vois cette étoile ?", rationale: "Option C", isCorrect: true },
-        { text: "Est-ce que tu voyons cette étoile ?", rationale: "Option D", isCorrect: false }
+        { text: "Verras-tu cette étoile ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Voyais-tu cette étoile ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Voit-tu cette étoile ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Vois-tu cette étoile ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true }
       ]
     },
     {
@@ -2527,10 +2527,10 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "What did he say?",
       hint: "Use passé composé interrogative: qu'est-ce qu'il a dit",
       answerOptions: [
-        { text: "Qu'est-ce qu'il ont dit ?", rationale: "Option A", isCorrect: false },
-        { text: "Qu'est-ce qu'il as dit ?", rationale: "Option B", isCorrect: false },
-        { text: "Qu'est-ce qu'il a dit ?", rationale: "Option C", isCorrect: true },
-        { text: "Qu'est-ce qu'il avons dit ?", rationale: "Option D", isCorrect: false }
+        { text: "Qu'ont-il dit ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Qu'a-t-il dit ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Qu'avait-il dit ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Qu'a-il dit ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -2677,10 +2677,10 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "What have I said?",
       hint: "Use passé composé interrogative: qu'est-ce que j'ai dit",
       answerOptions: [
-        { text: "Qu'est-ce que j'a dit ?", rationale: "Option A", isCorrect: false },
-        { text: "Qu'est-ce que j'ont dit ?", rationale: "Option B", isCorrect: false },
-        { text: "Qu'est-ce que j'as dit ?", rationale: "Option C", isCorrect: false },
-        { text: "Qu'est-ce que j'ai dit ?", rationale: "Option D", isCorrect: true }
+        { text: "Qu'ai-je dis ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Qu'avais-je dit ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Qu'as-je dit ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Qu'ai-je dit ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true }
       ]
     },
     {
@@ -2819,10 +2819,10 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "Did you (formal) know / have you known the time?",
       hint: "Use passé composé interrogative: avez-vous su",
       answerOptions: [
-        { text: "Savez-vous l'heure ?", rationale: "Option A", isCorrect: false },
-        { text: "Avez-vous su l'heure ?", rationale: "Option B", isCorrect: true },
-        { text: "Vous saviez l'heure ?", rationale: "Option C", isCorrect: false },
-        { text: "Vous saurez l'heure ?", rationale: "Option D", isCorrect: false }
+        { text: "Avez-vous su l'heure ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Avez-vous savu l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Avons-vous su l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "Êtes-vous su l'heure ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
@@ -2889,10 +2889,10 @@ export const ELEMENTARY_PASSE_COMPOSE_QUESTIONS: Record<string, ElementaryQuizQu
       question: "Did you (informal) know / have you known the password?",
       hint: "Use passé composé interrogative: as-tu su",
       answerOptions: [
-        { text: "Tu savais le mot de passe ?", rationale: "Option A", isCorrect: false },
-        { text: "Tu sauras le mot de passe ?", rationale: "Option B", isCorrect: false },
-        { text: "As-tu su le mot de passe ?", rationale: "Option C", isCorrect: true },
-        { text: "Tu sait le mot de passe ?", rationale: "Option D", isCorrect: false }
+        { text: "A-tu su le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "As-tu su le mot de passe ?", rationale: "Correct! The question is inverted: verb, hyphen, subject.", isCorrect: true },
+        { text: "Es-tu su le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false },
+        { text: "As-tu savu le mot de passe ?", rationale: "Not quite: check the tense, the person and the agreement.", isCorrect: false }
       ]
     },
     {
