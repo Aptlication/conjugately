@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   badgeOff: { borderColor: "rgba(255,255,255,0.2)", backgroundColor: "transparent" },
   badgeText: { color: "#fff", fontSize: 17, fontWeight: "800" },
   rate: { marginTop: 4, marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", paddingVertical: 14, alignItems: "center" },
-  rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700" },
+  rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700", textAlign: "center", paddingHorizontal: 12 },
   stat: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 12, padding: 10, alignItems: "center" },
   statNum: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   statSub: { fontSize: 10, color: "#B9CBFA" },
