@@ -24,7 +24,8 @@ import { contentLevel } from "@shared/levels";
  * at Beginner the words come from the unit's Final conversation.
  */
 
-export type VocabPos = "noun" | "adjective" | "adverb";
+/** "phrase" (1.2.5): short set phrases such as "tous les soirs", "à la maison". */
+export type VocabPos = "noun" | "adjective" | "adverb" | "phrase";
 export type Gender = "m" | "f";
 
 export type CheckWord = {
@@ -55,6 +56,10 @@ const W = (w: CheckWord) => w;
  * Novice quizzes are full sentences, so its words come from both the quizzes
  * and the conversations. A word Beginner already teaches is not repeated at
  * Novice; names (Italie, Julie), numbers and set phrases are left out.
+ * 1.2.5 (25 Oct 2026, Jonathan): PHRASES are tested too — time and frequency
+ * expressions above all ("tous les soirs", "chaque été", "le samedi") and other
+ * short set phrases ("à la maison"). Same no-repeat and unique-emoji rules; a
+ * phrase belongs to the first unit, in course order, where it appears.
  * Elementary and Intermediate (23 Oct 2026) follow the same rules: words from
  * each unit's quiz answers and conversation, none repeated from an earlier
  * unit or level, and no emoji used twice anywhere in the bank.

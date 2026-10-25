@@ -42,7 +42,9 @@ function load(file) {
 }
 
 const full = load(path.join(MOBILE, "lib", "conversationsFull.ts"));
-const { COURSES, COURSE_TIME_FRAMES } = load(path.join(MOBILE, "lib", "courses.ts"));
+const { COURSES, courseTimeFrames } = load(path.join(MOBILE, "lib", "courses.ts"));
+// Intermediate A and B (25 Oct 2026) follow the Intermediate conversation shape.
+const shapeLevel = (l) => (l.startsWith("Intermediate") ? "Intermediate" : l);
 const { normaliseFrench, similarity } = load(path.join(ROOT, "shared", "answerMatch.ts"));
 const { CHECK_WORDS } = load(path.join(MOBILE, "lib", "vocabCheck.ts"));
 const gmJudge = load(path.join(MOBILE, "lib", "generousMatch.ts")).judgeReply;
@@ -54,7 +56,7 @@ let units = 0, appLines = 0, replies = 0;
 const seenAudio = new Map();
 
 for (const [level, course] of Object.entries(COURSES)) {
-  for (const tf of COURSE_TIME_FRAMES) {
+  for (const tf of courseTimeFrames(level)) {
     for (const { verb } of course.units) {
       const unit = `${level}|${tf}|${verb}`;
       units++;
@@ -65,7 +67,7 @@ for (const [level, course] of Object.entries(COURSES)) {
       if (full.getConversation(level, tf, verb) !== conv) fail(unit, "getConversation returns a NEW object each call — the screen will loop on line 1");
       // 3. shape: app first and last, strictly alternating, expected length
       const who = conv.turns.map((t) => t.who);
-      if (who.length !== EXPECTED_TURNS[level]) fail(unit, `${who.length} turns, expected ${EXPECTED_TURNS[level]}`);
+      if (who.length !== EXPECTED_TURNS[shapeLevel(level)]) fail(unit, `${who.length} turns, expected ${EXPECTED_TURNS[shapeLevel(level)]}`);
       who.forEach((w, i) => { if (w !== (i % 2 === 0 ? "app" : "you")) fail(unit, `turn ${i + 1} is "${w}", expected ${i % 2 === 0 ? "app" : "you"}`); });
       if (who[who.length - 1] !== "app") fail(unit, "does not end on an app line");
       // 4. audio for every app line: key mapped, file present and non-trivial, not shared with another line
@@ -109,7 +111,7 @@ for (const [level, course] of Object.entries(COURSES)) {
 // must NOT be "good" when the learner says something else entirely.
 const gm = load(path.join(MOBILE, "lib", "generousMatch.ts"));
 const allReplies = [];
-for (const [level, course] of Object.entries(COURSES)) for (const tf of COURSE_TIME_FRAMES) for (const { verb } of course.units) {
+for (const [level, course] of Object.entries(COURSES)) for (const tf of courseTimeFrames(level)) for (const { verb } of course.units) {
   const c = full.getConversation(level, tf, verb);
   if (c) c.turns.forEach((t, i) => { if (t.who === "you") allReplies.push({ unit: `${level}|${tf}|${verb}`, verb, i, t }); });
 }
@@ -148,7 +150,7 @@ if (engGood) fail("generous", `${engGood} English replies accepted`);
 if (process.argv.includes("--verbose")) { genFails.slice(0, 25).forEach((f) => console.log("   miss:", f)); wrongFails.slice(0, 25).forEach((f) => console.log("   wrong:", f)); }
 
 // ── vocab check word bank ──────────────────────────────────────────────────
-const unitKeys = new Set(Object.entries(COURSES).flatMap(([l, c]) => COURSE_TIME_FRAMES.flatMap((tf) => c.units.map((u) => `${l}|${tf}|${u.verb}`.normalize("NFC")))));
+const unitKeys = new Set(Object.entries(COURSES).flatMap(([l, c]) => courseTimeFrames(l).flatMap((tf) => c.units.map((u) => `${l.startsWith("Intermediate") ? "Intermediate" : l}|${tf}|${u.verb}`.normalize("NFC")))));
 const ids = new Set(), frs = new Set(), emo = new Set();
 for (const w of CHECK_WORDS) {
   const u = `vocab ${w.id}`;
