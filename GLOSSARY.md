@@ -21,6 +21,10 @@ The app mirrors main exactly (DESIGN_PARITY.md), except where Jonathan has grant
 3. **Masters Mic is app-only.** Granted 2026-09-12 for release 1.1. Speech recognition runs on Apple's on-device Speech framework, which has no web equivalent; a Web Speech API version on main would be a *different recogniser* with different accuracy, latency and confidence semantics, so building one would be divergence dressed up as parity. The mic is therefore proved on staging (ladder and matcher) plus a physical device (recognition, permissions, audio session), and never lands on main.
    - The exemption covers the **capture and the ladder UI only**. The **matcher** — `shared/answerMatch.ts` — is shared code that both surfaces run, so the comparison logic stays common and is tuned once, on staging, at `/matcher`.
    - Consequence for exams: the mic is **not permitted in exams** in 1.1. Progression must not hang on speech recognition, and exams must remain completable without speaking.
+4. **CEFR-style tests are app-only.** Granted 2026-10-25 for release 1.2.5. They are Pro (RevenueCat, app only) and their speaking section uses Masters Mic (exemption 3), so a web version would be a different product. Main shows an info card in the course modals pointing to the app instead.
+   - The **content** (`shared/cefrTests.ts`), **scoring** (`shared/cefrScoring.ts`) and **unlock/price** (`shared/cefrCoins.ts`) are shared code, and the AI marker runs on the server (`/api/cefr/mark`), so nothing about how a test is marked diverges.
+   - The tests don't gate progression (Final Level Exams still do), which is why the mic **is** allowed in them, unlike exams.
+   - Content rule: built only from taught French. `npx tsx scripts/audit-cefr-coverage.ts` enforces it.
 
 Rule of engagement: any instruction that would make the app diverge from main gets flagged before implementation, then either (a) the feature is added to main first, or (b) an exemption is recorded here.
 
