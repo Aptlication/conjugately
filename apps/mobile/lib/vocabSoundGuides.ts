@@ -425,7 +425,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "phr-bonne-idee": "boh-nee-DAY", // bonne idée
   "phr-a-tout-a-l-heure": "ah too-tah LUHR", // à tout à l'heure
   "phr-cet-ete": "seh-tay-TAY", // cet été
-  "phr-chacun-son-plaisir": "shah-kuhn sohn pleh-ZEER", // chacun son plaisir
+  "phr-chacun-son-plaisir": "shah-kan sohn pleh-ZEER", // chacun son plaisir
   "phr-a-la-plage": "ah lah PLAHZH", // à la plage
   "phr-a-ce-soir": "ah suh SWAHR", // à ce soir
   "phr-cette-annee": "seh-tah-NAY", // cette année
@@ -448,7 +448,7 @@ export const SOUND_GUIDES: Record<string, string> = {
   "phr-merci-quand-meme": "mehr-see kahn MEHM", // merci quand même
   "phr-ah-bon": "ah BOHN", // ah bon
   "phr-hier-soir": "yehr SWAHR", // hier soir
-  "phr-chacun-ses-gouts": "shah-kuhn say GOO", // chacun ses goûts
+  "phr-chacun-ses-gouts": "shah-kan say GOO", // chacun ses goûts
   "phr-l-annee-derniere": "lah-nay dehr-NYEHR", // l'année dernière
   "phr-a-ce-moment": "ah suh moh-MAHN", // à ce moment
   "phr-tant-pis": "tahn PEE", // tant pis
@@ -514,8 +514,8 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-mettre-jardin": "uhn zhahr-DAN", // un jardin
   "int-mettre-tradition": "ewn trah-dee-SYOHN", // une tradition
   "int-mettre-joli": "zhoh-LEE", // joli
-  "phr-chaque-ete": "shahk ay-TAY", // chaque été
-  "phr-chaque-automne": "shahk oh-TOHN", // chaque automne
+  "phr-chaque-ete": "shah-kay-TAY", // chaque été
+  "phr-chaque-automne": "shah-koh-TOHN", // chaque automne
   "int-trouver-champignon": "uhn shahn-pee-NYOHN", // un champignon
   "int-trouver-foret": "lah foh-REH", // la forêt
   "int-trouver-coquillage": "uhn koh-kee-YAHZH", // un coquillage
@@ -710,7 +710,6 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-se-debrouiller-mecanicien": "uhn may-kah-nee-SYAN", // un mécanicien
   "int-se-debrouiller-efficace": "eh-fee-KAHS", // efficace
   "phr-quelque-chose": "kehl-kuh SHOHZ", // quelque chose
-  "int-sennuyer-arrivee": "ewn-nah-ree-VAY", // une arrivée
   "int-sennuyer-camping": "luh kahn-PEENG", // le camping
   "int-sentrainer-competition": "ewn kohn-pay-tee-SYOHN", // une compétition
   "int-sentrainer-course": "lah KOORS", // la course
