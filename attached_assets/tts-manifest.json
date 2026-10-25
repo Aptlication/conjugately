@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "voiceId": "mixed",
-  "generatedAt": "2026-10-24T23:08:41.984Z",
+  "generatedAt": "2026-10-25T03:48:48.430Z",
   "phrases": {
     "A-t-elle ?": "60e7df37c4d4d460.mp3",
     "A-t-elle adaptée?": "578843fb8a98267c.mp3",
@@ -4529,7 +4529,12 @@
     "Elles viendront nous rendre visite.": "elem_7c45f7053412b4ad.mp3",
     "Un jour, je reviendrai.": "elem_063fdf24ba81bfab.mp3",
     "Elle ne reviendra pas.": "elem_411ef62cc4edfbbf.mp3",
-    "Quand reviendront-ils ?": "elem_a500f9f282b5394c.mp3"
+    "Quand reviendront-ils ?": "elem_a500f9f282b5394c.mp3",
+    "Elle dirai la vérité demain.": "elem_51c2707bbe3b2084.mp3",
+    "Elle diras la vérité demain.": "elem_4fd76ea2bc3c6cd1.mp3",
+    "Elle diront la vérité demain.": "elem_e045b4a18ef4f004.mp3",
+    "Nous ne peux rien voir.": "elem_d022c24c84def7d9.mp3",
+    "Quand nous verra-nous ?": "elem_630a938d43859e91.mp3"
   },
   "intermediate_phrases": {
     "A-t-elle dit cela ?": "intr_ebb386f515f4729f.mp3",
