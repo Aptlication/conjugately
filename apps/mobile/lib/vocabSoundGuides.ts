@@ -410,4 +410,319 @@ export const SOUND_GUIDES: Record<string, string> = {
   "int-garder-allume": "ah-lew-MAY", // allumé
   "int-garder-organise": "ohr-gah-nee-ZAY", // organisé
   "int-garder-fichier": "uhn fee-SHYAY", // un fichier
+  // 1.2.5
+  "phr-a-la-maison": "ah lah meh-ZOHN", // à la maison
+  "phr-ce-soir": "suh SWAHR", // ce soir
+  "phr-bon-courage": "bohn koo-RAHZH", // bon courage
+  "phr-ce-matin": "suh mah-TAN", // ce matin
+  "phr-ce-n-est-pas-grave": "suh neh pah GRAHV", // ce n'est pas grave
+  "phr-quelle-chance": "kehl SHAHNS", // quelle chance
+  "phr-tres-bien": "treh BYAN", // très bien
+  "phr-bon-voyage": "bohn vwah-YAHZH", // bon voyage
+  "phr-a-demain": "ah duh-MAN", // à demain
+  "phr-en-vacances": "ahn vah-KAHNS", // en vacances
+  "phr-quel-age": "keh-LAHZH", // quel âge
+  "phr-bonne-idee": "boh-nee-DAY", // bonne idée
+  "phr-a-tout-a-l-heure": "ah too-tah LUHR", // à tout à l'heure
+  "phr-cet-ete": "seh-tay-TAY", // cet été
+  "phr-chacun-son-plaisir": "shah-kuhn sohn pleh-ZEER", // chacun son plaisir
+  "phr-a-la-plage": "ah lah PLAHZH", // à la plage
+  "phr-a-ce-soir": "ah suh SWAHR", // à ce soir
+  "phr-cette-annee": "seh-tah-NAY", // cette année
+  "phr-bonne-route": "bohn ROOT", // bonne route
+  "phr-bonnes-vacances": "bohn vah-KAHNS", // bonnes vacances
+  "phr-la-semaine-prochaine": "lah suh-mehn proh-SHEHN", // la semaine prochaine
+  "phr-demain-soir": "duh-man SWAHR", // demain soir
+  "phr-en-voiture": "ahn vwah-TEWR", // en voiture
+  "phr-tous-les-matins": "too lay mah-TAN", // tous les matins
+  "phr-tous-les-jours": "too lay ZHOOR", // tous les jours
+  "phr-chaque-jour": "shahk ZHOOR", // chaque jour
+  "phr-ce-week-end": "suh wee-KEHND", // ce week-end
+  "phr-d-ici": "dee-SEE", // d'ici
+  "phr-pas-encore": "pah ahn-KOHR", // pas encore
+  "phr-tout-de-suite": "toot SWEET", // tout de suite
+  "phr-autre-chose": "oh-truh SHOHZ", // autre chose
+  "phr-a-huit-heures": "ah wee-TUHR", // à huit heures
+  "phr-a-samedi": "ah sahm-DEE", // à samedi
+  "phr-si-tard": "see TAHR", // si tard
+  "phr-merci-quand-meme": "mehr-see kahn MEHM", // merci quand même
+  "phr-ah-bon": "ah BOHN", // ah bon
+  "phr-hier-soir": "yehr SWAHR", // hier soir
+  "phr-chacun-ses-gouts": "shah-kuhn say GOO", // chacun ses goûts
+  "phr-l-annee-derniere": "lah-nay dehr-NYEHR", // l'année dernière
+  "phr-a-ce-moment": "ah suh moh-MAHN", // à ce moment
+  "phr-tant-pis": "tahn PEE", // tant pis
+  "phr-a-pied": "ah PYAY", // à pied
+  "phr-en-train": "ahn TRAN", // en train
+  "phr-tous-les-deux": "too lay DUH", // tous les deux
+  "phr-plus-tot": "plew TOH", // plus tôt
+  "phr-tant-mieux": "tahn MYUH", // tant mieux
+  "phr-bon-week-end": "bohn wee-KEHND", // bon week-end
+  "phr-demain-matin": "duh-man mah-TAN", // demain matin
+  "phr-bonne-chance": "bohn SHAHNS", // bonne chance
+  "phr-a-noel": "ah noh-EHL", // à Noël
+  "phr-plus-tard": "plew TAHR", // plus tard
+  "phr-quelle-joie": "kehl ZHWAH", // quelle joie
+  "phr-une-autre-fois": "ew-noh-truh FWAH", // une autre fois
+  "phr-pas-de-probleme": "pah duh proh-BLEHM", // pas de problème
+  "phr-chaque-soir": "shahk SWAHR", // chaque soir
+  "phr-chaque-matin": "shahk mah-TAN", // chaque matin
+  "phr-en-silencieux": "ahn see-lahn-SYUH", // en silencieux
+  "phr-par-terre": "pahr TEHR", // par terre
+  "phr-a-chaque-fois": "ah shahk FWAH", // à chaque fois
+  "phr-pres-d-ici": "preh dee-SEE", // près d'ici
+  "phr-depuis-longtemps": "duh-pwee lohn-TAHN", // depuis longtemps
+  "phr-en-classe": "ahn KLAHS", // en classe
+  "phr-chez-toi": "shay TWAH", // chez toi
+  "phr-en-ligne": "ahn LEENY", // en ligne
+  "phr-a-l-ancienne": "ah lahn-SYEHN", // à l'ancienne
+  "phr-chaque-semaine": "shahk suh-MEHN", // chaque semaine
+  "phr-chaque-lundi": "shahk lan-DEE", // chaque lundi
+  "phr-au-tableau": "oh tah-BLOH", // au tableau
+  "phr-en-ete": "ahn-nay-TAY", // en été
+  "phr-en-hiver": "ahn-nee-VEHR", // en hiver
+  "phr-a-neuf-heures": "ah nuh-VUHR", // à neuf heures
+  "phr-a-cle": "ah KLAY", // à clé
+  "phr-pendant-le-dejeuner": "pahn-dahn luh day-zhuh-NAY", // pendant le déjeuner
+  "phr-tout-le-temps": "too luh TAHN", // tout le temps
+  "phr-chaque-annee": "shah-kah-NAY", // chaque année
+  "phr-a-la-nuit-tombee": "ah lah nwee tohn-BAY", // à la nuit tombée
+  "phr-tous-les-mercredis": "too lay mehr-kruh-DEE", // tous les mercredis
+  "phr-a-leur-place": "ah luhr PLAHS", // à leur place
+  "phr-a-six-heures": "ah see-ZUHR", // à six heures
+  "phr-sous-le-lit": "soo luh LEE", // sous le lit
+  "phr-cette-fois-la": "seht fwah-LAH", // cette fois-là
+  "phr-toute-la-soiree": "toot lah swah-RAY", // toute la soirée
+  "phr-apres-l-ecole": "ah-preh lay-KOHL", // après l'école
+  "phr-le-mois-dernier": "luh mwah dehr-NYAY", // le mois dernier
+  "phr-a-l-heure": "ah LUHR", // à l'heure
+  "phr-au-lieu-de": "oh lyuh DUH", // au lieu de
+  "phr-en-deux-jours": "ahn duh ZHOOR", // en deux jours
+  "phr-la-semaine-derniere": "lah suh-mehn dehr-NYEHR", // la semaine dernière
+  "phr-au-moins": "oh MWAN", // au moins
+  "phr-trois-a-un": "trwah-zah UHN", // trois à un
+  "phr-le-dimanche": "luh dee-MAHNSH", // le dimanche
+  "phr-tous-les-soirs": "too lay SWAHR", // tous les soirs
+  "phr-le-lundi": "luh lan-DEE", // le lundi
+  "int-mettre-assiette": "ewn-nah-SYEHT", // une assiette
+  "int-mettre-tiroir": "luh tee-RWAHR", // le tiroir
+  "int-mettre-etagere": "ewn-nay-tah-ZHEHR", // une étagère
+  "int-mettre-poubelles": "lay poo-BEHL", // les poubelles
+  "int-mettre-frigo": "luh free-GOH", // le frigo
+  "int-mettre-dehors": "duh-OHR", // dehors
+  "int-mettre-fleur": "ewn FLUHR", // une fleur
+  "int-mettre-jardin": "uhn zhahr-DAN", // un jardin
+  "int-mettre-tradition": "ewn trah-dee-SYOHN", // une tradition
+  "int-mettre-joli": "zhoh-LEE", // joli
+  "phr-chaque-ete": "shahk ay-TAY", // chaque été
+  "phr-chaque-automne": "shahk oh-TOHN", // chaque automne
+  "int-trouver-champignon": "uhn shahn-pee-NYOHN", // un champignon
+  "int-trouver-foret": "lah foh-REH", // la forêt
+  "int-trouver-coquillage": "uhn koh-kee-YAHZH", // un coquillage
+  "int-trouver-trefle-a-quatre-feuilles": "uhn treh-fluh ah kah-truh FUHY", // un trèfle à quatre feuilles
+  "int-trouver-lecon": "ewn luh-SOHN", // une leçon
+  "int-trouver-ennuyeux": "ahn-nwee-YUH", // ennuyeux
+  "int-trouver-place": "ewn PLAHS", // une place
+  "int-trouver-crabe": "uhn KRAHB", // un crabe
+  "int-trouver-rocher": "uhn roh-SHAY", // un rocher
+  "int-trouver-amusant": "ah-mew-ZAHN", // amusant
+  "int-croire-pere-noel": "luh pehr noh-EHL", // le père Noël
+  "int-croire-meteo": "lah may-tay-OH", // la météo
+  "int-croire-politiciens": "lay poh-lee-tee-SYAN", // les politiciens
+  "int-croire-publicite": "ewn pew-blee-see-TAY", // une publicité
+  "int-croire-horoscope": "uhn-noh-rohs-KOHP", // un horoscope
+  "int-croire-incroyable": "an-krwah-YAH-bluh", // incroyable
+  "int-croire-loup": "uhn LOO", // un loup
+  "phr-au-telephone": "oh tay-lay-FOHN", // au téléphone
+  "phr-pendant-des-heures": "pahn-dahn day-ZUHR", // pendant des heures
+  "phr-au-travail": "oh trah-VAHY", // au travail
+  "phr-trop-longtemps": "troh lohn-TAHN", // trop longtemps
+  "phr-apres-le-cours": "ah-preh luh KOOR", // après le cours
+  "int-parler-adolescent": "uhn-nah-doh-leh-SAHN", // un adolescent
+  "int-parler-meilleur-ami": "uhn meh-yuh-rah-MEE", // un meilleur ami
+  "int-parler-trop": "TROH", // trop
+  "phr-le-samedi": "luh sahm-DEE", // le samedi
+  "phr-pendant-les-vacances": "pahn-dahn lay vah-KAHNS", // pendant les vacances
+  "int-prendre-gare": "lah GAHR", // la gare
+  "int-prendre-note": "ewn NOHT", // une note
+  "int-prendre-bateau": "uhn bah-TOH", // un bateau
+  "phr-en-secret": "ahn suh-KREH", // en secret
+  "int-lire-instructions": "lay-zan-strewk-SYOHN", // les instructions
+  "int-lire-menu": "luh muh-NEW", // le menu
+  "int-lire-e-mail": "uhn-nee-MEHL", // un e-mail
+  "int-lire-informations": "lay-zan-fohr-mah-SYOHN", // les informations
+  "int-lire-poeme": "uhn poh-EHM", // un poème
+  "int-lire-couverture": "ewn koo-vehr-TEWR", // une couverture
+  "phr-a-l-etranger": "ah lay-trahn-ZHAY", // à l'étranger
+  "int-ecrire-chanson": "ewn shahn-SOHN", // une chanson
+  "int-ecrire-liste-de-courses": "ewn leest duh KOORS", // une liste de courses
+  "int-ecrire-carnet": "uhn kahr-NEH", // un carnet
+  "int-ecrire-correspondant": "uhn koh-rehs-pohn-DAHN", // un correspondant
+  "int-ecrire-moyen": "uhn mwah-YAN", // un moyen
+  "int-ecrire-garcon": "uhn gahr-SOHN", // un garçon
+  "phr-a-sept-heures": "ah seh-TUHR", // à sept heures
+  "phr-le-vendredi": "luh vahn-druh-DEE", // le vendredi
+  "int-ouvrir-colis": "uhn koh-LEE", // un colis
+  "int-ouvrir-courrier": "luh koo-RYAY", // le courrier
+  "int-ouvrir-rideaux": "lay ree-DOH", // les rideaux
+  "int-ouvrir-bouteille": "ewn boo-TEHY", // une bouteille
+  "int-ouvrir-impatient": "an-pah-SYAHN", // impatient
+  "phr-avant-de-partir": "ah-vahn duh pahr-TEER", // avant de partir
+  "int-fermer-volets": "lay voh-LEH", // les volets
+  "int-fermer-valise": "ewn vah-LEEZ", // une valise
+  "int-fermer-tante": "ewn TAHNT", // une tante
+  "int-fermer-ancien": "ahn-SYAN", // ancien
+  "phr-chaque-hiver": "shahk ee-VEHR", // chaque hiver
+  "int-perdre-poids": "luh PWAH", // le poids
+  "int-perdre-cartes": "lay KAHRT", // les cartes
+  "int-perdre-tennis": "luh teh-NEES", // le tennis
+  "int-perdre-foot": "luh FOOT", // le foot
+  "int-perdre-presque": "PREHSK", // presque
+  "int-perdre-entraineur": "uhn-nahn-treh-NUHR", // un entraîneur
+  "phr-le-mercredi": "luh mehr-kruh-DEE", // le mercredi
+  "int-garder-bebe": "uhn bay-BAY", // un bébé
+  "int-garder-monnaie": "lah moh-NEH", // la monnaie
+  "int-garder-amitie": "lah-mee-TYAY", // l'amitié
+  "int-garder-vrai": "VREH", // vrai
+  "phr-au-mauvais-moment": "oh moh-veh moh-MAHN", // au mauvais moment
+  "phr-comme-toujours": "kohm too-ZHOOR", // comme toujours
+  "int-mettre-vase": "uhn VAHZ", // un vase
+  "int-mettre-four": "luh FOOR", // le four
+  "int-mettre-arrivee": "lah-ree-VAY", // l'arrivée
+  "int-mettre-salon": "luh sah-LOHN", // le salon
+  "int-mettre-appel": "uhn-nah-PEHL", // un appel
+  "int-trouver-paillasson": "luh pah-yah-SOHN", // le paillasson
+  "int-trouver-grenier": "luh gruh-NYAY", // le grenier
+  "int-trouver-addition": "lah-dee-SYOHN", // l'addition
+  "int-trouver-retour": "luh ruh-TOOR", // le retour
+  "int-trouver-garage": "uhn gah-RAHZH", // un garage
+  "int-trouver-aventurier": "uhn-nah-vahn-tew-RYAY", // un aventurier
+  "int-croire-journaliste": "uhn zhoor-nah-LEEST", // un journaliste
+  "int-croire-temoin": "uhn tay-MWAN", // un témoin
+  "int-croire-vendeur": "uhn vahn-DUHR", // un vendeur
+  "int-croire-video": "ewn vee-day-OH", // une vidéo
+  "int-croire-requin": "uhn ruh-KAN", // un requin
+  "phr-en-francais": "ahn frahn-SEH", // en français
+  "int-parler-sejour": "uhn say-ZHOOR", // un séjour
+  "int-parler-premiere": "ewn pruh-MYEHR", // une première
+  "phr-la-mauvaise-route": "lah moh-vehz ROOT", // la mauvaise route
+  "int-prendre-jour-de-conge": "uhn zhoor duh kohn-ZHAY", // un jour de congé
+  "int-prendre-croissant": "uhn krwah-SAHN", // un croissant
+  "int-prendre-gouter": "uhn goo-TAY", // un goûter
+  "int-prendre-copain": "uhn koh-PAN", // un copain
+  "phr-ce-matin-la": "suh mah-tan-LAH", // ce matin-là
+  "phr-l-ete-dernier": "lay-tay dehr-NYAY", // l'été dernier
+  "int-lire-contrat": "uhn kohn-TRAH", // un contrat
+  "int-lire-meuble": "uhn MUH-bluh", // un meuble
+  "phr-la-veille": "lah VEHY", // la veille
+  "phr-un-seul-mot": "uhn suhl MOH", // un seul mot
+  "int-ecrire-discours": "uhn dees-KOOR", // un discours
+  "int-ecrire-redaction": "ewn ray-dahk-SYOHN", // une rédaction
+  "int-ouvrir-compte-en-banque": "uhn kohnt ahn BAHNK", // un compte en banque
+  "int-ouvrir-clients": "lay klee-YAHN", // les clients
+  "int-ouvrir-champagne": "luh shahn-PAHNY", // le champagne
+  "int-ouvrir-dessert": "luh deh-SEHR", // le dessert
+  "phr-oh-la-la": "oh lah LAH", // oh là là
+  "int-fermer-ordinateur-portable": "uhn-nohr-dee-nah-tuhr pohr-TAH-bluh", // un ordinateur portable
+  "int-fermer-orage": "uhn-noh-RAHZH", // un orage
+  "int-fermer-tente": "ewn TAHNT", // une tente
+  "int-fermer-coffre": "luh KOH-fruh", // le coffre
+  "int-fermer-mouille": "moo-YAY", // mouillé
+  "int-perdre-pari": "uhn pah-REE", // un pari
+  "int-perdre-triste": "TREEST", // triste
+  "int-perdre-heureusement": "uh-ruhz-MAHN", // heureusement
+  "int-perdre-mouvemente": "moov-mahn-TAY", // mouvementé
+  "phr-pendant-une-semaine": "pahn-dahn ewn suh-MEHN", // pendant une semaine
+  "phr-en-souvenir": "ahn soo-vuh-NEER", // en souvenir
+  "phr-pour-plus-tard": "poor plew TAHR", // pour plus tard
+  "int-garder-ticket-de-caisse": "uhn tee-keh duh KEHS", // un ticket de caisse
+  "int-garder-surprise": "ewn sewr-PREEZ", // une surprise
+  "int-garder-epoque": "ewn-nay-POHK", // une époque
+  "int-garder-ours-en-peluche": "uhn-noors ahn puh-LEWSH", // un ours en peluche
+  "int-garder-adorable": "ah-doh-RAH-bluh", // adorable
+  "phr-au-lit": "oh LEE", // au lit
+  "phr-a-gauche": "ah GOHSH", // à gauche
+  "phr-l-annee-prochaine": "lah-nay proh-SHEHN", // l'année prochaine
+  "phr-tout-le-monde": "too luh MOHND", // tout le monde
+  "phr-apres-minuit": "ah-preh mee-NWEE", // après minuit
+  "phr-le-mois-prochain": "luh mwah proh-SHAN", // le mois prochain
+  "phr-en-aout": "ahn-NOOT", // en août
+  "phr-cet-apres-midi": "seh-tah-preh-mee-DEE", // cet après-midi
+  "phr-lundi-prochain": "lan-dee proh-SHAN", // lundi prochain
+  "phr-chaque-nuit": "shahk NWEE", // chaque nuit
+  "phr-a-quelle-heure": "ah keh-LUHR", // à quelle heure
+  "phr-en-ville": "ahn VEEL", // en ville
+  "phr-par-accident": "pah-rahk-see-DAHN", // par accident
+  "phr-merci-mille-fois": "mehr-see meel FWAH", // merci mille fois
+  "phr-tout-seul": "too SUHL", // tout seul
+  "phr-sans-aide": "sahn-ZEHD", // sans aide
+  "phr-sans-problemes": "sahn proh-BLEHM", // sans problèmes
+  "phr-trois-fois-par-semaine": "trwah fwah pahr suh-MEHN", // trois fois par semaine
+  "phr-tres-vite": "treh VEET", // très vite
+  "phr-en-voyage": "ahn vwah-YAHZH", // en voyage
+  "phr-pourquoi-pas": "poor-kwah PAH", // pourquoi pas
+  "phr-c-est-la-vie": "seh lah VEE", // c'est la vie
+  "phr-a-cette-epoque": "ah seht ay-POHK", // à cette époque
+  "int-sinteresser-lycee": "luh lee-SAY", // le lycée
+  "int-sinteresser-football": "luh foot-BOHL", // le football
+  "int-se-debrouiller-carte": "ewn KAHRT", // une carte
+  "int-se-debrouiller-distributeur-de-billets": "luh dees-tree-bew-tuhr duh bee-YEH", // le distributeur de billets
+  "int-se-debrouiller-ordinateur": "uhn-nohr-dee-nah-TUHR", // un ordinateur
+  "int-se-debrouiller-pates": "lay PAHT", // les pâtes
+  "int-se-debrouiller-riz": "luh REE", // le riz
+  "int-se-debrouiller-plus-mal": "plew MAHL", // plus mal
+  "phr-a-l-ecole": "ah lay-KOHL", // à l'école
+  "int-sennuyer-campagne": "lah kahn-PAHNY", // la campagne
+  "int-sennuyer-cousin": "uhn koo-ZAN", // un cousin
+  "int-sennuyer-loin-de": "lwan DUH", // loin de
+  "phr-tout-l-hiver": "too lee-VEHR", // tout l'hiver
+  "phr-deux-fois-par-semaine": "duh fwah pahr suh-MEHN", // deux fois par semaine
+  "int-sentrainer-salle-de-sport": "lah sahl duh SPOHR", // la salle de sport
+  "int-sentrainer-piscine": "lah pee-SEEN", // la piscine
+  "int-sentrainer-college": "luh koh-LEHZH", // le collège
+  "int-sentrainer-basket": "luh bahs-KEHT", // le basket
+  "int-sentrainer-jardin": "luh zhahr-DAN", // le jardin
+  "int-se-souvenir-recette": "ewn ruh-SEHT", // une recette
+  "int-se-souvenir-numero-de-telephone": "uhn new-may-roh duh tay-lay-FOHN", // un numéro de téléphone
+  "int-se-souvenir-chef": "luh SHEHF", // le chef
+  "int-se-souvenir-livre-de-recettes": "uhn lee-vruh duh ruh-SEHT", // un livre de recettes
+  "int-se-souvenir-ingredient": "uhn-nan-gray-DYAHN", // un ingrédient
+  "int-se-souvenir-quantite": "ewn kahn-tee-TAY", // une quantité
+  "phr-pas-du-tout": "pah dew TOO", // pas du tout
+  "int-sadapter-bruit": "luh BRWEE", // le bruit
+  "int-sadapter-emploi": "uhn-nahn-PLWAH", // un emploi
+  "int-sadapter-horaires": "lay-zoh-REHR", // les horaires
+  "int-sadapter-chaleur": "lah shah-LUHR", // la chaleur
+  "int-sadapter-neige": "lah NEHZH", // la neige
+  "phr-toute-l-annee": "toot lah-NAY", // toute l'année
+  "int-se-rejouir-beau-temps": "luh boh TAHN", // le beau temps
+  "int-se-rejouir-visite": "ewn vee-ZEET", // une visite
+  "int-se-rejouir-grandes-vacances": "lay grahnd vah-KAHNS", // les grandes vacances
+  "int-se-rejouir-festival": "uhn fehs-tee-VAHL", // un festival
+  "int-se-rejouir-autant-que": "oh-tahn KUH", // autant que
+  "int-se-rejouir-surtout": "sewr-TOO", // surtout
+  "int-se-rejouir-genial": "zhay-NYAHL", // génial
+  "int-sinteresser-passion": "ewn pah-SYOHN", // une passion
+  "int-sinteresser-universite": "lew-nee-vehr-see-TAY", // l'université
+  "int-sinteresser-artiste": "uhn-nahr-TEEST", // un artiste
+  "phr-en-bus": "ahn BEWS", // en bus
+  "int-se-debrouiller-vol": "uhn VOHL", // un vol
+  "int-se-debrouiller-mecanicien": "uhn may-kah-nee-SYAN", // un mécanicien
+  "int-se-debrouiller-efficace": "eh-fee-KAHS", // efficace
+  "phr-quelque-chose": "kehl-kuh SHOHZ", // quelque chose
+  "int-sennuyer-arrivee": "ewn-nah-ree-VAY", // une arrivée
+  "int-sennuyer-camping": "luh kahn-PEENG", // le camping
+  "int-sentrainer-competition": "ewn kohn-pay-tee-SYOHN", // une compétition
+  "int-sentrainer-course": "lah KOORS", // la course
+  "int-sentrainer-club": "uhn KLUHB", // un club
+  "phr-le-premier-jour": "luh pruh-myay ZHOOR", // le premier jour
+  "int-sadapter-depart": "uhn day-PAHR", // un départ
+  "int-sadapter-situation": "lah see-tew-ah-SYOHN", // la situation
+  "phr-pendant-des-semaines": "pahn-dahn day suh-MEHN", // pendant des semaines
+  "int-se-rejouir-mariage": "uhn mah-RYAHZH", // un mariage
+  "int-se-rejouir-naissance": "ewn neh-SAHNS", // une naissance
+  "int-se-rejouir-groupe": "uhn GROOP", // un groupe
+  "int-se-rejouir-prefere": "pray-fay-RAY", // préféré
+  "int-se-rejouir-jazz": "luh DJAHZ", // le jazz
+  "phr-a-la-retraite": "ah lah ruh-TREHT", // à la retraite
 };
