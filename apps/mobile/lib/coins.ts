@@ -14,6 +14,8 @@ import {
   type ExamInvitation,
   type QuizAward,
 } from "@shared/coins";
+import { cefrGate, unlockCefrTest, type CefrGate } from "@shared/cefrCoins";
+import type { CefrId } from "@shared/cefrTests";
 import { COURSES } from "./courses";
 import { getCourseProgress, getQuizHistory } from "./progress";
 import { readExamResults } from "./exams";
@@ -136,4 +138,23 @@ export function awardVocabCoin(): Promise<number> {
 function coinBalanceEarned(s: CoinState): number {
   // A pre-18-Oct store has no `earned`; its balance was the sum of unit bests.
   return typeof s.earned === "number" ? s.earned : coinBalance(s) + s.spent;
+}
+
+// ------------------------------------------------- CEFR-style tests (1.3) ---
+// Rules live in shared/cefrCoins.ts: every Final Level Exam of the level first,
+// then 2 × the exam price, paid once; retakes free.
+
+export async function readCefrGate(id: CefrId): Promise<{ gate: CefrGate; coins: CoinState }> {
+  const [coins, results] = await Promise.all([readCoins(), readExamResults()]);
+  return { gate: cefrGate(coins, id, results), coins };
+}
+
+/** Spend the CEFR test's price. Resolves to the new gate (unchanged if not allowed). */
+export function spendOnCefr(id: CefrId): Promise<CefrGate> {
+  return serial(async () => {
+    const [coins, results] = await Promise.all([readCoins(), readExamResults()]);
+    const next = unlockCefrTest(coins, id, results);
+    if (next && next !== coins) { try { await write(next); } catch {} }
+    return cefrGate(next ?? coins, id, results);
+  });
 }

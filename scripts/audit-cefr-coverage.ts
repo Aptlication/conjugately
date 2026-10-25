@@ -1,5 +1,5 @@
 /**
- * CEFR-style tests: coverage audit (1.2.5).
+ * CEFR-style tests: coverage audit (1.3).
  *
  * Content rule (Jonathan, 25 Oct 2026): every test uses ONLY French already met in
  * that level's and earlier levels' quizzes, conversations and vocab checks.

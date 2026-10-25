@@ -1,5 +1,5 @@
 /**
- * CEFR-style tests: scoring (1.2.5). Pure functions, shared by the app and server.
+ * CEFR-style tests: scoring (1.3). Pure functions, shared by the app and server.
  *
  * Listening and reading are multiple choice: each section's questions share its
  * 25 points equally. Writing and speaking are marked by AI against the rubric

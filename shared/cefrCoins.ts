@@ -1,5 +1,5 @@
 /**
- * CEFR-style tests: unlock and price (1.2.5).
+ * CEFR-style tests: unlock and price (1.3).
  *
  * Approved by Jonathan 25 Oct 2026:
  *  - Opens only when every Final Level Exam of the test's level is passed

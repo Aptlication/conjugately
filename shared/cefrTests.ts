@@ -1,5 +1,5 @@
 /**
- * CEFR-style tests: content, the single source of truth (1.2.5).
+ * CEFR-style tests: content, the single source of truth (1.3).
  *
  * Three practice tests in the format of the official A1 / A2 / B1 French exams:
  * four sections of 25 points, pass = 50/100 overall AND at least 5/25 in every
