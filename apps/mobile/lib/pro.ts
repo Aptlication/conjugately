@@ -69,6 +69,19 @@ export type ProPackage = {
   raw: any;
 };
 
+/**
+ * True if this customer still has a Monthly or Annual subscription running
+ * (a free trial counts). Apple never cancels a subscription when someone buys
+ * Lifetime, so the paywall uses this to tell them to cancel it themselves.
+ */
+export function hasActiveSubscription(customerInfo: any): boolean {
+  const subs: unknown = customerInfo?.activeSubscriptions;
+  if (!Array.isArray(subs)) return false;
+  return subs.some((id) =>
+    typeof id === "string" && (id.startsWith(PRODUCT_ANNUAL) || id.startsWith(PRODUCT_MONTHLY)),
+  );
+}
+
 function readPeriod(productId: string, packageType?: string): ProPackage["period"] {
   if (productId === PRODUCT_ANNUAL) return "annual";
   if (productId === PRODUCT_MONTHLY) return "monthly";
@@ -131,16 +144,17 @@ export function usePro() {
   }, [refresh]);
 
   const purchase = useCallback(async (pkg: ProPackage) => {
-    if (!purchasesAvailable()) return { ok: false, cancelled: false, error: "unavailable" };
+    if (!purchasesAvailable()) return { ok: false, cancelled: false, error: "unavailable", customerInfo: null };
     try {
       const res = await Purchases.purchasePackage(pkg.raw);
-      const active = !!res?.customerInfo?.entitlements?.active?.[ENTITLEMENT_ID];
+      const customerInfo = res?.customerInfo ?? null;
+      const active = !!customerInfo?.entitlements?.active?.[ENTITLEMENT_ID];
       setIsPro(active);
-      return { ok: active, cancelled: false, error: active ? null : "not-entitled" };
+      return { ok: active, cancelled: false, error: active ? null : "not-entitled", customerInfo };
     } catch (e: any) {
       // A cancelled purchase is not an error worth showing.
-      if (e?.userCancelled) return { ok: false, cancelled: true, error: null };
-      return { ok: false, cancelled: false, error: e?.message ?? "purchase-failed" };
+      if (e?.userCancelled) return { ok: false, cancelled: true, error: null, customerInfo: null };
+      return { ok: false, cancelled: false, error: e?.message ?? "purchase-failed", customerInfo: null };
     }
   }, []);
 

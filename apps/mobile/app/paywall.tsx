@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ActivityIndicator, Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { usePro, type ProPackage } from "../lib/pro";
+import { hasActiveSubscription, usePro, type ProPackage } from "../lib/pro";
 
 /**
  * The paywall.
@@ -15,12 +15,15 @@ import { usePro, type ProPackage } from "../lib/pro";
 
 const TERMS_URL = "https://conjugately.com/terms";
 const PRIVACY_URL = "https://conjugately.com/privacy";
+const MANAGE_SUBSCRIPTIONS_URL = "https://apps.apple.com/account/subscriptions";
 
 export default function Paywall() {
   const router = useRouter();
   const { isPro, loading, packages, purchase, restore } = usePro();
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState<string | null>(null);
+  // Shown instead of closing when a subscriber buys Lifetime (1.2.4.1).
+  const [cancelReminder, setCancelReminder] = useState(false);
 
   const annual = packages.find((p) => p.period === "annual");
   const monthly = packages.find((p) => p.period === "monthly");
@@ -34,7 +37,16 @@ export default function Paywall() {
     setNote(null);
     const res = await purchase(selected);
     setBusy(false);
-    if (res.ok) { router.back(); return; }
+    if (res.ok) {
+      // Apple does not cancel an existing subscription when Lifetime is bought,
+      // so a subscriber would keep being billed. Tell them before closing.
+      if (chosen === "lifetime" && hasActiveSubscription(res.customerInfo)) {
+        setCancelReminder(true);
+        return;
+      }
+      router.back();
+      return;
+    }
     if (res.cancelled) return;
     setNote("That didn't go through. Nothing has been charged.");
   };
@@ -47,6 +59,33 @@ export default function Paywall() {
     setBusy(false);
     setNote(res.ok ? "Your Pro access is back." : "No previous purchase found on this Apple ID.");
   };
+
+  if (cancelReminder) {
+    return (
+      <View style={styles.screen}>
+        <Stack.Screen options={{ headerShown: false }} />
+        <ScrollView contentContainerStyle={styles.body}>
+          <Ionicons name="checkmark-circle" size={44} color="#17734A" />
+          <Text style={[styles.title, { marginTop: 12 }]}>You have Lifetime Pro</Text>
+          <Text style={styles.sub}>
+            Thank you. Your earlier subscription is still active, and Apple doesn't cancel it for
+            you. Cancel it in Settings → Apple ID → Subscriptions so you aren't charged again.
+            You keep Pro for good either way.
+          </Text>
+          <Pressable
+            onPress={() => Linking.openURL(MANAGE_SUBSCRIPTIONS_URL)}
+            accessibilityRole="button"
+            style={styles.cta}
+          >
+            <Text style={styles.ctaText}>Manage subscriptions</Text>
+          </Pressable>
+          <Pressable onPress={() => router.back()} accessibilityRole="button" style={styles.restore}>
+            <Text style={styles.restoreText}>Done</Text>
+          </Pressable>
+        </ScrollView>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.screen}>
@@ -61,7 +100,7 @@ export default function Paywall() {
 
         <View style={styles.points}>
           {[
-            "All courses and final exams, Beginner through Advanced",
+            "All courses and final exams, Beginner through Intermediate",
             "Masters Mic - answer out loud, checked on your device",
             "Your progress kept across every course",
           ].map((t) => (
