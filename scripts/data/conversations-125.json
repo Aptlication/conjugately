@@ -1,0 +1,3121 @@
+[
+ {
+  "key": "Intermediate|Imperfect|mettre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Que mettais-tu le dimanche, quand tu étais petit ?",
+    "en": "Hello! What did you wear on Sundays when you were little?"
+   },
+   {
+    "who": "you",
+    "fr": "Je mettais un chapeau le dimanche.",
+    "en": "I wore a hat on Sundays.",
+    "accept": [
+     "Je mettais un chapeau le dimanche.",
+     "Le dimanche, je mettais un chapeau.",
+     "Je mettais un chapeau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes sœurs, que mettaient-elles en hiver ?",
+    "en": "And your sisters, what did they wear in winter?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles mettaient une écharpe en hiver.",
+    "en": "They wore a scarf in winter.",
+    "accept": [
+     "Elles mettaient une écharpe en hiver.",
+     "En hiver, elles mettaient une écharpe.",
+     "Elles mettaient une écharpe."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Chez ta grand-mère, mettais-tu la table le soir ?",
+    "en": "At your grandmother's, did you set the table in the evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je mettais la table avec mon frère.",
+    "en": "Yes, I set the table with my brother.",
+    "accept": [
+     "Oui, je mettais la table avec mon frère.",
+     "Oui, je la mettais avec mon frère.",
+     "Oui, mon frère et moi, nous mettions la table."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Mettait-elle des fleurs sur la table ?",
+    "en": "Did she put flowers on the table?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle mettait des fleurs du jardin.",
+    "en": "Yes, she put flowers from the garden.",
+    "accept": [
+     "Oui, elle mettait des fleurs du jardin.",
+     "Oui, elle mettait des fleurs du jardin sur la table."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quelle jolie tradition !",
+    "en": "What a lovely tradition!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "une fleur",
+    "en": "flower"
+   },
+   {
+    "fr": "un jardin",
+    "en": "garden"
+   },
+   {
+    "fr": "une tradition",
+    "en": "tradition"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|trouver",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Salut ! Ton frère et toi, trouviez-vous les leçons faciles ?",
+    "en": "Hi! Did you and your brother find the lessons easy?"
+   },
+   {
+    "who": "you",
+    "fr": "Nous trouvions les leçons faciles.",
+    "en": "We found the lessons easy.",
+    "accept": [
+     "Nous trouvions les leçons faciles.",
+     "Oui, nous trouvions les leçons faciles.",
+     "Oui, nous les trouvions faciles."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes cousines, comment trouvaient-elles les films ?",
+    "en": "And your cousins, what did they think of the films?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles trouvaient les films ennuyeux.",
+    "en": "They found the films boring.",
+    "accept": [
+     "Elles trouvaient les films ennuyeux.",
+     "Elles les trouvaient ennuyeux."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tu étais petit, que faisais-tu à la plage ?",
+    "en": "When you were little, what did you do at the beach?"
+   },
+   {
+    "who": "you",
+    "fr": "Je trouvais des coquillages avec ma sœur.",
+    "en": "I found shells with my sister.",
+    "accept": [
+     "Je trouvais des coquillages avec ma sœur.",
+     "Avec ma sœur, je trouvais des coquillages."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Trouviez-vous aussi des crabes ?",
+    "en": "Did you find crabs too?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous trouvions des petits crabes sous les rochers.",
+    "en": "Yes, we found little crabs under the rocks.",
+    "accept": [
+     "Oui, nous trouvions des petits crabes sous les rochers.",
+     "Oui, nous en trouvions sous les rochers.",
+     "Oui, on trouvait des petits crabes sous les rochers."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ça devait être amusant !",
+    "en": "That must have been fun!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un crabe",
+    "en": "crab"
+   },
+   {
+    "fr": "un rocher",
+    "en": "rock"
+   },
+   {
+    "fr": "sous",
+    "en": "under"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|croire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Croyais-tu au père Noël quand tu étais petit ?",
+    "en": "Hello! Did you believe in Father Christmas when you were little?"
+   },
+   {
+    "who": "you",
+    "fr": "Je croyais au père Noël.",
+    "en": "I believed in Father Christmas.",
+    "accept": [
+     "Je croyais au père Noël.",
+     "Oui, je croyais au père Noël.",
+     "Oui, j'y croyais."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et aux miracles, y croyais-tu aussi ?",
+    "en": "And did you believe in miracles too?"
+   },
+   {
+    "who": "you",
+    "fr": "Je ne croyais pas aux miracles.",
+    "en": "I didn't believe in miracles.",
+    "accept": [
+     "Je ne croyais pas aux miracles.",
+     "Non, je ne croyais pas aux miracles.",
+     "Non, je n'y croyais pas."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Ton grand-père racontait-il des histoires incroyables ?",
+    "en": "Did your grandfather tell amazing stories?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, et je croyais toutes ses histoires.",
+    "en": "Yes, and I believed all his stories.",
+    "accept": [
+     "Oui, et je croyais toutes ses histoires.",
+     "Oui, et je les croyais toutes.",
+     "Oui, je croyais toutes ses histoires."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Croyais-tu aussi à son histoire du loup dans la forêt ?",
+    "en": "Did you also believe his story about the wolf in the forest?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je croyais qu'il y avait un loup.",
+    "en": "Yes, I believed there was a wolf.",
+    "accept": [
+     "Oui, je croyais qu'il y avait un loup.",
+     "Oui, j'y croyais aussi.",
+     "Oui, je croyais à cette histoire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quels beaux souvenirs !",
+    "en": "What lovely memories!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "raconter",
+    "en": "to tell"
+   },
+   {
+    "fr": "incroyable",
+    "en": "amazing"
+   },
+   {
+    "fr": "un loup",
+    "en": "wolf"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|parler",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Quelle langue parlais-tu à la maison ?",
+    "en": "Hello! What language did you speak at home?"
+   },
+   {
+    "who": "you",
+    "fr": "Je parlais français à la maison.",
+    "en": "I spoke French at home.",
+    "accept": [
+     "Je parlais français à la maison.",
+     "À la maison, je parlais français.",
+     "Je parlais français."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes sœurs, parlaient-elles anglais au travail ?",
+    "en": "And your sisters, did they speak English at work?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles parlaient anglais au travail.",
+    "en": "They spoke English at work.",
+    "accept": [
+     "Elles parlaient anglais au travail.",
+     "Oui, elles parlaient anglais au travail.",
+     "Oui, elles parlaient anglais."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Adolescent, parlais-tu souvent avec ton meilleur ami ?",
+    "en": "As a teenager, did you often talk with your best friend?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je lui parlais tous les soirs au téléphone.",
+    "en": "Yes, I talked to him every evening on the phone.",
+    "accept": [
+     "Oui, je lui parlais tous les soirs au téléphone.",
+     "Oui, je lui parlais tous les soirs.",
+     "Oui, je parlais avec lui tous les soirs au téléphone."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes parents disaient-ils quelque chose ?",
+    "en": "Did your parents say anything?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils disaient que je parlais trop longtemps.",
+    "en": "Yes, they said I talked for too long.",
+    "accept": [
+     "Oui, ils disaient que je parlais trop longtemps.",
+     "Oui, ils disaient que je parlais trop."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Les parents disent toujours ça !",
+    "en": "Parents always say that!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "adolescent / adolescente",
+    "en": "teenager"
+   },
+   {
+    "fr": "un meilleur ami",
+    "en": "best friend"
+   },
+   {
+    "fr": "trop longtemps",
+    "en": "for too long"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|prendre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Avant, comment allais-tu au travail ?",
+    "en": "Hello! Before, how did you get to work?"
+   },
+   {
+    "who": "you",
+    "fr": "Je prenais le bus pour aller au travail.",
+    "en": "I took the bus to get to work.",
+    "accept": [
+     "Je prenais le bus pour aller au travail.",
+     "Avant, je prenais le bus pour aller au travail.",
+     "Je prenais le bus."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta collègue, prenait-elle un café le matin ?",
+    "en": "And your colleague, did she have a coffee in the morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle prenait un café à la gare tous les matins.",
+    "en": "She had a coffee at the station every morning.",
+    "accept": [
+     "Elle prenait un café à la gare tous les matins.",
+     "Oui, elle prenait un café à la gare tous les matins.",
+     "Oui, elle prenait un café à la gare."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Pendant les vacances, comment alliez-vous en Corse ?",
+    "en": "During the holidays, how did your family get to Corsica?"
+   },
+   {
+    "who": "you",
+    "fr": "Nous prenions le bateau à Marseille.",
+    "en": "We took the boat from Marseille.",
+    "accept": [
+     "Nous prenions le bateau à Marseille.",
+     "On prenait le bateau à Marseille.",
+     "Nous prenions le bateau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Prenais-tu des photos pendant le voyage ?",
+    "en": "Did you take photos during the trip?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je prenais beaucoup de photos de la mer.",
+    "en": "Yes, I took lots of photos of the sea.",
+    "accept": [
+     "Oui, je prenais beaucoup de photos de la mer.",
+     "Oui, j'en prenais beaucoup.",
+     "Oui, je prenais des photos de la mer."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel beau voyage !",
+    "en": "What a lovely trip!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un bateau",
+    "en": "boat"
+   },
+   {
+    "fr": "un voyage",
+    "en": "trip"
+   },
+   {
+    "fr": "pendant",
+    "en": "during"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|lire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Avant, lisais-tu le journal le matin ?",
+    "en": "Hello! Before, did you read the paper in the morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lisais le journal tous les matins.",
+    "en": "I read the paper every morning.",
+    "accept": [
+     "Je lisais le journal tous les matins.",
+     "Oui, je lisais le journal tous les matins.",
+     "Oui, je le lisais tous les matins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta mère, lisait-elle des romans ?",
+    "en": "And your mother, did she read novels?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle lisait beaucoup de romans.",
+    "en": "She read a lot of novels.",
+    "accept": [
+     "Elle lisait beaucoup de romans.",
+     "Oui, elle lisait beaucoup de romans.",
+     "Oui, elle en lisait beaucoup."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tu étais petit, que lisais-tu le soir ?",
+    "en": "When you were little, what did you read in the evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lisais des bandes dessinées dans mon lit.",
+    "en": "I read comics in bed.",
+    "accept": [
+     "Je lisais des bandes dessinées dans mon lit.",
+     "Je lisais des bandes dessinées.",
+     "Le soir, je lisais des bandes dessinées dans mon lit."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes parents le savaient-ils ?",
+    "en": "Did your parents know?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je lisais en secret sous la couverture.",
+    "en": "No, I read secretly under the blanket.",
+    "accept": [
+     "Non, je lisais en secret sous la couverture.",
+     "Non, je lisais sous la couverture.",
+     "Non, je lisais en secret."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est un joli souvenir !",
+    "en": "That's a lovely memory!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "une bande dessinée",
+    "en": "comic"
+   },
+   {
+    "fr": "en secret",
+    "en": "secretly"
+   },
+   {
+    "fr": "une couverture",
+    "en": "blanket"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|écrire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! À qui écrivais-tu chaque semaine ?",
+    "en": "Hello! Who did you write to every week?"
+   },
+   {
+    "who": "you",
+    "fr": "J'écrivais à Marie chaque semaine.",
+    "en": "I wrote to Marie every week.",
+    "accept": [
+     "J'écrivais à Marie chaque semaine.",
+     "Chaque semaine, j'écrivais à Marie.",
+     "J'écrivais à Marie."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, écrivait-elle beaucoup d'e-mails ?",
+    "en": "And your sister, did she write a lot of emails?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle écrivait beaucoup d'e-mails.",
+    "en": "She wrote a lot of emails.",
+    "accept": [
+     "Elle écrivait beaucoup d'e-mails.",
+     "Oui, elle écrivait beaucoup d'e-mails.",
+     "Oui, elle en écrivait beaucoup."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "À l'école, avais-tu un correspondant à l'étranger ?",
+    "en": "At school, did you have a pen pal abroad?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'écrivais à un garçon en Angleterre.",
+    "en": "Yes, I wrote to a boy in England.",
+    "accept": [
+     "Oui, j'écrivais à un garçon en Angleterre.",
+     "Oui, j'écrivais à un garçon anglais."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Lui écrivais-tu en français ou en anglais ?",
+    "en": "Did you write to him in French or in English?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lui écrivais en anglais, c'était difficile.",
+    "en": "I wrote to him in English; it was hard.",
+    "accept": [
+     "Je lui écrivais en anglais, c'était difficile.",
+     "J'écrivais en anglais, c'était difficile.",
+     "Je lui écrivais en anglais."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est un bon moyen d'apprendre !",
+    "en": "It's a good way to learn!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un correspondant / une correspondante",
+    "en": "pen pal"
+   },
+   {
+    "fr": "à l'étranger",
+    "en": "abroad"
+   },
+   {
+    "fr": "un moyen",
+    "en": "way, means"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|ouvrir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! À quelle heure ouvrais-tu le magasin ?",
+    "en": "Hello! What time did you open the shop?"
+   },
+   {
+    "who": "you",
+    "fr": "J'ouvrais le magasin à huit heures.",
+    "en": "I opened the shop at eight o'clock.",
+    "accept": [
+     "J'ouvrais le magasin à huit heures.",
+     "Je l'ouvrais à huit heures.",
+     "J'ouvrais à huit heures."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes filles, à quelle heure ouvraient-elles les rideaux ?",
+    "en": "And your daughters, what time did they open the curtains?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles ouvraient les rideaux à sept heures.",
+    "en": "They opened the curtains at seven o'clock.",
+    "accept": [
+     "Elles ouvraient les rideaux à sept heures.",
+     "Elles les ouvraient à sept heures."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Le matin de Noël, ouvrais-tu les cadeaux tout de suite ?",
+    "en": "On Christmas morning, did you open the presents right away?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ouvrais les cadeaux avant le petit-déjeuner.",
+    "en": "Yes, I opened the presents before breakfast.",
+    "accept": [
+     "Oui, j'ouvrais les cadeaux avant le petit-déjeuner.",
+     "Oui, je les ouvrais avant le petit-déjeuner."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, ouvraient-ils leurs cadeaux aussi ?",
+    "en": "And your parents, did they open their presents too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils ouvraient leurs cadeaux après le repas.",
+    "en": "No, they opened their presents after the meal.",
+    "accept": [
+     "Non, ils ouvraient leurs cadeaux après le repas.",
+     "Non, ils les ouvraient après le repas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Les enfants sont toujours impatients !",
+    "en": "Children are always impatient!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un cadeau",
+    "en": "present"
+   },
+   {
+    "fr": "tout de suite",
+    "en": "right away"
+   },
+   {
+    "fr": "impatient / impatiente",
+    "en": "impatient"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|fermer",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonsoir ! Ta grand-mère fermait-elle les volets le soir ?",
+    "en": "Good evening! Did your grandmother close the shutters in the evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle fermait les volets tous les soirs.",
+    "en": "She closed the shutters every evening.",
+    "accept": [
+     "Elle fermait les volets tous les soirs.",
+     "Oui, elle fermait les volets tous les soirs.",
+     "Oui, elle les fermait tous les soirs."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes tantes, fermaient-elles les fenêtres en hiver ?",
+    "en": "And your aunts, did they close the windows in winter?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles fermaient les fenêtres en hiver.",
+    "en": "They closed the windows in winter.",
+    "accept": [
+     "Elles fermaient les fenêtres en hiver.",
+     "Oui, elles fermaient les fenêtres en hiver.",
+     "Oui, elles les fermaient en hiver."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Dans ton ancien travail, fermais-tu le bureau le soir ?",
+    "en": "In your old job, did you close the office in the evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je fermais le bureau à sept heures du soir.",
+    "en": "Yes, I closed the office at seven in the evening.",
+    "accept": [
+     "Oui, je fermais le bureau à sept heures du soir.",
+     "Oui, je fermais le bureau à dix-neuf heures.",
+     "Oui, je le fermais à sept heures du soir."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Fermais-tu aussi les fenêtres avant de partir ?",
+    "en": "Did you also close the windows before leaving?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, et je fermais toujours la porte à clé.",
+    "en": "Yes, and I always locked the door.",
+    "accept": [
+     "Oui, et je fermais toujours la porte à clé.",
+     "Oui, et je fermais la porte à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "On pouvait compter sur toi !",
+    "en": "People could count on you!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "ancien / ancienne",
+    "en": "former, old"
+   },
+   {
+    "fr": "avant de partir",
+    "en": "before leaving"
+   },
+   {
+    "fr": "compter sur",
+    "en": "to count on"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|perdre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Salut ! Perdais-tu souvent tes clés ?",
+    "en": "Hi! Did you often lose your keys?"
+   },
+   {
+    "who": "you",
+    "fr": "Je perdais mes clés tout le temps.",
+    "en": "I lost my keys all the time.",
+    "accept": [
+     "Je perdais mes clés tout le temps.",
+     "Oui, je perdais mes clés tout le temps.",
+     "Oui, je les perdais tout le temps."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, gagnait-elle au tennis ?",
+    "en": "And your sister, did she win at tennis?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle perdait tous les matchs.",
+    "en": "She lost every match.",
+    "accept": [
+     "Elle perdait tous les matchs.",
+     "Non, elle perdait tous les matchs.",
+     "Non, elle les perdait tous."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Petit, jouais-tu dans une équipe de foot ?",
+    "en": "As a kid, did you play on a football team?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, mais nous perdions presque tous les samedis.",
+    "en": "Yes, but we lost almost every Saturday.",
+    "accept": [
+     "Oui, mais nous perdions presque tous les samedis.",
+     "Oui, mais on perdait presque tous les samedis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton entraîneur perdait-il patience ?",
+    "en": "Did your coach lose patience?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne perdait jamais patience avec nous.",
+    "en": "No, he never lost patience with us.",
+    "accept": [
+     "Non, il ne perdait jamais patience avec nous.",
+     "Non, il ne perdait jamais patience."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel bon entraîneur !",
+    "en": "What a good coach!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "une équipe",
+    "en": "team"
+   },
+   {
+    "fr": "un entraîneur",
+    "en": "coach"
+   },
+   {
+    "fr": "presque",
+    "en": "almost"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|garder",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Ta fille gardait-elle des animaux l'été ?",
+    "en": "Hello! Did your daughter look after animals in the summer?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle gardait le chien des voisins l'été.",
+    "en": "She looked after the neighbours' dog in the summer.",
+    "accept": [
+     "Elle gardait le chien des voisins l'été.",
+     "Oui, elle gardait le chien des voisins l'été.",
+     "Oui, elle gardait le chien des voisins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, que faisait-il quand tu as appelé ?",
+    "en": "And your brother, what was he doing when you called?"
+   },
+   {
+    "who": "you",
+    "fr": "Il gardait les enfants quand le téléphone a sonné.",
+    "en": "He was looking after the children when the phone rang.",
+    "accept": [
+     "Il gardait les enfants quand le téléphone a sonné.",
+     "Il gardait les enfants."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "À l'école, ta meilleure amie gardait-elle tes secrets ?",
+    "en": "At school, did your best friend keep your secrets?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle gardait tous mes secrets.",
+    "en": "Yes, she kept all my secrets.",
+    "accept": [
+     "Oui, elle gardait tous mes secrets.",
+     "Oui, elle les gardait tous.",
+     "Oui, elle gardait mes secrets."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, gardais-tu ses secrets aussi ?",
+    "en": "And you, did you keep her secrets too?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je gardais ses secrets pour moi.",
+    "en": "Yes, I kept her secrets to myself.",
+    "accept": [
+     "Oui, je gardais ses secrets pour moi.",
+     "Oui, je les gardais pour moi."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est ça, la vraie amitié !",
+    "en": "That's true friendship!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un secret",
+    "en": "secret"
+   },
+   {
+    "fr": "garder pour soi",
+    "en": "to keep to oneself"
+   },
+   {
+    "fr": "l'amitié (f)",
+    "en": "friendship"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|mettre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Avant l'arrivée des invités, ta sœur avait-elle préparé la table ?",
+    "en": "Before the guests arrived, had your sister set the table?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle avait mis les assiettes sur la table.",
+    "en": "She had put the plates on the table.",
+    "accept": [
+     "Elle avait mis les assiettes sur la table.",
+     "Oui, elle avait mis les assiettes sur la table.",
+     "Oui, elle les avait mises sur la table."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes cousines, avaient-elles rangé le salon ?",
+    "en": "And your cousins, had they tidied the living room?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient mis les livres sur l'étagère.",
+    "en": "They had put the books on the shelf.",
+    "accept": [
+     "Elles avaient mis les livres sur l'étagère.",
+     "Oui, elles avaient mis les livres sur l'étagère.",
+     "Oui, elles les avaient mis sur l'étagère."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avais-tu déjà mis ton manteau quand le téléphone a sonné ?",
+    "en": "Had you already put your coat on when the phone rang?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais déjà mis mon manteau.",
+    "en": "Yes, I had already put my coat on.",
+    "accept": [
+     "Oui, j'avais déjà mis mon manteau.",
+     "Oui, je l'avais déjà mis.",
+     "J'avais déjà mis mon manteau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes chaussures, les avais-tu mises aussi ?",
+    "en": "And your shoes, had you put them on too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'avais pas encore mis mes chaussures.",
+    "en": "No, I hadn't put my shoes on yet.",
+    "accept": [
+     "Non, je n'avais pas encore mis mes chaussures.",
+     "Non, je ne les avais pas encore mises.",
+     "Je n'avais pas encore mis mes chaussures."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Un appel au mauvais moment, comme toujours !",
+    "en": "A call at the wrong moment, as always!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "sonner",
+    "en": "to ring"
+   },
+   {
+    "fr": "une chaussure",
+    "en": "shoe"
+   },
+   {
+    "fr": "un appel",
+    "en": "call"
+   },
+   {
+    "fr": "au mauvais moment",
+    "en": "at the wrong moment"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|trouver",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Tes cousines avaient-elles trouvé du travail avant de déménager ?",
+    "en": "Had your cousins found work before moving?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient trouvé un travail à Lyon.",
+    "en": "They had found a job in Lyon.",
+    "accept": [
+     "Elles avaient trouvé un travail à Lyon.",
+     "Oui, elles avaient trouvé un travail à Lyon.",
+     "Oui, elles avaient trouvé un travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton ami et toi, aviez-vous trouvé la réponse à l'exercice ?",
+    "en": "You and your friend, had you found the answer to the exercise?"
+   },
+   {
+    "who": "you",
+    "fr": "Nous avions trouvé la réponse dans le livre.",
+    "en": "We had found the answer in the book.",
+    "accept": [
+     "Nous avions trouvé la réponse dans le livre.",
+     "Oui, nous avions trouvé la réponse dans le livre.",
+     "Nous l'avions trouvée dans le livre."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant ton retour, ton voisin avait-il trouvé ton chat ?",
+    "en": "Before you got back, had your neighbour found your cat?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il avait trouvé le chat dans son garage.",
+    "en": "Yes, he had found the cat in his garage.",
+    "accept": [
+     "Oui, il avait trouvé le chat dans son garage.",
+     "Oui, il l'avait trouvé dans son garage.",
+     "Il avait trouvé le chat dans son garage."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Le chat avait-il trouvé quelque chose à manger ?",
+    "en": "Had the cat found something to eat?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il avait trouvé un vieux sandwich.",
+    "en": "Yes, it had found an old sandwich.",
+    "accept": [
+     "Oui, il avait trouvé un vieux sandwich.",
+     "Il avait trouvé un vieux sandwich."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel petit aventurier, ce chat !",
+    "en": "What a little adventurer, that cat!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "le retour",
+    "en": "return, getting back"
+   },
+   {
+    "fr": "un voisin",
+    "en": "neighbour"
+   },
+   {
+    "fr": "quelque chose",
+    "en": "something"
+   },
+   {
+    "fr": "un aventurier",
+    "en": "adventurer"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|croire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Avant l'annonce officielle, ta collègue avait-elle cru la rumeur sur le patron ?",
+    "en": "Before the official announcement, had your colleague believed the rumour about the boss?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle avait cru la rumeur.",
+    "en": "She had believed the rumour.",
+    "accept": [
+     "Elle avait cru la rumeur.",
+     "Oui, elle avait cru la rumeur.",
+     "Oui, elle l'avait crue."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Les enfants disaient avoir fini leurs devoirs. Les avais-tu crus ?",
+    "en": "The children said they'd finished their homework. Had you believed them?"
+   },
+   {
+    "who": "you",
+    "fr": "Je n'avais pas cru les enfants.",
+    "en": "I hadn't believed the children.",
+    "accept": [
+     "Je n'avais pas cru les enfants.",
+     "Non, je n'avais pas cru les enfants.",
+     "Non, je ne les avais pas crus."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant de voir la vidéo, avais-tu cru Paul et son requin ?",
+    "en": "Before seeing the video, had you believed Paul and his shark?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'avais pas cru son histoire.",
+    "en": "No, I hadn't believed his story.",
+    "accept": [
+     "Non, je n'avais pas cru son histoire.",
+     "Non, je ne l'avais pas crue.",
+     "Je n'avais pas cru son histoire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et sa femme, l'avait-elle cru ?",
+    "en": "And his wife, had she believed him?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle avait cru Paul tout de suite.",
+    "en": "Yes, she had believed Paul straight away.",
+    "accept": [
+     "Oui, elle avait cru Paul tout de suite.",
+     "Oui, elle l'avait cru tout de suite.",
+     "Elle avait cru Paul tout de suite."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Elle le connaît mieux que nous !",
+    "en": "She knows him better than we do!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un requin",
+    "en": "shark"
+   },
+   {
+    "fr": "tout de suite",
+    "en": "straight away"
+   },
+   {
+    "fr": "mieux",
+    "en": "better"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|parler",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Avant la réunion, avais-tu parlé au directeur ?",
+    "en": "Before the meeting, had you spoken to the director?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais parlé au directeur.",
+    "en": "I had spoken to the director.",
+    "accept": [
+     "J'avais parlé au directeur.",
+     "Oui, j'avais parlé au directeur.",
+     "Oui, je lui avais parlé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et Claire, de quoi avait-elle parlé ?",
+    "en": "And Claire, what had she talked about?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle avait parlé du projet.",
+    "en": "She had talked about the project.",
+    "accept": [
+     "Elle avait parlé du projet.",
+     "Claire avait parlé du projet."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant ton séjour à Paris, avais-tu déjà parlé français ?",
+    "en": "Before your stay in Paris, had you already spoken French?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais parlé français avec mon professeur.",
+    "en": "Yes, I had spoken French with my teacher.",
+    "accept": [
+     "Oui, j'avais parlé français avec mon professeur.",
+     "Oui, j'avais déjà parlé français.",
+     "J'avais parlé français avec mon professeur."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Avais-tu aussi parlé avec des Français ?",
+    "en": "Had you also spoken with French people?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'avais jamais parlé avec des Français.",
+    "en": "No, I had never spoken with French people.",
+    "accept": [
+     "Non, je n'avais jamais parlé avec des Français.",
+     "Je n'avais jamais parlé avec des Français."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Alors ce séjour a été une belle première !",
+    "en": "So that stay was a lovely first!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un séjour",
+    "en": "stay"
+   },
+   {
+    "fr": "jamais",
+    "en": "never"
+   },
+   {
+    "fr": "une première",
+    "en": "a first"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|prendre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Quand tu l'as appelé, ton frère avait-il pris le train pour Paris ?",
+    "en": "When you called him, had your brother taken the train to Paris?"
+   },
+   {
+    "who": "you",
+    "fr": "Il n'avait pas pris le train pour Paris.",
+    "en": "He hadn't taken the train to Paris.",
+    "accept": [
+     "Il n'avait pas pris le train pour Paris.",
+     "Non, il n'avait pas pris le train pour Paris.",
+     "Non, il ne l'avait pas pris."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Avant de partir, tes amies avaient-elles pensé aux clés de l'appartement ?",
+    "en": "Before leaving, had your friends remembered the apartment keys?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient pris les clés.",
+    "en": "They had taken the keys.",
+    "accept": [
+     "Elles avaient pris les clés.",
+     "Oui, elles avaient pris les clés.",
+     "Oui, elles les avaient prises."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Ce matin, avant de partir, avais-tu pris ton petit-déjeuner ?",
+    "en": "This morning, before leaving, had you had your breakfast?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais pris un café et un croissant.",
+    "en": "Yes, I had had a coffee and a croissant.",
+    "accept": [
+     "Oui, j'avais pris un café et un croissant.",
+     "Oui, j'avais pris mon petit-déjeuner.",
+     "J'avais pris un café et un croissant."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta fille, avait-elle pris son goûter pour l'école ?",
+    "en": "And your daughter, had she taken her snack for school?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle n'avait pas pris son goûter.",
+    "en": "No, she hadn't taken her snack.",
+    "accept": [
+     "Non, elle n'avait pas pris son goûter.",
+     "Non, elle ne l'avait pas pris.",
+     "Elle n'avait pas pris son goûter."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Pas de problème, elle partagera avec ses copains !",
+    "en": "No problem, she'll share with her friends!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "le petit-déjeuner",
+    "en": "breakfast"
+   },
+   {
+    "fr": "un goûter",
+    "en": "afternoon snack"
+   },
+   {
+    "fr": "partager",
+    "en": "to share"
+   },
+   {
+    "fr": "un copain",
+    "en": "friend, mate"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|lire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Avant de monter le meuble, ta sœur avait-elle lu les instructions ?",
+    "en": "Before putting the furniture together, had your sister read the instructions?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle avait lu les instructions.",
+    "en": "She had read the instructions.",
+    "accept": [
+     "Elle avait lu les instructions.",
+     "Oui, elle avait lu les instructions.",
+     "Oui, elle les avait lues."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, avais-tu lu le journal ce matin-là ?",
+    "en": "And you, had you read the newspaper that morning?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais lu le journal.",
+    "en": "I had read the newspaper.",
+    "accept": [
+     "J'avais lu le journal.",
+     "Oui, j'avais lu le journal.",
+     "Oui, je l'avais lu."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant de voir le film, avais-tu lu le livre ?",
+    "en": "Before seeing the film, had you read the book?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais lu le livre l'été dernier.",
+    "en": "Yes, I had read the book last summer.",
+    "accept": [
+     "Oui, j'avais lu le livre l'été dernier.",
+     "Oui, je l'avais lu l'été dernier.",
+     "J'avais lu le livre l'été dernier."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes enfants l'avaient-ils lu aussi ?",
+    "en": "Had your children read it too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils n'avaient pas lu le livre.",
+    "en": "No, they hadn't read the book.",
+    "accept": [
+     "Non, ils n'avaient pas lu le livre.",
+     "Non, ils ne l'avaient pas lu.",
+     "Ils n'avaient pas lu le livre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Le livre est souvent meilleur que le film !",
+    "en": "The book is often better than the film!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "l'été dernier",
+    "en": "last summer"
+   },
+   {
+    "fr": "souvent",
+    "en": "often"
+   },
+   {
+    "fr": "meilleur / meilleure",
+    "en": "better"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|écrire",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Pour l'anniversaire de Marie, qu'avais-tu préparé ?",
+    "en": "For Marie's birthday, what had you prepared?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais écrit une lettre à Marie.",
+    "en": "I had written a letter to Marie.",
+    "accept": [
+     "J'avais écrit une lettre à Marie.",
+     "Je lui avais écrit une lettre.",
+     "J'avais écrit une lettre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes filles, avaient-elles écrit quelque chose ?",
+    "en": "And your daughters, had they written something?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient écrit une carte postale.",
+    "en": "They had written a postcard.",
+    "accept": [
+     "Elles avaient écrit une carte postale.",
+     "Oui, elles avaient écrit une carte postale.",
+     "Elles avaient écrit une carte."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant le cours, avais-tu écrit ta rédaction ?",
+    "en": "Before class, had you written your essay?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais écrit ma rédaction la veille.",
+    "en": "Yes, I had written my essay the day before.",
+    "accept": [
+     "Oui, j'avais écrit ma rédaction la veille.",
+     "Oui, je l'avais écrite la veille.",
+     "J'avais écrit ma rédaction la veille."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton camarade avait-il écrit la sienne ?",
+    "en": "Had your classmate written his?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il n'avait pas écrit un seul mot.",
+    "en": "No, he hadn't written a single word.",
+    "accept": [
+     "Non, il n'avait pas écrit un seul mot.",
+     "Il n'avait pas écrit un seul mot.",
+     "Non, il n'avait rien écrit."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Le professeur n'a sûrement pas été content !",
+    "en": "The teacher can't have been happy!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "une rédaction",
+    "en": "essay"
+   },
+   {
+    "fr": "la veille",
+    "en": "the day before"
+   },
+   {
+    "fr": "un camarade",
+    "en": "classmate"
+   },
+   {
+    "fr": "un mot",
+    "en": "word"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|ouvrir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Quand les clients sont arrivés, aviez-vous ouvert le magasin ?",
+    "en": "When the customers arrived, had you opened the shop?"
+   },
+   {
+    "who": "you",
+    "fr": "Nous avions ouvert le magasin.",
+    "en": "We had opened the shop.",
+    "accept": [
+     "Nous avions ouvert le magasin.",
+     "Oui, nous avions ouvert le magasin.",
+     "Oui, nous l'avions ouvert."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le colis du matin, ton collègue l'avait-il ouvert ?",
+    "en": "And the morning parcel, had your colleague opened it?"
+   },
+   {
+    "who": "you",
+    "fr": "Il avait ouvert le colis.",
+    "en": "He had opened the parcel.",
+    "accept": [
+     "Il avait ouvert le colis.",
+     "Oui, il avait ouvert le colis.",
+     "Oui, il l'avait ouvert."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tes parents sont arrivés, avais-tu ouvert les fenêtres ?",
+    "en": "When your parents arrived, had you opened the windows?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais ouvert toutes les fenêtres.",
+    "en": "Yes, I had opened all the windows.",
+    "accept": [
+     "Oui, j'avais ouvert toutes les fenêtres.",
+     "Oui, je les avais ouvertes.",
+     "J'avais ouvert toutes les fenêtres."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton père avait-il déjà ouvert le champagne ?",
+    "en": "Had your father already opened the champagne?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il n'avait pas encore ouvert la bouteille.",
+    "en": "No, he hadn't opened the bottle yet.",
+    "accept": [
+     "Non, il n'avait pas encore ouvert la bouteille.",
+     "Non, il ne l'avait pas encore ouverte.",
+     "Il n'avait pas encore ouvert la bouteille."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Il attendait sûrement le dessert !",
+    "en": "He was surely waiting for dessert!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "tout / toute / tous / toutes",
+    "en": "all"
+   },
+   {
+    "fr": "attendre",
+    "en": "to wait for"
+   },
+   {
+    "fr": "sûrement",
+    "en": "surely"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|fermer",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Avant de partir, avais-tu fermé la porte à clé ?",
+    "en": "Before leaving, had you locked the door?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais fermé la porte à clé.",
+    "en": "I had locked the door.",
+    "accept": [
+     "J'avais fermé la porte à clé.",
+     "Oui, j'avais fermé la porte à clé.",
+     "Oui, je l'avais fermée à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes voisines, avaient-elles fermé les volets ?",
+    "en": "And your neighbours, had they closed the shutters?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient fermé les volets.",
+    "en": "They had closed the shutters.",
+    "accept": [
+     "Elles avaient fermé les volets.",
+     "Oui, elles avaient fermé les volets.",
+     "Oui, elles les avaient fermés."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand l'orage a commencé, avais-tu fermé la tente ?",
+    "en": "When the storm started, had you closed the tent?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais déjà fermé la tente.",
+    "en": "Yes, I had already closed the tent.",
+    "accept": [
+     "Oui, j'avais déjà fermé la tente.",
+     "Oui, je l'avais déjà fermée.",
+     "J'avais déjà fermé la tente."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes amis avaient-ils fermé leur voiture ?",
+    "en": "Had your friends closed up their car?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils n'avaient pas fermé le coffre.",
+    "en": "No, they hadn't closed the boot.",
+    "accept": [
+     "Non, ils n'avaient pas fermé le coffre.",
+     "Non, ils ne l'avaient pas fermé.",
+     "Ils n'avaient pas fermé le coffre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh là là, tout était mouillé alors !",
+    "en": "Oh dear, everything was wet then!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un orage",
+    "en": "storm"
+   },
+   {
+    "fr": "une tente",
+    "en": "tent"
+   },
+   {
+    "fr": "le coffre",
+    "en": "boot (of a car)"
+   },
+   {
+    "fr": "mouillé / mouillée",
+    "en": "wet"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|perdre",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Pourquoi tes amies étaient-elles tristes hier soir ?",
+    "en": "Why were your friends sad last night?"
+   },
+   {
+    "who": "you",
+    "fr": "Elles avaient perdu le pari.",
+    "en": "They had lost the bet.",
+    "accept": [
+     "Elles avaient perdu le pari.",
+     "Parce qu'elles avaient perdu le pari.",
+     "Elles avaient perdu leur pari."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes cousins, pourquoi étaient-ils en retard ?",
+    "en": "And your cousins, why were they late?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils avaient perdu l'adresse.",
+    "en": "They had lost the address.",
+    "accept": [
+     "Ils avaient perdu l'adresse.",
+     "Parce qu'ils avaient perdu l'adresse.",
+     "Ils avaient perdu l'adresse de la fête."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant d'arriver à l'aéroport, avais-tu perdu ton passeport ?",
+    "en": "Before reaching the airport, had you lost your passport?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais perdu mon passeport dans le taxi.",
+    "en": "Yes, I had lost my passport in the taxi.",
+    "accept": [
+     "Oui, j'avais perdu mon passeport dans le taxi.",
+     "Oui, je l'avais perdu dans le taxi.",
+     "J'avais perdu mon passeport dans le taxi."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton ami, avait-il perdu ses bagages ?",
+    "en": "And your friend, had he lost his luggage?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il n'avait rien perdu, heureusement.",
+    "en": "No, he hadn't lost anything, fortunately.",
+    "accept": [
+     "Non, il n'avait rien perdu, heureusement.",
+     "Non, il n'avait rien perdu.",
+     "Heureusement, il n'avait rien perdu."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel voyage mouvementé !",
+    "en": "What an eventful trip!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "les bagages",
+    "en": "luggage"
+   },
+   {
+    "fr": "rien",
+    "en": "nothing, anything"
+   },
+   {
+    "fr": "heureusement",
+    "en": "fortunately"
+   },
+   {
+    "fr": "mouvementé / mouvementée",
+    "en": "eventful"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|garder",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Après les courses, avais-tu jeté le ticket de caisse ?",
+    "en": "After the shopping, had you thrown away the receipt?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais gardé le reçu.",
+    "en": "I had kept the receipt.",
+    "accept": [
+     "J'avais gardé le reçu.",
+     "Non, j'avais gardé le reçu.",
+     "Non, je l'avais gardé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, avait-il parlé de la surprise ?",
+    "en": "And your brother, had he mentioned the surprise?"
+   },
+   {
+    "who": "you",
+    "fr": "Il avait gardé le secret.",
+    "en": "He had kept the secret.",
+    "accept": [
+     "Il avait gardé le secret.",
+     "Non, il avait gardé le secret.",
+     "Non, il l'avait gardé."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Ta grand-mère avait-elle gardé tes dessins d'enfant ?",
+    "en": "Had your grandmother kept your childhood drawings?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle avait gardé tous mes dessins.",
+    "en": "Yes, she had kept all my drawings.",
+    "accept": [
+     "Oui, elle avait gardé tous mes dessins.",
+     "Oui, elle les avait tous gardés.",
+     "Elle avait gardé tous mes dessins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, avais-tu gardé quelque chose de cette époque ?",
+    "en": "And you, had you kept anything from that time?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais gardé mon vieil ours en peluche.",
+    "en": "Yes, I had kept my old teddy bear.",
+    "accept": [
+     "Oui, j'avais gardé mon vieil ours en peluche.",
+     "J'avais gardé mon vieil ours en peluche.",
+     "Oui, j'avais gardé mon ours en peluche."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est adorable, ces souvenirs !",
+    "en": "Those memories are adorable!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un dessin",
+    "en": "drawing"
+   },
+   {
+    "fr": "une époque",
+    "en": "period, time"
+   },
+   {
+    "fr": "un ours en peluche",
+    "en": "teddy bear"
+   },
+   {
+    "fr": "un souvenir",
+    "en": "memory"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|s'intéresser",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! À quoi t'intéressais-tu au lycée ?",
+    "en": "Hello! What were you interested in at secondary school?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'intéressais à la politique.",
+    "en": "I was interested in politics.",
+    "accept": [
+     "Je m'intéressais à la politique.",
+     "Au lycée, je m'intéressais à la politique."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton frère s'intéressait-il aussi à la politique ?",
+    "en": "Was your brother interested in politics too?"
+   },
+   {
+    "who": "you",
+    "fr": "Il ne s'intéressait pas à la politique.",
+    "en": "He wasn't interested in politics.",
+    "accept": [
+     "Il ne s'intéressait pas à la politique.",
+     "Non, il ne s'intéressait pas à la politique.",
+     "Non, il ne s'y intéressait pas."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tu travaillais à la banque, tes collègues s'intéressaient-ils au foot ?",
+    "en": "When you worked at the bank, were your colleagues interested in football?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'intéressaient beaucoup au football.",
+    "en": "Yes, they were very interested in football.",
+    "accept": [
+     "Oui, ils s'intéressaient beaucoup au football.",
+     "Oui, ils s'intéressaient beaucoup au foot.",
+     "Oui, ils s'y intéressaient beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, t'intéressais-tu au foot à cette époque ?",
+    "en": "And were you interested in football at that time?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je m'intéressais seulement au tennis.",
+    "en": "No, I was only interested in tennis.",
+    "accept": [
+     "Non, je m'intéressais seulement au tennis.",
+     "Non, je m'intéressais uniquement au tennis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Chacun ses goûts !",
+    "en": "Each to their own!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "à cette époque",
+    "en": "at that time"
+   },
+   {
+    "fr": "seulement",
+    "en": "only"
+   },
+   {
+    "fr": "chacun ses goûts",
+    "en": "each to their own"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|se débrouiller",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Pendant ton voyage à Londres, te débrouillais-tu en anglais ?",
+    "en": "During your trip to London, did you manage in English?"
+   },
+   {
+    "who": "you",
+    "fr": "Je me débrouillais en anglais.",
+    "en": "I got by in English.",
+    "accept": [
+     "Je me débrouillais en anglais.",
+     "Oui, je me débrouillais en anglais."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton amie se débrouillait-elle sans voiture ?",
+    "en": "Did your friend manage without a car?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle se débrouillait sans voiture.",
+    "en": "She managed without a car.",
+    "accept": [
+     "Elle se débrouillait sans voiture.",
+     "Oui, elle se débrouillait sans voiture."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tu étais étudiant, te débrouillais-tu seul pour la cuisine ?",
+    "en": "When you were a student, did you manage the cooking on your own?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me débrouillais avec des pâtes et du riz.",
+    "en": "Yes, I got by with pasta and rice.",
+    "accept": [
+     "Oui, je me débrouillais avec des pâtes et du riz.",
+     "Je me débrouillais avec des pâtes et du riz."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes colocataires se débrouillaient-ils mieux que toi ?",
+    "en": "Did your flatmates manage better than you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils se débrouillaient encore plus mal que moi.",
+    "en": "No, they managed even worse than me.",
+    "accept": [
+     "Non, ils se débrouillaient encore plus mal que moi.",
+     "Non, ils se débrouillaient plus mal que moi."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Heureusement, il y avait les pizzas !",
+    "en": "Luckily, there was pizza!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un colocataire",
+    "en": "flatmate"
+   },
+   {
+    "fr": "les pâtes",
+    "en": "pasta"
+   },
+   {
+    "fr": "le riz",
+    "en": "rice"
+   },
+   {
+    "fr": "plus mal",
+    "en": "worse"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|s'ennuyer",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! T'ennuyais-tu à l'école quand tu étais petit ?",
+    "en": "Hello! Did you get bored at school when you were little?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'ennuyais à l'école.",
+    "en": "I got bored at school.",
+    "accept": [
+     "Je m'ennuyais à l'école.",
+     "Oui, je m'ennuyais à l'école."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ta sœur s'ennuyait-elle le dimanche ?",
+    "en": "Did your sister get bored on Sundays?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle s'ennuyait le dimanche.",
+    "en": "She got bored on Sundays.",
+    "accept": [
+     "Elle s'ennuyait le dimanche.",
+     "Oui, elle s'ennuyait le dimanche."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "T'ennuyais-tu chez tes grands-parents à la campagne ?",
+    "en": "Did you get bored at your grandparents' in the countryside?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'ennuyais jamais à la campagne.",
+    "en": "No, I never got bored in the countryside.",
+    "accept": [
+     "Non, je ne m'ennuyais jamais à la campagne.",
+     "Je ne m'ennuyais jamais à la campagne."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton cousin s'ennuyait-il loin de la ville ?",
+    "en": "Did your cousin get bored far from the city?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'ennuyait sans ses amis.",
+    "en": "Yes, he got bored without his friends.",
+    "accept": [
+     "Oui, il s'ennuyait sans ses amis.",
+     "Il s'ennuyait sans ses amis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "La campagne, ce n'est pas pour tout le monde !",
+    "en": "The countryside isn't for everyone!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "la campagne",
+    "en": "countryside"
+   },
+   {
+    "fr": "les grands-parents",
+    "en": "grandparents"
+   },
+   {
+    "fr": "un cousin",
+    "en": "cousin"
+   },
+   {
+    "fr": "loin de",
+    "en": "far from"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|s'entraîner",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Tu as couru un marathon ! T'entraînais-tu souvent ?",
+    "en": "You ran a marathon! Did you train often?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'entraînais tous les matins.",
+    "en": "I trained every morning.",
+    "accept": [
+     "Je m'entraînais tous les matins.",
+     "Oui, je m'entraînais tous les matins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, où s'entraînait-elle ?",
+    "en": "And your sister, where did she train?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle s'entraînait à la salle de sport.",
+    "en": "She trained at the gym.",
+    "accept": [
+     "Elle s'entraînait à la salle de sport.",
+     "Ma sœur s'entraînait à la salle de sport."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Au collège, t'entraînais-tu avec l'équipe de basket ?",
+    "en": "In middle school, did you train with the basketball team?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'entraînais avec eux deux fois par semaine.",
+    "en": "Yes, I trained with them twice a week.",
+    "accept": [
+     "Oui, je m'entraînais avec eux deux fois par semaine.",
+     "Oui, je m'entraînais deux fois par semaine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton père s'entraînait-il avec toi le week-end ?",
+    "en": "Did your dad train with you at weekends?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'entraînait avec moi dans le jardin.",
+    "en": "Yes, he trained with me in the garden.",
+    "accept": [
+     "Oui, il s'entraînait avec moi dans le jardin.",
+     "Oui, il s'entraînait avec moi."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel bon souvenir !",
+    "en": "What a lovely memory!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "le collège",
+    "en": "middle school"
+   },
+   {
+    "fr": "le basket",
+    "en": "basketball"
+   },
+   {
+    "fr": "deux fois par semaine",
+    "en": "twice a week"
+   },
+   {
+    "fr": "un souvenir",
+    "en": "memory"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|se souvenir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Au bureau, te souvenais-tu des anniversaires de tes collègues ?",
+    "en": "At the office, did you remember your colleagues' birthdays?"
+   },
+   {
+    "who": "you",
+    "fr": "Je me souvenais de l'anniversaire de tout le monde.",
+    "en": "I remembered everybody's birthday.",
+    "accept": [
+     "Je me souvenais de l'anniversaire de tout le monde.",
+     "Oui, je me souvenais de l'anniversaire de tout le monde."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton chef s'en souvenait-il aussi ?",
+    "en": "Did your boss remember them too?"
+   },
+   {
+    "who": "you",
+    "fr": "Il ne se souvenait pas de l'anniversaire de tout le monde.",
+    "en": "He didn't remember everybody's birthday.",
+    "accept": [
+     "Il ne se souvenait pas de l'anniversaire de tout le monde.",
+     "Non, il ne se souvenait pas de l'anniversaire de tout le monde."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Ta grand-mère cuisinait-elle sans livre de recettes ?",
+    "en": "Did your grandmother cook without a recipe book?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle se souvenait de toutes les recettes.",
+    "en": "Yes, she remembered all the recipes.",
+    "accept": [
+     "Oui, elle se souvenait de toutes les recettes.",
+     "Elle se souvenait de toutes les recettes."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, te souvenais-tu des ingrédients ?",
+    "en": "And did you remember the ingredients?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne me souvenais jamais des quantités.",
+    "en": "No, I never remembered the quantities.",
+    "accept": [
+     "Non, je ne me souvenais jamais des quantités.",
+     "Je ne me souvenais jamais des quantités."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Il faut tout écrire, alors !",
+    "en": "Then you have to write everything down!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un livre de recettes",
+    "en": "recipe book"
+   },
+   {
+    "fr": "un ingrédient",
+    "en": "ingredient"
+   },
+   {
+    "fr": "une quantité",
+    "en": "quantity"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|s'adapter",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Ta famille déménageait souvent. T'adaptais-tu facilement ?",
+    "en": "Your family moved often. Did you adapt easily?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'adaptais facilement aux changements.",
+    "en": "I adapted easily to changes.",
+    "accept": [
+     "Je m'adaptais facilement aux changements.",
+     "Oui, je m'adaptais facilement aux changements."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes frères s'adaptaient-ils à chaque nouvelle ville ?",
+    "en": "And did your brothers adapt to each new city?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils s'adaptaient à chaque nouvelle ville.",
+    "en": "They adapted to each new city.",
+    "accept": [
+     "Ils s'adaptaient à chaque nouvelle ville.",
+     "Oui, ils s'adaptaient à chaque nouvelle ville."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand tu travaillais au Canada, t'adaptais-tu au froid ?",
+    "en": "When you worked in Canada, did you adapt to the cold?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'adaptais pas du tout au froid.",
+    "en": "No, I didn't adapt to the cold at all.",
+    "accept": [
+     "Non, je ne m'adaptais pas du tout au froid.",
+     "Je ne m'adaptais pas du tout au froid.",
+     "Non, je ne m'y adaptais pas du tout."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton ami Marc s'adaptait-il mieux que toi ?",
+    "en": "Did your friend Marc adapt better than you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'adaptait vite, il adorait la neige.",
+    "en": "Yes, he adapted quickly, he loved the snow.",
+    "accept": [
+     "Oui, il s'adaptait vite, il adorait la neige.",
+     "Oui, il s'adaptait vite, il aimait la neige."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi, je préfère le soleil !",
+    "en": "Personally, I prefer the sun!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "le froid",
+    "en": "the cold"
+   },
+   {
+    "fr": "pas du tout",
+    "en": "not at all"
+   },
+   {
+    "fr": "la neige",
+    "en": "snow"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Imperfect|se réjouir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Enfant, te réjouissais-tu de la neige ?",
+    "en": "Hello! As a child, were you happy when it snowed?"
+   },
+   {
+    "who": "you",
+    "fr": "Je me réjouissais de la neige.",
+    "en": "I was happy about the snow.",
+    "accept": [
+     "Je me réjouissais de la neige.",
+     "Oui, je me réjouissais de la neige."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes parents se réjouissaient-ils des week-ends ?",
+    "en": "Did your parents look forward to the weekends?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils se réjouissaient des week-ends.",
+    "en": "They looked forward to the weekends.",
+    "accept": [
+     "Ils se réjouissaient des week-ends.",
+     "Oui, ils se réjouissaient des week-ends."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Allais-tu au festival de musique avec tes amis chaque été ?",
+    "en": "Did you go to the music festival with your friends every summer?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, et je me réjouissais de ce week-end toute l'année.",
+    "en": "Yes, and I looked forward to that weekend all year.",
+    "accept": [
+     "Oui, et je me réjouissais de ce week-end toute l'année.",
+     "Oui, je me réjouissais de ce week-end toute l'année."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes amis se réjouissaient-ils autant que toi ?",
+    "en": "Were your friends as excited as you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils se réjouissaient surtout des concerts du soir.",
+    "en": "Yes, they especially looked forward to the evening concerts.",
+    "accept": [
+     "Oui, ils se réjouissaient surtout des concerts du soir.",
+     "Oui, ils se réjouissaient des concerts du soir."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ça devait être génial !",
+    "en": "That must have been great!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un festival",
+    "en": "festival"
+   },
+   {
+    "fr": "chaque été",
+    "en": "every summer"
+   },
+   {
+    "fr": "autant que",
+    "en": "as much as"
+   },
+   {
+    "fr": "surtout",
+    "en": "especially"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|s'intéresser",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Ton frère avait-il une passion avant l'université ?",
+    "en": "Hello! Did your brother have a passion before university?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était intéressé à l'art.",
+    "en": "He had become interested in art.",
+    "accept": [
+     "Il s'était intéressé à l'art.",
+     "Oui, il s'était intéressé à l'art.",
+     "Il s'était déjà intéressé à l'art."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, à quoi s'était-elle intéressée ?",
+    "en": "And your sister, what had she become interested in?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle s'était intéressée à l'histoire.",
+    "en": "She had become interested in history.",
+    "accept": [
+     "Elle s'était intéressée à l'histoire.",
+     "Elle s'était déjà intéressée à l'histoire.",
+     "Elle, elle s'était intéressée à l'histoire."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant ton cours de photo, t'étais-tu déjà intéressé à la photo ?",
+    "en": "Before your photo class, had you already been interested in photography?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais déjà intéressé à la photo au lycée.",
+    "en": "Yes, I had already been interested in photography in high school.",
+    "accept": [
+     "Oui, je m'étais déjà intéressé à la photo au lycée.",
+     "Oui, je m'étais déjà intéressée à la photo au lycée.",
+     "Oui, je m'y étais déjà intéressé au lycée."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton père, s'y était-il intéressé avant toi ?",
+    "en": "And your father, had he been interested in it before you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'était jamais intéressé à la photo.",
+    "en": "No, he had never been interested in photography.",
+    "accept": [
+     "Non, il ne s'était jamais intéressé à la photo.",
+     "Non, il ne s'y était jamais intéressé.",
+     "Il ne s'était jamais intéressé à la photo."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Alors, c'est toi l'artiste de la famille !",
+    "en": "So you're the artist of the family!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un cours",
+    "en": "a class"
+   },
+   {
+    "fr": "la photo",
+    "en": "photography, photo"
+   },
+   {
+    "fr": "le lycée",
+    "en": "high school"
+   },
+   {
+    "fr": "un/une artiste",
+    "en": "an artist"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|se débrouiller",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Salut ! Quand tu l'as appelée, ta sœur avait-elle réglé son problème de vol ?",
+    "en": "Hi! When you called her, had your sister sorted out the problem with her flight?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle s'était débrouillée à l'aéroport.",
+    "en": "She had managed at the airport.",
+    "accept": [
+     "Elle s'était débrouillée à l'aéroport.",
+     "Oui, elle s'était débrouillée à l'aéroport.",
+     "Elle s'était bien débrouillée à l'aéroport."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, avait-il assez d'argent pour le voyage ?",
+    "en": "And your brother, did he have enough money for the trip?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était débrouillé avec très peu d'argent.",
+    "en": "He had managed with very little money.",
+    "accept": [
+     "Il s'était débrouillé avec très peu d'argent.",
+     "Non, il s'était débrouillé avec très peu d'argent.",
+     "Non, mais il s'était débrouillé avec très peu d'argent."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand le mécanicien est arrivé, t'étais-tu déjà débrouillé ?",
+    "en": "When the mechanic arrived, had you already sorted things out?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais déjà débrouillé tout seul.",
+    "en": "Yes, I had already managed all by myself.",
+    "accept": [
+     "Oui, je m'étais déjà débrouillé tout seul.",
+     "Oui, je m'étais déjà débrouillée toute seule.",
+     "Oui, je m'étais débrouillé tout seul."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton amie, s'était-elle débrouillée pour trouver un taxi ?",
+    "en": "And your friend, had she managed to find a taxi?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle s'était débrouillée pour rentrer en bus.",
+    "en": "No, she had managed to get home by bus.",
+    "accept": [
+     "Non, elle s'était débrouillée pour rentrer en bus.",
+     "Elle s'était débrouillée pour rentrer en bus.",
+     "Non, elle s'était débrouillée pour prendre le bus."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo, vous êtes une équipe efficace !",
+    "en": "Well done, you're an efficient team!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un mécanicien",
+    "en": "a mechanic"
+   },
+   {
+    "fr": "tout seul / toute seule",
+    "en": "all by myself"
+   },
+   {
+    "fr": "rentrer",
+    "en": "to go home"
+   },
+   {
+    "fr": "efficace",
+    "en": "efficient"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|s'ennuyer",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Ton collègue s'était-il ennuyé à la réunion ?",
+    "en": "Hello! Had your colleague been bored at the meeting?"
+   },
+   {
+    "who": "you",
+    "fr": "Il ne s'était pas ennuyé à la réunion.",
+    "en": "He hadn't been bored at the meeting.",
+    "accept": [
+     "Il ne s'était pas ennuyé à la réunion.",
+     "Non, il ne s'était pas ennuyé à la réunion.",
+     "Non, il ne s'y était pas ennuyé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton fils, avait-il aimé le musée ?",
+    "en": "And your son, had he liked the museum?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était ennuyé au musée.",
+    "en": "He had been bored at the museum.",
+    "accept": [
+     "Il s'était ennuyé au musée.",
+     "Non, il s'était ennuyé au musée.",
+     "Non, il s'y était ennuyé."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant l'arrivée de tes amis, t'étais-tu ennuyé au camping ?",
+    "en": "Before your friends arrived, had you been bored at the campsite?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais beaucoup ennuyé avant leur arrivée.",
+    "en": "Yes, I had been very bored before they arrived.",
+    "accept": [
+     "Oui, je m'étais beaucoup ennuyé avant leur arrivée.",
+     "Oui, je m'étais beaucoup ennuyée avant leur arrivée.",
+     "Oui, je m'étais beaucoup ennuyé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton fils, s'était-il ennuyé aussi ?",
+    "en": "And your son, had he been bored too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'était pas ennuyé, il avait nagé.",
+    "en": "No, he hadn't been bored, he had gone swimming.",
+    "accept": [
+     "Non, il ne s'était pas ennuyé, il avait nagé.",
+     "Non, il ne s'était pas ennuyé.",
+     "Il ne s'était pas ennuyé, il avait nagé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Les enfants trouvent toujours quelque chose à faire !",
+    "en": "Kids always find something to do!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "une arrivée",
+    "en": "an arrival"
+   },
+   {
+    "fr": "le camping",
+    "en": "the campsite"
+   },
+   {
+    "fr": "nager",
+    "en": "to swim"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|s'entraîner",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Salut ! Ta sœur avait-elle préparé la course ?",
+    "en": "Hi! Had your sister prepared for the race?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle s'était entraînée avec l'équipe.",
+    "en": "She had trained with the team.",
+    "accept": [
+     "Elle s'était entraînée avec l'équipe.",
+     "Oui, elle s'était entraînée avec l'équipe.",
+     "Oui, elle s'était entraînée avec son équipe."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, comment avait-il préparé le marathon ?",
+    "en": "And your brother, how had he prepared for the marathon?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était entraîné à la salle de sport.",
+    "en": "He had trained at the gym.",
+    "accept": [
+     "Il s'était entraîné à la salle de sport.",
+     "Il s'était entraîné à la salle de sport tous les jours.",
+     "Il s'était entraîné à la salle de gym."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant le match de dimanche, t'étais-tu entraîné avec ton club ?",
+    "en": "Before Sunday's match, had you trained with your club?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais entraîné trois fois par semaine.",
+    "en": "Yes, I had trained three times a week.",
+    "accept": [
+     "Oui, je m'étais entraîné trois fois par semaine.",
+     "Oui, je m'étais entraînée trois fois par semaine.",
+     "Oui, je m'étais entraîné avec mon club."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton meilleur ami, s'était-il entraîné aussi ?",
+    "en": "And your best friend, had he trained too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'était pas entraîné, il était malade.",
+    "en": "No, he hadn't trained, he was ill.",
+    "accept": [
+     "Non, il ne s'était pas entraîné, il était malade.",
+     "Non, il ne s'était pas entraîné.",
+     "Il ne s'était pas entraîné, il était malade."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "J'espère qu'il va mieux maintenant !",
+    "en": "I hope he's feeling better now!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un club",
+    "en": "a club"
+   },
+   {
+    "fr": "trois fois par semaine",
+    "en": "three times a week"
+   },
+   {
+    "fr": "malade",
+    "en": "ill, sick"
+   },
+   {
+    "fr": "aller mieux",
+    "en": "to feel better"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|se souvenir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Pourquoi ton ami était-il en retard ?",
+    "en": "Hello! Why was your friend late?"
+   },
+   {
+    "who": "you",
+    "fr": "Il ne s'était pas souvenu de l'adresse.",
+    "en": "He hadn't remembered the address.",
+    "accept": [
+     "Il ne s'était pas souvenu de l'adresse.",
+     "Non, il ne s'était pas souvenu de l'adresse.",
+     "Non, il ne s'en était pas souvenu."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, avaient-ils oublié la date ?",
+    "en": "And your parents, had they forgotten the date?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils s'étaient souvenus de la date.",
+    "en": "They had remembered the date.",
+    "accept": [
+     "Ils s'étaient souvenus de la date.",
+     "Non, ils s'étaient souvenus de la date.",
+     "Non, ils s'en étaient souvenus."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Quand ta grand-mère a téléphoné, t'étais-tu souvenu de son anniversaire ?",
+    "en": "When your grandmother called, had you remembered her birthday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais souvenu de son anniversaire le matin.",
+    "en": "Yes, I had remembered her birthday that morning.",
+    "accept": [
+     "Oui, je m'étais souvenu de son anniversaire le matin.",
+     "Oui, je m'étais souvenue de son anniversaire le matin.",
+     "Oui, je m'en étais souvenu le matin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, s'en était-il souvenu ?",
+    "en": "And your brother, had he remembered it?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'en était pas souvenu du tout.",
+    "en": "No, he hadn't remembered it at all.",
+    "accept": [
+     "Non, il ne s'en était pas souvenu du tout.",
+     "Non, il ne s'en était pas souvenu.",
+     "Non, il ne s'était pas souvenu de son anniversaire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Il doit vite lui téléphoner !",
+    "en": "He needs to call her quickly!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un anniversaire",
+    "en": "a birthday"
+   },
+   {
+    "fr": "téléphoner",
+    "en": "to phone"
+   },
+   {
+    "fr": "pas du tout",
+    "en": "not at all"
+   },
+   {
+    "fr": "vite",
+    "en": "quickly"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|s'adapter",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Salut ! Quand tu lui as rendu visite, ton cousin était-il content de sa nouvelle vie à Paris ?",
+    "en": "Hi! When you visited him, was your cousin happy with his new life in Paris?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était adapté à la vie à Paris.",
+    "en": "He had adapted to life in Paris.",
+    "accept": [
+     "Il s'était adapté à la vie à Paris.",
+     "Oui, il s'était adapté à la vie à Paris.",
+     "Oui, il s'était bien adapté à la vie à Paris."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes collègues, avaient-ils aimé la nouvelle équipe ?",
+    "en": "And your colleagues, had they liked the new team?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils s'étaient adaptés à la nouvelle équipe.",
+    "en": "They had adapted to the new team.",
+    "accept": [
+     "Ils s'étaient adaptés à la nouvelle équipe.",
+     "Oui, ils s'étaient adaptés à la nouvelle équipe.",
+     "Oui, ils s'y étaient adaptés."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant ton premier hiver au Canada, t'étais-tu adapté au froid ?",
+    "en": "Before your first winter in Canada, had you got used to the cold?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'étais pas encore adapté au froid.",
+    "en": "No, I hadn't got used to the cold yet.",
+    "accept": [
+     "Non, je ne m'étais pas encore adapté au froid.",
+     "Non, je ne m'étais pas encore adaptée au froid.",
+     "Non, je ne m'y étais pas encore adapté."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes enfants, s'étaient-ils adaptés à leur nouvelle école ?",
+    "en": "And your children, had they adapted to their new school?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'étaient adaptés très vite à l'école.",
+    "en": "Yes, they had adapted to school very quickly.",
+    "accept": [
+     "Oui, ils s'étaient adaptés très vite à l'école.",
+     "Oui, ils s'y étaient adaptés très vite.",
+     "Ils s'étaient adaptés très vite à l'école."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Les enfants s'adaptent toujours plus vite que les parents !",
+    "en": "Children always adapt faster than their parents!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un hiver",
+    "en": "a winter"
+   },
+   {
+    "fr": "pas encore",
+    "en": "not yet"
+   },
+   {
+    "fr": "vite",
+    "en": "quickly"
+   }
+  ]
+ },
+ {
+  "key": "Intermediate|Pluperfect|se réjouir",
+  "warmup": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Quand tu es rentré, ton père avait-il vu le résultat du match ?",
+    "en": "Hello! When you got home, had your father seen the result of the match?"
+   },
+   {
+    "who": "you",
+    "fr": "Il s'était réjoui du résultat.",
+    "en": "He had been delighted with the result.",
+    "accept": [
+     "Il s'était réjoui du résultat.",
+     "Oui, il s'était réjoui du résultat.",
+     "Oui, il s'en était réjoui."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes voisins, avaient-ils aimé la journée au jardin ?",
+    "en": "And your neighbours, had they enjoyed the day in the garden?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils s'étaient réjouis du beau temps.",
+    "en": "They had been delighted with the good weather.",
+    "accept": [
+     "Ils s'étaient réjouis du beau temps.",
+     "Oui, ils s'étaient réjouis du beau temps.",
+     "Oui, ils s'étaient bien réjouis du beau temps."
+    ]
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Avant le concert, t'étais-tu réjoui de voir ton groupe préféré ?",
+    "en": "Before the concert, had you been looking forward to seeing your favourite band?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais réjoui pendant des semaines.",
+    "en": "Yes, I had been looking forward to it for weeks.",
+    "accept": [
+     "Oui, je m'étais réjoui pendant des semaines.",
+     "Oui, je m'étais réjouie pendant des semaines.",
+     "Oui, je m'en étais réjoui pendant des semaines."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, s'était-elle réjouie de venir avec toi ?",
+    "en": "And your sister, had she been looking forward to coming with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle ne s'était pas réjouie, elle préfère le jazz.",
+    "en": "No, she hadn't been excited, she prefers jazz.",
+    "accept": [
+     "Non, elle ne s'était pas réjouie, elle préfère le jazz.",
+     "Non, elle ne s'était pas réjouie.",
+     "Elle ne s'était pas réjouie, elle préfère le jazz."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage, le concert était génial !",
+    "en": "Too bad, the concert was great!"
+   }
+  ],
+  "newWords": [
+   {
+    "fr": "un groupe",
+    "en": "a band"
+   },
+   {
+    "fr": "préféré / préférée",
+    "en": "favourite"
+   },
+   {
+    "fr": "pendant des semaines",
+    "en": "for weeks"
+   },
+   {
+    "fr": "génial",
+    "en": "great"
+   }
+  ]
+ }
+]

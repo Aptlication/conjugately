@@ -6,6 +6,8 @@ import {
 } from "./conversations";
 import { WARMUPS } from "./conversationWarmups";
 import { WARMUP_AUDIO } from "./conversationWarmupAudio";
+import { CONVERSATIONS_125, WARMUPS_125 } from "./conversations125";
+import { AUDIO_125 } from "./conversation125Audio";
 
 /**
  * 1.2.3.5 (Jonathan, 23 Oct 2026): longer conversations above Novice.
@@ -21,7 +23,7 @@ import { WARMUP_AUDIO } from "./conversationWarmupAudio";
  * plays silently and moves on, so a warm-up never blocks a conversation.
  */
 
-export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WARMUP_AUDIO };
+export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WARMUP_AUDIO, ...AUDIO_125 };
 
 // Built once per unit and reused. The conversation screen's effects depend on
 // this object, so a fresh copy on every render restarted the dialogue at its
@@ -30,12 +32,12 @@ export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WA
 const FULL = new Map<string, Conversation | undefined>();
 
 export function getConversation(level: string, timeFrame: string, verb: string): Conversation | undefined {
-  // Intermediate A and B use the conversations written for Intermediate.
-  // The Pluperfect has none yet, so its units simply offer no conversation.
+  // Intermediate A and B use the conversations written for Intermediate; the
+  // Imperfect and Pluperfect ones were added in 1.2.5 (conversations125.ts).
   const key = `${contentLevel(level)}|${timeFrame}|${verb}`.normalize("NFC");
   if (FULL.has(key)) return FULL.get(key);
-  const base = getBaseConversation(contentLevel(level), timeFrame, verb);
-  const warm = WARMUPS[key];
+  const base = getBaseConversation(contentLevel(level), timeFrame, verb) ?? CONVERSATIONS_125[key];
+  const warm = WARMUPS[key] ?? WARMUPS_125[key];
   const full = base && warm?.length ? { ...base, turns: [...warm, ...base.turns] } : base;
   FULL.set(key, full);
   return full;
