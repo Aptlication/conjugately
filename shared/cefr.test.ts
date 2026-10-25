@@ -4,7 +4,7 @@ import {
   fallbackSpeaking, fallbackWriting, mcqScore, mergeCefrResult, normaliseForMarking,
   outcome, rubricLinePasses, sectionMaxima, type CefrResult,
 } from "./cefrScoring";
-import { cefrCoinCost, cefrGate, cefrPrerequisiteExamIds, unlockCefrTest, cefrUnlockId } from "./cefrCoins";
+import { cefrCoinCost, cefrGate, cefrLevelExamsPassed, cefrPrerequisiteExamIds, unlockCefrTest, cefrUnlockId } from "./cefrCoins";
 import { emptyCoinState } from "./coins";
 import type { ExamResult } from "./exams";
 
@@ -74,18 +74,22 @@ assert.equal(cefrCoinCost("A1"), 100);
 assert.equal(cefrCoinCost("A2"), 140);
 assert.equal(cefrCoinCost("B1"), 140);
 
-// --- unlock: every Final Level Exam of the level first, then coins, then free retakes
+// --- unlock (1.3.10): coins only (Pro is checked by the app), then free retakes
 assert.equal(cefrPrerequisiteExamIds("A1").length, 3);
 assert.equal(cefrPrerequisiteExamIds("A2").length, 3);
 assert.equal(cefrPrerequisiteExamIds("B1").length, 5);
 const passAll = (id: "A1" | "A2" | "B1"): ExamResult[] =>
   cefrPrerequisiteExamIds(id).map((examId) => ({ examId, correct: 1, total: 1, passed: true, date: "x" }));
 let coins = { ...emptyCoinState(), earned: 500 };
-assert.equal(cefrGate(coins, "A1", []).kind, "examsFirst");
-assert.equal(cefrGate(coins, "A1", passAll("A1").slice(0, 2)).kind, "examsFirst");
+// 1.3.10: no exam prerequisite — coins alone decide.
+assert.equal(cefrGate(coins, "A1", []).kind, "canUnlock");
+assert.equal(cefrGate(coins, "A1", passAll("A1").slice(0, 2)).kind, "canUnlock");
+assert.equal(cefrLevelExamsPassed("A1", passAll("A1").slice(0, 2)), false);
+assert.equal(cefrLevelExamsPassed("A1", passAll("A1")), true);
 assert.equal(cefrGate({ ...emptyCoinState(), earned: 99 }, "A1", passAll("A1")).kind, "needCoins");
 assert.equal(cefrGate(coins, "A1", passAll("A1")).kind, "canUnlock");
-assert.equal(unlockCefrTest(coins, "A1", []), null);
+assert.equal(unlockCefrTest({ ...emptyCoinState(), earned: 99 }, "A1", passAll("A1")), null); // not enough coins
+assert.ok(unlockCefrTest(coins, "A1", [])); // no exams passed: still allowed (1.3.10)
 const after = unlockCefrTest(coins, "A1", passAll("A1"))!;
 assert.equal(after.spent, 100);
 assert.ok(after.unlockedExams.includes(cefrUnlockId("A1")));

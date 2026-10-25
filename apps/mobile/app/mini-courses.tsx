@@ -15,7 +15,8 @@ import { readCoins } from "../lib/coins";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
 import CefrGateCard from "../components/CefrGateCard";
-import { cefrTestForLevel } from "@shared/cefrTests";
+import { CEFR_IDS, cefrTestForLevel } from "@shared/cefrTests";
+import CefrBadge from "../components/CefrBadge";
 
 export default function MiniCourses() {
   const [level, setLevel] = useState<string | null>(null);
@@ -72,6 +73,21 @@ export default function MiniCourses() {
               <Text style={styles.rowSub}>Coming Soon!</Text>
             </Pressable>
           </View>
+        )}
+
+        {/* 1.3.10: every CEFR-style test in one place, open from any level */}
+        {!level && (
+          <Pressable style={styles.cefrEntry} onPress={() => router.push("/cefr-exams" as any)} accessibilityRole="button"
+            accessibilityLabel="CEFR Exams. Find out your European level, A1, A2 and B1. Conjugately Pro.">
+            <View style={styles.cefrBadges}>
+              {CEFR_IDS.map((id) => <CefrBadge key={id} id={id} earned size={24} label="" />)}
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.rowTitle}>CEFR Exams</Text>
+              <Text style={styles.rowSub}>Find out your European level · A1 · A2 · B1</Text>
+            </View>
+            <View style={styles.proTag}><Text style={styles.proTagText}>PRO</Text></View>
+          </Pressable>
         )}
 
         {level && !timeFrame && (
@@ -159,4 +175,9 @@ const styles = StyleSheet.create({
   rowNext: { borderColor: "#4A78F2", borderWidth: 2 },
   rowSubStarted: { color: "#9DB4F5" },
   back: { color: "#c4b5fd", fontSize: 15, textAlign: "center", padding: 10 },
+  cefrEntry: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, marginBottom: 16, borderRadius: 20,
+    borderWidth: 2, borderColor: "#5BD48F", backgroundColor: "rgba(91,212,143,0.12)" },
+  cefrBadges: { flexDirection: "row", gap: 2 },
+  proTag: { backgroundColor: "#F5C518", borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },
+  proTagText: { color: "#1B2145", fontSize: 11, fontWeight: "800" },
 });

@@ -28,6 +28,10 @@ import { maybeAskForReview, noteUnitResult } from "../lib/reviewPrompt";
 import CoinStack from "../components/CoinStack";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
+import CefrBadge from "../components/CefrBadge";
+import { maybeCefrInvitation } from "../lib/cefr";
+import { cefrCoinCost } from "@shared/cefrCoins";
+import { CEFR_TESTS, type CefrId } from "@shared/cefrTests";
 
 // From shared/levels.ts; Pluperfect added 25 Oct 2026 (Intermediate A and B).
 const TENSE_BY_TIMEFRAME: Record<string, string> = Object.fromEntries(
@@ -127,6 +131,8 @@ export default function Quiz() {
   // learner to an exam's price (shared/coins.ts examInvitation).
   const [invite, setInvite] = useState<ExamInvitation | null>(null);
   const [inviteBusy, setInviteBusy] = useState(false);
+  // 1.3.10: once, after the last Final Level Exam of a level with a CEFR-style test.
+  const [cefrInvite, setCefrInvite] = useState<CefrId | null>(null);
   const inviteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => () => { if (inviteTimer.current) clearTimeout(inviteTimer.current); }, []);
   // 1.2.1: the "Final conversation" offered after a course unit. Asked once per
@@ -392,7 +398,14 @@ export default function Quiz() {
           total: exam.totalQuestions,
           passed: finalScore >= exam.passMark,
           date: new Date().toISOString(),
-        }).then(setExamBest).catch(() => {});
+        }).then((best) => {
+          setExamBest(best);
+          if (finalScore >= exam.passMark) {
+            maybeCefrInvitation(exam.level).then((id) => {
+              if (id) inviteTimer.current = setTimeout(() => setCefrInvite(id), 1800);
+            }).catch(() => {});
+          }
+        }).catch(() => {});
       } else if (courseKey && unitIndex !== undefined) {
         // Coins first, history second: on the first run after the update the
         // coin store backfills from history, and it must not see this quiz
@@ -771,6 +784,29 @@ export default function Quiz() {
         </View>
       </Modal>
 
+      <Modal visible={!!cefrInvite} transparent animationType="fade" onRequestClose={() => setCefrInvite(null)}>
+        <View style={styles.modalBg}>
+          {cefrInvite && (
+            <View style={[styles.modalCard, styles.cefrInviteCard]} accessibilityViewIsModal>
+              <CefrBadge id={cefrInvite} earned size={120} />
+              <Text style={styles.cefrInviteKicker}>{CEFR_TESTS[cefrInvite].level.toUpperCase()} COMPLETE</Text>
+              <Text style={styles.cefrInviteTitle}>Ready to find out your CEFR level?</Text>
+              <Text style={styles.cefrInviteBody}>
+                The {cefrInvite} test covers listening, reading, writing and speaking — everything you've just learned. Pass it to earn your {cefrInvite} badge.
+              </Text>
+              <Text style={styles.cefrInviteCoins}><CoinIcon size={15} /> {cefrCoinCost(cefrInvite)} coins · yours to keep</Text>
+              <Pressable style={styles.cefrInviteBtn} accessibilityRole="button"
+                onPress={() => { setCefrInvite(null); router.push(isPro ? "/cefr-exams" as any : "/paywall" as any); }}>
+                <Text style={styles.cefrInviteBtnText}>{isPro ? `Try the ${cefrInvite} test` : "Requires Conjugately Pro"}</Text>
+              </Pressable>
+              <Pressable onPress={() => setCefrInvite(null)} accessibilityRole="button">
+                <Text style={styles.cefrInviteLater}>Maybe later</Text>
+              </Pressable>
+            </View>
+          )}
+        </View>
+      </Modal>
+
       <Modal visible={convoAsk && !invite} transparent animationType="fade" onRequestClose={() => setConvoAsk(false)}>
         <View style={styles.modalBg}>
           {conversation && (
@@ -860,6 +896,14 @@ const styles = StyleSheet.create({
   inviteDetail: { color: "#5A6472", fontSize: 13, textAlign: "center", marginTop: 8, marginBottom: 14 },
   inviteBtn: { backgroundColor: "#F5C518", borderRadius: 14, paddingVertical: 14, alignItems: "center", marginBottom: 10 },
   inviteBtnText: { color: "#1B2145", fontSize: 16, fontWeight: "800" },
+  cefrInviteCard: { backgroundColor: "#1B2145", borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", alignItems: "center" },
+  cefrInviteKicker: { color: "#5BD48F", fontSize: 13, fontWeight: "700", letterSpacing: 1, marginTop: 10 },
+  cefrInviteTitle: { color: "#FFFFFF", fontSize: 22, fontWeight: "700", textAlign: "center", marginTop: 8 },
+  cefrInviteBody: { color: "#C3CAD4", fontSize: 15, lineHeight: 22, textAlign: "center", marginTop: 8 },
+  cefrInviteCoins: { color: "#F5C518", fontSize: 14, fontWeight: "700", marginTop: 12 },
+  cefrInviteBtn: { alignSelf: "stretch", backgroundColor: "#5BD48F", borderRadius: 14, paddingVertical: 15, alignItems: "center", marginTop: 14 },
+  cefrInviteBtnText: { color: "#1B2145", fontSize: 17, fontWeight: "800" },
+  cefrInviteLater: { color: "#E6E9EE", fontSize: 15, padding: 10, textAlign: "center" },
   examBanner: {
     borderWidth: 1, borderColor: "rgba(245,197,24,0.4)", backgroundColor: "rgba(245,197,24,0.1)",
     borderRadius: 14, paddingVertical: 12, paddingHorizontal: 16, marginBottom: 16, alignItems: "center",

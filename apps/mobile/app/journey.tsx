@@ -5,9 +5,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, JourneySummary } from "../lib/progress";
 import { LEVELS, timeFrameListLabel } from "@shared/levels";
-import { CEFR_IDS, CEFR_TESTS } from "@shared/cefrTests";
+import { CEFR_IDS } from "@shared/cefrTests";
 import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
+import CefrBadge from "../components/CefrBadge";
 
 /** 1.3: the "Rate Conjugately" button opens the App Store's write-a-review page. */
 const APP_STORE_ID = "6799402337";
@@ -135,12 +136,11 @@ export default function Journey() {
             {CEFR_IDS.map((id) => {
               const earned = hasCefrBadge(cefr, id);
               return (
-                <View key={id} style={styles.badgeCol} accessible accessibilityLabel={`${id} badge ${earned ? "earned" : "not earned yet"}`}>
-                  <View style={[styles.badge, !earned && styles.badgeOff]}>
-                    <Text style={[styles.badgeText, !earned && { color: "#8A93A0" }]}>{id}</Text>
-                  </View>
-                  <Text style={styles.statSub}>{earned ? "Earned" : `After ${CEFR_TESTS[id].level}`}</Text>
-                </View>
+                <Pressable key={id} style={styles.badgeCol} onPress={() => router.push("/cefr-exams" as any)}
+                  accessibilityRole="button" accessibilityLabel={`${id} badge, ${earned ? "earned" : "not earned yet"}. Opens CEFR Exams.`}>
+                  <CefrBadge id={id} earned={earned} size={52} label="" />
+                  <Text style={styles.statSub}>{earned ? "Earned" : "Not yet"}</Text>
+                </Pressable>
               );
             })}
           </View>
@@ -186,9 +186,6 @@ const styles = StyleSheet.create({
   statsRow: { flexDirection: "row", gap: 8 },
   badges: { flexDirection: "row", justifyContent: "space-around" },
   badgeCol: { alignItems: "center", gap: 4 },
-  badge: { width: 54, height: 54, borderRadius: 27, backgroundColor: "#1B2145", borderWidth: 3, borderColor: "#F5C518", alignItems: "center", justifyContent: "center" },
-  badgeOff: { borderColor: "rgba(255,255,255,0.2)", backgroundColor: "transparent" },
-  badgeText: { color: "#fff", fontSize: 17, fontWeight: "800" },
   rate: { marginTop: 4, marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", paddingVertical: 14, alignItems: "center" },
   rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700", textAlign: "center", paddingHorizontal: 12 },
   stat: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 12, padding: 10, alignItems: "center" },

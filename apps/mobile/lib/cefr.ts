@@ -1,5 +1,8 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { CEFR_RESULTS_STORAGE_KEY, CEFR_TESTS, type CefrId } from "@shared/cefrTests";
+import { CEFR_RESULTS_STORAGE_KEY, CEFR_TESTS, cefrTestForLevel, type CefrId } from "@shared/cefrTests";
+import { cefrLevelExamsPassed } from "@shared/cefrCoins";
+import { readExamResults } from "./exams";
+import { readCefrGate } from "./coins";
 import {
   fallbackSpeaking, fallbackWriting, mergeCefrResult, parseCefrResults,
   type CefrResult, type SpokenAnswers, type WritingAnswers,
@@ -65,5 +68,30 @@ export async function markSection(
     return { score: d.score, marking: d.marking === "ai" ? "ai" : "fallback", feedback: d.feedback ?? {} };
   } catch {
     return local();
+  }
+}
+
+// ---------------------------------------------- end-of-level invitation (1.3.10) ---
+const INVITE_KEY = "conjugately_cefr_invites_shown";
+
+/**
+ * After a Final Level Exam is passed: the CEFR-style test to invite the learner
+ * to, or null. Only when that pass completes every Final Level Exam of a level
+ * that has a test, the learner doesn't already own it, and the invitation has
+ * never been shown for it. Marks it shown, so it appears once.
+ */
+export async function maybeCefrInvitation(level: string): Promise<CefrId | null> {
+  try {
+    const test = cefrTestForLevel(level);
+    if (!test) return null;
+    const id = test.id;
+    const shown: string[] = JSON.parse((await AsyncStorage.getItem(INVITE_KEY)) || "[]");
+    if (shown.includes(id)) return null;
+    const [results, { gate }] = await Promise.all([readExamResults(), readCefrGate(id)]);
+    if (gate.kind === "unlocked" || !cefrLevelExamsPassed(id, results)) return null;
+    await AsyncStorage.setItem(INVITE_KEY, JSON.stringify([...shown, id]));
+    return id;
+  } catch {
+    return null;
   }
 }
