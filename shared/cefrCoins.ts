@@ -1,9 +1,9 @@
 /**
  * CEFR-style tests: unlock and price (1.3).
  *
- * Approved by Jonathan 25 Oct 2026:
- *  - Opens only when every Final Level Exam of the test's level is passed
- *    (3 each for Novice and Elementary, 5 for Intermediate B).
+ * Approved by Jonathan 25 Oct 2026 (revised the same evening, 1.3.10):
+ *  - Pro + coins is the only gate. A learner does NOT need to pass the level's
+ *    Final Level Exams first: trying the test early is meant to excite interest.
  *  - Costs twice one Final Level Exam of that level, so it follows examCoinCost
  *    automatically: Novice 100, Elementary 140, Intermediate B 140.
  *  - Pay once; retakes are free. The unlock is stored in the coin state's
@@ -26,7 +26,10 @@ export function cefrCoinCost(id: CefrId): number {
   return CEFR_PRICE_MULTIPLIER * examCoinCost(CEFR_TESTS[id].level);
 }
 
-/** The Final Level Exams that must all be passed first, in course order. */
+/**
+ * The Final Level Exams of the test's level, in course order. No longer a gate
+ * (1.3.10); used to invite the learner to the test once they have all been passed.
+ */
 export function cefrPrerequisiteExamIds(id: CefrId): string[] {
   const level = CEFR_TESTS[id].level;
   return timeFramesFor(level)
@@ -36,20 +39,21 @@ export function cefrPrerequisiteExamIds(id: CefrId): string[] {
 
 export type CefrGate =
   | { kind: "unlocked" }
-  | { kind: "examsFirst"; passed: number; required: number; remaining: string[] }
   | { kind: "needCoins"; balance: number; short: number; cost: number }
   | { kind: "canUnlock"; balance: number; cost: number };
 
-export function cefrGate(s: CoinState, id: CefrId, examResults: ExamResult[] = []): CefrGate {
+export function cefrGate(s: CoinState, id: CefrId, _examResults: ExamResult[] = []): CefrGate {
   if (s.unlockedExams.includes(cefrUnlockId(id))) return { kind: "unlocked" };
-  const results = migrateLegacyExamResults(examResults);
-  const required = cefrPrerequisiteExamIds(id);
-  const remaining = required.filter((examId) => !hasPassedExam(results, examId));
-  if (remaining.length) return { kind: "examsFirst", passed: required.length - remaining.length, required: required.length, remaining };
   const balance = coinBalance(s);
   const cost = cefrCoinCost(id);
   if (balance < cost) return { kind: "needCoins", balance, short: cost - balance, cost };
   return { kind: "canUnlock", balance, cost };
+}
+
+/** True once every Final Level Exam of the test's level is passed (invitation trigger). */
+export function cefrLevelExamsPassed(id: CefrId, examResults: ExamResult[]): boolean {
+  const results = migrateLegacyExamResults(examResults);
+  return cefrPrerequisiteExamIds(id).every((examId) => hasPassedExam(results, examId));
 }
 
 /** Spend the price. Null when the gate does not allow it, so no caller can skip the check. */
@@ -62,8 +66,7 @@ export function unlockCefrTest(s: CoinState, id: CefrId, examResults: ExamResult
 
 export function cefrGateLabel(g: CefrGate, levelName: string): string {
   switch (g.kind) {
-    case "unlocked": return "Unlocked — retakes are free";
-    case "examsFirst": return `Pass all ${g.required} ${levelName} Final Level Exams first (${g.passed} of ${g.required} passed)`;
+    case "unlocked": return "Yours to keep — retakes are free";
     case "canUnlock": return `Ready — unlock for ${g.cost} coins (you have ${g.balance})`;
     case "needCoins": return `${g.short} more coins needed (you have ${g.balance} of ${g.cost}). Every course quiz earns coins.`;
   }

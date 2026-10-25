@@ -7,11 +7,12 @@ import type { CefrResult } from "@shared/cefrScoring";
 import { readCefrGate, spendOnCefr } from "../lib/coins";
 import { readCefrResults } from "../lib/cefr";
 import CoinIcon from "./CoinIcon";
+import CefrBadge from "./CefrBadge";
 
 /**
- * The CEFR-style test entry point (1.3), shown at the foot of a level's
- * time-frame list in Mini-Courses, after its Final Level Exams. Same two-tap
- * spend as ExamGateCard (Unlock, then Confirm).
+ * One CEFR-style test (1.3): shown on the CEFR Exams screen and at the foot of
+ * a level's time-frame list in Mini-Courses. Same two-tap spend as
+ * ExamGateCard (Unlock, then Confirm). 1.3.10: Pro + coins is the only gate.
  */
 type Props = { testId: CefrId; locked?: boolean };
 
@@ -42,9 +43,10 @@ export default function CefrGateCard({ testId, locked }: Props) {
   return (
     <View style={s.box}>
       <View style={s.head}>
-        <View style={s.badge}><Text style={s.badgeText}>{testId}</Text></View>
+        <CefrBadge id={testId} earned={!!best?.passed} size={46} />
         <View style={{ flex: 1 }}>
-          <Text style={s.title}>CEFR-style {testId} test</Text>
+          <Text style={s.title}>{testId} test</Text>
+          <Text style={s.meta}>Matches the {test.level} course</Text>
           <Text style={s.meta}>Listening · Reading · Writing · Speaking · {test.minutes.replace("About ", "~")}</Text>
         </View>
         <View style={s.pro}><Text style={s.proText}>PRO</Text></View>
@@ -90,8 +92,6 @@ export default function CefrGateCard({ testId, locked }: Props) {
 const s = StyleSheet.create({
   box: { borderRadius: 16, padding: 14, marginTop: 14, borderWidth: 1, backgroundColor: "rgba(91,212,143,0.10)", borderColor: "rgba(91,212,143,0.45)" },
   head: { flexDirection: "row", alignItems: "center", gap: 10 },
-  badge: { width: 44, height: 44, borderRadius: 22, backgroundColor: "#1B2145", borderWidth: 2, borderColor: "#F5C518", alignItems: "center", justifyContent: "center" },
-  badgeText: { color: "#FFFFFF", fontWeight: "800", fontSize: 15 },
   title: { color: "#FFFFFF", fontSize: 17, fontWeight: "700" },
   meta: { color: "#C3CAD4", fontSize: 12, marginTop: 2 },
   pro: { backgroundColor: "#F5C518", borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },

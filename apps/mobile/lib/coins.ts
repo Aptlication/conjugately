@@ -141,8 +141,8 @@ function coinBalanceEarned(s: CoinState): number {
 }
 
 // ------------------------------------------------- CEFR-style tests (1.3) ---
-// Rules live in shared/cefrCoins.ts: every Final Level Exam of the level first,
-// then 2 × the exam price, paid once; retakes free.
+// Rules live in shared/cefrCoins.ts: Pro (checked by the caller) + 2 × the
+// level's exam price, paid once; retakes free. No exams needed first (1.3.10).
 
 export async function readCefrGate(id: CefrId): Promise<{ gate: CefrGate; coins: CoinState }> {
   const [coins, results] = await Promise.all([readCoins(), readExamResults()]);
