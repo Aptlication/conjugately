@@ -4,7 +4,7 @@ import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, JourneySummary } from "../lib/progress";
-import { LEVELS, timeFrameListLabel, timeFramesFor } from "@shared/levels";
+import { LEVELS, timeFrameListLabel } from "@shared/levels";
 import { CEFR_IDS, CEFR_TESTS } from "@shared/cefrTests";
 import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
@@ -71,7 +71,7 @@ export default function Journey() {
             {s.levels.map((lv) => (
               <View key={lv.level} style={{ marginBottom: 4 }}>
                 <View style={styles.progRow}>
-                  <Text style={styles.progLabel}>{lv.level} — {timeFrameListLabel(lv.level)} Tenses</Text>
+                  <Text style={styles.progLabel} numberOfLines={1}>{lv.level}</Text>
                   <Text style={[styles.progPct, lv.pct > 0 ? { color: tempColors(lv.pct)[tempColors(lv.pct).length - 1] } : { color: "#8A93A0" }]}>{lv.pct}%</Text>
                 </View>
                 <View style={styles.track}>
@@ -81,7 +81,7 @@ export default function Journey() {
                       style={[styles.fill, { width: `${Math.min(100, lv.pct)}%` }]} />
                   )}
                 </View>
-                <Text style={styles.levelSub}>{lv.done} of {lv.total} units across the {timeFramesFor(lv.level).length === 5 ? "five" : "three"} tenses</Text>
+                <Text style={styles.levelSub}>{lv.done} of {lv.total} units · {timeFrameListLabel(lv.level)}</Text>
               </View>
             ))}
           </View>
@@ -172,9 +172,9 @@ const styles = StyleSheet.create({
   pathBar: { flex: 1, height: 4, borderRadius: 2, marginHorizontal: 4, minWidth: 10 },
   barDone: { backgroundColor: "#5BD48F" },
   barTodo: { backgroundColor: "rgba(255,255,255,0.2)" },
-  progRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 3 },
-  progLabel: { fontSize: 12, color: "#E2E8F0" },
-  progPct: { fontSize: 12, fontWeight: "700" },
+  progRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", marginBottom: 3 },
+  progLabel: { flex: 1, marginRight: 8, fontSize: 12, color: "#E2E8F0" },
+  progPct: { minWidth: 40, textAlign: "right", fontSize: 12, fontWeight: "700", fontVariant: ["tabular-nums"] },
   track: { height: 6, backgroundColor: "rgba(255,255,255,0.2)", borderRadius: 3, overflow: "hidden" },
   fill: { height: 6, backgroundColor: "#4A78F2", borderRadius: 3 },
   nextCard: { backgroundColor: "rgba(34,197,94,0.16)", borderWidth: 1, borderColor: "#22C55E",

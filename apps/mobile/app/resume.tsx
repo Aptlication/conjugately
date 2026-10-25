@@ -109,11 +109,11 @@ export default function Resume() {
       <View style={styles.card}>
         <Text style={styles.cardLabel}>LEVEL COMPLETION</Text>
         <View style={styles.progRow}>
-          <Text style={styles.progLabel}>{level} — {timeFrameListLabel(level)} Tenses</Text>
+          <Text style={styles.progLabel} numberOfLines={1}>{level}</Text>
           <Text style={[styles.progPct, { color: pctColor(levelPct) }]}>{levelPct}%</Text>
         </View>
         <Bar pct={levelPct} />
-        <Text style={styles.levelSub}>{done} of {total} units across the {timeFrames.length === 5 ? "five" : "three"} tenses</Text>
+        <Text style={styles.levelSub}>{done} of {total} units · {timeFrameListLabel(level)}</Text>
       </View>
 
       <View style={styles.card}>
@@ -184,10 +184,10 @@ const styles = StyleSheet.create({
   pathBar: { flex: 1, height: 4, borderRadius: 2, marginHorizontal: 4, minWidth: 8 },
   barDone: { backgroundColor: "#5BD48F" },
   barTodo: { backgroundColor: "rgba(255,255,255,0.2)" },
-  progRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 4 },
-  progLabel: { fontSize: 12, color: "#E2E8F0", flexShrink: 1 },
+  progRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 },
+  progLabel: { flex: 1, marginRight: 8, fontSize: 12, color: "#E2E8F0" },
   progLabelHere: { color: "#FFFFFF", fontWeight: "800" },
-  progPct: { fontSize: 12, fontWeight: "800", fontVariant: ["tabular-nums"] },
+  progPct: { minWidth: 40, textAlign: "right", fontSize: 12, fontWeight: "800", fontVariant: ["tabular-nums"] },
   resumeTag: { fontSize: 10, fontWeight: "900", color: "#FFFFFF", backgroundColor: "#4A78F2", letterSpacing: 0.8 },
   track: { height: 8, backgroundColor: "rgba(255,255,255,0.2)", borderRadius: 4, overflow: "hidden" },
   trackHere: { height: 10, borderWidth: 1.5, borderColor: "rgba(74,120,242,0.8)" },
