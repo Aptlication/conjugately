@@ -47,8 +47,8 @@ export default function CefrBadge({ id, earned, size = 48, label }: Props) {
           CEFR
         </Text>
       )}
-      <View style={[s.letters, { top: h * 0.44, height: h * 0.33 }]}>
-        <Text style={[s.id, { fontSize: w * 0.32 }]} allowFontScaling={false}>{id}</Text>
+      <View style={[s.letters, { top: h * 0.42, height: h * 0.30 }]}>
+        <Text style={[s.id, { fontSize: w * 0.245 }]} numberOfLines={1} allowFontScaling={false}>{id}</Text>
       </View>
     </View>
   );
