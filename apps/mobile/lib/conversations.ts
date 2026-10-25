@@ -23,7 +23,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Bonjour ! Tu es étudiant ?",
+    "fr": "Bonjour ! Es-tu étudiant ?",
     "en": "Hello! Are you a student?",
     "audio": "BEG_etre_pres_1"
    },
@@ -80,7 +80,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as été malade hier ?",
+    "fr": "As-tu été malade hier ?",
     "en": "Were you ill yesterday?",
     "audio": "BEG_etre_pc_1"
    },
@@ -95,7 +95,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous, vous avez été en retard ce matin ?",
+    "fr": "Et vous, avez-vous été en retard ce matin ?",
     "en": "And you all, were you late this morning?",
     "audio": "BEG_etre_pc_3"
    },
@@ -145,7 +145,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu seras à Paris demain ?",
+    "fr": "Seras-tu à Paris demain ?",
     "en": "Will you be in Paris tomorrow?",
     "audio": "BEG_etre_fut_1"
    },
@@ -160,7 +160,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes parents, ils seront là aussi ?",
+    "fr": "Et tes parents, seront-ils là aussi ?",
     "en": "And your parents, will they be there too?",
     "audio": "BEG_etre_fut_3"
    },
@@ -201,7 +201,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as un chien ?",
+    "fr": "As-tu un chien ?",
     "en": "Do you have a dog?",
     "audio": "BEG_avoir_pres_1"
    },
@@ -215,7 +215,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle a un chat ?",
+    "fr": "Et ta sœur, a-t-elle un chat ?",
     "en": "And your sister, does she have a cat?",
     "audio": "BEG_avoir_pres_3"
    },
@@ -260,7 +260,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as eu un cadeau pour ton anniversaire ?",
+    "fr": "As-tu eu un cadeau pour ton anniversaire ?",
     "en": "Did you get a present for your birthday?",
     "audio": "BEG_avoir_pc_1"
    },
@@ -275,7 +275,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton frère, il a eu un cadeau aussi ?",
+    "fr": "Et ton frère, a-t-il eu un cadeau aussi ?",
     "en": "And your brother, did he get a present too?",
     "audio": "BEG_avoir_pc_3"
    },
@@ -324,7 +324,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu auras le temps demain ?",
+    "fr": "Auras-tu le temps demain ?",
     "en": "Will you have time tomorrow?",
     "audio": "BEG_avoir_fut_1"
    },
@@ -339,7 +339,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et Paul, il aura le temps aussi ?",
+    "fr": "Et Paul, aura-t-il le temps aussi ?",
     "en": "And Paul, will he have time too?",
     "audio": "BEG_avoir_fut_3"
    },
@@ -515,7 +515,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et dimanche, vous ferez du sport ?",
+    "fr": "Et dimanche, ferez-vous du sport ?",
     "en": "And on Sunday, will you all do some sport?",
     "audio": "BEG_faire_fut_3"
    },
@@ -561,7 +561,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Vous êtes français ?",
+    "fr": "Êtes-vous français ?",
     "en": "Are you French?",
     "audio": "NOV_etre_pres_1"
    },
@@ -577,7 +577,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous êtes ici en vacances ?",
+    "fr": "Et êtes-vous ici en vacances ?",
     "en": "And are you here on holiday?",
     "audio": "NOV_etre_pres_3"
    },
@@ -623,7 +623,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as été en Italie cet été ?",
+    "fr": "As-tu été en Italie cet été ?",
     "en": "Have you been to Italy this summer?",
     "audio": "NOV_etre_pc_1"
    },
@@ -637,7 +637,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous avez été contents du voyage ?",
+    "fr": "Et avez-vous été contents du voyage ?",
     "en": "And were you happy with the trip?",
     "audio": "NOV_etre_pc_3"
    },
@@ -687,7 +687,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Vous serez à la fête ce soir ?",
+    "fr": "Serez-vous à la fête ce soir ?",
     "en": "Will you be at the party tonight?",
     "audio": "NOV_etre_fut_1"
    },
@@ -702,7 +702,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et Julie, elle sera là aussi ?",
+    "fr": "Et Julie, sera-t-elle là aussi ?",
     "en": "And Julie, will she be there too?",
     "audio": "NOV_etre_fut_3"
    },
@@ -743,7 +743,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Vous avez des enfants ?",
+    "fr": "Avez-vous des enfants ?",
     "en": "Do you have children?",
     "audio": "NOV_avoir_pres_1"
    },
@@ -799,7 +799,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as eu peur pendant le film ?",
+    "fr": "As-tu eu peur pendant le film ?",
     "en": "Were you scared during the film?",
     "audio": "NOV_avoir_pc_1"
    },
@@ -814,7 +814,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils ont eu peur aussi ?",
+    "fr": "Et tes amis, ont-ils eu peur aussi ?",
     "en": "And your friends, were they scared too?",
     "audio": "NOV_avoir_pc_3"
    },
@@ -855,7 +855,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu auras ton permis cette année ?",
+    "fr": "Auras-tu ton permis cette année ?",
     "en": "Will you get your driving licence this year?",
     "audio": "NOV_avoir_fut_1"
    },
@@ -870,7 +870,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle aura une voiture ?",
+    "fr": "Et ta sœur, aura-t-elle une voiture ?",
     "en": "And your sister, will she have a car?",
     "audio": "NOV_avoir_fut_3"
    },
@@ -920,7 +920,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Il fait beau aujourd'hui ?",
+    "fr": "Fait-il beau aujourd'hui ?",
     "en": "Is the weather nice today?",
     "audio": "NOV_faire_pres_1"
    },
@@ -976,7 +976,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Vous avez fait bon voyage ?",
+    "fr": "Avez-vous fait bon voyage ?",
     "en": "Did you have a good trip?",
     "audio": "NOV_faire_pc_1"
    },
@@ -1048,7 +1048,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton fils, il fera le voyage aussi ?",
+    "fr": "Et ton fils, fera-t-il le voyage aussi ?",
     "en": "And your son, will he come on the trip too?",
     "audio": "NOV_faire_fut_3"
    },
@@ -1107,7 +1107,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Tes amis vont avec toi ?",
+    "fr": "Tes amis vont-ils avec toi ?",
     "en": "Are your friends going with you?",
     "audio": "NOV_aller_pres_3"
    },
@@ -1148,7 +1148,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu es allé au cinéma hier ?",
+    "fr": "Es-tu allé au cinéma hier ?",
     "en": "Did you go to the cinema yesterday?",
     "audio": "NOV_aller_pc_1"
    },
@@ -1163,7 +1163,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta copine, elle est allée avec toi ?",
+    "fr": "Et ta copine, est-elle allée avec toi ?",
     "en": "And your girlfriend, did she go with you?",
     "audio": "NOV_aller_pc_3"
    },
@@ -1208,7 +1208,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu iras à la plage demain ?",
+    "fr": "Iras-tu à la plage demain ?",
     "en": "Will you go to the beach tomorrow?",
     "audio": "NOV_aller_fut_1"
    },
@@ -1223,7 +1223,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous, vous irez en voiture ?",
+    "fr": "Et vous, irez-vous en voiture ?",
     "en": "And you all, will you go by car?",
     "audio": "NOV_aller_fut_3"
    },
@@ -1280,7 +1280,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et toi, tu dis bonjour à tes voisins ?",
+    "fr": "Et toi, dis-tu bonjour à tes voisins ?",
     "en": "And you, do you say hello to your neighbours?",
     "audio": "ELE_dire_pres_3"
    },
@@ -1378,7 +1378,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu diras la vérité à ta mère ?",
+    "fr": "Diras-tu la vérité à ta mère ?",
     "en": "Will you tell your mother the truth?",
     "audio": "ELE_dire_fut_1"
    },
@@ -1434,7 +1434,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu vois la tour Eiffel d'ici ?",
+    "fr": "Vois-tu la tour Eiffel d'ici ?",
     "en": "Can you see the Eiffel Tower from here?",
     "audio": "ELE_voir_pres_1"
    },
@@ -1449,7 +1449,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous, vous voyez la Seine ?",
+    "fr": "Et vous, voyez-vous la Seine ?",
     "en": "And you all, can you see the Seine?",
     "audio": "ELE_voir_pres_3"
    },
@@ -1495,7 +1495,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as vu le match hier soir ?",
+    "fr": "As-tu vu le match hier soir ?",
     "en": "Did you see the match last night?",
     "audio": "ELE_voir_pc_1"
    },
@@ -1509,7 +1509,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils ont vu le match aussi ?",
+    "fr": "Et tes amis, ont-ils vu le match aussi ?",
     "en": "And your friends, did they see the match too?",
     "audio": "ELE_voir_pc_3"
    },
@@ -1554,7 +1554,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu verras tes grands-parents ce week-end ?",
+    "fr": "Verras-tu tes grands-parents ce week-end ?",
     "en": "Will you see your grandparents this weekend?",
     "audio": "ELE_voir_fut_1"
    },
@@ -1569,7 +1569,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle les verra aussi ?",
+    "fr": "Et ta sœur, les verra-t-elle aussi ?",
     "en": "And your sister, will she see them too?",
     "audio": "ELE_voir_fut_3"
    },
@@ -1610,7 +1610,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu sais nager ?",
+    "fr": "Sais-tu nager ?",
     "en": "Can you swim?",
     "audio": "ELE_savoir_pres_1"
    },
@@ -1624,7 +1624,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes enfants, ils savent nager ?",
+    "fr": "Et tes enfants, savent-ils nager ?",
     "en": "And your children, can they swim?",
     "audio": "ELE_savoir_pres_3"
    },
@@ -1685,7 +1685,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et Marc, il l'a su avant toi ?",
+    "fr": "Et Marc, l'a-t-il su avant toi ?",
     "en": "And Marc, did he find out before you?",
     "audio": "ELE_savoir_pc_3"
    },
@@ -1727,7 +1727,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu sauras le résultat demain ?",
+    "fr": "Sauras-tu le résultat demain ?",
     "en": "Will you know the result tomorrow?",
     "audio": "ELE_savoir_fut_1"
    },
@@ -1784,7 +1784,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu veux un café ?",
+    "fr": "Veux-tu un café ?",
     "en": "Do you want a coffee?",
     "audio": "ELE_vouloir_pres_1"
    },
@@ -1799,7 +1799,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton ami, il veut un thé ?",
+    "fr": "Et ton ami, veut-il un thé ?",
     "en": "And your friend, does he want a tea?",
     "audio": "ELE_vouloir_pres_3"
    },
@@ -1854,7 +1854,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils ont voulu venir ?",
+    "fr": "Et tes amis, ont-ils voulu venir ?",
     "en": "And your friends, did they want to come?",
     "audio": "ELE_vouloir_pc_3"
    },
@@ -1917,7 +1917,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta copine, elle voudra faire du shopping ?",
+    "fr": "Et ta copine, voudra-t-elle faire du shopping ?",
     "en": "And your girlfriend, will she want to go shopping?",
     "audio": "ELE_vouloir_fut_3"
    },
@@ -1954,7 +1954,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu viens à la fête samedi ?",
+    "fr": "Viens-tu à la fête samedi ?",
     "en": "Are you coming to the party on Saturday?",
     "audio": "ELE_venir_pres_1"
    },
@@ -1968,7 +1968,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Vos amis viennent aussi ?",
+    "fr": "Vos amis viennent-ils aussi ?",
     "en": "Are your friends coming too?",
     "audio": "ELE_venir_pres_3"
    },
@@ -2009,7 +2009,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu es venu en train ?",
+    "fr": "Es-tu venu en train ?",
     "en": "Did you come by train?",
     "audio": "ELE_venir_pc_1"
    },
@@ -2024,7 +2024,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta femme, elle est venue avec toi ?",
+    "fr": "Et ta femme, est-elle venue avec toi ?",
     "en": "And your wife, did she come with you?",
     "audio": "ELE_venir_pc_3"
    },
@@ -2069,7 +2069,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu viendras me voir à Noël ?",
+    "fr": "Viendras-tu me voir à Noël ?",
     "en": "Will you come and see me at Christmas?",
     "audio": "ELE_venir_fut_1"
    },
@@ -2084,7 +2084,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes enfants, ils viendront aussi ?",
+    "fr": "Et tes enfants, viendront-ils aussi ?",
     "en": "And your children, will they come too?",
     "audio": "ELE_venir_fut_3"
    },
@@ -2125,7 +2125,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu peux m'aider ?",
+    "fr": "Peux-tu m'aider ?",
     "en": "Can you help me?",
     "audio": "ELE_pouvoir_pres_1"
    },
@@ -2139,7 +2139,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Tes amis peuvent venir aussi ?",
+    "fr": "Tes amis peuvent-ils venir aussi ?",
     "en": "Can your friends come too?",
     "audio": "ELE_pouvoir_pres_3"
    },
@@ -2181,7 +2181,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as pu finir ton travail ?",
+    "fr": "As-tu pu finir ton travail ?",
     "en": "Were you able to finish your work?",
     "audio": "ELE_pouvoir_pc_1"
    },
@@ -2196,7 +2196,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et Sophie, elle a pu venir à la réunion ?",
+    "fr": "Et Sophie, a-t-elle pu venir à la réunion ?",
     "en": "And Sophie, was she able to come to the meeting?",
     "audio": "ELE_pouvoir_pc_3"
    },
@@ -2237,7 +2237,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu pourras venir demain ?",
+    "fr": "Pourras-tu venir demain ?",
     "en": "Will you be able to come tomorrow?",
     "audio": "ELE_pouvoir_fut_1"
    },
@@ -2252,7 +2252,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et vous, vous pourrez rester dîner ?",
+    "fr": "Et vous, pourrez-vous rester dîner ?",
     "en": "And you all, will you be able to stay for dinner?",
     "audio": "ELE_pouvoir_fut_3"
    },
@@ -2290,7 +2290,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as besoin d'aide ?",
+    "fr": "As-tu besoin d'aide ?",
     "en": "Do you need help?",
     "audio": "ELE_avoir-besoin-de_pres_1"
    },
@@ -2304,7 +2304,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton voisin, il a besoin de quelque chose ?",
+    "fr": "Et ton voisin, a-t-il besoin de quelque chose ?",
     "en": "And your neighbour, does he need anything?",
     "audio": "ELE_avoir-besoin-de_pres_3"
    },
@@ -2349,7 +2349,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as eu besoin d'un médecin ?",
+    "fr": "As-tu eu besoin d'un médecin ?",
     "en": "Did you need a doctor?",
     "audio": "ELE_avoir-besoin-de_pc_1"
    },
@@ -2363,7 +2363,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes enfants, ils ont eu besoin de médicaments ?",
+    "fr": "Et tes enfants, ont-ils eu besoin de médicaments ?",
     "en": "And your children, did they need medicine?",
     "audio": "ELE_avoir-besoin-de_pc_3"
    },
@@ -2405,7 +2405,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu auras besoin de la voiture demain ?",
+    "fr": "Auras-tu besoin de la voiture demain ?",
     "en": "Will you need the car tomorrow?",
     "audio": "ELE_avoir-besoin-de_fut_1"
    },
@@ -2420,7 +2420,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton père, il aura besoin de la voiture ?",
+    "fr": "Et ton père, aura-t-il besoin de la voiture ?",
     "en": "And your father, will he need the car?",
     "audio": "ELE_avoir-besoin-de_fut_3"
    },
@@ -2461,7 +2461,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'intéresses à l'histoire ?",
+    "fr": "T'intéresses-tu à l'histoire ?",
     "en": "Are you interested in history?",
     "audio": "INT_s-interesser_pres_1"
    },
@@ -2536,7 +2536,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils se sont intéressés au français aussi ?",
+    "fr": "Et tes amis, se sont-ils intéressés au français aussi ?",
     "en": "And your friends, did they get interested in French too?",
     "audio": "INT_s-interesser_pc_3"
    },
@@ -2581,7 +2581,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'intéresseras au jardinage à la retraite ?",
+    "fr": "T'intéresseras-tu au jardinage à la retraite ?",
     "en": "Will you take up gardening when you retire?",
     "audio": "INT_s-interesser_fut_1"
    },
@@ -2636,7 +2636,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te débrouilles en français ?",
+    "fr": "Te débrouilles-tu en français ?",
     "en": "Do you get by in French?",
     "audio": "INT_se-debrouiller_pres_1"
    },
@@ -2651,7 +2651,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle se débrouille en anglais ?",
+    "fr": "Et ta sœur, se débrouille-t-elle en anglais ?",
     "en": "And your sister, does she get by in English?",
     "audio": "INT_se-debrouiller_pres_3"
    },
@@ -2692,7 +2692,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es débrouillé à l'aéroport ?",
+    "fr": "T'es-tu débrouillé à l'aéroport ?",
     "en": "Did you manage at the airport?",
     "audio": "INT_se-debrouiller_pc_1"
    },
@@ -2707,7 +2707,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes parents, ils se sont débrouillés avec les bagages ?",
+    "fr": "Et tes parents, se sont-ils débrouillés avec les bagages ?",
     "en": "And your parents, did they manage with the luggage?",
     "audio": "INT_se-debrouiller_pc_3"
    },
@@ -2752,7 +2752,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te débrouilleras sans moi demain ?",
+    "fr": "Te débrouilleras-tu sans moi demain ?",
     "en": "Will you manage without me tomorrow?",
     "audio": "INT_se-debrouiller_fut_1"
    },
@@ -2766,7 +2766,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et les enfants, ils se débrouilleront pour le déjeuner ?",
+    "fr": "Et les enfants, se débrouilleront-ils pour le déjeuner ?",
     "en": "And the children, will they manage lunch?",
     "audio": "INT_se-debrouiller_fut_3"
    },
@@ -2811,7 +2811,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'ennuies le dimanche ?",
+    "fr": "T'ennuies-tu le dimanche ?",
     "en": "Do you get bored on Sundays?",
     "audio": "INT_s-ennuyer_pres_1"
    },
@@ -2826,7 +2826,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton chien, il s'ennuie quand tu travailles ?",
+    "fr": "Et ton chien, s'ennuie-t-il quand tu travailles ?",
     "en": "And your dog, does he get bored when you're working?",
     "audio": "INT_s-ennuyer_pres_3"
    },
@@ -2871,7 +2871,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es ennuyé pendant le concert ?",
+    "fr": "T'es-tu ennuyé pendant le concert ?",
     "en": "Did you get bored during the concert?",
     "audio": "INT_s-ennuyer_pc_1"
    },
@@ -2886,7 +2886,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta copine, elle s'est ennuyée ?",
+    "fr": "Et ta copine, s'est-elle ennuyée ?",
     "en": "And your girlfriend, did she get bored?",
     "audio": "INT_s-ennuyer_pc_3"
    },
@@ -2927,7 +2927,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu ne t'ennuieras pas pendant le long voyage ?",
+    "fr": "Ne t'ennuieras-tu pas pendant le long voyage ?",
     "en": "Won't you get bored on the long trip?",
     "audio": "INT_s-ennuyer_fut_1"
    },
@@ -2942,7 +2942,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton fils, il s'ennuiera ?",
+    "fr": "Et ton fils, s'ennuiera-t-il ?",
     "en": "And your son, will he get bored?",
     "audio": "INT_s-ennuyer_fut_3"
    },
@@ -2988,7 +2988,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'entraînes souvent ?",
+    "fr": "T'entraînes-tu souvent ?",
     "en": "Do you train often?",
     "audio": "INT_s-entrainer_pres_1"
    },
@@ -3003,7 +3003,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton équipe, elle s'entraîne le samedi ?",
+    "fr": "Et ton équipe, s'entraîne-t-elle le samedi ?",
     "en": "And your team, does it train on Saturdays?",
     "audio": "INT_s-entrainer_pres_3"
    },
@@ -3052,7 +3052,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es entraîné pour le marathon ?",
+    "fr": "T'es-tu entraîné pour le marathon ?",
     "en": "Did you train for the marathon?",
     "audio": "INT_s-entrainer_pc_1"
    },
@@ -3067,7 +3067,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle s'est entraînée avec toi ?",
+    "fr": "Et ta sœur, s'est-elle entraînée avec toi ?",
     "en": "And your sister, did she train with you?",
     "audio": "INT_s-entrainer_pc_3"
    },
@@ -3113,7 +3113,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'entraîneras avant l'examen ?",
+    "fr": "T'entraîneras-tu avant l'examen ?",
     "en": "Will you practise before the exam?",
     "audio": "INT_s-entrainer_fut_1"
    },
@@ -3127,7 +3127,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes camarades, ils s'entraîneront aussi ?",
+    "fr": "Et tes camarades, s'entraîneront-ils aussi ?",
     "en": "And your classmates, will they practise too?",
     "audio": "INT_s-entrainer_fut_3"
    },
@@ -3172,7 +3172,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te souviens de ton premier jour d'école ?",
+    "fr": "Te souviens-tu de ton premier jour d'école ?",
     "en": "Do you remember your first day at school?",
     "audio": "INT_se-souvenir_pres_1"
    },
@@ -3187,7 +3187,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta mère, elle s'en souvient aussi ?",
+    "fr": "Et ta mère, s'en souvient-elle aussi ?",
     "en": "And your mother, does she remember it too?",
     "audio": "INT_se-souvenir_pres_3"
    },
@@ -3228,7 +3228,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es souvenu de l'anniversaire de ta sœur ?",
+    "fr": "T'es-tu souvenu de l'anniversaire de ta sœur ?",
     "en": "Did you remember your sister's birthday?",
     "audio": "INT_se-souvenir_pc_1"
    },
@@ -3243,7 +3243,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton frère, il s'en est souvenu ?",
+    "fr": "Et ton frère, s'en est-il souvenu ?",
     "en": "And your brother, did he remember it?",
     "audio": "INT_se-souvenir_pc_3"
    },
@@ -3280,7 +3280,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te souviendras de ce voyage ?",
+    "fr": "Te souviendras-tu de ce voyage ?",
     "en": "Will you remember this trip?",
     "audio": "INT_se-souvenir_fut_1"
    },
@@ -3294,7 +3294,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et les enfants, ils s'en souviendront ?",
+    "fr": "Et les enfants, s'en souviendront-ils ?",
     "en": "And the children, will they remember it?",
     "audio": "INT_se-souvenir_fut_3"
    },
@@ -3337,7 +3337,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'adaptes bien à ton nouveau travail ?",
+    "fr": "T'adaptes-tu bien à ton nouveau travail ?",
     "en": "Are you settling into your new job?",
     "audio": "INT_s-adapter_pres_1"
    },
@@ -3351,7 +3351,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes collègues, ils s'adaptent à toi ?",
+    "fr": "Et tes collègues, s'adaptent-ils à toi ?",
     "en": "And your colleagues, are they getting used to you?",
     "audio": "INT_s-adapter_pres_3"
    },
@@ -3392,7 +3392,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es adapté à la vie en France ?",
+    "fr": "T'es-tu adapté à la vie en France ?",
     "en": "Did you adapt to life in France?",
     "audio": "INT_s-adapter_pc_1"
    },
@@ -3407,7 +3407,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta famille, elle s'est adaptée aussi ?",
+    "fr": "Et ta famille, s'est-elle adaptée aussi ?",
     "en": "And your family, did they adapt too?",
     "audio": "INT_s-adapter_pc_3"
    },
@@ -3456,7 +3456,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'adapteras au climat là-bas ?",
+    "fr": "T'adapteras-tu au climat là-bas ?",
     "en": "Will you adapt to the climate over there?",
     "audio": "INT_s-adapter_fut_1"
    },
@@ -3470,7 +3470,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes plantes, elles s'adapteront ?",
+    "fr": "Et tes plantes, s'adapteront-elles ?",
     "en": "And your plants, will they adapt?",
     "audio": "INT_s-adapter_fut_3"
    },
@@ -3519,7 +3519,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te réjouis de partir en vacances ?",
+    "fr": "Te réjouis-tu de partir en vacances ?",
     "en": "Are you excited to go on holiday?",
     "audio": "INT_se-rejouir_pres_1"
    },
@@ -3534,7 +3534,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes enfants, ils se réjouissent aussi ?",
+    "fr": "Et tes enfants, se réjouissent-ils aussi ?",
     "en": "And your children, are they excited too?",
     "audio": "INT_se-rejouir_pres_3"
    },
@@ -3575,7 +3575,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu t'es réjoui de la nouvelle ?",
+    "fr": "T'es-tu réjoui de la nouvelle ?",
     "en": "Were you delighted by the news?",
     "audio": "INT_se-rejouir_pc_1"
    },
@@ -3590,7 +3590,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes grands-parents, ils se sont réjouis ?",
+    "fr": "Et tes grands-parents, se sont-ils réjouis ?",
     "en": "And your grandparents, were they delighted?",
     "audio": "INT_se-rejouir_pc_3"
    },
@@ -3623,7 +3623,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu te réjouiras de le voir ?",
+    "fr": "Te réjouiras-tu de le voir ?",
     "en": "Will you be glad to see him?",
     "audio": "INT_se-rejouir_fut_1"
    },
@@ -3638,7 +3638,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta mère, elle se réjouira aussi ?",
+    "fr": "Et ta mère, se réjouira-t-elle aussi ?",
     "en": "And your mother, will she be glad too?",
     "audio": "INT_se-rejouir_fut_3"
    },
@@ -3675,7 +3675,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu mets un manteau aujourd'hui ?",
+    "fr": "Mets-tu un manteau aujourd'hui ?",
     "en": "Are you wearing a coat today?",
     "audio": "INT_mettre_pres_1"
    },
@@ -3803,7 +3803,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu mettras la table ce soir ?",
+    "fr": "Mettras-tu la table ce soir ?",
     "en": "Will you set the table tonight?",
     "audio": "INT_mettre_fut_1"
    },
@@ -3862,7 +3862,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu trouves ce livre intéressant ?",
+    "fr": "Trouves-tu ce livre intéressant ?",
     "en": "Do you find this book interesting?",
     "audio": "INT_trouver_pres_1"
    },
@@ -3917,7 +3917,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as trouvé ton portefeuille ?",
+    "fr": "As-tu trouvé ton portefeuille ?",
     "en": "Did you find your wallet?",
     "audio": "INT_trouver_pc_1"
    },
@@ -3932,7 +3932,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes lunettes, ta mère les a trouvées ?",
+    "fr": "Et tes lunettes, ta mère les a-t-elle trouvées ?",
     "en": "And your glasses, did your mother find them?",
     "audio": "INT_trouver_pc_3"
    },
@@ -3977,7 +3977,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu trouveras un appartement à Paris ?",
+    "fr": "Trouveras-tu un appartement à Paris ?",
     "en": "Will you find a flat in Paris?",
     "audio": "INT_trouver_fut_1"
    },
@@ -3991,7 +3991,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils trouveront du travail là-bas ?",
+    "fr": "Et tes amis, trouveront-ils du travail là-bas ?",
     "en": "And your friends, will they find work there?",
     "audio": "INT_trouver_fut_3"
    },
@@ -4036,7 +4036,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu crois aux fantômes ?",
+    "fr": "Crois-tu aux fantômes ?",
     "en": "Do you believe in ghosts?",
     "audio": "INT_croire_pres_1"
    },
@@ -4051,7 +4051,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta grand-mère, elle y croit ?",
+    "fr": "Et ta grand-mère, y croit-elle ?",
     "en": "And your grandmother, does she believe in them?",
     "audio": "INT_croire_pres_3"
    },
@@ -4096,7 +4096,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as cru son histoire ?",
+    "fr": "As-tu cru son histoire ?",
     "en": "Did you believe his story?",
     "audio": "INT_croire_pc_1"
    },
@@ -4111,7 +4111,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton patron, il l'a crue ?",
+    "fr": "Et ton patron, l'a-t-il crue ?",
     "en": "And your boss, did he believe it?",
     "audio": "INT_croire_pc_3"
    },
@@ -4152,7 +4152,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tes parents te croiront ?",
+    "fr": "Tes parents te croiront-ils ?",
     "en": "Will your parents believe you?",
     "audio": "INT_croire_fut_1"
    },
@@ -4166,7 +4166,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton professeur, il te croira ?",
+    "fr": "Et ton professeur, te croira-t-il ?",
     "en": "And your teacher, will he believe you?",
     "audio": "INT_croire_fut_3"
    },
@@ -4218,7 +4218,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes voisins, ils parlent anglais ?",
+    "fr": "Et tes voisins, parlent-ils anglais ?",
     "en": "And your neighbours, do they speak English?",
     "audio": "INT_parler_pres_3"
    },
@@ -4259,7 +4259,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as parlé à ton propriétaire ?",
+    "fr": "As-tu parlé à ton propriétaire ?",
     "en": "Did you speak to your landlord?",
     "audio": "INT_parler_pc_1"
    },
@@ -4274,7 +4274,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta colocataire, elle lui a parlé ?",
+    "fr": "Et ta colocataire, lui a-t-elle parlé ?",
     "en": "And your flatmate, did she speak to him?",
     "audio": "INT_parler_pc_3"
    },
@@ -4315,7 +4315,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu parleras au directeur demain ?",
+    "fr": "Parleras-tu au directeur demain ?",
     "en": "Will you speak to the manager tomorrow?",
     "audio": "INT_parler_fut_1"
    },
@@ -4330,7 +4330,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes collègues, ils lui parleront aussi ?",
+    "fr": "Et tes collègues, lui parleront-ils aussi ?",
     "en": "And your colleagues, will they speak to him too?",
     "audio": "INT_parler_fut_3"
    },
@@ -4372,7 +4372,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu prends le bus pour aller au travail ?",
+    "fr": "Prends-tu le bus pour aller au travail ?",
     "en": "Do you take the bus to work?",
     "audio": "INT_prendre_pres_1"
    },
@@ -4386,7 +4386,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta femme, elle prend le métro aussi ?",
+    "fr": "Et ta femme, prend-elle le métro aussi ?",
     "en": "And your wife, does she take the metro too?",
     "audio": "INT_prendre_pres_3"
    },
@@ -4486,7 +4486,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu prendras des vacances cet été ?",
+    "fr": "Prendras-tu des vacances cet été ?",
     "en": "Will you take a holiday this summer?",
     "audio": "INT_prendre_fut_1"
    },
@@ -4501,7 +4501,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle prendra des vacances ?",
+    "fr": "Et ta sœur, prendra-t-elle des vacances ?",
     "en": "And your sister, will she take a holiday?",
     "audio": "INT_prendre_fut_3"
    },
@@ -4547,7 +4547,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu lis le journal le matin ?",
+    "fr": "Lis-tu le journal le matin ?",
     "en": "Do you read the paper in the morning?",
     "audio": "INT_lire_pres_1"
    },
@@ -4562,7 +4562,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton père, il lit le journal ?",
+    "fr": "Et ton père, lit-il le journal ?",
     "en": "And your father, does he read the paper?",
     "audio": "INT_lire_pres_3"
    },
@@ -4607,7 +4607,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as lu le dernier roman de cet auteur ?",
+    "fr": "As-tu lu le dernier roman de cet auteur ?",
     "en": "Have you read this author's latest novel?",
     "audio": "INT_lire_pc_1"
    },
@@ -4622,7 +4622,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta mère, elle l'a lu ?",
+    "fr": "Et ta mère, l'a-t-elle lu ?",
     "en": "And your mother, has she read it?",
     "audio": "INT_lire_pc_3"
    },
@@ -4667,7 +4667,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu liras une histoire aux enfants ce soir ?",
+    "fr": "Liras-tu une histoire aux enfants ce soir ?",
     "en": "Will you read the children a story tonight?",
     "audio": "INT_lire_fut_1"
    },
@@ -4681,7 +4681,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et leur grand-père, il leur lira aussi ?",
+    "fr": "Et leur grand-père, leur lira-t-il aussi ?",
     "en": "And their grandfather, will he read to them too?",
     "audio": "INT_lire_fut_3"
    },
@@ -4722,7 +4722,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu écris souvent à ta famille ?",
+    "fr": "Écris-tu souvent à ta famille ?",
     "en": "Do you often write to your family?",
     "audio": "INT_ecrire_pres_1"
    },
@@ -4737,7 +4737,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton cousin, il t'écrit ?",
+    "fr": "Et ton cousin, t'écrit-il ?",
     "en": "And your cousin, does he write to you?",
     "audio": "INT_ecrire_pres_3"
    },
@@ -4782,7 +4782,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as écrit ta lettre de motivation ?",
+    "fr": "As-tu écrit ta lettre de motivation ?",
     "en": "Have you written your cover letter?",
     "audio": "INT_ecrire_pc_1"
    },
@@ -4797,7 +4797,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle a écrit son CV ?",
+    "fr": "Et ta sœur, a-t-elle écrit son CV ?",
     "en": "And your sister, has she written her CV?",
     "audio": "INT_ecrire_pc_3"
    },
@@ -4838,7 +4838,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu m'écriras pendant ton voyage ?",
+    "fr": "M'écriras-tu pendant ton voyage ?",
     "en": "Will you write to me during your trip?",
     "audio": "INT_ecrire_fut_1"
    },
@@ -4852,7 +4852,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes amis, ils m'écriront aussi ?",
+    "fr": "Et tes amis, m'écriront-ils aussi ?",
     "en": "And your friends, will they write to me too?",
     "audio": "INT_ecrire_fut_3"
    },
@@ -4889,7 +4889,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Il fait chaud. Tu ouvres la fenêtre ?",
+    "fr": "Il fait chaud. Ouvres-tu la fenêtre ?",
     "en": "It's hot. Will you open the window?",
     "audio": "INT_ouvrir_pres_1"
    },
@@ -4904,7 +4904,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et la porte, ton frère l'ouvre aussi ?",
+    "fr": "Et la porte, ton frère l'ouvre-t-il aussi ?",
     "en": "And the door, will your brother open it too?",
     "audio": "INT_ouvrir_pres_3"
    },
@@ -4950,7 +4950,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as ouvert tes cadeaux ?",
+    "fr": "As-tu ouvert tes cadeaux ?",
     "en": "Have you opened your presents?",
     "audio": "INT_ouvrir_pc_1"
    },
@@ -4965,7 +4965,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta petite sœur, elle a ouvert les siens ?",
+    "fr": "Et ta petite sœur, a-t-elle ouvert les siens ?",
     "en": "And your little sister, has she opened hers?",
     "audio": "INT_ouvrir_pc_3"
    },
@@ -5010,7 +5010,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu ouvriras ton magasin dimanche ?",
+    "fr": "Ouvriras-tu ton magasin dimanche ?",
     "en": "Will you open your shop on Sunday?",
     "audio": "INT_ouvrir_fut_1"
    },
@@ -5024,7 +5024,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et la boulangerie, elle ouvrira ?",
+    "fr": "Et la boulangerie, ouvrira-t-elle ?",
     "en": "And the bakery, will it open?",
     "audio": "INT_ouvrir_fut_3"
    },
@@ -5061,7 +5061,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu fermes la porte à clé le soir ?",
+    "fr": "Fermes-tu la porte à clé le soir ?",
     "en": "Do you lock the door at night?",
     "audio": "INT_fermer_pres_1"
    },
@@ -5076,7 +5076,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et tes voisins, ils ferment leur porte ?",
+    "fr": "Et tes voisins, ferment-ils leur porte ?",
     "en": "And your neighbours, do they lock their door?",
     "audio": "INT_fermer_pres_3"
    },
@@ -5117,7 +5117,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as fermé le gaz ?",
+    "fr": "As-tu fermé le gaz ?",
     "en": "Did you turn off the gas?",
     "audio": "INT_fermer_pc_1"
    },
@@ -5132,7 +5132,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et les fenêtres, ton fils les a fermées ?",
+    "fr": "Et les fenêtres, ton fils les a-t-il fermées ?",
     "en": "And the windows, did your son close them?",
     "audio": "INT_fermer_pc_3"
    },
@@ -5241,7 +5241,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu perds souvent tes clés ?",
+    "fr": "Perds-tu souvent tes clés ?",
     "en": "Do you often lose your keys?",
     "audio": "INT_perdre_pres_1"
    },
@@ -5256,7 +5256,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ton père, il perd ses lunettes ?",
+    "fr": "Et ton père, perd-il ses lunettes ?",
     "en": "And your father, does he lose his glasses?",
     "audio": "INT_perdre_pres_3"
    },
@@ -5297,7 +5297,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Vous avez perdu le match ?",
+    "fr": "Avez-vous perdu le match ?",
     "en": "Did your team lose the match?",
     "audio": "INT_perdre_pc_1"
    },
@@ -5312,7 +5312,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et l'autre équipe de ton club, elle a perdu aussi ?",
+    "fr": "Et l'autre équipe de ton club, a-t-elle perdu aussi ?",
     "en": "And the other team at your club, did it lose too?",
     "audio": "INT_perdre_pc_3"
    },
@@ -5357,7 +5357,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu ne perdras pas ton passeport cette fois ?",
+    "fr": "Ne perdras-tu pas ton passeport cette fois ?",
     "en": "You won't lose your passport this time?",
     "audio": "INT_perdre_fut_1"
    },
@@ -5372,7 +5372,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta sœur, elle ne perdra pas le sien ?",
+    "fr": "Et ta sœur, ne perdra-t-elle pas le sien ?",
     "en": "And your sister, won't she lose hers?",
     "audio": "INT_perdre_fut_3"
    },
@@ -5417,7 +5417,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu gardes tes petits-enfants le mercredi ?",
+    "fr": "Gardes-tu tes petits-enfants le mercredi ?",
     "en": "Do you look after your grandchildren on Wednesdays?",
     "audio": "INT_garder_pres_1"
    },
@@ -5432,7 +5432,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta femme, elle les garde aussi ?",
+    "fr": "Et ta femme, les garde-t-elle aussi ?",
     "en": "And your wife, does she look after them too?",
     "audio": "INT_garder_pres_3"
    },
@@ -5473,7 +5473,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu as gardé tes vieilles photos ?",
+    "fr": "As-tu gardé tes vieilles photos ?",
     "en": "Did you keep your old photos?",
     "audio": "INT_garder_pc_1"
    },
@@ -5488,7 +5488,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta mère, elle a gardé tes dessins d'enfant ?",
+    "fr": "Et ta mère, a-t-elle gardé tes dessins d'enfant ?",
     "en": "And your mother, did she keep your childhood drawings?",
     "audio": "INT_garder_pc_3"
    },
@@ -5533,7 +5533,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
   "turns": [
    {
     "who": "app",
-    "fr": "Tu garderas mon chat pendant les vacances ?",
+    "fr": "Garderas-tu mon chat pendant les vacances ?",
     "en": "Will you look after my cat during the holidays?",
     "audio": "INT_garder_fut_1"
    },
@@ -5548,7 +5548,7 @@ export const CONVERSATIONS: Record<string, Conversation> = {
    },
    {
     "who": "app",
-    "fr": "Et ta fille, elle gardera mes plantes ?",
+    "fr": "Et ta fille, gardera-t-elle mes plantes ?",
     "en": "And your daughter, will she look after my plants?",
     "audio": "INT_garder_fut_3"
    },

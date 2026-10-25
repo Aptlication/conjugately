@@ -5,7 +5,7 @@
   "verb": "être",
   "tense": "Présent",
   "line": "1",
-  "french": "Bonjour ! Tu es étudiant ?",
+  "french": "Bonjour ! Es-tu étudiant ?",
   "english": "Hello! Are you a student?",
   "conversation": "BEG_etre_pres",
   "voice": "Audrey"
@@ -38,7 +38,7 @@
   "verb": "être",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as été malade hier ?",
+  "french": "As-tu été malade hier ?",
   "english": "Were you ill yesterday?",
   "conversation": "BEG_etre_pc",
   "voice": "Voix grand père"
@@ -49,7 +49,7 @@
   "verb": "être",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et vous, vous avez été en retard ce matin ?",
+  "french": "Et vous, avez-vous été en retard ce matin ?",
   "english": "And you all, were you late this morning?",
   "conversation": "BEG_etre_pc",
   "voice": "Voix grand père"
@@ -71,7 +71,7 @@
   "verb": "être",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu seras à Paris demain ?",
+  "french": "Seras-tu à Paris demain ?",
   "english": "Will you be in Paris tomorrow?",
   "conversation": "BEG_etre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -82,7 +82,7 @@
   "verb": "être",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes parents, ils seront là aussi ?",
+  "french": "Et tes parents, seront-ils là aussi ?",
   "english": "And your parents, will they be there too?",
   "conversation": "BEG_etre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -104,7 +104,7 @@
   "verb": "avoir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu as un chien ?",
+  "french": "As-tu un chien ?",
   "english": "Do you have a dog?",
   "conversation": "BEG_avoir_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -115,7 +115,7 @@
   "verb": "avoir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta sœur, elle a un chat ?",
+  "french": "Et ta sœur, a-t-elle un chat ?",
   "english": "And your sister, does she have a cat?",
   "conversation": "BEG_avoir_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -137,7 +137,7 @@
   "verb": "avoir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as eu un cadeau pour ton anniversaire ?",
+  "french": "As-tu eu un cadeau pour ton anniversaire ?",
   "english": "Did you get a present for your birthday?",
   "conversation": "BEG_avoir_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -148,7 +148,7 @@
   "verb": "avoir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ton frère, il a eu un cadeau aussi ?",
+  "french": "Et ton frère, a-t-il eu un cadeau aussi ?",
   "english": "And your brother, did he get a present too?",
   "conversation": "BEG_avoir_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -170,7 +170,7 @@
   "verb": "avoir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu auras le temps demain ?",
+  "french": "Auras-tu le temps demain ?",
   "english": "Will you have time tomorrow?",
   "conversation": "BEG_avoir_fut",
   "voice": "Audrey"
@@ -181,7 +181,7 @@
   "verb": "avoir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et Paul, il aura le temps aussi ?",
+  "french": "Et Paul, aura-t-il le temps aussi ?",
   "english": "And Paul, will he have time too?",
   "conversation": "BEG_avoir_fut",
   "voice": "Audrey"
@@ -280,7 +280,7 @@
   "verb": "faire",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et dimanche, vous ferez du sport ?",
+  "french": "Et dimanche, ferez-vous du sport ?",
   "english": "And on Sunday, will you all do some sport?",
   "conversation": "BEG_faire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -302,7 +302,7 @@
   "verb": "être",
   "tense": "Présent",
   "line": "1",
-  "french": "Vous êtes français ?",
+  "french": "Êtes-vous français ?",
   "english": "Are you French?",
   "conversation": "NOV_etre_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -313,7 +313,7 @@
   "verb": "être",
   "tense": "Présent",
   "line": "3",
-  "french": "Et vous êtes ici en vacances ?",
+  "french": "Et êtes-vous ici en vacances ?",
   "english": "And are you here on holiday?",
   "conversation": "NOV_etre_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -335,7 +335,7 @@
   "verb": "être",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as été en Italie cet été ?",
+  "french": "As-tu été en Italie cet été ?",
   "english": "Have you been to Italy this summer?",
   "conversation": "NOV_etre_pc",
   "voice": "Audrey"
@@ -346,7 +346,7 @@
   "verb": "être",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et vous avez été contents du voyage ?",
+  "french": "Et avez-vous été contents du voyage ?",
   "english": "And were you happy with the trip?",
   "conversation": "NOV_etre_pc",
   "voice": "Audrey"
@@ -368,7 +368,7 @@
   "verb": "être",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Vous serez à la fête ce soir ?",
+  "french": "Serez-vous à la fête ce soir ?",
   "english": "Will you be at the party tonight?",
   "conversation": "NOV_etre_fut",
   "voice": "Voix grand père"
@@ -379,7 +379,7 @@
   "verb": "être",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et Julie, elle sera là aussi ?",
+  "french": "Et Julie, sera-t-elle là aussi ?",
   "english": "And Julie, will she be there too?",
   "conversation": "NOV_etre_fut",
   "voice": "Voix grand père"
@@ -401,7 +401,7 @@
   "verb": "avoir",
   "tense": "Présent",
   "line": "1",
-  "french": "Vous avez des enfants ?",
+  "french": "Avez-vous des enfants ?",
   "english": "Do you have children?",
   "conversation": "NOV_avoir_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -434,7 +434,7 @@
   "verb": "avoir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as eu peur pendant le film ?",
+  "french": "As-tu eu peur pendant le film ?",
   "english": "Were you scared during the film?",
   "conversation": "NOV_avoir_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -445,7 +445,7 @@
   "verb": "avoir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes amis, ils ont eu peur aussi ?",
+  "french": "Et tes amis, ont-ils eu peur aussi ?",
   "english": "And your friends, were they scared too?",
   "conversation": "NOV_avoir_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -467,7 +467,7 @@
   "verb": "avoir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu auras ton permis cette année ?",
+  "french": "Auras-tu ton permis cette année ?",
   "english": "Will you get your driving licence this year?",
   "conversation": "NOV_avoir_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -478,7 +478,7 @@
   "verb": "avoir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta sœur, elle aura une voiture ?",
+  "french": "Et ta sœur, aura-t-elle une voiture ?",
   "english": "And your sister, will she have a car?",
   "conversation": "NOV_avoir_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -500,7 +500,7 @@
   "verb": "faire",
   "tense": "Présent",
   "line": "1",
-  "french": "Il fait beau aujourd'hui ?",
+  "french": "Fait-il beau aujourd'hui ?",
   "english": "Is the weather nice today?",
   "conversation": "NOV_faire_pres",
   "voice": "Audrey"
@@ -533,7 +533,7 @@
   "verb": "faire",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Vous avez fait bon voyage ?",
+  "french": "Avez-vous fait bon voyage ?",
   "english": "Did you have a good trip?",
   "conversation": "NOV_faire_pc",
   "voice": "Voix grand père"
@@ -577,7 +577,7 @@
   "verb": "faire",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ton fils, il fera le voyage aussi ?",
+  "french": "Et ton fils, fera-t-il le voyage aussi ?",
   "english": "And your son, will he come on the trip too?",
   "conversation": "NOV_faire_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -610,7 +610,7 @@
   "verb": "aller",
   "tense": "Présent",
   "line": "3",
-  "french": "Tes amis vont avec toi ?",
+  "french": "Tes amis vont-ils avec toi ?",
   "english": "Are your friends going with you?",
   "conversation": "NOV_aller_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -632,7 +632,7 @@
   "verb": "aller",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu es allé au cinéma hier ?",
+  "french": "Es-tu allé au cinéma hier ?",
   "english": "Did you go to the cinema yesterday?",
   "conversation": "NOV_aller_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -643,7 +643,7 @@
   "verb": "aller",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta copine, elle est allée avec toi ?",
+  "french": "Et ta copine, est-elle allée avec toi ?",
   "english": "And your girlfriend, did she go with you?",
   "conversation": "NOV_aller_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -665,7 +665,7 @@
   "verb": "aller",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu iras à la plage demain ?",
+  "french": "Iras-tu à la plage demain ?",
   "english": "Will you go to the beach tomorrow?",
   "conversation": "NOV_aller_fut",
   "voice": "Audrey"
@@ -676,7 +676,7 @@
   "verb": "aller",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et vous, vous irez en voiture ?",
+  "french": "Et vous, irez-vous en voiture ?",
   "english": "And you all, will you go by car?",
   "conversation": "NOV_aller_fut",
   "voice": "Audrey"
@@ -709,7 +709,7 @@
   "verb": "dire",
   "tense": "Présent",
   "line": "3",
-  "french": "Et toi, tu dis bonjour à tes voisins ?",
+  "french": "Et toi, dis-tu bonjour à tes voisins ?",
   "english": "And you, do you say hello to your neighbours?",
   "conversation": "ELE_dire_pres",
   "voice": "Voix grand père"
@@ -764,7 +764,7 @@
   "verb": "dire",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu diras la vérité à ta mère ?",
+  "french": "Diras-tu la vérité à ta mère ?",
   "english": "Will you tell your mother the truth?",
   "conversation": "ELE_dire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -797,7 +797,7 @@
   "verb": "voir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu vois la tour Eiffel d'ici ?",
+  "french": "Vois-tu la tour Eiffel d'ici ?",
   "english": "Can you see the Eiffel Tower from here?",
   "conversation": "ELE_voir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -808,7 +808,7 @@
   "verb": "voir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et vous, vous voyez la Seine ?",
+  "french": "Et vous, voyez-vous la Seine ?",
   "english": "And you all, can you see the Seine?",
   "conversation": "ELE_voir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -830,7 +830,7 @@
   "verb": "voir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as vu le match hier soir ?",
+  "french": "As-tu vu le match hier soir ?",
   "english": "Did you see the match last night?",
   "conversation": "ELE_voir_pc",
   "voice": "Audrey"
@@ -841,7 +841,7 @@
   "verb": "voir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes amis, ils ont vu le match aussi ?",
+  "french": "Et tes amis, ont-ils vu le match aussi ?",
   "english": "And your friends, did they see the match too?",
   "conversation": "ELE_voir_pc",
   "voice": "Audrey"
@@ -863,7 +863,7 @@
   "verb": "voir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu verras tes grands-parents ce week-end ?",
+  "french": "Verras-tu tes grands-parents ce week-end ?",
   "english": "Will you see your grandparents this weekend?",
   "conversation": "ELE_voir_fut",
   "voice": "Voix grand père"
@@ -874,7 +874,7 @@
   "verb": "voir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta sœur, elle les verra aussi ?",
+  "french": "Et ta sœur, les verra-t-elle aussi ?",
   "english": "And your sister, will she see them too?",
   "conversation": "ELE_voir_fut",
   "voice": "Voix grand père"
@@ -896,7 +896,7 @@
   "verb": "savoir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu sais nager ?",
+  "french": "Sais-tu nager ?",
   "english": "Can you swim?",
   "conversation": "ELE_savoir_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -907,7 +907,7 @@
   "verb": "savoir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et tes enfants, ils savent nager ?",
+  "french": "Et tes enfants, savent-ils nager ?",
   "english": "And your children, can they swim?",
   "conversation": "ELE_savoir_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -940,7 +940,7 @@
   "verb": "savoir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et Marc, il l'a su avant toi ?",
+  "french": "Et Marc, l'a-t-il su avant toi ?",
   "english": "And Marc, did he find out before you?",
   "conversation": "ELE_savoir_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -962,7 +962,7 @@
   "verb": "savoir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu sauras le résultat demain ?",
+  "french": "Sauras-tu le résultat demain ?",
   "english": "Will you know the result tomorrow?",
   "conversation": "ELE_savoir_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -995,7 +995,7 @@
   "verb": "vouloir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu veux un café ?",
+  "french": "Veux-tu un café ?",
   "english": "Do you want a coffee?",
   "conversation": "ELE_vouloir_pres",
   "voice": "Audrey"
@@ -1006,7 +1006,7 @@
   "verb": "vouloir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton ami, il veut un thé ?",
+  "french": "Et ton ami, veut-il un thé ?",
   "english": "And your friend, does he want a tea?",
   "conversation": "ELE_vouloir_pres",
   "voice": "Audrey"
@@ -1039,7 +1039,7 @@
   "verb": "vouloir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes amis, ils ont voulu venir ?",
+  "french": "Et tes amis, ont-ils voulu venir ?",
   "english": "And your friends, did they want to come?",
   "conversation": "ELE_vouloir_pc",
   "voice": "Voix grand père"
@@ -1072,7 +1072,7 @@
   "verb": "vouloir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta copine, elle voudra faire du shopping ?",
+  "french": "Et ta copine, voudra-t-elle faire du shopping ?",
   "english": "And your girlfriend, will she want to go shopping?",
   "conversation": "ELE_vouloir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1094,7 +1094,7 @@
   "verb": "venir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu viens à la fête samedi ?",
+  "french": "Viens-tu à la fête samedi ?",
   "english": "Are you coming to the party on Saturday?",
   "conversation": "ELE_venir_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -1105,7 +1105,7 @@
   "verb": "venir",
   "tense": "Présent",
   "line": "3",
-  "french": "Vos amis viennent aussi ?",
+  "french": "Vos amis viennent-ils aussi ?",
   "english": "Are your friends coming too?",
   "conversation": "ELE_venir_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -1127,7 +1127,7 @@
   "verb": "venir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu es venu en train ?",
+  "french": "Es-tu venu en train ?",
   "english": "Did you come by train?",
   "conversation": "ELE_venir_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1138,7 +1138,7 @@
   "verb": "venir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta femme, elle est venue avec toi ?",
+  "french": "Et ta femme, est-elle venue avec toi ?",
   "english": "And your wife, did she come with you?",
   "conversation": "ELE_venir_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1160,7 +1160,7 @@
   "verb": "venir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu viendras me voir à Noël ?",
+  "french": "Viendras-tu me voir à Noël ?",
   "english": "Will you come and see me at Christmas?",
   "conversation": "ELE_venir_fut",
   "voice": "Audrey"
@@ -1171,7 +1171,7 @@
   "verb": "venir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes enfants, ils viendront aussi ?",
+  "french": "Et tes enfants, viendront-ils aussi ?",
   "english": "And your children, will they come too?",
   "conversation": "ELE_venir_fut",
   "voice": "Audrey"
@@ -1193,7 +1193,7 @@
   "verb": "pouvoir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu peux m'aider ?",
+  "french": "Peux-tu m'aider ?",
   "english": "Can you help me?",
   "conversation": "ELE_pouvoir_pres",
   "voice": "Voix grand père"
@@ -1204,7 +1204,7 @@
   "verb": "pouvoir",
   "tense": "Présent",
   "line": "3",
-  "french": "Tes amis peuvent venir aussi ?",
+  "french": "Tes amis peuvent-ils venir aussi ?",
   "english": "Can your friends come too?",
   "conversation": "ELE_pouvoir_pres",
   "voice": "Voix grand père"
@@ -1226,7 +1226,7 @@
   "verb": "pouvoir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as pu finir ton travail ?",
+  "french": "As-tu pu finir ton travail ?",
   "english": "Were you able to finish your work?",
   "conversation": "ELE_pouvoir_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -1237,7 +1237,7 @@
   "verb": "pouvoir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et Sophie, elle a pu venir à la réunion ?",
+  "french": "Et Sophie, a-t-elle pu venir à la réunion ?",
   "english": "And Sophie, was she able to come to the meeting?",
   "conversation": "ELE_pouvoir_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -1259,7 +1259,7 @@
   "verb": "pouvoir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu pourras venir demain ?",
+  "french": "Pourras-tu venir demain ?",
   "english": "Will you be able to come tomorrow?",
   "conversation": "ELE_pouvoir_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1270,7 +1270,7 @@
   "verb": "pouvoir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et vous, vous pourrez rester dîner ?",
+  "french": "Et vous, pourrez-vous rester dîner ?",
   "english": "And you all, will you be able to stay for dinner?",
   "conversation": "ELE_pouvoir_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1292,7 +1292,7 @@
   "verb": "avoir besoin de",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu as besoin d'aide ?",
+  "french": "As-tu besoin d'aide ?",
   "english": "Do you need help?",
   "conversation": "ELE_avoir-besoin-de_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -1303,7 +1303,7 @@
   "verb": "avoir besoin de",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton voisin, il a besoin de quelque chose ?",
+  "french": "Et ton voisin, a-t-il besoin de quelque chose ?",
   "english": "And your neighbour, does he need anything?",
   "conversation": "ELE_avoir-besoin-de_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -1325,7 +1325,7 @@
   "verb": "avoir besoin de",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as eu besoin d'un médecin ?",
+  "french": "As-tu eu besoin d'un médecin ?",
   "english": "Did you need a doctor?",
   "conversation": "ELE_avoir-besoin-de_pc",
   "voice": "Audrey"
@@ -1336,7 +1336,7 @@
   "verb": "avoir besoin de",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes enfants, ils ont eu besoin de médicaments ?",
+  "french": "Et tes enfants, ont-ils eu besoin de médicaments ?",
   "english": "And your children, did they need medicine?",
   "conversation": "ELE_avoir-besoin-de_pc",
   "voice": "Audrey"
@@ -1358,7 +1358,7 @@
   "verb": "avoir besoin de",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu auras besoin de la voiture demain ?",
+  "french": "Auras-tu besoin de la voiture demain ?",
   "english": "Will you need the car tomorrow?",
   "conversation": "ELE_avoir-besoin-de_fut",
   "voice": "Voix grand père"
@@ -1369,7 +1369,7 @@
   "verb": "avoir besoin de",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ton père, il aura besoin de la voiture ?",
+  "french": "Et ton père, aura-t-il besoin de la voiture ?",
   "english": "And your father, will he need the car?",
   "conversation": "ELE_avoir-besoin-de_fut",
   "voice": "Voix grand père"
@@ -1391,7 +1391,7 @@
   "verb": "s'intéresser",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu t'intéresses à l'histoire ?",
+  "french": "T'intéresses-tu à l'histoire ?",
   "english": "Are you interested in history?",
   "conversation": "INT_s-interesser_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -1435,7 +1435,7 @@
   "verb": "s'intéresser",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes amis, ils se sont intéressés au français aussi ?",
+  "french": "Et tes amis, se sont-ils intéressés au français aussi ?",
   "english": "And your friends, did they get interested in French too?",
   "conversation": "INT_s-interesser_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -1457,7 +1457,7 @@
   "verb": "s'intéresser",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu t'intéresseras au jardinage à la retraite ?",
+  "french": "T'intéresseras-tu au jardinage à la retraite ?",
   "english": "Will you take up gardening when you retire?",
   "conversation": "INT_s-interesser_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1490,7 +1490,7 @@
   "verb": "se débrouiller",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu te débrouilles en français ?",
+  "french": "Te débrouilles-tu en français ?",
   "english": "Do you get by in French?",
   "conversation": "INT_se-debrouiller_pres",
   "voice": "Audrey"
@@ -1501,7 +1501,7 @@
   "verb": "se débrouiller",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta sœur, elle se débrouille en anglais ?",
+  "french": "Et ta sœur, se débrouille-t-elle en anglais ?",
   "english": "And your sister, does she get by in English?",
   "conversation": "INT_se-debrouiller_pres",
   "voice": "Audrey"
@@ -1523,7 +1523,7 @@
   "verb": "se débrouiller",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es débrouillé à l'aéroport ?",
+  "french": "T'es-tu débrouillé à l'aéroport ?",
   "english": "Did you manage at the airport?",
   "conversation": "INT_se-debrouiller_pc",
   "voice": "Voix grand père"
@@ -1534,7 +1534,7 @@
   "verb": "se débrouiller",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes parents, ils se sont débrouillés avec les bagages ?",
+  "french": "Et tes parents, se sont-ils débrouillés avec les bagages ?",
   "english": "And your parents, did they manage with the luggage?",
   "conversation": "INT_se-debrouiller_pc",
   "voice": "Voix grand père"
@@ -1556,7 +1556,7 @@
   "verb": "se débrouiller",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu te débrouilleras sans moi demain ?",
+  "french": "Te débrouilleras-tu sans moi demain ?",
   "english": "Will you manage without me tomorrow?",
   "conversation": "INT_se-debrouiller_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1567,7 +1567,7 @@
   "verb": "se débrouiller",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et les enfants, ils se débrouilleront pour le déjeuner ?",
+  "french": "Et les enfants, se débrouilleront-ils pour le déjeuner ?",
   "english": "And the children, will they manage lunch?",
   "conversation": "INT_se-debrouiller_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -1589,7 +1589,7 @@
   "verb": "s'ennuyer",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu t'ennuies le dimanche ?",
+  "french": "T'ennuies-tu le dimanche ?",
   "english": "Do you get bored on Sundays?",
   "conversation": "INT_s-ennuyer_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -1600,7 +1600,7 @@
   "verb": "s'ennuyer",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton chien, il s'ennuie quand tu travailles ?",
+  "french": "Et ton chien, s'ennuie-t-il quand tu travailles ?",
   "english": "And your dog, does he get bored when you're working?",
   "conversation": "INT_s-ennuyer_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -1622,7 +1622,7 @@
   "verb": "s'ennuyer",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es ennuyé pendant le concert ?",
+  "french": "T'es-tu ennuyé pendant le concert ?",
   "english": "Did you get bored during the concert?",
   "conversation": "INT_s-ennuyer_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1633,7 +1633,7 @@
   "verb": "s'ennuyer",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta copine, elle s'est ennuyée ?",
+  "french": "Et ta copine, s'est-elle ennuyée ?",
   "english": "And your girlfriend, did she get bored?",
   "conversation": "INT_s-ennuyer_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -1655,7 +1655,7 @@
   "verb": "s'ennuyer",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu ne t'ennuieras pas pendant le long voyage ?",
+  "french": "Ne t'ennuieras-tu pas pendant le long voyage ?",
   "english": "Won't you get bored on the long trip?",
   "conversation": "INT_s-ennuyer_fut",
   "voice": "Audrey"
@@ -1666,7 +1666,7 @@
   "verb": "s'ennuyer",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ton fils, il s'ennuiera ?",
+  "french": "Et ton fils, s'ennuiera-t-il ?",
   "english": "And your son, will he get bored?",
   "conversation": "INT_s-ennuyer_fut",
   "voice": "Audrey"
@@ -1688,7 +1688,7 @@
   "verb": "s'entraîner",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu t'entraînes souvent ?",
+  "french": "T'entraînes-tu souvent ?",
   "english": "Do you train often?",
   "conversation": "INT_s-entrainer_pres",
   "voice": "Voix grand père"
@@ -1699,7 +1699,7 @@
   "verb": "s'entraîner",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton équipe, elle s'entraîne le samedi ?",
+  "french": "Et ton équipe, s'entraîne-t-elle le samedi ?",
   "english": "And your team, does it train on Saturdays?",
   "conversation": "INT_s-entrainer_pres",
   "voice": "Voix grand père"
@@ -1721,7 +1721,7 @@
   "verb": "s'entraîner",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es entraîné pour le marathon ?",
+  "french": "T'es-tu entraîné pour le marathon ?",
   "english": "Did you train for the marathon?",
   "conversation": "INT_s-entrainer_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -1732,7 +1732,7 @@
   "verb": "s'entraîner",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta sœur, elle s'est entraînée avec toi ?",
+  "french": "Et ta sœur, s'est-elle entraînée avec toi ?",
   "english": "And your sister, did she train with you?",
   "conversation": "INT_s-entrainer_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -1754,7 +1754,7 @@
   "verb": "s'entraîner",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu t'entraîneras avant l'examen ?",
+  "french": "T'entraîneras-tu avant l'examen ?",
   "english": "Will you practise before the exam?",
   "conversation": "INT_s-entrainer_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1765,7 +1765,7 @@
   "verb": "s'entraîner",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes camarades, ils s'entraîneront aussi ?",
+  "french": "Et tes camarades, s'entraîneront-ils aussi ?",
   "english": "And your classmates, will they practise too?",
   "conversation": "INT_s-entrainer_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -1787,7 +1787,7 @@
   "verb": "se souvenir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu te souviens de ton premier jour d'école ?",
+  "french": "Te souviens-tu de ton premier jour d'école ?",
   "english": "Do you remember your first day at school?",
   "conversation": "INT_se-souvenir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -1798,7 +1798,7 @@
   "verb": "se souvenir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta mère, elle s'en souvient aussi ?",
+  "french": "Et ta mère, s'en souvient-elle aussi ?",
   "english": "And your mother, does she remember it too?",
   "conversation": "INT_se-souvenir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -1820,7 +1820,7 @@
   "verb": "se souvenir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es souvenu de l'anniversaire de ta sœur ?",
+  "french": "T'es-tu souvenu de l'anniversaire de ta sœur ?",
   "english": "Did you remember your sister's birthday?",
   "conversation": "INT_se-souvenir_pc",
   "voice": "Audrey"
@@ -1831,7 +1831,7 @@
   "verb": "se souvenir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ton frère, il s'en est souvenu ?",
+  "french": "Et ton frère, s'en est-il souvenu ?",
   "english": "And your brother, did he remember it?",
   "conversation": "INT_se-souvenir_pc",
   "voice": "Audrey"
@@ -1853,7 +1853,7 @@
   "verb": "se souvenir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu te souviendras de ce voyage ?",
+  "french": "Te souviendras-tu de ce voyage ?",
   "english": "Will you remember this trip?",
   "conversation": "INT_se-souvenir_fut",
   "voice": "Voix grand père"
@@ -1864,7 +1864,7 @@
   "verb": "se souvenir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et les enfants, ils s'en souviendront ?",
+  "french": "Et les enfants, s'en souviendront-ils ?",
   "english": "And the children, will they remember it?",
   "conversation": "INT_se-souvenir_fut",
   "voice": "Voix grand père"
@@ -1886,7 +1886,7 @@
   "verb": "s'adapter",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu t'adaptes bien à ton nouveau travail ?",
+  "french": "T'adaptes-tu bien à ton nouveau travail ?",
   "english": "Are you settling into your new job?",
   "conversation": "INT_s-adapter_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -1897,7 +1897,7 @@
   "verb": "s'adapter",
   "tense": "Présent",
   "line": "3",
-  "french": "Et tes collègues, ils s'adaptent à toi ?",
+  "french": "Et tes collègues, s'adaptent-ils à toi ?",
   "english": "And your colleagues, are they getting used to you?",
   "conversation": "INT_s-adapter_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -1919,7 +1919,7 @@
   "verb": "s'adapter",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es adapté à la vie en France ?",
+  "french": "T'es-tu adapté à la vie en France ?",
   "english": "Did you adapt to life in France?",
   "conversation": "INT_s-adapter_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -1930,7 +1930,7 @@
   "verb": "s'adapter",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta famille, elle s'est adaptée aussi ?",
+  "french": "Et ta famille, s'est-elle adaptée aussi ?",
   "english": "And your family, did they adapt too?",
   "conversation": "INT_s-adapter_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -1952,7 +1952,7 @@
   "verb": "s'adapter",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu t'adapteras au climat là-bas ?",
+  "french": "T'adapteras-tu au climat là-bas ?",
   "english": "Will you adapt to the climate over there?",
   "conversation": "INT_s-adapter_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1963,7 +1963,7 @@
   "verb": "s'adapter",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes plantes, elles s'adapteront ?",
+  "french": "Et tes plantes, s'adapteront-elles ?",
   "english": "And your plants, will they adapt?",
   "conversation": "INT_s-adapter_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -1985,7 +1985,7 @@
   "verb": "se réjouir",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu te réjouis de partir en vacances ?",
+  "french": "Te réjouis-tu de partir en vacances ?",
   "english": "Are you excited to go on holiday?",
   "conversation": "INT_se-rejouir_pres",
   "voice": "Audrey"
@@ -1996,7 +1996,7 @@
   "verb": "se réjouir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et tes enfants, ils se réjouissent aussi ?",
+  "french": "Et tes enfants, se réjouissent-ils aussi ?",
   "english": "And your children, are they excited too?",
   "conversation": "INT_se-rejouir_pres",
   "voice": "Audrey"
@@ -2018,7 +2018,7 @@
   "verb": "se réjouir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu t'es réjoui de la nouvelle ?",
+  "french": "T'es-tu réjoui de la nouvelle ?",
   "english": "Were you delighted by the news?",
   "conversation": "INT_se-rejouir_pc",
   "voice": "Voix grand père"
@@ -2029,7 +2029,7 @@
   "verb": "se réjouir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes grands-parents, ils se sont réjouis ?",
+  "french": "Et tes grands-parents, se sont-ils réjouis ?",
   "english": "And your grandparents, were they delighted?",
   "conversation": "INT_se-rejouir_pc",
   "voice": "Voix grand père"
@@ -2051,7 +2051,7 @@
   "verb": "se réjouir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu te réjouiras de le voir ?",
+  "french": "Te réjouiras-tu de le voir ?",
   "english": "Will you be glad to see him?",
   "conversation": "INT_se-rejouir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -2062,7 +2062,7 @@
   "verb": "se réjouir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta mère, elle se réjouira aussi ?",
+  "french": "Et ta mère, se réjouira-t-elle aussi ?",
   "english": "And your mother, will she be glad too?",
   "conversation": "INT_se-rejouir_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -2084,7 +2084,7 @@
   "verb": "mettre",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu mets un manteau aujourd'hui ?",
+  "french": "Mets-tu un manteau aujourd'hui ?",
   "english": "Are you wearing a coat today?",
   "conversation": "INT_mettre_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -2150,7 +2150,7 @@
   "verb": "mettre",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu mettras la table ce soir ?",
+  "french": "Mettras-tu la table ce soir ?",
   "english": "Will you set the table tonight?",
   "conversation": "INT_mettre_fut",
   "voice": "Audrey"
@@ -2183,7 +2183,7 @@
   "verb": "trouver",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu trouves ce livre intéressant ?",
+  "french": "Trouves-tu ce livre intéressant ?",
   "english": "Do you find this book interesting?",
   "conversation": "INT_trouver_pres",
   "voice": "Voix grand père"
@@ -2216,7 +2216,7 @@
   "verb": "trouver",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as trouvé ton portefeuille ?",
+  "french": "As-tu trouvé ton portefeuille ?",
   "english": "Did you find your wallet?",
   "conversation": "INT_trouver_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -2227,7 +2227,7 @@
   "verb": "trouver",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et tes lunettes, ta mère les a trouvées ?",
+  "french": "Et tes lunettes, ta mère les a-t-elle trouvées ?",
   "english": "And your glasses, did your mother find them?",
   "conversation": "INT_trouver_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -2249,7 +2249,7 @@
   "verb": "trouver",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu trouveras un appartement à Paris ?",
+  "french": "Trouveras-tu un appartement à Paris ?",
   "english": "Will you find a flat in Paris?",
   "conversation": "INT_trouver_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -2260,7 +2260,7 @@
   "verb": "trouver",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes amis, ils trouveront du travail là-bas ?",
+  "french": "Et tes amis, trouveront-ils du travail là-bas ?",
   "english": "And your friends, will they find work there?",
   "conversation": "INT_trouver_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -2282,7 +2282,7 @@
   "verb": "croire",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu crois aux fantômes ?",
+  "french": "Crois-tu aux fantômes ?",
   "english": "Do you believe in ghosts?",
   "conversation": "INT_croire_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -2293,7 +2293,7 @@
   "verb": "croire",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta grand-mère, elle y croit ?",
+  "french": "Et ta grand-mère, y croit-elle ?",
   "english": "And your grandmother, does she believe in them?",
   "conversation": "INT_croire_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -2315,7 +2315,7 @@
   "verb": "croire",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as cru son histoire ?",
+  "french": "As-tu cru son histoire ?",
   "english": "Did you believe his story?",
   "conversation": "INT_croire_pc",
   "voice": "Audrey"
@@ -2326,7 +2326,7 @@
   "verb": "croire",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ton patron, il l'a crue ?",
+  "french": "Et ton patron, l'a-t-il crue ?",
   "english": "And your boss, did he believe it?",
   "conversation": "INT_croire_pc",
   "voice": "Audrey"
@@ -2348,7 +2348,7 @@
   "verb": "croire",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tes parents te croiront ?",
+  "french": "Tes parents te croiront-ils ?",
   "english": "Will your parents believe you?",
   "conversation": "INT_croire_fut",
   "voice": "Voix grand père"
@@ -2359,7 +2359,7 @@
   "verb": "croire",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ton professeur, il te croira ?",
+  "french": "Et ton professeur, te croira-t-il ?",
   "english": "And your teacher, will he believe you?",
   "conversation": "INT_croire_fut",
   "voice": "Voix grand père"
@@ -2392,7 +2392,7 @@
   "verb": "parler",
   "tense": "Présent",
   "line": "3",
-  "french": "Et tes voisins, ils parlent anglais ?",
+  "french": "Et tes voisins, parlent-ils anglais ?",
   "english": "And your neighbours, do they speak English?",
   "conversation": "INT_parler_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -2414,7 +2414,7 @@
   "verb": "parler",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as parlé à ton propriétaire ?",
+  "french": "As-tu parlé à ton propriétaire ?",
   "english": "Did you speak to your landlord?",
   "conversation": "INT_parler_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -2425,7 +2425,7 @@
   "verb": "parler",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta colocataire, elle lui a parlé ?",
+  "french": "Et ta colocataire, lui a-t-elle parlé ?",
   "english": "And your flatmate, did she speak to him?",
   "conversation": "INT_parler_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -2447,7 +2447,7 @@
   "verb": "parler",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu parleras au directeur demain ?",
+  "french": "Parleras-tu au directeur demain ?",
   "english": "Will you speak to the manager tomorrow?",
   "conversation": "INT_parler_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -2458,7 +2458,7 @@
   "verb": "parler",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes collègues, ils lui parleront aussi ?",
+  "french": "Et tes collègues, lui parleront-ils aussi ?",
   "english": "And your colleagues, will they speak to him too?",
   "conversation": "INT_parler_fut",
   "voice": "Cécile - Interactive Customer Support"
@@ -2480,7 +2480,7 @@
   "verb": "prendre",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu prends le bus pour aller au travail ?",
+  "french": "Prends-tu le bus pour aller au travail ?",
   "english": "Do you take the bus to work?",
   "conversation": "INT_prendre_pres",
   "voice": "Audrey"
@@ -2491,7 +2491,7 @@
   "verb": "prendre",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta femme, elle prend le métro aussi ?",
+  "french": "Et ta femme, prend-elle le métro aussi ?",
   "english": "And your wife, does she take the metro too?",
   "conversation": "INT_prendre_pres",
   "voice": "Audrey"
@@ -2546,7 +2546,7 @@
   "verb": "prendre",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu prendras des vacances cet été ?",
+  "french": "Prendras-tu des vacances cet été ?",
   "english": "Will you take a holiday this summer?",
   "conversation": "INT_prendre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -2557,7 +2557,7 @@
   "verb": "prendre",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta sœur, elle prendra des vacances ?",
+  "french": "Et ta sœur, prendra-t-elle des vacances ?",
   "english": "And your sister, will she take a holiday?",
   "conversation": "INT_prendre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -2579,7 +2579,7 @@
   "verb": "lire",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu lis le journal le matin ?",
+  "french": "Lis-tu le journal le matin ?",
   "english": "Do you read the paper in the morning?",
   "conversation": "INT_lire_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -2590,7 +2590,7 @@
   "verb": "lire",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton père, il lit le journal ?",
+  "french": "Et ton père, lit-il le journal ?",
   "english": "And your father, does he read the paper?",
   "conversation": "INT_lire_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -2612,7 +2612,7 @@
   "verb": "lire",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as lu le dernier roman de cet auteur ?",
+  "french": "As-tu lu le dernier roman de cet auteur ?",
   "english": "Have you read this author's latest novel?",
   "conversation": "INT_lire_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -2623,7 +2623,7 @@
   "verb": "lire",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta mère, elle l'a lu ?",
+  "french": "Et ta mère, l'a-t-elle lu ?",
   "english": "And your mother, has she read it?",
   "conversation": "INT_lire_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -2645,7 +2645,7 @@
   "verb": "lire",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu liras une histoire aux enfants ce soir ?",
+  "french": "Liras-tu une histoire aux enfants ce soir ?",
   "english": "Will you read the children a story tonight?",
   "conversation": "INT_lire_fut",
   "voice": "Audrey"
@@ -2656,7 +2656,7 @@
   "verb": "lire",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et leur grand-père, il leur lira aussi ?",
+  "french": "Et leur grand-père, leur lira-t-il aussi ?",
   "english": "And their grandfather, will he read to them too?",
   "conversation": "INT_lire_fut",
   "voice": "Audrey"
@@ -2678,7 +2678,7 @@
   "verb": "écrire",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu écris souvent à ta famille ?",
+  "french": "Écris-tu souvent à ta famille ?",
   "english": "Do you often write to your family?",
   "conversation": "INT_ecrire_pres",
   "voice": "Voix grand père"
@@ -2689,7 +2689,7 @@
   "verb": "écrire",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton cousin, il t'écrit ?",
+  "french": "Et ton cousin, t'écrit-il ?",
   "english": "And your cousin, does he write to you?",
   "conversation": "INT_ecrire_pres",
   "voice": "Voix grand père"
@@ -2711,7 +2711,7 @@
   "verb": "écrire",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as écrit ta lettre de motivation ?",
+  "french": "As-tu écrit ta lettre de motivation ?",
   "english": "Have you written your cover letter?",
   "conversation": "INT_ecrire_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -2722,7 +2722,7 @@
   "verb": "écrire",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta sœur, elle a écrit son CV ?",
+  "french": "Et ta sœur, a-t-elle écrit son CV ?",
   "english": "And your sister, has she written her CV?",
   "conversation": "INT_ecrire_pc",
   "voice": "David Vautrin - Tech Narrator"
@@ -2744,7 +2744,7 @@
   "verb": "écrire",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu m'écriras pendant ton voyage ?",
+  "french": "M'écriras-tu pendant ton voyage ?",
   "english": "Will you write to me during your trip?",
   "conversation": "INT_ecrire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -2755,7 +2755,7 @@
   "verb": "écrire",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et tes amis, ils m'écriront aussi ?",
+  "french": "Et tes amis, m'écriront-ils aussi ?",
   "english": "And your friends, will they write to me too?",
   "conversation": "INT_ecrire_fut",
   "voice": "Maxime - Dynamic and Natural"
@@ -2777,7 +2777,7 @@
   "verb": "ouvrir",
   "tense": "Présent",
   "line": "1",
-  "french": "Il fait chaud. Tu ouvres la fenêtre ?",
+  "french": "Il fait chaud. Ouvres-tu la fenêtre ?",
   "english": "It's hot. Will you open the window?",
   "conversation": "INT_ouvrir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -2788,7 +2788,7 @@
   "verb": "ouvrir",
   "tense": "Présent",
   "line": "3",
-  "french": "Et la porte, ton frère l'ouvre aussi ?",
+  "french": "Et la porte, ton frère l'ouvre-t-il aussi ?",
   "english": "And the door, will your brother open it too?",
   "conversation": "INT_ouvrir_pres",
   "voice": "Cécile - Interactive Customer Support"
@@ -2810,7 +2810,7 @@
   "verb": "ouvrir",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as ouvert tes cadeaux ?",
+  "french": "As-tu ouvert tes cadeaux ?",
   "english": "Have you opened your presents?",
   "conversation": "INT_ouvrir_pc",
   "voice": "Audrey"
@@ -2821,7 +2821,7 @@
   "verb": "ouvrir",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta petite sœur, elle a ouvert les siens ?",
+  "french": "Et ta petite sœur, a-t-elle ouvert les siens ?",
   "english": "And your little sister, has she opened hers?",
   "conversation": "INT_ouvrir_pc",
   "voice": "Audrey"
@@ -2843,7 +2843,7 @@
   "verb": "ouvrir",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu ouvriras ton magasin dimanche ?",
+  "french": "Ouvriras-tu ton magasin dimanche ?",
   "english": "Will you open your shop on Sunday?",
   "conversation": "INT_ouvrir_fut",
   "voice": "Voix grand père"
@@ -2854,7 +2854,7 @@
   "verb": "ouvrir",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et la boulangerie, elle ouvrira ?",
+  "french": "Et la boulangerie, ouvrira-t-elle ?",
   "english": "And the bakery, will it open?",
   "conversation": "INT_ouvrir_fut",
   "voice": "Voix grand père"
@@ -2876,7 +2876,7 @@
   "verb": "fermer",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu fermes la porte à clé le soir ?",
+  "french": "Fermes-tu la porte à clé le soir ?",
   "english": "Do you lock the door at night?",
   "conversation": "INT_fermer_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -2887,7 +2887,7 @@
   "verb": "fermer",
   "tense": "Présent",
   "line": "3",
-  "french": "Et tes voisins, ils ferment leur porte ?",
+  "french": "Et tes voisins, ferment-ils leur porte ?",
   "english": "And your neighbours, do they lock their door?",
   "conversation": "INT_fermer_pres",
   "voice": "David Vautrin - Tech Narrator"
@@ -2909,7 +2909,7 @@
   "verb": "fermer",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as fermé le gaz ?",
+  "french": "As-tu fermé le gaz ?",
   "english": "Did you turn off the gas?",
   "conversation": "INT_fermer_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -2920,7 +2920,7 @@
   "verb": "fermer",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et les fenêtres, ton fils les a fermées ?",
+  "french": "Et les fenêtres, ton fils les a-t-il fermées ?",
   "english": "And the windows, did your son close them?",
   "conversation": "INT_fermer_pc",
   "voice": "Maxime - Dynamic and Natural"
@@ -2975,7 +2975,7 @@
   "verb": "perdre",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu perds souvent tes clés ?",
+  "french": "Perds-tu souvent tes clés ?",
   "english": "Do you often lose your keys?",
   "conversation": "INT_perdre_pres",
   "voice": "Audrey"
@@ -2986,7 +2986,7 @@
   "verb": "perdre",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ton père, il perd ses lunettes ?",
+  "french": "Et ton père, perd-il ses lunettes ?",
   "english": "And your father, does he lose his glasses?",
   "conversation": "INT_perdre_pres",
   "voice": "Audrey"
@@ -3008,7 +3008,7 @@
   "verb": "perdre",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Vous avez perdu le match ?",
+  "french": "Avez-vous perdu le match ?",
   "english": "Did your team lose the match?",
   "conversation": "INT_perdre_pc",
   "voice": "Voix grand père"
@@ -3019,7 +3019,7 @@
   "verb": "perdre",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et l'autre équipe de ton club, elle a perdu aussi ?",
+  "french": "Et l'autre équipe de ton club, a-t-elle perdu aussi ?",
   "english": "And the other team at your club, did it lose too?",
   "conversation": "INT_perdre_pc",
   "voice": "Voix grand père"
@@ -3041,7 +3041,7 @@
   "verb": "perdre",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu ne perdras pas ton passeport cette fois ?",
+  "french": "Ne perdras-tu pas ton passeport cette fois ?",
   "english": "You won't lose your passport this time?",
   "conversation": "INT_perdre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -3052,7 +3052,7 @@
   "verb": "perdre",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta sœur, elle ne perdra pas le sien ?",
+  "french": "Et ta sœur, ne perdra-t-elle pas le sien ?",
   "english": "And your sister, won't she lose hers?",
   "conversation": "INT_perdre_fut",
   "voice": "David Vautrin - Tech Narrator"
@@ -3074,7 +3074,7 @@
   "verb": "garder",
   "tense": "Présent",
   "line": "1",
-  "french": "Tu gardes tes petits-enfants le mercredi ?",
+  "french": "Gardes-tu tes petits-enfants le mercredi ?",
   "english": "Do you look after your grandchildren on Wednesdays?",
   "conversation": "INT_garder_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -3085,7 +3085,7 @@
   "verb": "garder",
   "tense": "Présent",
   "line": "3",
-  "french": "Et ta femme, elle les garde aussi ?",
+  "french": "Et ta femme, les garde-t-elle aussi ?",
   "english": "And your wife, does she look after them too?",
   "conversation": "INT_garder_pres",
   "voice": "Maxime - Dynamic and Natural"
@@ -3107,7 +3107,7 @@
   "verb": "garder",
   "tense": "Passé composé",
   "line": "1",
-  "french": "Tu as gardé tes vieilles photos ?",
+  "french": "As-tu gardé tes vieilles photos ?",
   "english": "Did you keep your old photos?",
   "conversation": "INT_garder_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -3118,7 +3118,7 @@
   "verb": "garder",
   "tense": "Passé composé",
   "line": "3",
-  "french": "Et ta mère, elle a gardé tes dessins d'enfant ?",
+  "french": "Et ta mère, a-t-elle gardé tes dessins d'enfant ?",
   "english": "And your mother, did she keep your childhood drawings?",
   "conversation": "INT_garder_pc",
   "voice": "Cécile - Interactive Customer Support"
@@ -3140,7 +3140,7 @@
   "verb": "garder",
   "tense": "Futur simple",
   "line": "1",
-  "french": "Tu garderas mon chat pendant les vacances ?",
+  "french": "Garderas-tu mon chat pendant les vacances ?",
   "english": "Will you look after my cat during the holidays?",
   "conversation": "INT_garder_fut",
   "voice": "Audrey"
@@ -3151,7 +3151,7 @@
   "verb": "garder",
   "tense": "Futur simple",
   "line": "3",
-  "french": "Et ta fille, elle gardera mes plantes ?",
+  "french": "Et ta fille, gardera-t-elle mes plantes ?",
   "english": "And your daughter, will she look after my plants?",
   "conversation": "INT_garder_fut",
   "voice": "Audrey"
