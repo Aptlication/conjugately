@@ -16,6 +16,12 @@ import { Platform } from "react-native";
 export const ENTITLEMENT_ID = "pro";
 export const PRODUCT_ANNUAL = "com.conjugately.app.pro.annual";
 export const PRODUCT_MONTHLY = "com.conjugately.app.pro.monthly";
+/**
+ * One-time purchase, US$79.99 (1.2.4.1). A non-consumable in App Store Connect,
+ * attached in RevenueCat to the same `pro` entitlement and added to the current
+ * offering as its Lifetime package. Until that is done it simply doesn't appear.
+ */
+export const PRODUCT_LIFETIME = "com.conjugately.app.pro.lifetime";
 
 /** Public SDK key. Safe to ship in the binary; set it in eas.json / .env. */
 const API_KEY = process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY ?? "";
@@ -59,13 +65,15 @@ export type ProPackage = {
   identifier: string;
   productId: string;
   priceString: string;
-  period: "annual" | "monthly" | "other";
+  period: "annual" | "monthly" | "lifetime" | "other";
   raw: any;
 };
 
-function readPeriod(productId: string): ProPackage["period"] {
+function readPeriod(productId: string, packageType?: string): ProPackage["period"] {
   if (productId === PRODUCT_ANNUAL) return "annual";
   if (productId === PRODUCT_MONTHLY) return "monthly";
+  // By product id, or RevenueCat's own Lifetime package type if the id differs.
+  if (productId === PRODUCT_LIFETIME || packageType === "LIFETIME") return "lifetime";
   return "other";
 }
 
@@ -98,7 +106,7 @@ export function usePro() {
                 // Always the store's own localised price. Never a hard-coded one:
                 // Apple rejects a paywall whose price does not match the product.
                 priceString: p.product?.priceString ?? "",
-                period: readPeriod(p.product?.identifier ?? ""),
+                period: readPeriod(p.product?.identifier ?? "", p.packageType),
                 raw: p,
               })),
             );

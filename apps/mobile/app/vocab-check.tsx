@@ -4,6 +4,8 @@ import { Stack, router, useLocalSearchParams } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import VisCue from "../components/VisCue";
+import { SOUND_GUIDES } from "../lib/vocabSoundGuides";
+import { maybeAskForReview } from "../lib/reviewPrompt";
 import { optionsFor, recordAnswer, unitKey, wordsDue, type CheckWord } from "../lib/vocabCheck";
 import { awardVocabCoin, VOCAB_COINS_PER_WORD } from "../lib/coins";
 import { setAudioModeAsync, useAudioPlayer } from "expo-audio";
@@ -137,6 +139,12 @@ export default function VocabCheck() {
     setQuit(true); setPhase("done");
   };
 
+  // Review prompt (1.2.4.4): a finished (not paused) vocab check is where a
+  // passed unit's flow comes to rest.
+  useEffect(() => {
+    if (phase === "done" && !quit) maybeAskForReview("unit");
+  }, [phase, quit]);
+
   const leave = () => {
     clearTimer();
     if (p.from !== "card") { try { (router as any).dismiss(2); return; } catch {} }
@@ -183,6 +191,12 @@ export default function VocabCheck() {
           <>
             <View style={styles.wordCard}>
               <Text style={styles.wordFr} accessibilityLanguage="fr">{word.fr}</Text>
+              {/* 1.2.4.3: an English-friendly sound guide; the recording is the real model. */}
+              {SOUND_GUIDES[word.id] && (
+                <Text style={styles.soundGuide} accessibilityLabel={`Sounds like ${SOUND_GUIDES[word.id]}`}>
+                  {SOUND_GUIDES[word.id]}
+                </Text>
+              )}
               <Pressable onPress={() => sayWord(word)} hitSlop={12} accessibilityRole="button"
                 accessibilityLabel={`Hear ${word.fr}`} style={styles.speaker}>
                 <Ionicons name="volume-high" size={22} color={BLUE} />
@@ -311,6 +325,7 @@ const styles = StyleSheet.create({
   wordCard: { backgroundColor: "#F4F7FE", borderRadius: 24, borderWidth: 1, borderColor: "#DDE5F7",
     paddingVertical: 34, paddingHorizontal: 16, alignItems: "center", marginTop: 12 },
   wordFr: { color: INK, fontSize: 38, fontWeight: "800", textAlign: "center" },
+  soundGuide: { color: SOFT, fontSize: 16, fontStyle: "italic", textAlign: "center", marginTop: 6, letterSpacing: 0.3 },
   speaker: { position: "absolute", top: 12, right: 12, padding: 6 },
   pos: { color: SOFT, fontSize: 13, marginTop: 6, textTransform: "uppercase", letterSpacing: 1 },
   visCue: { flexDirection: "row", alignSelf: "center", alignItems: "center", gap: 8, marginTop: 16,

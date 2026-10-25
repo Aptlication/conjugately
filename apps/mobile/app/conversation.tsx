@@ -10,6 +10,7 @@ import { judgeReply } from "../lib/generousMatch";
 import { type ConvTurn } from "../lib/conversations";
 import { CONVERSATION_AUDIO, getConversation } from "../lib/conversationsFull";
 import { collectConversationWords } from "../lib/vocab";
+import { maybeAskForReview } from "../lib/reviewPrompt";
 import { countDue, unitKey } from "../lib/vocabCheck";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
@@ -256,6 +257,8 @@ export default function ConversationScreen() {
     if (!conv || !started || phase === "done" || phase === "replaying") return;
     if (step >= turns.length) {
       setPhase("done");
+      // Review prompt (1.2.4.4): a finished Final conversation is a good moment.
+      maybeAskForReview("conversation");
       setSeconds(Math.max(1, Math.round((Date.now() - startedAt.current) / 1000)));
       return;
     }

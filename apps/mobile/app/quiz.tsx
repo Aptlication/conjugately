@@ -24,6 +24,7 @@ import { coinBalance, tenseProgress, invitationCopy, examCoinCost, type ExamInvi
 import { getExam } from "@shared/exams";
 import { TENSES, audioLevelFolder, isIntermediate, tenseFor } from "@shared/levels";
 import { spendOnExam } from "../lib/coins";
+import { maybeAskForReview, noteUnitResult } from "../lib/reviewPrompt";
 import CoinStack from "../components/CoinStack";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
@@ -174,6 +175,15 @@ export default function Quiz() {
     // Course quizzes wait for their coins to land; home-screen quizzes pay no coins, so they go straight on.
     if (state !== "done" || !isCourseUnit || conversation || (courseKey && !award) || invite || vocabAutoRef.current || vocabDue === 0) return;
     const t = setTimeout(() => { if (!vocabAutoRef.current) openVocab(); }, 2800);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state, award, invite, vocabDue, !!conversation]);
+  // Review prompt (1.2.4.4): when nothing follows the quiz — no conversation,
+  // no vocab check, no exam invitation — the results screen is where the unit
+  // comes to rest, so ask there. Otherwise the later screen asks.
+  useEffect(() => {
+    if (state !== "done" || !isCourseUnit || conversation || (courseKey && !award) || invite || vocabDue > 0) return;
+    const t = setTimeout(() => { if (!vocabAutoRef.current) maybeAskForReview("unit"); }, 3000);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, award, invite, vocabDue, !!conversation]);
@@ -388,6 +398,7 @@ export default function Quiz() {
         // coin store backfills from history, and it must not see this quiz
         // there and then pay for it a second time.
         const total = questions.length;
+        noteUnitResult(finalScore, total).catch(() => {});
         recordCourseQuiz(courseLevel, courseTimeFrame, verb, finalScore, total)
           .then((a) => {
             setAward({
