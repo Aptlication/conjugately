@@ -2493,5 +2493,905 @@
   "voice": "Cécile - Interactive Customer Support",
   "french": "Tu trouves que c'est une bonne idée ? Pourquoi ?",
   "english": ""
+ },
+ "INT_mettre_imp_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Que mettais-tu le dimanche, quand tu étais petit ?",
+  "english": "Hello! What did you wear on Sundays when you were little?"
+ },
+ "INT_mettre_imp_w3": {
+  "voice": "Audrey",
+  "french": "Et tes sœurs, que mettaient-elles en hiver ?",
+  "english": "And your sisters, what did they wear in winter?"
+ },
+ "INT_mettre_imp_1": {
+  "voice": "Audrey",
+  "french": "Chez ta grand-mère, mettais-tu la table le soir ?",
+  "english": "At your grandmother's, did you set the table in the evening?"
+ },
+ "INT_mettre_imp_3": {
+  "voice": "Audrey",
+  "french": "Mettait-elle des fleurs sur la table ?",
+  "english": "Did she put flowers on the table?"
+ },
+ "INT_mettre_imp_5": {
+  "voice": "Audrey",
+  "french": "Quelle jolie tradition !",
+  "english": "What a lovely tradition!"
+ },
+ "INT_trouver_imp_w1": {
+  "voice": "Voix grand père",
+  "french": "Salut ! Ton frère et toi, trouviez-vous les leçons faciles ?",
+  "english": "Hi! Did you and your brother find the lessons easy?"
+ },
+ "INT_trouver_imp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et tes cousines, comment trouvaient-elles les films ?",
+  "english": "And your cousins, what did they think of the films?"
+ },
+ "INT_trouver_imp_1": {
+  "voice": "Voix grand père",
+  "french": "Quand tu étais petit, que faisais-tu à la plage ?",
+  "english": "When you were little, what did you do at the beach?"
+ },
+ "INT_trouver_imp_3": {
+  "voice": "Voix grand père",
+  "french": "Trouviez-vous aussi des crabes ?",
+  "english": "Did you find crabs too?"
+ },
+ "INT_trouver_imp_5": {
+  "voice": "Voix grand père",
+  "french": "Ça devait être amusant !",
+  "english": "That must have been fun!"
+ },
+ "INT_croire_imp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! Croyais-tu au père Noël quand tu étais petit ?",
+  "english": "Hello! Did you believe in Father Christmas when you were little?"
+ },
+ "INT_croire_imp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et aux miracles, y croyais-tu aussi ?",
+  "english": "And did you believe in miracles too?"
+ },
+ "INT_croire_imp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ton grand-père racontait-il des histoires incroyables ?",
+  "english": "Did your grandfather tell amazing stories?"
+ },
+ "INT_croire_imp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Croyais-tu aussi à son histoire du loup dans la forêt ?",
+  "english": "Did you also believe his story about the wolf in the forest?"
+ },
+ "INT_croire_imp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Quels beaux souvenirs !",
+  "english": "What lovely memories!"
+ },
+ "INT_parler_imp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Quelle langue parlais-tu à la maison ?",
+  "english": "Hello! What language did you speak at home?"
+ },
+ "INT_parler_imp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et tes sœurs, parlaient-elles anglais au travail ?",
+  "english": "And your sisters, did they speak English at work?"
+ },
+ "INT_parler_imp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Adolescent, parlais-tu souvent avec ton meilleur ami ?",
+  "english": "As a teenager, did you often talk with your best friend?"
+ },
+ "INT_parler_imp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Tes parents disaient-ils quelque chose ?",
+  "english": "Did your parents say anything?"
+ },
+ "INT_parler_imp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Les parents disent toujours ça !",
+  "english": "Parents always say that!"
+ },
+ "INT_prendre_imp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Avant, comment allais-tu au travail ?",
+  "english": "Hello! Before, how did you get to work?"
+ },
+ "INT_prendre_imp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta collègue, prenait-elle un café le matin ?",
+  "english": "And your colleague, did she have a coffee in the morning?"
+ },
+ "INT_prendre_imp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pendant les vacances, comment alliez-vous en Corse ?",
+  "english": "During the holidays, how did your family get to Corsica?"
+ },
+ "INT_prendre_imp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Prenais-tu des photos pendant le voyage ?",
+  "english": "Did you take photos during the trip?"
+ },
+ "INT_prendre_imp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quel beau voyage !",
+  "english": "What a lovely trip!"
+ },
+ "INT_lire_imp_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Avant, lisais-tu le journal le matin ?",
+  "english": "Hello! Before, did you read the paper in the morning?"
+ },
+ "INT_lire_imp_w3": {
+  "voice": "Audrey",
+  "french": "Et ta mère, lisait-elle des romans ?",
+  "english": "And your mother, did she read novels?"
+ },
+ "INT_lire_imp_1": {
+  "voice": "Audrey",
+  "french": "Quand tu étais petit, que lisais-tu le soir ?",
+  "english": "When you were little, what did you read in the evening?"
+ },
+ "INT_lire_imp_3": {
+  "voice": "Audrey",
+  "french": "Tes parents le savaient-ils ?",
+  "english": "Did your parents know?"
+ },
+ "INT_lire_imp_5": {
+  "voice": "Audrey",
+  "french": "C'est un joli souvenir !",
+  "english": "That's a lovely memory!"
+ },
+ "INT_ecrire_imp_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! À qui écrivais-tu chaque semaine ?",
+  "english": "Hello! Who did you write to every week?"
+ },
+ "INT_ecrire_imp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et ta sœur, écrivait-elle beaucoup d'e-mails ?",
+  "english": "And your sister, did she write a lot of emails?"
+ },
+ "INT_ecrire_imp_1": {
+  "voice": "Voix grand père",
+  "french": "À l'école, avais-tu un correspondant à l'étranger ?",
+  "english": "At school, did you have a pen pal abroad?"
+ },
+ "INT_ecrire_imp_3": {
+  "voice": "Voix grand père",
+  "french": "Lui écrivais-tu en français ou en anglais ?",
+  "english": "Did you write to him in French or in English?"
+ },
+ "INT_ecrire_imp_5": {
+  "voice": "Voix grand père",
+  "french": "C'est un bon moyen d'apprendre !",
+  "english": "It's a good way to learn!"
+ },
+ "INT_ouvrir_imp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! À quelle heure ouvrais-tu le magasin ?",
+  "english": "Hello! What time did you open the shop?"
+ },
+ "INT_ouvrir_imp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et tes filles, à quelle heure ouvraient-elles les rideaux ?",
+  "english": "And your daughters, what time did they open the curtains?"
+ },
+ "INT_ouvrir_imp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Le matin de Noël, ouvrais-tu les cadeaux tout de suite ?",
+  "english": "On Christmas morning, did you open the presents right away?"
+ },
+ "INT_ouvrir_imp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et tes parents, ouvraient-ils leurs cadeaux aussi ?",
+  "english": "And your parents, did they open their presents too?"
+ },
+ "INT_ouvrir_imp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Les enfants sont toujours impatients !",
+  "english": "Children are always impatient!"
+ },
+ "INT_fermer_imp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonsoir ! Ta grand-mère fermait-elle les volets le soir ?",
+  "english": "Good evening! Did your grandmother close the shutters in the evening?"
+ },
+ "INT_fermer_imp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et tes tantes, fermaient-elles les fenêtres en hiver ?",
+  "english": "And your aunts, did they close the windows in winter?"
+ },
+ "INT_fermer_imp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Dans ton ancien travail, fermais-tu le bureau le soir ?",
+  "english": "In your old job, did you close the office in the evening?"
+ },
+ "INT_fermer_imp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Fermais-tu aussi les fenêtres avant de partir ?",
+  "english": "Did you also close the windows before leaving?"
+ },
+ "INT_fermer_imp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "On pouvait compter sur toi !",
+  "english": "People could count on you!"
+ },
+ "INT_perdre_imp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Perdais-tu souvent tes clés ?",
+  "english": "Hi! Did you often lose your keys?"
+ },
+ "INT_perdre_imp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta sœur, gagnait-elle au tennis ?",
+  "english": "And your sister, did she win at tennis?"
+ },
+ "INT_perdre_imp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Petit, jouais-tu dans une équipe de foot ?",
+  "english": "As a kid, did you play on a football team?"
+ },
+ "INT_perdre_imp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ton entraîneur perdait-il patience ?",
+  "english": "Did your coach lose patience?"
+ },
+ "INT_perdre_imp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quel bon entraîneur !",
+  "english": "What a good coach!"
+ },
+ "INT_garder_imp_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Ta fille gardait-elle des animaux l'été ?",
+  "english": "Hello! Did your daughter look after animals in the summer?"
+ },
+ "INT_garder_imp_w3": {
+  "voice": "Audrey",
+  "french": "Et ton frère, que faisait-il quand tu as appelé ?",
+  "english": "And your brother, what was he doing when you called?"
+ },
+ "INT_garder_imp_1": {
+  "voice": "Audrey",
+  "french": "À l'école, ta meilleure amie gardait-elle tes secrets ?",
+  "english": "At school, did your best friend keep your secrets?"
+ },
+ "INT_garder_imp_3": {
+  "voice": "Audrey",
+  "french": "Et toi, gardais-tu ses secrets aussi ?",
+  "english": "And you, did you keep her secrets too?"
+ },
+ "INT_garder_imp_5": {
+  "voice": "Audrey",
+  "french": "C'est ça, la vraie amitié !",
+  "english": "That's true friendship!"
+ },
+ "INT_mettre_pqp_w1": {
+  "voice": "Voix grand père",
+  "french": "Avant l'arrivée des invités, ta sœur avait-elle préparé la table ?",
+  "english": "Before the guests arrived, had your sister set the table?"
+ },
+ "INT_mettre_pqp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et tes cousines, avaient-elles rangé le salon ?",
+  "english": "And your cousins, had they tidied the living room?"
+ },
+ "INT_mettre_pqp_1": {
+  "voice": "Voix grand père",
+  "french": "Avais-tu déjà mis ton manteau quand le téléphone a sonné ?",
+  "english": "Had you already put your coat on when the phone rang?"
+ },
+ "INT_mettre_pqp_3": {
+  "voice": "Voix grand père",
+  "french": "Et tes chaussures, les avais-tu mises aussi ?",
+  "english": "And your shoes, had you put them on too?"
+ },
+ "INT_mettre_pqp_5": {
+  "voice": "Voix grand père",
+  "french": "Un appel au mauvais moment, comme toujours !",
+  "english": "A call at the wrong moment, as always!"
+ },
+ "INT_trouver_pqp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Tes cousines avaient-elles trouvé du travail avant de déménager ?",
+  "english": "Had your cousins found work before moving?"
+ },
+ "INT_trouver_pqp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ton ami et toi, aviez-vous trouvé la réponse à l'exercice ?",
+  "english": "You and your friend, had you found the answer to the exercise?"
+ },
+ "INT_trouver_pqp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Avant ton retour, ton voisin avait-il trouvé ton chat ?",
+  "english": "Before you got back, had your neighbour found your cat?"
+ },
+ "INT_trouver_pqp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Le chat avait-il trouvé quelque chose à manger ?",
+  "english": "Had the cat found something to eat?"
+ },
+ "INT_trouver_pqp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Quel petit aventurier, ce chat !",
+  "english": "What a little adventurer, that cat!"
+ },
+ "INT_croire_pqp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Avant l'annonce officielle, ta collègue avait-elle cru la rumeur sur le patron ?",
+  "english": "Before the official announcement, had your colleague believed the rumour about the boss?"
+ },
+ "INT_croire_pqp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Les enfants disaient avoir fini leurs devoirs. Les avais-tu crus ?",
+  "english": "The children said they'd finished their homework. Had you believed them?"
+ },
+ "INT_croire_pqp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Avant de voir la vidéo, avais-tu cru Paul et son requin ?",
+  "english": "Before seeing the video, had you believed Paul and his shark?"
+ },
+ "INT_croire_pqp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et sa femme, l'avait-elle cru ?",
+  "english": "And his wife, had she believed him?"
+ },
+ "INT_croire_pqp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Elle le connaît mieux que nous !",
+  "english": "She knows him better than we do!"
+ },
+ "INT_parler_pqp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant la réunion, avais-tu parlé au directeur ?",
+  "english": "Before the meeting, had you spoken to the director?"
+ },
+ "INT_parler_pqp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et Claire, de quoi avait-elle parlé ?",
+  "english": "And Claire, what had she talked about?"
+ },
+ "INT_parler_pqp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant ton séjour à Paris, avais-tu déjà parlé français ?",
+  "english": "Before your stay in Paris, had you already spoken French?"
+ },
+ "INT_parler_pqp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avais-tu aussi parlé avec des Français ?",
+  "english": "Had you also spoken with French people?"
+ },
+ "INT_parler_pqp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Alors ce séjour a été une belle première !",
+  "english": "So that stay was a lovely first!"
+ },
+ "INT_prendre_pqp_w1": {
+  "voice": "Audrey",
+  "french": "Quand tu l'as appelé, ton frère avait-il pris le train pour Paris ?",
+  "english": "When you called him, had your brother taken the train to Paris?"
+ },
+ "INT_prendre_pqp_w3": {
+  "voice": "Audrey",
+  "french": "Avant de partir, tes amies avaient-elles pensé aux clés de l'appartement ?",
+  "english": "Before leaving, had your friends remembered the apartment keys?"
+ },
+ "INT_prendre_pqp_1": {
+  "voice": "Audrey",
+  "french": "Ce matin, avant de partir, avais-tu pris ton petit-déjeuner ?",
+  "english": "This morning, before leaving, had you had your breakfast?"
+ },
+ "INT_prendre_pqp_3": {
+  "voice": "Audrey",
+  "french": "Et ta fille, avait-elle pris son goûter pour l'école ?",
+  "english": "And your daughter, had she taken her snack for school?"
+ },
+ "INT_prendre_pqp_5": {
+  "voice": "Audrey",
+  "french": "Pas de problème, elle partagera avec ses copains !",
+  "english": "No problem, she'll share with her friends!"
+ },
+ "INT_lire_pqp_w1": {
+  "voice": "Voix grand père",
+  "french": "Avant de monter le meuble, ta sœur avait-elle lu les instructions ?",
+  "english": "Before putting the furniture together, had your sister read the instructions?"
+ },
+ "INT_lire_pqp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et toi, avais-tu lu le journal ce matin-là ?",
+  "english": "And you, had you read the newspaper that morning?"
+ },
+ "INT_lire_pqp_1": {
+  "voice": "Voix grand père",
+  "french": "Avant de voir le film, avais-tu lu le livre ?",
+  "english": "Before seeing the film, had you read the book?"
+ },
+ "INT_lire_pqp_3": {
+  "voice": "Voix grand père",
+  "french": "Tes enfants l'avaient-ils lu aussi ?",
+  "english": "Had your children read it too?"
+ },
+ "INT_lire_pqp_5": {
+  "voice": "Voix grand père",
+  "french": "Le livre est souvent meilleur que le film !",
+  "english": "The book is often better than the film!"
+ },
+ "INT_ecrire_pqp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Pour l'anniversaire de Marie, qu'avais-tu préparé ?",
+  "english": "For Marie's birthday, what had you prepared?"
+ },
+ "INT_ecrire_pqp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et tes filles, avaient-elles écrit quelque chose ?",
+  "english": "And your daughters, had they written something?"
+ },
+ "INT_ecrire_pqp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Avant le cours, avais-tu écrit ta rédaction ?",
+  "english": "Before class, had you written your essay?"
+ },
+ "INT_ecrire_pqp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ton camarade avait-il écrit la sienne ?",
+  "english": "Had your classmate written his?"
+ },
+ "INT_ecrire_pqp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Le professeur n'a sûrement pas été content !",
+  "english": "The teacher can't have been happy!"
+ },
+ "INT_ouvrir_pqp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Quand les clients sont arrivés, aviez-vous ouvert le magasin ?",
+  "english": "When the customers arrived, had you opened the shop?"
+ },
+ "INT_ouvrir_pqp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et le colis du matin, ton collègue l'avait-il ouvert ?",
+  "english": "And the morning parcel, had your colleague opened it?"
+ },
+ "INT_ouvrir_pqp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Quand tes parents sont arrivés, avais-tu ouvert les fenêtres ?",
+  "english": "When your parents arrived, had you opened the windows?"
+ },
+ "INT_ouvrir_pqp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ton père avait-il déjà ouvert le champagne ?",
+  "english": "Had your father already opened the champagne?"
+ },
+ "INT_ouvrir_pqp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Il attendait sûrement le dessert !",
+  "english": "He was surely waiting for dessert!"
+ },
+ "INT_fermer_pqp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant de partir, avais-tu fermé la porte à clé ?",
+  "english": "Before leaving, had you locked the door?"
+ },
+ "INT_fermer_pqp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes voisines, avaient-elles fermé les volets ?",
+  "english": "And your neighbours, had they closed the shutters?"
+ },
+ "INT_fermer_pqp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand l'orage a commencé, avais-tu fermé la tente ?",
+  "english": "When the storm started, had you closed the tent?"
+ },
+ "INT_fermer_pqp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tes amis avaient-ils fermé leur voiture ?",
+  "english": "Had your friends closed up their car?"
+ },
+ "INT_fermer_pqp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Oh là là, tout était mouillé alors !",
+  "english": "Oh dear, everything was wet then!"
+ },
+ "INT_perdre_pqp_w1": {
+  "voice": "Audrey",
+  "french": "Pourquoi tes amies étaient-elles tristes hier soir ?",
+  "english": "Why were your friends sad last night?"
+ },
+ "INT_perdre_pqp_w3": {
+  "voice": "Audrey",
+  "french": "Et tes cousins, pourquoi étaient-ils en retard ?",
+  "english": "And your cousins, why were they late?"
+ },
+ "INT_perdre_pqp_1": {
+  "voice": "Audrey",
+  "french": "Avant d'arriver à l'aéroport, avais-tu perdu ton passeport ?",
+  "english": "Before reaching the airport, had you lost your passport?"
+ },
+ "INT_perdre_pqp_3": {
+  "voice": "Audrey",
+  "french": "Et ton ami, avait-il perdu ses bagages ?",
+  "english": "And your friend, had he lost his luggage?"
+ },
+ "INT_perdre_pqp_5": {
+  "voice": "Audrey",
+  "french": "Quel voyage mouvementé !",
+  "english": "What an eventful trip!"
+ },
+ "INT_garder_pqp_w1": {
+  "voice": "Voix grand père",
+  "french": "Après les courses, avais-tu jeté le ticket de caisse ?",
+  "english": "After the shopping, had you thrown away the receipt?"
+ },
+ "INT_garder_pqp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et ton frère, avait-il parlé de la surprise ?",
+  "english": "And your brother, had he mentioned the surprise?"
+ },
+ "INT_garder_pqp_1": {
+  "voice": "Voix grand père",
+  "french": "Ta grand-mère avait-elle gardé tes dessins d'enfant ?",
+  "english": "Had your grandmother kept your childhood drawings?"
+ },
+ "INT_garder_pqp_3": {
+  "voice": "Voix grand père",
+  "french": "Et toi, avais-tu gardé quelque chose de cette époque ?",
+  "english": "And you, had you kept anything from that time?"
+ },
+ "INT_garder_pqp_5": {
+  "voice": "Voix grand père",
+  "french": "C'est adorable, ces souvenirs !",
+  "english": "Those memories are adorable!"
+ },
+ "INT_s-interesser_imp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Bonjour ! À quoi t'intéressais-tu au lycée ?",
+  "english": "Hello! What were you interested in at secondary school?"
+ },
+ "INT_s-interesser_imp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ton frère s'intéressait-il aussi à la politique ?",
+  "english": "Was your brother interested in politics too?"
+ },
+ "INT_s-interesser_imp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Quand tu travaillais à la banque, tes collègues s'intéressaient-ils au foot ?",
+  "english": "When you worked at the bank, were your colleagues interested in football?"
+ },
+ "INT_s-interesser_imp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et toi, t'intéressais-tu au foot à cette époque ?",
+  "english": "And were you interested in football at that time?"
+ },
+ "INT_s-interesser_imp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Chacun ses goûts !",
+  "english": "Each to their own!"
+ },
+ "INT_se-debrouiller_imp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Pendant ton voyage à Londres, te débrouillais-tu en anglais ?",
+  "english": "During your trip to London, did you manage in English?"
+ },
+ "INT_se-debrouiller_imp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ton amie se débrouillait-elle sans voiture ?",
+  "english": "Did your friend manage without a car?"
+ },
+ "INT_se-debrouiller_imp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Quand tu étais étudiant, te débrouillais-tu seul pour la cuisine ?",
+  "english": "When you were a student, did you manage the cooking on your own?"
+ },
+ "INT_se-debrouiller_imp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Tes colocataires se débrouillaient-ils mieux que toi ?",
+  "english": "Did your flatmates manage better than you?"
+ },
+ "INT_se-debrouiller_imp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Heureusement, il y avait les pizzas !",
+  "english": "Luckily, there was pizza!"
+ },
+ "INT_s-ennuyer_imp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! T'ennuyais-tu à l'école quand tu étais petit ?",
+  "english": "Hello! Did you get bored at school when you were little?"
+ },
+ "INT_s-ennuyer_imp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ta sœur s'ennuyait-elle le dimanche ?",
+  "english": "Did your sister get bored on Sundays?"
+ },
+ "INT_s-ennuyer_imp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "T'ennuyais-tu chez tes grands-parents à la campagne ?",
+  "english": "Did you get bored at your grandparents' in the countryside?"
+ },
+ "INT_s-ennuyer_imp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ton cousin s'ennuyait-il loin de la ville ?",
+  "english": "Did your cousin get bored far from the city?"
+ },
+ "INT_s-ennuyer_imp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "La campagne, ce n'est pas pour tout le monde !",
+  "english": "The countryside isn't for everyone!"
+ },
+ "INT_s-entrainer_imp_w1": {
+  "voice": "Audrey",
+  "french": "Tu as couru un marathon ! T'entraînais-tu souvent ?",
+  "english": "You ran a marathon! Did you train often?"
+ },
+ "INT_s-entrainer_imp_w3": {
+  "voice": "Audrey",
+  "french": "Et ta sœur, où s'entraînait-elle ?",
+  "english": "And your sister, where did she train?"
+ },
+ "INT_s-entrainer_imp_1": {
+  "voice": "Audrey",
+  "french": "Au collège, t'entraînais-tu avec l'équipe de basket ?",
+  "english": "In middle school, did you train with the basketball team?"
+ },
+ "INT_s-entrainer_imp_3": {
+  "voice": "Audrey",
+  "french": "Ton père s'entraînait-il avec toi le week-end ?",
+  "english": "Did your dad train with you at weekends?"
+ },
+ "INT_s-entrainer_imp_5": {
+  "voice": "Audrey",
+  "french": "Quel bon souvenir !",
+  "english": "What a lovely memory!"
+ },
+ "INT_se-souvenir_imp_w1": {
+  "voice": "Voix grand père",
+  "french": "Au bureau, te souvenais-tu des anniversaires de tes collègues ?",
+  "english": "At the office, did you remember your colleagues' birthdays?"
+ },
+ "INT_se-souvenir_imp_w3": {
+  "voice": "Voix grand père",
+  "french": "Ton chef s'en souvenait-il aussi ?",
+  "english": "Did your boss remember them too?"
+ },
+ "INT_se-souvenir_imp_1": {
+  "voice": "Voix grand père",
+  "french": "Ta grand-mère cuisinait-elle sans livre de recettes ?",
+  "english": "Did your grandmother cook without a recipe book?"
+ },
+ "INT_se-souvenir_imp_3": {
+  "voice": "Voix grand père",
+  "french": "Et toi, te souvenais-tu des ingrédients ?",
+  "english": "And did you remember the ingredients?"
+ },
+ "INT_se-souvenir_imp_5": {
+  "voice": "Voix grand père",
+  "french": "Il faut tout écrire, alors !",
+  "english": "Then you have to write everything down!"
+ },
+ "INT_s-adapter_imp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ta famille déménageait souvent. T'adaptais-tu facilement ?",
+  "english": "Your family moved often. Did you adapt easily?"
+ },
+ "INT_s-adapter_imp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et tes frères s'adaptaient-ils à chaque nouvelle ville ?",
+  "english": "And did your brothers adapt to each new city?"
+ },
+ "INT_s-adapter_imp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Quand tu travaillais au Canada, t'adaptais-tu au froid ?",
+  "english": "When you worked in Canada, did you adapt to the cold?"
+ },
+ "INT_s-adapter_imp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Ton ami Marc s'adaptait-il mieux que toi ?",
+  "english": "Did your friend Marc adapt better than you?"
+ },
+ "INT_s-adapter_imp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Moi, je préfère le soleil !",
+  "english": "Personally, I prefer the sun!"
+ },
+ "INT_se-rejouir_imp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Enfant, te réjouissais-tu de la neige ?",
+  "english": "Hello! As a child, were you happy when it snowed?"
+ },
+ "INT_se-rejouir_imp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Tes parents se réjouissaient-ils des week-ends ?",
+  "english": "Did your parents look forward to the weekends?"
+ },
+ "INT_se-rejouir_imp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Allais-tu au festival de musique avec tes amis chaque été ?",
+  "english": "Did you go to the music festival with your friends every summer?"
+ },
+ "INT_se-rejouir_imp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Tes amis se réjouissaient-ils autant que toi ?",
+  "english": "Were your friends as excited as you?"
+ },
+ "INT_se-rejouir_imp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Ça devait être génial !",
+  "english": "That must have been great!"
+ },
+ "INT_s-interesser_pqp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Bonjour ! Ton frère avait-il une passion avant l'université ?",
+  "english": "Hello! Did your brother have a passion before university?"
+ },
+ "INT_s-interesser_pqp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ta sœur, à quoi s'était-elle intéressée ?",
+  "english": "And your sister, what had she become interested in?"
+ },
+ "INT_s-interesser_pqp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant ton cours de photo, t'étais-tu déjà intéressé à la photo ?",
+  "english": "Before your photo class, had you already been interested in photography?"
+ },
+ "INT_s-interesser_pqp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ton père, s'y était-il intéressé avant toi ?",
+  "english": "And your father, had he been interested in it before you?"
+ },
+ "INT_s-interesser_pqp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Alors, c'est toi l'artiste de la famille !",
+  "english": "So you're the artist of the family!"
+ },
+ "INT_se-debrouiller_pqp_w1": {
+  "voice": "Audrey",
+  "french": "Salut ! Quand tu l'as appelée, ta sœur avait-elle réglé son problème de vol ?",
+  "english": "Hi! When you called her, had your sister sorted out the problem with her flight?"
+ },
+ "INT_se-debrouiller_pqp_w3": {
+  "voice": "Audrey",
+  "french": "Et ton frère, avait-il assez d'argent pour le voyage ?",
+  "english": "And your brother, did he have enough money for the trip?"
+ },
+ "INT_se-debrouiller_pqp_1": {
+  "voice": "Audrey",
+  "french": "Quand le mécanicien est arrivé, t'étais-tu déjà débrouillé ?",
+  "english": "When the mechanic arrived, had you already sorted things out?"
+ },
+ "INT_se-debrouiller_pqp_3": {
+  "voice": "Audrey",
+  "french": "Et ton amie, s'était-elle débrouillée pour trouver un taxi ?",
+  "english": "And your friend, had she managed to find a taxi?"
+ },
+ "INT_se-debrouiller_pqp_5": {
+  "voice": "Audrey",
+  "french": "Bravo, vous êtes une équipe efficace !",
+  "english": "Well done, you're an efficient team!"
+ },
+ "INT_s-ennuyer_pqp_w1": {
+  "voice": "Voix grand père",
+  "french": "Bonjour ! Ton collègue s'était-il ennuyé à la réunion ?",
+  "english": "Hello! Had your colleague been bored at the meeting?"
+ },
+ "INT_s-ennuyer_pqp_w3": {
+  "voice": "Voix grand père",
+  "french": "Et ton fils, avait-il aimé le musée ?",
+  "english": "And your son, had he liked the museum?"
+ },
+ "INT_s-ennuyer_pqp_1": {
+  "voice": "Voix grand père",
+  "french": "Avant l'arrivée de tes amis, t'étais-tu ennuyé au camping ?",
+  "english": "Before your friends arrived, had you been bored at the campsite?"
+ },
+ "INT_s-ennuyer_pqp_3": {
+  "voice": "Voix grand père",
+  "french": "Et ton fils, s'était-il ennuyé aussi ?",
+  "english": "And your son, had he been bored too?"
+ },
+ "INT_s-ennuyer_pqp_5": {
+  "voice": "Voix grand père",
+  "french": "Les enfants trouvent toujours quelque chose à faire !",
+  "english": "Kids always find something to do!"
+ },
+ "INT_s-entrainer_pqp_w1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Salut ! Ta sœur avait-elle préparé la course ?",
+  "english": "Hi! Had your sister prepared for the race?"
+ },
+ "INT_s-entrainer_pqp_w3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et ton frère, comment avait-il préparé le marathon ?",
+  "english": "And your brother, how had he prepared for the marathon?"
+ },
+ "INT_s-entrainer_pqp_1": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Avant le match de dimanche, t'étais-tu entraîné avec ton club ?",
+  "english": "Before Sunday's match, had you trained with your club?"
+ },
+ "INT_s-entrainer_pqp_3": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "Et ton meilleur ami, s'était-il entraîné aussi ?",
+  "english": "And your best friend, had he trained too?"
+ },
+ "INT_s-entrainer_pqp_5": {
+  "voice": "David Vautrin - Tech Narrator",
+  "french": "J'espère qu'il va mieux maintenant !",
+  "english": "I hope he's feeling better now!"
+ },
+ "INT_se-souvenir_pqp_w1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Bonjour ! Pourquoi ton ami était-il en retard ?",
+  "english": "Hello! Why was your friend late?"
+ },
+ "INT_se-souvenir_pqp_w3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et tes parents, avaient-ils oublié la date ?",
+  "english": "And your parents, had they forgotten the date?"
+ },
+ "INT_se-souvenir_pqp_1": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Quand ta grand-mère a téléphoné, t'étais-tu souvenu de son anniversaire ?",
+  "english": "When your grandmother called, had you remembered her birthday?"
+ },
+ "INT_se-souvenir_pqp_3": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Et ton frère, s'en était-il souvenu ?",
+  "english": "And your brother, had he remembered it?"
+ },
+ "INT_se-souvenir_pqp_5": {
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Il doit vite lui téléphoner !",
+  "english": "He needs to call her quickly!"
+ },
+ "INT_s-adapter_pqp_w1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Salut ! Quand tu lui as rendu visite, ton cousin était-il content de sa nouvelle vie à Paris ?",
+  "english": "Hi! When you visited him, was your cousin happy with his new life in Paris?"
+ },
+ "INT_s-adapter_pqp_w3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes collègues, avaient-ils aimé la nouvelle équipe ?",
+  "english": "And your colleagues, had they liked the new team?"
+ },
+ "INT_s-adapter_pqp_1": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant ton premier hiver au Canada, t'étais-tu adapté au froid ?",
+  "english": "Before your first winter in Canada, had you got used to the cold?"
+ },
+ "INT_s-adapter_pqp_3": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et tes enfants, s'étaient-ils adaptés à leur nouvelle école ?",
+  "english": "And your children, had they adapted to their new school?"
+ },
+ "INT_s-adapter_pqp_5": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Les enfants s'adaptent toujours plus vite que les parents !",
+  "english": "Children always adapt faster than their parents!"
+ },
+ "INT_se-rejouir_pqp_w1": {
+  "voice": "Audrey",
+  "french": "Bonjour ! Quand tu es rentré, ton père avait-il vu le résultat du match ?",
+  "english": "Hello! When you got home, had your father seen the result of the match?"
+ },
+ "INT_se-rejouir_pqp_w3": {
+  "voice": "Audrey",
+  "french": "Et tes voisins, avaient-ils aimé la journée au jardin ?",
+  "english": "And your neighbours, had they enjoyed the day in the garden?"
+ },
+ "INT_se-rejouir_pqp_1": {
+  "voice": "Audrey",
+  "french": "Avant le concert, t'étais-tu réjoui de voir ton groupe préféré ?",
+  "english": "Before the concert, had you been looking forward to seeing your favourite band?"
+ },
+ "INT_se-rejouir_pqp_3": {
+  "voice": "Audrey",
+  "french": "Et ta sœur, s'était-elle réjouie de venir avec toi ?",
+  "english": "And your sister, had she been looking forward to coming with you?"
+ },
+ "INT_se-rejouir_pqp_5": {
+  "voice": "Audrey",
+  "french": "Dommage, le concert était génial !",
+  "english": "Too bad, the concert was great!"
  }
 }
