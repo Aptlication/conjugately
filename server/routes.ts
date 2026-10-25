@@ -17,6 +17,7 @@ import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 import { registerAiWhyRoutes } from "./aiWhy";
+import { registerCefrMarkRoutes } from "./cefrMark";
 
 /**
  * Randomise the position of the correct answer (register item 1.1.3).
@@ -149,6 +150,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // AI WHY: explain a quiz answer (server/aiWhy.ts)
   registerAiWhyRoutes(app);
+
+  // CEFR-style tests: AI marking of writing and speaking (server/cefrMark.ts)
+  registerCefrMarkRoutes(app);
 
   // Generate French verb quiz using Gemini AI
   app.post("/api/get-quiz", async (req, res, next) => {

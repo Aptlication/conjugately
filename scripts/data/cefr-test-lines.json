@@ -731,7 +731,7 @@
   "verb": "",
   "tense": "",
   "line": "07",
-  "french": "Félicitations !",
+  "french": "Bonne chance !",
   "english": "",
   "conversation": "CEFR_B1_L1",
   "voice": "Cécile - Interactive Customer Support"
@@ -742,7 +742,7 @@
   "verb": "",
   "tense": "",
   "line": "01",
-  "french": "Bonjour à tous ! Avant, j'ouvrais le magasin à huit heures. Maintenant, nous ouvrons le magasin à neuf heures, et nous fermons le magasin à 21 heures. Dimanche, je n'ouvrirai pas le magasin. Mais la boulangerie, elle ouvrira le matin. Ce soir, je fermerai le bureau à dix-huit heures : la banque fermera à dix-sept heures. Et vous fermerez la porte avant de partir. Merci !",
+  "french": "Bonjour à tous ! Avant, j'ouvrais le magasin à huit heures. Maintenant, nous ouvrons à neuf heures et nous fermons à 21 heures. Dimanche, je n'ouvrirai pas. Mais la boulangerie, elle ouvrira le matin. Ce soir, je fermerai le bureau à dix-huit heures. La banque, elle, fermera à dix-sept heures. Et vous fermerez la porte avant de partir. Merci !",
   "english": "",
   "conversation": "CEFR_B1_L2",
   "voice": "Cécile - Interactive Customer Support"
@@ -797,7 +797,7 @@
   "verb": "",
   "tense": "",
   "line": "05",
-  "french": "Et toi, tu as lu le dernier roman de cet auteur ?",
+  "french": "Et toi, tu as lu le dernier roman de Zola ?",
   "english": "",
   "conversation": "CEFR_B1_L3",
   "voice": "Cécile - Interactive Customer Support"
@@ -841,7 +841,7 @@
   "verb": "",
   "tense": "",
   "line": "2",
-  "french": "Quand tu étais petit, tu t'intéressais à quoi ?",
+  "french": "Quand tu étais enfant, tu t'intéressais à quoi ?",
   "english": "",
   "conversation": "CEFR_B1_P1",
   "voice": "Cécile - Interactive Customer Support"

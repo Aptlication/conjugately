@@ -180,7 +180,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
           },
           {
             "fr": "Deux : pendant le film, il a eu…",
-            "en": "Conversation 2: during the film he was…",
+            "en": "Conversation 2: during the film he had…",
             "options": [
               "un problème",
               "très peur",
@@ -224,7 +224,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "R1",
         "kicker": "DOCUMENT 1 · TEXT MESSAGE",
         "title": "From Paul",
-        "text": "Bonjour ! Je suis malade aujourd'hui. Je ne vais pas à l'école. Ce soir, je serai à la maison. Tu as mon livre ? Tu iras chez moi ce soir ?\nPaul",
+        "text": "Bonjour ! Je suis malade aujourd'hui. Je ne vais pas à l'école. Ce soir, je serai à la maison. Tu as mon livre ? Tu seras chez moi ce soir ?\nPaul",
         "questions": [
           {
             "fr": "Aujourd'hui, Paul est…",
@@ -247,12 +247,12 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
             "answer": 2
           },
           {
-            "fr": "Tu as…",
-            "en": "You have Paul's…",
+            "fr": "C'est le livre de…",
+            "en": "The book belongs to…",
             "options": [
-              "son livre",
-              "son sac",
-              "son vélo"
+              "Paul",
+              "Julie",
+              "Marc"
             ],
             "answer": 0
           }
@@ -338,7 +338,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "R4",
         "kicker": "DOCUMENT 4 · NOTE ON THE FRIDGE",
         "title": "Who does what?",
-        "text": "Paul : tu feras la vaisselle ce soir.\nJulie : tu feras les courses demain.\nMoi, je ferai la cuisine.\nTa mère",
+        "text": "Paul : tu feras la vaisselle ce soir.\nJulie : tu feras les courses demain.\nMoi, je ferai la cuisine.\nVotre mère",
         "questions": [
           {
             "fr": "Ce soir, Paul fera…",
@@ -551,7 +551,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
     ],
     "model": {
       "title": "A model postcard",
-      "text": "Bonjour Paul ! Je suis en vacances en Italie avec mes amis. Il fait beau et chaud. Hier, nous sommes allés à la plage et j'ai fait du vélo. Demain, nous irons au musée et le soir, nous ferons la fête au restaurant. Nous sommes très contents. Bonnes vacances ! Sam"
+      "text": "Bonjour Paul ! Je suis en vacances en Italie avec mes amis. Il fait beau et chaud. Hier, nous sommes allés à la plage et j'ai fait du vélo. Demain, nous irons au musée et le soir, nous ferons la fête au restaurant. Nous sommes très contents. Bonne journée ! Sam"
     },
     "canDo": [
       "I can understand short, slow messages and announcements about everyday things.",
@@ -637,7 +637,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "questions": [
           {
             "fr": "Un : les amis ont vu…",
-            "en": "Conversation 1: the friends watched…",
+            "en": "Conversation 1: the friends saw…",
             "options": [
               "le match",
               "un film",
@@ -684,12 +684,12 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
             "answer": 0
           },
           {
-            "fr": "Ils pourront rester dîner ?",
-            "en": "Will they be able to stay for dinner?",
+            "fr": "Vous pourrez rester dîner ?",
+            "en": "\"Will you be able to stay for dinner?\" What was the reply?",
             "options": [
-              "Oui, ils pourront rester",
-              "Non, ils ne pourront pas rester",
-              "Ils ne savent pas encore"
+              "Oui, nous pourrons rester",
+              "Non, nous ne pourrons pas rester",
+              "Nous ne savons pas encore"
             ],
             "answer": 1
           },
@@ -732,7 +732,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "text": "Salut ! Je ne peux pas venir à la fête samedi : j'ai besoin de repos. Je suis très fatiguée. Je viendrai dimanche avec mon frère. Tu pourras m'appeler ce soir ?\nJulie",
         "questions": [
           {
-            "fr": "Pourquoi Julie ne vient pas samedi ?",
+            "fr": "Pourquoi Julie ne vient-elle pas samedi ?",
             "en": "Why isn't Julie coming on Saturday?",
             "options": [
               "Elle a besoin de repos",
@@ -1045,7 +1045,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
     ],
     "model": {
       "title": "A model blog post",
-      "text": "Samedi, je suis allé à Paris avec ma copine. Nous sommes venus en train. Nous avons vu la tour Eiffel et le musée. Ma copine a voulu faire du shopping, alors nous avons fait du shopping ! Le soir, nous avons vu une pièce de théâtre. C'était super ! Dimanche, nous avons fait une promenade au parc avec des amis. Nous viendrons encore l'année prochaine. C'est une belle ville !"
+      "text": "Samedi, je suis allé à Paris avec ma copine. Nous y sommes allés en train. Nous avons vu la tour Eiffel et le musée. Ma copine a voulu faire du shopping, alors nous avons fait du shopping ! Le soir, nous avons vu une pièce de théâtre. C'était super ! Dimanche, nous avons fait une promenade au parc avec des amis. Nous irons encore à Paris l'année prochaine. C'est une belle ville !"
     },
     "canDo": [
       "I can understand the main point of short, clear messages and announcements.",
@@ -1089,7 +1089,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "L1",
         "kicker": "DOCUMENT 1 · INTERVIEW",
         "title": "A new life in France",
-        "script": "Tu t'es adapté à la vie en France ? ... Oui, je me suis vite adapté. Le premier mois, je me suis un peu ennuyé. Mais je m'étais intéressé au français avant de venir, et maintenant, je me débrouille assez bien. ... Et ta famille, elle s'est adaptée aussi ? ... Oui, elle s'est adaptée sans problème. ... Et l'année prochaine ? ... Je trouverai un petit appartement à Paris. ... Félicitations !",
+        "script": "Tu t'es adapté à la vie en France ? ... Oui, je me suis vite adapté. Le premier mois, je me suis un peu ennuyé. Mais je m'étais intéressé au français avant de venir, et maintenant, je me débrouille assez bien. ... Et ta famille, elle s'est adaptée aussi ? ... Oui, elle s'est adaptée sans problème. ... Et l'année prochaine ? ... Je trouverai un petit appartement à Paris. ... Bonne chance !",
         "questions": [
           {
             "fr": "Le premier mois, il…",
@@ -1137,7 +1137,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "L2",
         "kicker": "DOCUMENT 2 · SHOP MESSAGE",
         "title": "This week at the shop",
-        "script": "Bonjour à tous ! Avant, j'ouvrais le magasin à huit heures. Maintenant, nous ouvrons le magasin à neuf heures, et nous fermons le magasin à 21 heures. Dimanche, je n'ouvrirai pas le magasin. Mais la boulangerie, elle ouvrira le matin. Ce soir, je fermerai le bureau à dix-huit heures : la banque fermera à dix-sept heures. Et vous fermerez la porte avant de partir. Merci !",
+        "script": "Bonjour à tous ! Avant, j'ouvrais le magasin à huit heures. Maintenant, nous ouvrons à neuf heures et nous fermons à 21 heures. Dimanche, je n'ouvrirai pas. Mais la boulangerie, elle ouvrira le matin. Ce soir, je fermerai le bureau à dix-huit heures. La banque, elle, fermera à dix-sept heures. Et vous fermerez la porte avant de partir. Merci !",
         "questions": [
           {
             "fr": "Le magasin ouvre à…",
@@ -1175,7 +1175,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "L3",
         "kicker": "DOCUMENT 3 · CONVERSATION",
         "title": "Paper or online?",
-        "script": "Léo, tu lis le journal le matin ? ... Oui, je lis le journal en ligne. ... Et ton père, il lit le journal ? ... Oui, il lit le journal papier. Avant, il lisait le journal tous les matins au café. À l'ancienne ! ... Et toi, tu as lu le dernier roman de cet auteur ? ... Oui, je l'ai lu en deux jours. Je le trouve très intéressant. Ma copine, elle le trouve un peu long. ... Chacun son avis !",
+        "script": "Léo, tu lis le journal le matin ? ... Oui, je lis le journal en ligne. ... Et ton père, il lit le journal ? ... Oui, il lit le journal papier. Avant, il lisait le journal tous les matins au café. À l'ancienne ! ... Et toi, tu as lu le dernier roman de Zola ? ... Oui, je l'ai lu en deux jours. Je le trouve très intéressant. Ma copine, elle le trouve un peu long. ... Chacun son avis !",
         "questions": [
           {
             "fr": "Léo lit le journal…",
@@ -1240,7 +1240,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
             "answer": 3
           },
           {
-            "fr": "Dans quel club on s'intéresse à la peinture ?",
+            "fr": "Dans quel club s'intéresse-t-on à la peinture ?",
             "en": "In which club are people interested in painting?",
             "options": [
               "Club A",
@@ -1267,7 +1267,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
         "id": "R2",
         "kicker": "DOCUMENT 2 · MAGAZINE ARTICLE",
         "title": "Le travail à la maison : une bonne idée ?",
-        "text": "Aujourd'hui, beaucoup de Français font leur travail à la maison deux ou trois jours par semaine. Ils sont contents : ils ne prennent pas le métro ou le bus, et ils se débrouillent bien tout seuls.\n\nMais ce n'est pas toujours facile. Souvent, on s'ennuie un peu sans ses collègues. « Je parle avec mes collègues en ligne, mais ce n'est pas la même chose », dit Julien, 41 ans. Avant, il prenait le métro tous les jours pour aller au travail. Pour s'adapter, on prend une pause au café à midi avec des amis.\n\nMais seul à la maison, Julien s'était beaucoup ennuyé. Alors il a trouvé une solution : le lundi et le jeudi, il prend le train et il parle avec son équipe au bureau. Le mardi, le mercredi et le vendredi, il est à la maison.",
+        "text": "Aujourd'hui, beaucoup de Français font leur travail à la maison deux ou trois jours par semaine. Ils sont contents : ils ne prennent plus le métro, et ils se débrouillent bien tout seuls.\n\nMais ce n'est pas toujours facile. Souvent, on s'ennuie un peu sans ses collègues. « Je parle avec mes collègues en ligne, mais ce n'est pas la même chose », dit Julien, 41 ans. Avant, il prenait le métro tous les jours pour aller au travail. Pour s'adapter, on prend une pause au café à midi avec des amis.\n\nMais seul à la maison, Julien s'était beaucoup ennuyé. Alors il a trouvé une solution : le lundi et le jeudi, il prend le train et il parle avec son équipe au bureau. Le mardi, le mercredi et le vendredi, il est à la maison.",
         "questions": [
           {
             "fr": "Avant sa solution, Julien…",
@@ -1284,7 +1284,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
             "en": "Why are they happy?",
             "options": [
               "Ils ont plus d'argent.",
-              "Ils ne prennent pas le métro ou le bus.",
+              "Ils ne prennent plus le métro.",
               "Ils ont plus de vacances."
             ],
             "answer": 1
@@ -1420,7 +1420,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
             ]
           },
           {
-            "prompt": "Quand tu étais petit, tu t'intéressais à quoi ?",
+            "prompt": "Quand tu étais enfant, tu t'intéressais à quoi ?",
             "cue": "Say what you used to be interested in as a child.",
             "need": [
               "\\b(je m'interessais|je ne m'interessais|j'aimais|je lisais|je faisais)"
@@ -1479,7 +1479,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
           {
             "prompt": "Tu trouves que c'est une bonne idée ? Pourquoi ?",
             "cue": "Give your opinion, with reasons and an example.",
-            "doc": "LE DIMANCHE, SANS VOITURE ?\nDans une ville française, on ne peut pas aller en ville en voiture le dimanche. Les enfants font du vélo, les parents font une promenade et on prend un café ensemble. Mais le propriétaire du magasin n'est pas content : il perd de l'argent.",
+            "doc": "LE DIMANCHE, SANS VOITURE ?\nDans une ville française, on ne peut pas aller en ville en voiture le dimanche. Les enfants font du vélo, les parents font une promenade et on prend un café ensemble. Mais un propriétaire de magasin n'est pas content : il perd de l'argent.",
             "minWords": 40,
             "need": [
               "\\b(je crois que|je crois qu'|je trouve que|je trouve qu'|a mon avis|je pense que|je pense qu')",
@@ -1492,7 +1492,7 @@ export const CEFR_TESTS: Record<CefrId, CefrTest> = {
     ],
     "model": {
       "title": "A model opinion post",
-      "text": "À mon avis, le livre papier et le livre en ligne sont tous les deux bons, mais pas pour les mêmes choses. Je prends le métro tous les jours pour aller au travail, alors je lis souvent sur ma tablette. C'est facile : j'ai beaucoup de livres sur ma tablette ! Avant ma tablette, j'avais déjà lu tous les vieux livres de mon père. L'année dernière, j'ai lu dix romans en ligne pendant mes voyages, et je ne me suis jamais ennuyé. Mais je trouve que le livre papier est plus beau. Quand j'étais petit, je lisais beaucoup de romans papier. Mon père lit toujours le journal papier le matin, à l'ancienne, et moi aussi, le dimanche, je lis un livre papier avec un café. Quand je lis un roman papier, je m'en souviens mieux. Et quand mes petits-enfants viennent chez moi, je leur lis une histoire dans un vieux livre : ils se réjouissent beaucoup ! Alors, je crois que les deux sont bons : la tablette pour le voyage, et le papier pour la maison. L'année prochaine, je lirai encore des romans en ligne, mais je garderai toujours mes vieux livres papier. Chacun son avis !"
+      "text": "À mon avis, le livre papier et le livre en ligne sont tous les deux bons, mais pas pour les mêmes choses. Je prends le métro tous les jours pour aller au travail, alors je lis souvent sur ma tablette. C'est facile : j'ai beaucoup de livres sur ma tablette ! Avant ma tablette, j'avais déjà lu tous les vieux livres de mon père. L'année dernière, j'ai lu dix romans en ligne pendant mes voyages, et je ne me suis jamais ennuyé. Mais je trouve que le livre papier est plus beau. Quand j'étais petit, je lisais beaucoup de romans papier. Mon père lit toujours le journal papier le matin, à l'ancienne, et moi aussi, le dimanche, je lis un livre papier avec un café. Quand je lis un roman papier, je m'en souviens mieux. Et quand mes petits-enfants viennent chez moi, je leur lis une histoire dans un vieux livre : ils se réjouissent beaucoup ! Alors, je crois que les deux sont bons : la tablette pour les voyages, et le papier pour la maison. L'année prochaine, je lirai encore des romans en ligne, mais je garderai toujours mes vieux livres papier. Chacun son avis !"
     },
     "canDo": [
       "I can understand the main points of clear speech on familiar topics.",
