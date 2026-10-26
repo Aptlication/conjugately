@@ -40,7 +40,8 @@ import { purchasesAvailable, usePro } from "../lib/pro";
  * is heard snaps to the nearest of the four. Right → « Très bien ! » (or
  * « Tu veux dire… ? » when only partly heard, still right); wrong → « Pas tout à
  * fait », the four shown in green/red, and the learner tries again until right.
- * A–D hidden by default (Show A–D); tapping an option answers with it. Answers
+ * No Show A–D (1.3.19): a stuck learner taps the English cue to see the French.
+ * The four appear only after a wrong answer, marked green/red; tapping one answers. Answers
  * that sound the same as the right one count as right. Replies with no options
  * yet keep the generous judging above.
  *
@@ -403,22 +404,32 @@ export default function ConversationScreen() {
   };
 
   /** Enter: judge the reply by the 50% rule. On web, a tap stands in for a clear reply. */
+  /** Index and score of the option nearest to what was heard (-1 if nothing heard). */
+  const nearestOption = (guesses: string[]) => {
+    const t = turns[step];
+    let best = -1, bestSim = -1;
+    if (!t || t.who !== "you" || !options) return { best, bestSim };
+    for (const g of guesses) {
+      if (!g?.trim()) continue;
+      options.forEach((o, i) => {
+        const m = matchAnswer(g, o.right ? [o.text, ...t.accept] : o.text, 1, DEFAULT_THRESHOLDS);
+        if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
+      });
+    }
+    // Sounds the same as the right answer → it is the right answer (1.3.15).
+    const rightIdx = options.findIndex((o) => o.right);
+    if (best >= 0 && best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
+    return { best, bestSim };
+  };
+
   /** Four-option reply: snap what was heard to the nearest of the four. */
   const submitFour = (guesses: string[], tapped: number | null = null) => {
     const t = turns[step];
     if (!t || t.who !== "you" || !options) return;
     const rightIdx = options.findIndex((o) => o.right);
-    let best = tapped ?? -1;
-    let bestSim = tapped === null ? -1 : 1;
-    if (tapped === null) {
-      for (const g of guesses) {
-        if (!g?.trim()) continue;
-        options.forEach((o, i) => {
-          const m = matchAnswer(g, o.right ? [o.text, ...t.accept] : o.text, 1, DEFAULT_THRESHOLDS);
-          if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
-        });
-      }
-    }
+    const near = tapped === null ? nearestOption(guesses) : { best: tapped, bestSim: 1 };
+    let best = near.best;
+    const bestSim = near.bestSim;
     const k = `y${step}-${attempt}`;
     if (best < 0) {
       // Nothing heard: ask again.
@@ -432,7 +443,6 @@ export default function ConversationScreen() {
       setPhase("yourTurn");
       return;
     }
-    // Sounds the same as the right answer → it is the right answer (1.3.15).
     if (best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
     setPicked(best);
     if (best === rightIdx) {
@@ -629,13 +639,8 @@ export default function ConversationScreen() {
           </Pressable>
         )}
 
-        {youTurn && options && (phase === "yourTurn" || phase === "heard") && (
+        {youTurn && options && showOptions && (phase === "yourTurn" || phase === "heard") && (
           <View style={styles.optWrap}>
-            <Pressable onPress={() => { Haptics.selectionAsync().catch(() => {}); setShowOptions((v) => !v); }}
-              accessibilityRole="button" style={styles.optToggle}>
-              <Ionicons name={showOptions ? "eye-off-outline" : "list"} size={16} color="#2B5FD9" />
-              <Text style={styles.optToggleText}>{showOptions ? "Hide A–D" : "Show A–D"}</Text>
-            </Pressable>
             {showOptions && options.map((o, i) => {
               const marked = picked !== null && attempt > 0;
               const isRight = marked && o.right;
@@ -672,9 +677,19 @@ export default function ConversationScreen() {
                 return <View key={i} style={[styles.eqBar, { height: h }]} />;
               })}
             </View>
-            <Text style={styles.heardText}>
-              {heard ? `Heard: « ${heard} »` : phase === "listening" ? "Listening…" : ""}
-            </Text>
+            {heard ? (
+              <View style={{ alignItems: "center", gap: 2 }} accessibilityLiveRegion="polite">
+                <Text style={styles.heardLabel}>Heard</Text>
+                <Text style={styles.heardSaid}>{heard}</Text>
+                {/* 1.3.19: like Masters Mic in quizzes, the option this will count as. */}
+                {options && phase === "heard" && (() => {
+                  const g = nearestOption([heard, ...heardAllRef.current]).best;
+                  return g >= 0 ? <Text style={styles.heardSnap}>{"\u2192 "}{options[g].text}</Text> : null;
+                })()}
+              </View>
+            ) : (
+              <Text style={styles.heardText}>{phase === "listening" ? "Listening…" : ""}</Text>
+            )}
           </View>
         )}
 
@@ -846,6 +861,10 @@ const styles = StyleSheet.create({
   eq: { flexDirection: "row", alignItems: "flex-end", gap: 5, height: 72 },
   eqBar: { width: 9, borderRadius: 3, backgroundColor: "#22C7E0" },
   heardText: { fontSize: 14, fontWeight: "800", color: RED, textAlign: "center" },
+  heardLabel: { fontSize: 13, fontWeight: "800", letterSpacing: 1.3, color: RED, textAlign: "center" },
+  heardSaid: { fontSize: 17, fontWeight: "700", color: INK, textAlign: "center" },
+  // Light blue, darkened enough to read on the white conversation screen.
+  heardSnap: { fontSize: 15, fontWeight: "700", color: "#0284C7", textAlign: "center" },
   notice: { fontSize: 14, color: "#A35A00", textAlign: "center" },
   doneCard: {
     marginTop: 10, padding: 24, borderRadius: 24, backgroundColor: "#F6F8FE",
@@ -877,8 +896,6 @@ const styles = StyleSheet.create({
   linkBtn: { height: 44, alignItems: "center", justifyContent: "center" },
   linkText: { color: "#3E63D8", fontSize: 16, fontWeight: "700" },
   optWrap: { marginTop: 10, gap: 8 },
-  optToggle: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "center", paddingVertical: 6, paddingHorizontal: 10 },
-  optToggleText: { color: "#2B5FD9", fontSize: 14, fontWeight: "700" },
   opt: { flexDirection: "row", alignItems: "center", gap: 10, borderWidth: 2, borderColor: "#D6DBE8",
     backgroundColor: "#FFFFFF", borderRadius: 14, paddingVertical: 12, paddingHorizontal: 14 },
   optRight: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
