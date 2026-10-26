@@ -45,7 +45,7 @@ export default function CefrGateCard({ testId, locked }: Props) {
       <View style={s.head}>
         <CefrBadge id={testId} earned={!!best?.passed} size={46} />
         <View style={{ flex: 1 }}>
-          <Text style={s.title}>{testId} test</Text>
+          <Text style={s.title}>CEFR-style {testId} test</Text>
           <Text style={s.meta}>Matches the {test.level} course</Text>
           <Text style={s.meta}>Listening · Reading · Writing · Speaking · {test.minutes.replace("About ", "~")}</Text>
         </View>

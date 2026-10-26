@@ -11,6 +11,7 @@ import {
 } from "@shared/cefrScoring";
 import { CEFR_AUDIO, CEFR_AUDIO_ORDER } from "../lib/cefrAudio";
 import { markSection, recordCefrResult } from "../lib/cefr";
+import CefrBadge from "../components/CefrBadge";
 import { readCefrGate } from "../lib/coins";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
@@ -424,7 +425,7 @@ export default function CefrTestScreen() {
               <Text style={st.score}>{fmt(result.total)}<Text style={st.scoreOf}> / 100</Text></Text>
               <Text style={st.heroBody}>
                 {result.passed
-                  ? `You passed the CEFR-style ${testId} test. Your ${test.level} French is at the level official ${testId} exams test for.`
+                  ? `You passed the CEFR-style ${testId} test. Your ${test.level} French is at ${testId} level, the level official ${testId} French exams test.`
                   : result.total >= 50
                     ? `Good total, but every section needs at least 5 / 25. Practise ${result.weak.map((w) => SECTION_NAMES[w].toLowerCase()).join(" and ")}, then try again. Retakes are free.`
                     : "Not yet. You need 50 / 100. Your scores below show where to practise. Retakes are free."}
@@ -432,7 +433,7 @@ export default function CefrTestScreen() {
             </View>
             {result.passed && (
               <View style={[st.card, st.badgeRow]}>
-                <View style={st.bigBadge}><Text style={st.bigBadgeText}>{testId}</Text><Text style={st.bigBadgeSub}>CEFR-STYLE</Text></View>
+                <CefrBadge id={testId} earned size={80} label="" />
                 <View style={{ flex: 1 }}>
                   <Text style={st.cardTitle}>Badge earned: {testId} · {test.level}</Text>
                   <Text style={st.sub}>It now shows on your {test.level} course and in My Journey.</Text>
@@ -556,9 +557,6 @@ const st = StyleSheet.create({
   score: { color: "#fff", fontSize: 44, fontWeight: "800" },
   scoreOf: { fontSize: 18, fontWeight: "600" },
   badgeRow: { flexDirection: "row", alignItems: "center", gap: 14 },
-  bigBadge: { width: 66, height: 66, borderRadius: 33, backgroundColor: "#1B2145", borderWidth: 3, borderColor: "#F5C518", alignItems: "center", justifyContent: "center" },
-  bigBadgeText: { color: "#fff", fontSize: 20, fontWeight: "800" },
-  bigBadgeSub: { color: "#F5C518", fontSize: 8, fontWeight: "800", letterSpacing: 0.6 },
   scoreRow: { flexDirection: "row", justifyContent: "space-between" },
   bar: { height: 8, borderRadius: 4, backgroundColor: "rgba(255,255,255,0.15)", overflow: "hidden", marginTop: 6 },
   barFill: { height: "100%", borderRadius: 4 },

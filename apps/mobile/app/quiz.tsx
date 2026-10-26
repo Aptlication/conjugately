@@ -585,14 +585,15 @@ export default function Quiz() {
               const showWrong = isSel && !o.isCorrect;
               return (
                 <Pressable key={i} onPress={() => handleAnswerSelect(i)}
-                  style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong]}>
+                  style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim]}>
                   <View style={[styles.letter, showCorrect && { borderColor: "#17734A" }, showWrong && { borderColor: "#C0392B" }]}>
                     <Text style={[styles.letterText, showCorrect && { color: "#17734A" }, showWrong && { color: "#C0392B" }]}>
                       {String.fromCharCode(65 + i)}
                     </Text>
                   </View>
-                  <Text style={styles.optText}>{o.text}</Text>
+                  <Text style={[styles.optText, showCorrect && styles.optTextCorrect, showWrong && styles.optTextWrong]}>{o.text}</Text>
                   {micMode && showWrong && <Text style={styles.youSaid}>You said</Text>}
+                  {showCorrect && <Text style={[styles.youSaid, { color: "#17734A" }]}>✓ Correct</Text>}
                 </Pressable>
               );
             })}
@@ -792,12 +793,12 @@ export default function Quiz() {
               <Text style={styles.cefrInviteKicker}>{CEFR_TESTS[cefrInvite].level.toUpperCase()} COMPLETE</Text>
               <Text style={styles.cefrInviteTitle}>Ready to find out your CEFR level?</Text>
               <Text style={styles.cefrInviteBody}>
-                The {cefrInvite} test covers listening, reading, writing and speaking — everything you've just learned. Pass it to earn your {cefrInvite} badge.
+                The CEFR-style {cefrInvite} test covers listening, reading, writing and speaking — everything you've just learned. Pass it to earn your {cefrInvite} badge.
               </Text>
               <Text style={styles.cefrInviteCoins}><CoinIcon size={15} /> {cefrCoinCost(cefrInvite)} coins · yours to keep</Text>
               <Pressable style={styles.cefrInviteBtn} accessibilityRole="button"
                 onPress={() => { setCefrInvite(null); router.push(isPro ? "/cefr-exams" as any : "/paywall" as any); }}>
-                <Text style={styles.cefrInviteBtnText}>{isPro ? `Try the ${cefrInvite} test` : "Requires Conjugately Pro"}</Text>
+                <Text style={styles.cefrInviteBtnText}>{isPro ? `Try the CEFR-style ${cefrInvite} test` : "Requires Conjugately Pro"}</Text>
               </Pressable>
               <Pressable onPress={() => setCefrInvite(null)} accessibilityRole="button">
                 <Text style={styles.cefrInviteLater}>Maybe later</Text>
@@ -932,8 +933,13 @@ const styles = StyleSheet.create({
   opt: { flexDirection: "row", alignItems: "center", borderWidth: 2,
     borderColor: "#C6CCD4", backgroundColor: "#FFFFFF",
     borderRadius: 14, padding: 14, marginBottom: 12 },
-  optCorrect: { borderColor: "#17734A", backgroundColor: "rgba(23,115,74,0.08)" },
-  optWrong: { borderColor: "#C0392B", backgroundColor: "rgba(192,57,43,0.08)" },
+  // Solid fills (1.3.11): the old 8% tints vanished on the dark quiz card and
+  // left dark text on a dark box, so the right and wrong answers looked faded.
+  optCorrect: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
+  optWrong: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
+  optDim: { opacity: 0.55 },
+  optTextCorrect: { color: "#0F5A38", fontWeight: "700" },
+  optTextWrong: { color: "#9B2C20", fontWeight: "600" },
   letter: { width: 30, height: 30, borderRadius: 15, borderWidth: 2,
     borderColor: "#8A93A0", alignItems: "center", justifyContent: "center",
     marginRight: 14 },
