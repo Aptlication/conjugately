@@ -17,8 +17,8 @@ import { getJourneySummary, getQuizHistory } from "../lib/progress";
  *
  * Entrance (approved 18 Oct 2026, replacing the wordmark turn): the eleven
  * letters of "Conjugately" fly in from different directions, spinning and
- * settling with a small overshoot, in a scattered arrival order; a soft glow
- * pulses as the last one lands. The tagline keeps its agreed build:
+ * settling with a small overshoot, in a scattered arrival order. (The soft glow
+ * that pulsed as the last letter landed was removed, 26 Oct 2026.) The tagline keeps its agreed build:
  * de → French → suite! → tout (which drops in from above).
  * Plays once each time Home appears. Timings match the approved browser
  * sample ("Conjugately Letter Assembly"). Reduce Motion: shown still.
@@ -29,7 +29,6 @@ import { getJourneySummary, getQuizHistory } from "../lib/progress";
 const START_DELAY_MS = 400;
 const TOTAL_MS = 2100;
 const EASE = Easing.bezierFn(0.22, 1, 0.36, 1);
-const GLOW_EASE = Easing.bezierFn(0.42, 0, 0.58, 1);
 
 /** Value at progress p (0..1) for keyframes `stops` → `vals`, easing each segment. */
 function kf(p: number, stops: number[], vals: number[], ease: (x: number) => number): number {
@@ -62,8 +61,6 @@ const DIRS = [200, 20, 290, 110, 335, 155, 245, 65, 180, 310, 90];
 const ORDER = [5, 0, 8, 3, 10, 1, 6, 9, 2, 7, 4];
 const LETTER_STAGGER_MS = 55;
 const LETTER_MS = 820;
-const GLOW_DELAY_MS = 1150;
-const GLOW_MS = 900;
 
 type WordSpec = { delay: number; fromTop?: boolean };
 const WORD_MS = 330;
@@ -156,19 +153,8 @@ export default function Home() {
 }
 
 function Wordmark({ ms }: { ms: SharedValue<number> }) {
-  const glow = useAnimatedStyle(() => ({
-    opacity: kf(prog(ms.value, GLOW_DELAY_MS, GLOW_MS), [0, 0.35, 1], [0, 0.55, 0], GLOW_EASE),
-  }));
   return (
     <View style={styles.markWrap} accessible accessibilityRole="header" accessibilityLabel="Conjugately">
-      <Animated.View pointerEvents="none" style={[styles.glowBox, glow]}
-        accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-        <View style={styles.glowOval}>
-          {GLOW_RINGS.map((d) => (
-            <View key={d} style={[styles.glowRing, { width: d, height: d, borderRadius: d / 2 }]} />
-          ))}
-        </View>
-      </Animated.View>
       <View style={styles.markRow} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
         {LETTERS.map((l, i) => <Letter key={i} ms={ms} index={i} ch={l.ch} color={l.color} />)}
       </View>
@@ -199,9 +185,6 @@ function Letter({ ms, index, ch, color }: { ms: SharedValue<number>; index: numb
   return <Animated.Text style={[styles.h1, { color }, style]}>{ch}</Animated.Text>;
 }
 
-// Stacked translucent circles, squashed to an oval: a radial glow without a
-// gradient library.
-const GLOW_RINGS = [260, 228, 196, 164, 132, 100, 68, 36];
 
 /** Each word in its own clipped slot, built out of order: de, French, suite!, tout. */
 function Tagline({ ms }: { ms: SharedValue<number> }) {
@@ -242,10 +225,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16, paddingBottom: 90 },
   markWrap: { alignItems: "center", justifyContent: "center", marginBottom: 8 },
   markRow: { flexDirection: "row" },
-  glowBox: { position: "absolute", width: 260, height: 60, alignItems: "center", justifyContent: "center" },
-  glowOval: { width: 260, height: 260, alignItems: "center", justifyContent: "center",
-    transform: [{ scaleY: 60 / 260 }] },
-  glowRing: { position: "absolute", backgroundColor: "rgba(127,160,238,0.10)" },
   h1: { fontSize: 40, fontWeight: "700", textAlign: "center" },
   // Each word rolls inside its own clipped slot. On iOS, Dancing Script's
   // swashes (the F, the !) overhang the Text box, so the slot needs real room
