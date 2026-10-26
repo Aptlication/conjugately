@@ -9,6 +9,7 @@ import {
   normaliseFrench,
   type MatchResult,
 } from "@shared/answerMatch";
+import { soundsAlike } from "@shared/soundAlike";
 
 /**
  * Masters Mic - the recogniser half.
@@ -213,10 +214,21 @@ export function useMastersMic(opts: {
     // near-miss is scored against the form it was nearest to rather than
     // dismissed as unheard. Only genuine silence has nothing to snap to.
     const usable = text.trim().length > 0;
+
+    // 1.3.15: the mic hears sound, not spelling. If the nearest option sounds
+    // the same as the correct one (parlais / parlait / parlaient, il / ils
+    // before a consonant), the learner said the right thing: mark it correct
+    // and show the correct spelling, never "Incorrect conjugation".
+    const ci = correctIndexRef.current;
+    if (usable && bestIndex !== null && bestIndex !== ci && ci != null && ci >= 0
+        && opts[bestIndex] != null && opts[ci] != null && soundsAlike(opts[bestIndex], opts[ci])) {
+      bestIndex = ci;
+    }
+
     return {
       heard: text,
       optionIndex: usable ? bestIndex : null,
-      correct: usable && bestIndex === correctIndexRef.current,
+      correct: usable && bestIndex === ci,
       usable,
       match: best,
     };
