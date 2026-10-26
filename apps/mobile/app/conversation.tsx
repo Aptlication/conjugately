@@ -7,6 +7,10 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import { judgeReply } from "../lib/generousMatch";
+import { wrongOptions } from "../lib/conversationOptions";
+import { DEFAULT_THRESHOLDS, matchAnswer } from "@shared/answerMatch";
+import { soundsAlike } from "@shared/soundAlike";
+import { contentLevel } from "@shared/levels";
 import { type ConvTurn } from "../lib/conversations";
 import { CONVERSATION_AUDIO, getConversation } from "../lib/conversationsFull";
 import { collectConversationWords } from "../lib/vocab";
@@ -30,6 +34,15 @@ import { purchasesAvailable, usePro } from "../lib/pro";
  *          a second miss shows the model answer and moves on. Silence gets « Comment ? ».
  * Tapping the English cue reveals the French, so a learner can read it aloud and
  * keep going; reading it counts. Nothing is ever marked wrong: it is practice.
+ *
+ * Four options (1.3.16, Jonathan 26 Oct 2026). A reply with three wrong answers
+ * in lib/conversationOptions.ts is judged like Masters Mic in quizzes: whatever
+ * is heard snaps to the nearest of the four. Right → « Très bien ! » (or
+ * « Tu veux dire… ? » when only partly heard, still right); wrong → « Pas tout à
+ * fait », the four shown in green/red, and the learner tries again until right.
+ * A–D hidden by default (Show A–D); tapping an option answers with it. Answers
+ * that sound the same as the right one count as right. Replies with no options
+ * yet keep the generous judging above.
  *
  * Tapping a French bubble flips it to the English; tapping again flips it back.
  * No coins, no marks: it is practice. New words go to Vocab, tagged with the unit.
@@ -139,6 +152,9 @@ export default function ConversationScreen() {
   const heardAllRef = useRef<Set<string>>(new Set());
   // The English cue flips to the French when tapped, so the learner can read it out.
   const [cueOpen, setCueOpen] = useState(false);
+  // Four-option replies: A–D hidden until asked for, or until a wrong answer.
+  const [showOptions, setShowOptions] = useState(false);
+  const [picked, setPicked] = useState<number | null>(null);
   const [heard, setHeard] = useState("");
   const [level01, setLevel01] = useState(0);
   const [notice, setNotice] = useState<string | null>(null);
@@ -174,6 +190,18 @@ export default function ConversationScreen() {
   const appReached = turns.slice(0, step + 1).filter((t) => t.who === "app").length;
   const replies = turns.filter((t) => t.who === "you").length;
   const current = turns[step];
+  const convKey = `${contentLevel(level)}|${timeFrame}|${unitVerb}`;
+  // The four options for this reply, right answer at a random position (fresh per reply).
+  const options = useMemo(() => {
+    const t = turns[step];
+    if (!t || t.who !== "you") return null;
+    const wrong = wrongOptions(convKey, t.fr);
+    if (!wrong?.length) return null;
+    const all = [{ text: t.fr, right: true }, ...wrong.map((w) => ({ text: w, right: false }))];
+    for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
+    return all;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, convKey, conv]);
 
   useEffect(() => {
     AccessibilityInfo.isReduceMotionEnabled().then(setReduceMotion).catch(() => {});
@@ -276,6 +304,8 @@ export default function ConversationScreen() {
     if (t.who === "you" && phase === "speaking") {
       setAttempt(0);
       setCueOpen(false);
+      setShowOptions(false);
+      setPicked(null);
       heardAllRef.current = new Set();
       setHeard("");
       setNotice(null);
@@ -343,7 +373,7 @@ export default function ConversationScreen() {
       interimResults: true,
       maxAlternatives: 3,
       continuous: false,
-      contextualStrings: t.accept,
+      contextualStrings: options ? [...t.accept, ...options.map((o) => o.text)] : t.accept,
       volumeChangeEventOptions: { enabled: true, intervalMillis: 50 },
       // Keep the loudspeaker: without this iOS routes the next clip to the earpiece.
       iosCategory: { category: "playAndRecord", categoryOptions: ["defaultToSpeaker", "allowBluetooth"], mode: "default" },
@@ -373,9 +403,67 @@ export default function ConversationScreen() {
   };
 
   /** Enter: judge the reply by the 50% rule. On web, a tap stands in for a clear reply. */
+  /** Four-option reply: snap what was heard to the nearest of the four. */
+  const submitFour = (guesses: string[], tapped: number | null = null) => {
+    const t = turns[step];
+    if (!t || t.who !== "you" || !options) return;
+    const rightIdx = options.findIndex((o) => o.right);
+    let best = tapped ?? -1;
+    let bestSim = tapped === null ? -1 : 1;
+    if (tapped === null) {
+      for (const g of guesses) {
+        if (!g?.trim()) continue;
+        options.forEach((o, i) => {
+          const m = matchAnswer(g, o.right ? [o.text, ...t.accept] : o.text, 1, DEFAULT_THRESHOLDS);
+          if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
+        });
+      }
+    }
+    const k = `y${step}-${attempt}`;
+    if (best < 0) {
+      // Nothing heard: ask again.
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
+      setLog((l) => [...l,
+        { kind: "you", text: "…", badge: "unheard", key: k },
+        { kind: "app", fr: "Comment ?", en: "Sorry?", key: `${k}-comment` },
+      ]);
+      setAttempt((a) => a + 1);
+      setHeard("");
+      setPhase("yourTurn");
+      return;
+    }
+    // Sounds the same as the right answer → it is the right answer (1.3.15).
+    if (best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
+    setPicked(best);
+    if (best === rightIdx) {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+      if (attempt === 0) setFirstTime((n) => n + 1);
+      const partly = tapped === null && bestSim < DEFAULT_THRESHOLDS.acceptAt;
+      setLog((l) => [...l,
+        { kind: "you", text: t.fr, badge: partly ? "close" : "correct", key: k },
+        ...(partly ? [{ kind: "app" as const, fr: `Tu veux dire : ${t.fr.replace(/[.!?]\s*$/, "")} ?`, en: `Did you mean: ${t.en}`, key: `${k}-tvd` }] : []),
+      ]);
+      setShowOptions(false);
+      setPhase("model");
+      advance(partly ? 1600 : 700);
+      return;
+    }
+    // Wrong: say so, show the four in green/red, try again until right.
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
+    setLog((l) => [...l,
+      { kind: "you", text: options[best].text, badge: "notQuite", key: k },
+      { kind: "app", fr: `Pas tout à fait. On dit : ${t.fr}`, en: `Not quite. You say: ${t.en}`, key: `${k}-ptaf` },
+    ]);
+    setAttempt((a) => a + 1);
+    setShowOptions(true);
+    setHeard("");
+    setPhase("yourTurn");
+  };
+
   const submit = (webTap = false) => {
     const t = turns[step];
     if (!t || t.who !== "you") return;
+    if (options) { submitFour(webTap ? [t.fr] : [heard, ...heardAllRef.current]); return; }
     const guesses = webTap ? [t.fr] : [heard, ...heardAllRef.current];
     const judged = judgeReply(guesses, t.accept, unitVerb);
     const said = webTap ? t.fr : (judged.best || heard);
@@ -539,6 +627,31 @@ export default function ConversationScreen() {
               <Text style={styles.cueHint}>Stuck? Tap to see it in French</Text>
             )}
           </Pressable>
+        )}
+
+        {youTurn && options && (phase === "yourTurn" || phase === "heard") && (
+          <View style={styles.optWrap}>
+            <Pressable onPress={() => { Haptics.selectionAsync().catch(() => {}); setShowOptions((v) => !v); }}
+              accessibilityRole="button" style={styles.optToggle}>
+              <Ionicons name={showOptions ? "eye-off-outline" : "list"} size={16} color="#2B5FD9" />
+              <Text style={styles.optToggleText}>{showOptions ? "Hide A–D" : "Show A–D"}</Text>
+            </Pressable>
+            {showOptions && options.map((o, i) => {
+              const marked = picked !== null && attempt > 0;
+              const isRight = marked && o.right;
+              const isWrong = marked && picked === i && !o.right;
+              return (
+                <Pressable key={i} onPress={() => submitFour([], i)} accessibilityRole="button"
+                  accessibilityLabel={`${String.fromCharCode(65 + i)}. ${o.text}`}
+                  style={[styles.opt, isRight && styles.optRight, isWrong && styles.optWrong, marked && !isRight && !isWrong && { opacity: 0.55 }]}>
+                  <Text style={[styles.optLetter, isRight && { color: "#15824A" }, isWrong && { color: "#B03426" }]}>{String.fromCharCode(65 + i)}</Text>
+                  <Text style={[styles.optText, isRight && { color: "#0F5A38", fontWeight: "700" }, isWrong && { color: "#9B2C20" }]}
+                    accessibilityLanguage="fr">{o.text}</Text>
+                  {isWrong && <Text style={styles.optTag}>You said</Text>}
+                </Pressable>
+              );
+            })}
+          </View>
         )}
 
         {youTurn && phase === "model" && log[log.length - 1]?.kind === "you" &&
@@ -763,4 +876,14 @@ const styles = StyleSheet.create({
   primaryText: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
   linkBtn: { height: 44, alignItems: "center", justifyContent: "center" },
   linkText: { color: "#3E63D8", fontSize: 16, fontWeight: "700" },
+  optWrap: { marginTop: 10, gap: 8 },
+  optToggle: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "center", paddingVertical: 6, paddingHorizontal: 10 },
+  optToggleText: { color: "#2B5FD9", fontSize: 14, fontWeight: "700" },
+  opt: { flexDirection: "row", alignItems: "center", gap: 10, borderWidth: 2, borderColor: "#D6DBE8",
+    backgroundColor: "#FFFFFF", borderRadius: 14, paddingVertical: 12, paddingHorizontal: 14 },
+  optRight: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
+  optWrong: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
+  optLetter: { width: 22, color: "#5A6390", fontWeight: "800", fontSize: 14 },
+  optText: { flex: 1, color: "#1B2145", fontSize: 16 },
+  optTag: { color: "#B03426", fontSize: 12, fontWeight: "700" },
 });
