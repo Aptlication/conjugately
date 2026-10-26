@@ -63,7 +63,7 @@ const TENSE_LABEL: Record<string, string> = { Present: "Présent", Past: "Passé
 // The tense names the quiz already stores on vocabulary words, so both group together.
 const VOCAB_TENSE: Record<string, string> = { Present: "Présent", Past: "Passé Composé", Future: "Futur Simple" };
 
-type Badge = "correct" | "close" | "unheard" | "notQuite";
+type Badge = "correct" | "close" | "unheard" | "notQuite" | "again" | "nearly" | "incorrect";
 type LogItem =
   | { kind: "app"; fr: string; en: string; key: string }
   | { kind: "you"; text: string; badge: Badge; key: string };
@@ -130,6 +130,10 @@ const BADGE: Record<Badge, { label: string; bg: string; fg: string }> = {
   close: { label: "Understood", bg: "#E3F7EC", fg: "#15824A" },
   unheard: { label: "Didn't catch that", bg: "#FFF0DD", fg: "#A35A00" },
   notQuite: { label: "Not quite", bg: "#FFF0DD", fg: "#A35A00" },
+  // Four-option replies (1.3.19): first miss → « Comment ? »; second miss → Close or Incorrect.
+  again: { label: "Try again", bg: "#FFF0DD", fg: "#A35A00" },
+  nearly: { label: "Close", bg: "#FFF0DD", fg: "#A35A00" },
+  incorrect: { label: "Incorrect", bg: "#FDE7E5", fg: "#B03426" },
 };
 
 export default function ConversationScreen() {
@@ -407,19 +411,20 @@ export default function ConversationScreen() {
   /** Index and score of the option nearest to what was heard (-1 if nothing heard). */
   const nearestOption = (guesses: string[]) => {
     const t = turns[step];
-    let best = -1, bestSim = -1;
-    if (!t || t.who !== "you" || !options) return { best, bestSim };
+    let best = -1, bestSim = -1, rightSim = 0;
+    if (!t || t.who !== "you" || !options) return { best, bestSim, rightSim };
     for (const g of guesses) {
       if (!g?.trim()) continue;
       options.forEach((o, i) => {
         const m = matchAnswer(g, o.right ? [o.text, ...t.accept] : o.text, 1, DEFAULT_THRESHOLDS);
         if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
+        if (o.right) rightSim = Math.max(rightSim, m.similarity);
       });
     }
     // Sounds the same as the right answer → it is the right answer (1.3.15).
     const rightIdx = options.findIndex((o) => o.right);
     if (best >= 0 && best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
-    return { best, bestSim };
+    return { best, bestSim, rightSim };
   };
 
   /** Four-option reply: snap what was heard to the nearest of the four. */
@@ -427,7 +432,7 @@ export default function ConversationScreen() {
     const t = turns[step];
     if (!t || t.who !== "you" || !options) return;
     const rightIdx = options.findIndex((o) => o.right);
-    const near = tapped === null ? nearestOption(guesses) : { best: tapped, bestSim: 1 };
+    const near = tapped === null ? nearestOption(guesses) : { best: tapped, bestSim: 1, rightSim: 0 };
     let best = near.best;
     const bestSim = near.bestSim;
     const k = `y${step}-${attempt}`;
@@ -438,7 +443,6 @@ export default function ConversationScreen() {
         { kind: "you", text: "…", badge: "unheard", key: k },
         { kind: "app", fr: "Comment ?", en: "Sorry?", key: `${k}-comment` },
       ]);
-      setAttempt((a) => a + 1);
       setHeard("");
       setPhase("yourTurn");
       return;
@@ -458,16 +462,29 @@ export default function ConversationScreen() {
       advance(partly ? 1600 : 700);
       return;
     }
-    // Wrong: say so, show the four in green/red, try again until right.
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
+    if (attempt === 0) {
+      // First miss: the app just asks again, as a person would. No answer shown yet.
+      setLog((l) => [...l,
+        { kind: "you", text: options[best].text, badge: "again", key: k },
+        { kind: "app", fr: "Comment ?", en: "Sorry?", key: `${k}-comment` },
+      ]);
+      setAttempt(1);
+      setHeard("");
+      setPhase("yourTurn");
+      return;
+    }
+    // Second miss: Close if it was nearly the right answer, otherwise Incorrect.
+    // Either way the right answer is shown and the conversation moves on.
+    const nearly = near.rightSim >= DEFAULT_THRESHOLDS.disambiguateAt;
     setLog((l) => [...l,
-      { kind: "you", text: options[best].text, badge: "notQuite", key: k },
-      { kind: "app", fr: `Pas tout à fait. On dit : ${t.fr}`, en: `Not quite. You say: ${t.en}`, key: `${k}-ptaf` },
+      // Close: one of the wrong conjugations. Incorrect: something unrelated, shown as heard.
+      { kind: "you", text: nearly ? options[best].text : (guesses.find((g) => g?.trim()) || options[best].text), badge: nearly ? "nearly" : "incorrect", key: k },
+      { kind: "app", fr: nearly ? `Presque ! On dit : ${t.fr}` : `On dit : ${t.fr}`,
+        en: nearly ? `Nearly! You say: ${t.en}` : `You say: ${t.en}`, key: `${k}-model` },
     ]);
-    setAttempt((a) => a + 1);
-    setShowOptions(true);
-    setHeard("");
-    setPhase("yourTurn");
+    setPhase("model");
+    advance(2200);
   };
 
   const submit = (webTap = false) => {
