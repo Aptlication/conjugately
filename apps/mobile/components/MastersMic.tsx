@@ -117,13 +117,12 @@ export default function MastersMic(props: {
         <Text style={styles.heardLabel}>Heard</Text>
         <Text
           style={[styles.heardText, !ready && styles.heardProvisional]}
-          numberOfLines={2}
           accessibilityLiveRegion="polite"
         >
           {shownText || placeholder}
         </Text>
         {ready && reading?.optionIndex != null && (
-          <Text style={styles.heardSnap} numberOfLines={1}>
+          <Text style={styles.heardSnap}>
             {"\u2192 "}{props.options[reading.optionIndex]}
           </Text>
         )}
@@ -386,7 +385,7 @@ const styles = StyleSheet.create({
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
-  heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9" },
+  heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
   pauseWrap: {
