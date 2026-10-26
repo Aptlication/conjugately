@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -11,7 +11,7 @@ import { getExam } from "@shared/exams";
 import { readExamResults } from "../lib/exams";
 import type { ExamResult } from "@shared/exams";
 import { coinBalance } from "@shared/coins";
-import { readCoins } from "../lib/coins";
+import { onCoinsChanged, readCoins } from "../lib/coins";
 import ExamGateCard from "../components/ExamGateCard";
 import CoinIcon from "../components/CoinIcon";
 import CefrGateCard from "../components/CefrGateCard";
@@ -29,6 +29,8 @@ export default function MiniCourses() {
   const [prog, setProg] = useState<Record<string, number[]>>({});
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
   const [balance, setBalance] = useState<number | null>(null);
+  // Live: a coin spend on this screen (exam or CEFR unlock) updates the balance at once.
+  useEffect(() => onCoinsChanged((c) => setBalance(coinBalance(c))), []);
   useFocusEffect(useCallback(() => {
     let on = true;
     getCourseProgress().then((cp) => {

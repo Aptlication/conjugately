@@ -74,8 +74,18 @@ export async function readCoins(): Promise<CoinState> {
   }
 }
 
+// Screens showing the balance listen here, so a spend on the same screen
+// (e.g. unlocking a CEFR-style test from its card) updates the header at once
+// instead of only on the next visit (1.3.17).
+const coinListeners = new Set<(s: CoinState) => void>();
+export function onCoinsChanged(fn: (s: CoinState) => void): () => void {
+  coinListeners.add(fn);
+  return () => { coinListeners.delete(fn); };
+}
+
 async function write(s: CoinState) {
   await AsyncStorage.setItem(COINS_STORAGE_KEY, JSON.stringify(s));
+  coinListeners.forEach((fn) => { try { fn(s); } catch {} });
 }
 
 /** Serialise read-modify-write so two quick saves cannot lose coins. */

@@ -1,10 +1,10 @@
 import NavBar from "../components/NavBar";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { CEFR_IDS } from "@shared/cefrTests";
 import { coinBalance } from "@shared/coins";
-import { readCoins } from "../lib/coins";
+import { onCoinsChanged, readCoins } from "../lib/coins";
 import { usePro } from "../lib/pro";
 import CefrGateCard from "../components/CefrGateCard";
 import CoinIcon from "../components/CoinIcon";
@@ -17,6 +17,8 @@ import CoinIcon from "../components/CoinIcon";
 export default function CefrExams() {
   const { isPro } = usePro();
   const [balance, setBalance] = useState<number | null>(null);
+  // Live: a coin spend on this screen (exam or CEFR unlock) updates the balance at once.
+  useEffect(() => onCoinsChanged((c) => setBalance(coinBalance(c))), []);
   useFocusEffect(useCallback(() => {
     let on = true;
     readCoins().then((c) => { if (on) setBalance(coinBalance(c)); });
