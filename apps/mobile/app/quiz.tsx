@@ -119,6 +119,7 @@ export default function Quiz() {
   useEffect(() => { soundRef.current = sound; }, [sound]);
   const [answerUrl, setAnswerUrl] = useState<string | null>(null);
   const [showTip, setShowTip] = useState(false);
+  const [micHolding, setMicHolding] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
   const [reviewIndex, setReviewIndex] = useState<number | null>(null);
   const [examBest, setExamBest] = useState<ExamResult | undefined>(undefined);
@@ -223,6 +224,28 @@ export default function Quiz() {
     ? `${API_BASE}/attached_assets/audio/quizzes/${audioLevel}/${encodeURIComponent(qVerb)}/${qTensePath}/questions/Q${q.audioIndex || idx + 1}.mp3`
     : null;
   const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
+  const qStatus = useAudioPlayerStatus(qPlayer);
+  // 1.3.20 (Jonathan, 28 Oct 2026): A-D stay greyed out until the English
+  // question has finished, so the English is always heard before an answer.
+  // Unlocked by the clip finishing, by Sound Off, by Masters Mic taking over,
+  // or by a safety timer so a clip that fails to load is never a dead end.
+  // Scoped to the question index, so a new question is locked from its very
+  // first frame rather than one render later.
+  const idxRef = useRef(idx);
+  idxRef.current = idx;
+  const [englishDoneFor, setEnglishDoneFor] = useState(-1);
+  const englishDone = englishDoneFor === idx;
+  const englishTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const finishEnglish = () => {
+    if (englishTimerRef.current) { clearTimeout(englishTimerRef.current); englishTimerRef.current = null; }
+    setEnglishDoneFor(idxRef.current);
+  };
+  useEffect(() => { if (qStatus?.didJustFinish) finishEnglish(); }, [qStatus?.didJustFinish]);
+  useEffect(() => () => { if (englishTimerRef.current) clearTimeout(englishTimerRef.current); }, []);
+  const stopEnglish = () => {
+    try { qPlayer.pause(); } catch {}
+    finishEnglish();
+  };
   const aPlayer = useAudioPlayer(answerUrl ? { uri: answerUrl } : null);
   const aStatus = useAudioPlayerStatus(aPlayer);
   const aPlayingRef = useRef(false);
@@ -304,11 +327,19 @@ export default function Quiz() {
   }, []);
 
   useEffect(() => {
-    if (state === "active" && questionUrl && sound && !showGuide) {
-      const t = setTimeout(() => { try { qPlayer.seekTo(0); qPlayer.play(); } catch {} }, 300);
+    // `sound` is a dependency (1.3.20): turning Sound On mid-question plays the
+    // English. Never after the question has been answered.
+    if (state === "active" && questionUrl && sound && !showGuide && !confirmed) {
+      setEnglishDoneFor(-1);
+      if (englishTimerRef.current) clearTimeout(englishTimerRef.current);
+      // Longest question clip is about 8.4s (Novice); a clip that never loads unlocks here.
+      englishTimerRef.current = setTimeout(finishEnglish, 12000);
+      const t = setTimeout(() => { try { qPlayer.seekTo(0); qPlayer.play(); } catch { finishEnglish(); } }, 300);
       return () => clearTimeout(t);
     }
-  }, [idx, state, questionUrl, showGuide]);
+    finishEnglish();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [idx, state, questionUrl, showGuide, sound]);
 
   useEffect(() => {
     if (answerUrl && soundRef.current) {
@@ -319,8 +350,16 @@ export default function Quiz() {
   const speakAnswer = async (i: number) => {
     // APPROVED EXCEPTION: plays immediately on selection (main uses 1.5s delay). Pre-recorded manifest only.
     if (!soundRef.current) return;
-    const opt = questions[idx]?.answerOptions[i];
+    // 1.3.20 (Jonathan, 28 Oct 2026): exams play no French after an answer.
+    if (exam) return;
+    let opt = questions[idx]?.answerOptions[i];
     if (!opt) return;
+    // 1.3.20: Intermediate A and B record only the correct option, so a wrong
+    // answer there plays the CORRECT French. Other levels keep playing the
+    // option the learner picked (every option is recorded there).
+    if (!opt.isCorrect && isIntermediate(difficulty)) {
+      opt = questions[idx]?.answerOptions.find((o) => o.isCorrect) ?? opt;
+    }
     const m = await getManifest();
     const f = lookupAnswerFile(m, opt.text, difficulty);
     if (f) {
@@ -335,6 +374,10 @@ export default function Quiz() {
   const handleAnswerSelect = (i: number) => {
     if (reviewIndex !== null) return;
     if (selected === i && confirmed) { nextQuestion(); return; }
+    // The English always comes first (1.3.20). Masters Mic answers arrive here
+    // too; the mic has already stopped the English by then.
+    if (!englishDone && !confirmed) return;
+    stopEnglish();
     setSelected(i);
     setConfirmed(true);
     setAnswers((prev) => ({ ...prev, [idx]: i }));
@@ -381,6 +424,7 @@ export default function Quiz() {
 
   const nextQuestion = () => {
     cancelAutoAdvance();
+    setMicHolding(false);
     waitAudioRef.current = false;
     audioPendingRef.current = false;
     audioDoneRef.current = true;
@@ -520,7 +564,9 @@ export default function Quiz() {
     <LinearGradient colors={exam ? ["#000000", "#000000"] : resultsNavy ? ["#1B2145", "#1B2145"] : micMode ? ["#0A1326", "#0A1326"] : ["#F7F8FA", "#F7F8FA"]}
       start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ flex: 1 }}>
       <Stack.Screen options={{ headerShown: false }} />
-      <ScrollView contentContainerStyle={styles.scroll}>
+      {/* Locked while Record is held (1.3.20): a finger drifting on a held
+          button was scrolling/bouncing the page, so Record jumped up. */}
+      <ScrollView contentContainerStyle={styles.scroll} scrollEnabled={!micHolding}>
         {exam && state !== "loading" && (
           <View style={styles.examBanner}>
             <Text style={styles.examBannerText}>
@@ -583,9 +629,12 @@ export default function Quiz() {
               const isSel = dispSelected === i && confirmedNow;
               const showCorrect = confirmedNow && o.isCorrect;
               const showWrong = isSel && !o.isCorrect;
+              const waitingForEnglish = reviewIndex === null && !confirmedNow && !englishDone;
               return (
-                <Pressable key={i} onPress={() => handleAnswerSelect(i)}
-                  style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim]}>
+                <Pressable key={i} onPress={() => handleAnswerSelect(i)} disabled={waitingForEnglish}
+                  accessibilityState={{ disabled: waitingForEnglish }}
+                  style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim,
+                    waitingForEnglish && styles.optWaiting]}>
                   <View style={[styles.letter, showCorrect && { borderColor: "#17734A" }, showWrong && { borderColor: "#C0392B" }]}>
                     <Text style={[styles.letterText, showCorrect && { color: "#17734A" }, showWrong && { color: "#C0392B" }]}>
                       {String.fromCharCode(65 + i)}
@@ -609,6 +658,7 @@ export default function Quiz() {
                 options={dispQ.answerOptions.map((o: any) => o.text)}
                 correctIndex={dispQ.answerOptions.findIndex((o: any) => o.isCorrect)}
                 onOutcome={handleMicOutcome}
+                onHoldChange={(h) => { setMicHolding(h); if (h) stopEnglish(); }}
                 optionsShown={showOptionsFor === dispIdx}
                 onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
               />
@@ -951,6 +1001,7 @@ const styles = StyleSheet.create({
   feedbackText: { fontSize: 14, lineHeight: 20 },
   bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center",
     gap: 14, marginTop: 16 },
+  optWaiting: { opacity: 0.4 },
   audioRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10, marginTop: 2 },
   ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12,
     paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },

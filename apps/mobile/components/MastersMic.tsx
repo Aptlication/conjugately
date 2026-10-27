@@ -38,6 +38,8 @@ export default function MastersMic(props: {
   options: string[];
   correctIndex: number;
   onOutcome: (o: MicOutcome) => void;
+  /** Record pressed (true) / released (false). The quiz locks scrolling and stops the English. */
+  onHoldChange?: (holding: boolean) => void;
   /** Toggles options A-D for this question. */
   onToggleOptions: () => void;
   optionsShown: boolean;
@@ -76,6 +78,11 @@ export default function MastersMic(props: {
   }, [listening, level]);
   const hearing = listening && gotAudio;
   const warming = listening && !gotAudio;
+  const lastErrorRef = useRef<string | null>(null);
+  // Never leave the quiz's scroll lock on if this unmounts mid-hold.
+  const holdChangeRef = useRef(props.onHoldChange);
+  holdChangeRef.current = props.onHoldChange;
+  useEffect(() => () => { holdChangeRef.current?.(false); }, []);
 
   if (props.disabled) return null;
 
@@ -100,6 +107,12 @@ export default function MastersMic(props: {
     );
   }
 
+  // errorDetail is cleared when recording starts; keep the last one on screen
+  // until the attempt has finished, so nothing above Record changes height.
+  if (errorDetail) lastErrorRef.current = errorDetail;
+  if (ready) lastErrorRef.current = null;
+  const shownError = errorDetail || (listening ? lastErrorRef.current : null);
+
   const shownText = ready ? (reading?.heard ?? "") : transcript;
   const placeholder = listening ? "…" : ready ? "nothing caught" : "Hold Record and say the answer";
 
@@ -117,6 +130,7 @@ export default function MastersMic(props: {
         <Text style={styles.heardLabel}>Heard</Text>
         <Text
           style={[styles.heardText, !ready && styles.heardProvisional]}
+          numberOfLines={ready ? undefined : 2}
           accessibilityLiveRegion="polite"
         >
           {shownText || placeholder}
@@ -128,8 +142,11 @@ export default function MastersMic(props: {
         )}
       </View>
 
-      {!!errorDetail && phase === "idle" && (
-        <Text style={styles.inlineError} numberOfLines={2}>{errorDetail}</Text>
+      {/* Shown through the hold as well (1.3.20): dropping it the moment Record
+          was pressed pulled the row up under the learner's finger. */}
+      {!!shownError && (phase === "idle" || phase === "listening") && (
+        // Kept in the layout but invisible while recording: the old error no longer applies.
+        <Text style={[styles.inlineError, listening && { opacity: 0 }]} numberOfLines={2}>{shownError}</Text>
       )}
 
       <View style={styles.row}>
@@ -151,8 +168,8 @@ export default function MastersMic(props: {
           again={ready}
           attention={!listening && !ready && !reduceMotion}
           hold
-          onPressIn={startHold}
-          onPressOut={stopHold}
+          onPressIn={() => { props.onHoldChange?.(true); startHold(); }}
+          onPressOut={() => { props.onHoldChange?.(false); stopHold(); }}
           hint={ready ? "Hold to record again over your last attempt" : "Hold to speak, release when you have finished"}
         />
         <SquareButton
@@ -381,7 +398,9 @@ const styles = StyleSheet.create({
   stripes: { position: "absolute", top: 0, left: 0, right: 0, height: EQ_HEIGHT },
   stripe: { position: "absolute", left: 0, right: 0, height: SEG_GAP, backgroundColor: NAVY_CARD },
 
-  heardBlock: { marginTop: 18, minHeight: 40, alignItems: "center", justifyContent: "center", gap: 3 },
+  // Room for the label and two lines of transcript (1.3.20), so the live
+  // transcript wrapping mid-hold never moves Record.
+  heardBlock: { marginTop: 18, minHeight: 58, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
