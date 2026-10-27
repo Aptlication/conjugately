@@ -114,6 +114,10 @@ function App() {
   const tts = useTTS();
   const questionAudioRef = useRef<HTMLAudioElement | null>(null);
   const lastPlayedQuestionRef = useRef<number>(-1);
+  // 1.3.20 (Jonathan, 28 Oct 2026): A-D stay greyed out until the English
+  // question has finished. Holds the index whose English is done.
+  const [englishDoneFor, setEnglishDoneFor] = useState<number>(-1);
+  const englishTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   // Load completed courses and progress on app start
   useEffect(() => {
@@ -1077,7 +1081,7 @@ function App() {
     const tensePath = (currentQuestion as any)._tensePath
       || TENSE_MAP[rawTense] || rawTense?.toLowerCase().replace(/\s+/g, '_');
 
-    if (!verb || !tensePath) return;
+    if (!verb || !tensePath) { setEnglishDoneFor(currentQuestionIndex); return; }
 
     const qNum = (currentQuestion as any).audioIndex || (currentQuestionIndex + 1);
 
@@ -1085,12 +1089,24 @@ function App() {
     const difficultyPath = activeQuizDifficulty ? audioLevelFolder(activeQuizDifficulty) : 'beginner';
     const url = `/attached_assets/audio/quizzes/${difficultyPath}/${encodeURIComponent(verb)}/${tensePath}/questions/Q${qNum}.mp3`;
 
+    const thisIndex = currentQuestionIndex;
+    const done = () => {
+      if (englishTimerRef.current) { clearTimeout(englishTimerRef.current); englishTimerRef.current = null; }
+      setEnglishDoneFor(thisIndex);
+    };
+    setEnglishDoneFor(-1);
+    if (englishTimerRef.current) clearTimeout(englishTimerRef.current);
+    // A clip that never loads must not leave the options locked.
+    englishTimerRef.current = setTimeout(done, 12000);
     const timer = setTimeout(() => {
       console.log(`🔊 Playing question: Q${qNum} (audioIndex=${(currentQuestion as any).audioIndex}, displayIndex=${currentQuestionIndex}, text="${currentQuestion.question}")`, url);
       const audio = new Audio(url);
       questionAudioRef.current = audio;
+      audio.onended = done;
+      audio.onerror = done;
       audio.play().catch(err => {
         console.warn('🔇 Question audio failed:', err.message);
+        done();
       });
     }, 300);
 
@@ -1102,7 +1118,15 @@ function App() {
     if (isAnswerConfirmed && selectedAnswerIndex !== null && quizData.length > 0 && tts.isEnabled) {
       const currentQuestion = quizData[currentQuestionIndex];
       if (currentQuestion && currentQuestion.answerOptions) {
-        const selectedOption = currentQuestion.answerOptions[selectedAnswerIndex];
+        // 1.3.20 (Jonathan, 28 Oct 2026): exams play no French after an answer.
+        if (courseInfo?.isFinalExam === true) return;
+        let selectedOption = currentQuestion.answerOptions[selectedAnswerIndex];
+        // 1.3.20: Intermediate A and B record only the correct option, so a
+        // wrong answer there plays the CORRECT French. Other levels keep
+        // playing the option picked (every option is recorded there).
+        if (selectedOption && !selectedOption.isCorrect && isIntermediate(activeQuizDifficulty || "")) {
+          selectedOption = currentQuestion.answerOptions.find((o: any) => o.isCorrect) ?? selectedOption;
+        }
         if (selectedOption) {
           setTimeout(() => {
             tts.speakAnswer(selectedOption.text, activeQuizDifficulty);
@@ -1484,7 +1508,10 @@ function App() {
       handleNextQuestion();
       setIsAnswerConfirmed(false);
     } else {
-      // First click - select and highlight answer
+      // First click - select and highlight answer. The English always comes
+      // first (1.3.20): ignore taps until it has finished, then stop it.
+      if (tts.isEnabled && englishDoneFor !== currentQuestionIndex) return;
+      if (questionAudioRef.current) questionAudioRef.current.pause();
       setSelectedAnswerIndex(answerIndex);
       setIsAnswerConfirmed(true);
       setUserAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerIndex }));
@@ -1768,11 +1795,15 @@ function App() {
           </div>
 
           <div className="mb-8">
-            {displayQuestion.answerOptions.map((option: any, index: number) => (
+            {displayQuestion.answerOptions.map((option: any, index: number) => {
+              const waitingForEnglish = reviewIndex === null && !displayConfirmed
+                && tts.isEnabled && englishDoneFor !== currentQuestionIndex;
+              return (
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
-                className={`w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center text-black font-medium ${
+                disabled={waitingForEnglish}
+                className={`${waitingForEnglish ? "opacity-40 cursor-not-allowed " : ""}w-full p-4 text-left rounded-xl mb-3 transition-all duration-200 flex items-center text-black font-medium ${
                   displaySelected === index && displayConfirmed
                     ? 'border-2 border-[#17734A] bg-[#EAF4EF]'
                     : displaySelected === index
@@ -1785,7 +1816,8 @@ function App() {
                 </span>
                 {option.text}
               </button>
-            ))}
+              );
+            })}
           </div>
 
 
