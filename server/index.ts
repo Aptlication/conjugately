@@ -16,8 +16,6 @@ app.use(canonicalHost);
 const CORS_ALLOWED = new Set([
   "https://conjugately-preview.onrender.com",
   "https://preview.conjugately.com",
-  // 1.4 rebrand: the preview moves to preview.plurifrench.com.
-  "https://preview.plurifrench.com",
 ]);
 app.use((req, res, next) => {
   const origin = req.headers.origin as string | undefined;
