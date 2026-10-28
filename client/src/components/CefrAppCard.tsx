@@ -19,7 +19,7 @@ export function CefrAppCard({ level }: { level: string }) {
           <div className="text-white font-semibold">CEFR-style {test.id} test — in the app</div>
           <div className="text-slate-300 text-sm">
             Listening, reading, writing and speaking in the format of official {test.id} French exams.
-            Opens after every {test.level} Final Level Exam is passed · {cefrCoinCost(test.id)} coins · Conjugately Pro.
+            Opens after every {test.level} Final Level Exam is passed · {cefrCoinCost(test.id)} coins · Pluri Pro.
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@ export function CefrAppCard({ level }: { level: string }) {
         rel="noopener noreferrer"
         className="mt-3 block text-center rounded-lg bg-[#F5C518] text-[#1B2145] font-bold py-2 hover:opacity-90"
       >
-        Get the Conjugately app
+        Get the Pluri French app
       </a>
       <div className="text-slate-400 text-xs mt-2">A practice test, not an official certificate.</div>
     </div>

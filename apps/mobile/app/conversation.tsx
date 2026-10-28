@@ -21,7 +21,7 @@ import { purchasesAvailable, usePro } from "../lib/pro";
 /**
  * Post-quiz "Final conversation" (1.2.1).
  *
- * The app speaks a recorded line, the learner answers out loud from an English
+ * The app speaks a recorded line, the learner answers aloud from an English
  * cue, and the app replies. Three app lines and two learner replies, about 20
  * seconds. Written and recorded in advance (docs/POST_QUIZ_CONVERSATION_SPEC.md).
  *
@@ -613,7 +613,7 @@ export default function ConversationScreen() {
               </View>
             ))}
             <Text style={styles.introNote}>
-              Listen, then answer out loud from the English cue. Tap any French bubble to see it in English.
+              Listen, then answer aloud from the English cue. Tap any French bubble to see it in English.
             </Text>
           </View>
         )}
@@ -648,7 +648,7 @@ export default function ConversationScreen() {
             {cueOpen ? (
               <View style={styles.cueReveal}>
                 <Text style={styles.cueRevealText} accessibilityLanguage="fr">{fr(youTurn.fr)}</Text>
-                <Text style={styles.cueHint}>Read it out loud — that counts.</Text>
+                <Text style={styles.cueHint}>Read it aloud — that counts.</Text>
               </View>
             ) : (
               <Text style={styles.cueHint}>Stuck? Tap to see it in French</Text>

@@ -719,7 +719,7 @@ export default function Quiz() {
                   accessibilityRole="switch"
                   accessibilityState={{ checked: micOn }}
                   accessibilityLabel="Masters Mic"
-                  accessibilityHint="Answer out loud instead of tapping. The options are hidden while it is on."
+                  accessibilityHint="Answer aloud instead of tapping. The options are hidden while it is on."
                   style={[styles.togglePill, micOn ? styles.micOn : styles.toggleOff]}>
                   <Ionicons name="mic" size={16} color={micOn ? "#06242E" : "#5A6472"} />
                   <Text style={[styles.toggleText, { color: micOn ? "#06242E" : "#5A6472" }]}>
@@ -865,7 +865,7 @@ export default function Quiz() {
               <View style={styles.convoIcon}><Ionicons name="chatbubbles" size={28} color="#FFFFFF" /></View>
               <Text style={styles.modalTitle}>Final conversation</Text>
               <Text style={styles.modalSub}>
-                A {conversationSeconds(conversation.level)}-second chat using <Text style={{ fontWeight: "800" }}>{conversation.verb}</Text> in the {conversation.tense.toLowerCase()}. Listen, then answer out loud.
+                A {conversationSeconds(conversation.level)}-second chat using <Text style={{ fontWeight: "800" }}>{conversation.verb}</Text> in the {conversation.tense.toLowerCase()}. Listen, then answer aloud.
               </Text>
               {convoLocked && (
                 <View style={[styles.proPill, { alignSelf: "center", marginBottom: 12 }]}>
@@ -912,7 +912,7 @@ export default function Quiz() {
               <Ionicons name="mic" size={26} color="#2B5FD9" />
             </View>
             <Text style={styles.modalTitle}>Masters Mic</Text>
-            <Text style={styles.modalSub}>Say the answer out loud instead of tapping it.</Text>
+            <Text style={styles.modalSub}>Say the answer aloud instead of tapping it.</Text>
             <View style={styles.micIntroList}>
               <Text style={styles.micIntroItem}>
                 1.  <Text style={styles.micIntroStrong}>Hold Record, wait a second, then speak.</Text> Starting too soon clips the first word.

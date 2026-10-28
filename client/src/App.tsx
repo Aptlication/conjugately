@@ -2392,7 +2392,7 @@ function App() {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 mb-8">
             <div className="text-center mb-6">
               <h2 className="text-4xl font-bold mb-2">📚 {courseInfo.timeFrame} Tense Course Overview</h2>
-              <p className="text-lg text-[#B9CBFA] font-semibold italic">Conjugately</p>
+              <p className="text-lg text-[#B9CBFA] font-semibold italic">Pluri French</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -2591,11 +2591,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1B2145] px-4 py-12 text-white">
+    <div className="min-h-screen bg-[#17162B] px-4 py-12 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-3 pb-2 leading-tight"><span style={{ color: "#7FA8EC" }}>Con</span><span style={{ color: "#EC9A9A" }}>j</span><span style={{ color: "#F5F6F8" }}>ugat</span><span style={{ color: "#EC9A9A" }}>ely</span></h1>
-          <p className="text-3xl text-white mb-6" style={{ fontFamily: "'Dancing Script', 'Segoe Script', cursive", fontWeight: 600 }}>French tout de suite!</p>
+          {/* Pluri French wordmark (1.4 rebrand): bold Michroma, pl blue / u white / ri red, chrome FRENCH */}
+          <h1 className="mb-2 leading-none" aria-label="Pluri French" style={{ fontFamily: "'Michroma', sans-serif", fontSize: "clamp(56px, 12vw, 88px)", letterSpacing: "0.03em", fontWeight: 400 }}>
+            <span style={{ color: "#4C7DFF", WebkitTextStroke: "0.045em #4C7DFF" }}>pl</span><span style={{ color: "#FFFFFF", WebkitTextStroke: "0.045em #FFFFFF" }}>u</span><span style={{ color: "#FF3B47", WebkitTextStroke: "0.045em #FF3B47" }}>ri</span>
+          </h1>
+          <p className="mb-8" aria-hidden="true" style={{ fontFamily: "'Michroma', sans-serif", fontSize: 20, letterSpacing: "0.35em", paddingLeft: "0.35em", color: "transparent", backgroundImage: "linear-gradient(to bottom, #FFFFFF 0%, #E4E8EE 30%, #A9B1BC 48%, #6E7782 52%, #C3C9D2 72%, #F4F6F9 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", display: "inline-block" }}>FRENCH</p>
 
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Master French verb conjugations—the key to fluency—with your own personalized quizzes and optional mini-courses.
@@ -3843,7 +3846,7 @@ function App() {
                   {selectedCourseTimeFrame} Tense Course Overview
                 </h3>
                 <p className="text-sm text-slate-300 italic">
-                  Conjugately
+                  Pluri French
                 </p>
               </div>
               
@@ -4281,7 +4284,7 @@ function App() {
               
               <div className="bg-white/5 rounded-lg p-4 mb-6">
                 <p className="text-slate-300 text-sm text-center">
-                  <strong className="text-yellow-300">Conjugately Version 1</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
+                  <strong className="text-yellow-300">Pluri French</strong> focuses on building a solid foundation with Beginner through Intermediate levels.
                 </p>
               </div>
               

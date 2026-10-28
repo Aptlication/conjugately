@@ -89,7 +89,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.type("application/xml").send(body);
   });
 
-  // The Conjugately Guarantee (linked from the App Store screenshots and
+  // The Pluri Guarantee (formerly the Conjugately Guarantee) (linked from the App Store screenshots and
   // promotional text, so App Review opens it). A real 200 page, not the SPA:
   // the SPA fallback rendered the home screen here, which read as a redirect.
   // Express routing is non-strict, so /guarantee/ is served by this too.
@@ -136,7 +136,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Conjugately</title>
+    <title>Pluri French</title>
     <script type="module" src="/@vite/client"></script>
   </head>
   <body>
@@ -379,7 +379,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/health", (req, res) => {
     res.json({
       success: true,
-      message: "Conjugately API is running",
+      message: "Pluri French API is running",
       timestamp: new Date().toISOString()
     });
   });

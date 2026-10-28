@@ -362,7 +362,7 @@ export default function CefrTestScreen() {
           <View style={{ gap: 14 }}>
             <Text style={st.h2}>Production orale</Text>
             <Text style={st.sub}>{test.sectionSubtitles.speaking}</Text>
-            <View style={st.tip}><Text style={st.tipText}>Tap the mic under each prompt and answer out loud; tap again when you've finished. Masters Mic marks generously. You can also type or correct your answer.</Text></View>
+            <View style={st.tip}><Text style={st.tipText}>Tap the mic under each prompt and answer aloud; tap again when you've finished. Masters Mic marks generously. You can also type or correct your answer.</Text></View>
             {test.speaking.map((p) => (
               <View key={p.id} style={st.card}>
                 <Text style={st.docKicker}>{p.kicker}</Text>
@@ -385,7 +385,7 @@ export default function CefrTestScreen() {
                       <Text style={st.cue}>{it.cue}</Text>
                       <View style={st.micRow}>
                         <Pressable style={[st.mic, on && st.micOn]} onPress={() => toggleMic(key)} accessibilityRole="button"
-                          accessibilityLabel={on ? "Stop recording" : "Answer out loud"}>
+                          accessibilityLabel={on ? "Stop recording" : "Answer aloud"}>
                           <Text style={st.micIcon}>{on ? "■" : "🎙"}</Text>
                         </Pressable>
                         {on && (
@@ -397,7 +397,7 @@ export default function CefrTestScreen() {
                         )}
                         <Text style={st.micStatus}>
                           {on ? "Parlez maintenant… Tap again when you've finished."
-                            : micNote[key] || (val ? "Tap the mic to answer again." : "Tap the mic and answer out loud.")}
+                            : micNote[key] || (val ? "Tap the mic to answer again." : "Tap the mic and answer aloud.")}
                         </Text>
                       </View>
                       <TextInput style={st.input} value={val} onChangeText={(v) => setSpoken((s) => ({ ...s, [key]: v }))}
