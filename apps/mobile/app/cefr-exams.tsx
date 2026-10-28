@@ -51,15 +51,15 @@ export default function CefrExams() {
 
         {!isPro && (
           <View style={s.pro}>
-            <Text style={s.proTitle}>CEFR Exams are part of Conjugately Pro</Text>
+            <Text style={s.proTitle}>CEFR Exams are part of Pluri Pro</Text>
             <Text style={s.proBody}>With Pro, unlock any test with the coins you earn in lessons.</Text>
             <Pressable style={s.proBtn} onPress={() => router.push("/paywall" as any)} accessibilityRole="button">
-              <Text style={s.proBtnText}>See Conjugately Pro</Text>
+              <Text style={s.proBtnText}>See Pluri Pro</Text>
             </Pressable>
           </View>
         )}
 
-        <Text style={s.small}>CEFR-style practice tests by Conjugately, in the format of official French exams. Not an official DELF certificate.</Text>
+        <Text style={s.small}>CEFR-style practice tests by Pluri French, in the format of official French exams. Not an official DELF certificate.</Text>
       </ScrollView>
       <NavBar variant="dark" active="courses" />
     </View>

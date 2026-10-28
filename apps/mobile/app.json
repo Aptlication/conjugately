@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Conjugately",
+    "name": "Pluri French",
     "slug": "conjugately",
-    "version": "1.3.1",
+    "version": "1.4.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "conjugately",
@@ -14,13 +14,13 @@
       "bundleIdentifier": "com.conjugately.app",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSPhotoLibraryUsageDescription": "Conjugately does not access your photo library. This description is required because a component included in the app references the photo library API."
+        "NSPhotoLibraryUsageDescription": "Pluri French does not access your photo library. This description is required because a component included in the app references the photo library API."
       }
     },
     "android": {
       "package": "com.conjugately.app",
       "adaptiveIcon": {
-        "backgroundColor": "#1e1b4b",
+        "backgroundColor": "#17162B",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -38,11 +38,11 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "imageWidth": 260,
           "resizeMode": "contain",
-          "backgroundColor": "#1e1b4b",
+          "backgroundColor": "#17162B",
           "dark": {
-            "backgroundColor": "#1e1b4b"
+            "backgroundColor": "#17162B"
           }
         }
       ],
@@ -51,15 +51,16 @@
         "expo-font",
         {
           "fonts": [
-            "node_modules/@expo-google-fonts/dancing-script/600SemiBold/DancingScript_600SemiBold.ttf"
+            "node_modules/@expo-google-fonts/dancing-script/600SemiBold/DancingScript_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/michroma/400Regular/Michroma_400Regular.ttf"
           ]
         }
       ],
       [
         "expo-speech-recognition",
         {
-          "microphonePermission": "Conjugately uses the microphone so you can speak your answers in Masters Mic and reply out loud in the Final conversations.",
-          "speechRecognitionPermission": "Conjugately uses speech recognition to check the French you speak. It runs on your iPhone when French is available offline; otherwise Apple's speech service is used. Conjugately does not record or keep your audio."
+          "microphonePermission": "Pluri French uses the microphone so you can speak your answers in Masters Mic and reply out loud in the Final conversations.",
+          "speechRecognitionPermission": "Pluri French uses speech recognition to check the French you speak. It runs on your iPhone when French is available offline; otherwise Apple's speech service is used. Pluri French does not record or keep your audio."
         }
       ]
     ],

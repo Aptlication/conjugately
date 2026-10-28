@@ -95,7 +95,7 @@ export default function Paywall() {
           <Ionicons name="close" size={22} color="#5A6472" />
         </Pressable>
 
-        <Text style={styles.title}>Conjugately Pro</Text>
+        <Text style={styles.title}>Pluri Pro</Text>
         <Text style={styles.sub}>Every course, every exam, and Masters Mic.</Text>
 
         <View style={styles.points}>

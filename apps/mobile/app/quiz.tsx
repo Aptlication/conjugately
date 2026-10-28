@@ -773,7 +773,7 @@ export default function Quiz() {
             )}
             {conversation && (
               <Pressable style={styles.convoBtn} onPress={openConversation} accessibilityRole="button"
-                accessibilityLabel={convoLocked ? "Final conversation, requires Conjugately Pro" : "Final conversation"}>
+                accessibilityLabel={convoLocked ? "Final conversation, requires Pluri Pro" : "Final conversation"}>
                 <Ionicons name="chatbubbles" size={18} color="#1B2145" />
                 <Text style={styles.convoBtnText}>Final conversation</Text>
                 <View style={styles.proPill}><Text style={styles.proPillText}>PRO</Text></View>
@@ -817,7 +817,7 @@ export default function Quiz() {
                   <>
                     <Pressable style={styles.inviteBtn} onPress={unlockAndStart} disabled={inviteBusy} accessibilityRole="button">
                       <Text style={styles.inviteBtnText}>
-                        {proLocked ? "Requires Conjugately Pro" : inviteBusy ? "…" : <>Unlock & start exam — {examCoinCost(invite.level)} <CoinIcon size={15} /></>}
+                        {proLocked ? "Requires Pluri Pro" : inviteBusy ? "…" : <>Unlock & start exam — {examCoinCost(invite.level)} <CoinIcon size={15} /></>}
                       </Text>
                     </Pressable>
                     <Pressable onPress={() => setInvite(null)} accessibilityRole="button">
@@ -848,7 +848,7 @@ export default function Quiz() {
               <Text style={styles.cefrInviteCoins}><CoinIcon size={15} /> {cefrCoinCost(cefrInvite)} coins · yours to keep</Text>
               <Pressable style={styles.cefrInviteBtn} accessibilityRole="button"
                 onPress={() => { setCefrInvite(null); router.push(isPro ? "/cefr-exams" as any : "/paywall" as any); }}>
-                <Text style={styles.cefrInviteBtnText}>{isPro ? `Try the CEFR-style ${cefrInvite} test` : "Requires Conjugately Pro"}</Text>
+                <Text style={styles.cefrInviteBtnText}>{isPro ? `Try the CEFR-style ${cefrInvite} test` : "Requires Pluri Pro"}</Text>
               </Pressable>
               <Pressable onPress={() => setCefrInvite(null)} accessibilityRole="button">
                 <Text style={styles.cefrInviteLater}>Maybe later</Text>
@@ -869,7 +869,7 @@ export default function Quiz() {
               </Text>
               {convoLocked && (
                 <View style={[styles.proPill, { alignSelf: "center", marginBottom: 12 }]}>
-                  <Text style={styles.proPillText}>CONJUGATELY PRO</Text>
+                  <Text style={styles.proPillText}>PLURI PRO</Text>
                 </View>
               )}
               <Pressable style={styles.convoContinue} onPress={openConversation} accessibilityRole="button">

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { LayoutChangeEvent, Platform, Pressable, StyleSheet, Text, View } from "react-native";
-import { useFonts, DancingScript_600SemiBold } from "@expo-google-fonts/dancing-script";
+import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
+import { useFonts, Michroma_400Regular } from "@expo-google-fonts/michroma";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -12,22 +12,22 @@ import NavBar from "../components/NavBar";
 import { getJourneySummary, getQuizHistory } from "../lib/progress";
 
 /**
- * Home (1.2.3). Wordmark, tagline, description and one Continue button,
- * centred above the tab bar.
+ * Home (1.4, Pluri rebrand). Wordmark, "FRENCH" and one Continue
+ * button, centred above the tab bar, on the brand's night navy.
  *
- * Entrance (approved 18 Oct 2026, replacing the wordmark turn): the eleven
- * letters of "Conjugately" fly in from different directions, spinning and
- * settling with a small overshoot, in a scattered arrival order. (The soft glow
- * that pulsed as the last letter landed was removed, 26 Oct 2026.) The tagline keeps its agreed build:
- * de → French → suite! → tout (which drops in from above).
- * Plays once each time Home appears. Timings match the approved browser
- * sample ("Conjugately Letter Assembly"). Reduce Motion: shown still.
+ * Wordmark (approved 27 Oct 2026): "pluri" in bold Michroma, "pl" blue,
+ * "u" white, "ri" red, with "FRENCH" below in silver chrome. Michroma has one
+ * weight, so the bold is drawn as a matching outline (layered copies).
+ * Entrance: the five letters fly in from different directions, spinning and
+ * settling with a small overshoot (the 1.2.3 letter-assembly motion), then
+ * FRENCH rises in. (The "tout de suite!" tagline was dropped, 29 Oct 2026.)
+ * Plays once each time Home appears. Reduce Motion: shown still.
  *
  * One clock (milliseconds since the entrance began) drives every piece.
  */
 
 const START_DELAY_MS = 400;
-const TOTAL_MS = 2100;
+const TOTAL_MS = 1500;
 const EASE = Easing.bezierFn(0.22, 1, 0.36, 1);
 
 /** Value at progress p (0..1) for keyframes `stops` → `vals`, easing each segment. */
@@ -49,30 +49,42 @@ function prog(ms: number, delay: number, dur: number): number {
   return Math.min(1, Math.max(0, (ms - delay) / dur));
 }
 
+// Brand (Pluri-French-Brand-Kit/README.md).
+const NAVY = "#17162B";
+const BLEU = "#4C7DFF";
+const BLANC = "#FFFFFF";
+const ROUGE = "#FF3B47";
+const MICHROMA = Platform.select({ ios: "Michroma-Regular", default: "Michroma_400Regular" });
+
 const LETTERS: { ch: string; color: string }[] = [
-  { ch: "C", color: "#7FA8EC" }, { ch: "o", color: "#7FA8EC" }, { ch: "n", color: "#7FA8EC" },
-  { ch: "j", color: "#EC9A9A" },
-  { ch: "u", color: "#F5F6F8" }, { ch: "g", color: "#F5F6F8" }, { ch: "a", color: "#F5F6F8" }, { ch: "t", color: "#F5F6F8" },
-  { ch: "e", color: "#EC9A9A" }, { ch: "l", color: "#EC9A9A" }, { ch: "y", color: "#EC9A9A" },
+  { ch: "p", color: BLEU }, { ch: "l", color: BLEU },
+  { ch: "u", color: BLANC },
+  { ch: "r", color: ROUGE }, { ch: "i", color: ROUGE },
 ];
 // Well-spread starting directions (degrees), so neighbouring letters never come from the same side.
-const DIRS = [200, 20, 290, 110, 335, 155, 245, 65, 180, 310, 90];
+const DIRS = [200, 20, 290, 110, 335];
 // Arrival order (not left to right).
-const ORDER = [5, 0, 8, 3, 10, 1, 6, 9, 2, 7, 4];
-const LETTER_STAGGER_MS = 55;
+const ORDER = [2, 0, 4, 1, 3];
+const LETTER_STAGGER_MS = 90;
 const LETTER_MS = 820;
-
-type WordSpec = { delay: number; fromTop?: boolean };
-const WORD_MS = 330;
+const MARK_SIZE = 80;
+// The bold: eight copies of each letter, offset round a circle of this radius.
+const BOLD_R = MARK_SIZE * 0.0225;
+const BOLD_OFFSETS = Array.from({ length: 8 }, (_, i) => {
+  const a = (i / 8) * Math.PI * 2;
+  return { x: Math.cos(a) * BOLD_R, y: Math.sin(a) * BOLD_R };
+});
+const FRENCH_DELAY_MS = 640;
+const FRENCH_MS = 420;
 
 type Resume =
   | { kind: "first" }
   | { kind: "returning"; line: string; params: Record<string, string> };
 
 export default function Home() {
-  // Dancing Script is embedded at build time (app.json expo-font plugin);
+  // Michroma is embedded at build time (app.json expo-font plugin);
   // useFonts keeps the web twin working.
-  useFonts({ DancingScript_600SemiBold });
+  useFonts({ Michroma_400Regular });
   const insets = useSafeAreaInsets();
   const reduceMotion = useReducedMotion();
   const ms = useSharedValue(0);
@@ -130,11 +142,11 @@ export default function Home() {
   const line2 = shown.kind === "returning" ? shown.line : "Build your first quiz / choose a course";
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
+    <View style={{ flex: 1, backgroundColor: NAVY }}>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={[styles.center, { paddingTop: insets.top }]}>
         <Wordmark ms={ms} />
-        <Tagline ms={ms} />
+        <French ms={ms} />
 
         {/* Rendered (invisible) before progress loads, so nothing shifts. */}
         <Pressable onPress={onContinue} disabled={!resume}
@@ -154,7 +166,7 @@ export default function Home() {
 
 function Wordmark({ ms }: { ms: SharedValue<number> }) {
   return (
-    <View style={styles.markWrap} accessible accessibilityRole="header" accessibilityLabel="Conjugately">
+    <View style={styles.markWrap} accessible accessibilityRole="header" accessibilityLabel="Pluri French">
       <View style={styles.markRow} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
         {LETTERS.map((l, i) => <Letter key={i} ms={ms} index={i} ch={l.ch} color={l.color} />)}
       </View>
@@ -182,68 +194,52 @@ function Letter({ ms, index, ch, color }: { ms: SharedValue<number>; index: numb
       ],
     };
   });
-  return <Animated.Text style={[styles.h1, { color }, style]}>{ch}</Animated.Text>;
-}
-
-
-/** Each word in its own clipped slot, built out of order: de, French, suite!, tout. */
-function Tagline({ ms }: { ms: SharedValue<number> }) {
   return (
-    <View style={styles.tagRow} accessible accessibilityRole="text" accessibilityLabel="French tout de suite!">
-      <Word ms={ms} spec={{ delay: 550 }} text="French" />
-      <Word ms={ms} spec={{ delay: 1060, fromTop: true }} text="tout" />
-      <Word ms={ms} spec={{ delay: 300 }} text="de" />
-      <Word ms={ms} spec={{ delay: 800 }} text="suite!" />
-    </View>
+    <Animated.View style={[styles.letter, style]}>
+      <Text style={[styles.h1, { color }]}>{ch}</Text>
+      {BOLD_OFFSETS.map((o, k) => (
+        <Text key={k} style={[styles.h1, styles.boldCopy, { color, transform: [{ translateX: o.x }, { translateY: o.y }] }]}>{ch}</Text>
+      ))}
+    </Animated.View>
   );
 }
 
-function Word({ ms, spec, text }: { ms: SharedValue<number>; spec: WordSpec; text: string }) {
-  const h = useSharedValue(36);
-  const dir = spec.fromTop ? -1 : 1;
+/** "FRENCH" in silver chrome: a pale top half laid over a darker bottom half. */
+function French({ ms }: { ms: SharedValue<number> }) {
   const style = useAnimatedStyle(() => {
-    const p = prog(ms.value, spec.delay, WORD_MS);
-    const S = [0, 0.72, 1];
-    return {
-      opacity: kf(p, S, [0, 1, 1], EASE),
-      transform: [{ translateY: kf(p, S, [1.05 * dir, -0.07 * dir, 0], EASE) * h.value }],
-    };
+    const p = prog(ms.value, FRENCH_DELAY_MS, FRENCH_MS);
+    return { opacity: kf(p, [0, 1], [0, 1], EASE), transform: [{ translateY: kf(p, [0, 1], [10, 0], EASE) }] };
   });
-  const onLayout = (e: LayoutChangeEvent) => { h.value = e.nativeEvent.layout.height; };
   return (
-    <View style={styles.slot} importantForAccessibility="no">
-      <Animated.View style={style} onLayout={onLayout}>
-        <Text style={styles.cursive}>{text}</Text>
-      </Animated.View>
-    </View>
+    <Animated.View style={[styles.frenchWrap, style]} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
+      <Text style={[styles.french, { color: "#9AA3AF" }]}>FRENCH</Text>
+      <View style={styles.frenchTop}>
+        <Text style={[styles.french, { color: "#F4F6F9" }]}>FRENCH</Text>
+      </View>
+    </Animated.View>
   );
 }
+
 
 const styles = StyleSheet.create({
   // Vertically centred in the space above the floating tab bar.
   center: { flex: 1, alignItems: "center", justifyContent: "center",
     paddingHorizontal: 16, paddingBottom: 90 },
-  markWrap: { alignItems: "center", justifyContent: "center", marginBottom: 8 },
+  markWrap: { alignItems: "center", justifyContent: "center", marginBottom: 2 },
   markRow: { flexDirection: "row" },
-  h1: { fontSize: 40, fontWeight: "700", textAlign: "center" },
-  // Each word rolls inside its own clipped slot. On iOS, Dancing Script's
-  // swashes (the F, the !) overhang the Text box, so the slot needs real room
-  // or the glyph edges are cut off. The extra padding is taken back out with
-  // negative margins, so word spacing and the tagline's position are unchanged.
-  tagRow: { flexDirection: "row", justifyContent: "center", gap: 5,
-    marginTop: -10, marginBottom: 8 },
-  slot: { overflow: "hidden", paddingTop: 10, paddingBottom: 12, paddingHorizontal: 10,
-    marginHorizontal: -8.5 },
-  // Dancing Script is embedded at build time; iOS addresses an embedded font by
-  // its PostScript name, the web twin by the useFonts alias.
-  cursive: { color: "#FFFFFF", fontSize: 26,
-    fontFamily: Platform.select({ ios: "DancingScript-SemiBold", default: "DancingScript_600SemiBold" }) },
+  letter: { marginHorizontal: MARK_SIZE * 0.015 },
+  h1: { fontSize: MARK_SIZE, lineHeight: MARK_SIZE * 1.25, fontFamily: MICHROMA, textAlign: "center" },
+  boldCopy: { position: "absolute", left: 0, top: 0 },
+  // FRENCH: letter-spacing 35%, with the same space added on the left so the word stays centred.
+  frenchWrap: { marginBottom: 22, paddingLeft: 7 },
+  french: { fontFamily: MICHROMA, fontSize: 20, lineHeight: 26, letterSpacing: 7 },
+  frenchTop: { position: "absolute", left: 7, top: 0, right: 0, height: 13.5, overflow: "hidden" },
   blurb: { color: "#CBD6F5", fontSize: 16, textAlign: "center", lineHeight: 25,
     paddingHorizontal: 10 },
   continueBtn: { marginTop: 18, minHeight: 58, paddingVertical: 8, paddingHorizontal: 24,
-    borderRadius: 29, backgroundColor: "#7FA8EC", borderWidth: 1, borderColor: "#A3BCF4",
+    borderRadius: 29, backgroundColor: BLEU, borderWidth: 1, borderColor: "#7C9BFF",
     flexDirection: "row", alignItems: "center", gap: 12,
-    shadowColor: "#7FA0EE", shadowOpacity: 0.35, shadowRadius: 9, shadowOffset: { width: 0, height: 6 },
+    shadowColor: BLEU, shadowOpacity: 0.35, shadowRadius: 9, shadowOffset: { width: 0, height: 6 },
     elevation: 6 },
   continueText: { alignItems: "flex-start", gap: 1 },
   continue1: { color: "#FFFFFF", fontSize: 19, fontWeight: "800", fontStyle: "italic" },

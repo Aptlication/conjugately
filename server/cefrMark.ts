@@ -64,7 +64,7 @@ export const clampHalf = (v: unknown, max: number) => {
 
 // ------------------------------------------------------------- prompts --
 
-export const MARK_SYSTEM = `You are the examiner for Conjugately's CEFR-style French practice tests. Learners are English speakers. You score answers against a fixed rubric and reply with JSON only.
+export const MARK_SYSTEM = `You are the examiner for Pluri French's CEFR-style French practice tests. Learners are English speakers. You score answers against a fixed rubric and reply with JSON only.
 
 Rules:
 - Score each rubric line from 0 up to its maximum, in half points. Award the line when the learner's French does what the line describes, even with small spelling or accent slips. Award half when they attempt it with a clear error. Award 0 when it is missing.

@@ -10,7 +10,7 @@ import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
 import CefrBadge from "../components/CefrBadge";
 
-/** 1.3: the "Rate Conjugately" button opens the App Store's write-a-review page. */
+/** 1.3: the "Rate Pluri French" button opens the App Store's write-a-review page. */
 const APP_STORE_ID = "6799402337";
 const openReviewPage = () => {
   Linking.openURL(`itms-apps://apps.apple.com/app/id${APP_STORE_ID}?action=write-review`)
@@ -147,9 +147,9 @@ export default function Journey() {
           <Text style={[styles.cardText, { marginTop: 8, color: "#A7B0BD" }]}>Practice tests in the format of official A1, A2 and B1 French exams. Not official certificates.</Text>
         </View>
 
-        {/* 1.3: permanent Rate Conjugately button (Apple's own prompt is rationed) */}
+        {/* 1.3: permanent Rate Pluri French button (Apple's own prompt is rationed) */}
         <Pressable style={styles.rate} onPress={openReviewPage} accessibilityRole="link" accessibilityHint="Opens the App Store">
-          <Text style={styles.rateText}>⭐ Enjoying Conjugately? Rate it on the App Store</Text>
+          <Text style={styles.rateText}>⭐ Enjoying Pluri French? Rate it on the App Store</Text>
         </Pressable>
       </ScrollView>
       <NavBar variant="dark" active="journey" />

@@ -80,7 +80,7 @@ export default function MiniCourses() {
         {/* 1.3.10: every CEFR-style test in one place, open from any level */}
         {!level && (
           <Pressable style={styles.cefrEntry} onPress={() => router.push("/cefr-exams" as any)} accessibilityRole="button"
-            accessibilityLabel="CEFR Exams. Find out your European level, A1, A2 and B1. Conjugately Pro.">
+            accessibilityLabel="CEFR Exams. Find out your European level, A1, A2 and B1. Pluri Pro.">
             <View style={styles.cefrBadges}>
               {CEFR_IDS.map((id) => <CefrBadge key={id} id={id} earned size={24} label="" />)}
             </View>
@@ -125,7 +125,7 @@ export default function MiniCourses() {
               const isNext = ui === nextIdx && doneArr.length > 0;
               return (
                 <Pressable key={u.name} style={[styles.row, done && styles.rowDone, isNext && styles.rowNext]}
-                  accessibilityHint={locked ? "Requires Conjugately Pro" : undefined}
+                  accessibilityHint={locked ? "Requires Pluri Pro" : undefined}
                   onPress={() => locked
                     ? router.push("/paywall" as any)
                     // 1.2.3: every course quiz opens with the 2.5 s progress overview (app/resume.tsx).

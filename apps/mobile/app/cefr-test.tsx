@@ -157,7 +157,7 @@ export default function CefrTestScreen() {
     const key = micKeyRef.current;
     micKeyRef.current = null; setMicKey(null); setMicLevel(0);
     if (!key) return;
-    const note = e.error === "not-allowed" ? "Microphone access is off. Turn it on in Settings › Conjugately, or type your answer."
+    const note = e.error === "not-allowed" ? "Microphone access is off. Turn it on in Settings › Pluri French, or type your answer."
       : e.error === "no-speech" ? "Je n'ai pas compris. Tap the mic and speak, or type your answer."
       : "That didn't record. Tap the mic to try again, or type your answer.";
     setMicNote((n) => ({ ...n, [key]: note }));
@@ -170,7 +170,7 @@ export default function CefrTestScreen() {
     stopAudio();
     try {
       const perm = await SR.requestPermissionsAsync();
-      if (!perm.granted) { setMicNote((n) => ({ ...n, [key]: "Microphone access is off. Turn it on in Settings › Conjugately, or type your answer." })); return; }
+      if (!perm.granted) { setMicNote((n) => ({ ...n, [key]: "Microphone access is off. Turn it on in Settings › Pluri French, or type your answer." })); return; }
     } catch { return; }
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     baseTextRef.current = (spoken[key] ?? "").trim();

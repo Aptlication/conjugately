@@ -57,7 +57,7 @@ export default function CefrGateCard({ testId, locked }: Props) {
           <Text style={s.status}>{cefrGateLabel(gate, test.level)}</Text>
           {locked ? (
             <Pressable style={s.btn} onPress={() => router.push("/paywall" as any)} accessibilityRole="button">
-              <Text style={s.btnText}>Requires Conjugately Pro</Text>
+              <Text style={s.btnText}>Requires Pluri Pro</Text>
             </Pressable>
           ) : gate.kind === "unlocked" ? (
             <Pressable style={s.btn} onPress={start} accessibilityRole="button">

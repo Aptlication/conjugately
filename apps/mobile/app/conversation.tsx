@@ -352,7 +352,7 @@ export default function ConversationScreen() {
     if (!listeningRef.current) return;
     listeningRef.current = false;
     setLevel01(0);
-    if (e.error === "not-allowed") setNotice("Microphone access is off. Turn it on in Settings › Conjugately.");
+    if (e.error === "not-allowed") setNotice("Microphone access is off. Turn it on in Settings › Pluri French.");
     else if (e.error === "no-speech") setNotice("I didn't hear anything. Hold the mic and speak.");
     else setNotice("That didn't record. Hold the mic and try again.");
     setPhase("yourTurn");
@@ -363,7 +363,7 @@ export default function ConversationScreen() {
     if (!voiceAvailable()) return;
     try {
       const perm = await SR.requestPermissionsAsync();
-      if (!perm.granted) { setNotice("Microphone access is off. Turn it on in Settings › Conjugately."); return; }
+      if (!perm.granted) { setNotice("Microphone access is off. Turn it on in Settings › Pluri French."); return; }
     } catch { return; }
     const t = turns[step];
     if (!t || t.who !== "you") return;
