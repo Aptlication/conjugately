@@ -120,6 +120,10 @@ export default function Quiz() {
   const [answerUrl, setAnswerUrl] = useState<string | null>(null);
   const [showTip, setShowTip] = useState(false);
   const [micHolding, setMicHolding] = useState(false);
+  // First-quiz Masters Mic pop-up (Jonathan, 29 Oct 2026): shown once, on the
+  // first quiz where the mic is available, before the English plays. Says the
+  // mic exists (Mic Off) and that Show A–D brings the options back.
+  const [micPromo, setMicPromo] = useState<"unknown" | "due" | "done">("unknown");
   const [showGuide, setShowGuide] = useState(false);
   const [reviewIndex, setReviewIndex] = useState<number | null>(null);
   const [examBest, setExamBest] = useState<ExamResult | undefined>(undefined);
@@ -319,6 +323,9 @@ export default function Quiz() {
     load(); getManifest();
     AsyncStorage.getItem("dontShowInstructionPopup").then((v) => setShowTip(v !== "true"));
     AsyncStorage.getItem("mastersMicIntroShown").then((v) => setMicIntroSeen(v === "true"));
+    AsyncStorage.getItem("mastersMicPromoShown")
+      .then((v) => setMicPromo(v === "true" ? "done" : "due"))
+      .catch(() => setMicPromo("done"));
     if (difficulty === "Beginner") {
       AsyncStorage.getItem("beginnerPronounGuideShown").then((v) => {
         if (v !== "true") setShowGuide(true);
@@ -326,10 +333,21 @@ export default function Quiz() {
     }
   }, []);
 
+  // Masters Mic is free on Beginner (Jonathan, 29 Oct 2026); above it, Pro.
+  const micFree = difficulty === "Beginner";
+  const micAllowed = isPro || micFree;
+  // The first-quiz pop-up: never in an exam (no mic there), never while
+  // reviewing, and after the Beginner pronouns guide.
+  const micPromoVisible = micPromo === "due" && state === "active" && !exam
+    && reviewIndex === null && !showGuide && !micOn;
+
   useEffect(() => {
     // `sound` is a dependency (1.3.20): turning Sound On mid-question plays the
     // English. Never after the question has been answered.
-    if (state === "active" && questionUrl && sound && !showGuide && !confirmed) {
+    // The English waits while the first-quiz Masters Mic pop-up is up (or
+    // while we don't yet know whether it is due).
+    const promoHolding = micPromo === "unknown" || micPromoVisible || showMicIntro;
+    if (state === "active" && questionUrl && sound && !showGuide && !confirmed && !promoHolding) {
       setEnglishDoneFor(-1);
       if (englishTimerRef.current) clearTimeout(englishTimerRef.current);
       // Longest question clip is about 8.4s (Novice); a clip that never loads unlocks here.
@@ -339,7 +357,7 @@ export default function Quiz() {
     }
     finishEnglish();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [idx, state, questionUrl, showGuide, sound]);
+  }, [idx, state, questionUrl, showGuide, sound, micPromo, micPromoVisible, showMicIntro]);
 
   useEffect(() => {
     if (answerUrl && soundRef.current) {
@@ -541,11 +559,19 @@ export default function Quiz() {
 
   const toggleMic = () => {
     if (micOn) { setMicOn(false); setShowOptionsFor(null); return; }
-    // Masters Mic is a Pro feature. Beginner's courses stay open; this does not.
-    if (!isPro) { router.push("/paywall" as any); return; }
+    // Masters Mic is free on Beginner (Jonathan, 29 Oct 2026); above Beginner it is Pro.
+    if (!micAllowed) { router.push("/paywall" as any); return; }
     if (!micIntroSeen) setShowMicIntro(true);
     setMicOn(true);
     setShowOptionsFor(null);
+  };
+
+  const closeMicPromo = (thenTry: boolean) => {
+    setMicPromo("done");
+    AsyncStorage.setItem("mastersMicPromoShown", "true").catch(() => {});
+    if (!thenTry) return;
+    if (!micAllowed) { router.push("/paywall" as any); return; }
+    if (!micOn) toggleMic();
   };
 
   const dismissMicIntro = (never: boolean) => {
@@ -905,6 +931,52 @@ export default function Quiz() {
         </View>
       </Modal>
 
+      <Modal visible={micPromoVisible} transparent animationType="fade" onRequestClose={() => closeMicPromo(false)}>
+        <View style={styles.modalBg}>
+          <View style={[styles.modalCard, styles.promoCard]}>
+            <View style={styles.micIntroIcon}>
+              <Ionicons name="mic" size={28} color="#2B5FD9" />
+            </View>
+            <View style={styles.promoTitleRow}>
+              <Text style={[styles.modalTitle, styles.promoTitle]}>Say it aloud</Text>
+              {!isPro && (
+                <Text style={[styles.promoBadge, micFree ? styles.promoBadgeFree : styles.promoBadgePro]}>
+                  {micFree ? "FREE ON BEGINNER" : "PRO"}
+                </Text>
+              )}
+            </View>
+            <Text style={styles.modalSub}>
+              With Masters Mic you answer in spoken French instead of tapping A–D.
+              {isPro ? "" : micFree ? " It's free on every Beginner quiz." : " Free on Beginner; on this level it comes with Pro."}
+            </Text>
+            <View style={styles.promoRow}>
+              <View style={[styles.togglePill, styles.toggleOff]}>
+                <Ionicons name="mic" size={14} color="#5A6472" />
+                <Text style={[styles.toggleText, { color: "#5A6472" }]}>Mic Off</Text>
+              </View>
+              <Text style={styles.promoText}>
+                <Text style={styles.micIntroStrong}>Tap Mic Off</Text> under the question to turn it on. Then hold Record and speak.
+              </Text>
+            </View>
+            <View style={styles.promoRow}>
+              <View style={styles.promoShowAD}>
+                <View style={styles.promoShowADBtn}><Ionicons name="list" size={18} color="#FFFFFF" /></View>
+                <Text style={styles.promoShowADLabel}>Show A–D</Text>
+              </View>
+              <Text style={styles.promoText}>
+                <Text style={styles.micIntroStrong}>Stuck?</Text> Press Show A–D to bring back the four answer options.
+              </Text>
+            </View>
+            <Pressable style={styles.promoPrimary} onPress={() => closeMicPromo(true)} accessibilityRole="button">
+              <Text style={styles.guideBtnText}>{micAllowed ? "Turn on Masters Mic" : "Try Masters Mic with Pro"}</Text>
+            </Pressable>
+            <Pressable onPress={() => closeMicPromo(false)} accessibilityRole="button" style={styles.promoLater}>
+              <Text style={styles.promoLaterText}>{"I'll tap my answers for now"}</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
       <Modal visible={showMicIntro} transparent animationType="fade">
         <View style={styles.modalBg}>
           <View style={styles.modalCard}>
@@ -1056,4 +1128,24 @@ const styles = StyleSheet.create({
   micIntroList: { marginTop: 16, gap: 10, alignSelf: "stretch" },
   micIntroItem: { fontSize: 14, lineHeight: 20, color: "#334155" },
   micIntroStrong: { fontWeight: "700", color: "#1B1F24" },
+  promoCard: { alignItems: "center" },
+  promoTitleRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 },
+  promoTitle: { color: "#1B1F24", fontSize: 22, fontWeight: "800", marginBottom: 0 },
+  promoBadge: { fontSize: 11, fontWeight: "800", letterSpacing: 1, borderRadius: 6, paddingVertical: 3, paddingHorizontal: 7, overflow: "hidden" },
+  promoBadgeFree: { backgroundColor: "#E7F5EE", color: "#17734A" },
+  promoBadgePro: { backgroundColor: "#1B2145", color: "#F5C518" },
+  promoRow: {
+    alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: 12, marginTop: 10,
+    backgroundColor: "#F7F8FA", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 14, padding: 12,
+  },
+  promoText: { flex: 1, fontSize: 14, lineHeight: 19, color: "#334155" },
+  promoShowAD: { width: 66, alignItems: "center", gap: 4 },
+  promoShowADBtn: { width: 40, height: 40, borderRadius: 12, backgroundColor: "#E11D48", alignItems: "center", justifyContent: "center" },
+  promoShowADLabel: { fontSize: 11, fontWeight: "700", color: "#1B1F24" },
+  promoPrimary: {
+    alignSelf: "stretch", height: 52, borderRadius: 14, backgroundColor: "#2B5FD9",
+    alignItems: "center", justifyContent: "center", marginTop: 16,
+  },
+  promoLater: { alignSelf: "stretch", height: 44, alignItems: "center", justifyContent: "center", marginTop: 4 },
+  promoLaterText: { color: "#4A5361", fontSize: 15, fontWeight: "600" },
 });
