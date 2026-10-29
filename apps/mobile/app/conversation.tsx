@@ -16,6 +16,7 @@ import { CONVERSATION_AUDIO, getConversation } from "../lib/conversationsFull";
 import { collectConversationWords } from "../lib/vocab";
 import { maybeAskForReview } from "../lib/reviewPrompt";
 import { countDue, unitKey } from "../lib/vocabCheck";
+import { soundGuideFor } from "../lib/conversationSoundGuides";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
 /**
@@ -155,6 +156,11 @@ export default function ConversationScreen() {
   const [attempt, setAttempt] = useState(0);
   // Every transcript the recogniser offered this turn (alternatives + interim): the best one counts.
   const heardAllRef = useRef<Set<string>>(new Set());
+  // Options turned down on this reply (Jonathan, 30 Oct 2026): holding the mic
+  // again after seeing the light-blue guess rules that guess out, so the same
+  // mishearing ("vous prenez" for "vous preniez") is not offered twice.
+  const ruledOutRef = useRef<Set<number>>(new Set());
+  const [ruledOut, setRuledOut] = useState<number[]>([]);
   // The English cue flips to the French when tapped, so the learner can read it out.
   const [cueOpen, setCueOpen] = useState(false);
   // Four-option replies: A–D hidden until asked for, or until a wrong answer.
@@ -308,6 +314,8 @@ export default function ConversationScreen() {
     }
     if (t.who === "you" && phase === "speaking") {
       setAttempt(0);
+      ruledOutRef.current = new Set();
+      setRuledOut([]);
       setCueOpen(false);
       setShowOptions(false);
       setPicked(null);
@@ -367,6 +375,16 @@ export default function ConversationScreen() {
     } catch { return; }
     const t = turns[step];
     if (!t || t.who !== "you") return;
+    // Recording over a guess = turning it down. Silence turns nothing down.
+    if (phase === "heard" && options && heard.trim()) {
+      const g = nearestOption([heard, ...heardAllRef.current]).best;
+      if (g >= 0) {
+        const out = ruledOutRef.current;
+        out.add(g);
+        if (out.size >= options.length) out.clear();
+        setRuledOut([...out]);
+      }
+    }
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     setHeard("");
     heardAllRef.current = new Set();
@@ -417,13 +435,16 @@ export default function ConversationScreen() {
       if (!g?.trim()) continue;
       options.forEach((o, i) => {
         const m = matchAnswer(g, o.right ? [o.text, ...t.accept] : o.text, 1, DEFAULT_THRESHOLDS);
-        if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
         if (o.right) rightSim = Math.max(rightSim, m.similarity);
+        if (ruledOutRef.current.has(i)) return;
+        if (m.similarity > bestSim) { bestSim = m.similarity; best = i; }
       });
     }
-    // Sounds the same as the right answer → it is the right answer (1.3.15).
+    // Sounds the same as the right answer → it is the right answer (1.3.15),
+    // unless the learner has already turned the right answer down.
     const rightIdx = options.findIndex((o) => o.right);
-    if (best >= 0 && best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
+    if (best >= 0 && best !== rightIdx && !ruledOutRef.current.has(rightIdx)
+        && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
     return { best, bestSim, rightSim };
   };
 
@@ -447,7 +468,8 @@ export default function ConversationScreen() {
       setPhase("yourTurn");
       return;
     }
-    if (best !== rightIdx && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
+    if (best !== rightIdx && tapped === null && !ruledOutRef.current.has(rightIdx)
+        && soundsAlike(options[best].text, options[rightIdx].text)) best = rightIdx;
     setPicked(best);
     if (best === rightIdx) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
@@ -608,7 +630,15 @@ export default function ConversationScreen() {
             <Text style={styles.introLabel}>NEW WORDS IN THIS CONVERSATION</Text>
             {conv.newWords.map((w) => (
               <View key={w.fr} style={styles.introRow}>
-                <Text style={styles.introFr}>{w.fr}</Text>
+                <View style={styles.introFrCol}>
+                  <Text style={styles.introFr}>{w.fr}</Text>
+                  {/* 30 Oct 2026: the same sound guide the vocab-check cards show. */}
+                  {!!soundGuideFor(w.fr) && (
+                    <Text style={styles.introGuide} accessibilityLabel={`Sounds like ${soundGuideFor(w.fr)}`}>
+                      {soundGuideFor(w.fr)}
+                    </Text>
+                  )}
+                </View>
                 <Text style={styles.introEn}>{w.en}</Text>
               </View>
             ))}
@@ -703,6 +733,12 @@ export default function ConversationScreen() {
                   const g = nearestOption([heard, ...heardAllRef.current]).best;
                   return g >= 0 ? <Text style={styles.heardSnap}>{"\u2192 "}{options[g].text}</Text> : null;
                 })()}
+                {options && ruledOut.length > 0 && (
+                  <Text style={styles.ruledOut} numberOfLines={2}>
+                    {"Ruled out: "}
+                    <Text style={styles.ruledOutStrike}>{ruledOut.map((i) => options[i]?.text).filter(Boolean).join("  ·  ")}</Text>
+                  </Text>
+                )}
               </View>
             ) : (
               <Text style={styles.heardText}>{phase === "listening" ? "Listening…" : ""}</Text>
@@ -859,6 +895,10 @@ const styles = StyleSheet.create({
   introRow: { flexDirection: "row", alignItems: "baseline", justifyContent: "space-between", gap: 12,
     paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: LINE },
   introFr: { fontSize: 20, fontWeight: "800", color: INK, flexShrink: 1 },
+  ruledOut: { marginTop: 2, fontSize: 12, color: "#7A82A6", textAlign: "center" },
+  ruledOutStrike: { textDecorationLine: "line-through" },
+  introFrCol: { flexShrink: 1, gap: 2 },
+  introGuide: { fontSize: 14, fontStyle: "italic", color: SOFT, letterSpacing: 0.3 },
   introEn: { fontSize: 16, color: SOFT, textAlign: "right", flexShrink: 1 },
   introNote: { fontSize: 14, color: MUTED, lineHeight: 20 },
   cue: {

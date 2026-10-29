@@ -45,7 +45,7 @@ export default function MastersMic(props: {
   optionsShown: boolean;
   disabled?: boolean;
 }) {
-  const { phase, level, transcript, reading, errorDetail, startHold, stopHold, reset, submit } =
+  const { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit } =
     useMastersMic({
       expected: props.expected,
       options: props.options,
@@ -138,6 +138,14 @@ export default function MastersMic(props: {
         {ready && reading?.optionIndex != null && (
           <Text style={styles.heardSnap}>
             {"\u2192 "}{props.options[reading.optionIndex]}
+          </Text>
+        )}
+        {/* 30 Oct 2026: guesses turned down by recording again. Shown while
+            recording too, so pressing Record never shrinks the block. */}
+        {ruledOut.length > 0 && (ready || listening) && (
+          <Text style={styles.ruledOut} numberOfLines={2}>
+            {"Ruled out: "}
+            <Text style={styles.ruledOutStrike}>{ruledOut.map((i) => props.options[i]).filter(Boolean).join("  ·  ")}</Text>
           </Text>
         )}
       </View>
@@ -404,6 +412,8 @@ const styles = StyleSheet.create({
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
+  ruledOut: { marginTop: 2, fontSize: 12, color: MUTED, textAlign: "center" },
+  ruledOutStrike: { textDecorationLine: "line-through" },
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 

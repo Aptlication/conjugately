@@ -85,6 +85,15 @@ export function useMastersMic(opts: {
   const onOutcomeRef = useRef(onOutcome);
   useEffect(() => { onOutcomeRef.current = onOutcome; }, [onOutcome]);
   const readingRef = useRef<MicReading | null>(null);
+  /**
+   * Options the learner has turned down on THIS question (Jonathan, 30 Oct
+   * 2026): holding Record again after seeing a guess rules that guess out, so
+   * a recogniser that keeps hearing "vous prenez" for "vous preniez" moves on
+   * to the next nearest option instead of offering the same wrong one again.
+   * The control is remounted per question, so this starts empty each time.
+   */
+  const ruledOutRef = useRef<Set<number>>(new Set());
+  const [ruledOut, setRuledOut] = useState<number[]>([]);
 
   const setReadingBoth = useCallback((r: MicReading | null) => {
     readingRef.current = r;
@@ -175,6 +184,15 @@ export function useMastersMic(opts: {
   /** Record button pressed. */
   const startHold = useCallback(() => {
     if (phase === "listening") return;
+    // Recording over a guess = turning it down. Silence turns nothing down.
+    const prev = readingRef.current;
+    if (phase === "ready" && prev?.usable && prev.optionIndex != null) {
+      const out = ruledOutRef.current;
+      out.add(prev.optionIndex);
+      // All four turned down: start again rather than leave nothing to pick.
+      if (out.size >= optionsRef.current.length) out.clear();
+      setRuledOut([...out]);
+    }
     beginListening();
   }, [beginListening, phase]);
 
@@ -186,6 +204,8 @@ export function useMastersMic(opts: {
   /** Delete: throw everything away and go back to the start of the question. */
   const reset = useCallback(() => {
     activeRef.current = false;
+    ruledOutRef.current = new Set();
+    setRuledOut([]);
     try { ExpoSpeechRecognitionModule.abort(); } catch {}
     setTranscript("");
     setReadingBoth(null);
@@ -194,20 +214,34 @@ export function useMastersMic(opts: {
     setPhase("idle");
   }, [setReadingBoth]);
 
-  const readTranscript = useCallback((text: string, confidence: number): MicReading => {
+  /**
+   * Every alternative the recogniser offers is scored against every option
+   * still in play (30 Oct 2026). Only its first guess was read before, though
+   * it is asked for three: the second is often the right form ("preniez" when
+   * the first is "prenez").
+   */
+  const readTranscripts = useCallback((alts: { text: string; confidence: number }[]): MicReading => {
     const opts = optionsRef.current;
+    const out = ruledOutRef.current;
     let bestIndex: number | null = null;
     let best: MatchResult | undefined;
     let bestScore = -1;
+    let bestText = alts[0]?.text ?? "";
+    const heardAny = alts.filter((a) => a.text.trim().length > 0);
+    const text = heardAny[0]?.text ?? "";
 
-    opts.forEach((option, i) => {
-      const m = matchAnswer(text, option, confidence, DEFAULT_THRESHOLDS);
-      if (m.similarity > bestScore) {
-        bestScore = m.similarity;
-        bestIndex = i;
-        best = m;
-      }
-    });
+    for (const alt of heardAny) {
+      opts.forEach((option, i) => {
+        if (out.has(i)) return;
+        const m = matchAnswer(alt.text, option, alt.confidence, DEFAULT_THRESHOLDS);
+        if (m.similarity > bestScore) {
+          bestScore = m.similarity;
+          bestIndex = i;
+          best = m;
+          bestText = alt.text;
+        }
+      });
+    }
 
     // Anything heard at all snaps to the nearest of the four. The point of the
     // exercise is to corral the learner onto one of the forms on offer, so a
@@ -219,14 +253,15 @@ export function useMastersMic(opts: {
     // the same as the correct one (parlais / parlait / parlaient, il / ils
     // before a consonant), the learner said the right thing: mark it correct
     // and show the correct spelling, never "Incorrect conjugation".
+    // A correct answer the learner has turned down stays turned down.
     const ci = correctIndexRef.current;
-    if (usable && bestIndex !== null && bestIndex !== ci && ci != null && ci >= 0
+    if (usable && bestIndex !== null && bestIndex !== ci && ci != null && ci >= 0 && !out.has(ci)
         && opts[bestIndex] != null && opts[ci] != null && soundsAlike(opts[bestIndex], opts[ci])) {
       bestIndex = ci;
     }
 
     return {
-      heard: text,
+      heard: usable ? bestText : text,
       optionIndex: usable ? bestIndex : null,
       correct: usable && bestIndex === ci,
       usable,
@@ -246,10 +281,13 @@ export function useMastersMic(opts: {
     setTranscript(text);
     if (!e.isFinal) return;
 
-    const confidence = typeof best?.confidence === "number" ? best.confidence : 1;
+    const alts = (e.results ?? []).map((r: any) => ({
+      text: String(r?.transcript ?? ""),
+      confidence: typeof r?.confidence === "number" ? r.confidence : 1,
+    }));
     activeRef.current = false;
     setLevel(0);
-    setReadingBoth(readTranscript(text, confidence));
+    setReadingBoth(readTranscripts(alts.length ? alts : [{ text, confidence: 1 }]));
     setPhase("ready");
   });
 
@@ -286,7 +324,7 @@ export function useMastersMic(opts: {
 
   useEffect(() => () => { try { ExpoSpeechRecognitionModule.abort(); } catch {} }, []);
 
-  return { phase, level, transcript, reading, errorDetail, startHold, stopHold, reset, submit };
+  return { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit };
 }
 
 export { normaliseFrench };
