@@ -101,7 +101,7 @@ export default function Paywall() {
         <View style={styles.points}>
           {[
             "All courses and final exams, Beginner through Intermediate",
-            "Masters Mic - answer aloud, checked on your device",
+            "Masters Mic on every level - answer aloud, checked on your device",
             "Your progress kept across every course",
           ].map((t) => (
             <View key={t} style={styles.point}>
