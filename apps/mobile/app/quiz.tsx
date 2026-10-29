@@ -120,9 +120,10 @@ export default function Quiz() {
   const [answerUrl, setAnswerUrl] = useState<string | null>(null);
   const [showTip, setShowTip] = useState(false);
   const [micHolding, setMicHolding] = useState(false);
-  // First-quiz Masters Mic pop-up (Jonathan, 29 Oct 2026): shown once, on the
-  // first quiz where the mic is available, before the English plays. Says the
-  // mic exists (Mic Off) and that Show A–D brings the options back.
+  // Masters Mic pop-up (Jonathan, 29 Oct 2026): shown at the start of every
+  // quiz where the mic is available, before the English plays, until the
+  // learner taps "Don't remind me again". Says the mic exists (Mic Off) and
+  // that Show A–D brings the options back.
   const [micPromo, setMicPromo] = useState<"unknown" | "due" | "done">("unknown");
   const [showGuide, setShowGuide] = useState(false);
   const [reviewIndex, setReviewIndex] = useState<number | null>(null);
@@ -323,7 +324,8 @@ export default function Quiz() {
     load(); getManifest();
     AsyncStorage.getItem("dontShowInstructionPopup").then((v) => setShowTip(v !== "true"));
     AsyncStorage.getItem("mastersMicIntroShown").then((v) => setMicIntroSeen(v === "true"));
-    AsyncStorage.getItem("mastersMicPromoShown")
+    // Shown at the start of EVERY quiz until "Don't remind me again" (Jonathan, 29 Oct 2026).
+    AsyncStorage.getItem("mastersMicPromoNever")
       .then((v) => setMicPromo(v === "true" ? "done" : "due"))
       .catch(() => setMicPromo("done"));
     if (difficulty === "Beginner") {
@@ -566,9 +568,14 @@ export default function Quiz() {
     setShowOptionsFor(null);
   };
 
+  const neverMicPromo = () => {
+    setMicPromo("done");
+    AsyncStorage.setItem("mastersMicPromoNever", "true").catch(() => {});
+  };
+
+  /** Closes the pop-up for this quiz only; it comes back at the next quiz. */
   const closeMicPromo = (thenTry: boolean) => {
     setMicPromo("done");
-    AsyncStorage.setItem("mastersMicPromoShown", "true").catch(() => {});
     if (!thenTry) return;
     if (!micAllowed) { router.push("/paywall" as any); return; }
     if (!micOn) toggleMic();
@@ -972,6 +979,9 @@ export default function Quiz() {
             </Pressable>
             <Pressable onPress={() => closeMicPromo(false)} accessibilityRole="button" style={styles.promoLater}>
               <Text style={styles.promoLaterText}>{"I'll tap my answers for now"}</Text>
+            </Pressable>
+            <Pressable onPress={neverMicPromo} accessibilityRole="button" hitSlop={8}>
+              <Text style={styles.tipLink}>{"Don't remind me again"}</Text>
             </Pressable>
           </View>
         </View>
