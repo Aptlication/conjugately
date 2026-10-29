@@ -14,6 +14,7 @@ import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exam
 import { normaliseFrench, similarity } from "@shared/answerMatch";
 import { Ionicons } from "@expo/vector-icons";
 import MastersMic from "../components/MastersMic";
+import MicPromoDemo from "../components/MicPromoDemo";
 import { AiWhyButton, AiWhyPanel } from "../components/AiWhy";
 import type { MicOutcome } from "../lib/mastersMic";
 import { loadExamQuestions, recordExamResult } from "../lib/exams";
@@ -941,9 +942,6 @@ export default function Quiz() {
       <Modal visible={micPromoVisible} transparent animationType="fade" onRequestClose={() => closeMicPromo(false)}>
         <View style={styles.modalBg}>
           <View style={[styles.modalCard, styles.promoCard]}>
-            <View style={styles.micIntroIcon}>
-              <Ionicons name="mic" size={28} color="#2B5FD9" />
-            </View>
             <View style={styles.promoTitleRow}>
               <Text style={[styles.modalTitle, styles.promoTitle]}>Say it aloud</Text>
               {!isPro && (
@@ -952,28 +950,12 @@ export default function Quiz() {
                 </Text>
               )}
             </View>
-            <Text style={styles.modalSub}>
-              With Masters Mic you answer in spoken French instead of tapping A–D.
+            <Text style={[styles.modalSub, styles.promoSub]}>
+              Answer in spoken French with Masters Mic.
               {isPro ? "" : micFree ? " It's free on every Beginner quiz." : " Free on Beginner; on this level it comes with Pro."}
             </Text>
-            <View style={styles.promoRow}>
-              <View style={[styles.togglePill, styles.toggleOff]}>
-                <Ionicons name="mic" size={14} color="#5A6472" />
-                <Text style={[styles.toggleText, { color: "#5A6472" }]}>Mic Off</Text>
-              </View>
-              <Text style={styles.promoText}>
-                <Text style={styles.micIntroStrong}>Tap Mic Off</Text> under the question to turn it on. Then hold Record and speak.
-              </Text>
-            </View>
-            <View style={styles.promoRow}>
-              <View style={styles.promoShowAD}>
-                <View style={styles.promoShowADBtn}><Ionicons name="list" size={18} color="#FFFFFF" /></View>
-                <Text style={styles.promoShowADLabel}>Show A–D</Text>
-              </View>
-              <Text style={styles.promoText}>
-                <Text style={styles.micIntroStrong}>Stuck?</Text> Press Show A–D to bring back the four answer options.
-              </Text>
-            </View>
+            {/* 30 Oct 2026: an animated demo built from the quiz screen's own parts. */}
+            <MicPromoDemo />
             <Pressable style={styles.promoPrimary} onPress={() => closeMicPromo(true)} accessibilityRole="button">
               <Text style={styles.guideBtnText}>{micAllowed ? "Turn on Masters Mic" : "Try Masters Mic with Pro"}</Text>
             </Pressable>
@@ -1140,21 +1122,14 @@ const styles = StyleSheet.create({
   micIntroStrong: { fontWeight: "700", color: "#1B1F24" },
   promoCard: { alignItems: "center" },
   promoTitleRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 },
+  promoSub: { marginBottom: 6 },
   promoTitle: { color: "#1B1F24", fontSize: 22, fontWeight: "800", marginBottom: 0 },
   promoBadge: { fontSize: 11, fontWeight: "800", letterSpacing: 1, borderRadius: 6, paddingVertical: 3, paddingHorizontal: 7, overflow: "hidden" },
   promoBadgeFree: { backgroundColor: "#E7F5EE", color: "#17734A" },
   promoBadgePro: { backgroundColor: "#1B2145", color: "#F5C518" },
-  promoRow: {
-    alignSelf: "stretch", flexDirection: "row", alignItems: "center", gap: 12, marginTop: 10,
-    backgroundColor: "#F7F8FA", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 14, padding: 12,
-  },
-  promoText: { flex: 1, fontSize: 14, lineHeight: 19, color: "#334155" },
-  promoShowAD: { width: 66, alignItems: "center", gap: 4 },
-  promoShowADBtn: { width: 40, height: 40, borderRadius: 12, backgroundColor: "#E11D48", alignItems: "center", justifyContent: "center" },
-  promoShowADLabel: { fontSize: 11, fontWeight: "700", color: "#1B1F24" },
   promoPrimary: {
     alignSelf: "stretch", height: 52, borderRadius: 14, backgroundColor: "#2B5FD9",
-    alignItems: "center", justifyContent: "center", marginTop: 16,
+    alignItems: "center", justifyContent: "center", marginTop: 14,
   },
   promoLater: { alignSelf: "stretch", height: 44, alignItems: "center", justifyContent: "center", marginTop: 4 },
   promoLaterText: { color: "#4A5361", fontSize: 15, fontWeight: "600" },
