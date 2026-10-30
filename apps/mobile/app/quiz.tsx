@@ -8,6 +8,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
+import { noteUnitFinished } from "../lib/milestones";
 import { purchasesAvailable, usePro } from "../lib/pro";
 import { getConversation, conversationSeconds } from "../lib/conversationsFull";
 import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
@@ -493,7 +494,9 @@ export default function Quiz() {
           })
           .catch(() => {})
           .finally(() => logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total,
-            date: new Date().toISOString(), courseKey, unitIndex }));
+            date: new Date().toISOString(), courseKey, unitIndex })
+            // 31 Oct 2026: a tense finished before the update gets its Tense complete card now.
+            .then(() => noteUnitFinished(courseLevel, courseTimeFrame)).catch(() => {}));
       } else {
         logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
           date: new Date().toISOString(), courseKey, unitIndex });

@@ -23,7 +23,12 @@ import { getTenseConversation } from "./conversationsFull";
  * conversation or vocab check.
  *
  * Learners who already finished tenses before this update are seeded as
- * celebrated on first read, so the update doesn't greet them with a stack of banners.
+ * celebrated on first read, so the update doesn't greet them with a stack of
+ * banners. A seeded tense (or level) becomes due again the next time the learner
+ * finishes one of its units (noteUnitFinished): that is the natural moment to
+ * show it, and the only way they'd meet the Tense Conversation otherwise.
+ * (Fixed 31 Oct 2026: Jonathan redid the last unit of a tense he'd finished
+ * before the update and saw nothing.)
  */
 
 const KEY = "pluri_milestones";
@@ -33,6 +38,8 @@ export type Milestones = {
   levelCelebrated: string[];
   /** "Level|TimeFrame" → ISO date the Tense Conversation was finished. */
   tenseConvoDone: Record<string, string>;
+  /** Tenses and levels marked celebrated only because they were done before the update. */
+  seeded: string[];
 };
 
 const tenseKey = (level: string, timeFrame: string) => `${level}|${timeFrame}`;
@@ -56,15 +63,17 @@ export async function getMilestones(): Promise<Milestones> {
     const raw = await AsyncStorage.getItem(KEY);
     if (raw) {
       const m = JSON.parse(raw);
-      return { tenseCelebrated: m.tenseCelebrated ?? [], levelCelebrated: m.levelCelebrated ?? [], tenseConvoDone: m.tenseConvoDone ?? {} };
+      return { tenseCelebrated: m.tenseCelebrated ?? [], levelCelebrated: m.levelCelebrated ?? [], tenseConvoDone: m.tenseConvoDone ?? {}, seeded: m.seeded ?? [] };
     }
   } catch {}
   // First read after the update: what is already finished counts as celebrated.
   const prog = await getCourseProgress();
-  const m: Milestones = { tenseCelebrated: [], levelCelebrated: [], tenseConvoDone: {} };
+  const m: Milestones = { tenseCelebrated: [], levelCelebrated: [], tenseConvoDone: {}, seeded: [] };
   for (const level of LEVELS) {
-    for (const tf of timeFramesFor(level)) if (tenseStatus(prog, level, tf).complete) m.tenseCelebrated.push(tenseKey(level, tf));
-    if (levelComplete(prog, level)) m.levelCelebrated.push(level);
+    for (const tf of timeFramesFor(level)) if (tenseStatus(prog, level, tf).complete) {
+      m.tenseCelebrated.push(tenseKey(level, tf)); m.seeded.push(tenseKey(level, tf));
+    }
+    if (levelComplete(prog, level)) { m.levelCelebrated.push(level); m.seeded.push(level); }
   }
   await save(m);
   return m;
@@ -97,6 +106,25 @@ export async function claimNextCelebration(): Promise<Celebration | null> {
     return { kind: "level", level };
   }
   return null;
+}
+
+/**
+ * After a course unit's quiz is recorded: a tense (and its level) that was only
+ * seeded as celebrated becomes due, so the Tense complete card (and, if the
+ * level is done, the Level complete banner) shows once when the learner returns.
+ */
+export async function noteUnitFinished(level: string, timeFrame: string) {
+  const m = await getMilestones();
+  const key = tenseKey(level, timeFrame);
+  const unseed = (k: string, list: string[]) => {
+    if (!m.seeded.includes(k)) return list;
+    m.seeded = m.seeded.filter((x) => x !== k);
+    return list.filter((x) => x !== k);
+  };
+  const before = m.seeded.length;
+  m.tenseCelebrated = unseed(key, m.tenseCelebrated);
+  m.levelCelebrated = unseed(level, m.levelCelebrated);
+  if (m.seeded.length !== before) await save(m);
 }
 
 export async function markTenseConversationDone(level: string, timeFrame: string) {
