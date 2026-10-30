@@ -1,0 +1,1155 @@
+{
+ "Beginner|Present": {
+  "title": "La nouvelle voisine",
+  "titleEn": "The new neighbour",
+  "character": "Léa",
+  "voice": "Audrey",
+  "scene": "Léa, your new neighbour, says hello on the stairs.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire"
+  ],
+  "newWords": [
+   {
+    "fr": "une voisine / un voisin",
+    "en": "neighbour"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Je suis Léa, ta voisine. Es-tu étudiant ?",
+    "en": "Hello! I'm Léa, your neighbour. Are you a student?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je suis étudiant.",
+    "en": "Yes, I'm a student.",
+    "verb": "être",
+    "person": "je",
+    "accept": [
+     "Oui, je suis étudiant.",
+     "Oui, je suis étudiante.",
+     "Je suis étudiant.",
+     "Je suis étudiante."
+    ],
+    "options": [
+     "Oui, je sommes étudiant.",
+     "Oui, j'ai été étudiant.",
+     "Oui, je serai étudiant."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! As-tu un chien ?",
+    "en": "Great! Do you have a dog?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, j'ai un chat.",
+    "en": "No, I have a cat.",
+    "verb": "avoir",
+    "person": "je",
+    "accept": [
+     "Non, j'ai un chat.",
+     "J'ai un chat."
+    ],
+    "options": [
+     "Non, je suis un chat.",
+     "Non, j'aurai un chat.",
+     "Non, j'avons un chat."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi, j'ai un lapin ! Que fais-tu ce soir ?",
+    "en": "I've got a rabbit! What are you doing tonight?"
+   },
+   {
+    "who": "you",
+    "fr": "Je fais un gâteau.",
+    "en": "I'm making a cake.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "Je fais un gâteau.",
+     "Ce soir, je fais un gâteau."
+    ],
+    "options": [
+     "Je suis fait un gâteau.",
+     "J'ai fait un gâteau.",
+     "Je faisons un gâteau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Miam ! Et ta sœur, où est-elle ?",
+    "en": "Yum! And your sister, where is she?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle est au café.",
+    "en": "She's at the café.",
+    "verb": "être",
+    "person": "elle",
+    "accept": [
+     "Elle est au café.",
+     "Ma sœur est au café."
+    ],
+    "options": [
+     "Elle sont au café.",
+     "Elle sera au café.",
+     "Elle a été au café."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes amis, ont-ils un chien ?",
+    "en": "And your friends, do they have a dog?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils ont un chien.",
+    "en": "Yes, they have a dog.",
+    "verb": "avoir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils ont un chien.",
+     "Ils ont un chien."
+    ],
+    "options": [
+     "Oui, ils sont un chien.",
+     "Oui, ils auront un chien.",
+     "Oui, ils avez un chien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ce soir, faites-vous vos devoirs, toi et ta sœur ?",
+    "en": "Tonight, are you and your sister doing your homework?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous faisons nos devoirs.",
+    "en": "Yes, we're doing our homework.",
+    "verb": "faire",
+    "person": "nous",
+    "accept": [
+     "Oui, nous faisons nos devoirs.",
+     "Oui, nous faisons les devoirs.",
+     "Nous faisons nos devoirs."
+    ],
+    "options": [
+     "Oui, nous sommes fait nos devoirs.",
+     "Oui, nous avons fait nos devoirs.",
+     "Oui, nous font nos devoirs."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bon courage !",
+    "en": "Good luck!"
+   }
+  ]
+ },
+ "Beginner|Past": {
+  "title": "Le week-end",
+  "titleEn": "The weekend",
+  "character": "Léa",
+  "voice": "Audrey",
+  "scene": "Léa asks about your family's busy day yesterday.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire"
+  ],
+  "newWords": [
+   {
+    "fr": "avoir froid",
+    "en": "to be cold"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Qu'as-tu fait hier ?",
+    "en": "Hello! What did you do yesterday?"
+   },
+   {
+    "who": "you",
+    "fr": "J'ai fait les courses.",
+    "en": "I did the shopping.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "J'ai fait les courses.",
+     "Hier, j'ai fait les courses."
+    ],
+    "options": [
+     "Je suis fait les courses.",
+     "Je ferai les courses.",
+     "Je fais les courses."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, a-t-il eu un beau cadeau pour son anniversaire ?",
+    "en": "And your brother, did he get a lovely present for his birthday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il a eu un chien !",
+    "en": "Yes, he got a dog!",
+    "verb": "avoir",
+    "person": "il",
+    "accept": [
+     "Oui, il a eu un chien !",
+     "Il a eu un chien !",
+     "Oui, il a eu un chien."
+    ],
+    "options": [
+     "Oui, il est eu un chien !",
+     "Oui, il aura un chien !",
+     "Oui, ils ont eu un chien !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quelle chance ! Et ta mère, a-t-elle été malade hier ?",
+    "en": "How lucky! And your mother, was she ill yesterday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle a été malade.",
+    "en": "Yes, she was ill.",
+    "verb": "être",
+    "person": "elle",
+    "accept": [
+     "Oui, elle a été malade.",
+     "Elle a été malade.",
+     "Oui, elle a été très malade."
+    ],
+    "options": [
+     "Oui, elle est été malade.",
+     "Oui, elle sera malade.",
+     "Oui, elle ont été malade."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh non ! Ton frère et ta sœur ont-ils fait de la soupe pour elle ?",
+    "en": "Oh no! Did your brother and sister make some soup for her?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils ont fait de la soupe.",
+    "en": "Yes, they made some soup.",
+    "verb": "faire",
+    "person": "ils",
+    "accept": [
+     "Oui, ils ont fait de la soupe.",
+     "Oui, ils ont fait une soupe.",
+     "Ils ont fait de la soupe.",
+     "Oui, ils ont fait de la soupe pour elle."
+    ],
+    "options": [
+     "Oui, ils sont fait de la soupe.",
+     "Oui, ils feront de la soupe.",
+     "Oui, ils avez fait de la soupe."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est très bien. Et toi, as-tu eu froid hier soir ?",
+    "en": "That's very good. And you, were you cold last night?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai eu très froid.",
+    "en": "Yes, I was very cold.",
+    "verb": "avoir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai eu très froid.",
+     "Oui, j'ai eu froid.",
+     "J'ai eu très froid."
+    ],
+    "options": [
+     "Oui, je suis eu très froid.",
+     "Oui, j'aurai très froid.",
+     "Oui, j'avons eu très froid."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Toi et ton frère, avez-vous été en retard ce matin ?",
+    "en": "You and your brother, were you late this morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous n'avons pas été en retard.",
+    "en": "No, we weren't late.",
+    "verb": "être",
+    "person": "nous",
+    "accept": [
+     "Non, nous n'avons pas été en retard.",
+     "Nous n'avons pas été en retard."
+    ],
+    "options": [
+     "Non, nous ne sommes pas été en retard.",
+     "Non, nous ne serons pas en retard.",
+     "Non, nous n'avez pas été en retard."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien ! Et maintenant, que fais-tu ?",
+    "en": "Very good! And now, what are you doing?"
+   },
+   {
+    "who": "you",
+    "fr": "Je fais un gâteau pour ma mère.",
+    "en": "I'm making a cake for my mother.",
+    "verb": "faire",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Je fais un gâteau pour ma mère.",
+     "Je fais un gâteau.",
+     "Maintenant, je fais un gâteau pour ma mère."
+    ],
+    "options": [
+     "J'ai fait un gâteau pour ma mère.",
+     "Je ferai un gâteau pour ma mère.",
+     "Je faisons un gâteau pour ma mère."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Miam ! Bon rétablissement à ta mère !",
+    "en": "Yum! I hope your mother feels better soon!"
+   }
+  ]
+ },
+ "Beginner|Future": {
+  "title": "Samedi à Paris",
+  "titleEn": "Saturday in Paris",
+  "character": "Léa",
+  "voice": "Audrey",
+  "scene": "Léa asks about your plans for Saturday in Paris.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Où seras-tu samedi ?",
+    "en": "Hello! Where will you be on Saturday?"
+   },
+   {
+    "who": "you",
+    "fr": "Je serai à Paris.",
+    "en": "I'll be in Paris.",
+    "verb": "être",
+    "person": "je",
+    "accept": [
+     "Je serai à Paris.",
+     "Samedi, je serai à Paris."
+    ],
+    "options": [
+     "J'ai été à Paris.",
+     "Je sera à Paris.",
+     "Je seront à Paris."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quelle chance ! Que feras-tu à Paris ?",
+    "en": "How lucky! What will you do in Paris?"
+   },
+   {
+    "who": "you",
+    "fr": "Je ferai une promenade avec ma sœur.",
+    "en": "I'll go for a walk with my sister.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "Je ferai une promenade avec ma sœur.",
+     "Je ferai une promenade."
+    ],
+    "options": [
+     "J'ai fait une promenade avec ma sœur.",
+     "Je fera une promenade avec ma sœur.",
+     "Je ferons une promenade avec ma sœur."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Auras-tu ton chat avec toi ?",
+    "en": "Great! Will you have your cat with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, mon frère aura le chat à la maison.",
+    "en": "No, my brother will have the cat at home.",
+    "verb": "avoir",
+    "person": "il",
+    "accept": [
+     "Non, mon frère aura le chat à la maison.",
+     "Non, mon frère aura le chat.",
+     "Mon frère aura le chat à la maison."
+    ],
+    "options": [
+     "Non, mon frère a eu le chat à la maison.",
+     "Non, mon frère sera le chat à la maison.",
+     "Non, mon frère auront le chat à la maison."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, seront-ils à Paris aussi ?",
+    "en": "And your parents, will they be in Paris too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils seront à la maison.",
+    "en": "No, they'll be at home.",
+    "verb": "être",
+    "person": "ils",
+    "accept": [
+     "Non, ils seront à la maison.",
+     "Ils seront à la maison."
+    ],
+    "options": [
+     "Non, ils ont été à la maison.",
+     "Non, ils sera à la maison.",
+     "Non, ils serez à la maison."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Toi et ta sœur, ferez-vous du sport à Paris ?",
+    "en": "You and your sister, will you do some sport in Paris?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous ferons du vélo.",
+    "en": "Yes, we'll go cycling.",
+    "verb": "faire",
+    "person": "nous",
+    "accept": [
+     "Oui, nous ferons du vélo.",
+     "Nous ferons du vélo.",
+     "Oui, nous ferons du sport."
+    ],
+    "options": [
+     "Oui, nous avons fait du vélo.",
+     "Oui, nous fera du vélo.",
+     "Oui, nous ferez du vélo."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Génial ! Et ta sœur, où est-elle maintenant ?",
+    "en": "Brilliant! And your sister, where is she now?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle est au café.",
+    "en": "She's at the café.",
+    "verb": "être",
+    "person": "elle",
+    "callback": "Present",
+    "accept": [
+     "Elle est au café.",
+     "Ma sœur est au café."
+    ],
+    "options": [
+     "Elle sera au café.",
+     "Elle a été au café.",
+     "Elle sont au café."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Aura-t-elle le temps lundi ?",
+    "en": "Will she have time on Monday?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle aura du travail.",
+    "en": "No, she'll have work to do.",
+    "verb": "avoir",
+    "person": "elle",
+    "accept": [
+     "Non, elle aura du travail.",
+     "Elle aura du travail.",
+     "Non, elle aura beaucoup de travail."
+    ],
+    "options": [
+     "Non, elle a eu du travail.",
+     "Non, elle sera du travail.",
+     "Non, elle auront du travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "D'accord. Bon voyage !",
+    "en": "OK. Have a good trip!"
+   }
+  ]
+ },
+ "Novice|Present": {
+  "title": "Samedi matin au marché",
+  "titleEn": "Saturday morning at the market",
+  "character": "Camille",
+  "voice": "Cécile - Interactive Customer Support",
+  "scene": "Camille, your neighbour, bumps into you at the market.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire",
+   "aller"
+  ],
+  "newWords": [
+   {
+    "fr": "avoir faim",
+    "en": "to be hungry"
+   },
+   {
+    "fr": "l'Australie",
+    "en": "Australia"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Comment vas-tu ce matin ?",
+    "en": "Hello! How are you this morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Je vais bien, merci.",
+    "en": "I'm well, thanks.",
+    "verb": "aller",
+    "person": "je",
+    "accept": [
+     "Je vais bien, merci.",
+     "Je vais bien.",
+     "Je vais très bien, merci."
+    ],
+    "options": [
+     "J'irai bien, merci.",
+     "Je suis allé bien, merci.",
+     "Je vont bien, merci."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Que fais-tu au marché ?",
+    "en": "What are you doing at the market?"
+   },
+   {
+    "who": "you",
+    "fr": "Je fais les courses.",
+    "en": "I'm doing the shopping.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "Je fais les courses.",
+     "Je fais les courses au marché."
+    ],
+    "options": [
+     "Je ferai les courses.",
+     "J'ai fait les courses.",
+     "Je faisons les courses."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi ! As-tu une voiture ?",
+    "en": "Me too! Do you have a car?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, j'ai un vélo.",
+    "en": "No, I have a bike.",
+    "verb": "avoir",
+    "person": "je",
+    "accept": [
+     "Non, j'ai un vélo.",
+     "J'ai un vélo."
+    ],
+    "options": [
+     "Non, je suis un vélo.",
+     "Non, j'aurai un vélo.",
+     "Non, j'avons un vélo."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton frère est-il avec toi ?",
+    "en": "Is your brother with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il est à la maison.",
+    "en": "No, he's at home.",
+    "verb": "être",
+    "person": "il",
+    "accept": [
+     "Non, il est à la maison.",
+     "Il est à la maison."
+    ],
+    "options": [
+     "Non, il sera à la maison.",
+     "Non, il a été à la maison.",
+     "Non, il sont à la maison."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, où vont-ils ce soir ?",
+    "en": "And your parents, where are they going tonight?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils vont au cinéma.",
+    "en": "They're going to the cinema.",
+    "verb": "aller",
+    "person": "ils",
+    "accept": [
+     "Ils vont au cinéma.",
+     "Ce soir, ils vont au cinéma."
+    ],
+    "options": [
+     "Ils va au cinéma.",
+     "Ils sont allés au cinéma.",
+     "Ils allez au cinéma."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah, voilà ta sœur ! Avez-vous faim, tous les deux ?",
+    "en": "Oh, here's your sister! Are you both hungry?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons faim !",
+    "en": "Yes, we're hungry!",
+    "verb": "avoir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons faim !",
+     "Nous avons faim !",
+     "Oui, nous avons très faim !"
+    ],
+    "options": [
+     "Oui, nous sommes faim !",
+     "Oui, nous aurons faim !",
+     "Oui, nous avez faim !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Il fait beau ici ! Et chez toi, en Australie, quel temps fait-il ?",
+    "en": "It's lovely here! And back home in Australia, what's the weather like?"
+   },
+   {
+    "who": "you",
+    "fr": "Il fait très chaud.",
+    "en": "It's very hot.",
+    "verb": "faire",
+    "person": "il",
+    "accept": [
+     "Il fait très chaud.",
+     "Il fait chaud.",
+     "En Australie, il fait très chaud."
+    ],
+    "options": [
+     "Il fera très chaud.",
+     "Il a fait très chaud.",
+     "Il font très chaud."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Êtes-vous prêts pour un petit café ?",
+    "en": "Great! Are you both ready for a coffee?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous sommes prêts !",
+    "en": "Yes, we're ready!",
+    "verb": "être",
+    "person": "nous",
+    "accept": [
+     "Oui, nous sommes prêts !",
+     "Oui, nous sommes prêtes !",
+     "Nous sommes prêts !"
+    ],
+    "options": [
+     "Oui, nous serons prêts !",
+     "Oui, nous avons été prêts !",
+     "Oui, nous êtes prêts !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Allons-y !",
+    "en": "Perfect! Let's go!"
+   }
+  ]
+ },
+ "Novice|Past": {
+  "title": "Le voyage à Paris",
+  "titleEn": "The trip to Paris",
+  "character": "Camille",
+  "voice": "Cécile - Interactive Customer Support",
+  "scene": "You're back from Paris and Camille wants to hear all about it.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire",
+   "aller"
+  ],
+  "newWords": [
+   {
+    "fr": "avoir beau temps",
+    "en": "to have good weather"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Alors, es-tu bien allé à Paris ?",
+    "en": "Hello! So, did you make it to Paris all right?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je suis allé à Paris.",
+    "en": "Yes, I went to Paris.",
+    "verb": "aller",
+    "person": "je",
+    "accept": [
+     "Oui, je suis allé à Paris.",
+     "Oui, je suis allée à Paris.",
+     "Je suis allé à Paris.",
+     "Je suis allée à Paris."
+    ],
+    "options": [
+     "Oui, j'ai allé à Paris.",
+     "Oui, j'irai à Paris.",
+     "Oui, je vais à Paris."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! As-tu fait bon voyage ?",
+    "en": "Great! Did you have a good trip?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai fait bon voyage.",
+    "en": "Yes, I had a good trip.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai fait bon voyage.",
+     "J'ai fait bon voyage.",
+     "Oui, j'ai fait un bon voyage."
+    ],
+    "options": [
+     "Oui, je suis fait bon voyage.",
+     "Oui, je ferai bon voyage.",
+     "Oui, je fais bon voyage."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta copine, a-t-elle été contente du voyage ?",
+    "en": "And your girlfriend, was she happy with the trip?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle a été très contente du voyage.",
+    "en": "Yes, she was very happy with the trip.",
+    "verb": "être",
+    "person": "elle",
+    "accept": [
+     "Oui, elle a été très contente du voyage.",
+     "Oui, elle a été très contente.",
+     "Oui, elle a été contente du voyage.",
+     "Elle a été très contente."
+    ],
+    "options": [
+     "Oui, elle est été très contente du voyage.",
+     "Oui, elle sera très contente du voyage.",
+     "Oui, elle ont été très contente du voyage."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "As-tu eu beau temps ?",
+    "en": "Did you have good weather?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai eu beau temps.",
+    "en": "Yes, I had good weather.",
+    "verb": "avoir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai eu beau temps.",
+     "J'ai eu beau temps.",
+     "Oui, nous avons eu beau temps."
+    ],
+    "options": [
+     "Oui, je suis eu beau temps.",
+     "Oui, j'aurai beau temps.",
+     "Oui, j'avons eu beau temps."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Êtes-vous allés au cinéma ?",
+    "en": "Did you (both) go to the cinema?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous sommes allés au cinéma.",
+    "en": "Yes, we went to the cinema.",
+    "verb": "aller",
+    "person": "nous",
+    "accept": [
+     "Oui, nous sommes allés au cinéma.",
+     "Oui, nous sommes allées au cinéma.",
+     "Nous sommes allés au cinéma."
+    ],
+    "options": [
+     "Oui, nous avons allé au cinéma.",
+     "Oui, nous irons au cinéma.",
+     "Oui, nous allons au cinéma."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Avez-vous eu peur pendant le film ?",
+    "en": "Were you scared during the film?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous n'avons pas eu peur.",
+    "en": "No, we weren't scared.",
+    "verb": "avoir",
+    "person": "nous",
+    "accept": [
+     "Non, nous n'avons pas eu peur.",
+     "Nous n'avons pas eu peur."
+    ],
+    "options": [
+     "Non, nous ne sommes pas eu peur.",
+     "Non, nous n'aurons pas peur.",
+     "Non, nous n'avez pas eu peur."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, qu'ont-ils fait cet été ?",
+    "en": "And your parents, what did they do this summer?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils ont fait du sport.",
+    "en": "They did some sport.",
+    "verb": "faire",
+    "person": "ils",
+    "accept": [
+     "Ils ont fait du sport.",
+     "Cet été, ils ont fait du sport."
+    ],
+    "options": [
+     "Ils sont fait du sport.",
+     "Ils feront du sport.",
+     "Ils avez fait du sport."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, as-tu été fatigué après le voyage ?",
+    "en": "And you, were you tired after the trip?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai été très fatigué.",
+    "en": "Yes, I was very tired.",
+    "verb": "être",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai été très fatigué.",
+     "Oui, j'ai été très fatiguée.",
+     "Oui, j'ai été fatigué.",
+     "Oui, j'ai été fatiguée.",
+     "J'ai été très fatigué.",
+     "J'ai été très fatiguée."
+    ],
+    "options": [
+     "Oui, je suis été très fatigué.",
+     "Oui, je serai très fatigué.",
+     "Oui, j'avons été très fatigué."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et aujourd'hui, comment vas-tu ?",
+    "en": "And today, how are you?"
+   },
+   {
+    "who": "you",
+    "fr": "Je vais très bien, merci !",
+    "en": "I'm very well, thanks!",
+    "verb": "aller",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Je vais très bien, merci !",
+     "Je vais bien, merci !",
+     "Aujourd'hui, je vais très bien."
+    ],
+    "options": [
+     "Je suis allé très bien, merci !",
+     "J'irai très bien, merci !",
+     "Je vont très bien, merci !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! À bientôt !",
+    "en": "Perfect! See you soon!"
+   }
+  ]
+ },
+ "Novice|Future": {
+  "title": "Samedi prochain",
+  "titleEn": "Next Saturday",
+  "character": "Camille",
+  "voice": "Cécile - Interactive Customer Support",
+  "scene": "Camille helps you plan a day at the beach next Saturday.",
+  "verbs": [
+   "être",
+   "avoir",
+   "faire",
+   "aller"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Où iras-tu samedi prochain ?",
+    "en": "Hello! Where will you go next Saturday?"
+   },
+   {
+    "who": "you",
+    "fr": "J'irai à la plage.",
+    "en": "I'll go to the beach.",
+    "verb": "aller",
+    "person": "je",
+    "accept": [
+     "J'irai à la plage.",
+     "Samedi prochain, j'irai à la plage."
+    ],
+    "options": [
+     "Je suis allé à la plage.",
+     "J'ira à la plage.",
+     "J'iront à la plage."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Seras-tu là le matin ?",
+    "en": "Great! Will you be there in the morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je serai là le matin.",
+    "en": "Yes, I'll be there in the morning.",
+    "verb": "être",
+    "person": "je",
+    "accept": [
+     "Oui, je serai là le matin.",
+     "Oui, je serai là.",
+     "Je serai là le matin."
+    ],
+    "options": [
+     "Oui, j'ai été là le matin.",
+     "Oui, je sera là le matin.",
+     "Oui, je seront là le matin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Que feras-tu à la plage ?",
+    "en": "What will you do at the beach?"
+   },
+   {
+    "who": "you",
+    "fr": "Je ferai du vélo.",
+    "en": "I'll go cycling.",
+    "verb": "faire",
+    "person": "je",
+    "accept": [
+     "Je ferai du vélo.",
+     "Je ferai du sport.",
+     "À la plage, je ferai du vélo."
+    ],
+    "options": [
+     "J'ai fait du vélo.",
+     "Je fera du vélo.",
+     "Je ferons du vélo."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Auras-tu assez de nourriture ?",
+    "en": "Will you have enough food?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'aurai beaucoup de nourriture.",
+    "en": "Yes, I'll have lots of food.",
+    "verb": "avoir",
+    "person": "je",
+    "accept": [
+     "Oui, j'aurai beaucoup de nourriture.",
+     "Oui, j'aurai assez de nourriture.",
+     "J'aurai beaucoup de nourriture."
+    ],
+    "options": [
+     "Oui, j'ai eu beaucoup de nourriture.",
+     "Oui, je serai beaucoup de nourriture.",
+     "Oui, j'auront beaucoup de nourriture."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah oui ? As-tu déjà fait les courses ?",
+    "en": "Oh yes? Have you already done the shopping?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai fait les courses hier.",
+    "en": "Yes, I did the shopping yesterday.",
+    "verb": "faire",
+    "person": "je",
+    "callback": "Past",
+    "accept": [
+     "Oui, j'ai fait les courses hier.",
+     "Oui, j'ai fait les courses.",
+     "J'ai fait les courses hier."
+    ],
+    "options": [
+     "Oui, je ferai les courses hier.",
+     "Oui, je fais les courses hier.",
+     "Oui, je suis fait les courses hier."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes amis, iront-ils avec toi ?",
+    "en": "And your friends, will they go with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils iront avec moi en voiture.",
+    "en": "Yes, they'll go with me by car.",
+    "verb": "aller",
+    "person": "ils",
+    "accept": [
+     "Oui, ils iront avec moi en voiture.",
+     "Oui, ils iront avec moi.",
+     "Oui, ils iront en voiture.",
+     "Ils iront avec moi en voiture."
+    ],
+    "options": [
+     "Oui, ils sont allés avec moi en voiture.",
+     "Oui, ils ira avec moi en voiture.",
+     "Oui, ils irez avec moi en voiture."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, sera-t-elle là aussi ?",
+    "en": "And your sister, will she be there too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle sera au travail.",
+    "en": "No, she'll be at work.",
+    "verb": "être",
+    "person": "elle",
+    "accept": [
+     "Non, elle sera au travail.",
+     "Elle sera au travail."
+    ],
+    "options": [
+     "Non, elle a été au travail.",
+     "Non, elle serez au travail.",
+     "Non, elle seront au travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage ! Ferez-vous du sport ensemble, toi et tes amis ?",
+    "en": "Shame! Will you and your friends do some sport together?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous ferons du sport ensemble.",
+    "en": "Yes, we'll do some sport together.",
+    "verb": "faire",
+    "person": "nous",
+    "accept": [
+     "Oui, nous ferons du sport ensemble.",
+     "Oui, nous ferons du sport.",
+     "Nous ferons du sport ensemble."
+    ],
+    "options": [
+     "Oui, nous avons fait du sport ensemble.",
+     "Oui, nous fera du sport ensemble.",
+     "Oui, nous ferez du sport ensemble."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Aurez-vous de l'eau ? Il fera chaud !",
+    "en": "Will you have some water? It'll be hot!"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous aurons de l'eau.",
+    "en": "Yes, we'll have some water.",
+    "verb": "avoir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous aurons de l'eau.",
+     "Nous aurons de l'eau.",
+     "Oui, nous aurons beaucoup d'eau."
+    ],
+    "options": [
+     "Oui, nous avons eu de l'eau.",
+     "Oui, nous serons de l'eau.",
+     "Oui, nous aurez de l'eau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Bonne journée à la plage !",
+    "en": "Perfect! Have a nice day at the beach!"
+   }
+  ]
+ }
+}

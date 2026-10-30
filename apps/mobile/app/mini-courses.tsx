@@ -17,8 +17,15 @@ import CoinIcon from "../components/CoinIcon";
 import CefrGateCard from "../components/CefrGateCard";
 import { CEFR_IDS, cefrTestForLevel } from "@shared/cefrTests";
 import CefrBadge from "../components/CefrBadge";
+import { Ionicons } from "@expo/vector-icons";
+import { getMilestones } from "../lib/milestones";
+import { getTenseConversation, tenseConversationMinutes } from "../lib/conversationsFull";
+import { purchasesAvailable } from "../lib/pro";
+import { useCelebrations } from "../lib/useCelebrations";
 
 export default function MiniCourses() {
+  // 31 Oct 2026: Tense complete / Level complete, once each, when the learner returns here.
+  useCelebrations();
   const [level, setLevel] = useState<string | null>(null);
   const [timeFrame, setTimeFrame] = useState<string | null>(null);
   const course = level ? COURSES[level] : null;
@@ -29,6 +36,7 @@ export default function MiniCourses() {
   const [prog, setProg] = useState<Record<string, number[]>>({});
   const [examResults, setExamResults] = useState<ExamResult[]>([]);
   const [balance, setBalance] = useState<number | null>(null);
+  const [convoDone, setConvoDone] = useState<Record<string, string>>({});
   // Live: a coin spend on this screen (exam or CEFR unlock) updates the balance at once.
   useEffect(() => onCoinsChanged((c) => setBalance(coinBalance(c))), []);
   useFocusEffect(useCallback(() => {
@@ -41,6 +49,7 @@ export default function MiniCourses() {
     });
     readExamResults().then((r) => { if (on) setExamResults(r); });
     readCoins().then((c) => { if (on) setBalance(coinBalance(c)); });
+    getMilestones().then((m) => { if (on) setConvoDone(m.tenseConvoDone); });
     return () => { on = false; };
   }, []));
 
@@ -94,7 +103,7 @@ export default function MiniCourses() {
 
         {level && !timeFrame && (
           <View style={styles.card}>
-            <Text style={styles.blurb}>{course!.emoji} {course!.title} — choose a time frame</Text>
+            <Text style={styles.blurb}>{course!.emoji} {course!.title} — choose a tense</Text>
             {courseTimeFrames(level).map((tf) => {
               const done = (prog[`${level}|${tf}`] || []).length;
               const total = course!.units.length;
@@ -102,8 +111,8 @@ export default function MiniCourses() {
               const commenced = done > 0 && !complete;
               return (
                 <Pressable key={tf} style={[styles.row, complete && styles.rowDone]} onPress={() => setTimeFrame(tf)}>
-                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tf} Tense{tf === "Pluperfect" || tf === "Imperfect" ? ` (${tenseFor(tf).label})` : ""}</Text>
-                  {complete ? <Text style={styles.rowSub}>Completed</Text>
+                  <Text style={[styles.rowTitle, complete && styles.rowTitleDone]}>{complete ? "✓ " : ""}{tenseFor(tf).label} · {tenseFor(tf).english} tense</Text>
+                  {complete ? <Text style={styles.rowSub}>Completed{convoDone[`${level}|${tf}`] ? " · 💬 conversation done" : getTenseConversation(level, tf) ? " · 💬 conversation ready" : ""}</Text>
                     : commenced ? <Text style={[styles.rowSub, styles.rowSubStarted]}>▸ In progress — {done} of {total} units</Text>
                     : null}
                 </Pressable>
@@ -117,7 +126,7 @@ export default function MiniCourses() {
 
         {level && timeFrame && (
           <View style={styles.card}>
-            <Text style={styles.blurb}>{course!.emoji} {course!.title} · {timeFrame}</Text>
+            <Text style={styles.blurb}>{course!.emoji} {course!.title} · {tenseFor(timeFrame).label}</Text>
             {course!.units.map((u, ui) => {
               const doneArr = prog[`${level}|${timeFrame}`] || [];
               const done = doneArr.includes(ui);
@@ -137,6 +146,28 @@ export default function MiniCourses() {
                 </Pressable>
               );
             })}
+            {/* 31 Oct 2026: the Tense Conversation, once every unit of the tense is done. Free at Beginner. */}
+            {(() => {
+              const conv = getTenseConversation(level, timeFrame);
+              const doneArr = prog[`${level}|${timeFrame}`] || [];
+              if (!conv || doneArr.length < course!.units.length) return null;
+              const convoLocked = level !== "Beginner" && !isPro && purchasesAvailable();
+              const tname = tenseFor(timeFrame).label;
+              const done = !!convoDone[`${level}|${timeFrame}`];
+              return (
+                <Pressable style={[styles.tenseConvo, done && { opacity: 0.8 }]} accessibilityRole="button"
+                  accessibilityLabel={`${tname} conversation${done ? ", done" : ""}${convoLocked ? ", requires Pluri Pro" : ""}`}
+                  onPress={() => router.push(convoLocked ? "/paywall" as any : { pathname: "/conversation" as any,
+                    params: { level, timeFrame, verb: "*", mode: "tense" } })}>
+                  <Ionicons name="chatbubbles" size={20} color="#FFFFFF" />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.rowTitle}>{done ? "✓ " : ""}{tname} conversation</Text>
+                    <Text style={[styles.rowSub, { color: "#DCE6FF" }]}>"{conv.title}" · all {course!.units.length} verbs · ~{tenseConversationMinutes(level, timeFrame)} min</Text>
+                  </View>
+                  {convoLocked && <View style={styles.proTag}><Text style={styles.proTagText}>PRO</Text></View>}
+                </Pressable>
+              );
+            })()}
             {(() => {
               const exam = getExam(level, timeFrame);
               const best = exam ? examResults.find((r) => r.examId === exam.id) : undefined;
@@ -151,7 +182,7 @@ export default function MiniCourses() {
                 </>
               );
             })()}
-            <Pressable onPress={() => setTimeFrame(null)}><Text style={styles.back}>← Back to time frames</Text></Pressable>
+            <Pressable onPress={() => setTimeFrame(null)}><Text style={styles.back}>← Back to tenses</Text></Pressable>
           </View>
         )}
 
@@ -180,6 +211,8 @@ const styles = StyleSheet.create({
   cefrEntry: { flexDirection: "row", alignItems: "center", gap: 14, padding: 16, marginBottom: 16, borderRadius: 20,
     borderWidth: 2, borderColor: "#5BD48F", backgroundColor: "rgba(91,212,143,0.12)" },
   cefrBadges: { flexDirection: "row", gap: 2 },
+  tenseConvo: { flexDirection: "row", alignItems: "center", gap: 12, backgroundColor: "#4A78F2", borderRadius: 14,
+    padding: 14, marginBottom: 10 },
   proTag: { backgroundColor: "#F5C518", borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },
   proTagText: { color: "#1B2145", fontSize: 11, fontWeight: "800" },
 });

@@ -486,10 +486,10 @@ export default function Quiz() {
               previousBest: undefined,
               tenseComplete: tenseProgress(a.state, courseLevel, courseTimeFrame).complete,
             });
-            if (a.invitation) {
-              const inv = a.invitation;
-              inviteTimer.current = setTimeout(() => setInvite(inv), 2300);
-            }
+            // 31 Oct 2026 (Jonathan): the per-tense exam pop-up is gone. The
+            // invitation to the Final Level Exams now comes once, on the Level
+            // complete banner (app/level-complete.tsx); the tense card keeps a
+            // quiet "exam available" line. a.invitation is no longer shown.
           })
           .catch(() => {})
           .finally(() => logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total,
@@ -803,7 +803,7 @@ export default function Quiz() {
             {award?.tenseComplete && (
               <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame} variant="dark"
                 locked={courseLevel !== "Beginner" && !isPro}
-                refreshKey={award.balance} celebrate />
+                refreshKey={award.balance} />
             )}
             {conversation && (
               <Pressable style={styles.convoBtn} onPress={openConversation} accessibilityRole="button"

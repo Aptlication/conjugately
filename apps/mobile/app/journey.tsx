@@ -3,14 +3,18 @@ import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, View } from "r
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
-import { getJourneySummary, JourneySummary } from "../lib/progress";
-import { LEVELS, timeFrameListLabel } from "@shared/levels";
+import { getCourseProgress, getJourneySummary, JourneySummary } from "../lib/progress";
+import { buildRoute, getMilestones, type RouteLevel } from "../lib/milestones";
+import { readExamResults } from "../lib/exams";
+import { Ionicons } from "@expo/vector-icons";
+import { LEVEL_EMOJI, TENSES, type Level } from "@shared/levels";
 import { CEFR_IDS } from "@shared/cefrTests";
 import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
 import CefrBadge from "../components/CefrBadge";
 import { switchedOffReminders, turnReminderBackOn } from "../lib/reminders";
-import { openManageSubscriptions, readActiveSubscription } from "../lib/pro";
+import { openManageSubscriptions, purchasesAvailable, readActiveSubscription, usePro } from "../lib/pro";
+import { useCelebrations } from "../lib/useCelebrations";
 
 /** 1.3: the "Rate Pluri French" button opens the App Store's write-a-review page. */
 const APP_STORE_ID = "6799402337";
@@ -27,10 +31,16 @@ function tempColors(pct: number): string[] {
 }
 
 export default function Journey() {
+  // 31 Oct 2026: Tense complete / Level complete, once each, when the learner returns here.
+  useCelebrations();
   const [s, setS] = useState<JourneySummary | null>(null);
   const [cefr, setCefr] = useState<CefrResult[]>([]);
   const [hidden, setHidden] = useState<{ key: string; label: string }[]>([]);
   const [subscribed, setSubscribed] = useState(false);
+  const [route, setRoute] = useState<RouteLevel[]>([]);
+  // null = the current level is open; "" = all closed; otherwise that level.
+  const [openLevel, setOpenLevel] = useState<string | null>(null);
+  const { isPro } = usePro();
 
   useFocusEffect(useCallback(() => {
     let on = true;
@@ -38,10 +48,11 @@ export default function Journey() {
     readCefrResults().then((r) => { if (on) setCefr(r); });
     switchedOffReminders().then((r) => { if (on) setHidden(r); });
     readActiveSubscription().then((v) => { if (on) setSubscribed(v); });
+    Promise.all([getCourseProgress(), getMilestones(), readExamResults(), readCefrResults()])
+      .then(([prog, m, ex, cr]) => { if (on) setRoute(buildRoute(prog, m, ex, cr)); }).catch(() => {});
     return () => { on = false; };
   }, []));
 
-  const levelIdx = s?.highestLevelTouched ? (LEVELS as string[]).indexOf(s.highestLevelTouched) : -1;
 
   return (
     <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
@@ -50,75 +61,19 @@ export default function Journey() {
         <Text style={styles.h1}>🧭 My Journey</Text>
         <Text style={styles.sub}>Votre route vers la fluidité</Text>
 
-        <View style={styles.card}>
-          <Text style={styles.cardLabel}>WHERE YOU ARE (MINI-COURSES)</Text>
-          <View style={styles.pathRow}>
-            {LEVELS.map((l, i) => (
-              <React.Fragment key={l}>
-                <Text style={[styles.pathLabel,
-                  i < levelIdx ? styles.pathDone : i === levelIdx ? styles.pathHere : styles.pathTodo]}>
-                  {i < levelIdx ? `${l} ✓` : l}
-                </Text>
-                {i < LEVELS.length - 1 && (
-                  <View style={[styles.pathBar, i < levelIdx ? styles.barDone : styles.barTodo]} />
-                )}
-              </React.Fragment>
-            ))}
-          </View>
-          <Text style={styles.cardText}>
-            {levelIdx >= 0
-              ? `You're working at ${s!.highestLevelTouched} level. Keep going!`
-              : "Take your first Mini-Course Quiz and your journey begins here."}
-          </Text>
-        </View>
-
-        {s && s.levels && s.levels.length > 0 && (
-          <View style={styles.card}>
-            <Text style={styles.cardLabel}>LEVEL COMPLETION</Text>
-            {s.levels.map((lv) => (
-              <View key={lv.level} style={{ marginBottom: 4 }}>
-                <View style={styles.progRow}>
-                  <Text style={styles.progLabel} numberOfLines={1}>{lv.level}</Text>
-                  <Text style={[styles.progPct, lv.pct > 0 ? { color: tempColors(lv.pct)[tempColors(lv.pct).length - 1] } : { color: "#8A93A0" }]}>{lv.pct}%</Text>
-                </View>
-                <View style={styles.track}>
-                  {lv.pct > 0 && (
-                    <LinearGradient colors={tempColors(lv.pct) as any}
-                      start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
-                      style={[styles.fill, { width: `${Math.min(100, lv.pct)}%` }]} />
-                  )}
-                </View>
-                <Text style={styles.levelSub}>{lv.done} of {lv.total} units · {timeFrameListLabel(lv.level)}</Text>
-              </View>
-            ))}
-          </View>
-        )}
-
-        <View style={styles.card}>
-          <Text style={styles.cardLabel}>PROGRESS{s && s.courses.length ? ` · ${s.overallCoursePct}% OVERALL` : ""}</Text>
-          {s && s.courses.length > 0 ? s.courses.map((c) => (
-            <View key={c.key} style={{ marginBottom: 8 }}>
-              <View style={styles.progRow}>
-                <Text style={styles.progLabel}>{c.label}</Text>
-                <Text style={[styles.progPct, c.pct > 0 ? { color: tempColors(c.pct)[tempColors(c.pct).length - 1] } : { color: "#8A93A0" }]}>{c.pct}%</Text>
-              </View>
-              <View style={styles.track}>
-                {c.pct > 0 && (
-                  <LinearGradient colors={tempColors(c.pct) as any}
-                    start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
-                    style={[styles.fill, { width: `${Math.min(100, c.pct)}%` }]} />
-                )}
-              </View>
-            </View>
-          )) : (
-            <Text style={styles.cardText}>No course units completed yet — start one from the Courses tab.</Text>
-          )}
-        </View>
+        {/* 31 Oct 2026: a complete level whose exams are still waiting. */}
+        {route.filter((r) => r.state === "complete" && r.examsTotal > 0 && r.examsPassed < r.examsTotal).slice(0, 1).map((r) => (
+          <Pressable key={r.level} style={styles.waiting} accessibilityRole="button"
+            onPress={() => router.push({ pathname: "/level-complete" as any, params: { level: r.level } })}>
+            <Text style={styles.waitingText}>🎓 {r.level} complete · {r.examsTotal - r.examsPassed} Final Level Exam{r.examsTotal - r.examsPassed === 1 ? "" : "s"} waiting</Text>
+            <Text style={styles.waitingGo}>Go ›</Text>
+          </Pressable>
+        ))}
 
         {s?.nextStep && (
           <View style={styles.nextCard}>
             <Text style={styles.nextLabel}>NEXT STEP</Text>
-            <Text style={styles.cardText}>Up next: {s.nextStep.label} — {s.nextStep.unitName}</Text>
+            <Text style={styles.cardText}>Up next: {s.nextStep.level} · {TENSES[s.nextStep.timeFrame as keyof typeof TENSES]?.label ?? s.nextStep.timeFrame} — {s.nextStep.unitName}</Text>
             <Pressable style={styles.nextBtn}
               onPress={() => router.push({ pathname: "/resume" as any, params: {
                 difficulty: s.nextStep!.level, verb: s.nextStep!.verb, timeFrame: s.nextStep!.timeFrame,
@@ -128,6 +83,77 @@ export default function Journey() {
             </Pressable>
           </View>
         )}
+
+        {/* 31 Oct 2026: the route. Where you've been (ticks), where you are
+            (the pin, open), where you're going (greyed, with what each level
+            leads to). Tap a level to open or close it. */}
+        <View style={styles.card}>
+          <Text style={styles.cardLabel}>YOUR ROUTE</Text>
+          {route.map((r, i) => {
+            const open = openLevel === r.level || (openLevel === null && r.state === "current");
+            const doneTenses = r.tenses.filter((t) => t.complete).length;
+            return (
+              <View key={r.level} style={styles.stop}>
+                <View style={styles.rail}>
+                  <View style={[styles.node, r.state === "complete" ? styles.nodeDone : r.state === "current" ? styles.nodeHere : styles.nodeTodo]}>
+                    {r.state === "complete" && <Ionicons name="checkmark" size={14} color="#1B2145" />}
+                  </View>
+                  {i < route.length - 1 && <View style={[styles.railLine, r.state === "complete" && styles.railDone]} />}
+                </View>
+                <View style={{ flex: 1, paddingBottom: 14 }}>
+                  <Pressable onPress={() => setOpenLevel(open ? "" : r.level)} accessibilityRole="button"
+                    accessibilityState={{ expanded: open }}
+                    accessibilityLabel={`${r.level}, ${r.state === "complete" ? "complete" : r.state === "current" ? "you are here" : "not started"}`}>
+                    <View style={styles.stopHead}>
+                      <Text style={[styles.stopTitle, r.state === "todo" && { color: "#8A93A0" }, r.state === "complete" && { color: "#5BD48F" }]}>
+                        {LEVEL_EMOJI[r.level as Level]} {r.level}
+                      </Text>
+                      {r.state === "current" && <View style={styles.here}><Text style={styles.hereText}>YOU ARE HERE</Text></View>}
+                      <Ionicons name={open ? "chevron-up" : "chevron-down"} size={16} color="#8A93A0" style={{ marginLeft: "auto" }} />
+                    </View>
+                    <Text style={styles.stopSub}>
+                      {r.state === "complete"
+                        ? `Complete · exams ${r.examsPassed}/${r.examsTotal}${r.cefr ? ` · ${r.cefr} ${r.cefrEarned ? "badge ✓" : "test next"}` : ""}`
+                        : r.state === "current"
+                          ? `${doneTenses} of ${r.tenses.length} tenses done · then ${r.leadsTo}`
+                          : `${r.verbs} verbs · ${r.tenses.length} tenses${r.leadsTo ? ` · → ${r.leadsTo}` : ""}`}
+                    </Text>
+                  </Pressable>
+                  {open && (
+                    <View style={{ marginTop: 8, gap: 6 }}>
+                      {r.tenses.map((t) => {
+                        const convoLocked = r.level !== "Beginner" && !isPro && purchasesAvailable();
+                        return (
+                          <View key={t.timeFrame} style={styles.tenseRow}>
+                            <Text style={[styles.tenseIcon, t.complete ? { color: "#5BD48F" } : t.done > 0 ? { color: "#9DB4F5" } : { color: "#5A6390" }]}>
+                              {t.complete ? "✓" : t.done > 0 ? "●" : "○"}
+                            </Text>
+                            <Text style={[styles.tenseName, !t.complete && t.done === 0 && { color: "#8A93A0" }]}>{t.label}</Text>
+                            <Text style={styles.tenseUnits}>{t.done}/{t.total}</Text>
+                            {t.complete && t.hasConversation && (
+                              <Pressable hitSlop={8} accessibilityRole="button"
+                                accessibilityLabel={`${t.label} conversation${t.conversationDone ? ", done" : ""}${convoLocked ? ", requires Pluri Pro" : ""}`}
+                                onPress={() => router.push(convoLocked ? "/paywall" as any : { pathname: "/conversation" as any,
+                                  params: { level: r.level, timeFrame: t.timeFrame, verb: "*", mode: "tense" } })}
+                                style={[styles.convoPill, t.conversationDone && styles.convoPillDone]}>
+                                <Text style={styles.convoPillText}>💬 {t.conversationDone ? "✓" : "Talk"}</Text>
+                              </Pressable>
+                            )}
+                            {t.examPassed && <Text style={styles.examTick}>🎓✓</Text>}
+                          </View>
+                        );
+                      })}
+                      <Text style={styles.examLine}>
+                        🎓 Final Level Exams {r.examsPassed}/{r.examsTotal}
+                        {r.cefr ? `  ·  🏅 CEFR-style ${r.cefr} ${r.cefrEarned ? "earned" : r.examsTotal > 0 && r.examsPassed === r.examsTotal ? "unlocked" : "locked"}` : ""}
+                      </Text>
+                    </View>
+                  )}
+                </View>
+              </View>
+            );
+          })}
+        </View>
 
         <View style={styles.statsRow}>
           <View style={styles.stat}><Text style={styles.statNum}>{s?.quizzes ?? 0}</Text><Text style={styles.statSub}>quizzes taken</Text></View>
@@ -241,4 +267,30 @@ const styles = StyleSheet.create({
   statNum: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   statSub: { fontSize: 10, color: "#B9CBFA" },
   levelSub: { fontSize: 11, color: "#8A93A0", marginTop: 6 },
+  waiting: { flexDirection: "row", alignItems: "center", backgroundColor: "rgba(245,197,24,0.14)", borderWidth: 1,
+    borderColor: "#F5C518", borderRadius: 12, paddingVertical: 10, paddingHorizontal: 12, marginBottom: 12 },
+  waitingText: { flex: 1, color: "#F5C518", fontSize: 13, fontWeight: "700" },
+  waitingGo: { color: "#F5C518", fontSize: 13, fontWeight: "800" },
+  stop: { flexDirection: "row", gap: 10 },
+  rail: { width: 22, alignItems: "center" },
+  node: { width: 22, height: 22, borderRadius: 11, alignItems: "center", justifyContent: "center", borderWidth: 2 },
+  nodeDone: { backgroundColor: "#5BD48F", borderColor: "#5BD48F" },
+  nodeHere: { backgroundColor: "#4A78F2", borderColor: "#B9CBFA" },
+  nodeTodo: { backgroundColor: "transparent", borderColor: "#5A6390" },
+  railLine: { flex: 1, width: 2, backgroundColor: "rgba(255,255,255,0.15)", marginVertical: 2 },
+  railDone: { backgroundColor: "#5BD48F" },
+  stopHead: { flexDirection: "row", alignItems: "center", gap: 8, minHeight: 22 },
+  stopTitle: { color: "#F5F6F8", fontSize: 15, fontWeight: "800" },
+  stopSub: { color: "#A7B0BD", fontSize: 12, marginTop: 2 },
+  here: { backgroundColor: "#4A78F2", borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },
+  hereText: { color: "#FFFFFF", fontSize: 9, fontWeight: "900", letterSpacing: 0.5 },
+  tenseRow: { flexDirection: "row", alignItems: "center", gap: 8, minHeight: 26 },
+  tenseIcon: { width: 14, fontSize: 13, fontWeight: "900", textAlign: "center" },
+  tenseName: { flex: 1, color: "#E2E8F0", fontSize: 13, fontWeight: "600" },
+  tenseUnits: { color: "#A7B0BD", fontSize: 12, fontVariant: ["tabular-nums"] },
+  convoPill: { backgroundColor: "#4A78F2", borderRadius: 999, paddingHorizontal: 8, paddingVertical: 3 },
+  convoPillDone: { backgroundColor: "rgba(91,212,143,0.25)" },
+  convoPillText: { color: "#FFFFFF", fontSize: 11, fontWeight: "800" },
+  examTick: { fontSize: 11 },
+  examLine: { color: "#B9CBFA", fontSize: 12, marginTop: 4 },
 });
