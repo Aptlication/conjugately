@@ -187,7 +187,7 @@ export default function MastersMic(props: {
           // Being ready is said by the flash, not by the colour arriving.
           submitState={ready ? (reduceMotion ? "on" : "flashing") : "on"}
           onPress={submit}
-          // Also during the 1.5 s Record keeps listening after it is let go.
+          // Also during the 2.5 s Record keeps listening after it is let go.
           disabled={!ready && !tail}
           hint="Submit this answer for marking"
         />

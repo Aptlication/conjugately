@@ -61,7 +61,7 @@ const VOLUME_INTERVAL_MS = 50;
  * Keep listening this long after Record is let go (Jonathan, 30 Oct 2026):
  * learners let go while still finding the next word. Enter works during it.
  */
-export const LISTEN_TAIL_MS = 1500;
+export const LISTEN_TAIL_MS = 2500;
 
 export function useMastersMic(opts: {
   expected: string | string[];
@@ -98,7 +98,7 @@ export function useMastersMic(opts: {
    * The control is remounted per question, so this starts empty each time.
    */
   const ruledOutRef = useRef<Set<number>>(new Set());
-  // The 1.5 s after Record is let go: still listening, and Enter may be pressed.
+  // The 2.5 s after Record is let go: still listening, and Enter may be pressed.
   const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [tail, setTail] = useState(false);
   // Enter pressed during the tail: submit as soon as the final words arrive.
@@ -361,7 +361,7 @@ export function useMastersMic(opts: {
   });
 
   const submit = useCallback(() => {
-    // Enter during the 1.5 s tail: stop now and mark the words as soon as the
+    // Enter during the 2.5 s tail: stop now and mark the words as soon as the
     // final result comes in.
     if (activeRef.current) {
       pendingSubmitRef.current = true;
