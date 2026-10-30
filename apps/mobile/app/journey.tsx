@@ -9,6 +9,7 @@ import { CEFR_IDS } from "@shared/cefrTests";
 import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
 import CefrBadge from "../components/CefrBadge";
+import { switchedOffReminders, turnReminderBackOn } from "../lib/reminders";
 
 /** 1.3: the "Rate Pluri French" button opens the App Store's write-a-review page. */
 const APP_STORE_ID = "6799402337";
@@ -27,11 +28,13 @@ function tempColors(pct: number): string[] {
 export default function Journey() {
   const [s, setS] = useState<JourneySummary | null>(null);
   const [cefr, setCefr] = useState<CefrResult[]>([]);
+  const [hidden, setHidden] = useState<{ key: string; label: string }[]>([]);
 
   useFocusEffect(useCallback(() => {
     let on = true;
     getJourneySummary().then((x) => { if (on) setS(x); });
     readCefrResults().then((r) => { if (on) setCefr(r); });
+    switchedOffReminders().then((r) => { if (on) setHidden(r); });
     return () => { on = false; };
   }, []));
 
@@ -151,6 +154,23 @@ export default function Journey() {
         <Pressable style={styles.rate} onPress={openReviewPage} accessibilityRole="link" accessibilityHint="Opens the App Store">
           <Text style={styles.rateText}>⭐ Enjoying Pluri French? Rate it on the App Store</Text>
         </Pressable>
+
+        {/* 30 Oct 2026: pop-ups switched off with "Don't remind me again",
+            one quiet line each, so they can be turned back on. */}
+        {hidden.length > 0 && (
+          <View style={styles.hidden}>
+            <Text style={styles.hiddenLabel}>Hidden pop-ups</Text>
+            {hidden.map((r) => (
+              <View key={r.key} style={styles.hiddenRow}>
+                <Text style={styles.hiddenText} numberOfLines={1}>{r.label}</Text>
+                <Pressable hitSlop={10} accessibilityRole="button" accessibilityLabel={`Show ${r.label} again`}
+                  onPress={async () => { await turnReminderBackOn(r.key); setHidden((h) => h.filter((x) => x.key !== r.key)); }}>
+                  <Text style={styles.hiddenBtn}>↺ Show again</Text>
+                </Pressable>
+              </View>
+            ))}
+          </View>
+        )}
       </ScrollView>
       <NavBar variant="dark" active="journey" />
     </View>
@@ -188,6 +208,11 @@ const styles = StyleSheet.create({
   badgeCol: { alignItems: "center", gap: 4 },
   rate: { marginTop: 4, marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", paddingVertical: 14, alignItems: "center" },
   rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700", textAlign: "center", paddingHorizontal: 12 },
+  hidden: { marginTop: 4, marginBottom: 12, paddingHorizontal: 4, gap: 6 },
+  hiddenLabel: { fontSize: 11, fontWeight: "700", color: "#8A93A0", letterSpacing: 0.5 },
+  hiddenRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 10, minHeight: 28 },
+  hiddenText: { flex: 1, fontSize: 12, color: "#A7B0BD" },
+  hiddenBtn: { fontSize: 12, fontWeight: "700", color: "#9DB4F5" },
   stat: { flex: 1, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 12, padding: 10, alignItems: "center" },
   statNum: { fontSize: 18, fontWeight: "800", color: "#FFFFFF" },
   statSub: { fontSize: 10, color: "#B9CBFA" },
