@@ -160,6 +160,16 @@ export default function ConversationScreen() {
   // again after seeing the light-blue guess rules that guess out, so the same
   // mishearing ("vous prenez" for "vous preniez") is not offered twice.
   const ruledOutRef = useRef<Set<number>>(new Set());
+  // 30 Oct 2026: the mic keeps listening 1.5 s after it is let go (learners
+  // let go while still finding the next word), and Enter works during it.
+  const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [tail, setTail] = useState(false);
+  const pendingSubmitRef = useRef(false);
+  const clearTail = () => {
+    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
+    setTail(false);
+  };
+  useEffect(() => () => { if (tailTimerRef.current) clearTimeout(tailTimerRef.current); }, []);
   const [ruledOut, setRuledOut] = useState<number[]>([]);
   // The English cue flips to the French when tapped, so the learner can read it out.
   const [cueOpen, setCueOpen] = useState(false);
@@ -348,10 +358,13 @@ export default function ConversationScreen() {
   useSREvent("result", (e: any) => {
     if (!listeningRef.current) return;
     const text = e.results?.[0]?.transcript ?? "";
-    for (const r of e.results ?? []) if (r?.transcript) heardAllRef.current.add(String(r.transcript));
     setHeard(text);
     if (e.isFinal) {
+      // All of the recogniser's alternatives for the finished reply (not the
+      // half-sentences heard on the way, now that recording is continuous).
+      for (const r of e.results ?? []) if (r?.transcript) heardAllRef.current.add(String(r.transcript));
       listeningRef.current = false;
+      clearTail();
       setLevel01(0);
       setPhase("heard");
     }
@@ -359,6 +372,8 @@ export default function ConversationScreen() {
   useSREvent("error", (e: any) => {
     if (!listeningRef.current) return;
     listeningRef.current = false;
+    clearTail();
+    pendingSubmitRef.current = false;
     setLevel01(0);
     if (e.error === "not-allowed") setNotice("Microphone access is off. Turn it on in Settings › Pluri French.");
     else if (e.error === "no-speech") setNotice("I didn't hear anything. Hold the mic and speak.");
@@ -367,6 +382,8 @@ export default function ConversationScreen() {
   });
 
   const startListening = async () => {
+    // Held again during the 1.5 s tail: carry on with the same reply.
+    if (phase === "listening" && tailTimerRef.current) { clearTail(); return; }
     if (phase !== "yourTurn" && phase !== "heard") return;
     if (!voiceAvailable()) return;
     try {
@@ -395,7 +412,8 @@ export default function ConversationScreen() {
       lang: "fr-FR",
       interimResults: true,
       maxAlternatives: 3,
-      continuous: false,
+      // Continuous (30 Oct 2026): a pause to think no longer ends the reply.
+      continuous: true,
       contextualStrings: options ? [...t.accept, ...options.map((o) => o.text)] : t.accept,
       volumeChangeEventOptions: { enabled: true, intervalMillis: 50 },
       // Keep the loudspeaker: without this iOS routes the next clip to the earpiece.
@@ -415,8 +433,28 @@ export default function ConversationScreen() {
   };
   const stopListening = () => {
     if (!listeningRef.current) return;
-    try { SR.stop(); } catch {}
+    clearTail();
+    setTail(true);
+    tailTimerRef.current = setTimeout(() => {
+      tailTimerRef.current = null;
+      setTail(false);
+      try { SR.stop(); } catch {}
+    }, 1500);
   };
+  /** Enter during the tail: stop now, mark the reply when its final words arrive. */
+  const enterNow = () => {
+    if (tail && listeningRef.current) {
+      pendingSubmitRef.current = true;
+      clearTail();
+      try { SR.stop(); } catch {}
+      return;
+    }
+    submit(false);
+  };
+  useEffect(() => {
+    if (phase === "heard" && pendingSubmitRef.current) { pendingSubmitRef.current = false; submit(false); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, heard]);
 
   const advance = (delay = 700) => {
     setTimeout(() => {
@@ -843,12 +881,12 @@ export default function ConversationScreen() {
               </>
             ) : (
               <>
-                <Pressable onPress={() => submit(false)} disabled={phase !== "heard"}
+                <Pressable onPress={enterNow} disabled={phase !== "heard" && !tail}
                   accessibilityRole="button" accessibilityLabel="Enter"
-                  style={[styles.sideBtn, { backgroundColor: phase === "heard" ? GREEN : "#CFEFDC" }]}>
+                  style={[styles.sideBtn, { backgroundColor: phase === "heard" || tail ? GREEN : "#CFEFDC" }]}>
                   <Ionicons name="return-down-back" size={26} color="#FFFFFF" />
                 </Pressable>
-                <Text style={[styles.sideLabel, phase !== "heard" && { color: "#9AA1BD" }]}>Enter</Text>
+                <Text style={[styles.sideLabel, phase !== "heard" && !tail && { color: "#9AA1BD" }]}>Enter</Text>
               </>
             )}
           </View>

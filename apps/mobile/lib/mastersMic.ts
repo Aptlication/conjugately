@@ -57,6 +57,11 @@ export type MicOutcome = {
 const VOLUME_FLOOR = 0;
 const VOLUME_CEIL = 10;
 const VOLUME_INTERVAL_MS = 50;
+/**
+ * Keep listening this long after Record is let go (Jonathan, 30 Oct 2026):
+ * learners let go while still finding the next word. Enter works during it.
+ */
+export const LISTEN_TAIL_MS = 1500;
 
 export function useMastersMic(opts: {
   expected: string | string[];
@@ -93,6 +98,15 @@ export function useMastersMic(opts: {
    * The control is remounted per question, so this starts empty each time.
    */
   const ruledOutRef = useRef<Set<number>>(new Set());
+  // The 1.5 s after Record is let go: still listening, and Enter may be pressed.
+  const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [tail, setTail] = useState(false);
+  // Enter pressed during the tail: submit as soon as the final words arrive.
+  const pendingSubmitRef = useRef(false);
+  const clearTail = () => {
+    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
+    setTail(false);
+  };
   const [ruledOut, setRuledOut] = useState<number[]>([]);
 
   const setReadingBoth = useCallback((r: MicReading | null) => {
@@ -151,7 +165,9 @@ export function useMastersMic(opts: {
       interimResults: true,
       maxAlternatives: 3,
       contextualStrings: [...forms, ...optionsRef.current],
-      continuous: false,
+      // Continuous (30 Oct 2026): a pause to think no longer ends the
+      // recording; it ends when Record is let go (plus LISTEN_TAIL_MS).
+      continuous: true,
       volumeChangeEventOptions: { enabled: true, intervalMillis: VOLUME_INTERVAL_MS },
     };
 
@@ -183,7 +199,8 @@ export function useMastersMic(opts: {
 
   /** Record button pressed. */
   const startHold = useCallback(() => {
-    if (phase === "listening") return;
+    // Pressed again during the tail: carry on with the same recording.
+    if (phase === "listening") { clearTail(); return; }
     // Recording over a guess = turning it down. Silence turns nothing down.
     const prev = readingRef.current;
     if (phase === "ready" && prev?.usable && prev.optionIndex != null) {
@@ -198,12 +215,21 @@ export function useMastersMic(opts: {
 
   /** Record button released - keep whatever was heard so Enter can act on it. */
   const stopHold = useCallback(() => {
-    try { ExpoSpeechRecognitionModule.stop(); } catch {}
+    if (!activeRef.current) { try { ExpoSpeechRecognitionModule.stop(); } catch {} return; }
+    clearTail();
+    setTail(true);
+    tailTimerRef.current = setTimeout(() => {
+      tailTimerRef.current = null;
+      setTail(false);
+      try { ExpoSpeechRecognitionModule.stop(); } catch {}
+    }, LISTEN_TAIL_MS);
   }, []);
 
   /** Delete: throw everything away and go back to the start of the question. */
   const reset = useCallback(() => {
     activeRef.current = false;
+    clearTail();
+    pendingSubmitRef.current = false;
     ruledOutRef.current = new Set();
     setRuledOut([]);
     try { ExpoSpeechRecognitionModule.abort(); } catch {}
@@ -274,6 +300,28 @@ export function useMastersMic(opts: {
     setLevel(v / VOLUME_CEIL);
   });
 
+  /** Mark what was heard (Enter). */
+  const resolveNow = useCallback(() => {
+    const r = readingRef.current;
+    if (!r) return;
+    activeRef.current = false;
+    setPhase("resolved");
+    setLevel(0);
+    onOutcomeRef.current({
+      correct: r.usable ? r.correct : false,
+      via: !r.usable ? "unheard" : r.correct ? "heard" : "wrong",
+      heard: r.heard,
+      optionIndex: r.optionIndex,
+      match: r.match,
+    });
+  }, []);
+
+  const afterFinal = () => {
+    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
+    setTail(false);
+    if (pendingSubmitRef.current) { pendingSubmitRef.current = false; resolveNow(); }
+  };
+
   useSpeechRecognitionEvent("result", (e) => {
     if (!activeRef.current) return;
     const best = e.results?.[0];
@@ -289,6 +337,7 @@ export function useMastersMic(opts: {
     setLevel(0);
     setReadingBoth(readTranscripts(alts.length ? alts : [{ text, confidence: 1 }]));
     setPhase("ready");
+    afterFinal();
   });
 
   useSpeechRecognitionEvent("error", (e) => {
@@ -298,8 +347,12 @@ export function useMastersMic(opts: {
     if (e.error === "no-speech") {
       setReadingBoth({ heard: "", optionIndex: null, correct: false, usable: false });
       setPhase("ready");
+      afterFinal();
       return;
     }
+    pendingSubmitRef.current = false;
+    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
+    setTail(false);
     if (e.error === "not-allowed") { setPhase("denied"); return; }
     // Anything else is this attempt failing, not the feature being gone: go
     // back to idle so the Record button still works.
@@ -308,23 +361,24 @@ export function useMastersMic(opts: {
   });
 
   const submit = useCallback(() => {
-    const r = readingRef.current;
-    if (!r) return;
-    activeRef.current = false;
-    setPhase("resolved");
-    setLevel(0);
-    onOutcomeRef.current({
-      correct: r.usable ? r.correct : false,
-      via: !r.usable ? "unheard" : r.correct ? "heard" : "wrong",
-      heard: r.heard,
-      optionIndex: r.optionIndex,
-      match: r.match,
-    });
+    // Enter during the 1.5 s tail: stop now and mark the words as soon as the
+    // final result comes in.
+    if (activeRef.current) {
+      pendingSubmitRef.current = true;
+      if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
+      setTail(false);
+      try { ExpoSpeechRecognitionModule.stop(); } catch {}
+      return;
+    }
+    resolveNow();
+  }, [resolveNow]);
+
+  useEffect(() => () => {
+    if (tailTimerRef.current) clearTimeout(tailTimerRef.current);
+    try { ExpoSpeechRecognitionModule.abort(); } catch {}
   }, []);
 
-  useEffect(() => () => { try { ExpoSpeechRecognitionModule.abort(); } catch {} }, []);
-
-  return { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit };
+  return { phase, level, transcript, reading, ruledOut, tail, errorDetail, startHold, stopHold, reset, submit };
 }
 
 export { normaliseFrench };
