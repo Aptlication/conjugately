@@ -17,6 +17,7 @@ import { collectConversationWords } from "../lib/vocab";
 import { maybeAskForReview } from "../lib/reviewPrompt";
 import { countDue, unitKey } from "../lib/vocabCheck";
 import { soundGuideFor } from "../lib/conversationSoundGuides";
+import { LISTEN_TAIL_MS } from "../lib/mastersMic";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
 /**
@@ -160,7 +161,7 @@ export default function ConversationScreen() {
   // again after seeing the light-blue guess rules that guess out, so the same
   // mishearing ("vous prenez" for "vous preniez") is not offered twice.
   const ruledOutRef = useRef<Set<number>>(new Set());
-  // 30 Oct 2026: the mic keeps listening 1.5 s after it is let go (learners
+  // 30 Oct 2026: the mic keeps listening 2.5 s after it is let go (learners
   // let go while still finding the next word), and Enter works during it.
   const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [tail, setTail] = useState(false);
@@ -382,7 +383,7 @@ export default function ConversationScreen() {
   });
 
   const startListening = async () => {
-    // Held again during the 1.5 s tail: carry on with the same reply.
+    // Held again during the 2.5 s tail: carry on with the same reply.
     if (phase === "listening" && tailTimerRef.current) { clearTail(); return; }
     if (phase !== "yourTurn" && phase !== "heard") return;
     if (!voiceAvailable()) return;
@@ -439,7 +440,7 @@ export default function ConversationScreen() {
       tailTimerRef.current = null;
       setTail(false);
       try { SR.stop(); } catch {}
-    }, 1500);
+    }, LISTEN_TAIL_MS);
   };
   /** Enter during the tail: stop now, mark the reply when its final words arrive. */
   const enterNow = () => {
