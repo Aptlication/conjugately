@@ -1151,5 +1151,4890 @@
     "en": "Perfect! Have a nice day at the beach!"
    }
   ]
+ },
+ "Elementary|Present": {
+  "title": "L'anniversaire surprise",
+  "titleEn": "The surprise birthday",
+  "character": "Hugo",
+  "voice": "Maxime - Dynamic and Natural",
+  "scene": "Your friend Hugo is planning a surprise birthday party for Léa and needs your help.",
+  "verbs": [
+   "dire",
+   "voir",
+   "savoir",
+   "vouloir",
+   "venir",
+   "pouvoir",
+   "besoin"
+  ],
+  "newWords": [
+   {
+    "fr": "une fête surprise",
+    "en": "a surprise party"
+   },
+   {
+    "fr": "un gâteau",
+    "en": "a cake"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! C'est Hugo. Sais-tu que c'est bientôt l'anniversaire de Léa ?",
+    "en": "Hi! It's Hugo. Do you know it's Léa's birthday soon?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je sais, c'est samedi !",
+    "en": "Yes, I know, it's on Saturday!",
+    "verb": "savoir",
+    "person": "je",
+    "accept": [
+     "Oui, je sais, c'est samedi !",
+     "Oui, je le sais, c'est samedi !",
+     "Je sais, c'est samedi !",
+     "Oui, je sais."
+    ],
+    "options": [
+     "Oui, j'ai su, c'est samedi !",
+     "Oui, je savons, c'est samedi !",
+     "Oui, je savent, c'est samedi !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Je veux faire une fête surprise pour elle ! Veux-tu m'aider ?",
+    "en": "I want to throw a surprise party for her! Do you want to help me?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je veux t'aider !",
+    "en": "Yes, I want to help you!",
+    "verb": "vouloir",
+    "person": "je",
+    "accept": [
+     "Oui, je veux t'aider !",
+     "Je veux t'aider !",
+     "Oui, je veux bien t'aider !",
+     "Oui, je veux bien !"
+    ],
+    "options": [
+     "Oui, j'ai voulu t'aider !",
+     "Oui, je voulons t'aider !",
+     "Oui, je veulent t'aider !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Merci ! Vois-tu Léa demain ?",
+    "en": "Thanks! Are you seeing Léa tomorrow?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je la vois demain.",
+    "en": "Yes, I'm seeing her tomorrow.",
+    "verb": "voir",
+    "person": "je",
+    "accept": [
+     "Oui, je la vois demain.",
+     "Je la vois demain.",
+     "Oui, je vois Léa demain."
+    ],
+    "options": [
+     "Oui, je l'ai vue demain.",
+     "Oui, je la voyons demain.",
+     "Oui, je la voyez demain."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Attention ! Lui dis-tu toujours tout ?",
+    "en": "Careful! Do you always tell her everything?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne lui dis rien !",
+    "en": "No, I don't tell her anything!",
+    "verb": "dire",
+    "person": "je",
+    "accept": [
+     "Non, je ne lui dis rien !",
+     "Je ne lui dis rien !",
+     "Non, je ne dis rien !"
+    ],
+    "options": [
+     "Non, je ne lui disons rien !",
+     "Non, je ne lui suis rien dit !",
+     "Non, je ne lui dites rien !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Et ton frère, sait-il pour la fête ?",
+    "en": "Perfect! And your brother, does he know about the party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il sait pour la fête.",
+    "en": "Yes, he knows about the party.",
+    "verb": "savoir",
+    "person": "il",
+    "accept": [
+     "Oui, il sait pour la fête.",
+     "Il sait pour la fête.",
+     "Oui, il sait."
+    ],
+    "options": [
+     "Oui, il savent pour la fête.",
+     "Oui, il savons pour la fête.",
+     "Oui, il savez pour la fête."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, viennent-ils à la fête ?",
+    "en": "And your parents, are they coming to the party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils viennent avec nous.",
+    "en": "Yes, they're coming with us.",
+    "verb": "venir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils viennent avec nous.",
+     "Ils viennent avec nous.",
+     "Oui, ils viennent."
+    ],
+    "options": [
+     "Oui, ils sont venus avec nous.",
+     "Oui, ils venons avec nous.",
+     "Oui, ils venez avec nous."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Toi et ta sœur, avez-vous besoin de quelque chose ?",
+    "en": "Great! You and your sister, do you need anything?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons besoin d'un gâteau au chocolat.",
+    "en": "Yes, we need a chocolate cake.",
+    "verb": "besoin",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons besoin d'un gâteau au chocolat.",
+     "Nous avons besoin d'un gâteau au chocolat.",
+     "Oui, nous avons besoin d'un gâteau."
+    ],
+    "options": [
+     "Oui, nous avons eu besoin d'un gâteau au chocolat.",
+     "Oui, nous sommes besoin d'un gâteau au chocolat.",
+     "Oui, nous avez besoin d'un gâteau au chocolat."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Miam ! Et Léa, que veut-elle pour son anniversaire ?",
+    "en": "Yum! And Léa, what does she want for her birthday?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle veut un nouveau vélo !",
+    "en": "She wants a new bike!",
+    "verb": "vouloir",
+    "person": "elle",
+    "accept": [
+     "Elle veut un nouveau vélo !",
+     "Elle veut un nouveau vélo.",
+     "Elle veut un vélo !"
+    ],
+    "options": [
+     "Elle a voulu un nouveau vélo !",
+     "Elle voulons un nouveau vélo !",
+     "Elle veulent un nouveau vélo !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Un vélo ? C'est cher ! Pouvez-vous aider, toi et ta sœur ?",
+    "en": "A bike? That's expensive! Can you and your sister help?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous pouvons aider.",
+    "en": "Yes, we can help.",
+    "verb": "pouvoir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous pouvons aider.",
+     "Nous pouvons aider.",
+     "Oui, nous pouvons t'aider."
+    ],
+    "options": [
+     "Oui, nous avons pu aider.",
+     "Oui, nous peuvent aider.",
+     "Oui, nous pouvez aider."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Merci ! Et ta sœur, voit-elle Léa au travail ?",
+    "en": "Thanks! And your sister, does she see Léa at work?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle la voit tous les jours.",
+    "en": "Yes, she sees her every day.",
+    "verb": "voir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle la voit tous les jours.",
+     "Elle la voit tous les jours.",
+     "Oui, elle voit Léa tous les jours."
+    ],
+    "options": [
+     "Oui, elle l'a vue tous les jours.",
+     "Oui, elle la voyons tous les jours.",
+     "Oui, elle la voyez tous les jours."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh là là ! Et que dis-tu à ta sœur ?",
+    "en": "Oh dear! And what do you say to your sister?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lui dis : « C'est un secret ! »",
+    "en": "I tell her: \"It's a secret!\"",
+    "verb": "dire",
+    "person": "je",
+    "accept": [
+     "Je lui dis : « C'est un secret ! »",
+     "Je lui dis que c'est un secret.",
+     "Je dis : « C'est un secret ! »"
+    ],
+    "options": [
+     "Je lui suis dit : « C'est un secret ! »",
+     "Je lui disons : « C'est un secret ! »",
+     "Je lui dites : « C'est un secret ! »"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien ! Et toi, à quelle heure viens-tu samedi ?",
+    "en": "Very good! And you, what time are you coming on Saturday?"
+   },
+   {
+    "who": "you",
+    "fr": "Je viens à huit heures.",
+    "en": "I'm coming at eight o'clock.",
+    "verb": "venir",
+    "person": "je",
+    "accept": [
+     "Je viens à huit heures.",
+     "Je viens à huit heures samedi.",
+     "Samedi, je viens à huit heures.",
+     "Je viens à vingt heures."
+    ],
+    "options": [
+     "Je suis venu à huit heures.",
+     "Je venons à huit heures.",
+     "Je venez à huit heures."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! As-tu besoin de mon aide ?",
+    "en": "Perfect! Do you need my help?"
+   },
+   {
+    "who": "you",
+    "fr": "Non merci, je n'ai pas besoin d'aide.",
+    "en": "No thanks, I don't need any help.",
+    "verb": "besoin",
+    "person": "je",
+    "accept": [
+     "Non merci, je n'ai pas besoin d'aide.",
+     "Non, je n'ai pas besoin d'aide.",
+     "Je n'ai pas besoin d'aide.",
+     "Non merci, je n'ai pas besoin de ton aide."
+    ],
+    "options": [
+     "Non merci, je n'ai pas eu besoin d'aide.",
+     "Non merci, je ne suis pas besoin d'aide.",
+     "Non merci, je n'avons pas besoin d'aide."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Une dernière question : Léa peut-elle venir samedi soir ?",
+    "en": "One last question: can Léa come on Saturday evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle peut venir, mais elle ne sait rien !",
+    "en": "Yes, she can come, but she doesn't know anything!",
+    "verb": "pouvoir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle peut venir, mais elle ne sait rien !",
+     "Oui, elle peut venir, elle ne sait rien !",
+     "Elle peut venir, mais elle ne sait rien !",
+     "Oui, elle peut venir."
+    ],
+    "options": [
+     "Oui, elle a pu venir, mais elle ne sait rien !",
+     "Oui, elle pouvons venir, mais elle ne sait rien !",
+     "Oui, elle pouvez venir, mais elle ne sait rien !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Génial ! Chut, c'est un secret ! À samedi !",
+    "en": "Brilliant! Shh, it's a secret! See you Saturday!"
+   }
+  ]
+ },
+ "Elementary|Past": {
+  "title": "La fête de Léa",
+  "titleEn": "Léa's party",
+  "character": "Hugo",
+  "voice": "Maxime - Dynamic and Natural",
+  "scene": "The day after Léa's surprise party, Hugo calls you to talk about what went wrong.",
+  "verbs": [
+   "dire",
+   "voir",
+   "savoir",
+   "vouloir",
+   "venir",
+   "pouvoir",
+   "besoin"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! Alors, es-tu venu tôt à la fête hier ?",
+    "en": "Hi! So, did you come to the party early yesterday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je suis venu tôt.",
+    "en": "Yes, I came early.",
+    "verb": "venir",
+    "person": "je",
+    "accept": [
+     "Oui, je suis venu tôt.",
+     "Oui, je suis venue tôt.",
+     "Je suis venu tôt.",
+     "Je suis venue tôt."
+    ],
+    "options": [
+     "Oui, j'ai venu tôt.",
+     "Oui, je viendrai tôt.",
+     "Oui, je viens tôt."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "As-tu vu Léa arriver ?",
+    "en": "Did you see Léa arrive?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai vu Léa arriver.",
+    "en": "Yes, I saw Léa arrive.",
+    "verb": "voir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai vu Léa arriver.",
+     "Oui, je l'ai vue arriver.",
+     "J'ai vu Léa arriver.",
+     "Oui, je l'ai vue."
+    ],
+    "options": [
+     "Oui, je suis vu Léa arriver.",
+     "Oui, je verrai Léa arriver.",
+     "Oui, j'avons vu Léa arriver."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et qu'as-tu dit à Léa ?",
+    "en": "And what did you say to Léa?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lui ai dit : « Surprise ! »",
+    "en": "I said to her: \"Surprise!\"",
+    "verb": "dire",
+    "person": "je",
+    "accept": [
+     "Je lui ai dit : « Surprise ! »",
+     "J'ai dit : « Surprise ! »",
+     "Je lui ai dit surprise."
+    ],
+    "options": [
+     "Je lui suis dit : « Surprise ! »",
+     "Je lui dirai : « Surprise ! »",
+     "Je lui avons dit : « Surprise ! »"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Mais Léa n'a pas été surprise ! A-t-elle su pour la fête ?",
+    "en": "But Léa wasn't surprised! Did she find out about the party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle a su pour la fête.",
+    "en": "Yes, she found out about the party.",
+    "verb": "savoir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle a su pour la fête.",
+     "Elle a su pour la fête.",
+     "Oui, elle a su."
+    ],
+    "options": [
+     "Oui, elle est su pour la fête.",
+     "Oui, elle saura pour la fête.",
+     "Oui, elle avons su pour la fête."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh non ! Qui le lui a dit ? Ton frère ?",
+    "en": "Oh no! Who told her? Your brother?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il lui a dit le secret.",
+    "en": "Yes, he told her the secret.",
+    "verb": "dire",
+    "person": "il",
+    "accept": [
+     "Oui, il lui a dit le secret.",
+     "Oui, il lui a dit.",
+     "Il lui a dit le secret.",
+     "Oui, mon frère lui a dit le secret."
+    ],
+    "options": [
+     "Oui, il lui est dit le secret.",
+     "Oui, il lui dira le secret.",
+     "Oui, il lui avons dit le secret."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Pourquoi a-t-il fait ça ?",
+    "en": "Why did he do that?"
+   },
+   {
+    "who": "you",
+    "fr": "Il a voulu être gentil.",
+    "en": "He wanted to be nice.",
+    "verb": "vouloir",
+    "person": "il",
+    "accept": [
+     "Il a voulu être gentil.",
+     "Il a voulu être gentil avec elle.",
+     "Parce qu'il a voulu être gentil."
+    ],
+    "options": [
+     "Il est voulu être gentil.",
+     "Il voudra être gentil.",
+     "Il avons voulu être gentil."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, sont-ils venus ?",
+    "en": "And your parents, did they come?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils ne sont pas venus.",
+    "en": "No, they didn't come.",
+    "verb": "venir",
+    "person": "ils",
+    "accept": [
+     "Non, ils ne sont pas venus.",
+     "Ils ne sont pas venus.",
+     "Non, ils ne sont pas venus à la fête."
+    ],
+    "options": [
+     "Non, ils n'ont pas venu.",
+     "Non, ils ne viendront pas.",
+     "Non, ils ne sommes pas venus."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah bon ? Ont-ils eu un problème ?",
+    "en": "Really? Did they have a problem?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils n'ont pas pu prendre le train.",
+    "en": "Yes, they couldn't take the train.",
+    "verb": "pouvoir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils n'ont pas pu prendre le train.",
+     "Ils n'ont pas pu prendre le train.",
+     "Oui, ils n'ont pas pu prendre leur train."
+    ],
+    "options": [
+     "Oui, ils ne sont pas pu prendre le train.",
+     "Oui, ils ne pourront pas prendre le train.",
+     "Oui, ils n'avons pas pu prendre le train."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage ! Et toi et ta sœur, avez-vous eu besoin d'aide pour le gâteau ?",
+    "en": "Shame! And you and your sister, did you need help with the cake?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons eu besoin d'aide.",
+    "en": "Yes, we needed help.",
+    "verb": "besoin",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons eu besoin d'aide.",
+     "Nous avons eu besoin d'aide.",
+     "Oui, nous avons eu besoin d'aide pour le gâteau."
+    ],
+    "options": [
+     "Oui, nous sommes eu besoin d'aide.",
+     "Oui, nous aurons besoin d'aide.",
+     "Oui, nous ont eu besoin d'aide."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Mais avez-vous pu finir le gâteau ?",
+    "en": "But were you able to finish the cake?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons pu finir le gâteau.",
+    "en": "Yes, we were able to finish the cake.",
+    "verb": "pouvoir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons pu finir le gâteau.",
+     "Nous avons pu finir le gâteau.",
+     "Oui, nous avons pu le finir.",
+     "Oui, nous avons pu finir."
+    ],
+    "options": [
+     "Oui, nous sommes pu finir le gâteau.",
+     "Oui, nous pourrons finir le gâteau.",
+     "Oui, nous ont pu finir le gâteau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Et Léa, qu'a-t-elle voulu faire après ?",
+    "en": "Well done! And Léa, what did she want to do afterwards?"
+   },
+   {
+    "who": "you",
+    "fr": "Elle a voulu manger tout le gâteau !",
+    "en": "She wanted to eat the whole cake!",
+    "verb": "vouloir",
+    "person": "elle",
+    "accept": [
+     "Elle a voulu manger tout le gâteau !",
+     "Elle a voulu manger le gâteau !",
+     "Elle a voulu manger tout le gâteau."
+    ],
+    "options": [
+     "Elle est voulu manger tout le gâteau !",
+     "Elle voudra manger tout le gâteau !",
+     "Elle avons voulu manger tout le gâteau !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Et toi, as-tu eu besoin de repos après la fête ?",
+    "en": "Ha ha! And you, did you need some rest after the party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai eu besoin de repos !",
+    "en": "Yes, I needed some rest!",
+    "verb": "besoin",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai eu besoin de repos !",
+     "J'ai eu besoin de repos.",
+     "Oui, j'ai eu besoin de repos après la fête."
+    ],
+    "options": [
+     "Oui, je suis eu besoin de repos !",
+     "Oui, j'aurai besoin de repos !",
+     "Oui, j'avons eu besoin de repos !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, l'as-tu vu ce matin ?",
+    "en": "And your brother, did you see him this morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je l'ai vu ce matin.",
+    "en": "Yes, I saw him this morning.",
+    "verb": "voir",
+    "person": "je",
+    "accept": [
+     "Oui, je l'ai vu ce matin.",
+     "Je l'ai vu ce matin.",
+     "Oui, je l'ai vu."
+    ],
+    "options": [
+     "Oui, je le suis vu ce matin.",
+     "Oui, je l'ont vu ce matin.",
+     "Oui, je l'avons vu ce matin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et maintenant, que veut-il ?",
+    "en": "And now, what does he want?"
+   },
+   {
+    "who": "you",
+    "fr": "Il veut voir Léa.",
+    "en": "He wants to see Léa.",
+    "verb": "vouloir",
+    "person": "il",
+    "callback": "Present",
+    "accept": [
+     "Il veut voir Léa.",
+     "Maintenant, il veut voir Léa.",
+     "Il veut voir Léa maintenant."
+    ],
+    "options": [
+     "Il a voulu voir Léa.",
+     "Il voudra voir Léa.",
+     "Il voulons voir Léa."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, ce matin, as-tu su quoi lui dire ?",
+    "en": "And you, this morning, did you know what to say to him?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'ai pas su quoi lui dire !",
+    "en": "No, I didn't know what to say to him!",
+    "verb": "savoir",
+    "person": "je",
+    "accept": [
+     "Non, je n'ai pas su quoi lui dire !",
+     "Je n'ai pas su quoi lui dire.",
+     "Non, je n'ai pas su quoi dire !"
+    ],
+    "options": [
+     "Non, je ne suis pas su quoi lui dire !",
+     "Non, je ne saurai pas quoi lui dire !",
+     "Non, je n'avons pas su quoi lui dire !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton pauvre frère ! La prochaine fois, pas de secret ! À bientôt !",
+    "en": "Your poor brother! Next time, no secrets! See you soon!"
+   }
+  ]
+ },
+ "Elementary|Future": {
+  "title": "Le festival de musique",
+  "titleEn": "The music festival",
+  "character": "Hugo",
+  "voice": "Maxime - Dynamic and Natural",
+  "scene": "Hugo wants you to come with him to a music festival next summer.",
+  "verbs": [
+   "dire",
+   "voir",
+   "savoir",
+   "vouloir",
+   "venir",
+   "pouvoir",
+   "besoin"
+  ],
+  "newWords": [
+   {
+    "fr": "un festival",
+    "en": "a festival"
+   },
+   {
+    "fr": "une tente",
+    "en": "a tent"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! L'été prochain, je vais à un festival de musique. Viendras-tu avec moi ?",
+    "en": "Hi! Next summer, I'm going to a music festival. Will you come with me?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je viendrai avec toi !",
+    "en": "Yes, I'll come with you!",
+    "verb": "venir",
+    "person": "je",
+    "accept": [
+     "Oui, je viendrai avec toi !",
+     "Je viendrai avec toi !",
+     "Oui, je viendrai !"
+    ],
+    "options": [
+     "Oui, je suis venu avec toi !",
+     "Oui, je viendra avec toi !",
+     "Oui, je viendront avec toi !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Pourras-tu prendre une semaine de vacances ?",
+    "en": "Great! Will you be able to take a week's holiday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je pourrai prendre une semaine.",
+    "en": "Yes, I'll be able to take a week.",
+    "verb": "pouvoir",
+    "person": "je",
+    "accept": [
+     "Oui, je pourrai prendre une semaine.",
+     "Je pourrai prendre une semaine.",
+     "Oui, je pourrai prendre une semaine de vacances."
+    ],
+    "options": [
+     "Oui, j'ai pu prendre une semaine.",
+     "Oui, je pourra prendre une semaine.",
+     "Oui, je pourront prendre une semaine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Que voudras-tu voir au festival ?",
+    "en": "What will you want to see at the festival?"
+   },
+   {
+    "who": "you",
+    "fr": "Je voudrai voir beaucoup de concerts.",
+    "en": "I'll want to see lots of concerts.",
+    "verb": "vouloir",
+    "person": "je",
+    "accept": [
+     "Je voudrai voir beaucoup de concerts.",
+     "Je voudrai voir des concerts.",
+     "Je voudrai voir beaucoup de concerts !"
+    ],
+    "options": [
+     "J'ai voulu voir beaucoup de concerts.",
+     "Je voudra voir beaucoup de concerts.",
+     "Je voudront voir beaucoup de concerts."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi ! Et ton frère, viendra-t-il ?",
+    "en": "Me too! And your brother, will he come?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne viendra pas.",
+    "en": "No, he won't come.",
+    "verb": "venir",
+    "person": "il",
+    "accept": [
+     "Non, il ne viendra pas.",
+     "Il ne viendra pas.",
+     "Non, il ne viendra pas avec nous."
+    ],
+    "options": [
+     "Non, il n'est pas venu.",
+     "Non, il ne viendrons pas.",
+     "Non, il ne viendrez pas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage ! Et tes parents, que diront-ils ?",
+    "en": "Shame! And your parents, what will they say?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils diront : « Bonne idée ! »",
+    "en": "They'll say: \"Good idea!\"",
+    "verb": "dire",
+    "person": "ils",
+    "accept": [
+     "Ils diront : « Bonne idée ! »",
+     "Ils diront que c'est une bonne idée.",
+     "Ils diront bonne idée."
+    ],
+    "options": [
+     "Ils ont dit : « Bonne idée ! »",
+     "Ils dira : « Bonne idée ! »",
+     "Ils direz : « Bonne idée ! »"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Aurons-nous besoin d'une tente ?",
+    "en": "Ha ha! Will we need a tent?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous aurons besoin d'une tente.",
+    "en": "Yes, we'll need a tent.",
+    "verb": "besoin",
+    "person": "nous",
+    "accept": [
+     "Oui, nous aurons besoin d'une tente.",
+     "Nous aurons besoin d'une tente.",
+     "Oui, nous en aurons besoin."
+    ],
+    "options": [
+     "Oui, nous avons eu besoin d'une tente.",
+     "Oui, nous aura besoin d'une tente.",
+     "Oui, nous aurez besoin d'une tente."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et sauras-tu trouver le chemin ?",
+    "en": "And will you know how to find the way?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je saurai trouver le chemin.",
+    "en": "Yes, I'll know how to find the way.",
+    "verb": "savoir",
+    "person": "je",
+    "accept": [
+     "Oui, je saurai trouver le chemin.",
+     "Je saurai trouver le chemin.",
+     "Oui, je saurai le trouver."
+    ],
+    "options": [
+     "Oui, j'ai su trouver le chemin.",
+     "Oui, je saura trouver le chemin.",
+     "Oui, je sauront trouver le chemin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Ta sœur et toi, pourrez-vous rester toute la semaine ?",
+    "en": "Perfect! Will you and your sister be able to stay the whole week?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous pourrons rester toute la semaine.",
+    "en": "Yes, we'll be able to stay the whole week.",
+    "verb": "pouvoir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous pourrons rester toute la semaine.",
+     "Nous pourrons rester toute la semaine.",
+     "Oui, nous pourrons rester."
+    ],
+    "options": [
+     "Oui, nous avons pu rester toute la semaine.",
+     "Oui, nous pourra rester toute la semaine.",
+     "Oui, nous pourrez rester toute la semaine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Génial ! Verrons-nous les étoiles la nuit ?",
+    "en": "Brilliant! Will we see the stars at night?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous verrons les étoiles !",
+    "en": "Yes, we'll see the stars!",
+    "verb": "voir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous verrons les étoiles !",
+     "Nous verrons les étoiles !",
+     "Oui, nous verrons les étoiles la nuit."
+    ],
+    "options": [
+     "Oui, nous avons vu les étoiles !",
+     "Oui, nous verra les étoiles !",
+     "Oui, nous verrez les étoiles !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Au fait, as-tu déjà dit à Léa pour le festival ?",
+    "en": "By the way, have you already told Léa about the festival?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je lui ai dit hier.",
+    "en": "Yes, I told her yesterday.",
+    "verb": "dire",
+    "person": "je",
+    "callback": "Past",
+    "accept": [
+     "Oui, je lui ai dit hier.",
+     "Oui, je lui ai déjà dit.",
+     "Je lui ai dit hier.",
+     "Oui, je le lui ai dit hier."
+    ],
+    "options": [
+     "Oui, je lui suis dit hier.",
+     "Oui, je lui dirai hier.",
+     "Oui, je lui avons dit hier."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et voudra-t-elle venir ?",
+    "en": "And will she want to come?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle voudra venir avec nous.",
+    "en": "Yes, she'll want to come with us.",
+    "verb": "vouloir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle voudra venir avec nous.",
+     "Elle voudra venir avec nous.",
+     "Oui, elle voudra venir."
+    ],
+    "options": [
+     "Oui, elle a voulu venir avec nous.",
+     "Oui, elle voudrons venir avec nous.",
+     "Oui, elle voudrez venir avec nous."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Et toi, auras-tu besoin d'argent ?",
+    "en": "Great! And you, will you need money?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'aurai besoin de beaucoup d'argent !",
+    "en": "Yes, I'll need lots of money!",
+    "verb": "besoin",
+    "person": "je",
+    "accept": [
+     "Oui, j'aurai besoin de beaucoup d'argent !",
+     "J'aurai besoin de beaucoup d'argent.",
+     "Oui, j'aurai besoin d'argent."
+    ],
+    "options": [
+     "Oui, j'ai eu besoin de beaucoup d'argent !",
+     "Oui, j'aura besoin de beaucoup d'argent !",
+     "Oui, j'auront besoin de beaucoup d'argent !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Et tes parents, sauront-ils où tu seras ?",
+    "en": "Ha ha! And your parents, will they know where you will be?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils sauront où je serai.",
+    "en": "Yes, they'll know where I'll be.",
+    "verb": "savoir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils sauront où je serai.",
+     "Ils sauront où je serai.",
+     "Oui, ils le sauront."
+    ],
+    "options": [
+     "Oui, ils ont su où je serai.",
+     "Oui, ils saura où je serai.",
+     "Oui, ils saurez où je serai."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien ! Verras-tu Léa avant l'été ?",
+    "en": "Very good! Will you see Léa before the summer?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je la verrai bientôt.",
+    "en": "Yes, I'll see her soon.",
+    "verb": "voir",
+    "person": "je",
+    "accept": [
+     "Oui, je la verrai bientôt.",
+     "Je la verrai bientôt.",
+     "Oui, je verrai Léa bientôt."
+    ],
+    "options": [
+     "Oui, je l'ai vue bientôt.",
+     "Oui, je la verra bientôt.",
+     "Oui, je la verront bientôt."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Et la date du festival, quand la sauras-tu ?",
+    "en": "Perfect! And the festival date, when will you know it?"
+   },
+   {
+    "who": "you",
+    "fr": "Je te dirai quand je saurai la date !",
+    "en": "I'll tell you when I know the date!",
+    "verb": "dire",
+    "person": "je",
+    "accept": [
+     "Je te dirai quand je saurai la date !",
+     "Je te le dirai quand je saurai la date !",
+     "Je te dirai quand je saurai."
+    ],
+    "options": [
+     "Je t'ai dit quand je saurai la date !",
+     "Je te dira quand je saurai la date !",
+     "Je te diront quand je saurai la date !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Merci ! Ce sera un été génial ! À bientôt !",
+    "en": "Thanks! It'll be a brilliant summer! See you soon!"
+   }
+  ]
+ },
+ "Intermediate A|Present": {
+  "title": "Le nouvel appartement",
+  "titleEn": "The new flat",
+  "character": "Julien",
+  "voice": "David Vautrin - Tech Narrator",
+  "scene": "Your friend Julien comes round to see your new flat and help you settle in.",
+  "verbs": [
+   "mettre",
+   "trouver",
+   "croire",
+   "parler",
+   "prendre",
+   "lire",
+   "écrire",
+   "ouvrir",
+   "fermer",
+   "perdre",
+   "garder"
+  ],
+  "newWords": [
+   {
+    "fr": "derrière moi",
+    "en": "behind me"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! Te voilà chez toi ! Alors, comment trouves-tu ton nouvel appartement ?",
+    "en": "Hi! Here you are in your own place! So, how do you find your new flat?"
+   },
+   {
+    "who": "you",
+    "fr": "Je le trouve très joli.",
+    "en": "I find it very pretty.",
+    "verb": "trouver",
+    "person": "je",
+    "accept": [
+     "Je le trouve très joli.",
+     "Je le trouve joli.",
+     "Oui, je le trouve très joli."
+    ],
+    "options": [
+     "Je le trouvons très joli.",
+     "Je le trouverai très joli.",
+     "Je le trouvez très joli."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi ! Mais il fait chaud ici. Ouvres-tu la fenêtre ?",
+    "en": "Me too! But it's hot in here. Will you open the window?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ouvre la fenêtre.",
+    "en": "Yes, I'll open the window.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ouvre la fenêtre.",
+     "J'ouvre la fenêtre.",
+     "Oui, j'ouvre la fenêtre tout de suite."
+    ],
+    "options": [
+     "Oui, j'ouvrons la fenêtre.",
+     "Oui, j'ouvrais la fenêtre.",
+     "Oui, j'ouvrez la fenêtre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah, ça fait du bien ! Et tes clés, où les mets-tu ?",
+    "en": "Ah, that's better! And your keys, where do you put them?"
+   },
+   {
+    "who": "you",
+    "fr": "Je les mets sur la table.",
+    "en": "I put them on the table.",
+    "verb": "mettre",
+    "person": "je",
+    "accept": [
+     "Je les mets sur la table.",
+     "Je mets mes clés sur la table.",
+     "Je mets les clés sur la table."
+    ],
+    "options": [
+     "Je les mettons sur la table.",
+     "Je les mettez sur la table.",
+     "Je les mettais sur la table."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bonne idée. Perds-tu encore tes clés tout le temps ?",
+    "en": "Good idea. Do you still lose your keys all the time?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne perds plus mes clés.",
+    "en": "No, I don't lose my keys any more.",
+    "verb": "perdre",
+    "person": "je",
+    "accept": [
+     "Non, je ne perds plus mes clés.",
+     "Non, je ne les perds plus.",
+     "Je ne perds plus mes clés."
+    ],
+    "options": [
+     "Non, je ne perdons plus mes clés.",
+     "Non, je ne perdez plus mes clés.",
+     "Non, je ne perdais plus mes clés."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Et ta sœur, qui habite avec toi, prend-elle la petite chambre ?",
+    "en": "Well done! And your sister, who lives with you, is she taking the small bedroom?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle prend la petite chambre.",
+    "en": "Yes, she's taking the small bedroom.",
+    "verb": "prendre",
+    "person": "elle",
+    "accept": [
+     "Oui, elle prend la petite chambre.",
+     "Elle prend la petite chambre.",
+     "Oui, elle la prend."
+    ],
+    "options": [
+     "Oui, elle prenons la petite chambre.",
+     "Oui, elle prenez la petite chambre.",
+     "Oui, elle prenait la petite chambre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, comment trouvent-ils l'appartement ?",
+    "en": "And your parents, what do they think of the flat?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils le trouvent un peu petit.",
+    "en": "They find it a bit small.",
+    "verb": "trouver",
+    "person": "ils",
+    "accept": [
+     "Ils le trouvent un peu petit.",
+     "Ils trouvent l'appartement un peu petit.",
+     "Ils le trouvent petit."
+    ],
+    "options": [
+     "Ils le trouvons un peu petit.",
+     "Ils le trouvez un peu petit.",
+     "Ils le trouveront un peu petit."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah, les parents ! Tiens, voici le contrat. Le lis-tu maintenant ?",
+    "en": "Ah, parents! Here, this is the contract. Are you reading it now?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je lis le contrat maintenant.",
+    "en": "Yes, I'm reading the contract now.",
+    "verb": "lire",
+    "person": "je",
+    "accept": [
+     "Oui, je lis le contrat maintenant.",
+     "Oui, je le lis maintenant.",
+     "Je lis le contrat maintenant."
+    ],
+    "options": [
+     "Oui, je lisons le contrat maintenant.",
+     "Oui, je lisez le contrat maintenant.",
+     "Oui, je lisais le contrat maintenant."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton nom, l'écris-tu sur le contrat ?",
+    "en": "And your name, are you writing it on the contract?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'écris mon nom sur le contrat.",
+    "en": "Yes, I'm writing my name on the contract.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Oui, j'écris mon nom sur le contrat.",
+     "Oui, je l'écris sur le contrat.",
+     "J'écris mon nom sur le contrat."
+    ],
+    "options": [
+     "Oui, j'écrivons mon nom sur le contrat.",
+     "Oui, j'écrivez mon nom sur le contrat.",
+     "Oui, j'écrivais mon nom sur le contrat."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Voilà, c'est signé ! Brr, il fait froid maintenant. Fermes-tu la fenêtre ?",
+    "en": "There, it's signed! Brr, it's cold now. Will you close the window?",
+    "break": true
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je ferme la fenêtre.",
+    "en": "Yes, I'll close the window.",
+    "verb": "fermer",
+    "person": "je",
+    "accept": [
+     "Oui, je ferme la fenêtre.",
+     "Je ferme la fenêtre.",
+     "Oui, je la ferme."
+    ],
+    "options": [
+     "Oui, je fermons la fenêtre.",
+     "Oui, je fermez la fenêtre.",
+     "Oui, je fermais la fenêtre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Merci ! Ta sœur et toi, gardez-vous les vieux meubles du propriétaire ?",
+    "en": "Thanks! Are you and your sister keeping the landlord's old furniture?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous gardons les vieux meubles.",
+    "en": "Yes, we're keeping the old furniture.",
+    "verb": "garder",
+    "person": "nous",
+    "accept": [
+     "Oui, nous gardons les vieux meubles.",
+     "Oui, nous les gardons.",
+     "Nous gardons les vieux meubles."
+    ],
+    "options": [
+     "Oui, nous gardez les vieux meubles.",
+     "Oui, nous gardent les vieux meubles.",
+     "Oui, nous gardions les vieux meubles."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "D'accord ! Et vos livres, où les mettez-vous ?",
+    "en": "Good idea! And your books, where are you putting them?"
+   },
+   {
+    "who": "you",
+    "fr": "Nous les mettons sur l'étagère.",
+    "en": "We're putting them on the shelf.",
+    "verb": "mettre",
+    "person": "nous",
+    "accept": [
+     "Nous les mettons sur l'étagère.",
+     "Nous mettons les livres sur l'étagère.",
+     "Nous mettons nos livres sur l'étagère."
+    ],
+    "options": [
+     "Nous les mettez sur l'étagère.",
+     "Nous les mettent sur l'étagère.",
+     "Nous les mettions sur l'étagère."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien. Et tes voisins, parlent-ils anglais ?",
+    "en": "Very good. And your neighbours, do they speak English?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils parlent anglais et français.",
+    "en": "Yes, they speak English and French.",
+    "verb": "parler",
+    "person": "ils",
+    "accept": [
+     "Oui, ils parlent anglais et français.",
+     "Ils parlent anglais et français.",
+     "Oui, ils parlent anglais."
+    ],
+    "options": [
+     "Oui, ils parlons anglais et français.",
+     "Oui, ils parlez anglais et français.",
+     "Oui, ils parleront anglais et français."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Ils disent que la rue est calme. Les crois-tu ?",
+    "en": "Great! They say the street is quiet. Do you believe them?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je les crois.",
+    "en": "Yes, I believe them.",
+    "verb": "croire",
+    "person": "je",
+    "accept": [
+     "Oui, je les crois.",
+     "Je les crois.",
+     "Oui, je les crois !"
+    ],
+    "options": [
+     "Oui, je les croyons.",
+     "Oui, je les croyez.",
+     "Oui, je les croirai."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tant mieux ! Et ta sœur, ouvre-t-elle les valises ?",
+    "en": "All the better! And your sister, is she opening the suitcases?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle ouvre les valises.",
+    "en": "Yes, she's opening the suitcases.",
+    "verb": "ouvrir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle ouvre les valises.",
+     "Elle ouvre les valises.",
+     "Oui, elle les ouvre."
+    ],
+    "options": [
+     "Oui, elle ouvrons les valises.",
+     "Oui, elle ouvrez les valises.",
+     "Oui, elle ouvrait les valises."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bon, j'ai fini ! Je suis fatigué.",
+    "en": "Right, I'm done! I'm tired."
+   },
+   {
+    "who": "you",
+    "fr": "Prends-tu un café avec moi ?",
+    "en": "Will you have a coffee with me?",
+    "verb": "prendre",
+    "person": "tu",
+    "accept": [
+     "Prends-tu un café avec moi ?",
+     "Prends-tu un café ?",
+     "Prends-tu un café avec moi, Julien ?"
+    ],
+    "options": [
+     "Prenons-tu un café avec moi ?",
+     "Prenez-tu un café avec moi ?",
+     "Prenais-tu un café avec moi ?"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Avec plaisir ! … Merci pour le café. Il est tard, je pars. Fermes-tu la porte à clé derrière moi ?",
+    "en": "With pleasure! … Thanks for the coffee. It's late, I'm off. Will you lock the door behind me?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je ferme la porte à clé et je mets les clés sur la table.",
+    "en": "Yes, I'll lock the door and put the keys on the table.",
+    "verb": "fermer",
+    "person": "je",
+    "accept": [
+     "Oui, je ferme la porte à clé et je mets les clés sur la table.",
+     "Je ferme la porte à clé et je mets les clés sur la table.",
+     "Oui, je ferme la porte et je mets les clés sur la table."
+    ],
+    "options": [
+     "Oui, je fermons la porte à clé et je mets les clés sur la table.",
+     "Oui, je fermez la porte à clé et je mets les clés sur la table.",
+     "Oui, je fermais la porte à clé et je mets les clés sur la table."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Bonne première nuit chez toi !",
+    "en": "Perfect! Have a good first night in your new home!"
+   }
+  ]
+ },
+ "Intermediate A|Past": {
+  "title": "Le jour du déménagement",
+  "titleEn": "Moving day",
+  "character": "Julien",
+  "voice": "David Vautrin - Tech Narrator",
+  "scene": "Julien missed moving day and wants to hear everything that happened.",
+  "verbs": [
+   "mettre",
+   "trouver",
+   "croire",
+   "parler",
+   "prendre",
+   "lire",
+   "écrire",
+   "ouvrir",
+   "fermer",
+   "perdre",
+   "garder"
+  ],
+  "newWords": [
+   {
+    "fr": "le déménagement",
+    "en": "the move (moving house)"
+   },
+   {
+    "fr": "un camion",
+    "en": "a van, a truck"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! Je n'ai pas pu venir samedi. Alors, le déménagement ? As-tu pris un camion ?",
+    "en": "Hi! I couldn't come on Saturday. So, how was the move? Did you get a van?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai pris un grand camion.",
+    "en": "Yes, I got a big van.",
+    "verb": "prendre",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai pris un grand camion.",
+     "J'ai pris un grand camion.",
+     "Oui, j'ai pris un camion."
+    ],
+    "options": [
+     "Oui, je suis pris un grand camion.",
+     "Oui, j'avons pris un grand camion.",
+     "Oui, je prendrai un grand camion."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes vêtements, où les as-tu mis ?",
+    "en": "And your clothes, where did you put them?"
+   },
+   {
+    "who": "you",
+    "fr": "J'ai mis mes vêtements dans les valises.",
+    "en": "I put my clothes in the suitcases.",
+    "verb": "mettre",
+    "person": "je",
+    "accept": [
+     "J'ai mis mes vêtements dans les valises.",
+     "Je les ai mis dans les valises.",
+     "J'ai mis les vêtements dans les valises."
+    ],
+    "options": [
+     "Je suis mis mes vêtements dans les valises.",
+     "J'avez mis mes vêtements dans les valises.",
+     "Je mettrai mes vêtements dans les valises."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "As-tu gardé tous tes vieux livres ?",
+    "en": "Did you keep all your old books?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'ai pas gardé tous mes vieux livres.",
+    "en": "No, I didn't keep all my old books.",
+    "verb": "garder",
+    "person": "je",
+    "accept": [
+     "Non, je n'ai pas gardé tous mes vieux livres.",
+     "Non, je ne les ai pas tous gardés.",
+     "Je n'ai pas gardé tous mes vieux livres."
+    ],
+    "options": [
+     "Non, je ne suis pas gardé tous mes vieux livres.",
+     "Non, je n'avons pas gardé tous mes vieux livres.",
+     "Non, je ne garderai pas tous mes vieux livres."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "La météo annonçait du soleil, mais il a plu ! Ton frère et toi, avez-vous cru la météo ?",
+    "en": "The forecast said sunshine, but it rained! Did you and your brother believe the forecast?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons cru la météo !",
+    "en": "Yes, we believed the forecast!",
+    "verb": "croire",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons cru la météo !",
+     "Nous avons cru la météo !",
+     "Oui, nous l'avons crue !",
+     "Oui, nous avons cru la météo."
+    ],
+    "options": [
+     "Oui, nous sommes cru la météo !",
+     "Oui, nous avez cru la météo !",
+     "Oui, nous croirons la météo !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh là là ! Et ton frère, a-t-il pris la bonne route ?",
+    "en": "Oh dear! And your brother, did he take the right road?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il a pris la mauvaise route !",
+    "en": "No, he took the wrong road!",
+    "verb": "prendre",
+    "person": "il",
+    "accept": [
+     "Non, il a pris la mauvaise route !",
+     "Il a pris la mauvaise route !",
+     "Non, il a pris la mauvaise route."
+    ],
+    "options": [
+     "Non, il est pris la mauvaise route !",
+     "Non, il avons pris la mauvaise route !",
+     "Non, il prendra la mauvaise route !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah non ! Avez-vous perdu beaucoup de temps ?",
+    "en": "Oh no! Did you lose a lot of time?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons perdu une heure.",
+    "en": "Yes, we lost an hour.",
+    "verb": "perdre",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons perdu une heure.",
+     "Nous avons perdu une heure.",
+     "Oui, nous avons perdu une heure !"
+    ],
+    "options": [
+     "Oui, nous avez perdu une heure.",
+     "Oui, nous perdrons une heure.",
+     "Oui, nous perdions une heure."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, ont-ils trouvé l'appartement facilement ?",
+    "en": "And your parents, did they find the flat easily?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils ont trouvé l'appartement facilement.",
+    "en": "Yes, they found the flat easily.",
+    "verb": "trouver",
+    "person": "ils",
+    "accept": [
+     "Oui, ils ont trouvé l'appartement facilement.",
+     "Ils ont trouvé l'appartement facilement.",
+     "Oui, ils l'ont trouvé facilement."
+    ],
+    "options": [
+     "Oui, ils sont trouvé l'appartement facilement.",
+     "Oui, ils avez trouvé l'appartement facilement.",
+     "Oui, ils trouveront l'appartement facilement."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et quand tu es arrivé, as-tu ouvert les fenêtres ?",
+    "en": "And when you arrived, did you open the windows?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai ouvert toutes les fenêtres.",
+    "en": "Yes, I opened all the windows.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai ouvert toutes les fenêtres.",
+     "J'ai ouvert toutes les fenêtres.",
+     "Oui, j'ai ouvert les fenêtres."
+    ],
+    "options": [
+     "Oui, je suis ouvert toutes les fenêtres.",
+     "Oui, j'avons ouvert toutes les fenêtres.",
+     "Oui, j'ouvrirai toutes les fenêtres."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et l'après-midi, pour monter le lit, as-tu lu les instructions ?",
+    "en": "And in the afternoon, to put the bed together, did you read the instructions?",
+    "break": true
+   },
+   {
+    "who": "you",
+    "fr": "Non, je n'ai pas lu les instructions !",
+    "en": "No, I didn't read the instructions!",
+    "verb": "lire",
+    "person": "je",
+    "accept": [
+     "Non, je n'ai pas lu les instructions !",
+     "Je n'ai pas lu les instructions !",
+     "Non, je n'ai pas lu les instructions."
+    ],
+    "options": [
+     "Non, je ne suis pas lu les instructions !",
+     "Non, je n'avons pas lu les instructions !",
+     "Non, je ne lirai pas les instructions !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha, c'est bien toi ! Et ta sœur, a-t-elle mis les assiettes dans les placards ?",
+    "en": "Ha ha, that's so you! And your sister, did she put the plates in the cupboards?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle a mis les assiettes dans les placards.",
+    "en": "Yes, she put the plates in the cupboards.",
+    "verb": "mettre",
+    "person": "elle",
+    "accept": [
+     "Oui, elle a mis les assiettes dans les placards.",
+     "Elle a mis les assiettes dans les placards.",
+     "Oui, elle les a mises dans les placards."
+    ],
+    "options": [
+     "Oui, elle est mis les assiettes dans les placards.",
+     "Oui, elle ont mis les assiettes dans les placards.",
+     "Oui, elle mettra les assiettes dans les placards."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super. As-tu parlé avec tes nouveaux voisins ?",
+    "en": "Great. Did you talk with your new neighbours?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai parlé avec mes voisins.",
+    "en": "Yes, I talked with my neighbours.",
+    "verb": "parler",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai parlé avec mes voisins.",
+     "J'ai parlé avec mes voisins.",
+     "Oui, j'ai parlé avec mes nouveaux voisins."
+    ],
+    "options": [
+     "Oui, je suis parlé avec mes voisins.",
+     "Oui, j'avons parlé avec mes voisins.",
+     "Oui, je parlerai avec mes voisins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur et toi, avez-vous écrit à vos amis ?",
+    "en": "And did you and your sister write to your friends?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avons écrit un message à nos amis.",
+    "en": "Yes, we wrote our friends a message.",
+    "verb": "écrire",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avons écrit un message à nos amis.",
+     "Nous avons écrit un message à nos amis.",
+     "Oui, nous avons écrit à nos amis."
+    ],
+    "options": [
+     "Oui, nous sommes écrit un message à nos amis.",
+     "Oui, nous avez écrit un message à nos amis.",
+     "Oui, nous écrirons un message à nos amis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes parents, ont-ils parlé aux voisins aussi ?",
+    "en": "And your parents, did they talk to the neighbours too?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils ont parlé avec la voisine.",
+    "en": "Yes, they talked with the woman next door.",
+    "verb": "parler",
+    "person": "ils",
+    "accept": [
+     "Oui, ils ont parlé avec la voisine.",
+     "Ils ont parlé avec la voisine.",
+     "Oui, ils ont parlé avec la voisine aussi."
+    ],
+    "options": [
+     "Oui, ils sont parlé avec la voisine.",
+     "Oui, ils avez parlé avec la voisine.",
+     "Oui, ils parleront avec la voisine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Sympa ! T'a-t-elle donné son numéro de téléphone ?",
+    "en": "Nice! Did she give you her phone number?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, et j'ai écrit son numéro dans mon carnet.",
+    "en": "Yes, and I wrote her number in my notebook.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Oui, et j'ai écrit son numéro dans mon carnet.",
+     "J'ai écrit son numéro dans mon carnet.",
+     "Oui, j'ai écrit son numéro dans mon carnet."
+    ],
+    "options": [
+     "Oui, et je suis écrit son numéro dans mon carnet.",
+     "Oui, et j'avons écrit son numéro dans mon carnet.",
+     "Oui, et j'écrirai son numéro dans mon carnet."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien. Et le soir, as-tu fermé la porte à clé ?",
+    "en": "Very good. And in the evening, did you lock the door?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai fermé la porte à clé.",
+    "en": "Yes, I locked the door.",
+    "verb": "fermer",
+    "person": "je",
+    "accept": [
+     "Oui, j'ai fermé la porte à clé.",
+     "J'ai fermé la porte à clé.",
+     "Oui, j'ai fermé la porte."
+    ],
+    "options": [
+     "Oui, je suis fermé la porte à clé.",
+     "Oui, j'avons fermé la porte à clé.",
+     "Oui, je fermerai la porte à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et maintenant, comment trouves-tu l'appartement ?",
+    "en": "And now, how do you find the flat?"
+   },
+   {
+    "who": "you",
+    "fr": "Je le trouve très joli maintenant.",
+    "en": "I find it very pretty now.",
+    "verb": "trouver",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Je le trouve très joli maintenant.",
+     "Je le trouve très joli.",
+     "Maintenant, je le trouve très joli."
+    ],
+    "options": [
+     "Je le trouvons très joli maintenant.",
+     "Je l'ai trouvé très joli maintenant.",
+     "Je le trouverai très joli maintenant."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Et tes parents, qu'ont-ils fait avant de partir ?",
+    "en": "Great! And your parents, what did they do before leaving?"
+   },
+   {
+    "who": "you",
+    "fr": "Ils ont fermé les volets et ils ont pris l'autoroute.",
+    "en": "They closed the shutters and took the motorway.",
+    "verb": "fermer",
+    "person": "ils",
+    "accept": [
+     "Ils ont fermé les volets et ils ont pris l'autoroute.",
+     "Ils ont fermé les volets et ont pris l'autoroute."
+    ],
+    "options": [
+     "Ils sont fermé les volets et ils ont pris l'autoroute.",
+     "Ils avez fermé les volets et ils ont pris l'autoroute.",
+     "Ils fermeront les volets et ils ont pris l'autoroute."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quelle journée ! Bravo à vous tous !",
+    "en": "What a day! Well done, all of you!"
+   }
+  ]
+ },
+ "Intermediate A|Imperfect": {
+  "title": "La maison de mon enfance",
+  "titleEn": "My childhood home",
+  "character": "Julien",
+  "voice": "David Vautrin - Tech Narrator",
+  "scene": "Over coffee in your new flat, Julien asks about the house you grew up in.",
+  "verbs": [
+   "mettre",
+   "trouver",
+   "croire",
+   "parler",
+   "prendre",
+   "lire",
+   "écrire",
+   "ouvrir",
+   "fermer",
+   "perdre",
+   "garder"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Dis-moi, quand tu étais petit, trouvais-tu ta maison grande ?",
+    "en": "Tell me, when you were little, did you find your house big?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je trouvais la maison très grande.",
+    "en": "Yes, I found the house very big.",
+    "verb": "trouver",
+    "person": "je",
+    "accept": [
+     "Oui, je trouvais la maison très grande.",
+     "Je trouvais la maison très grande.",
+     "Oui, je la trouvais très grande."
+    ],
+    "options": [
+     "Oui, je trouvions la maison très grande.",
+     "Oui, je trouviez la maison très grande.",
+     "Oui, je trouverai la maison très grande."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Le matin, ouvrais-tu les volets de ta chambre ?",
+    "en": "In the morning, did you open the shutters in your bedroom?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ouvrais les volets tous les matins.",
+    "en": "Yes, I opened the shutters every morning.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ouvrais les volets tous les matins.",
+     "J'ouvrais les volets tous les matins.",
+     "Oui, j'ouvrais les volets chaque matin."
+    ],
+    "options": [
+     "Oui, j'ouvrions les volets tous les matins.",
+     "Oui, j'ouvriez les volets tous les matins.",
+     "Oui, j'ouvrirai les volets tous les matins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le soir, que lisais-tu dans ton lit ?",
+    "en": "And in the evening, what did you read in bed?"
+   },
+   {
+    "who": "you",
+    "fr": "Je lisais des bandes dessinées.",
+    "en": "I read comics.",
+    "verb": "lire",
+    "person": "je",
+    "accept": [
+     "Je lisais des bandes dessinées.",
+     "Je lisais des bandes dessinées dans mon lit.",
+     "Je lisais des BD."
+    ],
+    "options": [
+     "Je lisions des bandes dessinées.",
+     "Je lisiez des bandes dessinées.",
+     "Je lirai des bandes dessinées."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ta mère gardait-elle tes dessins ?",
+    "en": "Did your mother keep your drawings?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle gardait tous mes dessins.",
+    "en": "Yes, she kept all my drawings.",
+    "verb": "garder",
+    "person": "elle",
+    "accept": [
+     "Oui, elle gardait tous mes dessins.",
+     "Elle gardait tous mes dessins.",
+     "Oui, elle les gardait tous."
+    ],
+    "options": [
+     "Oui, elle gardions tous mes dessins.",
+     "Oui, elle gardiez tous mes dessins.",
+     "Oui, elle gardera tous mes dessins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est mignon ! En été, tes parents mettaient-ils la table dans le jardin ?",
+    "en": "That's sweet! In summer, did your parents set the table in the garden?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils mettaient la table dans le jardin.",
+    "en": "Yes, they set the table in the garden.",
+    "verb": "mettre",
+    "person": "ils",
+    "accept": [
+     "Oui, ils mettaient la table dans le jardin.",
+     "Ils mettaient la table dans le jardin.",
+     "Oui, ils mettaient toujours la table dans le jardin."
+    ],
+    "options": [
+     "Oui, ils mettions la table dans le jardin.",
+     "Oui, ils mettiez la table dans le jardin.",
+     "Oui, ils mettront la table dans le jardin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton frère et toi, parliez-vous avec les voisins ?",
+    "en": "Did you and your brother talk with the neighbours?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous parlions souvent avec les voisins.",
+    "en": "Yes, we often talked with the neighbours.",
+    "verb": "parler",
+    "person": "nous",
+    "accept": [
+     "Oui, nous parlions souvent avec les voisins.",
+     "Nous parlions souvent avec les voisins.",
+     "Oui, nous parlions avec les voisins."
+    ],
+    "options": [
+     "Oui, nous parlais souvent avec les voisins.",
+     "Oui, nous parliez souvent avec les voisins.",
+     "Oui, nous parlerons souvent avec les voisins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le soir, ton père fermait-il la porte à clé ?",
+    "en": "And at night, did your father lock the door?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne fermait jamais la porte à clé.",
+    "en": "No, he never locked the door.",
+    "verb": "fermer",
+    "person": "il",
+    "accept": [
+     "Non, il ne fermait jamais la porte à clé.",
+     "Il ne fermait jamais la porte à clé.",
+     "Non, il ne la fermait jamais à clé."
+    ],
+    "options": [
+     "Non, il ne fermions jamais la porte à clé.",
+     "Non, il ne fermiez jamais la porte à clé.",
+     "Non, il ne fermera jamais la porte à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et toi, croyais-tu qu'il y avait un fantôme au grenier ?",
+    "en": "And you, did you believe there was a ghost in the attic?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je croyais qu'il y avait un fantôme.",
+    "en": "Yes, I believed there was a ghost.",
+    "verb": "croire",
+    "person": "je",
+    "accept": [
+     "Oui, je croyais qu'il y avait un fantôme.",
+     "Je croyais qu'il y avait un fantôme.",
+     "Oui, je croyais qu'il y avait un fantôme au grenier."
+    ],
+    "options": [
+     "Oui, je croyions qu'il y avait un fantôme.",
+     "Oui, je croyiez qu'il y avait un fantôme.",
+     "Oui, je croirai qu'il y avait un fantôme."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Et pendant les vacances, comment alliez-vous à la mer ?",
+    "en": "Ha ha! And in the holidays, how did you get to the seaside?",
+    "break": true
+   },
+   {
+    "who": "you",
+    "fr": "Nous prenions le train pour aller à la mer.",
+    "en": "We took the train to go to the seaside.",
+    "verb": "prendre",
+    "person": "nous",
+    "accept": [
+     "Nous prenions le train pour aller à la mer.",
+     "Nous prenions le train.",
+     "On prenait le train pour aller à la mer."
+    ],
+    "options": [
+     "Nous prenais le train pour aller à la mer.",
+     "Nous preniez le train pour aller à la mer.",
+     "Nous prendrons le train pour aller à la mer."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et sur la plage, que trouvais-tu ?",
+    "en": "And on the beach, what did you find?"
+   },
+   {
+    "who": "you",
+    "fr": "Je trouvais des coquillages.",
+    "en": "I found shells.",
+    "verb": "trouver",
+    "person": "je",
+    "accept": [
+     "Je trouvais des coquillages.",
+     "Je trouvais des coquillages sur la plage.",
+     "Je trouvais beaucoup de coquillages."
+    ],
+    "options": [
+     "Je trouvions des coquillages.",
+     "Je trouviez des coquillages.",
+     "Je trouverai des coquillages."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ta sœur, lisait-elle sur la plage ?",
+    "en": "And your sister, did she read on the beach?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle lisait des romans sur la plage.",
+    "en": "Yes, she read novels on the beach.",
+    "verb": "lire",
+    "person": "elle",
+    "accept": [
+     "Oui, elle lisait des romans sur la plage.",
+     "Elle lisait des romans sur la plage.",
+     "Oui, elle lisait des romans."
+    ],
+    "options": [
+     "Oui, elle lisions des romans sur la plage.",
+     "Oui, elle lisiez des romans sur la plage.",
+     "Oui, elle lira des romans sur la plage."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ton frère, prenait-il des photos ?",
+    "en": "And your brother, did he take photos?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il prenait beaucoup de photos.",
+    "en": "Yes, he took lots of photos.",
+    "verb": "prendre",
+    "person": "il",
+    "accept": [
+     "Oui, il prenait beaucoup de photos.",
+     "Il prenait beaucoup de photos.",
+     "Oui, il prenait des photos."
+    ],
+    "options": [
+     "Oui, il prenions beaucoup de photos.",
+     "Oui, il preniez beaucoup de photos.",
+     "Oui, il prendra beaucoup de photos."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes grands-parents gardaient-ils les photos ?",
+    "en": "Did your grandparents keep the photos?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils gardaient les photos dans une boîte.",
+    "en": "Yes, they kept the photos in a box.",
+    "verb": "garder",
+    "person": "ils",
+    "accept": [
+     "Oui, ils gardaient les photos dans une boîte.",
+     "Ils gardaient les photos dans une boîte.",
+     "Oui, ils les gardaient dans une boîte."
+    ],
+    "options": [
+     "Oui, ils gardions les photos dans une boîte.",
+     "Oui, ils gardiez les photos dans une boîte.",
+     "Oui, ils garderont les photos dans une boîte."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Écrivais-tu des cartes postales à tes amis ?",
+    "en": "Did you write postcards to your friends?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'écrivais des cartes postales à mes amis.",
+    "en": "Yes, I wrote postcards to my friends.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Oui, j'écrivais des cartes postales à mes amis.",
+     "J'écrivais des cartes postales à mes amis.",
+     "Oui, j'écrivais des cartes postales."
+    ],
+    "options": [
+     "Oui, j'écrivions des cartes postales à mes amis.",
+     "Oui, j'écriviez des cartes postales à mes amis.",
+     "Oui, j'écrirai des cartes postales à mes amis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le soir, ton frère et toi, gagniez-vous aux cartes contre ton père ?",
+    "en": "And in the evening, did you and your brother beat your father at cards?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous perdions toujours.",
+    "en": "No, we always lost.",
+    "verb": "perdre",
+    "person": "nous",
+    "accept": [
+     "Non, nous perdions toujours.",
+     "Nous perdions toujours.",
+     "Non, nous perdions tout le temps."
+    ],
+    "options": [
+     "Non, nous perdais toujours.",
+     "Non, nous perdiez toujours.",
+     "Non, nous perdrons toujours."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Ton père ne fermait jamais la porte à clé… Et maintenant, chez toi, fermes-tu la porte à clé ?",
+    "en": "Ha ha! Your father never locked the door… And now, at your place, do you lock the door?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, maintenant je ferme toujours la porte à clé.",
+    "en": "Yes, now I always lock the door.",
+    "verb": "fermer",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Oui, maintenant je ferme toujours la porte à clé.",
+     "Oui, je ferme toujours la porte à clé.",
+     "Maintenant, je ferme toujours la porte à clé."
+    ],
+    "options": [
+     "Oui, maintenant je fermais toujours la porte à clé.",
+     "Oui, maintenant je fermons toujours la porte à clé.",
+     "Oui, maintenant je fermez toujours la porte à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et petit, comment entrais-tu dans la maison quand tu n'avais pas tes clés ?",
+    "en": "And as a kid, how did you get into the house when you didn't have your keys?"
+   },
+   {
+    "who": "you",
+    "fr": "Quand je perdais mes clés, j'ouvrais la fenêtre de la cuisine.",
+    "en": "When I lost my keys, I opened the kitchen window.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Quand je perdais mes clés, j'ouvrais la fenêtre de la cuisine.",
+     "J'ouvrais la fenêtre de la cuisine quand je perdais mes clés.",
+     "Quand je perdais mes clés, j'ouvrais la fenêtre de la cuisine !"
+    ],
+    "options": [
+     "Quand je perdais mes clés, j'ouvrions la fenêtre de la cuisine.",
+     "Quand je perdais mes clés, j'ouvriez la fenêtre de la cuisine.",
+     "Quand je perdais mes clés, j'ouvrirai la fenêtre de la cuisine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quel petit malin ! Que de beaux souvenirs !",
+    "en": "What a clever kid! So many lovely memories!"
+   }
+  ]
+ },
+ "Intermediate A|Pluperfect": {
+  "title": "Le mystère de la clé perdue",
+  "titleEn": "The mystery of the lost key",
+  "character": "Julien",
+  "voice": "David Vautrin - Tech Narrator",
+  "scene": "You called Julien in a panic last night; today he wants to know what had happened before you noticed the key was gone.",
+  "verbs": [
+   "mettre",
+   "trouver",
+   "croire",
+   "parler",
+   "prendre",
+   "lire",
+   "écrire",
+   "ouvrir",
+   "fermer",
+   "perdre",
+   "garder"
+  ],
+  "newWords": [
+   {
+    "fr": "un double (de clé)",
+    "en": "a spare key"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! Tu m'as appelé hier soir. Que s'était-il passé ?",
+    "en": "Hi! You called me last night. What had happened?"
+   },
+   {
+    "who": "you",
+    "fr": "J'avais perdu la clé de l'appartement.",
+    "en": "I had lost the key to the flat.",
+    "verb": "perdre",
+    "person": "je",
+    "accept": [
+     "J'avais perdu la clé de l'appartement.",
+     "J'avais perdu ma clé.",
+     "J'avais perdu la clé."
+    ],
+    "options": [
+     "J'étais perdu la clé de l'appartement.",
+     "J'avions perdu la clé de l'appartement.",
+     "J'aurai perdu la clé de l'appartement."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh non ! Le matin, en sortant, avais-tu fermé la porte à clé ?",
+    "en": "Oh no! That morning, when you went out, had you locked the door?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais fermé la porte à clé.",
+    "en": "Yes, I had locked the door.",
+    "verb": "fermer",
+    "person": "je",
+    "accept": [
+     "Oui, j'avais fermé la porte à clé.",
+     "J'avais fermé la porte à clé.",
+     "Oui, j'avais bien fermé la porte à clé."
+    ],
+    "options": [
+     "Oui, j'étais fermé la porte à clé.",
+     "Oui, j'avions fermé la porte à clé.",
+     "Oui, j'aurai fermé la porte à clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et après, où avais-tu mis la clé ?",
+    "en": "And then, where had you put the key?"
+   },
+   {
+    "who": "you",
+    "fr": "Je l'avais mise dans mon sac.",
+    "en": "I had put it in my bag.",
+    "verb": "mettre",
+    "person": "je",
+    "accept": [
+     "Je l'avais mise dans mon sac.",
+     "J'avais mis la clé dans mon sac.",
+     "Je l'avais mise dans mon sac, comme toujours."
+    ],
+    "options": [
+     "Je l'étais mise dans mon sac.",
+     "Je l'avions mise dans mon sac.",
+     "Je l'aurai mise dans mon sac."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et dans le bus, avais-tu ouvert ton sac ?",
+    "en": "And on the bus, had you opened your bag?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais ouvert mon sac dans le bus.",
+    "en": "Yes, I had opened my bag on the bus.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Oui, j'avais ouvert mon sac dans le bus.",
+     "J'avais ouvert mon sac dans le bus.",
+     "Oui, je l'avais ouvert dans le bus."
+    ],
+    "options": [
+     "Oui, j'étais ouvert mon sac dans le bus.",
+     "Oui, j'avions ouvert mon sac dans le bus.",
+     "Oui, j'aurai ouvert mon sac dans le bus."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Hmm. Ta sœur avait-elle pris la clé ce matin-là ?",
+    "en": "Hmm. Had your sister taken the key that morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle n'avait pas pris la clé.",
+    "en": "No, she hadn't taken the key.",
+    "verb": "prendre",
+    "person": "elle",
+    "accept": [
+     "Non, elle n'avait pas pris la clé.",
+     "Elle n'avait pas pris la clé.",
+     "Non, elle ne l'avait pas prise."
+    ],
+    "options": [
+     "Non, elle n'était pas pris la clé.",
+     "Non, elle n'avions pas pris la clé.",
+     "Non, elle n'aura pas pris la clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et tes voisins, avaient-ils trouvé une clé dans l'escalier ?",
+    "en": "And your neighbours, had they found a key on the stairs?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils n'avaient rien trouvé.",
+    "en": "No, they hadn't found anything.",
+    "verb": "trouver",
+    "person": "ils",
+    "accept": [
+     "Non, ils n'avaient rien trouvé.",
+     "Ils n'avaient rien trouvé.",
+     "Non, ils n'avaient rien trouvé du tout."
+    ],
+    "options": [
+     "Non, ils n'étaient rien trouvé.",
+     "Non, ils n'aviez rien trouvé.",
+     "Non, ils n'auront rien trouvé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ta sœur et toi, aviez-vous parlé au propriétaire avant de m'appeler ?",
+    "en": "Had you and your sister spoken to the landlord before you called me?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous avions parlé au propriétaire.",
+    "en": "Yes, we had spoken to the landlord.",
+    "verb": "parler",
+    "person": "nous",
+    "accept": [
+     "Oui, nous avions parlé au propriétaire.",
+     "Nous avions parlé au propriétaire.",
+     "Oui, nous lui avions parlé."
+    ],
+    "options": [
+     "Oui, nous étions parlé au propriétaire.",
+     "Oui, nous aviez parlé au propriétaire.",
+     "Oui, nous aurons parlé au propriétaire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ta sœur pensait que la clé était dans l'appartement. L'avais-tu crue ?",
+    "en": "Your sister thought the key was in the flat. Had you believed her?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne l'avais pas crue.",
+    "en": "No, I hadn't believed her.",
+    "verb": "croire",
+    "person": "je",
+    "accept": [
+     "Non, je ne l'avais pas crue.",
+     "Je ne l'avais pas crue.",
+     "Non, je n'avais pas cru ma sœur."
+    ],
+    "options": [
+     "Non, je ne l'étais pas crue.",
+     "Non, je ne l'avions pas crue.",
+     "Non, je ne l'aurai pas crue."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et ce matin, as-tu trouvé la clé ?",
+    "en": "And this morning, did you find the key?",
+    "break": true
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ai trouvé la clé ce matin !",
+    "en": "Yes, I found the key this morning!",
+    "verb": "trouver",
+    "person": "je",
+    "callback": "Past",
+    "accept": [
+     "Oui, j'ai trouvé la clé ce matin !",
+     "Oui, je l'ai trouvée ce matin !",
+     "J'ai trouvé la clé ce matin !"
+    ],
+    "options": [
+     "Oui, je suis trouvé la clé ce matin !",
+     "Oui, j'avons trouvé la clé ce matin !",
+     "Oui, je trouverai la clé ce matin !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Mais où était-elle ? Hier, avant de rentrer, avais-tu lu dans le bus ?",
+    "en": "Well done! But where was it? Yesterday, before getting home, had you been reading on the bus?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'avais lu mon roman dans le bus.",
+    "en": "Yes, I had read my novel on the bus.",
+    "verb": "lire",
+    "person": "je",
+    "accept": [
+     "Oui, j'avais lu mon roman dans le bus.",
+     "J'avais lu mon roman dans le bus.",
+     "Oui, j'avais lu un roman dans le bus."
+    ],
+    "options": [
+     "Oui, j'étais lu mon roman dans le bus.",
+     "Oui, j'avions lu mon roman dans le bus.",
+     "Oui, j'aurai lu mon roman dans le bus."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah ! Et la clé, l'avais-tu mise dans le roman ?",
+    "en": "Aha! And the key, had you put it in the novel?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je l'avais mise dans le roman !",
+    "en": "Yes, I had put it in the novel!",
+    "verb": "mettre",
+    "person": "je",
+    "accept": [
+     "Oui, je l'avais mise dans le roman !",
+     "J'avais mis la clé dans le roman !",
+     "Oui, je l'avais mise dans le roman."
+    ],
+    "options": [
+     "Oui, je l'étais mise dans le roman !",
+     "Oui, je l'avions mise dans le roman !",
+     "Oui, je l'aurai mise dans le roman !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Incroyable ! Mais hier soir, comment étais-tu entré ? Ton frère avait-il gardé un double ?",
+    "en": "Unbelievable! But last night, how had you got in? Had your brother kept a spare key?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il avait gardé un double de la clé.",
+    "en": "Yes, he had kept a spare key.",
+    "verb": "garder",
+    "person": "il",
+    "accept": [
+     "Oui, il avait gardé un double de la clé.",
+     "Il avait gardé un double de la clé.",
+     "Oui, il avait gardé un double."
+    ],
+    "options": [
+     "Oui, il était gardé un double de la clé.",
+     "Oui, il avions gardé un double de la clé.",
+     "Oui, il aura gardé un double de la clé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "L'avais-tu appelé ?",
+    "en": "Had you phoned him?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je lui avais écrit un message.",
+    "en": "No, I had sent him a message.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Non, je lui avais écrit un message.",
+     "Je lui avais écrit un message.",
+     "Non, je lui avais écrit un texto."
+    ],
+    "options": [
+     "Non, je lui étais écrit un message.",
+     "Non, je lui avions écrit un message.",
+     "Non, je lui aurai écrit un message."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Avait-il pris le bus pour venir ?",
+    "en": "Had he taken the bus to come over?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il avait pris son vélo.",
+    "en": "No, he had taken his bike.",
+    "verb": "prendre",
+    "person": "il",
+    "accept": [
+     "Non, il avait pris son vélo.",
+     "Il avait pris son vélo.",
+     "Non, il avait pris son vélo pour venir."
+    ],
+    "options": [
+     "Non, il était pris son vélo.",
+     "Non, il avions pris son vélo.",
+     "Non, il aura pris son vélo."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "En l'attendant, ta sœur et toi, aviez-vous trouvé une solution ?",
+    "en": "While you waited for him, had you and your sister found a solution?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous n'avions trouvé aucune solution.",
+    "en": "No, we hadn't found any solution.",
+    "verb": "trouver",
+    "person": "nous",
+    "accept": [
+     "Non, nous n'avions trouvé aucune solution.",
+     "Nous n'avions trouvé aucune solution.",
+     "Non, nous n'avions pas trouvé de solution."
+    ],
+    "options": [
+     "Non, nous n'étions trouvé aucune solution.",
+     "Non, nous n'aviez trouvé aucune solution.",
+     "Non, nous n'aurons trouvé aucune solution."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vos voisins, vous avaient-ils ouvert leur porte ?",
+    "en": "And your neighbours, had they opened their door to you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils nous avaient ouvert leur porte.",
+    "en": "Yes, they had opened their door to us.",
+    "verb": "ouvrir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils nous avaient ouvert leur porte.",
+     "Ils nous avaient ouvert leur porte.",
+     "Oui, ils nous avaient ouvert la porte."
+    ],
+    "options": [
+     "Oui, ils nous étaient ouvert leur porte.",
+     "Oui, ils nous aviez ouvert leur porte.",
+     "Oui, ils nous auront ouvert leur porte."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quels gentils voisins ! Alors, la clé n'était pas perdue ?",
+    "en": "What kind neighbours! So the key wasn't lost after all?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne l'avais pas perdue, je l'avais mise dans le roman !",
+    "en": "No, I hadn't lost it, I'd put it in the novel!",
+    "verb": "perdre",
+    "person": "je",
+    "accept": [
+     "Non, je ne l'avais pas perdue, je l'avais mise dans le roman !",
+     "Je ne l'avais pas perdue, je l'avais mise dans le roman !",
+     "Non, je ne l'avais pas perdue, je l'avais mise dans le livre !"
+    ],
+    "options": [
+     "Non, je ne l'étais pas perdue, je l'avais mise dans le roman !",
+     "Non, je ne l'avions pas perdue, je l'avais mise dans le roman !",
+     "Non, je ne l'aurai pas perdue, je l'avais mise dans le roman !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Mystère résolu ! La prochaine fois, garde un double chez moi !",
+    "en": "Mystery solved! Next time, keep a spare key at my place!"
+   }
+  ]
+ },
+ "Intermediate A|Future": {
+  "title": "La pendaison de crémaillère",
+  "titleEn": "The housewarming",
+  "character": "Julien",
+  "voice": "David Vautrin - Tech Narrator",
+  "scene": "Julien helps you plan the housewarming party you'll throw in your new flat.",
+  "verbs": [
+   "mettre",
+   "trouver",
+   "croire",
+   "parler",
+   "prendre",
+   "lire",
+   "écrire",
+   "ouvrir",
+   "fermer",
+   "perdre",
+   "garder"
+  ],
+  "newWords": [
+   {
+    "fr": "une pendaison de crémaillère",
+    "en": "a housewarming party"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Salut ! Alors, ta pendaison de crémaillère, c'est samedi prochain ? Écriras-tu à tes amis ?",
+    "en": "Hi! So, your housewarming is next Saturday? Will you write to your friends?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'écrirai un message à tous mes amis.",
+    "en": "Yes, I'll write a message to all my friends.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Oui, j'écrirai un message à tous mes amis.",
+     "J'écrirai un message à tous mes amis.",
+     "Oui, j'écrirai un message à mes amis."
+    ],
+    "options": [
+     "Oui, j'écrirons un message à tous mes amis.",
+     "Oui, j'ai écrit un message à tous mes amis.",
+     "Oui, j'écrivais un message à tous mes amis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parleras-tu aussi à tes voisins ?",
+    "en": "Will you talk to your neighbours too?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je parlerai à mes voisins demain.",
+    "en": "Yes, I'll talk to my neighbours tomorrow.",
+    "verb": "parler",
+    "person": "je",
+    "accept": [
+     "Oui, je parlerai à mes voisins demain.",
+     "Je parlerai à mes voisins demain.",
+     "Oui, je leur parlerai demain."
+    ],
+    "options": [
+     "Oui, je parlerons à mes voisins demain.",
+     "Oui, j'ai parlé à mes voisins demain.",
+     "Oui, je parlais à mes voisins demain."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bien. Mettras-tu de la musique ?",
+    "en": "Good. Will you put some music on?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je mettrai de la musique.",
+    "en": "Yes, I'll put some music on.",
+    "verb": "mettre",
+    "person": "je",
+    "accept": [
+     "Oui, je mettrai de la musique.",
+     "Je mettrai de la musique.",
+     "Oui, je mettrai de la bonne musique."
+    ],
+    "options": [
+     "Oui, je mettrons de la musique.",
+     "Oui, j'ai mis de la musique.",
+     "Oui, je mettais de la musique."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Et ton frère, prendra-t-il le train pour venir ?",
+    "en": "Great! And your brother, will he take the train to come?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il prendra sa voiture.",
+    "en": "No, he'll take his car.",
+    "verb": "prendre",
+    "person": "il",
+    "accept": [
+     "Non, il prendra sa voiture.",
+     "Il prendra sa voiture.",
+     "Non, il prendra la voiture."
+    ],
+    "options": [
+     "Non, il prendrez sa voiture.",
+     "Non, il a pris sa voiture.",
+     "Non, il prenait sa voiture."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ta sœur et toi, ouvrirez-vous le champagne ?",
+    "en": "Will you and your sister open the champagne?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous ouvrirons le champagne à neuf heures.",
+    "en": "Yes, we'll open the champagne at nine o'clock.",
+    "verb": "ouvrir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous ouvrirons le champagne à neuf heures.",
+     "Nous ouvrirons le champagne à neuf heures.",
+     "Oui, nous ouvrirons le champagne."
+    ],
+    "options": [
+     "Oui, nous ouvrirez le champagne à neuf heures.",
+     "Oui, nous avons ouvert le champagne à neuf heures.",
+     "Oui, nous ouvrions le champagne à neuf heures."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tes voisins n'aiment pas le bruit. Te croiront-ils si tu leur dis que la fête finira à minuit ?",
+    "en": "Your neighbours don't like noise. Will they believe you if you tell them the party will end at midnight?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils ne me croiront pas !",
+    "en": "No, they won't believe me!",
+    "verb": "croire",
+    "person": "ils",
+    "accept": [
+     "Non, ils ne me croiront pas !",
+     "Ils ne me croiront pas !",
+     "Non, ils ne me croiront pas."
+    ],
+    "options": [
+     "Non, ils ne me croirez pas !",
+     "Non, ils ne m'ont pas cru !",
+     "Non, ils ne me croyaient pas !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Alors, écriras-tu un petit mot pour les voisins ?",
+    "en": "Ha ha! So, will you write a little note for the neighbours?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'écrirai un petit mot pour mes voisins.",
+    "en": "Yes, I'll write a little note for my neighbours.",
+    "verb": "écrire",
+    "person": "je",
+    "accept": [
+     "Oui, j'écrirai un petit mot pour mes voisins.",
+     "J'écrirai un petit mot pour mes voisins.",
+     "Oui, je leur écrirai un petit mot."
+    ],
+    "options": [
+     "Oui, j'écrirons un petit mot pour mes voisins.",
+     "Oui, j'ai écrit un petit mot pour mes voisins.",
+     "Oui, j'écrivais un petit mot pour mes voisins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et à cause de la musique, ta sœur et toi, fermerez-vous les fenêtres ?",
+    "en": "And because of the music, will you and your sister close the windows?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous fermerons toutes les fenêtres.",
+    "en": "Yes, we'll close all the windows.",
+    "verb": "fermer",
+    "person": "nous",
+    "accept": [
+     "Oui, nous fermerons toutes les fenêtres.",
+     "Nous fermerons toutes les fenêtres.",
+     "Oui, nous fermerons les fenêtres."
+    ],
+    "options": [
+     "Oui, nous fermerez toutes les fenêtres.",
+     "Oui, nous avons fermé toutes les fenêtres.",
+     "Oui, nous fermions toutes les fenêtres."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bonne idée. Et moi, perdrai-je mon chemin ? Je ne connais pas bien ta rue.",
+    "en": "Good idea. And me, will I lose my way? I don't know your street well."
+   },
+   {
+    "who": "you",
+    "fr": "Non, tu ne perdras pas ton chemin.",
+    "en": "No, you won't lose your way.",
+    "verb": "perdre",
+    "person": "tu",
+    "accept": [
+     "Non, tu ne perdras pas ton chemin.",
+     "Tu ne perdras pas ton chemin.",
+     "Non, tu ne perdras pas ton chemin, Julien."
+    ],
+    "options": [
+     "Non, tu ne perdrons pas ton chemin.",
+     "Non, tu n'as pas perdu ton chemin.",
+     "Non, tu ne perdais pas ton chemin."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait. Et le soir de la fête, comment t'aiderai-je ?",
+    "en": "Perfect. And on the night of the party, how will I help you?",
+    "break": true
+   },
+   {
+    "who": "you",
+    "fr": "Tu mettras les manteaux dans ma chambre.",
+    "en": "You'll put the coats in my bedroom.",
+    "verb": "mettre",
+    "person": "tu",
+    "accept": [
+     "Tu mettras les manteaux dans ma chambre.",
+     "Tu mettras les manteaux des invités dans ma chambre.",
+     "Tu mettras les manteaux dans la chambre."
+    ],
+    "options": [
+     "Tu mettrons les manteaux dans ma chambre.",
+     "Tu as mis les manteaux dans ma chambre.",
+     "Tu mettais les manteaux dans ma chambre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "D'accord ! Et tes grands-parents, trouveront-ils l'appartement facilement ?",
+    "en": "OK! And your grandparents, will they find the flat easily?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils trouveront l'appartement facilement.",
+    "en": "Yes, they'll find the flat easily.",
+    "verb": "trouver",
+    "person": "ils",
+    "accept": [
+     "Oui, ils trouveront l'appartement facilement.",
+     "Ils trouveront l'appartement facilement.",
+     "Oui, ils le trouveront facilement."
+    ],
+    "options": [
+     "Oui, ils trouverez l'appartement facilement.",
+     "Oui, ils ont trouvé l'appartement facilement.",
+     "Oui, ils trouvaient l'appartement facilement."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ton père lira-t-il un petit discours ?",
+    "en": "Will your father read a little speech?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il lira un discours.",
+    "en": "Yes, he'll read a speech.",
+    "verb": "lire",
+    "person": "il",
+    "accept": [
+     "Oui, il lira un discours.",
+     "Il lira un discours.",
+     "Oui, il lira un petit discours."
+    ],
+    "options": [
+     "Oui, il lirons un discours.",
+     "Oui, il a lu un discours.",
+     "Oui, il lisait un discours."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le gâteau, ta sœur le prendra-t-elle à la boulangerie ?",
+    "en": "And the cake, will your sister pick it up at the bakery?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle prendra le gâteau à la boulangerie.",
+    "en": "Yes, she'll pick up the cake at the bakery.",
+    "verb": "prendre",
+    "person": "elle",
+    "accept": [
+     "Oui, elle prendra le gâteau à la boulangerie.",
+     "Elle prendra le gâteau à la boulangerie.",
+     "Oui, elle le prendra à la boulangerie."
+    ],
+    "options": [
+     "Oui, elle prendrez le gâteau à la boulangerie.",
+     "Oui, elle a pris le gâteau à la boulangerie.",
+     "Oui, elle prenait le gâteau à la boulangerie."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Miam ! Ta sœur et toi, parlerez-vous de l'histoire de la clé ?",
+    "en": "Yum! Will you and your sister talk about the key story?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous parlerons de la clé perdue !",
+    "en": "Yes, we'll talk about the lost key!",
+    "verb": "parler",
+    "person": "nous",
+    "accept": [
+     "Oui, nous parlerons de la clé perdue !",
+     "Nous parlerons de la clé perdue !",
+     "Oui, nous parlerons de l'histoire de la clé."
+    ],
+    "options": [
+     "Oui, nous parlerez de la clé perdue !",
+     "Oui, nous avons parlé de la clé perdue !",
+     "Oui, nous parlions de la clé perdue !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tout le monde rira ! Et les cadeaux, les ouvriras-tu pendant la fête ?",
+    "en": "Everyone will laugh! And the presents, will you open them during the party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, j'ouvrirai les cadeaux après le gâteau.",
+    "en": "Yes, I'll open the presents after the cake.",
+    "verb": "ouvrir",
+    "person": "je",
+    "accept": [
+     "Oui, j'ouvrirai les cadeaux après le gâteau.",
+     "J'ouvrirai les cadeaux après le gâteau.",
+     "Oui, je les ouvrirai après le gâteau."
+    ],
+    "options": [
+     "Oui, j'ouvrirons les cadeaux après le gâteau.",
+     "Oui, j'ai ouvert les cadeaux après le gâteau.",
+     "Oui, j'ouvrais les cadeaux après le gâteau."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Au fait, maintenant, perds-tu encore tes clés ?",
+    "en": "By the way, these days, do you still lose your keys?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, maintenant je ne perds plus mes clés !",
+    "en": "No, I don't lose my keys any more these days!",
+    "verb": "perdre",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Non, maintenant je ne perds plus mes clés !",
+     "Non, je ne perds plus mes clés !",
+     "Maintenant, je ne perds plus mes clés."
+    ],
+    "options": [
+     "Non, maintenant je ne perdons plus mes clés !",
+     "Non, maintenant je ne perdez plus mes clés !",
+     "Non, maintenant je ne perdais plus mes clés !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha, on verra ! Et pendant la fête, avec tous ces invités ?",
+    "en": "Ha ha, we'll see! And during the party, with all those guests?"
+   },
+   {
+    "who": "you",
+    "fr": "Je garderai la clé sur moi, je ne la perdrai pas !",
+    "en": "I'll keep the key on me, I won't lose it!",
+    "verb": "garder",
+    "person": "je",
+    "accept": [
+     "Je garderai la clé sur moi, je ne la perdrai pas !",
+     "Je garderai la clé sur moi, je ne la perdrai pas.",
+     "Je garderai ma clé sur moi, je ne la perdrai pas !"
+    ],
+    "options": [
+     "Je garderons la clé sur moi, je ne la perdrai pas !",
+     "J'ai gardé la clé sur moi, je ne la perdrai pas !",
+     "Je gardais la clé sur moi, je ne la perdrai pas !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Promis ? Alors, à samedi, et vive le nouvel appartement !",
+    "en": "Promise? See you Saturday, then, and here's to the new flat!"
+   }
+  ]
+ },
+ "Intermediate B|Present": {
+  "title": "Le nouveau travail",
+  "titleEn": "The new job",
+  "character": "Monsieur Bernard",
+  "voice": "Voix grand père",
+  "scene": "Monsieur Bernard, a friendly older colleague, checks how you're settling in during your first days at your new job.",
+  "verbs": [
+   "s'intéresser",
+   "se débrouiller",
+   "s'ennuyer",
+   "s'entraîner",
+   "se souvenir",
+   "s'adapter",
+   "se réjouir"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Je suis Monsieur Bernard. Alors, vous adaptez-vous à votre nouveau travail ?",
+    "en": "Hello! I'm Monsieur Bernard. So, are you settling into your new job?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'adapte bien.",
+    "en": "Yes, I'm settling in well.",
+    "verb": "s'adapter",
+    "person": "je",
+    "accept": [
+     "Oui, je m'adapte bien.",
+     "Je m'adapte bien.",
+     "Oui, je m'adapte très bien."
+    ],
+    "options": [
+     "Oui, je m'adaptons bien.",
+     "Oui, je m'adaptais bien.",
+     "Oui, je m'adapterai bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien ! Vous intéressez-vous à votre travail ?",
+    "en": "Very good! Are you interested in your work?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'intéresse beaucoup à mon travail.",
+    "en": "Yes, I'm very interested in my work.",
+    "verb": "s'intéresser",
+    "person": "je",
+    "accept": [
+     "Oui, je m'intéresse beaucoup à mon travail.",
+     "Je m'intéresse beaucoup à mon travail.",
+     "Oui, je m'intéresse à mon travail."
+    ],
+    "options": [
+     "Oui, je m'intéressons beaucoup à mon travail.",
+     "Oui, je m'intéressais beaucoup à mon travail.",
+     "Oui, je m'intéresserai beaucoup à mon travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous débrouillez-vous avec l'ordinateur ?",
+    "en": "And are you managing with the computer?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me débrouille assez bien.",
+    "en": "Yes, I'm managing quite well.",
+    "verb": "se débrouiller",
+    "person": "je",
+    "accept": [
+     "Oui, je me débrouille assez bien.",
+     "Je me débrouille assez bien.",
+     "Oui, je me débrouille bien."
+    ],
+    "options": [
+     "Oui, je me débrouillons assez bien.",
+     "Oui, je me débrouillais assez bien.",
+     "Oui, je me suis débrouillé assez bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait. Et votre collègue Sophie, s'ennuie-t-elle au bureau ?",
+    "en": "Perfect. And your colleague Sophie, does she get bored at the office?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle ne s'ennuie jamais.",
+    "en": "No, she never gets bored.",
+    "verb": "s'ennuyer",
+    "person": "elle",
+    "accept": [
+     "Non, elle ne s'ennuie jamais.",
+     "Elle ne s'ennuie jamais.",
+     "Non, elle ne s'ennuie jamais au bureau."
+    ],
+    "options": [
+     "Non, elle ne s'ennuyons jamais.",
+     "Non, elle ne s'ennuyait jamais.",
+     "Non, elle ne s'ennuiera jamais."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ici, nous avons une équipe de football. Vos collègues s'entraînent-ils le mercredi ?",
+    "en": "We have a football team here. Do your colleagues train on Wednesdays?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'entraînent le mercredi soir.",
+    "en": "Yes, they train on Wednesday evenings.",
+    "verb": "s'entraîner",
+    "person": "ils",
+    "accept": [
+     "Oui, ils s'entraînent le mercredi soir.",
+     "Ils s'entraînent le mercredi soir.",
+     "Oui, ils s'entraînent le mercredi."
+    ],
+    "options": [
+     "Oui, ils s'entraînons le mercredi soir.",
+     "Oui, ils s'entraînaient le mercredi soir.",
+     "Oui, ils se sont entraînés le mercredi soir."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Vous souvenez-vous du nom de tous vos collègues ?",
+    "en": "Great! Do you remember all your colleagues' names?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne me souviens pas de tous les noms.",
+    "en": "No, I don't remember all the names.",
+    "verb": "se souvenir",
+    "person": "je",
+    "accept": [
+     "Non, je ne me souviens pas de tous les noms.",
+     "Je ne me souviens pas de tous les noms."
+    ],
+    "options": [
+     "Non, je ne me souvenons pas de tous les noms.",
+     "Non, je ne me souvenais pas de tous les noms.",
+     "Non, je ne me souviendrai pas de tous les noms."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est normal ! Vous et votre équipe, vous réjouissez-vous de la fête de vendredi ?",
+    "en": "That's normal! Are you and your team looking forward to Friday's party?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous en réjouissons.",
+    "en": "Yes, we're looking forward to it.",
+    "verb": "se réjouir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous en réjouissons.",
+     "Nous nous en réjouissons.",
+     "Oui, nous nous en réjouissons beaucoup.",
+     "Oui, nous nous réjouissons beaucoup."
+    ],
+    "options": [
+     "Oui, nous nous en réjouissez.",
+     "Oui, nous nous en réjouit.",
+     "Oui, nous nous en sommes réjouis."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi ! Et votre famille, s'adapte-t-elle à la nouvelle ville ?",
+    "en": "Me too! And your family, are they adapting to the new town?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle s'adapte très vite.",
+    "en": "Yes, they're adapting very quickly.",
+    "verb": "s'adapter",
+    "person": "elle",
+    "accept": [
+     "Oui, elle s'adapte très vite.",
+     "Elle s'adapte très vite.",
+     "Oui, elle s'adapte vite."
+    ],
+    "options": [
+     "Oui, elle s'adaptons très vite.",
+     "Oui, elle s'adaptait très vite.",
+     "Oui, elle s'adaptera très vite."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien. Et le chef, s'intéresse-t-il à vos idées ?",
+    "en": "Very good. And the boss, is he interested in your ideas?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'intéresse à mes idées.",
+    "en": "Yes, he's interested in my ideas.",
+    "verb": "s'intéresser",
+    "person": "il",
+    "accept": [
+     "Oui, il s'intéresse à mes idées.",
+     "Il s'intéresse à mes idées.",
+     "Oui, il s'intéresse beaucoup à mes idées."
+    ],
+    "options": [
+     "Oui, il s'intéressons à mes idées.",
+     "Oui, il s'intéressait à mes idées.",
+     "Oui, il s'intéressera à mes idées."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi, je cours le samedi matin. Vous entraînez-vous aussi ?",
+    "en": "Me, I go running on Saturday mornings. Do you train too?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'entraîne deux fois par semaine.",
+    "en": "Yes, I train twice a week.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Oui, je m'entraîne deux fois par semaine.",
+     "Je m'entraîne deux fois par semaine.",
+     "Oui, je m'entraîne aussi."
+    ],
+    "options": [
+     "Oui, je m'entraînons deux fois par semaine.",
+     "Oui, je m'entraînais deux fois par semaine.",
+     "Oui, je me suis entraîné deux fois par semaine."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Et vos collègues, se souviennent-ils de votre nom ?",
+    "en": "Well done! And your colleagues, do they remember your name?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils se souviennent de mon nom.",
+    "en": "Yes, they remember my name.",
+    "verb": "se souvenir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils se souviennent de mon nom.",
+     "Ils se souviennent de mon nom.",
+     "Oui, ils s'en souviennent."
+    ],
+    "options": [
+     "Oui, ils se souvenez de mon nom.",
+     "Oui, ils se souvenaient de mon nom.",
+     "Oui, ils se souviendront de mon nom."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tant mieux ! Vous et Sophie, vous ennuyez-vous pendant les réunions ?",
+    "en": "Good! You and Sophie, do you get bored during meetings?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous ennuyons un peu !",
+    "en": "Yes, we get a bit bored!",
+    "verb": "s'ennuyer",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous ennuyons un peu !",
+     "Nous nous ennuyons un peu.",
+     "Oui, nous nous ennuyons un peu."
+    ],
+    "options": [
+     "Oui, nous nous ennuyez un peu !",
+     "Oui, nous nous ennuie un peu !",
+     "Oui, nous nous sommes un peu ennuyés !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ! Et Sophie, se débrouille-t-elle en anglais ?",
+    "en": "Ha! And Sophie, does she get by in English?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle se débrouille très bien.",
+    "en": "Yes, she gets by very well.",
+    "verb": "se débrouiller",
+    "person": "elle",
+    "accept": [
+     "Oui, elle se débrouille très bien.",
+     "Elle se débrouille très bien.",
+     "Oui, elle se débrouille bien."
+    ],
+    "options": [
+     "Oui, elle se débrouillons très bien.",
+     "Oui, elle se débrouillait très bien.",
+     "Oui, elle se débrouillera très bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Alors, voulez-vous vous entraîner avec moi samedi matin, au parc ?",
+    "en": "So, would you like to train with me on Saturday morning, in the park?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me réjouis de m'entraîner avec vous !",
+    "en": "Yes, I'm looking forward to training with you!",
+    "verb": "se réjouir",
+    "person": "je",
+    "accept": [
+     "Oui, je me réjouis de m'entraîner avec vous !",
+     "Je me réjouis de m'entraîner avec vous !",
+     "Oui, je me réjouis de m'entraîner avec vous."
+    ],
+    "options": [
+     "Oui, je me réjouissons de m'entraîner avec vous !",
+     "Oui, je me suis réjoui de m'entraîner avec vous !",
+     "Oui, je me réjouissais de m'entraîner avec vous !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! À samedi, alors. Bienvenue dans l'équipe !",
+    "en": "Perfect! See you on Saturday, then. Welcome to the team!"
+   }
+  ]
+ },
+ "Intermediate B|Past": {
+  "title": "La première semaine",
+  "titleEn": "The first week",
+  "character": "Monsieur Bernard",
+  "voice": "Voix grand père",
+  "scene": "At the end of your first week, Monsieur Bernard asks how it all went.",
+  "verbs": [
+   "s'intéresser",
+   "se débrouiller",
+   "s'ennuyer",
+   "s'entraîner",
+   "se souvenir",
+   "s'adapter",
+   "se réjouir"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Alors, votre première semaine ? Vous êtes-vous bien adapté ?",
+    "en": "Hello! So, how was your first week? Did you settle in well?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me suis bien adapté.",
+    "en": "Yes, I settled in well.",
+    "verb": "s'adapter",
+    "person": "je",
+    "accept": [
+     "Oui, je me suis bien adapté.",
+     "Oui, je me suis bien adaptée.",
+     "Je me suis bien adapté.",
+     "Je me suis bien adaptée."
+    ],
+    "options": [
+     "Oui, je m'ai bien adapté.",
+     "Oui, je me sommes bien adapté.",
+     "Oui, je m'adapterai bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Tant mieux ! Vous êtes-vous ennuyé pendant la grande réunion de lundi ?",
+    "en": "Good! Did you get bored during Monday's big meeting?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne me suis pas ennuyé.",
+    "en": "No, I didn't get bored.",
+    "verb": "s'ennuyer",
+    "person": "je",
+    "accept": [
+     "Non, je ne me suis pas ennuyé.",
+     "Non, je ne me suis pas ennuyée.",
+     "Je ne me suis pas ennuyé.",
+     "Je ne me suis pas ennuyée."
+    ],
+    "options": [
+     "Non, je ne m'ai pas ennuyé.",
+     "Non, je ne me sont pas ennuyé.",
+     "Non, je ne m'ennuierai pas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous êtes-vous débrouillé avec l'ordinateur ?",
+    "en": "And did you manage with the computer?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me suis débrouillé tout seul.",
+    "en": "Yes, I managed on my own.",
+    "verb": "se débrouiller",
+    "person": "je",
+    "accept": [
+     "Oui, je me suis débrouillé tout seul.",
+     "Oui, je me suis débrouillée toute seule.",
+     "Je me suis débrouillé tout seul.",
+     "Je me suis débrouillée toute seule."
+    ],
+    "options": [
+     "Oui, je m'ai débrouillé tout seul.",
+     "Oui, je me sommes débrouillé tout seul.",
+     "Oui, je me débrouillerai tout seul."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Et Sophie, s'est-elle souvenue de votre anniversaire mercredi ?",
+    "en": "Well done! And Sophie, did she remember your birthday on Wednesday?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle s'est souvenue de mon anniversaire !",
+    "en": "Yes, she remembered my birthday!",
+    "verb": "se souvenir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle s'est souvenue de mon anniversaire !",
+     "Elle s'est souvenue de mon anniversaire.",
+     "Oui, elle s'en est souvenue !",
+     "Oui, elle s'est souvenue de mon anniversaire."
+    ],
+    "options": [
+     "Oui, elle s'a souvenue de mon anniversaire !",
+     "Oui, elle se sont souvenue de mon anniversaire !",
+     "Oui, elle se souviendra de mon anniversaire !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Quelle gentille collègue ! Et les autres, se sont-ils réjouis de votre arrivée ?",
+    "en": "What a kind colleague! And the others, were they pleased about your arrival?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils se sont réjouis de mon arrivée.",
+    "en": "Yes, they were pleased about my arrival.",
+    "verb": "se réjouir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils se sont réjouis de mon arrivée.",
+     "Ils se sont réjouis de mon arrivée.",
+     "Oui, ils se sont beaucoup réjouis."
+    ],
+    "options": [
+     "Oui, ils s'ont réjouis de mon arrivée.",
+     "Oui, ils se sommes réjouis de mon arrivée.",
+     "Oui, ils se réjouiront de mon arrivée."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Vous et l'équipe de football, vous êtes-vous entraînés mercredi soir ?",
+    "en": "You and the football team, did you train on Wednesday evening?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous sommes entraînés.",
+    "en": "Yes, we trained.",
+    "verb": "s'entraîner",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous sommes entraînés.",
+     "Nous nous sommes entraînés.",
+     "Oui, nous nous sommes entraînés ensemble."
+    ],
+    "options": [
+     "Oui, nous nous avons entraînés.",
+     "Oui, nous nous êtes entraînés.",
+     "Oui, nous nous entraînerons."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et le chef, s'est-il intéressé à votre travail ?",
+    "en": "And the boss, did he take an interest in your work?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'est beaucoup intéressé à mon travail.",
+    "en": "Yes, he took a lot of interest in my work.",
+    "verb": "s'intéresser",
+    "person": "il",
+    "accept": [
+     "Oui, il s'est beaucoup intéressé à mon travail.",
+     "Il s'est beaucoup intéressé à mon travail.",
+     "Oui, il s'est intéressé à mon travail."
+    ],
+    "options": [
+     "Oui, il s'a beaucoup intéressé à mon travail.",
+     "Oui, il se sont beaucoup intéressé à mon travail.",
+     "Oui, il s'intéressera beaucoup à mon travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Excellent ! Et maintenant, vous adaptez-vous bien à la vie ici ?",
+    "en": "Excellent! And now, are you settling into life here?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, maintenant je m'adapte très bien.",
+    "en": "Yes, now I'm settling in very well.",
+    "verb": "s'adapter",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Oui, maintenant je m'adapte très bien.",
+     "Oui, je m'adapte très bien.",
+     "Je m'adapte très bien.",
+     "Maintenant, je m'adapte très bien."
+    ],
+    "options": [
+     "Oui, maintenant je m'adaptons très bien.",
+     "Oui, maintenant je m'adapterai très bien.",
+     "Oui, maintenant je m'adaptais très bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et votre collègue Paul, s'est-il débrouillé avec les clients anglais ?",
+    "en": "And your colleague Paul, did he manage with the English clients?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'est très bien débrouillé.",
+    "en": "Yes, he managed very well.",
+    "verb": "se débrouiller",
+    "person": "il",
+    "accept": [
+     "Oui, il s'est très bien débrouillé.",
+     "Il s'est très bien débrouillé.",
+     "Oui, il s'est bien débrouillé."
+    ],
+    "options": [
+     "Oui, il s'a très bien débrouillé.",
+     "Oui, il se sont très bien débrouillé.",
+     "Oui, il se débrouillera très bien."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous, vous êtes-vous souvenu du nom de tous vos collègues ?",
+    "en": "And you, did you remember all your colleagues' names?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me suis souvenu de tous les noms !",
+    "en": "Yes, I remembered all the names!",
+    "verb": "se souvenir",
+    "person": "je",
+    "accept": [
+     "Oui, je me suis souvenu de tous les noms !",
+     "Oui, je me suis souvenue de tous les noms !",
+     "Je me suis souvenu de tous les noms.",
+     "Je me suis souvenue de tous les noms."
+    ],
+    "options": [
+     "Oui, je m'ai souvenu de tous les noms !",
+     "Oui, je me sommes souvenu de tous les noms !",
+     "Oui, je me souviendrai de tous les noms !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Et Sophie, s'est-elle entraînée avec vous ?",
+    "en": "Well done! And Sophie, did she train with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle ne s'est pas entraînée.",
+    "en": "No, she didn't train.",
+    "verb": "s'entraîner",
+    "person": "elle",
+    "accept": [
+     "Non, elle ne s'est pas entraînée.",
+     "Elle ne s'est pas entraînée.",
+     "Non, elle ne s'est pas entraînée avec nous."
+    ],
+    "options": [
+     "Non, elle ne s'a pas entraînée.",
+     "Non, elle ne se sont pas entraînée.",
+     "Non, elle ne s'entraînera pas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage ! Et Paul et Marc, se sont-ils ennuyés pendant la réunion ?",
+    "en": "Shame! And Paul and Marc, did they get bored during the meeting?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils se sont beaucoup ennuyés.",
+    "en": "Yes, they got really bored.",
+    "verb": "s'ennuyer",
+    "person": "ils",
+    "accept": [
+     "Oui, ils se sont beaucoup ennuyés.",
+     "Ils se sont beaucoup ennuyés.",
+     "Oui, ils se sont ennuyés."
+    ],
+    "options": [
+     "Oui, ils s'ont beaucoup ennuyés.",
+     "Oui, ils se sommes beaucoup ennuyés.",
+     "Oui, ils s'ennuieront beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah, les réunions ! Et votre famille, s'est-elle adaptée à la nouvelle ville ?",
+    "en": "Ah, meetings! And your family, did they adapt to the new town?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle s'est adaptée sans problème.",
+    "en": "Yes, they adapted without any trouble.",
+    "verb": "s'adapter",
+    "person": "elle",
+    "accept": [
+     "Oui, elle s'est adaptée sans problème.",
+     "Elle s'est adaptée sans problème.",
+     "Oui, elle s'est bien adaptée."
+    ],
+    "options": [
+     "Oui, elle s'a adaptée sans problème.",
+     "Oui, elle se sont adaptée sans problème.",
+     "Oui, elle s'adaptera sans problème."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait. Vous et Sophie, vous êtes-vous intéressés au nouveau client ?",
+    "en": "Perfect. You and Sophie, did you take an interest in the new client?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous sommes intéressés au nouveau client.",
+    "en": "Yes, we took an interest in the new client.",
+    "verb": "s'intéresser",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous sommes intéressés au nouveau client.",
+     "Nous nous sommes intéressés au nouveau client.",
+     "Oui, nous nous y sommes intéressés."
+    ],
+    "options": [
+     "Oui, nous nous avons intéressés au nouveau client.",
+     "Oui, nous nous êtes intéressés au nouveau client.",
+     "Oui, nous nous intéresserons au nouveau client."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bref, une belle semaine ! De quoi vous êtes-vous le plus réjoui ?",
+    "en": "All in all, a good week! What were you happiest about?"
+   },
+   {
+    "who": "you",
+    "fr": "Je me suis réjoui de m'être adapté si vite.",
+    "en": "I was happy to adapt so quickly.",
+    "verb": "se réjouir",
+    "person": "je",
+    "accept": [
+     "Je me suis réjoui de m'être adapté si vite.",
+     "Je me suis réjouie de m'être adaptée si vite.",
+     "Je me suis réjoui de m'être adapté si vite !",
+     "Je me suis réjouie de m'être adaptée si vite !"
+    ],
+    "options": [
+     "Je m'ai réjoui de m'être adapté si vite.",
+     "Je me sommes réjoui de m'être adapté si vite.",
+     "Je me réjouirai de m'être adapté si vite."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi, je m'en réjouis ! Bon week-end !",
+    "en": "I'm delighted about it too! Have a good weekend!"
+   }
+  ]
+ },
+ "Intermediate B|Imperfect": {
+  "title": "Quand j'étais étudiant",
+  "titleEn": "When I was a student",
+  "character": "Monsieur Bernard",
+  "voice": "Voix grand père",
+  "scene": "Over coffee, Monsieur Bernard asks what life was like when you were a student.",
+  "verbs": [
+   "s'intéresser",
+   "se débrouiller",
+   "s'ennuyer",
+   "s'entraîner",
+   "se souvenir",
+   "s'adapter",
+   "se réjouir"
+  ],
+  "newWords": [],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Parlons du bon vieux temps. Quand vous étiez étudiant, à quoi vous intéressiez-vous ?",
+    "en": "Hello! Let's talk about the good old days. When you were a student, what were you interested in?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'intéressais à l'histoire.",
+    "en": "I was interested in history.",
+    "verb": "s'intéresser",
+    "person": "je",
+    "accept": [
+     "Je m'intéressais à l'histoire.",
+     "Quand j'étais étudiant, je m'intéressais à l'histoire.",
+     "Quand j'étais étudiante, je m'intéressais à l'histoire.",
+     "Je m'intéressais beaucoup à l'histoire."
+    ],
+    "options": [
+     "Je m'intéressions à l'histoire.",
+     "Je m'intéresserai à l'histoire.",
+     "Je m'ai intéressé à l'histoire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Moi aussi ! Vous débrouilliez-vous avec peu d'argent ?",
+    "en": "Me too! Did you get by on little money?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me débrouillais avec des pâtes et du riz.",
+    "en": "Yes, I got by on pasta and rice.",
+    "verb": "se débrouiller",
+    "person": "je",
+    "accept": [
+     "Oui, je me débrouillais avec des pâtes et du riz.",
+     "Je me débrouillais avec des pâtes et du riz.",
+     "Oui, je me débrouillais avec du riz et des pâtes."
+    ],
+    "options": [
+     "Oui, je me débrouillions avec des pâtes et du riz.",
+     "Oui, je me débrouillerai avec des pâtes et du riz.",
+     "Oui, je m'ai débrouillé avec des pâtes et du riz."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ! Vous ennuyiez-vous en cours ?",
+    "en": "Ha! Did you get bored in class?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'ennuyais jamais.",
+    "en": "No, I never got bored.",
+    "verb": "s'ennuyer",
+    "person": "je",
+    "accept": [
+     "Non, je ne m'ennuyais jamais.",
+     "Je ne m'ennuyais jamais.",
+     "Non, je ne m'ennuyais jamais en cours."
+    ],
+    "options": [
+     "Non, je ne m'ennuyions jamais.",
+     "Non, je ne m'ennuierai jamais.",
+     "Non, je ne m'ai jamais ennuyé."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et votre colocataire, s'entraînait-il avec vous ?",
+    "en": "And your flatmate, did he train with you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'entraînait avec moi tous les matins.",
+    "en": "Yes, he trained with me every morning.",
+    "verb": "s'entraîner",
+    "person": "il",
+    "accept": [
+     "Oui, il s'entraînait avec moi tous les matins.",
+     "Il s'entraînait avec moi tous les matins.",
+     "Oui, il s'entraînait avec moi."
+    ],
+    "options": [
+     "Oui, il s'entraînions avec moi tous les matins.",
+     "Oui, il s'entraînera avec moi tous les matins.",
+     "Oui, il s'a entraîné avec moi tous les matins."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vos parents, se réjouissaient-ils de vous voir le week-end ?",
+    "en": "And your parents, were they happy to see you at the weekend?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils se réjouissaient de me voir le week-end.",
+    "en": "Yes, they were happy to see me at the weekend.",
+    "verb": "se réjouir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils se réjouissaient de me voir le week-end.",
+     "Ils se réjouissaient de me voir le week-end.",
+     "Oui, ils se réjouissaient de me voir."
+    ],
+    "options": [
+     "Oui, ils se réjouissions de me voir le week-end.",
+     "Oui, ils se réjouiront de me voir le week-end.",
+     "Oui, ils s'ont réjouis de me voir le week-end."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Vous et vos camarades, vous adaptiez-vous facilement aux nouveaux professeurs ?",
+    "en": "You and your classmates, did you adapt easily to new teachers?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous adaptions facilement.",
+    "en": "Yes, we adapted easily.",
+    "verb": "s'adapter",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous adaptions facilement.",
+     "Nous nous adaptions facilement.",
+     "Oui, nous nous adaptions très facilement."
+    ],
+    "options": [
+     "Oui, nous nous adaptiez facilement.",
+     "Oui, nous nous adapterons facilement.",
+     "Oui, nous nous avons adaptés facilement."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et votre colocataire se souvenait-il de fermer la porte ?",
+    "en": "And did your flatmate remember to close the door?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne se souvenait jamais de fermer la porte !",
+    "en": "No, he never remembered to close the door!",
+    "verb": "se souvenir",
+    "person": "il",
+    "accept": [
+     "Non, il ne se souvenait jamais de fermer la porte !",
+     "Il ne se souvenait jamais de fermer la porte.",
+     "Non, il ne s'en souvenait jamais !"
+    ],
+    "options": [
+     "Non, il ne se souvenions jamais de fermer la porte !",
+     "Non, il ne se souviendra jamais de fermer la porte !",
+     "Non, il ne s'a jamais souvenu de fermer la porte !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Et votre meilleure amie, s'intéressait-elle à l'histoire aussi ?",
+    "en": "Ha ha! And your best friend, was she interested in history too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle s'intéressait à la musique.",
+    "en": "No, she was interested in music.",
+    "verb": "s'intéresser",
+    "person": "elle",
+    "accept": [
+     "Non, elle s'intéressait à la musique.",
+     "Elle s'intéressait à la musique.",
+     "Non, elle s'intéressait seulement à la musique."
+    ],
+    "options": [
+     "Non, elle s'intéressions à la musique.",
+     "Non, elle s'intéressera à la musique.",
+     "Non, elle s'a intéressée à la musique."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vos camarades, s'ennuyaient-ils le dimanche ?",
+    "en": "And your classmates, did they get bored on Sundays?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'ennuyaient loin de leur famille.",
+    "en": "Yes, they got bored far from their families.",
+    "verb": "s'ennuyer",
+    "person": "ils",
+    "accept": [
+     "Oui, ils s'ennuyaient loin de leur famille.",
+     "Ils s'ennuyaient loin de leur famille.",
+     "Oui, ils s'ennuyaient loin de leurs familles."
+    ],
+    "options": [
+     "Oui, ils s'ennuyions loin de leur famille.",
+     "Oui, ils s'ennuieront loin de leur famille.",
+     "Oui, ils s'ont ennuyés loin de leur famille."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous, vous souveniez-vous de tout avant les examens ?",
+    "en": "And you, did you remember everything before exams?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne me souvenais de rien !",
+    "en": "No, I couldn't remember a thing!",
+    "verb": "se souvenir",
+    "person": "je",
+    "accept": [
+     "Non, je ne me souvenais de rien !",
+     "Je ne me souvenais de rien !",
+     "Non, je ne me souvenais de rien."
+    ],
+    "options": [
+     "Non, je ne me souvenions de rien !",
+     "Non, je ne me souviendrai de rien !",
+     "Non, je ne m'ai souvenu de rien !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Vraiment ? Mais vous entraîniez-vous beaucoup ?",
+    "en": "Really? But did you practise a lot?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'entraînais tous les soirs.",
+    "en": "Yes, I practised every evening.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Oui, je m'entraînais tous les soirs.",
+     "Je m'entraînais tous les soirs.",
+     "Oui, je m'entraînais beaucoup."
+    ],
+    "options": [
+     "Oui, je m'entraînions tous les soirs.",
+     "Oui, je m'entraînerai tous les soirs.",
+     "Oui, je m'ai entraîné tous les soirs."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Comme moi ! Et aujourd'hui, vous intéressez-vous toujours à l'histoire ?",
+    "en": "Like me! And today, are you still interested in history?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'intéresse toujours à l'histoire.",
+    "en": "Yes, I'm still interested in history.",
+    "verb": "s'intéresser",
+    "person": "je",
+    "callback": "Present",
+    "accept": [
+     "Oui, je m'intéresse toujours à l'histoire.",
+     "Je m'intéresse toujours à l'histoire.",
+     "Oui, je m'intéresse encore à l'histoire."
+    ],
+    "options": [
+     "Oui, je m'intéressons toujours à l'histoire.",
+     "Oui, je m'intéressais toujours à l'histoire.",
+     "Oui, je m'ai toujours intéressé à l'histoire."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bien ! Vous et votre colocataire, vous débrouilliez-vous en cuisine ?",
+    "en": "Good! You and your flatmate, did you manage in the kitchen?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous nous débrouillions très mal !",
+    "en": "No, we managed very badly!",
+    "verb": "se débrouiller",
+    "person": "nous",
+    "accept": [
+     "Non, nous nous débrouillions très mal !",
+     "Nous nous débrouillions très mal !",
+     "Non, nous nous débrouillions très mal."
+    ],
+    "options": [
+     "Non, nous nous débrouilliez très mal !",
+     "Non, nous nous débrouillerons très mal !",
+     "Non, nous nous avons débrouillés très mal !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ha ha ! Et votre meilleure amie, s'adaptait-elle à la grande ville ?",
+    "en": "Ha ha! And your best friend, was she adapting to the big city?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle ne s'adaptait pas du tout.",
+    "en": "No, she wasn't adapting at all.",
+    "verb": "s'adapter",
+    "person": "elle",
+    "accept": [
+     "Non, elle ne s'adaptait pas du tout.",
+     "Elle ne s'adaptait pas du tout.",
+     "Non, elle ne s'adaptait pas."
+    ],
+    "options": [
+     "Non, elle ne s'adaptions pas du tout.",
+     "Non, elle ne s'adaptera pas du tout.",
+     "Non, elle ne s'a pas adaptée du tout."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous, vous réjouissiez-vous d'être loin de vos parents ?",
+    "en": "And you, were you happy to be far from your parents?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me réjouissais de me débrouiller tout seul.",
+    "en": "Yes, I was happy to manage on my own.",
+    "verb": "se réjouir",
+    "person": "je",
+    "accept": [
+     "Oui, je me réjouissais de me débrouiller tout seul.",
+     "Oui, je me réjouissais de me débrouiller toute seule.",
+     "Je me réjouissais de me débrouiller tout seul.",
+     "Je me réjouissais de me débrouiller toute seule."
+    ],
+    "options": [
+     "Oui, je me réjouissions de me débrouiller tout seul.",
+     "Oui, je me réjouirai de me débrouiller tout seul.",
+     "Oui, je m'ai réjoui de me débrouiller tout seul."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah, la jeunesse ! Que de souvenirs !",
+    "en": "Ah, youth! So many memories!"
+   }
+  ]
+ },
+ "Intermediate B|Pluperfect": {
+  "title": "Avant l'entretien",
+  "titleEn": "Before the interview",
+  "character": "Monsieur Bernard",
+  "voice": "Voix grand père",
+  "scene": "Monsieur Bernard remembers your job interview and asks what you had done to prepare.",
+  "verbs": [
+   "s'intéresser",
+   "se débrouiller",
+   "s'ennuyer",
+   "s'entraîner",
+   "se souvenir",
+   "s'adapter",
+   "se réjouir"
+  ],
+  "newWords": [
+   {
+    "fr": "un entretien",
+    "en": "a (job) interview"
+   },
+   {
+    "fr": "un candidat / une candidate",
+    "en": "a candidate"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Je me souviens bien de votre entretien. Avant l'entretien, vous étiez-vous intéressé à notre équipe ?",
+    "en": "Hello! I remember your interview well. Before the interview, had you taken an interest in our team?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais beaucoup intéressé à votre équipe.",
+    "en": "Yes, I'd taken a lot of interest in your team.",
+    "verb": "s'intéresser",
+    "person": "je",
+    "accept": [
+     "Oui, je m'étais beaucoup intéressé à votre équipe.",
+     "Oui, je m'étais beaucoup intéressée à votre équipe.",
+     "Je m'étais beaucoup intéressé à votre équipe.",
+     "Je m'étais beaucoup intéressée à votre équipe."
+    ],
+    "options": [
+     "Oui, je m'avais beaucoup intéressé à votre équipe.",
+     "Oui, je m'étions beaucoup intéressé à votre équipe.",
+     "Oui, je m'intéresserai beaucoup à votre équipe."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bien ! Et le jour de l'entretien, vous étiez-vous souvenu de l'adresse ?",
+    "en": "Good! And on the day of the interview, had you remembered the address?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'étais pas souvenu de l'adresse !",
+    "en": "No, I hadn't remembered the address!",
+    "verb": "se souvenir",
+    "person": "je",
+    "accept": [
+     "Non, je ne m'étais pas souvenu de l'adresse !",
+     "Non, je ne m'étais pas souvenue de l'adresse !",
+     "Je ne m'étais pas souvenu de l'adresse.",
+     "Je ne m'étais pas souvenue de l'adresse."
+    ],
+    "options": [
+     "Non, je ne m'avais pas souvenu de l'adresse !",
+     "Non, je ne m'étions pas souvenu de l'adresse !",
+     "Non, je ne me souviendrai pas de l'adresse !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Oh là là ! Votre sœur s'était-elle débrouillée pour la trouver ?",
+    "en": "Oh dear! Had your sister managed to find it?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle s'était débrouillée pour trouver l'adresse.",
+    "en": "Yes, she'd managed to find the address.",
+    "verb": "se débrouiller",
+    "person": "elle",
+    "accept": [
+     "Oui, elle s'était débrouillée pour trouver l'adresse.",
+     "Elle s'était débrouillée pour trouver l'adresse.",
+     "Oui, elle s'était débrouillée pour la trouver."
+    ],
+    "options": [
+     "Oui, elle s'avait débrouillée pour trouver l'adresse.",
+     "Oui, elle s'étions débrouillée pour trouver l'adresse.",
+     "Oui, elle se débrouillera pour trouver l'adresse."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ouf ! Quand vous êtes arrivé, les autres candidats attendaient depuis une heure. S'étaient-ils ennuyés ?",
+    "en": "Phew! When you arrived, the other candidates had been waiting for an hour. Had they got bored?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'étaient beaucoup ennuyés.",
+    "en": "Yes, they'd got really bored.",
+    "verb": "s'ennuyer",
+    "person": "ils",
+    "accept": [
+     "Oui, ils s'étaient beaucoup ennuyés.",
+     "Ils s'étaient beaucoup ennuyés.",
+     "Oui, ils s'étaient ennuyés."
+    ],
+    "options": [
+     "Oui, ils s'avaient beaucoup ennuyés.",
+     "Oui, ils s'étions beaucoup ennuyés.",
+     "Oui, ils s'ennuieront beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous, vous étiez-vous entraîné à répondre aux questions ?",
+    "en": "And you, had you practised answering the questions?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais entraîné avec un ami.",
+    "en": "Yes, I'd practised with a friend.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Oui, je m'étais entraîné avec un ami.",
+     "Oui, je m'étais entraînée avec un ami.",
+     "Je m'étais entraîné avec un ami.",
+     "Je m'étais entraînée avec un ami."
+    ],
+    "options": [
+     "Oui, je m'avais entraîné avec un ami.",
+     "Oui, je m'étions entraîné avec un ami.",
+     "Oui, je m'entraînerai avec un ami."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Ah bon ? Votre ami s'était-il intéressé à ce travail, lui aussi ?",
+    "en": "Really? Had your friend been interested in this job too?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'était pas intéressé à ce travail.",
+    "en": "No, he hadn't been interested in this job.",
+    "verb": "s'intéresser",
+    "person": "il",
+    "accept": [
+     "Non, il ne s'était pas intéressé à ce travail.",
+     "Il ne s'était pas intéressé à ce travail.",
+     "Non, il ne s'y était pas intéressé."
+    ],
+    "options": [
+     "Non, il ne s'avait pas intéressé à ce travail.",
+     "Non, il ne s'étions pas intéressé à ce travail.",
+     "Non, il ne s'intéressera pas à ce travail."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et votre meilleure amie, s'était-elle réjouie pour vous ?",
+    "en": "And your best friend, had she been happy for you?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle s'était beaucoup réjouie.",
+    "en": "Yes, she'd been really happy.",
+    "verb": "se réjouir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle s'était beaucoup réjouie.",
+     "Elle s'était beaucoup réjouie.",
+     "Oui, elle s'était beaucoup réjouie pour moi."
+    ],
+    "options": [
+     "Oui, elle s'avait beaucoup réjouie.",
+     "Oui, elle s'étions beaucoup réjouie.",
+     "Oui, elle se réjouira beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est gentil ! Quand vous étiez étudiant, vous entraîniez-vous autant ?",
+    "en": "How nice! When you were a student, did you practise as much?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'entraînais tous les soirs.",
+    "en": "Yes, I practised every evening.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "callback": "Imperfect",
+    "accept": [
+     "Oui, je m'entraînais tous les soirs.",
+     "Je m'entraînais tous les soirs.",
+     "Oui, je m'entraînais beaucoup."
+    ],
+    "options": [
+     "Oui, je m'entraînions tous les soirs.",
+     "Oui, je m'entraînerai tous les soirs.",
+     "Oui, je m'ai entraîné tous les soirs."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Vous et votre famille, vous étiez-vous déjà adaptés à la ville ?",
+    "en": "Well done! You and your family, had you already settled into the town?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, nous ne nous étions pas encore adaptés.",
+    "en": "No, we hadn't settled in yet.",
+    "verb": "s'adapter",
+    "person": "nous",
+    "accept": [
+     "Non, nous ne nous étions pas encore adaptés.",
+     "Nous ne nous étions pas encore adaptés.",
+     "Non, nous ne nous étions pas encore adaptées."
+    ],
+    "options": [
+     "Non, nous ne nous avions pas encore adaptés.",
+     "Non, nous ne nous étiez pas encore adaptés.",
+     "Non, nous ne nous serons pas encore adaptés."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "C'est normal. Et vos parents, s'étaient-ils souvenus de vous téléphoner ce matin-là ?",
+    "en": "That's normal. And your parents, had they remembered to phone you that morning?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'en étaient souvenus.",
+    "en": "Yes, they'd remembered.",
+    "verb": "se souvenir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils s'en étaient souvenus.",
+     "Ils s'en étaient souvenus.",
+     "Oui, ils s'étaient souvenus de me téléphoner."
+    ],
+    "options": [
+     "Oui, ils s'en avaient souvenus.",
+     "Oui, ils s'en étions souvenus.",
+     "Oui, ils s'en souviendront."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous, vous étiez-vous ennuyé en attendant ?",
+    "en": "And you, had you got bored while waiting?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, je ne m'étais pas ennuyé, j'avais pris un livre.",
+    "en": "No, I hadn't got bored, I'd brought a book.",
+    "verb": "s'ennuyer",
+    "person": "je",
+    "accept": [
+     "Non, je ne m'étais pas ennuyé, j'avais pris un livre.",
+     "Non, je ne m'étais pas ennuyée, j'avais pris un livre.",
+     "Non, je ne m'étais pas ennuyé.",
+     "Non, je ne m'étais pas ennuyée."
+    ],
+    "options": [
+     "Non, je ne m'avais pas ennuyé, j'avais pris un livre.",
+     "Non, je ne m'étions pas ennuyé, j'avais pris un livre.",
+     "Non, je ne m'ennuie pas, j'avais pris un livre."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien. Et votre chien, s'était-il adapté à la nouvelle maison ?",
+    "en": "Very good. And your dog, had he adapted to the new house?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, il ne s'était pas encore adapté.",
+    "en": "No, he hadn't adapted yet.",
+    "verb": "s'adapter",
+    "person": "il",
+    "accept": [
+     "Non, il ne s'était pas encore adapté.",
+     "Il ne s'était pas encore adapté.",
+     "Non, il ne s'était pas adapté."
+    ],
+    "options": [
+     "Non, il ne s'avait pas encore adapté.",
+     "Non, il ne s'étions pas encore adapté.",
+     "Non, il ne se sera pas encore adapté."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Pauvre chien ! Et vous et votre sœur, vous étiez-vous débrouillés pour arriver à l'heure ?",
+    "en": "Poor dog! And you and your sister, had you managed to arrive on time?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous étions débrouillés pour arriver à l'heure !",
+    "en": "Yes, we'd managed to arrive on time!",
+    "verb": "se débrouiller",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous étions débrouillés pour arriver à l'heure !",
+     "Oui, nous nous étions débrouillées pour arriver à l'heure !",
+     "Nous nous étions débrouillés pour arriver à l'heure.",
+     "Oui, nous nous étions débrouillés pour arriver à l'heure."
+    ],
+    "options": [
+     "Oui, nous nous avions débrouillés pour arriver à l'heure !",
+     "Oui, nous nous étiez débrouillés pour arriver à l'heure !",
+     "Oui, nous nous débrouillerons pour arriver à l'heure !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous étiez-vous réjoui de cet entretien ?",
+    "en": "And had you been pleased about this interview?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'en étais beaucoup réjoui.",
+    "en": "Yes, I'd been really pleased about it.",
+    "verb": "se réjouir",
+    "person": "je",
+    "accept": [
+     "Oui, je m'en étais beaucoup réjoui.",
+     "Oui, je m'en étais beaucoup réjouie.",
+     "Je m'en étais beaucoup réjoui.",
+     "Je m'en étais beaucoup réjouie.",
+     "Oui, je m'étais beaucoup réjoui."
+    ],
+    "options": [
+     "Oui, je m'en avais beaucoup réjoui.",
+     "Oui, je m'en étions beaucoup réjoui.",
+     "Oui, je m'en réjouirai beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bref, étiez-vous prêt ce jour-là ?",
+    "en": "In short, were you ready that day?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'étais bien entraîné et je m'étais souvenu de toutes mes réponses.",
+    "en": "Yes, I'd trained well and I'd remembered all my answers.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Oui, je m'étais bien entraîné et je m'étais souvenu de toutes mes réponses.",
+     "Oui, je m'étais bien entraînée et je m'étais souvenue de toutes mes réponses.",
+     "Je m'étais bien entraîné et je m'étais souvenu de toutes mes réponses.",
+     "Je m'étais bien entraînée et je m'étais souvenue de toutes mes réponses.",
+     "Oui, je m'étais bien entraîné."
+    ],
+    "options": [
+     "Oui, je m'avais bien entraîné et je m'étais souvenu de toutes mes réponses.",
+     "Oui, je m'étions bien entraîné et je m'étais souvenu de toutes mes réponses.",
+     "Oui, je m'entraînerai bien et je m'étais souvenu de toutes mes réponses."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous avez eu le travail ! Bravo !",
+    "en": "And you got the job! Well done!"
+   }
+  ]
+ },
+ "Intermediate B|Future": {
+  "title": "Le marathon",
+  "titleEn": "The marathon",
+  "character": "Monsieur Bernard",
+  "voice": "Voix grand père",
+  "scene": "Monsieur Bernard is running the Paris marathon next spring and wants you to train with him.",
+  "verbs": [
+   "s'intéresser",
+   "se débrouiller",
+   "s'ennuyer",
+   "s'entraîner",
+   "se souvenir",
+   "s'adapter",
+   "se réjouir"
+  ],
+  "newWords": [
+   {
+    "fr": "le printemps",
+    "en": "spring"
+   },
+   {
+    "fr": "un conseil",
+    "en": "a piece of advice"
+   }
+  ],
+  "turns": [
+   {
+    "who": "app",
+    "fr": "Bonjour ! Grande nouvelle : je cours le marathon de Paris au printemps ! Vous entraînerez-vous avec moi ?",
+    "en": "Hello! Big news: I'm running the Paris marathon in the spring! Will you train with me?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'entraînerai avec vous !",
+    "en": "Yes, I'll train with you!",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Oui, je m'entraînerai avec vous !",
+     "Je m'entraînerai avec vous !",
+     "Oui, je m'entraînerai avec vous."
+    ],
+    "options": [
+     "Oui, je m'entraînerons avec vous !",
+     "Oui, je me suis entraîné avec vous !",
+     "Oui, je m'entraînais avec vous !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Super ! Vous souviendrez-vous de nos rendez-vous du samedi ?",
+    "en": "Great! Will you remember our Saturday sessions?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me souviendrai de nos rendez-vous.",
+    "en": "Yes, I'll remember our sessions.",
+    "verb": "se souvenir",
+    "person": "je",
+    "accept": [
+     "Oui, je me souviendrai de nos rendez-vous.",
+     "Je me souviendrai de nos rendez-vous.",
+     "Oui, je m'en souviendrai."
+    ],
+    "options": [
+     "Oui, je me souviendrons de nos rendez-vous.",
+     "Oui, je me suis souvenu de nos rendez-vous.",
+     "Oui, je me souvenais de nos rendez-vous."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vous adapterez-vous au froid du matin ?",
+    "en": "And will you adapt to the morning cold?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je m'adapterai facilement.",
+    "en": "Yes, I'll adapt easily.",
+    "verb": "s'adapter",
+    "person": "je",
+    "accept": [
+     "Oui, je m'adapterai facilement.",
+     "Je m'adapterai facilement.",
+     "Oui, je m'adapterai."
+    ],
+    "options": [
+     "Oui, je m'adapterons facilement.",
+     "Oui, je me suis adapté facilement.",
+     "Oui, je m'adaptais facilement."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Et Sophie, s'intéressera-t-elle au marathon ?",
+    "en": "Perfect! And Sophie, will she take an interest in the marathon?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, elle ne s'intéressera pas au marathon.",
+    "en": "No, she won't take an interest in the marathon.",
+    "verb": "s'intéresser",
+    "person": "elle",
+    "accept": [
+     "Non, elle ne s'intéressera pas au marathon.",
+     "Elle ne s'intéressera pas au marathon.",
+     "Non, elle ne s'y intéressera pas."
+    ],
+    "options": [
+     "Non, elle ne s'intéresserons pas au marathon.",
+     "Non, elle ne s'est pas intéressée au marathon.",
+     "Non, elle ne s'intéressait pas au marathon."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Dommage ! Paul et Marc courront avec nous. S'ennuieront-ils pendant le marathon ?",
+    "en": "Shame! Paul and Marc will run with us. Will they get bored during the marathon?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, ils ne s'ennuieront pas.",
+    "en": "No, they won't get bored.",
+    "verb": "s'ennuyer",
+    "person": "ils",
+    "accept": [
+     "Non, ils ne s'ennuieront pas.",
+     "Ils ne s'ennuieront pas.",
+     "Non, ils ne s'ennuieront pas pendant le marathon."
+    ],
+    "options": [
+     "Non, ils ne s'ennuierai pas.",
+     "Non, ils ne se sont pas ennuyés.",
+     "Non, ils ne s'ennuyaient pas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Vous et votre famille, vous réjouirez-vous de ce grand jour ?",
+    "en": "You and your family, will you be delighted on the big day?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous réjouirons beaucoup.",
+    "en": "Yes, we'll be really delighted.",
+    "verb": "se réjouir",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous réjouirons beaucoup.",
+     "Nous nous réjouirons beaucoup.",
+     "Oui, nous nous réjouirons.",
+     "Oui, nous nous en réjouirons."
+    ],
+    "options": [
+     "Oui, nous nous réjouirai beaucoup.",
+     "Oui, nous nous sommes beaucoup réjouis.",
+     "Oui, nous nous réjouissions beaucoup."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et votre sœur, se débrouillera-t-elle pour venir à Paris ?",
+    "en": "And your sister, will she manage to get to Paris?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle se débrouillera pour venir.",
+    "en": "Yes, she'll manage to come.",
+    "verb": "se débrouiller",
+    "person": "elle",
+    "accept": [
+     "Oui, elle se débrouillera pour venir.",
+     "Elle se débrouillera pour venir.",
+     "Oui, elle se débrouillera pour venir à Paris."
+    ],
+    "options": [
+     "Oui, elle se débrouillerons pour venir.",
+     "Oui, elle s'est débrouillée pour venir.",
+     "Oui, elle se débrouillait pour venir."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Et hier, vous êtes-vous entraîné ?",
+    "en": "Perfect! And yesterday, did you train?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, je me suis entraîné hier soir.",
+    "en": "Yes, I trained last night.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "callback": "Past",
+    "accept": [
+     "Oui, je me suis entraîné hier soir.",
+     "Oui, je me suis entraînée hier soir.",
+     "Je me suis entraîné hier soir.",
+     "Je me suis entraînée hier soir.",
+     "Oui, je me suis entraîné.",
+     "Oui, je me suis entraînée."
+    ],
+    "options": [
+     "Oui, je m'ai entraîné hier soir.",
+     "Oui, je m'entraînerai hier soir.",
+     "Oui, je me sommes entraîné hier soir."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bravo ! Moi, j'ai soixante ans. Pensez-vous que je m'adapterai ?",
+    "en": "Well done! Me, I'm sixty. Do you think I'll adapt?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, vous vous adapterez sans problème !",
+    "en": "Yes, you'll adapt without any trouble!",
+    "verb": "s'adapter",
+    "person": "vous",
+    "accept": [
+     "Oui, vous vous adapterez sans problème !",
+     "Vous vous adapterez sans problème !",
+     "Oui, vous vous adapterez.",
+     "Oui, vous vous adapterez sans problème."
+    ],
+    "options": [
+     "Oui, vous vous adapterons sans problème !",
+     "Oui, vous vous êtes adapté sans problème !",
+     "Oui, vous vous adaptiez sans problème !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Merci ! Et vous, vous ennuierez-vous pendant le marathon ?",
+    "en": "Thank you! And you, will you get bored during the marathon?"
+   },
+   {
+    "who": "you",
+    "fr": "Non, avec de la musique, je ne m'ennuierai pas.",
+    "en": "No, with music I won't get bored.",
+    "verb": "s'ennuyer",
+    "person": "je",
+    "accept": [
+     "Non, avec de la musique, je ne m'ennuierai pas.",
+     "Avec de la musique, je ne m'ennuierai pas.",
+     "Non, je ne m'ennuierai pas avec de la musique.",
+     "Non, je ne m'ennuierai pas."
+    ],
+    "options": [
+     "Non, avec de la musique, je ne m'ennuierons pas.",
+     "Non, avec de la musique, je ne me suis pas ennuyé.",
+     "Non, avec de la musique, je ne m'ennuyais pas."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Bonne idée ! Et le chef, s'intéressera-t-il à nos résultats ?",
+    "en": "Good idea! And the boss, will he take an interest in our results?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, il s'intéressera à nos résultats.",
+    "en": "Yes, he'll take an interest in our results.",
+    "verb": "s'intéresser",
+    "person": "il",
+    "accept": [
+     "Oui, il s'intéressera à nos résultats.",
+     "Il s'intéressera à nos résultats.",
+     "Oui, il s'y intéressera."
+    ],
+    "options": [
+     "Oui, il s'intéresserons à nos résultats.",
+     "Oui, il s'est intéressé à nos résultats.",
+     "Oui, il s'intéressait à nos résultats."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Et vos collègues, se souviendront-ils de la date ?",
+    "en": "And your colleagues, will they remember the date?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, ils s'en souviendront.",
+    "en": "Yes, they'll remember it.",
+    "verb": "se souvenir",
+    "person": "ils",
+    "accept": [
+     "Oui, ils s'en souviendront.",
+     "Ils s'en souviendront.",
+     "Oui, ils se souviendront de la date."
+    ],
+    "options": [
+     "Oui, ils s'en souviendrai.",
+     "Oui, ils s'en sont souvenus.",
+     "Oui, ils s'en souvenaient."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Très bien. Vous et moi, nous débrouillerons-nous sans aide ?",
+    "en": "Very good. You and I, will we manage without help?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, nous nous débrouillerons très bien !",
+    "en": "Yes, we'll manage very well!",
+    "verb": "se débrouiller",
+    "person": "nous",
+    "accept": [
+     "Oui, nous nous débrouillerons très bien !",
+     "Nous nous débrouillerons très bien !",
+     "Oui, nous nous débrouillerons très bien."
+    ],
+    "options": [
+     "Oui, nous nous débrouillerai très bien !",
+     "Oui, nous nous sommes très bien débrouillés !",
+     "Oui, nous nous débrouillions très bien !"
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Sophie ne courra pas, mais se réjouira-t-elle pour nous ?",
+    "en": "Sophie won't run, but will she be happy for us?"
+   },
+   {
+    "who": "you",
+    "fr": "Oui, elle se réjouira pour nous.",
+    "en": "Yes, she'll be happy for us.",
+    "verb": "se réjouir",
+    "person": "elle",
+    "accept": [
+     "Oui, elle se réjouira pour nous.",
+     "Elle se réjouira pour nous.",
+     "Oui, elle se réjouira beaucoup pour nous."
+    ],
+    "options": [
+     "Oui, elle se réjouirons pour nous.",
+     "Oui, elle s'est réjouie pour nous.",
+     "Oui, elle se réjouissait pour nous."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Alors, que ferez-vous d'ici le printemps ?",
+    "en": "So, what will you do between now and spring?"
+   },
+   {
+    "who": "you",
+    "fr": "Je m'entraînerai tous les jours et je me souviendrai de vos conseils.",
+    "en": "I'll train every day and I'll remember your advice.",
+    "verb": "s'entraîner",
+    "person": "je",
+    "accept": [
+     "Je m'entraînerai tous les jours et je me souviendrai de vos conseils.",
+     "Je m'entraînerai tous les jours.",
+     "Je m'entraînerai tous les jours et je me souviendrai de vos conseils !"
+    ],
+    "options": [
+     "Je m'entraînerons tous les jours et je me souviendrai de vos conseils.",
+     "Je me suis entraîné tous les jours et je me souviendrai de vos conseils.",
+     "Je m'entraînais tous les jours et je me souviendrai de vos conseils."
+    ]
+   },
+   {
+    "who": "app",
+    "fr": "Parfait ! Rendez-vous sur la ligne d'arrivée !",
+    "en": "Perfect! See you at the finish line!"
+   }
+  ]
  }
 }
