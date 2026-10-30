@@ -17,7 +17,6 @@ import { collectConversationWords } from "../lib/vocab";
 import { maybeAskForReview } from "../lib/reviewPrompt";
 import { countDue, unitKey } from "../lib/vocabCheck";
 import { soundGuideFor } from "../lib/conversationSoundGuides";
-import { LISTEN_TAIL_MS } from "../lib/mastersMic";
 import { purchasesAvailable, usePro } from "../lib/pro";
 
 /**
@@ -161,16 +160,15 @@ export default function ConversationScreen() {
   // again after seeing the light-blue guess rules that guess out, so the same
   // mishearing ("vous prenez" for "vous preniez") is not offered twice.
   const ruledOutRef = useRef<Set<number>>(new Set());
-  // 30 Oct 2026: the mic keeps listening 2.5 s after it is let go (learners
-  // let go while still finding the next word), and Enter works during it.
-  const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [tail, setTail] = useState(false);
-  const pendingSubmitRef = useRef(false);
-  const clearTail = () => {
-    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
-    setTail(false);
-  };
-  useEffect(() => () => { if (tailTimerRef.current) clearTimeout(tailTimerRef.current); }, []);
+  // The mic is being held (30 Oct 2026). On iOS 18+ every PAUSE arrives as a
+  // "final" result and the next words as a fresh piece, so while the mic is
+  // held the pieces are joined and the reply ends only when it is let go.
+  // Before, the first pause ended the reply while the mic was still held.
+  const holdingRef = useRef(false);
+  const committedRef = useRef("");
+  const lastAltsRef = useRef<string[]>([]);
+  const restartsRef = useRef(0);
+  const baseRef = useRef<any>(null);
   const [ruledOut, setRuledOut] = useState<number[]>([]);
   // The English cue flips to the French when tapped, so the learner can read it out.
   const [cueOpen, setCueOpen] = useState(false);
@@ -356,41 +354,85 @@ export default function ConversationScreen() {
     if (!listeningRef.current) return;
     setLevel01(Math.max(0, Math.min(10, e.value)) / 10);
   });
+  const joinWords = (a: string, b: string) => [a.trim(), b.trim()].filter(Boolean).join(" ");
+
+  /** The reply is finished (mic let go, or the recogniser stopped). */
+  const finishReply = () => {
+    if (!listeningRef.current) return;
+    listeningRef.current = false;
+    holdingRef.current = false;
+    setLevel01(0);
+    const alts = lastAltsRef.current.length ? lastAltsRef.current : [committedRef.current];
+    const said = alts.filter((a) => a.trim());
+    if (!said.length) {
+      setHeard("");
+      setNotice("I didn't hear anything. Hold the mic and speak.");
+      setPhase("yourTurn");
+      return;
+    }
+    // All of the recogniser's alternatives for the whole reply.
+    for (const a of said) heardAllRef.current.add(a);
+    setHeard(said[0]);
+    setPhase("heard");
+  };
+
+  /** The recogniser stopped by itself while the mic is still held: start it again. */
+  const keepListening = () => {
+    if (!holdingRef.current || !listeningRef.current || !baseRef.current || restartsRef.current >= 5) return false;
+    restartsRef.current += 1;
+    try { SR.start({ ...baseRef.current, requiresOnDeviceRecognition: onDeviceRef.current }); return true; } catch { return false; }
+  };
+
   useSREvent("result", (e: any) => {
     if (!listeningRef.current) return;
-    const text = e.results?.[0]?.transcript ?? "";
-    setHeard(text);
-    if (e.isFinal) {
-      // All of the recogniser's alternatives for the finished reply (not the
-      // half-sentences heard on the way, now that recording is continuous).
-      for (const r of e.results ?? []) if (r?.transcript) heardAllRef.current.add(String(r.transcript));
-      listeningRef.current = false;
-      clearTail();
-      setLevel01(0);
-      setPhase("heard");
+    const prefix = committedRef.current;
+    const alts: string[] = (e.results ?? []).map((r: any) => joinWords(prefix, String(r?.transcript ?? "")));
+    const shown = alts[0] ?? prefix;
+    setHeard(shown);
+    if (!e.isFinal) return;
+    if (alts.length && shown !== prefix) {
+      committedRef.current = shown;
+      lastAltsRef.current = alts;
     }
+    // Still held: that was a pause, not the end.
+    if (holdingRef.current) return;
+    finishReply();
+  });
+  useSREvent("end", () => {
+    if (!listeningRef.current) return;
+    if (keepListening()) return;
+    finishReply();
+  });
+  useSREvent("nomatch", () => {
+    if (!listeningRef.current || holdingRef.current) return;
+    finishReply();
   });
   useSREvent("error", (e: any) => {
     if (!listeningRef.current) return;
+    if (e.error === "no-speech" || e.error === "aborted") {
+      // A long silence while the mic is held is thinking time.
+      if (holdingRef.current && e.error === "no-speech" && keepListening()) return;
+      finishReply();
+      return;
+    }
     listeningRef.current = false;
-    clearTail();
-    pendingSubmitRef.current = false;
+    holdingRef.current = false;
     setLevel01(0);
     if (e.error === "not-allowed") setNotice("Microphone access is off. Turn it on in Settings › Pluri French.");
-    else if (e.error === "no-speech") setNotice("I didn't hear anything. Hold the mic and speak.");
     else setNotice("That didn't record. Hold the mic and try again.");
     setPhase("yourTurn");
   });
 
   const startListening = async () => {
-    // Held again during the 2.5 s tail: carry on with the same reply.
-    if (phase === "listening" && tailTimerRef.current) { clearTail(); return; }
+    holdingRef.current = true;
     if (phase !== "yourTurn" && phase !== "heard") return;
     if (!voiceAvailable()) return;
     try {
       const perm = await SR.requestPermissionsAsync();
       if (!perm.granted) { setNotice("Microphone access is off. Turn it on in Settings › Pluri French."); return; }
     } catch { return; }
+    // Let go before the permission check finished (a quick tap).
+    if (!holdingRef.current) return;
     const t = turns[step];
     if (!t || t.who !== "you") return;
     // Recording over a guess = turning it down. Silence turns nothing down.
@@ -406,6 +448,9 @@ export default function ConversationScreen() {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     setHeard("");
     heardAllRef.current = new Set();
+    committedRef.current = "";
+    lastAltsRef.current = [];
+    restartsRef.current = 0;
     setNotice(null);
     listeningRef.current = true;
     setPhase("listening");
@@ -420,6 +465,7 @@ export default function ConversationScreen() {
       // Keep the loudspeaker: without this iOS routes the next clip to the earpiece.
       iosCategory: { category: "playAndRecord", categoryOptions: ["defaultToSpeaker", "allowBluetooth"], mode: "default" },
     };
+    baseRef.current = base;
     try {
       SR.start({ ...base, requiresOnDeviceRecognition: onDeviceRef.current });
     } catch {
@@ -433,29 +479,10 @@ export default function ConversationScreen() {
     }
   };
   const stopListening = () => {
+    holdingRef.current = false;
     if (!listeningRef.current) return;
-    clearTail();
-    setTail(true);
-    tailTimerRef.current = setTimeout(() => {
-      tailTimerRef.current = null;
-      setTail(false);
-      try { SR.stop(); } catch {}
-    }, LISTEN_TAIL_MS);
+    try { SR.stop(); } catch {}
   };
-  /** Enter during the tail: stop now, mark the reply when its final words arrive. */
-  const enterNow = () => {
-    if (tail && listeningRef.current) {
-      pendingSubmitRef.current = true;
-      clearTail();
-      try { SR.stop(); } catch {}
-      return;
-    }
-    submit(false);
-  };
-  useEffect(() => {
-    if (phase === "heard" && pendingSubmitRef.current) { pendingSubmitRef.current = false; submit(false); }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, heard]);
 
   const advance = (delay = 700) => {
     setTimeout(() => {
@@ -882,12 +909,12 @@ export default function ConversationScreen() {
               </>
             ) : (
               <>
-                <Pressable onPress={enterNow} disabled={phase !== "heard" && !tail}
+                <Pressable onPress={() => submit(false)} disabled={phase !== "heard"}
                   accessibilityRole="button" accessibilityLabel="Enter"
-                  style={[styles.sideBtn, { backgroundColor: phase === "heard" || tail ? GREEN : "#CFEFDC" }]}>
+                  style={[styles.sideBtn, { backgroundColor: phase === "heard" ? GREEN : "#CFEFDC" }]}>
                   <Ionicons name="return-down-back" size={26} color="#FFFFFF" />
                 </Pressable>
-                <Text style={[styles.sideLabel, phase !== "heard" && !tail && { color: "#9AA1BD" }]}>Enter</Text>
+                <Text style={[styles.sideLabel, phase !== "heard" && { color: "#9AA1BD" }]}>Enter</Text>
               </>
             )}
           </View>

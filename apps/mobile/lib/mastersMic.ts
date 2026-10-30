@@ -57,14 +57,6 @@ export type MicOutcome = {
 const VOLUME_FLOOR = 0;
 const VOLUME_CEIL = 10;
 const VOLUME_INTERVAL_MS = 50;
-/**
- * How long to keep listening after Record is let go. 0 (Jonathan, 30 Oct
- * 2026): recording stops when Record is let go. What was wanted was that it
- * never cuts off WHILE Record is held, which `continuous: true` does; the
- * 1.5 s / 2.5 s tail tried on 30 Oct is off.
- */
-export const LISTEN_TAIL_MS = 0;
-
 export function useMastersMic(opts: {
   expected: string | string[];
   options: string[];
@@ -100,15 +92,20 @@ export function useMastersMic(opts: {
    * The control is remounted per question, so this starts empty each time.
    */
   const ruledOutRef = useRef<Set<number>>(new Set());
-  // The 2.5 s after Record is let go: still listening, and Enter may be pressed.
-  const tailTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [tail, setTail] = useState(false);
-  // Enter pressed during the tail: submit as soon as the final words arrive.
-  const pendingSubmitRef = useRef(false);
-  const clearTail = () => {
-    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
-    setTail(false);
-  };
+  /**
+   * Record is being held (30 Oct 2026). On iOS 18+ the speech library reports
+   * every PAUSE as a final result, and the next words arrive as a fresh
+   * piece. While Record is held a "final" is therefore only a pause: the
+   * pieces are joined (committed*) and the answer is finished only once
+   * Record is let go. Before this, the first pause ended the answer and
+   * everything said after it was dropped while the button was still held.
+   */
+  const holdingRef = useRef(false);
+  const committedRef = useRef("");
+  /** The last piece's alternatives, each with the earlier pieces in front. */
+  const lastAltsRef = useRef<{ text: string; confidence: number }[]>([]);
+  const restartsRef = useRef(0);
+  const baseRef = useRef<any>(null);
   const [ruledOut, setRuledOut] = useState<number[]>([]);
 
   const setReadingBoth = useCallback((r: MicReading | null) => {
@@ -154,8 +151,13 @@ export function useMastersMic(opts: {
       setPhase("unavailable");
       return;
     }
+    // Let go before the permission check finished (a quick tap): nothing to record.
+    if (!holdingRef.current) return;
 
     activeRef.current = true;
+    committedRef.current = "";
+    lastAltsRef.current = [];
+    restartsRef.current = 0;
     setTranscript("");
     setReadingBoth(null);
     setErrorDetail(null);
@@ -167,11 +169,12 @@ export function useMastersMic(opts: {
       interimResults: true,
       maxAlternatives: 3,
       contextualStrings: [...forms, ...optionsRef.current],
-      // Continuous (30 Oct 2026): a pause to think no longer ends the
-      // recording; it ends when Record is let go (plus LISTEN_TAIL_MS).
+      // Continuous (30 Oct 2026): a pause to think does not end the
+      // recording; letting go of Record does.
       continuous: true,
       volumeChangeEventOptions: { enabled: true, intervalMillis: VOLUME_INTERVAL_MS },
     };
+    baseRef.current = base;
 
     try {
       ExpoSpeechRecognitionModule.start({
@@ -201,8 +204,8 @@ export function useMastersMic(opts: {
 
   /** Record button pressed. */
   const startHold = useCallback(() => {
-    // Pressed again during the tail: carry on with the same recording.
-    if (phase === "listening") { clearTail(); return; }
+    holdingRef.current = true;
+    if (phase === "listening") return;
     // Recording over a guess = turning it down. Silence turns nothing down.
     const prev = readingRef.current;
     if (phase === "ready" && prev?.usable && prev.optionIndex != null) {
@@ -217,21 +220,16 @@ export function useMastersMic(opts: {
 
   /** Record button released - keep whatever was heard so Enter can act on it. */
   const stopHold = useCallback(() => {
-    if (!activeRef.current) { try { ExpoSpeechRecognitionModule.stop(); } catch {} return; }
-    clearTail();
-    setTail(true);
-    tailTimerRef.current = setTimeout(() => {
-      tailTimerRef.current = null;
-      setTail(false);
-      try { ExpoSpeechRecognitionModule.stop(); } catch {}
-    }, LISTEN_TAIL_MS);
+    holdingRef.current = false;
+    try { ExpoSpeechRecognitionModule.stop(); } catch {}
   }, []);
 
   /** Delete: throw everything away and go back to the start of the question. */
   const reset = useCallback(() => {
     activeRef.current = false;
-    clearTail();
-    pendingSubmitRef.current = false;
+    holdingRef.current = false;
+    committedRef.current = "";
+    lastAltsRef.current = [];
     ruledOutRef.current = new Set();
     setRuledOut([]);
     try { ExpoSpeechRecognitionModule.abort(); } catch {}
@@ -318,43 +316,84 @@ export function useMastersMic(opts: {
     });
   }, []);
 
-  const afterFinal = () => {
-    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
-    setTail(false);
-    if (pendingSubmitRef.current) { pendingSubmitRef.current = false; resolveNow(); }
+  const join = (a: string, b: string) => [a.trim(), b.trim()].filter(Boolean).join(" ");
+
+  /** The answer is finished: mark what was heard, ready for Enter. */
+  const finish = (alts: { text: string; confidence: number }[]) => {
+    if (!activeRef.current) return;
+    activeRef.current = false;
+    setLevel(0);
+    const usable = alts.filter((a) => a.text.trim().length > 0);
+    if (usable.length) {
+      setTranscript(usable[0].text);
+      setReadingBoth(readTranscripts(usable));
+    } else {
+      setReadingBoth({ heard: "", optionIndex: null, correct: false, usable: false });
+    }
+    setPhase("ready");
+  };
+
+  /** What has been said so far, for when the recogniser stops without a last piece. */
+  const soFar = () => lastAltsRef.current.length
+    ? lastAltsRef.current
+    : [{ text: committedRef.current, confidence: 1 }];
+
+  /** The recogniser stopped by itself while Record is still held: start it again. */
+  const keepListening = () => {
+    if (!holdingRef.current || !activeRef.current || !baseRef.current || restartsRef.current >= 5) return false;
+    restartsRef.current += 1;
+    try {
+      ExpoSpeechRecognitionModule.start({ ...baseRef.current, requiresOnDeviceRecognition: onDeviceRef.current });
+      return true;
+    } catch {
+      return false;
+    }
   };
 
   useSpeechRecognitionEvent("result", (e) => {
     if (!activeRef.current) return;
-    const best = e.results?.[0];
-    const text = best?.transcript ?? "";
-    setTranscript(text);
-    if (!e.isFinal) return;
-
+    const prefix = committedRef.current;
     const alts = (e.results ?? []).map((r: any) => ({
-      text: String(r?.transcript ?? ""),
+      text: join(prefix, String(r?.transcript ?? "")),
       confidence: typeof r?.confidence === "number" ? r.confidence : 1,
     }));
-    activeRef.current = false;
-    setLevel(0);
-    setReadingBoth(readTranscripts(alts.length ? alts : [{ text, confidence: 1 }]));
-    setPhase("ready");
-    afterFinal();
+    const shown = alts[0]?.text ?? prefix;
+    // The white "heard so far" text: everything said since Record was pressed.
+    setTranscript(shown);
+    if (!e.isFinal) return;
+
+    if (alts.length && alts[0].text !== prefix) {
+      committedRef.current = shown;
+      lastAltsRef.current = alts;
+    }
+    // Still held: that was a pause, not the end. Keep listening.
+    if (holdingRef.current) return;
+    finish(soFar());
+  });
+
+  // The recogniser has stopped (Record let go, or it gave up on its own).
+  useSpeechRecognitionEvent("end", () => {
+    if (!activeRef.current) return;
+    if (keepListening()) return;
+    finish(soFar());
+  });
+
+  useSpeechRecognitionEvent("nomatch", () => {
+    if (!activeRef.current || holdingRef.current) return;
+    finish(soFar());
   });
 
   useSpeechRecognitionEvent("error", (e) => {
     if (!activeRef.current) return;
-    activeRef.current = false;
-    setLevel(0);
-    if (e.error === "no-speech") {
-      setReadingBoth({ heard: "", optionIndex: null, correct: false, usable: false });
-      setPhase("ready");
-      afterFinal();
+    if (e.error === "no-speech" || e.error === "aborted") {
+      // A long silence while Record is held is thinking time, not the end.
+      if (holdingRef.current && e.error === "no-speech" && keepListening()) return;
+      finish(soFar());
       return;
     }
-    pendingSubmitRef.current = false;
-    if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
-    setTail(false);
+    activeRef.current = false;
+    holdingRef.current = false;
+    setLevel(0);
     if (e.error === "not-allowed") { setPhase("denied"); return; }
     // Anything else is this attempt failing, not the feature being gone: go
     // back to idle so the Record button still works.
@@ -363,24 +402,13 @@ export function useMastersMic(opts: {
   });
 
   const submit = useCallback(() => {
-    // Enter during the 2.5 s tail: stop now and mark the words as soon as the
-    // final result comes in.
-    if (activeRef.current) {
-      pendingSubmitRef.current = true;
-      if (tailTimerRef.current) { clearTimeout(tailTimerRef.current); tailTimerRef.current = null; }
-      setTail(false);
-      try { ExpoSpeechRecognitionModule.stop(); } catch {}
-      return;
-    }
+    if (activeRef.current) return; // still recording: Enter waits for the answer
     resolveNow();
   }, [resolveNow]);
 
-  useEffect(() => () => {
-    if (tailTimerRef.current) clearTimeout(tailTimerRef.current);
-    try { ExpoSpeechRecognitionModule.abort(); } catch {}
-  }, []);
+  useEffect(() => () => { try { ExpoSpeechRecognitionModule.abort(); } catch {} }, []);
 
-  return { phase, level, transcript, reading, ruledOut, tail, errorDetail, startHold, stopHold, reset, submit };
+  return { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit };
 }
 
 export { normaliseFrench };
