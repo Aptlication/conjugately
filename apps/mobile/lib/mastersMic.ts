@@ -58,10 +58,12 @@ const VOLUME_FLOOR = 0;
 const VOLUME_CEIL = 10;
 const VOLUME_INTERVAL_MS = 50;
 /**
- * Keep listening this long after Record is let go (Jonathan, 30 Oct 2026):
- * learners let go while still finding the next word. Enter works during it.
+ * How long to keep listening after Record is let go. 0 (Jonathan, 30 Oct
+ * 2026): recording stops when Record is let go. What was wanted was that it
+ * never cuts off WHILE Record is held, which `continuous: true` does; the
+ * 1.5 s / 2.5 s tail tried on 30 Oct is off.
  */
-export const LISTEN_TAIL_MS = 2500;
+export const LISTEN_TAIL_MS = 0;
 
 export function useMastersMic(opts: {
   expected: string | string[];
