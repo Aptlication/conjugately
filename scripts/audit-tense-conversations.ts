@@ -22,7 +22,7 @@ type You = { who: "you"; fr: string; en: string; verb: string; person: string; c
 type Turn = { who: "app"; fr: string; en: string } | You;
 type TC = { title: string; verbs: string[]; newWords: { fr: string; en: string }[]; turns: Turn[] };
 
-const data: Record<string, TC> = JSON.parse(readFileSync("scripts/data/tense-conversations.json", "utf8"));
+const data: Record<string, TC> = JSON.parse(readFileSync(process.argv[2] || "scripts/data/tense-conversations.json", "utf8"));
 const problems: string[] = [];
 const persons = (p: string) => p.replace(/^(il|elle|on)$/, "il/elle").replace(/^(ils|elles)$/, "ils/elles");
 

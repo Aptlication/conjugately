@@ -3,6 +3,7 @@ import {
   AccessibilityInfo, Animated, Easing, Platform, Pressable, ScrollView, StyleSheet, Text, View,
 } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
@@ -158,6 +159,11 @@ export default function ConversationScreen() {
   // curriculum, so the learner sees them before hearing them (Jonathan, 19 Oct).
   // The Start tap also satisfies the browser rule that sound needs a tap first.
   const [started, setStarted] = useState(false);
+  // Save point (Intermediate A, 31 Oct 2026): a long Tense Conversation is in two
+  // scenes. Reaching scene 2 saves the place, so the learner can stop and come
+  // back to it; finishing clears it.
+  const resumeKey = `pluri_tense_resume:${level}|${timeFrame}`;
+  const [savedScene, setSavedScene] = useState<number | null>(null);
   const [step, setStep] = useState(0);
   const [log, setLog] = useState<LogItem[]>([]);
   const [attempt, setAttempt] = useState(0);
@@ -233,6 +239,16 @@ export default function ConversationScreen() {
   useEffect(() => {
     AccessibilityInfo.isReduceMotionEnabled().then(setReduceMotion).catch(() => {});
   }, []);
+  useEffect(() => {
+    if (!tenseMode) return;
+    AsyncStorage.getItem(resumeKey).then((v) => { const n = Number(v); if (v && n > 0) setSavedScene(n); }).catch(() => {});
+  }, [tenseMode, resumeKey]);
+  useEffect(() => {
+    if (!tenseMode || !started) return;
+    const t: any = turns[step];
+    if (t?.who === "app" && t.break) AsyncStorage.setItem(resumeKey, String(step)).catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tenseMode, started, step]);
 
   // Pro feature. The web build (staging) has no store, so it always shows.
   // Tense Conversations are free at Beginner (Jonathan, 31 Oct 2026).
@@ -354,7 +370,10 @@ export default function ConversationScreen() {
       level, verb: tenseMode ? `${TENSE_LABEL[timeFrame] ?? timeFrame} conversation` : unitVerb,
       tense: VOCAB_TENSE[timeFrame] ?? timeFrame,
     }).catch(() => {});
-    if (tenseMode) markTenseConversationDone(level, timeFrame).catch(() => {});
+    if (tenseMode) {
+      markTenseConversationDone(level, timeFrame).catch(() => {});
+      AsyncStorage.removeItem(resumeKey).catch(() => {});
+    }
   }, [phase, conv, level, unitVerb, timeFrame, tenseMode]);
 
   useEffect(() => {
@@ -881,8 +900,15 @@ export default function ConversationScreen() {
 
       {!started ? (
         <View style={styles.footerDone}>
-          <Pressable style={styles.primary} onPress={() => { startedAt.current = Date.now(); setStarted(true); }} accessibilityRole="button">
-            <Text style={styles.primaryText}>Start conversation</Text>
+          {savedScene !== null && (
+            <Pressable style={[styles.primary, { marginBottom: 8 }]} accessibilityRole="button"
+              onPress={() => { startedAt.current = Date.now(); setStep(savedScene); setStarted(true); }}>
+              <Text style={styles.primaryText}>Continue from scene 2</Text>
+            </Pressable>
+          )}
+          <Pressable style={savedScene !== null ? styles.linkBtn : styles.primary} accessibilityRole="button"
+            onPress={() => { startedAt.current = Date.now(); setStep(0); setStarted(true); }}>
+            <Text style={savedScene !== null ? styles.linkText : styles.primaryText}>{savedScene !== null ? "Start from the beginning" : "Start conversation"}</Text>
           </Pressable>
         </View>
       ) : phase === "done" || phase === "replaying" ? (

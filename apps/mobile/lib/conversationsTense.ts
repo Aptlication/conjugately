@@ -2,7 +2,7 @@
 // Tense Conversations (31 Oct 2026). Do not edit by hand.
 import type { ConvTurn } from "./conversations";
 
-export type TenseTurn = ConvTurn & { verb?: string; person?: string; callback?: string; options?: string[] };
+export type TenseTurn = ConvTurn & { verb?: string; person?: string; callback?: string; options?: string[]; break?: boolean };
 
 export type TenseConversation = {
   level: string; timeFrame: string; tense: string; title: string; titleEn: string;
