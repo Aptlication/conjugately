@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Platform } from "react-native";
+import { Linking, Platform } from "react-native";
 
 /**
  * Pro entitlement, via RevenueCat.
@@ -80,6 +80,29 @@ export function hasActiveSubscription(customerInfo: any): boolean {
   return subs.some((id) =>
     typeof id === "string" && (id.startsWith(PRODUCT_ANNUAL) || id.startsWith(PRODUCT_MONTHLY)),
   );
+}
+
+/** Whether this customer has a Monthly or Annual subscription running now. */
+export async function readActiveSubscription(): Promise<boolean> {
+  if (!purchasesAvailable()) return false;
+  try {
+    return hasActiveSubscription(await Purchases.getCustomerInfo());
+  } catch {
+    return false;
+  }
+}
+
+export const MANAGE_SUBSCRIPTIONS_URL = "https://apps.apple.com/account/subscriptions";
+
+/**
+ * Opens Apple's own subscription screen, where a subscription is cancelled.
+ * Apple does not let an app cancel one itself (30 Oct 2026, Cancel Pro).
+ */
+export async function openManageSubscriptions(): Promise<void> {
+  try {
+    if (purchasesAvailable()) { await (Purchases as any).showManageSubscriptions(); return; }
+  } catch {}
+  Linking.openURL(MANAGE_SUBSCRIPTIONS_URL).catch(() => {});
 }
 
 function readPeriod(productId: string, packageType?: string): ProPackage["period"] {

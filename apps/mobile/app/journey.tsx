@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useFocusEffect } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import NavBar from "../components/NavBar";
@@ -10,6 +10,7 @@ import { hasCefrBadge, type CefrResult } from "@shared/cefrScoring";
 import { readCefrResults } from "../lib/cefr";
 import CefrBadge from "../components/CefrBadge";
 import { switchedOffReminders, turnReminderBackOn } from "../lib/reminders";
+import { openManageSubscriptions, readActiveSubscription } from "../lib/pro";
 
 /** 1.3: the "Rate Pluri French" button opens the App Store's write-a-review page. */
 const APP_STORE_ID = "6799402337";
@@ -29,12 +30,14 @@ export default function Journey() {
   const [s, setS] = useState<JourneySummary | null>(null);
   const [cefr, setCefr] = useState<CefrResult[]>([]);
   const [hidden, setHidden] = useState<{ key: string; label: string }[]>([]);
+  const [subscribed, setSubscribed] = useState(false);
 
   useFocusEffect(useCallback(() => {
     let on = true;
     getJourneySummary().then((x) => { if (on) setS(x); });
     readCefrResults().then((r) => { if (on) setCefr(r); });
     switchedOffReminders().then((r) => { if (on) setHidden(r); });
+    readActiveSubscription().then((v) => { if (on) setSubscribed(v); });
     return () => { on = false; };
   }, []));
 
@@ -155,6 +158,25 @@ export default function Journey() {
           <Text style={styles.rateText}>⭐ Enjoying Pluri French? Rate it on the App Store</Text>
         </Pressable>
 
+        {/* 30 Oct 2026: Cancel Pro, easy to find. Only for a running Monthly or
+            Annual subscription (Lifetime has nothing to cancel). Asks first,
+            then opens Apple's subscription screen: Apple does not let an app
+            cancel a subscription itself. */}
+        {subscribed && (
+          <Pressable style={styles.cancel} accessibilityRole="button"
+            accessibilityHint="Asks you to confirm, then opens Apple's subscription settings"
+            onPress={() => Alert.alert(
+              "Cancel your Pro subscription?",
+              "You won't be charged again. Pro stays on until the end of your current billing period or free trial.\n\nApple's subscription screen opens next: tap Cancel Subscription there to finish.",
+              [
+                { text: "Keep Pro", style: "cancel" },
+                { text: "Yes, cancel", style: "destructive", onPress: () => { openManageSubscriptions(); } },
+              ],
+            )}>
+            <Text style={styles.cancelText}>Cancel Pro subscription</Text>
+          </Pressable>
+        )}
+
         {/* 30 Oct 2026: pop-ups switched off with "Don't remind me again",
             one quiet line each, so they can be turned back on. */}
         {hidden.length > 0 && (
@@ -208,6 +230,8 @@ const styles = StyleSheet.create({
   badgeCol: { alignItems: "center", gap: 4 },
   rate: { marginTop: 4, marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(245,197,24,0.5)", paddingVertical: 14, alignItems: "center" },
   rateText: { color: "#F5C518", fontSize: 15, fontWeight: "700", textAlign: "center", paddingHorizontal: 12 },
+  cancel: { marginBottom: 12, borderRadius: 14, borderWidth: 1, borderColor: "rgba(236,154,154,0.45)", paddingVertical: 12, alignItems: "center" },
+  cancelText: { color: "#EC9A9A", fontSize: 14, fontWeight: "700" },
   hidden: { marginTop: 4, marginBottom: 12, paddingHorizontal: 4, gap: 6 },
   hiddenLabel: { fontSize: 11, fontWeight: "700", color: "#8A93A0", letterSpacing: 0.5 },
   hiddenRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 10, minHeight: 28 },
