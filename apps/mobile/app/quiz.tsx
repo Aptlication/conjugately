@@ -8,6 +8,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
 import { logQuizResult } from "../lib/progress";
+import { noteUnitFinished } from "../lib/milestones";
 import { purchasesAvailable, usePro } from "../lib/pro";
 import { getConversation, conversationSeconds } from "../lib/conversationsFull";
 import { getExamById, MIC_ALLOWED_IN_EXAMS, type ExamResult } from "@shared/exams";
@@ -486,14 +487,16 @@ export default function Quiz() {
               previousBest: undefined,
               tenseComplete: tenseProgress(a.state, courseLevel, courseTimeFrame).complete,
             });
-            if (a.invitation) {
-              const inv = a.invitation;
-              inviteTimer.current = setTimeout(() => setInvite(inv), 2300);
-            }
+            // 31 Oct 2026 (Jonathan): the per-tense exam pop-up is gone. The
+            // invitation to the Final Level Exams now comes once, on the Level
+            // complete banner (app/level-complete.tsx); the tense card keeps a
+            // quiet "exam available" line. a.invitation is no longer shown.
           })
           .catch(() => {})
           .finally(() => logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total,
-            date: new Date().toISOString(), courseKey, unitIndex }));
+            date: new Date().toISOString(), courseKey, unitIndex })
+            // 31 Oct 2026: a tense finished before the update gets its Tense complete card now.
+            .then(() => noteUnitFinished(courseLevel, courseTimeFrame)).catch(() => {}));
       } else {
         logQuizResult({ verb, difficulty, timeFrame, score: finalScore, total: questions.length,
           date: new Date().toISOString(), courseKey, unitIndex });
@@ -803,7 +806,7 @@ export default function Quiz() {
             {award?.tenseComplete && (
               <ExamGateCard level={courseLevel} timeFrame={courseTimeFrame} variant="dark"
                 locked={courseLevel !== "Beginner" && !isPro}
-                refreshKey={award.balance} celebrate />
+                refreshKey={award.balance} />
             )}
             {conversation && (
               <Pressable style={styles.convoBtn} onPress={openConversation} accessibilityRole="button"

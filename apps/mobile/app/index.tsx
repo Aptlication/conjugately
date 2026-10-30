@@ -10,6 +10,7 @@ import Animated, {
 } from "react-native-reanimated";
 import NavBar from "../components/NavBar";
 import { getJourneySummary, getQuizHistory } from "../lib/progress";
+import { useCelebrations } from "../lib/useCelebrations";
 
 /**
  * Home (1.4, Pluri rebrand). Wordmark, "FRENCH" and one Continue
@@ -82,6 +83,8 @@ type Resume =
   | { kind: "returning"; line: string; params: Record<string, string> };
 
 export default function Home() {
+  // 31 Oct 2026: Tense complete / Level complete, once each, when the learner returns here.
+  useCelebrations();
   // Michroma is embedded at build time (app.json expo-font plugin);
   // useFonts keeps the web twin working.
   useFonts({ Michroma_400Regular });

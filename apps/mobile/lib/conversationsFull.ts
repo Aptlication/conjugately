@@ -8,6 +8,8 @@ import { WARMUPS } from "./conversationWarmups";
 import { WARMUP_AUDIO } from "./conversationWarmupAudio";
 import { CONVERSATIONS_125, WARMUPS_125 } from "./conversations125";
 import { AUDIO_125 } from "./conversation125Audio";
+import { TENSE_CONVERSATIONS, type TenseConversation } from "./conversationsTense";
+import { AUDIO_TENSE } from "./conversationTenseAudio";
 
 /**
  * 1.2.3.5 (Jonathan, 23 Oct 2026): longer conversations above Novice.
@@ -23,7 +25,7 @@ import { AUDIO_125 } from "./conversation125Audio";
  * plays silently and moves on, so a warm-up never blocks a conversation.
  */
 
-export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WARMUP_AUDIO, ...AUDIO_125 };
+export const CONVERSATION_AUDIO: Record<string, number> = { ...BASE_AUDIO, ...WARMUP_AUDIO, ...AUDIO_125, ...AUDIO_TENSE };
 
 // Built once per unit and reused. The conversation screen's effects depend on
 // this object, so a fresh copy on every render restarted the dialogue at its
@@ -46,4 +48,28 @@ export function getConversation(level: string, timeFrame: string, verb: string):
 /** What the conversation offer says: about 20 s, plus 15 at Elementary and 30 at Intermediate. */
 export function conversationSeconds(level: string): number {
   return 20 + (level === "Elementary" ? 15 : isIntermediate(level) ? 30 : 0);
+}
+
+/**
+ * Tense Conversations (31 Oct 2026): one longer conversation at the end of each
+ * tense, weaving every verb of the tense. Keyed by the level itself (not
+ * contentLevel): Intermediate A and B have different verbs. Same shape as a unit
+ * conversation, with `verb: "*"`, so the conversation screen plays it unchanged.
+ */
+const TENSE_FULL = new Map<string, (Conversation & TenseConversation) | undefined>();
+export function getTenseConversation(level: string, timeFrame: string): (Conversation & TenseConversation) | undefined {
+  // Same object every time, like getConversation: the screen's effects depend on it.
+  const key = `${level}|${timeFrame}`.normalize("NFC");
+  if (!TENSE_FULL.has(key)) {
+    const c = TENSE_CONVERSATIONS[key];
+    TENSE_FULL.set(key, c ? { ...c, verb: "*" } : undefined);
+  }
+  return TENSE_FULL.get(key);
+}
+
+/** About 12 seconds a reply, rounded to the half-minute. */
+export function tenseConversationMinutes(level: string, timeFrame: string): number {
+  const c = TENSE_CONVERSATIONS[`${level}|${timeFrame}`];
+  const replies = c ? c.turns.filter((t) => t.who === "you").length : 0;
+  return Math.max(1, Math.round((replies * 12) / 30) / 2);
 }
