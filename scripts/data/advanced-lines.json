@@ -1,0 +1,2972 @@
+[
+ {
+  "file": "ADV_PRAISE_1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Très bien !"
+ },
+ {
+  "file": "ADV_PRAISE_2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Parfait !"
+ },
+ {
+  "file": "ADV_PRAISE_3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Excellent !"
+ },
+ {
+  "file": "ADV_MORE.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Oui, c'est ça ! Ajoutez une deuxième phrase."
+ },
+ {
+  "file": "ADV_MISS.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pas tout à fait. Écoutez encore, ou touchez la carte jaune pour un indice."
+ },
+ {
+  "file": "ADV_ENGLISH.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "En français, s'il vous plaît !"
+ },
+ {
+  "file": "ADV_MODEL.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Voici une réponse possible."
+ },
+ {
+  "file": "ADV_NEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "D'accord. Question suivante."
+ },
+ {
+  "file": "ADV_END.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Merci pour cette conversation. À bientôt !"
+ },
+ {
+  "file": "ADV_1_1_TEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "À Paris comme à Lyon, trouver un appartement n'est pas facile. Avant de visiter, il faut préparer un dossier : une pièce d'identité, vos trois dernières fiches de paie et souvent un garant, c'est-à-dire une personne qui paiera le loyer si vous ne pouvez pas le faire. Quand vous appelez l'agence, soyez poli : « Bonjour, je voudrais visiter l'appartement de la rue Victor-Hugo. Seriez-vous disponible jeudi ? » Pendant la visite, posez vos questions : « Les charges sont-elles comprises ? Pourriez-vous me dire quand l'appartement sera libre ? » Beaucoup de gens visitent le même logement, alors il vaudrait mieux apporter un dossier complet. Si vous étiez à la place du propriétaire, vous choisiriez aussi le dossier le plus sérieux ! Enfin, avant de signer le bail, lisez-le bien et faites un état des lieux le jour où vous recevez les clés. Ce document vous protégera quand vous partirez."
+ },
+ {
+  "file": "ADV_1_1_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faut-il mettre dans le dossier ?"
+ },
+ {
+  "file": "ADV_1_1_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que faut-il souvent en plus ?"
+ },
+ {
+  "file": "ADV_1_1_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que veut dire « garant » ?"
+ },
+ {
+  "file": "ADV_1_1_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi le propriétaire en voudrait-il un ?"
+ },
+ {
+  "file": "ADV_1_1_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment demanderiez-vous une visite à l'agence ?"
+ },
+ {
+  "file": "ADV_1_1_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et quel jour proposeriez-vous ?"
+ },
+ {
+  "file": "ADV_1_1_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi vaudrait-il mieux apporter un dossier complet ?"
+ },
+ {
+  "file": "ADV_1_1_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que choisira le propriétaire ?"
+ },
+ {
+  "file": "ADV_1_1_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faut-il faire avant de signer le bail ?"
+ },
+ {
+  "file": "ADV_1_1_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "À quoi sert l'état des lieux ?"
+ },
+ {
+  "file": "ADV_1_1_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Si vous cherchiez un appartement en France, dans quelle ville aimeriez-vous habiter ?"
+ },
+ {
+  "file": "ADV_1_1_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi choisiriez-vous cette ville ?"
+ },
+ {
+  "file": "ADV_1_2_TEXT.mp3",
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "En France, le café est bien plus qu'une boisson : c'est un lieu de vie. Le matin, beaucoup de gens prennent un petit café au comptoir, debout, en lisant le journal. Attention : si vous demandez « un café », on vous servira un expresso. Si vous préférez un grand café avec du lait, il faudrait commander un « café crème ». Pour être poli, on dit : « Je voudrais un café, s'il vous plaît » ou « Je prendrais bien un croissant ». Au comptoir, le café coûte souvent moins cher qu'en terrasse. En terrasse, vous pourriez rester une heure avec un seul café : personne ne vous demandera de partir. Pour payer, appelez le serveur : « L'addition, s'il vous plaît ! » Le service est compris dans le prix, mais on laisse parfois un petit pourboire quand on est content."
+ },
+ {
+  "file": "ADV_1_2_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que vous servira-t-on si vous demandez « un café » ?"
+ },
+ {
+  "file": "ADV_1_2_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et comment est ce café ?"
+ },
+ {
+  "file": "ADV_1_2_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faudrait-il commander pour avoir un café avec du lait ?"
+ },
+ {
+  "file": "ADV_1_2_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et comment est un café crème ?"
+ },
+ {
+  "file": "ADV_1_2_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment commande-t-on poliment ?"
+ },
+ {
+  "file": "ADV_1_2_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que peut-on dire aussi ?"
+ },
+ {
+  "file": "ADV_1_2_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Où le café coûte-t-il souvent moins cher ?"
+ },
+ {
+  "file": "ADV_1_2_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et en terrasse, le café coûte-t-il plus cher ?"
+ },
+ {
+  "file": "ADV_1_2_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Faut-il laisser un pourboire ?"
+ },
+ {
+  "file": "ADV_1_2_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand en laisse-t-on un ?"
+ },
+ {
+  "file": "ADV_1_2_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Que commanderiez-vous dans un café parisien ?"
+ },
+ {
+  "file": "ADV_1_2_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et resteriez-vous au comptoir ou en terrasse ?"
+ },
+ {
+  "file": "ADV_1_3_TEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Si vous venez travailler ou étudier en France, vous aurez vite besoin d'un compte bancaire. Pour payer votre loyer ou recevoir votre salaire, on vous demandera un RIB, c'est-à-dire un document avec le numéro de votre compte. Pour ouvrir un compte, il faut généralement prendre rendez-vous avec un conseiller. Apportez une pièce d'identité et un justificatif de domicile, par exemple une facture d'électricité. Au rendez-vous, vous pourriez dire : « Je voudrais ouvrir un compte courant. Pourriez-vous m'expliquer les frais ? » Le conseiller vous proposera sûrement une carte bancaire et une application pour gérer votre argent sur votre téléphone. Aujourd'hui, beaucoup de Français choisissent aussi une banque en ligne, souvent moins chère. Un conseil : à votre place, je comparerais les frais avant de signer. Quelques euros par mois, cela fait beaucoup sur une année !"
+ },
+ {
+  "file": "ADV_1_3_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi aurez-vous besoin d'un RIB ?"
+ },
+ {
+  "file": "ADV_1_3_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "En aurez-vous besoin pour autre chose ?"
+ },
+ {
+  "file": "ADV_1_3_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faut-il apporter au rendez-vous ?"
+ },
+ {
+  "file": "ADV_1_3_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourriez-vous donner un exemple de justificatif ?"
+ },
+ {
+  "file": "ADV_1_3_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourriez-vous dire au conseiller ?"
+ },
+ {
+  "file": "ADV_1_3_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que demanderiez-vous ensuite ?"
+ },
+ {
+  "file": "ADV_1_3_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que vous proposera sûrement le conseiller ?"
+ },
+ {
+  "file": "ADV_1_3_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et à quoi servira l'application ?"
+ },
+ {
+  "file": "ADV_1_3_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quel conseil le texte donne-t-il avant de signer ?"
+ },
+ {
+  "file": "ADV_1_3_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi est-ce important ?"
+ },
+ {
+  "file": "ADV_1_3_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Préféreriez-vous une banque en ligne ou un conseiller ?"
+ },
+ {
+  "file": "ADV_1_3_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi ?"
+ },
+ {
+  "file": "ADV_1_4_TEXT.mp3",
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "En France, on choisit en général un médecin traitant : c'est le médecin qu'on voit en premier quand on est malade. Pour prendre rendez-vous, on appelle le cabinet ou on réserve en ligne. Au téléphone, vous pourriez dire : « Bonjour, je voudrais un rendez-vous avec le docteur Martin. J'ai de la fièvre depuis deux jours. » N'oubliez pas votre carte Vitale, ou l'appli carte Vitale sur votre téléphone : c'est la carte de l'Assurance maladie. Grâce à elle, une partie de la consultation vous sera remboursée plus vite. La plupart des Français ont aussi une mutuelle, qui paie souvent le reste. Après la consultation, le médecin vous donnera peut-être une ordonnance. Avec cette ordonnance, vous irez à la pharmacie, qu'on reconnaît à sa croix verte. Le pharmacien donne aussi de bons conseils : si vous aviez juste un petit rhume, il pourrait vous recommander un médicament sans ordonnance."
+ },
+ {
+  "file": "ADV_1_4_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que veut dire « médecin traitant » ?"
+ },
+ {
+  "file": "ADV_1_4_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Le choisit-on soi-même ?"
+ },
+ {
+  "file": "ADV_1_4_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment prend-on rendez-vous ?"
+ },
+ {
+  "file": "ADV_1_4_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que diriez-vous au téléphone ?"
+ },
+ {
+  "file": "ADV_1_4_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "À quoi sert la carte Vitale ?"
+ },
+ {
+  "file": "ADV_1_4_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et qui paie souvent le reste ?"
+ },
+ {
+  "file": "ADV_1_4_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que fait-on avec une ordonnance ?"
+ },
+ {
+  "file": "ADV_1_4_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment reconnaît-on la pharmacie ?"
+ },
+ {
+  "file": "ADV_1_4_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourrait faire le pharmacien si vous aviez un petit rhume ?"
+ },
+ {
+  "file": "ADV_1_4_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Faudrait-il une ordonnance ?"
+ },
+ {
+  "file": "ADV_1_4_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Que diriez-vous au médecin si vous aviez de la fièvre ?"
+ },
+ {
+  "file": "ADV_1_4_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que demanderiez-vous ensuite ?"
+ },
+ {
+  "file": "ADV_1_5_TEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "La France a un grand réseau de trains, et c'est souvent la façon la plus agréable de voyager. Pour les longues distances, il y a le TGV, le train à grande vitesse : Paris–Marseille prend un peu plus de trois heures. Pour les petits trajets entre les villes d'une région, on prend le TER. Il vaudrait mieux réserver votre billet de TGV à l'avance, parce que les prix montent quand le train se remplit. Aujourd'hui, la plupart des voyageurs ont leur billet sur leur téléphone. À la gare, regardez le grand tableau des départs : la voie de votre train est souvent affichée vingt minutes avant le départ. Si vous aviez une question, vous pourriez demander à un agent : « Excusez-moi, pourriez-vous me dire d'où part le train pour Lyon ? » Et si votre train a beaucoup de retard, gardez votre billet ou sa référence : vous pourriez être remboursé en partie."
+ },
+ {
+  "file": "ADV_1_5_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quelle est la différence entre le TGV et le TER ?"
+ },
+ {
+  "file": "ADV_1_5_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et à quoi sert le TER ?"
+ },
+ {
+  "file": "ADV_1_5_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi vaudrait-il mieux réserver à l'avance ?"
+ },
+ {
+  "file": "ADV_1_5_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Un billet réservé tôt coûterait-il plus ou moins cher ?"
+ },
+ {
+  "file": "ADV_1_5_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand la voie du train est-elle affichée ?"
+ },
+ {
+  "file": "ADV_1_5_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Où la voit-on ?"
+ },
+ {
+  "file": "ADV_1_5_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourriez-vous demander à un agent ?"
+ },
+ {
+  "file": "ADV_1_5_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que ferait l'agent ?"
+ },
+ {
+  "file": "ADV_1_5_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faut-il faire si le train a beaucoup de retard ?"
+ },
+ {
+  "file": "ADV_1_5_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi ?"
+ },
+ {
+  "file": "ADV_1_5_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Si vous aviez une semaine en France, où iriez-vous en train ?"
+ },
+ {
+  "file": "ADV_1_5_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qu'y feriez-vous ?"
+ },
+ {
+  "file": "ADV_1_6_TEXT.mp3",
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "En France, la politesse commence par un mot : « Bonjour ». Quand on entre dans une boutique, une boulangerie ou même un ascenseur, on dit bonjour. Si vous oubliiez de le dire, la personne pourrait vous trouver impoli, même si vous souriiez. Ensuite, il y a le choix entre « tu » et « vous ». Avec un inconnu, un client ou une personne plus âgée, on dit « vous ». Avec les amis, la famille et les enfants, on dit « tu ». En cas de doute, il vaudrait mieux dire « vous » : l'autre vous proposera peut-être de passer au « tu ». Le conditionnel aide aussi à être poli : « Je voudrais » est plus doux que « Je veux », et « Pourriez-vous m'aider ? » est plus aimable que « Aidez-moi ! ». Enfin, entre amis, on se fait souvent la bise, c'est-à-dire un petit baiser sur chaque joue. Le nombre de bises change selon les régions !"
+ },
+ {
+  "file": "ADV_1_6_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quel est le premier mot de la politesse en France ?"
+ },
+ {
+  "file": "ADV_1_6_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Où le dit-on ?"
+ },
+ {
+  "file": "ADV_1_6_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourrait penser la personne si vous oubliiez de dire bonjour ?"
+ },
+ {
+  "file": "ADV_1_6_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et si vous souriiez, serait-ce différent ?"
+ },
+ {
+  "file": "ADV_1_6_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avec qui dit-on « vous » ?"
+ },
+ {
+  "file": "ADV_1_6_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et avec qui dit-on « tu » ?"
+ },
+ {
+  "file": "ADV_1_6_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi « Je voudrais » est-il plus poli que « Je veux » ?"
+ },
+ {
+  "file": "ADV_1_6_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourriez-vous donner un autre exemple ?"
+ },
+ {
+  "file": "ADV_1_6_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que veut dire « faire la bise » ?"
+ },
+ {
+  "file": "ADV_1_6_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Le nombre de bises est-il toujours le même ?"
+ },
+ {
+  "file": "ADV_1_6_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Dans votre pays, ferait-on la bise à un nouveau collègue ?"
+ },
+ {
+  "file": "ADV_1_6_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que ferait-on à la place ?"
+ },
+ {
+  "file": "ADV_1_7_TEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Presque toutes les villes françaises ont leur marché, une ou plusieurs fois par semaine. On y trouve des fruits et des légumes de saison, du fromage, du poisson et souvent des fleurs. Les produits viennent en général de la région, et les marchands sont fiers de vous les faire goûter. Au marché, on ne prend pas toujours les fruits soi-même : c'est le marchand qui vous sert. Vous pourriez dire : « Bonjour ! Je voudrais un kilo de tomates et deux avocats bien mûrs, s'il vous plaît. » Si vous ne savez pas quoi cuisiner, demandez conseil : « Que me conseilleriez-vous pour ce soir ? » Le marchand vous répondra sûrement avec plaisir. Venez tôt le matin si vous voulez le meilleur choix, ou à la fin du marché si vous préférez les bonnes affaires : certains marchands baissent leurs prix avant de partir. Et n'oubliez pas votre panier !"
+ },
+ {
+  "file": "ADV_1_7_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que trouve-t-on au marché ?"
+ },
+ {
+  "file": "ADV_1_7_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que trouve-t-on souvent en plus ?"
+ },
+ {
+  "file": "ADV_1_7_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Prend-on toujours les fruits soi-même ?"
+ },
+ {
+  "file": "ADV_1_7_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourriez-vous dire au marchand ?"
+ },
+ {
+  "file": "ADV_1_7_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi les marchands vous font-ils goûter leurs produits ?"
+ },
+ {
+  "file": "ADV_1_7_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "D'où viennent ces produits ?"
+ },
+ {
+  "file": "ADV_1_7_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourriez-vous demander si vous ne saviez pas quoi cuisiner ?"
+ },
+ {
+  "file": "ADV_1_7_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que diriez-vous exactement ?"
+ },
+ {
+  "file": "ADV_1_7_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand faudrait-il venir pour faire de bonnes affaires ?"
+ },
+ {
+  "file": "ADV_1_7_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi ?"
+ },
+ {
+  "file": "ADV_1_7_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Qu'achèteriez-vous au marché pour un repas entre amis ?"
+ },
+ {
+  "file": "ADV_1_7_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que cuisineriez-vous ?"
+ },
+ {
+  "file": "ADV_1_8_TEXT.mp3",
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Les Français aiment plaisanter sur leur administration, et ils ont parfois raison : en France, on a souvent besoin de papiers ! Pour beaucoup de démarches, on va à la mairie, le bâtiment où travaillent le maire et les services de la ville. C'est là qu'on se marie, qu'on déclare la naissance d'un enfant ou qu'on s'inscrit sur les listes électorales. Aujourd'hui, beaucoup de démarches se font aussi en ligne. Un conseil : avant d'y aller, vérifiez sur le site de la mairie les documents à apporter. Il vaudrait mieux en apporter trop que pas assez ! Au guichet, restez patient et poli : « Bonjour madame, je voudrais inscrire mon fils à l'école. Auriez-vous un formulaire ? » Si un document manque, on vous demandera de revenir. Alors, faites des photocopies de tout et gardez-les dans un dossier bien rangé. Vous verrez : avec un peu d'organisation, tout ira bien."
+ },
+ {
+  "file": "ADV_1_8_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que veut dire « mairie » ?"
+ },
+ {
+  "file": "ADV_1_8_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi y va-t-on ?"
+ },
+ {
+  "file": "ADV_1_8_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que peut-on faire à la mairie ?"
+ },
+ {
+  "file": "ADV_1_8_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que peut-on faire d'autre ?"
+ },
+ {
+  "file": "ADV_1_8_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faudrait-il vérifier avant d'y aller ?"
+ },
+ {
+  "file": "ADV_1_8_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vaudrait-il mieux en apporter trop ou pas assez ?"
+ },
+ {
+  "file": "ADV_1_8_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment demanderiez-vous un formulaire pour inscrire votre fils à l'école ?"
+ },
+ {
+  "file": "ADV_1_8_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que demanderiez-vous ensuite ?"
+ },
+ {
+  "file": "ADV_1_8_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que se passe-t-il si un document manque ?"
+ },
+ {
+  "file": "ADV_1_8_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faudrait-il faire pour éviter ça ?"
+ },
+ {
+  "file": "ADV_1_8_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? L'administration de votre pays est-elle plus simple qu'en France ?"
+ },
+ {
+  "file": "ADV_1_8_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que changeriez-vous ?"
+ },
+ {
+  "file": "ADV_1_9_TEXT.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Dans les villes françaises, beaucoup de gens habitent en appartement, alors les voisins font partie de la vie quotidienne. Dans certains immeubles, il y a encore un gardien ou une gardienne : cette personne s'occupe du bâtiment, reçoit parfois les colis et connaît tout le monde. Pour bien vivre ensemble, il y a quelques règles simples. Le soir, après vingt-deux heures, on évite de faire trop de bruit. Si vous organisez une fête, ce serait gentil de prévenir vos voisins avec un petit mot dans le hall de l'immeuble : « Samedi soir, nous fêterons un anniversaire. Excusez-nous d'avance pour le bruit ! » Et si un voisin faisait trop de bruit, il vaudrait mieux lui parler gentiment avant de vous fâcher. Chaque année, au printemps, beaucoup d'immeubles participent à la Fête des voisins : chacun apporte quelque chose à manger, et on fait connaissance autour d'un verre."
+ },
+ {
+  "file": "ADV_1_9_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que fait le gardien ou la gardienne ?"
+ },
+ {
+  "file": "ADV_1_9_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et qui connaît-il ?"
+ },
+ {
+  "file": "ADV_1_9_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que faut-il éviter après vingt-deux heures ?"
+ },
+ {
+  "file": "ADV_1_9_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi ?"
+ },
+ {
+  "file": "ADV_1_9_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que serait-il gentil de faire avant une fête ?"
+ },
+ {
+  "file": "ADV_1_9_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment pourriez-vous les prévenir ?"
+ },
+ {
+  "file": "ADV_1_9_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que vaudrait-il mieux faire si un voisin faisait trop de bruit ?"
+ },
+ {
+  "file": "ADV_1_9_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Faudrait-il se fâcher tout de suite ?"
+ },
+ {
+  "file": "ADV_1_9_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que fait-on pendant la Fête des voisins ?"
+ },
+ {
+  "file": "ADV_1_9_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que fait-on ensuite ?"
+ },
+ {
+  "file": "ADV_1_9_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Qu'apporteriez-vous à la Fête des voisins ?"
+ },
+ {
+  "file": "ADV_1_9_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et seriez-vous content d'y aller ?"
+ },
+ {
+  "file": "ADV_1_10_TEXT.mp3",
+  "voice": "Maxime - Dynamic and Natural",
+  "french": "Votre premier jour dans une entreprise française commence souvent à l'accueil. On vous donnera un badge pour entrer dans les bureaux, puis votre responsable vous présentera à l'équipe. Dans beaucoup d'entreprises, on travaille en open space, un grand bureau partagé. Le premier jour, c'est normal de poser beaucoup de questions, à condition d'être poli : « Excusez-moi, pourriez-vous m'indiquer la salle de réunion ? » ou « Pourrais-je avoir accès au dossier partagé ? ». Avec vos nouveaux collègues, il vaudrait mieux commencer par « vous », sauf si tout le monde se tutoie. Le midi, on vous proposera peut-être de déjeuner ensemble : acceptez, c'est le meilleur moyen de connaître l'équipe ! Beaucoup de salariés reçoivent des titres-restaurant pour payer une partie du déjeuner. Et le soir, avant de partir, n'oubliez pas de dire au revoir : « Bonne soirée, à demain ! »"
+ },
+ {
+  "file": "ADV_1_10_Q1.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que vous donnera-t-on à l'accueil ?"
+ },
+ {
+  "file": "ADV_1_10_Q1_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et ensuite, que fera votre responsable ?"
+ },
+ {
+  "file": "ADV_1_10_Q2.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que veut dire « open space » ?"
+ },
+ {
+  "file": "ADV_1_10_Q2_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Qui y travaille ?"
+ },
+ {
+  "file": "ADV_1_10_Q3.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Comment demanderiez-vous où est la salle de réunion ?"
+ },
+ {
+  "file": "ADV_1_10_Q3_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Que pourriez-vous demander d'autre ?"
+ },
+ {
+  "file": "ADV_1_10_Q4.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Faudrait-il dire « tu » ou « vous » à vos nouveaux collègues ?"
+ },
+ {
+  "file": "ADV_1_10_Q4_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et si tout le monde se tutoie, que fait-on ?"
+ },
+ {
+  "file": "ADV_1_10_Q5.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Pourquoi faudrait-il accepter de déjeuner avec l'équipe ?"
+ },
+ {
+  "file": "ADV_1_10_Q5_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et comment paie-t-on souvent le déjeuner ?"
+ },
+ {
+  "file": "ADV_1_10_Q6.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et vous ? Que feriez-vous pendant votre premier jour pour faire bonne impression ?"
+ },
+ {
+  "file": "ADV_1_10_Q6_F.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Et que feriez-vous d'autre ?"
+ },
+ {
+  "file": "ADVW_a.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à"
+ },
+ {
+  "file": "ADVW_paris.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Paris"
+ },
+ {
+  "file": "ADVW_comme.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "comme"
+ },
+ {
+  "file": "ADVW_lyon.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Lyon"
+ },
+ {
+  "file": "ADVW_trouver.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "trouver"
+ },
+ {
+  "file": "ADVW_un_une.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un, une"
+ },
+ {
+  "file": "ADVW_lappartement.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'appartement"
+ },
+ {
+  "file": "ADVW_ne_n.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ne, n'"
+ },
+ {
+  "file": "ADVW_etre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "être"
+ },
+ {
+  "file": "ADVW_pas.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "pas"
+ },
+ {
+  "file": "ADVW_facile.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "facile"
+ },
+ {
+  "file": "ADVW_avant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "avant"
+ },
+ {
+  "file": "ADVW_de_d.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "de, d'"
+ },
+ {
+  "file": "ADVW_visiter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "visiter"
+ },
+ {
+  "file": "ADVW_il_faut.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "il faut"
+ },
+ {
+  "file": "ADVW_preparer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "préparer"
+ },
+ {
+  "file": "ADVW_le_dossier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le dossier"
+ },
+ {
+  "file": "ADVW_une_piece_didentite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une pièce d'identité"
+ },
+ {
+  "file": "ADVW_votre_vos.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "votre, vos"
+ },
+ {
+  "file": "ADVW_trois.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "trois"
+ },
+ {
+  "file": "ADVW_dernier_derniere.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "dernier, dernière"
+ },
+ {
+  "file": "ADVW_la_fiche_de_paie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fiche de paie"
+ },
+ {
+  "file": "ADVW_et.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "et"
+ },
+ {
+  "file": "ADVW_souvent.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "souvent"
+ },
+ {
+  "file": "ADVW_le_garant_la_garante.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le garant, la garante"
+ },
+ {
+  "file": "ADVW_cest_a_dire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "c'est-à-dire"
+ },
+ {
+  "file": "ADVW_la_personne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la personne"
+ },
+ {
+  "file": "ADVW_qui.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "qui"
+ },
+ {
+  "file": "ADVW_payer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "payer"
+ },
+ {
+  "file": "ADVW_le_la_les.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le, la, les"
+ },
+ {
+  "file": "ADVW_le_loyer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le loyer"
+ },
+ {
+  "file": "ADVW_si_s.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "si, s'"
+ },
+ {
+  "file": "ADVW_vous.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vous"
+ },
+ {
+  "file": "ADVW_pouvoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "pouvoir"
+ },
+ {
+  "file": "ADVW_faire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "faire"
+ },
+ {
+  "file": "ADVW_quand.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "quand"
+ },
+ {
+  "file": "ADVW_appeler.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "appeler"
+ },
+ {
+  "file": "ADVW_lagence.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'agence"
+ },
+ {
+  "file": "ADVW_poli.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "poli"
+ },
+ {
+  "file": "ADVW_bonjour.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "bonjour"
+ },
+ {
+  "file": "ADVW_je_j.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "je, j'"
+ },
+ {
+  "file": "ADVW_vouloir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vouloir"
+ },
+ {
+  "file": "ADVW_la_rue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la rue"
+ },
+ {
+  "file": "ADVW_victor_hugo.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Victor-Hugo"
+ },
+ {
+  "file": "ADVW_disponible.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "disponible"
+ },
+ {
+  "file": "ADVW_le_jeudi.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le jeudi"
+ },
+ {
+  "file": "ADVW_pendant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "pendant"
+ },
+ {
+  "file": "ADVW_la_visite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la visite"
+ },
+ {
+  "file": "ADVW_poser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "poser"
+ },
+ {
+  "file": "ADVW_la_question.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la question"
+ },
+ {
+  "file": "ADVW_les_charges.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les charges"
+ },
+ {
+  "file": "ADVW_compris.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "compris"
+ },
+ {
+  "file": "ADVW_me_m.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "me, m'"
+ },
+ {
+  "file": "ADVW_dire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "dire"
+ },
+ {
+  "file": "ADVW_libre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "libre"
+ },
+ {
+  "file": "ADVW_beaucoup.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "beaucoup"
+ },
+ {
+  "file": "ADVW_les_gens.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les gens"
+ },
+ {
+  "file": "ADVW_meme.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "même"
+ },
+ {
+  "file": "ADVW_le_logement.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le logement"
+ },
+ {
+  "file": "ADVW_alors.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "alors"
+ },
+ {
+  "file": "ADVW_il_vaudrait_mieux.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "il vaudrait mieux"
+ },
+ {
+  "file": "ADVW_apporter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "apporter"
+ },
+ {
+  "file": "ADVW_complet_complete.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "complet, complète"
+ },
+ {
+  "file": "ADVW_la_place.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la place"
+ },
+ {
+  "file": "ADVW_du.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "du"
+ },
+ {
+  "file": "ADVW_le_la_proprietaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le, la propriétaire"
+ },
+ {
+  "file": "ADVW_choisir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "choisir"
+ },
+ {
+  "file": "ADVW_aussi.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aussi"
+ },
+ {
+  "file": "ADVW_plus.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "plus"
+ },
+ {
+  "file": "ADVW_serieux_serieuse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sérieux, sérieuse"
+ },
+ {
+  "file": "ADVW_enfin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "enfin"
+ },
+ {
+  "file": "ADVW_signer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "signer"
+ },
+ {
+  "file": "ADVW_le_bail.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le bail"
+ },
+ {
+  "file": "ADVW_lire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "lire"
+ },
+ {
+  "file": "ADVW_bien.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "bien"
+ },
+ {
+  "file": "ADVW_letat_des_lieux.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'état des lieux"
+ },
+ {
+  "file": "ADVW_le_jour.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le jour"
+ },
+ {
+  "file": "ADVW_ou.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "où"
+ },
+ {
+  "file": "ADVW_recevoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "recevoir"
+ },
+ {
+  "file": "ADVW_les_cles.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les clés"
+ },
+ {
+  "file": "ADVW_ce_cet_cette.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ce, cet, cette"
+ },
+ {
+  "file": "ADVW_le_document.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le document"
+ },
+ {
+  "file": "ADVW_proteger.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "protéger"
+ },
+ {
+  "file": "ADVW_partir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "partir"
+ },
+ {
+  "file": "ADVW_le_garant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le garant"
+ },
+ {
+  "file": "ADVW_le_proprietaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le propriétaire"
+ },
+ {
+  "file": "ADVW_en.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en"
+ },
+ {
+  "file": "ADVW_france.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "France"
+ },
+ {
+  "file": "ADVW_le_cafe.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le café"
+ },
+ {
+  "file": "ADVW_que_qu.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "que, qu'"
+ },
+ {
+  "file": "ADVW_la_boisson.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la boisson"
+ },
+ {
+  "file": "ADVW_ce_c.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ce, c'"
+ },
+ {
+  "file": "ADVW_un_lieu_de_vie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un lieu de vie"
+ },
+ {
+  "file": "ADVW_le_matin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le matin"
+ },
+ {
+  "file": "ADVW_prendre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "prendre"
+ },
+ {
+  "file": "ADVW_petit.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "petit"
+ },
+ {
+  "file": "ADVW_au.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "au"
+ },
+ {
+  "file": "ADVW_le_comptoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le comptoir"
+ },
+ {
+  "file": "ADVW_debout.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "debout"
+ },
+ {
+  "file": "ADVW_le_journal.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le journal"
+ },
+ {
+  "file": "ADVW_attention.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "attention !"
+ },
+ {
+  "file": "ADVW_demander.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "demander"
+ },
+ {
+  "file": "ADVW_on.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "on"
+ },
+ {
+  "file": "ADVW_servir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "servir"
+ },
+ {
+  "file": "ADVW_lexpresso.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'expresso"
+ },
+ {
+  "file": "ADVW_preferer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "préférer"
+ },
+ {
+  "file": "ADVW_grand.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "grand"
+ },
+ {
+  "file": "ADVW_avec.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "avec"
+ },
+ {
+  "file": "ADVW_le_lait.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le lait"
+ },
+ {
+  "file": "ADVW_il_faudrait.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "il faudrait"
+ },
+ {
+  "file": "ADVW_commander.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "commander"
+ },
+ {
+  "file": "ADVW_un_cafe_creme.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un café crème"
+ },
+ {
+  "file": "ADVW_pour.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "pour"
+ },
+ {
+  "file": "ADVW_sil_vous_plait.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "s'il vous plaît"
+ },
+ {
+  "file": "ADVW_le_croissant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le croissant"
+ },
+ {
+  "file": "ADVW_couter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "coûter"
+ },
+ {
+  "file": "ADVW_moins.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "moins"
+ },
+ {
+  "file": "ADVW_cher_chere.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "cher, chère"
+ },
+ {
+  "file": "ADVW_la_terrasse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la terrasse"
+ },
+ {
+  "file": "ADVW_rester.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "rester"
+ },
+ {
+  "file": "ADVW_lheure.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'heure"
+ },
+ {
+  "file": "ADVW_seul.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "seul"
+ },
+ {
+  "file": "ADVW_personne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "personne"
+ },
+ {
+  "file": "ADVW_le_serveur_la_serveuse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le serveur, la serveuse"
+ },
+ {
+  "file": "ADVW_laddition.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'addition"
+ },
+ {
+  "file": "ADVW_le_service.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le service"
+ },
+ {
+  "file": "ADVW_dans.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "dans"
+ },
+ {
+  "file": "ADVW_le_prix.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le prix"
+ },
+ {
+  "file": "ADVW_mais.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "mais"
+ },
+ {
+  "file": "ADVW_laisser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "laisser"
+ },
+ {
+  "file": "ADVW_parfois.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "parfois"
+ },
+ {
+  "file": "ADVW_le_pourboire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le pourboire"
+ },
+ {
+  "file": "ADVW_content.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "content"
+ },
+ {
+  "file": "ADVW_un_expresso.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un expresso"
+ },
+ {
+  "file": "ADVW_le_service_est_compris.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le service est compris"
+ },
+ {
+  "file": "ADVW_venir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "venir"
+ },
+ {
+  "file": "ADVW_travailler.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "travailler"
+ },
+ {
+  "file": "ADVW_etudier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "étudier"
+ },
+ {
+  "file": "ADVW_avoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "avoir"
+ },
+ {
+  "file": "ADVW_vite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vite"
+ },
+ {
+  "file": "ADVW_le_besoin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le besoin"
+ },
+ {
+  "file": "ADVW_le_compte.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le compte"
+ },
+ {
+  "file": "ADVW_bancaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "bancaire"
+ },
+ {
+  "file": "ADVW_le_salaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le salaire"
+ },
+ {
+  "file": "ADVW_le_rib.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le RIB"
+ },
+ {
+  "file": "ADVW_le_numero.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le numéro"
+ },
+ {
+  "file": "ADVW_ouvrir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ouvrir"
+ },
+ {
+  "file": "ADVW_generalement.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "généralement"
+ },
+ {
+  "file": "ADVW_le_rendez_vous.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le rendez-vous"
+ },
+ {
+  "file": "ADVW_le_conseiller_la_conseillere.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le conseiller, la conseillère"
+ },
+ {
+  "file": "ADVW_un_justificatif_de_domicile.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un justificatif de domicile"
+ },
+ {
+  "file": "ADVW_par_exemple.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "par exemple"
+ },
+ {
+  "file": "ADVW_la_facture.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la facture"
+ },
+ {
+  "file": "ADVW_lelectricite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'électricité"
+ },
+ {
+  "file": "ADVW_le_compte_courant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le compte courant"
+ },
+ {
+  "file": "ADVW_expliquer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "expliquer"
+ },
+ {
+  "file": "ADVW_les_frais.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les frais"
+ },
+ {
+  "file": "ADVW_proposer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "proposer"
+ },
+ {
+  "file": "ADVW_surement.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sûrement"
+ },
+ {
+  "file": "ADVW_la_carte_bancaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la carte bancaire"
+ },
+ {
+  "file": "ADVW_lapplication.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'application"
+ },
+ {
+  "file": "ADVW_gerer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "gérer"
+ },
+ {
+  "file": "ADVW_largent.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'argent"
+ },
+ {
+  "file": "ADVW_sur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sur"
+ },
+ {
+  "file": "ADVW_le_telephone.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le téléphone"
+ },
+ {
+  "file": "ADVW_aujourdhui.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aujourd'hui"
+ },
+ {
+  "file": "ADVW_le_francais_la_francaise.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le Français, la Française"
+ },
+ {
+  "file": "ADVW_la_banque_en_ligne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la banque en ligne"
+ },
+ {
+  "file": "ADVW_le_conseil.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le conseil"
+ },
+ {
+  "file": "ADVW_a_votre_place.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à votre place"
+ },
+ {
+  "file": "ADVW_comparer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "comparer"
+ },
+ {
+  "file": "ADVW_quelques.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "quelques"
+ },
+ {
+  "file": "ADVW_leuro.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'euro"
+ },
+ {
+  "file": "ADVW_par.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "par"
+ },
+ {
+  "file": "ADVW_le_mois.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le mois"
+ },
+ {
+  "file": "ADVW_cela.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "cela"
+ },
+ {
+  "file": "ADVW_lannee.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'année"
+ },
+ {
+  "file": "ADVW_un_compte.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un compte"
+ },
+ {
+  "file": "ADVW_une_facture.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une facture"
+ },
+ {
+  "file": "ADVW_une_banque_en_ligne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une banque en ligne"
+ },
+ {
+  "file": "ADVW_en_general.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en général"
+ },
+ {
+  "file": "ADVW_le_medecin_traitant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le médecin traitant"
+ },
+ {
+  "file": "ADVW_le_medecin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le médecin"
+ },
+ {
+  "file": "ADVW_voir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "voir"
+ },
+ {
+  "file": "ADVW_en_premier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en premier"
+ },
+ {
+  "file": "ADVW_malade.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "malade"
+ },
+ {
+  "file": "ADVW_le_cabinet.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le cabinet"
+ },
+ {
+  "file": "ADVW_reserver.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "réserver"
+ },
+ {
+  "file": "ADVW_en_ligne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en ligne"
+ },
+ {
+  "file": "ADVW_le_docteur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le docteur"
+ },
+ {
+  "file": "ADVW_martin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Martin"
+ },
+ {
+  "file": "ADVW_la_fievre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fièvre"
+ },
+ {
+  "file": "ADVW_depuis.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "depuis"
+ },
+ {
+  "file": "ADVW_deux.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "deux"
+ },
+ {
+  "file": "ADVW_oublier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "oublier"
+ },
+ {
+  "file": "ADVW_la_carte_vitale.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la carte Vitale"
+ },
+ {
+  "file": "ADVW_lappli.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'appli"
+ },
+ {
+  "file": "ADVW_la_carte.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la carte"
+ },
+ {
+  "file": "ADVW_lassurance_maladie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'Assurance maladie"
+ },
+ {
+  "file": "ADVW_grace_a.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "grâce à"
+ },
+ {
+  "file": "ADVW_elle.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "elle"
+ },
+ {
+  "file": "ADVW_la_partie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la partie"
+ },
+ {
+  "file": "ADVW_la_consultation.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la consultation"
+ },
+ {
+  "file": "ADVW_rembourser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "rembourser"
+ },
+ {
+  "file": "ADVW_la_plupart_des.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la plupart des"
+ },
+ {
+  "file": "ADVW_la_mutuelle.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la mutuelle"
+ },
+ {
+  "file": "ADVW_la_paie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la paie"
+ },
+ {
+  "file": "ADVW_le_reste.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le reste"
+ },
+ {
+  "file": "ADVW_apres.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "après"
+ },
+ {
+  "file": "ADVW_donner.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "donner"
+ },
+ {
+  "file": "ADVW_peut_etre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "peut-être"
+ },
+ {
+  "file": "ADVW_lordonnance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'ordonnance"
+ },
+ {
+  "file": "ADVW_ce_cet_cette_ces.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ce, cet, cette, ces"
+ },
+ {
+  "file": "ADVW_aller.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aller"
+ },
+ {
+  "file": "ADVW_la_pharmacie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la pharmacie"
+ },
+ {
+  "file": "ADVW_reconnaitre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "reconnaître"
+ },
+ {
+  "file": "ADVW_son_sa_ses.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "son, sa, ses"
+ },
+ {
+  "file": "ADVW_la_croix.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la croix"
+ },
+ {
+  "file": "ADVW_vert_verte.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vert, verte"
+ },
+ {
+  "file": "ADVW_le_pharmacien_la_pharmacienne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le pharmacien, la pharmacienne"
+ },
+ {
+  "file": "ADVW_bon_bonne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "bon, bonne"
+ },
+ {
+  "file": "ADVW_juste.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "juste"
+ },
+ {
+  "file": "ADVW_le_rhume.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le rhume"
+ },
+ {
+  "file": "ADVW_il.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "il"
+ },
+ {
+  "file": "ADVW_recommander.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "recommander"
+ },
+ {
+  "file": "ADVW_le_medicament.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le médicament"
+ },
+ {
+  "file": "ADVW_sans_ordonnance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sans ordonnance"
+ },
+ {
+  "file": "ADVW_le_reseau.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le réseau"
+ },
+ {
+  "file": "ADVW_le_train.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le train"
+ },
+ {
+  "file": "ADVW_la_facon.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la façon"
+ },
+ {
+  "file": "ADVW_agreable.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "agréable"
+ },
+ {
+  "file": "ADVW_voyager.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "voyager"
+ },
+ {
+  "file": "ADVW_long_longue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "long, longue"
+ },
+ {
+  "file": "ADVW_la_distance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la distance"
+ },
+ {
+  "file": "ADVW_y.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "y"
+ },
+ {
+  "file": "ADVW_tgv.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "TGV"
+ },
+ {
+  "file": "ADVW_a_grande_vitesse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à grande vitesse"
+ },
+ {
+  "file": "ADVW_marseille.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Marseille"
+ },
+ {
+  "file": "ADVW_peu.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "peu"
+ },
+ {
+  "file": "ADVW_petit_petite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "petit, petite"
+ },
+ {
+  "file": "ADVW_le_trajet.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le trajet"
+ },
+ {
+  "file": "ADVW_entre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "entre"
+ },
+ {
+  "file": "ADVW_la_ville.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la ville"
+ },
+ {
+  "file": "ADVW_la_region.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la région"
+ },
+ {
+  "file": "ADVW_ter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "TER"
+ },
+ {
+  "file": "ADVW_le_billet.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le billet"
+ },
+ {
+  "file": "ADVW_a_lavance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à l'avance"
+ },
+ {
+  "file": "ADVW_parce_que.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "parce que"
+ },
+ {
+  "file": "ADVW_monter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "monter"
+ },
+ {
+  "file": "ADVW_se_s.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se, s'"
+ },
+ {
+  "file": "ADVW_se_remplir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se remplir"
+ },
+ {
+  "file": "ADVW_le_voyageur_la_voyageuse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le voyageur, la voyageuse"
+ },
+ {
+  "file": "ADVW_leur_leurs.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "leur, leurs"
+ },
+ {
+  "file": "ADVW_la_gare.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la gare"
+ },
+ {
+  "file": "ADVW_regarder.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "regarder"
+ },
+ {
+  "file": "ADVW_le_tableau_des_departs.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le tableau des départs"
+ },
+ {
+  "file": "ADVW_la_voie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la voie"
+ },
+ {
+  "file": "ADVW_afficher.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "afficher"
+ },
+ {
+  "file": "ADVW_vingt.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vingt"
+ },
+ {
+  "file": "ADVW_la_minute.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la minute"
+ },
+ {
+  "file": "ADVW_le_depart.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le départ"
+ },
+ {
+  "file": "ADVW_lagent.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'agent"
+ },
+ {
+  "file": "ADVW_excuser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "excuser"
+ },
+ {
+  "file": "ADVW_le_retard.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le retard"
+ },
+ {
+  "file": "ADVW_garder.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "garder"
+ },
+ {
+  "file": "ADVW_la_reference.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la référence"
+ },
+ {
+  "file": "ADVW_en_partie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en partie"
+ },
+ {
+  "file": "ADVW_la_politesse.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la politesse"
+ },
+ {
+  "file": "ADVW_commencer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "commencer"
+ },
+ {
+  "file": "ADVW_le_mot.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le mot"
+ },
+ {
+  "file": "ADVW_entrer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "entrer"
+ },
+ {
+  "file": "ADVW_la_boutique.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la boutique"
+ },
+ {
+  "file": "ADVW_la_boulangerie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la boulangerie"
+ },
+ {
+  "file": "ADVW_lascenseur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'ascenseur"
+ },
+ {
+  "file": "ADVW_impoli.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "impoli"
+ },
+ {
+  "file": "ADVW_sourire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sourire"
+ },
+ {
+  "file": "ADVW_ensuite.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ensuite"
+ },
+ {
+  "file": "ADVW_le_choix.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le choix"
+ },
+ {
+  "file": "ADVW_tu.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tu"
+ },
+ {
+  "file": "ADVW_linconnu_linconnue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'inconnu, l'inconnue"
+ },
+ {
+  "file": "ADVW_le_client_la_cliente.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le client, la cliente"
+ },
+ {
+  "file": "ADVW_age.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "âgé"
+ },
+ {
+  "file": "ADVW_lami_lamie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'ami, l'amie"
+ },
+ {
+  "file": "ADVW_la_famille.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la famille"
+ },
+ {
+  "file": "ADVW_lenfant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'enfant"
+ },
+ {
+  "file": "ADVW_en_cas_de_doute.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "en cas de doute"
+ },
+ {
+  "file": "ADVW_lautre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'autre"
+ },
+ {
+  "file": "ADVW_passer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "passer"
+ },
+ {
+  "file": "ADVW_le_conditionnel.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le conditionnel"
+ },
+ {
+  "file": "ADVW_aider.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aider"
+ },
+ {
+  "file": "ADVW_doux_douce.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "doux, douce"
+ },
+ {
+  "file": "ADVW_aimable.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aimable"
+ },
+ {
+  "file": "ADVW_la_bise.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la bise"
+ },
+ {
+  "file": "ADVW_le_baiser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le baiser"
+ },
+ {
+  "file": "ADVW_chaque.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "chaque"
+ },
+ {
+  "file": "ADVW_la_joue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la joue"
+ },
+ {
+  "file": "ADVW_le_nombre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le nombre"
+ },
+ {
+  "file": "ADVW_changer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "changer"
+ },
+ {
+  "file": "ADVW_selon.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "selon"
+ },
+ {
+  "file": "ADVW_une_boutique.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une boutique"
+ },
+ {
+  "file": "ADVW_un_ascenseur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un ascenseur"
+ },
+ {
+  "file": "ADVW_un_inconnu_une_inconnue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un inconnu, une inconnue"
+ },
+ {
+  "file": "ADVW_presque.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "presque"
+ },
+ {
+  "file": "ADVW_tout_toute_tous_toutes.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tout, toute, tous, toutes"
+ },
+ {
+  "file": "ADVW_francais_francaise.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "français, française"
+ },
+ {
+  "file": "ADVW_le_marche.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le marché"
+ },
+ {
+  "file": "ADVW_plusieurs.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "plusieurs"
+ },
+ {
+  "file": "ADVW_la_fois.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fois"
+ },
+ {
+  "file": "ADVW_la_semaine.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la semaine"
+ },
+ {
+  "file": "ADVW_des.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "des"
+ },
+ {
+  "file": "ADVW_le_fruit.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le fruit"
+ },
+ {
+  "file": "ADVW_le_legume.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le légume"
+ },
+ {
+  "file": "ADVW_de_saison.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "de saison"
+ },
+ {
+  "file": "ADVW_le_fromage.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le fromage"
+ },
+ {
+  "file": "ADVW_le_poisson.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le poisson"
+ },
+ {
+  "file": "ADVW_la_fleur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fleur"
+ },
+ {
+  "file": "ADVW_le_produit.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le produit"
+ },
+ {
+  "file": "ADVW_le_marchand_la_marchande.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le marchand, la marchande"
+ },
+ {
+  "file": "ADVW_fier_fiere.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "fier, fière"
+ },
+ {
+  "file": "ADVW_gouter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "goûter"
+ },
+ {
+  "file": "ADVW_toujours.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "toujours"
+ },
+ {
+  "file": "ADVW_soi_meme.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "soi-même"
+ },
+ {
+  "file": "ADVW_le_kilo.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le kilo"
+ },
+ {
+  "file": "ADVW_la_tomate.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la tomate"
+ },
+ {
+  "file": "ADVW_lavocat.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'avocat"
+ },
+ {
+  "file": "ADVW_mur_mure.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "mûr, mûre"
+ },
+ {
+  "file": "ADVW_savoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "savoir"
+ },
+ {
+  "file": "ADVW_quoi.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "quoi"
+ },
+ {
+  "file": "ADVW_cuisiner.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "cuisiner"
+ },
+ {
+  "file": "ADVW_conseiller.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "conseiller"
+ },
+ {
+  "file": "ADVW_le_soir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le soir"
+ },
+ {
+  "file": "ADVW_repondre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "répondre"
+ },
+ {
+  "file": "ADVW_avec_plaisir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "avec plaisir"
+ },
+ {
+  "file": "ADVW_tot.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tôt"
+ },
+ {
+  "file": "ADVW_meilleur_meilleure.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "meilleur, meilleure"
+ },
+ {
+  "file": "ADVW_la_fin.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fin"
+ },
+ {
+  "file": "ADVW_une_bonne_affaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une bonne affaire"
+ },
+ {
+  "file": "ADVW_certain_certaine.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "certain, certaine"
+ },
+ {
+  "file": "ADVW_baisser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "baisser"
+ },
+ {
+  "file": "ADVW_le_panier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le panier"
+ },
+ {
+  "file": "ADVW_mur.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "mûr"
+ },
+ {
+  "file": "ADVW_aimer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "aimer"
+ },
+ {
+  "file": "ADVW_plaisanter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "plaisanter"
+ },
+ {
+  "file": "ADVW_ladministration.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'administration"
+ },
+ {
+  "file": "ADVW_ils.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ils"
+ },
+ {
+  "file": "ADVW_la_raison.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la raison"
+ },
+ {
+  "file": "ADVW_les_papiers.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les papiers"
+ },
+ {
+  "file": "ADVW_la_demarche.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la démarche"
+ },
+ {
+  "file": "ADVW_la_mairie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la mairie"
+ },
+ {
+  "file": "ADVW_le_batiment.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le bâtiment"
+ },
+ {
+  "file": "ADVW_le_la_maire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le, la maire"
+ },
+ {
+  "file": "ADVW_la.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "là"
+ },
+ {
+  "file": "ADVW_se_marier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se marier"
+ },
+ {
+  "file": "ADVW_declarer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "déclarer"
+ },
+ {
+  "file": "ADVW_la_naissance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la naissance"
+ },
+ {
+  "file": "ADVW_sinscrire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "s'inscrire"
+ },
+ {
+  "file": "ADVW_les_listes_electorales.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les listes électorales"
+ },
+ {
+  "file": "ADVW_se_faire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se faire"
+ },
+ {
+  "file": "ADVW_verifier.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vérifier"
+ },
+ {
+  "file": "ADVW_le_site.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le site"
+ },
+ {
+  "file": "ADVW_trop.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "trop"
+ },
+ {
+  "file": "ADVW_pas_assez.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "pas assez"
+ },
+ {
+  "file": "ADVW_le_guichet.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le guichet"
+ },
+ {
+  "file": "ADVW_patient_patiente.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "patient, patiente"
+ },
+ {
+  "file": "ADVW_madame.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "madame"
+ },
+ {
+  "file": "ADVW_inscrire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "inscrire"
+ },
+ {
+  "file": "ADVW_mon_ma_mes.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "mon, ma, mes"
+ },
+ {
+  "file": "ADVW_le_fils.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le fils"
+ },
+ {
+  "file": "ADVW_lecole.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'école"
+ },
+ {
+  "file": "ADVW_le_formulaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le formulaire"
+ },
+ {
+  "file": "ADVW_manquer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "manquer"
+ },
+ {
+  "file": "ADVW_revenir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "revenir"
+ },
+ {
+  "file": "ADVW_la_photocopie.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la photocopie"
+ },
+ {
+  "file": "ADVW_tout.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tout"
+ },
+ {
+  "file": "ADVW_range_rangee.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "rangé, rangée"
+ },
+ {
+  "file": "ADVW_lorganisation.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'organisation"
+ },
+ {
+  "file": "ADVW_une_demarche.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une démarche"
+ },
+ {
+  "file": "ADVW_le_maire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le maire"
+ },
+ {
+  "file": "ADVW_un_formulaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un formulaire"
+ },
+ {
+  "file": "ADVW_habiter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "habiter"
+ },
+ {
+  "file": "ADVW_le_voisin_la_voisine.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le voisin, la voisine"
+ },
+ {
+  "file": "ADVW_faire_partie_de.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "faire partie de"
+ },
+ {
+  "file": "ADVW_la_vie_quotidienne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la vie quotidienne"
+ },
+ {
+  "file": "ADVW_limmeuble.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'immeuble"
+ },
+ {
+  "file": "ADVW_encore.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "encore"
+ },
+ {
+  "file": "ADVW_le_gardien_la_gardienne.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le gardien, la gardienne"
+ },
+ {
+  "file": "ADVW_soccuper_de.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "s'occuper de"
+ },
+ {
+  "file": "ADVW_le_colis.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le colis"
+ },
+ {
+  "file": "ADVW_connaitre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "connaître"
+ },
+ {
+  "file": "ADVW_tout_le_monde.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tout le monde"
+ },
+ {
+  "file": "ADVW_vivre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vivre"
+ },
+ {
+  "file": "ADVW_ensemble.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "ensemble"
+ },
+ {
+  "file": "ADVW_la_regle.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la règle"
+ },
+ {
+  "file": "ADVW_simple.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "simple"
+ },
+ {
+  "file": "ADVW_vingt_deux.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "vingt-deux"
+ },
+ {
+  "file": "ADVW_eviter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "éviter"
+ },
+ {
+  "file": "ADVW_le_bruit.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le bruit"
+ },
+ {
+  "file": "ADVW_organiser.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "organiser"
+ },
+ {
+  "file": "ADVW_la_fete.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fête"
+ },
+ {
+  "file": "ADVW_gentil_gentille.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "gentil, gentille"
+ },
+ {
+  "file": "ADVW_prevenir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "prévenir"
+ },
+ {
+  "file": "ADVW_un_petit_mot.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un petit mot"
+ },
+ {
+  "file": "ADVW_le_hall.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le hall"
+ },
+ {
+  "file": "ADVW_le_samedi.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le samedi"
+ },
+ {
+  "file": "ADVW_nous.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "nous"
+ },
+ {
+  "file": "ADVW_feter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "fêter"
+ },
+ {
+  "file": "ADVW_lanniversaire.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'anniversaire"
+ },
+ {
+  "file": "ADVW_lavance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'avance"
+ },
+ {
+  "file": "ADVW_lui.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "lui"
+ },
+ {
+  "file": "ADVW_parler.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "parler"
+ },
+ {
+  "file": "ADVW_gentiment.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "gentiment"
+ },
+ {
+  "file": "ADVW_se_facher.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se fâcher"
+ },
+ {
+  "file": "ADVW_le_printemps.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le printemps"
+ },
+ {
+  "file": "ADVW_participer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "participer"
+ },
+ {
+  "file": "ADVW_la_fete_des_voisins.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la Fête des voisins"
+ },
+ {
+  "file": "ADVW_chacun_chacune.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "chacun, chacune"
+ },
+ {
+  "file": "ADVW_quelque_chose.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "quelque chose"
+ },
+ {
+  "file": "ADVW_manger.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "manger"
+ },
+ {
+  "file": "ADVW_faire_connaissance.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "faire connaissance"
+ },
+ {
+  "file": "ADVW_autour_dun_verre.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "autour d'un verre"
+ },
+ {
+  "file": "ADVW_un_immeuble.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un immeuble"
+ },
+ {
+  "file": "ADVW_un_colis.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un colis"
+ },
+ {
+  "file": "ADVW_premier_premiere.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "premier, première"
+ },
+ {
+  "file": "ADVW_lentreprise.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'entreprise"
+ },
+ {
+  "file": "ADVW_laccueil.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'accueil"
+ },
+ {
+  "file": "ADVW_le_badge.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le badge"
+ },
+ {
+  "file": "ADVW_le_bureau.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le bureau"
+ },
+ {
+  "file": "ADVW_puis.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "puis"
+ },
+ {
+  "file": "ADVW_le_la_responsable.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le, la responsable"
+ },
+ {
+  "file": "ADVW_presenter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "présenter"
+ },
+ {
+  "file": "ADVW_lequipe.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'équipe"
+ },
+ {
+  "file": "ADVW_lopen_space.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'open space"
+ },
+ {
+  "file": "ADVW_partage_partagee.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "partagé, partagée"
+ },
+ {
+  "file": "ADVW_normal_normale.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "normal, normale"
+ },
+ {
+  "file": "ADVW_a_condition_de.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à condition de"
+ },
+ {
+  "file": "ADVW_indiquer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "indiquer"
+ },
+ {
+  "file": "ADVW_la_salle_de_reunion.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la salle de réunion"
+ },
+ {
+  "file": "ADVW_lacces.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'accès"
+ },
+ {
+  "file": "ADVW_le_dossier_partage.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le dossier partagé"
+ },
+ {
+  "file": "ADVW_nouveau_nouvelle.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "nouveau, nouvelle"
+ },
+ {
+  "file": "ADVW_le_la_collegue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le, la collègue"
+ },
+ {
+  "file": "ADVW_sauf.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sauf"
+ },
+ {
+  "file": "ADVW_se_tutoyer.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "se tutoyer"
+ },
+ {
+  "file": "ADVW_le_midi.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le midi"
+ },
+ {
+  "file": "ADVW_dejeuner.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "déjeuner"
+ },
+ {
+  "file": "ADVW_accepter.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "accepter"
+ },
+ {
+  "file": "ADVW_le_moyen.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le moyen"
+ },
+ {
+  "file": "ADVW_le_salarie_la_salariee.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le salarié, la salariée"
+ },
+ {
+  "file": "ADVW_le_titre_restaurant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le titre-restaurant"
+ },
+ {
+  "file": "ADVW_au_revoir.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "au revoir"
+ },
+ {
+  "file": "ADVW_bonne_soiree.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "bonne soirée"
+ },
+ {
+  "file": "ADVW_a_demain.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "à demain"
+ },
+ {
+  "file": "ADVW_un_une_collegue.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un, une collègue"
+ },
+ {
+  "file": "ADVW_un_salarie_une_salariee.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un salarié, une salariée"
+ },
+ {
+  "file": "ADVW_un_titre_restaurant.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un titre-restaurant"
+ }
+]
