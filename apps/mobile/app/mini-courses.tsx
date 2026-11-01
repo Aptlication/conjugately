@@ -70,9 +70,11 @@ export default function MiniCourses() {
                 </Pressable>
               );
             })}
-            <Pressable style={[styles.row, { opacity: 0.5 }]}>
-              <Text style={styles.rowTitle}>🔒 Advanced Course</Text>
-              <Text style={styles.rowSub}>Coming Soon!</Text>
+            {/* 1 Nov 2026: Advanced A pilot, reading-led, Pro, Beta (app/advanced.tsx) */}
+            <Pressable style={styles.row} onPress={() => router.push("/advanced" as any)} accessibilityRole="button"
+              accessibilityLabel="Advanced A Course, beta. Read, learn the words, then talk about it. Pluri Pro.">
+              <Text style={styles.rowTitle}>{isPro ? "" : "🔒 "}🟣 Advanced A Course  <Text style={styles.betaInline}>BETA</Text></Text>
+              <Text style={styles.rowSub}>Read short articles, learn their words, then talk about them</Text>
             </Pressable>
           </View>
         )}
@@ -182,4 +184,5 @@ const styles = StyleSheet.create({
   cefrBadges: { flexDirection: "row", gap: 2 },
   proTag: { backgroundColor: "#F5C518", borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 },
   proTagText: { color: "#1B2145", fontSize: 11, fontWeight: "800" },
+  betaInline: { color: "#F5C518", fontSize: 12, fontWeight: "800", letterSpacing: 1 },
 });

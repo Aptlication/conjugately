@@ -145,6 +145,16 @@ export function awardVocabCoin(): Promise<number> {
   });
 }
 
+/** Advanced units (1 Nov 2026): coins for a spoken comprehension answer, 1–3 each. */
+export function awardCoins(n: number): Promise<number> {
+  return serial(async () => {
+    const s = await readCoins();
+    const next: CoinState = { ...s, earned: coinBalanceEarned(s) + Math.max(0, Math.round(n)) };
+    try { await write(next); } catch {}
+    return coinBalance(next);
+  });
+}
+
 function coinBalanceEarned(s: CoinState): number {
   // A pre-18-Oct store has no `earned`; its balance was the sum of unit bests.
   return typeof s.earned === "number" ? s.earned : coinBalance(s) + s.spent;
