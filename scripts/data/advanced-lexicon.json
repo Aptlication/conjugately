@@ -1,0 +1,3779 @@
+{
+ "words": {
+  "à": {
+   "fr": "à",
+   "en": "in (a city)",
+   "pos": "preposition"
+  },
+  "comme": {
+   "fr": "comme",
+   "en": "like, as",
+   "pos": "conjunction"
+  },
+  "un": {
+   "fr": "un / une",
+   "en": "a, an",
+   "pos": "determiner"
+  },
+  "une": {
+   "fr": "un / une",
+   "en": "a, an",
+   "pos": "determiner"
+  },
+  "n'": {
+   "fr": "ne / n'",
+   "en": "not (with pas)",
+   "pos": "adverb"
+  },
+  "ne": {
+   "fr": "ne / n'",
+   "en": "not (with pas)",
+   "pos": "adverb"
+  },
+  "pas": {
+   "fr": "pas",
+   "en": "not",
+   "pos": "adverb"
+  },
+  "avant": {
+   "fr": "avant",
+   "en": "before (avant de)",
+   "pos": "preposition"
+  },
+  "de": {
+   "fr": "de / d'",
+   "en": "of; to (before infinitive)",
+   "pos": "preposition"
+  },
+  "d'": {
+   "fr": "de / d'",
+   "en": "of",
+   "pos": "preposition"
+  },
+  "il": {
+   "fr": "il",
+   "en": "it (impersonal: il faut)",
+   "pos": "pronoun"
+  },
+  "vos": {
+   "fr": "votre / vos",
+   "en": "your",
+   "pos": "determiner"
+  },
+  "votre": {
+   "fr": "votre / vos",
+   "en": "your",
+   "pos": "determiner"
+  },
+  "et": {
+   "fr": "et",
+   "en": "and",
+   "pos": "conjunction"
+  },
+  "souvent": {
+   "fr": "souvent",
+   "en": "often",
+   "pos": "adverb"
+  },
+  "c'": {
+   "fr": "ce / c'",
+   "en": "it, this, that",
+   "pos": "pronoun"
+  },
+  "est-à-dire": {
+   "fr": "c'est-à-dire",
+   "en": "that is, i.e.",
+   "pos": "other"
+  },
+  "qui": {
+   "fr": "qui",
+   "en": "who",
+   "pos": "pronoun"
+  },
+  "le": {
+   "fr": "le / la / les",
+   "en": "the; it, him (pronoun)",
+   "pos": "determiner"
+  },
+  "la": {
+   "fr": "le / la / les",
+   "en": "the; it, her (pronoun)",
+   "pos": "determiner"
+  },
+  "les": {
+   "fr": "le / la / les",
+   "en": "the; them (pronoun)",
+   "pos": "determiner"
+  },
+  "l'": {
+   "fr": "le / la / les",
+   "en": "the; it, him, her (pronoun)",
+   "pos": "determiner"
+  },
+  "si": {
+   "fr": "si / s'",
+   "en": "if",
+   "pos": "conjunction"
+  },
+  "s'": {
+   "fr": "si / s'",
+   "en": "if (s'il vous plaît: please)",
+   "pos": "conjunction"
+  },
+  "vous": {
+   "fr": "vous",
+   "en": "you",
+   "pos": "pronoun"
+  },
+  "quand": {
+   "fr": "quand",
+   "en": "when",
+   "pos": "conjunction"
+  },
+  "je": {
+   "fr": "je / j'",
+   "en": "I",
+   "pos": "pronoun"
+  },
+  "me": {
+   "fr": "me / m'",
+   "en": "me, to me",
+   "pos": "pronoun"
+  },
+  "pendant": {
+   "fr": "pendant",
+   "en": "during",
+   "pos": "preposition"
+  },
+  "beaucoup": {
+   "fr": "beaucoup",
+   "en": "a lot (beaucoup de: many)",
+   "pos": "adverb"
+  },
+  "alors": {
+   "fr": "alors",
+   "en": "so, therefore",
+   "pos": "adverb"
+  },
+  "mieux": {
+   "fr": "mieux",
+   "en": "better",
+   "pos": "adverb"
+  },
+  "du": {
+   "fr": "du (de + le)",
+   "en": "of the",
+   "pos": "preposition"
+  },
+  "des": {
+   "fr": "des (de + les)",
+   "en": "some; of the",
+   "pos": "preposition"
+  },
+  "aussi": {
+   "fr": "aussi",
+   "en": "also, too",
+   "pos": "adverb"
+  },
+  "plus": {
+   "fr": "plus",
+   "en": "more (le plus: the most)",
+   "pos": "adverb"
+  },
+  "enfin": {
+   "fr": "enfin",
+   "en": "finally, lastly",
+   "pos": "adverb"
+  },
+  "bien": {
+   "fr": "bien",
+   "en": "well; gladly, really",
+   "pos": "adverb"
+  },
+  "où": {
+   "fr": "où",
+   "en": "where; when (le jour où)",
+   "pos": "pronoun"
+  },
+  "ce": {
+   "fr": "ce / cet / cette",
+   "en": "this",
+   "pos": "determiner"
+  },
+  "en": {
+   "fr": "en",
+   "en": "in, on; while (+ -ing)",
+   "pos": "preposition"
+  },
+  "qu'": {
+   "fr": "que / qu'",
+   "en": "than (plus que)",
+   "pos": "conjunction"
+  },
+  "au": {
+   "fr": "au (à + le)",
+   "en": "at the",
+   "pos": "preposition"
+  },
+  "debout": {
+   "fr": "debout",
+   "en": "standing (up)",
+   "pos": "adverb",
+   "emoji": "🧍"
+  },
+  "attention": {
+   "fr": "attention !",
+   "en": "watch out!, careful!",
+   "pos": "interjection"
+  },
+  "on": {
+   "fr": "on",
+   "en": "people, one, they",
+   "pos": "pronoun"
+  },
+  "avec": {
+   "fr": "avec",
+   "en": "with",
+   "pos": "preposition"
+  },
+  "pour": {
+   "fr": "pour",
+   "en": "to, in order to",
+   "pos": "preposition"
+  },
+  "ou": {
+   "fr": "ou",
+   "en": "or",
+   "pos": "conjunction"
+  },
+  "moins": {
+   "fr": "moins",
+   "en": "less",
+   "pos": "adverb"
+  },
+  "dans": {
+   "fr": "dans",
+   "en": "in",
+   "pos": "preposition"
+  },
+  "mais": {
+   "fr": "mais",
+   "en": "but",
+   "pos": "conjunction"
+  },
+  "parfois": {
+   "fr": "parfois",
+   "en": "sometimes",
+   "pos": "adverb"
+  },
+  "vite": {
+   "fr": "vite",
+   "en": "quickly, soon",
+   "pos": "adverb"
+  },
+  "généralement": {
+   "fr": "généralement",
+   "en": "usually, generally",
+   "pos": "adverb"
+  },
+  "bonjour": {
+   "fr": "bonjour",
+   "en": "hello, good morning",
+   "pos": "interjection",
+   "emoji": "👋"
+  },
+  "trois": {
+   "fr": "trois",
+   "en": "three",
+   "pos": "number",
+   "emoji": "3️⃣"
+  },
+  "paris": {
+   "fr": "Paris",
+   "en": "Paris",
+   "pos": "name"
+  },
+  "lyon": {
+   "fr": "Lyon",
+   "en": "Lyon",
+   "pos": "name"
+  },
+  "victor-hugo": {
+   "fr": "Victor-Hugo",
+   "en": "Victor-Hugo (street name)",
+   "pos": "name"
+  },
+  "france": {
+   "fr": "France",
+   "en": "France",
+   "pos": "name"
+  },
+  "facile": {
+   "fr": "facile",
+   "en": "easy",
+   "pos": "adjective"
+  },
+  "dernières": {
+   "fr": "dernier / dernière",
+   "en": "last, most recent",
+   "pos": "adjective"
+  },
+  "poli": {
+   "fr": "poli(e)",
+   "en": "polite",
+   "pos": "adjective"
+  },
+  "disponible": {
+   "fr": "disponible",
+   "en": "available, free",
+   "pos": "adjective"
+  },
+  "comprises": {
+   "fr": "compris(e)",
+   "en": "included",
+   "pos": "adjective"
+  },
+  "compris": {
+   "fr": "compris(e)",
+   "en": "included",
+   "pos": "adjective"
+  },
+  "libre": {
+   "fr": "libre",
+   "en": "free, vacant",
+   "pos": "adjective"
+  },
+  "même": {
+   "fr": "même",
+   "en": "same",
+   "pos": "adjective"
+  },
+  "complet": {
+   "fr": "complet / complète",
+   "en": "complete, full",
+   "pos": "adjective"
+  },
+  "sérieux": {
+   "fr": "sérieux / sérieuse",
+   "en": "reliable, serious",
+   "pos": "adjective"
+  },
+  "petit": {
+   "fr": "petit(e)",
+   "en": "small, little",
+   "pos": "adjective"
+  },
+  "grand": {
+   "fr": "grand(e)",
+   "en": "large, big",
+   "pos": "adjective"
+  },
+  "cher": {
+   "fr": "cher / chère",
+   "en": "expensive",
+   "pos": "adjective"
+  },
+  "seul": {
+   "fr": "seul(e)",
+   "en": "single, only one",
+   "pos": "adjective"
+  },
+  "content": {
+   "fr": "content(e)",
+   "en": "happy, pleased",
+   "pos": "adjective",
+   "emoji": "😊"
+  },
+  "bancaire": {
+   "fr": "bancaire",
+   "en": "bank (adj.), banking",
+   "pos": "adjective"
+  },
+  "appartement": {
+   "fr": "l'appartement (m)",
+   "en": "flat, apartment",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏢"
+  },
+  "dossier": {
+   "fr": "le dossier",
+   "en": "application file",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📁"
+  },
+  "pièce": {
+   "fr": "la pièce",
+   "en": "piece (of ID), document",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🪪"
+  },
+  "identité": {
+   "fr": "l'identité (f)",
+   "en": "identity",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "fiches": {
+   "fr": "la fiche",
+   "en": "slip, form (fiche de paie)",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "📃"
+  },
+  "paie": {
+   "fr": "la paie",
+   "en": "pay (fiche de paie: payslip)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "garant": {
+   "fr": "le garant / la garante",
+   "en": "guarantor",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "personne": {
+   "fr": "la personne",
+   "en": "person",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "loyer": {
+   "fr": "le loyer",
+   "en": "rent",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "agence": {
+   "fr": "l'agence (f)",
+   "en": "(estate) agency",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "rue": {
+   "fr": "la rue",
+   "en": "street",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🛣️"
+  },
+  "jeudi": {
+   "fr": "le jeudi",
+   "en": "Thursday",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "visite": {
+   "fr": "la visite",
+   "en": "viewing, visit",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "questions": {
+   "fr": "la question",
+   "en": "question",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "❓"
+  },
+  "charges": {
+   "fr": "les charges (f)",
+   "en": "service charges",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "gens": {
+   "fr": "les gens (m)",
+   "en": "people",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "👥"
+  },
+  "logement": {
+   "fr": "le logement",
+   "en": "accommodation, housing",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏘️"
+  },
+  "place": {
+   "fr": "la place",
+   "en": "place, position (in someone's shoes)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "propriétaire": {
+   "fr": "le / la propriétaire",
+   "en": "landlord, owner",
+   "pos": "noun"
+  },
+  "bail": {
+   "fr": "le bail",
+   "en": "lease",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📜"
+  },
+  "état": {
+   "fr": "l'état (m)",
+   "en": "condition, state",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "lieux": {
+   "fr": "les lieux (m)",
+   "en": "premises (état des lieux: inventory)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "jour": {
+   "fr": "le jour",
+   "en": "day",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "clés": {
+   "fr": "les clés (f)",
+   "en": "keys",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🔑"
+  },
+  "document": {
+   "fr": "le document",
+   "en": "document",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📄"
+  },
+  "café": {
+   "fr": "le café",
+   "en": "café; coffee",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "☕"
+  },
+  "boisson": {
+   "fr": "la boisson",
+   "en": "drink",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🥤"
+  },
+  "lieu": {
+   "fr": "le lieu",
+   "en": "place",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📍"
+  },
+  "vie": {
+   "fr": "la vie",
+   "en": "life (lieu de vie: social hub)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "matin": {
+   "fr": "le matin",
+   "en": "morning",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🌅"
+  },
+  "comptoir": {
+   "fr": "le comptoir",
+   "en": "counter, bar",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "journal": {
+   "fr": "le journal",
+   "en": "newspaper",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📰"
+  },
+  "expresso": {
+   "fr": "l'expresso (m)",
+   "en": "espresso",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "lait": {
+   "fr": "le lait",
+   "en": "milk",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥛"
+  },
+  "crème": {
+   "fr": "la crème",
+   "en": "cream (café crème: white coffee)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "croissant": {
+   "fr": "le croissant",
+   "en": "croissant",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥐"
+  },
+  "terrasse": {
+   "fr": "la terrasse",
+   "en": "terrace, outdoor seating",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "⛱️"
+  },
+  "heure": {
+   "fr": "l'heure (f)",
+   "en": "hour",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "⏳"
+  },
+  "serveur": {
+   "fr": "le serveur / la serveuse",
+   "en": "waiter, waitress",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🤵"
+  },
+  "addition": {
+   "fr": "l'addition (f)",
+   "en": "the bill, check",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🧾"
+  },
+  "service": {
+   "fr": "le service",
+   "en": "service (charge)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "prix": {
+   "fr": "le prix",
+   "en": "price",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏷️"
+  },
+  "pourboire": {
+   "fr": "le pourboire",
+   "en": "tip (for service)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🪙"
+  },
+  "besoin": {
+   "fr": "le besoin",
+   "en": "need (avoir besoin de)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "compte": {
+   "fr": "le compte",
+   "en": "(bank) account",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏦"
+  },
+  "salaire": {
+   "fr": "le salaire",
+   "en": "salary, wages",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "💶"
+  },
+  "rib": {
+   "fr": "le RIB",
+   "en": "bank details slip (IBAN)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "numéro": {
+   "fr": "le numéro",
+   "en": "number",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🔢"
+  },
+  "rendez-vous": {
+   "fr": "le rendez-vous",
+   "en": "appointment",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📅"
+  },
+  "conseiller": {
+   "fr": "le conseiller / la conseillère",
+   "en": "adviser (bank adviser)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "trouver": {
+   "fr": "trouver",
+   "en": "to find",
+   "pos": "verb",
+   "emoji": "🔍"
+  },
+  "est": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "est · présent"
+  },
+  "visiter": {
+   "fr": "visiter",
+   "en": "to visit, view (a flat)",
+   "pos": "verb"
+  },
+  "faut": {
+   "fr": "falloir",
+   "en": "to be necessary, must",
+   "pos": "verb",
+   "form": "faut · présent (il faut)"
+  },
+  "préparer": {
+   "fr": "préparer",
+   "en": "to prepare",
+   "pos": "verb"
+  },
+  "paiera": {
+   "fr": "payer",
+   "en": "to pay",
+   "pos": "verb",
+   "form": "paiera · futur"
+  },
+  "pouvez": {
+   "fr": "pouvoir",
+   "en": "to be able, can",
+   "pos": "verb",
+   "form": "pouvez · présent"
+  },
+  "faire": {
+   "fr": "faire",
+   "en": "to do, make",
+   "pos": "verb"
+  },
+  "appelez": {
+   "fr": "appeler",
+   "en": "to call, phone",
+   "pos": "verb",
+   "form": "appelez · présent",
+   "emoji": "📞"
+  },
+  "soyez": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "soyez · impératif"
+  },
+  "voudrais": {
+   "fr": "vouloir",
+   "en": "to want (would like)",
+   "pos": "verb",
+   "form": "voudrais · conditionnel"
+  },
+  "seriez-vous": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "seriez-vous · conditionnel (question)"
+  },
+  "posez": {
+   "fr": "poser",
+   "en": "to ask (a question), put",
+   "pos": "verb",
+   "form": "posez · impératif"
+  },
+  "sont-elles": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "sont-elles · présent (question)"
+  },
+  "pourriez-vous": {
+   "fr": "pouvoir",
+   "en": "to be able, can",
+   "pos": "verb",
+   "form": "pourriez-vous · conditionnel (question)"
+  },
+  "dire": {
+   "fr": "dire",
+   "en": "to say, tell",
+   "pos": "verb"
+  },
+  "sera": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "sera · futur"
+  },
+  "visitent": {
+   "fr": "visiter",
+   "en": "to visit, view (a flat)",
+   "pos": "verb",
+   "form": "visitent · présent"
+  },
+  "vaudrait": {
+   "fr": "valoir",
+   "en": "to be worth (vaudrait mieux: better)",
+   "pos": "verb",
+   "form": "vaudrait · conditionnel"
+  },
+  "apporter": {
+   "fr": "apporter",
+   "en": "to bring",
+   "pos": "verb"
+  },
+  "étiez": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "étiez · imparfait"
+  },
+  "choisiriez": {
+   "fr": "choisir",
+   "en": "to choose",
+   "pos": "verb",
+   "form": "choisiriez · conditionnel"
+  },
+  "signer": {
+   "fr": "signer",
+   "en": "to sign",
+   "pos": "verb",
+   "emoji": "✍️"
+  },
+  "lisez-le": {
+   "fr": "lire",
+   "en": "to read",
+   "pos": "verb",
+   "form": "lisez-le · impératif",
+   "emoji": "📖"
+  },
+  "faites": {
+   "fr": "faire",
+   "en": "to do, make",
+   "pos": "verb",
+   "form": "faites · impératif"
+  },
+  "recevez": {
+   "fr": "recevoir",
+   "en": "to receive, get",
+   "pos": "verb",
+   "form": "recevez · présent"
+  },
+  "protégera": {
+   "fr": "protéger",
+   "en": "to protect",
+   "pos": "verb",
+   "form": "protégera · futur"
+  },
+  "partirez": {
+   "fr": "partir",
+   "en": "to leave, move out",
+   "pos": "verb",
+   "form": "partirez · futur"
+  },
+  "prennent": {
+   "fr": "prendre",
+   "en": "to take, have (a drink)",
+   "pos": "verb",
+   "form": "prennent · présent"
+  },
+  "lisant": {
+   "fr": "lire",
+   "en": "to read",
+   "pos": "verb",
+   "form": "lisant · participe présent (en lisant)"
+  },
+  "demandez": {
+   "fr": "demander",
+   "en": "to ask for",
+   "pos": "verb",
+   "form": "demandez · présent"
+  },
+  "servira": {
+   "fr": "servir",
+   "en": "to serve",
+   "pos": "verb",
+   "form": "servira · futur"
+  },
+  "préférez": {
+   "fr": "préférer",
+   "en": "to prefer",
+   "pos": "verb",
+   "form": "préférez · présent"
+  },
+  "faudrait": {
+   "fr": "falloir",
+   "en": "to be necessary (should)",
+   "pos": "verb",
+   "form": "faudrait · conditionnel"
+  },
+  "commander": {
+   "fr": "commander",
+   "en": "to order",
+   "pos": "verb"
+  },
+  "être": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb"
+  },
+  "dit": {
+   "fr": "dire",
+   "en": "to say",
+   "pos": "verb",
+   "form": "dit · présent"
+  },
+  "plaît": {
+   "fr": "plaire",
+   "en": "to please (s'il vous plaît)",
+   "pos": "verb",
+   "form": "plaît · présent"
+  },
+  "prendrais": {
+   "fr": "prendre",
+   "en": "to take, have (food/drink)",
+   "pos": "verb",
+   "form": "prendrais · conditionnel"
+  },
+  "coûte": {
+   "fr": "coûter",
+   "en": "to cost",
+   "pos": "verb",
+   "form": "coûte · présent"
+  },
+  "pourriez": {
+   "fr": "pouvoir",
+   "en": "to be able, can",
+   "pos": "verb",
+   "form": "pourriez · conditionnel"
+  },
+  "rester": {
+   "fr": "rester",
+   "en": "to stay",
+   "pos": "verb"
+  },
+  "demandera": {
+   "fr": "demander",
+   "en": "to ask",
+   "pos": "verb",
+   "form": "demandera · futur"
+  },
+  "partir": {
+   "fr": "partir",
+   "en": "to leave",
+   "pos": "verb"
+  },
+  "payer": {
+   "fr": "payer",
+   "en": "to pay",
+   "pos": "verb",
+   "emoji": "💳"
+  },
+  "laisse": {
+   "fr": "laisser",
+   "en": "to leave (behind)",
+   "pos": "verb",
+   "form": "laisse · présent"
+  },
+  "venez": {
+   "fr": "venir",
+   "en": "to come",
+   "pos": "verb",
+   "form": "venez · présent"
+  },
+  "travailler": {
+   "fr": "travailler",
+   "en": "to work",
+   "pos": "verb",
+   "emoji": "💼"
+  },
+  "étudier": {
+   "fr": "étudier",
+   "en": "to study",
+   "pos": "verb",
+   "emoji": "📚"
+  },
+  "aurez": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "aurez · futur"
+  },
+  "recevoir": {
+   "fr": "recevoir",
+   "en": "to receive, get",
+   "pos": "verb"
+  },
+  "ouvrir": {
+   "fr": "ouvrir",
+   "en": "to open",
+   "pos": "verb"
+  },
+  "prendre": {
+   "fr": "prendre",
+   "en": "to take (prendre rendez-vous: make)",
+   "pos": "verb"
+  },
+  "apportez": {
+   "fr": "apporter",
+   "en": "to bring",
+   "pos": "verb",
+   "form": "apportez · impératif"
+  },
+  "justificatif": {
+   "fr": "le justificatif",
+   "en": "proof, supporting document",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "domicile": {
+   "fr": "le domicile",
+   "en": "home (address)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏠"
+  },
+  "par": {
+   "fr": "par",
+   "en": "by, per (par exemple: for example)",
+   "pos": "preposition"
+  },
+  "exemple": {
+   "fr": "l'exemple (m)",
+   "en": "example",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "facture": {
+   "fr": "la facture",
+   "en": "bill, invoice",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🧾"
+  },
+  "électricité": {
+   "fr": "l'électricité (f)",
+   "en": "electricity",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "⚡"
+  },
+  "courant": {
+   "fr": "courant / courante",
+   "en": "current (compte courant)",
+   "pos": "adjective"
+  },
+  "m'": {
+   "fr": "me / m'",
+   "en": "me, to me",
+   "pos": "pronoun"
+  },
+  "expliquer": {
+   "fr": "expliquer",
+   "en": "to explain",
+   "pos": "verb"
+  },
+  "frais": {
+   "fr": "les frais (m)",
+   "en": "fees, charges",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "proposera": {
+   "fr": "proposer",
+   "en": "to offer, suggest",
+   "pos": "verb",
+   "form": "proposera · futur"
+  },
+  "sûrement": {
+   "fr": "sûrement",
+   "en": "surely, most likely",
+   "pos": "adverb"
+  },
+  "carte": {
+   "fr": "la carte",
+   "en": "card",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "💳"
+  },
+  "application": {
+   "fr": "l'application (f)",
+   "en": "app (application)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "gérer": {
+   "fr": "gérer",
+   "en": "to manage",
+   "pos": "verb"
+  },
+  "argent": {
+   "fr": "l'argent (m)",
+   "en": "money",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "💰"
+  },
+  "sur": {
+   "fr": "sur",
+   "en": "on",
+   "pos": "preposition"
+  },
+  "téléphone": {
+   "fr": "le téléphone",
+   "en": "phone",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📱"
+  },
+  "aujourd'": {
+   "fr": "aujourd'hui",
+   "en": "today",
+   "pos": "adverb"
+  },
+  "hui": {
+   "fr": "aujourd'hui",
+   "en": "today (end of aujourd'hui)",
+   "pos": "adverb"
+  },
+  "français": {
+   "fr": "le Français / la Française",
+   "en": "French person",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "choisissent": {
+   "fr": "choisir",
+   "en": "to choose",
+   "pos": "verb",
+   "form": "choisissent · présent"
+  },
+  "banque": {
+   "fr": "la banque",
+   "en": "bank",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🏦"
+  },
+  "ligne": {
+   "fr": "la ligne",
+   "en": "line (en ligne: online)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "chère": {
+   "fr": "cher / chère",
+   "en": "expensive",
+   "pos": "adjective"
+  },
+  "conseil": {
+   "fr": "le conseil",
+   "en": "piece of advice, tip",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "comparerais": {
+   "fr": "comparer",
+   "en": "to compare",
+   "pos": "verb",
+   "form": "comparerais · conditionnel"
+  },
+  "quelques": {
+   "fr": "quelques",
+   "en": "a few",
+   "pos": "determiner"
+  },
+  "euros": {
+   "fr": "l'euro (m)",
+   "en": "euro",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "💶"
+  },
+  "mois": {
+   "fr": "le mois",
+   "en": "month",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📅"
+  },
+  "cela": {
+   "fr": "cela",
+   "en": "that, it",
+   "pos": "pronoun"
+  },
+  "fait": {
+   "fr": "faire",
+   "en": "to make, add up to",
+   "pos": "verb",
+   "form": "fait · présent"
+  },
+  "année": {
+   "fr": "l'année (f)",
+   "en": "year",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "choisit": {
+   "fr": "choisir",
+   "en": "to choose",
+   "pos": "verb",
+   "form": "choisit · présent"
+  },
+  "général": {
+   "fr": "en général",
+   "en": "generally, usually",
+   "pos": "adverb"
+  },
+  "médecin": {
+   "fr": "le médecin",
+   "en": "doctor",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🩺"
+  },
+  "traitant": {
+   "fr": "traitant / traitante",
+   "en": "regular (médecin traitant: GP)",
+   "pos": "adjective"
+  },
+  "voit": {
+   "fr": "voir",
+   "en": "to see",
+   "pos": "verb",
+   "form": "voit · présent"
+  },
+  "premier": {
+   "fr": "premier / première",
+   "en": "first (en premier: first)",
+   "pos": "adjective"
+  },
+  "malade": {
+   "fr": "malade",
+   "en": "ill, sick",
+   "pos": "adjective"
+  },
+  "appelle": {
+   "fr": "appeler",
+   "en": "to call, phone",
+   "pos": "verb",
+   "form": "appelle · présent",
+   "emoji": "📞"
+  },
+  "cabinet": {
+   "fr": "le cabinet",
+   "en": "(doctor's) surgery, practice",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "réserve": {
+   "fr": "réserver",
+   "en": "to book, reserve",
+   "pos": "verb",
+   "form": "réserve · présent"
+  },
+  "docteur": {
+   "fr": "le docteur",
+   "en": "doctor (title)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "martin": {
+   "fr": "Martin",
+   "en": "Martin (surname)",
+   "pos": "name"
+  },
+  "j'": {
+   "fr": "je / j'",
+   "en": "I",
+   "pos": "pronoun"
+  },
+  "ai": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "ai · présent"
+  },
+  "fièvre": {
+   "fr": "la fièvre",
+   "en": "fever, temperature",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🤒"
+  },
+  "depuis": {
+   "fr": "depuis",
+   "en": "for, since",
+   "pos": "preposition"
+  },
+  "deux": {
+   "fr": "deux",
+   "en": "two",
+   "pos": "number"
+  },
+  "jours": {
+   "fr": "le jour",
+   "en": "day",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "oubliez": {
+   "fr": "oublier",
+   "en": "to forget",
+   "pos": "verb",
+   "form": "n'oubliez pas · impératif"
+  },
+  "vitale": {
+   "fr": "Vitale",
+   "en": "carte Vitale: French health card",
+   "pos": "name"
+  },
+  "appli": {
+   "fr": "l'appli (f)",
+   "en": "app",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "assurance": {
+   "fr": "l'assurance (f)",
+   "en": "insurance",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "maladie": {
+   "fr": "la maladie",
+   "en": "illness (Assurance maladie: health insurance)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "grâce": {
+   "fr": "grâce à",
+   "en": "thanks to",
+   "pos": "preposition"
+  },
+  "elle": {
+   "fr": "elle",
+   "en": "it (the card); she",
+   "pos": "pronoun"
+  },
+  "partie": {
+   "fr": "la partie",
+   "en": "part",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "consultation": {
+   "fr": "la consultation",
+   "en": "(doctor's) appointment, consultation",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "remboursée": {
+   "fr": "rembourser",
+   "en": "to refund, reimburse",
+   "pos": "verb",
+   "form": "sera remboursée · futur passif"
+  },
+  "plupart": {
+   "fr": "la plupart",
+   "en": "most (la plupart des)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "ont": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "ont · présent"
+  },
+  "mutuelle": {
+   "fr": "la mutuelle",
+   "en": "top-up health insurance",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "reste": {
+   "fr": "le reste",
+   "en": "the rest, remainder",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "après": {
+   "fr": "après",
+   "en": "after",
+   "pos": "preposition"
+  },
+  "donnera": {
+   "fr": "donner",
+   "en": "to give",
+   "pos": "verb",
+   "form": "donnera · futur"
+  },
+  "peut-être": {
+   "fr": "peut-être",
+   "en": "maybe, perhaps",
+   "pos": "adverb"
+  },
+  "ordonnance": {
+   "fr": "l'ordonnance (f)",
+   "en": "prescription",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "📝"
+  },
+  "cette": {
+   "fr": "ce / cet / cette / ces",
+   "en": "this",
+   "pos": "determiner"
+  },
+  "irez": {
+   "fr": "aller",
+   "en": "to go",
+   "pos": "verb",
+   "form": "irez · futur"
+  },
+  "pharmacie": {
+   "fr": "la pharmacie",
+   "en": "pharmacy, chemist's",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "reconnaît": {
+   "fr": "reconnaître",
+   "en": "to recognise",
+   "pos": "verb",
+   "form": "reconnaît · présent"
+  },
+  "sa": {
+   "fr": "son / sa / ses",
+   "en": "its, his, her",
+   "pos": "determiner"
+  },
+  "croix": {
+   "fr": "la croix",
+   "en": "cross",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "verte": {
+   "fr": "vert / verte",
+   "en": "green",
+   "pos": "adjective",
+   "emoji": "🟢"
+  },
+  "pharmacien": {
+   "fr": "le pharmacien / la pharmacienne",
+   "en": "pharmacist",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "donne": {
+   "fr": "donner",
+   "en": "to give",
+   "pos": "verb",
+   "form": "donne · présent"
+  },
+  "bons": {
+   "fr": "bon / bonne",
+   "en": "good",
+   "pos": "adjective"
+  },
+  "conseils": {
+   "fr": "le conseil",
+   "en": "advice, tip",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "aviez": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "aviez · imparfait (si…)"
+  },
+  "juste": {
+   "fr": "juste",
+   "en": "just, only",
+   "pos": "adverb"
+  },
+  "rhume": {
+   "fr": "le rhume",
+   "en": "cold (illness)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🤧"
+  },
+  "pourrait": {
+   "fr": "pouvoir",
+   "en": "to be able, can",
+   "pos": "verb",
+   "form": "pourrait · conditionnel"
+  },
+  "recommander": {
+   "fr": "recommander",
+   "en": "to recommend",
+   "pos": "verb"
+  },
+  "médicament": {
+   "fr": "le médicament",
+   "en": "medicine, medication",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "💊"
+  },
+  "sans": {
+   "fr": "sans",
+   "en": "without",
+   "pos": "preposition"
+  },
+  "a": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "a · présent"
+  },
+  "réseau": {
+   "fr": "le réseau",
+   "en": "network",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "trains": {
+   "fr": "le train",
+   "en": "train",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🚆"
+  },
+  "façon": {
+   "fr": "la façon",
+   "en": "way, manner",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "agréable": {
+   "fr": "agréable",
+   "en": "pleasant",
+   "pos": "adjective"
+  },
+  "voyager": {
+   "fr": "voyager",
+   "en": "to travel",
+   "pos": "verb"
+  },
+  "longues": {
+   "fr": "long / longue",
+   "en": "long",
+   "pos": "adjective"
+  },
+  "distances": {
+   "fr": "la distance",
+   "en": "distance",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "y": {
+   "fr": "y",
+   "en": "there (il y a: there is)",
+   "pos": "pronoun"
+  },
+  "tgv": {
+   "fr": "TGV",
+   "en": "French high-speed train",
+   "pos": "name",
+   "emoji": "🚄"
+  },
+  "train": {
+   "fr": "le train",
+   "en": "train",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🚆"
+  },
+  "grande": {
+   "fr": "grand / grande",
+   "en": "high, great (à grande vitesse)",
+   "pos": "adjective"
+  },
+  "vitesse": {
+   "fr": "la vitesse",
+   "en": "speed",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "marseille": {
+   "fr": "Marseille",
+   "en": "Marseille",
+   "pos": "name"
+  },
+  "prend": {
+   "fr": "prendre",
+   "en": "to take",
+   "pos": "verb",
+   "form": "prend · présent"
+  },
+  "peu": {
+   "fr": "peu",
+   "en": "little (un peu: a bit)",
+   "pos": "adverb"
+  },
+  "heures": {
+   "fr": "l'heure (f)",
+   "en": "hour",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🕒"
+  },
+  "petits": {
+   "fr": "petit / petite",
+   "en": "short, small",
+   "pos": "adjective"
+  },
+  "trajets": {
+   "fr": "le trajet",
+   "en": "journey, trip",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "entre": {
+   "fr": "entre",
+   "en": "between",
+   "pos": "preposition"
+  },
+  "villes": {
+   "fr": "la ville",
+   "en": "town, city",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🏙️"
+  },
+  "région": {
+   "fr": "la région",
+   "en": "region",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "ter": {
+   "fr": "TER",
+   "en": "French regional train",
+   "pos": "name"
+  },
+  "réserver": {
+   "fr": "réserver",
+   "en": "to book, reserve",
+   "pos": "verb"
+  },
+  "billet": {
+   "fr": "le billet",
+   "en": "ticket",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🎫"
+  },
+  "avance": {
+   "fr": "l'avance (f)",
+   "en": "advance (à l'avance: in advance)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "parce": {
+   "fr": "parce que",
+   "en": "because",
+   "pos": "conjunction"
+  },
+  "que": {
+   "fr": "que / qu'",
+   "en": "that (parce que: because)",
+   "pos": "conjunction"
+  },
+  "montent": {
+   "fr": "monter",
+   "en": "to go up, rise",
+   "pos": "verb",
+   "form": "montent · présent",
+   "emoji": "📈"
+  },
+  "se": {
+   "fr": "se / s'",
+   "en": "itself (reflexive)",
+   "pos": "pronoun"
+  },
+  "remplit": {
+   "fr": "se remplir",
+   "en": "to fill up",
+   "pos": "verb",
+   "form": "se remplit · présent"
+  },
+  "voyageurs": {
+   "fr": "le voyageur / la voyageuse",
+   "en": "traveller, passenger",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🧳"
+  },
+  "leur": {
+   "fr": "leur / leurs",
+   "en": "their",
+   "pos": "determiner"
+  },
+  "gare": {
+   "fr": "la gare",
+   "en": "(train) station",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🚉"
+  },
+  "regardez": {
+   "fr": "regarder",
+   "en": "to look at",
+   "pos": "verb",
+   "form": "regardez · impératif",
+   "emoji": "👀"
+  },
+  "tableau": {
+   "fr": "le tableau",
+   "en": "(departures) board",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "départs": {
+   "fr": "le départ",
+   "en": "departure",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "voie": {
+   "fr": "la voie",
+   "en": "platform, track",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "affichée": {
+   "fr": "afficher",
+   "en": "to display, show",
+   "pos": "verb",
+   "form": "est affichée · présent passif"
+  },
+  "vingt": {
+   "fr": "vingt",
+   "en": "twenty",
+   "pos": "number"
+  },
+  "minutes": {
+   "fr": "la minute",
+   "en": "minute",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "départ": {
+   "fr": "le départ",
+   "en": "departure",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "question": {
+   "fr": "la question",
+   "en": "question",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "❓"
+  },
+  "demander": {
+   "fr": "demander",
+   "en": "to ask",
+   "pos": "verb"
+  },
+  "agent": {
+   "fr": "l'agent (m)",
+   "en": "staff member, agent",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "excusez-moi": {
+   "fr": "excuser",
+   "en": "to excuse (excuse me)",
+   "pos": "verb",
+   "form": "excusez-moi · impératif"
+  },
+  "part": {
+   "fr": "partir",
+   "en": "to leave, depart",
+   "pos": "verb",
+   "form": "part · présent"
+  },
+  "retard": {
+   "fr": "le retard",
+   "en": "delay",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "⏳"
+  },
+  "gardez": {
+   "fr": "garder",
+   "en": "to keep",
+   "pos": "verb",
+   "form": "gardez · impératif"
+  },
+  "référence": {
+   "fr": "la référence",
+   "en": "(booking) reference",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "remboursé": {
+   "fr": "rembourser",
+   "en": "to refund, reimburse",
+   "pos": "verb",
+   "form": "être remboursé · passif"
+  },
+  "politesse": {
+   "fr": "la politesse",
+   "en": "politeness",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "commence": {
+   "fr": "commencer",
+   "en": "to begin, start",
+   "pos": "verb",
+   "form": "commence · présent"
+  },
+  "mot": {
+   "fr": "le mot",
+   "en": "word",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "boutique": {
+   "fr": "la boutique",
+   "en": "shop",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🛍️"
+  },
+  "boulangerie": {
+   "fr": "la boulangerie",
+   "en": "bakery",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🥖"
+  },
+  "ascenseur": {
+   "fr": "l'ascenseur (m)",
+   "en": "lift, elevator",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🛗"
+  },
+  "oubliiez": {
+   "fr": "oublier",
+   "en": "to forget",
+   "pos": "verb",
+   "form": "oubliiez · imparfait (si…)"
+  },
+  "impoli": {
+   "fr": "impoli(e)",
+   "en": "rude, impolite",
+   "pos": "adjective"
+  },
+  "souriiez": {
+   "fr": "sourire",
+   "en": "to smile",
+   "pos": "verb",
+   "form": "souriiez · imparfait",
+   "emoji": "😊"
+  },
+  "ensuite": {
+   "fr": "ensuite",
+   "en": "next, then",
+   "pos": "adverb"
+  },
+  "choix": {
+   "fr": "le choix",
+   "en": "choice",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "tu": {
+   "fr": "tu",
+   "en": "you (informal)",
+   "pos": "pronoun"
+  },
+  "inconnu": {
+   "fr": "l'inconnu / l'inconnue",
+   "en": "stranger",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "client": {
+   "fr": "le client / la cliente",
+   "en": "customer, client",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "âgée": {
+   "fr": "âgé(e)",
+   "en": "old, elderly (plus âgé: older)",
+   "pos": "adjective"
+  },
+  "amis": {
+   "fr": "l'ami / l'amie",
+   "en": "friend",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "famille": {
+   "fr": "la famille",
+   "en": "family",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "👪"
+  },
+  "enfants": {
+   "fr": "l'enfant (m/f)",
+   "en": "child",
+   "pos": "noun",
+   "emoji": "🧒"
+  },
+  "cas": {
+   "fr": "le cas",
+   "en": "case (en cas de: in case of)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "doute": {
+   "fr": "le doute",
+   "en": "doubt",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "autre": {
+   "fr": "l'autre",
+   "en": "the other (person)",
+   "pos": "pronoun"
+  },
+  "passer": {
+   "fr": "passer",
+   "en": "to switch, move on (to)",
+   "pos": "verb"
+  },
+  "conditionnel": {
+   "fr": "le conditionnel",
+   "en": "conditional (mood)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "aide": {
+   "fr": "aider",
+   "en": "to help",
+   "pos": "verb",
+   "form": "aide · présent"
+  },
+  "doux": {
+   "fr": "doux / douce",
+   "en": "gentle, soft",
+   "pos": "adjective"
+  },
+  "veux": {
+   "fr": "vouloir",
+   "en": "to want",
+   "pos": "verb",
+   "form": "veux · présent"
+  },
+  "aider": {
+   "fr": "aider",
+   "en": "to help",
+   "pos": "verb"
+  },
+  "aimable": {
+   "fr": "aimable",
+   "en": "kind, polite",
+   "pos": "adjective"
+  },
+  "aidez-moi": {
+   "fr": "aider",
+   "en": "to help (help me!)",
+   "pos": "verb",
+   "form": "aidez-moi · impératif"
+  },
+  "bise": {
+   "fr": "la bise",
+   "en": "kiss on the cheek",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "😘"
+  },
+  "baiser": {
+   "fr": "le baiser",
+   "en": "kiss",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "💋"
+  },
+  "chaque": {
+   "fr": "chaque",
+   "en": "each",
+   "pos": "determiner"
+  },
+  "joue": {
+   "fr": "la joue",
+   "en": "cheek",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "nombre": {
+   "fr": "le nombre",
+   "en": "number",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "bises": {
+   "fr": "la bise",
+   "en": "kiss on the cheek",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "😘"
+  },
+  "change": {
+   "fr": "changer",
+   "en": "to change, vary",
+   "pos": "verb",
+   "form": "change · présent"
+  },
+  "selon": {
+   "fr": "selon",
+   "en": "depending on",
+   "pos": "preposition"
+  },
+  "régions": {
+   "fr": "la région",
+   "en": "region",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "presque": {
+   "fr": "presque",
+   "en": "almost",
+   "pos": "adverb"
+  },
+  "toutes": {
+   "fr": "tout / toute / tous / toutes",
+   "en": "all",
+   "pos": "determiner"
+  },
+  "françaises": {
+   "fr": "français / française",
+   "en": "French",
+   "pos": "adjective"
+  },
+  "marché": {
+   "fr": "le marché",
+   "en": "market",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "plusieurs": {
+   "fr": "plusieurs",
+   "en": "several",
+   "pos": "determiner"
+  },
+  "fois": {
+   "fr": "la fois",
+   "en": "time (occasion)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "semaine": {
+   "fr": "la semaine",
+   "en": "week",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "trouve": {
+   "fr": "trouver",
+   "en": "to find",
+   "pos": "verb",
+   "form": "trouve · présent"
+  },
+  "fruits": {
+   "fr": "le fruit",
+   "en": "fruit",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🍎"
+  },
+  "légumes": {
+   "fr": "le légume",
+   "en": "vegetable",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥕"
+  },
+  "saison": {
+   "fr": "la saison",
+   "en": "season",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "fromage": {
+   "fr": "le fromage",
+   "en": "cheese",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🧀"
+  },
+  "poisson": {
+   "fr": "le poisson",
+   "en": "fish",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🐟"
+  },
+  "fleurs": {
+   "fr": "la fleur",
+   "en": "flower",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "💐"
+  },
+  "produits": {
+   "fr": "le produit",
+   "en": "product, produce",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "viennent": {
+   "fr": "venir",
+   "en": "to come",
+   "pos": "verb",
+   "form": "viennent · présent"
+  },
+  "marchands": {
+   "fr": "le marchand / la marchande",
+   "en": "stallholder, vendor",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "sont": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "sont · présent"
+  },
+  "fiers": {
+   "fr": "fier / fière",
+   "en": "proud",
+   "pos": "adjective"
+  },
+  "goûter": {
+   "fr": "goûter",
+   "en": "to taste",
+   "pos": "verb",
+   "emoji": "👅"
+  },
+  "toujours": {
+   "fr": "toujours",
+   "en": "always",
+   "pos": "adverb"
+  },
+  "soi-même": {
+   "fr": "soi-même",
+   "en": "oneself, yourself",
+   "pos": "pronoun"
+  },
+  "marchand": {
+   "fr": "le marchand / la marchande",
+   "en": "stallholder, vendor",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "sert": {
+   "fr": "servir",
+   "en": "to serve",
+   "pos": "verb",
+   "form": "sert · présent"
+  },
+  "kilo": {
+   "fr": "le kilo",
+   "en": "kilo",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "⚖️"
+  },
+  "tomates": {
+   "fr": "la tomate",
+   "en": "tomato",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🍅"
+  },
+  "avocats": {
+   "fr": "l'avocat (m)",
+   "en": "avocado",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥑"
+  },
+  "mûrs": {
+   "fr": "mûr / mûre",
+   "en": "ripe",
+   "pos": "adjective"
+  },
+  "savez": {
+   "fr": "savoir",
+   "en": "to know",
+   "pos": "verb",
+   "form": "savez · présent"
+  },
+  "quoi": {
+   "fr": "quoi",
+   "en": "what",
+   "pos": "pronoun"
+  },
+  "cuisiner": {
+   "fr": "cuisiner",
+   "en": "to cook",
+   "pos": "verb",
+   "emoji": "🍳"
+  },
+  "conseilleriez-vous": {
+   "fr": "conseiller",
+   "en": "to advise, recommend",
+   "pos": "verb",
+   "form": "conseilleriez-vous · conditionnel (question)"
+  },
+  "soir": {
+   "fr": "le soir",
+   "en": "evening (ce soir = tonight)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🌆"
+  },
+  "répondra": {
+   "fr": "répondre",
+   "en": "to answer, reply",
+   "pos": "verb",
+   "form": "répondra · futur"
+  },
+  "plaisir": {
+   "fr": "le plaisir",
+   "en": "pleasure",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "tôt": {
+   "fr": "tôt",
+   "en": "early",
+   "pos": "adverb"
+  },
+  "voulez": {
+   "fr": "vouloir",
+   "en": "to want",
+   "pos": "verb",
+   "form": "voulez · présent"
+  },
+  "meilleur": {
+   "fr": "meilleur / meilleure",
+   "en": "best",
+   "pos": "adjective"
+  },
+  "fin": {
+   "fr": "la fin",
+   "en": "end",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "bonnes": {
+   "fr": "bon / bonne",
+   "en": "good",
+   "pos": "adjective"
+  },
+  "affaires": {
+   "fr": "l'affaire (f)",
+   "en": "deal (bonne affaire = bargain)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "certains": {
+   "fr": "certain / certaine",
+   "en": "some, certain",
+   "pos": "determiner"
+  },
+  "baissent": {
+   "fr": "baisser",
+   "en": "to lower",
+   "pos": "verb",
+   "form": "baissent · présent"
+  },
+  "leurs": {
+   "fr": "leur / leurs",
+   "en": "their",
+   "pos": "determiner"
+  },
+  "panier": {
+   "fr": "le panier",
+   "en": "basket",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🧺"
+  },
+  "aiment": {
+   "fr": "aimer",
+   "en": "to like, love",
+   "pos": "verb",
+   "form": "aiment · présent"
+  },
+  "plaisanter": {
+   "fr": "plaisanter",
+   "en": "to joke",
+   "pos": "verb"
+  },
+  "administration": {
+   "fr": "l'administration (f)",
+   "en": "administration, bureaucracy",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "ils": {
+   "fr": "ils",
+   "en": "they",
+   "pos": "pronoun"
+  },
+  "raison": {
+   "fr": "la raison",
+   "en": "right (avoir raison = be right)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "papiers": {
+   "fr": "les papiers (m)",
+   "en": "paperwork, documents",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "démarches": {
+   "fr": "la démarche",
+   "en": "formality, procedure",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "va": {
+   "fr": "aller",
+   "en": "to go",
+   "pos": "verb",
+   "form": "va · présent"
+  },
+  "mairie": {
+   "fr": "la mairie",
+   "en": "town hall",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🏛️"
+  },
+  "bâtiment": {
+   "fr": "le bâtiment",
+   "en": "building",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "travaillent": {
+   "fr": "travailler",
+   "en": "to work",
+   "pos": "verb",
+   "form": "travaillent · présent"
+  },
+  "maire": {
+   "fr": "le / la maire",
+   "en": "mayor",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "services": {
+   "fr": "le service",
+   "en": "department, service",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "ville": {
+   "fr": "la ville",
+   "en": "town, city",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "là": {
+   "fr": "là",
+   "en": "there",
+   "pos": "adverb"
+  },
+  "marie": {
+   "fr": "se marier",
+   "en": "to get married",
+   "pos": "verb",
+   "form": "se marie · présent",
+   "emoji": "💍"
+  },
+  "déclare": {
+   "fr": "déclarer",
+   "en": "to register, declare",
+   "pos": "verb",
+   "form": "déclare · présent"
+  },
+  "naissance": {
+   "fr": "la naissance",
+   "en": "birth",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "enfant": {
+   "fr": "l'enfant (m/f)",
+   "en": "child",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "👶"
+  },
+  "inscrit": {
+   "fr": "s'inscrire",
+   "en": "to register, sign up",
+   "pos": "verb",
+   "form": "s'inscrit · présent"
+  },
+  "listes": {
+   "fr": "la liste",
+   "en": "list (listes électorales = electoral roll)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "électorales": {
+   "fr": "électoral / électorale",
+   "en": "electoral",
+   "pos": "adjective"
+  },
+  "font": {
+   "fr": "se faire",
+   "en": "to be done",
+   "pos": "verb",
+   "form": "se font · présent"
+  },
+  "aller": {
+   "fr": "aller",
+   "en": "to go",
+   "pos": "verb"
+  },
+  "vérifiez": {
+   "fr": "vérifier",
+   "en": "to check",
+   "pos": "verb",
+   "form": "vérifiez · impératif"
+  },
+  "site": {
+   "fr": "le site",
+   "en": "website",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🌐"
+  },
+  "documents": {
+   "fr": "le document",
+   "en": "document",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📄"
+  },
+  "trop": {
+   "fr": "trop",
+   "en": "too much",
+   "pos": "adverb"
+  },
+  "assez": {
+   "fr": "assez",
+   "en": "enough",
+   "pos": "adverb"
+  },
+  "guichet": {
+   "fr": "le guichet",
+   "en": "counter, service window",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "restez": {
+   "fr": "rester",
+   "en": "to stay, remain",
+   "pos": "verb",
+   "form": "restez · impératif"
+  },
+  "patient": {
+   "fr": "patient / patiente",
+   "en": "patient",
+   "pos": "adjective"
+  },
+  "madame": {
+   "fr": "madame",
+   "en": "madam, Mrs",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "inscrire": {
+   "fr": "inscrire",
+   "en": "to enrol, register",
+   "pos": "verb"
+  },
+  "mon": {
+   "fr": "mon / ma / mes",
+   "en": "my",
+   "pos": "determiner"
+  },
+  "fils": {
+   "fr": "le fils",
+   "en": "son",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "👦"
+  },
+  "école": {
+   "fr": "l'école (f)",
+   "en": "school",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🏫"
+  },
+  "auriez-vous": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "auriez-vous · conditionnel (question)"
+  },
+  "formulaire": {
+   "fr": "le formulaire",
+   "en": "form (to fill in)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📝"
+  },
+  "manque": {
+   "fr": "manquer",
+   "en": "to be missing",
+   "pos": "verb",
+   "form": "manque · présent"
+  },
+  "revenir": {
+   "fr": "revenir",
+   "en": "to come back",
+   "pos": "verb"
+  },
+  "photocopies": {
+   "fr": "la photocopie",
+   "en": "photocopy",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "tout": {
+   "fr": "tout",
+   "en": "everything",
+   "pos": "pronoun"
+  },
+  "gardez-les": {
+   "fr": "garder",
+   "en": "to keep",
+   "pos": "verb",
+   "form": "gardez-les · impératif"
+  },
+  "rangé": {
+   "fr": "rangé / rangée",
+   "en": "tidy, well organised",
+   "pos": "adjective"
+  },
+  "verrez": {
+   "fr": "voir",
+   "en": "to see",
+   "pos": "verb",
+   "form": "verrez · futur"
+  },
+  "organisation": {
+   "fr": "l'organisation (f)",
+   "en": "organisation",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "ira": {
+   "fr": "aller",
+   "en": "to go (tout ira bien = all will be well)",
+   "pos": "verb",
+   "form": "ira · futur"
+  },
+  "habitent": {
+   "fr": "habiter",
+   "en": "to live (reside)",
+   "pos": "verb",
+   "form": "habitent · présent"
+  },
+  "voisins": {
+   "fr": "le voisin / la voisine",
+   "en": "neighbour",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "quotidienne": {
+   "fr": "quotidien / quotidienne",
+   "en": "daily, everyday",
+   "pos": "adjective"
+  },
+  "immeubles": {
+   "fr": "l'immeuble (m)",
+   "en": "apartment building",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏢"
+  },
+  "encore": {
+   "fr": "encore",
+   "en": "still",
+   "pos": "adverb"
+  },
+  "gardien": {
+   "fr": "le gardien / la gardienne",
+   "en": "caretaker, concierge",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "gardienne": {
+   "fr": "le gardien / la gardienne",
+   "en": "caretaker, concierge",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "occupe": {
+   "fr": "s'occuper de",
+   "en": "to look after, take care of",
+   "pos": "verb",
+   "form": "s'occupe · présent"
+  },
+  "reçoit": {
+   "fr": "recevoir",
+   "en": "to receive",
+   "pos": "verb",
+   "form": "reçoit · présent"
+  },
+  "colis": {
+   "fr": "le colis",
+   "en": "parcel",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "📦"
+  },
+  "connaît": {
+   "fr": "connaître",
+   "en": "to know (people)",
+   "pos": "verb",
+   "form": "connaît · présent"
+  },
+  "monde": {
+   "fr": "le monde",
+   "en": "people (tout le monde = everyone)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "vivre": {
+   "fr": "vivre",
+   "en": "to live",
+   "pos": "verb"
+  },
+  "ensemble": {
+   "fr": "ensemble",
+   "en": "together",
+   "pos": "adverb"
+  },
+  "règles": {
+   "fr": "la règle",
+   "en": "rule",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "simples": {
+   "fr": "simple",
+   "en": "simple",
+   "pos": "adjective"
+  },
+  "vingt-deux": {
+   "fr": "vingt-deux",
+   "en": "twenty-two",
+   "pos": "number"
+  },
+  "évite": {
+   "fr": "éviter",
+   "en": "to avoid",
+   "pos": "verb",
+   "form": "évite · présent"
+  },
+  "bruit": {
+   "fr": "le bruit",
+   "en": "noise",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🔊"
+  },
+  "organisez": {
+   "fr": "organiser",
+   "en": "to organise",
+   "pos": "verb",
+   "form": "organisez · présent"
+  },
+  "fête": {
+   "fr": "la fête",
+   "en": "party",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🎉"
+  },
+  "serait": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "serait · conditionnel"
+  },
+  "gentil": {
+   "fr": "gentil / gentille",
+   "en": "kind, nice",
+   "pos": "adjective"
+  },
+  "prévenir": {
+   "fr": "prévenir",
+   "en": "to let know, warn",
+   "pos": "verb"
+  },
+  "hall": {
+   "fr": "le hall",
+   "en": "entrance hall, lobby",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "immeuble": {
+   "fr": "l'immeuble (m)",
+   "en": "apartment building",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏢"
+  },
+  "samedi": {
+   "fr": "le samedi",
+   "en": "Saturday",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "nous": {
+   "fr": "nous",
+   "en": "we",
+   "pos": "pronoun"
+  },
+  "fêterons": {
+   "fr": "fêter",
+   "en": "to celebrate",
+   "pos": "verb",
+   "form": "fêterons · futur"
+  },
+  "anniversaire": {
+   "fr": "l'anniversaire (m)",
+   "en": "birthday",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🎂"
+  },
+  "excusez-nous": {
+   "fr": "excuser",
+   "en": "to excuse, forgive",
+   "pos": "verb",
+   "form": "excusez-nous · impératif"
+  },
+  "voisin": {
+   "fr": "le voisin / la voisine",
+   "en": "neighbour",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "faisait": {
+   "fr": "faire",
+   "en": "to make, do",
+   "pos": "verb",
+   "form": "faisait · imparfait (après si)"
+  },
+  "lui": {
+   "fr": "lui",
+   "en": "(to) him / her",
+   "pos": "pronoun"
+  },
+  "parler": {
+   "fr": "parler",
+   "en": "to talk, speak",
+   "pos": "verb",
+   "emoji": "🗣️"
+  },
+  "gentiment": {
+   "fr": "gentiment",
+   "en": "kindly, nicely",
+   "pos": "adverb"
+  },
+  "fâcher": {
+   "fr": "se fâcher",
+   "en": "to get angry",
+   "pos": "verb",
+   "emoji": "😠"
+  },
+  "printemps": {
+   "fr": "le printemps",
+   "en": "spring (season)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🌷"
+  },
+  "participent": {
+   "fr": "participer",
+   "en": "to take part",
+   "pos": "verb",
+   "form": "participent · présent"
+  },
+  "chacun": {
+   "fr": "chacun / chacune",
+   "en": "each person, everyone",
+   "pos": "pronoun"
+  },
+  "apporte": {
+   "fr": "apporter",
+   "en": "to bring",
+   "pos": "verb",
+   "form": "apporte · présent"
+  },
+  "quelque": {
+   "fr": "quelque chose",
+   "en": "something",
+   "pos": "pronoun"
+  },
+  "chose": {
+   "fr": "la chose",
+   "en": "thing",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "manger": {
+   "fr": "manger",
+   "en": "to eat",
+   "pos": "verb",
+   "emoji": "🍽️"
+  },
+  "connaissance": {
+   "fr": "la connaissance",
+   "en": "acquaintance (faire connaissance = meet)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "autour": {
+   "fr": "autour de",
+   "en": "around",
+   "pos": "preposition"
+  },
+  "verre": {
+   "fr": "le verre",
+   "en": "glass (a drink)",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥂"
+  },
+  "entreprise": {
+   "fr": "l'entreprise (f)",
+   "en": "company, firm",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "française": {
+   "fr": "français / française",
+   "en": "French",
+   "pos": "adjective"
+  },
+  "accueil": {
+   "fr": "l'accueil (m)",
+   "en": "reception (desk)",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "badge": {
+   "fr": "le badge",
+   "en": "ID badge, pass",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🪪"
+  },
+  "entrer": {
+   "fr": "entrer",
+   "en": "to enter, get in",
+   "pos": "verb",
+   "emoji": "🚪"
+  },
+  "bureaux": {
+   "fr": "le bureau",
+   "en": "office",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "puis": {
+   "fr": "puis",
+   "en": "then",
+   "pos": "adverb"
+  },
+  "responsable": {
+   "fr": "le / la responsable",
+   "en": "manager, boss",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "présentera": {
+   "fr": "présenter",
+   "en": "to introduce",
+   "pos": "verb",
+   "form": "présentera · futur"
+  },
+  "équipe": {
+   "fr": "l'équipe (f)",
+   "en": "team",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "👥"
+  },
+  "entreprises": {
+   "fr": "l'entreprise (f)",
+   "en": "company, firm",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "travaille": {
+   "fr": "travailler",
+   "en": "to work",
+   "pos": "verb",
+   "form": "travaille · présent"
+  },
+  "open": {
+   "fr": "l'open space (m)",
+   "en": "open-plan office",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "space": {
+   "fr": "l'open space (m)",
+   "en": "open-plan office",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "bureau": {
+   "fr": "le bureau",
+   "en": "office",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "partagé": {
+   "fr": "partagé / partagée",
+   "en": "shared",
+   "pos": "adjective"
+  },
+  "normal": {
+   "fr": "normal / normale",
+   "en": "normal",
+   "pos": "adjective"
+  },
+  "poser": {
+   "fr": "poser",
+   "en": "to ask (a question)",
+   "pos": "verb"
+  },
+  "condition": {
+   "fr": "la condition",
+   "en": "condition (à condition de = provided)",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "indiquer": {
+   "fr": "indiquer",
+   "en": "to show, point the way",
+   "pos": "verb"
+  },
+  "salle": {
+   "fr": "la salle",
+   "en": "room",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "réunion": {
+   "fr": "la réunion",
+   "en": "meeting",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "pourrais-je": {
+   "fr": "pouvoir",
+   "en": "to be able, can",
+   "pos": "verb",
+   "form": "pourrais-je · conditionnel (question)"
+  },
+  "avoir": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb"
+  },
+  "accès": {
+   "fr": "l'accès (m)",
+   "en": "access",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "nouveaux": {
+   "fr": "nouveau / nouvelle",
+   "en": "new",
+   "pos": "adjective"
+  },
+  "collègues": {
+   "fr": "le / la collègue",
+   "en": "colleague",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "commencer": {
+   "fr": "commencer",
+   "en": "to start, begin",
+   "pos": "verb"
+  },
+  "sauf": {
+   "fr": "sauf",
+   "en": "except (sauf si = unless)",
+   "pos": "preposition"
+  },
+  "tutoie": {
+   "fr": "se tutoyer",
+   "en": "to call each other « tu »",
+   "pos": "verb",
+   "form": "se tutoie · présent"
+  },
+  "midi": {
+   "fr": "le midi",
+   "en": "midday, lunchtime",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🕛"
+  },
+  "déjeuner": {
+   "fr": "déjeuner",
+   "en": "to have lunch; lunch",
+   "pos": "verb",
+   "emoji": "🥪"
+  },
+  "acceptez": {
+   "fr": "accepter",
+   "en": "to accept",
+   "pos": "verb",
+   "form": "acceptez · impératif"
+  },
+  "moyen": {
+   "fr": "le moyen",
+   "en": "way, means",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "connaître": {
+   "fr": "connaître",
+   "en": "to get to know",
+   "pos": "verb"
+  },
+  "salariés": {
+   "fr": "le salarié / la salariée",
+   "en": "employee",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "reçoivent": {
+   "fr": "recevoir",
+   "en": "to receive",
+   "pos": "verb",
+   "form": "reçoivent · présent"
+  },
+  "titres-restaurant": {
+   "fr": "le titre-restaurant",
+   "en": "meal voucher",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🎟️"
+  },
+  "revoir": {
+   "fr": "au revoir",
+   "en": "goodbye",
+   "pos": "interjection",
+   "emoji": "👋"
+  },
+  "bonne": {
+   "fr": "bon / bonne",
+   "en": "good",
+   "pos": "adjective"
+  },
+  "soirée": {
+   "fr": "la soirée",
+   "en": "evening",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "demain": {
+   "fr": "demain",
+   "en": "tomorrow",
+   "pos": "adverb"
+  }
+ },
+ "phrases": [
+  {
+   "words": [
+    "pièce",
+    "d'",
+    "identité"
+   ],
+   "entry": {
+    "fr": "une pièce d'identité",
+    "en": "ID, identity document",
+    "pos": "noun",
+    "gender": "f",
+    "emoji": "🪪"
+   }
+  },
+  {
+   "words": [
+    "fiches",
+    "de",
+    "paie"
+   ],
+   "entry": {
+    "fr": "la fiche de paie",
+    "en": "payslip",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "c'",
+    "est-à-dire"
+   ],
+   "entry": {
+    "fr": "c'est-à-dire",
+    "en": "that is, meaning",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "il",
+    "vaudrait",
+    "mieux"
+   ],
+   "entry": {
+    "fr": "il vaudrait mieux",
+    "en": "it would be better to",
+    "pos": "phrase",
+    "form": "vaudrait · conditionnel (valoir)"
+   }
+  },
+  {
+   "words": [
+    "il",
+    "faut"
+   ],
+   "entry": {
+    "fr": "il faut",
+    "en": "you must, you need to",
+    "pos": "phrase",
+    "form": "faut · présent (falloir)"
+   }
+  },
+  {
+   "words": [
+    "il",
+    "faudrait"
+   ],
+   "entry": {
+    "fr": "il faudrait",
+    "en": "you would need to, you should",
+    "pos": "phrase",
+    "form": "faudrait · conditionnel (falloir)"
+   }
+  },
+  {
+   "words": [
+    "état",
+    "des",
+    "lieux"
+   ],
+   "entry": {
+    "fr": "l'état des lieux (m)",
+    "en": "inventory (move-in/move-out check)",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "lieu",
+    "de",
+    "vie"
+   ],
+   "entry": {
+    "fr": "un lieu de vie",
+    "en": "a place where life happens",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "café",
+    "crème"
+   ],
+   "entry": {
+    "fr": "un café crème",
+    "en": "large white coffee",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "s'",
+    "il",
+    "vous",
+    "plaît"
+   ],
+   "entry": {
+    "fr": "s'il vous plaît",
+    "en": "please",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "justificatif",
+    "de",
+    "domicile"
+   ],
+   "entry": {
+    "fr": "un justificatif de domicile",
+    "en": "proof of address",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "compte",
+    "courant"
+   ],
+   "entry": {
+    "fr": "le compte courant",
+    "en": "current account",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "carte",
+    "bancaire"
+   ],
+   "entry": {
+    "fr": "la carte bancaire",
+    "en": "bank card",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "banque",
+    "en",
+    "ligne"
+   ],
+   "entry": {
+    "fr": "la banque en ligne",
+    "en": "online bank",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "à",
+    "votre",
+    "place"
+   ],
+   "entry": {
+    "fr": "à votre place",
+    "en": "in your place, if I were you",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "par",
+    "exemple"
+   ],
+   "entry": {
+    "fr": "par exemple",
+    "en": "for example",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "médecin",
+    "traitant"
+   ],
+   "entry": {
+    "fr": "le médecin traitant",
+    "en": "regular doctor, GP",
+    "pos": "noun",
+    "gender": "m",
+    "emoji": "🩺"
+   }
+  },
+  {
+   "words": [
+    "en",
+    "général"
+   ],
+   "entry": {
+    "fr": "en général",
+    "en": "generally, usually",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "en",
+    "premier"
+   ],
+   "entry": {
+    "fr": "en premier",
+    "en": "first",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "carte",
+    "vitale"
+   ],
+   "entry": {
+    "fr": "la carte Vitale",
+    "en": "French health insurance card",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "assurance",
+    "maladie"
+   ],
+   "entry": {
+    "fr": "l'Assurance maladie (f)",
+    "en": "national health insurance",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "grâce",
+    "à"
+   ],
+   "entry": {
+    "fr": "grâce à",
+    "en": "thanks to",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "la",
+    "plupart",
+    "des"
+   ],
+   "entry": {
+    "fr": "la plupart des",
+    "en": "most (of the)",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "à",
+    "grande",
+    "vitesse"
+   ],
+   "entry": {
+    "fr": "à grande vitesse",
+    "en": "high-speed",
+    "pos": "phrase",
+    "emoji": "🚄"
+   }
+  },
+  {
+   "words": [
+    "à",
+    "l'",
+    "avance"
+   ],
+   "entry": {
+    "fr": "à l'avance",
+    "en": "in advance",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "tableau",
+    "des",
+    "départs"
+   ],
+   "entry": {
+    "fr": "le tableau des départs",
+    "en": "departures board",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "en",
+    "partie"
+   ],
+   "entry": {
+    "fr": "en partie",
+    "en": "partly, in part",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "en",
+    "cas",
+    "de",
+    "doute"
+   ],
+   "entry": {
+    "fr": "en cas de doute",
+    "en": "when in doubt",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "de",
+    "saison"
+   ],
+   "entry": {
+    "fr": "de saison",
+    "en": "seasonal, in season",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "bonnes",
+    "affaires"
+   ],
+   "entry": {
+    "fr": "une bonne affaire",
+    "en": "a bargain",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "avec",
+    "plaisir"
+   ],
+   "entry": {
+    "fr": "avec plaisir",
+    "en": "gladly, with pleasure",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "listes",
+    "électorales"
+   ],
+   "entry": {
+    "fr": "les listes électorales (f)",
+    "en": "electoral roll",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "en",
+    "ligne"
+   ],
+   "entry": {
+    "fr": "en ligne",
+    "en": "online",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "pas",
+    "assez"
+   ],
+   "entry": {
+    "fr": "pas assez",
+    "en": "not enough",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "font",
+    "partie",
+    "de"
+   ],
+   "entry": {
+    "fr": "faire partie de",
+    "en": "to be part of",
+    "pos": "phrase",
+    "form": "font partie · présent"
+   }
+  },
+  {
+   "words": [
+    "vie",
+    "quotidienne"
+   ],
+   "entry": {
+    "fr": "la vie quotidienne",
+    "en": "everyday life",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "petit",
+    "mot"
+   ],
+   "entry": {
+    "fr": "un petit mot",
+    "en": "a short note",
+    "pos": "noun",
+    "gender": "m",
+    "emoji": "📝"
+   }
+  },
+  {
+   "words": [
+    "fête",
+    "des",
+    "voisins"
+   ],
+   "entry": {
+    "fr": "la Fête des voisins",
+    "en": "Neighbours' Day",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "quelque",
+    "chose"
+   ],
+   "entry": {
+    "fr": "quelque chose",
+    "en": "something",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "tout",
+    "le",
+    "monde"
+   ],
+   "entry": {
+    "fr": "tout le monde",
+    "en": "everyone",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "fait",
+    "connaissance"
+   ],
+   "entry": {
+    "fr": "faire connaissance",
+    "en": "to get to know each other",
+    "pos": "phrase",
+    "form": "fait connaissance · présent"
+   }
+  },
+  {
+   "words": [
+    "autour",
+    "d'",
+    "un",
+    "verre"
+   ],
+   "entry": {
+    "fr": "autour d'un verre",
+    "en": "over a drink",
+    "pos": "phrase",
+    "emoji": "🥂"
+   }
+  },
+  {
+   "words": [
+    "open",
+    "space"
+   ],
+   "entry": {
+    "fr": "l'open space (m)",
+    "en": "open-plan office",
+    "pos": "noun",
+    "gender": "m"
+   }
+  },
+  {
+   "words": [
+    "salle",
+    "de",
+    "réunion"
+   ],
+   "entry": {
+    "fr": "la salle de réunion",
+    "en": "meeting room",
+    "pos": "noun",
+    "gender": "f"
+   }
+  },
+  {
+   "words": [
+    "à",
+    "condition",
+    "d'"
+   ],
+   "entry": {
+    "fr": "à condition de",
+    "en": "as long as, provided that",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "dossier",
+    "partagé"
+   ],
+   "entry": {
+    "fr": "le dossier partagé",
+    "en": "shared folder",
+    "pos": "noun",
+    "gender": "m",
+    "emoji": "📁"
+   }
+  },
+  {
+   "words": [
+    "au",
+    "revoir"
+   ],
+   "entry": {
+    "fr": "au revoir",
+    "en": "goodbye",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "bonne",
+    "soirée"
+   ],
+   "entry": {
+    "fr": "bonne soirée",
+    "en": "have a good evening",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "à",
+    "demain"
+   ],
+   "entry": {
+    "fr": "à demain",
+    "en": "see you tomorrow",
+    "pos": "phrase"
+   }
+  },
+  {
+   "words": [
+    "aujourd'",
+    "hui"
+   ],
+   "entry": {
+    "fr": "aujourd'hui",
+    "en": "today",
+    "pos": "adverb"
+   }
+  },
+  {
+   "words": [
+    "parce",
+    "que"
+   ],
+   "entry": {
+    "fr": "parce que",
+    "en": "because",
+    "pos": "conjunction"
+   }
+  },
+  {
+   "words": [
+    "sans",
+    "ordonnance"
+   ],
+   "entry": {
+    "fr": "sans ordonnance",
+    "en": "without a prescription",
+    "pos": "phrase"
+   }
+  }
+ ],
+ "overrides": {
+  "1.2": {
+   "personne": {
+    "fr": "personne (ne …)",
+    "en": "nobody",
+    "pos": "pronoun"
+   }
+  },
+  "1.6": {
+   "entre": {
+    "fr": "entrer",
+    "en": "to go in, to enter",
+    "pos": "verb",
+    "form": "entre · présent"
+   }
+  }
+ }
+}
