@@ -3,7 +3,10 @@ import { AccessibilityInfo, Animated, Easing, Pressable, StyleSheet, Text, View 
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import * as Haptics from "expo-haptics";
+import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
+import { pronunciationFor } from "@shared/verbPronunciation";
 import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
+import { API_BASE } from "../lib/data";
 
 /**
  * Masters Mic - the control.
@@ -14,6 +17,15 @@ import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
  * Build 21 auto-started the recogniser on mount, which meant a device without
  * on-device French hit a dead "not available" before the learner had touched
  * anything. Recording now only ever starts from a deliberate press.
+ *
+ * Pronunciation (item 1.5, approved by Jonathan 3 Nov 2026): when the quiz
+ * passes `pronounce`, the box above the buttons is headed *Pronunciation*
+ * (small italics) instead of "Heard", with no placeholder line, and a round,
+ * half-size blue button on its right. A tap says the verb, never the answer:
+ * the infinitive, plus the past participle in the compound past tenses
+ * (shared/verbPronunciation.ts), with the written guide shown while it plays.
+ * Tap again to stop; Record stops it. What the mic heard still shows in the
+ * same box once the learner records.
  */
 
 const BARS = 16;
@@ -32,6 +44,8 @@ const LIT = "#22D3EE";
 const CAP = "#E6FBFF";
 const MUTED = "#8FA3C8";
 const SOFT = "#C3D0E8";
+/** The Pronunciation button (1.5): blue, so it never reads as part of Record / Enter. */
+const SAY_BLUE = "#5B8DEF";
 
 export default function MastersMic(props: {
   expected: string | string[];
@@ -44,6 +58,8 @@ export default function MastersMic(props: {
   onToggleOptions: () => void;
   optionsShown: boolean;
   disabled?: boolean;
+  /** 1.5: the verb and tense being practised, for the Pronunciation button. */
+  pronounce?: { verb: string; tense: string };
 }) {
   const { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit } =
     useMastersMic({
@@ -57,6 +73,48 @@ export default function MastersMic(props: {
         props.onOutcome(o);
       },
     });
+
+  // ── Pronunciation button (1.5) ──
+  const sayItems = useMemo(
+    () => (props.pronounce ? pronunciationFor(props.pronounce.verb, props.pronounce.tense) : []),
+    [props.pronounce?.verb, props.pronounce?.tense], // eslint-disable-line react-hooks/exhaustive-deps
+  );
+  const sayPlayer = useAudioPlayer(null);
+  const sayStatus = useAudioPlayerStatus(sayPlayer);
+  const [saying, setSaying] = useState<number | null>(null);
+  const sayingRef = useRef<number | null>(null);
+  const sayTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const clearSayTimer = () => { if (sayTimer.current) { clearTimeout(sayTimer.current); sayTimer.current = null; } };
+  const stopSay = () => {
+    clearSayTimer();
+    sayingRef.current = null; setSaying(null);
+    try { sayPlayer.pause(); } catch {}
+  };
+  const playSay = async (k: number) => {
+    const item = sayItems[k];
+    if (!item) { stopSay(); return; }
+    sayingRef.current = k; setSaying(k);
+    clearSayTimer();
+    // A clip not yet recorded or deployed: the guide stays up for a moment, then moves on.
+    sayTimer.current = setTimeout(() => { if (sayingRef.current === k) playSay(k + 1); }, 3500);
+    try { await setAudioModeAsync({ playsInSilentMode: true, allowsRecording: false, shouldRouteThroughEarpiece: false }); } catch {}
+    if (sayingRef.current !== k) return;
+    try { sayPlayer.replace({ uri: `${API_BASE}/attached_assets/audio/verbs/${encodeURIComponent(item.clip)}` }); sayPlayer.play(); } catch {}
+  };
+  useEffect(() => {
+    if (sayStatus?.didJustFinish && sayingRef.current !== null) {
+      const k = sayingRef.current;
+      clearSayTimer();
+      sayTimer.current = setTimeout(() => { if (sayingRef.current === k) playSay(k + 1); }, 350);
+    }
+  }, [sayStatus?.didJustFinish]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => () => { clearSayTimer(); try { sayPlayer.pause(); } catch {} }, [sayPlayer]);
+  const onSayPress = () => {
+    if (sayingRef.current !== null) { stopSay(); return; }
+    Haptics.selectionAsync().catch(() => {});
+    playSay(0);
+  };
+  const withPronounce = !!props.pronounce;
 
   const [reduceMotion, setReduceMotion] = useState(false);
   useEffect(() => {
@@ -114,7 +172,11 @@ export default function MastersMic(props: {
   const shownError = errorDetail || (listening ? lastErrorRef.current : null);
 
   const shownText = ready ? (reading?.heard ?? "") : transcript;
-  const placeholder = listening ? "…" : ready ? "nothing caught" : "Hold Record and say the answer";
+  const placeholder = listening ? "…" : ready ? "nothing caught" : withPronounce ? "" : "Hold Record and say the answer";
+  const sayLine = saying !== null && !listening && !ready
+    ? sayItems.slice(0, saying + 1).map((x) => x.text).join("  ·  ") : null;
+  const sayGuide = saying !== null && !listening && !ready
+    ? sayItems.slice(0, saying + 1).map((x) => x.guide).join("  ·  ") : null;
 
   return (
     <View style={styles.wrap}>
@@ -126,15 +188,30 @@ export default function MastersMic(props: {
         ? <Equaliser level={level} idle={warming} reduceMotion={reduceMotion} />
         : <PauseGlyph />}
 
-      <View style={styles.heardBlock}>
-        <Text style={styles.heardLabel}>Heard</Text>
-        <Text
-          style={[styles.heardText, !ready && styles.heardProvisional]}
-          numberOfLines={ready ? undefined : 2}
-          accessibilityLiveRegion="polite"
-        >
-          {shownText || placeholder}
-        </Text>
+      <View style={[styles.heardBlock, withPronounce && styles.pronBox]}>
+        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Pronunciation" : "Heard"}</Text>
+        {sayLine ? (
+          <>
+            <Text style={styles.sayText} accessibilityLanguage="fr">{sayLine}</Text>
+            {!!sayGuide && <Text style={styles.sayGuide}>{sayGuide}</Text>}
+          </>
+        ) : (shownText || placeholder) ? (
+          <Text
+            style={[styles.heardText, !ready && styles.heardProvisional]}
+            numberOfLines={ready ? undefined : 2}
+            accessibilityLiveRegion="polite"
+          >
+            {shownText || placeholder}
+          </Text>
+        ) : null}
+        {withPronounce && sayItems.length > 0 && (
+          <Pressable onPress={onSayPress} hitSlop={8} accessibilityRole="button"
+            accessibilityLabel={saying !== null ? "Stop" : `Hear the verb: ${sayItems[0].text}`}
+            accessibilityHint="Says the verb you are practising, not the answer"
+            style={[styles.sayBtn, saying !== null && styles.sayBtnOn]}>
+            <Ionicons name="volume-high" size={16} color={saying !== null ? "#FFFFFF" : SAY_BLUE} />
+          </Pressable>
+        )}
         {ready && reading?.optionIndex != null && (
           <Text style={styles.heardSnap}>
             {"\u2192 "}{props.options[reading.optionIndex]}
@@ -176,7 +253,7 @@ export default function MastersMic(props: {
           again={ready}
           attention={!listening && !ready && !reduceMotion}
           hold
-          onPressIn={() => { props.onHoldChange?.(true); startHold(); }}
+          onPressIn={() => { stopSay(); props.onHoldChange?.(true); startHold(); }}
           onPressOut={() => { props.onHoldChange?.(false); stopHold(); }}
           hint={ready ? "Hold to record again over your last attempt" : "Hold to speak, release when you have finished"}
         />
@@ -414,6 +491,15 @@ const styles = StyleSheet.create({
   heardProvisional: { color: SOFT, opacity: 0.75 },
   ruledOut: { marginTop: 2, fontSize: 12, color: MUTED, textAlign: "center" },
   ruledOutStrike: { textDecorationLine: "line-through" },
+  // 1.5: a quiet box with the blue button on its right; same height as before.
+  pronBox: { alignSelf: "stretch", borderWidth: 1, borderColor: EDGE, borderRadius: 16, backgroundColor: "rgba(255,255,255,0.04)",
+    paddingVertical: 8, paddingLeft: 48, paddingRight: 48 },
+  pronLabel: { fontSize: 14, fontStyle: "italic", color: MUTED },
+  sayText: { fontSize: HEARD_SIZE + 2, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
+  sayGuide: { fontSize: 12, fontWeight: "700", color: SAY_BLUE, letterSpacing: 0.3, textAlign: "center" },
+  sayBtn: { position: "absolute", right: 10, top: "50%", marginTop: -16, width: 32, height: 32, borderRadius: 16,
+    borderWidth: 2, borderColor: SAY_BLUE, backgroundColor: "rgba(91,141,239,0.16)", alignItems: "center", justifyContent: "center" },
+  sayBtnOn: { backgroundColor: SAY_BLUE },
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 

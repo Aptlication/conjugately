@@ -695,6 +695,7 @@ export default function Quiz() {
                 onHoldChange={(h) => { setMicHolding(h); if (h) stopEnglish(); }}
                 optionsShown={showOptionsFor === dispIdx}
                 onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
+                pronounce={{ verb: qVerb, tense }}
               />
             )}
 
