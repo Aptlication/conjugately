@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Builds shared/advanced/content.ts from the Advanced source data:
-//   scripts/data/advanced-theme1.json   the articles, key words and questions
+//   scripts/data/advanced-theme1.json   the articles and key words
+//   scripts/data/advanced-theme1-verbs.json  each unit's verb, verb quiz and
+//                                       translate-format conversation (2 Nov 2026)
 //   scripts/data/advanced-lexicon.json  a gloss for every word, the set phrases,
 //                                       and per-unit overrides for words that
 //                                       mean something else in one article
@@ -13,11 +15,15 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const read = (f) => JSON.parse(fs.readFileSync(path.join(here, "data", f), "utf8"));
 const theme1 = read("advanced-theme1.json");
 const lex = read("advanced-lexicon.json");
+const verbs = Object.fromEntries(read("advanced-theme1-verbs.json").map((v) => [v.unit, v]));
 
 const themes = [{
   id: theme1.theme, title: theme1.themeTitle, titleEn: "Everyday life", level: theme1.level,
-  units: theme1.units.map(({ id, title, titleEn, strand, grammar, text, textEn, keyWords, questions }) =>
-    ({ id, title, titleEn, strand, grammar, text, textEn, keyWords, questions })),
+  units: theme1.units.map(({ id, title, titleEn, strand, grammar, text, textEn, keyWords }) => {
+    const v = verbs[id];
+    if (!v) throw new Error(`No verb quiz and conversation for unit ${id}`);
+    return { id, title, titleEn, strand, grammar, text, textEn, keyWords, verb: v.verb, quiz: v.quiz, conversation: v.conversation };
+  }),
 }];
 
 const j = (x) => JSON.stringify(x, null, 1);

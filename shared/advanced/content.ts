@@ -52,129 +52,232 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "it would be better to"
      }
     ],
-    "questions": [
+    "verb": "visiter",
+    "quiz": [
      {
-      "fr": "Que faut-il mettre dans le dossier ?",
-      "en": "What do you need to put in the file?",
-      "keys": [
-       "identit",
-       "fiche",
-       "paie",
-       "garant"
-      ],
-      "chips": [
-       "une pièce d'identité",
-       "les fiches de paie",
-       "un garant"
-      ],
-      "starter": "Dans le dossier, il faut mettre…",
-      "follow": "Et que faut-il souvent en plus ?",
-      "followEn": "And often, what else do you need?",
-      "model": "Il faut mettre une pièce d'identité et les trois dernières fiches de paie. Souvent, il faut aussi un garant.",
-      "modelEn": "You need to put in ID and your last three payslips. Often you also need a guarantor.",
-      "open": false
+      "tense": "Présent",
+      "en": "We are viewing the flat on rue Victor-Hugo.",
+      "answer": "Nous visitons l'appartement de la rue Victor-Hugo.",
+      "wrong": [
+       "Nous avons visité l'appartement de la rue Victor-Hugo.",
+       "Nous visiterons l'appartement de la rue Victor-Hugo.",
+       "Vous visitez l'appartement de la rue Victor-Hugo."
+      ]
      },
      {
-      "fr": "Que veut dire « garant » ?",
-      "en": "What does \"garant\" mean?",
-      "keys": [
-       "loyer",
-       "pai",
-       "payer"
-      ],
-      "chips": [
-       "une personne",
-       "paiera le loyer",
-       "si vous ne pouvez pas"
-      ],
-      "starter": "Un garant, c'est une personne qui…",
-      "follow": "Pourquoi le propriétaire en voudrait-il un ?",
-      "followEn": "Why would the landlord want one?",
-      "model": "Un garant, c'est une personne qui paiera le loyer si je ne peux pas le faire. Le propriétaire voudrait être sûr d'être payé.",
-      "modelEn": "A guarantor is someone who will pay the rent if I can't. The landlord would want to be sure of being paid.",
-      "open": false
+      "tense": "Présent",
+      "en": "Many people view the same flat.",
+      "answer": "Beaucoup de gens visitent le même logement.",
+      "wrong": [
+       "Beaucoup de gens visiteront le même logement.",
+       "Beaucoup de gens ont visité le même logement.",
+       "Beaucoup de gens visitaient le même logement."
+      ]
      },
      {
-      "fr": "Comment demanderiez-vous une visite à l'agence ?",
-      "en": "How would you ask the agency for a viewing?",
-      "keys": [
-       "voudrais",
-       "pourriez",
-       "aimerais",
-       "seriez"
-      ],
-      "chips": [
-       "je voudrais",
-       "visiter l'appartement",
-       "seriez-vous disponible"
-      ],
-      "starter": "Je dirais : « Bonjour, je voudrais…",
-      "follow": "Et quel jour proposeriez-vous ?",
-      "followEn": "And what day would you suggest?",
-      "model": "Je dirais : « Bonjour, je voudrais visiter l'appartement. » Je demanderais aussi : « Seriez-vous disponible jeudi ? »",
-      "modelEn": "I'd say: \"Hello, I'd like to view the flat.\" I'd also ask: \"Would you be available on Thursday?\"",
-      "open": false
+      "tense": "Présent",
+      "en": "Are you viewing other flats?",
+      "tag": "formal",
+      "answer": "Visitez-vous d'autres appartements ?",
+      "wrong": [
+       "Avez-vous visité d'autres appartements ?",
+       "Visiterez-vous d'autres appartements ?",
+       "Visitons-nous d'autres appartements ?"
+      ]
      },
      {
-      "fr": "Pourquoi vaudrait-il mieux apporter un dossier complet ?",
-      "en": "Why would it be better to bring a complete file?",
-      "keys": [
-       "beaucoup",
-       "gens",
-       "serieux",
-       "proprietaire",
-       "meme logement"
-      ],
-      "chips": [
-       "beaucoup de gens",
-       "le même logement",
-       "le dossier le plus sérieux"
-      ],
-      "starter": "Parce que beaucoup de gens…",
-      "follow": "Et que choisira le propriétaire ?",
-      "followEn": "And what will the landlord choose?",
-      "model": "Parce que beaucoup de gens visitent le même logement. Le propriétaire choisira le dossier le plus sérieux.",
-      "modelEn": "Because lots of people view the same place. The landlord will choose the most serious file.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I viewed three flats this week.",
+      "answer": "J'ai visité trois appartements cette semaine.",
+      "wrong": [
+       "Je suis visité trois appartements cette semaine.",
+       "Je visiterai trois appartements cette semaine.",
+       "Je visitais trois appartements cette semaine."
+      ]
      },
      {
-      "fr": "Que faut-il faire avant de signer le bail ?",
-      "en": "What should you do before signing the lease?",
-      "keys": [
-       "lire",
-       "lisez",
-       "lis",
-       "etat des lieux"
-      ],
-      "chips": [
-       "bien lire le bail",
-       "faire",
-       "un état des lieux"
-      ],
-      "starter": "Avant de signer, il faut…",
-      "follow": "À quoi sert l'état des lieux ?",
-      "followEn": "What is the inventory for?",
-      "model": "Il faut bien lire le bail et faire un état des lieux. Ce document me protégera quand je partirai.",
-      "modelEn": "You need to read the lease carefully and do an inventory. This document will protect me when I leave.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "My sister viewed the flat yesterday.",
+      "answer": "Ma sœur a visité l'appartement hier.",
+      "wrong": [
+       "Ma sœur est visitée l'appartement hier.",
+       "Ma sœur visitera l'appartement hier.",
+       "Ma sœur visite l'appartement hier."
+      ]
      },
      {
-      "fr": "Et vous ? Si vous cherchiez un appartement en France, dans quelle ville aimeriez-vous habiter ?",
-      "en": "And you? If you were looking for a flat in France, which city would you like to live in?",
-      "keys": [],
-      "chips": [
-       "si je cherchais",
-       "j'aimerais habiter à",
-       "parce que"
-      ],
-      "starter": "Si je cherchais un appartement, j'aimerais habiter à…",
-      "follow": "Pourquoi choisiriez-vous cette ville ?",
-      "followEn": "Why would you choose that city?",
-      "model": "Si je cherchais un appartement en France, j'aimerais habiter à Lyon. J'aime la cuisine, et la ville est plus calme que Paris.",
-      "modelEn": "If I were looking for a flat in France, I'd like to live in Lyon. I love the food, and the city is calmer than Paris.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Did you view the kitchen?",
+      "tag": "informal",
+      "answer": "As-tu visité la cuisine ?",
+      "wrong": [
+       "Es-tu visité la cuisine ?",
+       "Visiteras-tu la cuisine ?",
+       "Visitais-tu la cuisine ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "You will view the flat on Thursday.",
+      "tag": "formal",
+      "answer": "Vous visiterez l'appartement jeudi.",
+      "wrong": [
+       "Vous avez visité l'appartement jeudi.",
+       "Vous visitiez l'appartement jeudi.",
+       "Vous visiteront l'appartement jeudi."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "I will view it with my guarantor.",
+      "answer": "Je le visiterai avec mon garant.",
+      "wrong": [
+       "Je l'ai visité avec mon garant.",
+       "Je le visitais avec mon garant.",
+       "Tu le visiteras avec mon garant."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When we lived in Lyon, we used to view flats every Saturday.",
+      "answer": "Quand nous habitions à Lyon, nous visitions des appartements chaque samedi.",
+      "wrong": [
+       "Quand nous habitions à Lyon, nous avons visité des appartements chaque samedi.",
+       "Quand nous habitions à Lyon, nous visiterons des appartements chaque samedi.",
+       "Quand nous habitions à Lyon, nous visitez des appartements chaque samedi."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "I was viewing the flat when the agent called.",
+      "answer": "Je visitais l'appartement quand l'agent a appelé.",
+      "wrong": [
+       "J'ai visité l'appartement quand l'agent a appelé.",
+       "Je visiterai l'appartement quand l'agent a appelé.",
+       "Je visite l'appartement quand l'agent a appelé."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You call the agency about the flat on rue Victor-Hugo. Cécile answers.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Agence Dupont, bonjour ! Puis-je vous aider ?",
+       "en": "Dupont agency, hello! May I help you?"
+      },
+      {
+       "who": "you",
+       "fr": "Bonjour, je visiterais volontiers l'appartement de la rue Victor-Hugo.",
+       "en": "Hello, I'd be glad to view the flat on rue Victor-Hugo.",
+       "tense": "Conditionnel",
+       "person": "je",
+       "accept": [
+        "Bonjour, je visiterais volontiers l'appartement de la rue Victor-Hugo.",
+        "Je visiterais volontiers l'appartement de la rue Victor-Hugo.",
+        "Je visiterais volontiers l'appartement."
+       ],
+       "options": [
+        "Bonjour, je visite volontiers l'appartement de la rue Victor-Hugo.",
+        "Bonjour, j'ai visité volontiers l'appartement de la rue Victor-Hugo.",
+        "Bonjour, je visitions volontiers l'appartement de la rue Victor-Hugo."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Avec plaisir. Avez-vous déjà visité d'autres appartements ?",
+       "en": "With pleasure. Have you already viewed other flats?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, j'ai visité trois appartements cette semaine.",
+       "en": "Yes, I've viewed three flats this week.",
+       "tense": "Passé composé",
+       "person": "je",
+       "accept": [
+        "Oui, j'ai visité trois appartements cette semaine.",
+        "J'ai visité trois appartements cette semaine.",
+        "Oui, j'ai visité trois appartements."
+       ],
+       "options": [
+        "Oui, je visite trois appartements cette semaine.",
+        "Oui, je visiterai trois appartements cette semaine.",
+        "Oui, je visitais trois appartements cette semaine."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Quelqu'un visitera-t-il l'appartement avec vous ?",
+       "en": "Will anyone view the flat with you?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, ma sœur le visitera avec moi.",
+       "en": "Yes, my sister will view it with me.",
+       "tense": "Futur simple",
+       "person": "elle",
+       "accept": [
+        "Oui, ma sœur le visitera avec moi.",
+        "Ma sœur le visitera avec moi.",
+        "Oui, ma sœur visitera l'appartement avec moi."
+       ],
+       "options": [
+        "Oui, ma sœur le visite avec moi.",
+        "Oui, ma sœur l'a visité avec moi.",
+        "Oui, ma sœur le visitait avec moi."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Avant, quand vous cherchiez un logement, visitiez-vous beaucoup d'appartements ?",
+       "en": "Before, when you were looking for somewhere to live, did you view lots of flats?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, nous visitions un appartement chaque samedi.",
+       "en": "Yes, we used to view a flat every Saturday.",
+       "tense": "Imparfait",
+       "person": "nous",
+       "accept": [
+        "Oui, nous visitions un appartement chaque samedi.",
+        "Nous visitions un appartement chaque samedi.",
+        "Oui, nous visitions un appartement tous les samedis."
+       ],
+       "options": [
+        "Oui, nous avons visité un appartement chaque samedi.",
+        "Oui, nous visiterons un appartement chaque samedi.",
+        "Oui, nous visitez un appartement chaque samedi."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Cet appartement plaît beaucoup. Savez-vous combien de personnes le visitent aujourd'hui ?",
+       "en": "This flat is very popular. Do you know how many people are viewing it today?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, dix personnes le visitent aujourd'hui.",
+       "en": "Yes, ten people are viewing it today.",
+       "tense": "Présent",
+       "person": "ils",
+       "accept": [
+        "Oui, dix personnes le visitent aujourd'hui.",
+        "Dix personnes le visitent aujourd'hui.",
+        "Oui, dix personnes le visitent."
+       ],
+       "options": [
+        "Oui, dix personnes le visiteront aujourd'hui.",
+        "Oui, dix personnes l'ont visité aujourd'hui.",
+        "Oui, dix personnes le visitaient aujourd'hui."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Alors ne tardez pas ! À jeudi, dix heures.",
+       "en": "Then don't wait! See you Thursday at ten."
+      }
+     ]
+    }
    },
    {
     "id": "1.2",
@@ -218,119 +321,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "service is included"
      }
     ],
-    "questions": [
+    "verb": "demander",
+    "quiz": [
      {
-      "fr": "Que vous servira-t-on si vous demandez « un café » ?",
-      "en": "What will you be served if you ask for \"un café\"?",
-      "keys": [
-       "expresso",
-       "express"
-      ],
-      "chips": [
-       "un expresso",
-       "un petit café",
-       "sans lait"
-      ],
-      "starter": "On me servira…",
-      "follow": "Et comment est ce café ?",
-      "followEn": "And what is that coffee like?",
-      "model": "On me servira un expresso. C'est un petit café, sans lait.",
-      "modelEn": "I'll be served an espresso. It's a small coffee, without milk.",
-      "open": false
+      "tense": "Présent",
+      "en": "I ask for a café crème every morning.",
+      "answer": "Je demande un café crème chaque matin.",
+      "wrong": [
+       "J'ai demandé un café crème chaque matin.",
+       "Je demanderai un café crème chaque matin.",
+       "Je demandons un café crème chaque matin."
+      ]
      },
      {
-      "fr": "Que faudrait-il commander pour avoir un café avec du lait ?",
-      "en": "What would you need to order to get a coffee with milk?",
-      "keys": [
-       "creme"
-      ],
-      "chips": [
-       "il faudrait",
-       "un café crème",
-       "du lait"
-      ],
-      "starter": "Il faudrait commander…",
-      "follow": "Et comment est un café crème ?",
-      "followEn": "And what is a café crème like?",
-      "model": "Il faudrait commander un café crème. C'est un grand café avec du lait.",
-      "modelEn": "You'd need to order a café crème. It's a big coffee with milk.",
-      "open": false
+      "tense": "Présent",
+      "en": "If you ask for 'un café', they'll serve you an espresso.",
+      "tag": "formal",
+      "answer": "Si vous demandez « un café », on vous servira un expresso.",
+      "wrong": [
+       "Si vous demanderez « un café », on vous servira un expresso.",
+       "Si vous demandiez « un café », on vous servira un expresso.",
+       "Si vous demandons « un café », on vous servira un expresso."
+      ]
      },
      {
-      "fr": "Comment commande-t-on poliment ?",
-      "en": "How do you order politely?",
-      "keys": [
-       "voudrais",
-       "prendrais",
-       "plait"
-      ],
-      "chips": [
-       "je voudrais",
-       "s'il vous plaît",
-       "je prendrais bien"
-      ],
-      "starter": "On dit : « Je voudrais…",
-      "follow": "Que peut-on dire aussi ?",
-      "followEn": "What else can you say?",
-      "model": "On dit : « Je voudrais un café, s'il vous plaît. » On peut aussi dire : « Je prendrais bien un croissant. »",
-      "modelEn": "You say: \"I'd like a coffee, please.\" You can also say: \"I'd happily have a croissant.\"",
-      "open": false
+      "tense": "Présent",
+      "en": "Are the customers asking for the bill?",
+      "answer": "Les clients demandent-ils l'addition ?",
+      "wrong": [
+       "Les clients ont-ils demandé l'addition ?",
+       "Les clients demanderont-ils l'addition ?",
+       "Les clients demandaient-ils l'addition ?"
+      ]
      },
      {
-      "fr": "Où le café coûte-t-il souvent moins cher ?",
-      "en": "Where is coffee often cheaper?",
-      "keys": [
-       "comptoir"
-      ],
-      "chips": [
-       "au comptoir",
-       "en terrasse",
-       "moins cher"
-      ],
-      "starter": "Le café coûte souvent moins cher…",
-      "follow": "Et en terrasse, le café coûte-t-il plus cher ?",
-      "followEn": "And on the terrace, is coffee more expensive?",
-      "model": "Le café coûte souvent moins cher au comptoir. En terrasse, il est plus cher, mais on peut rester longtemps.",
-      "modelEn": "Coffee is often cheaper at the counter. On the terrace it's more expensive, but you can stay a long time.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "This morning I asked for a croissant with my coffee.",
+      "answer": "Ce matin, j'ai demandé un croissant avec mon café.",
+      "wrong": [
+       "Ce matin, je suis demandé un croissant avec mon café.",
+       "Ce matin, je demanderai un croissant avec mon café.",
+       "Ce matin, je demandais un croissant avec mon café."
+      ]
      },
      {
-      "fr": "Faut-il laisser un pourboire ?",
-      "en": "Do you have to leave a tip?",
-      "keys": [
-       "compris",
-       "pourboire",
-       "content"
-      ],
-      "chips": [
-       "le service est compris",
-       "un petit pourboire",
-       "quand on est content"
-      ],
-      "starter": "Non, le service est…",
-      "follow": "Quand en laisse-t-on un ?",
-      "followEn": "When do people leave one?",
-      "model": "Non, le service est compris dans le prix. Mais on laisse parfois un petit pourboire quand on est content.",
-      "modelEn": "No, service is included in the price. But people sometimes leave a small tip when they're happy.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "The waitress asked us to wait.",
+      "answer": "La serveuse nous a demandé d'attendre.",
+      "wrong": [
+       "La serveuse nous est demandée d'attendre.",
+       "La serveuse nous demandera d'attendre.",
+       "La serveuse nous demande d'attendre."
+      ]
      },
      {
-      "fr": "Et vous ? Que commanderiez-vous dans un café parisien ?",
-      "en": "And you? What would you order in a Paris café?",
-      "keys": [],
-      "chips": [
-       "je commanderais",
-       "un café crème",
-       "je resterais"
-      ],
-      "starter": "Je commanderais…",
-      "follow": "Et resteriez-vous au comptoir ou en terrasse ?",
-      "followEn": "And would you stay at the counter or on the terrace?",
-      "model": "Je commanderais un café crème et un croissant. Je resterais en terrasse pour regarder passer les gens.",
-      "modelEn": "I'd order a café crème and a croissant. I'd stay on the terrace to watch people.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Did you ask for the bill?",
+      "tag": "informal",
+      "answer": "As-tu demandé l'addition ?",
+      "wrong": [
+       "Es-tu demandé l'addition ?",
+       "Demanderas-tu l'addition ?",
+       "Demandais-tu l'addition ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "Nobody will ask you to leave.",
+      "tag": "formal",
+      "answer": "Personne ne vous demandera de partir.",
+      "wrong": [
+       "Personne ne vous a demandé de partir.",
+       "Personne ne vous demandait de partir.",
+       "Personne ne vous demanderont de partir."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "We will ask for a table on the terrace.",
+      "answer": "Nous demanderons une table en terrasse.",
+      "wrong": [
+       "Nous avons demandé une table en terrasse.",
+       "Nous demandions une table en terrasse.",
+       "Nous demanderez une table en terrasse."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When you lived in Paris, you used to ask for a café crème at the counter.",
+      "tag": "informal",
+      "answer": "Quand tu habitais à Paris, tu demandais un café crème au comptoir.",
+      "wrong": [
+       "Quand tu habitais à Paris, tu as demandé un café crème au comptoir.",
+       "Quand tu habitais à Paris, tu demanderas un café crème au comptoir.",
+       "Quand tu habitais à Paris, tu demandiez un café crème au comptoir."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "We were asking for the bill when it started to rain.",
+      "answer": "Nous demandions l'addition quand il a commencé à pleuvoir.",
+      "wrong": [
+       "Nous avons demandé l'addition quand il a commencé à pleuvoir.",
+       "Nous demanderons l'addition quand il a commencé à pleuvoir.",
+       "Nous demandons l'addition quand il a commencé à pleuvoir."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You sit down on a café terrace in Paris. Cécile, the waitress, comes to your table.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour et bienvenue ! Est-ce votre première visite ? Que désirez-vous ?",
+       "en": "Hello and welcome! Is this your first visit? What would you like?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui. Que demanderiez-vous à ma place ?",
+       "en": "Yes. What would you ask for in my place?",
+       "tense": "Conditionnel",
+       "person": "vous",
+       "accept": [
+        "Oui. Que demanderiez-vous à ma place ?",
+        "Que demanderiez-vous à ma place ?",
+        "Oui. Que demanderiez-vous ?"
+       ],
+       "options": [
+        "Oui. Que demandez-vous à ma place ?",
+        "Oui. Que demanderez-vous à ma place ?",
+        "Oui. Que demandiez-vous à ma place ?"
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Moi, je prendrais un café crème. Avez-vous déjà demandé « un café » en France ?",
+       "en": "I'd have a café crème. Have you ever asked for 'un café' in France?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, hier, j'ai demandé « un café » et on m'a servi un expresso.",
+       "en": "Yes, yesterday I asked for 'un café' and I was served an espresso.",
+       "tense": "Passé composé",
+       "person": "je",
+       "accept": [
+        "Oui, hier, j'ai demandé « un café » et on m'a servi un expresso.",
+        "Hier, j'ai demandé « un café » et on m'a servi un expresso.",
+        "Oui, j'ai demandé « un café » hier et on m'a servi un expresso."
+       ],
+       "options": [
+        "Oui, hier, je suis demandé « un café » et on m'a servi un expresso.",
+        "Oui, hier, je demanderai « un café » et on m'a servi un expresso.",
+        "Oui, hier, je demande « un café » et on m'a servi un expresso."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "C'est normal ! Quand vous habitiez à Londres, que demandiez-vous au café ?",
+       "en": "That's normal! When you lived in London, what did you use to ask for at the café?"
+      },
+      {
+       "who": "you",
+       "fr": "Je demandais toujours un grand café avec du lait.",
+       "en": "I always used to ask for a big coffee with milk.",
+       "tense": "Imparfait",
+       "person": "je",
+       "accept": [
+        "Je demandais toujours un grand café avec du lait.",
+        "Je demandais un grand café avec du lait.",
+        "Je demandais toujours un grand café au lait."
+       ],
+       "options": [
+        "Je demande toujours un grand café avec du lait.",
+        "Je demanderai toujours un grand café avec du lait.",
+        "Je demandiez toujours un grand café avec du lait."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Alors ici, il faut dire « un café crème ». Et vos amis, que demanderont-ils en arrivant ?",
+       "en": "So here, you need to say 'un café crème'. And your friends, what will they ask for when they arrive?"
+      },
+      {
+       "who": "you",
+       "fr": "Ils demanderont sûrement deux expressos.",
+       "en": "They'll surely ask for two espressos.",
+       "tense": "Futur simple",
+       "person": "ils",
+       "accept": [
+        "Ils demanderont sûrement deux expressos.",
+        "Ils demanderont deux expressos.",
+        "Mes amis demanderont sûrement deux expressos."
+       ],
+       "options": [
+        "Ils ont sûrement demandé deux expressos.",
+        "Ils demandaient sûrement deux expressos.",
+        "Ils demanderez sûrement deux expressos."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Et en Angleterre, demande-t-on l'addition au serveur ?",
+       "en": "And in England, do people ask the waiter for the bill?"
+      },
+      {
+       "who": "you",
+       "fr": "Non, nous demandons souvent l'addition au comptoir.",
+       "en": "No, we often ask for the bill at the counter.",
+       "tense": "Présent",
+       "person": "nous",
+       "accept": [
+        "Non, nous demandons souvent l'addition au comptoir.",
+        "Nous demandons souvent l'addition au comptoir.",
+        "Non, nous demandons l'addition au comptoir."
+       ],
+       "options": [
+        "Non, nous avons souvent demandé l'addition au comptoir.",
+        "Non, nous demanderons souvent l'addition au comptoir.",
+        "Non, nous demandions souvent l'addition au comptoir."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Ici, appelez simplement le serveur ! Je vous apporte un café crème, alors.",
+       "en": "Here, just call the waiter! I'll bring you a café crème, then."
+      }
+     ]
+    }
    },
    {
     "id": "1.3",
@@ -374,125 +591,232 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "to manage"
      }
     ],
-    "questions": [
+    "verb": "recevoir",
+    "quiz": [
      {
-      "fr": "Pourquoi aurez-vous besoin d'un RIB ?",
-      "en": "Why will you need a RIB?",
-      "keys": [
-       "loyer",
-       "salaire"
-      ],
-      "chips": [
-       "payer le loyer",
-       "recevoir mon salaire",
-       "le numéro de compte"
-      ],
-      "starter": "J'aurai besoin d'un RIB pour…",
-      "follow": "En aurez-vous besoin pour autre chose ?",
-      "followEn": "Will you need it for anything else?",
-      "model": "J'aurai besoin d'un RIB pour payer mon loyer. On me le demandera aussi pour recevoir mon salaire.",
-      "modelEn": "I'll need a RIB to pay my rent. I'll also be asked for it to receive my salary.",
-      "open": false
+      "tense": "Présent",
+      "en": "I receive my salary at the end of the month.",
+      "answer": "Je reçois mon salaire à la fin du mois.",
+      "wrong": [
+       "J'ai reçu mon salaire à la fin du mois.",
+       "Je recevrai mon salaire à la fin du mois.",
+       "Je recevais mon salaire à la fin du mois."
+      ]
      },
      {
-      "fr": "Que faut-il apporter au rendez-vous ?",
-      "en": "What do you need to bring to the appointment?",
-      "keys": [
-       "identit",
-       "justificatif",
-       "domicile",
-       "facture"
-      ],
-      "chips": [
-       "une pièce d'identité",
-       "un justificatif de domicile",
-       "une facture"
-      ],
-      "starter": "Il faut apporter…",
-      "follow": "Pourriez-vous donner un exemple de justificatif ?",
-      "followEn": "Could you give an example of proof of address?",
-      "model": "Il faut apporter une pièce d'identité et un justificatif de domicile. Par exemple, une facture d'électricité.",
-      "modelEn": "You need to bring ID and proof of address. For example, an electricity bill.",
-      "open": false
+      "tense": "Présent",
+      "en": "The adviser sees clients by appointment.",
+      "answer": "Le conseiller reçoit les clients sur rendez-vous.",
+      "wrong": [
+       "Le conseiller reçoivent les clients sur rendez-vous.",
+       "Le conseiller a reçu les clients sur rendez-vous.",
+       "Le conseiller recevra les clients sur rendez-vous."
+      ]
      },
      {
-      "fr": "Que pourriez-vous dire au conseiller ?",
-      "en": "What could you say to the adviser?",
-      "keys": [
-       "voudrais",
-       "pourriez",
-       "ouvrir"
-      ],
-      "chips": [
-       "je voudrais",
-       "ouvrir un compte",
-       "pourriez-vous m'expliquer"
-      ],
-      "starter": "Je pourrais dire : « Je voudrais…",
-      "follow": "Et que demanderiez-vous ensuite ?",
-      "followEn": "And what would you ask next?",
-      "model": "Je pourrais dire : « Je voudrais ouvrir un compte courant. » Je demanderais aussi : « Pourriez-vous m'expliquer les frais ? »",
-      "modelEn": "I could say: \"I'd like to open a current account.\" I'd also ask: \"Could you explain the fees to me?\"",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you receive your salary in France?",
+      "tag": "formal",
+      "answer": "Recevez-vous votre salaire en France ?",
+      "wrong": [
+       "Avez-vous reçu votre salaire en France ?",
+       "Recevrez-vous votre salaire en France ?",
+       "Receviez-vous votre salaire en France ?"
+      ]
      },
      {
-      "fr": "Que vous proposera sûrement le conseiller ?",
-      "en": "What will the adviser surely offer you?",
-      "keys": [
-       "carte",
-       "application",
-       "appli"
-      ],
-      "chips": [
-       "une carte bancaire",
-       "une application",
-       "gérer mon argent"
-      ],
-      "starter": "Il me proposera sûrement…",
-      "follow": "Et à quoi servira l'application ?",
-      "followEn": "And what will the app be for?",
-      "model": "Il me proposera sûrement une carte bancaire. Il me proposera aussi une application pour gérer mon argent.",
-      "modelEn": "He'll surely offer me a bank card. He'll also offer me an app to manage my money.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "We received our bank cards this morning.",
+      "answer": "Nous avons reçu nos cartes bancaires ce matin.",
+      "wrong": [
+       "Nous sommes reçus nos cartes bancaires ce matin.",
+       "Nous recevrons nos cartes bancaires ce matin.",
+       "Nous recevions nos cartes bancaires ce matin."
+      ]
      },
      {
-      "fr": "Quel conseil le texte donne-t-il avant de signer ?",
-      "en": "What advice does the text give before signing?",
-      "keys": [
-       "compar",
-       "frais"
-      ],
-      "chips": [
-       "à ma place",
-       "comparerait",
-       "les frais",
-       "quelques euros par mois"
-      ],
-      "starter": "À ma place, l'auteur comparerait…",
-      "follow": "Pourquoi est-ce important ?",
-      "followEn": "Why is that important?",
-      "model": "À ma place, l'auteur comparerait les frais avant de signer. Quelques euros par mois, cela fait beaucoup sur une année.",
-      "modelEn": "In my place, the writer would compare the fees before signing. A few euros a month adds up to a lot over a year.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "Did you receive the RIB?",
+      "tag": "informal",
+      "answer": "As-tu reçu le RIB ?",
+      "wrong": [
+       "Es-tu reçu le RIB ?",
+       "Recevras-tu le RIB ?",
+       "Recevais-tu le RIB ?"
+      ]
      },
      {
-      "fr": "Et vous ? Préféreriez-vous une banque en ligne ou un conseiller ?",
-      "en": "And you? Would you prefer an online bank or an adviser?",
-      "keys": [],
-      "chips": [
-       "je préférerais",
-       "une banque en ligne",
-       "un conseiller",
-       "parce que"
-      ],
-      "starter": "Je préférerais…",
-      "follow": "Pourquoi ?",
-      "followEn": "Why?",
-      "model": "Je préférerais une banque en ligne, parce qu'elle est moins chère. Mais pour une question difficile, j'aimerais parler à un conseiller.",
-      "modelEn": "I'd prefer an online bank, because it's cheaper. But for a difficult question, I'd like to talk to an adviser.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "They received an electricity bill yesterday.",
+      "answer": "Ils ont reçu une facture d'électricité hier.",
+      "wrong": [
+       "Ils sont reçus une facture d'électricité hier.",
+       "Ils recevront une facture d'électricité hier.",
+       "Ils reçoivent une facture d'électricité hier."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "You will receive your card in a week's time.",
+      "tag": "formal",
+      "answer": "Vous recevrez votre carte dans une semaine.",
+      "wrong": [
+       "Vous avez reçu votre carte dans une semaine.",
+       "Vous receviez votre carte dans une semaine.",
+       "Vous recevront votre carte dans une semaine."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "She will receive an answer from the bank on Monday.",
+      "answer": "Elle recevra une réponse de la banque lundi.",
+      "wrong": [
+       "Elle a reçu une réponse de la banque lundi.",
+       "Elle recevait une réponse de la banque lundi.",
+       "Elle recevrons une réponse de la banque lundi."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When I was a student, I used to receive a grant every month.",
+      "answer": "Quand j'étais étudiant, je recevais une bourse chaque mois.",
+      "wrong": [
+       "Quand j'étais étudiant, j'ai reçu une bourse chaque mois.",
+       "Quand j'étais étudiant, je recevrai une bourse chaque mois.",
+       "Quand j'étais étudiant, je reçois une bourse chaque mois."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "My parents used to receive their bills by post.",
+      "answer": "Mes parents recevaient leurs factures par la poste.",
+      "wrong": [
+       "Mes parents ont reçu leurs factures par la poste.",
+       "Mes parents recevront leurs factures par la poste.",
+       "Mes parents receviez leurs factures par la poste."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You have an appointment at the bank to open an account. Cécile, the adviser, welcomes you.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour, asseyez-vous ! Recevrez-vous bientôt un salaire en France ?",
+       "en": "Hello, have a seat! Will you be receiving a salary in France soon?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, je recevrai mon premier salaire à la fin du mois.",
+       "en": "Yes, I'll receive my first salary at the end of the month.",
+       "tense": "Futur simple",
+       "person": "je",
+       "accept": [
+        "Oui, je recevrai mon premier salaire à la fin du mois.",
+        "Je recevrai mon premier salaire à la fin du mois.",
+        "Oui, je recevrai mon salaire à la fin du mois."
+       ],
+       "options": [
+        "Oui, j'ai reçu mon premier salaire à la fin du mois.",
+        "Oui, je recevais mon premier salaire à la fin du mois.",
+        "Oui, je recevront mon premier salaire à la fin du mois."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien. Avez-vous reçu un justificatif de domicile ?",
+       "en": "Very good. Have you received a proof of address?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, j'ai reçu une facture d'électricité hier.",
+       "en": "Yes, I received an electricity bill yesterday.",
+       "tense": "Passé composé",
+       "person": "je",
+       "accept": [
+        "Oui, j'ai reçu une facture d'électricité hier.",
+        "J'ai reçu une facture d'électricité hier.",
+        "Oui, j'ai reçu une facture d'électricité."
+       ],
+       "options": [
+        "Oui, je suis reçu une facture d'électricité hier.",
+        "Oui, je recevrai une facture d'électricité hier.",
+        "Oui, je reçois une facture d'électricité hier."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait. Et dans votre pays, receviez-vous vos factures par la poste ?",
+       "en": "Perfect. And in your country, did you use to receive your bills by post?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, nous recevions toutes nos factures par la poste.",
+       "en": "Yes, we used to receive all our bills by post.",
+       "tense": "Imparfait",
+       "person": "nous",
+       "accept": [
+        "Oui, nous recevions toutes nos factures par la poste.",
+        "Nous recevions toutes nos factures par la poste.",
+        "Oui, nous recevions nos factures par la poste."
+       ],
+       "options": [
+        "Oui, nous avons reçu toutes nos factures par la poste.",
+        "Oui, nous recevrons toutes nos factures par la poste.",
+        "Oui, nous recevez toutes nos factures par la poste."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Aujourd'hui, tout se fait sur l'application. Et vos colocataires, reçoivent-ils aussi leur salaire en France ?",
+       "en": "Today, everything is done on the app. And your flatmates, do they also receive their salary in France?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, ils reçoivent leur salaire ici chaque mois.",
+       "en": "Yes, they receive their salary here every month.",
+       "tense": "Présent",
+       "person": "ils",
+       "accept": [
+        "Oui, ils reçoivent leur salaire ici chaque mois.",
+        "Ils reçoivent leur salaire ici chaque mois.",
+        "Oui, ils reçoivent leur salaire ici."
+       ],
+       "options": [
+        "Oui, ils ont reçu leur salaire ici chaque mois.",
+        "Oui, ils recevront leur salaire ici chaque mois.",
+        "Oui, ils recevaient leur salaire ici chaque mois."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien. Si vous signiez aujourd'hui, quand votre employeur recevrait-il votre RIB ?",
+       "en": "Very good. If you signed today, when would your employer receive your RIB?"
+      },
+      {
+       "who": "you",
+       "fr": "Il recevrait mon RIB demain matin.",
+       "en": "He'd receive my RIB tomorrow morning.",
+       "tense": "Conditionnel",
+       "person": "il",
+       "accept": [
+        "Il recevrait mon RIB demain matin.",
+        "Il le recevrait demain matin.",
+        "Mon employeur recevrait mon RIB demain matin."
+       ],
+       "options": [
+        "Il reçoit mon RIB demain matin.",
+        "Il a reçu mon RIB demain matin.",
+        "Il recevait mon RIB demain matin."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait ! Alors signons tout de suite.",
+       "en": "Perfect! Then let's sign straight away."
+      }
+     ]
+    }
    },
    {
     "id": "1.4",
@@ -536,122 +860,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "cold"
      }
     ],
-    "questions": [
+    "verb": "donner",
+    "quiz": [
      {
-      "fr": "Que veut dire « médecin traitant » ?",
-      "en": "What does \"médecin traitant\" mean?",
-      "keys": [
-       "premier",
-       "malade"
-      ],
-      "chips": [
-       "le médecin",
-       "en premier",
-       "quand on est malade"
-      ],
-      "starter": "C'est le médecin qu'on voit…",
-      "follow": "Le choisit-on soi-même ?",
-      "followEn": "Do you choose them yourself?",
-      "model": "C'est le médecin qu'on voit en premier quand on est malade. En France, on le choisit en général.",
-      "modelEn": "It's the doctor you see first when you're ill. In France, you generally choose them.",
-      "open": false
+      "tense": "Présent",
+      "en": "The pharmacist gives good advice.",
+      "answer": "Le pharmacien donne de bons conseils.",
+      "wrong": [
+       "Le pharmacien a donné de bons conseils.",
+       "Le pharmacien donnera de bons conseils.",
+       "Le pharmacien donnait de bons conseils."
+      ]
      },
      {
-      "fr": "Comment prend-on rendez-vous ?",
-      "en": "How do you make an appointment?",
-      "keys": [
-       "appel",
-       "telephone",
-       "ligne",
-       "cabinet"
-      ],
-      "chips": [
-       "on appelle le cabinet",
-       "on réserve en ligne",
-       "je voudrais un rendez-vous"
-      ],
-      "starter": "On appelle…",
-      "follow": "Que diriez-vous au téléphone ?",
-      "followEn": "What would you say on the phone?",
-      "model": "On appelle le cabinet ou on réserve en ligne. Au téléphone, je dirais : « Je voudrais un rendez-vous, s'il vous plaît. »",
-      "modelEn": "You call the surgery or book online. On the phone, I'd say: \"I'd like an appointment, please.\"",
-      "open": false
+      "tense": "Présent",
+      "en": "We give our carte Vitale at the surgery.",
+      "answer": "Nous donnons notre carte Vitale au cabinet.",
+      "wrong": [
+       "Nous avons donné notre carte Vitale au cabinet.",
+       "Nous donnerons notre carte Vitale au cabinet.",
+       "Nous donnions notre carte Vitale au cabinet."
+      ]
      },
      {
-      "fr": "À quoi sert la carte Vitale ?",
-      "en": "What is the carte Vitale for?",
-      "keys": [
-       "rembours",
-       "assurance"
-      ],
-      "chips": [
-       "l'Assurance maladie",
-       "une partie",
-       "remboursée"
-      ],
-      "starter": "Grâce à la carte Vitale…",
-      "follow": "Et qui paie souvent le reste ?",
-      "followEn": "And who often pays the rest?",
-      "model": "Grâce à la carte Vitale, une partie de la consultation est remboursée plus vite. La mutuelle paie souvent le reste.",
-      "modelEn": "Thanks to the carte Vitale, part of the consultation is reimbursed more quickly. The mutuelle often pays the rest.",
-      "open": false
+      "tense": "Présent",
+      "en": "Are you giving me a prescription?",
+      "tag": "formal",
+      "answer": "Me donnez-vous une ordonnance ?",
+      "wrong": [
+       "M'avez-vous donné une ordonnance ?",
+       "Me donnerez-vous une ordonnance ?",
+       "Me donniez-vous une ordonnance ?"
+      ]
      },
      {
-      "fr": "Que fait-on avec une ordonnance ?",
-      "en": "What do you do with a prescription?",
-      "keys": [
-       "pharmac"
-      ],
-      "chips": [
-       "la pharmacie",
-       "la croix verte"
-      ],
-      "starter": "Avec une ordonnance, on va…",
-      "follow": "Comment reconnaît-on la pharmacie ?",
-      "followEn": "How do you recognise the pharmacy?",
-      "model": "Avec une ordonnance, on va à la pharmacie. On reconnaît la pharmacie à sa croix verte.",
-      "modelEn": "With a prescription, you go to the pharmacy. You recognise the pharmacy by its green cross.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "The doctor gave me a prescription yesterday.",
+      "answer": "Le médecin m'a donné une ordonnance hier.",
+      "wrong": [
+       "Le médecin m'est donné une ordonnance hier.",
+       "Le médecin me donnera une ordonnance hier.",
+       "Le médecin me donne une ordonnance hier."
+      ]
      },
      {
-      "fr": "Que pourrait faire le pharmacien si vous aviez un petit rhume ?",
-      "en": "What could the pharmacist do if you had a little cold?",
-      "keys": [
-       "recommand",
-       "medicament",
-       "conseil"
-      ],
-      "chips": [
-       "il pourrait",
-       "recommander",
-       "un médicament",
-       "sans ordonnance"
-      ],
-      "starter": "Il pourrait me recommander…",
-      "follow": "Faudrait-il une ordonnance ?",
-      "followEn": "Would you need a prescription?",
-      "model": "Il pourrait me recommander un médicament. Il ne faudrait pas d'ordonnance.",
-      "modelEn": "They could recommend a medicine for me. I wouldn't need a prescription.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "Did you give your carte Vitale to the doctor?",
+      "tag": "informal",
+      "answer": "As-tu donné ta carte Vitale au médecin ?",
+      "wrong": [
+       "Es-tu donné ta carte Vitale au médecin ?",
+       "Donneras-tu ta carte Vitale au médecin ?",
+       "Donnais-tu ta carte Vitale au médecin ?"
+      ]
      },
      {
-      "fr": "Et vous ? Que diriez-vous au médecin si vous aviez de la fièvre ?",
-      "en": "And you? What would you say to the doctor if you had a fever?",
-      "keys": [],
-      "chips": [
-       "je dirais",
-       "j'ai de la fièvre",
-       "depuis",
-       "je demanderais"
-      ],
-      "starter": "Je dirais : « Bonjour docteur, j'ai…",
-      "follow": "Que demanderiez-vous ensuite ?",
-      "followEn": "What would you ask next?",
-      "model": "Je dirais : « Bonjour docteur, j'ai de la fièvre depuis deux jours. » Je demanderais aussi si je dois prendre un médicament.",
-      "modelEn": "I'd say: \"Hello doctor, I've had a fever for two days.\" I'd also ask whether I should take a medicine.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "This morning I gave my phone number to the surgery.",
+      "answer": "Ce matin, j'ai donné mon numéro de téléphone au cabinet.",
+      "wrong": [
+       "Ce matin, je suis donné mon numéro de téléphone au cabinet.",
+       "Ce matin, je donnerai mon numéro de téléphone au cabinet.",
+       "Ce matin, je donnais mon numéro de téléphone au cabinet."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "The doctor will give you a prescription.",
+      "tag": "formal",
+      "answer": "Le médecin vous donnera une ordonnance.",
+      "wrong": [
+       "Le médecin vous a donné une ordonnance.",
+       "Le médecin vous donnait une ordonnance.",
+       "Le médecin vous donneront une ordonnance."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "They will give us the results on Friday.",
+      "answer": "Ils nous donneront les résultats vendredi.",
+      "wrong": [
+       "Ils nous ont donné les résultats vendredi.",
+       "Ils nous donnaient les résultats vendredi.",
+       "Ils nous donnera les résultats vendredi."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When we were children, our mother used to give us honey for a cold.",
+      "answer": "Quand nous étions enfants, notre mère nous donnait du miel contre le rhume.",
+      "wrong": [
+       "Quand nous étions enfants, notre mère nous a donné du miel contre le rhume.",
+       "Quand nous étions enfants, notre mère nous donnera du miel contre le rhume.",
+       "Quand nous étions enfants, notre mère nous donnions du miel contre le rhume."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "You were giving your name when the doctor arrived.",
+      "tag": "informal",
+      "answer": "Tu donnais ton nom quand le médecin est arrivé.",
+      "wrong": [
+       "Tu as donné ton nom quand le médecin est arrivé.",
+       "Tu donneras ton nom quand le médecin est arrivé.",
+       "Tu donnes ton nom quand le médecin est arrivé."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You go into a pharmacy with your daughter's prescription. Cécile, the pharmacist, serves you.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Que puis-je faire pour vous ?",
+       "en": "Hello! What can I do for you?"
+      },
+      {
+       "who": "you",
+       "fr": "Bonjour, je vous donne l'ordonnance de ma fille.",
+       "en": "Hello, I'm giving you my daughter's prescription.",
+       "tense": "Présent",
+       "person": "je",
+       "accept": [
+        "Bonjour, je vous donne l'ordonnance de ma fille.",
+        "Je vous donne l'ordonnance de ma fille.",
+        "Bonjour, je vous donne l'ordonnance."
+       ],
+       "options": [
+        "Bonjour, je vous ai donné l'ordonnance de ma fille.",
+        "Bonjour, je vous donnerai l'ordonnance de ma fille.",
+        "Bonjour, je vous donnais l'ordonnance de ma fille."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Merci. Qui vous a donné cette ordonnance ?",
+       "en": "Thank you. Who gave you this prescription?"
+      },
+      {
+       "who": "you",
+       "fr": "Le docteur Martin me l'a donnée ce matin.",
+       "en": "Dr Martin gave it to me this morning.",
+       "tense": "Passé composé",
+       "person": "il",
+       "accept": [
+        "Le docteur Martin me l'a donnée ce matin.",
+        "Le docteur Martin me l'a donnée.",
+        "C'est le docteur Martin qui me l'a donnée ce matin."
+       ],
+       "options": [
+        "Le docteur Martin me l'est donnée ce matin.",
+        "Le docteur Martin me la donnera ce matin.",
+        "Le docteur Martin me la donne ce matin."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "C'est un sirop contre la fièvre. Et quand vous étiez enfant, que vous donnait-on contre la fièvre ?",
+       "en": "It's a syrup for fever. And when you were a child, what did people give you for a fever?"
+      },
+      {
+       "who": "you",
+       "fr": "Mes parents me donnaient du miel et du citron.",
+       "en": "My parents used to give me honey and lemon.",
+       "tense": "Imparfait",
+       "person": "ils",
+       "accept": [
+        "Mes parents me donnaient du miel et du citron.",
+        "Mes parents me donnaient du miel.",
+        "Ils me donnaient du miel et du citron."
+       ],
+       "options": [
+        "Mes parents m'ont donné du miel et du citron.",
+        "Mes parents me donneront du miel et du citron.",
+        "Mes parents me donnions du miel et du citron."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Voici le sirop. Quand lui donnerez-vous la première dose ?",
+       "en": "Here's the syrup. When will you give her the first dose?"
+      },
+      {
+       "who": "you",
+       "fr": "Nous lui donnerons la première dose ce soir.",
+       "en": "We'll give her the first dose this evening.",
+       "tense": "Futur simple",
+       "person": "nous",
+       "accept": [
+        "Nous lui donnerons la première dose ce soir.",
+        "Nous lui donnerons la première dose.",
+        "Mon mari et moi, nous lui donnerons la première dose ce soir."
+       ],
+       "options": [
+        "Nous lui avons donné la première dose ce soir.",
+        "Nous lui donnions la première dose ce soir.",
+        "Nous lui donnez la première dose ce soir."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien. Si elle avait encore de la fièvre demain, que lui donneriez-vous ?",
+       "en": "Very good. If she still had a fever tomorrow, what would you give her?"
+      },
+      {
+       "who": "you",
+       "fr": "Je lui donnerais du paracétamol avant d'appeler le médecin.",
+       "en": "I'd give her paracetamol before calling the doctor.",
+       "tense": "Conditionnel",
+       "person": "je",
+       "accept": [
+        "Je lui donnerais du paracétamol avant d'appeler le médecin.",
+        "Je lui donnerais du paracétamol.",
+        "Je lui donnerais du paracétamol avant d'appeler le cabinet."
+       ],
+       "options": [
+        "Je lui donne du paracétamol avant d'appeler le médecin.",
+        "Je lui ai donné du paracétamol avant d'appeler le médecin.",
+        "Je lui donnais du paracétamol avant d'appeler le médecin."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Bonne idée. Bon rétablissement à votre fille !",
+       "en": "Good idea. I hope your daughter gets well soon!"
+      }
+     ]
+    }
    },
    {
     "id": "1.5",
@@ -695,126 +1130,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "delay"
      }
     ],
-    "questions": [
+    "verb": "réserver",
+    "quiz": [
      {
-      "fr": "Quelle est la différence entre le TGV et le TER ?",
-      "en": "What's the difference between the TGV and the TER?",
-      "keys": [
-       "vitesse",
-       "longue",
-       "region",
-       "petit"
-      ],
-      "chips": [
-       "grande vitesse",
-       "les longues distances",
-       "les petits trajets",
-       "une région"
-      ],
-      "starter": "Le TGV est un train…",
-      "follow": "Et à quoi sert le TER ?",
-      "followEn": "And what is the TER for?",
-      "model": "Le TGV est un train à grande vitesse pour les longues distances. Le TER est pour les petits trajets dans une région.",
-      "modelEn": "The TGV is a high-speed train for long distances. The TER is for short journeys within a region.",
-      "open": false
+      "tense": "Présent",
+      "en": "We book our TGV tickets in advance.",
+      "answer": "Nous réservons nos billets de TGV à l'avance.",
+      "wrong": [
+       "Nous avons réservé nos billets de TGV à l'avance.",
+       "Nous réserverons nos billets de TGV à l'avance.",
+       "Nous réservions nos billets de TGV à l'avance."
+      ]
      },
      {
-      "fr": "Pourquoi vaudrait-il mieux réserver à l'avance ?",
-      "en": "Why would it be better to book in advance?",
-      "keys": [
-       "prix",
-       "mont",
-       "rempli"
-      ],
-      "chips": [
-       "les prix montent",
-       "le train se remplit",
-       "moins cher"
-      ],
-      "starter": "Parce que les prix…",
-      "follow": "Un billet réservé tôt coûterait-il plus ou moins cher ?",
-      "followEn": "Would a ticket booked early cost more or less?",
-      "model": "Parce que les prix montent quand le train se remplit. Un billet réservé tôt coûterait moins cher.",
-      "modelEn": "Because prices go up as the train fills. A ticket booked early would cost less.",
-      "open": false
+      "tense": "Présent",
+      "en": "Most travellers book their ticket on their phone.",
+      "answer": "La plupart des voyageurs réservent leur billet sur leur téléphone.",
+      "wrong": [
+       "La plupart des voyageurs réserveront leur billet sur leur téléphone.",
+       "La plupart des voyageurs ont réservé leur billet sur leur téléphone.",
+       "La plupart des voyageurs réservaient leur billet sur leur téléphone."
+      ]
      },
      {
-      "fr": "Quand la voie du train est-elle affichée ?",
-      "en": "When is the train's platform shown?",
-      "keys": [
-       "vingt",
-       "20",
-       "minute"
-      ],
-      "chips": [
-       "vingt minutes",
-       "avant le départ",
-       "le tableau des départs"
-      ],
-      "starter": "La voie est affichée…",
-      "follow": "Où la voit-on ?",
-      "followEn": "Where do you see it?",
-      "model": "La voie est souvent affichée vingt minutes avant le départ. On la voit sur le grand tableau des départs.",
-      "modelEn": "The platform is often shown twenty minutes before departure. You see it on the big departures board.",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you book your tickets online?",
+      "tag": "formal",
+      "answer": "Réservez-vous vos billets en ligne ?",
+      "wrong": [
+       "Avez-vous réservé vos billets en ligne ?",
+       "Réserverez-vous vos billets en ligne ?",
+       "Réserviez-vous vos billets en ligne ?"
+      ]
      },
      {
-      "fr": "Que pourriez-vous demander à un agent ?",
-      "en": "What could you ask a member of staff?",
-      "keys": [
-       "pourriez",
-       "part"
-      ],
-      "chips": [
-       "excusez-moi",
-       "pourriez-vous me dire",
-       "d'où part le train"
-      ],
-      "starter": "Je pourrais demander : « Excusez-moi, pourriez-vous…",
-      "follow": "Et que ferait l'agent ?",
-      "followEn": "And what would the staff member do?",
-      "model": "Je pourrais demander : « Excusez-moi, pourriez-vous me dire d'où part le train pour Lyon ? » L'agent m'indiquerait la voie.",
-      "modelEn": "I could ask: \"Excuse me, could you tell me where the train for Lyon leaves from?\" The staff member would show me the platform.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I booked my ticket yesterday evening.",
+      "answer": "J'ai réservé mon billet hier soir.",
+      "wrong": [
+       "Je suis réservé mon billet hier soir.",
+       "Je réserverai mon billet hier soir.",
+       "Je réservais mon billet hier soir."
+      ]
      },
      {
-      "fr": "Que faut-il faire si le train a beaucoup de retard ?",
-      "en": "What should you do if the train is very late?",
-      "keys": [
-       "billet",
-       "gard",
-       "rembours"
-      ],
-      "chips": [
-       "garder son billet",
-       "remboursé",
-       "en partie"
-      ],
-      "starter": "Il faut garder…",
-      "follow": "Pourquoi ?",
-      "followEn": "Why?",
-      "model": "Il faut garder son billet. On pourrait être remboursé en partie.",
-      "modelEn": "You need to keep your ticket. You could get part of the fare back.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "My brother booked a seat on the TGV to Marseille.",
+      "answer": "Mon frère a réservé une place dans le TGV pour Marseille.",
+      "wrong": [
+       "Mon frère est réservé une place dans le TGV pour Marseille.",
+       "Mon frère réservera une place dans le TGV pour Marseille.",
+       "Mon frère réserve une place dans le TGV pour Marseille."
+      ]
      },
      {
-      "fr": "Et vous ? Si vous aviez une semaine en France, où iriez-vous en train ?",
-      "en": "And you? If you had a week in France, where would you go by train?",
-      "keys": [],
-      "chips": [
-       "si j'avais une semaine",
-       "j'irais à",
-       "en TGV",
-       "je voudrais"
-      ],
-      "starter": "Si j'avais une semaine, j'irais…",
-      "follow": "Qu'y feriez-vous ?",
-      "followEn": "What would you do there?",
-      "model": "Si j'avais une semaine en France, j'irais à Marseille en TGV. Je voudrais voir la mer et visiter le Vieux-Port.",
-      "modelEn": "If I had a week in France, I'd go to Marseille by TGV. I'd like to see the sea and visit the Old Port.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Did you book your seat?",
+      "tag": "informal",
+      "answer": "As-tu réservé ta place ?",
+      "wrong": [
+       "Es-tu réservé ta place ?",
+       "Réserveras-tu ta place ?",
+       "Réservais-tu ta place ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "You will book your return journey on the website.",
+      "tag": "formal",
+      "answer": "Vous réserverez votre retour sur le site.",
+      "wrong": [
+       "Vous avez réservé votre retour sur le site.",
+       "Vous réserviez votre retour sur le site.",
+       "Vous réserveront votre retour sur le site."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "They will book their seats tomorrow.",
+      "answer": "Ils réserveront leurs places demain.",
+      "wrong": [
+       "Ils ont réservé leurs places demain.",
+       "Ils réservaient leurs places demain.",
+       "Ils réserveraient leurs places demain."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When she was a student, she used to book the cheapest seats.",
+      "answer": "Quand elle était étudiante, elle réservait les places les moins chères.",
+      "wrong": [
+       "Quand elle était étudiante, elle a réservé les places les moins chères.",
+       "Quand elle était étudiante, elle réservera les places les moins chères.",
+       "Quand elle était étudiante, elle réserve les places les moins chères."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "You were booking your ticket when the train filled up.",
+      "tag": "informal",
+      "answer": "Tu réservais ton billet quand le train s'est rempli.",
+      "wrong": [
+       "Tu as réservé ton billet quand le train s'est rempli.",
+       "Tu réserveras ton billet quand le train s'est rempli.",
+       "Tu réserves ton billet quand le train s'est rempli."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You go to the ticket office at the Gare de Lyon in Paris to book a trip to Marseille. Cécile is behind the counter.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Que puis-je faire pour vous ?",
+       "en": "Hello! What can I do for you?"
+      },
+      {
+       "who": "you",
+       "fr": "Bonjour, je réserverais volontiers un billet de TGV pour Marseille.",
+       "en": "Hello, I'd be glad to book a TGV ticket to Marseille.",
+       "tense": "Conditionnel",
+       "person": "je",
+       "accept": [
+        "Bonjour, je réserverais volontiers un billet de TGV pour Marseille.",
+        "Je réserverais volontiers un billet de TGV pour Marseille.",
+        "Je réserverais volontiers un billet pour Marseille."
+       ],
+       "options": [
+        "Bonjour, je réserve volontiers un billet de TGV pour Marseille.",
+        "Bonjour, j'ai réservé volontiers un billet de TGV pour Marseille.",
+        "Bonjour, je réservions volontiers un billet de TGV pour Marseille."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien. Avez-vous déjà réservé votre retour ?",
+       "en": "Very good. Have you already booked your return?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, mon frère a réservé le retour hier.",
+       "en": "Yes, my brother booked the return yesterday.",
+       "tense": "Passé composé",
+       "person": "il",
+       "accept": [
+        "Oui, mon frère a réservé le retour hier.",
+        "Mon frère a réservé le retour hier.",
+        "Oui, mon frère l'a réservé hier."
+       ],
+       "options": [
+        "Oui, mon frère réserve le retour hier.",
+        "Oui, mon frère réservera le retour hier.",
+        "Oui, mon frère réservait le retour hier."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait. Les prix montent vite : pour le prochain voyage, réserverez-vous plus tôt ?",
+       "en": "Perfect. Prices go up quickly: for your next trip, will you book earlier?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, nous réserverons nos billets un mois à l'avance.",
+       "en": "Yes, we'll book our tickets a month in advance.",
+       "tense": "Futur simple",
+       "person": "nous",
+       "accept": [
+        "Oui, nous réserverons nos billets un mois à l'avance.",
+        "Nous réserverons nos billets un mois à l'avance.",
+        "Oui, nous réserverons un mois à l'avance."
+       ],
+       "options": [
+        "Oui, nous avons réservé nos billets un mois à l'avance.",
+        "Oui, nous réservions nos billets un mois à l'avance.",
+        "Oui, nous réservez nos billets un mois à l'avance."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Quand vous étiez plus jeune, réserviez-vous aussi à l'avance ?",
+       "en": "When you were younger, did you book in advance too?"
+      },
+      {
+       "who": "you",
+       "fr": "Non, je réservais toujours au dernier moment.",
+       "en": "No, I always used to book at the last minute.",
+       "tense": "Imparfait",
+       "person": "je",
+       "accept": [
+        "Non, je réservais toujours au dernier moment.",
+        "Je réservais toujours au dernier moment.",
+        "Non, je réservais au dernier moment."
+       ],
+       "options": [
+        "Non, je réserve toujours au dernier moment.",
+        "Non, je réserverai toujours au dernier moment.",
+        "Non, je réservions toujours au dernier moment."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Le TGV se remplit vite ! Vos amis réservent-ils aussi leurs billets aujourd'hui ?",
+       "en": "The TGV is filling up fast! Are your friends booking their tickets today too?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, ils réservent leurs billets en ce moment.",
+       "en": "Yes, they're booking their tickets right now.",
+       "tense": "Présent",
+       "person": "ils",
+       "accept": [
+        "Oui, ils réservent leurs billets en ce moment.",
+        "Ils réservent leurs billets en ce moment.",
+        "Oui, ils les réservent en ce moment."
+       ],
+       "options": [
+        "Oui, ils réserveront leurs billets en ce moment.",
+        "Oui, ils ont réservé leurs billets en ce moment.",
+        "Oui, ils réservaient leurs billets en ce moment."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Alors dites-leur de se dépêcher ! Bon voyage à Marseille !",
+       "en": "Then tell them to hurry! Have a good trip to Marseille!"
+      }
+     ]
+    }
    },
    {
     "id": "1.6",
@@ -858,118 +1400,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "kiss on the cheek (greeting)"
      }
     ],
-    "questions": [
+    "verb": "aider",
+    "quiz": [
      {
-      "fr": "Quel est le premier mot de la politesse en France ?",
-      "en": "What is the first word of politeness in France?",
-      "keys": [
-       "bonjour"
-      ],
-      "chips": [
-       "bonjour",
-       "une boutique",
-       "un ascenseur"
-      ],
-      "starter": "Le premier mot, c'est…",
-      "follow": "Où le dit-on ?",
-      "followEn": "Where do you say it?",
-      "model": "Le premier mot, c'est « Bonjour ». On le dit quand on entre dans une boutique ou même dans un ascenseur.",
-      "modelEn": "The first word is \"Bonjour\". You say it when you go into a shop or even into a lift.",
-      "open": false
+      "tense": "Présent",
+      "en": "I'm helping the elderly lady carry her bags.",
+      "answer": "J'aide la dame âgée à porter ses sacs.",
+      "wrong": [
+       "J'ai aidé la dame âgée à porter ses sacs.",
+       "J'aiderai la dame âgée à porter ses sacs.",
+       "J'aidais la dame âgée à porter ses sacs."
+      ]
      },
      {
-      "fr": "Que pourrait penser la personne si vous oubliiez de dire bonjour ?",
-      "en": "What could the person think if you forgot to say hello?",
-      "keys": [
-       "impoli"
-      ],
-      "chips": [
-       "elle pourrait",
-       "me trouver impoli",
-       "même si je souriais"
-      ],
-      "starter": "Elle pourrait me trouver…",
-      "follow": "Et si vous souriiez, serait-ce différent ?",
-      "followEn": "And if you smiled, would it be different?",
-      "model": "Elle pourrait me trouver impoli. Même si je souriais, ce ne serait pas poli.",
-      "modelEn": "They could find me rude. Even if I smiled, it wouldn't be polite.",
-      "open": false
+      "tense": "Présent",
+      "en": "We help the customers in the shop.",
+      "answer": "Nous aidons les clients dans la boutique.",
+      "wrong": [
+       "Nous avons aidé les clients dans la boutique.",
+       "Nous aiderons les clients dans la boutique.",
+       "Nous aidions les clients dans la boutique."
+      ]
      },
      {
-      "fr": "Avec qui dit-on « vous » ?",
-      "en": "Who do you say \"vous\" to?",
-      "keys": [
-       "inconnu",
-       "client",
-       "age"
-      ],
-      "chips": [
-       "un inconnu",
-       "un client",
-       "une personne plus âgée"
-      ],
-      "starter": "On dit « vous » avec…",
-      "follow": "Et avec qui dit-on « tu » ?",
-      "followEn": "And who do you say \"tu\" to?",
-      "model": "On dit « vous » avec un inconnu, un client ou une personne plus âgée. Avec les amis, on dit « tu ».",
-      "modelEn": "You say \"vous\" to a stranger, a customer or an older person. With friends, you say \"tu\".",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you help your neighbours?",
+      "tag": "formal",
+      "answer": "Aidez-vous vos voisins ?",
+      "wrong": [
+       "Avez-vous aidé vos voisins ?",
+       "Aiderez-vous vos voisins ?",
+       "Aidiez-vous vos voisins ?"
+      ]
      },
      {
-      "fr": "Pourquoi « Je voudrais » est-il plus poli que « Je veux » ?",
-      "en": "Why is \"Je voudrais\" more polite than \"Je veux\"?",
-      "keys": [
-       "doux",
-       "conditionnel"
-      ],
-      "chips": [
-       "le conditionnel",
-       "plus doux",
-       "trop direct"
-      ],
-      "starter": "Parce que le conditionnel…",
-      "follow": "Pourriez-vous donner un autre exemple ?",
-      "followEn": "Could you give another example?",
-      "model": "Parce que le conditionnel est plus doux. « Pourriez-vous m'aider ? » est aussi plus aimable que « Aidez-moi ! ».",
-      "modelEn": "Because the conditional is softer. \"Could you help me?\" is also friendlier than \"Help me!\".",
-      "open": false
+      "tense": "Passé composé",
+      "en": "Did you help the old man in the lift?",
+      "tag": "informal",
+      "answer": "As-tu aidé le vieux monsieur dans l'ascenseur ?",
+      "wrong": [
+       "Es-tu aidé le vieux monsieur dans l'ascenseur ?",
+       "Aideras-tu le vieux monsieur dans l'ascenseur ?",
+       "Aidais-tu le vieux monsieur dans l'ascenseur ?"
+      ]
      },
      {
-      "fr": "Que veut dire « faire la bise » ?",
-      "en": "What does \"faire la bise\" mean?",
-      "keys": [
-       "baiser",
-       "joue"
-      ],
-      "chips": [
-       "un petit baiser",
-       "sur chaque joue",
-       "entre amis"
-      ],
-      "starter": "La bise, c'est…",
-      "follow": "Le nombre de bises est-il toujours le même ?",
-      "followEn": "Is the number of kisses always the same?",
-      "model": "La bise, c'est un petit baiser sur chaque joue. Le nombre de bises change selon les régions.",
-      "modelEn": "La bise is a little kiss on each cheek. The number of kisses changes from region to region.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "The children helped their grandmother this morning.",
+      "answer": "Les enfants ont aidé leur grand-mère ce matin.",
+      "wrong": [
+       "Les enfants sont aidés leur grand-mère ce matin.",
+       "Les enfants aideront leur grand-mère ce matin.",
+       "Les enfants aident leur grand-mère ce matin."
+      ]
      },
      {
-      "fr": "Et vous ? Dans votre pays, ferait-on la bise à un nouveau collègue ?",
-      "en": "And you? In your country, would people kiss a new colleague on the cheek?",
-      "keys": [],
-      "chips": [
-       "dans mon pays",
-       "on ne ferait pas",
-       "on se serrerait la main"
-      ],
-      "starter": "Dans mon pays, on…",
-      "follow": "Que ferait-on à la place ?",
-      "followEn": "What would people do instead?",
-      "model": "Non, dans mon pays, on ne ferait pas la bise à un nouveau collègue. On se serrerait la main.",
-      "modelEn": "No, in my country people wouldn't kiss a new colleague. They'd shake hands.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "The baker helped my son yesterday.",
+      "answer": "La boulangère a aidé mon fils hier.",
+      "wrong": [
+       "La boulangère est aidée mon fils hier.",
+       "La boulangère aidera mon fils hier.",
+       "La boulangère aide mon fils hier."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "I will help you choose, madam.",
+      "answer": "Je vous aiderai à choisir, madame.",
+      "wrong": [
+       "Je vous ai aidée à choisir, madame.",
+       "Je vous aidais à choisir, madame.",
+       "Je vous aideront à choisir, madame."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "Our neighbours will help us on Saturday.",
+      "answer": "Nos voisins nous aideront samedi.",
+      "wrong": [
+       "Nos voisins nous ont aidés samedi.",
+       "Nos voisins nous aidaient samedi.",
+       "Nos voisins nous aideraient samedi."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When you worked in the shop, you used to help the older customers.",
+      "tag": "formal",
+      "answer": "Quand vous travailliez à la boutique, vous aidiez les clients plus âgés.",
+      "wrong": [
+       "Quand vous travailliez à la boutique, vous avez aidé les clients plus âgés.",
+       "Quand vous travailliez à la boutique, vous aiderez les clients plus âgés.",
+       "Quand vous travailliez à la boutique, vous aidez les clients plus âgés."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "He was helping a stranger when I came into the bakery.",
+      "answer": "Il aidait un inconnu quand je suis entré dans la boulangerie.",
+      "wrong": [
+       "Il a aidé un inconnu quand je suis entré dans la boulangerie.",
+       "Il aidera un inconnu quand je suis entré dans la boulangerie.",
+       "Il aide un inconnu quand je suis entré dans la boulangerie."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You walk into a small gift shop in Paris, remembering to say « Bonjour ». Cécile, the shop assistant, greets you.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Puis-je vous renseigner ?",
+       "en": "Hello! Can I help you?"
+      },
+      {
+       "who": "you",
+       "fr": "Bonjour, oui, vous m'aideriez beaucoup : je cherche un cadeau pour ma grand-mère.",
+       "en": "Hello, yes, you'd help me a lot: I'm looking for a present for my grandmother.",
+       "tense": "Conditionnel",
+       "person": "vous",
+       "accept": [
+        "Bonjour, oui, vous m'aideriez beaucoup : je cherche un cadeau pour ma grand-mère.",
+        "Vous m'aideriez beaucoup : je cherche un cadeau pour ma grand-mère.",
+        "Oui, vous m'aideriez beaucoup."
+       ],
+       "options": [
+        "Bonjour, oui, vous m'aidez beaucoup : je cherche un cadeau pour ma grand-mère.",
+        "Bonjour, oui, vous m'avez beaucoup aidé : je cherche un cadeau pour ma grand-mère.",
+        "Bonjour, oui, vous m'aidiez beaucoup : je cherche un cadeau pour ma grand-mère."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Avec plaisir ! Pourquoi lui offrez-vous un cadeau ?",
+       "en": "With pleasure! Why are you giving her a present?"
+      },
+      {
+       "who": "you",
+       "fr": "Parce qu'elle m'a aidé à déménager le mois dernier.",
+       "en": "Because she helped me move last month.",
+       "tense": "Passé composé",
+       "person": "elle",
+       "accept": [
+        "Parce qu'elle m'a aidé à déménager le mois dernier.",
+        "Elle m'a aidé à déménager le mois dernier.",
+        "Parce qu'elle m'a aidé à déménager.",
+        "Parce qu'elle m'a aidée à déménager le mois dernier."
+       ],
+       "options": [
+        "Parce qu'elle m'aide à déménager le mois dernier.",
+        "Parce qu'elle m'aidera à déménager le mois dernier.",
+        "Parce qu'elle m'aidait à déménager le mois dernier."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Quelle gentillesse ! Et vous, l'aiderez-vous dans son jardin cet été ?",
+       "en": "How kind! And you, will you help her in her garden this summer?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, je l'aiderai dans son jardin cet été.",
+       "en": "Yes, I'll help her in her garden this summer.",
+       "tense": "Futur simple",
+       "person": "je",
+       "accept": [
+        "Oui, je l'aiderai dans son jardin cet été.",
+        "Je l'aiderai dans son jardin cet été.",
+        "Oui, je l'aiderai cet été."
+       ],
+       "options": [
+        "Oui, je l'ai aidée dans son jardin cet été.",
+        "Oui, je l'aidais dans son jardin cet été.",
+        "Oui, je l'aidions dans son jardin cet été."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Quand vous étiez enfant, aidiez-vous aussi vos grands-parents ?",
+       "en": "When you were a child, did you help your grandparents too?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, mon frère et moi, nous les aidions chaque dimanche.",
+       "en": "Yes, my brother and I used to help them every Sunday.",
+       "tense": "Imparfait",
+       "person": "nous",
+       "accept": [
+        "Oui, mon frère et moi, nous les aidions chaque dimanche.",
+        "Nous les aidions chaque dimanche.",
+        "Oui, nous les aidions tous les dimanches."
+       ],
+       "options": [
+        "Oui, mon frère et moi, nous les avons aidés chaque dimanche.",
+        "Oui, mon frère et moi, nous les aiderons chaque dimanche.",
+        "Oui, mon frère et moi, nous les aidez chaque dimanche."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "C'est très bien ! Et aujourd'hui, d'autres membres de la famille les aident-ils ?",
+       "en": "That's lovely! And nowadays, do other family members help them?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, mes neveux les aident souvent.",
+       "en": "Yes, my nephews often help them.",
+       "tense": "Présent",
+       "person": "ils",
+       "accept": [
+        "Oui, mes neveux les aident souvent.",
+        "Mes neveux les aident souvent.",
+        "Oui, ils les aident souvent."
+       ],
+       "options": [
+        "Oui, mes neveux les aideront souvent.",
+        "Oui, mes neveux les ont souvent aidés.",
+        "Oui, mes neveux les aidaient souvent."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Quelle famille attentionnée ! Ce joli foulard lui plairait-il ?",
+       "en": "What a thoughtful family! Would this pretty scarf please her?"
+      }
+     ]
+    }
    },
    {
     "id": "1.7",
@@ -1013,122 +1670,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "basket"
      }
     ],
-    "questions": [
+    "verb": "servir",
+    "quiz": [
      {
-      "fr": "Que trouve-t-on au marché ?",
-      "en": "What do you find at the market?",
-      "keys": [
-       "fruit",
-       "legume",
-       "fromage",
-       "poisson",
-       "fleur"
-      ],
-      "chips": [
-       "des fruits et des légumes",
-       "de saison",
-       "du fromage",
-       "du poisson"
-      ],
-      "starter": "Au marché, on trouve…",
-      "follow": "Que trouve-t-on souvent en plus ?",
-      "followEn": "What else do you often find?",
-      "model": "On trouve des fruits et des légumes de saison, du fromage et du poisson. On y trouve souvent des fleurs aussi.",
-      "modelEn": "You find seasonal fruit and vegetables, cheese and fish. You often find flowers there too.",
-      "open": false
+      "tense": "Présent",
+      "en": "The stallholder serves the customers one by one.",
+      "answer": "Le marchand sert les clients un par un.",
+      "wrong": [
+       "Le marchand a servi les clients un par un.",
+       "Le marchand servira les clients un par un.",
+       "Le marchand servait les clients un par un."
+      ]
      },
      {
-      "fr": "Prend-on toujours les fruits soi-même ?",
-      "en": "Do you always pick the fruit yourself?",
-      "keys": [
-       "marchand",
-       "sert"
-      ],
-      "chips": [
-       "non",
-       "le marchand",
-       "qui nous sert"
-      ],
-      "starter": "Non, on…",
-      "follow": "Que pourriez-vous dire au marchand ?",
-      "followEn": "What could you say to the stallholder?",
-      "model": "Non, c'est souvent le marchand qui nous sert. Je dirais : « Je voudrais un kilo de tomates, s'il vous plaît. »",
-      "modelEn": "No, it's often the stallholder who serves you. I'd say: \"I'd like a kilo of tomatoes, please.\"",
-      "open": false
+      "tense": "Présent",
+      "en": "We serve local cheese on our stall.",
+      "answer": "Nous servons des fromages de la région sur notre stand.",
+      "wrong": [
+       "Nous avons servi des fromages de la région sur notre stand.",
+       "Nous servirons des fromages de la région sur notre stand.",
+       "Nous servions des fromages de la région sur notre stand."
+      ]
      },
      {
-      "fr": "Pourquoi les marchands vous font-ils goûter leurs produits ?",
-      "en": "Why do the stallholders let you taste their produce?",
-      "keys": [
-       "fier",
-       "region",
-       "bon"
-      ],
-      "chips": [
-       "ils sont fiers",
-       "de la région",
-       "leurs produits"
-      ],
-      "starter": "Parce qu'ils sont…",
-      "follow": "D'où viennent ces produits ?",
-      "followEn": "Where does that produce come from?",
-      "model": "Parce qu'ils sont fiers de leurs produits. Les produits viennent souvent de la région.",
-      "modelEn": "Because they're proud of their produce. The produce often comes from the region.",
-      "open": false
+      "tense": "Présent",
+      "en": "Are you serving this lady?",
+      "tag": "formal",
+      "answer": "Servez-vous cette dame ?",
+      "wrong": [
+       "Avez-vous servi cette dame ?",
+       "Servirez-vous cette dame ?",
+       "Serviez-vous cette dame ?"
+      ]
      },
      {
-      "fr": "Que pourriez-vous demander si vous ne saviez pas quoi cuisiner ?",
-      "en": "What could you ask if you didn't know what to cook?",
-      "keys": [
-       "conseil"
-      ],
-      "chips": [
-       "demander conseil",
-       "que me conseilleriez-vous",
-       "pour ce soir"
-      ],
-      "starter": "Je pourrais demander conseil…",
-      "follow": "Que diriez-vous exactement ?",
-      "followEn": "What exactly would you say?",
-      "model": "Je pourrais demander conseil au marchand. Je dirais : « Que me conseilleriez-vous pour ce soir ? »",
-      "modelEn": "I could ask for advice. I'd say: \"What would you recommend for tonight?\"",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I served thirty customers this morning.",
+      "answer": "J'ai servi trente clients ce matin.",
+      "wrong": [
+       "Je suis servi trente clients ce matin.",
+       "Je servirai trente clients ce matin.",
+       "Je servais trente clients ce matin."
+      ]
      },
      {
-      "fr": "Quand faudrait-il venir pour faire de bonnes affaires ?",
-      "en": "When would you need to come to get bargains?",
-      "keys": [
-       "fin"
-      ],
-      "chips": [
-       "à la fin du marché",
-       "baissent leurs prix",
-       "avant de partir"
-      ],
-      "starter": "Il faudrait venir…",
-      "follow": "Pourquoi ?",
-      "followEn": "Why?",
-      "model": "Il faudrait venir à la fin du marché. Certains marchands baissent leurs prix avant de partir.",
-      "modelEn": "You'd need to come at the end of the market. Some stallholders lower their prices before leaving.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "The cheese seller served my mother before me.",
+      "answer": "La fromagère a servi ma mère avant moi.",
+      "wrong": [
+       "La fromagère est servie ma mère avant moi.",
+       "La fromagère servira ma mère avant moi.",
+       "La fromagère sert ma mère avant moi."
+      ]
      },
      {
-      "fr": "Et vous ? Qu'achèteriez-vous au marché pour un repas entre amis ?",
-      "en": "And you? What would you buy at the market for a meal with friends?",
-      "keys": [],
-      "chips": [
-       "j'achèterais",
-       "des légumes de saison",
-       "je ferais"
-      ],
-      "starter": "J'achèterais…",
-      "follow": "Que cuisineriez-vous ?",
-      "followEn": "What would you cook?",
-      "model": "J'achèterais des légumes de saison et du fromage. Je ferais une grande salade pour mes amis.",
-      "modelEn": "I'd buy seasonal vegetables and cheese. I'd make a big salad for my friends.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Did you serve the man with the basket?",
+      "tag": "informal",
+      "answer": "As-tu servi le monsieur avec le panier ?",
+      "wrong": [
+       "Es-tu servi le monsieur avec le panier ?",
+       "Serviras-tu le monsieur avec le panier ?",
+       "Servais-tu le monsieur avec le panier ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "I'll serve you in five minutes, madam.",
+      "answer": "Je vous servirai dans cinq minutes, madame.",
+      "wrong": [
+       "Je vous ai servie dans cinq minutes, madame.",
+       "Je vous servais dans cinq minutes, madame.",
+       "Je vous serviront dans cinq minutes, madame."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "The stallholders will serve soup at the end of the market.",
+      "answer": "Les marchands serviront de la soupe à la fin du marché.",
+      "wrong": [
+       "Les marchands ont servi de la soupe à la fin du marché.",
+       "Les marchands servaient de la soupe à la fin du marché.",
+       "Les marchands serviraient de la soupe à la fin du marché."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When you had a stall, you used to serve the best tomatoes in town.",
+      "tag": "formal",
+      "answer": "Quand vous aviez un stand, vous serviez les meilleures tomates de la ville.",
+      "wrong": [
+       "Quand vous aviez un stand, vous avez servi les meilleures tomates de la ville.",
+       "Quand vous aviez un stand, vous servirez les meilleures tomates de la ville.",
+       "Quand vous aviez un stand, vous servez les meilleures tomates de la ville."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "You were serving a customer when I arrived.",
+      "tag": "informal",
+      "answer": "Tu servais une cliente quand je suis arrivé.",
+      "wrong": [
+       "Tu as servi une cliente quand je suis arrivé.",
+       "Tu serviras une cliente quand je suis arrivé.",
+       "Tu sers une cliente quand je suis arrivé."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "It's Saturday morning at the market and there's a queue at Cécile's fruit and vegetable stall. At last it's your turn.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Vous a-t-on déjà servi ?",
+       "en": "Hello! Have you been served yet?"
+      },
+      {
+       "who": "you",
+       "fr": "Non, votre collègue a servi trois clients avant moi.",
+       "en": "No, your colleague served three customers before me.",
+       "tense": "Passé composé",
+       "person": "il",
+       "accept": [
+        "Non, votre collègue a servi trois clients avant moi.",
+        "Votre collègue a servi trois clients avant moi.",
+        "Non, votre collègue a servi trois clients."
+       ],
+       "options": [
+        "Non, votre collègue sert trois clients avant moi.",
+        "Non, votre collègue servira trois clients avant moi.",
+        "Non, votre collègue servait trois clients avant moi."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Désolée pour l'attente ! Recevez-vous des amis ce soir ? Si vous preniez mes tomates, que leur serviriez-vous ?",
+       "en": "Sorry for the wait! Are you having friends round tonight? If you took my tomatoes, what would you serve them?"
+      },
+      {
+       "who": "you",
+       "fr": "Je leur servirais une salade de tomates.",
+       "en": "I'd serve them a tomato salad.",
+       "tense": "Conditionnel",
+       "person": "je",
+       "accept": [
+        "Je leur servirais une salade de tomates.",
+        "Oui, je leur servirais une salade de tomates.",
+        "Je leur servirais une grande salade de tomates."
+       ],
+       "options": [
+        "Je leur sers une salade de tomates.",
+        "Je leur ai servi une salade de tomates.",
+        "Je leur servions une salade de tomates."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Excellente idée, mes tomates sont parfaites ! Et le dessert, qui le servira ?",
+       "en": "Excellent idea, my tomatoes are perfect! And the dessert, who'll serve it?"
+      },
+      {
+       "who": "you",
+       "fr": "Mes amis serviront le dessert.",
+       "en": "My friends will serve the dessert.",
+       "tense": "Futur simple",
+       "person": "ils",
+       "accept": [
+        "Mes amis serviront le dessert.",
+        "Mes amis le serviront.",
+        "Ce sont mes amis qui serviront le dessert."
+       ],
+       "options": [
+        "Mes amis ont servi le dessert.",
+        "Mes amis servaient le dessert.",
+        "Mes amis serviraient le dessert."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait ! Quand vous étiez enfant, votre mère servait-elle des produits du marché ?",
+       "en": "Perfect! When you were a child, did your mother serve produce from the market?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, elle servait toujours des légumes de saison.",
+       "en": "Yes, she always used to serve seasonal vegetables.",
+       "tense": "Imparfait",
+       "person": "elle",
+       "accept": [
+        "Oui, elle servait toujours des légumes de saison.",
+        "Elle servait toujours des légumes de saison.",
+        "Oui, elle servait des légumes de saison."
+       ],
+       "options": [
+        "Oui, elle sert toujours des légumes de saison.",
+        "Oui, elle servira toujours des légumes de saison.",
+        "Oui, elle servions toujours des légumes de saison."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Et aujourd'hui, chez vous, servez-vous souvent des produits du marché ?",
+       "en": "And nowadays, at home, do you often serve produce from the market?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, nous servons des légumes du marché chaque semaine.",
+       "en": "Yes, we serve vegetables from the market every week.",
+       "tense": "Présent",
+       "person": "nous",
+       "accept": [
+        "Oui, nous servons des légumes du marché chaque semaine.",
+        "Nous servons des légumes du marché chaque semaine.",
+        "Oui, nous en servons chaque semaine."
+       ],
+       "options": [
+        "Oui, nous servirons des légumes du marché chaque semaine.",
+        "Oui, nous avons servi des légumes du marché chaque semaine.",
+        "Oui, nous servions des légumes du marché chaque semaine."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Alors voilà vos tomates, bien mûres. Et n'oubliez pas votre panier !",
+       "en": "Here are your tomatoes, nice and ripe. And don't forget your basket!"
+      }
+     ]
+    }
    },
    {
     "id": "1.8",
@@ -1172,124 +1940,233 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "form"
      }
     ],
-    "questions": [
+    "verb": "apporter",
+    "quiz": [
      {
-      "fr": "Que veut dire « mairie » ?",
-      "en": "What does \"mairie\" mean?",
-      "keys": [
-       "batiment",
-       "maire",
-       "ville",
-       "service"
-      ],
-      "chips": [
-       "le bâtiment",
-       "le maire",
-       "les services de la ville"
-      ],
-      "starter": "C'est le bâtiment où…",
-      "follow": "Pourquoi y va-t-on ?",
-      "followEn": "Why do you go there?",
-      "model": "C'est le bâtiment où travaillent le maire et les services de la ville. On y va pour beaucoup de démarches.",
-      "modelEn": "It's the building where the mayor and the town's services work. You go there for lots of formalities.",
-      "open": false
+      "tense": "Présent",
+      "en": "I'm bringing all my documents to the town hall.",
+      "answer": "J'apporte tous mes documents à la mairie.",
+      "wrong": [
+       "J'ai apporté tous mes documents à la mairie.",
+       "J'apporterai tous mes documents à la mairie.",
+       "J'apportais tous mes documents à la mairie."
+      ]
      },
      {
-      "fr": "Que peut-on faire à la mairie ?",
-      "en": "What can you do at the town hall?",
-      "keys": [
-       "mari",
-       "naissance",
-       "inscri",
-       "liste"
-      ],
-      "chips": [
-       "se marier",
-       "déclarer une naissance",
-       "s'inscrire"
-      ],
-      "starter": "À la mairie, on peut…",
-      "follow": "Que peut-on faire d'autre ?",
-      "followEn": "What else can you do?",
-      "model": "À la mairie, on peut se marier ou déclarer la naissance d'un enfant. On peut aussi s'inscrire sur les listes électorales.",
-      "modelEn": "At the town hall you can get married or register a child's birth. You can also put yourself on the electoral roll.",
-      "open": false
+      "tense": "Présent",
+      "en": "Lots of people bring too many documents.",
+      "answer": "Beaucoup de gens apportent trop de documents.",
+      "wrong": [
+       "Beaucoup de gens apporteront trop de documents.",
+       "Beaucoup de gens ont apporté trop de documents.",
+       "Beaucoup de gens apportaient trop de documents."
+      ]
      },
      {
-      "fr": "Que faudrait-il vérifier avant d'y aller ?",
-      "en": "What would you need to check before going?",
-      "keys": [
-       "document",
-       "site"
-      ],
-      "chips": [
-       "les documents",
-       "le site de la mairie",
-       "trop que pas assez"
-      ],
-      "starter": "Il faudrait vérifier…",
-      "follow": "Vaudrait-il mieux en apporter trop ou pas assez ?",
-      "followEn": "Would it be better to bring too many or not enough?",
-      "model": "Il faudrait vérifier sur le site de la mairie les documents à apporter. Il vaudrait mieux en apporter trop que pas assez.",
-      "modelEn": "You'd need to check on the town hall's website which documents to bring. It would be better to bring too many than not enough.",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you always bring photocopies to the counter?",
+      "tag": "formal",
+      "answer": "Apportez-vous toujours des photocopies au guichet ?",
+      "wrong": [
+       "Avez-vous toujours apporté des photocopies au guichet ?",
+       "Apporterez-vous toujours des photocopies au guichet ?",
+       "Apportons-nous toujours des photocopies au guichet ?"
+      ]
      },
      {
-      "fr": "Comment demanderiez-vous un formulaire pour inscrire votre fils à l'école ?",
-      "en": "How would you ask for a form to enrol your son at school?",
-      "keys": [
-       "voudrais",
-       "auriez",
-       "inscri"
-      ],
-      "chips": [
-       "je voudrais",
-       "inscrire mon fils",
-       "auriez-vous un formulaire"
-      ],
-      "starter": "Je dirais : « Bonjour madame, je voudrais…",
-      "follow": "Que demanderiez-vous ensuite ?",
-      "followEn": "What would you ask next?",
-      "model": "Je dirais : « Bonjour madame, je voudrais inscrire mon fils à l'école. » Puis je demanderais : « Auriez-vous un formulaire ? »",
-      "modelEn": "I'd say: \"Hello, I'd like to enrol my son at school.\" Then I'd ask: \"Would you have a form?\"",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I brought my passport this morning.",
+      "answer": "J'ai apporté mon passeport ce matin.",
+      "wrong": [
+       "Je suis apporté mon passeport ce matin.",
+       "J'apporterai mon passeport ce matin.",
+       "J'apportais mon passeport ce matin."
+      ]
      },
      {
-      "fr": "Que se passe-t-il si un document manque ?",
-      "en": "What happens if a document is missing?",
-      "keys": [
-       "reven"
-      ],
-      "chips": [
-       "on me demandera",
-       "de revenir",
-       "vérifier la liste"
-      ],
-      "starter": "On me demandera…",
-      "follow": "Que faudrait-il faire pour éviter ça ?",
-      "followEn": "What would you need to do to avoid that?",
-      "model": "On me demandera de revenir. Pour éviter ça, il faudrait vérifier la liste des documents avant d'y aller.",
-      "modelEn": "I'll be asked to come back. To avoid that, I'd need to check the list of documents before going.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "My husband brought the form yesterday.",
+      "answer": "Mon mari a apporté le formulaire hier.",
+      "wrong": [
+       "Mon mari est apporté le formulaire hier.",
+       "Mon mari apportera le formulaire hier.",
+       "Mon mari apporte le formulaire hier."
+      ]
      },
      {
-      "fr": "Et vous ? L'administration de votre pays est-elle plus simple qu'en France ?",
-      "en": "And you? Is the bureaucracy in your country simpler than in France?",
-      "keys": [],
-      "chips": [
-       "dans mon pays",
-       "plus simple",
-       "je changerais",
-       "je voudrais"
-      ],
-      "starter": "Dans mon pays, l'administration est…",
-      "follow": "Que changeriez-vous ?",
-      "followEn": "What would you change?",
-      "model": "Oui, je pense que l'administration de mon pays est plus simple. Mais je voudrais plus de démarches en ligne.",
-      "modelEn": "Yes, I think the bureaucracy in my country is simpler. But I'd like more formalities online.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Did you bring the photocopies?",
+      "tag": "informal",
+      "answer": "As-tu apporté les photocopies ?",
+      "wrong": [
+       "Es-tu apporté les photocopies ?",
+       "Apporteras-tu les photocopies ?",
+       "Apportais-tu les photocopies ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "You will bring your son's birth certificate.",
+      "tag": "formal",
+      "answer": "Vous apporterez l'acte de naissance de votre fils.",
+      "wrong": [
+       "Vous avez apporté l'acte de naissance de votre fils.",
+       "Vous apportiez l'acte de naissance de votre fils.",
+       "Vous apporteront l'acte de naissance de votre fils."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "We will bring the file next Monday.",
+      "answer": "Nous apporterons le dossier lundi prochain.",
+      "wrong": [
+       "Nous avons apporté le dossier lundi prochain.",
+       "Nous apportions le dossier lundi prochain.",
+       "Nous apporterez le dossier lundi prochain."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "Before the internet, people used to bring every form to the town hall.",
+      "answer": "Avant Internet, les gens apportaient chaque formulaire à la mairie.",
+      "wrong": [
+       "Avant Internet, les gens ont apporté chaque formulaire à la mairie.",
+       "Avant Internet, les gens apporteront chaque formulaire à la mairie.",
+       "Avant Internet, les gens apportent chaque formulaire à la mairie."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "I was bringing my file to the counter when the clerk called me.",
+      "answer": "J'apportais mon dossier au guichet quand l'employée m'a appelé.",
+      "wrong": [
+       "J'ai apporté mon dossier au guichet quand l'employée m'a appelé.",
+       "J'apporterai mon dossier au guichet quand l'employée m'a appelé.",
+       "J'apporte mon dossier au guichet quand l'employée m'a appelé."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You're at the town hall counter to enrol your son at school. Cécile works at the counter.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Que puis-je faire pour vous ?",
+       "en": "Hello! What can I do for you?"
+      },
+      {
+       "who": "you",
+       "fr": "Bonjour, j'apporte le formulaire pour l'inscription de mon fils.",
+       "en": "Hello, I'm bringing the form for my son's enrolment.",
+       "tense": "Présent",
+       "person": "je",
+       "accept": [
+        "Bonjour, j'apporte le formulaire pour l'inscription de mon fils.",
+        "J'apporte le formulaire pour l'inscription de mon fils.",
+        "Bonjour, j'apporte le formulaire pour mon fils."
+       ],
+       "options": [
+        "Bonjour, j'apporterai le formulaire pour l'inscription de mon fils.",
+        "Bonjour, j'apportais le formulaire pour l'inscription de mon fils.",
+        "Bonjour, j'apportons le formulaire pour l'inscription de mon fils."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien. Avez-vous apporté un justificatif de domicile ?",
+       "en": "Very good. Have you brought a proof of address?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, j'ai apporté deux photocopies de mon justificatif de domicile.",
+       "en": "Yes, I've brought two photocopies of my proof of address.",
+       "tense": "Passé composé",
+       "person": "je",
+       "accept": [
+        "Oui, j'ai apporté deux photocopies de mon justificatif de domicile.",
+        "J'ai apporté deux photocopies de mon justificatif de domicile.",
+        "Oui, j'ai apporté deux photocopies."
+       ],
+       "options": [
+        "Oui, j'apporte deux photocopies de mon justificatif de domicile.",
+        "Oui, j'apporterai deux photocopies de mon justificatif de domicile.",
+        "Oui, j'apportais deux photocopies de mon justificatif de domicile."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait. Mais il manque le carnet de vaccination. Qui l'apportera ?",
+       "en": "Perfect. But the vaccination record is missing. Who will bring it?"
+      },
+      {
+       "who": "you",
+       "fr": "Ma sœur l'apportera demain matin.",
+       "en": "My sister will bring it tomorrow morning.",
+       "tense": "Futur simple",
+       "person": "elle",
+       "accept": [
+        "Ma sœur l'apportera demain matin.",
+        "Ma sœur l'apportera demain.",
+        "Ma sœur apportera le carnet demain matin."
+       ],
+       "options": [
+        "Ma sœur l'a apporté demain matin.",
+        "Ma sœur l'apportait demain matin.",
+        "Ma sœur l'apporteront demain matin."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "D'accord. Dans votre pays, apportiez-vous autant de papiers pour l'école ?",
+       "en": "All right. In your country, did you use to bring as many papers for school?"
+      },
+      {
+       "who": "you",
+       "fr": "Non, nous n'apportions qu'un formulaire.",
+       "en": "No, we only used to bring one form.",
+       "tense": "Imparfait",
+       "person": "nous",
+       "accept": [
+        "Non, nous n'apportions qu'un formulaire.",
+        "Nous n'apportions qu'un formulaire.",
+        "Non, nous apportions seulement un formulaire.",
+        "Nous apportions seulement un formulaire."
+       ],
+       "options": [
+        "Non, nous n'avons apporté qu'un formulaire.",
+        "Non, nous n'apporterons qu'un formulaire.",
+        "Non, nous n'apportez qu'un formulaire."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Ici, c'est plus compliqué ! Avez-vous une autre question ?",
+       "en": "Here it's more complicated! Do you have another question?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, à ma place, apporteriez-vous des photocopies de tout ?",
+       "en": "Yes, in my position, would you bring photocopies of everything?",
+       "tense": "Conditionnel",
+       "person": "vous",
+       "accept": [
+        "Oui, à ma place, apporteriez-vous des photocopies de tout ?",
+        "À ma place, apporteriez-vous des photocopies de tout ?",
+        "Apporteriez-vous des photocopies de tout ?"
+       ],
+       "options": [
+        "Oui, à ma place, apportez-vous des photocopies de tout ?",
+        "Oui, à ma place, avez-vous apporté des photocopies de tout ?",
+        "Oui, à ma place, apportiez-vous des photocopies de tout ?"
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Oui, toujours ! Il vaudrait mieux en apporter trop que pas assez. Bonne journée !",
+       "en": "Yes, always! It would be better to bring too many than not enough. Have a good day!"
+      }
+     ]
+    }
    },
    {
     "id": "1.9",
@@ -1333,123 +2210,232 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "to get to know each other"
      }
     ],
-    "questions": [
+    "verb": "vivre",
+    "quiz": [
      {
-      "fr": "Que fait le gardien ou la gardienne ?",
-      "en": "What does the caretaker do?",
-      "keys": [
-       "occupe",
-       "colis",
-       "connait",
-       "batiment"
-      ],
-      "chips": [
-       "s'occupe du bâtiment",
-       "reçoit les colis",
-       "connaît tout le monde"
-      ],
-      "starter": "Le gardien s'occupe…",
-      "follow": "Et qui connaît-il ?",
-      "followEn": "And who do they know?",
-      "model": "Le gardien s'occupe du bâtiment et reçoit parfois les colis. Il connaît tout le monde dans l'immeuble.",
-      "modelEn": "The caretaker looks after the building and sometimes takes in parcels. They know everyone in the building.",
-      "open": false
+      "tense": "Présent",
+      "en": "We live on the third floor of an old building.",
+      "answer": "Nous vivons au troisième étage d'un vieil immeuble.",
+      "wrong": [
+       "Nous avons vécu au troisième étage d'un vieil immeuble.",
+       "Nous vivrons au troisième étage d'un vieil immeuble.",
+       "Vous vivez au troisième étage d'un vieil immeuble."
+      ]
      },
      {
-      "fr": "Que faut-il éviter après vingt-deux heures ?",
-      "en": "What should you avoid after 10 pm?",
-      "keys": [
-       "bruit"
-      ],
-      "chips": [
-       "trop de bruit",
-       "le soir",
-       "les voisins"
-      ],
-      "starter": "Après vingt-deux heures, on évite…",
-      "follow": "Pourquoi ?",
-      "followEn": "Why?",
-      "model": "Après vingt-deux heures, on évite de faire trop de bruit. Les voisins dorment peut-être.",
-      "modelEn": "After 10 pm, people avoid making too much noise. The neighbours might be asleep.",
-      "open": false
+      "tense": "Présent",
+      "en": "In French cities, lots of people live in flats.",
+      "answer": "Dans les villes françaises, beaucoup de gens vivent en appartement.",
+      "wrong": [
+       "Dans les villes françaises, beaucoup de gens vivront en appartement.",
+       "Dans les villes françaises, beaucoup de gens ont vécu en appartement.",
+       "Dans les villes françaises, beaucoup de gens vivaient en appartement."
+      ]
      },
      {
-      "fr": "Que serait-il gentil de faire avant une fête ?",
-      "en": "What would it be kind to do before a party?",
-      "keys": [
-       "preven",
-       "mot",
-       "porte"
-      ],
-      "chips": [
-       "ce serait gentil",
-       "prévenir les voisins",
-       "un petit mot"
-      ],
-      "starter": "Ce serait gentil de…",
-      "follow": "Comment pourriez-vous les prévenir ?",
-      "followEn": "How could you warn them?",
-      "model": "Ce serait gentil de prévenir les voisins. On pourrait mettre un petit mot dans le hall de l'immeuble.",
-      "modelEn": "It would be kind to warn the neighbours. You could put a little note in the building's entrance hall.",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you live in this building?",
+      "tag": "formal",
+      "answer": "Vivez-vous dans cet immeuble ?",
+      "wrong": [
+       "Avez-vous vécu dans cet immeuble ?",
+       "Vivrez-vous dans cet immeuble ?",
+       "Vivons-nous dans cet immeuble ?"
+      ]
      },
      {
-      "fr": "Que vaudrait-il mieux faire si un voisin faisait trop de bruit ?",
-      "en": "What would be better to do if a neighbour made too much noise?",
-      "keys": [
-       "parl",
-       "gentiment"
-      ],
-      "chips": [
-       "il vaudrait mieux",
-       "lui parler gentiment",
-       "se fâcher"
-      ],
-      "starter": "Il vaudrait mieux…",
-      "follow": "Faudrait-il se fâcher tout de suite ?",
-      "followEn": "Should you get angry straight away?",
-      "model": "Il vaudrait mieux lui parler gentiment. Non, ce serait mieux de ne pas se fâcher tout de suite.",
-      "modelEn": "It would be better to talk to them kindly. No, it would be better not to get angry straight away.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I lived next to a very noisy neighbour for two years.",
+      "answer": "J'ai vécu à côté d'un voisin très bruyant pendant deux ans.",
+      "wrong": [
+       "Je suis vécu à côté d'un voisin très bruyant pendant deux ans.",
+       "Je vivrai à côté d'un voisin très bruyant pendant deux ans.",
+       "Je vivais à côté d'un voisin très bruyant pendant deux ans."
+      ]
      },
      {
-      "fr": "Que fait-on pendant la Fête des voisins ?",
-      "en": "What do people do at the Fête des voisins?",
-      "keys": [
-       "apport",
-       "manger",
-       "connaissance",
-       "verre"
-      ],
-      "chips": [
-       "chacun apporte",
-       "quelque chose à manger",
-       "on fait connaissance"
-      ],
-      "starter": "Chacun apporte…",
-      "follow": "Et que fait-on ensuite ?",
-      "followEn": "And what do people do next?",
-      "model": "Chacun apporte quelque chose à manger. On fait connaissance autour d'un verre.",
-      "modelEn": "Everyone brings something to eat. People get to know each other over a drink.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "The caretaker lived in the building for thirty years.",
+      "answer": "La gardienne a vécu dans l'immeuble pendant trente ans.",
+      "wrong": [
+       "La gardienne est vécue dans l'immeuble pendant trente ans.",
+       "La gardienne vivra dans l'immeuble pendant trente ans.",
+       "La gardienne vit dans l'immeuble pendant trente ans."
+      ]
      },
      {
-      "fr": "Et vous ? Qu'apporteriez-vous à la Fête des voisins ?",
-      "en": "And you? What would you bring to the Fête des voisins?",
-      "keys": [],
-      "chips": [
-       "j'apporterais",
-       "une quiche",
-       "je serais content"
-      ],
-      "starter": "J'apporterais…",
-      "follow": "Et seriez-vous content d'y aller ?",
-      "followEn": "And would you be happy to go?",
-      "model": "J'apporterais une quiche et une bouteille de jus de fruits. Je serais content de faire connaissance avec mes voisins.",
-      "modelEn": "I'd bring a quiche and a bottle of fruit juice. I'd be happy to get to know my neighbours.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Have you ever lived in a block of flats?",
+      "tag": "informal",
+      "answer": "As-tu déjà vécu dans un immeuble ?",
+      "wrong": [
+       "Es-tu déjà vécu dans un immeuble ?",
+       "Vis-tu déjà dans un immeuble ?",
+       "Vivais-tu déjà dans un immeuble ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "Next year, they will live in a building with a caretaker.",
+      "answer": "L'année prochaine, ils vivront dans un immeuble avec un gardien.",
+      "wrong": [
+       "L'année prochaine, ils ont vécu dans un immeuble avec un gardien.",
+       "L'année prochaine, ils vivaient dans un immeuble avec un gardien.",
+       "L'année prochaine, ils vivra dans un immeuble avec un gardien."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "You will live on the ground floor, next to the caretaker.",
+      "tag": "formal",
+      "answer": "Vous vivrez au rez-de-chaussée, à côté de la gardienne.",
+      "wrong": [
+       "Vous avez vécu au rez-de-chaussée, à côté de la gardienne.",
+       "Vous viviez au rez-de-chaussée, à côté de la gardienne.",
+       "Vous vivront au rez-de-chaussée, à côté de la gardienne."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When I was twenty, I used to live in a tiny flat in Paris.",
+      "answer": "Quand j'avais vingt ans, je vivais dans un tout petit appartement à Paris.",
+      "wrong": [
+       "Quand j'avais vingt ans, j'ai vécu dans un tout petit appartement à Paris.",
+       "Quand j'avais vingt ans, je vivrai dans un tout petit appartement à Paris.",
+       "Quand j'avais vingt ans, je vis dans un tout petit appartement à Paris."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "In the past, a caretaker used to live in every building.",
+      "answer": "Autrefois, un gardien vivait dans chaque immeuble.",
+      "wrong": [
+       "Autrefois, un gardien a vécu dans chaque immeuble.",
+       "Autrefois, un gardien vivra dans chaque immeuble.",
+       "Autrefois, un gardien vit dans chaque immeuble."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "You've just moved into a block of flats. Cécile, your neighbour, says hello in the entrance hall.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour ! Venez-vous d'emménager dans l'immeuble ?",
+       "en": "Hello! Have you just moved into the building?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, je vis au troisième étage depuis lundi.",
+       "en": "Yes, I've been living on the third floor since Monday.",
+       "tense": "Présent",
+       "person": "je",
+       "accept": [
+        "Oui, je vis au troisième étage depuis lundi.",
+        "Je vis au troisième étage depuis lundi.",
+        "Oui, je vis au troisième étage."
+       ],
+       "options": [
+        "Oui, j'ai vécu au troisième étage depuis lundi.",
+        "Oui, je vivrai au troisième étage depuis lundi.",
+        "Oui, je vivais au troisième étage depuis lundi."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Bienvenue ! Avez-vous déjà vécu en appartement ?",
+       "en": "Welcome! Have you lived in a flat before?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, nous avons vécu dix ans dans un immeuble à Lyon.",
+       "en": "Yes, we lived in a block of flats in Lyon for ten years.",
+       "tense": "Passé composé",
+       "person": "nous",
+       "accept": [
+        "Oui, nous avons vécu dix ans dans un immeuble à Lyon.",
+        "Nous avons vécu dix ans dans un immeuble à Lyon.",
+        "Oui, nous avons vécu dix ans à Lyon."
+       ],
+       "options": [
+        "Oui, nous vivons dix ans dans un immeuble à Lyon.",
+        "Oui, nous vivrons dix ans dans un immeuble à Lyon.",
+        "Oui, nous sommes vécus dix ans dans un immeuble à Lyon."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Y avait-il un gardien dans votre immeuble à Lyon ?",
+       "en": "Was there a caretaker in your building in Lyon?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, un gardien vivait au rez-de-chaussée.",
+       "en": "Yes, a caretaker used to live on the ground floor.",
+       "tense": "Imparfait",
+       "person": "il",
+       "accept": [
+        "Oui, un gardien vivait au rez-de-chaussée.",
+        "Un gardien vivait au rez-de-chaussée.",
+        "Oui, un gardien vivait en bas."
+       ],
+       "options": [
+        "Oui, un gardien a vécu au rez-de-chaussée.",
+        "Oui, un gardien vivra au rez-de-chaussée.",
+        "Oui, un gardien vit au rez-de-chaussée."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Ici, il n'y a plus de gardien. Votre famille vivra-t-elle avec vous ?",
+       "en": "There's no caretaker here any more. Will your family live with you?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, mes parents vivront avec nous à partir de juin.",
+       "en": "Yes, my parents will live with us from June.",
+       "tense": "Futur simple",
+       "person": "ils",
+       "accept": [
+        "Oui, mes parents vivront avec nous à partir de juin.",
+        "Mes parents vivront avec nous à partir de juin.",
+        "Oui, mes parents vivront avec nous."
+       ],
+       "options": [
+        "Oui, mes parents ont vécu avec nous à partir de juin.",
+        "Oui, mes parents vivaient avec nous à partir de juin.",
+        "Oui, mes parents vivra avec nous à partir de juin."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Formidable ! Viendrez-vous à la Fête des voisins en mai ? L'ambiance est très sympa ici.",
+       "en": "Great! Will you come to the Neighbours' Day party in May? The atmosphere is really friendly here."
+      },
+      {
+       "who": "you",
+       "fr": "Bien sûr ! Avec des voisins comme vous, je vivrais ici toute ma vie !",
+       "en": "Of course! With neighbours like you, I'd live here all my life!",
+       "tense": "Conditionnel",
+       "person": "je",
+       "accept": [
+        "Bien sûr ! Avec des voisins comme vous, je vivrais ici toute ma vie !",
+        "Avec des voisins comme vous, je vivrais ici toute ma vie !",
+        "Bien sûr ! Je vivrais ici toute ma vie !"
+       ],
+       "options": [
+        "Bien sûr ! Avec des voisins comme vous, je vis ici toute ma vie !",
+        "Bien sûr ! Avec des voisins comme vous, j'ai vécu ici toute ma vie !",
+        "Bien sûr ! Avec des voisins comme vous, je vivais ici toute ma vie !"
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Merci, c'est gentil ! Apportez quelque chose à manger, et à bientôt !",
+       "en": "Thank you, that's kind! Bring something to eat, and see you soon!"
+      }
+     ]
+    }
    },
    {
     "id": "1.10",
@@ -1493,120 +2479,231 @@ export const ADVANCED_THEMES: AdvTheme[] = [
       "en": "meal voucher"
      }
     ],
-    "questions": [
+    "verb": "commencer",
+    "quiz": [
      {
-      "fr": "Que vous donnera-t-on à l'accueil ?",
-      "en": "What will you be given at reception?",
-      "keys": [
-       "badge"
-      ],
-      "chips": [
-       "un badge",
-       "entrer dans les bureaux",
-       "mon responsable"
-      ],
-      "starter": "On me donnera…",
-      "follow": "Et ensuite, que fera votre responsable ?",
-      "followEn": "And then, what will your manager do?",
-      "model": "On me donnera un badge pour entrer dans les bureaux. Ensuite, mon responsable me présentera à l'équipe.",
-      "modelEn": "I'll be given a badge to get into the offices. Then my manager will introduce me to the team.",
-      "open": false
+      "tense": "Présent",
+      "en": "We start work at nine o'clock.",
+      "answer": "Nous commençons le travail à neuf heures.",
+      "wrong": [
+       "Nous avons commencé le travail à neuf heures.",
+       "Nous commencerons le travail à neuf heures.",
+       "Vous commencez le travail à neuf heures."
+      ]
      },
      {
-      "fr": "Que veut dire « open space » ?",
-      "en": "What does \"open space\" mean?",
-      "keys": [
-       "grand",
-       "partag"
-      ],
-      "chips": [
-       "un grand bureau",
-       "partagé",
-       "ensemble"
-      ],
-      "starter": "C'est un grand bureau…",
-      "follow": "Qui y travaille ?",
-      "followEn": "Who works there?",
-      "model": "C'est un grand bureau partagé. Beaucoup de personnes y travaillent ensemble.",
-      "modelEn": "It's a big shared office. Lots of people work there together.",
-      "open": false
+      "tense": "Présent",
+      "en": "New employees often start their day at reception.",
+      "answer": "Les nouveaux salariés commencent souvent leur journée à l'accueil.",
+      "wrong": [
+       "Les nouveaux salariés commenceront souvent leur journée à l'accueil.",
+       "Les nouveaux salariés ont souvent commencé leur journée à l'accueil.",
+       "Les nouveaux salariés commençaient souvent leur journée à l'accueil."
+      ]
      },
      {
-      "fr": "Comment demanderiez-vous où est la salle de réunion ?",
-      "en": "How would you ask where the meeting room is?",
-      "keys": [
-       "pourriez",
-       "indiquer",
-       "salle"
-      ],
-      "chips": [
-       "excusez-moi",
-       "pourriez-vous m'indiquer",
-       "la salle de réunion"
-      ],
-      "starter": "Je dirais : « Excusez-moi, pourriez-vous…",
-      "follow": "Que pourriez-vous demander d'autre ?",
-      "followEn": "What else could you ask?",
-      "model": "Je dirais : « Excusez-moi, pourriez-vous m'indiquer la salle de réunion ? » Je pourrais aussi demander l'accès au dossier partagé.",
-      "modelEn": "I'd say: \"Excuse me, could you show me the way to the meeting room?\" I could also ask for access to the shared folder.",
-      "open": false
+      "tense": "Présent",
+      "en": "Do you start by saying \"vous\" to your colleagues?",
+      "tag": "formal",
+      "answer": "Commencez-vous par dire « vous » à vos collègues ?",
+      "wrong": [
+       "Avez-vous commencé par dire « vous » à vos collègues ?",
+       "Commencerez-vous par dire « vous » à vos collègues ?",
+       "Commençons-nous par dire « vous » à vos collègues ?"
+      ]
      },
      {
-      "fr": "Faudrait-il dire « tu » ou « vous » à vos nouveaux collègues ?",
-      "en": "Should you say \"tu\" or \"vous\" to your new colleagues?",
-      "keys": [
-       "commencer",
-       "vous"
-      ],
-      "chips": [
-       "il vaudrait mieux",
-       "commencer par « vous »",
-       "sauf si"
-      ],
-      "starter": "Il vaudrait mieux commencer par…",
-      "follow": "Et si tout le monde se tutoie, que fait-on ?",
-      "followEn": "And if everyone uses \"tu\", what do you do?",
-      "model": "Il vaudrait mieux commencer par « vous ». Si tout le monde se tutoie, on peut dire « tu ».",
-      "modelEn": "It would be better to start with \"vous\". If everyone uses \"tu\", you can say \"tu\".",
-      "open": false
+      "tense": "Passé composé",
+      "en": "I started my new job on Monday.",
+      "answer": "J'ai commencé mon nouveau travail lundi.",
+      "wrong": [
+       "Je suis commencé mon nouveau travail lundi.",
+       "Je commencerai mon nouveau travail lundi.",
+       "Je commençais mon nouveau travail lundi."
+      ]
      },
      {
-      "fr": "Pourquoi faudrait-il accepter de déjeuner avec l'équipe ?",
-      "en": "Why should you accept lunch with the team?",
-      "keys": [
-       "connaitre",
-       "moyen",
-       "equipe"
-      ],
-      "chips": [
-       "le meilleur moyen",
-       "connaître l'équipe",
-       "déjeuner ensemble"
-      ],
-      "starter": "Parce que c'est le meilleur moyen…",
-      "follow": "Et comment paie-t-on souvent le déjeuner ?",
-      "followEn": "And how is lunch often paid for?",
-      "model": "Parce que c'est le meilleur moyen de connaître l'équipe. Beaucoup de salariés paient une partie du déjeuner avec des titres-restaurant.",
-      "modelEn": "Because it's the best way to get to know the team. Many employees pay for part of lunch with meal vouchers.",
-      "open": false
+      "tense": "Passé composé",
+      "en": "My manager started the meeting at ten o'clock.",
+      "answer": "Ma responsable a commencé la réunion à dix heures.",
+      "wrong": [
+       "Ma responsable est commencée la réunion à dix heures.",
+       "Ma responsable commencera la réunion à dix heures.",
+       "Ma responsable commence la réunion à dix heures."
+      ]
      },
      {
-      "fr": "Et vous ? Que feriez-vous pendant votre premier jour pour faire bonne impression ?",
-      "en": "And you? What would you do on your first day to make a good impression?",
-      "keys": [],
-      "chips": [
-       "j'arriverais",
-       "je dirais bonjour",
-       "je poserais des questions"
-      ],
-      "starter": "J'arriverais…",
-      "follow": "Et que feriez-vous d'autre ?",
-      "followEn": "And what else would you do?",
-      "model": "J'arriverais un peu en avance et je dirais bonjour à tout le monde. Je poserais beaucoup de questions, mais toujours poliment.",
-      "modelEn": "I'd arrive a little early and say hello to everyone. I'd ask lots of questions, but always politely.",
-      "open": true
+      "tense": "Passé composé",
+      "en": "Have you started the training?",
+      "tag": "informal",
+      "answer": "As-tu commencé la formation ?",
+      "wrong": [
+       "Es-tu commencé la formation ?",
+       "Commenceras-tu la formation ?",
+       "Commençais-tu la formation ?"
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "Tomorrow, the new colleague will start in the open-plan office.",
+      "answer": "Demain, le nouveau collègue commencera dans l'open space.",
+      "wrong": [
+       "Demain, le nouveau collègue a commencé dans l'open space.",
+       "Demain, le nouveau collègue commençait dans l'open space.",
+       "Demain, le nouveau collègue commenceront dans l'open space."
+      ]
+     },
+     {
+      "tense": "Futur simple",
+      "en": "I will start by introducing myself to the team.",
+      "answer": "Je commencerai par me présenter à l'équipe.",
+      "wrong": [
+       "J'ai commencé par me présenter à l'équipe.",
+       "Je commençais par me présenter à l'équipe.",
+       "Je commencerons par me présenter à l'équipe."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "When I worked in Lyon, I used to start at eight o'clock.",
+      "answer": "Quand je travaillais à Lyon, je commençais à huit heures.",
+      "wrong": [
+       "Quand je travaillais à Lyon, j'ai commencé à huit heures.",
+       "Quand je travaillais à Lyon, je commencerai à huit heures.",
+       "Quand je travaillais à Lyon, je commence à huit heures."
+      ]
+     },
+     {
+      "tense": "Imparfait",
+      "en": "We were starting the meeting when the new colleague arrived.",
+      "answer": "Nous commencions la réunion quand le nouveau collègue est arrivé.",
+      "wrong": [
+       "Nous avons commencé la réunion quand le nouveau collègue est arrivé.",
+       "Nous commencerons la réunion quand le nouveau collègue est arrivé.",
+       "Nous commencez la réunion quand le nouveau collègue est arrivé."
+      ]
      }
-    ]
+    ],
+    "conversation": {
+     "scene": "It's your first day at a company in Lyon. Cécile, your new manager, meets you at reception.",
+     "turns": [
+      {
+       "who": "app",
+       "fr": "Bonjour et bienvenue ! Avez-vous déjà commencé à lire le guide de l'entreprise ?",
+       "en": "Hello and welcome! Have you already started reading the company guide?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, j'ai commencé à le lire hier soir.",
+       "en": "Yes, I started reading it last night.",
+       "tense": "Passé composé",
+       "person": "je",
+       "accept": [
+        "Oui, j'ai commencé à le lire hier soir.",
+        "J'ai commencé à le lire hier soir.",
+        "Oui, j'ai commencé hier soir."
+       ],
+       "options": [
+        "Oui, je commence à le lire hier soir.",
+        "Oui, je commencerai à le lire hier soir.",
+        "Oui, je commençais à le lire hier soir."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Très bien ! Dans votre ancienne entreprise, à quelle heure commenciez-vous ?",
+       "en": "Very good! At your old company, what time did you use to start?"
+      },
+      {
+       "who": "you",
+       "fr": "Dans mon ancienne entreprise, nous commencions à huit heures.",
+       "en": "At my old company, we used to start at eight.",
+       "tense": "Imparfait",
+       "person": "nous",
+       "accept": [
+        "Dans mon ancienne entreprise, nous commencions à huit heures.",
+        "Nous commencions à huit heures.",
+        "On commençait à huit heures."
+       ],
+       "options": [
+        "Dans mon ancienne entreprise, nous avons commencé à huit heures.",
+        "Dans mon ancienne entreprise, nous commencerons à huit heures.",
+        "Dans mon ancienne entreprise, nous commencez à huit heures."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Ici, c'est plus souple. Savez-vous à quelle heure vos collègues commencent ?",
+       "en": "It's more flexible here. Do you know what time your colleagues start?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, ils commencent vers neuf heures, je crois.",
+       "en": "Yes, they start around nine, I think.",
+       "tense": "Présent",
+       "person": "ils",
+       "accept": [
+        "Oui, ils commencent vers neuf heures, je crois.",
+        "Ils commencent vers neuf heures, je crois.",
+        "Oui, ils commencent vers neuf heures."
+       ],
+       "options": [
+        "Oui, ils ont commencé vers neuf heures, je crois.",
+        "Oui, ils commenceront vers neuf heures, je crois.",
+        "Oui, ils commençaient vers neuf heures, je crois."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Exactement. Et demain, commencerez-vous à neuf heures aussi ?",
+       "en": "Exactly. And tomorrow, will you start at nine as well?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, demain, je commencerai à neuf heures.",
+       "en": "Yes, tomorrow I'll start at nine.",
+       "tense": "Futur simple",
+       "person": "je",
+       "accept": [
+        "Oui, demain, je commencerai à neuf heures.",
+        "Demain, je commencerai à neuf heures.",
+        "Oui, je commencerai à neuf heures."
+       ],
+       "options": [
+        "Oui, demain, j'ai commencé à neuf heures.",
+        "Oui, demain, je commençais à neuf heures.",
+        "Oui, demain, je commencerons à neuf heures."
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Parfait. Avez-vous des questions avant de rencontrer l'équipe ?",
+       "en": "Perfect. Do you have any questions before meeting the team?"
+      },
+      {
+       "who": "you",
+       "fr": "Oui, par quoi commenceriez-vous à ma place ?",
+       "en": "Yes, what would you start with in my position?",
+       "tense": "Conditionnel",
+       "person": "vous",
+       "accept": [
+        "Oui, par quoi commenceriez-vous à ma place ?",
+        "Par quoi commenceriez-vous à ma place ?",
+        "À ma place, par quoi commenceriez-vous ?"
+       ],
+       "options": [
+        "Oui, par quoi commencez-vous à ma place ?",
+        "Oui, par quoi avez-vous commencé à ma place ?",
+        "Oui, par quoi commenciez-vous à ma place ?"
+       ]
+      },
+      {
+       "who": "app",
+       "fr": "Je commencerais par déjeuner avec l'équipe : c'est le meilleur moyen de la connaître ! À midi, alors !",
+       "en": "I'd start by having lunch with the team: it's the best way to get to know them! See you at noon, then!"
+      }
+     ]
+    }
    }
   ]
  }

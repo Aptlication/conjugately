@@ -74,7 +74,7 @@ export default function MiniCourses() {
             <Pressable style={styles.row} onPress={() => router.push("/advanced" as any)} accessibilityRole="button"
               accessibilityLabel="Advanced A Course, beta. Read, learn the words, then talk about it. Pluri Pro.">
               <Text style={styles.rowTitle}>{isPro ? "" : "🔒 "}🟣 Advanced A Course  <Text style={styles.betaInline}>BETA</Text></Text>
-              <Text style={styles.rowSub}>Read short articles, learn their words, then talk about them</Text>
+              <Text style={styles.rowSub}>Read short articles, learn their words and verbs, then talk about them</Text>
             </Pressable>
           </View>
         )}

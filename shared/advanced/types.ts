@@ -2,30 +2,38 @@
  * Advanced A — reading-led units (plan: advanced-reading-curriculum-plan.md,
  * Jonathan 31 Oct 2026; pilot approved for TestFlight 1 Nov 2026).
  *
- * A unit is: Read (tap a word for English, double-tap to save it) → Words
- * (the unit's key words plus the learner's saved words, learnt now or sent to
- * My Words) → a spoken comprehension Conversation (six questions, answered
- * aloud in at least two sentences, marked by AI) → Summary.
+ * A unit is (revised 2 Nov 2026): Read (tap a word for English, double-tap to
+ * save it) → Words (the unit's key words plus the learner's saved words, learnt
+ * now or sent to My Words) → Verb quiz (ten questions on the unit verb) →
+ * Conversation (the old translate format: say the English cue in French, with
+ * four options built around the verb) → Summary.
  */
 
-export interface AdvQuestion {
-  fr: string;
+export type AdvTense = "Présent" | "Passé composé" | "Futur simple" | "Imparfait" | "Conditionnel";
+
+/** One question of the unit's verb quiz, in the format of the conjugation quizzes. */
+export interface AdvQuizItem {
+  tense: AdvTense;
+  /** The English sentence shown. */
   en: string;
-  /** Crude keyword stems (accent-free, lowercase) for the offline fallback judge. */
-  keys: string[];
-  /** Help step 1: French word chips from the text. */
-  chips: string[];
-  /** Help step 2: a sentence starter. */
-  starter: string;
-  /** Asked when a correct answer has only one sentence. */
-  follow: string;
-  followEn: string;
-  /** A two-sentence model answer: help steps 3 (English) and 4 (French), and the AI's reference. */
-  model: string;
-  modelEn: string;
-  /** The open "Et vous ?" question: any sensible answer is right. */
-  open: boolean;
+  /** Which "you" is meant, when the English can't say. */
+  tag?: "formal" | "informal";
+  /** The one correct French sentence. */
+  answer: string;
+  /** Three wrong sentences that differ only in the verb form. */
+  wrong: string[];
 }
+
+/** A line of the unit's conversation: Cécile speaks, or the learner says the English cue in French. */
+export type AdvTurn =
+  | { who: "app"; fr: string; en: string }
+  | {
+      who: "you"; fr: string; en: string; tense: AdvTense; person: string;
+      /** Spoken variants that count as right, `fr` first. */
+      accept: string[];
+      /** Three wrong sentences built around the verb (wrong tense, ending or auxiliary). */
+      options: string[];
+    };
 
 export interface AdvUnit {
   /** "1.1" … "1.10": theme . article. */
@@ -38,7 +46,12 @@ export interface AdvUnit {
   text: string;
   textEn: string;
   keyWords: { fr: string; en: string }[];
-  questions: AdvQuestion[];
+  /** The unit verb: from the article, and not taught in an earlier level where possible (Jonathan, 2 Nov 2026). */
+  verb: string;
+  /** Ten questions on the unit verb: 3 présent, 3 passé composé, 2 futur simple, 2 imparfait. */
+  quiz: AdvQuizItem[];
+  /** Translate-format conversation built around the unit verb (replaces the spoken comprehension questions, 2 Nov 2026). */
+  conversation: { scene: string; turns: AdvTurn[] };
 }
 
 export interface AdvTheme {

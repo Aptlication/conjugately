@@ -26,7 +26,7 @@ The app mirrors main exactly (DESIGN_PARITY.md), except where Jonathan has grant
    - The tests don't gate progression (Final Level Exams still do), which is why the mic **is** allowed in them, unlike exams.
    - Content rule: built only from taught French. `npx tsx scripts/audit-cefr-coverage.ts` enforces it.
 
-5. **Advanced A is app-first.** Granted 2026-11-01 for the Advanced A pilot (Theme 1, TestFlight). Its comprehension conversations are spoken and use Masters Mic (exemption 3), and it is Pro (RevenueCat, app only), so it ships to TestFlight first. The content, tokeniser and marking rules live in `shared/advanced/` so main can follow later with typed answers; the AI marking endpoint `/api/advanced/mark` is on the shared server.
+5. **Advanced A is app-first.** Granted 2026-11-01 for the Advanced A pilot (Theme 1, TestFlight). Its conversations are spoken and use Masters Mic (exemption 3), and it is Pro (RevenueCat, app only), so it ships to TestFlight first. The content and tokeniser live in `shared/advanced/` so main can follow later. (The AI-marked comprehension conversation and `/api/advanced/mark` were withdrawn on 2 Nov 2026 in favour of the translate format.)
 
 Rule of engagement: any instruction that would make the app diverge from main gets flagged before implementation, then either (a) the feature is added to main first, or (b) an exemption is recorded here.
 

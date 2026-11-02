@@ -12,22 +12,15 @@ const u = (unitId: string) => unitId.replace(".", "_");
 
 /** The article read aloud. */
 export const articleClip = (unitId: string) => `ADV_${u(unitId)}_TEXT`;
-/** Cécile's question i (0-based). */
-export const questionClip = (unitId: string, i: number) => `ADV_${u(unitId)}_Q${i + 1}`;
-/** Her follow-up to question i, asking for a second sentence. */
-export const followClip = (unitId: string, i: number) => `ADV_${u(unitId)}_Q${i + 1}_F`;
+/** Conversation line i (0-based, Cécile's lines and the learner's model replies). */
+export const convClip = (unitId: string, i: number) => `ADV_${u(unitId)}_C${i + 1}`;
+/** Verb quiz question i (0-based): the correct French sentence, played after answering. */
+export const quizClip = (unitId: string, i: number) => `ADV_${u(unitId)}_QZ${i + 1}`;
 
 /** Lines Cécile says in every unit. */
 export const STOCK_LINES = {
-  ADV_PRAISE_1: "Très bien !",
-  ADV_PRAISE_2: "Parfait !",
-  ADV_PRAISE_3: "Excellent !",
-  ADV_MORE: "Oui, c'est ça ! Ajoutez une deuxième phrase.",
-  ADV_MISS: "Pas tout à fait. Écoutez encore, ou touchez la carte jaune pour un indice.",
-  ADV_ENGLISH: "En français, s'il vous plaît !",
-  ADV_MODEL: "Voici une réponse possible.",
-  ADV_NEXT: "D'accord. Question suivante.",
-  ADV_END: "Merci pour cette conversation. À bientôt !",
+  // A new key (not the old ADV_MISS), so the recorder doesn't skip it as already done.
+  ADV_TRY_AGAIN: "Pas tout à fait. Essayez encore.",
 } as const;
 export type StockLine = keyof typeof STOCK_LINES;
 
