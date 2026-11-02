@@ -18,7 +18,6 @@ import { storage } from "./storage";
 import { isAdvancedDifficultyEnabled, isDifficultyAllowed } from "@shared/config";
 import { registerAiWhyRoutes } from "./aiWhy";
 import { registerCefrMarkRoutes } from "./cefrMark";
-import { registerAdvancedMarkRoutes } from "./advancedMark";
 
 /**
  * Randomise the position of the correct answer (register item 1.1.3).
@@ -154,9 +153,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // CEFR-style tests: AI marking of writing and speaking (server/cefrMark.ts)
   registerCefrMarkRoutes(app);
-
-  // Advanced A (pilot): AI marking of spoken comprehension answers (server/advancedMark.ts)
-  registerAdvancedMarkRoutes(app);
 
   // Generate French verb quiz using Gemini AI
   app.post("/api/get-quiz", async (req, res, next) => {

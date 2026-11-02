@@ -1,9 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LEXICON_POOL } from "@shared/advanced/content";
 import type { LexEntry } from "@shared/advanced/types";
-import { API_BASE } from "./data";
-import { decide, fallbackUnderstood, type Verdict } from "@shared/advanced/marking";
-import { advancedUnit } from "@shared/advanced/content";
 
 /**
  * Advanced A (pilot, 1 Nov 2026): progress, words and marking for the
@@ -16,7 +13,7 @@ export const ADVANCED_LEVEL = "Advanced A";
 // ── Progress ────────────────────────────────────────────────────────────────
 
 const PROGRESS_KEY = "advanced_progress";
-export type UnitResult = { completedAt: string; coins: number; answered: number; withHelp: number };
+export type UnitResult = { completedAt: string; coins: number; quizScore: number; firstTime: number };
 type Progress = Record<string, UnitResult>;
 
 export async function readAdvancedProgress(): Promise<Progress> {
@@ -90,36 +87,4 @@ export async function readTipOff(): Promise<boolean> {
 }
 export async function turnReadTipOff() {
   try { await AsyncStorage.setItem(TIP_KEY, "1"); } catch {}
-}
-
-// ── Marking ─────────────────────────────────────────────────────────────────
-
-export type MarkOutcome = { verdict: Verdict; feedback: string; corrected: string; marking: "ai" | "fallback" };
-
-/**
- * Judge a spoken answer: the server's AI decides whether the meaning came
- * across (generously); the app counts sentences. Offline, or if the server is
- * slow, the key-word check stands in so the conversation never stalls.
- */
-export async function markAnswer(unitId: string, q: number, answer: string): Promise<MarkOutcome> {
-  const question = advancedUnit(unitId)?.questions[q];
-  const offline = (): MarkOutcome => ({
-    verdict: decide(answer, question ? fallbackUnderstood(question, answer) : true),
-    feedback: "", corrected: "", marking: "fallback",
-  });
-  try {
-    const ctl = new AbortController();
-    const t = setTimeout(() => ctl.abort(), 9000);
-    const r = await fetch(`${API_BASE}/api/advanced/mark`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ unitId, q, answer }), signal: ctl.signal,
-    });
-    clearTimeout(t);
-    if (!r.ok) return offline();
-    const d: any = await r.json();
-    if (typeof d?.understood !== "boolean") return offline();
-    return { verdict: decide(answer, d.understood), feedback: d.feedback || "", corrected: d.corrected || "", marking: d.marking === "ai" ? "ai" : "fallback" };
-  } catch {
-    return offline();
-  }
 }

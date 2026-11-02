@@ -1,48 +1,8 @@
 [
  {
-  "file": "ADV_PRAISE_1.mp3",
+  "file": "ADV_TRY_AGAIN.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien !"
- },
- {
-  "file": "ADV_PRAISE_2.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait !"
- },
- {
-  "file": "ADV_PRAISE_3.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Excellent !"
- },
- {
-  "file": "ADV_MORE.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Oui, c'est ça ! Ajoutez une deuxième phrase."
- },
- {
-  "file": "ADV_MISS.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Pas tout à fait. Écoutez encore, ou touchez la carte jaune pour un indice."
- },
- {
-  "file": "ADV_ENGLISH.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "En français, s'il vous plaît !"
- },
- {
-  "file": "ADV_MODEL.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Voici une réponse possible."
- },
- {
-  "file": "ADV_NEXT.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "D'accord. Question suivante."
- },
- {
-  "file": "ADV_END.mp3",
-  "voice": "Cécile - Interactive Customer Support",
-  "french": "Merci pour cette conversation. À bientôt !"
+  "french": "Pas tout à fait. Essayez encore."
  },
  {
   "file": "ADV_1_1_TEXT.mp3",
@@ -50,64 +10,84 @@
   "french": "À Paris comme à Lyon, trouver un appartement n'est pas facile. Avant de visiter, il faut préparer un dossier : une pièce d'identité, vos trois dernières fiches de paie et souvent un garant, c'est-à-dire une personne qui paiera le loyer si vous ne pouvez pas le faire. Quand vous appelez l'agence, soyez poli : « Bonjour, je voudrais visiter l'appartement de la rue Victor-Hugo. Seriez-vous disponible jeudi ? » Pendant la visite, posez vos questions : « Les charges sont-elles comprises ? Pourriez-vous me dire quand l'appartement sera libre ? » Beaucoup de gens visitent le même logement, alors il vaudrait mieux apporter un dossier complet. Si vous étiez à la place du propriétaire, vous choisiriez aussi le dossier le plus sérieux ! Enfin, avant de signer le bail, lisez-le bien et faites un état des lieux le jour où vous recevez les clés. Ce document vous protégera quand vous partirez."
  },
  {
-  "file": "ADV_1_1_Q1.mp3",
+  "file": "ADV_1_1_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faut-il mettre dans le dossier ?"
+  "french": "Agence Dupont, bonjour ! Puis-je vous aider ?"
  },
  {
-  "file": "ADV_1_1_Q1_F.mp3",
+  "file": "ADV_1_1_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que faut-il souvent en plus ?"
+  "french": "Avec plaisir. Avez-vous déjà visité d'autres appartements ?"
  },
  {
-  "file": "ADV_1_1_Q2.mp3",
+  "file": "ADV_1_1_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que veut dire « garant » ?"
+  "french": "Quelqu'un visitera-t-il l'appartement avec vous ?"
  },
  {
-  "file": "ADV_1_1_Q2_F.mp3",
+  "file": "ADV_1_1_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi le propriétaire en voudrait-il un ?"
+  "french": "Avant, quand vous cherchiez un logement, visitiez-vous beaucoup d'appartements ?"
  },
  {
-  "file": "ADV_1_1_Q3.mp3",
+  "file": "ADV_1_1_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment demanderiez-vous une visite à l'agence ?"
+  "french": "Cet appartement plaît beaucoup. Savez-vous combien de personnes le visitent aujourd'hui ?"
  },
  {
-  "file": "ADV_1_1_Q3_F.mp3",
+  "file": "ADV_1_1_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et quel jour proposeriez-vous ?"
+  "french": "Alors ne tardez pas ! À jeudi, dix heures."
  },
  {
-  "file": "ADV_1_1_Q4.mp3",
+  "file": "ADV_1_1_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi vaudrait-il mieux apporter un dossier complet ?"
+  "french": "Nous visitons l'appartement de la rue Victor-Hugo."
  },
  {
-  "file": "ADV_1_1_Q4_F.mp3",
+  "file": "ADV_1_1_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que choisira le propriétaire ?"
+  "french": "Beaucoup de gens visitent le même logement."
  },
  {
-  "file": "ADV_1_1_Q5.mp3",
+  "file": "ADV_1_1_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faut-il faire avant de signer le bail ?"
+  "french": "Visitez-vous d'autres appartements ?"
  },
  {
-  "file": "ADV_1_1_Q5_F.mp3",
+  "file": "ADV_1_1_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "À quoi sert l'état des lieux ?"
+  "french": "J'ai visité trois appartements cette semaine."
  },
  {
-  "file": "ADV_1_1_Q6.mp3",
+  "file": "ADV_1_1_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Si vous cherchiez un appartement en France, dans quelle ville aimeriez-vous habiter ?"
+  "french": "Ma sœur a visité l'appartement hier."
  },
  {
-  "file": "ADV_1_1_Q6_F.mp3",
+  "file": "ADV_1_1_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi choisiriez-vous cette ville ?"
+  "french": "As-tu visité la cuisine ?"
+ },
+ {
+  "file": "ADV_1_1_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous visiterez l'appartement jeudi."
+ },
+ {
+  "file": "ADV_1_1_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je le visiterai avec mon garant."
+ },
+ {
+  "file": "ADV_1_1_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand nous habitions à Lyon, nous visitions des appartements chaque samedi."
+ },
+ {
+  "file": "ADV_1_1_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je visitais l'appartement quand l'agent a appelé."
  },
  {
   "file": "ADV_1_2_TEXT.mp3",
@@ -115,64 +95,84 @@
   "french": "En France, le café est bien plus qu'une boisson : c'est un lieu de vie. Le matin, beaucoup de gens prennent un petit café au comptoir, debout, en lisant le journal. Attention : si vous demandez « un café », on vous servira un expresso. Si vous préférez un grand café avec du lait, il faudrait commander un « café crème ». Pour être poli, on dit : « Je voudrais un café, s'il vous plaît » ou « Je prendrais bien un croissant ». Au comptoir, le café coûte souvent moins cher qu'en terrasse. En terrasse, vous pourriez rester une heure avec un seul café : personne ne vous demandera de partir. Pour payer, appelez le serveur : « L'addition, s'il vous plaît ! » Le service est compris dans le prix, mais on laisse parfois un petit pourboire quand on est content."
  },
  {
-  "file": "ADV_1_2_Q1.mp3",
+  "file": "ADV_1_2_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que vous servira-t-on si vous demandez « un café » ?"
+  "french": "Bonjour et bienvenue ! Est-ce votre première visite ? Que désirez-vous ?"
  },
  {
-  "file": "ADV_1_2_Q1_F.mp3",
+  "file": "ADV_1_2_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et comment est ce café ?"
+  "french": "Moi, je prendrais un café crème. Avez-vous déjà demandé « un café » en France ?"
  },
  {
-  "file": "ADV_1_2_Q2.mp3",
+  "file": "ADV_1_2_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faudrait-il commander pour avoir un café avec du lait ?"
+  "french": "C'est normal ! Quand vous habitiez à Londres, que demandiez-vous au café ?"
  },
  {
-  "file": "ADV_1_2_Q2_F.mp3",
+  "file": "ADV_1_2_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et comment est un café crème ?"
+  "french": "Alors ici, il faut dire « un café crème ». Et vos amis, que demanderont-ils en arrivant ?"
  },
  {
-  "file": "ADV_1_2_Q3.mp3",
+  "file": "ADV_1_2_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment commande-t-on poliment ?"
+  "french": "Et en Angleterre, demande-t-on l'addition au serveur ?"
  },
  {
-  "file": "ADV_1_2_Q3_F.mp3",
+  "file": "ADV_1_2_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que peut-on dire aussi ?"
+  "french": "Ici, appelez simplement le serveur ! Je vous apporte un café crème, alors."
  },
  {
-  "file": "ADV_1_2_Q4.mp3",
+  "file": "ADV_1_2_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Où le café coûte-t-il souvent moins cher ?"
+  "french": "Je demande un café crème chaque matin."
  },
  {
-  "file": "ADV_1_2_Q4_F.mp3",
+  "file": "ADV_1_2_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et en terrasse, le café coûte-t-il plus cher ?"
+  "french": "Si vous demandez « un café », on vous servira un expresso."
  },
  {
-  "file": "ADV_1_2_Q5.mp3",
+  "file": "ADV_1_2_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Faut-il laisser un pourboire ?"
+  "french": "Les clients demandent-ils l'addition ?"
  },
  {
-  "file": "ADV_1_2_Q5_F.mp3",
+  "file": "ADV_1_2_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand en laisse-t-on un ?"
+  "french": "Ce matin, j'ai demandé un croissant avec mon café."
  },
  {
-  "file": "ADV_1_2_Q6.mp3",
+  "file": "ADV_1_2_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Que commanderiez-vous dans un café parisien ?"
+  "french": "La serveuse nous a demandé d'attendre."
  },
  {
-  "file": "ADV_1_2_Q6_F.mp3",
+  "file": "ADV_1_2_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et resteriez-vous au comptoir ou en terrasse ?"
+  "french": "As-tu demandé l'addition ?"
+ },
+ {
+  "file": "ADV_1_2_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Personne ne vous demandera de partir."
+ },
+ {
+  "file": "ADV_1_2_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous demanderons une table en terrasse."
+ },
+ {
+  "file": "ADV_1_2_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand tu habitais à Paris, tu demandais un café crème au comptoir."
+ },
+ {
+  "file": "ADV_1_2_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous demandions l'addition quand il a commencé à pleuvoir."
  },
  {
   "file": "ADV_1_3_TEXT.mp3",
@@ -180,64 +180,84 @@
   "french": "Si vous venez travailler ou étudier en France, vous aurez vite besoin d'un compte bancaire. Pour payer votre loyer ou recevoir votre salaire, on vous demandera un RIB, c'est-à-dire un document avec le numéro de votre compte. Pour ouvrir un compte, il faut généralement prendre rendez-vous avec un conseiller. Apportez une pièce d'identité et un justificatif de domicile, par exemple une facture d'électricité. Au rendez-vous, vous pourriez dire : « Je voudrais ouvrir un compte courant. Pourriez-vous m'expliquer les frais ? » Le conseiller vous proposera sûrement une carte bancaire et une application pour gérer votre argent sur votre téléphone. Aujourd'hui, beaucoup de Français choisissent aussi une banque en ligne, souvent moins chère. Un conseil : à votre place, je comparerais les frais avant de signer. Quelques euros par mois, cela fait beaucoup sur une année !"
  },
  {
-  "file": "ADV_1_3_Q1.mp3",
+  "file": "ADV_1_3_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi aurez-vous besoin d'un RIB ?"
+  "french": "Bonjour, asseyez-vous ! Recevrez-vous bientôt un salaire en France ?"
  },
  {
-  "file": "ADV_1_3_Q1_F.mp3",
+  "file": "ADV_1_3_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "En aurez-vous besoin pour autre chose ?"
+  "french": "Très bien. Avez-vous reçu un justificatif de domicile ?"
  },
  {
-  "file": "ADV_1_3_Q2.mp3",
+  "file": "ADV_1_3_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faut-il apporter au rendez-vous ?"
+  "french": "Parfait. Et dans votre pays, receviez-vous vos factures par la poste ?"
  },
  {
-  "file": "ADV_1_3_Q2_F.mp3",
+  "file": "ADV_1_3_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourriez-vous donner un exemple de justificatif ?"
+  "french": "Aujourd'hui, tout se fait sur l'application. Et vos colocataires, reçoivent-ils aussi leur salaire en France ?"
  },
  {
-  "file": "ADV_1_3_Q3.mp3",
+  "file": "ADV_1_3_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourriez-vous dire au conseiller ?"
+  "french": "Très bien. Si vous signiez aujourd'hui, quand votre employeur recevrait-il votre RIB ?"
  },
  {
-  "file": "ADV_1_3_Q3_F.mp3",
+  "file": "ADV_1_3_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que demanderiez-vous ensuite ?"
+  "french": "Parfait ! Alors signons tout de suite."
  },
  {
-  "file": "ADV_1_3_Q4.mp3",
+  "file": "ADV_1_3_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que vous proposera sûrement le conseiller ?"
+  "french": "Je reçois mon salaire à la fin du mois."
  },
  {
-  "file": "ADV_1_3_Q4_F.mp3",
+  "file": "ADV_1_3_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et à quoi servira l'application ?"
+  "french": "Le conseiller reçoit les clients sur rendez-vous."
  },
  {
-  "file": "ADV_1_3_Q5.mp3",
+  "file": "ADV_1_3_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quel conseil le texte donne-t-il avant de signer ?"
+  "french": "Recevez-vous votre salaire en France ?"
  },
  {
-  "file": "ADV_1_3_Q5_F.mp3",
+  "file": "ADV_1_3_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi est-ce important ?"
+  "french": "Nous avons reçu nos cartes bancaires ce matin."
  },
  {
-  "file": "ADV_1_3_Q6.mp3",
+  "file": "ADV_1_3_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Préféreriez-vous une banque en ligne ou un conseiller ?"
+  "french": "As-tu reçu le RIB ?"
  },
  {
-  "file": "ADV_1_3_Q6_F.mp3",
+  "file": "ADV_1_3_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi ?"
+  "french": "Ils ont reçu une facture d'électricité hier."
+ },
+ {
+  "file": "ADV_1_3_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous recevrez votre carte dans une semaine."
+ },
+ {
+  "file": "ADV_1_3_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elle recevra une réponse de la banque lundi."
+ },
+ {
+  "file": "ADV_1_3_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand j'étais étudiant, je recevais une bourse chaque mois."
+ },
+ {
+  "file": "ADV_1_3_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Mes parents recevaient leurs factures par la poste."
  },
  {
   "file": "ADV_1_4_TEXT.mp3",
@@ -245,64 +265,84 @@
   "french": "En France, on choisit en général un médecin traitant : c'est le médecin qu'on voit en premier quand on est malade. Pour prendre rendez-vous, on appelle le cabinet ou on réserve en ligne. Au téléphone, vous pourriez dire : « Bonjour, je voudrais un rendez-vous avec le docteur Martin. J'ai de la fièvre depuis deux jours. » N'oubliez pas votre carte Vitale, ou l'appli carte Vitale sur votre téléphone : c'est la carte de l'Assurance maladie. Grâce à elle, une partie de la consultation vous sera remboursée plus vite. La plupart des Français ont aussi une mutuelle, qui paie souvent le reste. Après la consultation, le médecin vous donnera peut-être une ordonnance. Avec cette ordonnance, vous irez à la pharmacie, qu'on reconnaît à sa croix verte. Le pharmacien donne aussi de bons conseils : si vous aviez juste un petit rhume, il pourrait vous recommander un médicament sans ordonnance."
  },
  {
-  "file": "ADV_1_4_Q1.mp3",
+  "file": "ADV_1_4_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que veut dire « médecin traitant » ?"
+  "french": "Bonjour ! Que puis-je faire pour vous ?"
  },
  {
-  "file": "ADV_1_4_Q1_F.mp3",
+  "file": "ADV_1_4_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Le choisit-on soi-même ?"
+  "french": "Merci. Qui vous a donné cette ordonnance ?"
  },
  {
-  "file": "ADV_1_4_Q2.mp3",
+  "file": "ADV_1_4_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment prend-on rendez-vous ?"
+  "french": "C'est un sirop contre la fièvre. Et quand vous étiez enfant, que vous donnait-on contre la fièvre ?"
  },
  {
-  "file": "ADV_1_4_Q2_F.mp3",
+  "file": "ADV_1_4_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que diriez-vous au téléphone ?"
+  "french": "Voici le sirop. Quand lui donnerez-vous la première dose ?"
  },
  {
-  "file": "ADV_1_4_Q3.mp3",
+  "file": "ADV_1_4_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "À quoi sert la carte Vitale ?"
+  "french": "Très bien. Si elle avait encore de la fièvre demain, que lui donneriez-vous ?"
  },
  {
-  "file": "ADV_1_4_Q3_F.mp3",
+  "file": "ADV_1_4_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et qui paie souvent le reste ?"
+  "french": "Bonne idée. Bon rétablissement à votre fille !"
  },
  {
-  "file": "ADV_1_4_Q4.mp3",
+  "file": "ADV_1_4_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que fait-on avec une ordonnance ?"
+  "french": "Le pharmacien donne de bons conseils."
  },
  {
-  "file": "ADV_1_4_Q4_F.mp3",
+  "file": "ADV_1_4_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment reconnaît-on la pharmacie ?"
+  "french": "Nous donnons notre carte Vitale au cabinet."
  },
  {
-  "file": "ADV_1_4_Q5.mp3",
+  "file": "ADV_1_4_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourrait faire le pharmacien si vous aviez un petit rhume ?"
+  "french": "Me donnez-vous une ordonnance ?"
  },
  {
-  "file": "ADV_1_4_Q5_F.mp3",
+  "file": "ADV_1_4_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Faudrait-il une ordonnance ?"
+  "french": "Le médecin m'a donné une ordonnance hier."
  },
  {
-  "file": "ADV_1_4_Q6.mp3",
+  "file": "ADV_1_4_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Que diriez-vous au médecin si vous aviez de la fièvre ?"
+  "french": "As-tu donné ta carte Vitale au médecin ?"
  },
  {
-  "file": "ADV_1_4_Q6_F.mp3",
+  "file": "ADV_1_4_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que demanderiez-vous ensuite ?"
+  "french": "Ce matin, j'ai donné mon numéro de téléphone au cabinet."
+ },
+ {
+  "file": "ADV_1_4_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Le médecin vous donnera une ordonnance."
+ },
+ {
+  "file": "ADV_1_4_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ils nous donneront les résultats vendredi."
+ },
+ {
+  "file": "ADV_1_4_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand nous étions enfants, notre mère nous donnait du miel contre le rhume."
+ },
+ {
+  "file": "ADV_1_4_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu donnais ton nom quand le médecin est arrivé."
  },
  {
   "file": "ADV_1_5_TEXT.mp3",
@@ -310,64 +350,84 @@
   "french": "La France a un grand réseau de trains, et c'est souvent la façon la plus agréable de voyager. Pour les longues distances, il y a le TGV, le train à grande vitesse : Paris–Marseille prend un peu plus de trois heures. Pour les petits trajets entre les villes d'une région, on prend le TER. Il vaudrait mieux réserver votre billet de TGV à l'avance, parce que les prix montent quand le train se remplit. Aujourd'hui, la plupart des voyageurs ont leur billet sur leur téléphone. À la gare, regardez le grand tableau des départs : la voie de votre train est souvent affichée vingt minutes avant le départ. Si vous aviez une question, vous pourriez demander à un agent : « Excusez-moi, pourriez-vous me dire d'où part le train pour Lyon ? » Et si votre train a beaucoup de retard, gardez votre billet ou sa référence : vous pourriez être remboursé en partie."
  },
  {
-  "file": "ADV_1_5_Q1.mp3",
+  "file": "ADV_1_5_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quelle est la différence entre le TGV et le TER ?"
+  "french": "Bonjour ! Que puis-je faire pour vous ?"
  },
  {
-  "file": "ADV_1_5_Q1_F.mp3",
+  "file": "ADV_1_5_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et à quoi sert le TER ?"
+  "french": "Très bien. Avez-vous déjà réservé votre retour ?"
  },
  {
-  "file": "ADV_1_5_Q2.mp3",
+  "file": "ADV_1_5_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi vaudrait-il mieux réserver à l'avance ?"
+  "french": "Parfait. Les prix montent vite : pour le prochain voyage, réserverez-vous plus tôt ?"
  },
  {
-  "file": "ADV_1_5_Q2_F.mp3",
+  "file": "ADV_1_5_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Un billet réservé tôt coûterait-il plus ou moins cher ?"
+  "french": "Quand vous étiez plus jeune, réserviez-vous aussi à l'avance ?"
  },
  {
-  "file": "ADV_1_5_Q3.mp3",
+  "file": "ADV_1_5_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand la voie du train est-elle affichée ?"
+  "french": "Le TGV se remplit vite ! Vos amis réservent-ils aussi leurs billets aujourd'hui ?"
  },
  {
-  "file": "ADV_1_5_Q3_F.mp3",
+  "file": "ADV_1_5_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Où la voit-on ?"
+  "french": "Alors dites-leur de se dépêcher ! Bon voyage à Marseille !"
  },
  {
-  "file": "ADV_1_5_Q4.mp3",
+  "file": "ADV_1_5_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourriez-vous demander à un agent ?"
+  "french": "Nous réservons nos billets de TGV à l'avance."
  },
  {
-  "file": "ADV_1_5_Q4_F.mp3",
+  "file": "ADV_1_5_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que ferait l'agent ?"
+  "french": "La plupart des voyageurs réservent leur billet sur leur téléphone."
  },
  {
-  "file": "ADV_1_5_Q5.mp3",
+  "file": "ADV_1_5_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faut-il faire si le train a beaucoup de retard ?"
+  "french": "Réservez-vous vos billets en ligne ?"
  },
  {
-  "file": "ADV_1_5_Q5_F.mp3",
+  "file": "ADV_1_5_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi ?"
+  "french": "J'ai réservé mon billet hier soir."
  },
  {
-  "file": "ADV_1_5_Q6.mp3",
+  "file": "ADV_1_5_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Si vous aviez une semaine en France, où iriez-vous en train ?"
+  "french": "Mon frère a réservé une place dans le TGV pour Marseille."
  },
  {
-  "file": "ADV_1_5_Q6_F.mp3",
+  "file": "ADV_1_5_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Qu'y feriez-vous ?"
+  "french": "As-tu réservé ta place ?"
+ },
+ {
+  "file": "ADV_1_5_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous réserverez votre retour sur le site."
+ },
+ {
+  "file": "ADV_1_5_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ils réserveront leurs places demain."
+ },
+ {
+  "file": "ADV_1_5_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand elle était étudiante, elle réservait les places les moins chères."
+ },
+ {
+  "file": "ADV_1_5_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu réservais ton billet quand le train s'est rempli."
  },
  {
   "file": "ADV_1_6_TEXT.mp3",
@@ -375,64 +435,84 @@
   "french": "En France, la politesse commence par un mot : « Bonjour ». Quand on entre dans une boutique, une boulangerie ou même un ascenseur, on dit bonjour. Si vous oubliiez de le dire, la personne pourrait vous trouver impoli, même si vous souriiez. Ensuite, il y a le choix entre « tu » et « vous ». Avec un inconnu, un client ou une personne plus âgée, on dit « vous ». Avec les amis, la famille et les enfants, on dit « tu ». En cas de doute, il vaudrait mieux dire « vous » : l'autre vous proposera peut-être de passer au « tu ». Le conditionnel aide aussi à être poli : « Je voudrais » est plus doux que « Je veux », et « Pourriez-vous m'aider ? » est plus aimable que « Aidez-moi ! ». Enfin, entre amis, on se fait souvent la bise, c'est-à-dire un petit baiser sur chaque joue. Le nombre de bises change selon les régions !"
  },
  {
-  "file": "ADV_1_6_Q1.mp3",
+  "file": "ADV_1_6_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quel est le premier mot de la politesse en France ?"
+  "french": "Bonjour ! Puis-je vous renseigner ?"
  },
  {
-  "file": "ADV_1_6_Q1_F.mp3",
+  "file": "ADV_1_6_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Où le dit-on ?"
+  "french": "Avec plaisir ! Pourquoi lui offrez-vous un cadeau ?"
  },
  {
-  "file": "ADV_1_6_Q2.mp3",
+  "file": "ADV_1_6_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourrait penser la personne si vous oubliiez de dire bonjour ?"
+  "french": "Quelle gentillesse ! Et vous, l'aiderez-vous dans son jardin cet été ?"
  },
  {
-  "file": "ADV_1_6_Q2_F.mp3",
+  "file": "ADV_1_6_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et si vous souriiez, serait-ce différent ?"
+  "french": "Quand vous étiez enfant, aidiez-vous aussi vos grands-parents ?"
  },
  {
-  "file": "ADV_1_6_Q3.mp3",
+  "file": "ADV_1_6_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Avec qui dit-on « vous » ?"
+  "french": "C'est très bien ! Et aujourd'hui, d'autres membres de la famille les aident-ils ?"
  },
  {
-  "file": "ADV_1_6_Q3_F.mp3",
+  "file": "ADV_1_6_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et avec qui dit-on « tu » ?"
+  "french": "Quelle famille attentionnée ! Ce joli foulard lui plairait-il ?"
  },
  {
-  "file": "ADV_1_6_Q4.mp3",
+  "file": "ADV_1_6_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi « Je voudrais » est-il plus poli que « Je veux » ?"
+  "french": "J'aide la dame âgée à porter ses sacs."
  },
  {
-  "file": "ADV_1_6_Q4_F.mp3",
+  "file": "ADV_1_6_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourriez-vous donner un autre exemple ?"
+  "french": "Nous aidons les clients dans la boutique."
  },
  {
-  "file": "ADV_1_6_Q5.mp3",
+  "file": "ADV_1_6_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que veut dire « faire la bise » ?"
+  "french": "Aidez-vous vos voisins ?"
  },
  {
-  "file": "ADV_1_6_Q5_F.mp3",
+  "file": "ADV_1_6_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Le nombre de bises est-il toujours le même ?"
+  "french": "As-tu aidé le vieux monsieur dans l'ascenseur ?"
  },
  {
-  "file": "ADV_1_6_Q6.mp3",
+  "file": "ADV_1_6_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Dans votre pays, ferait-on la bise à un nouveau collègue ?"
+  "french": "Les enfants ont aidé leur grand-mère ce matin."
  },
  {
-  "file": "ADV_1_6_Q6_F.mp3",
+  "file": "ADV_1_6_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que ferait-on à la place ?"
+  "french": "La boulangère a aidé mon fils hier."
+ },
+ {
+  "file": "ADV_1_6_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je vous aiderai à choisir, madame."
+ },
+ {
+  "file": "ADV_1_6_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nos voisins nous aideront samedi."
+ },
+ {
+  "file": "ADV_1_6_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand vous travailliez à la boutique, vous aidiez les clients plus âgés."
+ },
+ {
+  "file": "ADV_1_6_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Il aidait un inconnu quand je suis entré dans la boulangerie."
  },
  {
   "file": "ADV_1_7_TEXT.mp3",
@@ -440,64 +520,84 @@
   "french": "Presque toutes les villes françaises ont leur marché, une ou plusieurs fois par semaine. On y trouve des fruits et des légumes de saison, du fromage, du poisson et souvent des fleurs. Les produits viennent en général de la région, et les marchands sont fiers de vous les faire goûter. Au marché, on ne prend pas toujours les fruits soi-même : c'est le marchand qui vous sert. Vous pourriez dire : « Bonjour ! Je voudrais un kilo de tomates et deux avocats bien mûrs, s'il vous plaît. » Si vous ne savez pas quoi cuisiner, demandez conseil : « Que me conseilleriez-vous pour ce soir ? » Le marchand vous répondra sûrement avec plaisir. Venez tôt le matin si vous voulez le meilleur choix, ou à la fin du marché si vous préférez les bonnes affaires : certains marchands baissent leurs prix avant de partir. Et n'oubliez pas votre panier !"
  },
  {
-  "file": "ADV_1_7_Q1.mp3",
+  "file": "ADV_1_7_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que trouve-t-on au marché ?"
+  "french": "Bonjour ! Vous a-t-on déjà servi ?"
  },
  {
-  "file": "ADV_1_7_Q1_F.mp3",
+  "file": "ADV_1_7_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que trouve-t-on souvent en plus ?"
+  "french": "Désolée pour l'attente ! Recevez-vous des amis ce soir ? Si vous preniez mes tomates, que leur serviriez-vous ?"
  },
  {
-  "file": "ADV_1_7_Q2.mp3",
+  "file": "ADV_1_7_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Prend-on toujours les fruits soi-même ?"
+  "french": "Excellente idée, mes tomates sont parfaites ! Et le dessert, qui le servira ?"
  },
  {
-  "file": "ADV_1_7_Q2_F.mp3",
+  "file": "ADV_1_7_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourriez-vous dire au marchand ?"
+  "french": "Parfait ! Quand vous étiez enfant, votre mère servait-elle des produits du marché ?"
  },
  {
-  "file": "ADV_1_7_Q3.mp3",
+  "file": "ADV_1_7_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi les marchands vous font-ils goûter leurs produits ?"
+  "french": "Et aujourd'hui, chez vous, servez-vous souvent des produits du marché ?"
  },
  {
-  "file": "ADV_1_7_Q3_F.mp3",
+  "file": "ADV_1_7_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "D'où viennent ces produits ?"
+  "french": "Alors voilà vos tomates, bien mûres. Et n'oubliez pas votre panier !"
  },
  {
-  "file": "ADV_1_7_Q4.mp3",
+  "file": "ADV_1_7_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourriez-vous demander si vous ne saviez pas quoi cuisiner ?"
+  "french": "Le marchand sert les clients un par un."
  },
  {
-  "file": "ADV_1_7_Q4_F.mp3",
+  "file": "ADV_1_7_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que diriez-vous exactement ?"
+  "french": "Nous servons des fromages de la région sur notre stand."
  },
  {
-  "file": "ADV_1_7_Q5.mp3",
+  "file": "ADV_1_7_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand faudrait-il venir pour faire de bonnes affaires ?"
+  "french": "Servez-vous cette dame ?"
  },
  {
-  "file": "ADV_1_7_Q5_F.mp3",
+  "file": "ADV_1_7_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi ?"
+  "french": "J'ai servi trente clients ce matin."
  },
  {
-  "file": "ADV_1_7_Q6.mp3",
+  "file": "ADV_1_7_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Qu'achèteriez-vous au marché pour un repas entre amis ?"
+  "french": "La fromagère a servi ma mère avant moi."
  },
  {
-  "file": "ADV_1_7_Q6_F.mp3",
+  "file": "ADV_1_7_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que cuisineriez-vous ?"
+  "french": "As-tu servi le monsieur avec le panier ?"
+ },
+ {
+  "file": "ADV_1_7_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je vous servirai dans cinq minutes, madame."
+ },
+ {
+  "file": "ADV_1_7_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Les marchands serviront de la soupe à la fin du marché."
+ },
+ {
+  "file": "ADV_1_7_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand vous aviez un stand, vous serviez les meilleures tomates de la ville."
+ },
+ {
+  "file": "ADV_1_7_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu servais une cliente quand je suis arrivé."
  },
  {
   "file": "ADV_1_8_TEXT.mp3",
@@ -505,64 +605,84 @@
   "french": "Les Français aiment plaisanter sur leur administration, et ils ont parfois raison : en France, on a souvent besoin de papiers ! Pour beaucoup de démarches, on va à la mairie, le bâtiment où travaillent le maire et les services de la ville. C'est là qu'on se marie, qu'on déclare la naissance d'un enfant ou qu'on s'inscrit sur les listes électorales. Aujourd'hui, beaucoup de démarches se font aussi en ligne. Un conseil : avant d'y aller, vérifiez sur le site de la mairie les documents à apporter. Il vaudrait mieux en apporter trop que pas assez ! Au guichet, restez patient et poli : « Bonjour madame, je voudrais inscrire mon fils à l'école. Auriez-vous un formulaire ? » Si un document manque, on vous demandera de revenir. Alors, faites des photocopies de tout et gardez-les dans un dossier bien rangé. Vous verrez : avec un peu d'organisation, tout ira bien."
  },
  {
-  "file": "ADV_1_8_Q1.mp3",
+  "file": "ADV_1_8_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que veut dire « mairie » ?"
+  "french": "Bonjour ! Que puis-je faire pour vous ?"
  },
  {
-  "file": "ADV_1_8_Q1_F.mp3",
+  "file": "ADV_1_8_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi y va-t-on ?"
+  "french": "Très bien. Avez-vous apporté un justificatif de domicile ?"
  },
  {
-  "file": "ADV_1_8_Q2.mp3",
+  "file": "ADV_1_8_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que peut-on faire à la mairie ?"
+  "french": "Parfait. Mais il manque le carnet de vaccination. Qui l'apportera ?"
  },
  {
-  "file": "ADV_1_8_Q2_F.mp3",
+  "file": "ADV_1_8_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que peut-on faire d'autre ?"
+  "french": "D'accord. Dans votre pays, apportiez-vous autant de papiers pour l'école ?"
  },
  {
-  "file": "ADV_1_8_Q3.mp3",
+  "file": "ADV_1_8_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faudrait-il vérifier avant d'y aller ?"
+  "french": "Ici, c'est plus compliqué ! Avez-vous une autre question ?"
  },
  {
-  "file": "ADV_1_8_Q3_F.mp3",
+  "file": "ADV_1_8_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vaudrait-il mieux en apporter trop ou pas assez ?"
+  "french": "Oui, toujours ! Il vaudrait mieux en apporter trop que pas assez. Bonne journée !"
  },
  {
-  "file": "ADV_1_8_Q4.mp3",
+  "file": "ADV_1_8_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment demanderiez-vous un formulaire pour inscrire votre fils à l'école ?"
+  "french": "J'apporte tous mes documents à la mairie."
  },
  {
-  "file": "ADV_1_8_Q4_F.mp3",
+  "file": "ADV_1_8_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que demanderiez-vous ensuite ?"
+  "french": "Beaucoup de gens apportent trop de documents."
  },
  {
-  "file": "ADV_1_8_Q5.mp3",
+  "file": "ADV_1_8_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que se passe-t-il si un document manque ?"
+  "french": "Apportez-vous toujours des photocopies au guichet ?"
  },
  {
-  "file": "ADV_1_8_Q5_F.mp3",
+  "file": "ADV_1_8_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faudrait-il faire pour éviter ça ?"
+  "french": "J'ai apporté mon passeport ce matin."
  },
  {
-  "file": "ADV_1_8_Q6.mp3",
+  "file": "ADV_1_8_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? L'administration de votre pays est-elle plus simple qu'en France ?"
+  "french": "Mon mari a apporté le formulaire hier."
  },
  {
-  "file": "ADV_1_8_Q6_F.mp3",
+  "file": "ADV_1_8_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que changeriez-vous ?"
+  "french": "As-tu apporté les photocopies ?"
+ },
+ {
+  "file": "ADV_1_8_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous apporterez l'acte de naissance de votre fils."
+ },
+ {
+  "file": "ADV_1_8_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous apporterons le dossier lundi prochain."
+ },
+ {
+  "file": "ADV_1_8_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant Internet, les gens apportaient chaque formulaire à la mairie."
+ },
+ {
+  "file": "ADV_1_8_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "J'apportais mon dossier au guichet quand l'employée m'a appelé."
  },
  {
   "file": "ADV_1_9_TEXT.mp3",
@@ -570,64 +690,84 @@
   "french": "Dans les villes françaises, beaucoup de gens habitent en appartement, alors les voisins font partie de la vie quotidienne. Dans certains immeubles, il y a encore un gardien ou une gardienne : cette personne s'occupe du bâtiment, reçoit parfois les colis et connaît tout le monde. Pour bien vivre ensemble, il y a quelques règles simples. Le soir, après vingt-deux heures, on évite de faire trop de bruit. Si vous organisez une fête, ce serait gentil de prévenir vos voisins avec un petit mot dans le hall de l'immeuble : « Samedi soir, nous fêterons un anniversaire. Excusez-nous d'avance pour le bruit ! » Et si un voisin faisait trop de bruit, il vaudrait mieux lui parler gentiment avant de vous fâcher. Chaque année, au printemps, beaucoup d'immeubles participent à la Fête des voisins : chacun apporte quelque chose à manger, et on fait connaissance autour d'un verre."
  },
  {
-  "file": "ADV_1_9_Q1.mp3",
+  "file": "ADV_1_9_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que fait le gardien ou la gardienne ?"
+  "french": "Bonjour ! Venez-vous d'emménager dans l'immeuble ?"
  },
  {
-  "file": "ADV_1_9_Q1_F.mp3",
+  "file": "ADV_1_9_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et qui connaît-il ?"
+  "french": "Bienvenue ! Avez-vous déjà vécu en appartement ?"
  },
  {
-  "file": "ADV_1_9_Q2.mp3",
+  "file": "ADV_1_9_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que faut-il éviter après vingt-deux heures ?"
+  "french": "Y avait-il un gardien dans votre immeuble à Lyon ?"
  },
  {
-  "file": "ADV_1_9_Q2_F.mp3",
+  "file": "ADV_1_9_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi ?"
+  "french": "Ici, il n'y a plus de gardien. Votre famille vivra-t-elle avec vous ?"
  },
  {
-  "file": "ADV_1_9_Q3.mp3",
+  "file": "ADV_1_9_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que serait-il gentil de faire avant une fête ?"
+  "french": "Formidable ! Viendrez-vous à la Fête des voisins en mai ? L'ambiance est très sympa ici."
  },
  {
-  "file": "ADV_1_9_Q3_F.mp3",
+  "file": "ADV_1_9_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment pourriez-vous les prévenir ?"
+  "french": "Merci, c'est gentil ! Apportez quelque chose à manger, et à bientôt !"
  },
  {
-  "file": "ADV_1_9_Q4.mp3",
+  "file": "ADV_1_9_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que vaudrait-il mieux faire si un voisin faisait trop de bruit ?"
+  "french": "Nous vivons au troisième étage d'un vieil immeuble."
  },
  {
-  "file": "ADV_1_9_Q4_F.mp3",
+  "file": "ADV_1_9_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Faudrait-il se fâcher tout de suite ?"
+  "french": "Dans les villes françaises, beaucoup de gens vivent en appartement."
  },
  {
-  "file": "ADV_1_9_Q5.mp3",
+  "file": "ADV_1_9_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que fait-on pendant la Fête des voisins ?"
+  "french": "Vivez-vous dans cet immeuble ?"
  },
  {
-  "file": "ADV_1_9_Q5_F.mp3",
+  "file": "ADV_1_9_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que fait-on ensuite ?"
+  "french": "J'ai vécu à côté d'un voisin très bruyant pendant deux ans."
  },
  {
-  "file": "ADV_1_9_Q6.mp3",
+  "file": "ADV_1_9_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Qu'apporteriez-vous à la Fête des voisins ?"
+  "french": "La gardienne a vécu dans l'immeuble pendant trente ans."
  },
  {
-  "file": "ADV_1_9_Q6_F.mp3",
+  "file": "ADV_1_9_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et seriez-vous content d'y aller ?"
+  "french": "As-tu déjà vécu dans un immeuble ?"
+ },
+ {
+  "file": "ADV_1_9_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "L'année prochaine, ils vivront dans un immeuble avec un gardien."
+ },
+ {
+  "file": "ADV_1_9_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vous vivrez au rez-de-chaussée, à côté de la gardienne."
+ },
+ {
+  "file": "ADV_1_9_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand j'avais vingt ans, je vivais dans un tout petit appartement à Paris."
+ },
+ {
+  "file": "ADV_1_9_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Autrefois, un gardien vivait dans chaque immeuble."
  },
  {
   "file": "ADV_1_10_TEXT.mp3",
@@ -635,64 +775,84 @@
   "french": "Votre premier jour dans une entreprise française commence souvent à l'accueil. On vous donnera un badge pour entrer dans les bureaux, puis votre responsable vous présentera à l'équipe. Dans beaucoup d'entreprises, on travaille en open space, un grand bureau partagé. Le premier jour, c'est normal de poser beaucoup de questions, à condition d'être poli : « Excusez-moi, pourriez-vous m'indiquer la salle de réunion ? » ou « Pourrais-je avoir accès au dossier partagé ? ». Avec vos nouveaux collègues, il vaudrait mieux commencer par « vous », sauf si tout le monde se tutoie. Le midi, on vous proposera peut-être de déjeuner ensemble : acceptez, c'est le meilleur moyen de connaître l'équipe ! Beaucoup de salariés reçoivent des titres-restaurant pour payer une partie du déjeuner. Et le soir, avant de partir, n'oubliez pas de dire au revoir : « Bonne soirée, à demain ! »"
  },
  {
-  "file": "ADV_1_10_Q1.mp3",
+  "file": "ADV_1_10_C1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que vous donnera-t-on à l'accueil ?"
+  "french": "Bonjour et bienvenue ! Avez-vous déjà commencé à lire le guide de l'entreprise ?"
  },
  {
-  "file": "ADV_1_10_Q1_F.mp3",
+  "file": "ADV_1_10_C3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et ensuite, que fera votre responsable ?"
+  "french": "Très bien ! Dans votre ancienne entreprise, à quelle heure commenciez-vous ?"
  },
  {
-  "file": "ADV_1_10_Q2.mp3",
+  "file": "ADV_1_10_C5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que veut dire « open space » ?"
+  "french": "Ici, c'est plus souple. Savez-vous à quelle heure vos collègues commencent ?"
  },
  {
-  "file": "ADV_1_10_Q2_F.mp3",
+  "file": "ADV_1_10_C7.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Qui y travaille ?"
+  "french": "Exactement. Et demain, commencerez-vous à neuf heures aussi ?"
  },
  {
-  "file": "ADV_1_10_Q3.mp3",
+  "file": "ADV_1_10_C9.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Comment demanderiez-vous où est la salle de réunion ?"
+  "french": "Parfait. Avez-vous des questions avant de rencontrer l'équipe ?"
  },
  {
-  "file": "ADV_1_10_Q3_F.mp3",
+  "file": "ADV_1_10_C11.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Que pourriez-vous demander d'autre ?"
+  "french": "Je commencerais par déjeuner avec l'équipe : c'est le meilleur moyen de la connaître ! À midi, alors !"
  },
  {
-  "file": "ADV_1_10_Q4.mp3",
+  "file": "ADV_1_10_QZ1.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Faudrait-il dire « tu » ou « vous » à vos nouveaux collègues ?"
+  "french": "Nous commençons le travail à neuf heures."
  },
  {
-  "file": "ADV_1_10_Q4_F.mp3",
+  "file": "ADV_1_10_QZ2.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et si tout le monde se tutoie, que fait-on ?"
+  "french": "Les nouveaux salariés commencent souvent leur journée à l'accueil."
  },
  {
-  "file": "ADV_1_10_Q5.mp3",
+  "file": "ADV_1_10_QZ3.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Pourquoi faudrait-il accepter de déjeuner avec l'équipe ?"
+  "french": "Commencez-vous par dire « vous » à vos collègues ?"
  },
  {
-  "file": "ADV_1_10_Q5_F.mp3",
+  "file": "ADV_1_10_QZ4.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et comment paie-t-on souvent le déjeuner ?"
+  "french": "J'ai commencé mon nouveau travail lundi."
  },
  {
-  "file": "ADV_1_10_Q6.mp3",
+  "file": "ADV_1_10_QZ5.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et vous ? Que feriez-vous pendant votre premier jour pour faire bonne impression ?"
+  "french": "Ma responsable a commencé la réunion à dix heures."
  },
  {
-  "file": "ADV_1_10_Q6_F.mp3",
+  "file": "ADV_1_10_QZ6.mp3",
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et que feriez-vous d'autre ?"
+  "french": "As-tu commencé la formation ?"
+ },
+ {
+  "file": "ADV_1_10_QZ7.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Demain, le nouveau collègue commencera dans l'open space."
+ },
+ {
+  "file": "ADV_1_10_QZ8.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je commencerai par me présenter à l'équipe."
+ },
+ {
+  "file": "ADV_1_10_QZ9.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand je travaillais à Lyon, je commençais à huit heures."
+ },
+ {
+  "file": "ADV_1_10_QZ10.mp3",
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous commencions la réunion quand le nouveau collègue est arrivé."
  },
  {
   "file": "ADVW_a.mp3",
