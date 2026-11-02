@@ -37,7 +37,7 @@ export default function Advanced() {
           <View style={styles.beta}><Text style={styles.betaText}>BETA</Text></View>
         </View>
         <Text style={styles.lead}>
-          Read a short article, learn its new words, then talk about it with Cécile. Answer aloud, in at least two sentences.
+          Read a short article, learn its new words, master its verb in a quiz, then use it in a conversation with Cécile.
         </Text>
 
         {ADVANCED_THEMES.map((t) => {
@@ -59,7 +59,7 @@ export default function Advanced() {
                       {locked ? "🔒 " : r ? "✓ " : ""}{u.id} · {u.title}
                     </Text>
                     <Text style={[styles.rowSub, isNext && styles.rowSubNext]}>
-                      {r ? `Completed · best ${r.coins} coins` : isNext ? `▸ Up next · ${u.titleEn}` : u.titleEn}
+                      {r ? `Completed · best ${r.coins} coins` : isNext ? `▸ Up next · ${u.titleEn} · ${u.verb}` : `${u.titleEn} · ${u.verb}`}
                     </Text>
                   </Pressable>
                 );

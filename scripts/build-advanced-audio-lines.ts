@@ -13,14 +13,14 @@
  *
  * Voices: the articles alternate Cécile (odd units) and Maxime (even units), as the
  * plan says; Cécile asks every question and says every stock line, since she runs
- * the conversation; every word card is read by Cécile.
+ * the conversation and reads each verb-quiz answer; every word card is read by Cécile.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { ADVANCED_PHRASES, ADVANCED_UNITS, lexFor } from "../shared/advanced/content";
 import { keysIn } from "../shared/advanced/tokenize";
-import { STOCK_LINES, articleClip, followClip, questionClip, spokenHeadword, wordClip } from "../shared/advanced/audioKeys";
+import { STOCK_LINES, articleClip, convClip, quizClip, spokenHeadword, wordClip } from "../shared/advanced/audioKeys";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CLIPS_DIR = path.join(ROOT, "apps/mobile/assets/audio/conversations");
@@ -39,10 +39,10 @@ const add = (key: string, voice: string, french: string) => {
 for (const [k, t] of Object.entries(STOCK_LINES)) add(k, CECILE, t);
 for (const [n, u] of ADVANCED_UNITS.entries()) {
   add(articleClip(u.id), n % 2 === 0 ? CECILE : MAXIME, u.text);
-  u.questions.forEach((q, i) => {
-    add(questionClip(u.id, i), CECILE, q.fr);
-    add(followClip(u.id, i), CECILE, q.follow);
-  });
+  // Cécile's conversation lines (the learner's replies are theirs to say).
+  u.conversation.turns.forEach((t, i) => { if (t.who === "app") add(convClip(u.id, i), CECILE, t.fr); });
+  // The verb quiz's correct French, played after each answer.
+  u.quiz.forEach((q, i) => add(quizClip(u.id, i), CECILE, q.answer));
 }
 // Words: every headword a tap can show, plus the key words.
 for (const u of ADVANCED_UNITS) {

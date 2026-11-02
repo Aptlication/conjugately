@@ -120,7 +120,7 @@ export default function WordsStep({ unitId, keyWords, mine, play, onDone }: {
           <>
             <Text style={styles.h1}>Les mots</Text>
             <Text style={styles.p}>
-              Learn your words now, before the conversation: you’ll need them to answer Cécile, and each one learnt earns a coin.
+              Learn your words now, before the quiz and the conversation: you’ll meet them again there, and each one learnt earns a coin.
               Words you send to My Words wait there for later.
             </Text>
             <Text style={styles.label}>YOUR WORDS · {own.length}</Text>
@@ -222,7 +222,7 @@ export default function WordsStep({ unitId, keyWords, mine, play, onDone }: {
           <View style={styles.doneCard}>
             <View style={styles.doneIcon}><Ionicons name="checkmark" size={30} color="#FFFFFF" /></View>
             <Text style={styles.h1}>Mots appris</Text>
-            <Text style={styles.p}>You learnt all {total} words. You’re ready for the conversation.</Text>
+            <Text style={styles.p}>You learnt all {total} words. Next, the verb quiz.</Text>
             {coins > 0 && <Text style={styles.coinLine}>+{coins} <CoinIcon size={20} /></Text>}
             {laterWords.length > 0 && (
               <>
@@ -249,7 +249,7 @@ export default function WordsStep({ unitId, keyWords, mine, play, onDone }: {
         )}
         {phase === "done" && (
           <Pressable style={styles.primary} onPress={finish} accessibilityRole="button">
-            <Text style={styles.primaryText}>Start the conversation →</Text>
+            <Text style={styles.primaryText}>Start the verb quiz →</Text>
           </Pressable>
         )}
       </View>

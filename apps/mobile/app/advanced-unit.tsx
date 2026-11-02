@@ -8,7 +8,8 @@ import type { LexEntry } from "@shared/advanced/types";
 import ReadingStep from "../components/advanced/ReadingStep";
 import ReadTip from "../components/advanced/ReadTip";
 import WordsStep from "../components/advanced/WordsStep";
-import TalkStep from "../components/advanced/TalkStep";
+import QuizStep from "../components/advanced/QuizStep";
+import ConvStep from "../components/advanced/ConvStep";
 import CoinIcon from "../components/CoinIcon";
 import { fromLex, readTipOff, saveUnitResult, turnReadTipOff, wordId, type AdvWord } from "../lib/advanced";
 import { useAdvancedPlayer } from "../lib/advancedPlayer";
@@ -16,7 +17,8 @@ import { purchasesAvailable, usePro } from "../lib/pro";
 import { maybeAskForReview } from "../lib/reviewPrompt";
 
 /**
- * One Advanced unit (pilot, 1 Nov 2026): Read → Words → Conversation → Summary.
+ * One Advanced unit (pilot, 1 Nov 2026; revised 2 Nov 2026):
+ * Read → Words → Verb quiz → Conversation (translate format) → Summary.
  * The flow and its rules were set by Jonathan on 31 Oct 2026; see
  * advanced-reading-curriculum-plan.md in the project.
  */
@@ -25,7 +27,7 @@ const INK = "#1B2145";
 const SOFT = "#5A6390";
 const BLUE = "#2B5FD9";
 const RED = "#E63A2E";
-const STEPS = ["Lire", "Mots", "Conversation", "Bilan"];
+const STEPS = ["Lire", "Mots", "Quiz", "Conversation", "Bilan"];
 
 export default function AdvancedUnit() {
   const { unit: unitId } = useLocalSearchParams<{ unit: string }>();
@@ -37,7 +39,8 @@ export default function AdvancedUnit() {
   const [saved, setSaved] = useState<LexEntry[]>([]);
   const [tip, setTip] = useState(false);
   const [words, setWords] = useState<{ learned: AdvWord[]; later: AdvWord[]; coins: number } | null>(null);
-  const [talk, setTalk] = useState<{ coins: number; answered: number; withHelp: number } | null>(null);
+  const [quiz, setQuiz] = useState<{ score: number; total: number; coins: number } | null>(null);
+  const [talk, setTalk] = useState<{ replies: number; firstTime: number } | null>(null);
 
   // Pro feature. The web build (staging) has no store, so it always opens.
   useEffect(() => { if (!loading && !isPro && purchasesAvailable()) router.replace("/paywall" as any); }, [loading, isPro]);
@@ -65,14 +68,14 @@ export default function AdvancedUnit() {
 
   const leave = () => { stop(); if (router.canGoBack()) router.back(); else router.replace("/advanced" as any); };
 
-  const finishTalk = (r: { coins: number; answered: number; withHelp: number }) => {
+  const finishTalk = (r: { replies: number; firstTime: number }) => {
     setTalk(r);
-    saveUnitResult(unit.id, { coins: r.coins + (words?.coins ?? 0), answered: r.answered, withHelp: r.withHelp }).catch(() => {});
-    setStep(3);
+    saveUnitResult(unit.id, { coins: (words?.coins ?? 0) + (quiz?.coins ?? 0), quizScore: quiz?.score ?? 0, firstTime: r.firstTime }).catch(() => {});
+    setStep(4);
     maybeAskForReview("unit");
   };
 
-  const totalCoins = (words?.coins ?? 0) + (talk?.coins ?? 0);
+  const totalCoins = (words?.coins ?? 0) + (quiz?.coins ?? 0);
 
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
@@ -81,7 +84,7 @@ export default function AdvancedUnit() {
         <Pressable onPress={leave} accessibilityRole="button" accessibilityLabel="Close" style={styles.close}>
           <Ionicons name="close" size={20} color="#47507A" />
         </Pressable>
-        <View style={styles.steps} accessibilityRole="progressbar" accessibilityLabel={`Step ${step + 1} of 4: ${STEPS[step]}`}>
+        <View style={styles.steps} accessibilityRole="progressbar" accessibilityLabel={`Step ${step + 1} of ${STEPS.length}: ${STEPS[step]}`}>
           {STEPS.map((s, i) => (
             <View key={s} style={{ flex: 1 }}>
               <View style={[styles.stepBar, i < step && { backgroundColor: BLUE }, i === step && { backgroundColor: RED }]} />
@@ -100,15 +103,17 @@ export default function AdvancedUnit() {
           mine={saved.filter((e) => !keyWords.some((k) => wordId(k.fr) === wordId(e.fr))).map((e) => fromLex(e))}
           play={play} onDone={(r) => { setWords(r); setStep(2); }} />
       )}
-      {step === 2 && <TalkStep unit={unit} play={play} stop={stop} onDone={finishTalk} />}
-      {step === 3 && (
+      {step === 2 && <QuizStep unit={unit} play={play} onDone={(r) => { setQuiz(r); setStep(3); }} />}
+      {step === 3 && <ConvStep unit={unit} play={play} stop={stop} onDone={finishTalk} />}
+      {step === 4 && (
         <ScrollView contentContainerStyle={styles.summary}>
           <Text style={styles.h1}>Bilan</Text>
           <Text style={styles.sub}>{unit.title} · unit complete</Text>
           <View style={styles.stats}>
             <View style={styles.stat}><Text style={styles.statN}>{totalCoins} <CoinIcon size={18} /></Text><Text style={styles.statL}>coins earned</Text></View>
             <View style={styles.stat}><Text style={styles.statN}>{words?.learned.length ?? 0}</Text><Text style={styles.statL}>words learnt</Text></View>
-            <View style={styles.stat}><Text style={styles.statN}>{talk?.answered ?? 0}/{unit.questions.length}</Text><Text style={styles.statL}>questions answered</Text></View>
+            <View style={styles.stat}><Text style={styles.statN}>{quiz?.score ?? 0}/{quiz?.total ?? 10}</Text><Text style={styles.statL}>verb quiz · {unit.verb}</Text></View>
+            <View style={styles.stat}><Text style={styles.statN}>{talk?.firstTime ?? 0}/{talk?.replies ?? 5}</Text><Text style={styles.statL}>replies right first time</Text></View>
           </View>
           <Text style={styles.label}>LEARNT IN THIS LESSON</Text>
           <View style={styles.chips}>
@@ -141,8 +146,8 @@ const styles = StyleSheet.create({
   sub: { color: SOFT, fontSize: 14, textAlign: "center", marginTop: 4 },
   link: { color: BLUE, fontSize: 16, marginTop: 16 },
   summary: { padding: 22, paddingBottom: 48 },
-  stats: { flexDirection: "row", gap: 8, marginVertical: 18 },
-  stat: { flex: 1, backgroundColor: "#FFFFFF", borderRadius: 14, borderWidth: 1, borderColor: "#E3E8F3", padding: 12 },
+  stats: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginVertical: 18 },
+  stat: { flexGrow: 1, flexBasis: "45%", backgroundColor: "#FFFFFF", borderRadius: 14, borderWidth: 1, borderColor: "#E3E8F3", padding: 12 },
   statN: { color: INK, fontSize: 22, fontWeight: "800" },
   statL: { color: SOFT, fontSize: 12, marginTop: 2 },
   label: { color: SOFT, fontSize: 12, fontWeight: "800", letterSpacing: 1, marginBottom: 8 },
