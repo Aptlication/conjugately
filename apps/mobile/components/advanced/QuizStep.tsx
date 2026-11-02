@@ -27,6 +27,13 @@ import type { MicOutcome } from "../../lib/mastersMic";
  * by itself, as in Mic On quizzes elsewhere. The "Say it aloud" pop-up shows
  * at the start until "Don't remind me again" (the same setting as the quizzes).
  * The web build has no recogniser, so it stays tap-only there.
+ *
+ * Update 1.4.1 (Jonathan, 3 Nov 2026):
+ * - 1.4.1.1: with Mic On, opened A–D sit ABOVE Record, as in the conjugation
+ *   quizzes (they used to drop in below it).
+ * - 1.4.1.2: ‹ Back and Next › under the card, Mic On or off, as in the
+ *   conjugation quizzes. Back reviews earlier answers (read-only) and holds the
+ *   auto-advance; Next returns to the current question or moves on.
  */
 
 const MIC_PREF = "advancedQuizMic";
@@ -51,6 +58,9 @@ export default function QuizStep({ unit, play, onDone }: {
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  // Answers given so far (index into that question's options), for reviewing with Back.
+  const [answers, setAnswers] = useState<(number | null)[]>([]);
+  const [review, setReview] = useState<number | null>(null);
   const [micOn, setMicOn] = useState(micPossible);
   const [showOptions, setShowOptions] = useState(false);
   const [promo, setPromo] = useState(false);
@@ -59,8 +69,12 @@ export default function QuizStep({ unit, play, onDone }: {
   const scoreRef = useRef(0);
   useEffect(() => { scoreRef.current = score; }, [score]);
   const q = items[n];
+  const d = review ?? n;
+  const dq = items[d];
+  const dPicked = review !== null ? (answers[review] ?? null) : picked;
   const micMode = micOn && micPossible;
-  const optionsHidden = micMode && !showOptions && picked === null;
+  const micControl = micMode && review === null && picked === null;
+  const optionsHidden = micControl && !showOptions;
 
   useEffect(() => {
     if (!micPossible) return;
@@ -76,6 +90,7 @@ export default function QuizStep({ unit, play, onDone }: {
   const pick = (k: number) => {
     if (picked !== null) return;
     setPicked(k);
+    setAnswers((a) => { const b = [...a]; b[n] = k; return b; });
     const right = q.options[k] === q.answer;
     Haptics.notificationAsync(right ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Error).catch(() => {});
     if (right) setScore((s) => s + 1);
@@ -89,12 +104,22 @@ export default function QuizStep({ unit, play, onDone }: {
     pick(k);
     advance.current = setTimeout(() => next(), o.correct ? 2200 : 3200);
   };
+  const cancelAdvance = () => { if (advance.current) { clearTimeout(advance.current); advance.current = null; } };
   const next = () => {
-    if (advance.current) { clearTimeout(advance.current); advance.current = null; }
+    cancelAdvance();
     setShowOptions(false);
+    setReview(null);
     if (n < items.length - 1) { setN((x) => x + 1); setPicked(null); return; }
     awardCoins(scoreRef.current).catch(() => {});
     setDone(true);
+  };
+
+  const canBack = d > 0 && answers[d - 1] != null;
+  const canNext = review !== null || picked !== null;
+  const goBack = () => { if (!canBack) return; cancelAdvance(); setReview(d - 1); };
+  const goNext = () => {
+    if (review !== null) { setReview(review + 1 >= n ? null : review + 1); return; }
+    if (picked !== null) next();
   };
 
   if (done) {
@@ -122,34 +147,47 @@ export default function QuizStep({ unit, play, onDone }: {
         <View style={[styles.card, micMode && styles.cardNavy]}>
           <View style={styles.metaRow}>
             <Text style={[styles.meta, micMode && { color: "#C3D0E8" }]}>Verb quiz · <Text style={{ fontWeight: "700" }} accessibilityLanguage="fr">{unit.verb}</Text></Text>
-            <Text style={[styles.metaScore, micMode && { color: "#C3D0E8" }]}>{n + 1} / {items.length}</Text>
+            <Text style={[styles.metaScore, micMode && { color: "#C3D0E8" }]}>{d + 1} / {items.length}</Text>
           </View>
           <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${(n / items.length) * 100}%` }]} /></View>
-          <View style={styles.tense}><Text style={styles.tenseText}>{q.tense}</Text></View>
-          <Text style={[styles.qText, micMode && { color: "#FFFFFF" }]}>{q.en}{q.tag ? <Text style={styles.tag}>  ({q.tag})</Text> : null}</Text>
-          {micMode && picked === null && (
-            <MastersMic key={n} expected={q.answer} options={q.options} correctIndex={q.options.indexOf(q.answer)}
-              onOutcome={onMic} optionsShown={showOptions} onToggleOptions={() => setShowOptions((x) => !x)} />
-          )}
-          {!optionsHidden && q.options.map((o, k) => {
-            const isRight = picked !== null && o === q.answer;
-            const isWrong = picked === k && o !== q.answer;
+          <View style={styles.tense}><Text style={styles.tenseText}>{dq.tense}</Text></View>
+          {review !== null && <Text style={[styles.reviewNote, micMode && { color: "#C3D0E8" }]}>Reviewing an earlier answer</Text>}
+          <Text style={[styles.qText, micMode && { color: "#FFFFFF" }]}>{dq.en}{dq.tag ? <Text style={styles.tag}>  ({dq.tag})</Text> : null}</Text>
+          {/* 1.4.1.1: opened A–D sit above Record, as in the conjugation quizzes. */}
+          {!optionsHidden && dq.options.map((o, k) => {
+            const isRight = dPicked !== null && o === dq.answer;
+            const isWrong = dPicked === k && o !== dq.answer;
             return (
-              <Pressable key={o} onPress={() => pick(k)} disabled={picked !== null} accessibilityRole="button"
+              <Pressable key={o} onPress={() => pick(k)} disabled={dPicked !== null || review !== null} accessibilityRole="button"
                 accessibilityLabel={`${String.fromCharCode(65 + k)}. ${o}`}
-                style={[styles.opt, isRight && styles.optCorrect, isWrong && styles.optWrong, picked !== null && !isRight && !isWrong && styles.optDim]}>
+                style={[styles.opt, isRight && styles.optCorrect, isWrong && styles.optWrong, dPicked !== null && !isRight && !isWrong && styles.optDim]}>
                 <View style={styles.letter}><Text style={styles.letterText}>{String.fromCharCode(65 + k)}</Text></View>
                 <Text style={[styles.optText, isRight && styles.optTextCorrect, isWrong && styles.optTextWrong]} accessibilityLanguage="fr">{fr(o)}</Text>
               </Pressable>
             );
           })}
-          {picked !== null && (
-            <View style={[styles.feedback, q.options[picked] === q.answer ? styles.feedbackGood : styles.feedbackBad]}>
+          {micControl && (
+            <MastersMic key={n} expected={q.answer} options={q.options} correctIndex={q.options.indexOf(q.answer)}
+              onOutcome={onMic} optionsShown={showOptions} onToggleOptions={() => setShowOptions((x) => !x)} />
+          )}
+          {dPicked !== null && (
+            <View style={[styles.feedback, dq.options[dPicked] === dq.answer ? styles.feedbackGood : styles.feedbackBad]}>
               <Text style={styles.feedbackText}>
-                {q.options[picked] === q.answer ? <>Correct!  +1 <CoinIcon size={14} /></> : <>The answer is <Text style={{ fontWeight: "700" }}>{fr(q.answer)}</Text></>}
+                {dq.options[dPicked] === dq.answer ? <>Correct!  +1 <CoinIcon size={14} /></> : <>The answer is <Text style={{ fontWeight: "700" }}>{fr(dq.answer)}</Text></>}
               </Text>
             </View>
           )}
+          {/* 1.4.1.2: Back and Next, Mic On or off, as in the conjugation quizzes. */}
+          <View style={styles.bottomRow}>
+            <Pressable onPress={goBack} disabled={!canBack} accessibilityRole="button" accessibilityLabel="Back to the previous question"
+              style={[styles.ghostBtn, micMode && styles.ghostBtnMic, !canBack && { opacity: 0.4 }]}>
+              <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>‹ Back</Text>
+            </Pressable>
+            <Pressable onPress={goNext} disabled={!canNext} accessibilityRole="button"
+              style={[styles.ghostBtn, micMode && styles.ghostBtnMic, !canNext && { opacity: 0.4 }]}>
+              <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>{review === null && n === items.length - 1 ? "See your score ›" : "Next ›"}</Text>
+            </Pressable>
+          </View>
           {micPossible && (
             <Pressable onPress={() => setMic(!micOn)} accessibilityRole="switch" accessibilityState={{ checked: micOn }}
               accessibilityLabel="Masters Mic" accessibilityHint="Answer aloud instead of tapping. The options are hidden while it is on."
@@ -180,13 +218,6 @@ export default function QuizStep({ unit, play, onDone }: {
         </View>
       </Modal>
 
-      {picked !== null && (
-        <View style={styles.footer}>
-          <Pressable style={styles.primary} onPress={next} accessibilityRole="button">
-            <Text style={styles.primaryText}>{n < items.length - 1 ? "Next" : "See your score"}</Text>
-          </Pressable>
-        </View>
-      )}
     </View>
   );
 }
@@ -223,6 +254,13 @@ const styles = StyleSheet.create({
   letter: { width: 30, height: 30, borderRadius: 15, borderWidth: 2, borderColor: "#8A93A0", alignItems: "center", justifyContent: "center", marginRight: 14 },
   letterText: { color: SOFT, fontSize: 13, fontWeight: "700" },
   optText: { color: INK, fontSize: 16, fontWeight: "500", flex: 1 },
+  reviewNote: { color: SOFT, fontSize: 12, fontWeight: "700", marginBottom: 6 },
+  // Same as the conjugation quiz's Back / Next (app/quiz.tsx).
+  bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 14, marginTop: 16 },
+  ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },
+  ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
+  ghostText: { color: "#5A6472", fontSize: 15 },
+  ghostTextMic: { color: "#E2E9F7" },
   feedback: { borderWidth: 1, borderRadius: 14, padding: 14, marginTop: 4 },
   feedbackGood: { borderColor: GREEN, backgroundColor: "#E7F3EC" },
   feedbackBad: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
