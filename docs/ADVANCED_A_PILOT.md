@@ -24,6 +24,12 @@ Read → Words → Verb quiz → Conversation → Summary (`app/advanced-unit.ts
 - Ten questions on the unit verb, in the conjugation-quiz format: 3 présent, 3 passé composé, 2 futur simple, 2 imparfait.
 - The correct French is played after each answer.
 - 1 coin per right answer.
+- **Masters Mic** (2 Nov 2026) works as in the conjugation quizzes:
+  - Mic On is the default for Advanced, and switching it off is remembered.
+  - With Mic On, the screen goes navy and A–D are hidden; Show A–D brings them back.
+  - A spoken answer snaps to the nearest option and the quiz moves on by itself.
+  - The "Say it aloud" pop-up shows until "Don't remind me again".
+  - The web build stays tap-only.
 
 **Conversation** (`components/advanced/ConvStep.tsx`)
 - The old translate format, laid out like the post-quiz conversation.
