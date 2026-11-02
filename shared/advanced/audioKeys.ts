@@ -21,6 +21,8 @@ export const quizClip = (unitId: string, i: number) => `ADV_${u(unitId)}_QZ${i +
 export const STOCK_LINES = {
   // A new key (not the old ADV_MISS), so the recorder doesn't skip it as already done.
   ADV_TRY_AGAIN: "Pas tout à fait. Essayez encore.",
+  // Speech that sounds like none of the options left.
+  ADV_COMMENT: "Comment ?",
 } as const;
 export type StockLine = keyof typeof STOCK_LINES;
 
