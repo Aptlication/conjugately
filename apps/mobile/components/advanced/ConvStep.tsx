@@ -16,9 +16,14 @@ import type { AdvTurn, AdvUnit } from "@shared/advanced/types";
  *  - Whatever is heard snaps to the nearest of four sentences: the right one
  *    and three wrong ones built around the unit verb (wrong tense, ending or
  *    auxiliary). Sounding the same as the right one counts as right.
- *  - A miss: « Pas tout à fait. Essayez encore. », the four appear with the one
- *    heard marked red, and the learner tries again (by voice, or by tapping)
- *    until it's right. Tapping the yellow card shows the French to read aloud.
+ *  - A miss (Jonathan, 2 Nov 2026, same as the Beginner–Intermediate
+ *    conversations): no list of options. The sentence it matched is ruled out,
+ *    shown struck through ("Ruled out: …"), and Cécile says « Pas tout à fait.
+ *    Essayez encore. » (the Advanced line, kept on purpose). The next
+ *    attempt is matched only against what's left, so the field narrows until
+ *    the right one. Recording again over a wrong match also rules it out.
+ *    Speech that sounds like none of what's left gets « Comment ? » and rules
+ *    nothing out. Tapping the yellow card shows the French to read aloud.
  *  - Tapping a French bubble flips it to English. No coins: it is practice.
  * The web build (staging) has no recogniser: a tap on the mic stands in for a
  * clear right answer, as in app/conversation.tsx.
@@ -69,7 +74,7 @@ export default function ConvStep({ unit, play, stop, onDone }: {
   const [heard, setHeard] = useState("");
   const [heardAll, setHeardAll] = useState<string[]>([]);
   const [cueOpen, setCueOpen] = useState(false);
-  const [missed, setMissed] = useState(false);
+  const [misses, setMisses] = useState(0);
   const [ruledOut, setRuledOut] = useState<number[]>([]);
   const [notice, setNotice] = useState<string | null>(null);
   const [level01, setLevel01] = useState(0);
@@ -93,7 +98,7 @@ export default function ConvStep({ unit, play, stop, onDone }: {
       const timer = setTimeout(() => play([{ key: convClip(unit.id, step), text: t.fr }], () => setStep((s) => s + 1)), step === 0 ? 450 : 300);
       return () => clearTimeout(timer);
     }
-    setHeard(""); setHeardAll([]); setCueOpen(false); setMissed(false); setRuledOut([]); setNotice(null);
+    setHeard(""); setHeardAll([]); setCueOpen(false); setMisses(0); setRuledOut([]); setNotice(null);
     setPhase("yourTurn");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
@@ -101,7 +106,7 @@ export default function ConvStep({ unit, play, stop, onDone }: {
   useEffect(() => {
     const t = setTimeout(() => scroll.current?.scrollToEnd({ animated: true }), 60);
     return () => clearTimeout(t);
-  }, [log.length, phase, missed]);
+  }, [log.length, phase, ruledOut.length]);
 
   // ---- Mic (same pattern as app/conversation.tsx)
   const listeningRef = useRef(false);
@@ -166,6 +171,11 @@ export default function ConvStep({ unit, play, stop, onDone }: {
       if (!perm.granted) { setNotice("Microphone access is off. Turn it on in Settings › Pluri French."); return; }
     } catch { return; }
     if (!holdingRef.current) return;
+    // Recording again over a wrong match = turning it down (as in app/conversation.tsx).
+    if (phase === "heard" && heard.trim()) {
+      const g = nearest([heard, ...heardAll]).best;
+      if (g >= 0 && !options[g].right) setRuledOut((r) => r.includes(g) ? r : [...r, g]);
+    }
     stop();
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
     setHeard(""); setHeardAll([]); committedRef.current = ""; lastAltsRef.current = []; restartsRef.current = 0; setNotice(null);
@@ -208,22 +218,25 @@ export default function ConvStep({ unit, play, stop, onDone }: {
     const o = options[idx];
     if (o.right) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-      if (!missed) setFirstTime((x) => x + 1);
+      if (!misses && !ruledOut.length) setFirstTime((x) => x + 1);
       setLog((l) => [...l, { kind: "you", text: you.fr, good: true, key: k() }]);
       setPhase("speaking");
       setTimeout(() => setStep((s) => s + 1), 700);
       return;
     }
+    // Wrong: rule it out and ask again. No list of options (same as the earlier levels).
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {});
     setRuledOut((r) => r.includes(idx) ? r : [...r, idx]);
-    setMissed(true);
-    setHeard("");
+    setMisses((m) => m + 1);
+    setHeard(""); setHeardAll([]);
+    // Every miss: « Pas tout à fait. Essayez encore. » (Jonathan, 2 Nov 2026: keep the Advanced line).
+    const line = { key: "ADV_TRY_AGAIN", fr: STOCK_LINES.ADV_TRY_AGAIN, en: "Not quite. Try again." };
     setLog((l) => [...l,
       { kind: "you", text: o.text, good: false, key: k() },
-      { kind: "app", fr: STOCK_LINES.ADV_TRY_AGAIN, en: "Not quite. Try again.", key: k() },
+      { kind: "app", fr: line.fr, en: line.en, key: k() },
     ]);
     setPhase("speaking");
-    play([{ key: "ADV_TRY_AGAIN", text: STOCK_LINES.ADV_TRY_AGAIN }], () => setPhase("yourTurn"));
+    play([{ key: line.key, text: line.fr }], () => setPhase("yourTurn"));
   };
 
   const enter = () => {
@@ -232,8 +245,11 @@ export default function ConvStep({ unit, play, stop, onDone }: {
     if (phase !== "heard") return;
     const { best, bestSim } = nearest([heard, ...heardAll]);
     if (best < 0 || bestSim < 0.35) {
-      setLog((l) => [...l, { kind: "app", fr: "Comment ?", en: "Sorry?", key: k() }]);
-      setHeard(""); setPhase("yourTurn");
+      // Sounds like none of what's left: ask again, rule nothing out.
+      setLog((l) => [...l, { kind: "app", fr: STOCK_LINES.ADV_COMMENT, en: "Sorry?", key: k() }]);
+      setHeard(""); setHeardAll([]);
+      setPhase("speaking");
+      play([{ key: "ADV_COMMENT", text: STOCK_LINES.ADV_COMMENT }], () => setPhase("yourTurn"));
       return;
     }
     answer(best);
@@ -282,22 +298,6 @@ export default function ConvStep({ unit, play, stop, onDone }: {
           </Pressable>
         )}
 
-        {yourTurn && missed && (
-          <View style={styles.optWrap}>
-            {options.map((o, i) => {
-              const out = ruledOut.includes(i);
-              return (
-                <Pressable key={o.text} onPress={() => !out && answer(i)} disabled={out} accessibilityRole="button"
-                  accessibilityLabel={`${String.fromCharCode(65 + i)}. ${o.text}${out ? ", not right" : ""}`}
-                  style={[styles.opt, out && styles.optWrong]}>
-                  <Text style={[styles.optLetter, out && { color: "#B03426" }]}>{String.fromCharCode(65 + i)}</Text>
-                  <Text style={[styles.optText, out && { color: "#9B2C20", textDecorationLine: "line-through" }]} accessibilityLanguage="fr">{fr(o.text)}</Text>
-                </Pressable>
-              );
-            })}
-          </View>
-        )}
-
         {(phase === "listening" || phase === "heard") && (
           <View style={styles.heardWrap}>
             <View style={styles.eq} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
@@ -315,6 +315,12 @@ export default function ConvStep({ unit, play, stop, onDone }: {
               </View>
             ) : <Text style={styles.heardLabel}>{phase === "listening" ? "Listening…" : ""}</Text>}
           </View>
+        )}
+        {yourTurn && ruledOut.length > 0 && (
+          <Text style={styles.ruledOut} accessibilityLabel={`Ruled out: ${ruledOut.map((i) => options[i]?.text).join(", ")}`}>
+            {"Ruled out: "}
+            <Text style={styles.ruledOutStrike}>{ruledOut.map((i) => fr(options[i]?.text ?? "")).join("  ·  ")}</Text>
+          </Text>
         )}
         {notice && <Text style={styles.notice}>{notice}</Text>}
 
@@ -421,11 +427,6 @@ const styles = StyleSheet.create({
   cueHint: { fontSize: 12, fontWeight: "600", color: "#9A7400", marginTop: 2 },
   cueReveal: { marginTop: 6, paddingTop: 8, borderTopWidth: 1, borderTopColor: "#F0DFA0", gap: 2 },
   cueRevealText: { fontSize: 19, fontWeight: "800", color: INK },
-  optWrap: { gap: 8 },
-  opt: { flexDirection: "row", alignItems: "center", gap: 10, borderWidth: 2, borderColor: "#D6DBE8", backgroundColor: "#FFFFFF", borderRadius: 14, paddingVertical: 12, paddingHorizontal: 14 },
-  optWrong: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
-  optLetter: { width: 22, color: "#5A6390", fontWeight: "800", fontSize: 14 },
-  optText: { flex: 1, color: "#1B2145", fontSize: 16 },
   heardWrap: { alignItems: "center", gap: 10, marginTop: 8 },
   eq: { flexDirection: "row", alignItems: "flex-end", gap: 5, height: 72 },
   eqBar: { width: 9, borderRadius: 3, backgroundColor: "#22C7E0" },
@@ -433,6 +434,8 @@ const styles = StyleSheet.create({
   heardSaid: { fontSize: 17, fontWeight: "700", color: INK, textAlign: "center" },
   heardSnap: { fontSize: 15, fontWeight: "700", color: "#0284C7", textAlign: "center" },
   notice: { fontSize: 14, color: "#A35A00", textAlign: "center" },
+  ruledOut: { fontSize: 13, color: "#7A82A6", textAlign: "center" },
+  ruledOutStrike: { textDecorationLine: "line-through" },
   doneCard: { marginTop: 10, padding: 24, borderRadius: 24, backgroundColor: "#F6F8FE", alignItems: "center", gap: 10 },
   doneTick: { width: 64, height: 64, borderRadius: 32, backgroundColor: GREEN, alignItems: "center", justifyContent: "center" },
   doneTitle: { fontSize: 25, fontWeight: "800", color: INK },

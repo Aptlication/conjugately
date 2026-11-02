@@ -24,12 +24,20 @@ Read → Words → Verb quiz → Conversation → Summary (`app/advanced-unit.ts
 - Ten questions on the unit verb, in the conjugation-quiz format: 3 présent, 3 passé composé, 2 futur simple, 2 imparfait.
 - The correct French is played after each answer.
 - 1 coin per right answer.
+- **Masters Mic** (2 Nov 2026) works as in the conjugation quizzes:
+  - Mic On is the default for Advanced, and switching it off is remembered.
+  - With Mic On, the screen goes navy and A–D are hidden; Show A–D brings them back.
+  - A spoken answer snaps to the nearest option and the quiz moves on by itself.
+  - The "Say it aloud" pop-up shows until "Don't remind me again".
+  - The web build stays tap-only.
 
 **Conversation** (`components/advanced/ConvStep.tsx`)
 - The old translate format, laid out like the post-quiz conversation.
 - Cécile speaks; the learner says the English cue in French, using the unit verb in five tenses (including the conditionnel).
 - What's heard snaps to the nearest of four sentences built around the verb. Sounding the same as the right answer counts as right.
-- A miss: « Pas tout à fait. Essayez encore. », the four appear with the heard one struck out, and the learner tries again by voice or by tapping.
+- A miss (2 Nov 2026, same as the earlier levels): no list of options. The wrong match is struck through under "Ruled out" and Cécile says « Pas tout à fait. Essayez encore. ».
+- The next attempt is matched only against what's left, so the field narrows to the right one.
+- Speech that sounds like none of the remaining sentences gets « Comment ? » and rules nothing out.
 
 **Summary:** the result is saved to `advanced_progress` (best coins kept).
 
@@ -56,7 +64,7 @@ Read → Words → Verb quiz → Conversation → Summary (`app/advanced-unit.ts
    - Mini-Courses → Advanced A → 1.1.
    - Double-tap a few words, sort them, and learn them.
    - Do the verb quiz.
-   - In the conversation, say one reply in the wrong tense: « Pas tout à fait » should come, with the four options.
+   - In the conversation, say one reply in the wrong tense: « Pas tout à fait » should come, the wrong sentence should be struck through under "Ruled out", and no list should appear.
 
 ## Not in the pilot
 - Themes 2–10.
