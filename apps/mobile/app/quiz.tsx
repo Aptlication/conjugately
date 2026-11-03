@@ -7,6 +7,7 @@ import * as Haptics from "expo-haptics";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { API_BASE } from "../lib/data";
 import NavBar from "../components/NavBar";
+import { finishLesson } from "../lib/lessonEnd";
 import { logQuizResult } from "../lib/progress";
 import { purchasesAvailable, usePro } from "../lib/pro";
 import { getConversation, conversationSeconds } from "../lib/conversationsFull";
@@ -178,7 +179,7 @@ export default function Quiz() {
   const openVocab = (from?: "card") => {
     vocabAutoRef.current = true;
     router.push({ pathname: "/vocab-check" as any,
-      params: { level: vocabLevel, timeFrame: vocabTimeFrame, verb, ...(from ? { from } : {}) } });
+      params: { level: vocabLevel, timeFrame: vocabTimeFrame, verb, ...(from ? { from } : {}), ...(courseKey ? { course: "1" } : {}) } });
   };
   useFocusEffect(React.useCallback(() => {
     if (state === "done" && isCourseUnit) countDue(vocabUnit).then(setVocabDue).catch(() => {});
@@ -822,7 +823,14 @@ export default function Quiz() {
               </Pressable>
             )}
             <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={load}><Text style={[styles.ghostText, styles.ghostTextNavy]}>Try Again</Text></Pressable>
-            <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={goHome}><Text style={[styles.ghostText, styles.ghostTextNavy]}>← Back to Quiz Setup</Text></Pressable>
+            {/* A course lesson ends on My Journey (Jonathan, 3 Nov 2026); a home-screen quiz goes back to its setup. */}
+            {courseKey ? (
+              <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={() => { cancelAutoAdvance(); finishLesson(); }}>
+                <Text style={[styles.ghostText, styles.ghostTextNavy]}>My Journey ›</Text>
+              </Pressable>
+            ) : (
+              <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={goHome}><Text style={[styles.ghostText, styles.ghostTextNavy]}>← Back to Quiz Setup</Text></Pressable>
+            )}
           </View>
         )}
       </ScrollView>
