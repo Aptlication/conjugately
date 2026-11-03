@@ -3,6 +3,7 @@ import {
   AccessibilityInfo, Animated, Easing, Platform, Pressable, ScrollView, StyleSheet, Text, View,
 } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
+import { finishLesson } from "../lib/lessonEnd";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
@@ -641,7 +642,7 @@ export default function ConversationScreen() {
     try { player.pause(); } catch {}
     if (router.canGoBack()) router.back(); else router.replace("/");
   };
-  /** Continue: back past the results screen to the course, the next part of it. */
+  /** Continue: the vocab check if words are due, otherwise the lesson is finished (My Journey). */
   const continueOn = async () => {
     try { SR?.abort(); } catch {}
     try { player.pause(); } catch {}
@@ -649,11 +650,11 @@ export default function ConversationScreen() {
     // screen's place, so its own Continue still lands back on the course.
     const unit = unitKey(level, timeFrame, unitVerb);
     if ((await countDue(unit).catch(() => 0)) > 0) {
-      router.replace({ pathname: "/vocab-check" as any, params: { level, timeFrame, verb: unitVerb } });
+      router.replace({ pathname: "/vocab-check" as any, params: { level, timeFrame, verb: unitVerb, course: "1" } });
       return;
     }
-    try { (router as any).dismiss(2); return; } catch {}
-    if (router.canGoBack()) router.back(); else router.replace("/");
+    // The lesson is finished: My Journey (Jonathan, 3 Nov 2026).
+    finishLesson();
   };
 
   if (!conv) {

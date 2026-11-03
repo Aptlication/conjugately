@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
+import { finishLesson } from "../lib/lessonEnd";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import VisCue from "../components/VisCue";
@@ -41,7 +42,8 @@ type Verdict = "right" | "cued" | "wrong";
 const buzz = (k: Haptics.NotificationFeedbackType) => { try { Haptics.notificationAsync(k); } catch {} };
 
 export default function VocabCheck() {
-  const p = useLocalSearchParams<{ level: string; timeFrame: string; verb: string; from?: string }>();
+  // `course` = this check ends a course lesson (set by the quiz and the conversation).
+  const p = useLocalSearchParams<{ level: string; timeFrame: string; verb: string; from?: string; course?: string }>();
   const unit = unitKey(String(p.level || ""), String(p.timeFrame || ""), String(p.verb || ""));
 
   const [phase, setPhase] = useState<"loading" | "intro" | "card" | "done">("loading");
@@ -147,6 +149,10 @@ export default function VocabCheck() {
 
   const leave = () => {
     clearTimer();
+    // The end of a course lesson goes to My Journey (Jonathan, 3 Nov 2026). Opened
+    // from the results card, it goes back to the results; after a home-screen
+    // quiz, back past it as before.
+    if (p.from !== "card" && p.course) { finishLesson(); return; }
     if (p.from !== "card") { try { (router as any).dismiss(2); return; } catch {} }
     if (router.canGoBack()) router.back(); else router.replace("/");
   };
