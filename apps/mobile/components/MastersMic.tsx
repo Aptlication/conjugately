@@ -24,8 +24,8 @@ import { API_BASE } from "../lib/data";
  * half-size blue button on its right. A tap says the verb, never the answer:
  * the infinitive, plus the past participle in the compound past tenses
  * (shared/verbPronunciation.ts), with the written guide shown while it plays.
- * Tap again to stop; Record stops it. What the mic heard still shows in the
- * same box once the learner records.
+ * Tap again to stop. Pressing Record stops it and hides the button until
+ * Record is released. What the mic heard shows in the same box.
  */
 
 const BARS = 16;
@@ -204,7 +204,8 @@ export default function MastersMic(props: {
             {shownText || placeholder}
           </Text>
         ) : null}
-        {withPronounce && sayItems.length > 0 && (
+        {/* Gone while Record is held (Jonathan, 3 Nov 2026), so the verb can never play into the mic; back on release. */}
+        {withPronounce && sayItems.length > 0 && !listening && (
           <Pressable onPress={onSayPress} hitSlop={8} accessibilityRole="button"
             accessibilityLabel={saying !== null ? "Stop" : `Hear the verb: ${sayItems[0].text}`}
             accessibilityHint="Says the verb you are practising, not the answer"
