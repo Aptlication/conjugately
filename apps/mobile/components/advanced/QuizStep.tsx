@@ -1,239 +1,496 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { quizClip } from "@shared/advanced/audioKeys";
 import type { AdvUnit } from "@shared/advanced/types";
 import { awardCoins } from "../../lib/coins";
-import CoinIcon from "../CoinIcon";
+import { collectMissedWord } from "../../lib/vocab";
+import { purchasesAvailable, usePro } from "../../lib/pro";
+import CoinStack from "../CoinStack";
 import MastersMic from "../MastersMic";
 import MicPromoDemo from "../MicPromoDemo";
+import { AiWhyButton, AiWhyPanel } from "../AiWhy";
 import type { MicOutcome } from "../../lib/mastersMic";
 
 /**
- * Verb quiz (Advanced units, Jonathan 2 Nov 2026): ten questions on the unit
- * verb in the format of the conjugation quizzes: an English sentence, four
- * French sentences, one right. Three présent, three passé composé, two futur
- * simple, two imparfait. The correct French is played after each answer.
- * One coin per right answer.
+ * Verb quiz (Advanced units): ten questions on the unit verb, an English
+ * sentence and four French sentences, one right.
  *
- * Masters Mic (Jonathan, 2 Nov 2026: "as much as possible, to encourage people
- * to use it"): the same control as the conjugation quizzes. Mic On is the
- * default for Advanced (it is Pro, so the mic is always allowed); switching it
- * off is remembered for later Advanced quizzes. With Mic On the screen goes
- * navy, A–D hide, and "Show A–D" brings them back for that question. A spoken
- * answer snaps to the nearest of the four; right or wrong, the quiz moves on
- * by itself, as in Mic On quizzes elsewhere. The "Say it aloud" pop-up shows
- * at the start until "Don't remind me again" (the same setting as the quizzes).
- * The web build has no recogniser, so it stays tap-only there.
+ * Update 1.4.1 (Jonathan, 3 Nov 2026): "the same as the levels Intermediate and
+ * below". This screen is built from the same parts, copy and rules as the
+ * conjugation quiz (app/quiz.tsx), so the two read and behave as one:
+ * - "Question X of N" and "Score: s / N", progress bar, the Quick Tip box.
+ * - Options above Masters Mic; "You said" / "✓ Correct" tags; the feedback box
+ *   with AI WHY; tapping the chosen answer again moves on.
+ * - Start Over · ‹ Back · Next ›, then Sound On/Off and Mic On/Off.
+ * - Correct answers move on by themselves after the French has played; a wrong
+ *   tap waits for Next; every Mic On answer moves on by itself.
+ * - The "Say it aloud" pop-up and the Masters Mic how-to, as in the quizzes.
+ * - Results: score, percentage, message and the coin stack, then the
+ *   conversation (this unit's next step) and Try Again.
+ * Kept from the Advanced pilot (Jonathan, 2 Nov 2026): Mic On is the default
+ * here and switching it off is remembered; one coin per right answer. As at
+ * Intermediate A and B, only the correct French is recorded, so a wrong answer
+ * plays the correct French. The web build has no recogniser, so no mic there.
  */
 
 const MIC_PREF = "advancedQuizMic";
-const PROMO_NEVER = "mastersMicPromoNever";
 const micPossible = Platform.OS !== "web";
-
-const INK = "#3A4354";
-const SOFT = "#5A6472";
-const BLUE = "#2B5FD9";
-const GREEN = "#17734A";
+const LEVEL = "Advanced A";
 
 const shuffle = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 const fr = (t: string) => t.replace(/ ([?!:;»])/g, " $1").replace(/« /g, "« ");
+
+type Opt = { text: string; isCorrect: boolean; rationale: string };
 
 export default function QuizStep({ unit, play, onDone }: {
   unit: AdvUnit;
   play: (items: { key: string; text: string }[], onEnd?: () => void) => void;
   onDone: (r: { score: number; total: number; coins: number }) => void;
 }) {
-  const items = useMemo(() => unit.quiz.map((q, i) => ({ ...q, i, options: shuffle([q.answer, ...q.wrong]) })), [unit]);
-  const [n, setN] = useState(0);
-  const [picked, setPicked] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
+  const { isPro } = usePro();
+  const [round, setRound] = useState(0);
+  const questions = useMemo(() => unit.quiz.map((q, i) => ({
+    ...q, i,
+    question: q.tag ? `${q.en} (${q.tag})` : q.en,
+    answerOptions: shuffle<Opt>([
+      { text: q.answer, isCorrect: true, rationale: `Correct! ${fr(q.answer)}` },
+      ...q.wrong.map((w) => ({ text: w, isCorrect: false, rationale: `The correct answer is: ${fr(q.answer)}` })),
+    ]),
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  })), [unit, round]);
+
+  const [idx, setIdx] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [confirmed, setConfirmed] = useState(false);
+  const [answers, setAnswers] = useState<Record<number, number>>({});
+  // Timers outlive the render that set them, so the advance reads these.
+  const idxRef = useRef(0);
+  const answersRef = useRef<Record<number, number>>({});
+  idxRef.current = idx;
+  const [reviewIndex, setReviewIndex] = useState<number | null>(null);
   const [done, setDone] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
+  const [balance, setBalance] = useState<number | null>(null);
+  const [sound, setSound] = useState(true);
+  const soundRef = useRef(true);
+  useEffect(() => { soundRef.current = sound; }, [sound]);
   const [micOn, setMicOn] = useState(micPossible);
-  const [showOptions, setShowOptions] = useState(false);
-  const [promo, setPromo] = useState(false);
-  const advance = useRef<ReturnType<typeof setTimeout> | null>(null);
-  // The auto-advance timer outlives the render that set it, so the score it pays out is read from a ref.
-  const scoreRef = useRef(0);
-  useEffect(() => { scoreRef.current = score; }, [score]);
-  const q = items[n];
-  const micMode = micOn && micPossible;
-  const optionsHidden = micMode && !showOptions && picked === null;
+  const [showOptionsFor, setShowOptionsFor] = useState<number | null>(null);
+  const [micHolding, setMicHolding] = useState(false);
+  const [showTip, setShowTip] = useState(false);
+  const [micPromo, setMicPromo] = useState<"unknown" | "due" | "done">("unknown");
+  const [micIntroSeen, setMicIntroSeen] = useState(true);
+  const [showMicIntro, setShowMicIntro] = useState(false);
+  const [whyOpenFor, setWhyOpenFor] = useState<number | null>(null);
+  const whyLocked = !isPro && purchasesAvailable();
+
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelAutoAdvance = () => { if (autoAdvanceRef.current) { clearTimeout(autoAdvanceRef.current); autoAdvanceRef.current = null; } };
+  const waitAudioRef = useRef(false);
+  const audioDoneRef = useRef(true);
 
   useEffect(() => {
-    if (!micPossible) return;
-    AsyncStorage.getItem(MIC_PREF).then((v) => { if (v === "off") setMicOn(false); }).catch(() => {});
-    AsyncStorage.getItem(PROMO_NEVER).then((v) => { if (v !== "true") setPromo(true); }).catch(() => {});
-    return () => { if (advance.current) clearTimeout(advance.current); };
+    AsyncStorage.getItem("dontShowInstructionPopup").then((v) => setShowTip(v !== "true")).catch(() => {});
+    AsyncStorage.getItem("mastersMicPromoNever").then((v) => setMicPromo(v === "true" ? "done" : "due")).catch(() => setMicPromo("done"));
+    if (micPossible) {
+      Promise.all([AsyncStorage.getItem(MIC_PREF), AsyncStorage.getItem("mastersMicIntroShown")]).then(([pref, intro]) => {
+        if (pref === "off") setMicOn(false);
+        const seen = intro === "true";
+        setMicIntroSeen(seen);
+        // Mic On is the default here, so the how-to the quizzes show on switching it on shows at the start.
+        if (!seen && pref !== "off") setShowMicIntro(true);
+      }).catch(() => {});
+    }
+    return () => cancelAutoAdvance();
   }, []);
-  const setMic = (on: boolean) => {
-    setMicOn(on); setShowOptions(false);
-    AsyncStorage.setItem(MIC_PREF, on ? "on" : "off").catch(() => {});
+
+  const scoreOf = (a: Record<number, number>) => Object.entries(a).reduce((n, [qi, ai]) =>
+    n + (questions[Number(qi)]?.answerOptions[Number(ai)]?.isCorrect ? 1 : 0), 0);
+
+  const q = questions[idx];
+  const dispIdx = reviewIndex !== null ? reviewIndex : idx;
+  const dispQ = questions[dispIdx] || q;
+  const dispSelected = reviewIndex !== null ? (answers[dispIdx] ?? null) : selected;
+  const dispConfirmed = reviewIndex !== null ? answers[dispIdx] !== undefined : confirmed;
+  const score = scoreOf(answers);
+
+  const micEligible = micPossible && reviewIndex === null;
+  const micMode = micOn && micEligible;
+  const micControl = micMode && !dispConfirmed;
+  const optionsHidden = micMode && showOptionsFor !== dispIdx;
+  const micPromoVisible = micPromo === "due" && !done && reviewIndex === null && !micOn && micPossible && !showMicIntro;
+
+  const whyOpen = whyOpenFor === dispIdx;
+  const openWhy = () => {
+    cancelAutoAdvance();
+    waitAudioRef.current = false;
+    if (whyLocked) { router.push("/paywall" as any); return; }
+    setWhyOpenFor(dispIdx);
+    // Mic On hides A-D on purpose, but the explanation names every option.
+    if (micMode) setShowOptionsFor(dispIdx);
   };
 
-  const pick = (k: number) => {
-    if (picked !== null) return;
-    setPicked(k);
-    const right = q.options[k] === q.answer;
-    Haptics.notificationAsync(right ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Error).catch(() => {});
-    if (right) setScore((s) => s + 1);
-    play([{ key: quizClip(unit.id, q.i), text: q.answer }]);
+  const nextQuestion = () => {
+    cancelAutoAdvance();
+    setMicHolding(false);
+    waitAudioRef.current = false;
+    audioDoneRef.current = true;
+    setReviewIndex(null);
+    setSelected(null); setConfirmed(false); setWhyOpenFor(null);
+    const i = idxRef.current;
+    if (i + 1 >= questions.length) {
+      const s = scoreOf(answersRef.current);
+      setFinalScore(s);
+      awardCoins(s).then(setBalance).catch(() => {});
+      setDone(true);
+    } else setIdx(i + 1);
   };
-  /** A spoken answer: snapped by Masters Mic to one of the four. Moves on by itself, as in Mic On quizzes. */
-  const onMic = (o: MicOutcome) => {
-    if (picked !== null) return;
-    if (o.via === "unheard" || o.optionIndex === null) { next(); return; }
-    const k = o.correct ? q.options.indexOf(q.answer) : o.optionIndex;
-    pick(k);
-    advance.current = setTimeout(() => next(), o.correct ? 2200 : 3200);
+
+  /** The correct French, as at Intermediate (only the correct option is recorded). */
+  const speakAnswer = () => {
+    if (!soundRef.current) return;
+    audioDoneRef.current = false;
+    play([{ key: quizClip(unit.id, q.i), text: q.answer }], () => {
+      audioDoneRef.current = true;
+      if (waitAudioRef.current) {
+        waitAudioRef.current = false;
+        cancelAutoAdvance();
+        // Let the last syllable land before the next question replaces it.
+        autoAdvanceRef.current = setTimeout(() => nextQuestion(), 800);
+      }
+    });
   };
-  const next = () => {
-    if (advance.current) { clearTimeout(advance.current); advance.current = null; }
-    setShowOptions(false);
-    if (n < items.length - 1) { setN((x) => x + 1); setPicked(null); return; }
-    awardCoins(scoreRef.current).catch(() => {});
-    setDone(true);
+
+  const scheduleAdvance = () => {
+    autoAdvanceRef.current = setTimeout(() => {
+      if (!audioDoneRef.current) {
+        waitAudioRef.current = true;
+        autoAdvanceRef.current = setTimeout(() => {
+          if (waitAudioRef.current) { waitAudioRef.current = false; nextQuestion(); }
+        }, 8000);
+      } else nextQuestion();
+    }, 2500);
+  };
+
+  // As in the quizzes: first tap selects and confirms; tapping the same answer again moves on.
+  const handleAnswerSelect = (i: number) => {
+    if (reviewIndex !== null) return;
+    if (selected === i && confirmed) { nextQuestion(); return; }
+    if (confirmed) return;
+    setSelected(i);
+    setConfirmed(true);
+    answersRef.current = { ...answersRef.current, [idx]: i };
+    setAnswers(answersRef.current);
+    const opt = q.answerOptions[i];
+    Haptics.notificationAsync(opt?.isCorrect ? Haptics.NotificationFeedbackType.Success : Haptics.NotificationFeedbackType.Error).catch(() => {});
+    if (opt && !opt.isCorrect) {
+      collectMissedWord({ french: q.answer, english: q.en, verb: unit.verb, tense: q.tense, difficulty: LEVEL });
+    }
+    speakAnswer();
+    cancelAutoAdvance();
+    if (opt?.isCorrect) scheduleAdvance();
+  };
+
+  /** Move on after a spoken answer, right or wrong, waiting for the French as the tap path does. */
+  const advanceAfterMic = (immediate: boolean) => {
+    cancelAutoAdvance();
+    if (immediate) { nextQuestion(); return; }
+    scheduleAdvance();
+  };
+
+  /** A spoken answer goes through handleAnswerSelect, the same path a tap takes. */
+  const handleMicOutcome = (o: MicOutcome) => {
+    const opts = q?.answerOptions || [];
+    if (o.via === "unheard" || o.optionIndex === null) { advanceAfterMic(true); return; }
+    const i = o.correct ? opts.findIndex((x) => x.isCorrect) : o.optionIndex;
+    if (i < 0 || i >= opts.length) { advanceAfterMic(true); return; }
+    handleAnswerSelect(i);
+    if (!o.correct) advanceAfterMic(false);
+  };
+
+  const toggleMic = () => {
+    const on = !micOn;
+    setMicOn(on); setShowOptionsFor(null);
+    AsyncStorage.setItem(MIC_PREF, on ? "on" : "off").catch(() => {});
+    if (on && !micIntroSeen) setShowMicIntro(true);
+  };
+  const closeMicPromo = (thenTry: boolean) => { setMicPromo("done"); if (thenTry && !micOn) toggleMic(); };
+  const neverMicPromo = () => { setMicPromo("done"); AsyncStorage.setItem("mastersMicPromoNever", "true").catch(() => {}); };
+  const dismissMicIntro = (never: boolean) => {
+    setShowMicIntro(false);
+    if (never) { setMicIntroSeen(true); AsyncStorage.setItem("mastersMicIntroShown", "true").catch(() => {}); }
+  };
+
+  /** Start Over and Try Again: the same ten questions, freshly shuffled, from the first. */
+  const restart = () => {
+    cancelAutoAdvance();
+    answersRef.current = {};
+    setRound((r) => r + 1);
+    setIdx(0); setSelected(null); setConfirmed(false); setAnswers({}); setReviewIndex(null);
+    setDone(false); setBalance(null); setWhyOpenFor(null); setShowOptionsFor(null);
   };
 
   if (done) {
+    const total = questions.length;
+    const pct = finalScore / Math.max(1, total);
     return (
-      <View style={{ flex: 1 }}>
-        <ScrollView contentContainerStyle={styles.doneBody}>
-          <View style={styles.doneIcon}><Ionicons name="checkmark" size={30} color="#FFFFFF" /></View>
-          <Text style={styles.kicker}>VERB QUIZ · {unit.verb.toUpperCase()}</Text>
-          <Text style={styles.big}>{score} / {items.length}</Text>
-          <Text style={styles.p}>{score === items.length ? "Parfait !" : score >= 8 ? "Très bien !" : "Good effort. The conversation uses the same verb, so you’ll practise it again now."}</Text>
-          {score > 0 && <Text style={styles.coinLine}>+{score} <CoinIcon size={20} /></Text>}
+      <View style={{ flex: 1, backgroundColor: "#1B2145" }}>
+        <ScrollView contentContainerStyle={styles.scroll}>
+          <View style={[styles.card, styles.cardNavy]}>
+            <Text style={[styles.resultScore, styles.onNavy]}>{finalScore} / {total}</Text>
+            <Text style={[styles.resultPct, styles.pctNavy]}>{Math.round(pct * 100)}%</Text>
+            <Text style={[styles.resultMsg, styles.msgNavy]}>
+              {pct >= 0.9 ? "Excellent! Vous êtes formidable! 🌟" : pct >= 0.7 ? "Great work! Keep practicing! 💪" : "Good effort — practice makes perfect! 📚"}
+            </Text>
+            {balance !== null && <CoinStack earned={finalScore} unitMax={total} balance={balance} muted={!sound} />}
+            <Pressable style={styles.convoBtn} onPress={() => onDone({ score: finalScore, total, coins: finalScore })} accessibilityRole="button"
+              accessibilityLabel="Start the conversation">
+              <Ionicons name="chatbubbles" size={18} color="#1B2145" />
+              <Text style={styles.convoBtnText}>Start the conversation</Text>
+            </Pressable>
+            <Pressable style={[styles.ghostBtn, styles.ghostNavy]} onPress={restart}>
+              <Text style={[styles.ghostText, styles.ghostTextNavy]}>Try Again</Text>
+            </Pressable>
+          </View>
         </ScrollView>
-        <View style={styles.footer}>
-          <Pressable style={styles.primary} onPress={() => onDone({ score, total: items.length, coins: score })} accessibilityRole="button">
-            <Text style={styles.primaryText}>Start the conversation →</Text>
-          </Pressable>
-        </View>
       </View>
     );
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: micMode ? "#0A1326" : "transparent" }}>
-      <ScrollView contentContainerStyle={styles.body}>
-        <View style={[styles.card, micMode && styles.cardNavy]}>
+    <View style={{ flex: 1, backgroundColor: micMode ? "#0A1326" : "#F7F8FA" }}>
+      {/* Locked while Record is held, as in the quizzes (1.3.20). */}
+      <ScrollView contentContainerStyle={styles.scroll} scrollEnabled={!micHolding}>
+        <View style={[styles.card, micMode && styles.cardMic]}>
           <View style={styles.metaRow}>
-            <Text style={[styles.meta, micMode && { color: "#C3D0E8" }]}>Verb quiz · <Text style={{ fontWeight: "700" }} accessibilityLanguage="fr">{unit.verb}</Text></Text>
-            <Text style={[styles.metaScore, micMode && { color: "#C3D0E8" }]}>{n + 1} / {items.length}</Text>
+            <Text style={[styles.meta, micMode && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
+            <Text style={[styles.metaScore, micMode && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
           </View>
-          <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${(n / items.length) * 100}%` }]} /></View>
-          <View style={styles.tense}><Text style={styles.tenseText}>{q.tense}</Text></View>
-          <Text style={[styles.qText, micMode && { color: "#FFFFFF" }]}>{q.en}{q.tag ? <Text style={styles.tag}>  ({q.tag})</Text> : null}</Text>
-          {micMode && picked === null && (
-            <MastersMic key={n} expected={q.answer} options={q.options} correctIndex={q.options.indexOf(q.answer)}
-              onOutcome={onMic} optionsShown={showOptions} onToggleOptions={() => setShowOptions((x) => !x)} />
+          <View style={styles.progressTrack}>
+            <View style={[styles.progressFill, { width: `${((dispIdx + 1) / questions.length) * 100}%` }]} />
+          </View>
+
+          {showTip && (
+            <View style={styles.tipBox}>
+              <Text style={styles.tipTitle}>💡 Quick Tip</Text>
+              <Text style={styles.tipText}>Correct answers advance automatically — press Back anytime to review.</Text>
+              <View style={styles.tipActions}>
+                <Pressable onPress={() => setShowTip(false)}><Text style={styles.tipLink}>Dismiss</Text></Pressable>
+                <Pressable onPress={() => { setShowTip(false); AsyncStorage.setItem("dontShowInstructionPopup", "true").catch(() => {}); }}>
+                  <Text style={styles.tipLink}>Don&apos;t remind me again</Text>
+                </Pressable>
+              </View>
+            </View>
           )}
-          {!optionsHidden && q.options.map((o, k) => {
-            const isRight = picked !== null && o === q.answer;
-            const isWrong = picked === k && o !== q.answer;
+
+          <Text style={[styles.qText, micMode && styles.qTextMic]}>{dispQ.question}</Text>
+          {micMode && whyOpen && <Text style={styles.whyMicNote}>Options shown so you can follow the explanation.</Text>}
+
+          {!optionsHidden && dispQ.answerOptions.map((o, i) => {
+            const confirmedNow = dispSelected !== null && dispConfirmed;
+            const isSel = dispSelected === i && confirmedNow;
+            const showCorrect = confirmedNow && o.isCorrect;
+            const showWrong = isSel && !o.isCorrect;
             return (
-              <Pressable key={o} onPress={() => pick(k)} disabled={picked !== null} accessibilityRole="button"
-                accessibilityLabel={`${String.fromCharCode(65 + k)}. ${o}`}
-                style={[styles.opt, isRight && styles.optCorrect, isWrong && styles.optWrong, picked !== null && !isRight && !isWrong && styles.optDim]}>
-                <View style={styles.letter}><Text style={styles.letterText}>{String.fromCharCode(65 + k)}</Text></View>
-                <Text style={[styles.optText, isRight && styles.optTextCorrect, isWrong && styles.optTextWrong]} accessibilityLanguage="fr">{fr(o)}</Text>
+              <Pressable key={o.text} onPress={() => handleAnswerSelect(i)} accessibilityRole="button"
+                accessibilityLabel={`${String.fromCharCode(65 + i)}. ${o.text}`}
+                style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim]}>
+                <View style={[styles.letter, showCorrect && { borderColor: "#17734A" }, showWrong && { borderColor: "#C0392B" }]}>
+                  <Text style={[styles.letterText, showCorrect && { color: "#17734A" }, showWrong && { color: "#C0392B" }]}>{String.fromCharCode(65 + i)}</Text>
+                </View>
+                <Text style={[styles.optText, showCorrect && styles.optTextCorrect, showWrong && styles.optTextWrong]} accessibilityLanguage="fr">{fr(o.text)}</Text>
+                {micMode && showWrong && <Text style={styles.youSaid}>You said</Text>}
+                {showCorrect && <Text style={[styles.youSaid, { color: "#17734A" }]}>✓ Correct</Text>}
               </Pressable>
             );
           })}
-          {picked !== null && (
-            <View style={[styles.feedback, q.options[picked] === q.answer ? styles.feedbackGood : styles.feedbackBad]}>
-              <Text style={styles.feedbackText}>
-                {q.options[picked] === q.answer ? <>Correct!  +1 <CoinIcon size={14} /></> : <>The answer is <Text style={{ fontWeight: "700" }}>{fr(q.answer)}</Text></>}
+
+          {micControl && (
+            <MastersMic
+              key={`${round}-${dispIdx}`}
+              expected={q.answer}
+              options={q.answerOptions.map((o) => o.text)}
+              correctIndex={q.answerOptions.findIndex((o) => o.isCorrect)}
+              onOutcome={handleMicOutcome}
+              onHoldChange={setMicHolding}
+              optionsShown={showOptionsFor === dispIdx}
+              onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
+              pronounce={{ verb: unit.verb, tense: q.tense }}
+            />
+          )}
+
+          {dispSelected !== null && dispConfirmed && (
+            <View style={[styles.feedback, dispQ.answerOptions[dispSelected].isCorrect ? styles.feedbackGood : styles.feedbackBad]}>
+              <Text style={[styles.feedbackText, { color: dispQ.answerOptions[dispSelected].isCorrect ? "#17734A" : "#C0392B" }]}>
+                {dispQ.answerOptions[dispSelected].isCorrect ? "✓" : "✗"} {dispQ.answerOptions[dispSelected].rationale}
               </Text>
+              {!whyOpen && <AiWhyButton locked={whyLocked} onPress={openWhy} />}
             </View>
           )}
-          {micPossible && (
-            <Pressable onPress={() => setMic(!micOn)} accessibilityRole="switch" accessibilityState={{ checked: micOn }}
-              accessibilityLabel="Masters Mic" accessibilityHint="Answer aloud instead of tapping. The options are hidden while it is on."
-              style={[styles.togglePill, micOn ? styles.micOnPill : styles.toggleOff]}>
-              <Ionicons name="mic" size={16} color={micOn ? "#06242E" : SOFT} />
-              <Text style={[styles.toggleText, { color: micOn ? "#06242E" : SOFT }]}>{micOn ? "Mic On" : "Mic Off"}</Text>
-            </Pressable>
+
+          {whyOpen && dispSelected !== null && dispConfirmed && (
+            <AiWhyPanel key={dispIdx} dark={micMode}
+              request={{
+                question: dispQ.question, hint: "", level: LEVEL, tense: dispQ.tense,
+                options: dispQ.answerOptions.map((o) => ({ text: o.text, isCorrect: o.isCorrect })),
+                selectedIndex: dispSelected,
+              }} />
           )}
+
+          <View style={styles.bottomRow}>
+            <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic]} onPress={restart}>
+              <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Start Over</Text>
+            </Pressable>
+            <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic, ((reviewIndex ?? idx) === 0 || answers[(reviewIndex ?? idx) - 1] === undefined) && { opacity: 0.4 }]}
+              onPress={() => { cancelAutoAdvance(); const di = reviewIndex ?? idx; if (di > 0 && answers[di - 1] !== undefined) setReviewIndex(di - 1); }}>
+              <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>‹ Back</Text>
+            </Pressable>
+            <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic, (reviewIndex === null && !confirmed) && { opacity: 0.4 }]}
+              onPress={() => { if (reviewIndex !== null) { const nxt = reviewIndex + 1; if (nxt >= idx) setReviewIndex(null); else setReviewIndex(nxt); } else if (confirmed) { nextQuestion(); } }}>
+              <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Next ›</Text>
+            </Pressable>
+          </View>
+
+          <View style={styles.audioRow}>
+            <Pressable onPress={() => setSound((s) => !s)}
+              style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff, micMode && styles.togglePillMic]}>
+              <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
+              <Text style={[styles.toggleText, { color: micMode ? "#E2E9F7" : sound ? "#2B5FD9" : "#5A6472" }]}>{sound ? "Sound On" : "Sound Off"}</Text>
+            </Pressable>
+            {micEligible && (
+              <Pressable onPress={toggleMic} accessibilityRole="switch" accessibilityState={{ checked: micOn }}
+                accessibilityLabel="Masters Mic" accessibilityHint="Answer aloud instead of tapping. The options are hidden while it is on."
+                style={[styles.togglePill, micOn ? styles.micOn : styles.toggleOff]}>
+                <Ionicons name="mic" size={16} color={micOn ? "#06242E" : "#5A6472"} />
+                <Text style={[styles.toggleText, { color: micOn ? "#06242E" : "#5A6472" }]}>{micOn ? "Mic On" : "Mic Off"}</Text>
+              </Pressable>
+            )}
+          </View>
         </View>
       </ScrollView>
 
-      <Modal visible={promo} transparent animationType="fade" onRequestClose={() => setPromo(false)}>
+      <Modal visible={micPromoVisible} transparent animationType="fade" onRequestClose={() => closeMicPromo(false)}>
         <View style={styles.modalBg}>
-          <View style={styles.modalCard}>
-            <Text style={styles.promoTitle}>Say it aloud</Text>
-            <Text style={styles.promoSub}>Masters Mic is on: hold Record and say the French. Mic Off brings back tapping.</Text>
+          <View style={[styles.modalCard, styles.promoCard]}>
+            <View style={styles.promoTitleRow}>
+              <Text style={[styles.modalTitle, styles.promoTitle]}>Say it aloud</Text>
+            </View>
+            <Text style={[styles.modalSub, styles.promoSub]}>Answer in spoken French with Masters Mic.</Text>
             <MicPromoDemo />
-            <Pressable style={[styles.primary, { alignSelf: "stretch" }]} onPress={() => { setMic(true); setPromo(false); }} accessibilityRole="button">
-              <Text style={styles.primaryText}>Got it</Text>
+            <Pressable style={styles.promoPrimary} onPress={() => closeMicPromo(true)} accessibilityRole="button">
+              <Text style={styles.guideBtnText}>Turn on Masters Mic</Text>
             </Pressable>
-            <Pressable onPress={() => { setMic(false); setPromo(false); }} accessibilityRole="button" style={{ padding: 10 }}>
-              <Text style={styles.promoLater}>I’ll tap my answers for now</Text>
+            <Pressable onPress={() => closeMicPromo(false)} accessibilityRole="button" style={styles.promoLater}>
+              <Text style={styles.promoLaterText}>{"I'll tap my answers for now"}</Text>
             </Pressable>
-            <Pressable onPress={() => { setPromo(false); AsyncStorage.setItem(PROMO_NEVER, "true").catch(() => {}); }} accessibilityRole="button" hitSlop={8}>
-              <Text style={styles.promoNever}>Don’t remind me again</Text>
+            <Pressable onPress={neverMicPromo} accessibilityRole="button" hitSlop={8}>
+              <Text style={styles.tipLink}>{"Don't remind me again"}</Text>
             </Pressable>
           </View>
         </View>
       </Modal>
 
-      {picked !== null && (
-        <View style={styles.footer}>
-          <Pressable style={styles.primary} onPress={next} accessibilityRole="button">
-            <Text style={styles.primaryText}>{n < items.length - 1 ? "Next" : "See your score"}</Text>
-          </Pressable>
+      <Modal visible={showMicIntro} transparent animationType="fade">
+        <View style={styles.modalBg}>
+          <View style={styles.modalCard}>
+            <View style={styles.micIntroIcon}><Ionicons name="mic" size={26} color="#2B5FD9" /></View>
+            <Text style={styles.modalTitle}>Masters Mic</Text>
+            <Text style={styles.modalSub}>Say the answer aloud instead of tapping it.</Text>
+            <View style={styles.micIntroList}>
+              <Text style={styles.micIntroItem}>1.  <Text style={styles.micIntroStrong}>Hold Record, wait a second, then speak.</Text> Starting too soon clips the first word.</Text>
+              <Text style={styles.micIntroItem}>2.  Let go when you have finished. The four answers stay hidden, so you answer from memory.</Text>
+              <Text style={styles.micIntroItem}>3.  Not happy with it? Just hold Record again - it records over your last attempt. Nothing to delete.</Text>
+              <Text style={styles.micIntroItem}>4.  Press Enter to submit. Right or wrong, it moves straight to the next question.</Text>
+            </View>
+            <Pressable style={styles.guideBtn} onPress={() => dismissMicIntro(false)}>
+              <Text style={styles.guideBtnText}>Dismiss</Text>
+            </Pressable>
+            <Pressable onPress={() => dismissMicIntro(true)}>
+              <Text style={styles.tipLink}>Don&apos;t remind me again</Text>
+            </Pressable>
+          </View>
         </View>
-      )}
+      </Modal>
     </View>
   );
 }
 
+// Copied from app/quiz.tsx so the two screens look the same. Change both together.
 const styles = StyleSheet.create({
-  body: { padding: 16, paddingBottom: 30 },
+  scroll: { padding: 16, paddingBottom: 40 },
   card: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 24, padding: 18 },
-  cardNavy: { backgroundColor: "#10203F", borderColor: "#2E4270" },
-  togglePill: { flexDirection: "row", alignItems: "center", gap: 6, borderWidth: 1, borderRadius: 18, paddingVertical: 7, paddingHorizontal: 12, alignSelf: "center", marginTop: 14 },
-  toggleOff: { backgroundColor: "#F0F2F5", borderColor: "#C6CCD4" },
-  micOnPill: { backgroundColor: "#22D3EE", borderColor: "#22D3EE" },
-  toggleText: { fontSize: 13, fontWeight: "700" },
-  modalBg: { flex: 1, backgroundColor: "rgba(5,10,25,0.6)", alignItems: "center", justifyContent: "center", padding: 18 },
-  modalCard: { width: "100%", maxWidth: 420, backgroundColor: "#FFFFFF", borderRadius: 22, padding: 20, gap: 10, alignItems: "center" },
-  promoTitle: { color: "#1B1F24", fontSize: 22, fontWeight: "800" },
-  promoSub: { color: SOFT, fontSize: 15, textAlign: "center", lineHeight: 21 },
-  promoLater: { color: BLUE, fontSize: 15, fontWeight: "600" },
-  promoNever: { color: SOFT, fontSize: 13, textDecorationLine: "underline" },
+  cardNavy: { backgroundColor: "#1B2145", borderColor: "#1B2145" },
+  onNavy: { color: "#FFFFFF" },
+  pctNavy: { color: "#5FD39A" },
+  msgNavy: { color: "#C3CAD4" },
+  ghostNavy: { borderColor: "rgba(255,255,255,0.35)" },
+  ghostTextNavy: { color: "#E6E9EE" },
   metaRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
-  meta: { color: SOFT, fontSize: 13 },
-  metaScore: { color: SOFT, fontSize: 13, fontWeight: "600" },
-  progressTrack: { height: 8, backgroundColor: "#E3E6EA", borderRadius: 8, overflow: "hidden", marginBottom: 16 },
-  progressFill: { height: 8, borderRadius: 8, backgroundColor: BLUE },
-  tense: { alignSelf: "flex-start", backgroundColor: "#EAF0FC", borderRadius: 12, paddingVertical: 4, paddingHorizontal: 10, marginBottom: 10 },
-  tenseText: { color: BLUE, fontSize: 12, fontWeight: "800" },
-  qText: { color: INK, fontSize: 20, fontWeight: "700", marginBottom: 22, lineHeight: 28 },
-  tag: { color: SOFT, fontSize: 14, fontWeight: "700" },
+  meta: { color: "#5A6472", fontSize: 13 },
+  metaScore: { color: "#5A6472", fontSize: 13, fontWeight: "600" },
+  progressTrack: { height: 8, backgroundColor: "#E3E6EA", borderRadius: 8, overflow: "hidden", marginBottom: 18 },
+  progressFill: { height: 8, borderRadius: 8, backgroundColor: "#2B5FD9" },
+  tipBox: { backgroundColor: "#EAF0FC", borderWidth: 2, borderColor: "#2B5FD9", borderRadius: 14, padding: 14, marginBottom: 16 },
+  tipTitle: { color: "#3A4354", fontWeight: "700", fontSize: 16 },
+  tipText: { color: "#3A4354", fontSize: 14, marginTop: 3 },
+  tipActions: { flexDirection: "row", gap: 18, marginTop: 8 },
+  tipLink: { color: "#2B5FD9", fontSize: 13, textAlign: "center", paddingTop: 6 },
+  qText: { color: "#3A4354", fontSize: 20, fontWeight: "700", marginBottom: 24, lineHeight: 28 },
   opt: { flexDirection: "row", alignItems: "center", borderWidth: 2, borderColor: "#C6CCD4", backgroundColor: "#FFFFFF", borderRadius: 14, padding: 14, marginBottom: 12 },
-  optCorrect: { borderColor: GREEN, backgroundColor: "#E7F3EC" },
+  optCorrect: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
   optWrong: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
   optDim: { opacity: 0.55 },
   optTextCorrect: { color: "#0F5A38", fontWeight: "700" },
   optTextWrong: { color: "#9B2C20", fontWeight: "600" },
   letter: { width: 30, height: 30, borderRadius: 15, borderWidth: 2, borderColor: "#8A93A0", alignItems: "center", justifyContent: "center", marginRight: 14 },
-  letterText: { color: SOFT, fontSize: 13, fontWeight: "700" },
-  optText: { color: INK, fontSize: 16, fontWeight: "500", flex: 1 },
-  feedback: { borderWidth: 1, borderRadius: 14, padding: 14, marginTop: 4 },
-  feedbackGood: { borderColor: GREEN, backgroundColor: "#E7F3EC" },
+  letterText: { color: "#5A6472", fontSize: 13, fontWeight: "700" },
+  optText: { color: "#3A4354", fontSize: 16, fontWeight: "500", flex: 1 },
+  feedback: { borderWidth: 1, borderRadius: 14, padding: 14, marginBottom: 16 },
+  feedbackGood: { borderColor: "#17734A", backgroundColor: "#E7F3EC" },
   feedbackBad: { borderColor: "#C0392B", backgroundColor: "#F9ECEA" },
-  feedbackText: { fontSize: 14, lineHeight: 20, color: INK },
-  doneBody: { alignItems: "center", gap: 8, padding: 24, paddingTop: 50 },
-  doneIcon: { width: 60, height: 60, borderRadius: 30, backgroundColor: "#22A45D", alignItems: "center", justifyContent: "center" },
-  kicker: { color: SOFT, fontSize: 12, fontWeight: "800", letterSpacing: 1, marginTop: 6 },
-  big: { color: "#1B2145", fontSize: 44, fontWeight: "800" },
-  p: { color: SOFT, fontSize: 16, textAlign: "center", lineHeight: 23 },
-  coinLine: { color: "#1B2145", fontSize: 20, fontWeight: "800" },
-  footer: { paddingHorizontal: 22, paddingTop: 10, paddingBottom: 36 },
-  primary: { backgroundColor: BLUE, borderRadius: 26, paddingVertical: 16, alignItems: "center" },
-  primaryText: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+  feedbackText: { fontSize: 14, lineHeight: 20 },
+  bottomRow: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 14, marginTop: 16 },
+  audioRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10, marginTop: 2 },
+  ghostBtn: { borderWidth: 1, borderColor: "#C6CCD4", borderRadius: 12, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center", marginTop: 8 },
+  ghostText: { color: "#5A6472", fontSize: 15 },
+  togglePill: { flexDirection: "row", alignItems: "center", gap: 6, borderWidth: 1, borderRadius: 12, paddingVertical: 11, paddingHorizontal: 14, marginTop: 8 },
+  toggleOn: { backgroundColor: "#EAF0FC", borderColor: "#2B5FD9" },
+  toggleOff: { backgroundColor: "#F0F2F5", borderColor: "#C6CCD4" },
+  toggleText: { fontSize: 13, fontWeight: "700" },
+  resultScore: { color: "#3A4354", fontSize: 44, fontWeight: "700", textAlign: "center" },
+  resultPct: { color: "#17734A", fontSize: 22, fontWeight: "600", textAlign: "center", marginBottom: 8 },
+  resultMsg: { color: "#5A6472", fontSize: 16, textAlign: "center", marginBottom: 10 },
+  convoBtn: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, backgroundColor: "#F5F6F8", borderRadius: 14, paddingVertical: 14, marginTop: 14, marginBottom: 4 },
+  convoBtnText: { color: "#1B2145", fontSize: 16, fontWeight: "800" },
+  modalBg: { flex: 1, backgroundColor: "rgba(0,0,0,0.7)", justifyContent: "center", padding: 24 },
+  modalCard: { backgroundColor: "#FFFFFF", borderWidth: 1, borderColor: "#E3E6EA", borderRadius: 18, padding: 20 },
+  modalTitle: { color: "#3A4354", fontSize: 20, fontWeight: "700", textAlign: "center", marginBottom: 6 },
+  modalSub: { color: "#5A6472", fontSize: 14, textAlign: "center", marginBottom: 14 },
+  guideBtn: { backgroundColor: "#17734A", borderRadius: 12, paddingVertical: 13, alignItems: "center", marginTop: 10, marginBottom: 6 },
+  guideBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+  cardMic: { backgroundColor: "#10203F", borderColor: "#2E4270" },
+  metaMic: { color: "#A8B8D6" },
+  metaScoreMic: { color: "#FFFFFF" },
+  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 20 },
+  ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
+  togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
+  ghostTextMic: { color: "#E2E9F7" },
+  micOn: { backgroundColor: "#22D3EE", borderColor: "#22D3EE" },
+  whyMicNote: { color: "#A8B8D6", fontSize: 13, lineHeight: 18, marginTop: -8, marginBottom: 12 },
+  youSaid: { marginLeft: 8, fontSize: 12, fontWeight: "700", color: "#B03426" },
+  micIntroIcon: { width: 56, height: 56, borderRadius: 28, alignSelf: "center", alignItems: "center", justifyContent: "center", backgroundColor: "#EAF1FD", marginBottom: 14 },
+  micIntroList: { marginTop: 16, gap: 10, alignSelf: "stretch" },
+  micIntroItem: { fontSize: 14, lineHeight: 20, color: "#334155" },
+  micIntroStrong: { fontWeight: "700", color: "#1B1F24" },
+  promoCard: { alignItems: "center" },
+  promoTitleRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, flexWrap: "wrap", marginBottom: 6 },
+  promoSub: { marginBottom: 6 },
+  promoTitle: { color: "#1B1F24", fontSize: 22, fontWeight: "800", marginBottom: 0 },
+  promoPrimary: { alignSelf: "stretch", height: 52, borderRadius: 14, backgroundColor: "#2B5FD9", alignItems: "center", justifyContent: "center", marginTop: 14 },
+  promoLater: { alignSelf: "stretch", height: 44, alignItems: "center", justifyContent: "center", marginTop: 4 },
+  promoLaterText: { color: "#4A5361", fontSize: 15, fontWeight: "600" },
 });

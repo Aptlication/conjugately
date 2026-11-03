@@ -79,6 +79,20 @@ export async function addToMyWords(words: AdvWord[], unitId: string, status: "ne
   } catch {}
 }
 
+/**
+ * Take a word back out of the Vocabulary screen (1.4.1.3): only a word this
+ * unit put there and the learner hasn't learnt yet, so removing it from the
+ * reading tray never wipes progress made elsewhere.
+ */
+export async function removeFromMyWords(fr: string, unitId: string) {
+  try {
+    let list: any[] = [];
+    try { list = JSON.parse((await AsyncStorage.getItem(VOCAB_KEY)) || "[]"); } catch {}
+    const keep = list.filter((x) => !(x.source === "advanced" && x.verb === `Article ${unitId}` && x.status === "new" && wordId(x.french || "") === wordId(fr)));
+    if (keep.length !== list.length) await AsyncStorage.setItem(VOCAB_KEY, JSON.stringify(keep));
+  } catch {}
+}
+
 // ── The reading tip ─────────────────────────────────────────────────────────
 
 const TIP_KEY = "advanced_read_tip_off";

@@ -21,6 +21,11 @@ import { maybeAskForReview } from "../lib/reviewPrompt";
  * Read → Words → Verb quiz → Conversation (translate format) → Summary.
  * The flow and its rules were set by Jonathan on 31 Oct 2026; see
  * advanced-reading-curriculum-plan.md in the project.
+ *
+ * 1.4.1.1(b) (Jonathan, 3 Nov 2026): the bar along the top (✕ and the step
+ * names) folds away with the chevron, leaving a thin progress line, so the
+ * learner gets the room back without closing the session. Tap the line to
+ * bring the bar back.
  */
 
 const INK = "#1B2145";
@@ -38,6 +43,7 @@ export default function AdvancedUnit() {
   const [step, setStep] = useState(0);
   const [saved, setSaved] = useState<LexEntry[]>([]);
   const [tip, setTip] = useState(false);
+  const [barHidden, setBarHidden] = useState(false);
   const [words, setWords] = useState<{ learned: AdvWord[]; later: AdvWord[]; coins: number } | null>(null);
   const [quiz, setQuiz] = useState<{ score: number; total: number; coins: number } | null>(null);
   const [talk, setTalk] = useState<{ replies: number; firstTime: number } | null>(null);
@@ -80,19 +86,34 @@ export default function AdvancedUnit() {
   return (
     <View style={[styles.screen, { paddingTop: insets.top }]}>
       <Stack.Screen options={{ headerShown: false }} />
-      <View style={styles.top}>
-        <Pressable onPress={leave} accessibilityRole="button" accessibilityLabel="Close" style={styles.close}>
-          <Ionicons name="close" size={20} color="#47507A" />
+      {barHidden ? (
+        <Pressable onPress={() => setBarHidden(false)} accessibilityRole="button" accessibilityLabel={`Show the top bar. Step ${step + 1} of ${STEPS.length}: ${STEPS[step]}`}
+          hitSlop={{ top: 6, bottom: 10 }} style={styles.slim}>
+          <View style={styles.slimSteps}>
+            {STEPS.map((s, i) => (
+              <View key={s} style={[styles.slimBar, i < step && { backgroundColor: BLUE }, i === step && { backgroundColor: RED }]} />
+            ))}
+          </View>
+          <Ionicons name="chevron-down" size={14} color="#8A93B8" />
         </Pressable>
-        <View style={styles.steps} accessibilityRole="progressbar" accessibilityLabel={`Step ${step + 1} of ${STEPS.length}: ${STEPS[step]}`}>
-          {STEPS.map((s, i) => (
-            <View key={s} style={{ flex: 1 }}>
-              <View style={[styles.stepBar, i < step && { backgroundColor: BLUE }, i === step && { backgroundColor: RED }]} />
-              <Text style={[styles.stepText, i === step && { color: INK, fontWeight: "800" }]} numberOfLines={1}>{s}</Text>
-            </View>
-          ))}
+      ) : (
+        <View style={styles.top}>
+          <Pressable onPress={leave} accessibilityRole="button" accessibilityLabel="Close" style={styles.close}>
+            <Ionicons name="close" size={20} color="#47507A" />
+          </Pressable>
+          <View style={styles.steps} accessibilityRole="progressbar" accessibilityLabel={`Step ${step + 1} of ${STEPS.length}: ${STEPS[step]}`}>
+            {STEPS.map((s, i) => (
+              <View key={s} style={{ flex: 1 }}>
+                <View style={[styles.stepBar, i < step && { backgroundColor: BLUE }, i === step && { backgroundColor: RED }]} />
+                <Text style={[styles.stepText, i === step && { color: INK, fontWeight: "800" }]} numberOfLines={1}>{s}</Text>
+              </View>
+            ))}
+          </View>
+          <Pressable onPress={() => setBarHidden(true)} accessibilityRole="button" accessibilityLabel="Hide the top bar" hitSlop={8} style={styles.fold}>
+            <Ionicons name="chevron-up" size={18} color="#47507A" />
+          </Pressable>
         </View>
-      </View>
+      )}
 
       {step === 0 && (
         <ReadingStep unit={unit} saved={saved} onToggle={toggle} play={play} stop={stop}
@@ -140,6 +161,10 @@ const styles = StyleSheet.create({
   top: { flexDirection: "row", alignItems: "center", gap: 12, paddingHorizontal: 16, paddingTop: 8, paddingBottom: 8 },
   close: { width: 40, height: 40, borderRadius: 20, backgroundColor: "#EEF1F8", alignItems: "center", justifyContent: "center" },
   steps: { flex: 1, flexDirection: "row", gap: 6 },
+  fold: { width: 32, height: 32, borderRadius: 16, backgroundColor: "#EEF1F8", alignItems: "center", justifyContent: "center" },
+  slim: { flexDirection: "row", alignItems: "center", gap: 8, paddingHorizontal: 16, paddingTop: 6, paddingBottom: 6 },
+  slimSteps: { flex: 1, flexDirection: "row", gap: 4 },
+  slimBar: { flex: 1, height: 3, borderRadius: 2, backgroundColor: "#DCE2EE" },
   stepBar: { height: 4, borderRadius: 2, backgroundColor: "#DCE2EE", marginBottom: 4 },
   stepText: { fontSize: 12, color: SOFT },
   h1: { color: INK, fontSize: 26, fontWeight: "800", textAlign: "center" },

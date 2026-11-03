@@ -1,5 +1,5 @@
-import React, { useMemo, useRef, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Animated, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { ADVANCED_PHRASES, lexFor } from "@shared/advanced/content";
@@ -7,11 +7,18 @@ import { tokenize } from "@shared/advanced/tokenize";
 import { articleClip, wordClip } from "@shared/advanced/audioKeys";
 import type { AdvUnit, LexEntry } from "@shared/advanced/types";
 import { hasClip } from "../../lib/advancedPlayer";
+import { addToMyWords, fromLex, removeFromMyWords } from "../../lib/advanced";
 
 /**
  * Read (Advanced units). Tap a word for its English; double-tap to add it to
  * your words (every word can be added, Jonathan 31 Oct 2026). A saved word is
  * lightly highlighted; nothing else is marked (no dotted underlines).
+ *
+ * 1.4.1.3 (Jonathan, 3 Nov 2026), while the article is being read aloud:
+ * - double-tap adds the word to your words AND straight to the Vocab section
+ *   (My Words), without stopping the reading. A short "Added" note confirms
+ *   it. Double-tap only adds; a word is removed with its ✕ or the word card.
+ * - single tap stops the reading, then shows the word and says it.
  */
 
 const INK = "#1B2145";
@@ -36,6 +43,36 @@ export default function ReadingStep({ unit, saved, onToggle, onDone, onHowTo, pl
   const last = useRef<{ i: number; at: number } | null>(null);
   const single = useRef<ReturnType<typeof setTimeout> | null>(null);
   const savedSet = new Set(saved.map((s) => s.fr));
+  const [toast, setToast] = useState<string | null>(null);
+  const toastOpacity = useRef(new Animated.Value(0)).current;
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => {
+    if (toastTimer.current) clearTimeout(toastTimer.current);
+    if (single.current) clearTimeout(single.current);
+  }, []);
+
+  const flash = (msg: string) => {
+    setToast(msg);
+    if (toastTimer.current) clearTimeout(toastTimer.current);
+    Animated.timing(toastOpacity, { toValue: 1, duration: 120, useNativeDriver: true }).start();
+    toastTimer.current = setTimeout(() => {
+      Animated.timing(toastOpacity, { toValue: 0, duration: 250, useNativeDriver: true }).start(() => setToast(null));
+    }, 1400);
+  };
+
+  /** Add to the tray and the Vocab section. Never touches the reading audio. */
+  const add = (e: LexEntry) => {
+    if (savedSet.has(e.fr)) { flash(`Already in your words: ${e.fr}`); return; }
+    onToggle(e);
+    addToMyWords([fromLex(e)], unit.id, "new").catch(() => {});
+    flash(`Added to Vocab: ${e.fr}`);
+  };
+  /** Take out of the tray, and out of the Vocab section if this unit put it there. */
+  const remove = (e: LexEntry) => {
+    if (!savedSet.has(e.fr)) return;
+    onToggle(e);
+    removeFromMyWords(e.fr, unit.id).catch(() => {});
+  };
 
   const say = (e: LexEntry) => play([{ key: wordClip(e.fr), text: e.fr }]);
 
@@ -47,13 +84,17 @@ export default function ReadingStep({ unit, saved, onToggle, onDone, onHowTo, pl
       if (single.current) clearTimeout(single.current);
       single.current = null; last.current = null;
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
-      setSheet(null);
-      onToggle(e);
+      add(e);
       return;
     }
     last.current = { i, at: now };
     if (single.current) clearTimeout(single.current);
-    single.current = setTimeout(() => { single.current = null; setSheet(e); say(e); }, DOUBLE_TAP_MS);
+    // Single tap: interrupt the reading, then show and say the word.
+    single.current = setTimeout(() => {
+      single.current = null;
+      if (listening) { stop(); setListening(false); }
+      setSheet(e); say(e);
+    }, DOUBLE_TAP_MS);
   };
 
   const listen = () => {
@@ -101,12 +142,19 @@ export default function ReadingStep({ unit, saved, onToggle, onDone, onHowTo, pl
         <Text style={styles.trayLabel}>YOUR WORDS · {saved.length}</Text>
         <View style={styles.chips}>
           {saved.length ? saved.map((s) => (
-            <Pressable key={s.fr} style={styles.chip} onPress={() => onToggle(s)} accessibilityLabel={`Remove ${s.fr}`}>
+            <Pressable key={s.fr} style={styles.chip} onPress={() => remove(s)} accessibilityLabel={`Remove ${s.fr}`}>
               <Text style={styles.chipText}>{s.fr}  ✕</Text>
             </Pressable>
           )) : <Text style={styles.empty}>Nothing saved yet. Double-tap any word you don’t know.</Text>}
         </View>
       </ScrollView>
+
+      {toast && (
+        <Animated.View pointerEvents="none" style={[styles.toast, { opacity: toastOpacity }]} accessibilityLiveRegion="polite">
+          <Ionicons name="checkmark-circle" size={16} color="#FFFFFF" />
+          <Text style={styles.toastText} numberOfLines={1}>{toast}</Text>
+        </Animated.View>
+      )}
 
       {sheet && (
         <View style={styles.sheet} accessibilityViewIsModal>
@@ -120,7 +168,7 @@ export default function ReadingStep({ unit, saved, onToggle, onDone, onHowTo, pl
           {!!sheet.form && <Text style={styles.form}>In the text: {sheet.form}</Text>}
           <View style={styles.sheetRow}>
             <Pressable style={[styles.btn, !savedSet.has(sheet.fr) && styles.btnPrimary]}
-              onPress={() => { onToggle(sheet); setSheet(null); }} accessibilityRole="button">
+              onPress={() => { if (savedSet.has(sheet.fr)) remove(sheet); else add(sheet); setSheet(null); }} accessibilityRole="button">
               <Text style={[styles.btnText, !savedSet.has(sheet.fr) && { color: "#FFFFFF" }]}>
                 {savedSet.has(sheet.fr) ? "Remove from my words" : "+ Add to my words"}
               </Text>
@@ -171,6 +219,9 @@ const styles = StyleSheet.create({
   btn: { borderWidth: 1, borderColor: "#DDE5F7", borderRadius: 14, paddingVertical: 11, paddingHorizontal: 16 },
   btnPrimary: { backgroundColor: BLUE, borderColor: BLUE },
   btnText: { color: INK, fontSize: 15, fontWeight: "700" },
+  toast: { position: "absolute", alignSelf: "center", bottom: 110, flexDirection: "row", alignItems: "center", gap: 6,
+    backgroundColor: "rgba(27,33,69,0.92)", borderRadius: 18, paddingVertical: 8, paddingHorizontal: 14, maxWidth: "90%" },
+  toastText: { color: "#FFFFFF", fontSize: 14, fontWeight: "700", flexShrink: 1 },
   footer: { paddingHorizontal: 22, paddingTop: 10, paddingBottom: 36, backgroundColor: "#F7F9FD" },
   primary: { backgroundColor: BLUE, borderRadius: 26, paddingVertical: 16, alignItems: "center" },
   primaryText: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
