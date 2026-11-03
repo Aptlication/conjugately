@@ -3,6 +3,7 @@ import {
   AccessibilityInfo, Animated, Easing, Platform, Pressable, ScrollView, StyleSheet, Text, View,
 } from "react-native";
 import { Stack, router, useLocalSearchParams } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
@@ -12,7 +13,8 @@ import { DEFAULT_THRESHOLDS, matchAnswer } from "@shared/answerMatch";
 import { soundsAlike } from "@shared/soundAlike";
 import { contentLevel } from "@shared/levels";
 import { type ConvTurn } from "../lib/conversations";
-import { CONVERSATION_AUDIO, getConversation } from "../lib/conversationsFull";
+import { CONVERSATION_AUDIO, getConversation, getTenseConversation } from "../lib/conversationsFull";
+import { markTenseConversationDone } from "../lib/milestones";
 import { collectConversationWords } from "../lib/vocab";
 import { maybeAskForReview } from "../lib/reviewPrompt";
 import { countDue, unitKey } from "../lib/vocabCheck";
@@ -60,9 +62,9 @@ const LINE = "#ECEFF7";
 const GREEN = "#22A45D";
 const RED = "#E63A2E";
 
-const TENSE_LABEL: Record<string, string> = { Present: "Présent", Past: "Passé composé", Future: "Futur simple" };
+const TENSE_LABEL: Record<string, string> = { Present: "Présent", Past: "Passé composé", Future: "Futur simple", Imperfect: "Imparfait", Pluperfect: "Plus-que-parfait" };
 // The tense names the quiz already stores on vocabulary words, so both group together.
-const VOCAB_TENSE: Record<string, string> = { Present: "Présent", Past: "Passé Composé", Future: "Futur Simple" };
+const VOCAB_TENSE: Record<string, string> = { Present: "Présent", Past: "Passé Composé", Future: "Futur Simple", Imperfect: "Imparfait", Pluperfect: "Plus-que-parfait" };
 
 type Badge = "correct" | "close" | "unheard" | "notQuite" | "again" | "nearly" | "incorrect";
 type LogItem =
@@ -138,12 +140,18 @@ const BADGE: Record<Badge, { label: string; bg: string; fg: string }> = {
 };
 
 export default function ConversationScreen() {
-  const p = useLocalSearchParams<{ level: string; timeFrame: string; verb: string }>();
+  const p = useLocalSearchParams<{ level: string; timeFrame: string; verb: string; mode?: string }>();
   const level = String(p.level || "");
   const timeFrame = String(p.timeFrame || "");
   const unitVerb = String(p.verb || "");
+  // Tense Conversation (31 Oct 2026): the longer conversation at the end of a
+  // tense, weaving all its verbs. Same screen; each reply names its own verb
+  // and carries its own three wrong options.
+  const tenseMode = p.mode === "tense";
   // Held for the life of the screen: effects below depend on conv, so it must not change identity between renders.
-  const conv = useMemo(() => getConversation(level, timeFrame, unitVerb), [level, timeFrame, unitVerb]);
+  const conv = useMemo(
+    () => (tenseMode ? getTenseConversation(level, timeFrame) : getConversation(level, timeFrame, unitVerb)),
+    [tenseMode, level, timeFrame, unitVerb]);
   const { isPro, loading } = usePro();
 
   const [phase, setPhase] = useState<Phase>("start");
@@ -151,6 +159,11 @@ export default function ConversationScreen() {
   // curriculum, so the learner sees them before hearing them (Jonathan, 19 Oct).
   // The Start tap also satisfies the browser rule that sound needs a tap first.
   const [started, setStarted] = useState(false);
+  // Save point (Intermediate A, 31 Oct 2026): a long Tense Conversation is in two
+  // scenes. Reaching scene 2 saves the place, so the learner can stop and come
+  // back to it; finishing clears it.
+  const resumeKey = `pluri_tense_resume:${level}|${timeFrame}`;
+  const [savedScene, setSavedScene] = useState<number | null>(null);
   const [step, setStep] = useState(0);
   const [log, setLog] = useState<LogItem[]>([]);
   const [attempt, setAttempt] = useState(0);
@@ -215,7 +228,7 @@ export default function ConversationScreen() {
   const options = useMemo(() => {
     const t = turns[step];
     if (!t || t.who !== "you") return null;
-    const wrong = wrongOptions(convKey, t.fr);
+    const wrong = tenseMode ? (t as any).options as string[] | undefined : wrongOptions(convKey, t.fr);
     if (!wrong?.length) return null;
     const all = [{ text: t.fr, right: true }, ...wrong.map((w) => ({ text: w, right: false }))];
     for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
@@ -226,11 +239,23 @@ export default function ConversationScreen() {
   useEffect(() => {
     AccessibilityInfo.isReduceMotionEnabled().then(setReduceMotion).catch(() => {});
   }, []);
+  useEffect(() => {
+    if (!tenseMode) return;
+    AsyncStorage.getItem(resumeKey).then((v) => { const n = Number(v); if (v && n > 0) setSavedScene(n); }).catch(() => {});
+  }, [tenseMode, resumeKey]);
+  useEffect(() => {
+    if (!tenseMode || !started) return;
+    const t: any = turns[step];
+    if (t?.who === "app" && t.break) AsyncStorage.setItem(resumeKey, String(step)).catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tenseMode, started, step]);
 
   // Pro feature. The web build (staging) has no store, so it always shows.
+  // Tense Conversations are free at Beginner (Jonathan, 31 Oct 2026).
+  const free = tenseMode && level === "Beginner";
   useEffect(() => {
-    if (!loading && !isPro && purchasesAvailable()) router.replace("/paywall" as any);
-  }, [loading, isPro]);
+    if (!free && !loading && !isPro && purchasesAvailable()) router.replace("/paywall" as any);
+  }, [loading, isPro, free]);
 
   const clearFallback = () => { if (fallbackTimer.current) { clearTimeout(fallbackTimer.current); fallbackTimer.current = null; } };
   useEffect(() => () => {
@@ -341,8 +366,15 @@ export default function ConversationScreen() {
     if (phase !== "done" || savedRef.current || !conv) return;
     savedRef.current = true;
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-    collectConversationWords(conv.newWords, { level, verb: unitVerb, tense: VOCAB_TENSE[timeFrame] ?? timeFrame }).catch(() => {});
-  }, [phase, conv, level, unitVerb, timeFrame]);
+    collectConversationWords(conv.newWords, {
+      level, verb: tenseMode ? `${TENSE_LABEL[timeFrame] ?? timeFrame} conversation` : unitVerb,
+      tense: VOCAB_TENSE[timeFrame] ?? timeFrame,
+    }).catch(() => {});
+    if (tenseMode) {
+      markTenseConversationDone(level, timeFrame).catch(() => {});
+      AsyncStorage.removeItem(resumeKey).catch(() => {});
+    }
+  }, [phase, conv, level, unitVerb, timeFrame, tenseMode]);
 
   useEffect(() => {
     const t = setTimeout(() => scroll.current?.scrollToEnd({ animated: !reduceMotion }), 60);
@@ -580,7 +612,7 @@ export default function ConversationScreen() {
     if (!t || t.who !== "you") return;
     if (options) { submitFour(webTap ? [t.fr] : [heard, ...heardAllRef.current]); return; }
     const guesses = webTap ? [t.fr] : [heard, ...heardAllRef.current];
-    const judged = judgeReply(guesses, t.accept, unitVerb);
+    const judged = judgeReply(guesses, t.accept, tenseMode ? (t as any).verb : unitVerb);
     const said = webTap ? t.fr : (judged.best || heard);
     const k = `y${step}-${attempt}`;
     if (judged.verdict === "good") {
@@ -645,6 +677,9 @@ export default function ConversationScreen() {
   const continueOn = async () => {
     try { SR?.abort(); } catch {}
     try { player.pause(); } catch {}
+    // A Tense Conversation is opened from the Tense complete card or the course
+    // page; Continue goes back there. Its words have no vocab check of their own.
+    if (tenseMode) { if (router.canGoBack()) router.back(); else router.replace("/"); return; }
     // Vocab check (21 Oct 2026) follows the conversation. It takes this
     // screen's place, so its own Continue still lands back on the course.
     const unit = unitKey(level, timeFrame, unitVerb);
@@ -674,26 +709,52 @@ export default function ConversationScreen() {
   const canMic = (phase === "yourTurn" || phase === "heard") && voiceAvailable();
   const webMode = !voiceAvailable();
   const verbLabel = conv.verb;
+  const verbsUsed = tenseMode
+    ? ((conv as any).verbs as string[]).map((v) => ({
+        verb: v,
+        used: turns.slice(0, phase === "done" || phase === "replaying" ? turns.length : step)
+          .some((t: any) => t.who === "you" && t.verb === v && !t.callback),
+      }))
+    : [];
 
   return (
     <View style={styles.screen}>
       <Stack.Screen options={{ headerShown: false }} />
 
-      <View style={styles.header}>
+      <View style={[styles.header, tenseMode && { borderBottomWidth: 0 }]}>
         <Pressable onPress={leave} accessibilityRole="button" accessibilityLabel="Close conversation" style={styles.close}>
           <Ionicons name="close" size={20} color="#47507A" />
         </Pressable>
         <View style={{ alignItems: "center", flex: 1 }}>
-          <Text style={styles.title}>Final conversation</Text>
-          <Text style={styles.subtitle}>{level} · {verbLabel} · {TENSE_LABEL[timeFrame] ?? timeFrame}</Text>
+          <Text style={styles.title}>{tenseMode ? `${TENSE_LABEL[timeFrame] ?? timeFrame} conversation` : "Final conversation"}</Text>
+          <Text style={styles.subtitle}>
+            {tenseMode ? `${level} · ${(conv as any).title}` : `${level} · ${verbLabel} · ${TENSE_LABEL[timeFrame] ?? timeFrame}`}
+          </Text>
         </View>
         <Text style={styles.count}>{started ? Math.min(appReached, appCount) : 0} / {appCount}</Text>
       </View>
+      {tenseMode && (
+        // The weave: each verb lights up the first time the learner uses it.
+        <View style={styles.verbRow} accessibilityLabel={`Verbs: ${verbsUsed.map((v) => `${v.verb}${v.used ? ", used" : ""}`).join("; ")}`}>
+          {verbsUsed.map((v) => (
+            <View key={v.verb} style={[styles.verbChip, v.used && styles.verbChipOn]}>
+              {v.used && <Ionicons name="checkmark" size={12} color="#FFFFFF" />}
+              <Text style={[styles.verbChipText, v.used && { color: "#FFFFFF" }]}>{v.verb}</Text>
+            </View>
+          ))}
+        </View>
+      )}
 
       <ScrollView ref={scroll} style={{ flex: 1 }} contentContainerStyle={styles.body}>
         {!started && (
           <View style={styles.intro}>
-            <Text style={styles.introLabel}>NEW WORDS IN THIS CONVERSATION</Text>
+            {tenseMode && (
+              <View style={styles.scene}>
+                <Text style={styles.sceneTitle}>{(conv as any).title}</Text>
+                <Text style={styles.sceneText}>{(conv as any).scene} Every verb of the {TENSE_LABEL[timeFrame] ?? timeFrame} comes up: watch them light up.</Text>
+              </View>
+            )}
+            {conv.newWords.length > 0 && <Text style={styles.introLabel}>NEW WORDS IN THIS CONVERSATION</Text>}
             {conv.newWords.map((w) => (
               <View key={w.fr} style={styles.introRow}>
                 <View style={styles.introFrCol}>
@@ -839,8 +900,15 @@ export default function ConversationScreen() {
 
       {!started ? (
         <View style={styles.footerDone}>
-          <Pressable style={styles.primary} onPress={() => { startedAt.current = Date.now(); setStarted(true); }} accessibilityRole="button">
-            <Text style={styles.primaryText}>Start conversation</Text>
+          {savedScene !== null && (
+            <Pressable style={[styles.primary, { marginBottom: 8 }]} accessibilityRole="button"
+              onPress={() => { startedAt.current = Date.now(); setStep(savedScene); setStarted(true); }}>
+              <Text style={styles.primaryText}>Continue from scene 2</Text>
+            </Pressable>
+          )}
+          <Pressable style={savedScene !== null ? styles.linkBtn : styles.primary} accessibilityRole="button"
+            onPress={() => { startedAt.current = Date.now(); setStep(0); setStarted(true); }}>
+            <Text style={savedScene !== null ? styles.linkText : styles.primaryText}>{savedScene !== null ? "Start from the beginning" : "Start conversation"}</Text>
           </Pressable>
         </View>
       ) : phase === "done" || phase === "replaying" ? (
@@ -932,6 +1000,15 @@ const styles = StyleSheet.create({
   },
   close: { width: 44, height: 44, borderRadius: 22, backgroundColor: "#F2F4FA", alignItems: "center", justifyContent: "center" },
   title: { fontSize: 17, fontWeight: "800", color: INK },
+  verbRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 6, paddingHorizontal: 16, paddingBottom: 10,
+    borderBottomWidth: 1, borderBottomColor: LINE },
+  verbChip: { flexDirection: "row", alignItems: "center", gap: 3, borderRadius: 999, borderWidth: 1, borderColor: "#C9D3EE",
+    paddingHorizontal: 10, paddingVertical: 4, backgroundColor: "#FFFFFF" },
+  verbChipOn: { backgroundColor: GREEN, borderColor: GREEN },
+  verbChipText: { fontSize: 12, fontWeight: "700", color: SOFT },
+  scene: { marginBottom: 14 },
+  sceneTitle: { fontSize: 18, fontWeight: "800", color: INK, marginBottom: 4 },
+  sceneText: { fontSize: 14, lineHeight: 20, color: SOFT },
   subtitle: { fontSize: 12, fontWeight: "600", color: MUTED, marginTop: 2 },
   count: { width: 44, textAlign: "right", fontSize: 14, fontWeight: "700", color: MUTED },
   body: { padding: 18, paddingTop: 22, gap: 14, paddingBottom: 30 },
