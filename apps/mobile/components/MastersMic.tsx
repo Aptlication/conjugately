@@ -29,7 +29,8 @@ import { API_BASE } from "../lib/data";
  */
 
 const BARS = 16;
-const SEGMENTS = 16;
+// 12 (was 16) on 4 Nov 2026 so the Mic On quiz fits one screen without scrolling.
+const SEGMENTS = 12;
 const SEG_H = 6;
 const SEG_GAP = 3;
 const EQ_HEIGHT = SEGMENTS * SEG_H + (SEGMENTS - 1) * SEG_GAP;
@@ -60,6 +61,8 @@ export default function MastersMic(props: {
   disabled?: boolean;
   /** 1.5: the verb and tense being practised, for the Pronunciation button. */
   pronounce?: { verb: string; tense: string };
+  /** Mic On quiz (4 Nov 2026): the area above Record grows to fill the card, so the card meets the tab bar. */
+  fill?: boolean;
 }) {
   const { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit } =
     useMastersMic({
@@ -179,7 +182,8 @@ export default function MastersMic(props: {
     ? sayItems.slice(0, saying + 1).map((x) => x.guide).join("  ·  ") : null;
 
   return (
-    <View style={styles.wrap}>
+    <View style={[styles.wrap, props.fill && styles.wrapFill]}>
+      <View style={props.fill ? styles.eqArea : undefined}>
       {/* The equaliser appears the moment recording is live, not when the first
           sound arrives: the learner needs to see that Record took effect. While
           nothing is being heard yet it breathes at a low idle amplitude, which
@@ -187,6 +191,7 @@ export default function MastersMic(props: {
       {listening
         ? <Equaliser level={level} idle={warming} reduceMotion={reduceMotion} />
         : <PauseGlyph />}
+      </View>
 
       <View style={[styles.heardBlock, withPronounce && styles.pronBox]}>
         <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Verb pronunciation" : "Heard"}</Text>
@@ -468,6 +473,8 @@ function SquareButton(props: {
 
 const styles = StyleSheet.create({
   wrap: { marginTop: 4 },
+  wrapFill: { flexGrow: 1 },
+  eqArea: { flexGrow: 1, justifyContent: "center" },
   statusLine: { flexDirection: "row", alignItems: "center", gap: 10, marginTop: 8 },
   recWrap: { width: 26, height: 26, alignItems: "center", justifyContent: "center" },
   recRing: {
@@ -481,7 +488,7 @@ const styles = StyleSheet.create({
   },
   statusText: { flex: 1, fontSize: 14, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.1, lineHeight: 19 },
 
-  eq: { height: EQ_HEIGHT, marginTop: 18, flexDirection: "row", alignItems: "flex-end" },
+  eq: { height: EQ_HEIGHT, marginTop: 14, flexDirection: "row", alignItems: "flex-end" },
   barTrack: { flex: 1, marginHorizontal: 3, maxWidth: 16, height: EQ_HEIGHT, justifyContent: "flex-end", backgroundColor: TRACK, borderRadius: 2 },
   bar: { width: "100%", borderRadius: 2, backgroundColor: LIT, justifyContent: "flex-start" },
   barCap: { height: SEG_H, borderRadius: 2, backgroundColor: CAP },
@@ -490,7 +497,7 @@ const styles = StyleSheet.create({
 
   // Room for the label and two lines of transcript (1.3.20), so the live
   // transcript wrapping mid-hold never moves Record.
-  heardBlock: { marginTop: 18, minHeight: 58, alignItems: "center", justifyContent: "center", gap: 3 },
+  heardBlock: { marginTop: 14, minHeight: 58, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
@@ -510,12 +517,12 @@ const styles = StyleSheet.create({
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
   pauseWrap: {
-    height: EQ_HEIGHT, marginTop: 18, flexDirection: "row",
+    height: EQ_HEIGHT, marginTop: 14, flexDirection: "row",
     alignItems: "center", justifyContent: "center", gap: 22,
   },
   pauseBar: { width: 26, height: 100, borderRadius: 7, backgroundColor: "#24365E" },
 
-  row: { marginTop: 14, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
+  row: { marginTop: 16, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
   btnWrap: { width: 72, alignItems: "center", gap: 7 },
   btnWrapBig: { width: 125, alignItems: "center", gap: 10 },
   btn: {
