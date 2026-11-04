@@ -59,10 +59,9 @@ function splitQualifier(text: string): { main: string; qualifier: string; end: s
   const qualifier = found
     .map((q) => q.split(/(\s+|\/|,)/).map((w) => (QUALIFIER_WORDS.test(w) ? w.toLowerCase() : w)).join(""))
     .join(", ");
-  // The sentence keeps its full stop (or ?/!), placed after the qualifier:
-  // "You will not take any shortcuts (plural or formal)."
-  const end = /[.?!]$/.test(main) ? main.slice(-1) : "";
-  return { main: end ? main.slice(0, -1) : main, qualifier: `(${qualifier})`, end };
+  // The sentence keeps its full stop (or ?/!) and the qualifier follows it:
+  // "Will they take French lessons next year? (male)" (Jonathan, 4 Nov 2026).
+  return { main, qualifier: `(${qualifier})`, end: "" };
 }
 
 const PRONOUNS: [string, string, string][] = [
@@ -685,7 +684,7 @@ export default function Quiz() {
             <View style={[styles.tenseBadge, micMode && styles.tenseBadgeMic]}>
               <Text style={[styles.tenseBadgeText, micMode && styles.tenseBadgeTextMic]}>{tense}</Text>
             </View>
-            <Text style={[styles.qText, micMode && styles.qTextMic]}>
+            <Text style={[styles.qText, micMode && styles.qTextMic, micMode && !micControl && styles.qTextMicAnswered]}>
               {qParts.main}
               {!!qParts.qualifier && (
                 <Text style={[styles.qQualifier, micMode && styles.qQualifierMic]}>{" "}{qParts.qualifier}</Text>
@@ -1163,6 +1162,8 @@ const styles = StyleSheet.create({
   tenseBadgeText: { color: "#2B5FD9", fontSize: 12, fontWeight: "800", letterSpacing: 0.2 },
   tenseBadgeTextMic: { color: "#A9C2FF" },
   bottomRowMic: { marginTop: 8 },
+  // Answered with Mic On: a clear 25 pt gap above the answer box (4 Nov 2026).
+  qTextMicAnswered: { marginBottom: 25 },
   ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   ghostTextMic: { color: "#E2E9F7" },
