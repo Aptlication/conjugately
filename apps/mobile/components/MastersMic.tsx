@@ -19,7 +19,7 @@ import { API_BASE } from "../lib/data";
  * anything. Recording now only ever starts from a deliberate press.
  *
  * Pronunciation (item 1.5, approved by Jonathan 3 Nov 2026): when the quiz
- * passes `pronounce`, the box above the buttons is headed *Pronunciation*
+ * passes `pronounce`, the box above the buttons is headed *Verb pronunciation*
  * (small italics) instead of "Heard", with no placeholder line, and a round,
  * half-size blue button on its right. A tap says the verb, never the answer:
  * the infinitive, plus the past participle in the compound past tenses
@@ -189,7 +189,7 @@ export default function MastersMic(props: {
         : <PauseGlyph />}
 
       <View style={[styles.heardBlock, withPronounce && styles.pronBox]}>
-        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Pronunciation" : "Heard"}</Text>
+        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Verb pronunciation" : "Heard"}</Text>
         {sayLine ? (
           <>
             <Text style={styles.sayText} accessibilityLanguage="fr">{sayLine}</Text>
@@ -206,12 +206,16 @@ export default function MastersMic(props: {
         ) : null}
         {/* Gone while Record is held (Jonathan, 3 Nov 2026), so the verb can never play into the mic; back on release. */}
         {withPronounce && sayItems.length > 0 && !listening && (
+          // Centred by a full-height rail, not top: "50%": Yoga resolved the
+          // percentage against the box's minimum height, so the button sat high (4 Nov 2026).
+          <View style={styles.sayRail} pointerEvents="box-none">
           <Pressable onPress={onSayPress} hitSlop={8} accessibilityRole="button"
             accessibilityLabel={saying !== null ? "Stop" : `Hear the verb: ${sayItems[0].text}`}
             accessibilityHint="Says the verb you are practising, not the answer"
             style={[styles.sayBtn, saying !== null && styles.sayBtnOn]}>
             <Ionicons name="volume-high" size={16} color={saying !== null ? "#FFFFFF" : SAY_BLUE} />
           </Pressable>
+          </View>
         )}
         {ready && reading?.optionIndex != null && (
           <Text style={styles.heardSnap}>
@@ -498,7 +502,8 @@ const styles = StyleSheet.create({
   pronLabel: { fontSize: 14, fontStyle: "italic", color: MUTED },
   sayText: { fontSize: HEARD_SIZE + 2, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   sayGuide: { fontSize: 12, fontWeight: "700", color: SAY_BLUE, letterSpacing: 0.3, textAlign: "center" },
-  sayBtn: { position: "absolute", right: 10, top: "50%", marginTop: -16, width: 32, height: 32, borderRadius: 16,
+  sayRail: { position: "absolute", right: 10, top: 0, bottom: 0, justifyContent: "center" },
+  sayBtn: { width: 32, height: 32, borderRadius: 16,
     borderWidth: 2, borderColor: SAY_BLUE, backgroundColor: "rgba(91,141,239,0.16)", alignItems: "center", justifyContent: "center" },
   sayBtnOn: { backgroundColor: SAY_BLUE },
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
