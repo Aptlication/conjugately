@@ -50,16 +50,19 @@ const TENSE_PATH: Record<string, string> = {
  * the sentence. Only the display changes; AI WHY and Vocab get the original.
  */
 const QUALIFIER_WORDS = /^(plural|formal|informal|singular|feminine|masculine|mixed|male|female|or|only|and)$/i;
-function splitQualifier(text: string): { main: string; qualifier: string } {
+function splitQualifier(text: string): { main: string; qualifier: string; end: string } {
   const found: string[] = [];
   const main = text
     .replace(/\s*\(([^()]{1,40})\)/g, (_m, inner: string) => { found.push(inner.trim()); return ""; })
     .replace(/\s+([.,?!])/g, "$1").replace(/\s{2,}/g, " ").trim();
-  if (!found.length || !main) return { main: text, qualifier: "" };
+  if (!found.length || !main) return { main: text, qualifier: "", end: "" };
   const qualifier = found
     .map((q) => q.split(/(\s+|\/|,)/).map((w) => (QUALIFIER_WORDS.test(w) ? w.toLowerCase() : w)).join(""))
     .join(", ");
-  return { main: main.replace(/\.$/, ""), qualifier: `(${qualifier})` };
+  // The sentence keeps its full stop (or ?/!), placed after the qualifier:
+  // "You will not take any shortcuts (plural or formal)."
+  const end = /[.?!]$/.test(main) ? main.slice(-1) : "";
+  return { main: end ? main.slice(0, -1) : main, qualifier: `(${qualifier})`, end };
 }
 
 const PRONOUNS: [string, string, string][] = [
@@ -687,6 +690,7 @@ export default function Quiz() {
               {!!qParts.qualifier && (
                 <Text style={[styles.qQualifier, micMode && styles.qQualifierMic]}>{" "}{qParts.qualifier}</Text>
               )}
+              {qParts.end}
             </Text>
             {micMode && whyOpen && (
               <Text style={styles.whyMicNote}>Options shown so you can follow the explanation.</Text>
