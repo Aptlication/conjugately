@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import { Stack, router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
@@ -43,6 +43,25 @@ const TENSE_PATH: Record<string, string> = {
   ...Object.fromEntries(Object.values(TENSES).map((t) => [t.tense, t.tensePath])),
   "Imparfait": "imparfait",
 };
+/**
+ * "You (Plural or Formal) will not take any shortcuts." becomes the sentence
+ * "You will not take any shortcuts" plus "(plural or formal)", shown after it
+ * in small italics (approved 4 Nov 2026), so the qualifier no longer splits
+ * the sentence. Only the display changes; AI WHY and Vocab get the original.
+ */
+const QUALIFIER_WORDS = /^(plural|formal|informal|singular|feminine|masculine|mixed|male|female|or|only|and)$/i;
+function splitQualifier(text: string): { main: string; qualifier: string } {
+  const found: string[] = [];
+  const main = text
+    .replace(/\s*\(([^()]{1,40})\)/g, (_m, inner: string) => { found.push(inner.trim()); return ""; })
+    .replace(/\s+([.,?!])/g, "$1").replace(/\s{2,}/g, " ").trim();
+  if (!found.length || !main) return { main: text, qualifier: "" };
+  const qualifier = found
+    .map((q) => q.split(/(\s+|\/|,)/).map((w) => (QUALIFIER_WORDS.test(w) ? w.toLowerCase() : w)).join(""))
+    .join(", ");
+  return { main: main.replace(/\.$/, ""), qualifier: `(${qualifier})` };
+}
+
 const PRONOUNS: [string, string, string][] = [
   ["👤", "Je", "I"], ["🫵", "Tu", "You (informal)"], ["🎩", "Vous", "You (formal/plural)"],
   ["👥", "Nous", "We"], ["👬", "Ils", "They (masculine & mixed)"], ["👭", "Elles", "They (feminine)"],
@@ -99,6 +118,10 @@ export default function Quiz() {
   const verb = String(p.verb || "");
   const timeFrame = String(p.timeFrame || "");
   const tense = TENSE_BY_TIMEFRAME[timeFrame] || "Présent";
+  // Mic On card reaches down to the tab bar (4 Nov 2026): 64 above it, the tab
+  // bar plus a 12 px gap below. The area above Record takes up the slack.
+  const { height: winH } = useWindowDimensions();
+  const cardFillHeight = Math.max(0, winH - 64 - 92);
   const courseKey = p.courseKey ? String(p.courseKey) : undefined;
   const unitIndex = p.unitIndex !== undefined && p.unitIndex !== "" ? Number(p.unitIndex) : undefined;
 
@@ -278,6 +301,7 @@ export default function Quiz() {
 
   const dispIdx = reviewIndex !== null ? reviewIndex : idx;
   const dispQ = questions[dispIdx] || q;
+  const qParts = splitQualifier(String(dispQ?.question ?? ""));
   const dispSelected = reviewIndex !== null ? (answers[dispIdx] ?? null) : selected;
   const dispConfirmed = reviewIndex !== null ? answers[dispIdx] !== undefined : confirmed;
   const score = Object.entries(answers).reduce((n, [qi, ai]) =>
@@ -629,7 +653,7 @@ export default function Quiz() {
         )}
 
         {state === "active" && q && (
-          <View style={[styles.card, micMode && styles.cardMic]}>
+          <View style={[styles.card, micMode && styles.cardMic, micMode && { minHeight: cardFillHeight }]}>
             <View style={styles.metaRow}>
               <Text style={[styles.meta, micMode && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
               <Text style={[styles.metaScore, micMode && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
@@ -654,7 +678,16 @@ export default function Quiz() {
               </View>
             )}
 
-            <Text style={[styles.qText, micMode && styles.qTextMic]}>{dispQ.question}</Text>
+            {/* Tense badge (4 Nov 2026), as the earlier Advanced quiz had. */}
+            <View style={[styles.tenseBadge, micMode && styles.tenseBadgeMic]}>
+              <Text style={[styles.tenseBadgeText, micMode && styles.tenseBadgeTextMic]}>{tense}</Text>
+            </View>
+            <Text style={[styles.qText, micMode && styles.qTextMic]}>
+              {qParts.main}
+              {!!qParts.qualifier && (
+                <Text style={[styles.qQualifier, micMode && styles.qQualifierMic]}>{" "}{qParts.qualifier}</Text>
+              )}
+            </Text>
             {micMode && whyOpen && (
               <Text style={styles.whyMicNote}>Options shown so you can follow the explanation.</Text>
             )}
@@ -697,6 +730,7 @@ export default function Quiz() {
                 optionsShown={showOptionsFor === dispIdx}
                 onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
                 pronounce={{ verb: qVerb, tense }}
+                fill
               />
             )}
 
@@ -721,7 +755,7 @@ export default function Quiz() {
                 }} />
             )}
 
-            <View style={styles.bottomRow}>
+            <View style={[styles.bottomRow, micMode && styles.bottomRowMic]}>
               <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic]} onPress={goHome}>
                 <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Start Over</Text>
               </Pressable>
@@ -1115,7 +1149,16 @@ const styles = StyleSheet.create({
   metaScoreMic: { color: "#FFFFFF" },
   // Bigger in mic mode: the options are hidden, so the prompt is the only
   // thing to read and it inherits the space the status line used to take.
-  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 20 },
+  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 0 },
+  // Qualifier after the sentence: smaller, italic, quieter (4 Nov 2026).
+  qQualifier: { fontSize: 14, fontWeight: "500", fontStyle: "italic", color: "#5A6472", letterSpacing: 0 },
+  qQualifierMic: { fontSize: 15, color: "#A8B8D6" },
+  tenseBadge: { alignSelf: "flex-start", marginTop: -4, marginBottom: 10, borderRadius: 12, borderWidth: 1,
+    borderColor: "#C9D7F5", backgroundColor: "#EAF0FC", paddingVertical: 3, paddingHorizontal: 10 },
+  tenseBadgeMic: { borderColor: "#5B8DEF", backgroundColor: "rgba(91,141,239,0.16)" },
+  tenseBadgeText: { color: "#2B5FD9", fontSize: 12, fontWeight: "800", letterSpacing: 0.2 },
+  tenseBadgeTextMic: { color: "#A9C2FF" },
+  bottomRowMic: { marginTop: 8 },
   ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   ghostTextMic: { color: "#E2E9F7" },

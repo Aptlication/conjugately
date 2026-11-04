@@ -19,7 +19,7 @@ import { API_BASE } from "../lib/data";
  * anything. Recording now only ever starts from a deliberate press.
  *
  * Pronunciation (item 1.5, approved by Jonathan 3 Nov 2026): when the quiz
- * passes `pronounce`, the box above the buttons is headed *Pronunciation*
+ * passes `pronounce`, the box above the buttons is headed *Verb pronunciation*
  * (small italics) instead of "Heard", with no placeholder line, and a round,
  * half-size blue button on its right. A tap says the verb, never the answer:
  * the infinitive, plus the past participle in the compound past tenses
@@ -29,7 +29,8 @@ import { API_BASE } from "../lib/data";
  */
 
 const BARS = 16;
-const SEGMENTS = 16;
+// 12 (was 16) on 4 Nov 2026 so the Mic On quiz fits one screen without scrolling.
+const SEGMENTS = 12;
 const SEG_H = 6;
 const SEG_GAP = 3;
 const EQ_HEIGHT = SEGMENTS * SEG_H + (SEGMENTS - 1) * SEG_GAP;
@@ -60,6 +61,8 @@ export default function MastersMic(props: {
   disabled?: boolean;
   /** 1.5: the verb and tense being practised, for the Pronunciation button. */
   pronounce?: { verb: string; tense: string };
+  /** Mic On quiz (4 Nov 2026): the area above Record grows to fill the card, so the card meets the tab bar. */
+  fill?: boolean;
 }) {
   const { phase, level, transcript, reading, ruledOut, errorDetail, startHold, stopHold, reset, submit } =
     useMastersMic({
@@ -179,7 +182,8 @@ export default function MastersMic(props: {
     ? sayItems.slice(0, saying + 1).map((x) => x.guide).join("  ·  ") : null;
 
   return (
-    <View style={styles.wrap}>
+    <View style={[styles.wrap, props.fill && styles.wrapFill]}>
+      <View style={props.fill ? styles.eqArea : undefined}>
       {/* The equaliser appears the moment recording is live, not when the first
           sound arrives: the learner needs to see that Record took effect. While
           nothing is being heard yet it breathes at a low idle amplitude, which
@@ -187,9 +191,10 @@ export default function MastersMic(props: {
       {listening
         ? <Equaliser level={level} idle={warming} reduceMotion={reduceMotion} />
         : <PauseGlyph />}
+      </View>
 
       <View style={[styles.heardBlock, withPronounce && styles.pronBox]}>
-        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Pronunciation" : "Heard"}</Text>
+        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Verb pronunciation" : "Heard"}</Text>
         {sayLine ? (
           <>
             <Text style={styles.sayText} accessibilityLanguage="fr">{sayLine}</Text>
@@ -206,12 +211,16 @@ export default function MastersMic(props: {
         ) : null}
         {/* Gone while Record is held (Jonathan, 3 Nov 2026), so the verb can never play into the mic; back on release. */}
         {withPronounce && sayItems.length > 0 && !listening && (
+          // Centred by a full-height rail, not top: "50%": Yoga resolved the
+          // percentage against the box's minimum height, so the button sat high (4 Nov 2026).
+          <View style={styles.sayRail} pointerEvents="box-none">
           <Pressable onPress={onSayPress} hitSlop={8} accessibilityRole="button"
             accessibilityLabel={saying !== null ? "Stop" : `Hear the verb: ${sayItems[0].text}`}
             accessibilityHint="Says the verb you are practising, not the answer"
             style={[styles.sayBtn, saying !== null && styles.sayBtnOn]}>
             <Ionicons name="volume-high" size={16} color={saying !== null ? "#FFFFFF" : SAY_BLUE} />
           </Pressable>
+          </View>
         )}
         {ready && reading?.optionIndex != null && (
           <Text style={styles.heardSnap}>
@@ -464,6 +473,8 @@ function SquareButton(props: {
 
 const styles = StyleSheet.create({
   wrap: { marginTop: 4 },
+  wrapFill: { flexGrow: 1 },
+  eqArea: { flexGrow: 1, justifyContent: "center" },
   statusLine: { flexDirection: "row", alignItems: "center", gap: 10, marginTop: 8 },
   recWrap: { width: 26, height: 26, alignItems: "center", justifyContent: "center" },
   recRing: {
@@ -477,7 +488,7 @@ const styles = StyleSheet.create({
   },
   statusText: { flex: 1, fontSize: 14, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.1, lineHeight: 19 },
 
-  eq: { height: EQ_HEIGHT, marginTop: 18, flexDirection: "row", alignItems: "flex-end" },
+  eq: { height: EQ_HEIGHT, marginTop: 14, flexDirection: "row", alignItems: "flex-end" },
   barTrack: { flex: 1, marginHorizontal: 3, maxWidth: 16, height: EQ_HEIGHT, justifyContent: "flex-end", backgroundColor: TRACK, borderRadius: 2 },
   bar: { width: "100%", borderRadius: 2, backgroundColor: LIT, justifyContent: "flex-start" },
   barCap: { height: SEG_H, borderRadius: 2, backgroundColor: CAP },
@@ -486,7 +497,7 @@ const styles = StyleSheet.create({
 
   // Room for the label and two lines of transcript (1.3.20), so the live
   // transcript wrapping mid-hold never moves Record.
-  heardBlock: { marginTop: 18, minHeight: 58, alignItems: "center", justifyContent: "center", gap: 3 },
+  heardBlock: { marginTop: 14, minHeight: 58, alignItems: "center", justifyContent: "center", gap: 3 },
   heardLabel: { fontSize: 13, fontWeight: "700", letterSpacing: 1.3, color: "#FB5570" },
   heardText: { fontSize: HEARD_SIZE, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   heardProvisional: { color: SOFT, opacity: 0.75 },
@@ -498,19 +509,20 @@ const styles = StyleSheet.create({
   pronLabel: { fontSize: 14, fontStyle: "italic", color: MUTED },
   sayText: { fontSize: HEARD_SIZE + 2, fontWeight: "700", color: "#FFFFFF", textAlign: "center" },
   sayGuide: { fontSize: 12, fontWeight: "700", color: SAY_BLUE, letterSpacing: 0.3, textAlign: "center" },
-  sayBtn: { position: "absolute", right: 10, top: "50%", marginTop: -16, width: 32, height: 32, borderRadius: 16,
+  sayRail: { position: "absolute", right: 10, top: 0, bottom: 0, justifyContent: "center" },
+  sayBtn: { width: 32, height: 32, borderRadius: 16,
     borderWidth: 2, borderColor: SAY_BLUE, backgroundColor: "rgba(91,141,239,0.16)", alignItems: "center", justifyContent: "center" },
   sayBtnOn: { backgroundColor: SAY_BLUE },
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 
   pauseWrap: {
-    height: EQ_HEIGHT, marginTop: 18, flexDirection: "row",
+    height: EQ_HEIGHT, marginTop: 14, flexDirection: "row",
     alignItems: "center", justifyContent: "center", gap: 22,
   },
   pauseBar: { width: 26, height: 100, borderRadius: 7, backgroundColor: "#24365E" },
 
-  row: { marginTop: 14, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
+  row: { marginTop: 16, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8 },
   btnWrap: { width: 72, alignItems: "center", gap: 7 },
   btnWrapBig: { width: 125, alignItems: "center", gap: 10 },
   btn: {
