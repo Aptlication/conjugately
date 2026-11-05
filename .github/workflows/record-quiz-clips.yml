@@ -1,0 +1,60 @@
+# Records the verb-pronunciation clips (every verb form a quiz tests) and the
+# Advanced quiz's English questions with ElevenLabs, and commits them to the
+# branch it ran on. Run it from the Actions tab ("Run workflow") on main: the
+# server serves the clips once Render has deployed that commit.
+#
+# Needs the repository secret ELEVENLABS_API_KEY (already used by
+# "Generate quiz audio"). Existing clips are skipped, so re-running only fills gaps.
+# Added 5 Nov 2026.
+name: Record quiz clips
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (count characters, record nothing)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-quiz-clips
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: List the clips
+        run: npx -y tsx@4.19.2 scripts/build-server-clip-lines.ts
+
+      - name: Record
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          node scripts/record-server-clips.mjs $ARGS 2>&1 | tee record.log
+          if grep -q "❌" record.log; then echo "::warning::Some clips failed — run it again to fill the gaps"; fi
+
+      - name: Commit the clips
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add attached_assets/audio
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          COUNT=$(git diff --cached --name-only | wc -l)
+          git commit -m "Audio: $COUNT verb-form and Advanced question clips recorded by ElevenLabs"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

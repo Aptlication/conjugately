@@ -4,6 +4,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
+import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
+import { splitQualifier } from "@shared/quizText";
+import { formsForQuiz } from "@shared/verbForms";
+import { API_BASE } from "../../lib/data";
 import { quizClip } from "@shared/advanced/audioKeys";
 import type { AdvUnit } from "@shared/advanced/types";
 import { awardCoins } from "../../lib/coins";
@@ -124,6 +128,49 @@ export default function QuizStep({ unit, play, onDone }: {
   const optionsHidden = micMode && showOptionsFor !== dispIdx;
   const micPromoVisible = micPromo === "due" && !done && reviewIndex === null && !micOn && micPossible && !showMicIntro;
 
+  // ── The English question first (5 Nov 2026), as at every other level: it
+  // plays on its own and A-D stay locked until it has finished. Clips are on
+  // the server (attached_assets/audio/quizzes/advanced/<unit>/questions/Q<n>.mp3,
+  // recorded in the quiz questions' voice). A clip that fails to load unlocks
+  // within a few seconds, so nothing is ever stuck.
+  const questionUrl = q && !done ? `${API_BASE}/attached_assets/audio/quizzes/advanced/${unit.id.replace(".", "_")}/questions/Q${q.i + 1}.mp3` : null;
+  const qPlayer = useAudioPlayer(questionUrl ? { uri: questionUrl } : null);
+  const qStatus = useAudioPlayerStatus(qPlayer);
+  const [englishDoneFor, setEnglishDoneFor] = useState(-1);
+  const englishDone = englishDoneFor === idx;
+  const englishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const finishEnglish = () => {
+    if (englishTimer.current) { clearTimeout(englishTimer.current); englishTimer.current = null; }
+    setEnglishDoneFor(idxRef.current);
+  };
+  const stopEnglish = () => { try { qPlayer.pause(); } catch {} finishEnglish(); };
+  useEffect(() => { if (qStatus?.didJustFinish) finishEnglish(); }, [qStatus?.didJustFinish]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => () => { if (englishTimer.current) clearTimeout(englishTimer.current); }, []);
+  const promoHolding = micPromo === "unknown" || micPromoVisible || showMicIntro;
+  useEffect(() => {
+    if (!done && questionUrl && sound && !confirmed && reviewIndex === null && !promoHolding) {
+      setEnglishDoneFor(-1);
+      if (englishTimer.current) clearTimeout(englishTimer.current);
+      englishTimer.current = setTimeout(finishEnglish, 12000);
+      const t = setTimeout(() => {
+        try { qPlayer.seekTo(0); qPlayer.play(); } catch { finishEnglish(); }
+        // Not recorded yet, or offline: don't keep the answers locked.
+        setTimeout(() => { if (!qPlayer.playing && !(qPlayer.currentTime > 0)) finishEnglish(); }, 2500);
+      }, 300);
+      return () => clearTimeout(t);
+    }
+    finishEnglish();
+  }, [idx, round, done, questionUrl, sound, promoHolding]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Verb pronunciation (5 Nov 2026): the forms this quiz tests in the current question's tense.
+  const quizForms = useMemo(() => q ? formsForQuiz(
+    unit.quiz.filter((x) => x.tense === q.tense).map((x) => ({ answer: x.answer, wrongs: x.wrong })), unit.verb, q.tense,
+  ) : [], [unit, q?.tense]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // The card reaches the bottom of the screen with Mic On; the space above Record takes up the slack.
+  const [viewH, setViewH] = useState(0);
+  const qParts = splitQualifier(String(dispQ?.question ?? ""));
+
   const whyOpen = whyOpenFor === dispIdx;
   const openWhy = () => {
     cancelAutoAdvance();
@@ -181,6 +228,9 @@ export default function QuizStep({ unit, play, onDone }: {
     if (reviewIndex !== null) return;
     if (selected === i && confirmed) { nextQuestion(); return; }
     if (confirmed) return;
+    // The English always comes first; a spoken answer has already stopped it.
+    if (!englishDone) return;
+    stopEnglish();
     setSelected(i);
     setConfirmed(true);
     answersRef.current = { ...answersRef.current, [idx]: i };
@@ -264,8 +314,9 @@ export default function QuizStep({ unit, play, onDone }: {
   return (
     <View style={{ flex: 1, backgroundColor: micMode ? "#0A1326" : "#F7F8FA" }}>
       {/* Locked while Record is held, as in the quizzes (1.3.20). */}
-      <ScrollView contentContainerStyle={styles.scroll} scrollEnabled={!micHolding}>
-        <View style={[styles.card, micMode && styles.cardMic]}>
+      <ScrollView contentContainerStyle={styles.scroll} scrollEnabled={!micHolding}
+        onLayout={(e) => setViewH(e.nativeEvent.layout.height)}>
+        <View style={[styles.card, micMode && styles.cardMic, micMode && viewH > 0 && { minHeight: viewH - 16 - 24 }]}>
           <View style={styles.metaRow}>
             <Text style={[styles.meta, micMode && styles.metaMic]}>Question {dispIdx + 1} of {questions.length}</Text>
             <Text style={[styles.metaScore, micMode && styles.metaScoreMic]}>Score: {score} / {questions.length}</Text>
@@ -287,7 +338,14 @@ export default function QuizStep({ unit, play, onDone }: {
             </View>
           )}
 
-          <Text style={[styles.qText, micMode && styles.qTextMic]}>{dispQ.question}</Text>
+          {/* Tense badge and the quiet qualifier, as in the conjugation quizzes (5 Nov 2026). */}
+          <View style={[styles.tenseBadge, micMode && styles.tenseBadgeMic]}>
+            <Text style={[styles.tenseBadgeText, micMode && styles.tenseBadgeTextMic]}>{dispQ.tense}</Text>
+          </View>
+          <Text style={[styles.qText, micMode && styles.qTextMic, micMode && !micControl && styles.qTextMicAnswered]}>
+            {qParts.main}
+            {!!qParts.qualifier && <Text style={[styles.qQualifier, micMode && styles.qQualifierMic]}>{" "}{qParts.qualifier}</Text>}
+          </Text>
           {micMode && whyOpen && <Text style={styles.whyMicNote}>Options shown so you can follow the explanation.</Text>}
 
           {!optionsHidden && dispQ.answerOptions.map((o, i) => {
@@ -295,10 +353,13 @@ export default function QuizStep({ unit, play, onDone }: {
             const isSel = dispSelected === i && confirmedNow;
             const showCorrect = confirmedNow && o.isCorrect;
             const showWrong = isSel && !o.isCorrect;
+            const waitingForEnglish = reviewIndex === null && !confirmedNow && !englishDone;
             return (
               <Pressable key={o.text} onPress={() => handleAnswerSelect(i)} accessibilityRole="button"
+                disabled={waitingForEnglish} accessibilityState={{ disabled: waitingForEnglish }}
                 accessibilityLabel={`${String.fromCharCode(65 + i)}. ${o.text}`}
-                style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim]}>
+                style={[styles.opt, showCorrect && styles.optCorrect, showWrong && styles.optWrong, confirmedNow && !showCorrect && !showWrong && styles.optDim,
+                  waitingForEnglish && { opacity: 0.4 }]}>
                 <View style={[styles.letter, showCorrect && { borderColor: "#17734A" }, showWrong && { borderColor: "#C0392B" }]}>
                   <Text style={[styles.letterText, showCorrect && { color: "#17734A" }, showWrong && { color: "#C0392B" }]}>{String.fromCharCode(65 + i)}</Text>
                 </View>
@@ -316,10 +377,11 @@ export default function QuizStep({ unit, play, onDone }: {
               options={q.answerOptions.map((o) => o.text)}
               correctIndex={q.answerOptions.findIndex((o) => o.isCorrect)}
               onOutcome={handleMicOutcome}
-              onHoldChange={setMicHolding}
+              onHoldChange={(h) => { setMicHolding(h); if (h) stopEnglish(); }}
               optionsShown={showOptionsFor === dispIdx}
               onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
-              pronounce={{ verb: unit.verb, tense: q.tense }}
+              pronounce={{ verb: unit.verb, tense: q.tense, forms: quizForms }}
+              fill
             />
           )}
 
@@ -341,7 +403,7 @@ export default function QuizStep({ unit, play, onDone }: {
               }} />
           )}
 
-          <View style={styles.bottomRow}>
+          <View style={[styles.bottomRow, micMode && styles.bottomRowMic]}>
             <Pressable style={[styles.ghostBtn, micMode && styles.ghostBtnMic]} onPress={restart}>
               <Text style={[styles.ghostText, micMode && styles.ghostTextMic]}>Start Over</Text>
             </Pressable>
@@ -356,7 +418,7 @@ export default function QuizStep({ unit, play, onDone }: {
           </View>
 
           <View style={styles.audioRow}>
-            <Pressable onPress={() => setSound((s) => !s)}
+            <Pressable onPress={() => setSound((s) => { if (s) { try { qPlayer.pause(); } catch {} } return !s; })}
               style={[styles.togglePill, sound ? styles.toggleOn : styles.toggleOff, micMode && styles.togglePillMic]}>
               <Text style={{ fontSize: 15 }}>{sound ? "🔊" : "🔇"}</Text>
               <Text style={[styles.toggleText, { color: micMode ? "#E2E9F7" : sound ? "#2B5FD9" : "#5A6472" }]}>{sound ? "Sound On" : "Sound Off"}</Text>
@@ -475,7 +537,16 @@ const styles = StyleSheet.create({
   cardMic: { backgroundColor: "#10203F", borderColor: "#2E4270" },
   metaMic: { color: "#A8B8D6" },
   metaScoreMic: { color: "#FFFFFF" },
-  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 20 },
+  qTextMic: { color: "#FFFFFF", fontSize: 28, lineHeight: 34, letterSpacing: -0.4, marginBottom: 0 },
+  qTextMicAnswered: { marginBottom: 25 },
+  qQualifier: { fontSize: 14, fontWeight: "500", fontStyle: "italic", color: "#5A6472", letterSpacing: 0 },
+  qQualifierMic: { fontSize: 15, color: "#A8B8D6" },
+  tenseBadge: { alignSelf: "flex-start", marginTop: -4, marginBottom: 10, borderRadius: 12, borderWidth: 1,
+    borderColor: "#C9D7F5", backgroundColor: "#EAF0FC", paddingVertical: 3, paddingHorizontal: 10 },
+  tenseBadgeMic: { borderColor: "#5B8DEF", backgroundColor: "rgba(91,141,239,0.16)" },
+  tenseBadgeText: { color: "#2B5FD9", fontSize: 12, fontWeight: "800", letterSpacing: 0.2 },
+  tenseBadgeTextMic: { color: "#A9C2FF" },
+  bottomRowMic: { marginTop: 8 },
   ghostBtnMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   togglePillMic: { borderColor: "#2E4270", backgroundColor: "transparent" },
   ghostTextMic: { color: "#E2E9F7" },
