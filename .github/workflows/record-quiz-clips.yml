@@ -44,6 +44,10 @@ jobs:
         run: |
           ARGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          if [ -z "$ARGS" ] && [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::The repository secret ELEVENLABS_API_KEY is not set (Settings → Secrets and variables → Actions)."
+            exit 1
+          fi
           node scripts/record-server-clips.mjs $ARGS 2>&1 | tee record.log
           if grep -q "❌" record.log; then echo "::warning::Some clips failed — run it again to fill the gaps"; fi
 

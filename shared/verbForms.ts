@@ -154,7 +154,8 @@ function readForm(answer: string, verb: string, tense: string, wrongs: string[])
     }
     if (!person) { person = PLURAL_3.test(head) || /^(sont|font|vont|ont)$/.test(head) ? "ils" : "il"; subject = person; }
   }
-  if (!head || head.includes("-")) return null;
+  // "c'est", "ce sont": not a personal form of the verb.
+  if (!head || head.includes("-") || head === "ce" || /^c'/.test(head)) return null;
   if (head === "puis" && person === "je") head = "peux";
 
   const words = [subject];
