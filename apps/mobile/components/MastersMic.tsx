@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import { pronunciationFor } from "@shared/verbPronunciation";
+import type { VerbForm } from "@shared/verbForms";
 import { useMastersMic, type MicOutcome } from "../lib/mastersMic";
 import { API_BASE } from "../lib/data";
 
@@ -60,7 +61,7 @@ export default function MastersMic(props: {
   optionsShown: boolean;
   disabled?: boolean;
   /** 1.5: the verb and tense being practised, for the Pronunciation button. */
-  pronounce?: { verb: string; tense: string };
+  pronounce?: { verb: string; tense: string; forms?: VerbForm[] };
   /** Mic On quiz (4 Nov 2026): the area above Record grows to fill the card, so the card meets the tab bar. */
   fill?: boolean;
 }) {
@@ -78,10 +79,15 @@ export default function MastersMic(props: {
     });
 
   // ── Pronunciation button (1.5) ──
-  const sayItems = useMemo(
-    () => (props.pronounce ? pronunciationFor(props.pronounce.verb, props.pronounce.tense) : []),
-    [props.pronounce?.verb, props.pronounce?.tense], // eslint-disable-line react-hooks/exhaustive-deps
-  );
+  // 5 Nov 2026: every form the quiz tests, played in turn (falls back to the
+  // infinitive / participle when the quiz's forms can't be read).
+  const formsKey = (props.pronounce?.forms ?? []).map((f) => f.clip).join("|");
+  const sayItems = useMemo(() => {
+    const forms = props.pronounce?.forms ?? [];
+    if (forms.length) return forms.map((f) => ({ text: f.text, guide: "", clip: f.clip }));
+    return props.pronounce ? pronunciationFor(props.pronounce.verb, props.pronounce.tense) : [];
+  }, [props.pronounce?.verb, props.pronounce?.tense, formsKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  const formsMode = (props.pronounce?.forms?.length ?? 0) > 0;
   const sayPlayer = useAudioPlayer(null);
   const sayStatus = useAudioPlayerStatus(sayPlayer);
   const [saying, setSaying] = useState<number | null>(null);
@@ -176,7 +182,7 @@ export default function MastersMic(props: {
 
   const shownText = ready ? (reading?.heard ?? "") : transcript;
   const placeholder = listening ? "…" : ready ? "nothing caught" : withPronounce ? "" : "Hold Record and say the answer";
-  const sayLine = saying !== null && !listening && !ready
+  const sayLine = saying !== null && !listening && !ready && !formsMode
     ? sayItems.slice(0, saying + 1).map((x) => x.text).join("  ·  ") : null;
   const sayGuide = saying !== null && !listening && !ready
     ? sayItems.slice(0, saying + 1).map((x) => x.guide).join("  ·  ") : null;
@@ -190,11 +196,18 @@ export default function MastersMic(props: {
           reads as alive without pretending to show speech. */}
       {listening
         ? <Equaliser level={level} idle={warming} reduceMotion={reduceMotion} />
-        : <PauseGlyph />}
+        : formsMode && saying !== null
+          ? <FormsList verb={props.pronounce!.verb} tense={props.pronounce!.tense} items={sayItems} current={saying} />
+          : <PauseGlyph />}
       </View>
 
       <View style={[styles.heardBlock, withPronounce && styles.pronBox]}>
-        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>{withPronounce ? "Verb pronunciation" : "Heard"}</Text>
+        <Text style={withPronounce ? styles.pronLabel : styles.heardLabel}>
+          {withPronounce ? "Verb pronunciation" : "Heard"}
+          {withPronounce && formsMode && saying !== null && !listening && (
+            <Text style={styles.pronCount}>{`  ·  ${saying + 1} of ${sayItems.length}`}</Text>
+          )}
+        </Text>
         {sayLine ? (
           <>
             <Text style={styles.sayText} accessibilityLanguage="fr">{sayLine}</Text>
@@ -215,10 +228,10 @@ export default function MastersMic(props: {
           // percentage against the box's minimum height, so the button sat high (4 Nov 2026).
           <View style={styles.sayRail} pointerEvents="box-none">
           <Pressable onPress={onSayPress} hitSlop={8} accessibilityRole="button"
-            accessibilityLabel={saying !== null ? "Stop" : `Hear the verb: ${sayItems[0].text}`}
-            accessibilityHint="Says the verb you are practising, not the answer"
+            accessibilityLabel={saying !== null ? "Stop" : formsMode ? `Hear every form of the verb in this quiz, ${sayItems.length} in all` : `Hear the verb: ${sayItems[0].text}`}
+            accessibilityHint={formsMode ? "Plays them one by one. Tap again to stop." : "Says the verb you are practising, not the answer"}
             style={[styles.sayBtn, saying !== null && styles.sayBtnOn]}>
-            <Ionicons name="volume-high" size={16} color={saying !== null ? "#FFFFFF" : SAY_BLUE} />
+            <Ionicons name={saying !== null && formsMode ? "stop" : "volume-high"} size={saying !== null && formsMode ? 13 : 16} color={saying !== null ? "#FFFFFF" : SAY_BLUE} />
           </Pressable>
           </View>
         )}
@@ -291,6 +304,36 @@ function Notice(props: { title: string; body: string; detail?: string | null; on
       <Pressable onPress={props.onShowOptions} accessibilityRole="button" style={styles.noticeBtn}>
         <Text style={styles.noticeBtnText}>Show the options</Text>
       </Pressable>
+    </View>
+  );
+}
+
+/** While the forms play: the list in place of the pause bars, the current one lit (5 Nov 2026). */
+function FormsList(props: { verb: string; tense: string; items: { text: string }[]; current: number }) {
+  // Two columns, filled down: je, tu, il / elle on the left; nous, vous, ils / elles on the right.
+  const rows = Math.ceil(props.items.length / 2);
+  const cols = [props.items.slice(0, rows), props.items.slice(rows)];
+  return (
+    <View style={styles.formsWrap} accessibilityLiveRegion="polite"
+      accessibilityLabel={`Playing ${props.items[props.current]?.text ?? ""}, ${props.current + 1} of ${props.items.length}`}>
+      <Text style={styles.formsHead}>{`${props.verb} · ${props.tense.toLowerCase()}`}</Text>
+      <View style={styles.formsCols}>
+        {cols.map((col, c) => (
+          <View key={c} style={styles.formsCol}>
+            {col.map((it, r) => {
+              const k = c * rows + r;
+              const on = k === props.current, done = k < props.current;
+              return (
+                <View key={k} style={[styles.formRow, on && styles.formRowOn]}>
+                  <Text style={[styles.formNum, on && styles.formNumOn]}>{k + 1}</Text>
+                  <Text style={[styles.formText, done && styles.formTextDone, on && styles.formTextOn]}
+                    numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8} accessibilityLanguage="fr">{it.text}</Text>
+                </View>
+              );
+            })}
+          </View>
+        ))}
+      </View>
     </View>
   );
 }
@@ -513,6 +556,18 @@ const styles = StyleSheet.create({
   sayBtn: { width: 32, height: 32, borderRadius: 16,
     borderWidth: 2, borderColor: SAY_BLUE, backgroundColor: "rgba(91,141,239,0.16)", alignItems: "center", justifyContent: "center" },
   sayBtnOn: { backgroundColor: SAY_BLUE },
+  pronCount: { fontStyle: "normal", fontWeight: "700", color: "#A9C2FF" },
+  formsWrap: { minHeight: EQ_HEIGHT, marginTop: 14, justifyContent: "center", gap: 6, alignSelf: "stretch" },
+  formsHead: { fontSize: 12, fontWeight: "700", letterSpacing: 0.6, textTransform: "uppercase", color: MUTED, textAlign: "center" },
+  formsCols: { flexDirection: "row", gap: 8 },
+  formsCol: { flex: 1, gap: 4 },
+  formRow: { flexDirection: "row", alignItems: "center", gap: 6, paddingVertical: 4, paddingHorizontal: 6, borderRadius: 10 },
+  formRowOn: { backgroundColor: "rgba(91,141,239,0.18)" },
+  formNum: { width: 14, fontSize: 12, fontWeight: "700", color: "#5E7096" },
+  formNumOn: { color: "#A9C2FF" },
+  formText: { flex: 1, fontSize: 15, fontWeight: "700", color: "#5E7096" },
+  formTextDone: { color: SOFT },
+  formTextOn: { color: "#FFFFFF" },
   heardSnap: { marginTop: 2, fontSize: 13, fontWeight: "600", color: "#67E8F9", textAlign: "center" },
   inlineError: { marginTop: 6, fontSize: 11, color: "#FCA5A5", textAlign: "center" },
 

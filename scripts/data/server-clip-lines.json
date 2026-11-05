@@ -1,0 +1,8270 @@
+[
+ {
+  "file": "verbs/etre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "être"
+ },
+ {
+  "file": "verbs/etre-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "été"
+ },
+ {
+  "file": "verbs/avoir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "avoir"
+ },
+ {
+  "file": "verbs/avoir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "eu"
+ },
+ {
+  "file": "verbs/faire.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "faire"
+ },
+ {
+  "file": "verbs/faire-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "fait"
+ },
+ {
+  "file": "verbs/aller.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "aller"
+ },
+ {
+  "file": "verbs/dire.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "dire"
+ },
+ {
+  "file": "verbs/dire-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "dit"
+ },
+ {
+  "file": "verbs/voir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "voir"
+ },
+ {
+  "file": "verbs/voir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vu"
+ },
+ {
+  "file": "verbs/savoir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "savoir"
+ },
+ {
+  "file": "verbs/savoir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "su"
+ },
+ {
+  "file": "verbs/vouloir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vouloir"
+ },
+ {
+  "file": "verbs/vouloir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "voulu"
+ },
+ {
+  "file": "verbs/venir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "venir"
+ },
+ {
+  "file": "verbs/venir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "venu"
+ },
+ {
+  "file": "verbs/pouvoir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "pouvoir"
+ },
+ {
+  "file": "verbs/pouvoir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "pu"
+ },
+ {
+  "file": "verbs/besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "avoir besoin"
+ },
+ {
+  "file": "verbs/besoin-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "eu besoin"
+ },
+ {
+  "file": "verbs/mettre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "mettre"
+ },
+ {
+  "file": "verbs/mettre-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "mis"
+ },
+ {
+  "file": "verbs/trouver.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "trouver"
+ },
+ {
+  "file": "verbs/croire.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "croire"
+ },
+ {
+  "file": "verbs/croire-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "cru"
+ },
+ {
+  "file": "verbs/parler.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "parler"
+ },
+ {
+  "file": "verbs/prendre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "prendre"
+ },
+ {
+  "file": "verbs/prendre-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "pris"
+ },
+ {
+  "file": "verbs/lire.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "lire"
+ },
+ {
+  "file": "verbs/lire-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "lu"
+ },
+ {
+  "file": "verbs/ecrire.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "écrire"
+ },
+ {
+  "file": "verbs/ecrire-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "écrit"
+ },
+ {
+  "file": "verbs/ouvrir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ouvrir"
+ },
+ {
+  "file": "verbs/ouvrir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ouvert"
+ },
+ {
+  "file": "verbs/fermer.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "fermer"
+ },
+ {
+  "file": "verbs/perdre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "perdre"
+ },
+ {
+  "file": "verbs/perdre-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "perdu"
+ },
+ {
+  "file": "verbs/garder.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "garder"
+ },
+ {
+  "file": "verbs/s-interesser.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "s'intéresser"
+ },
+ {
+  "file": "verbs/s-interesser-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "intéressé"
+ },
+ {
+  "file": "verbs/se-debrouiller.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "se débrouiller"
+ },
+ {
+  "file": "verbs/se-debrouiller-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "débrouillé"
+ },
+ {
+  "file": "verbs/s-ennuyer.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "s'ennuyer"
+ },
+ {
+  "file": "verbs/s-ennuyer-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ennuyé"
+ },
+ {
+  "file": "verbs/s-entrainer.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "s'entraîner"
+ },
+ {
+  "file": "verbs/s-entrainer-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "entraîné"
+ },
+ {
+  "file": "verbs/se-souvenir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "se souvenir"
+ },
+ {
+  "file": "verbs/se-souvenir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "souvenu"
+ },
+ {
+  "file": "verbs/s-adapter.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "s'adapter"
+ },
+ {
+  "file": "verbs/s-adapter-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "adapté"
+ },
+ {
+  "file": "verbs/se-rejouir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "se réjouir"
+ },
+ {
+  "file": "verbs/se-rejouir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "réjoui"
+ },
+ {
+  "file": "verbs/aider.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "aider"
+ },
+ {
+  "file": "verbs/apporter.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "apporter"
+ },
+ {
+  "file": "verbs/commencer.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "commencer"
+ },
+ {
+  "file": "verbs/demander.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "demander"
+ },
+ {
+  "file": "verbs/donner.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "donner"
+ },
+ {
+  "file": "verbs/recevoir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "recevoir"
+ },
+ {
+  "file": "verbs/recevoir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "reçu"
+ },
+ {
+  "file": "verbs/reserver.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "réserver"
+ },
+ {
+  "file": "verbs/servir.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "servir"
+ },
+ {
+  "file": "verbs/servir-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "servi"
+ },
+ {
+  "file": "verbs/visiter.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "visiter"
+ },
+ {
+  "file": "verbs/vivre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vivre"
+ },
+ {
+  "file": "verbs/vivre-pp.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vécu"
+ },
+ {
+  "file": "verbs/forms/je-suis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je suis"
+ },
+ {
+  "file": "verbs/forms/tu-es.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu es"
+ },
+ {
+  "file": "verbs/forms/il-est.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il est"
+ },
+ {
+  "file": "verbs/forms/elle-est.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle est"
+ },
+ {
+  "file": "verbs/forms/nous-sommes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous sommes"
+ },
+ {
+  "file": "verbs/forms/vous-etes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous êtes"
+ },
+ {
+  "file": "verbs/forms/ils-sont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils sont"
+ },
+ {
+  "file": "verbs/forms/elles-sont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles sont"
+ },
+ {
+  "file": "verbs/forms/il-c-est.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il c'est"
+ },
+ {
+  "file": "verbs/forms/il-ce.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ce"
+ },
+ {
+  "file": "verbs/forms/j-ai-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai été"
+ },
+ {
+  "file": "verbs/forms/tu-as-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as été"
+ },
+ {
+  "file": "verbs/forms/il-a-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a été"
+ },
+ {
+  "file": "verbs/forms/elle-a-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a été"
+ },
+ {
+  "file": "verbs/forms/nous-avons-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons été"
+ },
+ {
+  "file": "verbs/forms/vous-avez-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez été"
+ },
+ {
+  "file": "verbs/forms/ils-ont-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont été"
+ },
+ {
+  "file": "verbs/forms/elles-ont-ete.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont été"
+ },
+ {
+  "file": "verbs/forms/je-serai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je serai"
+ },
+ {
+  "file": "verbs/forms/tu-seras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu seras"
+ },
+ {
+  "file": "verbs/forms/il-sera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il sera"
+ },
+ {
+  "file": "verbs/forms/elle-sera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle sera"
+ },
+ {
+  "file": "verbs/forms/nous-serons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous serons"
+ },
+ {
+  "file": "verbs/forms/vous-serez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous serez"
+ },
+ {
+  "file": "verbs/forms/ils-seront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils seront"
+ },
+ {
+  "file": "verbs/forms/elles-seront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles seront"
+ },
+ {
+  "file": "verbs/forms/j-ai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai"
+ },
+ {
+  "file": "verbs/forms/tu-as.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as"
+ },
+ {
+  "file": "verbs/forms/il-a.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a"
+ },
+ {
+  "file": "verbs/forms/elle-a.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a"
+ },
+ {
+  "file": "verbs/forms/nous-avons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons"
+ },
+ {
+  "file": "verbs/forms/vous-avez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez"
+ },
+ {
+  "file": "verbs/forms/ils-ont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont"
+ },
+ {
+  "file": "verbs/forms/elles-ont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont"
+ },
+ {
+  "file": "verbs/forms/j-ai-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai eu"
+ },
+ {
+  "file": "verbs/forms/tu-as-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as eu"
+ },
+ {
+  "file": "verbs/forms/il-a-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a eu"
+ },
+ {
+  "file": "verbs/forms/elle-a-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a eu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons eu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez eu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont eu"
+ },
+ {
+  "file": "verbs/forms/elles-ont-eu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont eu"
+ },
+ {
+  "file": "verbs/forms/j-aurai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'aurai"
+ },
+ {
+  "file": "verbs/forms/tu-auras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu auras"
+ },
+ {
+  "file": "verbs/forms/il-aura.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il aura"
+ },
+ {
+  "file": "verbs/forms/elle-aura.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle aura"
+ },
+ {
+  "file": "verbs/forms/nous-aurons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous aurons"
+ },
+ {
+  "file": "verbs/forms/vous-aurez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aurez"
+ },
+ {
+  "file": "verbs/forms/ils-auront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils auront"
+ },
+ {
+  "file": "verbs/forms/elles-auront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles auront"
+ },
+ {
+  "file": "verbs/forms/je-fais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je fais"
+ },
+ {
+  "file": "verbs/forms/tu-fais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu fais"
+ },
+ {
+  "file": "verbs/forms/il-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il fait"
+ },
+ {
+  "file": "verbs/forms/elle-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle fait"
+ },
+ {
+  "file": "verbs/forms/nous-faisons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous faisons"
+ },
+ {
+  "file": "verbs/forms/vous-faites.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous faites"
+ },
+ {
+  "file": "verbs/forms/ils-font.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils font"
+ },
+ {
+  "file": "verbs/forms/elles-font.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles font"
+ },
+ {
+  "file": "verbs/forms/j-ai-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai fait"
+ },
+ {
+  "file": "verbs/forms/tu-as-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as fait"
+ },
+ {
+  "file": "verbs/forms/il-a-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a fait"
+ },
+ {
+  "file": "verbs/forms/elle-a-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a fait"
+ },
+ {
+  "file": "verbs/forms/nous-avons-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons fait"
+ },
+ {
+  "file": "verbs/forms/vous-avez-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez fait"
+ },
+ {
+  "file": "verbs/forms/ils-ont-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont fait"
+ },
+ {
+  "file": "verbs/forms/elles-ont-fait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont fait"
+ },
+ {
+  "file": "verbs/forms/je-ferai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je ferai"
+ },
+ {
+  "file": "verbs/forms/tu-feras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu feras"
+ },
+ {
+  "file": "verbs/forms/il-fera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il fera"
+ },
+ {
+  "file": "verbs/forms/elle-fera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle fera"
+ },
+ {
+  "file": "verbs/forms/nous-ferons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous ferons"
+ },
+ {
+  "file": "verbs/forms/vous-ferez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous ferez"
+ },
+ {
+  "file": "verbs/forms/ils-feront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils feront"
+ },
+ {
+  "file": "verbs/forms/elles-feront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles feront"
+ },
+ {
+  "file": "verbs/forms/je-vais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je vais"
+ },
+ {
+  "file": "verbs/forms/tu-vas.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu vas"
+ },
+ {
+  "file": "verbs/forms/il-va.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il va"
+ },
+ {
+  "file": "verbs/forms/elle-va.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle va"
+ },
+ {
+  "file": "verbs/forms/nous-allons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous allons"
+ },
+ {
+  "file": "verbs/forms/vous-allez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous allez"
+ },
+ {
+  "file": "verbs/forms/ils-vont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils vont"
+ },
+ {
+  "file": "verbs/forms/elles-vont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles vont"
+ },
+ {
+  "file": "verbs/forms/je-suis-alle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je suis allé"
+ },
+ {
+  "file": "verbs/forms/tu-es-alle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu es allé"
+ },
+ {
+  "file": "verbs/forms/il-est-alle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il est allé"
+ },
+ {
+  "file": "verbs/forms/elle-est-allee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle est allée"
+ },
+ {
+  "file": "verbs/forms/nous-sommes-alles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous sommes allés"
+ },
+ {
+  "file": "verbs/forms/vous-etes-alles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous êtes allés"
+ },
+ {
+  "file": "verbs/forms/ils-sont-alles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils sont allés"
+ },
+ {
+  "file": "verbs/forms/elles-sont-allees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles sont allées"
+ },
+ {
+  "file": "verbs/forms/j-irai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'irai"
+ },
+ {
+  "file": "verbs/forms/tu-iras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu iras"
+ },
+ {
+  "file": "verbs/forms/il-ira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ira"
+ },
+ {
+  "file": "verbs/forms/nous-irons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous irons"
+ },
+ {
+  "file": "verbs/forms/elle-ira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle ira"
+ },
+ {
+  "file": "verbs/forms/vous-irez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous irez"
+ },
+ {
+  "file": "verbs/forms/ils-iront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils iront"
+ },
+ {
+  "file": "verbs/forms/j-etais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'étais"
+ },
+ {
+  "file": "verbs/forms/tu-etais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu étais"
+ },
+ {
+  "file": "verbs/forms/il-etait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il était"
+ },
+ {
+  "file": "verbs/forms/elle-etait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle était"
+ },
+ {
+  "file": "verbs/forms/nous-etions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous étions"
+ },
+ {
+  "file": "verbs/forms/vous-etiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous étiez"
+ },
+ {
+  "file": "verbs/forms/ils-etaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils étaient"
+ },
+ {
+  "file": "verbs/forms/elles-etaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles étaient"
+ },
+ {
+  "file": "verbs/forms/j-avais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais"
+ },
+ {
+  "file": "verbs/forms/tu-avais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais"
+ },
+ {
+  "file": "verbs/forms/il-avait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait"
+ },
+ {
+  "file": "verbs/forms/elle-avait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait"
+ },
+ {
+  "file": "verbs/forms/nous-avions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions"
+ },
+ {
+  "file": "verbs/forms/vous-aviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez"
+ },
+ {
+  "file": "verbs/forms/ils-avaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient"
+ },
+ {
+  "file": "verbs/forms/elles-avaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient"
+ },
+ {
+  "file": "verbs/forms/je-faisais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je faisais"
+ },
+ {
+  "file": "verbs/forms/tu-faisais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu faisais"
+ },
+ {
+  "file": "verbs/forms/il-faisait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il faisait"
+ },
+ {
+  "file": "verbs/forms/elle-faisait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle faisait"
+ },
+ {
+  "file": "verbs/forms/nous-faisions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous faisions"
+ },
+ {
+  "file": "verbs/forms/vous-faisiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous faisiez"
+ },
+ {
+  "file": "verbs/forms/ils-faisaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils faisaient"
+ },
+ {
+  "file": "verbs/forms/elles-faisaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles faisaient"
+ },
+ {
+  "file": "verbs/forms/elles-iront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles iront"
+ },
+ {
+  "file": "verbs/forms/j-allais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'allais"
+ },
+ {
+  "file": "verbs/forms/tu-allais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu allais"
+ },
+ {
+  "file": "verbs/forms/il-allait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il allait"
+ },
+ {
+  "file": "verbs/forms/elle-allait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle allait"
+ },
+ {
+  "file": "verbs/forms/nous-allions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous allions"
+ },
+ {
+  "file": "verbs/forms/vous-alliez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous alliez"
+ },
+ {
+  "file": "verbs/forms/ils-allaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils allaient"
+ },
+ {
+  "file": "verbs/forms/elles-allaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles allaient"
+ },
+ {
+  "file": "verbs/forms/je-vois.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je vois"
+ },
+ {
+  "file": "verbs/forms/tu-vois.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu vois"
+ },
+ {
+  "file": "verbs/forms/il-voit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il voit"
+ },
+ {
+  "file": "verbs/forms/elle-voit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle voit"
+ },
+ {
+  "file": "verbs/forms/nous-voyons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous voyons"
+ },
+ {
+  "file": "verbs/forms/vous-voyez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous voyez"
+ },
+ {
+  "file": "verbs/forms/ils-voient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils voient"
+ },
+ {
+  "file": "verbs/forms/elles-voient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles voient"
+ },
+ {
+  "file": "verbs/forms/j-ai-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai vu"
+ },
+ {
+  "file": "verbs/forms/tu-as-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as vu"
+ },
+ {
+  "file": "verbs/forms/il-a-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a vu"
+ },
+ {
+  "file": "verbs/forms/elle-a-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a vu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons vu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez vu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont vu"
+ },
+ {
+  "file": "verbs/forms/elles-ont-vu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont vu"
+ },
+ {
+  "file": "verbs/forms/tu-as-vus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as vus"
+ },
+ {
+  "file": "verbs/forms/je-verrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je verrai"
+ },
+ {
+  "file": "verbs/forms/tu-verras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu verras"
+ },
+ {
+  "file": "verbs/forms/il-verra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il verra"
+ },
+ {
+  "file": "verbs/forms/elle-verra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle verra"
+ },
+ {
+  "file": "verbs/forms/nous-verrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous verrons"
+ },
+ {
+  "file": "verbs/forms/vous-verrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous verrez"
+ },
+ {
+  "file": "verbs/forms/ils-verront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils verront"
+ },
+ {
+  "file": "verbs/forms/elles-verront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles verront"
+ },
+ {
+  "file": "verbs/forms/je-voyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je voyais"
+ },
+ {
+  "file": "verbs/forms/tu-voyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu voyais"
+ },
+ {
+  "file": "verbs/forms/il-voyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il voyait"
+ },
+ {
+  "file": "verbs/forms/elle-voyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle voyait"
+ },
+ {
+  "file": "verbs/forms/nous-voyions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous voyions"
+ },
+ {
+  "file": "verbs/forms/vous-voyiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous voyiez"
+ },
+ {
+  "file": "verbs/forms/ils-voyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils voyaient"
+ },
+ {
+  "file": "verbs/forms/elles-voyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles voyaient"
+ },
+ {
+  "file": "verbs/forms/je-dis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je dis"
+ },
+ {
+  "file": "verbs/forms/tu-dis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu dis"
+ },
+ {
+  "file": "verbs/forms/il-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il dit"
+ },
+ {
+  "file": "verbs/forms/elle-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle dit"
+ },
+ {
+  "file": "verbs/forms/nous-disons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous disons"
+ },
+ {
+  "file": "verbs/forms/vous-dites.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous dites"
+ },
+ {
+  "file": "verbs/forms/ils-disent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils disent"
+ },
+ {
+  "file": "verbs/forms/elles-disent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles disent"
+ },
+ {
+  "file": "verbs/forms/j-ai-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai dit"
+ },
+ {
+  "file": "verbs/forms/tu-as-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as dit"
+ },
+ {
+  "file": "verbs/forms/il-a-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a dit"
+ },
+ {
+  "file": "verbs/forms/elle-a-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a dit"
+ },
+ {
+  "file": "verbs/forms/nous-avons-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons dit"
+ },
+ {
+  "file": "verbs/forms/vous-avez-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez dit"
+ },
+ {
+  "file": "verbs/forms/ils-ont-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont dit"
+ },
+ {
+  "file": "verbs/forms/elles-ont-dit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont dit"
+ },
+ {
+  "file": "verbs/forms/je-dirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je dirai"
+ },
+ {
+  "file": "verbs/forms/tu-diras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu diras"
+ },
+ {
+  "file": "verbs/forms/il-dira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il dira"
+ },
+ {
+  "file": "verbs/forms/elle-dira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle dira"
+ },
+ {
+  "file": "verbs/forms/nous-dirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous dirons"
+ },
+ {
+  "file": "verbs/forms/vous-direz.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous direz"
+ },
+ {
+  "file": "verbs/forms/ils-diront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils diront"
+ },
+ {
+  "file": "verbs/forms/elles-diront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles diront"
+ },
+ {
+  "file": "verbs/forms/je-disais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je disais"
+ },
+ {
+  "file": "verbs/forms/tu-disais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu disais"
+ },
+ {
+  "file": "verbs/forms/il-disait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il disait"
+ },
+ {
+  "file": "verbs/forms/elle-disait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle disait"
+ },
+ {
+  "file": "verbs/forms/nous-disions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous disions"
+ },
+ {
+  "file": "verbs/forms/vous-disiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous disiez"
+ },
+ {
+  "file": "verbs/forms/ils-disaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils disaient"
+ },
+ {
+  "file": "verbs/forms/elles-disaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles disaient"
+ },
+ {
+  "file": "verbs/forms/je-peux.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je peux"
+ },
+ {
+  "file": "verbs/forms/tu-peux.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu peux"
+ },
+ {
+  "file": "verbs/forms/il-peut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il peut"
+ },
+ {
+  "file": "verbs/forms/elle-peut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle peut"
+ },
+ {
+  "file": "verbs/forms/nous-pouvons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous pouvons"
+ },
+ {
+  "file": "verbs/forms/vous-pouvez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous pouvez"
+ },
+ {
+  "file": "verbs/forms/ils-peuvent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils peuvent"
+ },
+ {
+  "file": "verbs/forms/elles-peuvent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles peuvent"
+ },
+ {
+  "file": "verbs/forms/j-ai-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai pu"
+ },
+ {
+  "file": "verbs/forms/tu-as-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as pu"
+ },
+ {
+  "file": "verbs/forms/il-a-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a pu"
+ },
+ {
+  "file": "verbs/forms/elle-a-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a pu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons pu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez pu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont pu"
+ },
+ {
+  "file": "verbs/forms/elles-ont-pu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont pu"
+ },
+ {
+  "file": "verbs/forms/je-pourrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je pourrai"
+ },
+ {
+  "file": "verbs/forms/tu-pourras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu pourras"
+ },
+ {
+  "file": "verbs/forms/il-pourra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il pourra"
+ },
+ {
+  "file": "verbs/forms/elle-pourra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle pourra"
+ },
+ {
+  "file": "verbs/forms/nous-pourrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous pourrons"
+ },
+ {
+  "file": "verbs/forms/vous-pourrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous pourrez"
+ },
+ {
+  "file": "verbs/forms/ils-pourront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils pourront"
+ },
+ {
+  "file": "verbs/forms/elles-pourront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles pourront"
+ },
+ {
+  "file": "verbs/forms/je-pouvais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je pouvais"
+ },
+ {
+  "file": "verbs/forms/tu-pouvais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu pouvais"
+ },
+ {
+  "file": "verbs/forms/il-pouvait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il pouvait"
+ },
+ {
+  "file": "verbs/forms/elle-pouvait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle pouvait"
+ },
+ {
+  "file": "verbs/forms/nous-pouvions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous pouvions"
+ },
+ {
+  "file": "verbs/forms/vous-pouviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous pouviez"
+ },
+ {
+  "file": "verbs/forms/ils-pouvaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils pouvaient"
+ },
+ {
+  "file": "verbs/forms/elles-pouvaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles pouvaient"
+ },
+ {
+  "file": "verbs/forms/je-veux.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je veux"
+ },
+ {
+  "file": "verbs/forms/tu-veux.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu veux"
+ },
+ {
+  "file": "verbs/forms/il-veut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il veut"
+ },
+ {
+  "file": "verbs/forms/elle-veut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle veut"
+ },
+ {
+  "file": "verbs/forms/nous-voulons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous voulons"
+ },
+ {
+  "file": "verbs/forms/vous-voulez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous voulez"
+ },
+ {
+  "file": "verbs/forms/ils-veulent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils veulent"
+ },
+ {
+  "file": "verbs/forms/elles-veulent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles veulent"
+ },
+ {
+  "file": "verbs/forms/je-voulais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je voulais"
+ },
+ {
+  "file": "verbs/forms/j-ai-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai voulu"
+ },
+ {
+  "file": "verbs/forms/tu-as-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as voulu"
+ },
+ {
+  "file": "verbs/forms/il-a-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a voulu"
+ },
+ {
+  "file": "verbs/forms/elle-a-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a voulu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons voulu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez voulu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont voulu"
+ },
+ {
+  "file": "verbs/forms/elles-ont-voulu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont voulu"
+ },
+ {
+  "file": "verbs/forms/je-voudrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je voudrai"
+ },
+ {
+  "file": "verbs/forms/tu-voudras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu voudras"
+ },
+ {
+  "file": "verbs/forms/il-voudra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il voudra"
+ },
+ {
+  "file": "verbs/forms/elle-voudra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle voudra"
+ },
+ {
+  "file": "verbs/forms/nous-voudrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous voudrons"
+ },
+ {
+  "file": "verbs/forms/vous-voudrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous voudrez"
+ },
+ {
+  "file": "verbs/forms/ils-voudront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils voudront"
+ },
+ {
+  "file": "verbs/forms/elles-voudront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles voudront"
+ },
+ {
+  "file": "verbs/forms/tu-voulais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu voulais"
+ },
+ {
+  "file": "verbs/forms/il-voulait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il voulait"
+ },
+ {
+  "file": "verbs/forms/elle-voulait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle voulait"
+ },
+ {
+  "file": "verbs/forms/nous-voulions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous voulions"
+ },
+ {
+  "file": "verbs/forms/vous-vouliez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vouliez"
+ },
+ {
+  "file": "verbs/forms/ils-voulaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils voulaient"
+ },
+ {
+  "file": "verbs/forms/elles-voulaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles voulaient"
+ },
+ {
+  "file": "verbs/forms/ils-prennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils prennent"
+ },
+ {
+  "file": "verbs/forms/je-prends.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je prends"
+ },
+ {
+  "file": "verbs/forms/elle-prend.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle prend"
+ },
+ {
+  "file": "verbs/forms/nous-prenons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous prenons"
+ },
+ {
+  "file": "verbs/forms/vous-prenez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous prenez"
+ },
+ {
+  "file": "verbs/forms/elles-prennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles prennent"
+ },
+ {
+  "file": "verbs/forms/tu-prends.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu prends"
+ },
+ {
+  "file": "verbs/forms/il-prend.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il prend"
+ },
+ {
+  "file": "verbs/forms/elles-ont-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont pris"
+ },
+ {
+  "file": "verbs/forms/il-a-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a pris"
+ },
+ {
+  "file": "verbs/forms/j-ai-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai pris"
+ },
+ {
+  "file": "verbs/forms/elle-a-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a pris"
+ },
+ {
+  "file": "verbs/forms/tu-as-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as pris"
+ },
+ {
+  "file": "verbs/forms/vous-avez-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez pris"
+ },
+ {
+  "file": "verbs/forms/nous-avons-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons pris"
+ },
+ {
+  "file": "verbs/forms/ils-ont-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont pris"
+ },
+ {
+  "file": "verbs/forms/elles-prendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles prendront"
+ },
+ {
+  "file": "verbs/forms/il-prendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il prendra"
+ },
+ {
+  "file": "verbs/forms/je-prendrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je prendrai"
+ },
+ {
+  "file": "verbs/forms/elle-prendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle prendra"
+ },
+ {
+  "file": "verbs/forms/tu-prendras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu prendras"
+ },
+ {
+  "file": "verbs/forms/vous-prendrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous prendrez"
+ },
+ {
+  "file": "verbs/forms/nous-prendrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous prendrons"
+ },
+ {
+  "file": "verbs/forms/ils-prendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils prendront"
+ },
+ {
+  "file": "verbs/forms/je-prenais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je prenais"
+ },
+ {
+  "file": "verbs/forms/tu-prenais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu prenais"
+ },
+ {
+  "file": "verbs/forms/il-prenait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il prenait"
+ },
+ {
+  "file": "verbs/forms/elle-prenait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle prenait"
+ },
+ {
+  "file": "verbs/forms/nous-prenions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous prenions"
+ },
+ {
+  "file": "verbs/forms/vous-preniez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous preniez"
+ },
+ {
+  "file": "verbs/forms/ils-prenaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils prenaient"
+ },
+ {
+  "file": "verbs/forms/elles-prenaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles prenaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais pris"
+ },
+ {
+  "file": "verbs/forms/tu-avais-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais pris"
+ },
+ {
+  "file": "verbs/forms/il-avait-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait pris"
+ },
+ {
+  "file": "verbs/forms/elle-avait-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait pris"
+ },
+ {
+  "file": "verbs/forms/nous-avions-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions pris"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez pris"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient pris"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-pris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient pris"
+ },
+ {
+  "file": "verbs/forms/je-viens.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je viens"
+ },
+ {
+  "file": "verbs/forms/tu-viens.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu viens"
+ },
+ {
+  "file": "verbs/forms/il-vient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il vient"
+ },
+ {
+  "file": "verbs/forms/elle-vient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle vient"
+ },
+ {
+  "file": "verbs/forms/nous-venons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous venons"
+ },
+ {
+  "file": "verbs/forms/vous-venez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous venez"
+ },
+ {
+  "file": "verbs/forms/ils-viennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils viennent"
+ },
+ {
+  "file": "verbs/forms/elles-viennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles viennent"
+ },
+ {
+  "file": "verbs/forms/je-suis-venu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je suis venu"
+ },
+ {
+  "file": "verbs/forms/tu-es-venu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu es venu"
+ },
+ {
+  "file": "verbs/forms/il-est-venu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il est venu"
+ },
+ {
+  "file": "verbs/forms/elle-est-venue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle est venue"
+ },
+ {
+  "file": "verbs/forms/nous-sommes-venus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous sommes venus"
+ },
+ {
+  "file": "verbs/forms/vous-etes-venus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous êtes venus"
+ },
+ {
+  "file": "verbs/forms/ils-sont-venus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils sont venus"
+ },
+ {
+  "file": "verbs/forms/elles-sont-venues.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles sont venues"
+ },
+ {
+  "file": "verbs/forms/je-viendrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je viendrai"
+ },
+ {
+  "file": "verbs/forms/tu-viendras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu viendras"
+ },
+ {
+  "file": "verbs/forms/il-viendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il viendra"
+ },
+ {
+  "file": "verbs/forms/elle-viendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle viendra"
+ },
+ {
+  "file": "verbs/forms/nous-viendrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous viendrons"
+ },
+ {
+  "file": "verbs/forms/vous-viendrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous viendrez"
+ },
+ {
+  "file": "verbs/forms/ils-viendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils viendront"
+ },
+ {
+  "file": "verbs/forms/elles-viendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles viendront"
+ },
+ {
+  "file": "verbs/forms/je-venais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je venais"
+ },
+ {
+  "file": "verbs/forms/tu-venais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu venais"
+ },
+ {
+  "file": "verbs/forms/il-venait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il venait"
+ },
+ {
+  "file": "verbs/forms/elle-venait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle venait"
+ },
+ {
+  "file": "verbs/forms/nous-venions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous venions"
+ },
+ {
+  "file": "verbs/forms/vous-veniez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous veniez"
+ },
+ {
+  "file": "verbs/forms/ils-venaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils venaient"
+ },
+ {
+  "file": "verbs/forms/elles-venaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles venaient"
+ },
+ {
+  "file": "verbs/forms/je-sais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je sais"
+ },
+ {
+  "file": "verbs/forms/tu-sais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu sais"
+ },
+ {
+  "file": "verbs/forms/il-sait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il sait"
+ },
+ {
+  "file": "verbs/forms/elle-sait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle sait"
+ },
+ {
+  "file": "verbs/forms/nous-savons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous savons"
+ },
+ {
+  "file": "verbs/forms/vous-savez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous savez"
+ },
+ {
+  "file": "verbs/forms/ils-savent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils savent"
+ },
+ {
+  "file": "verbs/forms/elles-savent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles savent"
+ },
+ {
+  "file": "verbs/forms/j-ai-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai su"
+ },
+ {
+  "file": "verbs/forms/tu-as-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as su"
+ },
+ {
+  "file": "verbs/forms/il-a-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a su"
+ },
+ {
+  "file": "verbs/forms/elle-a-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a su"
+ },
+ {
+  "file": "verbs/forms/nous-avons-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons su"
+ },
+ {
+  "file": "verbs/forms/vous-avez-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez su"
+ },
+ {
+  "file": "verbs/forms/ils-ont-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont su"
+ },
+ {
+  "file": "verbs/forms/elles-ont-su.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont su"
+ },
+ {
+  "file": "verbs/forms/je-saurai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je saurai"
+ },
+ {
+  "file": "verbs/forms/tu-sauras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu sauras"
+ },
+ {
+  "file": "verbs/forms/il-saura.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il saura"
+ },
+ {
+  "file": "verbs/forms/elle-saura.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle saura"
+ },
+ {
+  "file": "verbs/forms/nous-saurons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous saurons"
+ },
+ {
+  "file": "verbs/forms/vous-saurez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous saurez"
+ },
+ {
+  "file": "verbs/forms/ils-sauront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils sauront"
+ },
+ {
+  "file": "verbs/forms/elles-sauront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles sauront"
+ },
+ {
+  "file": "verbs/forms/je-savais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je savais"
+ },
+ {
+  "file": "verbs/forms/tu-savais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu savais"
+ },
+ {
+  "file": "verbs/forms/il-savait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il savait"
+ },
+ {
+  "file": "verbs/forms/elle-savait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle savait"
+ },
+ {
+  "file": "verbs/forms/nous-savions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous savions"
+ },
+ {
+  "file": "verbs/forms/vous-saviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous saviez"
+ },
+ {
+  "file": "verbs/forms/ils-savaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils savaient"
+ },
+ {
+  "file": "verbs/forms/elles-savaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles savaient"
+ },
+ {
+  "file": "verbs/forms/elles-lisent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles lisent"
+ },
+ {
+  "file": "verbs/forms/il-lit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il lit"
+ },
+ {
+  "file": "verbs/forms/tu-lis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu lis"
+ },
+ {
+  "file": "verbs/forms/elle-lit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle lit"
+ },
+ {
+  "file": "verbs/forms/vous-lisez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous lisez"
+ },
+ {
+  "file": "verbs/forms/nous-lisons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous lisons"
+ },
+ {
+  "file": "verbs/forms/ils-lisent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils lisent"
+ },
+ {
+  "file": "verbs/forms/je-lis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je lis"
+ },
+ {
+  "file": "verbs/forms/elles-ont-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont lu"
+ },
+ {
+  "file": "verbs/forms/il-a-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a lu"
+ },
+ {
+  "file": "verbs/forms/j-ai-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai lu"
+ },
+ {
+  "file": "verbs/forms/elle-a-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a lu"
+ },
+ {
+  "file": "verbs/forms/tu-as-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as lu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez lu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons lu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont lu"
+ },
+ {
+  "file": "verbs/forms/elles-liront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles liront"
+ },
+ {
+  "file": "verbs/forms/il-lira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il lira"
+ },
+ {
+  "file": "verbs/forms/je-lirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je lirai"
+ },
+ {
+  "file": "verbs/forms/elle-lira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle lira"
+ },
+ {
+  "file": "verbs/forms/tu-liras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu liras"
+ },
+ {
+  "file": "verbs/forms/vous-lirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous lirez"
+ },
+ {
+  "file": "verbs/forms/nous-lirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous lirons"
+ },
+ {
+  "file": "verbs/forms/ils-liront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils liront"
+ },
+ {
+  "file": "verbs/forms/je-lisais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je lisais"
+ },
+ {
+  "file": "verbs/forms/tu-lisais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu lisais"
+ },
+ {
+  "file": "verbs/forms/il-lisait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il lisait"
+ },
+ {
+  "file": "verbs/forms/elle-lisait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle lisait"
+ },
+ {
+  "file": "verbs/forms/nous-lisions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous lisions"
+ },
+ {
+  "file": "verbs/forms/vous-lisiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous lisiez"
+ },
+ {
+  "file": "verbs/forms/ils-lisaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils lisaient"
+ },
+ {
+  "file": "verbs/forms/elles-lisaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles lisaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais lu"
+ },
+ {
+  "file": "verbs/forms/tu-avais-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais lu"
+ },
+ {
+  "file": "verbs/forms/il-avait-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait lu"
+ },
+ {
+  "file": "verbs/forms/elle-avait-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait lu"
+ },
+ {
+  "file": "verbs/forms/nous-avions-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions lu"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez lu"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient lu"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-lu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient lu"
+ },
+ {
+  "file": "verbs/forms/elles-ecrivent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles écrivent"
+ },
+ {
+  "file": "verbs/forms/il-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il écrit"
+ },
+ {
+  "file": "verbs/forms/tu-ecris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu écris"
+ },
+ {
+  "file": "verbs/forms/elle-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle écrit"
+ },
+ {
+  "file": "verbs/forms/vous-ecrivez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous écrivez"
+ },
+ {
+  "file": "verbs/forms/nous-ecrivons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous écrivons"
+ },
+ {
+  "file": "verbs/forms/ils-ecrivent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils écrivent"
+ },
+ {
+  "file": "verbs/forms/j-ecris.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'écris"
+ },
+ {
+  "file": "verbs/forms/elles-ont-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont écrit"
+ },
+ {
+  "file": "verbs/forms/il-a-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a écrit"
+ },
+ {
+  "file": "verbs/forms/j-ai-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai écrit"
+ },
+ {
+  "file": "verbs/forms/elle-a-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a écrit"
+ },
+ {
+  "file": "verbs/forms/tu-as-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as écrit"
+ },
+ {
+  "file": "verbs/forms/vous-avez-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez écrit"
+ },
+ {
+  "file": "verbs/forms/nous-avons-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons écrit"
+ },
+ {
+  "file": "verbs/forms/ils-ont-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont écrit"
+ },
+ {
+  "file": "verbs/forms/elles-ecriront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles écriront"
+ },
+ {
+  "file": "verbs/forms/il-ecrira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il écrira"
+ },
+ {
+  "file": "verbs/forms/j-ecrirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'écrirai"
+ },
+ {
+  "file": "verbs/forms/elle-ecrira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle écrira"
+ },
+ {
+  "file": "verbs/forms/tu-ecriras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu écriras"
+ },
+ {
+  "file": "verbs/forms/vous-ecrirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous écrirez"
+ },
+ {
+  "file": "verbs/forms/nous-ecrirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous écrirons"
+ },
+ {
+  "file": "verbs/forms/ils-ecriront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils écriront"
+ },
+ {
+  "file": "verbs/forms/j-ecrivais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'écrivais"
+ },
+ {
+  "file": "verbs/forms/tu-ecrivais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu écrivais"
+ },
+ {
+  "file": "verbs/forms/il-ecrivait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il écrivait"
+ },
+ {
+  "file": "verbs/forms/elle-ecrivait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle écrivait"
+ },
+ {
+  "file": "verbs/forms/nous-ecrivions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous écrivions"
+ },
+ {
+  "file": "verbs/forms/vous-ecriviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous écriviez"
+ },
+ {
+  "file": "verbs/forms/ils-ecrivaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils écrivaient"
+ },
+ {
+  "file": "verbs/forms/elles-ecrivaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles écrivaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais écrit"
+ },
+ {
+  "file": "verbs/forms/tu-avais-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais écrit"
+ },
+ {
+  "file": "verbs/forms/il-avait-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait écrit"
+ },
+ {
+  "file": "verbs/forms/elle-avait-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait écrit"
+ },
+ {
+  "file": "verbs/forms/nous-avions-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions écrit"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez écrit"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient écrit"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-ecrit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient écrit"
+ },
+ {
+  "file": "verbs/forms/elles-ouvrent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ouvrent"
+ },
+ {
+  "file": "verbs/forms/il-ouvre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ouvre"
+ },
+ {
+  "file": "verbs/forms/tu-ouvres.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu ouvres"
+ },
+ {
+  "file": "verbs/forms/elle-ouvre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle ouvre"
+ },
+ {
+  "file": "verbs/forms/vous-ouvrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous ouvrez"
+ },
+ {
+  "file": "verbs/forms/nous-ouvrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous ouvrons"
+ },
+ {
+  "file": "verbs/forms/ils-ouvrent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ouvrent"
+ },
+ {
+  "file": "verbs/forms/j-ouvre.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ouvre"
+ },
+ {
+  "file": "verbs/forms/elles-ont-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont ouvert"
+ },
+ {
+  "file": "verbs/forms/il-a-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a ouvert"
+ },
+ {
+  "file": "verbs/forms/j-ai-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai ouvert"
+ },
+ {
+  "file": "verbs/forms/elle-a-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a ouvert"
+ },
+ {
+  "file": "verbs/forms/tu-as-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as ouvert"
+ },
+ {
+  "file": "verbs/forms/vous-avez-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez ouvert"
+ },
+ {
+  "file": "verbs/forms/nous-avons-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons ouvert"
+ },
+ {
+  "file": "verbs/forms/ils-ont-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont ouvert"
+ },
+ {
+  "file": "verbs/forms/elles-ouvriront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ouvriront"
+ },
+ {
+  "file": "verbs/forms/il-ouvrira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ouvrira"
+ },
+ {
+  "file": "verbs/forms/j-ouvrirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ouvrirai"
+ },
+ {
+  "file": "verbs/forms/elle-ouvrira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle ouvrira"
+ },
+ {
+  "file": "verbs/forms/tu-ouvriras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu ouvriras"
+ },
+ {
+  "file": "verbs/forms/vous-ouvrirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous ouvrirez"
+ },
+ {
+  "file": "verbs/forms/nous-ouvrirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous ouvrirons"
+ },
+ {
+  "file": "verbs/forms/ils-ouvriront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ouvriront"
+ },
+ {
+  "file": "verbs/forms/j-ouvrais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ouvrais"
+ },
+ {
+  "file": "verbs/forms/tu-ouvrais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu ouvrais"
+ },
+ {
+  "file": "verbs/forms/il-ouvrait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ouvrait"
+ },
+ {
+  "file": "verbs/forms/elle-ouvrait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle ouvrait"
+ },
+ {
+  "file": "verbs/forms/nous-ouvrions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous ouvrions"
+ },
+ {
+  "file": "verbs/forms/vous-ouvriez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous ouvriez"
+ },
+ {
+  "file": "verbs/forms/ils-ouvraient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ouvraient"
+ },
+ {
+  "file": "verbs/forms/elles-ouvraient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ouvraient"
+ },
+ {
+  "file": "verbs/forms/j-avais-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais ouvert"
+ },
+ {
+  "file": "verbs/forms/tu-avais-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais ouvert"
+ },
+ {
+  "file": "verbs/forms/il-avait-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait ouvert"
+ },
+ {
+  "file": "verbs/forms/elle-avait-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait ouvert"
+ },
+ {
+  "file": "verbs/forms/nous-avions-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions ouvert"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez ouvert"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient ouvert"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-ouvert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient ouvert"
+ },
+ {
+  "file": "verbs/forms/elles-ferment.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ferment"
+ },
+ {
+  "file": "verbs/forms/il-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il ferme"
+ },
+ {
+  "file": "verbs/forms/tu-fermes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu fermes"
+ },
+ {
+  "file": "verbs/forms/elle-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle ferme"
+ },
+ {
+  "file": "verbs/forms/vous-fermez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous fermez"
+ },
+ {
+  "file": "verbs/forms/nous-fermons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous fermons"
+ },
+ {
+  "file": "verbs/forms/ils-ferment.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ferment"
+ },
+ {
+  "file": "verbs/forms/je-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je ferme"
+ },
+ {
+  "file": "verbs/forms/elles-ont-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont fermé"
+ },
+ {
+  "file": "verbs/forms/il-a-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a fermé"
+ },
+ {
+  "file": "verbs/forms/j-ai-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai fermé"
+ },
+ {
+  "file": "verbs/forms/elle-a-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a fermé"
+ },
+ {
+  "file": "verbs/forms/tu-as-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as fermé"
+ },
+ {
+  "file": "verbs/forms/vous-avez-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez fermé"
+ },
+ {
+  "file": "verbs/forms/nous-avons-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons fermé"
+ },
+ {
+  "file": "verbs/forms/ils-ont-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont fermé"
+ },
+ {
+  "file": "verbs/forms/elles-fermeront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles fermeront"
+ },
+ {
+  "file": "verbs/forms/il-fermera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il fermera"
+ },
+ {
+  "file": "verbs/forms/je-fermerai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je fermerai"
+ },
+ {
+  "file": "verbs/forms/elle-fermera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle fermera"
+ },
+ {
+  "file": "verbs/forms/tu-fermeras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu fermeras"
+ },
+ {
+  "file": "verbs/forms/vous-fermerez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous fermerez"
+ },
+ {
+  "file": "verbs/forms/nous-fermerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous fermerons"
+ },
+ {
+  "file": "verbs/forms/ils-fermeront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils fermeront"
+ },
+ {
+  "file": "verbs/forms/je-fermais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je fermais"
+ },
+ {
+  "file": "verbs/forms/tu-fermais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu fermais"
+ },
+ {
+  "file": "verbs/forms/il-fermait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il fermait"
+ },
+ {
+  "file": "verbs/forms/elle-fermait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle fermait"
+ },
+ {
+  "file": "verbs/forms/nous-fermions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous fermions"
+ },
+ {
+  "file": "verbs/forms/vous-fermiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous fermiez"
+ },
+ {
+  "file": "verbs/forms/ils-fermaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils fermaient"
+ },
+ {
+  "file": "verbs/forms/elles-fermaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles fermaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais fermé"
+ },
+ {
+  "file": "verbs/forms/tu-avais-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais fermé"
+ },
+ {
+  "file": "verbs/forms/il-avait-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait fermé"
+ },
+ {
+  "file": "verbs/forms/elle-avait-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait fermé"
+ },
+ {
+  "file": "verbs/forms/nous-avions-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions fermé"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez fermé"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient fermé"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-ferme.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient fermé"
+ },
+ {
+  "file": "verbs/forms/elles-perdent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles perdent"
+ },
+ {
+  "file": "verbs/forms/il-perd.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il perd"
+ },
+ {
+  "file": "verbs/forms/nous-perdons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous perdons"
+ },
+ {
+  "file": "verbs/forms/elle-perd.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle perd"
+ },
+ {
+  "file": "verbs/forms/tu-perds.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu perds"
+ },
+ {
+  "file": "verbs/forms/vous-perdez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous perdez"
+ },
+ {
+  "file": "verbs/forms/ils-perdent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils perdent"
+ },
+ {
+  "file": "verbs/forms/je-perds.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je perds"
+ },
+ {
+  "file": "verbs/forms/elles-ont-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont perdu"
+ },
+ {
+  "file": "verbs/forms/il-a-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a perdu"
+ },
+ {
+  "file": "verbs/forms/j-ai-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai perdu"
+ },
+ {
+  "file": "verbs/forms/elle-a-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a perdu"
+ },
+ {
+  "file": "verbs/forms/tu-as-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as perdu"
+ },
+ {
+  "file": "verbs/forms/vous-avez-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez perdu"
+ },
+ {
+  "file": "verbs/forms/nous-avons-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons perdu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont perdu"
+ },
+ {
+  "file": "verbs/forms/elles-perdront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles perdront"
+ },
+ {
+  "file": "verbs/forms/il-perdra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il perdra"
+ },
+ {
+  "file": "verbs/forms/je-perdrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je perdrai"
+ },
+ {
+  "file": "verbs/forms/elle-perdra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle perdra"
+ },
+ {
+  "file": "verbs/forms/tu-perdras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu perdras"
+ },
+ {
+  "file": "verbs/forms/vous-perdrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous perdrez"
+ },
+ {
+  "file": "verbs/forms/nous-perdrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous perdrons"
+ },
+ {
+  "file": "verbs/forms/ils-perdront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils perdront"
+ },
+ {
+  "file": "verbs/forms/je-perdais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je perdais"
+ },
+ {
+  "file": "verbs/forms/tu-perdais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu perdais"
+ },
+ {
+  "file": "verbs/forms/il-perdait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il perdait"
+ },
+ {
+  "file": "verbs/forms/elle-perdait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle perdait"
+ },
+ {
+  "file": "verbs/forms/nous-perdions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous perdions"
+ },
+ {
+  "file": "verbs/forms/vous-perdiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous perdiez"
+ },
+ {
+  "file": "verbs/forms/ils-perdaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils perdaient"
+ },
+ {
+  "file": "verbs/forms/elles-perdaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles perdaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais perdu"
+ },
+ {
+  "file": "verbs/forms/tu-avais-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais perdu"
+ },
+ {
+  "file": "verbs/forms/il-avait-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait perdu"
+ },
+ {
+  "file": "verbs/forms/elle-avait-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait perdu"
+ },
+ {
+  "file": "verbs/forms/nous-avions-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions perdu"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez perdu"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient perdu"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-perdu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient perdu"
+ },
+ {
+  "file": "verbs/forms/elles-gardent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles gardent"
+ },
+ {
+  "file": "verbs/forms/il-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il garde"
+ },
+ {
+  "file": "verbs/forms/elle-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle garde"
+ },
+ {
+  "file": "verbs/forms/tu-gardes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu gardes"
+ },
+ {
+  "file": "verbs/forms/ils-gardent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils gardent"
+ },
+ {
+  "file": "verbs/forms/vous-gardez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous gardez"
+ },
+ {
+  "file": "verbs/forms/nous-gardons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous gardons"
+ },
+ {
+  "file": "verbs/forms/je-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je garde"
+ },
+ {
+  "file": "verbs/forms/elles-ont-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont gardé"
+ },
+ {
+  "file": "verbs/forms/il-a-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a gardé"
+ },
+ {
+  "file": "verbs/forms/j-ai-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai gardé"
+ },
+ {
+  "file": "verbs/forms/elle-a-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a gardé"
+ },
+ {
+  "file": "verbs/forms/tu-as-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as gardé"
+ },
+ {
+  "file": "verbs/forms/vous-avez-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez gardé"
+ },
+ {
+  "file": "verbs/forms/nous-avons-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons gardé"
+ },
+ {
+  "file": "verbs/forms/ils-ont-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont gardé"
+ },
+ {
+  "file": "verbs/forms/elles-garderont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles garderont"
+ },
+ {
+  "file": "verbs/forms/il-gardera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il gardera"
+ },
+ {
+  "file": "verbs/forms/je-garderai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je garderai"
+ },
+ {
+  "file": "verbs/forms/elle-gardera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle gardera"
+ },
+ {
+  "file": "verbs/forms/tu-garderas.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu garderas"
+ },
+ {
+  "file": "verbs/forms/vous-garderez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous garderez"
+ },
+ {
+  "file": "verbs/forms/nous-garderons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous garderons"
+ },
+ {
+  "file": "verbs/forms/ils-garderont.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils garderont"
+ },
+ {
+  "file": "verbs/forms/je-gardais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je gardais"
+ },
+ {
+  "file": "verbs/forms/tu-gardais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu gardais"
+ },
+ {
+  "file": "verbs/forms/il-gardait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il gardait"
+ },
+ {
+  "file": "verbs/forms/elle-gardait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle gardait"
+ },
+ {
+  "file": "verbs/forms/nous-gardions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous gardions"
+ },
+ {
+  "file": "verbs/forms/vous-gardiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous gardiez"
+ },
+ {
+  "file": "verbs/forms/ils-gardaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils gardaient"
+ },
+ {
+  "file": "verbs/forms/elles-gardaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles gardaient"
+ },
+ {
+  "file": "verbs/forms/j-avais-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais gardé"
+ },
+ {
+  "file": "verbs/forms/tu-avais-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais gardé"
+ },
+ {
+  "file": "verbs/forms/il-avait-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait gardé"
+ },
+ {
+  "file": "verbs/forms/elle-avait-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait gardé"
+ },
+ {
+  "file": "verbs/forms/nous-avions-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions gardé"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez gardé"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient gardé"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-garde.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient gardé"
+ },
+ {
+  "file": "verbs/forms/vous-vous-interessez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous intéressez"
+ },
+ {
+  "file": "verbs/forms/tu-t-interesses.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'intéresses"
+ },
+ {
+  "file": "verbs/forms/il-s-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'intéresse"
+ },
+ {
+  "file": "verbs/forms/elle-s-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'intéresse"
+ },
+ {
+  "file": "verbs/forms/nous-nous-interessons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous intéressons"
+ },
+ {
+  "file": "verbs/forms/ils-s-interessent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'intéressent"
+ },
+ {
+  "file": "verbs/forms/elles-s-interessent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'intéressent"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis intéressé"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es intéressé"
+ },
+ {
+  "file": "verbs/forms/il-s-est-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est intéressé"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-interessee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est intéressée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes intéressé"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes intéressé"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-interesses.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont intéressés"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-interessees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont intéressées"
+ },
+ {
+  "file": "verbs/forms/je-m-interesserai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'intéresserai"
+ },
+ {
+  "file": "verbs/forms/tu-t-interesseras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'intéresseras"
+ },
+ {
+  "file": "verbs/forms/il-s-interessera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'intéressera"
+ },
+ {
+  "file": "verbs/forms/elle-s-interessera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'intéressera"
+ },
+ {
+  "file": "verbs/forms/nous-nous-interesserons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous intéresserons"
+ },
+ {
+  "file": "verbs/forms/vous-vous-interesserez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous intéresserez"
+ },
+ {
+  "file": "verbs/forms/ils-s-interesseront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'intéresseront"
+ },
+ {
+  "file": "verbs/forms/elles-s-interesseront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'intéresseront"
+ },
+ {
+  "file": "verbs/forms/il-se-ces.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se ces"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais intéressé"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-interessee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais intéressée"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était intéressé"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-interessee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était intéressée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-interesses.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions intéressés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-interesses.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez intéressés"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-interesses.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient intéressés"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-interessees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient intéressées"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-interessee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais intéressée"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-interesse.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais intéressé"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-interessees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions intéressées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-interessee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez intéressée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-interessees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez intéressées"
+ },
+ {
+  "file": "verbs/forms/je-m-interessais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'intéressais"
+ },
+ {
+  "file": "verbs/forms/tu-t-interessais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'intéressais"
+ },
+ {
+  "file": "verbs/forms/il-s-interessait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'intéressait"
+ },
+ {
+  "file": "verbs/forms/elle-s-interessait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'intéressait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-interessions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous intéressions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-interessiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous intéressiez"
+ },
+ {
+  "file": "verbs/forms/ils-s-interessaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'intéressaient"
+ },
+ {
+  "file": "verbs/forms/elles-s-interessaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'intéressaient"
+ },
+ {
+  "file": "verbs/forms/il-se-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se débrouille"
+ },
+ {
+  "file": "verbs/forms/tu-te-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te débrouilles"
+ },
+ {
+  "file": "verbs/forms/nous-nous-debrouillons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous débrouillons"
+ },
+ {
+  "file": "verbs/forms/elle-se-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se débrouille"
+ },
+ {
+  "file": "verbs/forms/vous-vous-debrouillez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous débrouillez"
+ },
+ {
+  "file": "verbs/forms/ils-se-debrouillent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se débrouillent"
+ },
+ {
+  "file": "verbs/forms/elles-se-debrouillent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se débrouillent"
+ },
+ {
+  "file": "verbs/forms/je-me-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me débrouille"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis débrouillé"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es débrouillé"
+ },
+ {
+  "file": "verbs/forms/il-s-est-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est débrouillé"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes débrouillés"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-debrouillee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est débrouillée"
+ },
+ {
+  "file": "verbs/forms/il-se-tres-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se très débrouillés"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont débrouillés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes débrouillé"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-debrouillees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont débrouillées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes débrouillés"
+ },
+ {
+  "file": "verbs/forms/je-me-debrouillerai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me débrouillerai"
+ },
+ {
+  "file": "verbs/forms/tu-te-debrouilleras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te débrouilleras"
+ },
+ {
+  "file": "verbs/forms/il-se-debrouillera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se débrouillera"
+ },
+ {
+  "file": "verbs/forms/nous-nous-debrouillerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous débrouillerons"
+ },
+ {
+  "file": "verbs/forms/elle-se-debrouillera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se débrouillera"
+ },
+ {
+  "file": "verbs/forms/vous-vous-debrouillerez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous débrouillerez"
+ },
+ {
+  "file": "verbs/forms/ils-se-debrouilleront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se débrouilleront"
+ },
+ {
+  "file": "verbs/forms/elles-se-debrouilleront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se débrouilleront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais débrouillé"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-debrouillee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais débrouillée"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était débrouillé"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-debrouillee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était débrouillée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions débrouillés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez débrouillés"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-debrouilles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient débrouillés"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-debrouillees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient débrouillées"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-debrouillee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais débrouillée"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-debrouille.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais débrouillé"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-debrouillees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions débrouillées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-debrouillee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez débrouillée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-debrouillees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez débrouillées"
+ },
+ {
+  "file": "verbs/forms/je-me-debrouillais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me débrouillais"
+ },
+ {
+  "file": "verbs/forms/tu-te-debrouillais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te débrouillais"
+ },
+ {
+  "file": "verbs/forms/il-se-debrouillait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se débrouillait"
+ },
+ {
+  "file": "verbs/forms/elle-se-debrouillait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se débrouillait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-debrouillions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous débrouillions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-debrouilliez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous débrouilliez"
+ },
+ {
+  "file": "verbs/forms/ils-se-debrouillaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se débrouillaient"
+ },
+ {
+  "file": "verbs/forms/elles-se-debrouillaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se débrouillaient"
+ },
+ {
+  "file": "verbs/forms/tu-t-entraines.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'entraînes"
+ },
+ {
+  "file": "verbs/forms/il-s-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'entraîne"
+ },
+ {
+  "file": "verbs/forms/nous-nous-entrainons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous entraînons"
+ },
+ {
+  "file": "verbs/forms/elle-s-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'entraîne"
+ },
+ {
+  "file": "verbs/forms/vous-vous-entrainez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous entraînez"
+ },
+ {
+  "file": "verbs/forms/ils-s-entrainent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'entraînent"
+ },
+ {
+  "file": "verbs/forms/elles-s-entrainent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'entraînent"
+ },
+ {
+  "file": "verbs/forms/je-m-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'entraîne"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis entraîné"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es entraîné"
+ },
+ {
+  "file": "verbs/forms/il-s-est-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est entraîné"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes entraîné"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-entrainee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est entraînée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes entraîné"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-entraines.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont entraînés"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-entrainees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont entraînées"
+ },
+ {
+  "file": "verbs/forms/je-m-entrainerai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'entraînerai"
+ },
+ {
+  "file": "verbs/forms/tu-t-entraineras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'entraîneras"
+ },
+ {
+  "file": "verbs/forms/il-s-entrainera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'entraînera"
+ },
+ {
+  "file": "verbs/forms/nous-nous-entrainerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous entraînerons"
+ },
+ {
+  "file": "verbs/forms/elle-s-entrainera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'entraînera"
+ },
+ {
+  "file": "verbs/forms/vous-vous-entrainerez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous entraînerez"
+ },
+ {
+  "file": "verbs/forms/ils-s-entraineront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'entraîneront"
+ },
+ {
+  "file": "verbs/forms/elles-s-entraineront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'entraîneront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais entraîné"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-entrainee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais entraînée"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était entraîné"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-entrainee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était entraînée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-entraines.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions entraînés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-entraines.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez entraînés"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-entraines.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient entraînés"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-entrainees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient entraînées"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-entrainee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais entraînée"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-entraine.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais entraîné"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-entrainees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions entraînées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-entrainee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez entraînée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-entrainees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez entraînées"
+ },
+ {
+  "file": "verbs/forms/je-m-entrainais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'entraînais"
+ },
+ {
+  "file": "verbs/forms/tu-t-entrainais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'entraînais"
+ },
+ {
+  "file": "verbs/forms/il-s-entrainait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'entraînait"
+ },
+ {
+  "file": "verbs/forms/elle-s-entrainait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'entraînait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-entrainions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous entraînions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-entrainiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous entraîniez"
+ },
+ {
+  "file": "verbs/forms/ils-s-entrainaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'entraînaient"
+ },
+ {
+  "file": "verbs/forms/elles-s-entrainaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'entraînaient"
+ },
+ {
+  "file": "verbs/forms/tu-t-ennuies.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'ennuies"
+ },
+ {
+  "file": "verbs/forms/il-s-ennuie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'ennuie"
+ },
+ {
+  "file": "verbs/forms/nous-nous-ennuyons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous ennuyons"
+ },
+ {
+  "file": "verbs/forms/vous-vous-ennuyez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous ennuyez"
+ },
+ {
+  "file": "verbs/forms/elle-s-ennuie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'ennuie"
+ },
+ {
+  "file": "verbs/forms/ils-s-ennuient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'ennuient"
+ },
+ {
+  "file": "verbs/forms/je-m-ennuie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'ennuie"
+ },
+ {
+  "file": "verbs/forms/elles-s-ennuient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'ennuient"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis ennuyé"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es ennuyé"
+ },
+ {
+  "file": "verbs/forms/il-s-est-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est ennuyé"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes ennuyé"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-ennuyee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est ennuyée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes ennuyé"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-ennuyes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont ennuyés"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-ennuyees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont ennuyées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-ennuyes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes ennuyés"
+ },
+ {
+  "file": "verbs/forms/je-m-ennuierai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'ennuierai"
+ },
+ {
+  "file": "verbs/forms/tu-t-ennuieras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'ennuieras"
+ },
+ {
+  "file": "verbs/forms/il-s-ennuiera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'ennuiera"
+ },
+ {
+  "file": "verbs/forms/nous-nous-ennuierons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous ennuierons"
+ },
+ {
+  "file": "verbs/forms/elle-s-ennuiera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'ennuiera"
+ },
+ {
+  "file": "verbs/forms/vous-vous-ennuierez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous ennuierez"
+ },
+ {
+  "file": "verbs/forms/ils-s-ennuieront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'ennuieront"
+ },
+ {
+  "file": "verbs/forms/elles-s-ennuieront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'ennuieront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais ennuyé"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-ennuyee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais ennuyée"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était ennuyé"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-ennuyee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était ennuyée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-ennuyes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions ennuyés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-ennuyes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez ennuyés"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-ennuyes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient ennuyés"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-ennuyees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient ennuyées"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-ennuyee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais ennuyée"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-ennuye.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais ennuyé"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-ennuyees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions ennuyées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-ennuyee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez ennuyée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-ennuyees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez ennuyées"
+ },
+ {
+  "file": "verbs/forms/je-m-ennuyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'ennuyais"
+ },
+ {
+  "file": "verbs/forms/tu-t-ennuyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'ennuyais"
+ },
+ {
+  "file": "verbs/forms/il-s-ennuyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'ennuyait"
+ },
+ {
+  "file": "verbs/forms/elle-s-ennuyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'ennuyait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-ennuyions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous ennuyions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-ennuyiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous ennuyiez"
+ },
+ {
+  "file": "verbs/forms/ils-s-ennuyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'ennuyaient"
+ },
+ {
+  "file": "verbs/forms/elles-s-ennuyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'ennuyaient"
+ },
+ {
+  "file": "verbs/forms/tu-te-souviens.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te souviens"
+ },
+ {
+  "file": "verbs/forms/il-se-souvient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se souvient"
+ },
+ {
+  "file": "verbs/forms/nous-nous-souvenons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous souvenons"
+ },
+ {
+  "file": "verbs/forms/elle-se-souvient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se souvient"
+ },
+ {
+  "file": "verbs/forms/vous-vous-souvenez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous souvenez"
+ },
+ {
+  "file": "verbs/forms/ils-se-souviennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se souviennent"
+ },
+ {
+  "file": "verbs/forms/elles-se-souviennent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se souviennent"
+ },
+ {
+  "file": "verbs/forms/je-me-souviens.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me souviens"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis souvenu"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es souvenu"
+ },
+ {
+  "file": "verbs/forms/il-s-est-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est souvenu"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes souvenus"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-souvenue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est souvenue"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes souvenus"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont souvenus"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes souvenu"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-souvenues.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont souvenues"
+ },
+ {
+  "file": "verbs/forms/je-me-souviendrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me souviendrai"
+ },
+ {
+  "file": "verbs/forms/tu-te-souviendras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te souviendras"
+ },
+ {
+  "file": "verbs/forms/il-se-souviendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se souviendra"
+ },
+ {
+  "file": "verbs/forms/nous-nous-souviendrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous souviendrons"
+ },
+ {
+  "file": "verbs/forms/elle-se-souviendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se souviendra"
+ },
+ {
+  "file": "verbs/forms/vous-vous-souviendrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous souviendrez"
+ },
+ {
+  "file": "verbs/forms/ils-se-souviendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se souviendront"
+ },
+ {
+  "file": "verbs/forms/elles-se-souviendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se souviendront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais souvenu"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-souvenue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais souvenue"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était souvenu"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-souvenue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était souvenue"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions souvenus"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez souvenus"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-souvenus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient souvenus"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-souvenues.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient souvenues"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-souvenue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais souvenue"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-souvenu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais souvenu"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-souvenues.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions souvenues"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-souvenue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez souvenue"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-souvenues.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez souvenues"
+ },
+ {
+  "file": "verbs/forms/je-me-souvenais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me souvenais"
+ },
+ {
+  "file": "verbs/forms/tu-te-souvenais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te souvenais"
+ },
+ {
+  "file": "verbs/forms/il-se-souvenait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se souvenait"
+ },
+ {
+  "file": "verbs/forms/elle-se-souvenait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se souvenait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-souvenions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous souvenions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-souveniez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous souveniez"
+ },
+ {
+  "file": "verbs/forms/ils-se-souvenaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se souvenaient"
+ },
+ {
+  "file": "verbs/forms/elles-se-souvenaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se souvenaient"
+ },
+ {
+  "file": "verbs/forms/tu-t-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'adaptes"
+ },
+ {
+  "file": "verbs/forms/il-s-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'adapte"
+ },
+ {
+  "file": "verbs/forms/nous-nous-adaptons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous adaptons"
+ },
+ {
+  "file": "verbs/forms/elle-s-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'adapte"
+ },
+ {
+  "file": "verbs/forms/vous-vous-adaptez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous adaptez"
+ },
+ {
+  "file": "verbs/forms/ils-s-adaptent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'adaptent"
+ },
+ {
+  "file": "verbs/forms/elles-s-adaptent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'adaptent"
+ },
+ {
+  "file": "verbs/forms/je-m-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'adapte"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis adapté"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es adapté"
+ },
+ {
+  "file": "verbs/forms/il-s-est-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est adapté"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes adapté"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-adaptee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est adaptée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes adaptés"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont adaptés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes adapté"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-adaptees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont adaptées"
+ },
+ {
+  "file": "verbs/forms/je-m-adapterai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'adapterai"
+ },
+ {
+  "file": "verbs/forms/tu-t-adapteras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'adapteras"
+ },
+ {
+  "file": "verbs/forms/il-s-adaptera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'adaptera"
+ },
+ {
+  "file": "verbs/forms/nous-nous-adapterons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous adapterons"
+ },
+ {
+  "file": "verbs/forms/elle-s-adaptera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'adaptera"
+ },
+ {
+  "file": "verbs/forms/vous-vous-adapterez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous adapterez"
+ },
+ {
+  "file": "verbs/forms/ils-s-adapteront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'adapteront"
+ },
+ {
+  "file": "verbs/forms/elles-s-adapteront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'adapteront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais adapté"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-adaptee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais adaptée"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était adapté"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-adaptee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était adaptée"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions adaptés"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez adaptés"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-adaptes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient adaptés"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-adaptees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient adaptées"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-adaptee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais adaptée"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-adapte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais adapté"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-adaptees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions adaptées"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-adaptee.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez adaptée"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-adaptees.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez adaptées"
+ },
+ {
+  "file": "verbs/forms/je-m-adaptais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'adaptais"
+ },
+ {
+  "file": "verbs/forms/tu-t-adaptais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'adaptais"
+ },
+ {
+  "file": "verbs/forms/il-s-adaptait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'adaptait"
+ },
+ {
+  "file": "verbs/forms/elle-s-adaptait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'adaptait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-adaptions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous adaptions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-adaptiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous adaptiez"
+ },
+ {
+  "file": "verbs/forms/ils-s-adaptaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'adaptaient"
+ },
+ {
+  "file": "verbs/forms/elles-s-adaptaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'adaptaient"
+ },
+ {
+  "file": "verbs/forms/tu-te-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te réjouis"
+ },
+ {
+  "file": "verbs/forms/il-se-rejouit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se réjouit"
+ },
+ {
+  "file": "verbs/forms/nous-nous-rejouissons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous réjouissons"
+ },
+ {
+  "file": "verbs/forms/elle-se-rejouit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se réjouit"
+ },
+ {
+  "file": "verbs/forms/vous-vous-rejouissez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous réjouissez"
+ },
+ {
+  "file": "verbs/forms/ils-se-rejouissent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se réjouissent"
+ },
+ {
+  "file": "verbs/forms/elles-se-rejouissent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se réjouissent"
+ },
+ {
+  "file": "verbs/forms/je-me-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me réjouis"
+ },
+ {
+  "file": "verbs/forms/je-me-suis-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me suis réjoui"
+ },
+ {
+  "file": "verbs/forms/tu-t-es-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'es réjoui"
+ },
+ {
+  "file": "verbs/forms/il-s-est-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'est réjoui"
+ },
+ {
+  "file": "verbs/forms/nous-nous-sommes-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous sommes réjoui"
+ },
+ {
+  "file": "verbs/forms/elle-s-est-rejouie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'est réjouie"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes réjouis"
+ },
+ {
+  "file": "verbs/forms/ils-se-sont-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se sont réjouis"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etes-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous êtes réjoui"
+ },
+ {
+  "file": "verbs/forms/elles-se-sont-rejouies.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se sont réjouies"
+ },
+ {
+  "file": "verbs/forms/je-me-rejouirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me réjouirai"
+ },
+ {
+  "file": "verbs/forms/tu-te-rejouiras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te réjouiras"
+ },
+ {
+  "file": "verbs/forms/il-se-rejouira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se réjouira"
+ },
+ {
+  "file": "verbs/forms/nous-nous-rejouirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous réjouirons"
+ },
+ {
+  "file": "verbs/forms/elle-se-rejouira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se réjouira"
+ },
+ {
+  "file": "verbs/forms/vous-vous-rejouirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous réjouirez"
+ },
+ {
+  "file": "verbs/forms/ils-se-rejouiront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se réjouiront"
+ },
+ {
+  "file": "verbs/forms/elles-se-rejouiront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se réjouiront"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais réjoui"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-rejouie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais réjouie"
+ },
+ {
+  "file": "verbs/forms/il-s-etait-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il s'était réjoui"
+ },
+ {
+  "file": "verbs/forms/elle-s-etait-rejouie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle s'était réjouie"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions réjouis"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez réjouis"
+ },
+ {
+  "file": "verbs/forms/ils-s-etaient-rejouis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils s'étaient réjouis"
+ },
+ {
+  "file": "verbs/forms/elles-s-etaient-rejouies.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles s'étaient réjouies"
+ },
+ {
+  "file": "verbs/forms/je-m-etais-rejouie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je m'étais réjouie"
+ },
+ {
+  "file": "verbs/forms/tu-t-etais-rejoui.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu t'étais réjoui"
+ },
+ {
+  "file": "verbs/forms/nous-nous-etions-rejouies.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous étions réjouies"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-rejouie.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez réjouie"
+ },
+ {
+  "file": "verbs/forms/vous-vous-etiez-rejouies.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous étiez réjouies"
+ },
+ {
+  "file": "verbs/forms/je-me-rejouissais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je me réjouissais"
+ },
+ {
+  "file": "verbs/forms/tu-te-rejouissais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu te réjouissais"
+ },
+ {
+  "file": "verbs/forms/il-se-rejouissait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il se réjouissait"
+ },
+ {
+  "file": "verbs/forms/elle-se-rejouissait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle se réjouissait"
+ },
+ {
+  "file": "verbs/forms/nous-nous-rejouissions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous nous réjouissions"
+ },
+ {
+  "file": "verbs/forms/vous-vous-rejouissiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vous réjouissiez"
+ },
+ {
+  "file": "verbs/forms/ils-se-rejouissaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils se réjouissaient"
+ },
+ {
+  "file": "verbs/forms/elles-se-rejouissaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles se réjouissaient"
+ },
+ {
+  "file": "verbs/forms/ils-trouvent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils trouvent"
+ },
+ {
+  "file": "verbs/forms/nous-trouvons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous trouvons"
+ },
+ {
+  "file": "verbs/forms/elle-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle trouve"
+ },
+ {
+  "file": "verbs/forms/tu-trouves.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu trouves"
+ },
+ {
+  "file": "verbs/forms/vous-trouvez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous trouvez"
+ },
+ {
+  "file": "verbs/forms/je-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je trouve"
+ },
+ {
+  "file": "verbs/forms/elles-trouvent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles trouvent"
+ },
+ {
+  "file": "verbs/forms/il-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il trouve"
+ },
+ {
+  "file": "verbs/forms/ils-ont-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont trouvé"
+ },
+ {
+  "file": "verbs/forms/nous-avons-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons trouvé"
+ },
+ {
+  "file": "verbs/forms/elle-a-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a trouvé"
+ },
+ {
+  "file": "verbs/forms/tu-as-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as trouvé"
+ },
+ {
+  "file": "verbs/forms/vous-avez-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez trouvé"
+ },
+ {
+  "file": "verbs/forms/j-ai-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai trouvé"
+ },
+ {
+  "file": "verbs/forms/elles-ont-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont trouvé"
+ },
+ {
+  "file": "verbs/forms/il-a-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a trouvé"
+ },
+ {
+  "file": "verbs/forms/ils-trouveront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils trouveront"
+ },
+ {
+  "file": "verbs/forms/nous-trouverons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous trouverons"
+ },
+ {
+  "file": "verbs/forms/elle-trouvera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle trouvera"
+ },
+ {
+  "file": "verbs/forms/tu-trouveras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu trouveras"
+ },
+ {
+  "file": "verbs/forms/vous-trouverez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous trouverez"
+ },
+ {
+  "file": "verbs/forms/je-trouverai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je trouverai"
+ },
+ {
+  "file": "verbs/forms/elles-trouveront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles trouveront"
+ },
+ {
+  "file": "verbs/forms/il-trouvera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il trouvera"
+ },
+ {
+  "file": "verbs/forms/j-avais-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais trouvé"
+ },
+ {
+  "file": "verbs/forms/tu-avais-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais trouvé"
+ },
+ {
+  "file": "verbs/forms/il-avait-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait trouvé"
+ },
+ {
+  "file": "verbs/forms/elle-avait-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait trouvé"
+ },
+ {
+  "file": "verbs/forms/nous-avions-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions trouvé"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez trouvé"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient trouvé"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-trouve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient trouvé"
+ },
+ {
+  "file": "verbs/forms/je-trouvais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je trouvais"
+ },
+ {
+  "file": "verbs/forms/tu-trouvais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu trouvais"
+ },
+ {
+  "file": "verbs/forms/il-trouvait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il trouvait"
+ },
+ {
+  "file": "verbs/forms/elle-trouvait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle trouvait"
+ },
+ {
+  "file": "verbs/forms/nous-trouvions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous trouvions"
+ },
+ {
+  "file": "verbs/forms/vous-trouviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous trouviez"
+ },
+ {
+  "file": "verbs/forms/ils-trouvaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils trouvaient"
+ },
+ {
+  "file": "verbs/forms/elles-trouvaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles trouvaient"
+ },
+ {
+  "file": "verbs/forms/ils-croient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils croient"
+ },
+ {
+  "file": "verbs/forms/nous-croyons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous croyons"
+ },
+ {
+  "file": "verbs/forms/elle-croit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle croit"
+ },
+ {
+  "file": "verbs/forms/tu-crois.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu crois"
+ },
+ {
+  "file": "verbs/forms/vous-croyez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous croyez"
+ },
+ {
+  "file": "verbs/forms/je-crois.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je crois"
+ },
+ {
+  "file": "verbs/forms/elles-croient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles croient"
+ },
+ {
+  "file": "verbs/forms/ils-ont-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont cru"
+ },
+ {
+  "file": "verbs/forms/nous-avons-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons cru"
+ },
+ {
+  "file": "verbs/forms/elle-a-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a cru"
+ },
+ {
+  "file": "verbs/forms/tu-as-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as cru"
+ },
+ {
+  "file": "verbs/forms/vous-avez-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez cru"
+ },
+ {
+  "file": "verbs/forms/j-ai-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai cru"
+ },
+ {
+  "file": "verbs/forms/elles-ont-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont cru"
+ },
+ {
+  "file": "verbs/forms/nous-avons-crue.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons crue"
+ },
+ {
+  "file": "verbs/forms/ils-croiront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils croiront"
+ },
+ {
+  "file": "verbs/forms/nous-croirons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous croirons"
+ },
+ {
+  "file": "verbs/forms/elle-croira.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle croira"
+ },
+ {
+  "file": "verbs/forms/tu-croiras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu croiras"
+ },
+ {
+  "file": "verbs/forms/vous-croirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous croirez"
+ },
+ {
+  "file": "verbs/forms/je-croirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je croirai"
+ },
+ {
+  "file": "verbs/forms/elles-croiront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles croiront"
+ },
+ {
+  "file": "verbs/forms/j-avais-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais cru"
+ },
+ {
+  "file": "verbs/forms/tu-avais-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais cru"
+ },
+ {
+  "file": "verbs/forms/il-avait-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait cru"
+ },
+ {
+  "file": "verbs/forms/elle-avait-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait cru"
+ },
+ {
+  "file": "verbs/forms/nous-avions-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions cru"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez cru"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient cru"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-cru.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient cru"
+ },
+ {
+  "file": "verbs/forms/je-croyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je croyais"
+ },
+ {
+  "file": "verbs/forms/tu-croyais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu croyais"
+ },
+ {
+  "file": "verbs/forms/il-croyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il croyait"
+ },
+ {
+  "file": "verbs/forms/elle-croyait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle croyait"
+ },
+ {
+  "file": "verbs/forms/nous-croyions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous croyions"
+ },
+ {
+  "file": "verbs/forms/vous-croyiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous croyiez"
+ },
+ {
+  "file": "verbs/forms/ils-croyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils croyaient"
+ },
+ {
+  "file": "verbs/forms/elles-croyaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles croyaient"
+ },
+ {
+  "file": "verbs/forms/elles-mettent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles mettent"
+ },
+ {
+  "file": "verbs/forms/nous-mettons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous mettons"
+ },
+ {
+  "file": "verbs/forms/vous-mettez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous mettez"
+ },
+ {
+  "file": "verbs/forms/tu-mets.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu mets"
+ },
+ {
+  "file": "verbs/forms/je-mets.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je mets"
+ },
+ {
+  "file": "verbs/forms/il-met.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il met"
+ },
+ {
+  "file": "verbs/forms/elle-met.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle met"
+ },
+ {
+  "file": "verbs/forms/ils-mettent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils mettent"
+ },
+ {
+  "file": "verbs/forms/elles-ont-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont mis"
+ },
+ {
+  "file": "verbs/forms/nous-avons-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons mis"
+ },
+ {
+  "file": "verbs/forms/vous-avez-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez mis"
+ },
+ {
+  "file": "verbs/forms/tu-as-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as mis"
+ },
+ {
+  "file": "verbs/forms/j-ai-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai mis"
+ },
+ {
+  "file": "verbs/forms/il-a-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a mis"
+ },
+ {
+  "file": "verbs/forms/elle-a-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a mis"
+ },
+ {
+  "file": "verbs/forms/ils-ont-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont mis"
+ },
+ {
+  "file": "verbs/forms/elles-mettront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles mettront"
+ },
+ {
+  "file": "verbs/forms/nous-mettrons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous mettrons"
+ },
+ {
+  "file": "verbs/forms/vous-mettrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous mettrez"
+ },
+ {
+  "file": "verbs/forms/tu-mettras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu mettras"
+ },
+ {
+  "file": "verbs/forms/je-mettrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je mettrai"
+ },
+ {
+  "file": "verbs/forms/il-mettra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il mettra"
+ },
+ {
+  "file": "verbs/forms/elle-mettra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle mettra"
+ },
+ {
+  "file": "verbs/forms/ils-mettront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils mettront"
+ },
+ {
+  "file": "verbs/forms/j-avais-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais mis"
+ },
+ {
+  "file": "verbs/forms/tu-avais-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais mis"
+ },
+ {
+  "file": "verbs/forms/il-avait-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait mis"
+ },
+ {
+  "file": "verbs/forms/elle-avait-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait mis"
+ },
+ {
+  "file": "verbs/forms/nous-avions-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions mis"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez mis"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient mis"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-mis.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient mis"
+ },
+ {
+  "file": "verbs/forms/je-mettais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je mettais"
+ },
+ {
+  "file": "verbs/forms/tu-mettais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu mettais"
+ },
+ {
+  "file": "verbs/forms/il-mettait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il mettait"
+ },
+ {
+  "file": "verbs/forms/elle-mettait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle mettait"
+ },
+ {
+  "file": "verbs/forms/nous-mettions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous mettions"
+ },
+ {
+  "file": "verbs/forms/vous-mettiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous mettiez"
+ },
+ {
+  "file": "verbs/forms/ils-mettaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils mettaient"
+ },
+ {
+  "file": "verbs/forms/elles-mettaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles mettaient"
+ },
+ {
+  "file": "verbs/forms/ils-parlent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils parlent"
+ },
+ {
+  "file": "verbs/forms/nous-parlons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous parlons"
+ },
+ {
+  "file": "verbs/forms/elle-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle parle"
+ },
+ {
+  "file": "verbs/forms/tu-parles.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu parles"
+ },
+ {
+  "file": "verbs/forms/vous-parlez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous parlez"
+ },
+ {
+  "file": "verbs/forms/je-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je parle"
+ },
+ {
+  "file": "verbs/forms/il-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il parle"
+ },
+ {
+  "file": "verbs/forms/elles-parlent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles parlent"
+ },
+ {
+  "file": "verbs/forms/ils-ont-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont parlé"
+ },
+ {
+  "file": "verbs/forms/nous-avons-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons parlé"
+ },
+ {
+  "file": "verbs/forms/elle-a-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a parlé"
+ },
+ {
+  "file": "verbs/forms/tu-as-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as parlé"
+ },
+ {
+  "file": "verbs/forms/vous-avez-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez parlé"
+ },
+ {
+  "file": "verbs/forms/j-ai-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai parlé"
+ },
+ {
+  "file": "verbs/forms/elles-ont-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont parlé"
+ },
+ {
+  "file": "verbs/forms/ils-parleront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils parleront"
+ },
+ {
+  "file": "verbs/forms/nous-parlerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous parlerons"
+ },
+ {
+  "file": "verbs/forms/elle-parlera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle parlera"
+ },
+ {
+  "file": "verbs/forms/tu-parleras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu parleras"
+ },
+ {
+  "file": "verbs/forms/vous-parlerez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous parlerez"
+ },
+ {
+  "file": "verbs/forms/je-parlerai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je parlerai"
+ },
+ {
+  "file": "verbs/forms/elles-parleront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles parleront"
+ },
+ {
+  "file": "verbs/forms/j-avais-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'avais parlé"
+ },
+ {
+  "file": "verbs/forms/tu-avais-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu avais parlé"
+ },
+ {
+  "file": "verbs/forms/il-avait-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il avait parlé"
+ },
+ {
+  "file": "verbs/forms/elle-avait-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle avait parlé"
+ },
+ {
+  "file": "verbs/forms/nous-avions-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avions parlé"
+ },
+ {
+  "file": "verbs/forms/vous-aviez-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aviez parlé"
+ },
+ {
+  "file": "verbs/forms/ils-avaient-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils avaient parlé"
+ },
+ {
+  "file": "verbs/forms/elles-avaient-parle.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles avaient parlé"
+ },
+ {
+  "file": "verbs/forms/je-parlais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je parlais"
+ },
+ {
+  "file": "verbs/forms/tu-parlais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu parlais"
+ },
+ {
+  "file": "verbs/forms/il-parlait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il parlait"
+ },
+ {
+  "file": "verbs/forms/elle-parlait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle parlait"
+ },
+ {
+  "file": "verbs/forms/nous-parlions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous parlions"
+ },
+ {
+  "file": "verbs/forms/vous-parliez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous parliez"
+ },
+ {
+  "file": "verbs/forms/ils-parlaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils parlaient"
+ },
+ {
+  "file": "verbs/forms/elles-parlaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles parlaient"
+ },
+ {
+  "file": "verbs/forms/j-ai-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai besoin"
+ },
+ {
+  "file": "verbs/forms/tu-as-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as besoin"
+ },
+ {
+  "file": "verbs/forms/il-a-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a besoin"
+ },
+ {
+  "file": "verbs/forms/elle-a-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a besoin"
+ },
+ {
+  "file": "verbs/forms/nous-avons-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons besoin"
+ },
+ {
+  "file": "verbs/forms/vous-avez-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez besoin"
+ },
+ {
+  "file": "verbs/forms/ils-ont-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont besoin"
+ },
+ {
+  "file": "verbs/forms/elles-ont-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont besoin"
+ },
+ {
+  "file": "verbs/forms/on-voit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "on voit"
+ },
+ {
+  "file": "verbs/forms/on-peut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "on peut"
+ },
+ {
+  "file": "verbs/forms/on-vient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "on vient"
+ },
+ {
+  "file": "verbs/forms/on-veut.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "on veut"
+ },
+ {
+  "file": "verbs/forms/j-ai-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai eu besoin"
+ },
+ {
+  "file": "verbs/forms/tu-as-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as eu besoin"
+ },
+ {
+  "file": "verbs/forms/il-a-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a eu besoin"
+ },
+ {
+  "file": "verbs/forms/elle-a-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle a eu besoin"
+ },
+ {
+  "file": "verbs/forms/nous-avons-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons eu besoin"
+ },
+ {
+  "file": "verbs/forms/vous-avez-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez eu besoin"
+ },
+ {
+  "file": "verbs/forms/ils-ont-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont eu besoin"
+ },
+ {
+  "file": "verbs/forms/elles-ont-eu-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont eu besoin"
+ },
+ {
+  "file": "verbs/forms/nous-avons-vus.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons vus"
+ },
+ {
+  "file": "verbs/forms/j-aurai-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'aurai besoin"
+ },
+ {
+  "file": "verbs/forms/tu-auras-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu auras besoin"
+ },
+ {
+  "file": "verbs/forms/il-aura-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il aura besoin"
+ },
+ {
+  "file": "verbs/forms/elle-aura-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle aura besoin"
+ },
+ {
+  "file": "verbs/forms/nous-aurons-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous aurons besoin"
+ },
+ {
+  "file": "verbs/forms/vous-aurez-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aurez besoin"
+ },
+ {
+  "file": "verbs/forms/ils-auront-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils auront besoin"
+ },
+ {
+  "file": "verbs/forms/elles-auront-besoin.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles auront besoin"
+ },
+ {
+  "file": "verbs/forms/je-reviendrai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je reviendrai"
+ },
+ {
+  "file": "verbs/forms/elle-reviendra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle reviendra"
+ },
+ {
+  "file": "verbs/forms/ils-reviendront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils reviendront"
+ },
+ {
+  "file": "verbs/forms/nous-visitons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous visitons"
+ },
+ {
+  "file": "verbs/forms/ils-visitent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils visitent"
+ },
+ {
+  "file": "verbs/forms/vous-visitez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous visitez"
+ },
+ {
+  "file": "verbs/forms/j-ai-visite.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai visité"
+ },
+ {
+  "file": "verbs/forms/il-a-visite.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a visité"
+ },
+ {
+  "file": "verbs/forms/tu-as-visite.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as visité"
+ },
+ {
+  "file": "verbs/forms/vous-visiterez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous visiterez"
+ },
+ {
+  "file": "verbs/forms/je-visiterai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je visiterai"
+ },
+ {
+  "file": "verbs/forms/nous-visitions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous visitions"
+ },
+ {
+  "file": "verbs/forms/je-visitais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je visitais"
+ },
+ {
+  "file": "verbs/forms/je-demande.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je demande"
+ },
+ {
+  "file": "verbs/forms/vous-demandez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous demandez"
+ },
+ {
+  "file": "verbs/forms/ils-demandent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils demandent"
+ },
+ {
+  "file": "verbs/forms/j-ai-demande.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai demandé"
+ },
+ {
+  "file": "verbs/forms/il-a-demande.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a demandé"
+ },
+ {
+  "file": "verbs/forms/tu-as-demande.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as demandé"
+ },
+ {
+  "file": "verbs/forms/il-demandera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il demandera"
+ },
+ {
+  "file": "verbs/forms/nous-demanderons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous demanderons"
+ },
+ {
+  "file": "verbs/forms/tu-demandais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu demandais"
+ },
+ {
+  "file": "verbs/forms/nous-demandions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous demandions"
+ },
+ {
+  "file": "verbs/forms/je-recois.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je reçois"
+ },
+ {
+  "file": "verbs/forms/il-recoit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il reçoit"
+ },
+ {
+  "file": "verbs/forms/vous-recevez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous recevez"
+ },
+ {
+  "file": "verbs/forms/nous-avons-recu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons reçu"
+ },
+ {
+  "file": "verbs/forms/tu-as-recu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as reçu"
+ },
+ {
+  "file": "verbs/forms/ils-ont-recu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont reçu"
+ },
+ {
+  "file": "verbs/forms/vous-recevrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous recevrez"
+ },
+ {
+  "file": "verbs/forms/elle-recevra.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle recevra"
+ },
+ {
+  "file": "verbs/forms/je-recevais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je recevais"
+ },
+ {
+  "file": "verbs/forms/ils-recevaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils recevaient"
+ },
+ {
+  "file": "verbs/forms/il-donne.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il donne"
+ },
+ {
+  "file": "verbs/forms/nous-donnons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous donnons"
+ },
+ {
+  "file": "verbs/forms/vous-donnez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous donnez"
+ },
+ {
+  "file": "verbs/forms/il-a-donne.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a donné"
+ },
+ {
+  "file": "verbs/forms/tu-as-donne.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as donné"
+ },
+ {
+  "file": "verbs/forms/j-ai-donne.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai donné"
+ },
+ {
+  "file": "verbs/forms/il-donnera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il donnera"
+ },
+ {
+  "file": "verbs/forms/ils-donneront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils donneront"
+ },
+ {
+  "file": "verbs/forms/il-donnait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il donnait"
+ },
+ {
+  "file": "verbs/forms/tu-donnais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu donnais"
+ },
+ {
+  "file": "verbs/forms/nous-reservons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous réservons"
+ },
+ {
+  "file": "verbs/forms/ils-reservent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils réservent"
+ },
+ {
+  "file": "verbs/forms/vous-reservez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous réservez"
+ },
+ {
+  "file": "verbs/forms/j-ai-reserve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai réservé"
+ },
+ {
+  "file": "verbs/forms/il-a-reserve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a réservé"
+ },
+ {
+  "file": "verbs/forms/tu-as-reserve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as réservé"
+ },
+ {
+  "file": "verbs/forms/vous-reserverez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous réserverez"
+ },
+ {
+  "file": "verbs/forms/ils-reserveront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils réserveront"
+ },
+ {
+  "file": "verbs/forms/elle-reservait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle réservait"
+ },
+ {
+  "file": "verbs/forms/tu-reservais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu réservais"
+ },
+ {
+  "file": "verbs/forms/j-aide.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'aide"
+ },
+ {
+  "file": "verbs/forms/nous-aidons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous aidons"
+ },
+ {
+  "file": "verbs/forms/vous-aidez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aidez"
+ },
+ {
+  "file": "verbs/forms/tu-as-aide.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as aidé"
+ },
+ {
+  "file": "verbs/forms/ils-ont-aide.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont aidé"
+ },
+ {
+  "file": "verbs/forms/il-a-aide.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a aidé"
+ },
+ {
+  "file": "verbs/forms/j-aiderai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'aiderai"
+ },
+ {
+  "file": "verbs/forms/ils-aideront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils aideront"
+ },
+ {
+  "file": "verbs/forms/vous-aidiez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous aidiez"
+ },
+ {
+  "file": "verbs/forms/il-aidait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il aidait"
+ },
+ {
+  "file": "verbs/forms/il-sert.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il sert"
+ },
+ {
+  "file": "verbs/forms/nous-servons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous servons"
+ },
+ {
+  "file": "verbs/forms/vous-servez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous servez"
+ },
+ {
+  "file": "verbs/forms/j-ai-servi.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai servi"
+ },
+ {
+  "file": "verbs/forms/il-a-servi.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a servi"
+ },
+ {
+  "file": "verbs/forms/tu-as-servi.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as servi"
+ },
+ {
+  "file": "verbs/forms/je-servirai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je servirai"
+ },
+ {
+  "file": "verbs/forms/ils-serviront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils serviront"
+ },
+ {
+  "file": "verbs/forms/vous-serviez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous serviez"
+ },
+ {
+  "file": "verbs/forms/tu-servais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu servais"
+ },
+ {
+  "file": "verbs/forms/j-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'apporte"
+ },
+ {
+  "file": "verbs/forms/ils-apportent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils apportent"
+ },
+ {
+  "file": "verbs/forms/vous-apportez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous apportez"
+ },
+ {
+  "file": "verbs/forms/j-ai-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai apporté"
+ },
+ {
+  "file": "verbs/forms/il-a-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a apporté"
+ },
+ {
+  "file": "verbs/forms/tu-as-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as apporté"
+ },
+ {
+  "file": "verbs/forms/vous-apporterez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous apporterez"
+ },
+ {
+  "file": "verbs/forms/nous-apporterons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous apporterons"
+ },
+ {
+  "file": "verbs/forms/ils-apportaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils apportaient"
+ },
+ {
+  "file": "verbs/forms/j-apportais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'apportais"
+ },
+ {
+  "file": "verbs/forms/nous-vivons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous vivons"
+ },
+ {
+  "file": "verbs/forms/ils-vivent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils vivent"
+ },
+ {
+  "file": "verbs/forms/vous-vivez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vivez"
+ },
+ {
+  "file": "verbs/forms/j-ai-vecu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai vécu"
+ },
+ {
+  "file": "verbs/forms/il-a-vecu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a vécu"
+ },
+ {
+  "file": "verbs/forms/tu-as-vecu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as vécu"
+ },
+ {
+  "file": "verbs/forms/ils-vivront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils vivront"
+ },
+ {
+  "file": "verbs/forms/vous-vivrez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous vivrez"
+ },
+ {
+  "file": "verbs/forms/je-vivais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je vivais"
+ },
+ {
+  "file": "verbs/forms/il-vivait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il vivait"
+ },
+ {
+  "file": "verbs/forms/nous-commencons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous commençons"
+ },
+ {
+  "file": "verbs/forms/ils-commencent.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils commencent"
+ },
+ {
+  "file": "verbs/forms/vous-commencez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous commencez"
+ },
+ {
+  "file": "verbs/forms/j-ai-commence.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai commencé"
+ },
+ {
+  "file": "verbs/forms/il-a-commence.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il a commencé"
+ },
+ {
+  "file": "verbs/forms/tu-as-commence.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu as commencé"
+ },
+ {
+  "file": "verbs/forms/il-commencera.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il commencera"
+ },
+ {
+  "file": "verbs/forms/je-commencerai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je commencerai"
+ },
+ {
+  "file": "verbs/forms/je-commencais.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je commençais"
+ },
+ {
+  "file": "verbs/forms/nous-commencions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous commencions"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We are viewing the flat on rue Victor-Hugo."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Many people view the same flat."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Are you viewing other flats? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I viewed three flats this week."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My sister viewed the flat yesterday."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you view the kitchen? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will view the flat on Thursday. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I will view it with my guarantor."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When we lived in Lyon, we used to view flats every Saturday."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I was viewing the flat when the agent called."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I ask for a café crème every morning."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "If you ask for 'un café', they'll serve you an espresso. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Are the customers asking for the bill?"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "This morning I asked for a croissant with my coffee."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The waitress asked us to wait."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you ask for the bill? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Nobody will ask you to leave. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We will ask for a table on the terrace."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you lived in Paris, you used to ask for a café crème at the counter. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We were asking for the bill when it started to rain."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I receive my salary at the end of the month."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The adviser sees clients by appointment."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you receive your salary in France? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We received our bank cards this morning."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you receive the RIB? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They received an electricity bill yesterday."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will receive your card in a week's time. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "She will receive an answer from the bank on Monday."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I was a student, I used to receive a grant every month."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My parents used to receive their bills by post."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The pharmacist gives good advice."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We give our carte Vitale at the surgery."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Are you giving me a prescription? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The doctor gave me a prescription yesterday."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you give your carte Vitale to the doctor? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "This morning I gave my phone number to the surgery."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The doctor will give you a prescription. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will give us the results on Friday."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When we were children, our mother used to give us honey for a cold."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You were giving your name when the doctor arrived. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We book our TGV tickets in advance."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Most travellers book their ticket on their phone."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you book your tickets online? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I booked my ticket yesterday evening."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My brother booked a seat on the TGV to Marseille."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you book your seat? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will book your return journey on the website. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will book their seats tomorrow."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When she was a student, she used to book the cheapest seats."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You were booking your ticket when the train filled up. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I'm helping the elderly lady carry her bags."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We help the customers in the shop."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you help your neighbours? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you help the old man in the lift? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The children helped their grandmother this morning."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The baker helped my son yesterday."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I will help you choose, madam."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Our neighbours will help us on Saturday."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you worked in the shop, you used to help the older customers. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "He was helping a stranger when I came into the bakery."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The stallholder serves the customers one by one."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We serve local cheese on our stall."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Are you serving this lady? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I served thirty customers this morning."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The cheese seller served my mother before me."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you serve the man with the basket? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I'll serve you in five minutes, madam."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The stallholders will serve soup at the end of the market."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you had a stall, you used to serve the best tomatoes in town. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You were serving a customer when I arrived. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I'm bringing all my documents to the town hall."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Lots of people bring too many documents."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you always bring photocopies to the counter? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I brought my passport this morning."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My husband brought the form yesterday."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Did you bring the photocopies? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will bring your son's birth certificate. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We will bring the file next Monday."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Before the internet, people used to bring every form to the town hall."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I was bringing my file to the counter when the clerk called me."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We live on the third floor of an old building."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "In French cities, lots of people live in flats."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you live in this building? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I lived next to a very noisy neighbour for two years."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The caretaker lived in the building for thirty years."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Have you ever lived in a block of flats? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Next year, they will live in a building with a caretaker."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will live on the ground floor, next to the caretaker. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I was twenty, I used to live in a tiny flat in Paris."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "In the past, a caretaker used to live in every building."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q1.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We start work at nine o'clock."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q2.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "New employees often start their day at reception."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q3.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Do you start by saying \"vous\" to your colleagues? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q4.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I started my new job on Monday."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q5.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My manager started the meeting at ten o'clock."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q6.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Have you started the training? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q7.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Tomorrow, the new colleague will start in the open-plan office."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q8.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I will start by introducing myself to the team."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q9.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I worked in Lyon, I used to start at eight o'clock."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q10.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We were starting the meeting when the new colleague arrived."
+ }
+]

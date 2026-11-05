@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import { Stack, router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
@@ -25,6 +25,8 @@ import { recordCourseQuiz, readExamGate } from "../lib/coins";
 import { coinBalance, tenseProgress, invitationCopy, examCoinCost, type ExamInvitation } from "@shared/coins";
 import { getExam } from "@shared/exams";
 import { TENSES, audioLevelFolder, isIntermediate, tenseFor } from "@shared/levels";
+import { formsForQuiz } from "@shared/verbForms";
+import { splitQualifier } from "@shared/quizText";
 import { spendOnExam } from "../lib/coins";
 import { maybeAskForReview, noteUnitResult } from "../lib/reviewPrompt";
 import CoinStack from "../components/CoinStack";
@@ -43,27 +45,6 @@ const TENSE_PATH: Record<string, string> = {
   ...Object.fromEntries(Object.values(TENSES).map((t) => [t.tense, t.tensePath])),
   "Imparfait": "imparfait",
 };
-/**
- * "You (Plural or Formal) will not take any shortcuts." becomes the sentence
- * "You will not take any shortcuts" plus "(plural or formal)", shown after it
- * in small italics (approved 4 Nov 2026), so the qualifier no longer splits
- * the sentence. Only the display changes; AI WHY and Vocab get the original.
- */
-const QUALIFIER_WORDS = /^(plural|formal|informal|singular|feminine|masculine|mixed|male|female|or|only|and)$/i;
-function splitQualifier(text: string): { main: string; qualifier: string; end: string } {
-  const found: string[] = [];
-  const main = text
-    .replace(/\s*\(([^()]{1,40})\)/g, (_m, inner: string) => { found.push(inner.trim()); return ""; })
-    .replace(/\s+([.,?!])/g, "$1").replace(/\s{2,}/g, " ").trim();
-  if (!found.length || !main) return { main: text, qualifier: "", end: "" };
-  const qualifier = found
-    .map((q) => q.split(/(\s+|\/|,)/).map((w) => (QUALIFIER_WORDS.test(w) ? w.toLowerCase() : w)).join(""))
-    .join(", ");
-  // The sentence keeps its full stop (or ?/!) and the qualifier follows it:
-  // "Will they take French lessons next year? (male)" (Jonathan, 4 Nov 2026).
-  return { main, qualifier: `(${qualifier})`, end: "" };
-}
-
 const PRONOUNS: [string, string, string][] = [
   ["👤", "Je", "I"], ["🫵", "Tu", "You (informal)"], ["🎩", "Vous", "You (formal/plural)"],
   ["👥", "Nous", "We"], ["👬", "Ils", "They (masculine & mixed)"], ["👭", "Elles", "They (feminine)"],
@@ -304,6 +285,14 @@ export default function Quiz() {
   const dispIdx = reviewIndex !== null ? reviewIndex : idx;
   const dispQ = questions[dispIdx] || q;
   const qParts = splitQualifier(String(dispQ?.question ?? ""));
+  // Verb pronunciation (5 Nov 2026): every form this quiz's answers test, for the blue button.
+  const quizForms = useMemo(() => exam ? [] : formsForQuiz(
+    questions.map((x: any) => ({
+      answer: x.answerOptions?.find((o: any) => o.isCorrect)?.text ?? "",
+      wrongs: (x.answerOptions ?? []).filter((o: any) => !o.isCorrect).map((o: any) => o.text),
+    })).filter((x) => x.answer),
+    verb, tense,
+  ), [questions, verb, tense, !!exam]); // eslint-disable-line react-hooks/exhaustive-deps
   const dispSelected = reviewIndex !== null ? (answers[dispIdx] ?? null) : selected;
   const dispConfirmed = reviewIndex !== null ? answers[dispIdx] !== undefined : confirmed;
   const score = Object.entries(answers).reduce((n, [qi, ai]) =>
@@ -400,14 +389,10 @@ export default function Quiz() {
     if (!soundRef.current) return;
     // 1.3.20 (Jonathan, 28 Oct 2026): exams play no French after an answer.
     if (exam) return;
-    let opt = questions[idx]?.answerOptions[i];
+    // The CORRECT French plays after every answer, right or wrong, at every
+    // level (Jonathan, 5 Nov 2026: "play the right answer uniformly across the app").
+    const opt = questions[idx]?.answerOptions.find((o) => o.isCorrect) ?? questions[idx]?.answerOptions[i];
     if (!opt) return;
-    // 1.3.20: Intermediate A and B record only the correct option, so a wrong
-    // answer there plays the CORRECT French. Other levels keep playing the
-    // option the learner picked (every option is recorded there).
-    if (!opt.isCorrect && isIntermediate(difficulty)) {
-      opt = questions[idx]?.answerOptions.find((o) => o.isCorrect) ?? opt;
-    }
     const m = await getManifest();
     const f = lookupAnswerFile(m, opt.text, difficulty);
     if (f) {
@@ -732,7 +717,7 @@ export default function Quiz() {
                 onHoldChange={(h) => { setMicHolding(h); if (h) stopEnglish(); }}
                 optionsShown={showOptionsFor === dispIdx}
                 onToggleOptions={() => setShowOptionsFor((cur) => (cur === dispIdx ? null : dispIdx))}
-                pronounce={{ verb: qVerb, tense }}
+                pronounce={{ verb: qVerb, tense, forms: quizForms }}
                 fill
               />
             )}
