@@ -108,6 +108,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Serve static audio assets
   const assetsPath = path.resolve(import.meta.dirname, '..', 'attached_assets');
   app.use('/attached_assets', express.static(assetsPath));
+  // A missing clip is a 404, not the web app's fallback page (5 Nov 2026), so the
+  // app's players fail fast and a check of a clip URL means what it says.
+  app.use('/attached_assets', (_req, res) => { res.status(404).type('text/plain').send('Not found'); });
 
   // Auth middleware
   await setupAuth(app);
