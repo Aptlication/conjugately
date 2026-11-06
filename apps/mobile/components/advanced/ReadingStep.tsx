@@ -195,7 +195,8 @@ const styles = StyleSheet.create({
   body: { padding: 20, paddingBottom: 40 },
   title: { color: INK, fontSize: 28, fontWeight: "800", marginTop: 4 },
   sub: { color: SOFT, fontSize: 14, marginTop: 2, marginBottom: 12 },
-  tools: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 12 },
+  // Half the old 12 pt gap between the buttons and the text (Jonathan, 7 Nov 2026).
+  tools: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 6 },
   tool: { flexDirection: "row", alignItems: "center", gap: 6, borderWidth: 1, borderColor: "#DDE5F7", borderRadius: 18,
     paddingVertical: 7, paddingHorizontal: 12, backgroundColor: "#FFFFFF" },
   toolText: { color: BLUE, fontSize: 14, fontWeight: "700" },

@@ -648,6 +648,7 @@ export const ADVANCED_THEMES: AdvTheme[] = [
      {
       "tense": "Passé composé",
       "en": "They received an electricity bill yesterday.",
+      "tag": "male",
       "answer": "Ils ont reçu une facture d'électricité hier.",
       "wrong": [
        "Ils sont reçus une facture d'électricité hier.",
@@ -938,6 +939,7 @@ export const ADVANCED_THEMES: AdvTheme[] = [
      {
       "tense": "Futur simple",
       "en": "They will give us the results on Friday.",
+      "tag": "male",
       "answer": "Ils nous donneront les résultats vendredi.",
       "wrong": [
        "Ils nous ont donné les résultats vendredi.",
@@ -1208,6 +1210,7 @@ export const ADVANCED_THEMES: AdvTheme[] = [
      {
       "tense": "Futur simple",
       "en": "They will book their seats tomorrow.",
+      "tag": "male",
       "answer": "Ils réserveront leurs places demain.",
       "wrong": [
        "Ils ont réservé leurs places demain.",
@@ -2277,6 +2280,7 @@ export const ADVANCED_THEMES: AdvTheme[] = [
      {
       "tense": "Futur simple",
       "en": "Next year, they will live in a building with a caretaker.",
+      "tag": "male",
       "answer": "L'année prochaine, ils vivront dans un immeuble avec un gardien.",
       "wrong": [
        "L'année prochaine, ils ont vécu dans un immeuble avec un gardien.",

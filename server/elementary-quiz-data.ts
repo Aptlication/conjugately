@@ -410,7 +410,7 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       ]
     },
     {
-      question: "They do not say / are not saying anything.",
+      question: "They (male) do not say / are not saying anything.",
       hint: "Use third person plural with negation: ils ne disent rien",
       answerOptions: [
         { text: "Ils ne disent rien.", rationale: "Option A", isCorrect: true },
@@ -860,7 +860,7 @@ export const ELEMENTARY_PRESENT_QUESTIONS: Record<string, ElementaryQuizQuestion
       ]
     },
     {
-      question: "They do not say / are not saying anything.",
+      question: "They (male) do not say / are not saying anything.",
       hint: "Use third person plural with negation: ils ne disent rien",
       answerOptions: [
         { text: "Ils ne disent rien.", rationale: "Option A", isCorrect: true },
