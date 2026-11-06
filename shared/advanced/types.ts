@@ -17,7 +17,7 @@ export interface AdvQuizItem {
   /** The English sentence shown. */
   en: string;
   /** Which "you" is meant, when the English can't say. */
-  tag?: "formal" | "informal";
+  tag?: "formal" | "informal" | "male" | "female";
   /** The one correct French sentence. */
   answer: string;
   /** Three wrong sentences that differ only in the verb form. */

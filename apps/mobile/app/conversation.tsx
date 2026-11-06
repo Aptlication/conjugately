@@ -9,7 +9,7 @@ import * as Haptics from "expo-haptics";
 import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 import { judgeReply } from "../lib/generousMatch";
 import { wrongOptions } from "../lib/conversationOptions";
-import { DEFAULT_THRESHOLDS, matchAnswer } from "@shared/answerMatch";
+import { DEFAULT_THRESHOLDS, foldAccents, matchAnswer, normaliseFrench } from "@shared/answerMatch";
 import { soundsAlike } from "@shared/soundAlike";
 import { contentLevel } from "@shared/levels";
 import { type ConvTurn } from "../lib/conversations";
@@ -136,6 +136,17 @@ const BADGE: Record<Badge, { label: string; bg: string; fg: string }> = {
   again: { label: "Try again", bg: "#FFF0DD", fg: "#A35A00" },
   nearly: { label: "Close", bg: "#FFF0DD", fg: "#A35A00" },
   incorrect: { label: "Incorrect", bg: "#FDE7E5", fg: "#B03426" },
+};
+
+/**
+ * The same words, ignoring case, accents, punctuation and quotes (7 Nov 2026).
+ * Jonathan: a right answer was marked "Understood" and then « Tu veux dire : … ? »
+ * repeated it word for word. When what was heard already is the right sentence,
+ * it is simply correct; « Tu veux dire » only follows a reply that differs.
+ */
+const sameWords = (a: string, b: string) => {
+  const n = (x: string) => foldAccents(normaliseFrench(x)).replace(/[^a-z0-9' ]/g, "").replace(/\s+/g, " ").trim();
+  return !!a.trim() && n(a) === n(b);
 };
 
 export default function ConversationScreen() {
@@ -541,9 +552,12 @@ export default function ConversationScreen() {
     if (best === rightIdx) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
       if (attempt === 0) setFirstTime((n) => n + 1);
-      const partly = tapped === null && bestSim < DEFAULT_THRESHOLDS.acceptAt;
+      // "Understood" shows what was heard, then the right sentence once. If what was
+      // heard is already the right sentence, it is plain correct (no echo).
+      const heardText = guesses.find((g) => g?.trim()) || "";
+      const partly = tapped === null && bestSim < DEFAULT_THRESHOLDS.acceptAt && !sameWords(heardText, t.fr);
       setLog((l) => [...l,
-        { kind: "you", text: t.fr, badge: partly ? "close" : "correct", key: k },
+        { kind: "you", text: partly && heardText ? heardText : t.fr, badge: partly ? "close" : "correct", key: k },
         ...(partly ? [{ kind: "app" as const, fr: `Tu veux dire : ${t.fr.replace(/[.!?]\s*$/, "")} ?`, en: `Did you mean: ${t.en}`, key: `${k}-tvd` }] : []),
       ]);
       setShowOptions(false);
@@ -584,7 +598,7 @@ export default function ConversationScreen() {
     const judged = judgeReply(guesses, t.accept, unitVerb);
     const said = webTap ? t.fr : (judged.best || heard);
     const k = `y${step}-${attempt}`;
-    if (judged.verdict === "good") {
+    if (judged.verdict === "good" || (judged.verdict === "close" && sameWords(said, t.fr))) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
       if (attempt === 0) setFirstTime((n) => n + 1);
       setLog((l) => [...l, { kind: "you", text: t.fr, badge: "correct", key: k }]);
