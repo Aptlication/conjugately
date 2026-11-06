@@ -1,0 +1,69 @@
+# Records the Advanced A clips (reading texts, word cards, quiz answers,
+# conversation lines) with ElevenLabs, regenerates the app's clip map
+# (apps/mobile/lib/advancedAudio.ts) and commits both to the branch it ran on.
+# Run it from the Actions tab ("Run workflow") on main. The clips are bundled in
+# the app, so they reach learners with the next build (no server deploy).
+#
+# Needs the repository secret ELEVENLABS_API_KEY. Existing clips are skipped,
+# so re-running only fills gaps. Added 7 Nov 2026 for the 162 Advanced clips
+# (quiz answers QZ, conversation lines C) that had never been recorded.
+name: Record Advanced audio
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (list the clips, record nothing)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-advanced-audio
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: List the clips
+        run: npx -y tsx@4.19.2 scripts/build-advanced-audio-lines.ts
+
+      - name: Record
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          ARGS="--lines=scripts/data/advanced-lines.json"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.dry_run }}" != "true" ] && [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::error::The repository secret ELEVENLABS_API_KEY is not set (Settings → Secrets and variables → Actions)."
+            exit 1
+          fi
+          node scripts/generate-conversation-audio.mjs $ARGS 2>&1 | tee record.log
+          if grep -q "^FAIL" record.log; then echo "::warning::Some clips failed — run it again to fill the gaps"; fi
+
+      - name: Update the app's clip map
+        if: ${{ !inputs.dry_run }}
+        run: npx -y tsx@4.19.2 scripts/build-advanced-audio-lines.ts --map
+
+      - name: Commit the clips
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add apps/mobile/assets/audio/conversations apps/mobile/lib/advancedAudio.ts scripts/data/advanced-lines.json
+          if git diff --cached --quiet; then echo "Nothing new to commit"; exit 0; fi
+          COUNT=$(git diff --cached --name-only -- 'apps/mobile/assets/audio/conversations/*.mp3' | wc -l)
+          git commit -m "Audio: $COUNT Advanced A clips recorded by ElevenLabs"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
