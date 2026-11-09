@@ -7074,6 +7074,12 @@
   "text": "vous visitez"
  },
  {
+  "file": "verbs/forms/tu-visites.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu visites"
+ },
+ {
   "file": "verbs/forms/j-ai-visite.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7102,6 +7108,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "je visiterai"
+ },
+ {
+  "file": "verbs/forms/ils-visiteront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils visiteront"
  },
  {
   "file": "verbs/forms/nous-visitions.mp3",
@@ -7134,6 +7146,12 @@
   "text": "ils demandent"
  },
  {
+  "file": "verbs/forms/tu-demandes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu demandes"
+ },
+ {
   "file": "verbs/forms/j-ai-demande.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7152,6 +7170,12 @@
   "text": "tu as demandé"
  },
  {
+  "file": "verbs/forms/elles-ont-demande.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles ont demandé"
+ },
+ {
   "file": "verbs/forms/il-demandera.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7164,6 +7188,18 @@
   "text": "nous demanderons"
  },
  {
+  "file": "verbs/forms/je-demanderai.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "je demanderai"
+ },
+ {
+  "file": "verbs/forms/vous-demanderez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous demanderez"
+ },
+ {
   "file": "verbs/forms/tu-demandais.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7174,6 +7210,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "nous demandions"
+ },
+ {
+  "file": "verbs/forms/il-demandait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il demandait"
  },
  {
   "file": "verbs/forms/je-recois.mp3",
@@ -7194,6 +7236,12 @@
   "text": "vous recevez"
  },
  {
+  "file": "verbs/forms/nous-recevons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous recevons"
+ },
+ {
   "file": "verbs/forms/nous-avons-recu.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7212,6 +7260,12 @@
   "text": "ils ont reçu"
  },
  {
+  "file": "verbs/forms/j-ai-recu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "j'ai reçu"
+ },
+ {
   "file": "verbs/forms/vous-recevrez.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7224,6 +7278,18 @@
   "text": "elle recevra"
  },
  {
+  "file": "verbs/forms/tu-recevras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu recevras"
+ },
+ {
+  "file": "verbs/forms/elles-recevront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles recevront"
+ },
+ {
   "file": "verbs/forms/je-recevais.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7234,6 +7300,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "ils recevaient"
+ },
+ {
+  "file": "verbs/forms/elle-recevait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle recevait"
  },
  {
   "file": "verbs/forms/il-donne.mp3",
@@ -7252,6 +7324,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "vous donnez"
+ },
+ {
+  "file": "verbs/forms/tu-donnes.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu donnes"
  },
  {
   "file": "verbs/forms/il-a-donne.mp3",
@@ -7284,6 +7362,18 @@
   "text": "ils donneront"
  },
  {
+  "file": "verbs/forms/vous-donnerez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous donnerez"
+ },
+ {
+  "file": "verbs/forms/nous-donnerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous donnerons"
+ },
+ {
   "file": "verbs/forms/il-donnait.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7294,6 +7384,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "tu donnais"
+ },
+ {
+  "file": "verbs/forms/elles-donnaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles donnaient"
  },
  {
   "file": "verbs/forms/nous-reservons.mp3",
@@ -7314,6 +7410,12 @@
   "text": "vous réservez"
  },
  {
+  "file": "verbs/forms/elle-reserve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle réserve"
+ },
+ {
   "file": "verbs/forms/j-ai-reserve.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7332,6 +7434,12 @@
   "text": "tu as réservé"
  },
  {
+  "file": "verbs/forms/vous-avez-reserve.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous avez réservé"
+ },
+ {
   "file": "verbs/forms/vous-reserverez.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7344,6 +7452,18 @@
   "text": "ils réserveront"
  },
  {
+  "file": "verbs/forms/tu-reserveras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu réserveras"
+ },
+ {
+  "file": "verbs/forms/nous-reserverons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous réserverons"
+ },
+ {
   "file": "verbs/forms/elle-reservait.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7354,6 +7474,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "tu réservais"
+ },
+ {
+  "file": "verbs/forms/ils-reservaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils réservaient"
  },
  {
   "file": "verbs/forms/j-aide.mp3",
@@ -7374,6 +7500,12 @@
   "text": "vous aidez"
  },
  {
+  "file": "verbs/forms/tu-aides.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu aides"
+ },
+ {
   "file": "verbs/forms/tu-as-aide.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7392,6 +7524,12 @@
   "text": "il a aidé"
  },
  {
+  "file": "verbs/forms/nous-avons-aide.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons aidé"
+ },
+ {
   "file": "verbs/forms/j-aiderai.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7404,6 +7542,18 @@
   "text": "ils aideront"
  },
  {
+  "file": "verbs/forms/tu-aideras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu aideras"
+ },
+ {
+  "file": "verbs/forms/elles-aideront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles aideront"
+ },
+ {
   "file": "verbs/forms/vous-aidiez.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7414,6 +7564,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "il aidait"
+ },
+ {
+  "file": "verbs/forms/nous-aidions.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous aidions"
  },
  {
   "file": "verbs/forms/il-sert.mp3",
@@ -7452,6 +7608,12 @@
   "text": "tu as servi"
  },
  {
+  "file": "verbs/forms/nous-avons-servi.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons servi"
+ },
+ {
   "file": "verbs/forms/je-servirai.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7464,6 +7626,18 @@
   "text": "ils serviront"
  },
  {
+  "file": "verbs/forms/vous-servirez.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "vous servirez"
+ },
+ {
+  "file": "verbs/forms/tu-serviras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu serviras"
+ },
+ {
   "file": "verbs/forms/vous-serviez.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7474,6 +7648,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "tu servais"
+ },
+ {
+  "file": "verbs/forms/elles-servaient.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles servaient"
  },
  {
   "file": "verbs/forms/j-apporte.mp3",
@@ -7494,6 +7674,12 @@
   "text": "vous apportez"
  },
  {
+  "file": "verbs/forms/elle-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle apporte"
+ },
+ {
   "file": "verbs/forms/j-ai-apporte.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7512,6 +7698,12 @@
   "text": "tu as apporté"
  },
  {
+  "file": "verbs/forms/nous-avons-apporte.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons apporté"
+ },
+ {
   "file": "verbs/forms/vous-apporterez.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7522,6 +7714,18 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "nous apporterons"
+ },
+ {
+  "file": "verbs/forms/tu-apporteras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu apporteras"
+ },
+ {
+  "file": "verbs/forms/elles-apporteront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles apporteront"
  },
  {
   "file": "verbs/forms/ils-apportaient.mp3",
@@ -7554,6 +7758,12 @@
   "text": "vous vivez"
  },
  {
+  "file": "verbs/forms/il-vit.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il vit"
+ },
+ {
   "file": "verbs/forms/j-ai-vecu.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7572,6 +7782,12 @@
   "text": "tu as vécu"
  },
  {
+  "file": "verbs/forms/nous-avons-vecu.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous avons vécu"
+ },
+ {
   "file": "verbs/forms/ils-vivront.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7582,6 +7798,18 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "vous vivrez"
+ },
+ {
+  "file": "verbs/forms/tu-vivras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu vivras"
+ },
+ {
+  "file": "verbs/forms/elles-vivront.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elles vivront"
  },
  {
   "file": "verbs/forms/je-vivais.mp3",
@@ -7614,6 +7842,12 @@
   "text": "vous commencez"
  },
  {
+  "file": "verbs/forms/elle-commence.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "elle commence"
+ },
+ {
   "file": "verbs/forms/j-ai-commence.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7632,6 +7866,12 @@
   "text": "tu as commencé"
  },
  {
+  "file": "verbs/forms/ils-ont-commence.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "ils ont commencé"
+ },
+ {
   "file": "verbs/forms/il-commencera.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7644,6 +7884,18 @@
   "text": "je commencerai"
  },
  {
+  "file": "verbs/forms/tu-commenceras.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "tu commenceras"
+ },
+ {
+  "file": "verbs/forms/nous-commencerons.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "nous commencerons"
+ },
+ {
   "file": "verbs/forms/je-commencais.mp3",
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
@@ -7654,6 +7906,12 @@
   "voiceId": "McVZB9hVxVSk3Equu8EH",
   "lang": "fr",
   "text": "nous commencions"
+ },
+ {
+  "file": "verbs/forms/il-commencait.mp3",
+  "voiceId": "McVZB9hVxVSk3Equu8EH",
+  "lang": "fr",
+  "text": "il commençait"
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q1.mp3",
@@ -7677,43 +7935,73 @@
   "file": "quizzes/advanced/1_1/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I viewed three flats this week."
+  "text": "Do you view flats on Saturdays? (informal)"
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "My sister viewed the flat yesterday."
+  "text": "I viewed three flats this week."
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you view the kitchen? (informal)"
+  "text": "My sister viewed the flat yesterday."
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "You will view the flat on Thursday. (formal)"
+  "text": "Did you view the kitchen? (informal)"
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I will view it with my guarantor."
+  "text": "The landlord viewed the flat with us."
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When we lived in Lyon, we used to view flats every Saturday."
+  "text": "You will view the flat on Thursday. (formal)"
  },
  {
   "file": "quizzes/advanced/1_1/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "I will view it with my guarantor."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will view the flat on Monday. (male)"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you view the kitchen? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When we lived in Lyon, we used to view flats every Saturday."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "I was viewing the flat when the agent called."
+ },
+ {
+  "file": "quizzes/advanced/1_1/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We used to view flats with my father."
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q1.mp3",
@@ -7737,43 +8025,73 @@
   "file": "quizzes/advanced/1_2/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "This morning I asked for a croissant with my coffee."
+  "text": "Do you ask for milk with your coffee? (informal)"
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The waitress asked us to wait."
+  "text": "This morning I asked for a croissant with my coffee."
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you ask for the bill? (informal)"
+  "text": "The waitress asked us to wait."
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Nobody will ask you to leave. (formal)"
+  "text": "Did you ask for the bill? (informal)"
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "We will ask for a table on the terrace."
+  "text": "They asked for two espressos at the counter. (female)"
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When you lived in Paris, you used to ask for a café crème at the counter. (informal)"
+  "text": "Nobody will ask you to leave. (formal)"
  },
  {
   "file": "quizzes/advanced/1_2/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "We will ask for a table on the terrace."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "I will ask for the bill at the end."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you ask for a croissant? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you lived in Paris, you used to ask for a café crème at the counter. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "We were asking for the bill when it started to rain."
+ },
+ {
+  "file": "quizzes/advanced/1_2/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My father used to ask for a coffee at the counter."
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q1.mp3",
@@ -7797,43 +8115,73 @@
   "file": "quizzes/advanced/1_3/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "We received our bank cards this morning."
+  "text": "We receive the bills by post."
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you receive the RIB? (informal)"
+  "text": "We received our bank cards this morning."
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "They received an electricity bill yesterday. (male)"
+  "text": "Did you receive the RIB? (informal)"
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "You will receive your card in a week's time. (formal)"
+  "text": "They received an electricity bill yesterday. (male)"
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "She will receive an answer from the bank on Monday."
+  "text": "I received my salary yesterday."
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When I was a student, I used to receive a grant every month."
+  "text": "You will receive your card in a week's time. (formal)"
  },
  {
   "file": "quizzes/advanced/1_3/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "She will receive an answer from the bank on Monday."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you receive your card on Monday? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will receive the RIB by email. (female)"
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I was a student, I used to receive a grant every month."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "My parents used to receive their bills by post."
+ },
+ {
+  "file": "quizzes/advanced/1_3/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When she was a student, she used to receive her salary on the first of the month."
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q1.mp3",
@@ -7857,43 +8205,73 @@
   "file": "quizzes/advanced/1_4/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The doctor gave me a prescription yesterday."
+  "text": "Do you give honey to your children? (informal)"
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you give your carte Vitale to the doctor? (informal)"
+  "text": "The doctor gave me a prescription yesterday."
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "This morning I gave my phone number to the surgery."
+  "text": "Did you give your carte Vitale to the doctor? (informal)"
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The doctor will give you a prescription. (formal)"
+  "text": "This morning I gave my phone number to the surgery."
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "They will give us the results on Friday. (male)"
+  "text": "The pharmacist gave me good advice."
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When we were children, our mother used to give us honey for a cold."
+  "text": "The doctor will give you a prescription. (formal)"
  },
  {
   "file": "quizzes/advanced/1_4/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "They will give us the results on Friday. (male)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you give me your carte Vitale? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We will give the prescription to the pharmacist."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When we were children, our mother used to give us honey for a cold."
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "You were giving your name when the doctor arrived. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_4/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They used to give their carte Vitale at the surgery. (female)"
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q1.mp3",
@@ -7917,43 +8295,73 @@
   "file": "quizzes/advanced/1_5/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I booked my ticket yesterday evening."
+  "text": "She books a seat on the TER."
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "My brother booked a seat on the TGV to Marseille."
+  "text": "I booked my ticket yesterday evening."
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you book your seat? (informal)"
+  "text": "My brother booked a seat on the TGV to Marseille."
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "You will book your return journey on the website. (formal)"
+  "text": "Did you book your seat? (informal)"
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "They will book their seats tomorrow. (male)"
+  "text": "Have you booked your tickets? (formal)"
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When she was a student, she used to book the cheapest seats."
+  "text": "You will book your return journey on the website. (formal)"
  },
  {
   "file": "quizzes/advanced/1_5/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "They will book their seats tomorrow. (male)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you book the train to Lyon? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We will book our tickets in advance."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When she was a student, she used to book the cheapest seats."
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "You were booking your ticket when the train filled up. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_5/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They always used to book their tickets at the station. (male)"
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q1.mp3",
@@ -7977,43 +8385,73 @@
   "file": "quizzes/advanced/1_6/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you help the old man in the lift? (informal)"
+  "text": "Do you help your grandmother on Saturdays? (informal)"
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The children helped their grandmother this morning."
+  "text": "Did you help the old man in the lift? (informal)"
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The baker helped my son yesterday."
+  "text": "The children helped their grandmother this morning."
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I will help you choose, madam."
+  "text": "The baker helped my son yesterday."
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Our neighbours will help us on Saturday."
+  "text": "We helped a stranger in the shop."
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When you worked in the shop, you used to help the older customers. (formal)"
+  "text": "I will help you choose, madam."
  },
  {
   "file": "quizzes/advanced/1_6/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "Our neighbours will help us on Saturday."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you help me choose a present? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will help the elderly lady in the lift. (female)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you worked in the shop, you used to help the older customers. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "He was helping a stranger when I came into the bakery."
+ },
+ {
+  "file": "quizzes/advanced/1_6/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We often used to help our elderly neighbours."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q1.mp3",
@@ -8037,43 +8475,73 @@
   "file": "quizzes/advanced/1_7/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I served thirty customers this morning."
+  "text": "The stallholder serves me first."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The cheese seller served my mother before me."
+  "text": "I served thirty customers this morning."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you serve the man with the basket? (informal)"
+  "text": "The cheese seller served my mother before me."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I'll serve you in five minutes, madam."
+  "text": "Did you serve the man with the basket? (informal)"
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The stallholders will serve soup at the end of the market."
+  "text": "We served the strawberries to our friends."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When you had a stall, you used to serve the best tomatoes in town. (formal)"
+  "text": "I'll serve you in five minutes, madam."
  },
  {
   "file": "quizzes/advanced/1_7/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "The stallholders will serve soup at the end of the market."
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you serve me after this lady? (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "You will serve the strawberries with cream. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When you had a stall, you used to serve the best tomatoes in town. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "You were serving a customer when I arrived. (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_7/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They used to serve the best fish at the market. (female)"
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q1.mp3",
@@ -8097,43 +8565,73 @@
   "file": "quizzes/advanced/1_8/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I brought my passport this morning."
+  "text": "She brings her passport to the counter."
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "My husband brought the form yesterday."
+  "text": "I brought my passport this morning."
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Did you bring the photocopies? (informal)"
+  "text": "My husband brought the form yesterday."
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "You will bring your son's birth certificate. (formal)"
+  "text": "Did you bring the photocopies? (informal)"
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "We will bring the file next Monday."
+  "text": "We brought the photocopies to the town hall."
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Before the internet, people used to bring every form to the town hall."
+  "text": "You will bring your son's birth certificate. (formal)"
  },
  {
   "file": "quizzes/advanced/1_8/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "We will bring the file next Monday."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you bring the form tomorrow? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will bring their passports to the counter. (female)"
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Before the internet, people used to bring every form to the town hall."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "I was bringing my file to the counter when the clerk called me."
+ },
+ {
+  "file": "quizzes/advanced/1_8/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My parents used to bring all their papers to the town hall."
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q1.mp3",
@@ -8157,43 +8655,73 @@
   "file": "quizzes/advanced/1_9/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I lived next to a very noisy neighbour for two years."
+  "text": "My neighbour lives alone on the third floor."
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "The caretaker lived in the building for thirty years."
+  "text": "I lived next to a very noisy neighbour for two years."
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Have you ever lived in a block of flats? (informal)"
+  "text": "The caretaker lived in the building for thirty years."
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Next year, they will live in a building with a caretaker. (male)"
+  "text": "Have you ever lived in a block of flats? (informal)"
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "You will live on the ground floor, next to the caretaker. (formal)"
+  "text": "We lived in that building for two years."
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When I was twenty, I used to live in a tiny flat in Paris."
+  "text": "Next year, they will live in a building with a caretaker. (male)"
  },
  {
   "file": "quizzes/advanced/1_9/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "You will live on the ground floor, next to the caretaker. (formal)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you live near your parents? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "They will live in a quiet building. (female)"
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I was twenty, I used to live in a tiny flat in Paris."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "In the past, a caretaker used to live in every building."
+ },
+ {
+  "file": "quizzes/advanced/1_9/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "The caretaker used to live on the ground floor."
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q1.mp3",
@@ -8217,42 +8745,72 @@
   "file": "quizzes/advanced/1_10/questions/Q4.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I started my new job on Monday."
+  "text": "Does the meeting start at ten?"
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q5.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "My manager started the meeting at ten o'clock."
+  "text": "I started my new job on Monday."
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q6.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Have you started the training? (informal)"
+  "text": "My manager started the meeting at ten o'clock."
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q7.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "Tomorrow, the new colleague will start in the open-plan office."
+  "text": "Have you started the training? (informal)"
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q8.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "I will start by introducing myself to the team."
+  "text": "The new employees started at reception. (male)"
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q9.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
-  "text": "When I worked in Lyon, I used to start at eight o'clock."
+  "text": "Tomorrow, the new colleague will start in the open-plan office."
  },
  {
   "file": "quizzes/advanced/1_10/questions/Q10.mp3",
   "voiceId": "t4fHUMAMZxaaV2inHOnb",
   "lang": "en",
+  "text": "I will start by introducing myself to the team."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q11.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "Will you start on Monday? (informal)"
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q12.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "We will start the meeting at nine."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q13.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "When I worked in Lyon, I used to start at eight o'clock."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q14.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
   "text": "We were starting the meeting when the new colleague arrived."
+ },
+ {
+  "file": "quizzes/advanced/1_10/questions/Q15.mp3",
+  "voiceId": "t4fHUMAMZxaaV2inHOnb",
+  "lang": "en",
+  "text": "My colleague used to start at seven."
  }
 ]

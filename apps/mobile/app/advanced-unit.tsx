@@ -133,7 +133,7 @@ export default function AdvancedUnit() {
           <View style={styles.stats}>
             <View style={styles.stat}><Text style={styles.statN}>{totalCoins} <CoinIcon size={18} /></Text><Text style={styles.statL}>coins earned</Text></View>
             <View style={styles.stat}><Text style={styles.statN}>{words?.learned.length ?? 0}</Text><Text style={styles.statL}>words learnt</Text></View>
-            <View style={styles.stat}><Text style={styles.statN}>{quiz?.score ?? 0}/{quiz?.total ?? 10}</Text><Text style={styles.statL}>verb quiz · {unit.verb}</Text></View>
+            <View style={styles.stat}><Text style={styles.statN}>{quiz?.score ?? 0}/{quiz?.total ?? unit.quiz.length}</Text><Text style={styles.statL}>verb quiz · {unit.verb}</Text></View>
             <View style={styles.stat}><Text style={styles.statN}>{talk?.firstTime ?? 0}/{talk?.replies ?? 5}</Text><Text style={styles.statL}>replies right first time</Text></View>
           </View>
           <Text style={styles.label}>LEARNT IN THIS LESSON</Text>

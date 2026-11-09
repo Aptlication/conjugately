@@ -4,7 +4,7 @@
  *
  * A unit is (revised 2 Nov 2026): Read (tap a word for English, double-tap to
  * save it) → Words (the unit's key words plus the learner's saved words, learnt
- * now or sent to My Words) → Verb quiz (ten questions on the unit verb) →
+ * now or sent to My Words) → Verb quiz (fifteen questions on the unit verb) →
  * Conversation (the old translate format: say the English cue in French, with
  * four options built around the verb) → Summary.
  */
