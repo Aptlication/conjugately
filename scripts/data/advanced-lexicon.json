@@ -3128,6 +3128,483 @@
    "fr": "demain",
    "en": "tomorrow",
    "pos": "adverb"
+  },
+  "dites": {
+   "fr": "dire",
+   "en": "to say, tell",
+   "pos": "verb",
+   "form": "dites · présent / impératif"
+  },
+  "avez": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "avez · présent"
+  },
+  "sera-t-il": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "sera-t-il · futur (inversion)"
+  },
+  "prêt": {
+   "fr": "prêt(e)",
+   "en": "ready",
+   "pos": "adjective"
+  },
+  "personnes": {
+   "fr": "la personne",
+   "en": "person",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "lisez": {
+   "fr": "lire",
+   "en": "to read",
+   "pos": "verb",
+   "form": "lisez · présent / impératif"
+  },
+  "lisent": {
+   "fr": "lire",
+   "en": "to read",
+   "pos": "verb",
+   "form": "lisent · présent"
+  },
+  "étais": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "étais · imparfait"
+  },
+  "était": {
+   "fr": "être",
+   "en": "to be",
+   "pos": "verb",
+   "form": "était · imparfait"
+  },
+  "étudiant": {
+   "fr": "l'étudiant / l'étudiante",
+   "en": "student",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "visité": {
+   "fr": "visiter",
+   "en": "to visit, to view (a flat)",
+   "pos": "verb",
+   "form": "visité · passé composé"
+  },
+  "appartements": {
+   "fr": "l'appartement",
+   "en": "flat, apartment",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🏢"
+  },
+  "elles": {
+   "fr": "elles",
+   "en": "they (feminine)",
+   "pos": "pronoun"
+  },
+  "peut": {
+   "fr": "pouvoir",
+   "en": "can, to be able to",
+   "pos": "verb",
+   "form": "peut · présent"
+  },
+  "peux": {
+   "fr": "pouvoir",
+   "en": "can, to be able to",
+   "pos": "verb",
+   "form": "peux · présent"
+  },
+  "demande": {
+   "fr": "demander",
+   "en": "to ask (for)",
+   "pos": "verb",
+   "form": "demande · présent"
+  },
+  "laisser": {
+   "fr": "laisser",
+   "en": "to leave (a tip)",
+   "pos": "verb",
+   "form": "laisser · infinitif"
+  },
+  "prenais": {
+   "fr": "prendre",
+   "en": "to take, to have (a drink)",
+   "pos": "verb",
+   "form": "prenais · imparfait"
+  },
+  "prenez": {
+   "fr": "prendre",
+   "en": "to take",
+   "pos": "verb",
+   "form": "prenez · présent / impératif"
+  },
+  "tous": {
+   "fr": "tout / tous",
+   "en": "all, every (tous les matins: every morning)",
+   "pos": "adjective"
+  },
+  "toute": {
+   "fr": "tout / toute",
+   "en": "all, the whole",
+   "pos": "adjective"
+  },
+  "matins": {
+   "fr": "le matin",
+   "en": "morning",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "bon": {
+   "fr": "bon / bonne",
+   "en": "good",
+   "pos": "adjective"
+  },
+  "recevais": {
+   "fr": "recevoir",
+   "en": "to receive, get",
+   "pos": "verb",
+   "form": "recevais · imparfait"
+  },
+  "mes": {
+   "fr": "mon / ma / mes",
+   "en": "my",
+   "pos": "determiner"
+  },
+  "ma": {
+   "fr": "mon / ma / mes",
+   "en": "my",
+   "pos": "determiner"
+  },
+  "son": {
+   "fr": "son / sa / ses",
+   "en": "his, her, one's",
+   "pos": "determiner"
+  },
+  "parents": {
+   "fr": "les parents",
+   "en": "parents",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "chez": {
+   "fr": "chez",
+   "en": "at / to (someone's place)",
+   "pos": "preposition"
+  },
+  "donnez": {
+   "fr": "donner",
+   "en": "to give",
+   "pos": "verb",
+   "form": "donnez · présent / impératif"
+  },
+  "rembourser": {
+   "fr": "rembourser",
+   "en": "to pay back, reimburse",
+   "pos": "verb",
+   "form": "rembourser · infinitif"
+  },
+  "allez": {
+   "fr": "aller",
+   "en": "to go",
+   "pos": "verb",
+   "form": "allez · présent / impératif"
+  },
+  "avais": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "avais · imparfait"
+  },
+  "avait": {
+   "fr": "avoir",
+   "en": "to have",
+   "pos": "verb",
+   "form": "avait · imparfait (il n'y avait plus: there were no more)"
+  },
+  "mère": {
+   "fr": "la mère",
+   "en": "mother",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "donnait": {
+   "fr": "donner",
+   "en": "to give",
+   "pos": "verb",
+   "form": "donnait · imparfait"
+  },
+  "soupe": {
+   "fr": "la soupe",
+   "en": "soup",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🍲"
+  },
+  "thé": {
+   "fr": "le thé",
+   "en": "tea",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🍵"
+  },
+  "longs": {
+   "fr": "long / longue",
+   "en": "long",
+   "pos": "adjective"
+  },
+  "long": {
+   "fr": "long / longue",
+   "en": "long",
+   "pos": "adjective"
+  },
+  "très": {
+   "fr": "très",
+   "en": "very",
+   "pos": "adverb"
+  },
+  "réservez": {
+   "fr": "réserver",
+   "en": "to book",
+   "pos": "verb",
+   "form": "réservez · présent / impératif"
+  },
+  "réservé": {
+   "fr": "réserver",
+   "en": "to book",
+   "pos": "verb",
+   "form": "réservé · passé composé"
+  },
+  "remplir": {
+   "fr": "se remplir",
+   "en": "to fill up",
+   "pos": "verb",
+   "form": "remplir · infinitif"
+  },
+  "dernière": {
+   "fr": "dernier / dernière",
+   "en": "last",
+   "pos": "adjective"
+  },
+  "tard": {
+   "fr": "tard",
+   "en": "late",
+   "pos": "adverb"
+  },
+  "places": {
+   "fr": "la place",
+   "en": "seat",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "important": {
+   "fr": "important(e)",
+   "en": "important",
+   "pos": "adjective"
+  },
+  "âgées": {
+   "fr": "âgé(e)",
+   "en": "old, elderly",
+   "pos": "adjective"
+  },
+  "dira": {
+   "fr": "dire",
+   "en": "to say, tell",
+   "pos": "verb",
+   "form": "dira · futur"
+  },
+  "joues": {
+   "fr": "la joue",
+   "en": "cheek",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "faisais": {
+   "fr": "faire",
+   "en": "to do, make",
+   "pos": "verb",
+   "form": "faisais · imparfait"
+  },
+  "dimanche": {
+   "fr": "le dimanche",
+   "en": "Sunday",
+   "pos": "noun",
+   "gender": "m"
+  },
+  "pain": {
+   "fr": "le pain",
+   "en": "bread",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🥖"
+  },
+  "fraise": {
+   "fr": "la fraise",
+   "en": "strawberry",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🍓"
+  },
+  "fraises": {
+   "fr": "la fraise",
+   "en": "strawberry",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🍓"
+  },
+  "pomme": {
+   "fr": "la pomme",
+   "en": "apple",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🍎"
+  },
+  "mûres": {
+   "fr": "mûr(e)",
+   "en": "ripe",
+   "pos": "adjective"
+  },
+  "belles": {
+   "fr": "beau / belle",
+   "en": "beautiful, fine",
+   "pos": "adjective"
+  },
+  "petite": {
+   "fr": "petit(e)",
+   "en": "small, little (quand j'étais petite: when I was little)",
+   "pos": "adjective"
+  },
+  "allais": {
+   "fr": "aller",
+   "en": "to go",
+   "pos": "verb",
+   "form": "allais · imparfait"
+  },
+  "grand-mère": {
+   "fr": "la grand-mère",
+   "en": "grandmother",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "marchande": {
+   "fr": "le marchand / la marchande",
+   "en": "stallholder, seller",
+   "pos": "noun",
+   "gender": "f"
+  },
+  "servait": {
+   "fr": "servir",
+   "en": "to serve",
+   "pos": "verb",
+   "form": "servait · imparfait"
+  },
+  "gentille": {
+   "fr": "gentil / gentille",
+   "en": "kind, nice",
+   "pos": "adjective"
+  },
+  "maison": {
+   "fr": "la maison",
+   "en": "house",
+   "pos": "noun",
+   "gender": "f",
+   "emoji": "🏠"
+  },
+  "quels": {
+   "fr": "quel / quelle / quels",
+   "en": "which, what",
+   "pos": "determiner"
+  },
+  "passeport": {
+   "fr": "le passeport",
+   "en": "passport",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🛂"
+  },
+  "apportaient": {
+   "fr": "apporter",
+   "en": "to bring",
+   "pos": "verb",
+   "form": "apportaient · imparfait"
+  },
+  "vivent": {
+   "fr": "vivre",
+   "en": "to live",
+   "pos": "verb",
+   "form": "vivent · présent"
+  },
+  "vivais": {
+   "fr": "vivre",
+   "en": "to live",
+   "pos": "verb",
+   "form": "vivais · imparfait"
+  },
+  "sait": {
+   "fr": "savoir",
+   "en": "to know",
+   "pos": "verb",
+   "form": "sait · présent"
+  },
+  "parlez": {
+   "fr": "parler",
+   "en": "to speak, talk",
+   "pos": "verb",
+   "form": "parlez · présent / impératif"
+  },
+  "préférée": {
+   "fr": "préféré(e)",
+   "en": "favourite",
+   "pos": "adjective"
+  },
+  "voir": {
+   "fr": "voir",
+   "en": "to see",
+   "pos": "verb",
+   "form": "voir · infinitif"
+  },
+  "commencez": {
+   "fr": "commencer",
+   "en": "to start, begin",
+   "pos": "verb",
+   "form": "commencez · présent"
+  },
+  "commencé": {
+   "fr": "commencer",
+   "en": "to start, begin",
+   "pos": "verb",
+   "form": "commencé · passé composé"
+  },
+  "tutoyer": {
+   "fr": "se tutoyer",
+   "en": "to call each other « tu »",
+   "pos": "verb",
+   "form": "tutoyer · infinitif"
+  },
+  "oui": {
+   "fr": "oui",
+   "en": "yes",
+   "pos": "adverb"
+  },
+  "titre-restaurant": {
+   "fr": "le titre-restaurant",
+   "en": "meal voucher",
+   "pos": "noun",
+   "gender": "m",
+   "emoji": "🎫"
+  },
+  "neuf": {
+   "fr": "neuf",
+   "en": "nine",
+   "pos": "number"
+  },
+  "fatigué": {
+   "fr": "fatigué(e)",
+   "en": "tired",
+   "pos": "adjective"
   }
  },
  "phrases": [

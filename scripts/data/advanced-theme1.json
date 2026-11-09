@@ -8,16 +8,20 @@
    "title": "Trouver un logement",
    "titleEn": "Finding somewhere to live",
    "strand": "Q",
-   "grammar": "conditionnel présent",
-   "text": "À Paris comme à Lyon, trouver un appartement n'est pas facile. Avant de visiter, il faut préparer un dossier : une pièce d'identité, vos trois dernières fiches de paie et souvent un garant, c'est-à-dire une personne qui paiera le loyer si vous ne pouvez pas le faire. Quand vous appelez l'agence, soyez poli : « Bonjour, je voudrais visiter l'appartement de la rue Victor-Hugo. Seriez-vous disponible jeudi ? » Pendant la visite, posez vos questions : « Les charges sont-elles comprises ? Pourriez-vous me dire quand l'appartement sera libre ? » Beaucoup de gens visitent le même logement, alors il vaudrait mieux apporter un dossier complet. Si vous étiez à la place du propriétaire, vous choisiriez aussi le dossier le plus sérieux ! Enfin, avant de signer le bail, lisez-le bien et faites un état des lieux le jour où vous recevez les clés. Ce document vous protégera quand vous partirez.",
-   "textEn": "In Paris as in Lyon, finding a flat isn't easy. Before viewing, you need to prepare an application file: ID, your last three payslips and often a guarantor, meaning someone who will pay the rent if you can't. When you call the agency, be polite: \"Hello, I'd like to view the flat on rue Victor-Hugo. Would you be available on Thursday?\" During the viewing, ask your questions: \"Are the service charges included? Could you tell me when the flat will be free?\" Lots of people view the same place, so it would be better to bring a complete file. If you were in the landlord's shoes, you'd choose the most serious file too! Finally, before signing the lease, read it carefully and do an inventory on the day you get the keys. This document will protect you when you leave.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "À Paris, trouver un appartement n'est pas facile. Avant de visiter, faites un dossier. Dans le dossier, il y a vos papiers et vos fiches de paie. Souvent, il faut aussi un garant. Le garant est là si vous ne pouvez pas payer le loyer. Au téléphone, dites : « Je voudrais visiter l'appartement. » Pendant la visite, vous avez des questions ? Les charges sont-elles dans le loyer ? Quand l'appartement sera-t-il prêt ? Beaucoup de personnes visitent le même appartement. Le propriétaire prend souvent le meilleur dossier. Lisez bien le bail avant de le signer. Quand vous avez les clés, faites l'état des lieux. Quand j'étais étudiant, j'ai visité beaucoup d'appartements en un mois !",
+   "textEn": "In Paris, finding a flat isn't easy. Before viewing, put together a file. In the file go your papers and your payslips. Often you also need a guarantor. The guarantor is there if you can't pay the rent. On the phone, say: “I'd like to view the flat.” Got questions during the viewing? Are the service charges included in the rent? When will the flat be ready? Lots of people view the same flat. The landlord often takes the best file. Read the lease carefully before you sign it. When you get the keys, do the inventory. When I was a student, I viewed lots of flats in one month!",
    "keyWords": [
     {
      "fr": "le dossier",
      "en": "application file"
     },
     {
-     "fr": "le garant",
+     "fr": "une fiche de paie",
+     "en": "payslip"
+    },
+    {
+     "fr": "le garant / la garante",
      "en": "guarantor"
     },
     {
@@ -25,24 +29,28 @@
      "en": "rent"
     },
     {
+     "fr": "payer",
+     "en": "to pay"
+    },
+    {
      "fr": "les charges",
      "en": "service charges"
     },
     {
-     "fr": "le propriétaire",
+     "fr": "le propriétaire / la propriétaire",
      "en": "landlord, owner"
+    },
+    {
+     "fr": "signer",
+     "en": "to sign"
     },
     {
      "fr": "le bail",
      "en": "lease"
     },
     {
-     "fr": "l'état des lieux",
-     "en": "inventory (move-in/move-out check)"
-    },
-    {
-     "fr": "il vaudrait mieux",
-     "en": "it would be better to"
+     "fr": "l'état des lieux (m)",
+     "en": "inventory (check-in report)"
     }
    ]
   },
@@ -51,9 +59,9 @@
    "title": "Au café",
    "titleEn": "At the café",
    "strand": "Q/C",
-   "grammar": "conditionnel présent",
-   "text": "En France, le café est bien plus qu'une boisson : c'est un lieu de vie. Le matin, beaucoup de gens prennent un petit café au comptoir, debout, en lisant le journal. Attention : si vous demandez « un café », on vous servira un expresso. Si vous préférez un grand café avec du lait, il faudrait commander un « café crème ». Pour être poli, on dit : « Je voudrais un café, s'il vous plaît » ou « Je prendrais bien un croissant ». Au comptoir, le café coûte souvent moins cher qu'en terrasse. En terrasse, vous pourriez rester une heure avec un seul café : personne ne vous demandera de partir. Pour payer, appelez le serveur : « L'addition, s'il vous plaît ! » Le service est compris dans le prix, mais on laisse parfois un petit pourboire quand on est content.",
-   "textEn": "In France, café means much more than a drink: it's also a place where life happens. In the morning, lots of people have a quick coffee at the counter, standing up, reading the paper. Careful: if you ask for \"un café\", you'll be served an espresso. If you'd rather have a big coffee with milk, you'd need to order a \"café crème\". To be polite, people say: \"I'd like a coffee, please\" or \"I'd happily have a croissant\". At the counter, coffee is often cheaper than on the terrace. On the terrace, you could stay an hour with a single coffee: nobody will ask you to leave. To pay, call the waiter: \"The bill, please!\" Service is included in the price, but people sometimes leave a small tip when they're happy.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, le café est un lieu de vie. Le matin, beaucoup de personnes prennent un café au comptoir. Elles sont debout et lisent le journal. Si vous demandez « un café », vous avez un expresso. Vous voulez un grand café avec du lait ? Demandez un café crème. Pour être poli, dites : « Je voudrais un café, s'il vous plaît. » Au comptoir, le café est moins cher qu'en terrasse. En terrasse, on peut rester une heure avec un café. Personne ne vous demande de partir ! À la fin, dites au serveur : « L'addition, s'il vous plaît ! » Le service est compris. Mais quand on est content, on peut laisser un petit pourboire. Quand j'étais étudiant, je prenais un café crème tous les matins.",
+   "textEn": "In France, the café is a place where life happens. In the morning, lots of people have a coffee at the counter. They stand and read the paper. If you ask for “un café”, you get an espresso. Want a big coffee with milk? Ask for a café crème. To be polite, say: “I'd like a coffee, please.” At the counter, coffee costs less than on the terrace. On the terrace, you can stay an hour with one coffee. Nobody asks you to leave! At the end, say to the waiter: “The bill, please!” Service is included. But when you're happy, you can leave a small tip. When I was a student, I had a café crème every morning.",
    "keyWords": [
     {
      "fr": "le comptoir",
@@ -65,27 +73,35 @@
     },
     {
      "fr": "un expresso",
-     "en": "an espresso"
+     "en": "espresso"
     },
     {
      "fr": "un café crème",
-     "en": "a large white coffee"
+     "en": "coffee with hot milk"
+    },
+    {
+     "fr": "cher / chère",
+     "en": "expensive"
     },
     {
      "fr": "la terrasse",
-     "en": "terrace (outdoor seating)"
+     "en": "terrace (outside tables)"
     },
     {
      "fr": "le serveur / la serveuse",
      "en": "waiter / waitress"
     },
     {
-     "fr": "le pourboire",
-     "en": "tip"
-    },
-    {
      "fr": "le service est compris",
      "en": "service is included"
+    },
+    {
+     "fr": "laisser",
+     "en": "to leave (something)"
+    },
+    {
+     "fr": "le pourboire",
+     "en": "tip"
     }
    ]
   },
@@ -94,21 +110,29 @@
    "title": "Ouvrir un compte en banque",
    "titleEn": "Opening a bank account",
    "strand": "Q/B",
-   "grammar": "conditionnel présent",
-   "text": "Si vous venez travailler ou étudier en France, vous aurez vite besoin d'un compte bancaire. Pour payer votre loyer ou recevoir votre salaire, on vous demandera un RIB, c'est-à-dire un document avec le numéro de votre compte. Pour ouvrir un compte, il faut généralement prendre rendez-vous avec un conseiller. Apportez une pièce d'identité et un justificatif de domicile, par exemple une facture d'électricité. Au rendez-vous, vous pourriez dire : « Je voudrais ouvrir un compte courant. Pourriez-vous m'expliquer les frais ? » Le conseiller vous proposera sûrement une carte bancaire et une application pour gérer votre argent sur votre téléphone. Aujourd'hui, beaucoup de Français choisissent aussi une banque en ligne, souvent moins chère. Un conseil : à votre place, je comparerais les frais avant de signer. Quelques euros par mois, cela fait beaucoup sur une année !",
-   "textEn": "If you come to France to work or study, you'll soon need a bank account. To pay your rent or receive your salary, you'll be asked for a RIB, meaning a document with your account number. To open an account, you generally need to make an appointment with an adviser. Bring ID and proof of address, for example an electricity bill. At the appointment, you could say: \"I'd like to open a current account. Could you explain the fees to me?\" The adviser will surely offer you a bank card and an app to manage your money on your phone. Today, many French people also choose an online bank, which is often cheaper. A tip: in your place, I'd compare the fees before signing. A few euros a month adds up to a lot over a year!",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "Vous venez travailler en France ? Vous avez vite besoin d'un compte bancaire. Pour recevoir votre salaire, il faut un compte. Pour le loyer, on vous demande aussi un RIB. Le RIB, c'est le numéro de votre compte. Pour ouvrir un compte, prenez rendez-vous avec un conseiller. Venez avec vos papiers et un justificatif de domicile. Une facture de téléphone, c'est un bon justificatif. Après, vous recevez une carte bancaire. Sur votre téléphone, vous pouvez gérer votre argent. Aujourd'hui, beaucoup de Français ont une banque en ligne. Elle a souvent moins de frais. Les frais de chaque mois, sur une année, c'est beaucoup d'argent ! Quand j'étais étudiant, je recevais de l'argent de mes parents chaque mois.",
+   "textEn": "Coming to work in France? You'll soon need a bank account. To receive your salary, you need an account. For the rent, you'll also be asked for a RIB. The RIB is your account number. To open an account, make an appointment with an adviser. Bring your papers and proof of address. A phone bill is good proof of address. Then you receive a bank card. On your phone, you can manage your money. These days, lots of French people have an online bank. It often has lower fees. Fees every month, over a year, add up to a lot of money! When I was a student, I received money from my parents every month.",
    "keyWords": [
     {
      "fr": "un compte (bancaire)",
      "en": "(bank) account"
     },
     {
+     "fr": "le salaire",
+     "en": "salary, pay"
+    },
+    {
      "fr": "le RIB",
-     "en": "bank details slip (account number)"
+     "en": "bank details slip"
+    },
+    {
+     "fr": "un rendez-vous",
+     "en": "appointment"
     },
     {
      "fr": "le conseiller / la conseillère",
-     "en": "(bank) adviser"
+     "en": "adviser"
     },
     {
      "fr": "un justificatif de domicile",
@@ -119,16 +143,16 @@
      "en": "bill, invoice"
     },
     {
-     "fr": "les frais",
-     "en": "fees, charges"
+     "fr": "gérer",
+     "en": "to manage"
     },
     {
      "fr": "une banque en ligne",
      "en": "online bank"
     },
     {
-     "fr": "gérer",
-     "en": "to manage"
+     "fr": "les frais",
+     "en": "fees, charges"
     }
    ]
   },
@@ -137,9 +161,9 @@
    "title": "Chez le médecin et à la pharmacie",
    "titleEn": "At the doctor's and the pharmacy",
    "strand": "Q",
-   "grammar": "conditionnel présent",
-   "text": "En France, on choisit en général un médecin traitant : c'est le médecin qu'on voit en premier quand on est malade. Pour prendre rendez-vous, on appelle le cabinet ou on réserve en ligne. Au téléphone, vous pourriez dire : « Bonjour, je voudrais un rendez-vous avec le docteur Martin. J'ai de la fièvre depuis deux jours. » N'oubliez pas votre carte Vitale, ou l'appli carte Vitale sur votre téléphone : c'est la carte de l'Assurance maladie. Grâce à elle, une partie de la consultation vous sera remboursée plus vite. La plupart des Français ont aussi une mutuelle, qui paie souvent le reste. Après la consultation, le médecin vous donnera peut-être une ordonnance. Avec cette ordonnance, vous irez à la pharmacie, qu'on reconnaît à sa croix verte. Le pharmacien donne aussi de bons conseils : si vous aviez juste un petit rhume, il pourrait vous recommander un médicament sans ordonnance.",
-   "textEn": "In France, people generally choose a regular doctor (médecin traitant): the doctor you see first when you're ill. To make an appointment, you call the surgery or book online. On the phone, you could say: \"Hello, I'd like an appointment with Dr Martin. I've had a fever for two days.\" Don't forget your carte Vitale, or the carte Vitale app on your phone: it's the national health insurance card. Thanks to it, part of the consultation will be reimbursed more quickly. Most French people also have a mutuelle (top-up insurance), which often pays the rest. After the consultation, the doctor may give you a prescription. With that prescription, you'll go to the pharmacy, which you recognise by its green cross. The pharmacist also gives good advice: if you just had a little cold, they could recommend a medicine without a prescription.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, on a un médecin traitant. Quand on est malade, on va chez lui en premier. On prend rendez-vous au cabinet, par téléphone ou en ligne. Au téléphone, dites : « Bonjour, je voudrais un rendez-vous. J'ai de la fièvre. » Au cabinet, donnez votre carte Vitale. Avec elle, l'Assurance maladie va vous rembourser une partie. La mutuelle peut aussi vous rembourser. Après, le médecin vous donne une ordonnance. Avec l'ordonnance, vous allez chez le pharmacien. Il donne aussi de bons conseils. Pour un petit rhume, il vous donnera un médicament sans ordonnance. Quand j'étais enfant, j'avais souvent un rhume. Ma mère me donnait de la soupe et du thé !",
+   "textEn": "In France, you have a regular doctor. When you're ill, you go to them first. You make an appointment at the surgery, by phone or online. On the phone, say: “Hello, I'd like an appointment. I have a fever.” At the surgery, give your carte Vitale. With it, the national health insurance will pay you back part of the cost. The top-up insurance can pay you back too. Afterwards, the doctor gives you a prescription. With the prescription, you go to the pharmacist. They also give good advice. For a little cold, they'll give you a medicine without a prescription. When I was a child, I often had a cold. My mother used to give me soup and tea!",
    "keyWords": [
     {
      "fr": "le médecin traitant",
@@ -147,7 +171,7 @@
     },
     {
      "fr": "le cabinet",
-     "en": "surgery, doctor's office"
+     "en": "doctor's surgery"
     },
     {
      "fr": "la fièvre",
@@ -155,11 +179,15 @@
     },
     {
      "fr": "la carte Vitale",
-     "en": "health insurance card"
+     "en": "French health insurance card"
+    },
+    {
+     "fr": "l'Assurance maladie",
+     "en": "national health insurance"
     },
     {
      "fr": "rembourser",
-     "en": "to reimburse"
+     "en": "to pay back, to refund"
     },
     {
      "fr": "la mutuelle",
@@ -170,8 +198,12 @@
      "en": "prescription"
     },
     {
+     "fr": "le pharmacien / la pharmacienne",
+     "en": "pharmacist"
+    },
+    {
      "fr": "le rhume",
-     "en": "cold"
+     "en": "cold (illness)"
     }
    ]
   },
@@ -180,33 +212,37 @@
    "title": "Prendre le train",
    "titleEn": "Taking the train",
    "strand": "Q",
-   "grammar": "conditionnel présent",
-   "text": "La France a un grand réseau de trains, et c'est souvent la façon la plus agréable de voyager. Pour les longues distances, il y a le TGV, le train à grande vitesse : Paris–Marseille prend un peu plus de trois heures. Pour les petits trajets entre les villes d'une région, on prend le TER. Il vaudrait mieux réserver votre billet de TGV à l'avance, parce que les prix montent quand le train se remplit. Aujourd'hui, la plupart des voyageurs ont leur billet sur leur téléphone. À la gare, regardez le grand tableau des départs : la voie de votre train est souvent affichée vingt minutes avant le départ. Si vous aviez une question, vous pourriez demander à un agent : « Excusez-moi, pourriez-vous me dire d'où part le train pour Lyon ? » Et si votre train a beaucoup de retard, gardez votre billet ou sa référence : vous pourriez être remboursé en partie.",
-   "textEn": "France has a large rail network, and it's often the most pleasant way to travel. For long distances there's the TGV, the high-speed train: Paris–Marseille takes just over three hours. For short journeys between towns in a region, you take the TER. It would be better to book your TGV ticket in advance, because prices go up as the train fills. Today, most travellers have their ticket on their phone. At the station, look at the big departures board: your train's platform is often shown twenty minutes before departure. If you had a question, you could ask a member of staff: \"Excuse me, could you tell me where the train for Lyon leaves from?\" And if your train is very late, keep your ticket or its booking reference: you could get part of the fare back.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, on prend souvent le train. Pour les longs trajets, il y a le TGV, le train à grande vitesse. Il va très vite ! Paris–Lyon, c'est deux heures. Pour les petits trajets, on prend le TER. Réservez votre billet de TGV à l'avance. Le train va vite se remplir ! Aujourd'hui, on a son billet sur son téléphone. À la gare, il y a le tableau des départs. Avant le départ, on voit la voie du train. Le train a du retard ? Gardez votre billet. On peut vous rembourser. L'année dernière, j'ai réservé trop tard. Il n'y avait plus de places !",
+   "textEn": "In France, people often take the train. For long journeys, there's the TGV, the high-speed train. It goes very fast! Paris–Lyon takes two hours. For short journeys, you take the TER. Book your TGV ticket in advance. The train will soon fill up! Today, people have their ticket on their phone. At the station, there's the departures board. Before departure, the train's platform is shown. Is the train late? Keep your ticket. You can get a refund. Last year, I booked too late. There were no seats left!",
    "keyWords": [
     {
-     "fr": "le réseau",
-     "en": "network"
+     "fr": "le trajet",
+     "en": "journey"
+    },
+    {
+     "fr": "le TGV",
+     "en": "high-speed train"
     },
     {
      "fr": "à grande vitesse",
      "en": "high-speed"
     },
     {
-     "fr": "le trajet",
-     "en": "journey, trip"
+     "fr": "le TER",
+     "en": "regional train"
     },
     {
-     "fr": "le billet",
-     "en": "ticket"
+     "fr": "à l'avance",
+     "en": "in advance"
     },
     {
      "fr": "se remplir",
      "en": "to fill up"
     },
     {
-     "fr": "la gare",
-     "en": "(train) station"
+     "fr": "le tableau des départs",
+     "en": "departures board"
     },
     {
      "fr": "la voie",
@@ -223,9 +259,9 @@
    "title": "Les codes de la politesse",
    "titleEn": "The rules of politeness",
    "strand": "C",
-   "grammar": "conditionnel présent",
-   "text": "En France, la politesse commence par un mot : « Bonjour ». Quand on entre dans une boutique, une boulangerie ou même un ascenseur, on dit bonjour. Si vous oubliiez de le dire, la personne pourrait vous trouver impoli, même si vous souriiez. Ensuite, il y a le choix entre « tu » et « vous ». Avec un inconnu, un client ou une personne plus âgée, on dit « vous ». Avec les amis, la famille et les enfants, on dit « tu ». En cas de doute, il vaudrait mieux dire « vous » : l'autre vous proposera peut-être de passer au « tu ». Le conditionnel aide aussi à être poli : « Je voudrais » est plus doux que « Je veux », et « Pourriez-vous m'aider ? » est plus aimable que « Aidez-moi ! ». Enfin, entre amis, on se fait souvent la bise, c'est-à-dire un petit baiser sur chaque joue. Le nombre de bises change selon les régions !",
-   "textEn": "In France, politeness starts with one word: \"Bonjour\". When you go into a shop, a bakery or even a lift, you say hello. If you forgot to say it, the person might think you're rude, even if you smiled. Then there's the choice between \"tu\" and \"vous\". With a stranger, a customer or an older person, you say \"vous\". With friends, family and children, you say \"tu\". When in doubt, it would be better to say \"vous\": the other person may suggest switching to \"tu\". The conditional also helps you be polite: \"Je voudrais\" (I'd like) is softer than \"Je veux\" (I want), and \"Could you help me?\" is friendlier than \"Help me!\". Finally, among friends, people often do la bise, a little kiss on each cheek. The number of kisses changes from region to region!",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, pour la politesse, il y a un mot très important : « Bonjour ». Dans une boutique, on dit bonjour. Dans un ascenseur aussi ! Sans bonjour, on est impoli. Après, il y a « tu » et « vous ». Avec un inconnu ou une personne âgée, on dit « vous ». On aide aussi les personnes âgées. Avec la famille et les amis, on dit « tu ». Vous ne savez pas ? Dites « vous ». Plus tard, l'autre personne vous dira : « Tu peux me dire tu ! » Pour demander quelque chose, dites « Je voudrais » : c'est plus aimable que « Je veux ». Avec les amis, on se fait la bise sur les deux joues. Quand j'étais enfant, je faisais la bise à toute la famille le dimanche !",
+   "textEn": "In France, for politeness, there is one very important word: “Bonjour”. In a shop, you say bonjour. In a lift too! Without bonjour, you're rude. Then there's “tu” and “vous”. With a stranger or an older person, you say “vous”. We also help elderly people. With family and friends, you say “tu”. Don't know? Say “vous”. Later, the other person will tell you: “You can call me tu!” To ask for something, say “Je voudrais”: it's kinder than “Je veux”. With friends, you kiss on both cheeks. When I was a child, I kissed the whole family on Sundays!",
    "keyWords": [
     {
      "fr": "la politesse",
@@ -252,12 +288,16 @@
      "en": "old, elderly"
     },
     {
-     "fr": "doux / douce",
-     "en": "soft, gentle"
+     "fr": "aimable",
+     "en": "kind, polite"
     },
     {
      "fr": "la bise",
      "en": "kiss on the cheek (greeting)"
+    },
+    {
+     "fr": "la joue",
+     "en": "cheek"
     }
    ]
   },
@@ -266,17 +306,29 @@
    "title": "Faire ses courses au marché",
    "titleEn": "Shopping at the market",
    "strand": "Q",
-   "grammar": "conditionnel présent",
-   "text": "Presque toutes les villes françaises ont leur marché, une ou plusieurs fois par semaine. On y trouve des fruits et des légumes de saison, du fromage, du poisson et souvent des fleurs. Les produits viennent en général de la région, et les marchands sont fiers de vous les faire goûter. Au marché, on ne prend pas toujours les fruits soi-même : c'est le marchand qui vous sert. Vous pourriez dire : « Bonjour ! Je voudrais un kilo de tomates et deux avocats bien mûrs, s'il vous plaît. » Si vous ne savez pas quoi cuisiner, demandez conseil : « Que me conseilleriez-vous pour ce soir ? » Le marchand vous répondra sûrement avec plaisir. Venez tôt le matin si vous voulez le meilleur choix, ou à la fin du marché si vous préférez les bonnes affaires : certains marchands baissent leurs prix avant de partir. Et n'oubliez pas votre panier !",
-   "textEn": "Almost every French town has a market, once or several times a week. You find seasonal fruit and vegetables there, cheese, fish and often flowers. The produce often comes from the region, and the stallholders are proud to let you taste it. At the market, you don't always pick the fruit yourself: the stallholder serves you. You could say: \"Hello! I'd like a kilo of tomatoes and two nice ripe avocados, please.\" If you don't know what to cook, ask for advice: \"What would you recommend for tonight?\" The stallholder will surely be happy to answer. Come early in the morning if you want the best choice, or at the end of the market if you prefer bargains: some stallholders lower their prices before leaving. And don't forget your basket!",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, presque toutes les villes ont un marché. On y trouve des fruits et des légumes de saison. Il y a aussi du poisson, du pain et des fleurs. Les marchands sont fiers de leurs fruits. Ils vous font goûter une fraise ou une pomme. Au marché, on ne prend pas les fruits. C'est le marchand qui vous sert. Dites : « Je voudrais des fraises bien mûres. » Venez tôt le matin pour trouver les plus belles. Venez tard pour les bonnes affaires ! Et prenez votre panier. Quand j'étais petite, j'allais au marché avec ma grand-mère. La marchande nous servait toujours en premier. Elle était très gentille !",
+   "textEn": "In France, almost every town has a market. You find fruit and vegetables in season there. There's also fish, bread and flowers. The stallholders are proud of their fruit. They let you taste a strawberry or an apple. At the market, you don't pick up the fruit. It's the stallholder who serves you. Say: “I'd like some nice ripe strawberries.” Come early in the morning to find the best ones. Come late for the bargains! And take your basket. When I was little, I went to the market with my grandmother. The stallholder always served us first. She was very kind!",
    "keyWords": [
     {
      "fr": "de saison",
-     "en": "seasonal, in season"
+     "en": "in season"
+    },
+    {
+     "fr": "un fruit",
+     "en": "fruit"
+    },
+    {
+     "fr": "un légume",
+     "en": "vegetable"
+    },
+    {
+     "fr": "une pomme",
+     "en": "apple"
     },
     {
      "fr": "le marchand / la marchande",
-     "en": "stallholder, trader"
+     "en": "stallholder"
     },
     {
      "fr": "fier / fière",
@@ -291,12 +343,8 @@
      "en": "ripe"
     },
     {
-     "fr": "conseiller",
-     "en": "to advise, recommend"
-    },
-    {
      "fr": "une bonne affaire",
-     "en": "a bargain"
+     "en": "bargain"
     },
     {
      "fr": "le panier",
@@ -309,41 +357,45 @@
    "title": "La mairie et les papiers",
    "titleEn": "The town hall and paperwork",
    "strand": "Q",
-   "grammar": "conditionnel présent",
-   "text": "Les Français aiment plaisanter sur leur administration, et ils ont parfois raison : en France, on a souvent besoin de papiers ! Pour beaucoup de démarches, on va à la mairie, le bâtiment où travaillent le maire et les services de la ville. C'est là qu'on se marie, qu'on déclare la naissance d'un enfant ou qu'on s'inscrit sur les listes électorales. Aujourd'hui, beaucoup de démarches se font aussi en ligne. Un conseil : avant d'y aller, vérifiez sur le site de la mairie les documents à apporter. Il vaudrait mieux en apporter trop que pas assez ! Au guichet, restez patient et poli : « Bonjour madame, je voudrais inscrire mon fils à l'école. Auriez-vous un formulaire ? » Si un document manque, on vous demandera de revenir. Alors, faites des photocopies de tout et gardez-les dans un dossier bien rangé. Vous verrez : avec un peu d'organisation, tout ira bien.",
-   "textEn": "The French like joking about their bureaucracy, and they're sometimes right: in France you often need paperwork! For many formalities you go to the mairie, the town hall, where the mayor and the council's departments work. That's where people get married, register a child's birth or register to vote. Today, many formalities can also be done online. A tip: before going, check on the town hall's website which documents to bring. It would be better to bring too many than not enough! At the counter, stay patient and polite: \"Hello, I'd like to enrol my son at school. Would you have a form?\" If a document is missing, you'll be asked to come back. So photocopy everything and keep it in a tidy folder. You'll see: with a little organisation, everything will be fine.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, on a souvent besoin de papiers. Pour beaucoup de démarches, on va à la mairie. C'est la maison du maire et des services de la ville. À la mairie, on se marie. On peut aussi inscrire les enfants à l'école. Avant d'y aller, lisez le site de la mairie. Il dit quels documents apporter. Apportez toujours votre passeport ! Au guichet, il faut être patient et poli. Dites : « Bonjour madame, je voudrais un formulaire. » Il faut tous les documents, ou vous allez revenir un autre jour. Alors, faites des photocopies de tout. Aujourd'hui, on fait aussi beaucoup de démarches en ligne. Quand j'étais petit, mes parents apportaient tous leurs papiers au guichet. C'était plus long !",
+   "textEn": "In France, you often need paperwork. For lots of formalities, you go to the town hall. It's the home of the mayor and the town's services. At the town hall, people get married. You can also enrol children at school there. Before you go, read the town hall's website. It says which documents to bring. Always bring your passport! At the counter, you need to be patient and polite. Say: “Hello, I'd like a form.” You need all the documents, or you'll have to come back another day. So make photocopies of everything. Today, you also do lots of formalities online. When I was little, my parents used to bring all their papers to the counter. It took longer!",
    "keyWords": [
     {
-     "fr": "plaisanter",
-     "en": "to joke"
-    },
-    {
      "fr": "une démarche",
-     "en": "formality, procedure"
+     "en": "a formality, a procedure"
     },
     {
      "fr": "la mairie",
-     "en": "town hall"
+     "en": "the town hall"
     },
     {
      "fr": "le maire",
-     "en": "mayor"
+     "en": "the mayor"
     },
     {
      "fr": "se marier",
      "en": "to get married"
     },
     {
-     "fr": "s'inscrire",
-     "en": "to register, sign up"
+     "fr": "inscrire",
+     "en": "to enrol, to register"
     },
     {
      "fr": "le guichet",
-     "en": "counter, service desk"
+     "en": "the counter"
     },
     {
      "fr": "un formulaire",
-     "en": "form"
+     "en": "a form"
+    },
+    {
+     "fr": "une photocopie",
+     "en": "a photocopy"
+    },
+    {
+     "fr": "patient(e)",
+     "en": "patient"
     }
    ]
   },
@@ -352,21 +404,25 @@
    "title": "Les voisins",
    "titleEn": "The neighbours",
    "strand": "Q/C",
-   "grammar": "conditionnel présent",
-   "text": "Dans les villes françaises, beaucoup de gens habitent en appartement, alors les voisins font partie de la vie quotidienne. Dans certains immeubles, il y a encore un gardien ou une gardienne : cette personne s'occupe du bâtiment, reçoit parfois les colis et connaît tout le monde. Pour bien vivre ensemble, il y a quelques règles simples. Le soir, après vingt-deux heures, on évite de faire trop de bruit. Si vous organisez une fête, ce serait gentil de prévenir vos voisins avec un petit mot dans le hall de l'immeuble : « Samedi soir, nous fêterons un anniversaire. Excusez-nous d'avance pour le bruit ! » Et si un voisin faisait trop de bruit, il vaudrait mieux lui parler gentiment avant de vous fâcher. Chaque année, au printemps, beaucoup d'immeubles participent à la Fête des voisins : chacun apporte quelque chose à manger, et on fait connaissance autour d'un verre.",
-   "textEn": "In French cities, lots of people live in flats, so neighbours are part of everyday life. In some buildings there's still a caretaker (gardien or gardienne): this person looks after the building, sometimes takes in parcels and knows everyone. To live well together, there are a few simple rules. In the evening, after 10 pm, people avoid making too much noise. If you're having a party, it would be kind to warn your neighbours with a little note in the building's entrance hall: \"On Saturday evening we'll be celebrating a birthday. Sorry in advance for the noise!\" And if a neighbour made too much noise, it would be better to talk to them kindly before getting angry. Every year, in spring, many buildings take part in the Fête des voisins (Neighbours' Day): everyone brings something to eat, and people get to know each other over a drink.",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "En France, beaucoup de gens vivent en appartement. Les voisins font partie de la vie. Dans quelques immeubles, il y a un gardien ou une gardienne. Cette personne reçoit les colis. Elle sait tout sur tout le monde ! Pour bien vivre ensemble, il y a des règles. Le soir, on ne fait pas trop de bruit. Vous faites une fête ? Il faut prévenir vos voisins avec un petit mot. Un voisin fait trop de bruit ? Parlez avec lui. C'est mieux que de se fâcher ! Chaque année, il y a la Fête des voisins. Chacun apporte quelque chose à manger. On fait connaissance. Quand je vivais à Paris, c'était ma fête préférée !",
+   "textEn": "In France, lots of people live in flats. Neighbours are part of life. In some buildings, there's a caretaker. This person takes in the parcels. She knows everything about everyone! To live well together, there are rules. In the evening, you don't make too much noise. Having a party? You should let your neighbours know with a little note. A neighbour is making too much noise? Talk to him. It's better than getting angry! Every year, there's the Neighbours' Day party. Everyone brings something to eat. You get to know each other. When I lived in Paris, it was my favourite party!",
    "keyWords": [
     {
      "fr": "un immeuble",
-     "en": "block of flats, building"
+     "en": "a block of flats, a building"
     },
     {
      "fr": "le gardien / la gardienne",
-     "en": "caretaker"
+     "en": "the caretaker"
     },
     {
      "fr": "un colis",
-     "en": "parcel"
+     "en": "a parcel"
+    },
+    {
+     "fr": "une règle",
+     "en": "a rule"
     },
     {
      "fr": "le bruit",
@@ -374,11 +430,11 @@
     },
     {
      "fr": "prévenir",
-     "en": "to warn, let know"
+     "en": "to warn, to let know"
     },
     {
      "fr": "un petit mot",
-     "en": "a short note"
+     "en": "a little note"
     },
     {
      "fr": "se fâcher",
@@ -395,41 +451,49 @@
    "title": "Le premier jour dans une entreprise",
    "titleEn": "Your first day at a company",
    "strand": "B",
-   "grammar": "conditionnel présent",
-   "text": "Votre premier jour dans une entreprise française commence souvent à l'accueil. On vous donnera un badge pour entrer dans les bureaux, puis votre responsable vous présentera à l'équipe. Dans beaucoup d'entreprises, on travaille en open space, un grand bureau partagé. Le premier jour, c'est normal de poser beaucoup de questions, à condition d'être poli : « Excusez-moi, pourriez-vous m'indiquer la salle de réunion ? » ou « Pourrais-je avoir accès au dossier partagé ? ». Avec vos nouveaux collègues, il vaudrait mieux commencer par « vous », sauf si tout le monde se tutoie. Le midi, on vous proposera peut-être de déjeuner ensemble : acceptez, c'est le meilleur moyen de connaître l'équipe ! Beaucoup de salariés reçoivent des titres-restaurant pour payer une partie du déjeuner. Et le soir, avant de partir, n'oubliez pas de dire au revoir : « Bonne soirée, à demain ! »",
-   "textEn": "Your first day at a French company often starts at reception. You'll be given a badge to get into the offices, then your manager will introduce you to the team. In many companies people work in an open-plan office, a big shared office. On the first day it's normal to ask lots of questions, as long as you're polite: \"Excuse me, could you show me the way to the meeting room?\" or \"Could I have access to the shared folder?\". With your new colleagues it would be better to start with \"vous\", unless everyone uses \"tu\". At lunchtime you may be invited to eat together: accept, it's the best way to get to know the team! Many employees get meal vouchers (titres-restaurant) to pay for part of their lunch. And in the evening, before leaving, don't forget to say goodbye: \"Have a good evening, see you tomorrow!\"",
+   "grammar": "présent · passé composé · futur · imparfait",
+   "text": "Votre premier jour dans une entreprise commence souvent à l'accueil. On vous donne un badge. Puis vous allez voir votre responsable et l'équipe. Le premier jour, vous avez beaucoup de questions. Demandez : « Où est la salle de réunion, s'il vous plaît ? » Avec vos collègues, commencez par « vous ». Souvent, on peut se tutoyer après quelques jours. À midi, on va déjeuner ensemble. Dites oui ! C'est le meilleur moyen de parler avec l'équipe. Beaucoup de salariés ont un titre-restaurant pour le déjeuner. Le soir, dites au revoir : « Bonne soirée, à demain ! » Pour mon premier jour, j'ai commencé à neuf heures. J'étais un peu fatigué le soir, mais très content !",
+   "textEn": "Your first day at a company often starts at reception. You're given a badge. Then you go and see your manager and the team. On the first day, you have lots of questions. Ask: “Where is the meeting room, please?” With your colleagues, start with “vous”. Often, you can say “tu” to each other after a few days. At lunchtime, people go and have lunch together. Say yes! It's the best way to talk with the team. Lots of employees have a meal voucher for lunch. In the evening, say goodbye: “Have a good evening, see you tomorrow!” On my first day, I started at nine o'clock. I was a bit tired in the evening, but very happy!",
    "keyWords": [
+    {
+     "fr": "une entreprise",
+     "en": "a company"
+    },
     {
      "fr": "l'accueil (m)",
      "en": "reception"
     },
     {
+     "fr": "un badge",
+     "en": "a pass, a badge"
+    },
+    {
      "fr": "le / la responsable",
-     "en": "manager"
+     "en": "the manager"
     },
     {
      "fr": "l'équipe (f)",
-     "en": "team"
+     "en": "the team"
     },
     {
      "fr": "la salle de réunion",
-     "en": "meeting room"
+     "en": "the meeting room"
     },
     {
      "fr": "un / une collègue",
-     "en": "colleague"
+     "en": "a colleague"
     },
     {
      "fr": "se tutoyer",
-     "en": "to call each other \"tu\""
+     "en": "to say “tu” to each other"
     },
     {
      "fr": "un salarié / une salariée",
-     "en": "employee"
+     "en": "an employee"
     },
     {
      "fr": "un titre-restaurant",
-     "en": "meal voucher"
+     "en": "a meal voucher"
     }
    ]
   }

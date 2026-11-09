@@ -5,6 +5,7 @@ import { soundAlikeKey } from "./soundAlike";
 import { LEVEL_VERBS } from "./levels";
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 /**
  * Advanced A rules (Jonathan, 31 Oct – 9 Nov 2026). Run: npx tsx shared/advanced.test.ts
@@ -39,7 +40,7 @@ const stem = (verb: string) => {
 const hasVerb = (s: string, verb: string) => stem(verb).some((st) => s.toLowerCase().includes(st));
 
 // ---- Words already met (Theme 1 practice check) ----
-const ROOT = path.resolve(__dirname, "..");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const words = (t: string) => t.toLowerCase().replace(/[’']/g, " ").match(/[a-zàâäçéèêëîïôöùûüÿœæ]+(?:-[a-zàâäçéèêëîïôöùûüÿœæ]+)*/g) ?? [];
 const met = new Set<string>();
 const meet = (texts: string[]) => texts.forEach((t) => words(t).forEach((w) => met.add(w)));
