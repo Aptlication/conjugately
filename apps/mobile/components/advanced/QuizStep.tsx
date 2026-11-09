@@ -20,7 +20,7 @@ import { AiWhyButton, AiWhyPanel } from "../AiWhy";
 import type { MicOutcome } from "../../lib/mastersMic";
 
 /**
- * Verb quiz (Advanced units): ten questions on the unit verb, an English
+ * Verb quiz (Advanced units): fifteen questions on the unit verb, an English
  * sentence and four French sentences, one right.
  *
  * Update 1.4.1 (Jonathan, 3 Nov 2026): "the same as the levels Intermediate and
@@ -275,7 +275,7 @@ export default function QuizStep({ unit, play, onDone }: {
     if (never) { setMicIntroSeen(true); AsyncStorage.setItem("mastersMicIntroShown", "true").catch(() => {}); }
   };
 
-  /** Start Over and Try Again: the same ten questions, freshly shuffled, from the first. */
+  /** Start Over and Try Again: the same fifteen questions, freshly shuffled, from the first. */
   const restart = () => {
     cancelAutoAdvance();
     answersRef.current = {};
