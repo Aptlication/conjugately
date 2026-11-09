@@ -3404,31 +3404,31 @@
  },
  "ADV_1_1_TEXT": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "À Paris comme à Lyon, trouver un appartement n'est pas facile. Avant de visiter, il faut préparer un dossier : une pièce d'identité, vos trois dernières fiches de paie et souvent un garant, c'est-à-dire une personne qui paiera le loyer si vous ne pouvez pas le faire. Quand vous appelez l'agence, soyez poli : « Bonjour, je voudrais visiter l'appartement de la rue Victor-Hugo. Seriez-vous disponible jeudi ? » Pendant la visite, posez vos questions : « Les charges sont-elles comprises ? Pourriez-vous me dire quand l'appartement sera libre ? » Beaucoup de gens visitent le même logement, alors il vaudrait mieux apporter un dossier complet. Si vous étiez à la place du propriétaire, vous choisiriez aussi le dossier le plus sérieux ! Enfin, avant de signer le bail, lisez-le bien et faites un état des lieux le jour où vous recevez les clés. Ce document vous protégera quand vous partirez."
+  "french": "À Paris, trouver un appartement n'est pas facile. Avant de visiter, faites un dossier. Dans le dossier, il y a vos papiers et vos fiches de paie. Souvent, il faut aussi un garant. Le garant est là si vous ne pouvez pas payer le loyer. Au téléphone, dites : « Je voudrais visiter l'appartement. » Pendant la visite, vous avez des questions ? Les charges sont-elles dans le loyer ? Quand l'appartement sera-t-il prêt ? Beaucoup de personnes visitent le même appartement. Le propriétaire prend souvent le meilleur dossier. Lisez bien le bail avant de le signer. Quand vous avez les clés, faites l'état des lieux. Quand j'étais étudiant, j'ai visité beaucoup d'appartements en un mois !"
  },
  "ADV_1_1_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Agence Dupont, bonjour ! Puis-je vous aider ?"
+  "french": "Bonjour ! Venez-vous visiter l'appartement ?"
  },
  "ADV_1_1_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Avec plaisir. Avez-vous déjà visité d'autres appartements ?"
+  "french": "Avez-vous déjà visité d'autres appartements ?"
  },
  "ADV_1_1_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quelqu'un visitera-t-il l'appartement avec vous ?"
+  "french": "Votre garant visitera-t-il l'appartement aussi ?"
  },
  "ADV_1_1_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Avant, quand vous cherchiez un logement, visitiez-vous beaucoup d'appartements ?"
+  "french": "Quand vous étiez étudiant, visitiez-vous beaucoup de logements ?"
  },
  "ADV_1_1_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Cet appartement plaît beaucoup. Savez-vous combien de personnes le visitent aujourd'hui ?"
+  "french": "Beaucoup de gens visitent-ils cet appartement ?"
  },
  "ADV_1_1_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Alors ne tardez pas ! À jeudi, dix heures."
+  "french": "Alors, faites bien votre dossier ! À bientôt !"
  },
  "ADV_1_1_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3444,59 +3444,59 @@
  },
  "ADV_1_1_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai visité trois appartements cette semaine."
+  "french": "Visites-tu des appartements le samedi ?"
  },
  "ADV_1_1_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ma sœur a visité l'appartement hier."
+  "french": "J'ai visité trois appartements cette semaine."
  },
  "ADV_1_1_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu visité la cuisine ?"
+  "french": "Ma sœur a visité l'appartement hier."
  },
  "ADV_1_1_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vous visiterez l'appartement jeudi."
+  "french": "As-tu visité la cuisine ?"
  },
  "ADV_1_1_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je le visiterai avec mon garant."
+  "french": "Le propriétaire a visité l'appartement avec nous."
  },
  "ADV_1_1_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand nous habitions à Lyon, nous visitions des appartements chaque samedi."
+  "french": "Vous visiterez l'appartement jeudi."
  },
  "ADV_1_1_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je visitais l'appartement quand l'agent a appelé."
+  "french": "Je le visiterai avec mon garant."
  },
  "ADV_1_2_TEXT": {
   "voice": "Maxime - Dynamic and Natural",
-  "french": "En France, le café est bien plus qu'une boisson : c'est un lieu de vie. Le matin, beaucoup de gens prennent un petit café au comptoir, debout, en lisant le journal. Attention : si vous demandez « un café », on vous servira un expresso. Si vous préférez un grand café avec du lait, il faudrait commander un « café crème ». Pour être poli, on dit : « Je voudrais un café, s'il vous plaît » ou « Je prendrais bien un croissant ». Au comptoir, le café coûte souvent moins cher qu'en terrasse. En terrasse, vous pourriez rester une heure avec un seul café : personne ne vous demandera de partir. Pour payer, appelez le serveur : « L'addition, s'il vous plaît ! » Le service est compris dans le prix, mais on laisse parfois un petit pourboire quand on est content."
+  "french": "En France, le café est un lieu de vie. Le matin, beaucoup de personnes prennent un café au comptoir. Elles sont debout et lisent le journal. Si vous demandez « un café », vous avez un expresso. Vous voulez un grand café avec du lait ? Demandez un café crème. Pour être poli, dites : « Je voudrais un café, s'il vous plaît. » Au comptoir, le café est moins cher qu'en terrasse. En terrasse, on peut rester une heure avec un café. Personne ne vous demande de partir ! À la fin, dites au serveur : « L'addition, s'il vous plaît ! » Le service est compris. Mais quand on est content, on peut laisser un petit pourboire. Quand j'étais étudiant, je prenais un café crème tous les matins."
  },
  "ADV_1_2_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour et bienvenue ! Est-ce votre première visite ? Que désirez-vous ?"
+  "french": "Bonjour ! Que voulez-vous ?"
  },
  "ADV_1_2_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Moi, je prendrais un café crème. Avez-vous déjà demandé « un café » en France ?"
+  "french": "Et votre amie, a-t-elle demandé quelque chose ?"
  },
  "ADV_1_2_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "C'est normal ! Quand vous habitiez à Londres, que demandiez-vous au café ?"
+  "french": "Demanderez-vous l'addition tout de suite ?"
  },
  "ADV_1_2_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Alors ici, il faut dire « un café crème ». Et vos amis, que demanderont-ils en arrivant ?"
+  "french": "Quand vous étiez étudiant, que demandiez-vous au café ?"
  },
  "ADV_1_2_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et en Angleterre, demande-t-on l'addition au serveur ?"
+  "french": "Aujourd'hui, les étudiants demandent-ils un café crème ?"
  },
  "ADV_1_2_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ici, appelez simplement le serveur ! Je vous apporte un café crème, alors."
+  "french": "Très bien ! Merci, à tout de suite !"
  },
  "ADV_1_2_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3512,59 +3512,59 @@
  },
  "ADV_1_2_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ce matin, j'ai demandé un croissant avec mon café."
+  "french": "Demandes-tu du lait avec ton café ?"
  },
  "ADV_1_2_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "La serveuse nous a demandé d'attendre."
+  "french": "Ce matin, j'ai demandé un croissant avec mon café."
  },
  "ADV_1_2_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu demandé l'addition ?"
+  "french": "La serveuse nous a demandé d'attendre."
  },
  "ADV_1_2_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Personne ne vous demandera de partir."
+  "french": "As-tu demandé l'addition ?"
  },
  "ADV_1_2_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nous demanderons une table en terrasse."
+  "french": "Elles ont demandé deux expressos au comptoir."
  },
  "ADV_1_2_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand tu habitais à Paris, tu demandais un café crème au comptoir."
+  "french": "Personne ne vous demandera de partir."
  },
  "ADV_1_2_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nous demandions l'addition quand il a commencé à pleuvoir."
+  "french": "Nous demanderons une table en terrasse."
  },
  "ADV_1_3_TEXT": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Si vous venez travailler ou étudier en France, vous aurez vite besoin d'un compte bancaire. Pour payer votre loyer ou recevoir votre salaire, on vous demandera un RIB, c'est-à-dire un document avec le numéro de votre compte. Pour ouvrir un compte, il faut généralement prendre rendez-vous avec un conseiller. Apportez une pièce d'identité et un justificatif de domicile, par exemple une facture d'électricité. Au rendez-vous, vous pourriez dire : « Je voudrais ouvrir un compte courant. Pourriez-vous m'expliquer les frais ? » Le conseiller vous proposera sûrement une carte bancaire et une application pour gérer votre argent sur votre téléphone. Aujourd'hui, beaucoup de Français choisissent aussi une banque en ligne, souvent moins chère. Un conseil : à votre place, je comparerais les frais avant de signer. Quelques euros par mois, cela fait beaucoup sur une année !"
+  "french": "Vous venez travailler en France ? Vous avez vite besoin d'un compte bancaire. Pour recevoir votre salaire, il faut un compte. Pour le loyer, on vous demande aussi un RIB. Le RIB, c'est le numéro de votre compte. Pour ouvrir un compte, prenez rendez-vous avec un conseiller. Venez avec vos papiers et un justificatif de domicile. Une facture de téléphone, c'est un bon justificatif. Après, vous recevez une carte bancaire. Sur votre téléphone, vous pouvez gérer votre argent. Aujourd'hui, beaucoup de Français ont une banque en ligne. Elle a souvent moins de frais. Les frais de chaque mois, sur une année, c'est beaucoup d'argent ! Quand j'étais étudiant, je recevais de l'argent de mes parents chaque mois."
  },
  "ADV_1_3_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour, asseyez-vous ! Recevrez-vous bientôt un salaire en France ?"
+  "french": "Bonjour ! Avez-vous vos papiers et un justificatif ?"
  },
  "ADV_1_3_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien. Avez-vous reçu un justificatif de domicile ?"
+  "french": "Très bien. Votre patron a-t-il déjà demandé votre RIB ?"
  },
  "ADV_1_3_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait. Et dans votre pays, receviez-vous vos factures par la poste ?"
+  "french": "Parfait. Votre femme et vous, recevrez-vous les cartes à la maison ?"
  },
  "ADV_1_3_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Aujourd'hui, tout se fait sur l'application. Et vos colocataires, reçoivent-ils aussi leur salaire en France ?"
+  "french": "D'accord, dans une semaine. Aviez-vous une banque en ligne avant ?"
  },
  "ADV_1_3_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien. Si vous signiez aujourd'hui, quand votre employeur recevrait-il votre RIB ?"
+  "french": "Et vos parents, comment reçoivent-ils leurs factures ?"
  },
  "ADV_1_3_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait ! Alors signons tout de suite."
+  "french": "Voilà, votre compte est ouvert ! Bonne journée !"
  },
  "ADV_1_3_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3580,39 +3580,39 @@
  },
  "ADV_1_3_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nous avons reçu nos cartes bancaires ce matin."
+  "french": "Nous recevons les factures par la poste."
  },
  "ADV_1_3_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu reçu le RIB ?"
+  "french": "Nous avons reçu nos cartes bancaires ce matin."
  },
  "ADV_1_3_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ils ont reçu une facture d'électricité hier."
+  "french": "As-tu reçu le RIB ?"
  },
  "ADV_1_3_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vous recevrez votre carte dans une semaine."
+  "french": "Ils ont reçu une facture d'électricité hier."
  },
  "ADV_1_3_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Elle recevra une réponse de la banque lundi."
+  "french": "J'ai reçu mon salaire hier."
  },
  "ADV_1_3_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand j'étais étudiant, je recevais une bourse chaque mois."
+  "french": "Vous recevrez votre carte dans une semaine."
  },
  "ADV_1_3_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Mes parents recevaient leurs factures par la poste."
+  "french": "Elle recevra une réponse de la banque lundi."
  },
  "ADV_1_4_TEXT": {
   "voice": "Maxime - Dynamic and Natural",
-  "french": "En France, on choisit en général un médecin traitant : c'est le médecin qu'on voit en premier quand on est malade. Pour prendre rendez-vous, on appelle le cabinet ou on réserve en ligne. Au téléphone, vous pourriez dire : « Bonjour, je voudrais un rendez-vous avec le docteur Martin. J'ai de la fièvre depuis deux jours. » N'oubliez pas votre carte Vitale, ou l'appli carte Vitale sur votre téléphone : c'est la carte de l'Assurance maladie. Grâce à elle, une partie de la consultation vous sera remboursée plus vite. La plupart des Français ont aussi une mutuelle, qui paie souvent le reste. Après la consultation, le médecin vous donnera peut-être une ordonnance. Avec cette ordonnance, vous irez à la pharmacie, qu'on reconnaît à sa croix verte. Le pharmacien donne aussi de bons conseils : si vous aviez juste un petit rhume, il pourrait vous recommander un médicament sans ordonnance."
+  "french": "En France, on a un médecin traitant. Quand on est malade, on va chez lui en premier. On prend rendez-vous au cabinet, par téléphone ou en ligne. Au téléphone, dites : « Bonjour, je voudrais un rendez-vous. J'ai de la fièvre. » Au cabinet, donnez votre carte Vitale. Avec elle, l'Assurance maladie va vous rembourser une partie. La mutuelle peut aussi vous rembourser. Après, le médecin vous donne une ordonnance. Avec l'ordonnance, vous allez chez le pharmacien. Il donne aussi de bons conseils. Pour un petit rhume, il vous donnera un médicament sans ordonnance. Quand j'étais enfant, j'avais souvent un rhume. Ma mère me donnait de la soupe et du thé !"
  },
  "ADV_1_4_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Que puis-je faire pour vous ?"
+  "french": "Bonjour ! Avez-vous une ordonnance ?"
  },
  "ADV_1_4_C3": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3620,19 +3620,19 @@
  },
  "ADV_1_4_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "C'est un sirop contre la fièvre. Et quand vous étiez enfant, que vous donnait-on contre la fièvre ?"
+  "french": "Très bien. Me donnerez-vous aussi votre carte Vitale ?"
  },
  "ADV_1_4_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Voici le sirop. Quand lui donnerez-vous la première dose ?"
+  "french": "Enfant, que vous donnait-on contre le rhume ?"
  },
  "ADV_1_4_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien. Si elle avait encore de la fièvre demain, que lui donneriez-vous ?"
+  "french": "Et aujourd'hui, donnez-vous du miel à vos enfants ?"
  },
  "ADV_1_4_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonne idée. Bon rétablissement à votre fille !"
+  "french": "Voici votre médicament. Au revoir et bonne journée !"
  },
  "ADV_1_4_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3648,59 +3648,59 @@
  },
  "ADV_1_4_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Le médecin m'a donné une ordonnance hier."
+  "french": "Donnes-tu du miel à tes enfants ?"
  },
  "ADV_1_4_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu donné ta carte Vitale au médecin ?"
+  "french": "Le médecin m'a donné une ordonnance hier."
  },
  "ADV_1_4_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ce matin, j'ai donné mon numéro de téléphone au cabinet."
+  "french": "As-tu donné ta carte Vitale au médecin ?"
  },
  "ADV_1_4_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Le médecin vous donnera une ordonnance."
+  "french": "Ce matin, j'ai donné mon numéro de téléphone au cabinet."
  },
  "ADV_1_4_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ils nous donneront les résultats vendredi."
+  "french": "Le pharmacien m'a donné de bons conseils."
  },
  "ADV_1_4_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand nous étions enfants, notre mère nous donnait du miel contre le rhume."
+  "french": "Le médecin vous donnera une ordonnance."
  },
  "ADV_1_4_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Tu donnais ton nom quand le médecin est arrivé."
+  "french": "Ils nous donneront les résultats vendredi."
  },
  "ADV_1_5_TEXT": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "La France a un grand réseau de trains, et c'est souvent la façon la plus agréable de voyager. Pour les longues distances, il y a le TGV, le train à grande vitesse : Paris–Marseille prend un peu plus de trois heures. Pour les petits trajets entre les villes d'une région, on prend le TER. Il vaudrait mieux réserver votre billet de TGV à l'avance, parce que les prix montent quand le train se remplit. Aujourd'hui, la plupart des voyageurs ont leur billet sur leur téléphone. À la gare, regardez le grand tableau des départs : la voie de votre train est souvent affichée vingt minutes avant le départ. Si vous aviez une question, vous pourriez demander à un agent : « Excusez-moi, pourriez-vous me dire d'où part le train pour Lyon ? » Et si votre train a beaucoup de retard, gardez votre billet ou sa référence : vous pourriez être remboursé en partie."
+  "french": "En France, on prend souvent le train. Pour les longs trajets, il y a le TGV, le train à grande vitesse. Il va très vite ! Paris–Lyon, c'est deux heures. Pour les petits trajets, on prend le TER. Réservez votre billet de TGV à l'avance. Le train va vite se remplir ! Aujourd'hui, on a son billet sur son téléphone. À la gare, il y a le tableau des départs. Avant le départ, on voit la voie du train. Le train a du retard ? Gardez votre billet. On peut vous rembourser. L'année dernière, j'ai réservé trop tard. Il n'y avait plus de places !"
  },
  "ADV_1_5_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Que puis-je faire pour vous ?"
+  "french": "Bonjour ! Où allez-vous aujourd'hui ?"
  },
  "ADV_1_5_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien. Avez-vous déjà réservé votre retour ?"
+  "french": "Très bien. Votre amie vient-elle aussi ?"
  },
  "ADV_1_5_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait. Les prix montent vite : pour le prochain voyage, réserverez-vous plus tôt ?"
+  "french": "Et le retour, le réserverez-vous aujourd'hui ?"
  },
  "ADV_1_5_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand vous étiez plus jeune, réserviez-vous aussi à l'avance ?"
+  "french": "Étudiant, preniez-vous souvent le train ?"
  },
  "ADV_1_5_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Le TGV se remplit vite ! Vos amis réservent-ils aussi leurs billets aujourd'hui ?"
+  "french": "Et vos parents, réservent-ils leurs billets en ligne ?"
  },
  "ADV_1_5_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Alors dites-leur de se dépêcher ! Bon voyage à Marseille !"
+  "french": "Voici votre billet. Allez voir le tableau des départs. Bon voyage !"
  },
  "ADV_1_5_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3716,59 +3716,59 @@
  },
  "ADV_1_5_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai réservé mon billet hier soir."
+  "french": "Elle réserve une place dans le TER."
  },
  "ADV_1_5_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Mon frère a réservé une place dans le TGV pour Marseille."
+  "french": "J'ai réservé mon billet hier soir."
  },
  "ADV_1_5_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu réservé ta place ?"
+  "french": "Mon frère a réservé une place dans le TGV pour Marseille."
  },
  "ADV_1_5_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vous réserverez votre retour sur le site."
+  "french": "As-tu réservé ta place ?"
  },
  "ADV_1_5_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ils réserveront leurs places demain."
+  "french": "Avez-vous réservé vos billets ?"
  },
  "ADV_1_5_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand elle était étudiante, elle réservait les places les moins chères."
+  "french": "Vous réserverez votre retour sur le site."
  },
  "ADV_1_5_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Tu réservais ton billet quand le train s'est rempli."
+  "french": "Ils réserveront leurs places demain."
  },
  "ADV_1_6_TEXT": {
   "voice": "Maxime - Dynamic and Natural",
-  "french": "En France, la politesse commence par un mot : « Bonjour ». Quand on entre dans une boutique, une boulangerie ou même un ascenseur, on dit bonjour. Si vous oubliiez de le dire, la personne pourrait vous trouver impoli, même si vous souriiez. Ensuite, il y a le choix entre « tu » et « vous ». Avec un inconnu, un client ou une personne plus âgée, on dit « vous ». Avec les amis, la famille et les enfants, on dit « tu ». En cas de doute, il vaudrait mieux dire « vous » : l'autre vous proposera peut-être de passer au « tu ». Le conditionnel aide aussi à être poli : « Je voudrais » est plus doux que « Je veux », et « Pourriez-vous m'aider ? » est plus aimable que « Aidez-moi ! ». Enfin, entre amis, on se fait souvent la bise, c'est-à-dire un petit baiser sur chaque joue. Le nombre de bises change selon les régions !"
+  "french": "En France, pour la politesse, il y a un mot très important : « Bonjour ». Dans une boutique, on dit bonjour. Dans un ascenseur aussi ! Sans bonjour, on est impoli. Après, il y a « tu » et « vous ». Avec un inconnu ou une personne âgée, on dit « vous ». On aide aussi les personnes âgées. Avec la famille et les amis, on dit « tu ». Vous ne savez pas ? Dites « vous ». Plus tard, l'autre personne vous dira : « Tu peux me dire tu ! » Pour demander quelque chose, dites « Je voudrais » : c'est plus aimable que « Je veux ». Avec les amis, on se fait la bise sur les deux joues. Quand j'étais enfant, je faisais la bise à toute la famille le dimanche !"
  },
  "ADV_1_6_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Puis-je vous renseigner ?"
+  "french": "Bonjour ! Puis-je vous aider ?"
  },
  "ADV_1_6_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Avec plaisir ! Pourquoi lui offrez-vous un cadeau ?"
+  "french": "C'est gentil ! Comment vous aide-t-elle ?"
  },
  "ADV_1_6_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quelle gentillesse ! Et vous, l'aiderez-vous dans son jardin cet été ?"
+  "french": "Et vous, l'aiderez-vous aussi ?"
  },
  "ADV_1_6_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand vous étiez enfant, aidiez-vous aussi vos grands-parents ?"
+  "french": "Quand vous étiez enfant, aidiez-vous votre grand-mère ?"
  },
  "ADV_1_6_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "C'est très bien ! Et aujourd'hui, d'autres membres de la famille les aident-ils ?"
+  "french": "Et aujourd'hui, les enfants aident-ils les personnes âgées ?"
  },
  "ADV_1_6_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quelle famille attentionnée ! Ce joli foulard lui plairait-il ?"
+  "french": "Merci, vous êtes très aimable ! Au revoir !"
  },
  "ADV_1_6_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3784,59 +3784,59 @@
  },
  "ADV_1_6_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu aidé le vieux monsieur dans l'ascenseur ?"
+  "french": "Aides-tu ta grand-mère le samedi ?"
  },
  "ADV_1_6_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Les enfants ont aidé leur grand-mère ce matin."
+  "french": "As-tu aidé le vieux monsieur dans l'ascenseur ?"
  },
  "ADV_1_6_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "La boulangère a aidé mon fils hier."
+  "french": "Les enfants ont aidé leur grand-mère ce matin."
  },
  "ADV_1_6_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je vous aiderai à choisir, madame."
+  "french": "La boulangère a aidé mon fils hier."
  },
  "ADV_1_6_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nos voisins nous aideront samedi."
+  "french": "Nous avons aidé une inconnue dans la boutique."
  },
  "ADV_1_6_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand vous travailliez à la boutique, vous aidiez les clients plus âgés."
+  "french": "Je vous aiderai à choisir, madame."
  },
  "ADV_1_6_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Il aidait un inconnu quand je suis entré dans la boulangerie."
+  "french": "Nos voisins nous aideront samedi."
  },
  "ADV_1_7_TEXT": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Presque toutes les villes françaises ont leur marché, une ou plusieurs fois par semaine. On y trouve des fruits et des légumes de saison, du fromage, du poisson et souvent des fleurs. Les produits viennent en général de la région, et les marchands sont fiers de vous les faire goûter. Au marché, on ne prend pas toujours les fruits soi-même : c'est le marchand qui vous sert. Vous pourriez dire : « Bonjour ! Je voudrais un kilo de tomates et deux avocats bien mûrs, s'il vous plaît. » Si vous ne savez pas quoi cuisiner, demandez conseil : « Que me conseilleriez-vous pour ce soir ? » Le marchand vous répondra sûrement avec plaisir. Venez tôt le matin si vous voulez le meilleur choix, ou à la fin du marché si vous préférez les bonnes affaires : certains marchands baissent leurs prix avant de partir. Et n'oubliez pas votre panier !"
+  "french": "En France, presque toutes les villes ont un marché. On y trouve des fruits et des légumes de saison. Il y a aussi du poisson, du pain et des fleurs. Les marchands sont fiers de leurs fruits. Ils vous font goûter une fraise ou une pomme. Au marché, on ne prend pas les fruits. C'est le marchand qui vous sert. Dites : « Je voudrais des fraises bien mûres. » Venez tôt le matin pour trouver les plus belles. Venez tard pour les bonnes affaires ! Et prenez votre panier. Quand j'étais petite, j'allais au marché avec ma grand-mère. La marchande nous servait toujours en premier. Elle était très gentille !"
  },
  "ADV_1_7_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Vous a-t-on déjà servi ?"
+  "french": "Bonjour ! Que puis-je vous servir ?"
  },
  "ADV_1_7_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Désolée pour l'attente ! Recevez-vous des amis ce soir ? Si vous preniez mes tomates, que leur serviriez-vous ?"
+  "french": "Oui, et elles sont bien mûres ! Voulez-vous goûter ?"
  },
  "ADV_1_7_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Excellente idée, mes tomates sont parfaites ! Et le dessert, qui le servira ?"
+  "french": "Servirez-vous ces fraises à vos amis ce soir ?"
  },
  "ADV_1_7_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait ! Quand vous étiez enfant, votre mère servait-elle des produits du marché ?"
+  "french": "Enfant, serviez-vous le dessert à la maison ?"
  },
  "ADV_1_7_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Et aujourd'hui, chez vous, servez-vous souvent des produits du marché ?"
+  "french": "Et ici, les marchands servent-ils bien les clients ?"
  },
  "ADV_1_7_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Alors voilà vos tomates, bien mûres. Et n'oubliez pas votre panier !"
+  "french": "Merci ! Voici vos fraises. Bonne soirée !"
  },
  "ADV_1_7_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3852,59 +3852,59 @@
  },
  "ADV_1_7_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai servi trente clients ce matin."
+  "french": "La marchande me sert en premier."
  },
  "ADV_1_7_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "La fromagère a servi ma mère avant moi."
+  "french": "J'ai servi trente clients ce matin."
  },
  "ADV_1_7_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu servi le monsieur avec le panier ?"
+  "french": "La fromagère a servi ma mère avant moi."
  },
  "ADV_1_7_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je vous servirai dans cinq minutes, madame."
+  "french": "As-tu servi le monsieur avec le panier ?"
  },
  "ADV_1_7_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Les marchands serviront de la soupe à la fin du marché."
+  "french": "Nous avons servi les fraises à nos amis."
  },
  "ADV_1_7_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand vous aviez un stand, vous serviez les meilleures tomates de la ville."
+  "french": "Je vous servirai dans cinq minutes, madame."
  },
  "ADV_1_7_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Tu servais une cliente quand je suis arrivé."
+  "french": "Les marchands serviront de la soupe à la fin du marché."
  },
  "ADV_1_8_TEXT": {
   "voice": "Maxime - Dynamic and Natural",
-  "french": "Les Français aiment plaisanter sur leur administration, et ils ont parfois raison : en France, on a souvent besoin de papiers ! Pour beaucoup de démarches, on va à la mairie, le bâtiment où travaillent le maire et les services de la ville. C'est là qu'on se marie, qu'on déclare la naissance d'un enfant ou qu'on s'inscrit sur les listes électorales. Aujourd'hui, beaucoup de démarches se font aussi en ligne. Un conseil : avant d'y aller, vérifiez sur le site de la mairie les documents à apporter. Il vaudrait mieux en apporter trop que pas assez ! Au guichet, restez patient et poli : « Bonjour madame, je voudrais inscrire mon fils à l'école. Auriez-vous un formulaire ? » Si un document manque, on vous demandera de revenir. Alors, faites des photocopies de tout et gardez-les dans un dossier bien rangé. Vous verrez : avec un peu d'organisation, tout ira bien."
+  "french": "En France, on a souvent besoin de papiers. Pour beaucoup de démarches, on va à la mairie. C'est la maison du maire et des services de la ville. À la mairie, on se marie. On peut aussi inscrire les enfants à l'école. Avant d'y aller, lisez le site de la mairie. Il dit quels documents apporter. Apportez toujours votre passeport ! Au guichet, il faut être patient et poli. Dites : « Bonjour madame, je voudrais un formulaire. » Il faut tous les documents, ou vous allez revenir un autre jour. Alors, faites des photocopies de tout. Aujourd'hui, on fait aussi beaucoup de démarches en ligne. Quand j'étais petit, mes parents apportaient tous leurs papiers au guichet. C'était plus long !"
  },
  "ADV_1_8_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Que puis-je faire pour vous ?"
+  "french": "Bonjour ! Puis-je vous aider ?"
  },
  "ADV_1_8_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien. Avez-vous apporté un justificatif de domicile ?"
+  "french": "Très bien. Avez-vous apporté votre passeport ?"
  },
  "ADV_1_8_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait. Mais il manque le carnet de vaccination. Qui l'apportera ?"
+  "french": "Il faut aussi une photocopie. L'apporterez-vous demain ?"
  },
  "ADV_1_8_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "D'accord. Dans votre pays, apportiez-vous autant de papiers pour l'école ?"
+  "french": "Avant Internet, les gens apportaient-ils tous leurs papiers ici ?"
  },
  "ADV_1_8_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ici, c'est plus compliqué ! Avez-vous une autre question ?"
+  "french": "Et vous, apportez-vous des photocopies à chaque démarche ?"
  },
  "ADV_1_8_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Oui, toujours ! Il vaudrait mieux en apporter trop que pas assez. Bonne journée !"
+  "french": "Parfait ! Voici votre formulaire. Bonne journée !"
  },
  "ADV_1_8_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3920,59 +3920,59 @@
  },
  "ADV_1_8_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai apporté mon passeport ce matin."
+  "french": "Elle apporte son passeport au guichet."
  },
  "ADV_1_8_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Mon mari a apporté le formulaire hier."
+  "french": "J'ai apporté mon passeport ce matin."
  },
  "ADV_1_8_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu apporté les photocopies ?"
+  "french": "Mon mari a apporté le formulaire hier."
  },
  "ADV_1_8_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vous apporterez l'acte de naissance de votre fils."
+  "french": "As-tu apporté les photocopies ?"
  },
  "ADV_1_8_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nous apporterons le dossier lundi prochain."
+  "french": "Nous avons apporté les photocopies à la mairie."
  },
  "ADV_1_8_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Avant Internet, les gens apportaient chaque formulaire à la mairie."
+  "french": "Vous apporterez l'acte de naissance de votre fils."
  },
  "ADV_1_8_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'apportais mon dossier au guichet quand l'employée m'a appelé."
+  "french": "Nous apporterons le dossier lundi prochain."
  },
  "ADV_1_9_TEXT": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Dans les villes françaises, beaucoup de gens habitent en appartement, alors les voisins font partie de la vie quotidienne. Dans certains immeubles, il y a encore un gardien ou une gardienne : cette personne s'occupe du bâtiment, reçoit parfois les colis et connaît tout le monde. Pour bien vivre ensemble, il y a quelques règles simples. Le soir, après vingt-deux heures, on évite de faire trop de bruit. Si vous organisez une fête, ce serait gentil de prévenir vos voisins avec un petit mot dans le hall de l'immeuble : « Samedi soir, nous fêterons un anniversaire. Excusez-nous d'avance pour le bruit ! » Et si un voisin faisait trop de bruit, il vaudrait mieux lui parler gentiment avant de vous fâcher. Chaque année, au printemps, beaucoup d'immeubles participent à la Fête des voisins : chacun apporte quelque chose à manger, et on fait connaissance autour d'un verre."
+  "french": "En France, beaucoup de gens vivent en appartement. Les voisins font partie de la vie. Dans quelques immeubles, il y a un gardien ou une gardienne. Cette personne reçoit les colis. Elle sait tout sur tout le monde ! Pour bien vivre ensemble, il y a des règles. Le soir, on ne fait pas trop de bruit. Vous faites une fête ? Il faut prévenir vos voisins avec un petit mot. Un voisin fait trop de bruit ? Parlez avec lui. C'est mieux que de se fâcher ! Chaque année, il y a la Fête des voisins. Chacun apporte quelque chose à manger. On fait connaissance. Quand je vivais à Paris, c'était ma fête préférée !"
  },
  "ADV_1_9_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour ! Venez-vous d'emménager dans l'immeuble ?"
+  "french": "Bonjour ! Vivez-vous dans l'immeuble maintenant ?"
  },
  "ADV_1_9_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bienvenue ! Avez-vous déjà vécu en appartement ?"
+  "french": "Bienvenue ! Et avant, où viviez-vous ?"
  },
  "ADV_1_9_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Y avait-il un gardien dans votre immeuble à Lyon ?"
+  "french": "Et vos enfants, vivront-ils avec vous ?"
  },
  "ADV_1_9_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ici, il n'y a plus de gardien. Votre famille vivra-t-elle avec vous ?"
+  "french": "Votre fille a-t-elle déjà vécu en appartement ?"
  },
  "ADV_1_9_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Formidable ! Viendrez-vous à la Fête des voisins en mai ? L'ambiance est très sympa ici."
+  "french": "Et vivez-vous bien ici ?"
  },
  "ADV_1_9_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Merci, c'est gentil ! Apportez quelque chose à manger, et à bientôt !"
+  "french": "Parfait ! À bientôt, alors !"
  },
  "ADV_1_9_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -3988,59 +3988,59 @@
  },
  "ADV_1_9_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai vécu à côté d'un voisin très bruyant pendant deux ans."
+  "french": "Ma voisine vit seule au troisième étage."
  },
  "ADV_1_9_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "La gardienne a vécu dans l'immeuble pendant trente ans."
+  "french": "J'ai vécu à côté d'un voisin très bruyant pendant deux ans."
  },
  "ADV_1_9_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu déjà vécu dans un immeuble ?"
+  "french": "La gardienne a vécu dans l'immeuble pendant trente ans."
  },
  "ADV_1_9_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "L'année prochaine, ils vivront dans un immeuble avec un gardien."
+  "french": "As-tu déjà vécu dans un immeuble ?"
  },
  "ADV_1_9_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Vous vivrez au rez-de-chaussée, à côté de la gardienne."
+  "french": "Nous avons vécu dans cet immeuble pendant deux ans."
  },
  "ADV_1_9_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand j'avais vingt ans, je vivais dans un tout petit appartement à Paris."
+  "french": "L'année prochaine, ils vivront dans un immeuble avec un gardien."
  },
  "ADV_1_9_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Autrefois, un gardien vivait dans chaque immeuble."
+  "french": "Vous vivrez au rez-de-chaussée, à côté de la gardienne."
  },
  "ADV_1_10_TEXT": {
   "voice": "Maxime - Dynamic and Natural",
-  "french": "Votre premier jour dans une entreprise française commence souvent à l'accueil. On vous donnera un badge pour entrer dans les bureaux, puis votre responsable vous présentera à l'équipe. Dans beaucoup d'entreprises, on travaille en open space, un grand bureau partagé. Le premier jour, c'est normal de poser beaucoup de questions, à condition d'être poli : « Excusez-moi, pourriez-vous m'indiquer la salle de réunion ? » ou « Pourrais-je avoir accès au dossier partagé ? ». Avec vos nouveaux collègues, il vaudrait mieux commencer par « vous », sauf si tout le monde se tutoie. Le midi, on vous proposera peut-être de déjeuner ensemble : acceptez, c'est le meilleur moyen de connaître l'équipe ! Beaucoup de salariés reçoivent des titres-restaurant pour payer une partie du déjeuner. Et le soir, avant de partir, n'oubliez pas de dire au revoir : « Bonne soirée, à demain ! »"
+  "french": "Votre premier jour dans une entreprise commence souvent à l'accueil. On vous donne un badge. Puis vous allez voir votre responsable et l'équipe. Le premier jour, vous avez beaucoup de questions. Demandez : « Où est la salle de réunion, s'il vous plaît ? » Avec vos collègues, commencez par « vous ». Souvent, on peut se tutoyer après quelques jours. À midi, on va déjeuner ensemble. Dites oui ! C'est le meilleur moyen de parler avec l'équipe. Beaucoup de salariés ont un titre-restaurant pour le déjeuner. Le soir, dites au revoir : « Bonne soirée, à demain ! » Pour mon premier jour, j'ai commencé à neuf heures. J'étais un peu fatigué le soir, mais très content !"
  },
  "ADV_1_10_C1": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Bonjour et bienvenue ! Avez-vous déjà commencé à lire le guide de l'entreprise ?"
+  "french": "Bonjour ! Bienvenue dans l'équipe. Commencez-vous aujourd'hui ?"
  },
  "ADV_1_10_C3": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Très bien ! Dans votre ancienne entreprise, à quelle heure commenciez-vous ?"
+  "french": "Très bien. Avez-vous déjà commencé la formation en ligne ?"
  },
  "ADV_1_10_C5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ici, c'est plus souple. Savez-vous à quelle heure vos collègues commencent ?"
+  "french": "Demain, à quelle heure commencerez-vous ?"
  },
  "ADV_1_10_C7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Exactement. Et demain, commencerez-vous à neuf heures aussi ?"
+  "french": "Dans votre ancienne entreprise, les salariés commençaient-ils tôt ?"
  },
  "ADV_1_10_C9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Parfait. Avez-vous des questions avant de rencontrer l'équipe ?"
+  "french": "Et votre collègue Paul, commence-t-il aussi aujourd'hui ?"
  },
  "ADV_1_10_C11": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je commencerais par déjeuner avec l'équipe : c'est le meilleur moyen de la connaître ! À midi, alors !"
+  "french": "Parfait ! Allons voir l'équipe."
  },
  "ADV_1_10_QZ1": {
   "voice": "Cécile - Interactive Customer Support",
@@ -4056,31 +4056,31 @@
  },
  "ADV_1_10_QZ4": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "J'ai commencé mon nouveau travail lundi."
+  "french": "La réunion commence-t-elle à dix heures ?"
  },
  "ADV_1_10_QZ5": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Ma responsable a commencé la réunion à dix heures."
+  "french": "J'ai commencé mon nouveau travail lundi."
  },
  "ADV_1_10_QZ6": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "As-tu commencé la formation ?"
+  "french": "Ma responsable a commencé la réunion à dix heures."
  },
  "ADV_1_10_QZ7": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Demain, le nouveau collègue commencera dans l'open space."
+  "french": "As-tu commencé la formation ?"
  },
  "ADV_1_10_QZ8": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Je commencerai par me présenter à l'équipe."
+  "french": "Les nouveaux salariés ont commencé à l'accueil."
  },
  "ADV_1_10_QZ9": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Quand je travaillais à Lyon, je commençais à huit heures."
+  "french": "Demain, le nouveau collègue commencera dans l'open space."
  },
  "ADV_1_10_QZ10": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "Nous commencions la réunion quand le nouveau collègue est arrivé."
+  "french": "Je commencerai par me présenter à l'équipe."
  },
  "ADVW_a": {
   "voice": "Cécile - Interactive Customer Support",
@@ -4392,7 +4392,7 @@
  },
  "ADVW_ou": {
   "voice": "Cécile - Interactive Customer Support",
-  "french": "où"
+  "french": "ou"
  },
  "ADVW_recevoir": {
   "voice": "Cécile - Interactive Customer Support",
@@ -5901,5 +5901,377 @@
  "ADVW_un_titre_restaurant": {
   "voice": "Cécile - Interactive Customer Support",
   "french": "un titre-restaurant"
+ },
+ "ADV_1_1_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ils visiteront l'appartement lundi."
+ },
+ "ADV_1_1_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Visiterez-vous la cuisine ?"
+ },
+ "ADV_1_1_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand nous habitions à Lyon, nous visitions des appartements chaque samedi."
+ },
+ "ADV_1_1_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je visitais l'appartement quand l'agent a appelé."
+ },
+ "ADV_1_1_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous visitions des appartements avec mon père."
+ },
+ "ADV_1_2_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Je demanderai l'addition à la fin."
+ },
+ "ADV_1_2_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Demanderez-vous un croissant ?"
+ },
+ "ADV_1_2_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand tu habitais à Paris, tu demandais un café crème au comptoir."
+ },
+ "ADV_1_2_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous demandions l'addition quand il a commencé à pleuvoir."
+ },
+ "ADV_1_2_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Mon père demandait un café au comptoir."
+ },
+ "ADV_1_3_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Recevras-tu ta carte lundi ?"
+ },
+ "ADV_1_3_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles recevront le RIB par email."
+ },
+ "ADV_1_3_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand j'étais étudiant, je recevais une bourse chaque mois."
+ },
+ "ADV_1_3_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Mes parents recevaient leurs factures par la poste."
+ },
+ "ADV_1_3_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand elle était étudiante, elle recevait son salaire le premier du mois."
+ },
+ "ADV_1_4_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Me donnerez-vous votre carte Vitale ?"
+ },
+ "ADV_1_4_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous donnerons l'ordonnance au pharmacien."
+ },
+ "ADV_1_4_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand nous étions enfants, notre mère nous donnait du miel contre le rhume."
+ },
+ "ADV_1_4_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu donnais ton nom quand le médecin est arrivé."
+ },
+ "ADV_1_4_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles donnaient leur carte Vitale au cabinet."
+ },
+ "ADV_1_5_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Réserveras-tu le train pour Lyon ?"
+ },
+ "ADV_1_5_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous réserverons nos billets à l'avance."
+ },
+ "ADV_1_5_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand elle était étudiante, elle réservait les places les moins chères."
+ },
+ "ADV_1_5_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu réservais ton billet quand le train s'est rempli."
+ },
+ "ADV_1_5_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ils réservaient toujours leurs billets à la gare."
+ },
+ "ADV_1_6_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "M'aideras-tu à choisir un cadeau ?"
+ },
+ "ADV_1_6_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles aideront la dame âgée dans l'ascenseur."
+ },
+ "ADV_1_6_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand vous travailliez à la boutique, vous aidiez les clients plus âgés."
+ },
+ "ADV_1_6_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Il aidait un inconnu quand je suis entré dans la boulangerie."
+ },
+ "ADV_1_6_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous aidions souvent nos voisins âgés."
+ },
+ "ADV_1_7_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Me servirez-vous après cette dame ?"
+ },
+ "ADV_1_7_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu serviras les fraises avec de la crème."
+ },
+ "ADV_1_7_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand vous aviez un stand, vous serviez les meilleures tomates de la ville."
+ },
+ "ADV_1_7_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Tu servais une cliente quand je suis arrivé."
+ },
+ "ADV_1_7_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles servaient le meilleur poisson du marché."
+ },
+ "ADV_1_8_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Apporteras-tu le formulaire demain ?"
+ },
+ "ADV_1_8_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles apporteront leurs passeports au guichet."
+ },
+ "ADV_1_8_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Avant Internet, les gens apportaient chaque formulaire à la mairie."
+ },
+ "ADV_1_8_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "J'apportais mon dossier au guichet quand l'employée m'a appelé."
+ },
+ "ADV_1_8_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Mes parents apportaient tous leurs papiers à la mairie."
+ },
+ "ADV_1_9_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Vivras-tu près de tes parents ?"
+ },
+ "ADV_1_9_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Elles vivront dans un immeuble tranquille."
+ },
+ "ADV_1_9_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand j'avais vingt ans, je vivais dans un tout petit appartement à Paris."
+ },
+ "ADV_1_9_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Autrefois, un gardien vivait dans chaque immeuble."
+ },
+ "ADV_1_9_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "La gardienne vivait au rez-de-chaussée."
+ },
+ "ADV_1_10_QZ11": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Commenceras-tu lundi ?"
+ },
+ "ADV_1_10_QZ12": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous commencerons la réunion à neuf heures."
+ },
+ "ADV_1_10_QZ13": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Quand je travaillais à Lyon, je commençais à huit heures."
+ },
+ "ADV_1_10_QZ14": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Nous commencions la réunion quand le nouveau collègue est arrivé."
+ },
+ "ADV_1_10_QZ15": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "Ma collègue commençait à sept heures."
+ },
+ "ADVW_pret": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "prêt"
+ },
+ "ADVW_letudiant_letudiante": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "l'étudiant, l'étudiante"
+ },
+ "ADVW_une_fiche_de_paie": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une fiche de paie"
+ },
+ "ADVW_le_proprietaire_la_proprietaire": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le propriétaire, la propriétaire"
+ },
+ "ADVW_elles": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "elles"
+ },
+ "ADVW_tout_tous": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tout, tous"
+ },
+ "ADVW_le_justificatif": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le justificatif"
+ },
+ "ADVW_les_parents": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "les parents"
+ },
+ "ADVW_un_rendez_vous": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un rendez-vous"
+ },
+ "ADVW_chez": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "chez"
+ },
+ "ADVW_la_mere": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la mère"
+ },
+ "ADVW_la_soupe": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la soupe"
+ },
+ "ADVW_le_the": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le thé"
+ },
+ "ADVW_tres": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "très"
+ },
+ "ADVW_tard": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tard"
+ },
+ "ADVW_le_tgv": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le TGV"
+ },
+ "ADVW_le_ter": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le TER"
+ },
+ "ADVW_important": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "important"
+ },
+ "ADVW_sans": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "sans"
+ },
+ "ADVW_tout_toute": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "tout, toute"
+ },
+ "ADVW_le_dimanche": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le dimanche"
+ },
+ "ADVW_le_pain": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le pain"
+ },
+ "ADVW_la_fraise": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la fraise"
+ },
+ "ADVW_la_pomme": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la pomme"
+ },
+ "ADVW_beau_belle": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "beau, belle"
+ },
+ "ADVW_la_grand_mere": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la grand-mère"
+ },
+ "ADVW_un_fruit": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un fruit"
+ },
+ "ADVW_un_legume": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un légume"
+ },
+ "ADVW_une_pomme": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une pomme"
+ },
+ "ADVW_la_maison": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la maison"
+ },
+ "ADVW_quel_quelle_quels": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "quel, quelle, quels"
+ },
+ "ADVW_le_passeport": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "le passeport"
+ },
+ "ADVW_une_photocopie": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une photocopie"
+ },
+ "ADVW_patient": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "patient"
+ },
+ "ADVW_la_vie": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "la vie"
+ },
+ "ADVW_mieux": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "mieux"
+ },
+ "ADVW_prefere": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "préféré"
+ },
+ "ADVW_une_regle": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une règle"
+ },
+ "ADVW_oui": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "oui"
+ },
+ "ADVW_neuf": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "neuf"
+ },
+ "ADVW_fatigue": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "fatigué"
+ },
+ "ADVW_une_entreprise": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "une entreprise"
+ },
+ "ADVW_un_badge": {
+  "voice": "Cécile - Interactive Customer Support",
+  "french": "un badge"
  }
 }
